@@ -21,7 +21,6 @@ Before you submit the pull request for review please ensure that
   ```
 
   When `TYPE` can be:
-
   - **feat** - is a new feature
   - **docs** - documentation only changes
   - **fix** - a bug fix
@@ -38,7 +37,7 @@ Before you submit the pull request for review please ensure that
 2. Clone your fork to your machine with `git clone`
 
 ```
-$ git clone https://github.com/[your_username]/pingvin-share
+git clone https://github.com/[your_username]/pingvin-share-x
 ```
 
 3. Work - commit - repeat
@@ -46,7 +45,7 @@ $ git clone https://github.com/[your_username]/pingvin-share
 4. Push changes to GitHub
 
 ```
-$ git push origin [name_of_your_new_branch]
+git push origin [name_of_your_new_branch]
 ```
 
 5. Submit your changes for review
