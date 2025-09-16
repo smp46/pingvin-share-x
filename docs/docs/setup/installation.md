@@ -15,7 +15,7 @@ The website is now listening on `http://localhost:3000`, have fun with Pingvin S
 
 1. In the **Stacks** menu, click the **Add stack** button
 2. Give you stack a name (ex. pingvinshare)
-3. In the web editor, paste the content of the [docker-compose](https://github.com/stonith404/pingvin-share/blob/main/docker-compose.yml) file.
+3. In the web editor, paste the content of the [docker-compose](https://github.com/smp46/pingvin-share-x/blob/main/docker-compose.yml) file.
 4. Edit the external port and the environment variables (optional).
 5. Click on **Deploy the stack**.
 
@@ -30,7 +30,7 @@ Required tools:
 - [pm2](https://pm2.keymetrics.io/) for running Pingvin Share in the background
 
 ```bash
-git clone https://github.com/stonith404/pingvin-share
+git clone https://github.com/smp46/pingvin-share-x
 cd pingvin-share
 
 # Checkout the latest version

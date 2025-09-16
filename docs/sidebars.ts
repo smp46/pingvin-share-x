@@ -14,7 +14,7 @@ const sidebars: SidebarsConfig = {
   docsSidebar: [
     {
       type: "doc",
-      id : "introduction",
+      id: "introduction",
     },
     {
       type: "category",
@@ -52,23 +52,9 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: "doc",
-          id: "help-out/translate",
-        },
-        {
-          type: "doc",
           id: "help-out/contribute",
         },
       ],
-    },
-    {
-      type: "link",
-      label: "Demo",
-      href: "https://pingvin-share.dev.eliasschneider.com",
-    },
-    {
-      type: "link",
-      label: "Discord",
-      href: "https://discord.gg/HutpbfB59Q",
     },
   ],
 };
