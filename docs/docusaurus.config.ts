@@ -3,15 +3,15 @@ import type { Config } from "@docusaurus/types";
 import { themes as prismThemes } from "prism-react-renderer";
 
 const config: Config = {
-  title: "Pingvin Share",
+  title: "Pingvin Share X",
   tagline:
-    "Pingvin Share is self-hosted file sharing platform and an alternative for WeTransfer.",
+    "Pingvin Share X is a self-hosted file sharing platform and an alternative for WeTransfer.",
   favicon: "img/pingvinshare.svg",
 
-  url: "https://stonith404.github.io",
-  baseUrl: "/pingvin-share/",
-  organizationName: "stonith404",
-  projectName: "pingvin-share",
+  url: "https://smp46.github.io",
+  baseUrl: "/pingvin-share-x/",
+  organizationName: "smp46",
+  projectName: "pingvin-share-x",
 
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
@@ -28,7 +28,7 @@ const config: Config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: "./sidebars.ts",
-          editUrl: "https://github.com/stonith404/pingvin-share/edit/main/docs",
+          editUrl: "https://github.com/smp46/pingvin-share-x/edit/main/docs",
         },
         blog: false,
       } satisfies Preset.Options,
@@ -41,14 +41,14 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: "Pingvin Share",
+      title: "Pingvin Share X",
       logo: {
         alt: "Pingvin Share Logo",
         src: "img/pingvinshare.svg",
       },
       items: [
         {
-          href: "https://github.com/stonith404/pingvin-share",
+          href: "https://github.com/smp46/pingvin-share-x",
           label: "GitHub",
           position: "right",
         },
