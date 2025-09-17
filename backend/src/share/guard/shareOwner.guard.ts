@@ -2,6 +2,7 @@ import {
   ExecutionContext,
   Injectable,
   NotFoundException,
+  BadRequestException,
 } from "@nestjs/common";
 import { User } from "@prisma/client";
 import { Request } from "express";
@@ -18,6 +19,11 @@ export class ShareOwnerGuard extends JwtGuard {
     super(configService);
   }
 
+  isBase64(toCheck: string) {
+    const isBase64 = /^[a-zA-Z0-9-]*={0,2}$/.test(toCheck);
+    return isBase64;
+  }
+
   async canActivate(context: ExecutionContext) {
     const request: Request = context.switchToHttp().getRequest();
     const shareId = Object.prototype.hasOwnProperty.call(
@@ -26,6 +32,10 @@ export class ShareOwnerGuard extends JwtGuard {
     )
       ? request.params.shareId
       : request.params.id;
+
+    if (!this.isBase64(shareId)) {
+      throw new BadRequestException("Invalid ID format");
+    }
 
     const share = await this.prisma.share.findUnique({
       where: { id: shareId },

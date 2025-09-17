@@ -26,7 +26,7 @@ export class FileController {
 
   @Post()
   @SkipThrottle()
-  @UseGuards(CreateShareGuard, ShareOwnerGuard)
+  @UseGuards(IdValidation, CreateShareGuard, ShareOwnerGuard)
   async create(
     @Query()
     query: {
