@@ -24,7 +24,7 @@ import {
 } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 
-const categories = [
+export const categories = [
   { name: "General", icon: <TbSettings /> },
   { name: "Email", icon: <TbMail /> },
   { name: "Share", icon: <TbShare /> },

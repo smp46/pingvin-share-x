@@ -30,6 +30,18 @@ import { AdminConfig, UpdateConfig } from "../../../types/config.type";
 import { camelToKebab } from "../../../utils/string.util";
 import toast from "../../../utils/toast.util";
 
+const categories = [
+  "General",
+  "Email",
+  "Share",
+  "SMTP",
+  "OAuth",
+  "LDAP",
+  "S3",
+  "Legal",
+  "Cache",
+];
+
 export default function AppShellDemo() {
   const theme = useMantineTheme();
   const router = useRouter();
@@ -39,7 +51,13 @@ export default function AppShellDemo() {
   const isMobile = useMediaQuery("(max-width: 560px)");
   const config = useConfig();
 
-  const categoryId = (router.query.category as string | undefined) ?? "general";
+  let categoryId = "General";
+  if (
+    router.query.category &&
+    !categories.includes(router.query.category as string)
+  ) {
+    categoryId = router.query.category as string;
+  }
 
   const [configVariables, setConfigVariables] = useState<AdminConfig[]>();
   const [updatedConfigVariables, setUpdatedConfigVariables] = useState<
