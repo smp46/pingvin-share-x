@@ -60,6 +60,7 @@ export class OAuthController {
     response.cookie(`oauth_${provider}_state`, state, {
       sameSite: "lax",
       secure: isSecure,
+      httpOnly: true,
     });
 
     response.redirect(url);
