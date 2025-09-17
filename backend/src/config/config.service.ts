@@ -13,6 +13,7 @@ import { PrismaService } from "src/prisma/prisma.service";
 import { stringToTimespan } from "src/utils/date.util";
 import { parse as yamlParse } from "yaml";
 import { YamlConfig } from "../../prisma/seed/config.seed";
+import { CONFIG_FILE } from "src/constants";
 
 /**
  * ConfigService extends EventEmitter to allow listening for config updates,
@@ -30,7 +31,8 @@ export class ConfigService extends EventEmitter {
     super();
   }
 
-  async onModuleInit() {
+  // Initialize gets called by the ConfigModule
+  async initialize() {
     await this.loadYamlConfig();
 
     if (this.yamlConfig) {
@@ -41,7 +43,7 @@ export class ConfigService extends EventEmitter {
   private async loadYamlConfig() {
     let configFile: string = "";
     try {
-      configFile = fs.readFileSync("../config.yaml", "utf8");
+      configFile = fs.readFileSync(CONFIG_FILE, "utf8");
     } catch (e) {
       this.logger.log(
         "Config.yaml is not set. Falling back to UI configuration.",
@@ -49,12 +51,13 @@ export class ConfigService extends EventEmitter {
     }
     try {
       this.yamlConfig = yamlParse(configFile);
+
       if (this.yamlConfig) {
         for (const configVariable of this.configVariables) {
           const category = this.yamlConfig[configVariable.category];
           if (!category) continue;
-
           configVariable.value = category[configVariable.name];
+          this.emit("update", configVariable.name, configVariable.value);
         }
       }
     } catch (e) {

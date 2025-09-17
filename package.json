@@ -1,6 +1,6 @@
 {
   "name": "pingvin-share",
-  "version": "1.11.1",
+  "version": "1.13.0",
   "scripts": {
     "format": "cd frontend && npm run format && cd ../backend && npm run format",
     "lint": "cd frontend && npm run lint && cd ../backend && npm run lint",
@@ -11,5 +11,9 @@
   },
   "devDependencies": {
     "conventional-changelog-cli": "^3.0.0"
+  },
+  "prettier": {
+    "singleQuote": false,
+    "trailingComma": "all"
   }
 }

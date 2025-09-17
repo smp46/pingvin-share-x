@@ -3,9 +3,9 @@ import { Module } from "@nestjs/common";
 import { ScheduleModule } from "@nestjs/schedule";
 import { AuthModule } from "./auth/auth.module";
 
-import { CacheModule } from "@nestjs/cache-manager";
 import { APP_GUARD } from "@nestjs/core";
 import { ThrottlerGuard, ThrottlerModule } from "@nestjs/throttler";
+import { AppCacheModule } from "./cache/cache.module";
 import { AppController } from "./app.controller";
 import { ClamScanModule } from "./clamscan/clamscan.module";
 import { ConfigModule } from "./config/config.module";
@@ -20,12 +20,12 @@ import { UserModule } from "./user/user.module";
 
 @Module({
   imports: [
+    ConfigModule,
     AuthModule,
     ShareModule,
     FileModule,
     EmailModule,
     PrismaModule,
-    ConfigModule,
     JobsModule,
     UserModule,
     ThrottlerModule.forRoot([
@@ -38,9 +38,7 @@ import { UserModule } from "./user/user.module";
     ClamScanModule,
     ReverseShareModule,
     OAuthModule,
-    CacheModule.register({
-      isGlobal: true,
-    }),
+    AppCacheModule,
   ],
   controllers: [AppController],
   providers: [

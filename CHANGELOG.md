@@ -1,3 +1,27 @@
+## [1.13.0](https://github.com/stonith404/pingvin-share/compare/v1.12.0...v1.13.0) (2025-05-25)
+
+
+### Features
+
+* allow to use redis cache instead of memory cache ([#832](https://github.com/stonith404/pingvin-share/issues/832)) ([85f5143](https://github.com/stonith404/pingvin-share/commit/85f514316b0b808b8c063bf571df6b528a1b3de4))
+* **backend:** allow to define path to the config file ([#838](https://github.com/stonith404/pingvin-share/issues/838)) ([cfdb29e](https://github.com/stonith404/pingvin-share/commit/cfdb29ed4dde875233b4bc3f510ae50976b963b8))
+
+## [1.12.0](https://github.com/stonith404/pingvin-share/compare/v1.11.1...v1.12.0) (2025-05-07)
+
+
+### Features
+
+* **s3:** stream s3 content over a zip file ([#822](https://github.com/stonith404/pingvin-share/issues/822)) ([ccc783a](https://github.com/stonith404/pingvin-share/commit/ccc783ab6a00841a7041c454e77afb472d76999e))
+
+
+### Bug Fixes
+
+* disable HTML rendering in Markdown preview ([427e99c](https://github.com/stonith404/pingvin-share/commit/427e99c7b1d00ff6ed7b5fd879d8cf0f0d49281a))
+* health check for containers with reverse proxy disabled ([#816](https://github.com/stonith404/pingvin-share/issues/816)) ([a790ac7](https://github.com/stonith404/pingvin-share/commit/a790ac73fd42d266a957e09a05b1894199605f6a)), closes [#809](https://github.com/stonith404/pingvin-share/issues/809)
+* OIDC configuration from YAML configuration file doesn't get loaded ([48a6ceb](https://github.com/stonith404/pingvin-share/commit/48a6ceb3b4b4dfc0407dc6f9ee2e07cca1829cef))
+* spelling mistake and add clarity in email template ([#824](https://github.com/stonith404/pingvin-share/issues/824)) ([af047c0](https://github.com/stonith404/pingvin-share/commit/af047c0bc152a955b3ab135f5a9ea3d62b32fb0f))
+* use sandbox CSP for file previews ([1864951](https://github.com/stonith404/pingvin-share/commit/1864951bdbf573431e795109224a45545b86b54d))
+
 ## [1.11.1](https://github.com/stonith404/pingvin-share/compare/v1.11.0...v1.11.1) (2025-04-06)
 
 ## [1.11.0](https://github.com/stonith404/pingvin-share/compare/v1.10.4...v1.11.0) (2025-04-05)

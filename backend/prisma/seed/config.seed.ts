@@ -76,6 +76,25 @@ export const configVariables = {
       secret: false,
     },
   },
+  cache: {
+    "redis-enabled": {
+      type: "boolean",
+      defaultValue: "false",
+    },
+    "redis-url": {
+      type: "string",
+      defaultValue: "redis://pingvin-redis:6379",
+      secret: true,
+    },
+    ttl: {
+      type: "number",
+      defaultValue: "60",
+    },
+    maxItems: {
+      type: "number",
+      defaultValue: "1000",
+    },
+  },
   email: {
     enableShareEmailRecipients: {
       type: "boolean",
@@ -89,7 +108,7 @@ export const configVariables = {
     shareRecipientsMessage: {
       type: "text",
       defaultValue:
-        "Hey!\n\n{creator} ({creatorEmail}) shared some files with you, view or download the files with this link: {shareUrl}\n\nThe share will expire {expires}.\n\nNote: {desc}\n\nShared securely with Pingvin Share 🐧",
+        "Hey!\n\n{creator} ({creatorEmail}) shared some files with you. You can view or download the files with this link: {shareUrl}\n\nThe share will expire {expires}.\n\nNote: {desc}\n\nShared securely with Pingvin Share 🐧",
     },
     reverseShareSubject: {
       type: "string",
@@ -107,7 +126,7 @@ export const configVariables = {
     resetPasswordMessage: {
       type: "text",
       defaultValue:
-        "Hey!\n\nYou requested a password reset. Click this link to reset your password: {url}\nThe link expires in a hour.\n\nPingvin Share 🐧",
+        "Hey!\n\nYou requested a password reset. Click this link to reset your password: {url}\nThe link expires in an hour.\n\nPingvin Share 🐧",
     },
     inviteSubject: {
       type: "string",
@@ -419,11 +438,11 @@ const prisma = new PrismaClient({
 
 async function seedConfigVariables() {
   for (const [category, configVariablesOfCategory] of Object.entries(
-    configVariables
+    configVariables,
   )) {
     let order = 0;
     for (const [name, properties] of Object.entries(
-      configVariablesOfCategory
+      configVariablesOfCategory,
     )) {
       const existingConfigVariable = await prisma.config.findUnique({
         where: { name_category: { name, category } },
@@ -469,7 +488,7 @@ async function migrateConfigVariables() {
       // Update the config variable if it exists in the seed
     } else {
       const variableOrder = Object.keys(
-        configVariables[existingConfigVariable.category]
+        configVariables[existingConfigVariable.category],
       ).indexOf(existingConfigVariable.name);
       await prisma.config.update({
         where: {

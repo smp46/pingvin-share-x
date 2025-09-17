@@ -15,6 +15,7 @@ import * as contentDisposition from "content-disposition";
 import { Response } from "express";
 import { CreateShareGuard } from "src/share/guard/createShare.guard";
 import { ShareOwnerGuard } from "src/share/guard/shareOwner.guard";
+import { IdValidation } from "src/share/guard/shareIdValidation.guard";
 import { FileService } from "./file.service";
 import { FileSecurityGuard } from "./guard/fileSecurity.guard";
 import * as mime from "mime-types";
@@ -25,7 +26,7 @@ export class FileController {
 
   @Post()
   @SkipThrottle()
-  @UseGuards(CreateShareGuard, ShareOwnerGuard)
+  @UseGuards(IdValidation, CreateShareGuard, ShareOwnerGuard)
   async create(
     @Query()
     query: {
@@ -54,7 +55,7 @@ export class FileController {
     @Res({ passthrough: true }) res: Response,
     @Param("shareId") shareId: string,
   ) {
-    const zipStream = this.fileService.getZip(shareId);
+    const zipStream = await this.fileService.getZip(shareId);
 
     res.set({
       "Content-Type": "application/zip",
@@ -78,7 +79,7 @@ export class FileController {
       "Content-Type":
         mime?.lookup?.(file.metaData.name) || "application/octet-stream",
       "Content-Length": file.metaData.size,
-      "Content-Security-Policy": "script-src 'none'",
+      "Content-Security-Policy": "sandbox",
     };
 
     if (download === "true") {

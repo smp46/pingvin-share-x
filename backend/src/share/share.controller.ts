@@ -28,6 +28,7 @@ import { CreateShareGuard } from "./guard/createShare.guard";
 import { ShareOwnerGuard } from "./guard/shareOwner.guard";
 import { ShareSecurityGuard } from "./guard/shareSecurity.guard";
 import { ShareTokenSecurity } from "./guard/shareTokenSecurity.guard";
+import { IdValidation } from "./guard/shareIdValidation.guard";
 import { ShareService } from "./share.service";
 import { CompletedShareDTO } from "./dto/shareComplete.dto";
 @Controller("shares")
@@ -52,19 +53,19 @@ export class ShareController {
   }
 
   @Get(":id")
-  @UseGuards(ShareSecurityGuard)
+  @UseGuards(IdValidation, ShareSecurityGuard)
   async get(@Param("id") id: string) {
     return new ShareDTO().from(await this.shareService.get(id));
   }
 
   @Get(":id/from-owner")
-  @UseGuards(ShareOwnerGuard)
+  @UseGuards(IdValidation, ShareOwnerGuard)
   async getFromOwner(@Param("id") id: string) {
     return new ShareDTO().from(await this.shareService.get(id));
   }
 
   @Get(":id/metaData")
-  @UseGuards(ShareSecurityGuard)
+  @UseGuards(IdValidation, ShareSecurityGuard)
   async getMetaData(@Param("id") id: string) {
     return new ShareMetaDataDTO().from(await this.shareService.getMetaData(id));
   }
@@ -84,7 +85,7 @@ export class ShareController {
 
   @Post(":id/complete")
   @HttpCode(202)
-  @UseGuards(CreateShareGuard, ShareOwnerGuard)
+  @UseGuards(IdValidation, CreateShareGuard, ShareOwnerGuard)
   async complete(@Param("id") id: string, @Req() request: Request) {
     const { reverse_share_token } = request.cookies;
     return new CompletedShareDTO().from(
@@ -93,13 +94,13 @@ export class ShareController {
   }
 
   @Delete(":id/complete")
-  @UseGuards(ShareOwnerGuard)
+  @UseGuards(IdValidation, ShareOwnerGuard)
   async revertComplete(@Param("id") id: string) {
     return new ShareDTO().from(await this.shareService.revertComplete(id));
   }
 
   @Delete(":id")
-  @UseGuards(ShareOwnerGuard)
+  @UseGuards(IdValidation, ShareOwnerGuard)
   async remove(@Param("id") id: string, @GetUser() user: User) {
     const isDeleterAdmin = user?.isAdmin === true;
     await this.shareService.remove(id, isDeleterAdmin);
@@ -123,7 +124,7 @@ export class ShareController {
       ttl: 5 * 60,
     },
   })
-  @UseGuards(ShareTokenSecurity)
+  @UseGuards(IdValidation, ShareTokenSecurity)
   @Post(":id/token")
   async getShareToken(
     @Param("id") id: string,
