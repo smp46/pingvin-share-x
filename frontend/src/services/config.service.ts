@@ -3,11 +3,30 @@ import Config, { AdminConfig, UpdateConfig } from "../types/config.type";
 import api from "./api.service";
 import { stringToTimespan } from "../utils/date.util";
 
+const categories = [
+  "general",
+  "email",
+  "share",
+  "smpt",
+  "oauth",
+  "ldap",
+  "s3",
+  "legal",
+  "cache",
+];
+
 const list = async (): Promise<Config[]> => {
   return (await api.get("/configs")).data;
 };
 
-const getByCategory = async (category: string): Promise<AdminConfig[]> => {
+const getByCategory = async (categoryInput: string): Promise<AdminConfig[]> => {
+  let category: string;
+  if (categories.indexOf(categoryInput.trim()) === -1) {
+    category = "general";
+  } else {
+    category = categoryInput.trim();
+  }
+
   return (await api.get(`/configs/admin/${category}`)).data;
 };
 
