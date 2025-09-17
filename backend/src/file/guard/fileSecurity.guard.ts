@@ -21,6 +21,11 @@ export class FileSecurityGuard extends ShareSecurityGuard {
     super(_shareService, _prisma, _config);
   }
 
+  isBase64(toCheck: string) {
+    const isBase64 = /^[a-zA-Z0-9-]*={0,2}$/.test(toCheck);
+    return isBase64;
+  }
+
   async canActivate(context: ExecutionContext) {
     const request: Request = context.switchToHttp().getRequest();
 
@@ -30,6 +35,10 @@ export class FileSecurityGuard extends ShareSecurityGuard {
     )
       ? request.params.shareId
       : request.params.id;
+
+    if (!this.isBase64(shareId)) {
+      throw new NotFoundException("File not found");
+    }
 
     const shareToken = request.cookies[`share_${shareId}_token`];
 
