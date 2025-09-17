@@ -12,11 +12,16 @@ export class IdValidation implements CanActivate {
     context: ExecutionContext,
   ): boolean | Promise<boolean> | Observable<boolean> {
     const request = context.switchToHttp().getRequest();
-    const id =
-      request.params.id ||
-      request.query.id ||
-      request.body.id ||
-      request.params.shareId;
+    let id: string;
+    try {
+      id =
+        request.params?.id ||
+        request.query?.id ||
+        request.body?.id ||
+        request.params?.shareId;
+    } catch {
+      throw new BadRequestException("Invalid ID format");
+    }
 
     if (!id) {
       return true;
