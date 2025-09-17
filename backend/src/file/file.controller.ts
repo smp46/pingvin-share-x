@@ -15,6 +15,7 @@ import * as contentDisposition from "content-disposition";
 import { Response } from "express";
 import { CreateShareGuard } from "src/share/guard/createShare.guard";
 import { ShareOwnerGuard } from "src/share/guard/shareOwner.guard";
+import { IdValidation } from "src/share/guard/shareIdValidation.guard";
 import { FileService } from "./file.service";
 import { FileSecurityGuard } from "./guard/fileSecurity.guard";
 import * as mime from "mime-types";

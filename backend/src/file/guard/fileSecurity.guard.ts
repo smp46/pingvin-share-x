@@ -3,6 +3,7 @@ import {
   ForbiddenException,
   Injectable,
   NotFoundException,
+  BadRequestException,
 } from "@nestjs/common";
 import { Request } from "express";
 import * as moment from "moment";
@@ -37,7 +38,7 @@ export class FileSecurityGuard extends ShareSecurityGuard {
       : request.params.id;
 
     if (!this.isBase64(shareId)) {
-      throw new NotFoundException("File not found");
+      throw new BadRequestException("Invalid ID format");
     }
 
     const shareToken = request.cookies[`share_${shareId}_token`];
