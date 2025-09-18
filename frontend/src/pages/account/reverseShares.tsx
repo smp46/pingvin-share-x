@@ -145,16 +145,9 @@ const MyShares = () => {
                                     {share.id}
                                   </Text>
                                 </Anchor>
-                                <Tooltip
-                                  position="bottom"
-                                  multiline
+                                <HoverTip
                                   width={80}
                                   label={t("common.button.copy-link")}
-                                  events={{
-                                    hover: true,
-                                    focus: false,
-                                    touch: true,
-                                  }}
                                 >
                                   <ActionIcon
                                     color="victoria"
@@ -175,7 +168,7 @@ const MyShares = () => {
                                   >
                                     <TbLink />
                                   </ActionIcon>
-                                </Tooltip>
+                                </HoverTip>
                               </Group>
                             ))}
                           </Accordion.Panel>
@@ -194,13 +187,7 @@ const MyShares = () => {
                   </td>
                   <td>
                     <Group position="right">
-                      <Tooltip
-                        position="bottom"
-                        multiline
-                        width={80}
-                        label={t("common.button.copy-link")}
-                        events={{ hover: true, focus: false, touch: true }}
-                      >
+                      <HoverTip width={80} label={t("common.button.copy-link")}>
                         <ActionIcon
                           color="victoria"
                           variant="light"
@@ -223,14 +210,8 @@ const MyShares = () => {
                         >
                           <TbLink />
                         </ActionIcon>
-                      </Tooltip>
-                      <Tooltip
-                        position="bottom"
-                        multiline
-                        width={60}
-                        label={t("common.button.delete")}
-                        events={{ hover: true, focus: false, touch: true }}
-                      >
+                      </HoverTip>
+                      <HoverTip width={60} label={t("common.button.delete")}>
                         <ActionIcon
                           color="red"
                           variant="light"
@@ -267,7 +248,7 @@ const MyShares = () => {
                         >
                           <TbTrash />
                         </ActionIcon>
-                      </Tooltip>
+                      </HoverTip>
                     </Group>
                   </td>
                 </tr>
