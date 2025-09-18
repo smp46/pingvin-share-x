@@ -6,7 +6,7 @@ id: upgrading
 
 ### Upgrade to a new version
 
-As Pingvin Share is in early stage, see the release notes for breaking changes before upgrading.
+As Pingvin Share X is in active development, see the release notes for breaking changes before upgrading.
 
 #### Docker
 
@@ -14,6 +14,7 @@ As Pingvin Share is in early stage, see the release notes for breaking changes b
 docker compose pull
 docker compose up -d
 ```
+
 ### Portainer
 
 1. In your container page, click on Recreate.
@@ -23,9 +24,11 @@ docker compose up -d
 #### Stand-alone
 
 1. Stop the running app
+
    ```bash
-   pm2 stop pingvin-share-backend pingvin-share-frontend
+   pm2 stop pingvin-share-x-backend pingvin-share-x-frontend
    ```
+
 2. Repeat the steps from the [installation guide](#stand-alone-installation) except the `git clone` step.
 
    ```bash
@@ -38,12 +41,13 @@ docker compose up -d
    cd backend
    npm install
    npm run build
-   pm2 restart pingvin-share-backend
+   pm2 restart pingvin-share-x-backend
 
    # Start the frontend
    cd ../frontend
    npm install
    npm run build
-   pm2 restart pingvin-share-frontend
+   pm2 restart pingvin-share-x-frontend
    ```
-Note that environment variables are not picked up when using pm2 restart, if you actually want to change configs, you need to run ````pm2 --update-env restart````
+
+   Note that environment variables are not picked up when using pm2 restart, if you actually want to change configs, you need to run `pm2 --update-env restart`

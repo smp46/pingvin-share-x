@@ -18,7 +18,7 @@ You can set the configuration via a YAML file. If you choose this way, you won't
 
 If you use Docker you can create a `config.yml` file based on the [`config.example.yaml`](https://github.com/smp46/pingvin-share-x/blob/main/config.example.yaml) and mount it to `/opt/app/config.yaml` in the container.
 
-If you run Pingvin Share without Docker, you can create a `config.yml` file based on the [`config.example.yaml`](https://github.com/smp46/pingvin-share-x/blob/main/config.example.yaml) in the root directory of the project.
+If you run Pingvin Share X without Docker, you can create a `config.yml` file based on the [`config.example.yaml`](https://github.com/smp46/pingvin-share-x/blob/main/config.example.yaml) in the root directory of the project.
 
 ---
 
@@ -46,10 +46,10 @@ For installation specific configuration, you can use environment variables. The 
 
 #### Docker specific
 
-Environment variables that are only available when running Pingvin Share with Docker.
+Environment variables that are only available when running Pingvin Share X with Docker.
 
-| Variable          | Default Value | Description                                                                                                                                                                                                                                                                                                                                                                   |
-| ----------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `TRUST_PROXY`     | `false`       | Whether Pingvin Share is behind a reverse proxy. If set to `true`, the `X-Forwarded-For` header is trusted.                                                                                                                                                                                                                                                                   |
-| `CADDY_DISABLED`  | `false`       | Configures if Pingvin Share is starting built-in Caddy. If set to `true`, Caddy will not be started. If disabled, you must configure your reverse proxy to correctly map all paths. Refer to the [official Caddyfile](https://github.com/smp46/pingvin-share-x/blob/main/reverse-proxy/Caddyfile) for guidance.                                                            |
-| `PUID` and `PGID` | `1000`        | The user and group ID of the user who should run Pingvin Share inside the Docker container and owns the files that are mounted with the volume. You can get the `PUID` and `GUID` of your user on your host machine by using the command `id`. For more information see [this article](https://docs.linuxserver.io/general/understanding-puid-and-pgid/#using-the-variables). |
+| Variable          | Default Value | Description                                                                                                                                                                                                                                                                                                                                                                     |
+| ----------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `TRUST_PROXY`     | `false`       | Whether Pingvin Share X is behind a reverse proxy. If set to `true`, the `X-Forwarded-For` header is trusted.                                                                                                                                                                                                                                                                   |
+| `CADDY_DISABLED`  | `false`       | Configures if Pingvin Share X is starting built-in Caddy. If set to `true`, Caddy will not be started. If disabled, you must configure your reverse proxy to correctly map all paths. Refer to the [official Caddyfile](https://github.com/smp46/pingvin-share-x/blob/main/reverse-proxy/Caddyfile) for guidance.                                                               |
+| `PUID` and `PGID` | `1000`        | The user and group ID of the user who should run Pingvin Share X inside the Docker container and owns the files that are mounted with the volume. You can get the `PUID` and `GUID` of your user on your host machine by using the command `id`. For more information see [this article](https://docs.linuxserver.io/general/understanding-puid-and-pgid/#using-the-variables). |

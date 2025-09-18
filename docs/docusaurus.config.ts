@@ -41,7 +41,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: "Pingvin Share",
+      title: "Pingvin Share X",
       logo: {
         alt: "Pingvin Share Logo",
         src: "img/pingvinshare.svg",

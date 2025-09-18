@@ -1,10 +1,10 @@
 # Contributing
 
-We would ❤️ for you to contribute to Pingvin Share and help make it better! All contributions are welcome, including issues, suggestions, pull requests and more.
+We would appreciate for you to contribute to Pingvin Share X and help make it better! All contributions are welcome, including issues, suggestions, pull requests and more.
 
 ## Getting started
 
-You've found a bug, have suggestion or something else, just create an issue on GitHub and we can get in touch 😊.
+You've found a bug, have suggestion or something else, just create an issue on GitHub and we can get in touch.
 
 ## Submit a Pull Request
 
