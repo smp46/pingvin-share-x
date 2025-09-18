@@ -115,48 +115,54 @@ const FileList = ({
                   <td>{file.name}</td>
                   <td>{byteToHumanSizeString(parseInt(file.size))}</td>
                   <td>
-                    <Group position="right">
+                    <Group position="right" noWrap>
                       {shareService.doesFileSupportPreview(file.name) && (
-                        <HoverTip width={70} label={t("common.button.preview")}>
-                          <ActionIcon
-                            color="green"
-                            variant="light"
-                            size={25}
-                            onClick={() =>
-                              showFilePreviewModal(share.id, file, modals)
-                            }
-                          >
-                            <TbEye />
-                          </ActionIcon>
-                        </HoverTip>
-                      )}
-                      {!share.hasPassword && (
-                        <HoverTip
-                          width={80}
-                          label={t("common.button.copy-link")}
-                        >
-                          <ActionIcon
-                            color="orange"
-                            variant="light"
-                            size={25}
-                            onClick={() => copyFileLink(file)}
-                          >
-                            <TbLink />
-                          </ActionIcon>
-                        </HoverTip>
-                      )}
-                      <HoverTip width={85} label={t("common.button.download")}>
                         <ActionIcon
-                          color="victoria"
+                          color="green"
                           variant="light"
                           size={25}
-                          onClick={async () => {
-                            await shareService.downloadFile(share.id, file.id);
-                          }}
+                          onClick={() =>
+                            showFilePreviewModal(share.id, file, modals)
+                          }
+                        >
+                          <HoverTip
+                            width={70}
+                            label={t("common.button.preview")}
+                          >
+                            <TbEye />
+                          </HoverTip>
+                        </ActionIcon>
+                      )}
+                      {!share.hasPassword && (
+                        <ActionIcon
+                          color="orange"
+                          variant="light"
+                          size={25}
+                          onClick={() => copyFileLink(file)}
+                        >
+                          <HoverTip
+                            width={80}
+                            label={t("common.button.copy-link")}
+                          >
+                            <TbLink />
+                          </HoverTip>
+                        </ActionIcon>
+                      )}
+                      <ActionIcon
+                        color="victoria"
+                        variant="light"
+                        size={25}
+                        onClick={async () => {
+                          await shareService.downloadFile(share.id, file.id);
+                        }}
+                      >
+                        <HoverTip
+                          width={85}
+                          label={t("common.button.download")}
                         >
                           <TbDownload />
-                        </ActionIcon>
-                      </HoverTip>
+                        </HoverTip>
+                      </ActionIcon>
                     </Group>
                   </td>
                 </tr>
