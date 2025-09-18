@@ -1,3 +1,65 @@
+## [1.13.1](https://github.com/smp46/pingvin-share-x/compare/v1.11.1...v1.13.1) (2025-09-18)
+
+
+### Features
+
+* Add translations for icon descriptions ([9cb9eac](https://github.com/smp46/pingvin-share-x/commit/9cb9eac06f93a2cda3ba10b220c9ced76a09033a))
+* allow to use redis cache instead of memory cache ([#832](https://github.com/smp46/pingvin-share-x/issues/832)) ([3ffe833](https://github.com/smp46/pingvin-share-x/commit/3ffe833120f558b72969496ceea47acaef95b5b1))
+* **backend:** allow to define path to the config file ([#838](https://github.com/smp46/pingvin-share-x/issues/838)) ([2b8f629](https://github.com/smp46/pingvin-share-x/commit/2b8f6293bd9d1d492ccc435b131ddb5e0d77ea6a))
+* Change ActionIcon to Button to add descriptive text ([67717b5](https://github.com/smp46/pingvin-share-x/commit/67717b5fb4cc5fd9a36de13b7f3bdd475911eedf))
+* Change Header Icon to Button to add descriptive text ([9a024c7](https://github.com/smp46/pingvin-share-x/commit/9a024c704e1392cba10bdd03b449e45d28fb01c8))
+* **s3:** stream s3 content over a zip file ([#822](https://github.com/smp46/pingvin-share-x/issues/822)) ([ccc783a](https://github.com/smp46/pingvin-share-x/commit/ccc783ab6a00841a7041c454e77afb472d76999e))
+* **ui:** Add text labels to action buttons for clarity ([84f12e0](https://github.com/smp46/pingvin-share-x/commit/84f12e096384d389d5b72384508dfdcc25be80a9))
+* **ui:** Add text labels to action buttons for clarity ([3cf148b](https://github.com/smp46/pingvin-share-x/commit/3cf148b227f013e38a84831307f5b5009ea5fa0c))
+* **ui:** Add tooltips and remove text from ActionIcons ([2293f6d](https://github.com/smp46/pingvin-share-x/commit/2293f6d03f63e02583f56338d25e84934dc98c2d))
+
+
+### Bug Fixes
+
+* change button size ([1ab1b29](https://github.com/smp46/pingvin-share-x/commit/1ab1b29d0e880e3196608fae0cf623c86290a147))
+* disable HTML rendering in Markdown preview ([427e99c](https://github.com/smp46/pingvin-share-x/commit/427e99c7b1d00ff6ed7b5fd879d8cf0f0d49281a))
+* health check for containers with reverse proxy disabled ([#816](https://github.com/smp46/pingvin-share-x/issues/816)) ([a790ac7](https://github.com/smp46/pingvin-share-x/commit/a790ac73fd42d266a957e09a05b1894199605f6a)), closes [#809](https://github.com/smp46/pingvin-share-x/issues/809)
+* OIDC configuration from YAML configuration file doesn't get loaded ([48a6ceb](https://github.com/smp46/pingvin-share-x/commit/48a6ceb3b4b4dfc0407dc6f9ee2e07cca1829cef))
+* **security:** remedy potential 'Sever-side request forgery' vuln ([73215fb](https://github.com/smp46/pingvin-share-x/commit/73215fb40f418262751e902fe63d245eb21aafc6))
+* **security:** remedy potential 'Uncontrolled data used in path expression' vuln ([601a1bb](https://github.com/smp46/pingvin-share-x/commit/601a1bb652de8def999ecc1601af06f25e54e660))
+* **security:** remedy potential 'Uncontrolled data' vulns via validation ([ea44573](https://github.com/smp46/pingvin-share-x/commit/ea445737fc929358bd6abbe9af7a8f9eb40f22a7))
+* **security:** remedy potential 'userside redirect' vuln on error page ([e4bd9e6](https://github.com/smp46/pingvin-share-x/commit/e4bd9e6099a52d9610f3cbdcd48e7d5cd5a25134))
+* **security:** remedy vuln in insecure transmission of oauth cookies ([e6d6840](https://github.com/smp46/pingvin-share-x/commit/e6d6840aaeb9666ceba329676473ed5007bd6358))
+* **security:** update axios to patch dos vuln ([5af4958](https://github.com/smp46/pingvin-share-x/commit/5af49581f2b1d936045cf420aa8c5e1272b49dee))
+* spelling mistake and add clarity in email template ([#824](https://github.com/smp46/pingvin-share-x/issues/824)) ([af047c0](https://github.com/smp46/pingvin-share-x/commit/af047c0bc152a955b3ab135f5a9ea3d62b32fb0f))
+* use sandbox CSP for file previews ([1864951](https://github.com/smp46/pingvin-share-x/commit/1864951bdbf573431e795109224a45545b86b54d))
+
+## [1.13.0](https://github.com/smp46/pingvin-share-x/compare/v1.11.1...v1.13.0) (2025-09-18)
+
+
+### Features
+
+* Add translations for icon descriptions ([9cb9eac](https://github.com/smp46/pingvin-share-x/commit/9cb9eac06f93a2cda3ba10b220c9ced76a09033a))
+* allow to use redis cache instead of memory cache ([#832](https://github.com/smp46/pingvin-share-x/issues/832)) ([3ffe833](https://github.com/smp46/pingvin-share-x/commit/3ffe833120f558b72969496ceea47acaef95b5b1))
+* **backend:** allow to define path to the config file ([#838](https://github.com/smp46/pingvin-share-x/issues/838)) ([2b8f629](https://github.com/smp46/pingvin-share-x/commit/2b8f6293bd9d1d492ccc435b131ddb5e0d77ea6a))
+* Change ActionIcon to Button to add descriptive text ([67717b5](https://github.com/smp46/pingvin-share-x/commit/67717b5fb4cc5fd9a36de13b7f3bdd475911eedf))
+* Change Header Icon to Button to add descriptive text ([9a024c7](https://github.com/smp46/pingvin-share-x/commit/9a024c704e1392cba10bdd03b449e45d28fb01c8))
+* **s3:** stream s3 content over a zip file ([#822](https://github.com/smp46/pingvin-share-x/issues/822)) ([ccc783a](https://github.com/smp46/pingvin-share-x/commit/ccc783ab6a00841a7041c454e77afb472d76999e))
+* **ui:** Add text labels to action buttons for clarity ([84f12e0](https://github.com/smp46/pingvin-share-x/commit/84f12e096384d389d5b72384508dfdcc25be80a9))
+* **ui:** Add text labels to action buttons for clarity ([3cf148b](https://github.com/smp46/pingvin-share-x/commit/3cf148b227f013e38a84831307f5b5009ea5fa0c))
+* **ui:** Add tooltips and remove text from ActionIcons ([2293f6d](https://github.com/smp46/pingvin-share-x/commit/2293f6d03f63e02583f56338d25e84934dc98c2d))
+
+
+### Bug Fixes
+
+* change button size ([1ab1b29](https://github.com/smp46/pingvin-share-x/commit/1ab1b29d0e880e3196608fae0cf623c86290a147))
+* disable HTML rendering in Markdown preview ([427e99c](https://github.com/smp46/pingvin-share-x/commit/427e99c7b1d00ff6ed7b5fd879d8cf0f0d49281a))
+* health check for containers with reverse proxy disabled ([#816](https://github.com/smp46/pingvin-share-x/issues/816)) ([a790ac7](https://github.com/smp46/pingvin-share-x/commit/a790ac73fd42d266a957e09a05b1894199605f6a)), closes [#809](https://github.com/smp46/pingvin-share-x/issues/809)
+* OIDC configuration from YAML configuration file doesn't get loaded ([48a6ceb](https://github.com/smp46/pingvin-share-x/commit/48a6ceb3b4b4dfc0407dc6f9ee2e07cca1829cef))
+* **security:** remedy potential 'Sever-side request forgery' vuln ([73215fb](https://github.com/smp46/pingvin-share-x/commit/73215fb40f418262751e902fe63d245eb21aafc6))
+* **security:** remedy potential 'Uncontrolled data used in path expression' vuln ([601a1bb](https://github.com/smp46/pingvin-share-x/commit/601a1bb652de8def999ecc1601af06f25e54e660))
+* **security:** remedy potential 'Uncontrolled data' vulns via validation ([ea44573](https://github.com/smp46/pingvin-share-x/commit/ea445737fc929358bd6abbe9af7a8f9eb40f22a7))
+* **security:** remedy potential 'userside redirect' vuln on error page ([e4bd9e6](https://github.com/smp46/pingvin-share-x/commit/e4bd9e6099a52d9610f3cbdcd48e7d5cd5a25134))
+* **security:** remedy vuln in insecure transmission of oauth cookies ([e6d6840](https://github.com/smp46/pingvin-share-x/commit/e6d6840aaeb9666ceba329676473ed5007bd6358))
+* **security:** update axios to patch dos vuln ([5af4958](https://github.com/smp46/pingvin-share-x/commit/5af49581f2b1d936045cf420aa8c5e1272b49dee))
+* spelling mistake and add clarity in email template ([#824](https://github.com/smp46/pingvin-share-x/issues/824)) ([af047c0](https://github.com/smp46/pingvin-share-x/commit/af047c0bc152a955b3ab135f5a9ea3d62b32fb0f))
+* use sandbox CSP for file previews ([1864951](https://github.com/smp46/pingvin-share-x/commit/1864951bdbf573431e795109224a45545b86b54d))
+
 ## [1.13.0](https://github.com/stonith404/pingvin-share/compare/v1.12.0...v1.13.0) (2025-05-25)
 
 
