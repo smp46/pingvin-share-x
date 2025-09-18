@@ -21,6 +21,7 @@ import { byteToHumanSizeString } from "../../utils/fileSize.util";
 import toast from "../../utils/toast.util";
 import TableSortIcon, { TableSort } from "../core/SortIcon";
 import showFilePreviewModal from "./modals/showFilePreviewModal";
+import { HoverTip } from "../core/HoverTip";
 
 const FileList = ({
   files,
@@ -116,31 +117,46 @@ const FileList = ({
                   <td>
                     <Group position="right">
                       {shareService.doesFileSupportPreview(file.name) && (
-                        <ActionIcon
-                          onClick={() =>
-                            showFilePreviewModal(share.id, file, modals)
-                          }
-                          size={25}
-                        >
-                          <TbEye />
-                        </ActionIcon>
+                        <HoverTip width={70} label={t("common.button.preview")}>
+                          <ActionIcon
+                            color="green"
+                            variant="light"
+                            size={25}
+                            onClick={() =>
+                              showFilePreviewModal(share.id, file, modals)
+                            }
+                          >
+                            <TbEye />
+                          </ActionIcon>
+                        </HoverTip>
                       )}
                       {!share.hasPassword && (
-                        <ActionIcon
-                          size={25}
-                          onClick={() => copyFileLink(file)}
+                        <HoverTip
+                          width={80}
+                          label={t("common.button.copy-link")}
                         >
-                          <TbLink />
-                        </ActionIcon>
+                          <ActionIcon
+                            color="orange"
+                            variant="light"
+                            size={25}
+                            onClick={() => copyFileLink(file)}
+                          >
+                            <TbLink />
+                          </ActionIcon>
+                        </HoverTip>
                       )}
-                      <ActionIcon
-                        size={25}
-                        onClick={async () => {
-                          await shareService.downloadFile(share.id, file.id);
-                        }}
-                      >
-                        <TbDownload />
-                      </ActionIcon>
+                      <HoverTip width={85} label={t("common.button.download")}>
+                        <ActionIcon
+                          color="victoria"
+                          variant="light"
+                          size={25}
+                          onClick={async () => {
+                            await shareService.downloadFile(share.id, file.id);
+                          }}
+                        >
+                          <TbDownload />
+                        </ActionIcon>
+                      </HoverTip>
                     </Group>
                   </td>
                 </tr>

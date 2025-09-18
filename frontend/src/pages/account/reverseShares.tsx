@@ -10,7 +10,6 @@ import {
   Table,
   Text,
   Title,
-  Tooltip,
 } from "@mantine/core";
 import { useClipboard } from "@mantine/hooks";
 import { useModals } from "@mantine/modals";
@@ -21,6 +20,7 @@ import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
 import showReverseShareLinkModal from "../../components/account/showReverseShareLinkModal";
 import showShareLinkModal from "../../components/account/showShareLinkModal";
+import { HoverTip } from "../../components/core/HoverTip";
 import CenterLoader from "../../components/core/CenterLoader";
 import showCreateReverseShareModal from "../../components/share/modals/showCreateReverseShareModal";
 import useConfig from "../../hooks/config.hook";
@@ -58,17 +58,11 @@ const MyShares = () => {
           <Title order={3}>
             <FormattedMessage id="account.reverseShares.title" />
           </Title>
-          <Tooltip
-            position="bottom"
-            multiline
-            width={220}
-            label={t("account.reverseShares.description")}
-            events={{ hover: true, focus: false, touch: true }}
-          >
+          <HoverTip width={220} label={t("account.reverseShares.description")}>
             <ActionIcon>
               <TbInfoCircle />
             </ActionIcon>
-          </Tooltip>
+          </HoverTip>
         </Group>
         <Button
           onClick={() =>
@@ -151,25 +145,37 @@ const MyShares = () => {
                                     {share.id}
                                   </Text>
                                 </Anchor>
-                                <ActionIcon
-                                  color="victoria"
-                                  variant="light"
-                                  size={25}
-                                  onClick={() => {
-                                    if (window.isSecureContext) {
-                                      clipboard.copy(
-                                        `${window.location.origin}/s/${share.id}`,
-                                      );
-                                      toast.success(
-                                        t("common.notify.copied-link"),
-                                      );
-                                    } else {
-                                      showShareLinkModal(modals, share.id);
-                                    }
+                                <Tooltip
+                                  position="bottom"
+                                  multiline
+                                  width={80}
+                                  label={t("common.button.copy-link")}
+                                  events={{
+                                    hover: true,
+                                    focus: false,
+                                    touch: true,
                                   }}
                                 >
-                                  <TbLink />
-                                </ActionIcon>
+                                  <ActionIcon
+                                    color="victoria"
+                                    variant="light"
+                                    size={25}
+                                    onClick={() => {
+                                      if (window.isSecureContext) {
+                                        clipboard.copy(
+                                          `${window.location.origin}/s/${share.id}`,
+                                        );
+                                        toast.success(
+                                          t("common.notify.copied-link"),
+                                        );
+                                      } else {
+                                        showShareLinkModal(modals, share.id);
+                                      }
+                                    }}
+                                  >
+                                    <TbLink />
+                                  </ActionIcon>
+                                </Tooltip>
                               </Group>
                             ))}
                           </Accordion.Panel>
@@ -188,62 +194,80 @@ const MyShares = () => {
                   </td>
                   <td>
                     <Group position="right">
-                      <ActionIcon
-                        color="victoria"
-                        variant="light"
-                        size={25}
-                        onClick={() => {
-                          if (window.isSecureContext) {
-                            clipboard.copy(
-                              `${window.location.origin}/upload/${
-                                reverseShare.token
-                              }`,
-                            );
-                            toast.success(t("common.notify.copied-link"));
-                          } else {
-                            showReverseShareLinkModal(
-                              modals,
-                              reverseShare.token,
-                            );
-                          }
-                        }}
+                      <Tooltip
+                        position="bottom"
+                        multiline
+                        width={80}
+                        label={t("common.button.copy-link")}
+                        events={{ hover: true, focus: false, touch: true }}
                       >
-                        <TbLink />
-                      </ActionIcon>
-                      <ActionIcon
-                        color="red"
-                        variant="light"
-                        size={25}
-                        onClick={() => {
-                          modals.openConfirmModal({
-                            title: t(
-                              "account.reverseShares.modal.delete.title",
-                            ),
-                            children: (
-                              <Text size="sm">
-                                <FormattedMessage id="account.reverseShares.modal.delete.description" />
-                              </Text>
-                            ),
-                            confirmProps: {
-                              color: "red",
-                            },
-                            labels: {
-                              confirm: t("common.button.delete"),
-                              cancel: t("common.button.cancel"),
-                            },
-                            onConfirm: () => {
-                              shareService.removeReverseShare(reverseShare.id);
-                              setReverseShares(
-                                reverseShares.filter(
-                                  (item) => item.id !== reverseShare.id,
-                                ),
+                        <ActionIcon
+                          color="victoria"
+                          variant="light"
+                          size={25}
+                          onClick={() => {
+                            if (window.isSecureContext) {
+                              clipboard.copy(
+                                `${window.location.origin}/upload/${
+                                  reverseShare.token
+                                }`,
                               );
-                            },
-                          });
-                        }}
+                              toast.success(t("common.notify.copied-link"));
+                            } else {
+                              showReverseShareLinkModal(
+                                modals,
+                                reverseShare.token,
+                              );
+                            }
+                          }}
+                        >
+                          <TbLink />
+                        </ActionIcon>
+                      </Tooltip>
+                      <Tooltip
+                        position="bottom"
+                        multiline
+                        width={60}
+                        label={t("common.button.delete")}
+                        events={{ hover: true, focus: false, touch: true }}
                       >
-                        <TbTrash />
-                      </ActionIcon>
+                        <ActionIcon
+                          color="red"
+                          variant="light"
+                          size={25}
+                          onClick={() => {
+                            modals.openConfirmModal({
+                              title: t(
+                                "account.reverseShares.modal.delete.title",
+                              ),
+                              children: (
+                                <Text size="sm">
+                                  <FormattedMessage id="account.reverseShares.modal.delete.description" />
+                                </Text>
+                              ),
+                              confirmProps: {
+                                color: "red",
+                              },
+                              labels: {
+                                confirm: t("common.button.delete"),
+                                cancel: t("common.button.cancel"),
+                              },
+                              onConfirm: () => {
+                                shareService.removeReverseShare(
+                                  reverseShare.id,
+                                );
+                                setReverseShares(
+                                  reverseShares.filter(
+                                    (item) => item.id !== reverseShare.id,
+                                  ),
+                                );
+                              },
+                            });
+                          }}
+                        >
+                          <TbTrash />
+                        </ActionIcon>
+                      </Tooltip>
                     </Group>
                   </td>
                 </tr>

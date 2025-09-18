@@ -1,18 +1,25 @@
 import { ActionIcon, Avatar, Menu } from "@mantine/core";
 import Link from "next/link";
-import { TbDoorExit, TbSettings, TbUser } from "react-icons/tb";
+import { TbDoorExit, TbSettings, TbUser, TbUserCircle } from "react-icons/tb";
 import useUser from "../../hooks/user.hook";
 import authService from "../../services/auth.service";
 import { FormattedMessage, useIntl } from "react-intl";
+import { HoverTip } from "../../components/core/HoverTip";
+import useTranslate from "../../hooks/useTranslate.hook";
+import { useState } from "react";
 
 const ActionAvatar = () => {
   const { user } = useUser();
+  const t = useTranslate();
+  const [menuOpened, setMenuOpened] = useState(false);
 
   return (
-    <Menu position="bottom-start" withinPortal>
+    <Menu position="bottom-start" withinPortal onChange={setMenuOpened}>
       <Menu.Target>
         <ActionIcon>
-          <Avatar size={28} />
+          <HoverTip label={t("common.button.profile")} disabled={menuOpened}>
+            <Avatar size={28} />
+          </HoverTip>
         </ActionIcon>
       </Menu.Target>
       <Menu.Dropdown>

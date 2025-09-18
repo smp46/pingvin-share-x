@@ -5,6 +5,8 @@ import { FileListItem } from "../../types/File.type";
 import { byteToHumanSizeString } from "../../utils/fileSize.util";
 import UploadProgressIndicator from "./UploadProgressIndicator";
 import { FormattedMessage } from "react-intl";
+import useTranslate from "../../hooks/useTranslate.hook";
+import { HoverTip } from "../core/HoverTip";
 
 const FileListRow = ({
   file,
@@ -23,6 +25,7 @@ const FileListRow = ({
       : onRemove && !file.deleted;
     const restorable = onRestore && !uploadable && !!file.deleted; // maybe undefined, force boolean
     const deleted = !uploadable && !!file.deleted;
+    const t = useTranslate();
 
     return (
       <tr
@@ -35,27 +38,31 @@ const FileListRow = ({
         <td>{byteToHumanSizeString(+file.size)}</td>
         <td>
           {removable && (
-            <ActionIcon
-              color="red"
-              variant="light"
-              size={25}
-              onClick={onRemove}
-            >
-              <TbTrash />
-            </ActionIcon>
+            <HoverTip width={60} label={t("common.button.delete")}>
+              <ActionIcon
+                color="red"
+                variant="light"
+                size={25}
+                onClick={onRemove}
+              >
+                <TbTrash />
+              </ActionIcon>
+            </HoverTip>
           )}
           {uploading && (
             <UploadProgressIndicator progress={file.uploadingProgress} />
           )}
           {restorable && (
-            <ActionIcon
-              color="primary"
-              variant="light"
-              size={25}
-              onClick={onRestore}
-            >
-              <GrUndo />
-            </ActionIcon>
+            <HoverTip width={60} label={t("common.button.undo")}>
+              <ActionIcon
+                color="primary"
+                variant="light"
+                size={25}
+                onClick={onRestore}
+              >
+                <GrUndo />
+              </ActionIcon>
+            </HoverTip>
           )}
         </td>
       </tr>

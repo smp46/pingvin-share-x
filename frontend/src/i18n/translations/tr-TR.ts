@@ -512,6 +512,15 @@ export default {
   "error.param.provider_discord": "Discord",
   "error.param.provider_oidc": "OpenID Connect",
   // Common translations
+  "common.button.info": "Bilgi",
+  "common.button.undo": "Geri Al",
+  "common.button.download": "İndir",
+  "common.button.copy": "Kopyala",
+  "common.button.copy-link": "Bağlantıyı kopyala",
+  "common.button.preview": "Önizleme",
+  "common.button.edit": "Düzenle",
+  "common.button.profile": "Profil",
+  "common.button.shares": "Paylaşımlar",
   "common.button.save": "Kaydet",
   "common.button.create": "Oluştur",
   "common.button.submit": "Gönder",
@@ -540,5 +549,5 @@ export default {
   "common.error.number-too-large": "En fazla {max} olabilir",
   "common.error.exact-length": "Tam olarak {length} karakter olmalıdır",
   "common.error.invalid-number": "Bir sayı olmalıdır",
-  "common.error.field-required": "Bu alan zorunludur"
+  "common.error.field-required": "Bu alan gereklidir"
 };

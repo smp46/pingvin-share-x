@@ -20,6 +20,7 @@ import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
 import showShareInformationsModal from "../../components/account/showShareInformationsModal";
 import showShareLinkModal from "../../components/account/showShareLinkModal";
+import { HoverTip } from "../../components/core/HoverTip";
 import CenterLoader from "../../components/core/CenterLoader";
 import useConfig from "../../hooks/config.hook";
 import useTranslate from "../../hooks/useTranslate.hook";
@@ -120,73 +121,81 @@ const MyShares = () => {
                   <td>
                     <Group position="right">
                       <Link href={`/share/${share.id}/edit`}>
-                        <ActionIcon color="orange" variant="light" size={25}>
-                          <TbEdit />
-                        </ActionIcon>
+                        <HoverTip width={45} label={t("common.button.edit")}>
+                          <ActionIcon color="orange" variant="light" size={25}>
+                            <TbEdit />
+                          </ActionIcon>
+                        </HoverTip>
                       </Link>
-                      <ActionIcon
-                        color="blue"
-                        variant="light"
-                        size={25}
-                        onClick={() => {
-                          showShareInformationsModal(
-                            modals,
-                            share,
-                            parseInt(config.get("share.maxSize")),
-                          );
-                        }}
-                      >
-                        <TbInfoCircle />
-                      </ActionIcon>
-                      <ActionIcon
-                        color="victoria"
-                        variant="light"
-                        size={25}
-                        onClick={() => {
-                          if (window.isSecureContext) {
-                            clipboard.copy(
-                              `${window.location.origin}/s/${share.id}`,
+                      <HoverTip width={45} label={t("common.button.info")}>
+                        <ActionIcon
+                          color="blue"
+                          variant="light"
+                          size={25}
+                          onClick={() => {
+                            showShareInformationsModal(
+                              modals,
+                              share,
+                              parseInt(config.get("share.maxSize")),
                             );
-                            toast.success(t("common.notify.copied-link"));
-                          } else {
-                            showShareLinkModal(modals, share.id);
-                          }
-                        }}
-                      >
-                        <TbLink />
-                      </ActionIcon>
-                      <ActionIcon
-                        color="red"
-                        variant="light"
-                        size={25}
-                        onClick={() => {
-                          modals.openConfirmModal({
-                            title: t("account.shares.modal.delete.title", {
-                              share: share.id,
-                            }),
-                            children: (
-                              <Text size="sm">
-                                <FormattedMessage id="account.shares.modal.delete.description" />
-                              </Text>
-                            ),
-                            confirmProps: {
-                              color: "red",
-                            },
-                            labels: {
-                              confirm: t("common.button.delete"),
-                              cancel: t("common.button.cancel"),
-                            },
-                            onConfirm: () => {
-                              shareService.remove(share.id);
-                              setShares(
-                                shares.filter((item) => item.id !== share.id),
+                          }}
+                        >
+                          <TbInfoCircle />
+                        </ActionIcon>
+                      </HoverTip>
+                      <HoverTip width={80} label={t("common.button.copy-link")}>
+                        <ActionIcon
+                          color="victoria"
+                          variant="light"
+                          size={25}
+                          onClick={() => {
+                            if (window.isSecureContext) {
+                              clipboard.copy(
+                                `${window.location.origin}/s/${share.id}`,
                               );
-                            },
-                          });
-                        }}
-                      >
-                        <TbTrash />
-                      </ActionIcon>
+                              toast.success(t("common.notify.copied-link"));
+                            } else {
+                              showShareLinkModal(modals, share.id);
+                            }
+                          }}
+                        >
+                          <TbLink />
+                        </ActionIcon>
+                      </HoverTip>
+                      <HoverTip width={60} label={t("common.button.delete")}>
+                        <ActionIcon
+                          color="red"
+                          variant="light"
+                          size={25}
+                          onClick={() => {
+                            modals.openConfirmModal({
+                              title: t("account.shares.modal.delete.title", {
+                                share: share.id,
+                              }),
+                              children: (
+                                <Text size="sm">
+                                  <FormattedMessage id="account.shares.modal.delete.description" />
+                                </Text>
+                              ),
+                              confirmProps: {
+                                color: "red",
+                              },
+                              labels: {
+                                confirm: t("common.button.delete"),
+                                cancel: t("common.button.cancel"),
+                              },
+                              onConfirm: () => {
+                                shareService.remove(share.id);
+                                setShares(
+                                  shares.filter((item) => item.id !== share.id),
+                                );
+                              },
+                            });
+                          }}
+                        >
+                          <TbTrash />
+                        </ActionIcon>
+                      </HoverTip>
                     </Group>
                   </td>
                 </tr>
