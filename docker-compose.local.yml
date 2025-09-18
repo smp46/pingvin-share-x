@@ -1,5 +1,6 @@
 services:
-  pingvin-share:
+  pingvin-share-x:
+    container_name: pingvin-share-x
     build: .
     restart: unless-stopped
     ports:
@@ -7,6 +8,7 @@ services:
     environment:
       - TRUST_PROXY=false
     volumes:
-      - "./data:/opt/app/backend/data"
-      - "./data/images:/opt/app/frontend/public/img"
+      - "./data:/opt/app/backend/data:rw,z"
+      - "./data/images:/opt/app/frontend/public/img:rw,z"
 #      - "./config.yaml:/opt/app/config.yaml"
+
