@@ -6,7 +6,6 @@ import {
   Stack,
   Table,
   TextInput,
-  Tooltip,
 } from "@mantine/core";
 import { useClipboard } from "@mantine/hooks";
 import { useModals } from "@mantine/modals";
@@ -22,6 +21,7 @@ import { byteToHumanSizeString } from "../../utils/fileSize.util";
 import toast from "../../utils/toast.util";
 import TableSortIcon, { TableSort } from "../core/SortIcon";
 import showFilePreviewModal from "./modals/showFilePreviewModal";
+import { HoverTip } from "../core/HoverTip";
 
 const FileList = ({
   files,
@@ -117,13 +117,7 @@ const FileList = ({
                   <td>
                     <Group position="right">
                       {shareService.doesFileSupportPreview(file.name) && (
-                        <Tooltip
-                          position="bottom"
-                          multiline
-                          width={70}
-                          label={t("common.button.preview")}
-                          events={{ hover: true, focus: false, touch: true }}
-                        >
+                        <HoverTip width={70} label={t("common.button.preview")}>
                           <ActionIcon
                             color="green"
                             variant="light"
@@ -134,35 +128,26 @@ const FileList = ({
                           >
                             <TbEye />
                           </ActionIcon>
-                        </Tooltip>
+                        </HoverTip>
                       )}
                       {!share.hasPassword && (
-                        <Tooltip
-                          position="bottom"
-                          multiline
+                        <HoverTip
                           width={80}
                           label={t("common.button.copy-link")}
-                          events={{ hover: true, focus: false, touch: true }}
                         >
                           <ActionIcon
-                            color="victoria"
+                            color="orange"
                             variant="light"
                             size={25}
                             onClick={() => copyFileLink(file)}
                           >
                             <TbLink />
                           </ActionIcon>
-                        </Tooltip>
+                        </HoverTip>
                       )}
-                      <Tooltip
-                        position="bottom"
-                        multiline
-                        width={85}
-                        label={t("common.button.download")}
-                        events={{ hover: true, focus: false, touch: true }}
-                      >
+                      <HoverTip width={85} label={t("common.button.download")}>
                         <ActionIcon
-                          color="blue"
+                          color="victoria"
                           variant="light"
                           size={25}
                           onClick={async () => {
@@ -171,7 +156,7 @@ const FileList = ({
                         >
                           <TbDownload />
                         </ActionIcon>
-                      </Tooltip>
+                      </HoverTip>
                     </Group>
                   </td>
                 </tr>

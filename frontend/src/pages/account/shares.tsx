@@ -9,7 +9,6 @@ import {
   Table,
   Text,
   Title,
-  Tooltip,
 } from "@mantine/core";
 import { useClipboard } from "@mantine/hooks";
 import { useModals } from "@mantine/modals";
@@ -21,6 +20,7 @@ import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
 import showShareInformationsModal from "../../components/account/showShareInformationsModal";
 import showShareLinkModal from "../../components/account/showShareLinkModal";
+import { HoverTip } from "../../components/core/HoverTip";
 import CenterLoader from "../../components/core/CenterLoader";
 import useConfig from "../../hooks/config.hook";
 import useTranslate from "../../hooks/useTranslate.hook";
@@ -121,33 +121,13 @@ const MyShares = () => {
                   <td>
                     <Group position="right">
                       <Link href={`/share/${share.id}/edit`}>
-                        <Tooltip
-                          position="bottom"
-                          multiline
-                          width={45}
-                          label={t("common.button.edit")}
-                          events={{
-                            hover: true,
-                            focus: false,
-                            touch: true,
-                          }}
-                        >
+                        <HoverTip width={45} label={t("common.button.edit")}>
                           <ActionIcon color="orange" variant="light" size={25}>
                             <TbEdit />
                           </ActionIcon>
-                        </Tooltip>
+                        </HoverTip>
                       </Link>
-                      <Tooltip
-                        position="bottom"
-                        multiline
-                        width={45}
-                        label={t("common.button.info")}
-                        events={{
-                          hover: true,
-                          focus: false,
-                          touch: true,
-                        }}
-                      >
+                      <HoverTip width={45} label={t("common.button.info")}>
                         <ActionIcon
                           color="blue"
                           variant="light"
@@ -162,18 +142,8 @@ const MyShares = () => {
                         >
                           <TbInfoCircle />
                         </ActionIcon>
-                      </Tooltip>
-                      <Tooltip
-                        position="bottom"
-                        multiline
-                        width={80}
-                        label={t("common.button.copy-link")}
-                        events={{
-                          hover: true,
-                          focus: false,
-                          touch: true,
-                        }}
-                      >
+                      </HoverTip>
+                      <HoverTip width={80} label={t("common.button.copy-link")}>
                         <ActionIcon
                           color="victoria"
                           variant="light"
@@ -191,18 +161,8 @@ const MyShares = () => {
                         >
                           <TbLink />
                         </ActionIcon>
-                      </Tooltip>
-                      <Tooltip
-                        position="bottom"
-                        multiline
-                        width={60}
-                        label={t("common.button.delete")}
-                        events={{
-                          hover: true,
-                          focus: false,
-                          touch: true,
-                        }}
-                      >
+                      </HoverTip>
+                      <HoverTip width={60} label={t("common.button.delete")}>
                         <ActionIcon
                           color="red"
                           variant="light"
@@ -235,7 +195,7 @@ const MyShares = () => {
                         >
                           <TbTrash />
                         </ActionIcon>
-                      </Tooltip>
+                      </HoverTip>
                     </Group>
                   </td>
                 </tr>

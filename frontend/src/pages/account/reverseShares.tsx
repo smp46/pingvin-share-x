@@ -10,7 +10,6 @@ import {
   Table,
   Text,
   Title,
-  Tooltip,
 } from "@mantine/core";
 import { useClipboard } from "@mantine/hooks";
 import { useModals } from "@mantine/modals";
@@ -21,6 +20,7 @@ import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
 import showReverseShareLinkModal from "../../components/account/showReverseShareLinkModal";
 import showShareLinkModal from "../../components/account/showShareLinkModal";
+import { HoverTip } from "../../components/core/HoverTip";
 import CenterLoader from "../../components/core/CenterLoader";
 import showCreateReverseShareModal from "../../components/share/modals/showCreateReverseShareModal";
 import useConfig from "../../hooks/config.hook";
@@ -58,17 +58,11 @@ const MyShares = () => {
           <Title order={3}>
             <FormattedMessage id="account.reverseShares.title" />
           </Title>
-          <Tooltip
-            position="bottom"
-            multiline
-            width={220}
-            label={t("account.reverseShares.description")}
-            events={{ hover: true, focus: false, touch: true }}
-          >
+          <HoverTip width={220} label={t("account.reverseShares.description")}>
             <ActionIcon>
               <TbInfoCircle />
             </ActionIcon>
-          </Tooltip>
+          </HoverTip>
         </Group>
         <Button
           onClick={() =>
