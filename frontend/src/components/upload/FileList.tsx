@@ -1,4 +1,4 @@
-import { ActionIcon, Table, Tooltip } from "@mantine/core";
+import { ActionIcon, Table } from "@mantine/core";
 import { TbTrash } from "react-icons/tb";
 import { GrUndo } from "react-icons/gr";
 import { FileListItem } from "../../types/File.type";
@@ -6,6 +6,7 @@ import { byteToHumanSizeString } from "../../utils/fileSize.util";
 import UploadProgressIndicator from "./UploadProgressIndicator";
 import { FormattedMessage } from "react-intl";
 import useTranslate from "../../hooks/useTranslate.hook";
+import { HoverTip } from "../core/HoverTip";
 
 const FileListRow = ({
   file,
@@ -37,13 +38,7 @@ const FileListRow = ({
         <td>{byteToHumanSizeString(+file.size)}</td>
         <td>
           {removable && (
-            <Tooltip
-              position="bottom"
-              multiline
-              width={60}
-              label={t("common.button.delete")}
-              events={{ hover: true, focus: false, touch: true }}
-            >
+            <HoverTip width={60} label={t("common.button.delete")}>
               <ActionIcon
                 color="red"
                 variant="light"
@@ -52,19 +47,13 @@ const FileListRow = ({
               >
                 <TbTrash />
               </ActionIcon>
-            </Tooltip>
+            </HoverTip>
           )}
           {uploading && (
             <UploadProgressIndicator progress={file.uploadingProgress} />
           )}
           {restorable && (
-            <Tooltip
-              position="bottom"
-              multiline
-              width={60}
-              label={t("common.button.undo")}
-              events={{ hover: true, focus: false, touch: true }}
-            >
+            <HoverTip width={60} label={t("common.button.undo")}>
               <ActionIcon
                 color="primary"
                 variant="light"
@@ -73,7 +62,7 @@ const FileListRow = ({
               >
                 <GrUndo />
               </ActionIcon>
-            </Tooltip>
+            </HoverTip>
           )}
         </td>
       </tr>
