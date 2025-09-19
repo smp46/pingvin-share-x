@@ -1,3 +1,11 @@
+## [1.13.2](https://github.com/smp46/pingvin-share-x/compare/v1.13.1...v1.13.2) (2025-09-19)
+
+
+### Bug Fixes
+
+* **ui:** add noWrap to prevent vert filelist icons ([4ed095a](https://github.com/smp46/pingvin-share-x/commit/4ed095ad2398f3b3f0b3bf37d6baa8fe1cdd8dea))
+* **ui:** remove old tooltip refs, allow unused vars ([fc0f1be](https://github.com/smp46/pingvin-share-x/commit/fc0f1be70f546c4448a54a0eca620977524f410d))
+
 ## [1.13.1](https://github.com/smp46/pingvin-share-x/compare/v1.11.1...v1.13.1) (2025-09-18)
 
 ### Features
