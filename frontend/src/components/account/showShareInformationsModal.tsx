@@ -1,4 +1,4 @@
-import { Divider, Flex, Progress, Stack, Text } from "@mantine/core";
+import { Divider, Flex, Progress, Stack, Text, Collapse } from "@mantine/core";
 import { ModalsContextProps } from "@mantine/modals/lib/context";
 import moment from "moment";
 import { FormattedMessage } from "react-intl";
@@ -7,6 +7,7 @@ import { MyShare } from "../../types/share.type";
 import { byteToHumanSizeString } from "../../utils/fileSize.util";
 import CopyTextField from "../upload/CopyTextField";
 import QRCode from "../share/QRCode";
+import { useState } from "react";
 
 const showShareInformationsModal = (
   modals: ModalsContextProps,
@@ -14,6 +15,26 @@ const showShareInformationsModal = (
   maxShareSize: number,
 ) => {
   const t = translateOutsideContext();
+
+  return modals.openModal({
+    title: t("account.shares.modal.share-informations"),
+    children: <Body share={share} maxShareSize={maxShareSize} />,
+  });
+};
+
+const Body = ({
+  share,
+  maxShareSize,
+}: {
+  share: MyShare;
+  maxShareSize: number;
+}) => {
+  const [showQR, setShowQR] = useState(false);
+
+  const handleToggleQR = () => {
+    setShowQR(!showQR);
+  };
+
   const link = `${window.location.origin}/s/${share.id}`;
 
   const formattedShareSize = byteToHumanSizeString(share.size);
@@ -26,76 +47,74 @@ const showShareInformationsModal = (
       ? "Never"
       : moment(share.expiration).format("LLL");
 
-  return modals.openModal({
-    title: t("account.shares.modal.share-informations"),
+  return (
+    <Stack align="stretch" spacing="md">
+      <Text size="sm">
+        <b>
+          <FormattedMessage id="account.shares.table.id" />:{" "}
+        </b>
+        {share.id}
+      </Text>
+      <Text size="sm">
+        <b>
+          <FormattedMessage id="account.shares.table.name" />:{" "}
+        </b>
+        {share.name || "-"}
+      </Text>
 
-    children: (
-      <Stack align="stretch" spacing="md">
-        <Text size="sm">
-          <b>
-            <FormattedMessage id="account.shares.table.id" />:{" "}
-          </b>
-          {share.id}
-        </Text>
-        <Text size="sm">
-          <b>
-            <FormattedMessage id="account.shares.table.name" />:{" "}
-          </b>
-          {share.name || "-"}
-        </Text>
+      <Text size="sm">
+        <b>
+          <FormattedMessage id="account.shares.table.description" />:{" "}
+        </b>
+        {share.description || "-"}
+      </Text>
 
-        <Text size="sm">
-          <b>
-            <FormattedMessage id="account.shares.table.description" />:{" "}
-          </b>
-          {share.description || "-"}
-        </Text>
+      <Text size="sm">
+        <b>
+          <FormattedMessage id="account.shares.table.createdAt" />:{" "}
+        </b>
+        {formattedCreatedAt}
+      </Text>
 
-        <Text size="sm">
-          <b>
-            <FormattedMessage id="account.shares.table.createdAt" />:{" "}
-          </b>
-          {formattedCreatedAt}
-        </Text>
-
-        <Text size="sm">
-          <b>
-            <FormattedMessage id="account.shares.table.expiresAt" />:{" "}
-          </b>
-          {formattedExpiration}
-        </Text>
-        <Divider />
-        <CopyTextField link={link} />
+      <Text size="sm">
+        <b>
+          <FormattedMessage id="account.shares.table.expiresAt" />:{" "}
+        </b>
+        {formattedExpiration}
+      </Text>
+      <Divider />
+      <CopyTextField link={link} toggleQR={handleToggleQR} />
+      <Collapse in={showQR}>
         <QRCode link={link} />
-        <Divider />
-        <Text size="sm">
-          <b>
-            <FormattedMessage id="account.shares.table.size" />:{" "}
-          </b>
-          {formattedShareSize} / {formattedMaxShareSize} (
-          {shareSizeProgress.toFixed(1)}%)
-        </Text>
+      </Collapse>
+      <Divider />
+      <Text size="sm">
+        <b>
+          <FormattedMessage id="account.shares.table.size" />:{" "}
+        </b>
+        {formattedShareSize} / {formattedMaxShareSize} (
+        {shareSizeProgress.toFixed(1)}%)
+      </Text>
 
-        <Flex align="center" justify="center">
-          {share.size / maxShareSize < 0.1 && (
-            <Text size="xs" style={{ marginRight: "4px" }}>
-              {formattedShareSize}
-            </Text>
-          )}
-          <Progress
-            value={shareSizeProgress}
-            label={share.size / maxShareSize >= 0.1 ? formattedShareSize : ""}
-            style={{ width: share.size / maxShareSize < 0.1 ? "70%" : "80%" }}
-            size="xl"
-            radius="xl"
-          />
-          <Text size="xs" style={{ marginLeft: "4px" }}>
-            {formattedMaxShareSize}
+      <Flex align="center" justify="center">
+        {share.size / maxShareSize < 0.1 && (
+          <Text size="xs" style={{ marginRight: "4px" }}>
+            {formattedShareSize}
           </Text>
-        </Flex>
-      </Stack>
-    ),
-  });
+        )}
+        <Progress
+          value={shareSizeProgress}
+          label={share.size / maxShareSize >= 0.1 ? formattedShareSize : ""}
+          style={{ width: share.size / maxShareSize < 0.1 ? "70%" : "80%" }}
+          size="xl"
+          radius="xl"
+        />
+        <Text size="xs" style={{ marginLeft: "4px" }}>
+          {formattedMaxShareSize}
+        </Text>
+      </Flex>
+    </Stack>
+  );
 };
 
 export default showShareInformationsModal;

@@ -124,6 +124,7 @@ export default {
   "account.modal.totp.enterManually": "Enter manually",
   "account.modal.totp.code": "Code",
   "common.button.clickToCopy": "Click to copy",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Verify",
   "account.notify.totp.disable": "TOTP disabled successfully",
   "account.notify.totp.enable": "TOTP enabled successfully",
