@@ -1,6 +1,7 @@
-import { Button, Stack, Text } from "@mantine/core";
+import { Button, Stack, Text, Collapse } from "@mantine/core";
 import { useModals } from "@mantine/modals";
 import { ModalsContextProps } from "@mantine/modals/lib/context";
+import { useState } from "react";
 import moment from "moment";
 import { useRouter } from "next/router";
 import { FormattedMessage } from "react-intl";
@@ -30,14 +31,22 @@ const Body = ({ share }: { share: CompletedShare }) => {
   const router = useRouter();
   const t = useTranslate();
 
+  const [showQR, setShowQR] = useState(false);
+
+  const handleToggleQR = () => {
+    setShowQR(!showQR);
+  };
+
   const isReverseShare = !!router.query["reverseShareToken"];
 
   const link = `${window.location.origin}/s/${share.id}`;
 
   return (
     <Stack align="stretch">
-      <CopyTextField link={link} />
-      <QRCode link={link} />
+      <CopyTextField link={link} toggleQR={handleToggleQR} />
+      <Collapse in={showQR}>
+        <QRCode link={link} />
+      </Collapse>
       {share.notifyReverseShareCreator === true && (
         <Text
           size="sm"
