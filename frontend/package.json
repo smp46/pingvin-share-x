@@ -1,6 +1,6 @@
 {
   "name": "pingvin-share-frontend",
-  "version": "1.13.2",
+  "version": "1.13.4",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

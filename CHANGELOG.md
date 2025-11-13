@@ -1,3 +1,10 @@
+## [1.13.4](https://github.com/smp46/pingvin-share-x/compare/v1.13.2...v1.13.4) (2025-11-13)
+
+
+### Features
+
+* share links with qr code button ([518dd9b](https://github.com/smp46/pingvin-share-x/commit/518dd9ba40b82e2fe1df86cd763875567405bc4d))
+
 ## [1.13.2](https://github.com/smp46/pingvin-share-x/compare/v1.13.1...v1.13.2) (2025-09-19)
 
 
