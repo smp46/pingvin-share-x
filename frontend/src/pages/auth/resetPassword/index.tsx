@@ -4,13 +4,13 @@ import {
   Button,
   Center,
   Container,
-  createStyles,
   Group,
   Paper,
   Text,
   TextInput,
   Title,
 } from "@mantine/core";
+import { createStyles } from "@mantine/emotion";
 import { useForm, yupResolver } from "@mantine/form";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -29,13 +29,13 @@ const useStyles = createStyles((theme) => ({
   },
 
   controls: {
-    [theme.fn.smallerThan("xs")]: {
+    "@media (max-width: 48em)": {
       flexDirection: "column-reverse",
     },
   },
 
   control: {
-    [theme.fn.smallerThan("xs")]: {
+    "@media (max-width: 48em)": {
       width: "100%",
       textAlign: "center",
     },
@@ -63,10 +63,10 @@ const ResetPassword = () => {
 
   return (
     <Container size={460} my={30}>
-      <Title order={2} weight={900} align="center">
+      <Title order={2} fw={900} ta="center">
         <FormattedMessage id="resetPassword.title" />
       </Title>
-      <Text color="dimmed" size="sm" align="center">
+      <Text color="dimmed" size="sm" ta="center">
         <FormattedMessage id="resetPassword.description" />
       </Text>
 
@@ -87,7 +87,7 @@ const ResetPassword = () => {
             placeholder={t("signup.input.email.placeholder")}
             {...form.getInputProps("email")}
           />
-          <Group position="apart" mt="lg" className={classes.controls}>
+          <Group justify="apart" mt="lg" className={classes.controls}>
             <Anchor
               component={Link}
               color="dimmed"

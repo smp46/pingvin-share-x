@@ -1,13 +1,13 @@
 import {
   Button,
   Container,
-  createStyles,
   Group,
   List,
   Text,
   ThemeIcon,
   Title,
 } from "@mantine/core";
+import { createStyles } from "@mantine/emotion";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -30,41 +30,38 @@ const useStyles = createStyles((theme) => ({
     maxWidth: 480,
     marginRight: `calc(${theme.spacing.md} * 3)`,
 
-    [theme.fn.smallerThan("md")]: {
+    "@media (max-width: 48em)": {
       maxWidth: "100%",
       marginRight: 0,
     },
   },
 
   title: {
-    color: theme.colorScheme === "dark" ? theme.white : theme.black,
+    color: theme.black,
     fontSize: 44,
     lineHeight: 1.2,
     fontWeight: 900,
 
-    [theme.fn.smallerThan("xs")]: {
+    "@media (max-width: 48em)": {
       fontSize: 28,
     },
   },
 
   control: {
-    [theme.fn.smallerThan("xs")]: {
+    "@media (max-width: 48em)": {
       flex: 1,
     },
   },
 
   image: {
-    [theme.fn.smallerThan("md")]: {
+    "@media (max-width: 48em)": {
       display: "none",
     },
   },
 
   highlight: {
     position: "relative",
-    backgroundColor:
-      theme.colorScheme === "dark"
-        ? theme.fn.rgba(theme.colors[theme.primaryColor][6], 0.55)
-        : theme.colors[theme.primaryColor][0],
+    backgroundColor: theme.colors.gray[0],
     borderRadius: theme.radius.sm,
     padding: "4px 12px",
   },
@@ -166,7 +163,7 @@ export default function Home() {
               </Button>
               <Button
                 component={Link}
-                href="https://github.com/stonith404/pingvin-share"
+                href="https://github.com/smp46/pingvin-share-x"
                 target="_blank"
                 variant="default"
                 radius="xl"

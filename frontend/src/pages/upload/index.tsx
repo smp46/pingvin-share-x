@@ -47,9 +47,9 @@ const Upload = ({
     enabled: isUploading,
   });
 
-  const chunkSize = useRef(parseInt(config.get("share.chunkSize")));
+  const chunkSize = useRef(parseInt(config.get("share.chunkSize")) || 10485760);
 
-  maxShareSize ??= parseInt(config.get("share.maxSize"));
+  maxShareSize ??= parseInt(config.get("share.maxSize")) || 1073741824;
   const autoOpenCreateUploadModal = config.get("share.autoOpenShareModal");
 
   const uploadFiles = async (share: CreateShare, files: FileUpload[]) => {
@@ -202,7 +202,7 @@ const Upload = ({
   return (
     <>
       <Meta title={t("upload.title")} />
-      <Group position="right" mb={20}>
+      <Group justify="right" mb={20}>
         <Button
           loading={isUploading}
           disabled={files.length <= 0}

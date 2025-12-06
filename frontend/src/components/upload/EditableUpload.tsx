@@ -30,7 +30,7 @@ const EditableUpload = ({
   const router = useRouter();
   const config = useConfig();
 
-  const chunkSize = useRef(parseInt(config.get("share.chunkSize")));
+  const chunkSize = useRef(parseInt(config.get("share.chunkSize")) || 10485760);
 
   const [existingFiles, setExistingFiles] =
     useState<Array<FileMetaData & { deleted?: boolean }>>(savedFiles);
@@ -59,7 +59,7 @@ const EditableUpload = ({
     setExistingFiles(_existingFiles);
   };
 
-  maxShareSize ??= parseInt(config.get("share.maxSize"));
+  maxShareSize ??= parseInt(config.get("share.maxSize")) || 1073741824;
 
   const uploadFiles = async (files: FileUpload[]) => {
     const fileUploadPromises = files.map(async (file, fileIndex) =>
@@ -209,7 +209,7 @@ const EditableUpload = ({
 
   return (
     <>
-      <Group position="right" mb={20}>
+      <Group justify="right" mb={20}>
         <Button loading={isUploading} disabled={!dirty} onClick={() => save()}>
           <FormattedMessage id="common.button.save" />
         </Button>

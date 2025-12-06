@@ -1,4 +1,4 @@
-import { Anchor, Title, useMantineTheme } from "@mantine/core";
+import { Anchor, Title, useMantineColorScheme } from "@mantine/core";
 import Meta from "../../components/Meta";
 import useTranslate from "../../hooks/useTranslate.hook";
 import { FormattedMessage } from "react-intl";
@@ -7,8 +7,10 @@ import Markdown from "markdown-to-jsx";
 
 const Imprint = () => {
   const t = useTranslate();
-  const { colorScheme } = useMantineTheme();
   const config = useConfig();
+  const { colorScheme } = useMantineColorScheme();
+  const isDark = colorScheme === "dark";
+
   return (
     <>
       <Meta title={t("imprint.title")} />
@@ -22,10 +24,7 @@ const Imprint = () => {
             pre: {
               props: {
                 style: {
-                  backgroundColor:
-                    colorScheme == "dark"
-                      ? "rgba(50, 50, 50, 0.5)"
-                      : "rgba(220, 220, 220, 0.5)",
+                  backgroundColor: isDark ? "rgba(50, 50, 50, 0.5)" : "rgba(220, 220, 220, 0.5)",
                   padding: "0.75em",
                   whiteSpace: "pre-wrap",
                 },

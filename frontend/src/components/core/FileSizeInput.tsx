@@ -65,11 +65,11 @@ const FileSizeInput = ({
       value={inputValue}
       min={1}
       max={999999}
-      precision={0}
+      decimalScale={0}
       rightSection={unitSelect}
       rightSectionWidth={76}
       onChange={(value) => {
-        const inputVal = value || 0;
+        const inputVal = typeof value === "string" ? parseFloat(value) || 0 : value || 0;
         setInputValue(inputVal);
         onChange(multipliers[unit] * inputVal);
       }}

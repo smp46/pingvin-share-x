@@ -1,13 +1,13 @@
 export function byteToHumanSizeString(bytes: number) {
   const sizes = ["B", "KB", "MB", "GB", "TB"];
-  if (bytes == 0) return "0 Byte";
+  if (!bytes || bytes == 0 || isNaN(bytes)) return "0 B";
   const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1000)).toString());
   return (bytes / Math.pow(1000, i)).toFixed(1).toString() + " " + sizes[i];
 }
 
 export function byteToUnitAndSize(bytes: number) {
   const units = ["B", "KB", "MB", "GB", "TB"];
-  if (bytes == 0) return { unit: "B", size: 0 };
+  if (!bytes || bytes == 0 || isNaN(bytes)) return { unit: "B", size: 0 };
   const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1000)).toString());
 
   return {

@@ -113,7 +113,7 @@ const Body = ({
             description={t("admin.users.modal.create.admin.description")}
             {...form.getInputProps("isAdmin", { type: "checkbox" })}
           />
-          <Group position="right">
+          <Group justify="right">
             <Button type="submit">
               <FormattedMessage id="common.button.create" />
             </Button>

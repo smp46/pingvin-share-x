@@ -170,7 +170,7 @@ const Account = () => {
                 {...accountForm.getInputProps("email")}
               />
               {!user?.isLdap && (
-                <Group position="right">
+                <Group justify="right">
                   <Button type="submit">
                     <FormattedMessage id="common.button.save" />
                   </Button>
@@ -211,7 +211,7 @@ const Account = () => {
                   label={t("account.card.password.new")}
                   {...passwordForm.getInputProps("password")}
                 />
-                <Group position="right">
+                <Group justify="right">
                   <Button type="submit">
                     <FormattedMessage id="common.button.save" />
                   </Button>
@@ -231,7 +231,7 @@ const Account = () => {
                 {oauth.map((provider) => (
                   <Tabs.Tab
                     value={provider}
-                    icon={getOAuthIcon(provider)}
+                    leftSection={getOAuthIcon(provider)}
                     key={provider}
                   >
                     {t(`account.card.oauth.${provider}`)}
@@ -240,7 +240,7 @@ const Account = () => {
               </Tabs.List>
               {oauth.map((provider) => (
                 <Tabs.Panel value={provider} pt="xs" key={provider}>
-                  <Group position="apart">
+                  <Group justify="apart">
                     <Text>
                       {oauthStatus?.[provider]
                         ? oauthStatus[provider].providerUsername
@@ -297,7 +297,7 @@ const Account = () => {
 
           <Tabs defaultValue="totp">
             <Tabs.List>
-              <Tabs.Tab value="totp" icon={<TbAuth2Fa size={14} />}>
+              <Tabs.Tab value="totp" leftSection={<TbAuth2Fa size={14} />}>
                 TOTP
               </Tabs.Tab>
             </Tabs.List>
@@ -334,7 +334,7 @@ const Account = () => {
                         {...disableTotpForm.getInputProps("code")}
                       />
 
-                      <Group position="right">
+                      <Group justify="right">
                         <Button color="red" type="submit">
                           <FormattedMessage id="common.button.disable" />
                         </Button>
@@ -367,7 +367,7 @@ const Account = () => {
                         )}
                         {...enableTotpForm.getInputProps("password")}
                       />
-                      <Group position="right">
+                      <Group justify="right">
                         <Button type="submit">
                           <FormattedMessage id="account.card.security.totp.button.start" />
                         </Button>

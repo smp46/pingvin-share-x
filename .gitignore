@@ -48,3 +48,6 @@ yarn-error.log*
 
 # Jetbrains specific (webstorm)
 .idea/**/**
+
+# Claude Code
+.claude

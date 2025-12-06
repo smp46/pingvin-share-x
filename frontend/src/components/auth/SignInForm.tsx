@@ -2,7 +2,6 @@ import {
   Anchor,
   Button,
   Container,
-  createStyles,
   Group,
   Loader,
   Paper,
@@ -12,6 +11,7 @@ import {
   TextInput,
   Title,
 } from "@mantine/core";
+import { createStyles } from "@mantine/emotion";
 import { useForm, yupResolver } from "@mantine/form";
 import { showNotification } from "@mantine/notifications";
 import Link from "next/link";
@@ -49,10 +49,7 @@ const useStyles = createStyles((theme) => ({
       display: "block",
       borderTopWidth: 1,
       borderTopStyle: "solid",
-      borderColor:
-        theme.colorScheme === "dark"
-          ? theme.colors.dark[3]
-          : theme.colors.gray[4],
+      borderColor: "light-dark(var(--mantine-color-gray-4), var(--mantine-color-dark-3))",
     },
     "&:after": {
       content: "''",
@@ -60,10 +57,7 @@ const useStyles = createStyles((theme) => ({
       display: "block",
       borderTopWidth: 1,
       borderTopStyle: "solid",
-      borderColor:
-        theme.colorScheme === "dark"
-          ? theme.colors.dark[3]
-          : theme.colors.gray[4],
+      borderColor: "light-dark(var(--mantine-color-gray-4), var(--mantine-color-dark-3))",
     },
   },
 }));
@@ -138,9 +132,9 @@ const SignInForm = ({ redirectPath }: { redirectPath: string }) => {
 
   if (isRedirectingToOauthProvider)
     return (
-      <Group align="center" position="center">
+      <Group align="center" justify="center">
         <Loader size="sm" />
-        <Text align="center">
+        <Text ta="center">
           <FormattedMessage id="common.text.redirecting" />
         </Text>
       </Group>
@@ -148,11 +142,11 @@ const SignInForm = ({ redirectPath }: { redirectPath: string }) => {
 
   return (
     <Container size={420} my={40}>
-      <Title order={2} align="center" weight={900}>
+      <Title order={2} ta="center" fw={900}>
         <FormattedMessage id="signin.title" />
       </Title>
       {config.get("share.allowRegistration") && (
-        <Text color="dimmed" size="sm" align="center" mt={5}>
+        <Text color="dimmed" size="sm" ta="center" mt={5}>
           <FormattedMessage id="signin.description" />{" "}
           <Anchor component={Link} href={"signUp"} size="sm">
             <FormattedMessage id="signin.button.signup" />
@@ -178,7 +172,7 @@ const SignInForm = ({ redirectPath }: { redirectPath: string }) => {
               {...form.getInputProps("password")}
             />
             {config.get("smtp.enabled") && (
-              <Group position="right" mt="xs">
+              <Group justify="right" mt="xs">
                 <Anchor component={Link} href="/auth/resetPassword" size="xs">
                   <FormattedMessage id="resetPassword.title" />
                 </Anchor>
@@ -200,7 +194,7 @@ const SignInForm = ({ redirectPath }: { redirectPath: string }) => {
                 <Text>{t("signIn.oauth.or")}</Text>
               </Group>
             )}
-            <Group position="center">
+            <Group justify="center">
               {oauthProviders.map((provider) => (
                 <Button
                   key={provider}

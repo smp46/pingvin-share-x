@@ -1,8 +1,8 @@
-import { NotificationProps, showNotification } from "@mantine/notifications";
+import { NotificationData, showNotification } from "@mantine/notifications";
 import { TbCheck, TbX } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 
-const error = (message: string, config?: Omit<NotificationProps, "message">) =>
+const error = (message: string, config?: Omit<NotificationData, "message">) =>
   showNotification({
     icon: <TbX />,
     color: "red",
@@ -20,7 +20,7 @@ const axiosError = (axiosError: any) =>
 
 const success = (
   message: string,
-  config?: Omit<NotificationProps, "message">,
+  config?: Omit<NotificationData, "message">,
 ) =>
   showNotification({
     icon: <TbCheck />,

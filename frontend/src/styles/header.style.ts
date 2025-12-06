@@ -1,4 +1,4 @@
-import { createStyles } from "@mantine/core";
+import { createStyles } from "@mantine/emotion";
 
 export default createStyles((theme) => ({
   root: {
@@ -17,7 +17,7 @@ export default createStyles((theme) => ({
     borderTopWidth: 0,
     overflow: "hidden",
 
-    [theme.fn.largerThan("sm")]: {
+    "@media (min-width: 48em)": {
       display: "none",
     },
   },
@@ -30,13 +30,13 @@ export default createStyles((theme) => ({
   },
 
   links: {
-    [theme.fn.smallerThan("sm")]: {
+    "@media (max-width: 48em)": {
       display: "none",
     },
   },
 
   burger: {
-    [theme.fn.largerThan("sm")]: {
+    "@media (min-width: 48em)": {
       display: "none",
     },
   },
@@ -47,34 +47,55 @@ export default createStyles((theme) => ({
     padding: "8px 12px",
     borderRadius: theme.radius.sm,
     textDecoration: "none",
-    color:
-      theme.colorScheme === "dark"
-        ? theme.colors.dark[0]
-        : theme.colors.gray[7],
     fontSize: theme.fontSizes.sm,
     fontWeight: 500,
 
-    "&:hover": {
-      backgroundColor:
-        theme.colorScheme === "dark"
-          ? theme.colors.dark[6]
-          : theme.colors.gray[0],
+    // Use CSS variables for light/dark mode
+    "@media (prefers-color-scheme: light)": {
+      color: theme.colors.gray[7],
+      "&:hover": {
+        backgroundColor: theme.colors.gray[0],
+      },
     },
 
-    [theme.fn.smallerThan("sm")]: {
+    "@media (prefers-color-scheme: dark)": {
+      color: theme.colors.dark[0],
+      "&:hover": {
+        backgroundColor: theme.colors.dark[6],
+      },
+    },
+
+    "[data-mantine-color-scheme='light'] &": {
+      color: theme.colors.gray[7],
+      "&:hover": {
+        backgroundColor: theme.colors.gray[0],
+      },
+    },
+
+    "[data-mantine-color-scheme='dark'] &": {
+      color: theme.colors.dark[0],
+      "&:hover": {
+        backgroundColor: theme.colors.dark[6],
+      },
+    },
+
+    "@media (max-width: 48em)": {
       borderRadius: 0,
       padding: theme.spacing.md,
     },
   },
 
   linkActive: {
-    "&, &:hover": {
-      backgroundColor:
-        theme.colorScheme === "dark"
-          ? theme.fn.rgba(theme.colors[theme.primaryColor][9], 0.25)
-          : theme.colors[theme.primaryColor][0],
-      color:
-        theme.colors[theme.primaryColor][theme.colorScheme === "dark" ? 3 : 7],
-    },
+    "[data-mantine-color-scheme='light'] &, [data-mantine-color-scheme='light'] &:hover":
+      {
+        backgroundColor: theme.colors[theme.primaryColor][0],
+        color: theme.colors[theme.primaryColor][7],
+      },
+
+    "[data-mantine-color-scheme='dark'] &, [data-mantine-color-scheme='dark'] &:hover":
+      {
+        backgroundColor: theme.colors[theme.primaryColor][9],
+        color: theme.colors[theme.primaryColor][2],
+      },
   },
 }));

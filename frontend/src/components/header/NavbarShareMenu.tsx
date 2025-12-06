@@ -22,13 +22,13 @@ const NavbarShareMneu = () => {
         </ActionIcon>
       </Menu.Target>
       <Menu.Dropdown>
-        <Menu.Item component={Link} href="/account/shares" icon={<TbLink />}>
+        <Menu.Item component={Link} href="/account/shares" leftSection={<TbLink />}>
           <FormattedMessage id="navbar.links.shares" />
         </Menu.Item>
         <Menu.Item
           component={Link}
           href="/account/reverseShares"
-          icon={<TbArrowLoopLeft />}
+          leftSection={<TbArrowLoopLeft />}
         >
           <FormattedMessage id="navbar.links.reverse" />
         </Menu.Item>

@@ -48,24 +48,11 @@ const Body = ({ share }: { share: CompletedShare }) => {
         <QRCode link={link} />
       </Collapse>
       {share.notifyReverseShareCreator === true && (
-        <Text
-          size="sm"
-          sx={(theme) => ({
-            color:
-              theme.colorScheme === "dark"
-                ? theme.colors.gray[3]
-                : theme.colors.dark[4],
-          })}
-        >
+        <Text size="sm" c="dimmed">
           {t("upload.modal.completed.notified-reverse-share-creator")}
         </Text>
       )}
-      <Text
-        size="xs"
-        sx={(theme) => ({
-          color: theme.colors.gray[6],
-        })}
-      >
+      <Text size="xs" c="dimmed">
         {/* If our share.expiration is timestamp 0, show a different message */}
         {moment(share.expiration).unix() === 0
           ? t("upload.modal.completed.never-expires")

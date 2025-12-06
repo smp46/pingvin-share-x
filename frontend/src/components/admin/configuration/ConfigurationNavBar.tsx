@@ -1,14 +1,12 @@
 import {
   Box,
   Button,
-  createStyles,
   Group,
-  MediaQuery,
-  Navbar,
   Stack,
   Text,
   ThemeIcon,
 } from "@mantine/core";
+import { createStyles } from "@mantine/emotion";
 import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
 import {
@@ -38,13 +36,8 @@ export const categories = [
 
 const useStyles = createStyles((theme) => ({
   activeLink: {
-    backgroundColor: theme.fn.variant({
-      variant: "light",
-      color: theme.primaryColor,
-    }).background,
-    color: theme.fn.variant({ variant: "light", color: theme.primaryColor })
-      .color,
-
+    backgroundColor: `var(--mantine-color-${theme.primaryColor}-light)`,
+    color: `var(--mantine-color-${theme.primaryColor}-light-color)`,
     borderRadius: theme.radius.sm,
     fontWeight: 600,
   },
@@ -61,17 +54,21 @@ const ConfigurationNavBar = ({
 }) => {
   const { classes } = useStyles();
   return (
-    <Navbar
+    <Box
       p="md"
-      hiddenBreakpoint="sm"
-      hidden={!isMobileNavBarOpened}
-      width={{ sm: 200, lg: 300 }}
+      hiddenFrom="sm"
+      style={{
+        display: isMobileNavBarOpened ? "block" : "none",
+        width: "100%",
+      }}
+      visibleFrom="sm"
+      w={{ sm: 200, lg: 300 }}
     >
-      <Navbar.Section>
-        <Text size="xs" color="dimmed" mb="sm">
+      <Box>
+        <Text size="xs" c="dimmed" mb="sm">
           <FormattedMessage id="admin.config.title" />
         </Text>
-        <Stack spacing="xs">
+        <Stack gap="xs">
           {categories.map((category) => (
             <Box
               p="xs"
@@ -104,13 +101,13 @@ const ConfigurationNavBar = ({
             </Box>
           ))}
         </Stack>
-      </Navbar.Section>
-      <MediaQuery largerThan="sm" styles={{ display: "none" }}>
+      </Box>
+      <Box hiddenFrom="sm">
         <Button mt="xl" variant="light" component={Link} href="/admin">
           <FormattedMessage id="common.button.go-back" />
         </Button>
-      </MediaQuery>
-    </Navbar>
+      </Box>
+    </Box>
   );
 };
 

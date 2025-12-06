@@ -1,4 +1,5 @@
-import { Button, Container, createStyles, Group, Title } from "@mantine/core";
+import { Button, Container, Group, Title } from "@mantine/core";
+import { createStyles } from "@mantine/emotion";
 import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 import Meta from "../components/Meta";
@@ -17,7 +18,7 @@ const useStyles = createStyles((theme) => ({
     marginBottom: 20,
     color: theme.colors.gray[2],
 
-    [theme.fn.smallerThan("sm")]: {
+    "@media (max-width: 48em)": {
       fontSize: 120,
     },
   },
@@ -31,10 +32,10 @@ const ErrorNotFound = () => {
       <Meta title="Not found" />
       <Container className={classes.root}>
         <div className={classes.label}>404</div>
-        <Title align="center" order={3}>
+        <Title ta="center" order={3}>
           <FormattedMessage id="404.description" />
         </Title>
-        <Group position="center" mt={50}>
+        <Group justify="center" mt={50}>
           <Button component={Link} href="/" variant="light">
             <FormattedMessage id="404.button.home" />
           </Button>

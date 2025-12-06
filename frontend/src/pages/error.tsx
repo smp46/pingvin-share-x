@@ -1,5 +1,6 @@
 import React from "react";
-import { Button, createStyles, Stack, Text, Title } from "@mantine/core";
+import { Button, Stack, Text, Title } from "@mantine/core";
+import { createStyles } from "@mantine/emotion";
 import Meta from "../components/Meta";
 import useTranslate from "../hooks/useTranslate.hook";
 import { useRouter } from "next/router";

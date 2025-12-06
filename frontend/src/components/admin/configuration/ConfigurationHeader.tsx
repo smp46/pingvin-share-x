@@ -1,11 +1,9 @@
 import {
+  Box,
   Burger,
   Button,
   Group,
-  Header,
-  MediaQuery,
   Text,
-  useMantineTheme,
 } from "@mantine/core";
 import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
@@ -21,34 +19,32 @@ const ConfigurationHeader = ({
   setIsMobileNavBarOpened: Dispatch<SetStateAction<boolean>>;
 }) => {
   const config = useConfig();
-  const theme = useMantineTheme();
   return (
-    <Header height={60} p="md">
+    <Box h={60} p="md">
       <div style={{ display: "flex", alignItems: "center", height: "100%" }}>
-        <MediaQuery largerThan="sm" styles={{ display: "none" }}>
+        <Box hiddenFrom="sm">
           <Burger
             opened={isMobileNavBarOpened}
             onClick={() => setIsMobileNavBarOpened((o) => !o)}
             size="sm"
-            color={theme.colors.gray[6]}
             mr="xl"
           />
-        </MediaQuery>
-        <Group position="apart" w="100%">
+        </Box>
+        <Group justify="apart" w="100%">
           <Link href="/" passHref>
             <Group>
               <Logo height={35} width={35} />
-              <Text weight={600}>{config.get("general.appName")}</Text>
+              <Text fw={600}>{config.get("general.appName")}</Text>
             </Group>
           </Link>
-          <MediaQuery smallerThan="sm" styles={{ display: "none" }}>
+          <Box visibleFrom="sm">
             <Button variant="light" component={Link} href="/admin">
               <FormattedMessage id="common.button.go-back" />
             </Button>
-          </MediaQuery>
+          </Box>
         </Group>
       </div>
-    </Header>
+    </Box>
   );
 };
 

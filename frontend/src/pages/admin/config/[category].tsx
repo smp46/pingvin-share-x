@@ -8,7 +8,7 @@ import {
   Stack,
   Text,
   Title,
-  useMantineTheme,
+  useMantineColorScheme,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
@@ -43,7 +43,7 @@ const categories = [
 ];
 
 export default function AppShellDemo() {
-  const theme = useMantineTheme();
+  const { colorScheme } = useMantineColorScheme();
   const router = useRouter();
   const t = useTranslate();
 
@@ -130,26 +130,26 @@ export default function AppShellDemo() {
       <AppShell
         styles={{
           main: {
-            background:
-              theme.colorScheme === "dark"
-                ? theme.colors.dark[8]
-                : theme.colors.gray[0],
+            background: colorScheme === "dark" ? "var(--mantine-color-dark-7)" : "var(--mantine-color-gray-0)",
           },
         }}
-        navbar={
+        header={{ height: 60 }}
+        navbar={{ width: 300, breakpoint: "sm" }}
+      >
+        <AppShell.Header>
+          <ConfigurationHeader
+            isMobileNavBarOpened={isMobileNavBarOpened}
+            setIsMobileNavBarOpened={setIsMobileNavBarOpened}
+          />
+        </AppShell.Header>
+        <AppShell.Navbar>
           <ConfigurationNavBar
             categoryId={categoryId}
             isMobileNavBarOpened={isMobileNavBarOpened}
             setIsMobileNavBarOpened={setIsMobileNavBarOpened}
           />
-        }
-        header={
-          <ConfigurationHeader
-            isMobileNavBarOpened={isMobileNavBarOpened}
-            setIsMobileNavBarOpened={setIsMobileNavBarOpened}
-          />
-        }
-      >
+        </AppShell.Navbar>
+        <AppShell.Main>
         <Container size="lg">
           {!configVariables ? (
             <CenterLoader />
@@ -171,10 +171,10 @@ export default function AppShellDemo() {
                   {t("admin.config.category." + categoryId)}
                 </Title>
                 {configVariables.map((configVariable) => (
-                  <Group key={configVariable.key} position="apart">
+                  <Group key={configVariable.key} justify="apart">
                     <Stack
                       style={{ maxWidth: isMobile ? "100%" : "40%" }}
-                      spacing={0}
+                      gap={0}
                     >
                       <Title order={6}>
                         <FormattedMessage
@@ -185,10 +185,8 @@ export default function AppShellDemo() {
                       </Title>
 
                       <Text
-                        sx={{
-                          whiteSpace: "pre-line",
-                        }}
-                        color="dimmed"
+                        style={{ whiteSpace: "pre-line" }}
+                        c="dimmed"
                         size="sm"
                         mb="xs"
                       >
@@ -214,7 +212,7 @@ export default function AppShellDemo() {
                   <LogoConfigInput logo={logo} setLogo={setLogo} />
                 )}
               </Stack>
-              <Group mt="lg" position="right">
+              <Group mt="lg" justify="right">
                 {categoryId == "smtp" && (
                   <TestEmailButton
                     configVariablesChanged={updatedConfigVariables.length != 0}
@@ -228,6 +226,7 @@ export default function AppShellDemo() {
             </>
           )}
         </Container>
+        </AppShell.Main>
       </AppShell>
     </>
   );

@@ -1,15 +1,17 @@
+import "@mantine/core/styles.css";
+import "@mantine/notifications/styles.css";
+import "@mantine/dropzone/styles.css";
 import {
-  ColorScheme,
-  ColorSchemeProvider,
   Container,
   MantineProvider,
   Stack,
 } from "@mantine/core";
+import { MantineEmotionProvider } from "@mantine/emotion";
 import { useColorScheme } from "@mantine/hooks";
 import { ModalsProvider } from "@mantine/modals";
 import { Notifications } from "@mantine/notifications";
 import axios from "axios";
-import { getCookie, setCookie } from "cookies-next";
+import { getCookie } from "cookies-next";
 import moment from "moment";
 import "moment/min/locales";
 import { GetServerSidePropsContext } from "next";
@@ -32,14 +34,19 @@ import { CurrentUser } from "../types/user.type";
 import i18nUtil from "../utils/i18n.util";
 import userPreferences from "../utils/userPreferences.util";
 import Footer from "../components/footer/Footer";
+import { createEmotionCache } from "../utils/createEmotionCache";
 
 const excludeDefaultLayoutRoutes = ["/admin/config/[category]"];
+
+type ColorScheme = "light" | "dark" | "auto";
+
+const emotionCache = createEmotionCache();
 
 function App({ Component, pageProps }: AppProps) {
   const systemTheme = useColorScheme(pageProps.colorScheme);
   const router = useRouter();
 
-  const [colorScheme, setColorScheme] = useState<ColorScheme>(systemTheme);
+  const [colorScheme, setColorScheme] = useState<ColorScheme>(systemTheme as ColorScheme);
 
   const [user, setUser] = useState<CurrentUser | null>(pageProps.user);
   const [route, setRoute] = useState<string>(pageProps.route);
@@ -71,20 +78,14 @@ function App({ Component, pageProps }: AppProps) {
   }, []);
 
   useEffect(() => {
-    const colorScheme =
-      userPreferences.get("colorScheme") == "system"
-        ? systemTheme
-        : userPreferences.get("colorScheme");
+    const prefColorScheme = userPreferences.get("colorScheme");
+    const effectiveColorScheme =
+      prefColorScheme == "system"
+        ? "auto"
+        : prefColorScheme || "light";
 
-    toggleColorScheme(colorScheme);
+    setColorScheme(effectiveColorScheme as ColorScheme);
   }, [systemTheme]);
-
-  const toggleColorScheme = (value: ColorScheme) => {
-    setColorScheme(value ?? "light");
-    setCookie("mantine-color-scheme", value ?? "light", {
-      sameSite: "lax",
-    });
-  };
 
   const language = useRef(pageProps.language);
   moment.locale(language.current);
@@ -102,59 +103,55 @@ function App({ Component, pageProps }: AppProps) {
         locale={language.current}
         defaultLocale={LOCALES.ENGLISH.code}
       >
-        <MantineProvider
-          withGlobalStyles
-          withNormalizeCSS
-          theme={{ colorScheme, ...globalStyle }}
-        >
-          <ColorSchemeProvider
-            colorScheme={colorScheme}
-            toggleColorScheme={toggleColorScheme}
+        <MantineEmotionProvider cache={emotionCache}>
+          <MantineProvider
+            defaultColorScheme={colorScheme}
+            theme={globalStyle}
           >
             <GlobalStyle />
             <Notifications />
             <ModalsProvider>
-              <ConfigContext.Provider
+            <ConfigContext.Provider
+              value={{
+                configVariables,
+                refresh: async () => {
+                  setConfigVariables(await configService.list());
+                },
+              }}
+            >
+              <UserContext.Provider
                 value={{
-                  configVariables,
-                  refresh: async () => {
-                    setConfigVariables(await configService.list());
+                  user,
+                  refreshUser: async () => {
+                    const user = await userService.getCurrentUser();
+                    setUser(user);
+                    return user;
                   },
                 }}
               >
-                <UserContext.Provider
-                  value={{
-                    user,
-                    refreshUser: async () => {
-                      const user = await userService.getCurrentUser();
-                      setUser(user);
-                      return user;
-                    },
-                  }}
-                >
-                  {excludeDefaultLayoutRoutes.includes(route) ? (
-                    <Component {...pageProps} />
-                  ) : (
-                    <>
-                      <Stack
-                        justify="space-between"
-                        sx={{ minHeight: "100vh" }}
-                      >
-                        <div>
-                          <Header />
-                          <Container>
-                            <Component {...pageProps} />
-                          </Container>
-                        </div>
-                        <Footer />
-                      </Stack>
-                    </>
-                  )}
-                </UserContext.Provider>
-              </ConfigContext.Provider>
-            </ModalsProvider>
-          </ColorSchemeProvider>
+                {excludeDefaultLayoutRoutes.includes(route) ? (
+                  <Component {...pageProps} />
+                ) : (
+                  <>
+                    <Stack
+                      justify="space-between"
+                      style={{ minHeight: "100vh" }}
+                    >
+                      <div>
+                        <Header />
+                        <Container>
+                          <Component {...pageProps} />
+                        </Container>
+                      </div>
+                      <Footer />
+                    </Stack>
+                  </>
+                )}
+              </UserContext.Provider>
+            </ConfigContext.Provider>
+          </ModalsProvider>
         </MantineProvider>
+        </MantineEmotionProvider>
       </IntlProvider>
     </>
   );

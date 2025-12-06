@@ -19,7 +19,7 @@ export const HoverTip = ({
       position="bottom"
       multiline
       events={{ hover: true, focus: false, touch: true }}
-      width={width}
+      w={width}
       label={label}
       disabled={disabled}
     >

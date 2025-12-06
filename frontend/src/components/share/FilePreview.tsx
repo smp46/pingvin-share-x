@@ -4,7 +4,7 @@ import {
   Stack,
   Text,
   Title,
-  useMantineTheme,
+  useMantineColorScheme,
 } from "@mantine/core";
 import { modals } from "@mantine/modals";
 import Markdown, { MarkdownToJSX } from "markdown-to-jsx";
@@ -82,7 +82,7 @@ const AudioPreview = () => {
     React.useContext(FilePreviewContext);
   return (
     <Center style={{ minHeight: 200 }}>
-      <Stack align="center" spacing={10} style={{ width: "100%" }}>
+      <Stack align="center" gap={10} style={{ width: "100%" }}>
         <audio controls style={{ width: "100%" }}>
           <source
             src={`/api/shares/${shareId}/files/${fileId}?download=false`}
@@ -124,7 +124,8 @@ const ImagePreview = () => {
 const TextPreview = () => {
   const { shareId, fileId } = React.useContext(FilePreviewContext);
   const [text, setText] = useState<string>("");
-  const { colorScheme } = useMantineTheme();
+  const { colorScheme } = useMantineColorScheme();
+  const isDark = colorScheme === "dark";
 
   useEffect(() => {
     api
@@ -138,10 +139,9 @@ const TextPreview = () => {
       pre: {
         props: {
           style: {
-            backgroundColor:
-              colorScheme == "dark"
-                ? "rgba(50, 50, 50, 0.5)"
-                : "rgba(220, 220, 220, 0.5)",
+            backgroundColor: isDark
+              ? "rgba(50, 50, 50, 0.5)"
+              : "rgba(220, 220, 220, 0.5)",
             padding: "0.75em",
             whiteSpace: "pre-wrap",
           },
@@ -169,7 +169,7 @@ const PdfPreview = () => {
 const UnSupportedFile = () => {
   return (
     <Center style={{ minHeight: 200 }}>
-      <Stack align="center" spacing={10}>
+      <Stack align="center" gap={10}>
         <Title order={3}>
           <FormattedMessage id="share.modal.file-preview.error.not-supported.title" />
         </Title>

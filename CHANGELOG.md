@@ -1,3 +1,19 @@
+## [1.13.5]
+
+
+### Features
+
+- **ui:** Mantine updated to 7.15.2 from 6.0.21
+- Minor version bump of Next.js
+- Minor version bump of Prisma
+- Minor reconfiguration to enable successful testing
+- Basic updating to refer to this repo instead of the original
+
+### Bug fixes
+
+- **ui:** Potential email address validation issue resolved
+- Minor bug fixes
+
 ## [1.13.4](https://github.com/smp46/pingvin-share-x/compare/v1.13.2...v1.13.4) (2025-11-13)
 
 

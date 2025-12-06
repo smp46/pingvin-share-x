@@ -48,7 +48,7 @@ const Body = ({
       : moment(share.expiration).format("LLL");
 
   return (
-    <Stack align="stretch" spacing="md">
+    <Stack align="stretch" gap="md">
       <Text size="sm">
         <b>
           <FormattedMessage id="account.shares.table.id" />:{" "}
@@ -102,13 +102,17 @@ const Body = ({
             {formattedShareSize}
           </Text>
         )}
-        <Progress
-          value={shareSizeProgress}
-          label={share.size / maxShareSize >= 0.1 ? formattedShareSize : ""}
+        <Progress.Root
           style={{ width: share.size / maxShareSize < 0.1 ? "70%" : "80%" }}
           size="xl"
           radius="xl"
-        />
+        >
+          <Progress.Section value={shareSizeProgress}>
+            {share.size / maxShareSize >= 0.1 && (
+              <Progress.Label>{formattedShareSize}</Progress.Label>
+            )}
+          </Progress.Section>
+        </Progress.Root>
         <Text size="xs" style={{ marginLeft: "4px" }}>
           {formattedMaxShareSize}
         </Text>

@@ -2,14 +2,14 @@ import {
   Box,
   Burger,
   Container,
-  createStyles,
   Group,
-  Header as MantineHeader,
   Paper,
   Stack,
   Text,
   Transition,
+  useMantineColorScheme,
 } from "@mantine/core";
+import { createStyles } from "@mantine/emotion";
 import { useDisclosure } from "@mantine/hooks";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -47,7 +47,7 @@ const useStyles = createStyles((theme) => ({
     borderTopWidth: 0,
     overflow: "hidden",
 
-    [theme.fn.largerThan("sm")]: {
+    "@media (min-width: 48em)": {
       display: "none",
     },
   },
@@ -60,13 +60,13 @@ const useStyles = createStyles((theme) => ({
   },
 
   links: {
-    [theme.fn.smallerThan("sm")]: {
+    "@media (max-width: 48em)": {
       display: "none",
     },
   },
 
   burger: {
-    [theme.fn.largerThan("sm")]: {
+    "@media (min-width: 48em)": {
       display: "none",
     },
   },
@@ -77,21 +77,15 @@ const useStyles = createStyles((theme) => ({
     padding: "8px 12px",
     borderRadius: theme.radius.sm,
     textDecoration: "none",
-    color:
-      theme.colorScheme === "dark"
-        ? theme.colors.dark[0]
-        : theme.colors.gray[7],
+    color: "light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0))",
     fontSize: theme.fontSizes.sm,
     fontWeight: 500,
 
     "&:hover": {
-      backgroundColor:
-        theme.colorScheme === "dark"
-          ? theme.colors.dark[6]
-          : theme.colors.gray[0],
+      backgroundColor: "light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6))",
     },
 
-    [theme.fn.smallerThan("sm")]: {
+    "@media (max-width: 48em)": {
       borderRadius: 0,
       padding: theme.spacing.md,
     },
@@ -99,12 +93,8 @@ const useStyles = createStyles((theme) => ({
 
   linkActive: {
     "&, &:hover": {
-      backgroundColor:
-        theme.colorScheme === "dark"
-          ? theme.fn.rgba(theme.colors[theme.primaryColor][9], 0.25)
-          : theme.colors[theme.primaryColor][0],
-      color:
-        theme.colors[theme.primaryColor][theme.colorScheme === "dark" ? 3 : 7],
+      backgroundColor: `light-dark(var(--mantine-color-${theme.primaryColor}-0), color-mix(in srgb, var(--mantine-color-${theme.primaryColor}-9) 25%, transparent))`,
+      color: `light-dark(var(--mantine-color-${theme.primaryColor}-7), var(--mantine-color-${theme.primaryColor}-3))`,
     },
   },
 }));
@@ -189,15 +179,15 @@ const Header = () => {
     </>
   );
   return (
-    <MantineHeader height={HEADER_HEIGHT} mb={40} className={classes.root}>
+    <Box component="header" h={HEADER_HEIGHT} mb={40} className={classes.root}>
       <Container className={classes.header}>
         <Link href="/" passHref>
           <Group>
             <Logo height={35} width={35} />
-            <Text weight={600}>{config.get("general.appName")}</Text>
+            <Text fw={600}>{config.get("general.appName")}</Text>
           </Group>
         </Link>
-        <Group spacing={5} className={classes.links}>
+        <Group gap={5} className={classes.links}>
           <Group>{items} </Group>
         </Group>
         <Burger
@@ -209,12 +199,12 @@ const Header = () => {
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
           {(styles) => (
             <Paper className={classes.dropdown} withBorder style={styles}>
-              <Stack spacing={0}> {items}</Stack>
+              <Stack gap={0}> {items}</Stack>
             </Paper>
           )}
         </Transition>
       </Container>
-    </MantineHeader>
+    </Box>
   );
 };
 

@@ -1,4 +1,5 @@
-import { Button, Center, createStyles, Group, Text } from "@mantine/core";
+import { Button, Center, Group, Text } from "@mantine/core";
+import { createStyles } from "@mantine/emotion";
 import { Dropzone as MantineDropzone } from "@mantine/dropzone";
 import { ForwardedRef, useRef } from "react";
 import { TbCloudUpload, TbUpload } from "react-icons/tb";
@@ -20,10 +21,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   icon: {
-    color:
-      theme.colorScheme === "dark"
-        ? theme.colors.dark[3]
-        : theme.colors.gray[4],
+    color: theme.colors.gray[7],
   },
 
   control: {
@@ -55,7 +53,7 @@ const Dropzone = ({
         }}
         disabled={isUploading}
         openRef={openRef as ForwardedRef<() => void>}
-        onDrop={(files: FileUpload[]) => {
+        onDrop={(files) => {
           const fileSizeSum = files.reduce((n, { size }) => n + size, 0);
 
           if (fileSizeSum > maxShareSize) {
@@ -65,24 +63,23 @@ const Dropzone = ({
               }),
             );
           } else {
-            files = files.map((newFile) => {
-              newFile.uploadingProgress = 0;
-              return newFile;
+            const fileUploads: FileUpload[] = files.map((newFile: File) => {
+              return Object.assign(newFile, { uploadingProgress: 0 });
             });
-            onFilesChanged(files);
+            onFilesChanged(fileUploads);
           }
         }}
         className={classes.dropzone}
         radius="md"
       >
         <div style={{ pointerEvents: "none" }}>
-          <Group position="center">
+          <Group justify="center">
             <TbCloudUpload size={50} />
           </Group>
-          <Text align="center" weight={700} size="lg" mt="xl">
+          <Text ta="center" fw={700} size="lg" mt="xl">
             {title || <FormattedMessage id="upload.dropzone.title" />}
           </Text>
-          <Text align="center" size="sm" mt="xs" color="dimmed">
+          <Text ta="center" size="sm" mt="xs" c="dimmed">
             <FormattedMessage
               id="upload.dropzone.description"
               values={{ maxSize: byteToHumanSizeString(maxShareSize) }}

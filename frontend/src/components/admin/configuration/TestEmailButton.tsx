@@ -26,7 +26,7 @@ const TestEmailButton = ({
         modals.openModal({
           title: "Failed to send email",
           children: (
-            <Stack spacing="xs">
+            <Stack gap="xs">
               <Text size="sm">
                 While sending the test email, the following error occurred:
               </Text>

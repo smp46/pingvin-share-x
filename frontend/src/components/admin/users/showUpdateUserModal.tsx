@@ -102,7 +102,7 @@ const Body = ({
         </Stack>
       </form>
       <Accordion>
-        <Accordion.Item sx={{ borderBottom: "none" }} value="changePassword">
+        <Accordion.Item style={{ borderBottom: "none" }} value="changePassword">
           <Accordion.Control px={0}>
             <FormattedMessage id="admin.users.edit.update.change-password.title" />
           </Accordion.Control>
@@ -134,7 +134,7 @@ const Body = ({
           </Accordion.Panel>
         </Accordion.Item>
       </Accordion>
-      <Group position="right">
+      <Group justify="right">
         <Button type="submit" form="accountForm">
           <FormattedMessage id="common.button.save" />
         </Button>

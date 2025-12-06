@@ -59,7 +59,7 @@ const Users = () => {
   return (
     <>
       <Meta title={t("admin.users.title")} />
-      <Group position="apart" align="baseline" mb={20}>
+      <Group justify="apart" align="baseline" mb={20}>
         <Title mb={30} order={3}>
           <FormattedMessage id="admin.users.title" />
         </Title>
@@ -67,7 +67,7 @@ const Users = () => {
           onClick={() =>
             showCreateUserModal(modals, config.get("smtp.enabled"), getUsers)
           }
-          leftIcon={<TbPlus size={20} />}
+          leftSection={<TbPlus size={20} />}
         >
           <FormattedMessage id="common.button.create" />
         </Button>
