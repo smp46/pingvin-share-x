@@ -64,7 +64,7 @@ const sendTestEmail = async (email: string) => {
 const isNewReleaseAvailable = async () => {
   const response = (
     await axios.get(
-      "https://api.github.com/repos/stonith404/pingvin-share/releases/latest",
+      "https://api.github.com/repos/smp46/pingvin-share-x/releases/latest",
     )
   ).data;
   return response.tag_name.replace("v", "") != process.env.VERSION;

@@ -11,7 +11,6 @@ const withPWA = require("next-pwa")({
       handler: 'NetworkOnly',
     },
   ],
-  reloadOnOnline: false,
 });
 
 module.exports = withPWA({
