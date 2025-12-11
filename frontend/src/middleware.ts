@@ -11,6 +11,63 @@ export const config = {
   matcher: "/((?!api|static|.*\\..*|_next).*)",
 };
 
+// In-memory cache for config to avoid fetching on every request
+let configCache: { data: any; timestamp: number } | null = null;
+const CONFIG_CACHE_TTL = 30 * 1000; // 30 seconds cache TTL
+
+// Fetch config with caching and error handling
+async function fetchConfig(apiUrl: string): Promise<any> {
+  const now = Date.now();
+
+  // Return cached config if still valid
+  if (configCache && now - configCache.timestamp < CONFIG_CACHE_TTL) {
+    return configCache.data;
+  }
+
+  try {
+    const response = await fetch(`${apiUrl}/api/configs`, {
+      next: { revalidate: 30 },
+      signal: AbortSignal.timeout(5000),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Config fetch failed: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    // Update cache
+    configCache = { data, timestamp: now };
+
+    return data;
+  } catch (error) {
+    // If fetch fails but we have stale cache, use it as fallback
+    if (configCache) {
+      console.error("Config fetch failed, using stale cache:", error);
+      return configCache.data;
+    }
+
+    // If no cache available, return safe defaults
+    console.error("Config fetch failed with no cache, using defaults:", error);
+    return getDefaultConfig();
+  }
+}
+
+// Safe default configuration when API is unavailable
+function getDefaultConfig() {
+  return [
+    { key: "general.showHomePage", value: "true", defaultValue: "true", type: "boolean" },
+    { key: "share.allowRegistration", value: "true", defaultValue: "true", type: "boolean" },
+    { key: "share.allowUnauthenticatedShares", value: "false", defaultValue: "false", type: "boolean" },
+    { key: "smtp.enabled", value: "false", defaultValue: "false", type: "boolean" },
+    { key: "legal.enabled", value: "false", defaultValue: "false", type: "boolean" },
+    { key: "legal.imprintText", value: "", defaultValue: "", type: "text" },
+    { key: "legal.imprintUrl", value: "", defaultValue: "", type: "string" },
+    { key: "legal.privacyPolicyText", value: "", defaultValue: "", type: "text" },
+    { key: "legal.privacyPolicyUrl", value: "", defaultValue: "", type: "string" },
+  ];
+}
+
 export async function middleware(request: NextRequest) {
   const routes = {
     unauthenticated: new Routes(["/auth/*", "/"]),
@@ -27,9 +84,9 @@ export async function middleware(request: NextRequest) {
     disabled: new Routes([]),
   };
 
-  // Get config from backend
+  // Get config from backend with caching and error handling
   const apiUrl = process.env.API_URL || "http://localhost:8080";
-  const config = await (await fetch(`${apiUrl}/api/configs`)).json();
+  const config = await fetchConfig(apiUrl);
 
   const getConfig = (key: string) => {
     return configService.get(key, config);

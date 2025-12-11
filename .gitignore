@@ -48,3 +48,10 @@ yarn-error.log*
 
 # Jetbrains specific (webstorm)
 .idea/**/**
+
+# IDE specific
+.claude
+.vscode
+
+# Temp folder for generative work
+/temp/**
