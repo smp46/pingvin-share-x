@@ -32,6 +32,7 @@ import { CurrentUser } from "../types/user.type";
 import i18nUtil from "../utils/i18n.util";
 import userPreferences from "../utils/userPreferences.util";
 import Footer from "../components/footer/Footer";
+import { getDefaultConfig } from "../utils/defaultConfig.util";
 
 const excludeDefaultLayoutRoutes = ["/admin/config/[category]"];
 
@@ -185,7 +186,15 @@ App.getInitialProps = async ({ ctx }: { ctx: GetServerSidePropsContext }) => {
       .then((res) => res.data)
       .catch(() => null);
 
-    pageProps.configVariables = (await axios(`${apiURL}/api/configs`)).data;
+    try {
+      pageProps.configVariables = (
+        await axios(`${apiURL}/api/configs`, {
+          timeout: 1000,
+        })
+      ).data;
+    } catch (e) {
+      pageProps.configVariables = getDefaultConfig();
+    }
 
     pageProps.route = ctx.req.url;
 
