@@ -1,4 +1,5 @@
 import {
+  BadRequestException,
   Body,
   Controller,
   FileTypeValidator,
@@ -62,14 +63,10 @@ export class ConfigController {
   @Post("admin/logo")
   @UseInterceptors(FileInterceptor("file"))
   @UseGuards(JwtGuard, AdministratorGuard)
-  async uploadLogo(
-    @UploadedFile(
-      new ParseFilePipe({
-        validators: [new FileTypeValidator({ fileType: "image/png" })],
-      }),
-    )
-    file: Express.Multer.File,
-  ) {
+  async uploadLogo(@UploadedFile() file: Express.Multer.File) {
+    if (!file) {
+      throw new BadRequestException("No file uploaded");
+    }
     return await this.logoService.create(file.buffer);
   }
 }
