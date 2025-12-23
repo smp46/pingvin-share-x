@@ -1,6 +1,7 @@
 import { jwtDecode } from "jwt-decode";
 import { NextRequest, NextResponse } from "next/server";
 import configService from "./services/config.service";
+import { getDefaultConfig } from "./utils/defaultConfig.util";
 
 // This middleware redirects based on different conditions:
 // - Authentication state
@@ -10,6 +11,24 @@ import configService from "./services/config.service";
 export const config = {
   matcher: "/((?!api|static|.*\\..*|_next).*)",
 };
+
+async function fetchConfig(apiUrl: string): Promise<any> {
+  try {
+    const response = await fetch(`${apiUrl}/api/configs`, {
+      next: { revalidate: 30 },
+      signal: AbortSignal.timeout(1000),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Config fetch failed: ${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Config fetch failed, using defaults:", error);
+    return getDefaultConfig();
+  }
+}
 
 export async function middleware(request: NextRequest) {
   const routes = {
@@ -27,9 +46,9 @@ export async function middleware(request: NextRequest) {
     disabled: new Routes([]),
   };
 
-  // Get config from backend
+  // Get config from backend with caching and error handling
   const apiUrl = process.env.API_URL || "http://localhost:8080";
-  const config = await (await fetch(`${apiUrl}/api/configs`)).json();
+  const config = await fetchConfig(apiUrl);
 
   const getConfig = (key: string) => {
     return configService.get(key, config);
