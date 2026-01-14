@@ -28,7 +28,7 @@ The website is now listening on `http://localhost:3000`.
 
 ## Documentation
 
-For more installation options and advanced configurations, please refer to the [documentation](https://smp46.github.io/pingvin-share).
+For more installation options and advanced configurations, please refer to the [documentation](https://smp46.github.io/pingvin-share-x/).
 
 ## Contributing
 
