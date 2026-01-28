@@ -7,7 +7,7 @@ const categories = [
   "general",
   "email",
   "share",
-  "smpt",
+  "smtp",
   "oauth",
   "ldap",
   "s3",
