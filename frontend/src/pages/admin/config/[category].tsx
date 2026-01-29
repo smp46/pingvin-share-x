@@ -52,14 +52,11 @@ export default function AppShellDemo() {
   const config = useConfig();
 
   let categoryId = "General";
-  if (router.query.category) {
-    const urlCategory = router.query.category as string;
-    const matchedCategory = categories.find(
-      (cat) => cat.toLowerCase() === urlCategory.toLowerCase()
-    );
-    if (matchedCategory) {
-      categoryId = matchedCategory;
-    }
+  if (
+    router.query.category &&
+    !categories.includes(router.query.category as string)
+  ) {
+    categoryId = router.query.category as string;
   }
 
   const [configVariables, setConfigVariables] = useState<AdminConfig[]>();
@@ -122,7 +119,7 @@ export default function AppShellDemo() {
   };
 
   useEffect(() => {
-    configService.getByCategory(categoryId.toLowerCase()).then((configVariables) => {
+    configService.getByCategory(categoryId).then((configVariables) => {
       setConfigVariables(configVariables);
     });
   }, [categoryId]);
@@ -171,7 +168,7 @@ export default function AppShellDemo() {
                   </Alert>
                 )}
                 <Title mb="md" order={3}>
-                  {t("admin.config.category." + categoryId.toLowerCase())}
+                  {t("admin.config.category." + categoryId)}
                 </Title>
                 {configVariables.map((configVariable) => (
                   <Group key={configVariable.key} position="apart">
@@ -213,12 +210,12 @@ export default function AppShellDemo() {
                     </Box>
                   </Group>
                 ))}
-                {categoryId.toLowerCase() == "general" && (
+                {categoryId == "general" && (
                   <LogoConfigInput logo={logo} setLogo={setLogo} />
                 )}
               </Stack>
               <Group mt="lg" position="right">
-                {categoryId.toLowerCase() == "smtp" && (
+                {categoryId == "smtp" && (
                   <TestEmailButton
                     configVariablesChanged={updatedConfigVariables.length != 0}
                     saveConfigVariables={saveConfigVariables}
