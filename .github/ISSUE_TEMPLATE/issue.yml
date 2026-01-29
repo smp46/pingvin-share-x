@@ -1,15 +1,44 @@
-### Subject of the issue
-Describe your issue here.
+name: Bug Report
+description: Report a problem with Pingvin Share X
+body:
+  - type: textarea
+    id: subject
+    attributes:
+      label: Subject of the issue
+      placeholder: Describe your issue here.
+    validations:
+      required: true
 
-### Your environment
-* version of pingvin-share-x
-* which browser and its version
+  - type: textarea
+    id: environment
+    attributes:
+      label: Your environment
+      placeholder: |
+        - which version of Pingvin Share X
+        - which browser and its version
+    validations:
+      required: true
 
-### Steps to reproduce
-Tell us how to reproduce this issue
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: Tell us how to reproduce this issue
+    validations:
+      required: true
 
-### Expected behaviour
-Tell us what should happen
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      placeholder: Tell us what should happen
+    validations:
+      required: true
 
-### Actual behaviour
-Tell us what happens instead
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+      placeholder: Tell us what happens instead
+    validations:
+      required: true
