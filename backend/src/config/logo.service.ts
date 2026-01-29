@@ -1,4 +1,4 @@
-import { BadRequestException, Injectable } from "@nestjs/common";
+import { Injectable } from "@nestjs/common";
 import * as fs from "fs";
 import * as sharp from "sharp";
 
@@ -7,16 +7,10 @@ const IMAGES_PATH = "../frontend/public/img";
 @Injectable()
 export class LogoService {
   async create(file: Buffer) {
-    try {
-      const resized = await sharp(file).resize(900).toBuffer();
-      fs.writeFileSync(`${IMAGES_PATH}/logo.png`, resized, "binary");
-      this.createFavicon(file);
-      this.createPWAIcons(file);
-    } catch (error) {
-      throw new BadRequestException(
-        "Invalid image file. Please upload a valid PNG image.",
-      );
-    }
+    const resized = await sharp(file).resize(900).toBuffer();
+    fs.writeFileSync(`${IMAGES_PATH}/logo.png`, resized, "binary");
+    this.createFavicon(file);
+    this.createPWAIcons(file);
   }
 
   async createFavicon(file: Buffer) {
