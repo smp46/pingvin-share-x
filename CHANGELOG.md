@@ -1,3 +1,14 @@
+## [1.13.5](https://github.com/smp46/pingvin-share-x/compare/v1.13.4...v1.13.5) (2026-01-29)
+
+
+### Bug Fixes
+
+* defaultConfig for offline backend, caching ([ffc5915](https://github.com/smp46/pingvin-share-x/commit/ffc59158b879834811fdd8b7e8cd75d8a029dcc4))
+* references to old project name ([584eeb7](https://github.com/smp46/pingvin-share-x/commit/584eeb766a1be9d5ddc6b93261a5b425f5bfa222))
+* replaced accidentally changed default imgs ([137e14e](https://github.com/smp46/pingvin-share-x/commit/137e14e6bb6c74873e088534b3c4f19df2a9ec98))
+* **repo:** fix invalid templates ([b9b119d](https://github.com/smp46/pingvin-share-x/commit/b9b119d4da2f881769c843b094733c14894cc13a))
+* SMTP menu typo, bump Docker Node version ([75a1ca2](https://github.com/smp46/pingvin-share-x/commit/75a1ca2c550267527b8e13050e66726069141b50))
+
 ## [1.13.4](https://github.com/smp46/pingvin-share-x/compare/v1.13.2...v1.13.4) (2025-11-13)
 
 
