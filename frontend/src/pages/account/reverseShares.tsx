@@ -70,6 +70,7 @@ const MyShares = () => {
               modals,
               config.get("smtp.enabled"),
               config.get("share.maxExpiration"),
+              config.get("share.defaultExpiration"),
               getReverseShares,
             )
           }
