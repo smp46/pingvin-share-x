@@ -30,6 +30,7 @@ const showCreateReverseShareModal = (
   modals: ModalsContextProps,
   showSendEmailNotificationOption: boolean,
   maxExpiration: Timespan,
+  defaultExpiration: Timespan,
   getReverseShares: () => void,
 ) => {
   const t = translateOutsideContext();
@@ -40,6 +41,7 @@ const showCreateReverseShareModal = (
         showSendEmailNotificationOption={showSendEmailNotificationOption}
         getReverseShares={getReverseShares}
         maxExpiration={maxExpiration}
+        defaultExpiration={defaultExpiration}
       />
     ),
   });
@@ -49,21 +51,27 @@ const Body = ({
   getReverseShares,
   showSendEmailNotificationOption,
   maxExpiration,
+  defaultExpiration,
 }: {
   getReverseShares: () => void;
   showSendEmailNotificationOption: boolean;
   maxExpiration: Timespan;
+  defaultExpiration: Timespan;
 }) => {
   const modals = useModals();
   const t = useTranslate();
+
+  const defaultTimespan = defaultExpiration
+    ? defaultExpiration
+    : { value: 7, unit: "days" };
 
   const form = useForm({
     initialValues: {
       maxShareSize: 104857600,
       maxUseCount: 1,
       sendEmailNotification: false,
-      expiration_num: 1,
-      expiration_unit: "-days",
+      expiration_num: defaultTimespan.value,
+      expiration_unit: `-${defaultTimespan.unit}` as string,
       simplified: !!(getCookie("reverse-share.simplified") ?? false),
       publicAccess: !!(getCookie("reverse-share.public-access") ?? true),
     },
