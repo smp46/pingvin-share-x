@@ -297,7 +297,7 @@ export default {
   "upload.notify.count-failed": "{count} files failed to upload. Trying again.",
   "upload.reverse-share.error.invalid.title": "Invalid reverse share link",
   "upload.reverse-share.error.invalid.description":
-    "This reverse share has expired or is invalid.",
+    "This link has no remaining uses or is invalid.",
 
   // Dropzone.tsx
   "upload.dropzone.title": "Upload files",
