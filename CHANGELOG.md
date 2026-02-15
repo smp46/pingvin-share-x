@@ -1,3 +1,23 @@
+## [1.14.0](https://github.com/smp46/pingvin-share-x/compare/v1.13.4...v1.14.0) (2026-02-15)
+
+
+### Features
+
+* admin can change default expiry ([503e96b](https://github.com/smp46/pingvin-share-x/commit/503e96b547c9ce3dc9f661a6015f2b080ef0679e))
+
+
+### Bug Fixes
+
+* clarify reverse share expiration message ([de99ba1](https://github.com/smp46/pingvin-share-x/commit/de99ba1840c540a79838fa081c0c994b07415649))
+* defaultConfig for offline backend, caching ([ffc5915](https://github.com/smp46/pingvin-share-x/commit/ffc59158b879834811fdd8b7e8cd75d8a029dcc4))
+* **deps:** resolve security vulns via npm audit ([2bf854a](https://github.com/smp46/pingvin-share-x/commit/2bf854aba62c0f52acc7bb70be7023b53a75d25c))
+* **otp:** migrate to non-vulnerable otplib version ([cf5689b](https://github.com/smp46/pingvin-share-x/commit/cf5689becd3130738b658b7450b24f6282e7ec76))
+* patch unvalidated use of url params ([939145c](https://github.com/smp46/pingvin-share-x/commit/939145c1c27daaa99a3cf032b1a368cafc1e9292))
+* references to old project name ([584eeb7](https://github.com/smp46/pingvin-share-x/commit/584eeb766a1be9d5ddc6b93261a5b425f5bfa222))
+* replaced accidentally changed default imgs ([137e14e](https://github.com/smp46/pingvin-share-x/commit/137e14e6bb6c74873e088534b3c4f19df2a9ec98))
+* **repo:** fix invalid templates ([b9b119d](https://github.com/smp46/pingvin-share-x/commit/b9b119d4da2f881769c843b094733c14894cc13a))
+* SMTP menu typo, bump Docker Node version ([75a1ca2](https://github.com/smp46/pingvin-share-x/commit/75a1ca2c550267527b8e13050e66726069141b50))
+
 ## [1.13.5](https://github.com/smp46/pingvin-share-x/compare/v1.13.4...v1.13.5) (2026-01-29)
 
 
