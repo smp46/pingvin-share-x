@@ -11,6 +11,10 @@ import {
 } from "../types/share.type";
 import api from "./api.service";
 
+const isValidId = (id: string) => {
+  return /^[a-zA-Z0-9-]+$/.test(id);
+};
+
 const list = async (): Promise<MyShare[]> => {
   return (await api.get(`shares/all`)).data;
 };
@@ -23,28 +27,34 @@ const create = async (share: CreateShare, isReverseShare = false) => {
 };
 
 const completeShare = async (id: string) => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
   const response = (await api.post(`shares/${id}/complete`)).data;
   deleteCookie("reverse_share_token");
   return response;
 };
 
 const revertComplete = async (id: string) => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
   return (await api.delete(`shares/${id}/complete`)).data;
 };
 
 const get = async (id: string): Promise<Share> => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
   return (await api.get(`shares/${id}`)).data;
 };
 
 const getFromOwner = async (id: string): Promise<Share> => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
   return (await api.get(`shares/${id}/from-owner`)).data;
 };
 
 const getMetaData = async (id: string): Promise<ShareMetaData> => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
   return (await api.get(`shares/${id}/metaData`)).data;
 };
 
 const remove = async (id: string) => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
   await api.delete(`shares/${id}`);
 };
 
@@ -53,10 +63,12 @@ const getMyShares = async (): Promise<MyShare[]> => {
 };
 
 const getShareToken = async (id: string, password?: string) => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
   await api.post(`/shares/${id}/token`, { password });
 };
 
 const isShareIdAvailable = async (id: string): Promise<boolean> => {
+  if (!isValidId(id)) throw new Error("Invalid Share ID");
   return (await api.get(`/shares/isShareIdAvailable/${id}`)).data.isAvailable;
 };
 
@@ -81,6 +93,7 @@ const downloadFile = async (shareId: string, fileId: string) => {
 };
 
 const removeFile = async (shareId: string, fileId: string) => {
+  if (!isValidId(shareId)) throw new Error("Invalid Share ID");
   await api.delete(`shares/${shareId}/files/${fileId}`);
 };
 
@@ -94,6 +107,7 @@ const uploadFile = async (
   chunkIndex: number,
   totalChunks: number,
 ): Promise<FileUploadResponse> => {
+  if (!isValidId(shareId)) throw new Error("Invalid Share ID");
   return (
     await api.post(`shares/${shareId}/files`, chunk, {
       headers: { "Content-Type": "application/octet-stream" },
@@ -132,12 +146,15 @@ const getMyReverseShares = async (): Promise<MyReverseShare[]> => {
 };
 
 const setReverseShare = async (reverseShareToken: string) => {
+  if (!isValidId(reverseShareToken))
+    throw new Error("Invalid Reverse Share Token");
   const { data } = await api.get(`/reverseShares/${reverseShareToken}`);
   setCookie("reverse_share_token", reverseShareToken);
   return data;
 };
 
 const removeReverseShare = async (id: string) => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
   await api.delete(`/reverseShares/${id}`);
 };
 
