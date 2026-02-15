@@ -1,25 +1,35 @@
-## [1.13.5](https://github.com/smp46/pingvin-share-x/compare/v1.13.4...v1.13.5) (2026-01-29)
-
-
-### Bug Fixes
-
-* defaultConfig for offline backend, caching ([ffc5915](https://github.com/smp46/pingvin-share-x/commit/ffc59158b879834811fdd8b7e8cd75d8a029dcc4))
-* SMTP menu typo, bump Docker Node version ([75a1ca2](https://github.com/smp46/pingvin-share-x/commit/75a1ca2c550267527b8e13050e66726069141b50))
-
-## [1.13.4](https://github.com/smp46/pingvin-share-x/compare/v1.13.2...v1.13.4) (2025-11-13)
-
+## [1.14.0](https://github.com/smp46/pingvin-share-x/compare/v1.13.4...v1.14.0) (2026-02-15)
 
 ### Features
 
-* share links with qr code button ([518dd9b](https://github.com/smp46/pingvin-share-x/commit/518dd9ba40b82e2fe1df86cd763875567405bc4d))
-
-## [1.13.2](https://github.com/smp46/pingvin-share-x/compare/v1.13.1...v1.13.2) (2025-09-19)
-
+- admin can change default expiry ([503e96b](https://github.com/smp46/pingvin-share-x/commit/503e96b547c9ce3dc9f661a6015f2b080ef0679e))
 
 ### Bug Fixes
 
-* **ui:** add noWrap to prevent vert filelist icons ([4ed095a](https://github.com/smp46/pingvin-share-x/commit/4ed095ad2398f3b3f0b3bf37d6baa8fe1cdd8dea))
-* **ui:** remove old tooltip refs, allow unused vars ([fc0f1be](https://github.com/smp46/pingvin-share-x/commit/fc0f1be70f546c4448a54a0eca620977524f410d))
+- clarify reverse share expiration message ([de99ba1](https://github.com/smp46/pingvin-share-x/commit/de99ba1840c540a79838fa081c0c994b07415649))
+- **deps:** resolve security vulns via npm audit ([2bf854a](https://github.com/smp46/pingvin-share-x/commit/2bf854aba62c0f52acc7bb70be7023b53a75d25c))
+- **otp:** migrate to non-vulnerable otplib version ([cf5689b](https://github.com/smp46/pingvin-share-x/commit/cf5689becd3130738b658b7450b24f6282e7ec76))
+- patch unvalidated use of url params ([939145c](https://github.com/smp46/pingvin-share-x/commit/939145c1c27daaa99a3cf032b1a368cafc1e9292))
+
+## [1.13.5](https://github.com/smp46/pingvin-share-x/compare/v1.13.4...v1.13.5) (2026-01-29)
+
+### Bug Fixes
+
+- defaultConfig for offline backend, caching ([ffc5915](https://github.com/smp46/pingvin-share-x/commit/ffc59158b879834811fdd8b7e8cd75d8a029dcc4))
+- SMTP menu typo, bump Docker Node version ([75a1ca2](https://github.com/smp46/pingvin-share-x/commit/75a1ca2c550267527b8e13050e66726069141b50))
+
+## [1.13.4](https://github.com/smp46/pingvin-share-x/compare/v1.13.2...v1.13.4) (2025-11-13)
+
+### Features
+
+- share links with qr code button ([518dd9b](https://github.com/smp46/pingvin-share-x/commit/518dd9ba40b82e2fe1df86cd763875567405bc4d))
+
+## [1.13.2](https://github.com/smp46/pingvin-share-x/compare/v1.13.1...v1.13.2) (2025-09-19)
+
+### Bug Fixes
+
+- **ui:** add noWrap to prevent vert filelist icons ([4ed095a](https://github.com/smp46/pingvin-share-x/commit/4ed095ad2398f3b3f0b3bf37d6baa8fe1cdd8dea))
+- **ui:** remove old tooltip refs, allow unused vars ([fc0f1be](https://github.com/smp46/pingvin-share-x/commit/fc0f1be70f546c4448a54a0eca620977524f410d))
 
 ## [1.13.1](https://github.com/smp46/pingvin-share-x/compare/v1.11.1...v1.13.1) (2025-09-18)
 
