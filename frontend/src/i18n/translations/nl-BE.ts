@@ -221,7 +221,7 @@ export default {
   "admin.shares.table.username": "Auteur",
   "admin.shares.table.visitors": "Bezoekers",
   "admin.shares.table.expires": "Verloopt op",
-  "admin.shares.edit.delete.title": "Delete share: {id}",
+  "admin.shares.edit.delete.title": "Share verwijderd: {id}",
   "admin.shares.edit.delete.description": "Weet u zeker dat u deze share wilt verwijderen?",
   // END /admin/shares
 
