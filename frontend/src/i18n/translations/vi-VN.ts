@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Quản trị viên",
   "navbar.avatar.signout": "Đăng xuất",
   // END navbar
+
   // /
   "home.title": "Một nền tảng <h>seft-hosted</h> chi sẻ tệp tin.",
   "home.description": "Do you really want to give your personal files in the hand of third parties like WeTransfer?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Bắt đầu",
   "home.button.source": "Mã nguồn",
   // END /
+
   // /auth/signin
   "signin.title": "Chào mừng trở lại",
   "signin.description": "Chưa có tài khoản?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Tạo tài khoản",
   "signup.description": "Đã có tài khoản?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Email",
   "signup.button.submit": "Let's get started",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "TOTP Authentication",
   "totp.button.signIn": "Đăng nhập",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Quên mật khẩu?",
   "resetPassword.description": "Nhập email để khôi phục mật khẩu.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Nhập thủ công",
   "account.modal.totp.code": "Mã",
   "common.button.clickToCopy": "Nhấn để sao chép",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Xác thực",
   "account.notify.totp.disable": "Tắt TOTP thành công",
   "account.notify.totp.enable": "Bật TOTP thành công",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Xóa tài khoản",
   "account.modal.delete.description": "Do you really want to delete your account including all your active shares?",
   // END /account
+
   // /account/shares
   "account.shares.title": "My shares",
   "account.shares.title.empty": "It's empty here 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "Do you really want to delete this share?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Chia sẻ ngược",
   "account.reverseShares.description": "Chia sẻ ngược cho phép bạn tạo một liên kết duy nhất để người ngoài có thể tải tệp lên cho bạn.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Delete reverse share",
   "account.reverseShares.modal.delete.description": "Do you really want to delete this reverse share? If you do, the associated shares will be deleted as well.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Administration",
   "admin.button.users": "User management",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Configuration",
   "admin.version": "Phiên bản",
   // END /admin
+
   // /admin/users
   "admin.users.title": "User management",
   "admin.users.table.username": "Username",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Admin privileges",
   "admin.users.modal.create.admin.description": "If checked, the user will be able to access the admin panel.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Share management",
   "admin.shares.table.id": "Share ID",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Delete share: {id}",
   "admin.shares.edit.delete.description": "Do you really want to delete this share?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Tải lên",
   "upload.notify.confirm-leave": "Are you sure you want to leave this page? Your upload will be canceled.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Share ready",
   "upload.modal.completed.notified-reverse-share-creator": "We have notified the creator of the reverse share. You can also manually share this link with them through other means.",
   // END /upload
+
   // /share/[id]
   "share.title": "Share {shareId}",
   "share.description": "Look what I've shared with you!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Xem trước không được hỗ trợ",
   "share.modal.file-preview.error.not-supported.description": "Previews are not supported for this type of files. Please download the file to view it.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Edit {shareId}",
   "share.edit.append-upload": "Append file",
   "share.edit.notify.generic-error": "An error occurred while finishing your share.",
   "share.edit.notify.save-success": "Share updated successfully",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Imprint",
   // END /imprint
+
   // /privacy
   "privacy.title": "Privacy Policy",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Whether registration is allowed",
   "admin.config.share.allow-unauthenticated-shares": "Allow unauthenticated shares",
   "admin.config.share.allow-unauthenticated-shares.description": "Whether unauthenticated users can create shares",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Max expiration",
   "admin.config.share.max-expiration.description": "Maximum share expiration. Set to 0 to allow unlimited expiration.",
   "admin.config.share.share-id-length": "Default share ID length",
@@ -512,6 +531,15 @@ export default {
   "error.param.provider_discord": "Discord",
   "error.param.provider_oidc": "OpenID Connect",
   // Common translations
+  "common.button.info": "Thông tin",
+  "common.button.undo": "Hoàn tác",
+  "common.button.download": "Tải xuống",
+  "common.button.copy": "Sao chép",
+  "common.button.copy-link": "Sao chép liên kết",
+  "common.button.preview": "Xem trước",
+  "common.button.edit": "Chỉnh sửa",
+  "common.button.profile": "Hồ sơ",
+  "common.button.shares": "Chia sẻ",
   "common.button.save": "Lưu",
   "common.button.create": "Tạo",
   "common.button.submit": "Submit",
