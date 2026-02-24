@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Администрација",
   "navbar.avatar.signout": "Одјави се",
   // END navbar
+
   // /
   "home.title": "<h>Само-хостована</h> платформа за дељење фајлова.",
   "home.description": "Да ли заиста желите да дате своје личне датотеке у руке трећих страна као што је WeTransfer?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Започни",
   "home.button.source": "Изворни код",
   // END /
+
   // /auth/signin
   "signin.title": "Добродошли назад",
   "signin.description": "Још увек немате налог?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Направи налог",
   "signup.description": "Већ имате налог?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Ваш имејл",
   "signup.button.submit": "Хајде да почнемо",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "ТОТП аутентификација",
   "totp.button.signIn": "Пријавите се",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Заборавили сте лозинку?",
   "resetPassword.description": "Унесите свој имејл да бисте ресетовали лозинку.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Унесите ручно",
   "account.modal.totp.code": "Код",
   "common.button.clickToCopy": "Кликните за копирање",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Верификуј",
   "account.notify.totp.disable": "ТОТП је успешно онемогућен",
   "account.notify.totp.enable": "ТОТП је успешно омогућен",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Избриши Налог",
   "account.modal.delete.description": "Да ли заиста желите да избришете свој налог укључујући све ваше активне дељења?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Моја дељења",
   "account.shares.title.empty": "Овде је празно 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Избриши дељење {share}",
   "account.shares.modal.delete.description": "Да ли заиста желите да избришете ово дељење?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Обрнуто дељење",
   "account.reverseShares.description": "Обрнуто дељење вам омогућава да генеришете јединствени URL који омогућава спољним корисницима да креирају дељење.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Обришите обрнуто дељење",
   "account.reverseShares.modal.delete.description": "Да ли заиста желите да избришете ово обрнуто дељење? Ако то учините, придружена дељења ће такође бити избрисана.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Администрација",
   "admin.button.users": "Управљање корисницима",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Конфигурација",
   "admin.version": "Верзија",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Управљање корисницима",
   "admin.users.table.username": "Корисничко име",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Администраторске привилегије",
   "admin.users.modal.create.admin.description": "Ако је означено, корисник ће моћи да приступи административном панелу.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Управљање дељењем",
   "admin.shares.table.id": "ID дељења",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Обриши дељење: {id}",
   "admin.shares.edit.delete.description": "Да ли заиста желите да обришете ово дељење?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Пошаљи",
   "upload.notify.confirm-leave": "Да ли сте сигурни да желите да напустите ову страницу? Ваше отпремање ће бити отказано.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Дељење је спремно",
   "upload.modal.completed.notified-reverse-share-creator": "Обавестили смо креатора реверзног дељења. Такође можете ручно поделити овај линк са њима на друге начине.",
   // END /upload
+
   // /share/[id]
   "share.title": "Дељење {shareId}",
   "share.description": "Погледајте шта сам поделио са вама!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Преглед није подржан",
   "share.modal.file-preview.error.not-supported.description": "Прегледи нису подржани за овај тип датотека. Молимо преузмите фајл да бисте га прегледали.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Уреди {shareId}",
   "share.edit.append-upload": "Надодај фајл",
   "share.edit.notify.generic-error": "Дошло је до грешке приликом завршетка вашег дељења.",
   "share.edit.notify.save-success": "Дељење је успешно ажурирано",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Imprint",
   // END /imprint
+
   // /privacy
   "privacy.title": "Privacy Policy",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Да ли је регистрација дозвољена",
   "admin.config.share.allow-unauthenticated-shares": "Дозволи дељење без аутентификације",
   "admin.config.share.allow-unauthenticated-shares.description": "Да ли корисници без аутентификације могу да креирају дељења",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Максимални рок трајања",
   "admin.config.share.max-expiration.description": "Maximum share expiration. Set to 0 to allow unlimited expiration.",
   "admin.config.share.share-id-length": "Дужина подразумеваног ID-а за дељење",
@@ -365,7 +384,7 @@ export default {
   "admin.config.share.zip-compression-level.description": "Подесите ниво да бисте балансирали између величине датотеке и брзине компресије. Важеће вредности се крећу од 0 до 9, при чему је 0 без компресије, а 9 је максимална компресија. ",
   "admin.config.share.chunk-size": "Величина комада",
   "admin.config.share.chunk-size.description": "Подесите величину дела за ваша отпремање како бисте уравнотежили ефикасност и поузданост у складу са вашом интернет везом. Мањи делови могу побољшати стопу успеха за нестабилне везе, док већи делови омогућавају брже отпремање за стабилне везе.",
-  "admin.config.share.auto-open-share-modal": "",
+  "admin.config.share.auto-open-share-modal": "Auto open create share modal",
   "admin.config.share.auto-open-share-modal.description": "Модал за креирање дељења аутоматски се појављује када корисник изабере датотеке, елиминишући потребу за ручним кликом на дугме.",
   "admin.config.smtp.enabled": "Омогући",
   "admin.config.smtp.enabled.description": "Да ли је SMTP омогућен. Поставите ово на тачно само ако сте унели хост, порт, имејл, корисника и лозинку вашег SMTP сервера.",
