@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "관리자",
   "navbar.avatar.signout": "로그아웃",
   // END navbar
+
   // /
   "home.title": "<h>직접 호스팅</h>하는 파일 공유 플랫폼.",
   "home.description": "정말 WeTransfer와 같은 제3자에게 개인 파일을 맡기고 싶으세요?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "시작하기",
   "home.button.source": "소스 코드",
   // END /
+
   // /auth/signin
   "signin.title": "다시 오신 것을 환영합니다!",
   "signin.description": "아직 계정이 없으신가요?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "디스코드",
   "signIn.oauth.oidc": "오픈ID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "계정 만들기",
   "signup.description": "이미 계정이 있으신가요?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "귀하의 이메일",
   "signup.button.submit": "시작하기",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "TOTP 인증",
   "totp.button.signIn": "로그인",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "비밀번호를 잊으셨나요?",
   "resetPassword.description": "비밀번호를 재설정하려면 이메일을 입력하세요.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "직접 입력",
   "account.modal.totp.code": "코드",
   "common.button.clickToCopy": "클릭하여 복사",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "인증",
   "account.notify.totp.disable": "TOTP가 비활성화되었습니다.",
   "account.notify.totp.enable": "TOTP가 활성화 되었습니다.",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "계정 삭제",
   "account.modal.delete.description": "정말로 활성화된 모든 공유를 포함하여 계정을 삭제하시겠습니까?",
   // END /account
+
   // /account/shares
   "account.shares.title": "내 공유",
   "account.shares.title.empty": "이곳은 아무것도 없는것 같아요 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "정말로 이 공유를 삭제하시겠습니까?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "역방향 공유",
   "account.reverseShares.description": "역방향 공유를 통해 외부 사용자가 공유를 생성할 수 있는 고유 URL을 생성할 수 있습니다.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "역방향 공유 삭제",
   "account.reverseShares.modal.delete.description": "이 역방향 공유를 삭제하시겠습니까? 삭제하면 관련 공유도 삭제됩니다.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "관리자",
   "admin.button.users": "사용자 관리",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "구성",
   "admin.version": "버전",
   // END /admin
+
   // /admin/users
   "admin.users.title": "사용자 관리",
   "admin.users.table.username": "사용자 이름",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Admin Privilege",
   "admin.users.modal.create.admin.description": "이 옵션을 선택하면 사용자는 관리 패널에 액세스할 수 있습니다.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "공유 관리",
   "admin.shares.table.id": "공유 ID",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Delete share: {id}",
   "admin.shares.edit.delete.description": "정말로 이 공유를 삭제하시겠습니까?",
   // END /admin/shares
+
   // /upload
   "upload.title": "업로드",
   "upload.notify.confirm-leave": "Are you sure you want to leave this page? Your upload will be canceled.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "공유 준비",
   "upload.modal.completed.notified-reverse-share-creator": "We have notified the creator of the reverse share. You can also manually share this link with them through other means.",
   // END /upload
+
   // /share/[id]
   "share.title": "공유 {shareId}",
   "share.description": "내가 당신과 공유한 것을 보세요!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "미리보기는 지원되지 않습니다",
   "share.modal.file-preview.error.not-supported.description": "Previews are not supported for this type of files. Please download the file to view it.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "수정 {shareId}",
   "share.edit.append-upload": "파일 추가",
   "share.edit.notify.generic-error": "공유를 완료하는 동안 오류가 발생했습니다.",
   "share.edit.notify.save-success": "공유가 업데이트 되었습니다.",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Imprint",
   // END /imprint
+
   // /privacy
   "privacy.title": "Privacy Policy",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "등록 가능 여부",
   "admin.config.share.allow-unauthenticated-shares": "인증되지 않은 공유 허용",
   "admin.config.share.allow-unauthenticated-shares.description": "인증되지 않은 사용자가 공유를 생성할 수 있는지 여부",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "최대 만료 시간",
   "admin.config.share.max-expiration.description": "Maximum share expiration. Set to 0 to allow unlimited expiration.",
   "admin.config.share.share-id-length": "Default share ID length",
