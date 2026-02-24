@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Administracja",
   "navbar.avatar.signout": "Wyloguj się",
   // END navbar
+
   // /
   "home.title": "<h>Samodzielnie utrzymywana</h> platforma udostępniania plików.",
   "home.description": "Czy na pewno chcesz przekazać swoje prywatne pliki w ręce osób trzecich, takich jak WeTransfer?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Zaczynajmy",
   "home.button.source": "Kod źródłowy",
   // END /
+
   // /auth/signin
   "signin.title": "Witaj ponownie",
   "signin.description": "Nie masz jeszcze konta?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Utwórz konto",
   "signup.description": "Masz już konto?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Twój adres e-mail",
   "signup.button.submit": "Zaczynajmy",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "Uwierzytelnianie TOTP",
   "totp.button.signIn": "Zaloguj się",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Nie pamiętasz hasła?",
   "resetPassword.description": "Wprowadź swój e-mail, aby zresetować swoje hasło.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Wpisz ręcznie",
   "account.modal.totp.code": "Kod",
   "common.button.clickToCopy": "Kliknij, aby skopiować",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Weryfikuj",
   "account.notify.totp.disable": "%s wyłączono pomyślnie",
   "account.notify.totp.enable": "TOTP włączono pomyślnie",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Usuń Konto",
   "account.modal.delete.description": "Czy na pewno chcesz usunąć swoje konto, w tym wszystkie aktywne udziały?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Moje udziały",
   "account.shares.title.empty": "Tu jest pusto 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Usuń udostępnianie: {share}",
   "account.shares.modal.delete.description": "Czy na pewno chcesz usunąć to udostępnianie?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Udziały odwrotne",
   "account.reverseShares.description": "Udostępnianie odwrotne pozwala na wygenerowanie unikalnego adresu URL, który umożliwia użytkownikom zewnętrznym na tworzenie udostępniania.",
@@ -156,7 +164,7 @@ export default {
   "account.reverseShares.modal.send-email": "Send email notifications",
   "account.reverseShares.modal.send-email.description": "Sends you an email notification when a share is created with this reverse share link.",
   "account.reverseShares.modal.simplified": "Tryb uproszczony",
-  "account.reverseShares.modal.simplified.description": "",
+  "account.reverseShares.modal.simplified.description": "Make it easy for the person uploading the file to share it with you. They will only be able to customize the name and description of the share.",
   "account.reverseShares.modal.public-access": "Dostęp publiczny",
   "account.reverseShares.modal.public-access.description": "Make the shares created with this reverse share public. If disabled, only you and the share creator will have access to view it.",
   "account.reverseShares.modal.max-use.label": "Limit użyć",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Usuń udostępnienie odwrotnie",
   "account.reverseShares.modal.delete.description": "Czy na pewno chcesz usunąć to udostępnienie odwrotne? Jeśli tak, to również zostaną usunięte powiązane z nim udostępnienia.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Administracja",
   "admin.button.users": "Zarządzanie użytkownikami",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Konfiguracja",
   "admin.version": "Wersja",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Zarządzanie użytkownikami",
   "admin.users.table.username": "Nazwa użytkownika",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Uprawnienia administratora",
   "admin.users.modal.create.admin.description": "Jeśli zaznaczone, użytkownik będzie miał dostęp do panelu administratora.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Zarządzanie udostępnieniami",
   "admin.shares.table.id": "ID Udostępnienia",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Delete share: {id}",
   "admin.shares.edit.delete.description": "Czy na pewno chcesz usunąć to udostępnienie?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Prześlij",
   "upload.notify.confirm-leave": "Are you sure you want to leave this page? Your upload will be canceled.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Udostępnianie gotowe",
   "upload.modal.completed.notified-reverse-share-creator": "Powiadomiliśmy twórcę odwrotnego udostępnienia. Możesz również ręcznie udostępnić ten link w inny sposób.",
   // END /upload
+
   // /share/[id]
   "share.title": "Udostępnij {shareId}",
   "share.description": "Spójrz, co ci udostępniłem!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Podgląd nie jest obsługiwany",
   "share.modal.file-preview.error.not-supported.description": "Previews are not supported for this type of files. Please download the file to view it.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Edytuj {shareId}",
   "share.edit.append-upload": "Dołącz plik",
   "share.edit.notify.generic-error": "W trakcie zakańczania tworzenia udziału wystąpił błąd.",
   "share.edit.notify.save-success": "Udział zaktualizowany pomyślnie",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Imprint",
   // END /imprint
+
   // /privacy
   "privacy.title": "Privacy Policy",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Czy dozwolona jest rejestracja",
   "admin.config.share.allow-unauthenticated-shares": "Zezwalaj na nieuwierzytelnione udostępnianie",
   "admin.config.share.allow-unauthenticated-shares.description": "Czy nieautoryzowani użytkownicy mogą tworzyć udostępnienia",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Maksymalny okres ważności",
   "admin.config.share.max-expiration.description": "Maximum share expiration. Set to 0 to allow unlimited expiration.",
   "admin.config.share.share-id-length": "Default share ID length",
@@ -512,6 +531,15 @@ export default {
   "error.param.provider_discord": "Discord",
   "error.param.provider_oidc": "OpenID Connect",
   // Common translations
+  "common.button.info": "Info",
+  "common.button.undo": "Cofnij",
+  "common.button.download": "Pobierz",
+  "common.button.copy": "Kopiuj",
+  "common.button.copy-link": "Kopiuj link",
+  "common.button.preview": "Podgląd",
+  "common.button.edit": "Edytuj",
+  "common.button.profile": "Profil",
+  "common.button.shares": "Udostępnienia",
   "common.button.save": "Zapisz",
   "common.button.create": "Utwórz",
   "common.button.submit": "Prześlij",
