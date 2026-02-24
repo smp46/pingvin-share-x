@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "管理画面",
   "navbar.avatar.signout": "ログアウト",
   // END navbar
+
   // /
   "home.title": "<h>セルフホスト</h>のファイル共有プラットフォーム。",
   "home.description": "WeTransferのようなサードパーティーサービスに自分のファイルを渡したいですか？",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "始めましょう",
   "home.button.source": "ソースコード",
   // END /
+
   // /auth/signin
   "signin.title": "おかえりなさい",
   "signin.description": "アカウントをお持ちではありませんか？",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "アカウントを作成",
   "signup.description": "既にアカウントをお持ちですか？",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "あなたのメールアドレス",
   "signup.button.submit": "さあ始めましょう",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "二段階認証",
   "totp.button.signIn": "ログイン",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "パスワードを忘れてしまいましたか？",
   "resetPassword.description": "登録しているメールアドレスを入力してください。",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "手動で入力",
   "account.modal.totp.code": "コピー",
   "common.button.clickToCopy": "ここをクリックしてコピー",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "検証",
   "account.notify.totp.disable": "2段階認証の無効化に成功しました",
   "account.notify.totp.enable": "2段階認証の有効化に成功しました",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "アカウントを削除",
   "account.modal.delete.description": "全ての有効な共有を含め、アカウントに関する全てのデータを完全に削除してもよろしいですか？",
   // END /account
+
   // /account/shares
   "account.shares.title": "自分の共有",
   "account.shares.title.empty": "まだ何もありません 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "共有を削除: {share}",
   "account.shares.modal.delete.description": "この共有を削除してもよろしいですか？",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "ファイルリクエスト",
   "account.reverseShares.description": "ファイルリクエストは、外部のユーザーにファイルをアップロードしてもらえるユニークなURLを生成できます。",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "ファイルリクエストを削除",
   "account.reverseShares.modal.delete.description": "本当にこのファイルリクエストを削除しますか？削除すると、関連するファイルアップロードも削除されます。",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "管理画面",
   "admin.button.users": "ユーザー管理",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "設定",
   "admin.version": "バージョン",
   // END /admin
+
   // /admin/users
   "admin.users.title": "ユーザー管理",
   "admin.users.table.username": "ユーザー名",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "管理者権限",
   "admin.users.modal.create.admin.description": "チェックされている場合、ユーザーは管理画面にアクセスできるようになります。",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "共有管理",
   "admin.shares.table.id": "共有ID",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "共有を削除: {id}",
   "admin.shares.edit.delete.description": "この共有を削除してもよろしいですか？",
   // END /admin/shares
+
   // /upload
   "upload.title": "アップロード",
   "upload.notify.confirm-leave": "このページから離れますか？アップロードはキャンセルされます。",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "共有の準備ができました",
   "upload.modal.completed.notified-reverse-share-creator": "ファイルリクエストの作成者に通知しました。他の手段でこのリンクを手動で共有することもできます。",
   // END /upload
+
   // /share/[id]
   "share.title": "「{shareId}」が共有されました",
   "share.description": "あなたと共有したファイルをご確認ください！",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "プレビューに対応していません",
   "share.modal.file-preview.error.not-supported.description": "このファイル形式のプレビューはサポートされていません。ファイルをダウンロードして表示してください。",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "編集 {shareId}",
   "share.edit.append-upload": "ファイルを追加",
   "share.edit.notify.generic-error": "共有の最終処理でエラーが発生しました。",
   "share.edit.notify.save-success": "共有の更新に成功しました",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "インプリント",
   // END /imprint
+
   // /privacy
   "privacy.title": "プライバシーポリシー",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "構成ファイルがあります",
   "admin.config.config-file-warning.description": "設定ファイル設定で済みのPingvin ShareはUI を使用して設定を変更することはできません。",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "登録を許可するかどうかを選択してください。",
   "admin.config.share.allow-unauthenticated-shares": "ログインしていない状態での共有を許可する",
   "admin.config.share.allow-unauthenticated-shares.description": "ログインしていないユーザーに共有の作成を許可するかどうかを選択してください。",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "有効期限の上限",
   "admin.config.share.max-expiration.description": "共有の最大有効期限。無期限を許可するには0に設定します。",
   "admin.config.share.share-id-length": "デフォルトの共有IDの長さ",
