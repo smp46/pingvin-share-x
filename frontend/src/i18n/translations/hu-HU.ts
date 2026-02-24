@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Admin ügyek",
   "navbar.avatar.signout": "Kijelentkezés",
   // END navbar
+
   // /
   "home.title": "<h>Saját üzemeltetésű</h> fájl megosztó platform.",
   "home.description": "Valóban hozzáférhetővé akarja tenni fájljait a WeTransfer és más hasonló harmadik felek számára?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Nosza, kezdjük",
   "home.button.source": "Forráskód",
   // END /
+
   // /auth/signin
   "signin.title": "Üdv ismét itt",
   "signin.description": "Nincsen még fiókja?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Fiók létrehozása",
   "signup.description": "Már van fiókja?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Az Ön emailcíme",
   "signup.button.submit": "Kezdhetjük",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "TOTP hitelesítés",
   "totp.button.signIn": "Bejelentkezés",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Elfelejtette jelszavát?",
   "resetPassword.description": "Adja meg emailcímét a jelszó alaphelyzetbe állításához.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Kézi megadás",
   "account.modal.totp.code": "Kód",
   "common.button.clickToCopy": "Kattintson a másoláshoz",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Hitelesítés",
   "account.notify.totp.disable": "TOTP sikeresen letiltva",
   "account.notify.totp.enable": "TOTP sikeresen engedélyezve",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Fiók törlése",
   "account.modal.delete.description": "Valóban törölni kívánja a fiókot és vele az összes meglévő aktív megosztást?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Megosztásaim",
   "account.shares.title.empty": "Üres 👀, itt nincs semmi",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Megosztás törlése: {share}",
   "account.shares.modal.delete.description": "Biztos abban, hogy törölni kívánja ezt a megosztást?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Fordított megosztás",
   "account.reverseShares.description": "A fordított megosztással egy egyedi URL azonosító készül, amivel a rendszeren kívülről készíthető megosztás.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Fordított megosztás törlése",
   "account.reverseShares.modal.delete.description": "Valóban törölni kívánja ezt a fordított megosztást? A használatával készített megosztások is törlésre kerülnek.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Admin ügyek",
   "admin.button.users": "Felhasználókezelés",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Konfiguráció",
   "admin.version": "Verzió",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Felhasználókezelés",
   "admin.users.table.username": "Felhasználónév",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Adminisztrátori jogosultságok",
   "admin.users.modal.create.admin.description": "Bejelölt állapotában a felhasználó hozzáfér az admin beállító oldalhoz.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Megosztáskezelés",
   "admin.shares.table.id": "Megosztás ID",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Megosztás törlése: {id}",
   "admin.shares.edit.delete.description": "Valóban törölni kívánja ezt a megosztást?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Feltöltés",
   "upload.notify.confirm-leave": "Are you sure you want to leave this page? Your upload will be canceled.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "A megosztás készen áll",
   "upload.modal.completed.notified-reverse-share-creator": "Értesítettük a fordított megosztás létrehozóját. Ezt a linket kézzel is megoszthatja velük más csatornákon keresztül.",
   // END /upload
+
   // /share/[id]
   "share.title": "Megosztás: {shareId}",
   "share.description": "Megosztottak Önnel valami fontosat!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Az előnézetek nem támogatottak",
   "share.modal.file-preview.error.not-supported.description": "Previews are not supported for this type of files. Please download the file to view it.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Módosítás: {shareId}",
   "share.edit.append-upload": "Fájl hozzáfűzése",
   "share.edit.notify.generic-error": "Hiba lépett fel a megosztás befejezése közben.",
   "share.edit.notify.save-success": "A megosztás frissítésre került",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Imprint",
   // END /imprint
+
   // /privacy
   "privacy.title": "Privacy Policy",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Regisztráció engedélyezésének ki- és bekapcsolása",
   "admin.config.share.allow-unauthenticated-shares": "Hitelesítés nélküli megosztások engedélyezése",
   "admin.config.share.allow-unauthenticated-shares.description": "Hitelesítés nélküli felhasználók létre hozhatnak-e megosztásokat",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Max lejárat",
   "admin.config.share.max-expiration.description": "Maximum share expiration. Set to 0 to allow unlimited expiration.",
   "admin.config.share.share-id-length": "Default share ID length",
@@ -512,6 +531,15 @@ export default {
   "error.param.provider_discord": "Discord",
   "error.param.provider_oidc": "OpenID Connect",
   // Common translations
+  "common.button.info": "Infó",
+  "common.button.undo": "Visszavonás",
+  "common.button.download": "Letöltés",
+  "common.button.copy": "Másolás",
+  "common.button.copy-link": "Hivatkozás másolása",
+  "common.button.preview": "Előnézet",
+  "common.button.edit": "Szerkesztés",
+  "common.button.profile": "Profil",
+  "common.button.shares": "Megosztások",
   "common.button.save": "Mentés",
   "common.button.create": "Létrehozás",
   "common.button.submit": "Küldés",
