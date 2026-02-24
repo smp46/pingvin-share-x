@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Administreerimine",
   "navbar.avatar.signout": "Logi välja",
   // END navbar
+
   // /
   "home.title": "<h>Isehostitav</h> failijagamisplatvorm.",
   "home.description": "Kas tõesti soovid anda oma isiklikud failid kolmandate osapoolte nagu WeTransfer kätte?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Alusta",
   "home.button.source": "Lähtekood",
   // END /
+
   // /auth/signin
   "signin.title": "Tere tulemast tagasi",
   "signin.description": "Kas sul pole veel kontot?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Loo konto",
   "signup.description": "Kas sul on juba konto?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Sinu e-post",
   "signup.button.submit": "Alustame",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "TOTP autentimine",
   "totp.button.signIn": "Sisene",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Unustasid oma parooli?",
   "resetPassword.description": "Parooli lähtestamiseks sisesta enda e-posti aadress.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Sisesta käsitsi",
   "account.modal.totp.code": "Kood",
   "common.button.clickToCopy": "Klõpsa, et kopeerida",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Kinnita",
   "account.notify.totp.disable": "TOTP edukalt välja lülitatud",
   "account.notify.totp.enable": "TOTP edukalt sisse lülitatud",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Kustuta konto",
   "account.modal.delete.description": "Kas tahad tõesti kustutada enda konto koos kõikide jagatud failidega?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Minu jagamised",
   "account.shares.title.empty": "Siin on tühjus 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Kustuta jagamine: {share}",
   "account.shares.modal.delete.description": "Kas soovid tõesti seda jagamist kustutada?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Tagasijagamine",
   "account.reverseShares.description": "Tagasijagamine võimaldab sul genereerida unikaalse URL-i, mille kaudu väliskasutajad saavad luua jagamise.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Kustuta tagasijagamine",
   "account.reverseShares.modal.delete.description": "Kas soovid tõesti seda tagasijagamist kustutada? Kui jah, siis kustutatakse ka sellega seotud jagamised.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Administreerimine",
   "admin.button.users": "Kasutajate haldamine",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Seaded",
   "admin.version": "Versioon",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Kasutajate haldamine",
   "admin.users.table.username": "Kasutajanimi",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Administraatori õigused",
   "admin.users.modal.create.admin.description": "Kui see on märgitud, saab kasutaja pääseda administraatori paneelile.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Jagamiste haldus",
   "admin.shares.table.id": "Jagamise ID",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Kustuta jagamine: {id}",
   "admin.shares.edit.delete.description": "Kas soovid tõesti seda jagamist kustutada?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Laadi üles",
   "upload.notify.confirm-leave": "Kas oled kindel, et soovid sellelt lehelt lahkuda? Sinu üleslaadimine tühistatakse.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Jagamine valmis",
   "upload.modal.completed.notified-reverse-share-creator": "Oleme teavitanud tagasijagamise loojat. Saad samuti seda linki nendega käsitsi teiste vahenditega jagada.",
   // END /upload
+
   // /share/[id]
   "share.title": "Jagamine {shareId}",
   "share.description": "Vaata, mida ma sinuga jagasin!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Eelvaadet ei toetata",
   "share.modal.file-preview.error.not-supported.description": "Selle failitüübi eelvaateid ei toetata. Faili vaatamiseks laadi see alla.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Muuda jagamist {shareId}",
   "share.edit.append-upload": "Lisa fail",
   "share.edit.notify.generic-error": "Jagamise lõpetamisel tekkis viga.",
   "share.edit.notify.save-success": "Jagamine edukalt uuendatud",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Kontaktandmed",
   // END /imprint
+
   // /privacy
   "privacy.title": "Privaatsuspoliitika",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Konfiguratsioonifail olemas",
   "admin.config.config-file-warning.description": "Kuna teil on konfigureeritud Pingvin Share konfiguratsioonifailiga, ei saa te muuta konfiguratsiooni kasutajaliidest kasutades.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Kas registreerimine on lubatud",
   "admin.config.share.allow-unauthenticated-shares": "Luba autentimata jagamised",
   "admin.config.share.allow-unauthenticated-shares.description": "Kas autentimata kasutajad saavad jagamisi luua",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Maksimaalne aegumisaeg",
   "admin.config.share.max-expiration.description": "Maksimaalne jagamise aegumisaeg. Määra 0, et lubada piiramatu aegumisaeg.",
   "admin.config.share.share-id-length": "Vaikimisi jagamise ID pikkus",
