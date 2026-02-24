@@ -5,12 +5,22 @@ import {
   UnauthorizedException,
 } from "@nestjs/common";
 import { User } from "@prisma/client";
-import { authenticator, totp } from "@otplib/v12-adapter";
+import {
+  generateSecret,
+  generateURI,
+  generate,
+  verify,
+  createGuardrails,
+} from "otplib";
 import * as qrcode from "qrcode-svg";
 import { ConfigService } from "src/config/config.service";
 import { PrismaService } from "src/prisma/prisma.service";
 import { AuthService } from "./auth.service";
 import { AuthSignInTotpDTO } from "./dto/authSignInTotp.dto";
+
+const legacyGuardrails = createGuardrails({
+  MIN_SECRET_BYTES: 10,
+});
 
 @Injectable()
 export class AuthTotpService {
@@ -43,7 +53,12 @@ export class AuthTotpService {
       throw new BadRequestException("TOTP is not enabled");
     }
 
-    if (!authenticator.check(dto.totp, totpSecret)) {
+    const verified = await verify({
+      token: dto.totp,
+      secret: totpSecret,
+      guardrails: legacyGuardrails,
+    });
+    if (!verified) {
       throw new BadRequestException("Invalid code");
     }
 
@@ -78,9 +93,13 @@ export class AuthTotpService {
     }
 
     const issuer = this.configService.get("general.appName");
-    const secret = authenticator.generateSecret();
+    const secret = generateSecret();
 
-    const otpURL = totp.keyuri(user.username || user.email, issuer, secret);
+    const otpURL = generateURI({
+      issuer: issuer,
+      label: user.username || user.email,
+      secret: secret,
+    });
 
     await this.prisma.user.update({
       where: { id: user.id },
@@ -118,7 +137,10 @@ export class AuthTotpService {
       throw new BadRequestException("TOTP is not in progress");
     }
 
-    const expected = authenticator.generate(totpSecret);
+    const expected = await generate({
+      secret: totpSecret,
+      guardrails: legacyGuardrails,
+    });
 
     if (code !== expected) {
       throw new BadRequestException("Invalid code");
@@ -147,7 +169,10 @@ export class AuthTotpService {
       throw new BadRequestException("TOTP is not enabled");
     }
 
-    const expected = authenticator.generate(totpSecret);
+    const expected = await generate({
+      secret: totpSecret,
+      guardrails: legacyGuardrails,
+    });
 
     if (code !== expected) {
       throw new BadRequestException("Invalid code");
