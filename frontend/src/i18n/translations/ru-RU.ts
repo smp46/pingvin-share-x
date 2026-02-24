@@ -3,7 +3,7 @@ export default {
   "navbar.upload": "Загрузить",
   "navbar.signin": "Вход",
   "navbar.home": "Главная",
-  "navbar.signup": "Sign up",
+  "navbar.signup": "Зарегистрироваться",
   "navbar.links.shares": "Мои загрузки",
   "navbar.links.reverse": "Обратные загрузки",
   "navbar.avatar.account": "Мой аккаунт",
@@ -128,7 +128,7 @@ export default {
   "account.shares.table.name": "Название",
   "account.shares.table.description": "Описание",
   "account.shares.table.visitors": "Посетителей",
-  "account.shares.table.expiresAt": "Expires on",
+  "account.shares.table.expiresAt": "Срок действия до",
   "account.shares.table.createdAt": "Created on",
   "account.shares.table.size": "Размер",
   "account.shares.table.password-protected": "Password protected",
@@ -186,7 +186,7 @@ export default {
   // /admin
   "admin.title": "Администрирование",
   "admin.button.users": "Управление пользователями",
-  "admin.button.shares": "Share management",
+  "admin.button.shares": "Управление Share",
   "admin.button.config": "Конфигурация",
   "admin.version": "Версия",
   // END /admin
