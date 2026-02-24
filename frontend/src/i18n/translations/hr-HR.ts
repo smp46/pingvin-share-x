@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Administracija",
   "navbar.avatar.signout": "Odjavi se",
   // END navbar
+
   // /
   "home.title": "<h>Samo-hostana</h> platforma za dijeljenje datoteka.",
   "home.description": "Želite li zaista povjeriti svoje osobne datoteke trećim stranama poput WeTransfera?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Započni",
   "home.button.source": "Izvorni kod",
   // END /
+
   // /auth/signin
   "signin.title": "Dobrodošli natrag",
   "signin.description": "Još uvijek nemate račun?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Kreiraj račun",
   "signup.description": "Već imate račun?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Vaš email",
   "signup.button.submit": "Krenimo",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "TOTP autentifikacija",
   "totp.button.signIn": "Prijavite se",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Zaboravili ste lozinku?",
   "resetPassword.description": "Unesite svoj email kako biste resetirali lozinku.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Unesite ručno",
   "account.modal.totp.code": "Kod",
   "common.button.clickToCopy": "Kliknite za kopiranje",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Potvrdi",
   "account.notify.totp.disable": "TOTP je uspješno onemogućen",
   "account.notify.totp.enable": "TOTP je uspješno omogućen",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Izbriši račun",
   "account.modal.delete.description": "Jeste li sigurni da želite izbrisati svoj račun, uključujući sva vaša aktivna dijeljenja?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Moja dijeljenja",
   "account.shares.title.empty": "Ovdje je prazno 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Izbriši dijeljenje {share}",
   "account.shares.modal.delete.description": "Jeste li sigurni da želite izbrisati ovo dijeljenje?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Obrnuto dijeljenje",
   "account.reverseShares.description": "Obrnuto dijeljenje omogućava vam da generirate jedinstveni URL koji omogućava vanjskim korisnicima kreiranje dijeljenja.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Obrišite obrnuto dijeljenje",
   "account.reverseShares.modal.delete.description": "Jeste li sigurni da želite izbrisati ovo obrnuto dijeljenje? Ako to učinite, pridružena dijeljenja će također biti izbrisana.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Administracija",
   "admin.button.users": "Upravljanje korisnicima",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Konfiguracija",
   "admin.version": "Verzija",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Upravljanje korisnicima",
   "admin.users.table.username": "Korisničko ime",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Administratorske privilegije",
   "admin.users.modal.create.admin.description": "Ako je označeno, korisnik će moći pristupiti administratorskom panelu.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Upravljanje dijeljenjima",
   "admin.shares.table.id": "ID dijeljenja",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Obrišite dijeljenje: {id}",
   "admin.shares.edit.delete.description": "Jeste li sigurni da želite obrisati ovo dijeljenje?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Pošalji",
   "upload.notify.confirm-leave": "Jeste li sigurni da želite napustiti ovu stranicu? Vaše učitavanje će biti otkazano.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Dijeljenje je spremno",
   "upload.modal.completed.notified-reverse-share-creator": "Obavijestili smo kreatora obrnutog dijeljenja. Također možete ručno podijeliti ovu poveznicu s njima na druge načine.",
   // END /upload
+
   // /share/[id]
   "share.title": "Dijeljenje {shareId}",
   "share.description": "Pogledajte što sam podijelio s vama!",
@@ -290,21 +303,25 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Pregled nije podržan",
   "share.modal.file-preview.error.not-supported.description": "Pregledi nisu podržani za ovu vrstu datoteka. Molimo preuzmite datoteku za pregled.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Uredi {shareId}",
   "share.edit.append-upload": "Dodaj datoteku",
   "share.edit.notify.generic-error": "Došlo je do pogreške prilikom dovršavanja vašeg dijeljenja.",
   "share.edit.notify.save-success": "Dijeljenje je uspješno ažurirano",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Otisak",
   // END /imprint
+
   // /privacy
   "privacy.title": "Pravilima o zaštiti privatnosti",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
-  "admin.config.config-file-warning.description": "",
+  "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
   "admin.config.title": "Konfiguracija",
   "admin.config.category.general": "Opće",
   "admin.config.category.share": "Dijeljenje",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Je li registracija dozvoljena",
   "admin.config.share.allow-unauthenticated-shares": "Dozvoli dijeljenje bez autentifikacije",
   "admin.config.share.allow-unauthenticated-shares.description": "Mogu li korisnici bez autentifikacije kreirati dijeljenja",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Maksimalno trajanje",
   "admin.config.share.max-expiration.description": "Maximum share expiration. Set to 0 to allow unlimited expiration.",
   "admin.config.share.share-id-length": "Dužina zadano generiranog ID-a za dijeljenje",
