@@ -3,7 +3,7 @@ export default {
   "navbar.upload": "업로드",
   "navbar.signin": "로그인",
   "navbar.home": "홈",
-  "navbar.signup": "Sign up",
+  "navbar.signup": "계정 만들기",
   "navbar.links.shares": "내 공유",
   "navbar.links.reverse": "역방향 공유",
   "navbar.avatar.account": "내 계정",
