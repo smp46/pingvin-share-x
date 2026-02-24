@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Verwaltung",
   "navbar.avatar.signout": "Abmelden",
   // END navbar
+
   // /
   "home.title": "Eine <h>selbst gehostete</h> Dateifreigabe-Plattform.",
   "home.description": "Möchtest du wirklich deine persönlichen Dateien an Drittanbieter wie WeTransfer weitergeben?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Lege los",
   "home.button.source": "Quellcode",
   // END /
+
   // /auth/signin
   "signin.title": "Willkommen zurück",
   "signin.description": "Du hast noch kein Konto?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Erstelle ein Konto",
   "signup.description": "Besitzt du bereits ein Konto?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Deine E-Mail-Adresse",
   "signup.button.submit": "Lass uns loslegen",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "TOTP Authentifizierung",
   "totp.button.signIn": "Anmelden",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Passwort vergessen?",
   "resetPassword.description": "Gib deine E-Mail-Adresse ein, um dein Passwort zurückzusetzen.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Manuell eingeben",
   "account.modal.totp.code": "Code",
   "common.button.clickToCopy": "Klicken zum Kopieren",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Überprüfen",
   "account.notify.totp.disable": "TOTP erfolgreich deaktiviert",
   "account.notify.totp.enable": "TOTP erfolgreich aktiviert",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Konto löschen",
   "account.modal.delete.description": "Möchtest du wirklich dein Konto inklusive aller aktiven Freigaben löschen?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Meine Freigaben",
   "account.shares.title.empty": "Es ist so leer hier 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Freigabe löschen: {share}",
   "account.shares.modal.delete.description": "Möchtest du diese Freigabe wirklich löschen?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Datei Anfragen",
   "account.reverseShares.description": "Eine Datei Anfrage erlaubt dir eine einzigartige URL zu erstellen, die externen Benutzern erlaubt, Dateien hochzuladen.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Externe Freigabe löschen",
   "account.reverseShares.modal.delete.description": "Möchtest du diese externe Freigabe wirklich löschen? In diesem Fall werden auch hiermit verbundene Freigaben gelöscht.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Verwaltung",
   "admin.button.users": "Benutzerverwaltung",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Konfiguration",
   "admin.version": "Version",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Benutzerverwaltung",
   "admin.users.table.username": "Benutzername",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Administratorrechte",
   "admin.users.modal.create.admin.description": "Wenn aktiviert, kann der Benutzer auf das Administrator-Panel zugreifen.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Freigaben Verwaltung",
   "admin.shares.table.id": "Freigabe ID",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Freigabe löschen: {id}",
   "admin.shares.edit.delete.description": "Möchtest du diese Freigabe wirklich löschen?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Upload",
   "upload.notify.confirm-leave": "Bist du sicher, dass du diese Seite verlassen willst? Dein Upload wird abgebrochen.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Freigabe bereit",
   "upload.modal.completed.notified-reverse-share-creator": "Wir haben den Ersteller der externen Freigabe benachrichtigt. Du kannst den Link auch auf andere Wege teilen.",
   // END /upload
+
   // /share/[id]
   "share.title": "Freigabe {shareId}",
   "share.description": "Schau, was ich mit dir geteilt habe!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Vorschau wird nicht unterstützt",
   "share.modal.file-preview.error.not-supported.description": "Vorschaubilder werden für diesen Dateityp nicht unterstützt. Bitte lade die Datei herunter, um sie anzuzeigen.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "{shareId} bearbeiten",
   "share.edit.append-upload": "Datei anfügen",
   "share.edit.notify.generic-error": "Während der Erstellung der Freigabe ist ein Fehler aufgetreten.",
   "share.edit.notify.save-success": "Freigabe erfolgreich aktualisiert",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Impressum",
   // END /imprint
+
   // /privacy
   "privacy.title": "Datenschutzerklärung",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Konfigurationsdatei aktiv",
   "admin.config.config-file-warning.description": "Da Pingvin Share mit einer Konfigurationsdatei konfiguriert ist, kann die Konfiguration nicht über die Benutzeroberfläche geändert werden.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Gibt an, ob eine Registrierung erlaubt ist",
   "admin.config.share.allow-unauthenticated-shares": "Nicht authentifizierte Freigaben erlauben",
   "admin.config.share.allow-unauthenticated-shares.description": "Gibt an, ob nicht authentifizierte Benutzer Freigaben erstellen können",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Max. Ablaufdatum",
   "admin.config.share.max-expiration.description": "Maximale Ablaufzeit. Auf 0 setzen, um kein Ablaufdatum zu definieren.",
   "admin.config.share.share-id-length": "Standardlänge der Freigabe-ID",
@@ -512,6 +531,15 @@ export default {
   "error.param.provider_discord": "Discord",
   "error.param.provider_oidc": "OpenID Connect",
   // Common translations
+  "common.button.info": "Info",
+  "common.button.undo": "Rückgängig",
+  "common.button.download": "Herunterladen",
+  "common.button.copy": "Kopieren",
+  "common.button.copy-link": "Link kopieren",
+  "common.button.preview": "Vorschau",
+  "common.button.edit": "Bearbeiten",
+  "common.button.profile": "Profil",
+  "common.button.shares": "Freigaben",
   "common.button.save": "Speichern",
   "common.button.create": "Erstellen",
   "common.button.submit": "Bestätigen",
