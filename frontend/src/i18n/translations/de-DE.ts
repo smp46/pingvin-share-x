@@ -226,7 +226,7 @@ export default {
   // END /admin/shares
 
   // /upload
-  "upload.title": "Upload",
+  "upload.title": "Hochladen",
   "upload.notify.confirm-leave": "Bist du sicher, dass du diese Seite verlassen willst? Dein Upload wird abgebrochen.",
   "upload.notify.generic-error": "Während der Erstellung der Freigabe ist ein Fehler aufgetreten.",
   "upload.notify.count-failed": "{count} Dateien konnten nicht hochgeladen werden. Wird erneut versucht.",
@@ -248,7 +248,7 @@ export default {
   "upload.modal.expires.never": "nie",
   "upload.modal.expires.never-long": "Permanente Freigabe",
   "upload.modal.expires.error.too-long": "Das Ablaufdatum überschreitet das Maximum von {max}.",
-  "upload.modal.link.label": "Link",
+  "upload.modal.link.label": "Verknüpfen",
   "upload.modal.expires.label": "Gültig bis",
   "upload.modal.expires.minute-singular": "Minute",
   "upload.modal.expires.minute-plural": "Minuten",
@@ -550,7 +550,7 @@ export default {
   "common.button.share": "Teilen",
   "common.button.generate": "Generieren",
   "common.button.done": "Fertig",
-  "common.text.link": "Link",
+  "common.text.link": "Verknüpfen",
   "common.text.navigate-to-link": "Link öffnen",
   "common.text.or": "oder",
   "common.text.redirecting": "Umleitung...",
