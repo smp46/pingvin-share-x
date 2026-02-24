@@ -4,12 +4,13 @@ export default {
   "navbar.signin": "Είσοδος",
   "navbar.home": "Αρχική",
   "navbar.signup": "Sign up",
-  "navbar.links.shares": "",
+  "navbar.links.shares": "My shares",
   "navbar.links.reverse": "Αντίστροφος σύνδεσμος κοινής χρήσης",
   "navbar.avatar.account": "Ο λογαριασμός μου",
   "navbar.avatar.admin": "Διαχείριση",
   "navbar.avatar.signout": "Αποσύνδεση",
   // END navbar
+
   // /
   "home.title": "Μια πλατφόρμα κοινής χρήσης αρχείων <h>σε ιδιωτική εγκατάσταση</h>.",
   "home.description": "Θέλετε πραγματικά να δώσετε τα προσωπικά σας αρχεία στο χέρι τρίτων όπως WeTransfer?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Ας αρχίσουμε",
   "home.button.source": "Πηγαίος κώδικας",
   // END /
+
   // /auth/signin
   "signin.title": "Καλώς ήρθατε ξανά",
   "signin.description": "Δεν έχετε ακόμα λογαριασμό;",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Δημιουργία λογαριασμού",
   "signup.description": "Έχετε ήδη λογαριασμό;",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Το email σας",
   "signup.button.submit": "Ας ξεκινήσουμε",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "Ταυτοποίηση TOTP",
   "totp.button.signIn": "Είσοδος",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Ξεχάσατε τον κωδικό σας;",
   "resetPassword.description": "A message with a link to reset your password has been sent if the email exists.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Χειροκίνητη εισαγωγή",
   "account.modal.totp.code": "Κώδικας",
   "common.button.clickToCopy": "Κάνε κλικ για αντιγραφή",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Επαλήθευση",
   "account.notify.totp.disable": "Το TOTP απενεργοποιήθηκε επιτυχώς",
   "account.notify.totp.enable": "Το TOTP ενεργοποιήθηκε επιτυχώς",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Διαγραφή Λογαριασμού",
   "account.modal.delete.description": "Θέλετε πραγματικά να διαγράψετε το λογαριασμό σας, συμπεριλαμβανομένων όλων των ενεργών μετοχών σας?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Οι κοινοποιήσεις μου",
   "account.shares.title.empty": "Είναι κενό εδώ 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "Θέλετε πραγματικά να διαγράψετε αυτό το διαμοιρασμό;",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Αντίστροφες κοινοποιήσεις",
   "account.reverseShares.description": "Μια αντίστροφη κοινοποίηση σάς επιτρέπει να δημιουργήσετε μια μοναδική διεύθυνση URL που επιτρέπει σε εξωτερικούς χρήστες να δημιουργήσουν μια κοινή χρήση.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Διαγραφή αντίστροφης κοινοποίησης",
   "account.reverseShares.modal.delete.description": "Θέλετε πραγματικά να διαγράψετε αυτή την αντίστροφη κοινοποίηση; Εάν το κάνετε, οι συνδεδεμένες κοινοποιήσεις θα διαγραφούν επίσης.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Διαχείριση",
   "admin.button.users": "Διαχείριση χρηστών",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Διαμόρφωση",
   "admin.version": "Έκδοση",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Διαχείριση χρηστών",
   "admin.users.table.username": "Όνομα χρήστη",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Δικαιώματα διαχειριστή",
   "admin.users.modal.create.admin.description": "Αν ενεργοποιηθεί, ο χρήστης θα μπορεί να έχει πρόσβαση στον πίνακα διαχείρισης.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Διαχείριση κοινοποιήσεων",
   "admin.shares.table.id": "Αναγνωριστικό κοινοποίησης",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Delete share: {id}",
   "admin.shares.edit.delete.description": "Θέλετε πραγματικά να διαγράψετε αυτή τη κοινοποίηση;",
   // END /admin/shares
+
   // /upload
   "upload.title": "Μεταφόρτωση",
   "upload.notify.confirm-leave": "Are you sure you want to leave this page? Your upload will be canceled.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Κοινοποίηση έτοιμου",
   "upload.modal.completed.notified-reverse-share-creator": "Έχουμε ειδοποιήσει τον δημιουργό της αντίστροφης κοινής χρήσης. Μπορείτε επίσης να μοιραστείτε χειροκίνητα αυτόν τον σύνδεσμο μαζί τους μέσω άλλων μέσων.",
   // END /upload
+
   // /share/[id]
   "share.title": "Διαμοιρασμός {shareId}",
   "share.description": "Σας προωθώ αρχεία προς κοινοποίηση.",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Η προεπισκόπηση δεν υποστηρίζεται",
   "share.modal.file-preview.error.not-supported.description": "Previews are not supported for this type of files. Please download the file to view it.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Ενημέρωση {shareId}",
   "share.edit.append-upload": "Προσθήκη αρχείου",
   "share.edit.notify.generic-error": "Παρουσιάστηκε σφάλμα κατά την ολοκλήρωση του διαμοιρασμού.",
   "share.edit.notify.save-success": "Ο διαμοιρασμός ενημερώθηκε επιτυχώς",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Imprint",
   // END /imprint
+
   // /privacy
   "privacy.title": "Privacy Policy",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Αν επιτρέπεται η εγγραφή",
   "admin.config.share.allow-unauthenticated-shares": "Επιτρέψτε κοινές χρήσεις χωρίς έλεγχο ταυτότητας",
   "admin.config.share.allow-unauthenticated-shares.description": "Εάν οι χρήστες χωρίς έλεγχο ταυτότητας μπορούν να δημιουργήσουν κοινόχρηστα στοιχεία",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Μέγιστη λήξη",
   "admin.config.share.max-expiration.description": "Maximum share expiration. Set to 0 to allow unlimited expiration.",
   "admin.config.share.share-id-length": "Default share ID length",
@@ -512,6 +531,15 @@ export default {
   "error.param.provider_discord": "Discord",
   "error.param.provider_oidc": "Σύνδεση OpenID",
   // Common translations
+  "common.button.info": "Πληροφορίες",
+  "common.button.undo": "Αναίρεση",
+  "common.button.download": "Λήψη",
+  "common.button.copy": "Αντιγραφή",
+  "common.button.copy-link": "Αντιγραφή συνδέσμου",
+  "common.button.preview": "Προεπισκόπηση",
+  "common.button.edit": "Επεξεργασία",
+  "common.button.profile": "Προφίλ",
+  "common.button.shares": "Κοινοποιήσεις",
   "common.button.save": "Αποθήκευση",
   "common.button.create": "Δημιουργία",
   "common.button.submit": "Υποβολή",
