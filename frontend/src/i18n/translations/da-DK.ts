@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Administration",
   "navbar.avatar.signout": "Log ud",
   // END navbar
+
   // /
   "home.title": "En <h>self-hosted</h> fildelingsplatform.",
   "home.description": "Er du sikker på, at du vil overlade dine personlige filer til tredjeparter som WeTransfer?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Kom i gang",
   "home.button.source": "Source code",
   // END /
+
   // /auth/signin
   "signin.title": "Velkommen tilbage",
   "signin.description": "Har du ikke en bruger endnu?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Opret en bruger",
   "signup.description": "Har du allerede en bruger?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Din e-mail",
   "signup.button.submit": "Lad os komme i gang",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "TOTP Authentication",
   "totp.button.signIn": "Log ind",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Glemt din adgangskode?",
   "resetPassword.description": "Indtast din e-mail for at nulstille din adgangskode.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Indtast manuelt",
   "account.modal.totp.code": "Kode",
   "common.button.clickToCopy": "Klik for at kopiere",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Bekræft",
   "account.notify.totp.disable": "2-faktor blev deaktiveret",
   "account.notify.totp.enable": "2-faktor blev deaktiveret",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Slet bruger",
   "account.modal.delete.description": "Er du sikker på at du vil slette din bruger, herunder alle dine aktive delinger?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Mine delte filer",
   "account.shares.title.empty": "Der er tomt her 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "Ønsker du virkelig at slette denne deling?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Omvendt deling",
   "account.reverseShares.description": "A reverse share allows you to generate a unique URL that allows external users to create a share.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Slet omvendt deling",
   "account.reverseShares.modal.delete.description": "Ønsker du virkelig at slette denne omvendte deling? Hvis du gør det, vil de tilknyttede delinger også blive slettet.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Administration",
   "admin.button.users": "Brugeradministration",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Konfiguration",
   "admin.version": "Version",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Brugeradministration",
   "admin.users.table.username": "Brugernavn",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Admin rettigheder",
   "admin.users.modal.create.admin.description": "If checked, the user will be able to access the admin panel.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Share management",
   "admin.shares.table.id": "Share ID",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Delete share: {id}",
   "admin.shares.edit.delete.description": "Do you really want to delete this share?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Upload",
   "upload.notify.confirm-leave": "Are you sure you want to leave this page? Your upload will be canceled.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Delingen er klar",
   "upload.modal.completed.notified-reverse-share-creator": "We have notified the creator of the reverse share. You can also manually share this link with them through other means.",
   // END /upload
+
   // /share/[id]
   "share.title": "Del {shareId}",
   "share.description": "Se hvad jeg har delt med dig!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Forhåndsvisning ikke understøttet",
   "share.modal.file-preview.error.not-supported.description": "Previews are not supported for this type of files. Please download the file to view it.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Rediger {shareId}",
   "share.edit.append-upload": "Append file",
   "share.edit.notify.generic-error": "An error occurred while finishing your share.",
   "share.edit.notify.save-success": "Deling opdateret",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Imprint",
   // END /imprint
+
   // /privacy
   "privacy.title": "Privacy Policy",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Om alle skal kunne oprette en bruger",
   "admin.config.share.allow-unauthenticated-shares": "Tillad uautoriserede delinger",
   "admin.config.share.allow-unauthenticated-shares.description": "Whether unauthenticated users can create shares",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Maks. udløb",
   "admin.config.share.max-expiration.description": "Maximum share expiration. Set to 0 to allow unlimited expiration.",
   "admin.config.share.share-id-length": "Default share ID length",

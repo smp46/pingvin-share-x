@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Администрирование",
   "navbar.avatar.signout": "Выйти",
   // END navbar
+
   // /
   "home.title": "Платформа для обмена файлами с <h>собственного хостинга</h>.",
   "home.description": "Вы действительно хотите предоставить свои личные файлы в руки третьих лиц, таких как WeTransfer?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Начнем",
   "home.button.source": "Исходный код",
   // END /
+
   // /auth/signin
   "signin.title": "С возвращением",
   "signin.description": "У вас еще нет учетной записи?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Создать аккаунт",
   "signup.description": "Уже есть учётная запись?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Адрес эл. почты",
   "signup.button.submit": "Давайте начнём",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "Авторизация TOTP",
   "totp.button.signIn": "Войти",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Забыли пароль?",
   "resetPassword.description": "Введите ваш email для восстановления пароля.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Ввести вручную",
   "account.modal.totp.code": "Код",
   "common.button.clickToCopy": "Нажмите, чтобы скопировать",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Подтвердить",
   "account.notify.totp.disable": "TOTP успешно отключен",
   "account.notify.totp.enable": "TOTP успешно включен",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Удалить аккаунт",
   "account.modal.delete.description": "Вы действительно хотите удалить свою учетную запись, включая все ваши загрузки?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Мои загрузки",
   "account.shares.title.empty": "Тут пусто 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "Вы действительно хотите удалить эту загрузку?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Обратные загрузки",
   "account.reverseShares.description": "Обратная загрузка позволяет генерировать уникальный URL, позволяющий внешним пользователям загружать файлы.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Удалить обратную загрузку",
   "account.reverseShares.modal.delete.description": "Вы действительно хотите удалить эту обратную загрузку? Если вы это сделаете, то все связанные обратные загрузки будут также удалены.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Администрирование",
   "admin.button.users": "Управление пользователями",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Конфигурация",
   "admin.version": "Версия",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Управление пользователями",
   "admin.users.table.username": "Логин",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Права администратора",
   "admin.users.modal.create.admin.description": "Если отмечено, пользователь будет иметь доступ к панели администратора.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Управление Share",
   "admin.shares.table.id": "Share ID",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Delete share: {id}",
   "admin.shares.edit.delete.description": "Вы действительно хотите удалить эту загрузку?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Загрузить",
   "upload.notify.confirm-leave": "Вы уверены, что хотите покинуть эту страницу? Загрузка будет отменена.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Готово",
   "upload.modal.completed.notified-reverse-share-creator": "Мы уведомили создателя обратного ресурса. Вы также можете вручную поделиться этой ссылкой с ними другими средствами.",
   // END /upload
+
   // /share/[id]
   "share.title": "Загрузка {shareId}",
   "share.description": "Посмотрите, чем я поделился с вами!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Предпросмотр не поддерживается",
   "share.modal.file-preview.error.not-supported.description": "Предпросмотр не поддерживается для этого типа файлов. Пожалуйста, скачайте файл для просмотра.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Редактировать {shareId}",
   "share.edit.append-upload": "Добавить файл",
   "share.edit.notify.generic-error": "Произошла ошибка при завершении вашей загрузки.",
   "share.edit.notify.save-success": "Ссылка на ресурс успешна обновлена",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Imprint",
   // END /imprint
+
   // /privacy
   "privacy.title": "Privacy Policy",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Разрешена ли регистрация",
   "admin.config.share.allow-unauthenticated-shares": "Разрешить неавторизованные загрузки",
   "admin.config.share.allow-unauthenticated-shares.description": "Могут ли неавторизованные пользователи создавать загрузки",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Максимальная срок действия",
   "admin.config.share.max-expiration.description": "Maximum share expiration. Set to 0 to allow unlimited expiration.",
   "admin.config.share.share-id-length": "Длина идентификатора по умолчанию",

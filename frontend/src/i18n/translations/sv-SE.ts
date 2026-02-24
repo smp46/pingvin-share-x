@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Administration",
   "navbar.avatar.signout": "Logga ut",
   // END navbar
+
   // /
   "home.title": "En <h>egen</h> fildelningsplattform.",
   "home.description": "Vill du verkligen lägga dina personliga filer hos en tredje part som WeTransfer?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Kom igång",
   "home.button.source": "Källkod",
   // END /
+
   // /auth/signin
   "signin.title": "Välkommen tillbaka",
   "signin.description": "Har du inget konto än?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Skapa ett konto",
   "signup.description": "Har du redan ett konto?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Din e-post",
   "signup.button.submit": "Kom igång",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "TOTP-autentisering",
   "totp.button.signIn": "Logga in",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Glömt ditt lösenord?",
   "resetPassword.description": "Ange din e-postadress för att återställa ditt lösenord.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Ange manuellt",
   "account.modal.totp.code": "Kod",
   "common.button.clickToCopy": "Klicka för att kopiera",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Verifiera",
   "account.notify.totp.disable": "TOTP har inaktiverats",
   "account.notify.totp.enable": "TOTP aktiverat",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Ta bort konto",
   "account.modal.delete.description": "Vill du verkligen ta bort ditt konto inklusive alla dina aktiva delningar?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Mina delningar",
   "account.shares.title.empty": "Här var det tomt 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Ta bort delning: {share}",
   "account.shares.modal.delete.description": "Vill du verkligen ta bort denna delning?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Omvända delningar",
   "account.reverseShares.description": "En omvänd delning gör att du kan generera en unik URL som tillåter externa användare att skapa en delning.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Ta bort omvänd delning",
   "account.reverseShares.modal.delete.description": "Vill du verkligen ta bort denna omvänd delning? Om du gör det, kommer de tillhörande delningarna också att raderas.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Administration",
   "admin.button.users": "Användarhantering",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Konfiguration",
   "admin.version": "Version",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Användarhantering",
   "admin.users.table.username": "Användarnamn",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Administratörsbehörigheter",
   "admin.users.modal.create.admin.description": "Om detta markeras kommer användaren att kunna komma åt administratörspanelen.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Delningshantering",
   "admin.shares.table.id": "Delnings ID",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Ta bort delning: {id}",
   "admin.shares.edit.delete.description": "Vill du verkligen ta bort denna delning?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Ladda upp",
   "upload.notify.confirm-leave": "Är du säker på att du vill lämna denna sida? Din uppladdning kommer att avbrytas.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Delning redo",
   "upload.modal.completed.notified-reverse-share-creator": "Vi har meddelat skaparen av omvänd delning. Du kan också manuellt dela denna länk med dem på andra sätt.",
   // END /upload
+
   // /share/[id]
   "share.title": "Delning {shareId}",
   "share.description": "Titta vad jag har delat med dig!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Förhandsgranskning stöds ej",
   "share.modal.file-preview.error.not-supported.description": "Förhandsvisningar stöds inte för denna typ av filer. Ladda ner filen för att se den.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Redigera {shareId}",
   "share.edit.append-upload": "Lägg till fil",
   "share.edit.notify.generic-error": "Ett fel uppstod när din delning skulle slutföras.",
   "share.edit.notify.save-success": "Delningen har uppdaterats",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Avtryck",
   // END /imprint
+
   // /privacy
   "privacy.title": "Integritetspolicy",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Konfigurationsfil finns",
   "admin.config.config-file-warning.description": "Eftersom du har en konfigurerad Pingvin Share med en konfigurationsfil kan du inte ändra konfigurationen genom UI.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Om registrering är tillåten",
   "admin.config.share.allow-unauthenticated-shares": "Tillåt oautentiserade delningar",
   "admin.config.share.allow-unauthenticated-shares.description": "Om oautentiserade användare kan skapa delningar",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Max utgångsdatum",
   "admin.config.share.max-expiration.description": "Max längd innan en delning förfaller. Sätt till 0 för att tillåta obegränsad förfallotid.",
   "admin.config.share.share-id-length": "Standardlängd på delnings-ID",

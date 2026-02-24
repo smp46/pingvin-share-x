@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Administracija",
   "navbar.avatar.signout": "Odjavi se",
   // END navbar
+
   // /
   "home.title": "<h>Samo-hostovana</h> platforma za deljenje fajlova.",
   "home.description": "Da li zaista želite da date svoje lične datoteke u ruke trećih strana kao što je WeTransfer?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Započni",
   "home.button.source": "Izvorni kod",
   // END /
+
   // /auth/signin
   "signin.title": "Dobrodošli nazad",
   "signin.description": "Još uvek nemate nalog?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Napravi nalog",
   "signup.description": "Već imate nalog?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Vaš imejl",
   "signup.button.submit": "Hajde da počnemo",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "TOTP autentifikacija",
   "totp.button.signIn": "Prijavite se",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Zaboravili ste lozinku?",
   "resetPassword.description": "Unesite svoj imejl da biste resetovali lozinku.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Unesite ručno",
   "account.modal.totp.code": "Kod",
   "common.button.clickToCopy": "Kliknite za kopiranje",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Verifikuj",
   "account.notify.totp.disable": "TOTP je uspešno onemogućen",
   "account.notify.totp.enable": "TOTP je uspešno omogućen",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Izbriši Nalog",
   "account.modal.delete.description": "Da li zaista želite da izbrišete svoj nalog uključujući sve vaše aktivne deljenja?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Moja deljenja",
   "account.shares.title.empty": "Ovde je prazno 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Izbriši deljenje {share}",
   "account.shares.modal.delete.description": "Da li zaista želite da izbrišete ovo deljenje?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Obrnuto deljenje",
   "account.reverseShares.description": "Obrnuto deljenje vam omogućava da generišete jedinstveni URL koji omogućava spoljnim korisnicima da kreiraju deljenje.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Obrišite obrnuto deljenje",
   "account.reverseShares.modal.delete.description": "Da li zaista želite da izbrišete ovo obrnuto deljenje? Ako to učinite, pridružena deljenja će takođe biti izbrisana.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Administracija",
   "admin.button.users": "Upravljanje korisnicima",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Konfiguracija",
   "admin.version": "Verzija",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Upravljanje korisnicima",
   "admin.users.table.username": "Korisničko ime",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Administratorske privilegije",
   "admin.users.modal.create.admin.description": "Ako je označeno, korisnik će moći da pristupi administrativnom panelu.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Upravljanje deljenjem",
   "admin.shares.table.id": "ID deljenja",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Obriši deljenje: {id}",
   "admin.shares.edit.delete.description": "Da li zaista želite da obrišete ovo deljenje?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Pošalji",
   "upload.notify.confirm-leave": "Da li ste sigurni da želite da napustite ovu stranicu? Vaše otpremanje će biti otkazano.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Deljenje je spremno",
   "upload.modal.completed.notified-reverse-share-creator": "Obavestili smo kreatora reverznog deljenja. Takođe možete ručno podeliti ovaj link sa njima na druge načine.",
   // END /upload
+
   // /share/[id]
   "share.title": "Deljenje {shareId}",
   "share.description": "Pogledajte šta sam podelio sa vama!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Pregled nije podržan",
   "share.modal.file-preview.error.not-supported.description": "Pregledi nisu podržani za ovaj tip datoteka. Molimo preuzmite fajl da biste ga pregledali.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Uredi {shareId}",
   "share.edit.append-upload": "Nadodaj fajl",
   "share.edit.notify.generic-error": "Došlo je do greške prilikom završetka vašeg deljenja.",
   "share.edit.notify.save-success": "Deljenje je uspešno ažurirano",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Imprint",
   // END /imprint
+
   // /privacy
   "privacy.title": "Politika privatnosti",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Konfiguracioni fajl je prisutan",
   "admin.config.config-file-warning.description": "Pošto ste konfigurisali Pingvin Share pomoću konfiguracionog fajla, ne možete menjati konfiguraciju putem korisničkog interfejsa (UI).",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Da li je registracija dozvoljena",
   "admin.config.share.allow-unauthenticated-shares": "Dozvoli deljenje bez autentifikacije",
   "admin.config.share.allow-unauthenticated-shares.description": "Da li korisnici bez autentifikacije mogu da kreiraju deljenja",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Maksimalni rok trajanja",
   "admin.config.share.max-expiration.description": "Maksimalno trajanje deljenja. Podesite na 0 da biste omogućili neograničeno trajanje.",
   "admin.config.share.share-id-length": "Dužina podrazumevanog ID-a za deljenje",

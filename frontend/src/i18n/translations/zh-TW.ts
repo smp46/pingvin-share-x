@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "管理",
   "navbar.avatar.signout": "登出",
   // END navbar
+
   // /
   "home.title": "<h>自建</h> 檔案分享平台！",
   "home.description": "您真的放心把檔案交到第三方檔案平台手中嗎？",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "開始使用",
   "home.button.source": "原始碼",
   // END /
+
   // /auth/signin
   "signin.title": "歡迎回來",
   "signin.description": "還沒有帳號嗎？請",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "建立帳號",
   "signup.description": "已經有帳號了？請",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "請輸入電子郵件",
   "signup.button.submit": "註冊",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "TOTP 驗證",
   "totp.button.signIn": "登入",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "忘記密碼？",
   "resetPassword.description": "請輸入Email以讓系統寄送重置密碼郵件",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "手動輸入",
   "account.modal.totp.code": "驗證碼",
   "common.button.clickToCopy": "複製",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "確認",
   "account.notify.totp.disable": "成功關閉兩步驗證！",
   "account.notify.totp.enable": "成功開啟兩步驗證！",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "刪除帳號",
   "account.modal.delete.description": "您真的想刪除您的帳號，並刪除所有的分享嗎？",
   // END /account
+
   // /account/shares
   "account.shares.title": "我的分享",
   "account.shares.title.empty": "這裡空空如也 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "刪除： {share}",
   "account.shares.modal.delete.description": "您真的想刪除這個分享嗎？",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "檔案請求",
   "account.reverseShares.description": "檔案請求允許您建立一個特定的上傳畫面，以便外部使用者與您分享檔案",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "刪除檔案請求連結",
   "account.reverseShares.modal.delete.description": "您真的想刪除此檔案請求連結嗎？聯結下所有關聯的檔案都將被刪除",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "管理",
   "admin.button.users": "使用者管理",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "配置管理",
   "admin.version": "版本",
   // END /admin
+
   // /admin/users
   "admin.users.title": "使用者管理",
   "admin.users.table.username": "使用者名稱",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "管理員",
   "admin.users.modal.create.admin.description": "如果勾選，使用者將能查看管理員面板",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "檔案管理",
   "admin.shares.table.id": "分享 ID",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "刪除： {id}",
   "admin.shares.edit.delete.description": "您真的想刪除這個檔案嗎？",
   // END /admin/shares
+
   // /upload
   "upload.title": "上傳",
   "upload.notify.confirm-leave": "您真的想離開這個網頁嗎？您的上傳會被中止。",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "分享建立完畢",
   "upload.modal.completed.notified-reverse-share-creator": "我們已經通知檔案請求連結的擁有者，你也可以手動分享此連結給他們。",
   // END /upload
+
   // /share/[id]
   "share.title": "分享 {shareId}",
   "share.description": "瞧瞧我給您分享了些什麽！",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "該檔案類型不支持預覽",
   "share.modal.file-preview.error.not-supported.description": "該檔案類型不支援預覽，請下載後再瀏覽。",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "編輯 {shareId}",
   "share.edit.append-upload": "追加檔案",
   "share.edit.notify.generic-error": "保存分享的過程中發生了錯誤",
   "share.edit.notify.save-success": "分享已更新成功",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "版權宣告",
   // END /imprint
+
   // /privacy
   "privacy.title": "隱私權政策",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "是否允許註冊",
   "admin.config.share.allow-unauthenticated-shares": "是否允許未登入進行分享",
   "admin.config.share.allow-unauthenticated-shares.description": "是否允許未登入的使用者建立分享",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "最大過期時間",
   "admin.config.share.max-expiration.description": "最長分享期限，若設定為0則為永不過期。",
   "admin.config.share.share-id-length": "預設分享ID長度",

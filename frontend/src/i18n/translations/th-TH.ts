@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "แผงควบคุมระบบ",
   "navbar.avatar.signout": "ออกจากระบบ",
   // END navbar
+
   // /
   "home.title": "แพลตฟอร์มสำหรับแชร์ไฟล์ที่คุณสามารถโฮสต์ด้วยตนเอง.",
   "home.description": "คุณอยากให้บริษัทภายนอกเช่น WeTransfer เข้าถึงไฟล์ส่วนตัวของคุณหรือเปล่า?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "เริ่มต้น",
   "home.button.source": "ซอร์สโค้ด",
   // END /
+
   // /auth/signin
   "signin.title": "ยินดีต้อนรับกลับ",
   "signin.description": "ยังไม่มีบัญชี?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "สมัครบัญชี",
   "signup.description": "มีบัญชีแล้ว?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "อีเมลของคุณ",
   "signup.button.submit": "เริ่มต้นกัน",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "TOTP Authentication",
   "totp.button.signIn": "Sign in",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "ลืมรหัสผ่าน?",
   "resetPassword.description": "กรุณาใส่อีเมลของคุณเพื่อรีเซ็ตรหัสผ่าน",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "ป้อนด้วยตนเอง",
   "account.modal.totp.code": "รหัส",
   "common.button.clickToCopy": "คลิกเพื่อคัดลอก",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "ยืนยัน",
   "account.notify.totp.disable": "TOTP ถูกปิดใช้งานเรียบร้อยแล้ว",
   "account.notify.totp.enable": "TOTP ถูกเปิดใช้งานเรียบร้อยแล้ว",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "ลบบัญชีของคุณ",
   "account.modal.delete.description": "คุณต้องการลบบัญชีของคุณหรือไม่ รวมถึงแชร์ที่คุณสร้างไว้ทั้งหมด?",
   // END /account
+
   // /account/shares
   "account.shares.title": "แชร์ของฉัน",
   "account.shares.title.empty": "มันว่างเปล่าที่นี่ 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "คุณต้องการลบแชร์นี้หรือไม่?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "รีเวิร์สแชร์ของฉัน",
   "account.reverseShares.description": "รีเวิร์สแชร์สร้างลิงค์สำหรับคนภายนอกเพื่อที่จะแชร์ไฟล์ให้คุณ",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "ลบลิงค์รีเวิร์สแชร์",
   "account.reverseShares.modal.delete.description": "คุณต้องการลบลิงค์รีเวิร์สแชร์นี้หรือไม่? หากคุณทำเช่นนั้นแชร์ที่เกี่ยวข้องจะถูกลบด้วย",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "แผงควบคุมระบบ",
   "admin.button.users": "การจัดการผู้ใช้",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "การตั้งค่า",
   "admin.version": "เวอร์ชัน",
   // END /admin
+
   // /admin/users
   "admin.users.title": "การจัดการผู้ใช้",
   "admin.users.table.username": "ชื่อผู้ใช้",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "สิทธิ์ของผู้ดูแลระบบ",
   "admin.users.modal.create.admin.description": "หากติ๊กเลือก ผู้ใช้จะสามารถเข้าถึงแผงควบคุมระบบได้",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Share management",
   "admin.shares.table.id": "Share ID",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Delete share: {id}",
   "admin.shares.edit.delete.description": "Do you really want to delete this share?",
   // END /admin/shares
+
   // /upload
   "upload.title": "อัปโหลด",
   "upload.notify.confirm-leave": "Are you sure you want to leave this page? Your upload will be canceled.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "แชร์พร้อมใช้งาน",
   "upload.modal.completed.notified-reverse-share-creator": "We have notified the creator of the reverse share. You can also manually share this link with them through other means.",
   // END /upload
+
   // /share/[id]
   "share.title": "แชร์ {shareId}",
   "share.description": "ดูสิ่งที่ฉันแชร์กับคุณ!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "ไม่รองรับการแสดงตัวอย่าง",
   "share.modal.file-preview.error.not-supported.description": "Previews are not supported for this type of files. Please download the file to view it.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Edit {shareId}",
   "share.edit.append-upload": "Append file",
   "share.edit.notify.generic-error": "An error occurred while finishing your share.",
   "share.edit.notify.save-success": "Share updated successfully",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Imprint",
   // END /imprint
+
   // /privacy
   "privacy.title": "Privacy Policy",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "อนุญาตให้ผู้ใช้ลงทะเบียนด้วยตัวเองเพื่อสร้างแชร์",
   "admin.config.share.allow-unauthenticated-shares": "อนุญาตให้แชร์โดยไม่ต้องเข้าสู่ระบบ",
   "admin.config.share.allow-unauthenticated-shares.description": "อนุญาตให้ผู้ใช้ที่ไม่ได้เข้าสู่ระบบสร้างแชร์",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Max expiration",
   "admin.config.share.max-expiration.description": "Maximum share expiration. Set to 0 to allow unlimited expiration.",
   "admin.config.share.share-id-length": "Default share ID length",
