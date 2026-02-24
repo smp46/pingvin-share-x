@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "الإدارة",
   "navbar.avatar.signout": "تسجيل الخروج",
   // END navbar
+
   // /
   "home.title": "منصة لمشاركة الملفات <h>باستضافة ذاتية</h>.",
   "home.description": "أحقًا تريد تسليم ملفاتك الشخصية لطرف ثالث مثل WeTransfer؟",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "ابدأ",
   "home.button.source": "النص البرمجي المصدري",
   // END /
+
   // /auth/signin
   "signin.title": "أهلًا بعودتك",
   "signin.description": "ليس لديك حساب؟",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "أنشئ حسابًا",
   "signup.description": "لديك حساب بالفعل؟",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "بريدك",
   "signup.button.submit": "لنبدأ",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "كلمة المرور لمرة واحدة المؤقتة TOTP",
   "totp.button.signIn": "تسجيل الدخول",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "نسيت كلمة سرّك؟",
   "resetPassword.description": "اكتب بريدك لتعيد تعيين كلمة السر.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "أدخل يدوياً",
   "account.modal.totp.code": "الرمز",
   "common.button.clickToCopy": "انقر للنسخ",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "تحقق",
   "account.notify.totp.disable": "تم تعطيل TOTP بنجاح",
   "account.notify.totp.enable": "تم تمكين TOTP بنجاح",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "حذف الحساب",
   "account.modal.delete.description": "هل تريد حقاً حذف حسابك بما في ذلك جميع مشاركاتك النشطة؟",
   // END /account
+
   // /account/shares
   "account.shares.title": "مشاركاتي",
   "account.shares.title.empty": "المكان خالٍ هنا 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "هل تريد حذف هذه المشاركة حقاً؟",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "المشاركات العكسية",
   "account.reverseShares.description": "تسمح لك المشاركة العكسية بإنشاء رابط فريد يسمح للمستخدمين الخارجيين بإنشاء مشاركة.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "حذف المشاركة العكسية",
   "account.reverseShares.modal.delete.description": "هل تريد حقاً حذف هذه المشاركة العكسية؟ إذا قمت بذلك، فسيتم حذف المشاركات المرتبطة بها أيضاً.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "الإدارة",
   "admin.button.users": "إدارة المستخدم",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "الإعدادات",
   "admin.version": "الإصدار",
   // END /admin
+
   // /admin/users
   "admin.users.title": "إدارة المستخدم",
   "admin.users.table.username": "اسم المستخدم",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "صلاحيات المدير",
   "admin.users.modal.create.admin.description": "مع هذا الخيار، سيتمكن المستخدم من الدخول إلى لوحة الإدارة.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "إدارة المشاركة",
   "admin.shares.table.id": "معرّف المشاركة",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Delete share: {id}",
   "admin.shares.edit.delete.description": "هل تريد حذف هذه المشاركة حقاً؟",
   // END /admin/shares
+
   // /upload
   "upload.title": "رفع",
   "upload.notify.confirm-leave": "Are you sure you want to leave this page? Your upload will be canceled.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "المشاركة جاهزة",
   "upload.modal.completed.notified-reverse-share-creator": "We have notified the creator of the reverse share. You can also manually share this link with them through other means.",
   // END /upload
+
   // /share/[id]
   "share.title": "المشاركة {shareId}",
   "share.description": "انظر ما الذي شاركته معك!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "المعاينة غير مدعومة",
   "share.modal.file-preview.error.not-supported.description": "Previews are not supported for this type of files. Please download the file to view it.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "تحرير {shareId}",
   "share.edit.append-upload": "إضافة ملف",
   "share.edit.notify.generic-error": "حدث خطأ أثناء إنهاء مشاركتك.",
   "share.edit.notify.save-success": "تم تحديث المشاركة بنجاح",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Imprint",
   // END /imprint
+
   // /privacy
   "privacy.title": "Privacy Policy",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "إتاحة تسجيل حساب جديد",
   "admin.config.share.allow-unauthenticated-shares": "السماح بالمشاركات غير المصادق عليها",
   "admin.config.share.allow-unauthenticated-shares.description": "إتاحة إنشاء المشاركات للمستخدمين غير الموثقين",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "أبعد زمن لانتهاء الصلاحية",
   "admin.config.share.max-expiration.description": "Maximum share expiration. Set to 0 to allow unlimited expiration.",
   "admin.config.share.share-id-length": "Default share ID length",
