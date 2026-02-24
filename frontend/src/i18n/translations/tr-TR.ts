@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Yönetim",
   "navbar.avatar.signout": "Çıkış Yap",
   // END navbar
+
   // /
   "home.title": "Kendi sunucunuzda <h>barındırabileceğiniz</h> bir dosya paylaşım platformu.",
   "home.description": "Kişisel dosyalarınızı gerçekten WeTransfer gibi üçüncü taraf hizmetlere emanet etmek istiyor musunuz?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Hemen Başlayın",
   "home.button.source": "Kaynak Kodu",
   // END /
+
   // /auth/signin
   "signin.title": "Tekrar hoş geldiniz",
   "signin.description": "Henüz bir hesabınız yok mu?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Hesap oluştur",
   "signup.description": "Zaten bir hesabınız var mı?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "E-postanız",
   "signup.button.submit": "Hadi başlayalım",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "TOTP ile Kimlik Doğrulama",
   "totp.button.signIn": "Giriş Yap",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Şifrenizi mi unuttunuz?",
   "resetPassword.description": "Şifrenizi sıfırlamak için e-postanızı girin.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Manuel olarak gir",
   "account.modal.totp.code": "Kod",
   "common.button.clickToCopy": "Kopyalamak için tıkla",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Doğrula",
   "account.notify.totp.disable": "TOTP başarıyla devre dışı bırakıldı",
   "account.notify.totp.enable": "TOTP başarıyla etkinleştirildi",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Hesabı Sil",
   "account.modal.delete.description": "Tüm aktif paylaşımlarınızla birlikte hesabınızı gerçekten silmek istiyor musunuz?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Paylaşımlarım",
   "account.shares.title.empty": "Buralar boş 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Paylaşımı sil: {share}",
   "account.shares.modal.delete.description": "Bu paylaşımı gerçekten silmek istiyor musunuz?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Karşı Paylaşımlar",
   "account.reverseShares.description": "Bir karşı paylaşım, dış kullanıcıların bir paylaşım oluşturmasına olanak tanıyan benzersiz bir URL oluşturmanızı sağlar.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Karşı paylaşımı sil",
   "account.reverseShares.modal.delete.description": "Bu karşı paylaşımı gerçekten silmek istiyor musunuz? Eğer silerseniz, ilişkili paylaşımlar da silinecektir.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Yönetim",
   "admin.button.users": "Kullanıcı Yönetimi",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Yapılandırma",
   "admin.version": "Sürüm",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Kullanıcı Yönetimi",
   "admin.users.table.username": "Kullanıcı adı",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Yönetici yetkileri",
   "admin.users.modal.create.admin.description": "İşaretlenirse, kullanıcı yönetim paneline erişebilecektir.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Paylaşım Yönetimi",
   "admin.shares.table.id": "Paylaşım ID",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Paylaşımı sil: {id}",
   "admin.shares.edit.delete.description": "Bu paylaşımı gerçekten silmek istiyor musunuz?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Yükle",
   "upload.notify.confirm-leave": "Bu sayfadan ayrılmak istediğinizden emin misiniz? Yüklemeniz iptal edilecek.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Paylaşım hazır",
   "upload.modal.completed.notified-reverse-share-creator": "Karşı paylaşımı oluşturan kişiyi bilgilendirdik. Bu bağlantıyı onlarla başka yollarla da manuel olarak paylaşabilirsiniz.",
   // END /upload
+
   // /share/[id]
   "share.title": "Paylaşım {shareId}",
   "share.description": "Bak sana ne paylaştım!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Önizleme desteklenmiyor",
   "share.modal.file-preview.error.not-supported.description": "Bu dosya türü için önizleme desteklenmemektedir. Görüntülemek için lütfen dosyayı indirin.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Düzenle {shareId}",
   "share.edit.append-upload": "Dosya ekle",
   "share.edit.notify.generic-error": "Paylaşımınız tamamlanırken bir hata oluştu.",
   "share.edit.notify.save-success": "Paylaşım başarıyla güncellendi",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Künye",
   // END /imprint
+
   // /privacy
   "privacy.title": "Gizlilik Politikası",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Yapılandırma dosyası mevcut",
   "admin.config.config-file-warning.description": "Pingvin Share'i bir yapılandırma dosyası ile kurduğunuz için, yapılandırmayı arayüz üzerinden değiştiremezsiniz.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Kayıt olmaya izin verilip verilmeyeceği",
   "admin.config.share.allow-unauthenticated-shares": "Kimliği doğrulanmamış paylaşımlara izin ver",
   "admin.config.share.allow-unauthenticated-shares.description": "Kimliği doğrulanmamış kullanıcıların paylaşım oluşturup oluşturamayacağı",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Maksimum geçerlilik süresi",
   "admin.config.share.max-expiration.description": "Maksimum paylaşım geçerlilik süresi. Sınırsız geçerlilik süresine izin vermek için 0 olarak ayarlayın.",
   "admin.config.share.share-id-length": "Varsayılan paylaşım ID uzunluğu",
@@ -512,6 +531,15 @@ export default {
   "error.param.provider_discord": "Discord",
   "error.param.provider_oidc": "OpenID Connect",
   // Common translations
+  "common.button.info": "Bilgi",
+  "common.button.undo": "Geri Al",
+  "common.button.download": "İndir",
+  "common.button.copy": "Kopyala",
+  "common.button.copy-link": "Bağlantıyı kopyala",
+  "common.button.preview": "Önizleme",
+  "common.button.edit": "Düzenle",
+  "common.button.profile": "Profil",
+  "common.button.shares": "Paylaşımlar",
   "common.button.save": "Kaydet",
   "common.button.create": "Oluştur",
   "common.button.submit": "Gönder",
@@ -540,5 +568,5 @@ export default {
   "common.error.number-too-large": "En fazla {max} olabilir",
   "common.error.exact-length": "Tam olarak {length} karakter olmalıdır",
   "common.error.invalid-number": "Bir sayı olmalıdır",
-  "common.error.field-required": "Bu alan zorunludur"
+  "common.error.field-required": "Bu alan gereklidir"
 };
