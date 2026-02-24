@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Administrace",
   "navbar.avatar.signout": "Odhlásit se",
   // END navbar
+
   // /
   "home.title": "<h>Samostatně hostovaná</h> platforma pro sdílení souborů.",
   "home.description": "Opravdu chcete dát své osobní soubory do rukou třetích stran, jako je WeTransfer?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Začít",
   "home.button.source": "Zdrojový kód",
   // END /
+
   // /auth/signin
   "signin.title": "Vítejte zpět",
   "signin.description": "Ještě nemáte účet?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Vytvořit účet",
   "signup.description": "Máte již svůj účet?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Váš e-mail",
   "signup.button.submit": "Pojďme na to",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "TOTP ověření",
   "totp.button.signIn": "Přihlásit se",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Zapomněli jste heslo?",
   "resetPassword.description": "Zadejte svůj e-mail pro obnovení hesla.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Zadat ručně",
   "account.modal.totp.code": "Kód",
   "common.button.clickToCopy": "Kliknutím zkopírujete",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Ověřit",
   "account.notify.totp.disable": "TOTP úspěšně zakázáno",
   "account.notify.totp.enable": "TOTP úspěšně povoleno",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Odstranit účet",
   "account.modal.delete.description": "Opravdu chcete odstranit svůj účet včetně všech aktivních sdílení?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Má sdílení",
   "account.shares.title.empty": "Je tu prázdno 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Odstranit sdílení {share}",
   "account.shares.modal.delete.description": "Opravdu chcete odstranit toto sdílení?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Opačná sdílení",
   "account.reverseShares.description": "Opačné sdílení umožňuje vygenerovat jedinečné URL, které umožní externím uživatelům vytvořit sdílet soubory.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Odstranit opačné sdílení",
   "account.reverseShares.modal.delete.description": "Opravdu chcete odstranit toto opačné sdílení? Pokud tak učiníte, související sdílení budou také odstraněny.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Administrace",
   "admin.button.users": "Správa uživatelů",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Nastavení",
   "admin.version": "Verze",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Správa uživatelů",
   "admin.users.table.username": "Uživatelské jméno",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Administrátorská práva",
   "admin.users.modal.create.admin.description": "Je-li zaškrtnuto, uživatel bude mít přístup k administračnímu panelu.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Správa sdílení",
   "admin.shares.table.id": "ID sdílení",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Odstranit sdílení: {id}",
   "admin.shares.edit.delete.description": "Opravdu chcete smazat toto sdílení?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Nahrát",
   "upload.notify.confirm-leave": "Opravdu chcete opustit tuto stránku? Vaše nahrávání bude zrušeno.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Sdílení připraveno",
   "upload.modal.completed.notified-reverse-share-creator": "Upozornili jsme tvůrce opačného sdílení. Můžete s nimi také ručně sdílet tento odkaz jiným způsobem.",
   // END /upload
+
   // /share/[id]
   "share.title": "Sdílení {shareId}",
   "share.description": "Podívejte se, co jsem s vámi sdílel!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Náhled není podporován",
   "share.modal.file-preview.error.not-supported.description": "Náhledy nejsou podporovány pro tento typ souborů. Stáhněte si soubor pro jeho zobrazení.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Upravit {shareId}",
   "share.edit.append-upload": "Připojit soubor",
   "share.edit.notify.generic-error": "Při dokončování vašeho sdílení došlo k chybě.",
   "share.edit.notify.save-success": "Sdílení úspěšně aktualizováno",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Tiráž",
   // END /imprint
+
   // /privacy
   "privacy.title": "Zásady ochrany osobních údajů",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Konfigurační soubor existuje",
   "admin.config.config-file-warning.description": "Jelikož je Pingvin Share nastaven pomocí konfiguračního souboru, nemůžete změnit nastavení přes UI.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Zda je registrace povolena",
   "admin.config.share.allow-unauthenticated-shares": "Povolit sdílení neověřeným uživatelům",
   "admin.config.share.allow-unauthenticated-shares.description": "Zda mohou neověření uživatelé vytvářet sdílení",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Max. platnost",
   "admin.config.share.max-expiration.description": "Maximální platnost sdílení. Nastavte 0 pro neomezenou platnost.",
   "admin.config.share.share-id-length": "Výchozí délka sdílení ID",
@@ -512,6 +531,15 @@ export default {
   "error.param.provider_discord": "Discord",
   "error.param.provider_oidc": "OpenID Connect",
   // Common translations
+  "common.button.info": "Info",
+  "common.button.undo": "Zpět",
+  "common.button.download": "Stáhnout",
+  "common.button.copy": "Kopírovat",
+  "common.button.copy-link": "Kopírovat odkaz",
+  "common.button.preview": "Náhled",
+  "common.button.edit": "Upravit",
+  "common.button.profile": "Profil",
+  "common.button.shares": "Sdílení",
   "common.button.save": "Uložit",
   "common.button.create": "Vytvořit",
   "common.button.submit": "Odeslat",
