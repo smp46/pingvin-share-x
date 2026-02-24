@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Beheer",
   "navbar.avatar.signout": "Afmelden",
   // END navbar
+
   // /
   "home.title": "Een <h>zelfgehost</h> platform voor het delen van bestanden.",
   "home.description": "Wil je echt je persoonlijke bestanden geven aan derden zoals WeTransfer?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Aan de slag",
   "home.button.source": "Broncode",
   // END /
+
   // /auth/signin
   "signin.title": "Welkom terug",
   "signin.description": "Heeft u nog geen account?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Account aanmaken",
   "signup.description": "Heeft u al een account?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Uw e-mailadres",
   "signup.button.submit": "Laten we beginnen",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "TOTP Authenticatie",
   "totp.button.signIn": "Aanmelden",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Wachtwoord vergeten?",
   "resetPassword.description": "Voer uw e-mailadres in om uw wachtwoord opnieuw in te stellen.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Handmatig invoeren",
   "account.modal.totp.code": "Code",
   "common.button.clickToCopy": "Klik om te kopiëren",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Verifiëren",
   "account.notify.totp.disable": "TOTP succesvol uitgeschakeld",
   "account.notify.totp.enable": "TOTP succesvol ingeschakeld",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Account verwijderen",
   "account.modal.delete.description": "Weet u zeker dat u uw account met al uw gedeelde bestanden wilt verwijderen?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Mijn gedeelde bestanden",
   "account.shares.title.empty": "Het is hier leeg 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Share verwijderd: {share}",
   "account.shares.modal.delete.description": "Weet u zeker dat u deze share wilt verwijderen?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Omgekeerde share",
   "account.reverseShares.description": "Met een omgekeerde share kan een externe gebruiker via unieke genereerde URL bestanden uploaden.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Omgekeerde share verwijderen",
   "account.reverseShares.modal.delete.description": "Weet u zeker dat u deze omgekeerde share wilt verwijderen? Als u dit doet, worden de bijbehorende bestanden ook verwijderd.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Instellingen",
   "admin.button.users": "Gebruikers beheer",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Configuratie",
   "admin.version": "Versie",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Gebruikers beheren",
   "admin.users.table.username": "Gebruikersnaam",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Beheerdersrechten",
   "admin.users.modal.create.admin.description": "Indien aangevinkt, heeft de gebruiker toegang tot de beheeromgeving.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Share management",
   "admin.shares.table.id": "Share ID",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Delete share: {id}",
   "admin.shares.edit.delete.description": "Weet u zeker dat u deze share wilt verwijderen?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Uploaden",
   "upload.notify.confirm-leave": "Are you sure you want to leave this page? Your upload will be canceled.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Share is gereed",
   "upload.modal.completed.notified-reverse-share-creator": "We hebben de maker van de reverse share op de hoogte gesteld. U kunt deze link ook handmatig met hen delen via andere middelen.",
   // END /upload
+
   // /share/[id]
   "share.title": "Share {shareId}",
   "share.description": "Kijk eens wat ik met je heb gedeeld!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Voorbeeld niet ondersteund",
   "share.modal.file-preview.error.not-supported.description": "Previews are not supported for this type of files. Please download the file to view it.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "{shareId} bewerken",
   "share.edit.append-upload": "Bestand toevoegen",
   "share.edit.notify.generic-error": "Er is een fout opgetreden tijdens het voltooien van uw share.",
   "share.edit.notify.save-success": "Share is succesvol bijgewerkt",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Imprint",
   // END /imprint
+
   // /privacy
   "privacy.title": "Privacy Policy",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Of registratie is toegestaan",
   "admin.config.share.allow-unauthenticated-shares": "Ongeverifieerde shares toestaan",
   "admin.config.share.allow-unauthenticated-shares.description": "Sta niet-geverifieerde gebruikers toe shares te kunnen aanmaken",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Max. vervaldatum",
   "admin.config.share.max-expiration.description": "Maximum share expiration. Set to 0 to allow unlimited expiration.",
   "admin.config.share.share-id-length": "Default share ID length",
@@ -367,7 +386,7 @@ export default {
   "admin.config.share.chunk-size.description": "Adjust the chunk size for your uploads to balance efficiency and reliability according to your internet connection. Smaller chunks can enhance success rates for unstable connections, while larger chunks make uploads faster for stable connections.",
   "admin.config.share.auto-open-share-modal": "Auto open create share modal",
   "admin.config.share.auto-open-share-modal.description": "The share creation modal automatically appears when a user selects files, eliminating the need to manually click the button.",
-  "admin.config.smtp.enabled": "",
+  "admin.config.smtp.enabled": "Enable",
   "admin.config.smtp.enabled.description": "Of SMTP is ingeschakeld. Stel dit alleen in op true als u de host hebt ingevoerd, poort, e-mail, gebruiker en wachtwoord van uw SMTP-server.",
   "admin.config.smtp.host": "Host",
   "admin.config.smtp.host.description": "Host van de SMTP-server",
