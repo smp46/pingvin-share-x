@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Ylläpito",
   "navbar.avatar.signout": "Kirjaudu ulos",
   // END navbar
+
   // /
   "home.title": "<h>\"Itse isännöitty\"</h> tiedostojen jakamisen alusta.",
   "home.description": "Haluatko oikeasti jakaa yksityisiä tiedostojasi kolmannen osapuolen yhtiöille niin kuin WeTransfer?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Aloita",
   "home.button.source": "Lähdekoodi",
   // END /
+
   // /auth/signin
   "signin.title": "Tervetuloa takaisin",
   "signin.description": "Eikö sinulla ole vielä tiliä?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discordia",
   "signIn.oauth.oidc": "OpenIDtä",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Rekisteröidy",
   "signup.description": "Onko sinulla jo tili?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Sähköpostisi",
   "signup.button.submit": "Aloitetaan",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "TOTP Authentication",
   "totp.button.signIn": "Kirjaudu sisään",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Unohditko salasanan?",
   "resetPassword.description": "Kirjoita sähköpostiosoitteesi palauttaaksesi salasanasi.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Syötä manuaalisesti",
   "account.modal.totp.code": "Koodi",
   "common.button.clickToCopy": "Klikkaa kopioidaksesi",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Vahvista",
   "account.notify.totp.disable": "TOTP poistettu käytöstä",
   "account.notify.totp.enable": "TOTP otettu käyttöön onnistuneesti",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Poista tili",
   "account.modal.delete.description": "Haluatko varmasti poistaa tilisi mukaan lukien kaikki aktiiviset jaetut tiedostot?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Minun jakaukset",
   "account.shares.title.empty": "Täällä on tyhjää 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "Haluatko todella poistaa tämän jaetun tiedoston/ot?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Takaperin jaetut",
   "account.reverseShares.description": "Käänteisen jaon avulla voit luoda ainutlaatuisen URL-osoitteen, jonka avulla ulkoiset käyttäjät voivat luoda jaon.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Poista käänteinen jako",
   "account.reverseShares.modal.delete.description": "Haluatko varmasti poistaa tämän käänteisen jaon? Jos kyllä, myös siihen liittyvät jaot poistetaan.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Ylläpito",
   "admin.button.users": "Käyttäjien Hallinta",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Asetukset",
   "admin.version": "Versio",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Käyttäjien Hallinta",
   "admin.users.table.username": "Käyttäjätunnus",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Ylläpitäjän oikeudet",
   "admin.users.modal.create.admin.description": "Jos valittu, käyttäjä voi käyttää hallintapaneelia.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Share management",
   "admin.shares.table.id": "Share ID",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Delete share: {id}",
   "admin.shares.edit.delete.description": "Do you really want to delete this share?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Pilvetä",
   "upload.notify.confirm-leave": "Are you sure you want to leave this page? Your upload will be canceled.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Jako valmiina",
   "upload.modal.completed.notified-reverse-share-creator": "We have notified the creator of the reverse share. You can also manually share this link with them through other means.",
   // END /upload
+
   // /share/[id]
   "share.title": "Jaa {shareId}",
   "share.description": "Katso, mitä olen jakanut kanssasi!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Esikatselua ei tuettu",
   "share.modal.file-preview.error.not-supported.description": "Esikatselua ei tueta tämäntyyppisille tiedostoille. Ole hyvä ja lataa tiedosto nähdäksesi sen.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Muokkaa {shareId}",
   "share.edit.append-upload": "Lisää tiedosto",
   "share.edit.notify.generic-error": "Odottamaton virhe jaon luomisessa.",
   "share.edit.notify.save-success": "Jako päivitetty onnistuneesti",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Imprint",
   // END /imprint
+
   // /privacy
   "privacy.title": "Privacy Policy",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Onko rekisteröinti sallittu",
   "admin.config.share.allow-unauthenticated-shares": "Salli anonyymit jaot",
   "admin.config.share.allow-unauthenticated-shares.description": "Voiko tunnistamattomat käyttäjät luoda jakoja",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Max expiration",
   "admin.config.share.max-expiration.description": "Maximum share expiration. Set to 0 to allow unlimited expiration.",
   "admin.config.share.share-id-length": "Default share ID length",
