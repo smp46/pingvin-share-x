@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "管理",
   "navbar.avatar.signout": "登出",
   // END navbar
+
   // /
   "home.title": "<h>自建</h> 文件共享平台！",
   "home.description": "你真的放心把文件交到第三方文件平台手中吗？",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "开始使用",
   "home.button.source": "源代码",
   // END /
+
   // /auth/signin
   "signin.title": "欢迎回来",
   "signin.description": "还没有账户吗？请",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "创建账户",
   "signup.description": "已经有账户了？请",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "请输入电子邮件",
   "signup.button.submit": "注册",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "两步验证",
   "totp.button.signIn": "登录",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "忘记密码？",
   "resetPassword.description": "请输入电子邮箱地址来接收重置密码邮件",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "手动输入",
   "account.modal.totp.code": "验证码",
   "common.button.clickToCopy": "点击复制",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "确定",
   "account.notify.totp.disable": "成功关闭两步验证！",
   "account.notify.totp.enable": "成功开启两步验证！",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "删除账户",
   "account.modal.delete.description": "你真的想删除你的账户，并删除所有的共享吗？",
   // END /account
+
   // /account/shares
   "account.shares.title": "我的共享",
   "account.shares.title.empty": "这里空空如也 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "删除共享 {share}",
   "account.shares.modal.delete.description": "你真的想删除这个共享吗？",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "预留共享",
   "account.reverseShares.description": "预留共享允许你创建一个特定共享链接，以便外部用户以此链接创建共享",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "删除预留共享链接",
   "account.reverseShares.modal.delete.description": "你真的想删除此预留共享链接吗？链接下所有关联的共享都将被删除",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "管理",
   "admin.button.users": "用户管理",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "配置管理",
   "admin.version": "版本",
   // END /admin
+
   // /admin/users
   "admin.users.title": "用户管理",
   "admin.users.table.username": "用户名",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "管理员",
   "admin.users.modal.create.admin.description": "如果勾选，用户将能访问管理员面板",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "共享管理",
   "admin.shares.table.id": "共享 ID",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "删除共享 {id}",
   "admin.shares.edit.delete.description": "你真的要删除这个共享吗？",
   // END /admin/shares
+
   // /upload
   "upload.title": "上传",
   "upload.notify.confirm-leave": "您确定要离开此页面吗？您的上传将被取消。",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "共享创建完毕",
   "upload.modal.completed.notified-reverse-share-creator": "我们已经通知预留共享的创建者。您也可以通过其他方式将该链接手动分享给他们。",
   // END /upload
+
   // /share/[id]
   "share.title": "共享 {shareId}",
   "share.description": "瞧瞧我给你共享了些什么！",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "该文件类型不支持预览",
   "share.modal.file-preview.error.not-supported.description": "这种类型的文件不支持预览。请下载文件查看。",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "编辑 {shareId}",
   "share.edit.append-upload": "追加文件",
   "share.edit.notify.generic-error": "保存共享的过程中发生了错误",
   "share.edit.notify.save-success": "共享已更新成功",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "版权信息",
   // END /imprint
+
   // /privacy
   "privacy.title": "隐私政策",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "配置文件已存在",
   "admin.config.config-file-warning.description": "由于您已配置了Pingvin 共享的配置文件，您无法通过UI更改配置。",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "是否允许注册",
   "admin.config.share.allow-unauthenticated-shares": "是否允许未验证的共享",
   "admin.config.share.allow-unauthenticated-shares.description": "是否允许未验证的用户创建共享",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "最长过期时间",
   "admin.config.share.max-expiration.description": "“最长过期时间”以小时为单位，如果将其设置为“0”则为永不过期。",
   "admin.config.share.share-id-length": "默认共享ID长度",
