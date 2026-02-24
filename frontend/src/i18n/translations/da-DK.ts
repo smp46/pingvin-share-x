@@ -3,7 +3,7 @@ export default {
   "navbar.upload": "Upload",
   "navbar.signin": "Log ind",
   "navbar.home": "Hjem",
-  "navbar.signup": "Sign up",
+  "navbar.signup": "Opret bruger",
   "navbar.links.shares": "Mine delte filer",
   "navbar.links.reverse": "Omvendt deling",
   "navbar.avatar.account": "Min bruger",
@@ -128,7 +128,7 @@ export default {
   "account.shares.table.name": "Navn",
   "account.shares.table.description": "Beskrivelse",
   "account.shares.table.visitors": "Besøgende",
-  "account.shares.table.expiresAt": "Expires on",
+  "account.shares.table.expiresAt": "Udløber",
   "account.shares.table.createdAt": "Created on",
   "account.shares.table.size": "Størrelse",
   "account.shares.table.password-protected": "Password protected",
@@ -173,7 +173,7 @@ export default {
   "account.reverseShare.expires-on": "Denne omvendte deling udløber den {expiration}.",
   "account.reverseShares.table.no-shares": "Der er ikke oprettet nogle delinger endnu",
   "account.reverseShares.table.count.singular": "del",
-  "account.reverseShares.table.count.plural": "shares",
+  "account.reverseShares.table.count.plural": "delinger",
   "account.reverseShares.table.shares": "Delinger",
   "account.reverseShares.table.remaining": "Resterende anvendelser",
   "account.reverseShares.table.max-size": "Maksimal størrelse for deling",
@@ -222,7 +222,7 @@ export default {
   "admin.shares.table.visitors": "Besøgende",
   "admin.shares.table.expires": "Udløber",
   "admin.shares.edit.delete.title": "Delete share: {id}",
-  "admin.shares.edit.delete.description": "Do you really want to delete this share?",
+  "admin.shares.edit.delete.description": "Ønsker du virkelig at slette denne deling?",
   // END /admin/shares
 
   // /upload
@@ -307,7 +307,7 @@ export default {
   // /share/[id]/edit
   "share.edit.title": "Rediger {shareId}",
   "share.edit.append-upload": "Append file",
-  "share.edit.notify.generic-error": "An error occurred while finishing your share.",
+  "share.edit.notify.generic-error": "Der opstod en fejl under afslutningen af din deling.",
   "share.edit.notify.save-success": "Deling opdateret",
   // END /share/[id]/edit
 
