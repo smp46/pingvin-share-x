@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Administracija",
   "navbar.avatar.signout": "Odjava",
   // END navbar
+
   // /
   "home.title": "Platforma za deljenje datotek z <h>lastnim gostovanjem</h>.",
   "home.description": "Ali res želite predati svoje osebne datoteke v roke tretjih oseb, kot je WeTransfer?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Začnite zdaj",
   "home.button.source": "Izvorna koda",
   // END /
+
   // /auth/signin
   "signin.title": "Dobrodošli nazaj",
   "signin.description": "Še nimate računa?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Ustvarite račun",
   "signup.description": "Že imate račun?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Vaš e-poštni naslov",
   "signup.button.submit": "Pa začnimo",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "TOTP Avtentikacija",
   "totp.button.signIn": "Prijava",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Ste pozabili svoje geslo?",
   "resetPassword.description": "Vnesite svoj e-poštni naslov za ponastavitev gesla.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Vnesite ročno",
   "account.modal.totp.code": "Koda",
   "common.button.clickToCopy": "Kliknite za kopiranje",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Preveri",
   "account.notify.totp.disable": "TOTP je uspešno onemogočen",
   "account.notify.totp.enable": "TOTP je uspešno omogočen",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Izbrišite račun",
   "account.modal.delete.description": "Ali res želite izbrisati vaš račun vključno z vsemi vašimi deljenji?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Moja deljenja",
   "account.shares.title.empty": "Prazno je 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "Ali res želite izbrisati to delitev?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Delitev v obratni smeri",
   "account.reverseShares.description": "Delitev v obratni smeri vam omogoča, da generirate unikaten URL, ki omogoča zunanjim uporabnikom ustvariti delitev.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Izbriši delitev v obratni smeri",
   "account.reverseShares.modal.delete.description": "Ali res želite izbrisati to delitev v obratni smeri? Če boste izbrisali, bodo izbrisane tudi povezane delitve.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Administracija",
   "admin.button.users": "Upravljanje uporabnikov",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Nastavitve",
   "admin.version": "Različica",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Upravljanje uporabnikov",
   "admin.users.table.username": "Uporabniško ime",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Administratorski privilegiji",
   "admin.users.modal.create.admin.description": "Če je omogočeno, bo lahko porabnik dostopal do administratorskega vmesnika.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Share management",
   "admin.shares.table.id": "Share ID",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Delete share: {id}",
   "admin.shares.edit.delete.description": "Do you really want to delete this share?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Naložite",
   "upload.notify.confirm-leave": "Are you sure you want to leave this page? Your upload will be canceled.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Delitev je pripravljena",
   "upload.modal.completed.notified-reverse-share-creator": "We have notified the creator of the reverse share. You can also manually share this link with them through other means.",
   // END /upload
+
   // /share/[id]
   "share.title": "Deli {shareId}",
   "share.description": "Poglej kaj sem delil s taboj!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Predogled ni mogoč",
   "share.modal.file-preview.error.not-supported.description": "Previews are not supported for this type of files. Please download the file to view it.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Uredite {shareId}",
   "share.edit.append-upload": "Dodaj datoteko",
   "share.edit.notify.generic-error": "Prišlo je do napake pri ustvarjanju vaše delitve.",
   "share.edit.notify.save-success": "Delitev je bila uspešno posodbljena",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Imprint",
   // END /imprint
+
   // /privacy
   "privacy.title": "Privacy Policy",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Če je registracija dovoljena",
   "admin.config.share.allow-unauthenticated-shares": "Dovoli delitve s strani neprijavljenih uporabnikov",
   "admin.config.share.allow-unauthenticated-shares.description": "Če lahko neprijavljeni uporabniki ustvarijo delitve",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Najvišja zapadlost",
   "admin.config.share.max-expiration.description": "Maximum share expiration. Set to 0 to allow unlimited expiration.",
   "admin.config.share.share-id-length": "Default share ID length",
@@ -512,6 +531,15 @@ export default {
   "error.param.provider_discord": "Discord",
   "error.param.provider_oidc": "OpenID Connect",
   // Common translations
+  "common.button.info": "Info",
+  "common.button.undo": "Razveljavi",
+  "common.button.download": "Prenesi",
+  "common.button.copy": "Kopiraj",
+  "common.button.copy-link": "Kopiraj povezavo",
+  "common.button.preview": "Predogled",
+  "common.button.edit": "Uredi",
+  "common.button.profile": "Profil",
+  "common.button.shares": "Deljenja",
   "common.button.save": "Shrani",
   "common.button.create": "Ustvari",
   "common.button.submit": "Pošlji",
