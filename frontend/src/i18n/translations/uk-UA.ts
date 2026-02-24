@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Адміністрування",
   "navbar.avatar.signout": "Вийти",
   // END navbar
+
   // /
   "home.title": "Платформа для обміну файлами із <h>власного хостингу</h>.",
   "home.description": "Ви дійсно ви хочете передати свої особисті файли в руки третіх осіб, таких як WeTransfer?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Почнемо",
   "home.button.source": "Вихідний код",
   // END /
+
   // /auth/signin
   "signin.title": "З поверненням",
   "signin.description": "У вас ще немає облікового запису?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Створити акаунт",
   "signup.description": "Уже є обліковий запис?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Адреса ел. пошти",
   "signup.button.submit": "Давайте почнемо",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "Авторизація TOTP",
   "totp.button.signIn": "Увійти",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Забули пароль?",
   "resetPassword.description": "Введіть ваш email для відновлення пароля.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Ввести вручну",
   "account.modal.totp.code": "Код",
   "common.button.clickToCopy": "Натисніть, щоб скопіювати",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Підтвердити",
   "account.notify.totp.disable": "TOTP успішно відключено",
   "account.notify.totp.enable": "TOTP успішно увімкнено",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Видалити акаунт",
   "account.modal.delete.description": "Ви дійсно хочете видалити свій обліковий запис, включно з усіма вашими завантаженнями?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Мої завантаження",
   "account.shares.title.empty": "Тут порожньо 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Видалити завантаження: {share}",
   "account.shares.modal.delete.description": "Ви дійсно хочете видалити це завантаження?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Зворотні завантаження",
   "account.reverseShares.description": "Зворотне завантаження дає змогу генерувати унікальний URL, що дозволяє зовнішнім користувачам завантажувати файли.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Видалити зворотне завантаження",
   "account.reverseShares.modal.delete.description": "Ви дійсно хочете видалити це зворотне завантаження? Якщо ви це зробите, то всі пов'язані зворотні завантаження будуть також видалені.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Адміністрування",
   "admin.button.users": "Управління користувачами",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Конфігурація",
   "admin.version": "Версія",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Управління користувачами",
   "admin.users.table.username": "Логін",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Права адміністратора",
   "admin.users.modal.create.admin.description": "Якщо зазначено, користувач матиме доступ до панелі адміністратора.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Керування завантаженнями",
   "admin.shares.table.id": "ID Завантаження",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Видалити завантаження: {id}",
   "admin.shares.edit.delete.description": "Ви дійсно хочете видалити це завантаження?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Завантажити",
   "upload.notify.confirm-leave": "Ви впевнені, що хочете залишити цю сторінку? Ваше завантаження буде скасовано.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Готово",
   "upload.modal.completed.notified-reverse-share-creator": "Ми сповістили створювача зворотного завантаження. Ви також можете вручну поділитися цим посиланням з ними іншим способом.",
   // END /upload
+
   // /share/[id]
   "share.title": "Завантаження {shareId}",
   "share.description": "Подивіться, чим я поділився з вами!",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Попередній перегляд не підтримується",
   "share.modal.file-preview.error.not-supported.description": "Попередні перегляди не підтримуються для цього типу файлів. Будь ласка, завантажте файл, щоб переглянути його.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Редагувати {shareId}",
   "share.edit.append-upload": "Додати файл",
   "share.edit.notify.generic-error": "Сталася помилка під час завершення вашого завантаження.",
   "share.edit.notify.save-success": "Посилання на ресурс успішно оновлено",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Вихідні дані",
   // END /imprint
+
   // /privacy
   "privacy.title": "Політика конфіденційності",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Файл конфігурації присутній",
   "admin.config.config-file-warning.description": "Оскільки у вас налаштовано Pingvin Share за допомогою конфігураційного файлу, ви не можете змінювати конфігурацію через інтерфейс користувача.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Чи дозволена реєстрація",
   "admin.config.share.allow-unauthenticated-shares": "Дозволити неавторизовані завантаження",
   "admin.config.share.allow-unauthenticated-shares.description": "Чи можуть неавторизовані користувачі створювати завантаження",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Максимальний термін дії",
   "admin.config.share.max-expiration.description": "Максимальний термін дії спільного доступу. Встановіть 0, щоб дозволити необмежений термін дії.",
   "admin.config.share.share-id-length": "Стандартна довжина ID завантаження",
