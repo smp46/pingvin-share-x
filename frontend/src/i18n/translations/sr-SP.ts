@@ -86,7 +86,7 @@ export default {
   "account.card.oauth.microsoft": "Microsoft",
   "account.card.oauth.discord": "Discord",
   "account.card.oauth.oidc": "OpenID",
-  "account.card.oauth.link": "Link",
+  "account.card.oauth.link": "Линк",
   "account.card.oauth.unlink": "Прекини везу",
   "account.card.oauth.unlinked": "Веза је прекинута",
   "account.modal.unlink.title": "Прекини везу са налогом",
