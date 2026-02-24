@@ -10,6 +10,7 @@ export default {
   "navbar.avatar.admin": "Administration",
   "navbar.avatar.signout": "Se déconnecter",
   // END navbar
+
   // /
   "home.title": "Une plateforme de partage de fichiers <h>autohébergée</h>.",
   "home.description": "Voulez-vous vraiment remettre vos fichiers personnels dans les mains de tiers comme WeTransfer ?",
@@ -22,6 +23,7 @@ export default {
   "home.button.start": "Commencer",
   "home.button.source": "Code source",
   // END /
+
   // /auth/signin
   "signin.title": "Content de vous revoir",
   "signin.description": "Vous n'avez pas encore de compte ?",
@@ -41,6 +43,7 @@ export default {
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
   // END /auth/signin
+
   // /auth/signup
   "signup.title": "Créer un compte",
   "signup.description": "Vous avez déjà un compte ?",
@@ -51,10 +54,12 @@ export default {
   "signup.input.email.placeholder": "Votre courriel",
   "signup.button.submit": "Commençons",
   // END /auth/signup
+
   // /auth/totp
   "totp.title": "Authentification TOTP",
   "totp.button.signIn": "Se connecter",
   // END /auth/totp
+
   // /auth/reset-password
   "resetPassword.title": "Mot de passe oublié ?",
   "resetPassword.description": "Saisissez votre courriel pour réinitialiser votre mot de passe.",
@@ -97,6 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Saisir manuellement",
   "account.modal.totp.code": "Code",
   "common.button.clickToCopy": "Cliquez pour copier",
+  "common.button.showQRCode": "Show QR code",
   "account.modal.totp.verify": "Vérifier",
   "account.notify.totp.disable": "Double authentification (TOTP) désactivé avec succès",
   "account.notify.totp.enable": "TOTP activé avec succès",
@@ -111,6 +117,7 @@ export default {
   "account.modal.delete.title": "Supprimer le compte",
   "account.modal.delete.description": "Voulez-vous vraiment supprimer votre compte, y compris tous vos partages actifs ?",
   // END /account
+
   // /account/shares
   "account.shares.title": "Mes partages",
   "account.shares.title.empty": "Il n'y a rien ici 👀",
@@ -132,6 +139,7 @@ export default {
   "account.shares.modal.delete.title": "Supprimer le partage : {share}",
   "account.shares.modal.delete.description": "Voulez-vous vraiment supprimer ce partage ?",
   // END /account/shares
+
   // /account/reverseShares
   "account.reverseShares.title": "Partages inversés",
   "account.reverseShares.description": "Un partage inversé vous permet de générer une URL unique qui permet à des utilisateurs externes de créer un partage.",
@@ -174,6 +182,7 @@ export default {
   "account.reverseShares.modal.delete.title": "Supprimer le partage inversé",
   "account.reverseShares.modal.delete.description": "Voulez-vous vraiment supprimer ce partage inversé ? Si vous le faites, les partages qu’il contient seront également supprimés.",
   // END /account/reverseShares
+
   // /admin
   "admin.title": "Administration",
   "admin.button.users": "Gestion des utilisateurs",
@@ -181,6 +190,7 @@ export default {
   "admin.button.config": "Paramètres",
   "admin.version": "Version",
   // END /admin
+
   // /admin/users
   "admin.users.title": "Gestion des utilisateurs",
   "admin.users.table.username": "Surnom",
@@ -204,6 +214,7 @@ export default {
   "admin.users.modal.create.admin": "Privilèges d’admin",
   "admin.users.modal.create.admin.description": "Si coché, l’utilisateur pourra accéder au panneau d'administration.",
   // END /admin/users
+
   // /admin/shares
   "admin.shares.title": "Gestion des partages",
   "admin.shares.table.id": "ID de partage",
@@ -213,6 +224,7 @@ export default {
   "admin.shares.edit.delete.title": "Supprimer le partage : {id}",
   "admin.shares.edit.delete.description": "Voulez-vous vraiment supprimer ce partage ?",
   // END /admin/shares
+
   // /upload
   "upload.title": "Envoyer",
   "upload.notify.confirm-leave": "Êtes-vous sûr de vouloir quitter cette page ? Votre envoi sera annulé.",
@@ -267,6 +279,7 @@ export default {
   "upload.modal.completed.share-ready": "Partage prêt",
   "upload.modal.completed.notified-reverse-share-creator": "Nous avons notifié le créateur du partage inverse. Vous pouvez également partager manuellement ce lien avec eux par d'autres moyens.",
   // END /upload
+
   // /share/[id]
   "share.title": "Partage {shareId}",
   "share.description": "Regardez ce que j’ai partagé !",
@@ -290,18 +303,22 @@ export default {
   "share.modal.file-preview.error.not-supported.title": "Aperçu non supporté",
   "share.modal.file-preview.error.not-supported.description": "Les aperçus ne sont pas pris en charge pour ce type de fichiers. Veuillez télécharger le fichier pour le voir.",
   // END /share/[id]
+
   // /share/[id]/edit
   "share.edit.title": "Modifier {shareId}",
   "share.edit.append-upload": "Ajouter un fichier",
   "share.edit.notify.generic-error": "Une erreur est survenue durant le traitement de votre partage.",
   "share.edit.notify.save-success": "Partage mis à jour avec succès",
   // END /share/[id]/edit
+
   // /imprint
   "imprint.title": "Mentions légales",
   // END /imprint
+
   // /privacy
   "privacy.title": "Politique de confidentialité",
   // END /privacy
+
   // /admin/config
   "admin.config.config-file-warning.title": "Fichier de configuration présent",
   "admin.config.config-file-warning.description": "Puisque vous avez configuré Pingvin Share avec un fichier de configuration, vous ne pouvez pas modifier la configuration via l'interface utilisateur.",
@@ -355,6 +372,8 @@ export default {
   "admin.config.share.allow-registration.description": "Permet aux visiteurs de créer un compte",
   "admin.config.share.allow-unauthenticated-shares": "Autoriser les partages anonymes",
   "admin.config.share.allow-unauthenticated-shares.description": "Permet aux visiteurs de créer des partages",
+  "admin.config.share.default-expiration": "Default expiration",
+  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
   "admin.config.share.max-expiration": "Échéance",
   "admin.config.share.max-expiration.description": "Expiration du partage en heures. Réglez sur 0 pour qu'il n'expire jamais.",
   "admin.config.share.share-id-length": "Taille de l'identifiant généré",
@@ -512,6 +531,15 @@ export default {
   "error.param.provider_discord": "Discord",
   "error.param.provider_oidc": "Connexion OpenID",
   // Common translations
+  "common.button.info": "Infos",
+  "common.button.undo": "Annuler",
+  "common.button.download": "Télécharger",
+  "common.button.copy": "Copier",
+  "common.button.copy-link": "Copier le lien",
+  "common.button.preview": "Aperçu",
+  "common.button.edit": "Modifier",
+  "common.button.profile": "Profil",
+  "common.button.shares": "Partages",
   "common.button.save": "Sauvegarder",
   "common.button.create": "Créer",
   "common.button.submit": "Envoyer",
