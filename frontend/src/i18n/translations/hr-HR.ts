@@ -437,7 +437,7 @@ export default {
   "admin.config.oauth.discord-client-id.description": "ID klijenta Discord OAuth aplikacije",
   "admin.config.oauth.discord-client-secret": "Discord klijent tajna",
   "admin.config.oauth.discord-client-secret.description": "Tajna klijenta Discord OAuth aplikacije",
-  "admin.config.oauth.oidc-enabled": "OpenID Connect",
+  "admin.config.oauth.oidc-enabled": "OpenId Connect",
   "admin.config.oauth.oidc-enabled.description": "Omogućiti prijavu putem OpenID Connect-a ili ne",
   "admin.config.oauth.oidc-discovery-uri": "URI za OpenID Connect Discovery",
   "admin.config.oauth.oidc-discovery-uri.description": "Discovery URI za otkrivanje OpenID Connect OAuth aplikacije",

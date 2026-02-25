@@ -57,7 +57,7 @@ export default {
 
   // /auth/totp
   "totp.title": "TOTP Authentication",
-  "totp.button.signIn": "Sign in",
+  "totp.button.signIn": "เข้าสู่ระบบ",
   // END /auth/totp
 
   // /auth/reset-password
@@ -86,7 +86,7 @@ export default {
   "account.card.oauth.microsoft": "Microsoft",
   "account.card.oauth.discord": "Discord",
   "account.card.oauth.oidc": "OpenID",
-  "account.card.oauth.link": "Link",
+  "account.card.oauth.link": "ลิงค์",
   "account.card.oauth.unlink": "Unlink",
   "account.card.oauth.unlinked": "Unlinked",
   "account.modal.unlink.title": "Unlink account",
@@ -219,10 +219,10 @@ export default {
   "admin.shares.title": "Share management",
   "admin.shares.table.id": "Share ID",
   "admin.shares.table.username": "Creator",
-  "admin.shares.table.visitors": "Visitors",
+  "admin.shares.table.visitors": "ผู้เข้าชม",
   "admin.shares.table.expires": "Expires on",
   "admin.shares.edit.delete.title": "Delete share: {id}",
-  "admin.shares.edit.delete.description": "Do you really want to delete this share?",
+  "admin.shares.edit.delete.description": "คุณต้องการลบแชร์นี้หรือไม่?",
   // END /admin/shares
 
   // /upload
@@ -263,7 +263,7 @@ export default {
   "upload.modal.expires.year-singular": "ปี",
   "upload.modal.expires.year-plural": "ปี",
   "upload.modal.accordion.name-and-description.title": "Name and description",
-  "upload.modal.accordion.name-and-description.name.placeholder": "Name",
+  "upload.modal.accordion.name-and-description.name.placeholder": "ชื่อ",
   "upload.modal.accordion.name-and-description.description.placeholder": "Note for the recipients of this share",
   "upload.modal.accordion.email.title": "ผู้รับอีเมล",
   "upload.modal.accordion.email.placeholder": "ป้อนผู้รับอีเมล",
@@ -307,7 +307,7 @@ export default {
   // /share/[id]/edit
   "share.edit.title": "Edit {shareId}",
   "share.edit.append-upload": "Append file",
-  "share.edit.notify.generic-error": "An error occurred while finishing your share.",
+  "share.edit.notify.generic-error": "เกิดข้อผิดพลาดขณะที่กำลังจัดการการแชร์ของคุณ",
   "share.edit.notify.save-success": "Share updated successfully",
   // END /share/[id]/edit
 
@@ -401,7 +401,7 @@ export default {
   "admin.config.smtp.button.test": "ส่งอีเมล์์์์์์ทดสอบ",
   "admin.config.smtp.allow-unauthorized-certificates": "Trust unauthorized SMTP server certificates",
   "admin.config.smtp.allow-unauthorized-certificates.description": "Only set this to true if you need to trust self signed certificates.",
-  "admin.config.oauth.allow-registration": "Allow registration",
+  "admin.config.oauth.allow-registration": "อนุญาตให้ลงทะเบียนด้วยตัวเอง",
   "admin.config.oauth.allow-registration.description": "Allow users to register via social login",
   "admin.config.oauth.ignore-totp": "Ignore TOTP",
   "admin.config.oauth.ignore-totp.description": "Whether to ignore TOTP when user using social login",
@@ -511,9 +511,9 @@ export default {
   "404.description": "ไม่พบหน้าที่คุณกำลังมองหา",
   "404.button.home": "หน้าแรก",
   // error
-  "error.title": "Error",
+  "error.title": "เกิดข้อผิดพลาด",
   "error.description": "Oops!",
-  "error.button.back": "Go back",
+  "error.button.back": "ย้อนกลับ",
   "error.msg.default": "มีบางอย่างผิดพลาด",
   "error.msg.access_denied": "You canceled the authentication process, please try again.",
   "error.msg.expired_token": "The authentication process took too long, please try again.",

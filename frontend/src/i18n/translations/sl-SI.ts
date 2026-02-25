@@ -3,7 +3,7 @@ export default {
   "navbar.upload": "Naloži",
   "navbar.signin": "Vpis",
   "navbar.home": "Domov",
-  "navbar.signup": "Sign up",
+  "navbar.signup": "Registrirajte se",
   "navbar.links.shares": "Moja deljenja",
   "navbar.links.reverse": "Deljenja v obratni smeri",
   "navbar.avatar.account": "Moj račun",
@@ -219,10 +219,10 @@ export default {
   "admin.shares.title": "Share management",
   "admin.shares.table.id": "Share ID",
   "admin.shares.table.username": "Creator",
-  "admin.shares.table.visitors": "Visitors",
+  "admin.shares.table.visitors": "Obiskovalci",
   "admin.shares.table.expires": "Expires on",
   "admin.shares.edit.delete.title": "Delete share: {id}",
-  "admin.shares.edit.delete.description": "Do you really want to delete this share?",
+  "admin.shares.edit.delete.description": "Ali res želite izbrisati to delitev?",
   // END /admin/shares
 
   // /upload
@@ -263,7 +263,7 @@ export default {
   "upload.modal.expires.year-singular": "Leto",
   "upload.modal.expires.year-plural": "Leta",
   "upload.modal.accordion.name-and-description.title": "Name and description",
-  "upload.modal.accordion.name-and-description.name.placeholder": "Name",
+  "upload.modal.accordion.name-and-description.name.placeholder": "Ime",
   "upload.modal.accordion.name-and-description.description.placeholder": "Note for the recipients of this share",
   "upload.modal.accordion.email.title": "Prejemnik e-pošte",
   "upload.modal.accordion.email.placeholder": "Vnesite prejemnika e-pošte",

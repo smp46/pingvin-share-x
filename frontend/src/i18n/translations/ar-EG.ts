@@ -3,7 +3,7 @@ export default {
   "navbar.upload": "رفع",
   "navbar.signin": "تسجيل الدخول",
   "navbar.home": "الصفحة الرئيسية",
-  "navbar.signup": "Sign up",
+  "navbar.signup": "إنشاء حساب",
   "navbar.links.shares": "مشاركاتي",
   "navbar.links.reverse": "مشاركاتي العكسية",
   "navbar.avatar.account": "حسابي",
