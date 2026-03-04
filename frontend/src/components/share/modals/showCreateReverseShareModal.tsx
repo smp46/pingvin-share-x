@@ -31,9 +31,12 @@ const showCreateReverseShareModal = (
   showSendEmailNotificationOption: boolean,
   maxExpiration: Timespan,
   defaultExpiration: Timespan,
+  appUrl: string,
+  defaultAppUrl: string,
   getReverseShares: () => void,
 ) => {
   const t = translateOutsideContext();
+
   return modals.openModal({
     title: t("account.reverseShares.modal.title"),
     children: (
@@ -42,6 +45,8 @@ const showCreateReverseShareModal = (
         getReverseShares={getReverseShares}
         maxExpiration={maxExpiration}
         defaultExpiration={defaultExpiration}
+        appUrl={appUrl}
+        defaultAppUrl={defaultAppUrl}
       />
     ),
   });
@@ -52,11 +57,15 @@ const Body = ({
   showSendEmailNotificationOption,
   maxExpiration,
   defaultExpiration,
+  appUrl,
+  defaultAppUrl,
 }: {
   getReverseShares: () => void;
   showSendEmailNotificationOption: boolean;
   maxExpiration: Timespan;
   defaultExpiration: Timespan;
+  appUrl: string;
+  defaultAppUrl: string;
 }) => {
   const modals = useModals();
   const t = useTranslate();
@@ -125,8 +134,9 @@ const Body = ({
         values.simplified,
         values.publicAccess,
       )
-      .then(({ link }) => {
+      .then(({ token }) => {
         modals.closeAll();
+        const link = `${appUrl !== defaultAppUrl ? appUrl : window.location.origin}/upload/${token}`;
         showCompletedReverseShareModal(modals, link, getReverseShares);
       })
       .catch(toast.axiosError);
