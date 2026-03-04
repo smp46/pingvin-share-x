@@ -138,6 +138,7 @@ const Upload = ({
       {
         isUserSignedIn: user ? true : false,
         isReverseShare,
+        appUrl: config.get("general.appUrl"),
         allowUnauthenticatedShares: config.get(
           "share.allowUnauthenticatedShares",
         ),
@@ -193,7 +194,7 @@ const Upload = ({
         .completeShare(createdShare.id)
         .then((share) => {
           setisUploading(false);
-          showCompletedUploadModal(modals, share);
+          showCompletedUploadModal(modals, share, config.get("general.appUrl"));
           setFiles([]);
         })
         .catch(() => toast.error(t("upload.notify.generic-error")));

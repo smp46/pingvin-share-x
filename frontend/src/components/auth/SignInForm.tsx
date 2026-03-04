@@ -128,7 +128,10 @@ const SignInForm = ({ redirectPath }: { redirectPath: string }) => {
           config.get("oauth.disablePassword")
         ) {
           setIsRedirectingToOauthProvider(true);
-          router.push(getOAuthUrl(window.location.origin, providers.data[0]));
+          const origin: string = config.get("general.appUrl")
+            ? config.get("general.appUrl")!
+            : window.location.origin;
+          router.push(getOAuthUrl(origin, providers.data[0]));
         }
       })
       .catch(toast.axiosError);
@@ -206,7 +209,12 @@ const SignInForm = ({ redirectPath }: { redirectPath: string }) => {
                   key={provider}
                   component="a"
                   title={t(`signIn.oauth.${provider}`)}
-                  href={getOAuthUrl(window.location.origin, provider)}
+                  href={getOAuthUrl(
+                    config.get("general.appUrl") !== ""
+                      ? config.get("general.appUrl")
+                      : window.location.origin,
+                    provider,
+                  )}
                   variant="light"
                   fullWidth
                 >

@@ -13,21 +13,26 @@ const showShareInformationsModal = (
   modals: ModalsContextProps,
   share: MyShare,
   maxShareSize: number,
+  appUrl: string,
 ) => {
   const t = translateOutsideContext();
 
   return modals.openModal({
     title: t("account.shares.modal.share-informations"),
-    children: <Body share={share} maxShareSize={maxShareSize} />,
+    children: (
+      <Body share={share} maxShareSize={maxShareSize} appUrl={appUrl} />
+    ),
   });
 };
 
 const Body = ({
   share,
   maxShareSize,
+  appUrl,
 }: {
   share: MyShare;
   maxShareSize: number;
+  appUrl: string;
 }) => {
   const [showQR, setShowQR] = useState(false);
 
@@ -35,7 +40,7 @@ const Body = ({
     setShowQR(!showQR);
   };
 
-  const link = `${window.location.origin}/s/${share.id}`;
+  const link = `${appUrl !== "" ? appUrl : window.location.origin}/s/${share.id}`;
 
   const formattedShareSize = byteToHumanSizeString(share.size);
   const formattedMaxShareSize = byteToHumanSizeString(maxShareSize);

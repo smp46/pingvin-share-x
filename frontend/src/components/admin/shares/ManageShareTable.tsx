@@ -89,11 +89,15 @@ const ManageShareTable = ({
                         onClick={() => {
                           if (window.isSecureContext) {
                             clipboard.copy(
-                              `${window.location.origin}/s/${share.id}`,
+                              `${config.get("general.appUrl") !== "" ? config.get("general.appUrl") : window.location.origin}/s/${share.id}`,
                             );
                             toast.success(t("common.notify.copied-link"));
                           } else {
-                            showShareLinkModal(modals, share.id);
+                            showShareLinkModal(
+                              modals,
+                              share.id,
+                              config.get("general.appUrl"),
+                            );
                           }
                         }}
                       >

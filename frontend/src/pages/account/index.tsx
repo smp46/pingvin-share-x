@@ -279,7 +279,12 @@ const Account = () => {
                     ) : (
                       <Button
                         component="a"
-                        href={getOAuthUrl(window.location.origin, provider)}
+                        href={getOAuthUrl(
+                          config.get("general.appUrl") !== ""
+                            ? config.get("general.appUrl")
+                            : window.location.origin,
+                          provider,
+                        )}
                       >
                         {t("account.card.oauth.link")}
                       </Button>
