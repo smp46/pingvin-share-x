@@ -15,6 +15,7 @@ import QRCode from "../../share/QRCode";
 const showCompletedUploadModal = (
   modals: ModalsContextProps,
   share: CompletedShare,
+  appUrl: string,
 ) => {
   const t = translateOutsideContext();
   return modals.openModal({
@@ -22,11 +23,11 @@ const showCompletedUploadModal = (
     withCloseButton: false,
     closeOnEscape: false,
     title: t("upload.modal.completed.share-ready"),
-    children: <Body share={share} />,
+    children: <Body share={share} appUrl={appUrl} />,
   });
 };
 
-const Body = ({ share }: { share: CompletedShare }) => {
+const Body = ({ share, appUrl }: { share: CompletedShare; appUrl: string }) => {
   const modals = useModals();
   const router = useRouter();
   const t = useTranslate();
@@ -39,7 +40,7 @@ const Body = ({ share }: { share: CompletedShare }) => {
 
   const isReverseShare = !!router.query["reverseShareToken"];
 
-  const link = `${window.location.origin}/s/${share.id}`;
+  const link = `${appUrl !== "" ? appUrl : window.location.origin}/s/${share.id}`;
 
   return (
     <Stack align="stretch">

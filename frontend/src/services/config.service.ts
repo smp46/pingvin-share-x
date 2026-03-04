@@ -34,7 +34,11 @@ const updateMany = async (data: UpdateConfig[]): Promise<AdminConfig[]> => {
   return (await api.patch("/configs/admin", data)).data;
 };
 
-const get = (key: string, configVariables: Config[]): any => {
+const get = (
+  key: string,
+  configVariables: Config[],
+  returnDefault: boolean = false,
+): any => {
   if (!configVariables) return null;
 
   const configVariable = configVariables.filter(
@@ -43,7 +47,9 @@ const get = (key: string, configVariables: Config[]): any => {
 
   if (!configVariable) throw new Error(`Config variable ${key} not found`);
 
-  const value = configVariable.value ?? configVariable.defaultValue;
+  const value = returnDefault
+    ? configVariable.defaultValue
+    : (configVariable.value ?? configVariable.defaultValue);
 
   if (configVariable.type == "number" || configVariable.type == "filesize")
     return parseInt(value);
