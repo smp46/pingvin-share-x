@@ -10,7 +10,8 @@ export const ConfigContext = createContext<ConfigHook>({
 const useConfig = () => {
   const configContext = useContext(ConfigContext);
   return {
-    get: (key: string) => configService.get(key, configContext.configVariables),
+    get: (key: string, returnDefault?: boolean) =>
+      configService.get(key, configContext.configVariables, returnDefault),
     refresh: async () => configContext.refresh(),
   };
 };

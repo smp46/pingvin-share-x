@@ -280,7 +280,8 @@ const Account = () => {
                       <Button
                         component="a"
                         href={getOAuthUrl(
-                          config.get("general.appUrl") !== ""
+                          config.get("general.appUrl") !==
+                            config.get("general.appUrl", true)
                             ? config.get("general.appUrl")
                             : window.location.origin,
                           provider,

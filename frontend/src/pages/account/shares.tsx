@@ -137,9 +137,8 @@ const MyShares = () => {
                               modals,
                               share,
                               parseInt(config.get("share.maxSize")),
-                              config.get("general.appUrl") !== ""
-                                ? config.get("general.appUrl")
-                                : window.location.origin,
+                              config.get("general.appUrl"),
+                              config.get("general.appUrl", true),
                             );
                           }}
                         >
@@ -154,16 +153,15 @@ const MyShares = () => {
                           onClick={() => {
                             if (window.isSecureContext) {
                               clipboard.copy(
-                                `${config.get("general.appUrl") !== "" ? config.get("general.appUrl") : window.location.origin}/s/${share.id}`,
+                                `${config.get("general.appUrl") !== config.get("general.appUrl", true) ? config.get("general.appUrl") : window.location.origin}/s/${share.id}`,
                               );
                               toast.success(t("common.notify.copied-link"));
                             } else {
                               showShareLinkModal(
                                 modals,
                                 share.id,
-                                config.get("general.appUrl") !== ""
-                                  ? config.get("general.appUrl")
-                                  : window.location.origin,
+                                config.get("general.appUrl"),
+                                config.get("general.appUrl", true),
                               );
                             }
                           }}

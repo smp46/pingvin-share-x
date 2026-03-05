@@ -37,6 +37,7 @@ const MyShares = () => {
 
   const config = useConfig();
   const appUrl = config.get("general.appUrl");
+  const defaultAppUrl = config.get("general.appUrl", true);
 
   const [reverseShares, setReverseShares] = useState<MyReverseShare[]>();
 
@@ -72,6 +73,8 @@ const MyShares = () => {
               config.get("smtp.enabled"),
               config.get("share.maxExpiration"),
               config.get("share.defaultExpiration"),
+              appUrl,
+              defaultAppUrl,
               getReverseShares,
             )
           }
@@ -140,7 +143,7 @@ const MyShares = () => {
                             {reverseShare.shares.map((share) => (
                               <Group key={share.id} mb={4}>
                                 <Anchor
-                                  href={`${appUrl !== "" ? appUrl : window.location.origin}/share/${share.id}`}
+                                  href={`${appUrl !== defaultAppUrl ? appUrl : window.location.origin}/share/${share.id}`}
                                   target="_blank"
                                 >
                                   <Text maw={120} truncate>
@@ -158,7 +161,7 @@ const MyShares = () => {
                                     onClick={() => {
                                       if (window.isSecureContext) {
                                         clipboard.copy(
-                                          `${appUrl !== "" ? appUrl : window.location.origin}/s/${share.id}`,
+                                          `${appUrl !== defaultAppUrl ? appUrl : window.location.origin}/s/${share.id}`,
                                         );
                                         toast.success(
                                           t("common.notify.copied-link"),
@@ -167,9 +170,8 @@ const MyShares = () => {
                                         showShareLinkModal(
                                           modals,
                                           share.id,
-                                          appUrl !== ""
-                                            ? appUrl
-                                            : window.location.origin,
+                                          appUrl,
+                                          defaultAppUrl,
                                         );
                                       }
                                     }}
@@ -203,7 +205,7 @@ const MyShares = () => {
                           onClick={() => {
                             if (window.isSecureContext) {
                               clipboard.copy(
-                                `${appUrl !== "" ? appUrl : window.location.origin}/upload/${
+                                `${appUrl !== defaultAppUrl ? appUrl : window.location.origin}/upload/${
                                   reverseShare.token
                                 }`,
                               );
@@ -212,7 +214,8 @@ const MyShares = () => {
                               showReverseShareLinkModal(
                                 modals,
                                 reverseShare.token,
-                                appUrl !== "" ? appUrl : window.location.origin,
+                                appUrl,
+                                defaultAppUrl,
                               );
                             }
                           }}

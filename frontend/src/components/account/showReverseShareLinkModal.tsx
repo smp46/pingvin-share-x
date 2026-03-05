@@ -6,9 +6,10 @@ const showReverseShareLinkModal = (
   modals: ModalsContextProps,
   reverseShareToken: string,
   appUrl: string,
+  defaultAppUrl: string,
 ) => {
   const t = translateOutsideContext();
-  const link = `${appUrl !== "" ? appUrl : window.location.origin}/upload/${reverseShareToken}`;
+  const link = `${appUrl !== "" ? defaultAppUrl : window.location.origin}/upload/${reverseShareToken}`;
   return modals.openModal({
     title: t("account.reverseShares.modal.reverse-share-link"),
     children: (

@@ -6,9 +6,10 @@ const showShareLinkModal = (
   modals: ModalsContextProps,
   shareId: string,
   appUrl: string,
+  defaultAppUrl: string,
 ) => {
   const t = translateOutsideContext();
-  const link = `${appUrl !== "" ? appUrl : window.location.origin}/s/${shareId}`;
+  const link = `${appUrl !== defaultAppUrl ? appUrl : window.location.origin}/s/${shareId}`;
   return modals.openModal({
     title: t("account.shares.modal.share-link"),
     children: (
