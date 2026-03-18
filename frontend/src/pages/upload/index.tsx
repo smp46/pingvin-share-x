@@ -20,6 +20,8 @@ import { CreateShare, Share } from "../../types/share.type";
 import toast from "../../utils/toast.util";
 import { useRouter } from "next/router";
 
+import { byteToHumanSizeString } from "../../utils/fileSize.util";
+
 const promiseLimit = pLimit(3);
 let errorToastShown = false;
 let createdShare: Share;
@@ -162,6 +164,64 @@ const Upload = ({
       setFiles((oldArr) => [...oldArr, ...files]);
     }
   };
+
+  useEffect(() => {
+    const handlePaste = (e: ClipboardEvent) => {
+      const clipboardData = e.clipboardData;
+      let fileUpload: FileUpload;
+
+      if (!clipboardData) {
+        return;
+      }
+
+      if (clipboardData.files.length > 0) {
+        const pastedFile = clipboardData.files[0];
+
+        if (pastedFile.size > maxShareSize) {
+          toast.error(
+            t("upload.dropzone.notify.file-too-big", {
+              maxSize: byteToHumanSizeString(maxShareSize),
+            }),
+          );
+          return;
+        }
+
+        fileUpload = pastedFile as FileUpload;
+        fileUpload.uploadingProgress = 0;
+      } else if (clipboardData?.getData("text/plain")) {
+        const pastedText = clipboardData.getData("text/plain");
+        if (!pastedText) {
+          return;
+        }
+
+        // Create a sanitised file name from the pasted text
+        const safeName = pastedText
+          .substring(0, 50)
+          .replace(/[^a-zA-Z0-9 ]/g, "")
+          .trim();
+        const fileName = `${safeName || "clipboard_paste"}.txt`;
+
+        const file = new File([pastedText], fileName, {
+          type: "text/plain",
+        });
+        fileUpload = file as FileUpload;
+        fileUpload.uploadingProgress = 0;
+      }
+
+      if (autoOpenCreateUploadModal) {
+        setFiles([fileUpload]);
+        showCreateUploadModalCallback([fileUpload]);
+      } else {
+        setFiles((oldArr) => [...oldArr, fileUpload]);
+      }
+    };
+
+    window.addEventListener("paste", handlePaste);
+
+    return () => {
+      window.removeEventListener("paste", handlePaste);
+    };
+  }, [autoOpenCreateUploadModal]);
 
   useEffect(() => {
     // Check if there are any files that failed to upload
