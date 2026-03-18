@@ -192,7 +192,7 @@ const MyShares = () => {
                                 cancel: t("common.button.cancel"),
                               },
                               onConfirm: () => {
-                                shareService.remove(share.id);
+                                shareService.expire(share.id);
                                 setShares(
                                   shares.filter((item) => item.id !== share.id),
                                 );

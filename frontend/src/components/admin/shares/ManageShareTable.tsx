@@ -33,6 +33,10 @@ const ManageShareTable = ({
   const config = useConfig();
   const t = useTranslate();
 
+  // Check if file retention is enabled
+  const fileRetentionPeriod = config.get("share.fileRetentionPeriod");
+  const fileRetentionEnabled = fileRetentionPeriod.value !== 0 ? true : false;
+
   return (
     <Box sx={{ display: "block", overflowX: "auto" }}>
       <Table verticalSpacing="sm">
@@ -56,6 +60,13 @@ const ManageShareTable = ({
             <th>
               <FormattedMessage id="account.shares.table.expiresAt" />
             </th>
+            {fileRetentionEnabled ? (
+              <th>
+                <FormattedMessage id="admin.shares.table.deletes" />
+              </th>
+            ) : (
+              <></>
+            )}
             <th></th>
           </tr>
         </thead>
@@ -80,6 +91,20 @@ const ManageShareTable = ({
                       ? "Never"
                       : moment(share.expiration).format("LLL")}
                   </td>
+                  {fileRetentionEnabled ? (
+                    <td>
+                      {moment(share.expiration).unix() === 0
+                        ? "Never"
+                        : moment(share.expiration)
+                            .add(
+                              fileRetentionPeriod.value,
+                              fileRetentionPeriod.unit,
+                            )
+                            .format("LLL")}
+                    </td>
+                  ) : (
+                    <></>
+                  )}
                   <td>
                     <Group position="right">
                       <ActionIcon

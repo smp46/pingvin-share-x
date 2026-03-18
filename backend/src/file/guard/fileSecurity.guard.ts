@@ -51,14 +51,6 @@ export class FileSecurityGuard extends ShareSecurityGuard {
 
     // If there is no share token the user requests a file directly
     if (!shareToken) {
-      if (
-        !share ||
-        (moment().isAfter(share.expiration) &&
-          !moment(share.expiration).isSame(0))
-      ) {
-        throw new NotFoundException("File not found");
-      }
-
       // If admin access is enabled and user is admin, allow access
       if (this._config.get("share.allowAdminAccessAllShares")) {
         await super.canActivate(context);
@@ -66,6 +58,14 @@ export class FileSecurityGuard extends ShareSecurityGuard {
         if (user?.isAdmin) {
           return true;
         }
+      }
+
+      if (
+        !share ||
+        (moment().isAfter(share.expiration) &&
+          !moment(share.expiration).isSame(0))
+      ) {
+        throw new NotFoundException("File not found");
       }
 
       if (share.security?.password)
