@@ -106,6 +106,13 @@ export class ShareController {
     await this.shareService.remove(id, isDeleterAdmin);
   }
 
+  @Post(":id/expire")
+  @HttpCode(200)
+  @UseGuards(IdValidation, ShareOwnerGuard)
+  async expire(@Param("id") id: string) {
+    await this.shareService.expire(id);
+  }
+
   @Throttle({
     default: {
       limit: 10,

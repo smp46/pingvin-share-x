@@ -5,6 +5,7 @@ import * as moment from "moment";
 import { FileService } from "src/file/file.service";
 import { PrismaService } from "src/prisma/prisma.service";
 import { ReverseShareService } from "src/reverseShare/reverseShare.service";
+import { ConfigService } from "src/config/config.service";
 import { SHARE_DIRECTORY } from "../constants";
 
 @Injectable()
@@ -15,15 +16,23 @@ export class JobsService {
     private prisma: PrismaService,
     private reverseShareService: ReverseShareService,
     private fileService: FileService,
+    private configServer: ConfigService,
   ) {}
 
-  @Cron("0 * * * *")
+  @Cron("* * * * *")
   async deleteExpiredShares() {
+    const fileRetentionPeriod = this.configServer.get(
+      "share.fileRetentionPeriod",
+    );
+    const thresholdDate = moment()
+      .subtract(fileRetentionPeriod.value, fileRetentionPeriod.unit)
+      .toDate();
+
     const expiredShares = await this.prisma.share.findMany({
       where: {
-        // We want to remove only shares that have an expiration date less than the current date, but not 0
+        // We want to remove only shares that have an expiration date + retention period less than the current date, but not 0
         AND: [
-          { expiration: { lt: new Date() } },
+          { expiration: { lt: thresholdDate } },
           { expiration: { not: moment(0).toDate() } },
         ],
       },

@@ -85,6 +85,11 @@ export const configVariables = {
       defaultValue: "false",
       secret: false,
     },
+    fileRetentionPeriod: {
+      type: "timespan",
+      defaultValue: "0 days",
+      secret: false,
+    },
   },
   cache: {
     "redis-enabled": {

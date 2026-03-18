@@ -298,6 +298,23 @@ export class ShareService {
     await this.prisma.share.delete({ where: { id: shareId } });
   }
 
+  async expire(shareId: string) {
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+    });
+
+    if (!share) throw new NotFoundException("Share not found");
+
+    if (!share.creatorId) {
+      throw new ForbiddenException("Anonymous shares can't be expired");
+    }
+
+    await this.prisma.share.update({
+      where: { id: shareId },
+      data: { expiration: moment().toDate() },
+    });
+  }
+
   async isShareCompleted(id: string) {
     return (await this.prisma.share.findUnique({ where: { id } })).uploadLocked;
   }
@@ -367,7 +384,9 @@ export class ShareService {
     };
 
     if (!moment(expiration).isSame(0)) {
-      tokenOptions.expiresIn = moment(expiration).diff(new Date(), "seconds");
+      const diffSeconds = moment(expiration).diff(new Date(), "seconds");
+      // Default to a 1 hour token if the share is expired but being viewed by an admin
+      tokenOptions.expiresIn = diffSeconds > 0 ? diffSeconds : 3600;
     }
 
     return this.jwtService.sign(tokenPayload, tokenOptions);

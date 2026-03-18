@@ -31,6 +31,8 @@ share:
   autoOpenShareModal: "false"
   #Whether admins can access all shares without tokens/passwords
   allowAdminAccessAllShares: "false"
+  #How long files are kept after shares expire or are deleted by the uploader.
+  fileRetentionPeriod: 0 days
 cache:
   #Normally Pingvin Share caches information in memory. If you run multiple instances of Pingvin Share, you need to enable Redis caching to share the cache between the instances.
   redis-enabled: "false"

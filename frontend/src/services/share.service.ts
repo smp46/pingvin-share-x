@@ -58,6 +58,11 @@ const remove = async (id: string) => {
   await api.delete(`shares/${id}`);
 };
 
+const expire = async (id: string) => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
+  await api.post(`shares/${id}/expire`);
+};
+
 const getMyShares = async (): Promise<MyShare[]> => {
   return (await api.get("shares")).data;
 };
@@ -167,6 +172,7 @@ export default {
   get,
   getFromOwner,
   remove,
+  expire,
   getMetaData,
   doesFileSupportPreview,
   getMyShares,
