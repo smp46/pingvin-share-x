@@ -7,6 +7,7 @@ import {
 } from "@nestjs/common";
 import { Request } from "express";
 import * as moment from "moment";
+import { User } from "@prisma/client";
 import { PrismaService } from "src/prisma/prisma.service";
 import { ShareSecurityGuard } from "src/share/guard/shareSecurity.guard";
 import { ShareService } from "src/share/share.service";
@@ -17,7 +18,7 @@ export class FileSecurityGuard extends ShareSecurityGuard {
   constructor(
     private _shareService: ShareService,
     private _prisma: PrismaService,
-    _config: ConfigService,
+    private _config: ConfigService,
   ) {
     super(_shareService, _prisma, _config);
   }
@@ -56,6 +57,15 @@ export class FileSecurityGuard extends ShareSecurityGuard {
           !moment(share.expiration).isSame(0))
       ) {
         throw new NotFoundException("File not found");
+      }
+
+      // If admin access is enabled and user is admin, allow access
+      if (this._config.get("share.allowAdminAccessAllShares")) {
+        await super.canActivate(context);
+        const user = request.user as User | undefined;
+        if (user?.isAdmin) {
+          return true;
+        }
       }
 
       if (share.security?.password)

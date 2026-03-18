@@ -17,7 +17,7 @@ export class ShareSecurityGuard extends JwtGuard {
   constructor(
     private shareService: ShareService,
     private prisma: PrismaService,
-    configService: ConfigService,
+    private configService: ConfigService,
   ) {
     super(configService);
   }
@@ -39,12 +39,26 @@ export class ShareSecurityGuard extends JwtGuard {
       include: { security: true, reverseShare: true },
     });
 
+    if (!share) throw new NotFoundException("Share not found");
+
+    // Run the JWTGuard to set the user
+    await super.canActivate(context);
+    const user = request.user as User;
+
+    // If admin access is enabled and user is admin, allow access
     if (
-      !share ||
-      (moment().isAfter(share.expiration) &&
-        !moment(share.expiration).isSame(0))
-    )
+      user?.isAdmin &&
+      this.configService.get("share.allowAdminAccessAllShares")
+    ) {
+      return true;
+    }
+
+    if (
+      moment().isAfter(share.expiration) &&
+      !moment(share.expiration).isSame(0)
+    ) {
       throw new NotFoundException("Share not found");
+    }
 
     if (share.security?.password && !shareToken)
       throw new ForbiddenException(
@@ -57,10 +71,6 @@ export class ShareSecurityGuard extends JwtGuard {
         "Share token required",
         "share_token_required",
       );
-
-    // Run the JWTGuard to set the user
-    await super.canActivate(context);
-    const user = request.user as User;
 
     // Only the creator and reverse share creator can access the reverse share if it's not public
     if (
