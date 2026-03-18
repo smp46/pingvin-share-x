@@ -29,6 +29,8 @@ share:
   chunkSize: "10000000"
   #The share creation modal automatically appears when a user selects files, eliminating the need to manually click the button.
   autoOpenShareModal: "false"
+  #Whether admins can access all shares without tokens/passwords
+  allowAdminAccessAllShares: "false"
 cache:
   #Normally Pingvin Share caches information in memory. If you run multiple instances of Pingvin Share, you need to enable Redis caching to share the cache between the instances.
   redis-enabled: "false"

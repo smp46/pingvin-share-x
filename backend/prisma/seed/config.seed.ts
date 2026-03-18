@@ -80,6 +80,11 @@ export const configVariables = {
       defaultValue: "false",
       secret: false,
     },
+    allowAdminAccessAllShares: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
   },
   cache: {
     "redis-enabled": {
