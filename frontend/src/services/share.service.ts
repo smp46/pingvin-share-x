@@ -88,6 +88,14 @@ const doesFileSupportPreview = (fileName: string) => {
   return supportedMimeTypes.some((isSupported) => isSupported);
 };
 
+const isShareTextFile = (fileName: string) => {
+  const mimeType = (mime.contentType(fileName) || "").split(";")[0];
+
+  if (!mimeType) return false;
+
+  return mimeType.startsWith("text/");
+};
+
 const downloadFile = async (shareId: string, fileId: string) => {
   window.location.href = `${window.location.origin}/api/shares/${shareId}/files/${fileId}`;
 };
@@ -169,6 +177,7 @@ export default {
   remove,
   getMetaData,
   doesFileSupportPreview,
+  isShareTextFile,
   getMyShares,
   isShareIdAvailable,
   downloadFile,

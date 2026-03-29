@@ -10,7 +10,7 @@ import {
 import { useClipboard } from "@mantine/hooks";
 import { useModals } from "@mantine/modals";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { TbDownload, TbEye, TbLink } from "react-icons/tb";
+import { TbDownload, TbEye, TbLink, TbClipboard } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import useConfig from "../../hooks/config.hook";
 import useTranslate from "../../hooks/useTranslate.hook";
@@ -22,6 +22,7 @@ import toast from "../../utils/toast.util";
 import TableSortIcon, { TableSort } from "../core/SortIcon";
 import showFilePreviewModal from "./modals/showFilePreviewModal";
 import { HoverTip } from "../core/HoverTip";
+import api from "../../services/api.service";
 
 const FileList = ({
   files,
@@ -116,6 +117,33 @@ const FileList = ({
                   <td>{byteToHumanSizeString(parseInt(file.size))}</td>
                   <td>
                     <Group position="right" noWrap>
+                      {shareService.isShareTextFile(file.name) && (
+                        <ActionIcon
+                          color="blue"
+                          variant="light"
+                          size={25}
+                          onClick={() => {
+                            api
+                              .get(`/shares/${share.id}/files/${file.id}`)
+                              .then((res) => {
+                                if (window.isSecureContext) {
+                                  clipboard.copy(res.data);
+                                  toast.success(
+                                    t("share.notify.copied-contents"),
+                                  );
+                                } else {
+                                  toast.error(
+                                    t("share.notify.copy-not-supported"),
+                                  );
+                                }
+                              });
+                          }}
+                        >
+                          <HoverTip label={t("share.copy-text-contents")}>
+                            <TbClipboard />
+                          </HoverTip>
+                        </ActionIcon>
+                      )}
                       {shareService.doesFileSupportPreview(file.name) && (
                         <ActionIcon
                           color="green"

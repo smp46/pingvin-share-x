@@ -9,6 +9,7 @@ import { FormattedMessage } from "react-intl";
 import useTranslate from "../../hooks/useTranslate.hook";
 import { HoverTip } from "../core/HoverTip";
 import showTextEditorModal from "./modals/showTextEditorModal";
+import shareService from "../../services/share.service";
 
 const FileListRow = ({
   file,
@@ -30,12 +31,7 @@ const FileListRow = ({
     const restorable = onRestore && !uploadable && !!file.deleted;
     const deleted = !uploadable && !!file.deleted;
 
-    // Determine if the file is editable plain text
-    const isTextFile =
-      uploadable &&
-      ((file as File).type.startsWith("text/") ||
-        file.name.endsWith(".md") ||
-        file.name.endsWith(".txt"));
+    const isTextFile = shareService.isShareTextFile(file.name);
     const editable = isTextFile && uploadable && file.uploadingProgress === 0;
 
     const t = useTranslate();
