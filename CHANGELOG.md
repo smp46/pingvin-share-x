@@ -1,3 +1,22 @@
+## [1.15.0](https://github.com/smp46/pingvin-share-x/compare/v1.14.1...v1.15.0) (2026-03-29)
+
+
+### Features
+
+* **admin:** opt-in allow admins to access all shares ([b68c6c8](https://github.com/smp46/pingvin-share-x/commit/b68c6c85af9a6a46b5b57292e15cb7ccc8f07a09))
+* **admin:** shares can now be retained after deletion/expiry ([2c548df](https://github.com/smp46/pingvin-share-x/commit/2c548dfc9a302dc04143666e9a390819c807cd28))
+* **shares:** copy to clipboard for text files ([92d4f09](https://github.com/smp46/pingvin-share-x/commit/92d4f09dac22a4698d114888b0ceb4c700892555))
+* **upload:** support for pasting files or text ([eb3dbed](https://github.com/smp46/pingvin-share-x/commit/eb3dbede79835e2caabd0addd07e00ee4dff13b8))
+* **upload:** text editor modal for supported files ([61b9f3c](https://github.com/smp46/pingvin-share-x/commit/61b9f3c4014c12eee497fdd0128bc69c6b809dd3))
+
+
+### Bug Fixes
+
+* **deps:** resolve security vulns via npm audit ([0ed712c](https://github.com/smp46/pingvin-share-x/commit/0ed712c154af9e3bdefc6c8dabb5d620d9627b48))
+* **deps:** resolve security vulns via npm audit ([8f1164d](https://github.com/smp46/pingvin-share-x/commit/8f1164d24af49a235c322a383c6f5b0e7c5a5aec))
+* **deps:** resolve security vulns via npm audit and overrides ([e846802](https://github.com/smp46/pingvin-share-x/commit/e84680292487aadafca634b56fd2f6fc8beff9f3))
+* **shares:** use origin only if appUrl not configured ([4f94a40](https://github.com/smp46/pingvin-share-x/commit/4f94a40f7770f9aba0c3e7bba2f239905b30b6aa))
+
 ## [1.14.1](https://github.com/smp46/pingvin-share-x/compare/v1.13.4...v1.14.1) (2026-02-24)
 
 
