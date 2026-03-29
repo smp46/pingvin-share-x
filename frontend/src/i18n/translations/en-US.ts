@@ -370,6 +370,7 @@ export default {
   "share.description": "Look what I've shared with you!",
   "share.fileCount":
     "{count, plural, =1 {# file} other {# files}} · {size} (zip file may be smaller due to compression)",
+  "share.copy-text-contents": "Copy file contents to clipboard",
   "share.error.visitor-limit-exceeded.title": "Visitor limit exceeded",
   "share.error.visitor-limit-exceeded.description":
     "The visitor limit from this share has been exceeded.",
@@ -390,6 +391,11 @@ export default {
   "share.button.download-all": "Download all",
   "share.notify.download-all-preparing":
     "The share is being prepared. Please try again in a few minutes.",
+
+  "share.notify.copied-contents": "File contents copied to clipboard",
+  "share.notify.copy-too-big-error": "File is too big to copy to clipboard",
+  "share.notify.copy-not-supported-error":
+    "Copying to clipboard requires a HTTPS connection",
 
   "share.modal.file-link": "File link",
   "share.table.name": "Name",
