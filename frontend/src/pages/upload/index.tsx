@@ -240,12 +240,7 @@ const Upload = ({
         .completeShare(createdShare.id)
         .then((share) => {
           setisUploading(false);
-          showCompletedUploadModal(
-            modals,
-            share,
-            config.get("general.appUrl"),
-            config.get("general.appUrl", true),
-          );
+          showCompletedUploadModal(modals, share, config.get("general.appUrl"));
           setFiles([]);
         })
         .catch(() => toast.error(t("upload.notify.generic-error")));
