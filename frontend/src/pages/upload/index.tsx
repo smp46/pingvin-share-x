@@ -168,27 +168,12 @@ const Upload = ({
   useEffect(() => {
     const handlePaste = (e: ClipboardEvent) => {
       const clipboardData = e.clipboardData;
-      let fileUpload: FileUpload;
 
       if (!clipboardData) {
         return;
       }
 
-      if (clipboardData.files.length > 0) {
-        const pastedFile = clipboardData.files[0];
-
-        if (pastedFile.size > maxShareSize) {
-          toast.error(
-            t("upload.dropzone.notify.file-too-big", {
-              maxSize: byteToHumanSizeString(maxShareSize),
-            }),
-          );
-          return;
-        }
-
-        fileUpload = pastedFile as FileUpload;
-        fileUpload.uploadingProgress = 0;
-      } else if (clipboardData?.getData("text/plain")) {
+      if (clipboardData?.getData("text/plain")) {
         const pastedText = clipboardData.getData("text/plain");
         if (!pastedText) {
           return;
@@ -204,15 +189,15 @@ const Upload = ({
         const file = new File([pastedText], fileName, {
           type: "text/plain",
         });
-        fileUpload = file as FileUpload;
+        const fileUpload = file as FileUpload;
         fileUpload.uploadingProgress = 0;
-      }
 
-      if (autoOpenCreateUploadModal) {
-        setFiles([fileUpload]);
-        showCreateUploadModalCallback([fileUpload]);
-      } else {
-        setFiles((oldArr) => [...oldArr, fileUpload]);
+        if (autoOpenCreateUploadModal) {
+          setFiles([fileUpload]);
+          showCreateUploadModalCallback([fileUpload]);
+        } else {
+          setFiles((oldArr) => [...oldArr, fileUpload]);
+        }
       }
     };
 

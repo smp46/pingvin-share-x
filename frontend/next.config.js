@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const { version } = require('./package.json');
+const { version } = require("./package.json");
 
 const withPWA = require("next-pwa")({
   dest: "public",
@@ -8,13 +8,15 @@ const withPWA = require("next-pwa")({
   runtimeCaching: [
     {
       urlPattern: /^https?.*/,
-      handler: 'NetworkOnly',
+      handler: "NetworkOnly",
     },
   ],
 });
 
 module.exports = withPWA({
-  output: "standalone", env: {
+  transpilePackages: ["@uiw/react-md-editor", "@uiw/react-markdown-preview"],
+  output: "standalone",
+  env: {
     VERSION: version,
   },
 });

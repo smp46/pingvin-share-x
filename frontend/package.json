@@ -18,6 +18,7 @@
     "@mantine/modals": "6.0.21",
     "@mantine/next": "6.0.21",
     "@mantine/notifications": "6.0.21",
+    "@uiw/react-md-editor": "^4.1.0",
     "axios": "^1.7.7",
     "cookies-next": "^4.2.1",
     "file-saver": "^2.0.5",

@@ -1,5 +1,6 @@
-import { ActionIcon, Table } from "@mantine/core";
-import { TbTrash } from "react-icons/tb";
+import { ActionIcon, Table, Group } from "@mantine/core";
+import { useModals } from "@mantine/modals";
+import { TbTrash, TbEdit } from "react-icons/tb";
 import { GrUndo } from "react-icons/gr";
 import { FileListItem } from "../../types/File.type";
 import { byteToHumanSizeString } from "../../utils/fileSize.util";
@@ -7,15 +8,18 @@ import UploadProgressIndicator from "./UploadProgressIndicator";
 import { FormattedMessage } from "react-intl";
 import useTranslate from "../../hooks/useTranslate.hook";
 import { HoverTip } from "../core/HoverTip";
+import showTextEditorModal from "./modals/showTextEditorModal";
 
 const FileListRow = ({
   file,
   onRemove,
   onRestore,
+  onEdit,
 }: {
   file: FileListItem;
   onRemove?: () => void;
   onRestore?: () => void;
+  onEdit?: () => void;
 }) => {
   {
     const uploadable = "uploadingProgress" in file;
@@ -23,8 +27,17 @@ const FileListRow = ({
     const removable = uploadable
       ? file.uploadingProgress === 0
       : onRemove && !file.deleted;
-    const restorable = onRestore && !uploadable && !!file.deleted; // maybe undefined, force boolean
+    const restorable = onRestore && !uploadable && !!file.deleted;
     const deleted = !uploadable && !!file.deleted;
+
+    // Determine if the file is editable plain text
+    const isTextFile =
+      uploadable &&
+      ((file as File).type.startsWith("text/") ||
+        file.name.endsWith(".md") ||
+        file.name.endsWith(".txt"));
+    const editable = isTextFile && uploadable && file.uploadingProgress === 0;
+
     const t = useTranslate();
 
     return (
@@ -37,33 +50,47 @@ const FileListRow = ({
         <td>{file.name}</td>
         <td>{byteToHumanSizeString(+file.size)}</td>
         <td>
-          {removable && (
-            <HoverTip width={60} label={t("common.button.delete")}>
-              <ActionIcon
-                color="red"
-                variant="light"
-                size={25}
-                onClick={onRemove}
-              >
-                <TbTrash />
-              </ActionIcon>
-            </HoverTip>
-          )}
-          {uploading && (
-            <UploadProgressIndicator progress={file.uploadingProgress} />
-          )}
-          {restorable && (
-            <HoverTip width={60} label={t("common.button.undo")}>
-              <ActionIcon
-                color="primary"
-                variant="light"
-                size={25}
-                onClick={onRestore}
-              >
-                <GrUndo />
-              </ActionIcon>
-            </HoverTip>
-          )}
+          <Group position="right" spacing="xs" noWrap>
+            {editable && (
+              <HoverTip width={60} label={t("common.button.edit")}>
+                <ActionIcon
+                  color="blue"
+                  variant="light"
+                  size={25}
+                  onClick={onEdit}
+                >
+                  <TbEdit />
+                </ActionIcon>
+              </HoverTip>
+            )}
+            {removable && (
+              <HoverTip width={60} label={t("common.button.delete")}>
+                <ActionIcon
+                  color="red"
+                  variant="light"
+                  size={25}
+                  onClick={onRemove}
+                >
+                  <TbTrash />
+                </ActionIcon>
+              </HoverTip>
+            )}
+            {uploading && (
+              <UploadProgressIndicator progress={file.uploadingProgress} />
+            )}
+            {restorable && (
+              <HoverTip width={60} label={t("common.button.undo")}>
+                <ActionIcon
+                  color="primary"
+                  variant="light"
+                  size={25}
+                  onClick={onRestore}
+                >
+                  <GrUndo />
+                </ActionIcon>
+              </HoverTip>
+            )}
+          </Group>
         </td>
       </tr>
     );
@@ -77,6 +104,7 @@ const FileList = <T extends FileListItem = FileListItem>({
   files: T[];
   setFiles: (files: T[]) => void;
 }) => {
+  const modals = useModals();
   const remove = (index: number) => {
     const file = files[index];
 
@@ -101,12 +129,20 @@ const FileList = <T extends FileListItem = FileListItem>({
     setFiles([...files]);
   };
 
+  const edit = async (index: number) => {
+    const originalFile = files[index] as unknown as File;
+    const text = await originalFile.text();
+
+    showTextEditorModal(index, files, setFiles, text, modals);
+  };
+
   const rows = files.map((file, i) => (
     <FileListRow
       key={i}
       file={file}
       onRemove={() => remove(i)}
       onRestore={() => restore(i)}
+      onEdit={() => edit(i)}
     />
   ));
 
