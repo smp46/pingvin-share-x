@@ -7,10 +7,14 @@
     "prod": "prisma migrate deploy && prisma db seed && node dist/src/main",
     "lint": "eslint 'src/**/*.ts'",
     "format": "prettier --end-of-line=auto --write 'src/**/*.ts'",
-    "test:system": "prisma migrate reset -f && nest start & wait-on http://localhost:8080/api/configs && newman run ./test/newman-system-tests.json"
+    "test:system": "prisma migrate reset -f && nest start & wait-on http://localhost:8080/api/configs && npx newman run ./test/newman-system-tests.json"
   },
   "prisma": {
     "seed": "ts-node prisma/seed/config.seed.ts"
+  },
+  "overrides": {
+    "handlebars": "^4.7.9",
+    "path-to-regexp": "^8.4.0"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.787.0",
@@ -42,7 +46,7 @@
     "mime-types": "^3.0.1",
     "moment": "^2.30.1",
     "nanoid": "^5.1.5",
-    "nodemailer": "^7.0.7",
+    "nodemailer": "^8.0.4",
     "otplib": "^13.3.0",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
@@ -79,7 +83,6 @@
     "eslint": "^9.24.0",
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-prettier": "^5.2.6",
-    "newman": "^6.2.1",
     "prettier": "^3.5.3",
     "prisma": "^6.6.0",
     "source-map-support": "^0.5.21",
