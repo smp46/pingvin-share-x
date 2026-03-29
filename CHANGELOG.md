@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/smp46/pingvin-share-x/compare/v1.15.0...v1.15.1) (2026-03-29)
+
+
+### Bug Fixes
+
+* **bug:** linting error preventing build ([8580580](https://github.com/smp46/pingvin-share-x/commit/8580580fd7204cd6afcd01103aeb50715d29ea45))
+
 ## [1.15.0](https://github.com/smp46/pingvin-share-x/compare/v1.14.1...v1.15.0) (2026-03-29)
 
 
