@@ -20,8 +20,6 @@ import { CreateShare, Share } from "../../types/share.type";
 import toast from "../../utils/toast.util";
 import { useRouter } from "next/router";
 
-import { byteToHumanSizeString } from "../../utils/fileSize.util";
-
 const promiseLimit = pLimit(3);
 let errorToastShown = false;
 let createdShare: Share;
@@ -167,6 +165,10 @@ const Upload = ({
 
   useEffect(() => {
     const handlePaste = (e: ClipboardEvent) => {
+      if (modals.modals.length > 0) {
+        return;
+      }
+
       const clipboardData = e.clipboardData;
 
       if (!clipboardData) {
@@ -206,7 +208,7 @@ const Upload = ({
     return () => {
       window.removeEventListener("paste", handlePaste);
     };
-  }, [autoOpenCreateUploadModal]);
+  }, [autoOpenCreateUploadModal, modals.modals.length]);
 
   useEffect(() => {
     // Check if there are any files that failed to upload
