@@ -1,3 +1,11 @@
+## [1.15.2](https://github.com/smp46/pingvin-share-x/compare/v1.15.1...v1.15.2) (2026-04-01)
+
+
+### Bug Fixes
+
+* **deps:** resolve security vulns via npm audit and overrides ([e4505b2](https://github.com/smp46/pingvin-share-x/commit/e4505b2e04c8ec569c1151a4700384fa8b9d06ee))
+* **upload:** don't listen for paste when modals open ([97445ff](https://github.com/smp46/pingvin-share-x/commit/97445ff1af29f08ee70ec9d58336edb3bfd316dd))
+
 ## [1.15.1](https://github.com/smp46/pingvin-share-x/compare/v1.15.0...v1.15.1) (2026-03-29)
 
 
