@@ -12,6 +12,20 @@ general:
   showHomePage: "true"
   #Time after which a user must log in again (default: 3 months).
   sessionDuration: 3 months
+appearance:
+  #Mantine primary color used across the UI.
+  #Use one of the named colors: dark, gray, red, pink, grape, violet, indigo, blue, cyan, teal, green, lime, yellow, orange, victoria, custom
+  themePrimaryColor: victoria
+  #If themePrimaryColor is set to custom, this hex color will be used as override.
+  themePrimaryColorOverride: ""
+  #Mantine default border radius (xs, sm, md, lg, xl).
+  themeRadius: sm
+  #UI font preset loaded at build time. Options: system, inter, roboto, poppins, openSans, lato, montserrat, nunito, sourceSans3, merriweather, playfairDisplay
+  themeFontPreset: system
+  #Default color scheme for the UI. Options: system, light, dark
+  themeColorScheme: system
+  #Custom CSS that will be injected globally into the frontend. Use carefully, as invalid CSS may impact the UI.
+  customCss: ""
 share:
   #Whether registration is allowed
   allowRegistration: "true"

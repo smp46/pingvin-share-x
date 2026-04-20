@@ -5,6 +5,7 @@ import { stringToTimespan } from "../utils/date.util";
 
 const categories = [
   "general",
+  "appearance",
   "email",
   "share",
   "smtp",
@@ -82,6 +83,13 @@ const changeLogo = async (file: File) => {
 
   await api.post("/configs/admin/logo", form);
 };
+
+const changeDarkLogo = async (file: File) => {
+  const form = new FormData();
+  form.append("file", file);
+
+  await api.post("/configs/admin/logoDark", form);
+};
 export default {
   list,
   getByCategory,
@@ -91,4 +99,5 @@ export default {
   sendTestEmail,
   isNewReleaseAvailable,
   changeLogo,
+  changeDarkLogo,
 };

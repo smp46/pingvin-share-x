@@ -13,6 +13,11 @@ export class LogoService {
     this.createPWAIcons(file);
   }
 
+  async createDark(file: Buffer) {
+    const resized = await sharp(file).resize(900).toBuffer();
+    fs.writeFileSync(`${IMAGES_PATH}/logo-dark.png`, resized, "binary");
+  }
+
   async createFavicon(file: Buffer) {
     const resized = await sharp(file).resize(16).toBuffer();
     fs.promises.writeFile(`${IMAGES_PATH}/favicon.ico`, resized, "binary");

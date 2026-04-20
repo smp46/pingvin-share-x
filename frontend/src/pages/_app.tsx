@@ -2,6 +2,7 @@ import {
   ColorScheme,
   ColorSchemeProvider,
   Container,
+  MantineThemeOverride,
   MantineProvider,
   Stack,
 } from "@mantine/core";
@@ -12,6 +13,18 @@ import axios from "axios";
 import { getCookie, setCookie } from "cookies-next";
 import moment from "moment";
 import "moment/min/locales";
+import {
+  Inter,
+  Lato,
+  Merriweather,
+  Montserrat,
+  Nunito,
+  Open_Sans,
+  Playfair_Display,
+  Poppins,
+  Roboto,
+  Source_Sans_3,
+} from "next/font/google";
 import { GetServerSidePropsContext } from "next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -35,6 +48,111 @@ import Footer from "../components/footer/Footer";
 import { getDefaultConfig } from "../utils/defaultConfig.util";
 
 const excludeDefaultLayoutRoutes = ["/admin/config/[category]"];
+const availableMantineColors = [
+  "dark",
+  "gray",
+  "red",
+  "pink",
+  "grape",
+  "violet",
+  "indigo",
+  "blue",
+  "cyan",
+  "teal",
+  "green",
+  "lime",
+  "yellow",
+  "orange",
+  "victoria",
+] as const;
+const availableMantineRadii = ["xs", "sm", "md", "lg", "xl"] as const;
+const hexColorPattern = /^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/;
+const availableFontPresets = [
+  "system",
+  "inter",
+  "roboto",
+  "poppins",
+  "openSans",
+  "lato",
+  "montserrat",
+  "nunito",
+  "sourceSans3",
+  "merriweather",
+  "playfairDisplay",
+] as const;
+
+const interFont = Inter({ subsets: ["latin"], display: "swap" });
+const robotoFont = Roboto({ subsets: ["latin"], display: "swap", weight: ["400", "500", "700"] });
+const poppinsFont = Poppins({ subsets: ["latin"], display: "swap", weight: ["400", "500", "700"] });
+const openSansFont = Open_Sans({ subsets: ["latin"], display: "swap", weight: ["400", "500", "700"] });
+const latoFont = Lato({ subsets: ["latin"], display: "swap", weight: ["400", "700"] });
+const montserratFont = Montserrat({ subsets: ["latin"], display: "swap", weight: ["400", "500", "700"] });
+const nunitoFont = Nunito({ subsets: ["latin"], display: "swap", weight: ["400", "500", "700"] });
+const sourceSans3Font = Source_Sans_3({ subsets: ["latin"], display: "swap", weight: ["400", "500", "700"] });
+const merriweatherFont = Merriweather({ subsets: ["latin"], display: "swap", weight: ["400", "700"] });
+const playfairDisplayFont = Playfair_Display({ subsets: ["latin"], display: "swap", weight: ["400", "700"] });
+
+const fontPresetToFamily: Record<(typeof availableFontPresets)[number], string | null> = {
+  system: null,
+  inter: interFont.style.fontFamily,
+  roboto: robotoFont.style.fontFamily,
+  poppins: poppinsFont.style.fontFamily,
+  openSans: openSansFont.style.fontFamily,
+  lato: latoFont.style.fontFamily,
+  montserrat: montserratFont.style.fontFamily,
+  nunito: nunitoFont.style.fontFamily,
+  sourceSans3: sourceSans3Font.style.fontFamily,
+  merriweather: merriweatherFont.style.fontFamily,
+  playfairDisplay: playfairDisplayFont.style.fontFamily,
+};
+
+const normalizeHexColor = (value: string): string | null => {
+  if (!hexColorPattern.test(value)) return null;
+  if (value.length === 4) {
+    return `#${value[1]}${value[1]}${value[2]}${value[2]}${value[3]}${value[3]}`;
+  }
+  return value.toLowerCase();
+};
+
+const hexToRgb = (hex: string): { r: number; g: number; b: number } => ({
+  r: parseInt(hex.slice(1, 3), 16),
+  g: parseInt(hex.slice(3, 5), 16),
+  b: parseInt(hex.slice(5, 7), 16),
+});
+
+const rgbToHex = (r: number, g: number, b: number): string =>
+  `#${[r, g, b]
+    .map((channel) =>
+      Math.min(255, Math.max(0, Math.round(channel)))
+        .toString(16)
+        .padStart(2, "0"),
+    )
+    .join("")}`;
+
+const mixHexColors = (baseHex: string, mixHex: string, weight: number): string => {
+  const base = hexToRgb(baseHex);
+  const mix = hexToRgb(mixHex);
+  const inverseWeight = 1 - weight;
+
+  return rgbToHex(
+    base.r * inverseWeight + mix.r * weight,
+    base.g * inverseWeight + mix.g * weight,
+    base.b * inverseWeight + mix.b * weight,
+  );
+};
+
+const createMantineScaleFromHex = (hex: string) => [
+  mixHexColors(hex, "#ffffff", 0.92),
+  mixHexColors(hex, "#ffffff", 0.82),
+  mixHexColors(hex, "#ffffff", 0.68),
+  mixHexColors(hex, "#ffffff", 0.54),
+  mixHexColors(hex, "#ffffff", 0.36),
+  hex,
+  mixHexColors(hex, "#000000", 0.1),
+  mixHexColors(hex, "#000000", 0.22),
+  mixHexColors(hex, "#000000", 0.34),
+  mixHexColors(hex, "#000000", 0.46),
+] as [string, string, string, string, string, string, string, string, string, string];
 
 function App({ Component, pageProps }: AppProps) {
   const systemTheme = useColorScheme(pageProps.colorScheme);
@@ -48,6 +166,87 @@ function App({ Component, pageProps }: AppProps) {
   const [configVariables, setConfigVariables] = useState<Config[]>(
     pageProps.configVariables,
   );
+  const getStringConfigValue = (key: string, fallback = ""): string => {
+    const config = configVariables?.find((item) => item.key === key);
+    return (config?.value ?? config?.defaultValue ?? fallback).trim();
+  };
+
+  const customCss = getStringConfigValue("appearance.customCss");
+  const themePrimaryColorRaw = getStringConfigValue(
+    "appearance.themePrimaryColor",
+    "victoria",
+  );
+  const themePrimaryColorOverrideRaw = getStringConfigValue(
+    "appearance.themePrimaryColorOverride",
+  );
+  const themeRadiusRaw = getStringConfigValue("appearance.themeRadius", "sm");
+  const themeFontPresetRaw = getStringConfigValue(
+    "appearance.themeFontPreset",
+    "system",
+  );
+  const themeColorSchemeRaw = getStringConfigValue(
+    "appearance.themeColorScheme",
+    "system",
+  );
+
+  const normalizedPrimaryColorOverrideHex = normalizeHexColor(
+    themePrimaryColorOverrideRaw,
+  );
+  const useCustomPrimaryColor = themePrimaryColorRaw === "custom";
+
+  const effectivePrimaryHex = useCustomPrimaryColor
+    ? normalizedPrimaryColorOverrideHex
+    : null;
+
+  const themePrimaryColor = effectivePrimaryHex
+    ? "adminPrimary"
+    : (availableMantineColors as readonly string[]).includes(
+          themePrimaryColorRaw,
+        )
+      ? themePrimaryColorRaw
+      : "victoria";
+
+  const themeRadius = (availableMantineRadii as readonly string[]).includes(
+    themeRadiusRaw,
+  )
+    ? themeRadiusRaw
+    : "sm";
+
+  const themeFontPreset = (availableFontPresets as readonly string[]).includes(
+    themeFontPresetRaw,
+  )
+    ? themeFontPresetRaw
+    : "system";
+
+  const selectedFontFamily =
+    fontPresetToFamily[themeFontPreset as keyof typeof fontPresetToFamily];
+  const adminDefaultColorScheme =
+    themeColorSchemeRaw === "light" || themeColorSchemeRaw === "dark"
+      ? themeColorSchemeRaw
+      : "system";
+
+  const adminTheme: MantineThemeOverride = {
+    ...(effectivePrimaryHex
+      ? {
+          colors: {
+            adminPrimary: createMantineScaleFromHex(effectivePrimaryHex),
+          },
+        }
+      : {}),
+    primaryColor: themePrimaryColor,
+    defaultRadius: themeRadius,
+    ...(selectedFontFamily ? { fontFamily: selectedFontFamily } : {}),
+  };
+
+  const mergedTheme: MantineThemeOverride = {
+    ...globalStyle,
+    ...adminTheme,
+    colorScheme,
+    colors: {
+      ...(globalStyle.colors ?? {}),
+      ...(adminTheme.colors ?? {}),
+    },
+  };
 
   useEffect(() => {
     setRoute(router.pathname);
@@ -72,13 +271,17 @@ function App({ Component, pageProps }: AppProps) {
   }, []);
 
   useEffect(() => {
-    const colorScheme =
-      userPreferences.get("colorScheme") == "system"
+    const userColorPreference = userPreferences.get("colorScheme");
+    const colorScheme = user
+      ? userColorPreference === "system"
         ? systemTheme
-        : userPreferences.get("colorScheme");
+        : userColorPreference
+      : adminDefaultColorScheme === "system"
+        ? systemTheme
+        : adminDefaultColorScheme;
 
     toggleColorScheme(colorScheme);
-  }, [systemTheme]);
+  }, [adminDefaultColorScheme, systemTheme, user]);
 
   const toggleColorScheme = (value: ColorScheme) => {
     setColorScheme(value ?? "light");
@@ -106,8 +309,13 @@ function App({ Component, pageProps }: AppProps) {
         <MantineProvider
           withGlobalStyles
           withNormalizeCSS
-          theme={{ colorScheme, ...globalStyle }}
+          theme={mergedTheme}
         >
+          {customCss && (
+            <style id="admin-custom-css">
+              {customCss.replace(/<\/style/gi, "<\\/style")}
+            </style>
+          )}
           <ColorSchemeProvider
             colorScheme={colorScheme}
             toggleColorScheme={toggleColorScheme}
