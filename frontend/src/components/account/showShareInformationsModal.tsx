@@ -48,7 +48,7 @@ const Body = ({
     setShowQR(!showQR);
   };
 
-  const link = `${appUrl !== "" ? defaultAppUrl : window.location.origin}/s/${share.id}`;
+  const link = `${appUrl !== defaultAppUrl ? appUrl : window.location.origin}/s/${share.id}`;
 
   const formattedShareSize = byteToHumanSizeString(share.size);
   const formattedMaxShareSize = byteToHumanSizeString(maxShareSize);
