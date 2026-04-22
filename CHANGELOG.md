@@ -1,3 +1,16 @@
+## [1.16.0](https://github.com/smp46/pingvin-share-x/compare/v1.15.2...v1.16.0) (2026-04-22)
+
+
+### Features
+
+* **admin:** add appearance settings with guest theme defaults and dark logo upload ([#46](https://github.com/smp46/pingvin-share-x/issues/46)) ([9b07edb](https://github.com/smp46/pingvin-share-x/commit/9b07edb56693fda0f3941364e63e37d1b816217c))
+
+
+### Bug Fixes
+
+* **deps:** resolve security vulns via npm audit ([a64dd00](https://github.com/smp46/pingvin-share-x/commit/a64dd009d1a9604faa99fd848b6e83843e275911))
+* **shares:** appUrl not being used correctly ([#49](https://github.com/smp46/pingvin-share-x/issues/49)) ([ec5f61c](https://github.com/smp46/pingvin-share-x/commit/ec5f61c9833804861d660a26c8f2b3b569412045))
+
 ## [1.15.2](https://github.com/smp46/pingvin-share-x/compare/v1.15.1...v1.15.2) (2026-04-01)
 
 
