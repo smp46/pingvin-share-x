@@ -72,4 +72,18 @@ export class ConfigController {
   ) {
     return await this.logoService.create(file.buffer);
   }
+
+  @Post("admin/logoDark")
+  @UseInterceptors(FileInterceptor("file"))
+  @UseGuards(JwtGuard, AdministratorGuard)
+  async uploadDarkLogo(
+    @UploadedFile(
+      new ParseFilePipe({
+        validators: [new FileTypeValidator({ fileType: "image/png" })],
+      }),
+    )
+    file: Express.Multer.File,
+  ) {
+    return await this.logoService.createDark(file.buffer);
+  }
 }

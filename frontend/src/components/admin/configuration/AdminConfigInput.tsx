@@ -1,12 +1,19 @@
 import {
+  Box,
+  Center,
+  ColorInput,
   NumberInput,
   PasswordInput,
+  Select,
+  SegmentedControl,
   Stack,
   Switch,
   Textarea,
   TextInput,
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
+import { TbDeviceLaptop, TbMoon, TbSun } from "react-icons/tb";
+import { FormattedMessage } from "react-intl";
 import { AdminConfig, UpdateConfig } from "../../../types/config.type";
 import { stringToTimespan, timespanToString } from "../../../utils/date.util";
 import FileSizeInput from "../../core/FileSizeInput";
@@ -15,10 +22,36 @@ import TimespanInput from "../../core/TimespanInput";
 const AdminConfigInput = ({
   configVariable,
   updateConfigVariable,
+  allConfigVariables,
+  updatedConfigVariables,
 }: {
   configVariable: AdminConfig;
   updateConfigVariable: (variable: UpdateConfig) => void;
+  allConfigVariables?: AdminConfig[];
+  updatedConfigVariables?: UpdateConfig[];
 }) => {
+  const isCustomCssConfig = configVariable.key === "appearance.customCss";
+  const isThemePrimaryColorConfig =
+    configVariable.key === "appearance.themePrimaryColor";
+  const isThemePrimaryColorOverrideConfig =
+    configVariable.key === "appearance.themePrimaryColorOverride";
+  const isThemeRadiusConfig = configVariable.key === "appearance.themeRadius";
+  const isThemeFontPresetConfig =
+    configVariable.key === "appearance.themeFontPreset";
+  const isThemeColorSchemeConfig =
+    configVariable.key === "appearance.themeColorScheme";
+
+  const getEffectiveConfigValue = (key: string): string | undefined => {
+    const updatedValue = updatedConfigVariables?.find((item) => item.key === key);
+    if (updatedValue) return updatedValue.value;
+
+    const configVariable = allConfigVariables?.find((item) => item.key === key);
+    return configVariable?.value ?? configVariable?.defaultValue;
+  };
+
+  const shouldShowPrimaryColorOverride =
+    getEffectiveConfigValue("appearance.themePrimaryColor") === "custom";
+
   const form = useForm({
     initialValues: {
       stringValue: configVariable.value ?? configVariable.defaultValue,
@@ -49,6 +82,157 @@ const AdminConfigInput = ({
             {...form.getInputProps("stringValue")}
             onChange={(e) => onValueChange(configVariable, e.target.value)}
           />
+        ) : isCustomCssConfig ? (
+          <Textarea
+            style={{
+              width: "100%",
+            }}
+            disabled={!configVariable.allowEdit}
+            autosize
+            minRows={8}
+            {...form.getInputProps("stringValue")}
+            placeholder={configVariable.defaultValue}
+            onChange={(e) => onValueChange(configVariable, e.target.value)}
+          />
+        ) : isThemePrimaryColorConfig ? (
+          <Select
+            style={{
+              width: "100%",
+            }}
+            disabled={!configVariable.allowEdit}
+            data={[
+              "victoria",
+              "blue",
+              "teal",
+              "green",
+              "cyan",
+              "indigo",
+              "violet",
+              "grape",
+              "pink",
+              "red",
+              "orange",
+              "yellow",
+              "lime",
+              "gray",
+              "dark",
+              "custom",
+            ]}
+            value={form.values.stringValue}
+            placeholder={configVariable.defaultValue}
+            onChange={(value) => onValueChange(configVariable, value ?? "")}
+            searchable
+            allowDeselect={false}
+          />
+        ) : isThemePrimaryColorOverrideConfig ? (
+          shouldShowPrimaryColorOverride ? (
+            <ColorInput
+              style={{
+                width: "100%",
+              }}
+              disabled={!configVariable.allowEdit}
+              value={form.values.stringValue}
+              placeholder="#464379"
+              format="hex"
+              swatches={[
+                "#464379",
+                "#228be6",
+                "#12b886",
+                "#40c057",
+                "#15aabf",
+                "#4c6ef5",
+                "#7950f2",
+                "#be4bdb",
+                "#e64980",
+                "#fa5252",
+                "#fd7e14",
+                "#fab005",
+                "#82c91e",
+              ]}
+              onChange={(value) => onValueChange(configVariable, value ?? "")}
+            />
+          ) : null
+        ) : isThemeRadiusConfig ? (
+          <Select
+            style={{
+              width: "100%",
+            }}
+            disabled={!configVariable.allowEdit}
+            data={["xs", "sm", "md", "lg", "xl"]}
+            value={form.values.stringValue}
+            placeholder={configVariable.defaultValue}
+            onChange={(value) => onValueChange(configVariable, value ?? "")}
+            allowDeselect={false}
+          />
+        ) : isThemeFontPresetConfig ? (
+          <Select
+            style={{
+              width: "100%",
+            }}
+            disabled={!configVariable.allowEdit}
+            data={[
+              { value: "system", label: "System default" },
+              { value: "inter", label: "Inter" },
+              { value: "roboto", label: "Roboto" },
+              { value: "poppins", label: "Poppins" },
+              { value: "openSans", label: "Open Sans" },
+              { value: "lato", label: "Lato" },
+              { value: "montserrat", label: "Montserrat" },
+              { value: "nunito", label: "Nunito" },
+              { value: "sourceSans3", label: "Source Sans 3" },
+              { value: "merriweather", label: "Merriweather" },
+              { value: "playfairDisplay", label: "Playfair Display" },
+            ]}
+            value={form.values.stringValue}
+            placeholder={configVariable.defaultValue}
+            onChange={(value) => onValueChange(configVariable, value ?? "")}
+            allowDeselect={false}
+            searchable
+          />
+        ) : isThemeColorSchemeConfig ? (
+          <SegmentedControl
+            style={{
+              width: "100%",
+            }}
+            disabled={!configVariable.allowEdit}
+            data={[
+              {
+                label: (
+                  <Center>
+                    <TbMoon size={16} />
+                    <Box ml={10}>
+                      <FormattedMessage id="account.theme.dark" />
+                    </Box>
+                  </Center>
+                ),
+                value: "dark",
+              },
+              {
+                label: (
+                  <Center>
+                    <TbSun size={16} />
+                    <Box ml={10}>
+                      <FormattedMessage id="account.theme.light" />
+                    </Box>
+                  </Center>
+                ),
+                value: "light",
+              },
+              {
+                label: (
+                  <Center>
+                    <TbDeviceLaptop size={16} />
+                    <Box ml={10}>
+                      <FormattedMessage id="account.theme.system" />
+                    </Box>
+                  </Center>
+                ),
+                value: "system",
+              },
+            ]}
+            value={form.values.stringValue}
+            onChange={(value) => onValueChange(configVariable, value)}
+          />
         ) : (
           <TextInput
             style={{
@@ -68,6 +252,7 @@ const AdminConfigInput = ({
           }}
           disabled={!configVariable.allowEdit}
           autosize
+          minRows={isCustomCssConfig ? 8 : undefined}
           {...form.getInputProps("textValue")}
           placeholder={configVariable.defaultValue}
           onChange={(e) => onValueChange(configVariable, e.target.value)}

@@ -32,6 +32,7 @@ import toast from "../../../utils/toast.util";
 
 const categories = [
   "General",
+  "Appearance",
   "Email",
   "Share",
   "SMTP",
@@ -65,6 +66,7 @@ export default function AppShellDemo() {
   >([]);
 
   const [logo, setLogo] = useState<File | null>(null);
+  const [darkLogo, setDarkLogo] = useState<File | null>(null);
 
   const isEditingAllowed = (): boolean => {
     return !configVariables || configVariables[0].allowEdit;
@@ -72,10 +74,20 @@ export default function AppShellDemo() {
 
   const saveConfigVariables = async () => {
     if (logo) {
-      configService
+      await configService
         .changeLogo(logo)
         .then(() => {
           setLogo(null);
+          toast.success(t("admin.config.notify.logo-success"));
+        })
+        .catch(toast.axiosError);
+    }
+
+    if (darkLogo) {
+      await configService
+        .changeDarkLogo(darkLogo)
+        .then(() => {
+          setDarkLogo(null);
           toast.success(t("admin.config.notify.logo-success"));
         })
         .catch(toast.axiosError);
@@ -155,65 +167,156 @@ export default function AppShellDemo() {
             <CenterLoader />
           ) : (
             <>
-              <Stack>
-                {!isEditingAllowed() && (
-                  <Alert
-                    mb={"lg"}
-                    variant="light"
-                    color="primary"
-                    title={t("admin.config.config-file-warning.title")}
-                    icon={<TbInfoCircle />}
-                  >
-                    <FormattedMessage id="admin.config.config-file-warning.description" />
-                  </Alert>
-                )}
-                <Title mb="md" order={3}>
-                  {t("admin.config.category." + categoryId)}
-                </Title>
-                {configVariables.map((configVariable) => (
-                  <Group key={configVariable.key} position="apart">
-                    <Stack
-                      style={{ maxWidth: isMobile ? "100%" : "40%" }}
-                      spacing={0}
-                    >
-                      <Title order={6}>
-                        <FormattedMessage
-                          id={`admin.config.${camelToKebab(
-                            configVariable.key,
-                          )}`}
-                        />
-                      </Title>
+              {/*
+               * Keep custom CSS at the bottom in Appearance settings for better UX.
+               */}
+              {(() => {
+                const customCssConfigVariable = configVariables.find(
+                  (configVariable) => configVariable.key === "appearance.customCss",
+                );
+                const getEffectiveConfigValue = (key: string): string => {
+                  const updatedValue = updatedConfigVariables.find(
+                    (item) => item.key === key,
+                  );
+                  if (updatedValue) return updatedValue.value;
 
-                      <Text
-                        sx={{
-                          whiteSpace: "pre-line",
-                        }}
-                        color="dimmed"
-                        size="sm"
-                        mb="xs"
-                      >
-                        <FormattedMessage
-                          id={`admin.config.${camelToKebab(
-                            configVariable.key,
-                          )}.description`}
-                          values={{ br: <br /> }}
+                  const configVariable = configVariables.find(
+                    (item) => item.key === key,
+                  );
+                  return configVariable?.value ?? configVariable?.defaultValue ?? "";
+                };
+
+                const shouldShowPrimaryColorOverride =
+                  getEffectiveConfigValue("appearance.themePrimaryColor") ===
+                  "custom";
+                const visibleConfigVariables = configVariables.filter(
+                  (configVariable) => configVariable.key !== "appearance.customCss",
+                );
+
+                return (
+                  <>
+                    <Stack>
+                      {!isEditingAllowed() && (
+                        <Alert
+                          mb={"lg"}
+                          variant="light"
+                          color="primary"
+                          title={t("admin.config.config-file-warning.title")}
+                          icon={<TbInfoCircle />}
+                        >
+                          <FormattedMessage id="admin.config.config-file-warning.description" />
+                        </Alert>
+                      )}
+                      <Title mb="md" order={3}>
+                        {t("admin.config.category." + categoryId)}
+                      </Title>
+                      {visibleConfigVariables.map((configVariable) => {
+                        if (
+                          configVariable.key ===
+                            "appearance.themePrimaryColorOverride" &&
+                          !shouldShowPrimaryColorOverride
+                        ) {
+                          return null;
+                        }
+
+                        return (
+                          <Group key={configVariable.key} position="apart">
+                            <Stack
+                              style={{ maxWidth: isMobile ? "100%" : "40%" }}
+                              spacing={0}
+                            >
+                              <Title order={6}>
+                                <FormattedMessage
+                                  id={`admin.config.${camelToKebab(
+                                    configVariable.key,
+                                  )}`}
+                                />
+                              </Title>
+
+                              <Text
+                                sx={{
+                                  whiteSpace: "pre-line",
+                                }}
+                                color="dimmed"
+                                size="sm"
+                                mb="xs"
+                              >
+                                <FormattedMessage
+                                  id={`admin.config.${camelToKebab(
+                                    configVariable.key,
+                                  )}.description`}
+                                  values={{ br: <br /> }}
+                                />
+                              </Text>
+                            </Stack>
+                            <Stack></Stack>
+                            <Box style={{ width: isMobile ? "100%" : "50%" }}>
+                              <AdminConfigInput
+                                key={configVariable.key}
+                                configVariable={configVariable}
+                                updateConfigVariable={updateConfigVariable}
+                                allConfigVariables={configVariables}
+                                updatedConfigVariables={updatedConfigVariables}
+                              />
+                            </Box>
+                          </Group>
+                        );
+                      })}
+                      {categoryId == "general" && (
+                        <LogoConfigInput
+                          logo={logo}
+                          setLogo={setLogo}
+                          darkLogo={darkLogo}
+                          setDarkLogo={setDarkLogo}
                         />
-                      </Text>
+                      )}
+                      {categoryId == "appearance" &&
+                        customCssConfigVariable && (
+                        <Group key={customCssConfigVariable.key} position="apart">
+                          <Stack
+                            style={{ maxWidth: isMobile ? "100%" : "40%" }}
+                            spacing={0}
+                          >
+                            <Title order={6}>
+                              <FormattedMessage
+                                id={`admin.config.${camelToKebab(
+                                  customCssConfigVariable.key,
+                                )}`}
+                              />
+                            </Title>
+
+                            <Text
+                              sx={{
+                                whiteSpace: "pre-line",
+                              }}
+                              color="dimmed"
+                              size="sm"
+                              mb="xs"
+                            >
+                              <FormattedMessage
+                                id={`admin.config.${camelToKebab(
+                                  customCssConfigVariable.key,
+                                )}.description`}
+                                values={{ br: <br /> }}
+                              />
+                            </Text>
+                          </Stack>
+                          <Stack></Stack>
+                          <Box style={{ width: isMobile ? "100%" : "50%" }}>
+                            <AdminConfigInput
+                              key={customCssConfigVariable.key}
+                              configVariable={customCssConfigVariable}
+                              updateConfigVariable={updateConfigVariable}
+                              allConfigVariables={configVariables}
+                              updatedConfigVariables={updatedConfigVariables}
+                            />
+                          </Box>
+                        </Group>
+                      )}
                     </Stack>
-                    <Stack></Stack>
-                    <Box style={{ width: isMobile ? "100%" : "50%" }}>
-                      <AdminConfigInput
-                        key={configVariable.key}
-                        configVariable={configVariable}
-                        updateConfigVariable={updateConfigVariable}
-                      />
-                    </Box>
-                  </Group>
-                ))}
-                {categoryId == "general" && (
-                  <LogoConfigInput logo={logo} setLogo={setLogo} />
-                )}
-              </Stack>
+                  </>
+                );
+              })()}
               <Group mt="lg" position="right">
                 {categoryId == "smtp" && (
                   <TestEmailButton

@@ -427,17 +427,34 @@ export default {
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description":
     "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
-
   "admin.config.title": "Configuration",
   "admin.config.category.general": "General",
+  "admin.config.category.appearance": "Appearance",
   "admin.config.category.share": "Share",
   "admin.config.category.cache": "Cache",
   "admin.config.category.email": "Email",
   "admin.config.category.smtp": "SMTP",
   "admin.config.category.oauth": "Social Login",
-
   "admin.config.general.app-name": "App name",
   "admin.config.general.app-name.description": "Name of the application",
+  "admin.config.appearance.theme-primary-color": "Theme primary color",
+  "admin.config.appearance.theme-primary-color.description":
+    "Primary color used for buttons, links, and accents. Choose custom to use a color picker override.",
+  "admin.config.appearance.theme-primary-color-override": "Custom primary color",
+  "admin.config.appearance.theme-primary-color-override.description":
+    "Hex color override used when theme primary color is set to custom.",
+  "admin.config.appearance.theme-font-preset": "Theme font preset",
+  "admin.config.appearance.theme-font-preset.description":
+    "Font preset loaded at build time. Choose system default or one of the bundled Google Fonts.",
+  "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
+  "admin.config.appearance.theme-color-scheme.description":
+    "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
+  "admin.config.appearance.theme-radius": "Theme border radius",
+  "admin.config.appearance.theme-radius.description":
+    "Default border radius used by Mantine components.",
+  "admin.config.appearance.custom-css": "Custom CSS",
+  "admin.config.appearance.custom-css.description":
+    "Global CSS applied to the frontend. Use carefully, as invalid CSS may affect the UI.",
   "admin.config.general.app-url": "App URL",
   "admin.config.general.app-url.description":
     "On which URL Pingvin Share is available",
@@ -453,8 +470,9 @@ export default {
   "admin.config.general.logo": "Logo",
   "admin.config.general.logo.description":
     "Change your logo by uploading a new image. The image must be a PNG and should have the format 1:1.",
+  "admin.config.general.logo-dark": "Dark mode logo",
+  "admin.config.general.logo-dark.description": "Upload a separate logo for dark mode. The image must be a PNG and should have the format 1:1.",
   "admin.config.general.logo.placeholder": "Pick image",
-
   "admin.config.cache.ttl": "TTL",
   "admin.config.cache.ttl.description":
     "Time in second to keep information inside the cache.",
@@ -467,7 +485,6 @@ export default {
   "admin.config.cache.redis-url": "Redis URL",
   "admin.config.cache.redis-url.description":
     "Url to connect to the Redis instance used for caching.",
-
   "admin.config.email.enable-share-email-recipients":
     "Enable email recipient sharing",
   "admin.config.email.enable-share-email-recipients.description":
@@ -496,7 +513,6 @@ export default {
   "admin.config.email.invite-message": "Invite message",
   "admin.config.email.invite-message.description":
     "Message which gets sent when an admin invites a user. {url} will be replaced with the invite URL, {email} with the email and {password} with the users password.",
-
   "admin.config.share.allow-registration": "Allow registration",
   "admin.config.share.allow-registration.description":
     "Whether registration is allowed",
@@ -550,7 +566,6 @@ export default {
     "Trust unauthorized SMTP server certificates",
   "admin.config.smtp.allow-unauthorized-certificates.description":
     "Only set this to true if you need to trust self signed certificates.",
-
   "admin.config.oauth.allow-registration": "Allow registration",
   "admin.config.oauth.allow-registration.description":
     "Allow users to register via social login",
@@ -641,7 +656,6 @@ export default {
   "admin.config.oauth.oidc-client-secret": "OpenID Connect Client secret",
   "admin.config.oauth.oidc-client-secret.description":
     "Client secret of the OpenID Connect OAuth app",
-
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "Enable LDAP",
   "admin.config.ldap.enabled.description":
@@ -673,7 +687,6 @@ export default {
   "admin.config.notify.logo-success":
     "Logo updated successfully. It may take a few minutes to update on the website.",
   "admin.config.notify.no-changes": "No changes to save.",
-
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Enabled",
   "admin.config.s3.enabled.description":
@@ -696,7 +709,6 @@ export default {
   "admin.config.s3.use-checksum": "Use checksum",
   "admin.config.s3.use-checksum.description":
     "Turn off for backends that do not support checksum (e.g. B2).",
-
   "admin.config.category.legal": "Legal",
   "admin.config.legal.enabled": "Enable legal notices",
   "admin.config.legal.enabled.description":

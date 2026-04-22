@@ -35,6 +35,38 @@ export const configVariables = {
       secret: false,
     },
   },
+  appearance: {
+    themePrimaryColor: {
+      type: "string",
+      defaultValue: "victoria",
+      secret: false,
+    },
+    themePrimaryColorOverride: {
+      type: "string",
+      defaultValue: "",
+      secret: false,
+    },
+    themeRadius: {
+      type: "string",
+      defaultValue: "sm",
+      secret: false,
+    },
+    themeFontPreset: {
+      type: "string",
+      defaultValue: "system",
+      secret: false,
+    },
+    themeColorScheme: {
+      type: "string",
+      defaultValue: "system",
+      secret: false,
+    },
+    customCss: {
+      type: "text",
+      defaultValue: "",
+      secret: false,
+    },
+  },
   share: {
     allowRegistration: {
       type: "boolean",

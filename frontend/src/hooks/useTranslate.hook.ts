@@ -10,7 +10,7 @@ const useTranslate = () => {
     opts?: Parameters<typeof intl.formatMessage>[2],
   ) => {
     const result = intl.formatMessage({ id }, values, opts);
-    return typeof result === 'string' ? result : String(result);
+    return typeof result === "string" ? result : String(result);
   };
 };
 
@@ -34,7 +34,7 @@ export const translateOutsideContext = () => {
     opts?: Parameters<typeof intl.formatMessage>[2],
   ) => {
     const result = intl.formatMessage({ id }, values, opts);
-    return typeof result === 'string' ? result : String(result);
+    return typeof result === "string" ? result : String(result);
   };
 };
 
