@@ -13,18 +13,7 @@ import axios from "axios";
 import { getCookie, setCookie } from "cookies-next";
 import moment from "moment";
 import "moment/min/locales";
-import {
-  Inter,
-  Lato,
-  Merriweather,
-  Montserrat,
-  Nunito,
-  Open_Sans,
-  Playfair_Display,
-  Poppins,
-  Roboto,
-  Source_Sans_3,
-} from "next/font/google";
+import { Inter, Lato, Nunito, Open_Sans, Roboto } from "next/font/google";
 import { GetServerSidePropsContext } from "next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -71,39 +60,43 @@ const availableFontPresets = [
   "system",
   "inter",
   "roboto",
-  "poppins",
   "openSans",
   "lato",
-  "montserrat",
   "nunito",
-  "sourceSans3",
-  "merriweather",
-  "playfairDisplay",
 ] as const;
 
 const interFont = Inter({ subsets: ["latin"], display: "swap" });
-const robotoFont = Roboto({ subsets: ["latin"], display: "swap", weight: ["400", "500", "700"] });
-const poppinsFont = Poppins({ subsets: ["latin"], display: "swap", weight: ["400", "500", "700"] });
-const openSansFont = Open_Sans({ subsets: ["latin"], display: "swap", weight: ["400", "500", "700"] });
-const latoFont = Lato({ subsets: ["latin"], display: "swap", weight: ["400", "700"] });
-const montserratFont = Montserrat({ subsets: ["latin"], display: "swap", weight: ["400", "500", "700"] });
-const nunitoFont = Nunito({ subsets: ["latin"], display: "swap", weight: ["400", "500", "700"] });
-const sourceSans3Font = Source_Sans_3({ subsets: ["latin"], display: "swap", weight: ["400", "500", "700"] });
-const merriweatherFont = Merriweather({ subsets: ["latin"], display: "swap", weight: ["400", "700"] });
-const playfairDisplayFont = Playfair_Display({ subsets: ["latin"], display: "swap", weight: ["400", "700"] });
+const robotoFont = Roboto({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "700"],
+});
+const openSansFont = Open_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "700"],
+});
+const latoFont = Lato({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "700"],
+});
+const nunitoFont = Nunito({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "700"],
+});
 
-const fontPresetToFamily: Record<(typeof availableFontPresets)[number], string | null> = {
+const fontPresetToFamily: Record<
+  (typeof availableFontPresets)[number],
+  string | null
+> = {
   system: null,
   inter: interFont.style.fontFamily,
   roboto: robotoFont.style.fontFamily,
-  poppins: poppinsFont.style.fontFamily,
   openSans: openSansFont.style.fontFamily,
   lato: latoFont.style.fontFamily,
-  montserrat: montserratFont.style.fontFamily,
   nunito: nunitoFont.style.fontFamily,
-  sourceSans3: sourceSans3Font.style.fontFamily,
-  merriweather: merriweatherFont.style.fontFamily,
-  playfairDisplay: playfairDisplayFont.style.fontFamily,
 };
 
 const normalizeHexColor = (value: string): string | null => {
@@ -129,7 +122,11 @@ const rgbToHex = (r: number, g: number, b: number): string =>
     )
     .join("")}`;
 
-const mixHexColors = (baseHex: string, mixHex: string, weight: number): string => {
+const mixHexColors = (
+  baseHex: string,
+  mixHex: string,
+  weight: number,
+): string => {
   const base = hexToRgb(baseHex);
   const mix = hexToRgb(mixHex);
   const inverseWeight = 1 - weight;
@@ -141,18 +138,30 @@ const mixHexColors = (baseHex: string, mixHex: string, weight: number): string =
   );
 };
 
-const createMantineScaleFromHex = (hex: string) => [
-  mixHexColors(hex, "#ffffff", 0.92),
-  mixHexColors(hex, "#ffffff", 0.82),
-  mixHexColors(hex, "#ffffff", 0.68),
-  mixHexColors(hex, "#ffffff", 0.54),
-  mixHexColors(hex, "#ffffff", 0.36),
-  hex,
-  mixHexColors(hex, "#000000", 0.1),
-  mixHexColors(hex, "#000000", 0.22),
-  mixHexColors(hex, "#000000", 0.34),
-  mixHexColors(hex, "#000000", 0.46),
-] as [string, string, string, string, string, string, string, string, string, string];
+const createMantineScaleFromHex = (hex: string) =>
+  [
+    mixHexColors(hex, "#ffffff", 0.92),
+    mixHexColors(hex, "#ffffff", 0.82),
+    mixHexColors(hex, "#ffffff", 0.68),
+    mixHexColors(hex, "#ffffff", 0.54),
+    mixHexColors(hex, "#ffffff", 0.36),
+    hex,
+    mixHexColors(hex, "#000000", 0.1),
+    mixHexColors(hex, "#000000", 0.22),
+    mixHexColors(hex, "#000000", 0.34),
+    mixHexColors(hex, "#000000", 0.46),
+  ] as [
+    string,
+    string,
+    string,
+    string,
+    string,
+    string,
+    string,
+    string,
+    string,
+    string,
+  ];
 
 function App({ Component, pageProps }: AppProps) {
   const systemTheme = useColorScheme(pageProps.colorScheme);
@@ -306,11 +315,7 @@ function App({ Component, pageProps }: AppProps) {
         locale={language.current}
         defaultLocale={LOCALES.ENGLISH.code}
       >
-        <MantineProvider
-          withGlobalStyles
-          withNormalizeCSS
-          theme={mergedTheme}
-        >
+        <MantineProvider withGlobalStyles withNormalizeCSS theme={mergedTheme}>
           {customCss && (
             <style id="admin-custom-css">
               {customCss.replace(/<\/style/gi, "<\\/style")}
