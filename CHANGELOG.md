@@ -1,3 +1,10 @@
+## [1.16.1](https://github.com/smp46/pingvin-share-x/compare/v1.16.0...v1.16.1) (2026-04-23)
+
+
+### Bug Fixes
+
+* **build:** reduce # of customfonts for gh build ([603056b](https://github.com/smp46/pingvin-share-x/commit/603056b209d48de5b5d6363d657f0196d28a6d55))
+
 ## [1.16.0](https://github.com/smp46/pingvin-share-x/compare/v1.15.2...v1.16.0) (2026-04-22)
 
 
