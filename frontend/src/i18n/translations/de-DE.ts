@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Primärfarbe für Buttons, Links und Akzente. Wähle „Benutzerdefiniert“, um eine Farbpicker-Überschreibung zu verwenden.",
   "admin.config.appearance.theme-primary-color-override": "Benutzerdefinierte Primärfarbe",
   "admin.config.appearance.theme-primary-color-override.description": "Hex-Farbüberschreibung, wenn die Primärfarbe auf „Benutzerdefiniert“ steht.",
-  "admin.config.appearance.theme-font-preset": "Schriftart-Voreinstellung",
-  "admin.config.appearance.theme-font-preset.description": "Schriftart-Voreinstellung, die beim Build geladen wird. Wähle Standard oder eine der eingebundenen Google Fonts.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Theme-Eckenradius",

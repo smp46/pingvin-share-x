@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Основной цвет для кнопок, ссылок и акцентов. Выберите «пользовательский», чтобы использовать переопределение цвета.",
   "admin.config.appearance.theme-primary-color-override": "Пользовательский основной цвет",
   "admin.config.appearance.theme-primary-color-override.description": "Переопределение HEX-цвета, используемое, когда основной цвет темы установлен как пользовательский.",
-  "admin.config.appearance.theme-font-preset": "Набор шрифтов темы",
-  "admin.config.appearance.theme-font-preset.description": "Набор шрифтов, загружаемый при сборке. Выберите системный или один из включённых Google Fonts.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Радиус скругления темы",

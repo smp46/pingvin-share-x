@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Màu chính dùng cho nút, liên kết và điểm nhấn. Chọn tùy chỉnh để dùng màu ghi đè.",
   "admin.config.appearance.theme-primary-color-override": "Màu chính tùy chỉnh",
   "admin.config.appearance.theme-primary-color-override.description": "Màu HEX ghi đè khi màu chính của giao diện được đặt là tùy chỉnh.",
-  "admin.config.appearance.theme-font-preset": "Mẫu phông chữ",
-  "admin.config.appearance.theme-font-preset.description": "Mẫu phông chữ được tải lúc build. Chọn mặc định hệ thống hoặc một trong các Google Fonts đi kèm.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Bo góc giao diện",

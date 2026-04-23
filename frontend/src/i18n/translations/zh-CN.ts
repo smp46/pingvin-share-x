@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "用于按钮、链接和强调元素的主色。选择“自定义”可使用颜色覆盖。",
   "admin.config.appearance.theme-primary-color-override": "自定义主色",
   "admin.config.appearance.theme-primary-color-override.description": "当主题主色设为“自定义”时使用的十六进制覆盖颜色。",
-  "admin.config.appearance.theme-font-preset": "字体预设",
-  "admin.config.appearance.theme-font-preset.description": "在构建时加载的字体预设。可选择系统默认或内置的 Google Fonts。",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "主题圆角",

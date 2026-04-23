@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "ボタン、リンク、アクセントに使う主色です。カスタムを選ぶと色の上書きを使えます。",
   "admin.config.appearance.theme-primary-color-override": "カスタムプライマリカラー",
   "admin.config.appearance.theme-primary-color-override.description": "テーマの主色がカスタムのときに使う16進カラー上書きです。",
-  "admin.config.appearance.theme-font-preset": "フォントプリセット",
-  "admin.config.appearance.theme-font-preset.description": "ビルド時に読み込まれるフォントプリセットです。システム既定または同梱の Google Fonts を選択できます。",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "テーマの角丸",

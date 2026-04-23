@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Elsődleges szín gombokhoz, linkekhez és kiemelésekhez. Válaszd az egyéni opciót színfelülíráshoz.",
   "admin.config.appearance.theme-primary-color-override": "Egyéni elsődleges szín",
   "admin.config.appearance.theme-primary-color-override.description": "Hex színfelülírás, amikor a téma elsődleges színe egyénire van állítva.",
-  "admin.config.appearance.theme-font-preset": "Betűtípus előbeállítás",
-  "admin.config.appearance.theme-font-preset.description": "Build során betöltött betűtípus-előbeállítás. Válaszd a rendszert vagy egy beépített Google Fonts készletet.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Téma sarokkerekítés",

@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Primärfärg för knappar, länkar och accenter. Välj anpassad för att använda en färgöverskrivning.",
   "admin.config.appearance.theme-primary-color-override": "Anpassad primärfärg",
   "admin.config.appearance.theme-primary-color-override.description": "Hex-färgöverskrivning som används när temats primärfärg är satt till anpassad.",
-  "admin.config.appearance.theme-font-preset": "Förinställt typsnitt",
-  "admin.config.appearance.theme-font-preset.description": "Typsnittsförinställning som laddas vid build. Välj system eller ett av de inkluderade Google Fonts.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Temats hörnradie",

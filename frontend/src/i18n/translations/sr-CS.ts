@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Primarna boja za dugmad, linkove i akcente. Izaberite prilagođeno za nadjačavanje bojom.",
   "admin.config.appearance.theme-primary-color-override": "Prilagođena primarna boja",
   "admin.config.appearance.theme-primary-color-override.description": "Hex nadjačavanje boje kada je primarna boja teme podešena na prilagođeno.",
-  "admin.config.appearance.theme-font-preset": "Preset fonta",
-  "admin.config.appearance.theme-font-preset.description": "Preset fonta učitan tokom build-a. Izaberite sistem ili jedan od uključenih Google Fonts.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Radijus ivica teme",

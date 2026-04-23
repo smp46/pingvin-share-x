@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Primarna barva za gumbe, povezave in poudarke. Izberite po meri za preglasitev barve.",
   "admin.config.appearance.theme-primary-color-override": "Primarna barva po meri",
   "admin.config.appearance.theme-primary-color-override.description": "Hex preglasitev barve, ko je primarna barva teme nastavljena na po meri.",
-  "admin.config.appearance.theme-font-preset": "Prednastavitev pisave",
-  "admin.config.appearance.theme-font-preset.description": "Prednastavitev pisave, naložena ob gradnji. Izberite sistemsko ali eno od priloženih Google Fonts.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Polmer robov teme",

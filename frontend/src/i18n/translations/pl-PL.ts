@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Podstawowy kolor przycisków, linków i akcentów. Wybierz niestandardowy, aby użyć nadpisania koloru.",
   "admin.config.appearance.theme-primary-color-override": "Niestandardowy kolor podstawowy",
   "admin.config.appearance.theme-primary-color-override.description": "Nadpisanie koloru HEX używane, gdy podstawowy kolor motywu jest ustawiony na niestandardowy.",
-  "admin.config.appearance.theme-font-preset": "Preset czcionki",
-  "admin.config.appearance.theme-font-preset.description": "Preset czcionki ładowany podczas builda. Wybierz system lub jedną z dołączonych Google Fonts.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Promień zaokrąglenia motywu",

@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Primærfarve til knapper, links og accenter. Vælg tilpasset for at bruge en farveoverride.",
   "admin.config.appearance.theme-primary-color-override": "Tilpasset primærfarve",
   "admin.config.appearance.theme-primary-color-override.description": "Hex-farveoverride, der bruges når temaets primærfarve er sat til tilpasset.",
-  "admin.config.appearance.theme-font-preset": "Forudindstillet skrifttype",
-  "admin.config.appearance.theme-font-preset.description": "Skrifttype-forudindstilling, der indlæses ved build. Vælg system eller en af de medfølgende Google Fonts.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Temaets hjørneradius",

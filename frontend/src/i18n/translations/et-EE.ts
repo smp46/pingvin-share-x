@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Põhivärv nuppudele, linkidele ja rõhutustele. Vali kohandatud, et kasutada värvi ülekirjutust.",
   "admin.config.appearance.theme-primary-color-override": "Kohandatud põhivärv",
   "admin.config.appearance.theme-primary-color-override.description": "Hex-värvi ülekirjutus, mida kasutatakse kui teema põhivärv on seatud kohandatuks.",
-  "admin.config.appearance.theme-font-preset": "Fondi eelseadistus",
-  "admin.config.appearance.theme-font-preset.description": "Buildi ajal laaditav fondi eelseadistus. Vali süsteemne või üks kaasasolevatest Google Fonts fontidest.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Teema nurga raadius",

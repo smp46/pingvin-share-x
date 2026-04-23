@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Cor primária para botões, links e destaques. Escolha personalizado para usar uma cor de substituição.",
   "admin.config.appearance.theme-primary-color-override": "Cor primária personalizada",
   "admin.config.appearance.theme-primary-color-override.description": "Cor hexadecimal de substituição quando a cor primária do tema estiver em personalizado.",
-  "admin.config.appearance.theme-font-preset": "Predefinição de fonte",
-  "admin.config.appearance.theme-font-preset.description": "Predefinição de fonte carregada no build. Escolha sistema ou uma das Google Fonts incluídas.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Raio de borda do tema",

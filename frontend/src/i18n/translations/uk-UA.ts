@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Основний колір для кнопок, посилань і акцентів. Оберіть «власний», щоб використати перевизначення кольору.",
   "admin.config.appearance.theme-primary-color-override": "Власний основний колір",
   "admin.config.appearance.theme-primary-color-override.description": "HEX-перевизначення кольору, що використовується, коли основний колір теми встановлено як власний.",
-  "admin.config.appearance.theme-font-preset": "Набір шрифтів теми",
-  "admin.config.appearance.theme-font-preset.description": "Набір шрифтів, що завантажується під час збірки. Оберіть системний або один із вбудованих Google Fonts.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Радіус заокруглення теми",
