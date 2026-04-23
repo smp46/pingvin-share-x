@@ -167,13 +167,7 @@ export default function AppShellDemo() {
             <CenterLoader />
           ) : (
             <>
-              {/*
-               * Keep custom CSS at the bottom in Appearance settings for better UX.
-               */}
               {(() => {
-                const customCssConfigVariable = configVariables.find(
-                  (configVariable) => configVariable.key === "appearance.customCss",
-                );
                 const getEffectiveConfigValue = (key: string): string => {
                   const updatedValue = updatedConfigVariables.find(
                     (item) => item.key === key,
@@ -189,9 +183,6 @@ export default function AppShellDemo() {
                 const shouldShowPrimaryColorOverride =
                   getEffectiveConfigValue("appearance.themePrimaryColor") ===
                   "custom";
-                const visibleConfigVariables = configVariables.filter(
-                  (configVariable) => configVariable.key !== "appearance.customCss",
-                );
 
                 return (
                   <>
@@ -210,7 +201,7 @@ export default function AppShellDemo() {
                       <Title mb="md" order={3}>
                         {t("admin.config.category." + categoryId)}
                       </Title>
-                      {visibleConfigVariables.map((configVariable) => {
+                      {configVariables.map((configVariable) => {
                         if (
                           configVariable.key ===
                             "appearance.themePrimaryColorOverride" &&
@@ -269,49 +260,6 @@ export default function AppShellDemo() {
                           darkLogo={darkLogo}
                           setDarkLogo={setDarkLogo}
                         />
-                      )}
-                      {categoryId == "appearance" &&
-                        customCssConfigVariable && (
-                        <Group key={customCssConfigVariable.key} position="apart">
-                          <Stack
-                            style={{ maxWidth: isMobile ? "100%" : "40%" }}
-                            spacing={0}
-                          >
-                            <Title order={6}>
-                              <FormattedMessage
-                                id={`admin.config.${camelToKebab(
-                                  customCssConfigVariable.key,
-                                )}`}
-                              />
-                            </Title>
-
-                            <Text
-                              sx={{
-                                whiteSpace: "pre-line",
-                              }}
-                              color="dimmed"
-                              size="sm"
-                              mb="xs"
-                            >
-                              <FormattedMessage
-                                id={`admin.config.${camelToKebab(
-                                  customCssConfigVariable.key,
-                                )}.description`}
-                                values={{ br: <br /> }}
-                              />
-                            </Text>
-                          </Stack>
-                          <Stack></Stack>
-                          <Box style={{ width: isMobile ? "100%" : "50%" }}>
-                            <AdminConfigInput
-                              key={customCssConfigVariable.key}
-                              configVariable={customCssConfigVariable}
-                              updateConfigVariable={updateConfigVariable}
-                              allConfigVariables={configVariables}
-                              updatedConfigVariables={updatedConfigVariables}
-                            />
-                          </Box>
-                        </Group>
                       )}
                     </Stack>
                   </>

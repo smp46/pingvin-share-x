@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Κύριο χρώμα για κουμπιά, συνδέσμους και τόνους. Επιλέξτε προσαρμοσμένο για παράκαμψη χρώματος.",
   "admin.config.appearance.theme-primary-color-override": "Προσαρμοσμένο κύριο χρώμα",
   "admin.config.appearance.theme-primary-color-override.description": "Παράκαμψη χρώματος HEX όταν το κύριο χρώμα θέματος είναι προσαρμοσμένο.",
-  "admin.config.appearance.theme-font-preset": "Προεπιλογή γραμματοσειράς",
-  "admin.config.appearance.theme-font-preset.description": "Προεπιλογή γραμματοσειράς που φορτώνεται στο build. Επιλέξτε σύστημα ή μία από τις ενσωματωμένες Google Fonts.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Ακτίνα γωνιών θέματος",

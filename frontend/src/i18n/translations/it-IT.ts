@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Colore primario per pulsanti, link e accenti. Scegli personalizzato per usare un colore di override.",
   "admin.config.appearance.theme-primary-color-override": "Colore primario personalizzato",
   "admin.config.appearance.theme-primary-color-override.description": "Override colore esadecimale usato quando il colore primario del tema è impostato su personalizzato.",
-  "admin.config.appearance.theme-font-preset": "Preset font",
-  "admin.config.appearance.theme-font-preset.description": "Preset font caricato in fase di build. Scegli sistema o uno dei Google Fonts inclusi.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Raggio bordi del tema",

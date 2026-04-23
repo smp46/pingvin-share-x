@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "用於按鈕、連結與重點元素的主色。選擇「自訂」可使用顏色覆寫。",
   "admin.config.appearance.theme-primary-color-override": "自訂主色",
   "admin.config.appearance.theme-primary-color-override.description": "當主題主色設為「自訂」時使用的十六進位覆寫色。",
-  "admin.config.appearance.theme-font-preset": "字型預設",
-  "admin.config.appearance.theme-font-preset.description": "在建置時載入的字型預設。可選系統預設或內建 Google Fonts。",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "主題圓角",

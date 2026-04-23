@@ -20,8 +20,6 @@ appearance:
   themePrimaryColorOverride: ""
   #Mantine default border radius (xs, sm, md, lg, xl).
   themeRadius: sm
-  #UI font preset loaded at build time. Options: system, inter, roboto, poppins, openSans, lato, montserrat, nunito, sourceSans3, merriweather, playfairDisplay
-  themeFontPreset: system
   #Default color scheme for the UI. Options: system, light, dark
   themeColorScheme: system
   #Custom CSS that will be injected globally into the frontend. Use carefully, as invalid CSS may impact the UI.

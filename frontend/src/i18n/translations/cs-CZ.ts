@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Primární barva pro tlačítka, odkazy a zvýraznění. Zvolte vlastní pro použití přepsání barvy.",
   "admin.config.appearance.theme-primary-color-override": "Vlastní primární barva",
   "admin.config.appearance.theme-primary-color-override.description": "Hex přepsání barvy použité, když je primární barva motivu nastavena na vlastní.",
-  "admin.config.appearance.theme-font-preset": "Předvolba písma",
-  "admin.config.appearance.theme-font-preset.description": "Předvolba písma načítaná při buildu. Vyberte systém nebo jedno z přibalených Google Fonts.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Poloměr zaoblení motivu",

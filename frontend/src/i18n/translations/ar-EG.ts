@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "اللون الأساسي للأزرار والروابط والعناصر البارزة. اختر مخصص لاستخدام تجاوز لون.",
   "admin.config.appearance.theme-primary-color-override": "لون أساسي مخصص",
   "admin.config.appearance.theme-primary-color-override.description": "تجاوز لون بصيغة Hex يُستخدم عندما يكون اللون الأساسي مضبوطًا على مخصص.",
-  "admin.config.appearance.theme-font-preset": "إعداد الخط المسبق",
-  "admin.config.appearance.theme-font-preset.description": "إعداد خط يُحمَّل وقت البناء. اختر النظام أو أحد خطوط Google المضمّنة.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "استدارة حواف المظهر",

@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "버튼, 링크, 강조 요소에 사용하는 기본 색상입니다. 사용자 지정을 선택하면 색상 오버라이드를 사용합니다.",
   "admin.config.appearance.theme-primary-color-override": "사용자 지정 기본 색상",
   "admin.config.appearance.theme-primary-color-override.description": "테마 기본 색상이 사용자 지정일 때 사용하는 HEX 색상 오버라이드입니다.",
-  "admin.config.appearance.theme-font-preset": "글꼴 프리셋",
-  "admin.config.appearance.theme-font-preset.description": "빌드 시 로드되는 글꼴 프리셋입니다. 시스템 기본 또는 포함된 Google Fonts 중에서 선택하세요.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "테마 모서리 반경",

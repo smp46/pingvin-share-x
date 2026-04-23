@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Primaire kleur voor knoppen, links en accenten. Kies aangepast om een kleurkiezer-override te gebruiken.",
   "admin.config.appearance.theme-primary-color-override": "Aangepaste primaire kleur",
   "admin.config.appearance.theme-primary-color-override.description": "Hex-kleur override die wordt gebruikt wanneer de primaire themakleur op aangepast staat.",
-  "admin.config.appearance.theme-font-preset": "Thema lettertype-preset",
-  "admin.config.appearance.theme-font-preset.description": "Lettertype-preset dat tijdens build wordt geladen. Kies systeemstandaard of een van de meegeleverde Google Fonts.",
   "admin.config.appearance.theme-color-scheme": "Standaard kleurenschema (gasten)",
   "admin.config.appearance.theme-color-scheme.description": "Standaard licht/donker-modus voor niet-ingelogde gebruikers. Ingelogde gebruikers gebruiken hun eigen accountvoorkeur.",
   "admin.config.appearance.theme-radius": "Thema afronding",

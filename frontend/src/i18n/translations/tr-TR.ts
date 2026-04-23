@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Düğmeler, bağlantılar ve vurgu renkleri için birincil renk. Renk geçersiz kılma kullanmak için özel seçin.",
   "admin.config.appearance.theme-primary-color-override": "Özel birincil renk",
   "admin.config.appearance.theme-primary-color-override.description": "Tema birincil rengi özel olarak ayarlandığında kullanılan HEX renk geçersiz kılması.",
-  "admin.config.appearance.theme-font-preset": "Yazı tipi ön ayarı",
-  "admin.config.appearance.theme-font-preset.description": "Build sırasında yüklenen yazı tipi ön ayarı. Sistem veya dahil edilen Google Fonts'tan birini seçin.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Tema köşe yarıçapı",

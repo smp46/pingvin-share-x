@@ -36,8 +36,6 @@ const AdminConfigInput = ({
   const isThemePrimaryColorOverrideConfig =
     configVariable.key === "appearance.themePrimaryColorOverride";
   const isThemeRadiusConfig = configVariable.key === "appearance.themeRadius";
-  const isThemeFontPresetConfig =
-    configVariable.key === "appearance.themeFontPreset";
   const isThemeColorSchemeConfig =
     configVariable.key === "appearance.themeColorScheme";
 
@@ -163,31 +161,6 @@ const AdminConfigInput = ({
             placeholder={configVariable.defaultValue}
             onChange={(value) => onValueChange(configVariable, value ?? "")}
             allowDeselect={false}
-          />
-        ) : isThemeFontPresetConfig ? (
-          <Select
-            style={{
-              width: "100%",
-            }}
-            disabled={!configVariable.allowEdit}
-            data={[
-              { value: "system", label: "System default" },
-              { value: "inter", label: "Inter" },
-              { value: "roboto", label: "Roboto" },
-              { value: "poppins", label: "Poppins" },
-              { value: "openSans", label: "Open Sans" },
-              { value: "lato", label: "Lato" },
-              { value: "montserrat", label: "Montserrat" },
-              { value: "nunito", label: "Nunito" },
-              { value: "sourceSans3", label: "Source Sans 3" },
-              { value: "merriweather", label: "Merriweather" },
-              { value: "playfairDisplay", label: "Playfair Display" },
-            ]}
-            value={form.values.stringValue}
-            placeholder={configVariable.defaultValue}
-            onChange={(value) => onValueChange(configVariable, value ?? "")}
-            allowDeselect={false}
-            searchable
           />
         ) : isThemeColorSchemeConfig ? (
           <SegmentedControl

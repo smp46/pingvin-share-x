@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Couleur principale pour les boutons, liens et accents. Choisissez personnalisé pour utiliser une couleur de remplacement.",
   "admin.config.appearance.theme-primary-color-override": "Couleur principale personnalisée",
   "admin.config.appearance.theme-primary-color-override.description": "Couleur hex de remplacement lorsque la couleur principale est définie sur personnalisé.",
-  "admin.config.appearance.theme-font-preset": "Préréglage de police",
-  "admin.config.appearance.theme-font-preset.description": "Préréglage de police chargé à la compilation. Choisissez système ou une police Google incluse.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Rayon des bordures du thème",

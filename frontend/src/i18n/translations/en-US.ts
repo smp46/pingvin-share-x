@@ -443,9 +443,6 @@ export default {
   "admin.config.appearance.theme-primary-color-override": "Custom primary color",
   "admin.config.appearance.theme-primary-color-override.description":
     "Hex color override used when theme primary color is set to custom.",
-  "admin.config.appearance.theme-font-preset": "Theme font preset",
-  "admin.config.appearance.theme-font-preset.description":
-    "Font preset loaded at build time. Choose system default or one of the bundled Google Fonts.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description":
     "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",

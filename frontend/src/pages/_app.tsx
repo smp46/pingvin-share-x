@@ -13,7 +13,6 @@ import axios from "axios";
 import { getCookie, setCookie } from "cookies-next";
 import moment from "moment";
 import "moment/min/locales";
-import { Inter, Lato, Nunito, Open_Sans, Roboto } from "next/font/google";
 import { GetServerSidePropsContext } from "next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -56,49 +55,6 @@ const availableMantineColors = [
 ] as const;
 const availableMantineRadii = ["xs", "sm", "md", "lg", "xl"] as const;
 const hexColorPattern = /^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/;
-const availableFontPresets = [
-  "system",
-  "inter",
-  "roboto",
-  "openSans",
-  "lato",
-  "nunito",
-] as const;
-
-const interFont = Inter({ subsets: ["latin"], display: "swap" });
-const robotoFont = Roboto({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "700"],
-});
-const openSansFont = Open_Sans({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "700"],
-});
-const latoFont = Lato({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "700"],
-});
-const nunitoFont = Nunito({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "700"],
-});
-
-const fontPresetToFamily: Record<
-  (typeof availableFontPresets)[number],
-  string | null
-> = {
-  system: null,
-  inter: interFont.style.fontFamily,
-  roboto: robotoFont.style.fontFamily,
-  openSans: openSansFont.style.fontFamily,
-  lato: latoFont.style.fontFamily,
-  nunito: nunitoFont.style.fontFamily,
-};
-
 const normalizeHexColor = (value: string): string | null => {
   if (!hexColorPattern.test(value)) return null;
   if (value.length === 4) {
@@ -189,10 +145,6 @@ function App({ Component, pageProps }: AppProps) {
     "appearance.themePrimaryColorOverride",
   );
   const themeRadiusRaw = getStringConfigValue("appearance.themeRadius", "sm");
-  const themeFontPresetRaw = getStringConfigValue(
-    "appearance.themeFontPreset",
-    "system",
-  );
   const themeColorSchemeRaw = getStringConfigValue(
     "appearance.themeColorScheme",
     "system",
@@ -221,14 +173,6 @@ function App({ Component, pageProps }: AppProps) {
     ? themeRadiusRaw
     : "sm";
 
-  const themeFontPreset = (availableFontPresets as readonly string[]).includes(
-    themeFontPresetRaw,
-  )
-    ? themeFontPresetRaw
-    : "system";
-
-  const selectedFontFamily =
-    fontPresetToFamily[themeFontPreset as keyof typeof fontPresetToFamily];
   const adminDefaultColorScheme =
     themeColorSchemeRaw === "light" || themeColorSchemeRaw === "dark"
       ? themeColorSchemeRaw
@@ -244,7 +188,6 @@ function App({ Component, pageProps }: AppProps) {
       : {}),
     primaryColor: themePrimaryColor,
     defaultRadius: themeRadius,
-    ...(selectedFontFamily ? { fontFamily: selectedFontFamily } : {}),
   };
 
   const mergedTheme: MantineThemeOverride = {

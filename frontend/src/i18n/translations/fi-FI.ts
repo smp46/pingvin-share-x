@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "Pääväri painikkeille, linkeille ja korostuksille. Valitse mukautettu käyttääksesi värin ohitusta.",
   "admin.config.appearance.theme-primary-color-override": "Mukautettu pääväri",
   "admin.config.appearance.theme-primary-color-override.description": "Hex-väriohitus, jota käytetään kun teeman pääväri on asetettu mukautetuksi.",
-  "admin.config.appearance.theme-font-preset": "Fonttiesiasetus",
-  "admin.config.appearance.theme-font-preset.description": "Build-vaiheessa ladattava fonttiesiasetus. Valitse järjestelmä tai jokin mukana tulevista Google Fonts -fonteista.",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "Teeman reunasäde",

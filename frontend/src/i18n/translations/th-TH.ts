@@ -341,8 +341,6 @@ export default {
   "admin.config.appearance.theme-primary-color.description": "สีหลักสำหรับปุ่ม ลิงก์ และส่วนเน้น เลือกกำหนดเองเพื่อใช้การแทนค่าสี",
   "admin.config.appearance.theme-primary-color-override": "สีหลักแบบกำหนดเอง",
   "admin.config.appearance.theme-primary-color-override.description": "ค่าสี Hex ที่ใช้แทนเมื่อสีหลักของธีมตั้งเป็นกำหนดเอง",
-  "admin.config.appearance.theme-font-preset": "พรีเซ็ตฟอนต์",
-  "admin.config.appearance.theme-font-preset.description": "พรีเซ็ตฟอนต์ที่โหลดตอน build เลือกค่าเริ่มต้นของระบบหรือ Google Fonts ที่มีให้",
   "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
   "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
   "admin.config.appearance.theme-radius": "ความโค้งมุมของธีม",
