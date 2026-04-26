@@ -172,7 +172,8 @@ export default function AppShellDemo() {
                */}
               {(() => {
                 const customCssConfigVariable = configVariables.find(
-                  (configVariable) => configVariable.key === "appearance.customCss",
+                  (configVariable) =>
+                    configVariable.key === "appearance.customCss",
                 );
                 const getEffectiveConfigValue = (key: string): string => {
                   const updatedValue = updatedConfigVariables.find(
@@ -183,14 +184,17 @@ export default function AppShellDemo() {
                   const configVariable = configVariables.find(
                     (item) => item.key === key,
                   );
-                  return configVariable?.value ?? configVariable?.defaultValue ?? "";
+                  return (
+                    configVariable?.value ?? configVariable?.defaultValue ?? ""
+                  );
                 };
 
                 const shouldShowPrimaryColorOverride =
                   getEffectiveConfigValue("appearance.themePrimaryColor") ===
                   "custom";
                 const visibleConfigVariables = configVariables.filter(
-                  (configVariable) => configVariable.key !== "appearance.customCss",
+                  (configVariable) =>
+                    configVariable.key !== "appearance.customCss",
                 );
 
                 return (
@@ -272,47 +276,50 @@ export default function AppShellDemo() {
                       )}
                       {categoryId == "appearance" &&
                         customCssConfigVariable && (
-                        <Group key={customCssConfigVariable.key} position="apart">
-                          <Stack
-                            style={{ maxWidth: isMobile ? "100%" : "40%" }}
-                            spacing={0}
+                          <Group
+                            key={customCssConfigVariable.key}
+                            position="apart"
                           >
-                            <Title order={6}>
-                              <FormattedMessage
-                                id={`admin.config.${camelToKebab(
-                                  customCssConfigVariable.key,
-                                )}`}
-                              />
-                            </Title>
-
-                            <Text
-                              sx={{
-                                whiteSpace: "pre-line",
-                              }}
-                              color="dimmed"
-                              size="sm"
-                              mb="xs"
+                            <Stack
+                              style={{ maxWidth: isMobile ? "100%" : "40%" }}
+                              spacing={0}
                             >
-                              <FormattedMessage
-                                id={`admin.config.${camelToKebab(
-                                  customCssConfigVariable.key,
-                                )}.description`}
-                                values={{ br: <br /> }}
+                              <Title order={6}>
+                                <FormattedMessage
+                                  id={`admin.config.${camelToKebab(
+                                    customCssConfigVariable.key,
+                                  )}`}
+                                />
+                              </Title>
+
+                              <Text
+                                sx={{
+                                  whiteSpace: "pre-line",
+                                }}
+                                color="dimmed"
+                                size="sm"
+                                mb="xs"
+                              >
+                                <FormattedMessage
+                                  id={`admin.config.${camelToKebab(
+                                    customCssConfigVariable.key,
+                                  )}.description`}
+                                  values={{ br: <br /> }}
+                                />
+                              </Text>
+                            </Stack>
+                            <Stack></Stack>
+                            <Box style={{ width: isMobile ? "100%" : "50%" }}>
+                              <AdminConfigInput
+                                key={customCssConfigVariable.key}
+                                configVariable={customCssConfigVariable}
+                                updateConfigVariable={updateConfigVariable}
+                                allConfigVariables={configVariables}
+                                updatedConfigVariables={updatedConfigVariables}
                               />
-                            </Text>
-                          </Stack>
-                          <Stack></Stack>
-                          <Box style={{ width: isMobile ? "100%" : "50%" }}>
-                            <AdminConfigInput
-                              key={customCssConfigVariable.key}
-                              configVariable={customCssConfigVariable}
-                              updateConfigVariable={updateConfigVariable}
-                              allConfigVariables={configVariables}
-                              updatedConfigVariables={updatedConfigVariables}
-                            />
-                          </Box>
-                        </Group>
-                      )}
+                            </Box>
+                          </Group>
+                        )}
                     </Stack>
                   </>
                 );

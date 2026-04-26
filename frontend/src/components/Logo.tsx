@@ -6,7 +6,8 @@ const darkLogoSrc = "/img/logo-dark.png";
 
 const Logo = ({ height, width }: { height: number; width: number }) => {
   const { colorScheme } = useMantineColorScheme();
-  const preferredLogoSrc = colorScheme === "dark" ? darkLogoSrc : defaultLogoSrc;
+  const preferredLogoSrc =
+    colorScheme === "dark" ? darkLogoSrc : defaultLogoSrc;
   const [logoSrc, setLogoSrc] = useState(preferredLogoSrc);
 
   useEffect(() => {
