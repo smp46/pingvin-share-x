@@ -51,11 +51,6 @@ export const configVariables = {
       defaultValue: "sm",
       secret: false,
     },
-    themeFontPreset: {
-      type: "string",
-      defaultValue: "system",
-      secret: false,
-    },
     themeColorScheme: {
       type: "string",
       defaultValue: "system",
