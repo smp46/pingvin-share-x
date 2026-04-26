@@ -1,3 +1,12 @@
+## [1.16.2](https://github.com/smp46/pingvin-share-x/compare/v1.16.0...v1.16.2) (2026-04-26)
+
+
+### Bug Fixes
+
+* **build:** reduce # of customfonts for gh build ([603056b](https://github.com/smp46/pingvin-share-x/commit/603056b209d48de5b5d6363d657f0196d28a6d55))
+* **fonts:** remove custom fonts ([c9a13f9](https://github.com/smp46/pingvin-share-x/commit/c9a13f9f4c557a99922082a4ab98a1a6005c28a7))
+* **logo:** add default dark logo ([12a0ab7](https://github.com/smp46/pingvin-share-x/commit/12a0ab70478573c84bd077cb38297aa7380ccce4))
+
 ## [1.16.1](https://github.com/smp46/pingvin-share-x/compare/v1.16.0...v1.16.1) (2026-04-23)
 
 
