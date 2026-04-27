@@ -118,79 +118,71 @@ const FileList = ({
                   <td>
                     <Group position="right" noWrap>
                       {shareService.isShareTextFile(file.name) && (
-                        <ActionIcon
-                          color="blue"
-                          variant="light"
-                          size={25}
-                          onClick={() => {
-                            api
-                              .get(`/shares/${share.id}/files/${file.id}`)
-                              .then((res) => {
-                                if (window.isSecureContext) {
-                                  clipboard.copy(res.data);
-                                  toast.success(
-                                    t("share.notify.copied-contents"),
-                                  );
-                                } else {
-                                  toast.error(
-                                    t("share.notify.copy-not-supported"),
-                                  );
-                                }
-                              });
-                          }}
-                        >
-                          <HoverTip label={t("share.copy-text-contents")}>
+                        <HoverTip label={t("share.copy-text-contents")}>
+                          <ActionIcon
+                            color="blue"
+                            variant="light"
+                            size={25}
+                            onClick={() => {
+                              api
+                                .get(`/shares/${share.id}/files/${file.id}`)
+                                .then((res) => {
+                                  if (window.isSecureContext) {
+                                    clipboard.copy(res.data);
+                                    toast.success(
+                                      t("share.notify.copied-contents"),
+                                    );
+                                  } else {
+                                    toast.error(
+                                      t("share.notify.copy-not-supported"),
+                                    );
+                                  }
+                                });
+                            }}
+                          >
                             <TbClipboard />
-                          </HoverTip>
-                        </ActionIcon>
+                          </ActionIcon>
+                        </HoverTip>
                       )}
                       {shareService.doesFileSupportPreview(file.name) && (
-                        <ActionIcon
-                          color="green"
-                          variant="light"
-                          size={25}
-                          onClick={() =>
-                            showFilePreviewModal(share.id, file, modals)
-                          }
-                        >
-                          <HoverTip
-                            width={70}
-                            label={t("common.button.preview")}
+                        <HoverTip label={t("common.button.preview")}>
+                          <ActionIcon
+                            color="green"
+                            variant="light"
+                            size={25}
+                            onClick={() =>
+                              showFilePreviewModal(share.id, file, modals)
+                            }
                           >
                             <TbEye />
-                          </HoverTip>
-                        </ActionIcon>
+                          </ActionIcon>
+                        </HoverTip>
                       )}
                       {!share.hasPassword && (
-                        <ActionIcon
-                          color="orange"
-                          variant="light"
-                          size={25}
-                          onClick={() => copyFileLink(file)}
-                        >
-                          <HoverTip
-                            width={80}
-                            label={t("common.button.copy-link")}
+                        <HoverTip label={t("common.button.copy-link")}>
+                          <ActionIcon
+                            color="orange"
+                            variant="light"
+                            size={25}
+                            onClick={() => copyFileLink(file)}
                           >
                             <TbLink />
-                          </HoverTip>
-                        </ActionIcon>
+                          </ActionIcon>
+                        </HoverTip>
                       )}
-                      <ActionIcon
-                        color="victoria"
-                        variant="light"
-                        size={25}
-                        onClick={async () => {
-                          await shareService.downloadFile(share.id, file.id);
-                        }}
-                      >
-                        <HoverTip
-                          width={85}
-                          label={t("common.button.download")}
+
+                      <HoverTip label={t("common.button.download")}>
+                        <ActionIcon
+                          color="victoria"
+                          variant="light"
+                          size={25}
+                          onClick={async () => {
+                            await shareService.downloadFile(share.id, file.id);
+                          }}
                         >
                           <TbDownload />
-                        </HoverTip>
-                      </ActionIcon>
+                        </ActionIcon>
+                      </HoverTip>
                     </Group>
                   </td>
                 </tr>

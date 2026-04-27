@@ -18,6 +18,7 @@ import { MyShare } from "../../../types/share.type";
 import { byteToHumanSizeString } from "../../../utils/fileSize.util";
 import toast from "../../../utils/toast.util";
 import showShareLinkModal from "../../account/showShareLinkModal";
+import { HoverTip } from "../../core/HoverTip";
 
 const ManageShareTable = ({
   shares,
@@ -107,36 +108,40 @@ const ManageShareTable = ({
                   )}
                   <td>
                     <Group position="right">
-                      <ActionIcon
-                        color="victoria"
-                        variant="light"
-                        size={25}
-                        onClick={() => {
-                          if (window.isSecureContext) {
-                            clipboard.copy(
-                              `${config.get("general.appUrl") !== config.get("general.appUrl", true) ? config.get("general.appUrl") : window.location.origin}/s/${share.id}`,
-                            );
-                            toast.success(t("common.notify.copied-link"));
-                          } else {
-                            showShareLinkModal(
-                              modals,
-                              share.id,
-                              config.get("general.appUrl"),
-                              config.get("general.appUrl", true),
-                            );
-                          }
-                        }}
-                      >
-                        <TbLink />
-                      </ActionIcon>
-                      <ActionIcon
-                        variant="light"
-                        color="red"
-                        size="sm"
-                        onClick={() => deleteShare(share)}
-                      >
-                        <TbTrash />
-                      </ActionIcon>
+                      <HoverTip label={t("common.button.copy-link")}>
+                        <ActionIcon
+                          color="victoria"
+                          variant="light"
+                          size={25}
+                          onClick={() => {
+                            if (window.isSecureContext) {
+                              clipboard.copy(
+                                `${config.get("general.appUrl") !== config.get("general.appUrl", true) ? config.get("general.appUrl") : window.location.origin}/s/${share.id}`,
+                              );
+                              toast.success(t("common.notify.copied-link"));
+                            } else {
+                              showShareLinkModal(
+                                modals,
+                                share.id,
+                                config.get("general.appUrl"),
+                                config.get("general.appUrl", true),
+                              );
+                            }
+                          }}
+                        >
+                          <TbLink />
+                        </ActionIcon>
+                      </HoverTip>
+                      <HoverTip label={t("common.button.delete")}>
+                        <ActionIcon
+                          variant="light"
+                          color="red"
+                          size="sm"
+                          onClick={() => deleteShare(share)}
+                        >
+                          <TbTrash />
+                        </ActionIcon>
+                      </HoverTip>
                     </Group>
                   </td>
                 </tr>
