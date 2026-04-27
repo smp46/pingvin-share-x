@@ -121,13 +121,13 @@ const MyShares = () => {
                   <td>
                     <Group position="right">
                       <Link href={`/share/${share.id}/edit`}>
-                        <HoverTip width={45} label={t("common.button.edit")}>
+                        <HoverTip label={t("common.button.edit")}>
                           <ActionIcon color="orange" variant="light" size={25}>
                             <TbEdit />
                           </ActionIcon>
                         </HoverTip>
                       </Link>
-                      <HoverTip width={45} label={t("common.button.info")}>
+                      <HoverTip label={t("common.button.info")}>
                         <ActionIcon
                           color="blue"
                           variant="light"
@@ -145,7 +145,7 @@ const MyShares = () => {
                           <TbInfoCircle />
                         </ActionIcon>
                       </HoverTip>
-                      <HoverTip width={80} label={t("common.button.copy-link")}>
+                      <HoverTip label={t("common.button.copy-link")}>
                         <ActionIcon
                           color="victoria"
                           variant="light"
@@ -169,7 +169,7 @@ const MyShares = () => {
                           <TbLink />
                         </ActionIcon>
                       </HoverTip>
-                      <HoverTip width={60} label={t("common.button.delete")}>
+                      <HoverTip label={t("common.button.delete")}>
                         <ActionIcon
                           color="red"
                           variant="light"
