@@ -48,7 +48,7 @@ const FileListRow = ({
         <td>
           <Group position="right" spacing="xs" noWrap>
             {editable && (
-              <HoverTip width={60} label={t("common.button.edit")}>
+              <HoverTip label={t("common.button.edit")}>
                 <ActionIcon
                   color="blue"
                   variant="light"
@@ -60,7 +60,7 @@ const FileListRow = ({
               </HoverTip>
             )}
             {removable && (
-              <HoverTip width={60} label={t("common.button.delete")}>
+              <HoverTip label={t("common.button.delete")}>
                 <ActionIcon
                   color="red"
                   variant="light"
@@ -75,7 +75,7 @@ const FileListRow = ({
               <UploadProgressIndicator progress={file.uploadingProgress} />
             )}
             {restorable && (
-              <HoverTip width={60} label={t("common.button.undo")}>
+              <HoverTip label={t("common.button.undo")}>
                 <ActionIcon
                   color="primary"
                   variant="light"

@@ -60,7 +60,7 @@ const MyShares = () => {
           <Title order={3}>
             <FormattedMessage id="account.reverseShares.title" />
           </Title>
-          <HoverTip width={220} label={t("account.reverseShares.description")}>
+          <HoverTip label={t("account.reverseShares.description")}>
             <ActionIcon>
               <TbInfoCircle />
             </ActionIcon>
@@ -151,7 +151,6 @@ const MyShares = () => {
                                   </Text>
                                 </Anchor>
                                 <HoverTip
-                                  width={80}
                                   label={t("common.button.copy-link")}
                                 >
                                   <ActionIcon
@@ -197,7 +196,7 @@ const MyShares = () => {
                   </td>
                   <td>
                     <Group position="right">
-                      <HoverTip width={80} label={t("common.button.copy-link")}>
+                      <HoverTip label={t("common.button.copy-link")}>
                         <ActionIcon
                           color="victoria"
                           variant="light"
@@ -223,7 +222,7 @@ const MyShares = () => {
                           <TbLink />
                         </ActionIcon>
                       </HoverTip>
-                      <HoverTip width={60} label={t("common.button.delete")}>
+                      <HoverTip label={t("common.button.delete")}>
                         <ActionIcon
                           color="red"
                           variant="light"
