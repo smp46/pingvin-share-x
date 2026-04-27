@@ -4,6 +4,8 @@ import { TbCheck, TbEdit, TbTrash } from "react-icons/tb";
 import User from "../../../types/user.type";
 import showUpdateUserModal from "./showUpdateUserModal";
 import { FormattedMessage, useIntl } from "react-intl";
+import useTranslate from "../../../hooks/useTranslate.hook";
+import { HoverTip } from "../../core/HoverTip";
 
 const ManageUserTable = ({
   users,
@@ -17,6 +19,7 @@ const ManageUserTable = ({
   isLoading: boolean;
 }) => {
   const modals = useModals();
+  const t = useTranslate();
 
   return (
     <Box sx={{ display: "block", overflowX: "auto" }}>
@@ -51,25 +54,29 @@ const ManageUserTable = ({
                   <td>
                     <Group position="right">
                       {user.isLdap ? null : (
+                        <HoverTip label={t("common.button.edit")}>
+                          <ActionIcon
+                            variant="light"
+                            color="primary"
+                            size={25}
+                            onClick={() =>
+                              showUpdateUserModal(modals, user, getUsers)
+                            }
+                          >
+                            <TbEdit />
+                          </ActionIcon>
+                        </HoverTip>
+                      )}
+                      <HoverTip label={t("common.button.delete")}>
                         <ActionIcon
                           variant="light"
-                          color="primary"
-                          size="sm"
-                          onClick={() =>
-                            showUpdateUserModal(modals, user, getUsers)
-                          }
+                          color="red"
+                          size={25}
+                          onClick={() => deleteUser(user)}
                         >
-                          <TbEdit />
+                          <TbTrash />
                         </ActionIcon>
-                      )}
-                      <ActionIcon
-                        variant="light"
-                        color="red"
-                        size="sm"
-                        onClick={() => deleteUser(user)}
-                      >
-                        <TbTrash />
-                      </ActionIcon>
+                      </HoverTip>
                     </Group>
                   </td>
                 </tr>
