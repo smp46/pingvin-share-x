@@ -1,3 +1,9 @@
+## [1.16.3](https://github.com/smp46/pingvin-share-x/compare/v1.16.2...v1.16.3) (2026-04-27)
+
+### Bug Fixes
+
+* **otp:** 2FA incorrectly validated on login ([7439a1c](https://github.com/smp46/pingvin-share-x/commit/7439a1ce94f4dd81dbd857d526b83ab55ca35e30))
+
 ## [1.16.2](https://github.com/smp46/pingvin-share-x/compare/v1.16.0...v1.16.2) (2026-04-26)
 
 
