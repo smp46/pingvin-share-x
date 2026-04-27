@@ -58,7 +58,7 @@ export class AuthTotpService {
       secret: totpSecret,
       guardrails: legacyGuardrails,
     });
-    if (!verified) {
+    if (!verified.valid) {
       throw new BadRequestException("Invalid code");
     }
 
