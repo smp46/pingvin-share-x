@@ -513,7 +513,7 @@ export default {
   "admin.config.notify.no-changes": "Inga ändringar att spara.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Aktiverad",
-  "admin.config.s3.enabled.description": "Om S3 ska användas för att lagra de delade filerna istället för det lokala filsystemet.",
+  "admin.config.s3.enabled.description": "Whether S3 should be used to store the shared files instead of the local file system. WARNING: If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
   "admin.config.s3.endpoint": "Endpoint",
   "admin.config.s3.endpoint.description": "Webbadressen till S3 bucket.",
   "admin.config.s3.region": "Region",
