@@ -68,6 +68,13 @@ const sendTestEmail = async (email: string) => {
   await api.post("/configs/admin/testEmail", { email });
 };
 
+const testRedisConnection = async () => {
+  return (await api.post("/configs/admin/testRedis")).data as {
+    ok: boolean;
+    enabled: boolean;
+  };
+};
+
 const isNewReleaseAvailable = async () => {
   const response = (
     await axios.get(
@@ -97,6 +104,7 @@ export default {
   get,
   finishSetup,
   sendTestEmail,
+  testRedisConnection,
   isNewReleaseAvailable,
   changeLogo,
   changeDarkLogo,

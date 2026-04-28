@@ -22,6 +22,7 @@ import ConfigurationHeader from "../../../components/admin/configuration/Configu
 import ConfigurationNavBar from "../../../components/admin/configuration/ConfigurationNavBar";
 import LogoConfigInput from "../../../components/admin/configuration/LogoConfigInput";
 import TestEmailButton from "../../../components/admin/configuration/TestEmailButton";
+import TestRedisButton from "../../../components/admin/configuration/TestRedisButton";
 import CenterLoader from "../../../components/core/CenterLoader";
 import useConfig from "../../../hooks/config.hook";
 import useTranslate from "../../../hooks/useTranslate.hook";
@@ -327,6 +328,12 @@ export default function AppShellDemo() {
               <Group mt="lg" position="right">
                 {categoryId == "smtp" && (
                   <TestEmailButton
+                    configVariablesChanged={updatedConfigVariables.length != 0}
+                    saveConfigVariables={saveConfigVariables}
+                  />
+                )}
+                {categoryId == "cache" && (
+                  <TestRedisButton
                     configVariablesChanged={updatedConfigVariables.length != 0}
                     saveConfigVariables={saveConfigVariables}
                   />
