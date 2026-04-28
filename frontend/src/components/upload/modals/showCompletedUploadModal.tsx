@@ -16,6 +16,7 @@ const showCompletedUploadModal = (
   modals: ModalsContextProps,
   share: CompletedShare,
   appUrl: string,
+  defaultAppUrl: string,
 ) => {
   const t = translateOutsideContext();
   return modals.openModal({
@@ -23,11 +24,21 @@ const showCompletedUploadModal = (
     withCloseButton: false,
     closeOnEscape: false,
     title: t("upload.modal.completed.share-ready"),
-    children: <Body share={share} appUrl={appUrl} />,
+    children: (
+      <Body share={share} appUrl={appUrl} defaultAppUrl={defaultAppUrl} />
+    ),
   });
 };
 
-const Body = ({ share, appUrl }: { share: CompletedShare; appUrl: string }) => {
+const Body = ({
+  share,
+  appUrl,
+  defaultAppUrl,
+}: {
+  share: CompletedShare;
+  appUrl: string;
+  defaultAppUrl: string;
+}) => {
   const modals = useModals();
   const router = useRouter();
   const t = useTranslate();
@@ -40,7 +51,7 @@ const Body = ({ share, appUrl }: { share: CompletedShare; appUrl: string }) => {
 
   const isReverseShare = !!router.query["reverseShareToken"];
 
-  const link = `${appUrl !== "" ? appUrl : window.location.origin}/s/${share.id}`;
+  const link = `${appUrl !== defaultAppUrl ? appUrl : window.location.origin}/s/${share.id}`;
 
   return (
     <Stack align="stretch">
