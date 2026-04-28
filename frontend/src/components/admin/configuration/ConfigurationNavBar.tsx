@@ -39,6 +39,14 @@ export const categories = [
 ];
 
 const useStyles = createStyles((theme) => ({
+  navbar: {
+    [theme.fn.smallerThan("sm")]: {
+      height: "calc(100dvh - 60px)",
+      maxHeight: "calc(100dvh - 60px)",
+      overflowY: "auto",
+    },
+  },
+
   activeLink: {
     backgroundColor: theme.fn.variant({
       variant: "light",
@@ -64,6 +72,7 @@ const ConfigurationNavBar = ({
   const { classes } = useStyles();
   return (
     <Navbar
+      className={classes.navbar}
       p="md"
       hiddenBreakpoint="sm"
       hidden={!isMobileNavBarOpened}
@@ -108,7 +117,14 @@ const ConfigurationNavBar = ({
         </Stack>
       </Navbar.Section>
       <MediaQuery largerThan="sm" styles={{ display: "none" }}>
-        <Button mt="xl" variant="light" component={Link} href="/admin">
+        <Button
+          mt="xl"
+          pt="sm"
+          pb="sm"
+          variant="light"
+          component={Link}
+          href="/admin"
+        >
           <FormattedMessage id="common.button.go-back" />
         </Button>
       </MediaQuery>
