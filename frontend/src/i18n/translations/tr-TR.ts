@@ -513,7 +513,7 @@ export default {
   "admin.config.notify.no-changes": "Kaydedilecek değişiklik yok.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Etkin",
-  "admin.config.s3.enabled.description": "Paylaşılan dosyaları yerel dosya sistemi yerine depolamak için S3'ün kullanılıp kullanılmayacağı.",
+  "admin.config.s3.enabled.description": "Whether S3 should be used to store the shared files instead of the local file system. WARNING: If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
   "admin.config.s3.endpoint": "Uç Nokta (Endpoint)",
   "admin.config.s3.endpoint.description": "S3 bucket'ının URL'si.",
   "admin.config.s3.region": "Bölge (Region)",
