@@ -513,7 +513,7 @@ export default {
   "admin.config.notify.no-changes": "No changes to save.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "啟用",
-  "admin.config.s3.enabled.description": "使用S3儲存檔案。",
+  "admin.config.s3.enabled.description": "Whether S3 should be used to store the shared files instead of the local file system. WARNING: If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
   "admin.config.s3.endpoint": "Endpoint",
   "admin.config.s3.endpoint.description": "S3 bucket 的 URL。",
   "admin.config.s3.region": "Region",
