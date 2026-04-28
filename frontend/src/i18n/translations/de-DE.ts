@@ -102,7 +102,7 @@ export default {
   "account.modal.totp.enterManually": "Manuell eingeben",
   "account.modal.totp.code": "Code",
   "common.button.clickToCopy": "Klicken zum Kopieren",
-  "common.button.showQRCode": "Show QR code",
+  "common.button.showQRCode": "QR-Code anzeigen",
   "account.modal.totp.verify": "Überprüfen",
   "account.notify.totp.disable": "TOTP erfolgreich deaktiviert",
   "account.notify.totp.enable": "TOTP erfolgreich aktiviert",
@@ -221,7 +221,7 @@ export default {
   "admin.shares.table.username": "Ersteller",
   "admin.shares.table.visitors": "Besucher",
   "admin.shares.table.expires": "Läuft ab am",
-  "admin.shares.table.deletes": "Deletes on",
+  "admin.shares.table.deletes": "Wird gelöscht am",
   "admin.shares.edit.delete.title": "Freigabe löschen: {id}",
   "admin.shares.edit.delete.description": "Möchtest du diese Freigabe wirklich löschen?",
   // END /admin/shares
@@ -235,7 +235,7 @@ export default {
   "upload.reverse-share.error.invalid.description": "Diese externe Freigabe ist abgelaufen oder ungültig.",
   // Dropzone.tsx
   "upload.dropzone.title": "Dateien hochladen",
-  "upload.dropzone.description": "Drag'n'drop files here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
+  "upload.dropzone.description": "Ziehen Sie Dateien per Drag & Drop hierher, um Ihre Freigabe zu starten, oder drücken Sie „Strg+V“, um Textinhalte aus der Zwischenablage hochzuladen. Wir akzeptieren eine maximale Dateigröße von {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Ihre Dateien überschreiten die maximale Freigabegröße von {maxSize}.",
   // FileList.tsx
   "upload.filelist.name": "Name",
