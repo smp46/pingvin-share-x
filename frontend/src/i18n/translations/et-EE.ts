@@ -513,7 +513,7 @@ export default {
   "admin.config.notify.no-changes": "Pole muudatusi mida salvestada.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Lubatud",
-  "admin.config.s3.enabled.description": "Kas S3-d tuleks kasutada jagatud failide salvestamiseks lokaalse failisüsteemi asemel.",
+  "admin.config.s3.enabled.description": "Whether S3 should be used to store the shared files instead of the local file system. WARNING: If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
   "admin.config.s3.endpoint": "Endpoint",
   "admin.config.s3.endpoint.description": "S3 ämbri URL.",
   "admin.config.s3.region": "Regioon",
