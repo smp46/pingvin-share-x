@@ -513,7 +513,7 @@ export default {
   "admin.config.notify.no-changes": "Nema promena za čuvanje.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Omogućen",
-  "admin.config.s3.enabled.description": "Da li treba koristiti S3 za čuvanje deljenih fajlova umesto lokalnog sistema datoteka.",
+  "admin.config.s3.enabled.description": "Whether S3 should be used to store the shared files instead of the local file system. WARNING: If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
   "admin.config.s3.endpoint": "Endpoint",
   "admin.config.s3.endpoint.description": "URL S3 bucket-a.",
   "admin.config.s3.region": "Region",

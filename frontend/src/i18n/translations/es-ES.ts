@@ -513,7 +513,7 @@ export default {
   "admin.config.notify.no-changes": "No hay cambios que guardar.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Habilitado",
-  "admin.config.s3.enabled.description": "Si se debería utilizar S3 en lugar del sistema de archivos local para almacenar los archivos compartidos.",
+  "admin.config.s3.enabled.description": "Whether S3 should be used to store the shared files instead of the local file system. WARNING: If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
   "admin.config.s3.endpoint": "Punto de acceso/endpoint",
   "admin.config.s3.endpoint.description": "La URL del bucket S3.",
   "admin.config.s3.region": "Región",

@@ -317,7 +317,7 @@ export default {
   // END /share/[id]/edit
 
   // /imprint
-  "imprint.title": "Imprint",
+  "imprint.title": "Impressum",
   // END /imprint
 
   // /privacy
@@ -414,7 +414,7 @@ export default {
   "admin.config.share.chunk-size.description": "Adjust the chunk size for your uploads to balance efficiency and reliability according to your internet connection. Smaller chunks can enhance success rates for unstable connections, while larger chunks make uploads faster for stable connections.",
   "admin.config.share.auto-open-share-modal": "Auto open create share modal",
   "admin.config.share.auto-open-share-modal.description": "The share creation modal automatically appears when a user selects files, eliminating the need to manually click the button.",
-  "admin.config.share.allow-admin-access-all-shares": "Allow admin access to all shares",
+  "admin.config.share.allow-admin-access-all-shares": "Geef beheerders toegang tot alle gedeelde mappen",
   "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled.",
@@ -513,7 +513,7 @@ export default {
   "admin.config.notify.no-changes": "No changes to save.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Enabled",
-  "admin.config.s3.enabled.description": "Whether S3 should be used to store the shared files instead of the local file system.",
+  "admin.config.s3.enabled.description": "Whether S3 should be used to store the shared files instead of the local file system. WARNING: If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
   "admin.config.s3.endpoint": "Endpoint",
   "admin.config.s3.endpoint.description": "The URL of the S3 bucket.",
   "admin.config.s3.region": "Region",
