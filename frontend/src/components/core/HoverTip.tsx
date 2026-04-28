@@ -7,11 +7,7 @@ type HoverTipProps = {
   disabled?: boolean;
 };
 
-export const HoverTip = ({
-  label,
-  children,
-  disabled,
-}: HoverTipProps) => {
+export const HoverTip = ({ label, children, disabled }: HoverTipProps) => {
   return (
     <Tooltip
       position="bottom"

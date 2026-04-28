@@ -150,9 +150,7 @@ const MyShares = () => {
                                     {share.id}
                                   </Text>
                                 </Anchor>
-                                <HoverTip
-                                  label={t("common.button.copy-link")}
-                                >
+                                <HoverTip label={t("common.button.copy-link")}>
                                   <ActionIcon
                                     color="victoria"
                                     variant="light"
