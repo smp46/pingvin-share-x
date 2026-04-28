@@ -1,12 +1,4 @@
-import {
-  Burger,
-  Button,
-  Group,
-  Header,
-  MediaQuery,
-  Text,
-  useMantineTheme,
-} from "@mantine/core";
+import { Burger, Button, Group, Header, MediaQuery, Text } from "@mantine/core";
 import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
 import { FormattedMessage } from "react-intl";
@@ -21,19 +13,9 @@ const ConfigurationHeader = ({
   setIsMobileNavBarOpened: Dispatch<SetStateAction<boolean>>;
 }) => {
   const config = useConfig();
-  const theme = useMantineTheme();
   return (
     <Header height={60} p="md">
       <div style={{ display: "flex", alignItems: "center", height: "100%" }}>
-        <MediaQuery largerThan="sm" styles={{ display: "none" }}>
-          <Burger
-            opened={isMobileNavBarOpened}
-            onClick={() => setIsMobileNavBarOpened((o) => !o)}
-            size="sm"
-            color={theme.colors.gray[6]}
-            mr="xl"
-          />
-        </MediaQuery>
         <Group position="apart" w="100%">
           <Link href="/" passHref>
             <Group>
@@ -47,6 +29,13 @@ const ConfigurationHeader = ({
             </Button>
           </MediaQuery>
         </Group>
+        <MediaQuery largerThan="sm" styles={{ display: "none" }}>
+          <Burger
+            opened={isMobileNavBarOpened}
+            onClick={() => setIsMobileNavBarOpened((o) => !o)}
+            size="sm"
+          />
+        </MediaQuery>
       </div>
     </Header>
   );
