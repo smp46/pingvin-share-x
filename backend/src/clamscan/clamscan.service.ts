@@ -36,13 +36,69 @@ export class ClamScanService {
   async check(shareId: string) {
     const clamScan = await this.ClamScan;
 
-    if (!clamScan) return [];
+    if (!clamScan) {
+      return [];
+    }
 
     const infectedFiles = [];
 
-    const files = fs
-      .readdirSync(`${SHARE_DIRECTORY}/${shareId}`)
-      .filter((file) => file != "archive.zip");
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+    });
+    const storageProvider = share?.storageProvider || "UNKNOWN";
+
+    if (storageProvider === "S3") {
+      const files = await this.prisma.file.findMany({
+        where: { shareId },
+        select: { id: true, name: true },
+      });
+
+      for (const f of files) {
+        try {
+          const fileObj = await this.fileService.get(shareId, f.id);
+
+          const tmpDir = `${SHARE_DIRECTORY}/${shareId}`;
+          const tmpPath = `${tmpDir}/${f.id}`;
+
+          fs.mkdirSync(tmpDir, { recursive: true });
+
+          // Download S3 object stream to temp local file
+          await new Promise<void>((resolve, reject) => {
+            const writeStream = fs.createWriteStream(tmpPath);
+            (fileObj.file as any).pipe(writeStream);
+            writeStream.on("finish", resolve);
+            writeStream.on("error", reject);
+            (fileObj.file as any).on("error", reject);
+          });
+
+          const { isInfected } = await clamScan
+            .isInfected(tmpPath)
+            .catch(() => ({ isInfected: false }));
+
+          if (isInfected) infectedFiles.push({ id: f.id, name: f.name });
+
+          try {
+            fs.unlinkSync(tmpPath);
+          } catch {}
+        } catch (err: any) {
+          this.logger.warn(
+            `ClamAV scan failed for S3 file ${f.id} in share ${shareId}: ${err?.message || "unknown error"}`,
+          );
+        }
+      }
+
+      return infectedFiles;
+    }
+
+    let files: string[] = [];
+    try {
+      files = fs
+        .readdirSync(`${SHARE_DIRECTORY}/${shareId}`)
+        .filter((file) => file != "archive.zip");
+    } catch (e) {
+      void e;
+      return [];
+    }
 
     for (const fileId of files) {
       const { isInfected } = await clamScan
@@ -68,8 +124,15 @@ export class ClamScanService {
     const infectedFiles = await this.check(shareId);
 
     if (infectedFiles.length > 0) {
-      await this.fileService.deleteAllFiles(shareId);
-      await this.prisma.file.deleteMany({ where: { shareId } });
+      try {
+        await this.fileService.deleteAllFiles(shareId);
+        await this.prisma.file.deleteMany({ where: { shareId } });
+      } catch (err: any) {
+        this.logger.error(
+          `Failed to delete malicious share ${shareId}: ${err?.message || "unknown error"}`,
+        );
+        return;
+      }
 
       const fileNames = infectedFiles.map((file) => file.name).join(", ");
 

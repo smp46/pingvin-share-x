@@ -222,18 +222,42 @@ export class S3FileService {
   async deleteAllFiles(shareId: string) {
     const prefix = `${this.getS3Path()}${shareId}/`;
     const s3Instance = this.getS3Instance();
+    const bucketName = this.config.get("s3.bucketName");
+
+    const fallbackDeleteByDb = async (reason: string) => {
+      void reason;
+
+      const files = await this.prisma.file.findMany({
+        where: { shareId },
+        select: { name: true },
+      });
+
+      for (const f of files) {
+        const key = `${this.getS3Path()}${shareId}/${f.name}`;
+        try {
+          await s3Instance.send(
+            new DeleteObjectCommand({
+              Bucket: bucketName,
+              Key: key,
+            }),
+          );
+        } catch {
+          // ignore per-object failure
+        }
+      }
+    };
 
     try {
       // List all objects under the given prefix
       const listResponse = await s3Instance.send(
         new ListObjectsV2Command({
-          Bucket: this.config.get("s3.bucketName"),
+          Bucket: bucketName,
           Prefix: prefix,
         }),
       );
 
       if (!listResponse.Contents || listResponse.Contents.length === 0) {
-        throw new Error(`No files found for share ${shareId}`);
+        return;
       }
 
       // Extract the keys of the files to be deleted
@@ -244,14 +268,16 @@ export class S3FileService {
       // Delete all files in a single request (up to 1000 objects at once)
       await s3Instance.send(
         new DeleteObjectsCommand({
-          Bucket: this.config.get("s3.bucketName"),
+          Bucket: bucketName,
           Delete: {
             Objects: objectsToDelete,
           },
         }),
       );
     } catch (error) {
-      throw new Error("Could not delete all files from S3");
+      // try deleting by known file names from DB instead.
+      await fallbackDeleteByDb("list_or_bulk_delete_failed");
+      void error;
     }
   }
 
@@ -385,6 +411,8 @@ export class S3FileService {
 
   getS3Path(): string {
     const configS3Path = this.config.get("s3.bucketPath");
-    return configS3Path ? `${configS3Path}/` : "";
+    if (!configS3Path) return "";
+    const normalized = `${configS3Path}`.replace(/^\/+|\/+$/g, "");
+    return normalized ? `${normalized}/` : "";
   }
 }
