@@ -440,7 +440,8 @@ export default {
   "admin.config.appearance.theme-primary-color": "Theme primary color",
   "admin.config.appearance.theme-primary-color.description":
     "Primary color used for buttons, links, and accents. Choose custom to use a color picker override.",
-  "admin.config.appearance.theme-primary-color-override": "Custom primary color",
+  "admin.config.appearance.theme-primary-color-override":
+    "Custom primary color",
   "admin.config.appearance.theme-primary-color-override.description":
     "Hex color override used when theme primary color is set to custom.",
   "admin.config.appearance.theme-font-preset": "Theme font preset",
@@ -471,7 +472,8 @@ export default {
   "admin.config.general.logo.description":
     "Change your logo by uploading a new image. The image must be a PNG and should have the format 1:1.",
   "admin.config.general.logo-dark": "Dark mode logo",
-  "admin.config.general.logo-dark.description": "Upload a separate logo for dark mode. The image must be a PNG and should have the format 1:1.",
+  "admin.config.general.logo-dark.description":
+    "Upload a separate logo for dark mode. The image must be a PNG and should have the format 1:1.",
   "admin.config.general.logo.placeholder": "Pick image",
   "admin.config.cache.ttl": "TTL",
   "admin.config.cache.ttl.description":
@@ -489,7 +491,8 @@ export default {
   "admin.config.cache.test-redis.success": "Connected to Redis successfully",
   "admin.config.cache.test-redis.success-disabled":
     "Connected to Redis successfully (Redis caching is currently disabled).",
-  "admin.config.cache.test-redis.modal.error.title": "Failed to connect to Redis",
+  "admin.config.cache.test-redis.modal.error.title":
+    "Failed to connect to Redis",
   "admin.config.cache.test-redis.modal.error.description":
     "While connecting to Redis, the following error occurred:",
   "admin.config.cache.test-redis.modal.save.title": "Save configuration",
@@ -701,7 +704,7 @@ export default {
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Enabled",
   "admin.config.s3.enabled.description":
-    "Whether S3 should be used to store the shared files instead of the local file system.",
+    "Whether S3 should be used to store the shared files instead of the local file system. WARNING: If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
   "admin.config.s3.endpoint": "Endpoint",
   "admin.config.s3.endpoint.description": "The URL of the S3 bucket.",
   "admin.config.s3.region": "Region",

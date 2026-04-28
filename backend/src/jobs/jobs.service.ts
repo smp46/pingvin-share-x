@@ -39,11 +39,10 @@ export class JobsService {
     });
 
     for (const expiredShare of expiredShares) {
+      await this.fileService.deleteAllFiles(expiredShare.id);
       await this.prisma.share.delete({
         where: { id: expiredShare.id },
       });
-
-      await this.fileService.deleteAllFiles(expiredShare.id);
     }
 
     if (expiredShares.length > 0) {
@@ -80,11 +79,10 @@ export class JobsService {
     });
 
     for (const unfinishedShare of unfinishedShares) {
+      await this.fileService.deleteAllFiles(unfinishedShare.id);
       await this.prisma.share.delete({
         where: { id: unfinishedShare.id },
       });
-
-      await this.fileService.deleteAllFiles(unfinishedShare.id);
     }
 
     if (unfinishedShares.length > 0) {

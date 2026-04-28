@@ -50,12 +50,20 @@ export class FileService {
   }
 
   async remove(shareId: string, fileId: string) {
-    const storageService = this.getStorageService();
+    const share = await this.prisma.share.findFirst({
+      where: { id: shareId },
+      select: { storageProvider: true },
+    });
+    const storageService = this.getStorageService(share?.storageProvider);
     return storageService.remove(shareId, fileId);
   }
 
   async deleteAllFiles(shareId: string) {
-    const storageService = this.getStorageService();
+    const share = await this.prisma.share.findFirst({
+      where: { id: shareId },
+      select: { id: true, storageProvider: true },
+    });
+    const storageService = this.getStorageService(share?.storageProvider);
     return storageService.deleteAllFiles(shareId);
   }
 
