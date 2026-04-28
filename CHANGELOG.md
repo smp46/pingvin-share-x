@@ -1,3 +1,20 @@
+## [1.17.0](https://github.com/smp46/pingvin-share-x/compare/v1.16.3...v1.17.0) (2026-04-28)
+
+### Features
+
+* **redis:** redis connection check button ([3adee32](https://github.com/smp46/pingvin-share-x/commit/3adee3241c408c255a10e1293732549ebab4351e))
+* **s3:** support for ClamAV scans with S3 Buckets ([63c5807](https://github.com/smp46/pingvin-share-x/commit/63c5807250b9ff4897fdf33f2b6a7edb44a6e7e1))
+
+### Bug Fixes
+
+* **config:** admin config header consistent with global header ([9a41a75](https://github.com/smp46/pingvin-share-x/commit/9a41a75426aa490faca1e22331e4834ee188918f))
+* **config:** inaccessible back button on small mobile ([cbaf931](https://github.com/smp46/pingvin-share-x/commit/cbaf931a0dffc305a45aca07474f05b914eeb369))
+* **footer:** better centre footer on mobile ([8d66735](https://github.com/smp46/pingvin-share-x/commit/8d667358cfafa548a703656e008d7dc0f31ae514))
+* **header:** rework header for mobile ([d46575b](https://github.com/smp46/pingvin-share-x/commit/d46575baef809a275513ed7af44044074abf6895))
+* **hovertip:** add mising instances of hover tooltips ([e12bf42](https://github.com/smp46/pingvin-share-x/commit/e12bf42b183014cc9acc5e3a66b6eda5d4f1c7d7))
+* **hovertip:** dynamic sizing of hover tool tips ([13ec91e](https://github.com/smp46/pingvin-share-x/commit/13ec91e27bf3fbbfbbb7b789d0b1d4e5bf3c1f50))
+* **shares:** incorrect url use ([b5c5fbe](https://github.com/smp46/pingvin-share-x/commit/b5c5fbe2169f863bc1a2eb49dfac012055e5514c))
+
 ## [1.16.3](https://github.com/smp46/pingvin-share-x/compare/v1.16.2...v1.16.3) (2026-04-27)
 
 ### Bug Fixes
