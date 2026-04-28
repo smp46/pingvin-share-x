@@ -225,12 +225,11 @@ export class S3FileService {
     const bucketName = this.config.get("s3.bucketName");
 
     const fallbackDeleteByDb = async (reason: string) => {
-      void reason;
-
       const files = await this.prisma.file.findMany({
         where: { shareId },
         select: { name: true },
       });
+      void reason;
 
       for (const f of files) {
         const key = `${this.getS3Path()}${shareId}/${f.name}`;
