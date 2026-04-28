@@ -1,8 +1,13 @@
 import { NotificationProps, showNotification } from "@mantine/notifications";
 import { TbCheck, TbX } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
+import { getApiErrorMessage } from "./error.util";
+import { ReactNode } from "react";
 
-const error = (message: string, config?: Omit<NotificationProps, "message">) =>
+const error = (
+  message: ReactNode,
+  config?: Omit<NotificationProps, "message">,
+) =>
   showNotification({
     icon: <TbX />,
     color: "red",
@@ -16,10 +21,14 @@ const error = (message: string, config?: Omit<NotificationProps, "message">) =>
   });
 
 const axiosError = (axiosError: any) =>
-  error(axiosError?.response?.data?.message ?? "An unknown error occurred");
+  error(
+    getApiErrorMessage(axiosError) ?? (
+      <FormattedMessage id="common.error.unknown" />
+    ),
+  );
 
 const success = (
-  message: string,
+  message: ReactNode,
   config?: Omit<NotificationProps, "message">,
 ) =>
   showNotification({

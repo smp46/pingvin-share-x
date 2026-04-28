@@ -485,6 +485,17 @@ export default {
   "admin.config.cache.redis-url": "Redis URL",
   "admin.config.cache.redis-url.description":
     "Url to connect to the Redis instance used for caching.",
+  "admin.config.cache.button.test-redis": "Test Redis connection",
+  "admin.config.cache.test-redis.success": "Connected to Redis successfully",
+  "admin.config.cache.test-redis.success-disabled":
+    "Connected to Redis successfully (Redis caching is currently disabled).",
+  "admin.config.cache.test-redis.modal.error.title": "Failed to connect to Redis",
+  "admin.config.cache.test-redis.modal.error.description":
+    "While connecting to Redis, the following error occurred:",
+  "admin.config.cache.test-redis.modal.save.title": "Save configuration",
+  "admin.config.cache.test-redis.modal.save.description":
+    "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
+  "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients":
     "Enable email recipient sharing",
   "admin.config.email.enable-share-email-recipients.description":
