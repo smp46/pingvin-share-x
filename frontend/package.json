@@ -44,6 +44,7 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.59.1",
     "@types/mime-types": "^2.1.4",
     "@types/node": "22.5.5",
     "@types/qrcode": "^1.5.5",
