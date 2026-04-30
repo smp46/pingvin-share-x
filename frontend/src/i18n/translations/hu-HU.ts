@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "Regisztráció",
   "navbar.links.shares": "Megosztásaim",
   "navbar.links.reverse": "Fordított megosztások",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Fiókom",
   "navbar.avatar.admin": "Admin ügyek",
   "navbar.avatar.signout": "Kijelentkezés",
@@ -140,6 +141,14 @@ export default {
   "account.shares.modal.delete.description": "Biztos abban, hogy törölni kívánja ezt a megosztást?",
   // END /account/shares
 
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
+
   // /account/reverseShares
   "account.reverseShares.title": "Fordított megosztás",
   "account.reverseShares.description": "A fordított megosztással egy egyedi URL azonosító készül, amivel a rendszeren kívülről készíthető megosztás.",
@@ -269,6 +278,10 @@ export default {
   "upload.modal.accordion.email.title": "Email címzettek",
   "upload.modal.accordion.email.placeholder": "Adja meg az email címzetteket",
   "upload.modal.accordion.email.invalid-email": "Érvénytelen emailcím",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Restrict access to these recipients only (requires all to have an account)",
+  "upload.modal.accordion.email.unregistered-warning":
+    "These addresses don't have an account and won't be able to access the share: {emails}",
   "upload.modal.accordion.security.title": "Biztonsági beállítások",
   "upload.modal.accordion.security.password.label": "Jelszavas védelem",
   "upload.modal.accordion.security.password.placeholder": "Nincs jelszó",
@@ -294,6 +307,10 @@ export default {
   "share.error.access-denied.title": "Privát megosztás",
   "share.error.access-denied.description": "Ez a fiók nem rendelkezik jogosultsággal a megosztás eléréséhez",
   "share.modal.password.title": "Jelszó szükséges",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description":
+    "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.description": "Please enter the password to access this share.",
   "share.modal.password": "Jelszó",
   "share.modal.error.invalid-password": "Érvénytelen jelszó",
@@ -416,6 +433,9 @@ export default {
   "admin.config.share.auto-open-share-modal.description": "A mgosztás létrehozása előugró elem automatikusan megjelenik a fájlok kiválasztásakor, ehhez nem szükséges külön kattintani.",
   "admin.config.share.allow-admin-access-all-shares": "Allow admin access to all shares",
   "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description":
+    "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled.",
   "admin.config.smtp.enabled": "Enable",

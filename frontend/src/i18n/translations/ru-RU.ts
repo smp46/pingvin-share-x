@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "Зарегистрироваться",
   "navbar.links.shares": "Мои загрузки",
   "navbar.links.reverse": "Обратные загрузки",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Мой аккаунт",
   "navbar.avatar.admin": "Администрирование",
   "navbar.avatar.signout": "Выйти",
@@ -140,6 +141,14 @@ export default {
   "account.shares.modal.delete.description": "Вы действительно хотите удалить эту загрузку?",
   // END /account/shares
 
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
+
   // /account/reverseShares
   "account.reverseShares.title": "Обратные загрузки",
   "account.reverseShares.description": "Обратная загрузка позволяет генерировать уникальный URL, позволяющий внешним пользователям загружать файлы.",
@@ -269,6 +278,10 @@ export default {
   "upload.modal.accordion.email.title": "Получатели письма",
   "upload.modal.accordion.email.placeholder": "Получатели e-mail",
   "upload.modal.accordion.email.invalid-email": "Недопустимый адрес электронной почты",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Restrict access to these recipients only (requires all to have an account)",
+  "upload.modal.accordion.email.unregistered-warning":
+    "These addresses don't have an account and won't be able to access the share: {emails}",
   "upload.modal.accordion.security.title": "Параметры безопасности",
   "upload.modal.accordion.security.password.label": "Защита паролем",
   "upload.modal.accordion.security.password.placeholder": "Без пароля",
@@ -294,6 +307,10 @@ export default {
   "share.error.access-denied.title": "Приватное доступ",
   "share.error.access-denied.description": "У текущей учетной записи нет разрешения на доступ к этому ресурсу",
   "share.modal.password.title": "Требуется пароль",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description":
+    "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.description": "Пожалуйста, введите пароль для доступа к этому ресурсу.",
   "share.modal.password": "Пароль",
   "share.modal.error.invalid-password": "Неверный пароль",
@@ -416,6 +433,9 @@ export default {
   "admin.config.share.auto-open-share-modal.description": "Модуль создания общего доступа автоматически появляется, когда пользователь выбирает файлы, устраняя необходимость вручную нажать кнопку.",
   "admin.config.share.allow-admin-access-all-shares": "Allow admin access to all shares",
   "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description":
+    "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled.",
   "admin.config.smtp.enabled": "Включено",

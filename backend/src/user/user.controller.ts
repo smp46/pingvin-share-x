@@ -2,6 +2,7 @@ import {
   Body,
   Controller,
   Delete,
+  ForbiddenException,
   Get,
   HttpCode,
   Param,
@@ -20,6 +21,7 @@ import { CreateUserDTO } from "./dto/createUser.dto";
 import { UpdateOwnUserDTO } from "./dto/updateOwnUser.dto";
 import { UpdateUserDto } from "./dto/updateUser.dto";
 import { UserDTO } from "./dto/user.dto";
+import { VerifyEmailsDTO } from "./dto/verifyEmails.dto";
 import { UserSevice } from "./user.service";
 
 @Controller("users")
@@ -28,6 +30,15 @@ export class UserController {
     private userService: UserSevice,
     private config: ConfigService,
   ) {}
+
+  @HttpCode(200)
+  @Post("verify-emails")
+  @UseGuards(JwtGuard)
+  async verifyEmails(@Body() body: VerifyEmailsDTO) {
+    if (!this.config.get("share.enableUserRecipients"))
+      throw new ForbiddenException("User recipients are not enabled");
+    return this.userService.verifyEmails(body.emails);
+  }
 
   // Own user operations
   @Get("me")

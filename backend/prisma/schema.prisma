@@ -18,10 +18,11 @@ model User {
   isAdmin  Boolean @default(false)
   ldapDN   String? @unique
 
-  shares        Share[]
-  refreshTokens RefreshToken[]
-  loginTokens   LoginToken[]
-  reverseShares ReverseShare[]
+  shares              Share[]
+  refreshTokens       RefreshToken[]
+  loginTokens         LoginToken[]
+  reverseShares       ReverseShare[]
+  shareUserRecipients ShareUserRecipient[]
 
   totpEnabled        Boolean             @default(false)
   totpVerified       Boolean             @default(false)
@@ -92,9 +93,10 @@ model Share {
   reverseShareId String?
   reverseShare   ReverseShare? @relation(fields: [reverseShareId], references: [id], onDelete: Cascade)
 
-  security   ShareSecurity?
-  recipients ShareRecipient[]
-  files      File[]
+  security       ShareSecurity?
+  recipients     ShareRecipient[]
+  userRecipients ShareUserRecipient[]
+  files          File[]
   storageProvider String @default("LOCAL")
 }
 
@@ -139,11 +141,25 @@ model ShareSecurity {
   id        String   @id @default(uuid())
   createdAt DateTime @default(now())
 
-  password String?
-  maxViews Int?
+  password             String?
+  maxViews             Int?
+  restrictToRecipients Boolean @default(false)
 
   shareId String? @unique
   share   Share?  @relation(fields: [shareId], references: [id], onDelete: Cascade)
+}
+
+model ShareUserRecipient {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+
+  userId  String
+  user    User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  shareId String
+  share   Share  @relation(fields: [shareId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, shareId])
 }
 
 model Config {

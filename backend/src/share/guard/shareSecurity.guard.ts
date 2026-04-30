@@ -60,6 +60,26 @@ export class ShareSecurityGuard extends JwtGuard {
       throw new NotFoundException("Share not found");
     }
 
+    // If user sharing is enabled, check if the authenticated user is a named recipient
+    if (this.configService.get("share.enableUserRecipients") && user) {
+      const shareWithUserRecipients = await this.prisma.share.findUnique({
+        where: { id: shareId },
+        include: { userRecipients: { select: { userId: true } } },
+      });
+      const isRecipient = shareWithUserRecipients.userRecipients.some(
+        (r) => r.userId === user.id,
+      );
+      if (isRecipient) return true;
+    }
+
+    // If share is restricted to named recipients, block everyone else
+    if (share.security?.restrictToRecipients) {
+      throw new ForbiddenException(
+        "This share is restricted to specific recipients. Please log in to access it.",
+        "share_restricted_to_recipients",
+      );
+    }
+
     if (share.security?.password && !shareToken)
       throw new ForbiddenException(
         "This share is password protected",

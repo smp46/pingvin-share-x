@@ -44,6 +44,26 @@ export class ShareService {
       share.security.password = await argon.hash(share.security.password);
     }
 
+    if (
+      this.configService.get("share.enableUserRecipients") &&
+      share.security?.restrictToRecipients &&
+      share.recipients?.length
+    ) {
+      const registered = await this.prisma.user.findMany({
+        where: { email: { in: share.recipients } },
+        select: { email: true },
+      });
+      const registeredEmails = new Set(registered.map((u) => u.email));
+      const unregistered = share.recipients.filter(
+        (e) => !registeredEmails.has(e),
+      );
+      if (unregistered.length > 0) {
+        throw new BadRequestException(
+          `Restricted access requires all recipients to have an account. Not registered: ${unregistered.join(", ")}`,
+        );
+      }
+    }
+
     let expirationDate: Date;
 
     // If share is created by a reverse share token override the expiration date
@@ -160,6 +180,26 @@ export class ShareService {
         share.description,
         share.expiration,
       );
+    }
+
+    // Auto-link email recipients who are registered users so the share appears in their dashboard
+    if (this.configService.get("share.enableUserRecipients")) {
+      const emails = share.recipients.map((r) => r.email);
+      if (emails.length > 0) {
+        const matchedUsers = await this.prisma.user.findMany({
+          where: { email: { in: emails } },
+          select: { id: true },
+        });
+        for (const matchedUser of matchedUsers) {
+          await this.prisma.shareUserRecipient.upsert({
+            where: {
+              userId_shareId: { userId: matchedUser.id, shareId: share.id },
+            },
+            create: { userId: matchedUser.id, shareId: share.id },
+            update: {},
+          });
+        }
+      }
     }
 
     const notifyReverseShareCreator = share.reverseShare
@@ -317,6 +357,22 @@ export class ShareService {
 
   async isShareCompleted(id: string) {
     return (await this.prisma.share.findUnique({ where: { id } })).uploadLocked;
+  }
+
+  async getReceivedShares(userId: string) {
+    return this.prisma.shareUserRecipient.findMany({
+      where: { userId },
+      include: {
+        share: {
+          include: {
+            creator: true,
+            files: true,
+            security: true,
+          },
+        },
+      },
+      orderBy: { createdAt: "desc" },
+    });
   }
 
   async isShareIdAvailable(id: string) {
