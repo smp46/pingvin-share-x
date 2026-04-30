@@ -188,7 +188,11 @@ const CreateUploadModalBody = ({
       return;
     }
     const result = await userService.verifyEmails(recipients).catch(() => null);
-    if (result) setUnregisteredEmails(result.unregistered);
+    if (result) {
+      setUnregisteredEmails(result.unregistered);
+    } else {
+      toast.error(t("common.error.unknown"));
+    }
   };
 
   const handleRestrictToggle = async (checked: boolean) => {

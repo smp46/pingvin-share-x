@@ -59,13 +59,14 @@ export class ShareService {
           "A share restricted to recipients must have at least one recipient.",
         );
       }
+      const normalizedRecipients = share.recipients.map((e) => e.toLowerCase());
       const registered = await this.prisma.user.findMany({
-        where: { email: { in: share.recipients } },
+        where: { email: { in: normalizedRecipients } },
         select: { email: true },
       });
-      const registeredEmails = new Set(registered.map((u) => u.email));
+      const registeredEmails = new Set(registered.map((u) => u.email.toLowerCase()));
       const unregistered = share.recipients.filter(
-        (e) => !registeredEmails.has(e),
+        (e) => !registeredEmails.has(e.toLowerCase()),
       );
       if (unregistered.length > 0) {
         throw new BadRequestException(
@@ -293,6 +294,7 @@ export class ShareService {
         security: {
           maxViews: share.security?.maxViews,
           passwordProtected: !!share.security?.password,
+          restrictToRecipients: !!share.security?.restrictToRecipients,
         },
       };
     });

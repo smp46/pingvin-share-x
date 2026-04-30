@@ -63,4 +63,5 @@ export type UserVerifyResult = {
 export type MyShareSecurity = {
   passwordProtected: boolean;
   maxViews: number;
+  restrictToRecipients: boolean;
 };
