@@ -103,7 +103,7 @@ export default function AppShellDemo() {
               const updated = updatedConfigVariables.find(
                 (u) => u.key === cv.key,
               );
-              return updated ? { ...cv, value: updated.value } : cv;
+              return updated ? { ...cv, value: String(updated.value) } : cv;
             }),
           );
           setUpdatedConfigVariables([]);
