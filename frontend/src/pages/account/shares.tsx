@@ -86,7 +86,16 @@ const MyShares = () => {
               </tr>
             </thead>
             <tbody>
-              {shares.map((share) => (
+              {shares.map((share) => {
+                const openShareInformationsModal = () =>
+                  showShareInformationsModal(
+                    modals,
+                    share,
+                    parseInt(config.get("share.maxSize")),
+                    config.get("general.appUrl"),
+                    config.get("general.appUrl", true),
+                  );
+                return (
                 <tr key={share.id}>
                   <td>
                     <Group spacing="xs">
@@ -104,6 +113,8 @@ const MyShares = () => {
                             title={t(
                               "upload.modal.accordion.email.restrict-to-recipients",
                             )}
+                            style={{ cursor: "pointer" }}
+                            onClick={openShareInformationsModal}
                           />
                         )}
                     </Group>
@@ -143,15 +154,7 @@ const MyShares = () => {
                           color="blue"
                           variant="light"
                           size={25}
-                          onClick={() => {
-                            showShareInformationsModal(
-                              modals,
-                              share,
-                              parseInt(config.get("share.maxSize")),
-                              config.get("general.appUrl"),
-                              config.get("general.appUrl", true),
-                            );
-                          }}
+                          onClick={openShareInformationsModal}
                         >
                           <TbInfoCircle />
                         </ActionIcon>
@@ -217,7 +220,8 @@ const MyShares = () => {
                     </Group>
                   </td>
                 </tr>
-              ))}
+                );
+              })}
             </tbody>
           </Table>
         </Box>
