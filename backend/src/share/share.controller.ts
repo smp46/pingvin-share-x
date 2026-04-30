@@ -2,6 +2,7 @@ import {
   Body,
   Controller,
   Delete,
+  ForbiddenException,
   Get,
   HttpCode,
   Param,
@@ -18,6 +19,7 @@ import * as moment from "moment";
 import { GetUser } from "src/auth/decorator/getUser.decorator";
 import { AdministratorGuard } from "src/auth/guard/isAdmin.guard";
 import { JwtGuard } from "src/auth/guard/jwt.guard";
+import { ConfigService } from "src/config/config.service";
 import { AdminShareDTO } from "./dto/adminShare.dto";
 import { CreateShareDTO } from "./dto/createShare.dto";
 import { MyShareDTO } from "./dto/myShare.dto";
@@ -36,6 +38,7 @@ export class ShareController {
   constructor(
     private shareService: ShareService,
     private jwtService: JwtService,
+    private config: ConfigService,
   ) {}
 
   @Get("all")
@@ -55,6 +58,8 @@ export class ShareController {
   @Get("received")
   @UseGuards(JwtGuard)
   async getReceivedShares(@GetUser() user: User) {
+    if (!this.config.get("share.enableUserRecipients"))
+      throw new ForbiddenException("User recipients are not enabled");
     return this.shareService.getReceivedShares(user.id);
   }
 

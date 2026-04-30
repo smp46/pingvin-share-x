@@ -11,18 +11,26 @@ import {
 } from "@mantine/core";
 import moment from "moment";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
 import CenterLoader from "../../components/core/CenterLoader";
+import useConfig from "../../hooks/config.hook";
 import useTranslate from "../../hooks/useTranslate.hook";
 import shareService from "../../services/share.service";
 
 const ReceivedShares = () => {
   const t = useTranslate();
+  const router = useRouter();
+  const config = useConfig();
   const [receivedShares, setReceivedShares] = useState<any[]>();
 
   useEffect(() => {
+    if (!config.get("share.enableUserRecipients")) {
+      router.replace("/");
+      return;
+    }
     shareService.getReceivedShares().then((data) => setReceivedShares(data));
   }, []);
 
