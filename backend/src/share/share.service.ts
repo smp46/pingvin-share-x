@@ -40,15 +40,25 @@ export class ShareService {
     if (!share.security || Object.keys(share.security).length == 0)
       share.security = undefined;
 
+    if (share.security?.restrictToRecipients && share.security?.password) {
+      throw new BadRequestException(
+        "Cannot set a password on a share restricted to recipients.",
+      );
+    }
+
     if (share.security?.password) {
       share.security.password = await argon.hash(share.security.password);
     }
 
     if (
       this.configService.get("share.enableUserRecipients") &&
-      share.security?.restrictToRecipients &&
-      share.recipients?.length
+      share.security?.restrictToRecipients
     ) {
+      if (!share.recipients?.length) {
+        throw new BadRequestException(
+          "A share restricted to recipients must have at least one recipient.",
+        );
+      }
       const registered = await this.prisma.user.findMany({
         where: { email: { in: share.recipients } },
         select: { email: true },
