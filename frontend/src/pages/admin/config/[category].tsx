@@ -98,6 +98,14 @@ export default function AppShellDemo() {
       await configService
         .updateMany(updatedConfigVariables)
         .then(() => {
+          setConfigVariables((prev) =>
+            prev?.map((cv) => {
+              const updated = updatedConfigVariables.find(
+                (u) => u.key === cv.key,
+              );
+              return updated ? { ...cv, value: String(updated.value) } : cv;
+            }),
+          );
           setUpdatedConfigVariables([]);
           toast.success(t("admin.config.notify.success"));
         })
