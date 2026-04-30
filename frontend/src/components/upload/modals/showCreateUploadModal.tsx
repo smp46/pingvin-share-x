@@ -541,7 +541,13 @@ const CreateUploadModalBody = ({
               </Accordion.Panel>
             </Accordion.Item>
           </Accordion>
-          <Button type="submit" data-autofocus>
+          <Button
+            type="submit"
+            data-autofocus
+            disabled={
+              form.values.restrictToRecipients && unregisteredEmails.length > 0
+            }
+          >
             <FormattedMessage id="common.button.share" />
           </Button>
         </Stack>
