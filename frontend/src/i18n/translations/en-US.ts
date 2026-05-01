@@ -165,6 +165,9 @@ export default {
 
   "account.shares.modal.share-informations": "Share informations",
   "account.shares.modal.share-link": "Share link",
+  "account.shares.modal.edit.password.keep":
+    "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
 
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description":

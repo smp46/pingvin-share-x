@@ -44,6 +44,8 @@ export class ShareOwnerGuard extends JwtGuard {
 
     if (!share) throw new NotFoundException("Share not found");
 
+    (request as any).share = share;
+
     // Run the JWTGuard to set the user
     await super.canActivate(context);
     const user = request.user as User;

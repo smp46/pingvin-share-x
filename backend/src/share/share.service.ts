@@ -5,9 +5,10 @@ import {
   NotFoundException,
 } from "@nestjs/common";
 import { JwtService, JwtSignOptions } from "@nestjs/jwt";
-import { Share, User } from "@prisma/client";
+import { Prisma, Share, User, ShareSecurity } from "@prisma/client";
 import * as archiver from "archiver";
 import * as argon from "argon2";
+import * as crypto from "crypto";
 import * as fs from "fs";
 import * as moment from "moment";
 import { ClamScanService } from "src/clamscan/clamscan.service";
@@ -19,6 +20,7 @@ import { ReverseShareService } from "src/reverseShare/reverseShare.service";
 import { parseRelativeDateToAbsolute } from "src/utils/date.util";
 import { SHARE_DIRECTORY } from "../constants";
 import { CreateShareDTO } from "./dto/createShare.dto";
+import { UpdateShareDTO } from "./dto/updateShare.dto";
 
 @Injectable()
 export class ShareService {
@@ -52,23 +54,8 @@ export class ShareService {
     if (reverseShare) {
       expirationDate = reverseShare.shareExpiration;
     } else {
-      const parsedExpiration = parseRelativeDateToAbsolute(share.expiration);
-
-      const expiresNever = moment(0).toDate() == parsedExpiration;
-
-      const maxExpiration = this.config.get("share.maxExpiration");
-      if (
-        maxExpiration.value !== 0 &&
-        (expiresNever ||
-          parsedExpiration >
-            moment().add(maxExpiration.value, maxExpiration.unit).toDate())
-      ) {
-        throw new BadRequestException(
-          "Expiration date exceeds maximum expiration date",
-        );
-      }
-
-      expirationDate = parsedExpiration;
+      expirationDate = this.parseExpiration(share.expiration);
+      this.validateExpiration(expirationDate);
     }
 
     fs.mkdirSync(`${SHARE_DIRECTORY}/${share.id}`, {
@@ -207,15 +194,10 @@ export class ShareService {
       orderBy: {
         expiration: "desc",
       },
-      include: { files: true, creator: true },
+      include: { files: true, creator: true, security: true, recipients: true },
     });
 
-    return shares.map((share) => {
-      return {
-        ...share,
-        size: share.files.reduce((acc, file) => acc + parseInt(file.size), 0),
-      };
-    });
+    return shares.map((share) => this.transformShare(share));
   }
 
   async getSharesByUser(userId: string) {
@@ -235,17 +217,7 @@ export class ShareService {
       include: { recipients: true, files: true, security: true },
     });
 
-    return shares.map((share) => {
-      return {
-        ...share,
-        size: share.files.reduce((acc, file) => acc + parseInt(file.size), 0),
-        recipients: share.recipients.map((recipients) => recipients.email),
-        security: {
-          maxViews: share.security?.maxViews,
-          passwordProtected: !!share.security?.password,
-        },
-      };
-    });
+    return shares.map((share) => this.transformShare(share));
   }
 
   async get(id: string): Promise<any> {
@@ -315,8 +287,138 @@ export class ShareService {
     });
   }
 
+  async update(
+    shareId: string,
+    body: UpdateShareDTO,
+    user?: User,
+    share?: Share & { security?: ShareSecurity },
+  ) {
+    const currentShare =
+      share ||
+      (await this.prisma.share.findUnique({
+        where: { id: shareId },
+        include: { security: true },
+      }));
+
+    const isUpdaterAdmin = user?.isAdmin === true;
+    if (!currentShare.creatorId && !isUpdaterAdmin) {
+      throw new ForbiddenException("Anonymous shares can't be updated");
+    }
+
+    let expirationDate: Date | undefined;
+    if (body.expiration !== undefined) {
+      expirationDate = this.parseExpiration(body.expiration);
+      this.validateExpiration(expirationDate);
+    }
+
+    const data: Prisma.ShareUpdateInput = {
+      name: body.name !== undefined ? body.name || null : undefined,
+      description:
+        body.description !== undefined ? body.description || null : undefined,
+      expiration: expirationDate,
+    };
+
+    await this.prisma.share.update({
+      where: { id: shareId },
+      data,
+    });
+
+    if (body.security) {
+      await this.updateSecurity(shareId, body, currentShare.security);
+    }
+
+    const updatedShare = await this.prisma.share.findUnique({
+      where: { id: shareId },
+      include: { creator: true, files: true, recipients: true, security: true },
+    });
+
+    return this.transformShare(updatedShare);
+  }
+
+  private async updateSecurity(
+    shareId: string,
+    body: UpdateShareDTO,
+    currentSecurity?: ShareSecurity,
+  ) {
+    const nextPassword = body.security.removePassword
+      ? null
+      : body.security.password
+        ? await argon.hash(body.security.password)
+        : currentSecurity?.password;
+    const nextMaxViews =
+      body.security.maxViews !== undefined
+        ? body.security.maxViews
+        : currentSecurity?.maxViews;
+
+    if (!nextPassword && !nextMaxViews) {
+      if (currentSecurity) {
+        await this.prisma.shareSecurity.delete({ where: { shareId } });
+      }
+      return;
+    }
+
+    await this.prisma.shareSecurity.upsert({
+      where: { shareId },
+      create: {
+        share: { connect: { id: shareId } },
+        password: nextPassword,
+        maxViews: nextMaxViews,
+      },
+      update: {
+        password: nextPassword,
+        maxViews: nextMaxViews,
+      },
+    });
+  }
+
   async isShareCompleted(id: string) {
     return (await this.prisma.share.findUnique({ where: { id } })).uploadLocked;
+  }
+
+  private transformShare(share: any) {
+    return {
+      ...share,
+      size:
+        share.files?.reduce((acc, file) => acc + parseInt(file.size), 0) ?? 0,
+      recipients: share.recipients?.map((recipient) => recipient.email) ?? [],
+      security: {
+        maxViews: share.security?.maxViews,
+        passwordProtected: !!share.security?.password,
+      },
+    };
+  }
+
+  private parseExpiration(expiration: string) {
+    if (expiration === "never") return moment(0).toDate();
+
+    if (
+      /^\d+-(minute|hour|day|week|month|year|minutes|hours|days|weeks|months|years)$/.test(
+        expiration,
+      )
+    ) {
+      return parseRelativeDateToAbsolute(expiration);
+    }
+
+    const absoluteExpiration = moment(expiration, moment.ISO_8601, true);
+    if (absoluteExpiration.isValid()) return absoluteExpiration.toDate();
+
+    throw new BadRequestException("Invalid expiration date");
+  }
+
+  private validateExpiration(expiration: Date) {
+    const expiresNever = moment(expiration).isSame(0);
+    const maxExpiration = this.config.get("share.maxExpiration");
+
+    if (
+      maxExpiration.value !== 0 &&
+      (expiresNever ||
+        expiration >
+          moment().add(maxExpiration.value, maxExpiration.unit).toDate())
+    ) {
+      throw new BadRequestException(
+        "Expiration date exceeds maximum expiration date",
+      );
+    }
   }
 
   async isShareIdAvailable(id: string) {
@@ -363,19 +465,20 @@ export class ShareService {
       );
     }
 
-    const token = await this.generateShareToken(shareId);
+    const token = await this.generateShareToken(share);
     await this.increaseViewCount(share);
     return token;
   }
 
-  async generateShareToken(shareId: string) {
-    const { expiration, createdAt } = await this.prisma.share.findUnique({
-      where: { id: shareId },
-    });
+  async generateShareToken(share: Share & { security?: ShareSecurity }) {
+    const { id: shareId, expiration, createdAt, security } = share;
 
     const tokenPayload = {
       shareId,
       shareCreatedAt: moment(createdAt).unix(),
+      sharePasswordSignature: this.getSharePasswordSignature(
+        security?.password,
+      ),
       iat: moment().unix(),
     };
 
@@ -392,10 +495,11 @@ export class ShareService {
     return this.jwtService.sign(tokenPayload, tokenOptions);
   }
 
-  async verifyShareToken(shareId: string, token: string) {
-    const { expiration, createdAt } = await this.prisma.share.findUnique({
-      where: { id: shareId },
-    });
+  async verifyShareToken(
+    share: Share & { security?: ShareSecurity },
+    token: string,
+  ) {
+    const { expiration, createdAt, security } = share;
 
     try {
       const claims = this.jwtService.verify(token, {
@@ -405,11 +509,23 @@ export class ShareService {
       });
 
       return (
-        claims.shareId == shareId &&
-        claims.shareCreatedAt == moment(createdAt).unix()
+        claims.shareId == share.id &&
+        claims.shareCreatedAt == moment(createdAt).unix() &&
+        (!security?.password ||
+          claims.sharePasswordSignature ===
+            this.getSharePasswordSignature(security.password))
       );
     } catch {
       return false;
     }
+  }
+
+  private getSharePasswordSignature(password?: string) {
+    if (!password) return undefined;
+
+    return crypto
+      .createHmac("sha256", this.config.get("internal.jwtSecret"))
+      .update(password)
+      .digest("hex");
   }
 }

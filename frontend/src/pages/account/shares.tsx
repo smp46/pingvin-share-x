@@ -18,7 +18,7 @@ import { useEffect, useState } from "react";
 import { TbEdit, TbInfoCircle, TbLink, TbLock, TbTrash } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
-import showShareInformationsModal from "../../components/account/showShareInformationsModal";
+import showShareInformationsModal from "../../components/share/showShareInformationsModal";
 import showShareLinkModal from "../../components/account/showShareLinkModal";
 import { HoverTip } from "../../components/core/HoverTip";
 import CenterLoader from "../../components/core/CenterLoader";
@@ -89,7 +89,7 @@ const MyShares = () => {
                   <td>
                     <Group spacing="xs">
                       {share.id}{" "}
-                      {share.security.passwordProtected && (
+                      {share.security?.passwordProtected && (
                         <TbLock
                           color="orange"
                           title={t("account.shares.table.password-protected")}
@@ -99,7 +99,7 @@ const MyShares = () => {
                   </td>
                   <td>{share.name}</td>
                   <td>
-                    {share.security.maxViews ? (
+                    {share.security?.maxViews ? (
                       <FormattedMessage
                         id="account.shares.table.visitor-count"
                         values={{
@@ -139,6 +139,15 @@ const MyShares = () => {
                               parseInt(config.get("share.maxSize")),
                               config.get("general.appUrl"),
                               config.get("general.appUrl", true),
+                              config.get("share.maxExpiration"),
+                              (updatedShare) =>
+                                setShares(
+                                  shares.map((item) =>
+                                    item.id === updatedShare.id
+                                      ? updatedShare
+                                      : item,
+                                  ),
+                                ),
                             );
                           }}
                         >

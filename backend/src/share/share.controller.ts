@@ -5,6 +5,7 @@ import {
   Get,
   HttpCode,
   Param,
+  Patch,
   Post,
   Req,
   Res,
@@ -12,7 +13,7 @@ import {
 } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
 import { Throttle } from "@nestjs/throttler";
-import { User } from "@prisma/client";
+import { Share, ShareSecurity, User } from "@prisma/client";
 import { Request, Response } from "express";
 import * as moment from "moment";
 import { GetUser } from "src/auth/decorator/getUser.decorator";
@@ -24,6 +25,8 @@ import { MyShareDTO } from "./dto/myShare.dto";
 import { ShareDTO } from "./dto/share.dto";
 import { ShareMetaDataDTO } from "./dto/shareMetaData.dto";
 import { SharePasswordDto } from "./dto/sharePassword.dto";
+import { UpdateShareDTO } from "./dto/updateShare.dto";
+import { GetShare } from "./decorator/getShare.decorator";
 import { CreateShareGuard } from "./guard/createShare.guard";
 import { ShareOwnerGuard } from "./guard/shareOwner.guard";
 import { ShareSecurityGuard } from "./guard/shareSecurity.guard";
@@ -80,6 +83,19 @@ export class ShareController {
     const { reverse_share_token } = request.cookies;
     return new ShareDTO().from(
       await this.shareService.create(body, user, reverse_share_token),
+    );
+  }
+
+  @Patch(":id")
+  @UseGuards(IdValidation, ShareOwnerGuard)
+  async update(
+    @Param("id") id: string,
+    @Body() body: UpdateShareDTO,
+    @GetShare() share: Share & { security?: ShareSecurity },
+    @GetUser() user: User,
+  ) {
+    return new MyShareDTO().from(
+      await this.shareService.update(id, body, user, share),
     );
   }
 
