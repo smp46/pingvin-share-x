@@ -152,6 +152,22 @@ export const configVariables = {
       defaultValue:
         "Hey!\n\n{creator} ({creatorEmail}) shared some files with you. You can view or download the files with this link: {shareUrl}\n\nThe share will expire {expires}.\n\nNote: {desc}\n\nShared securely with Pingvin Share 🐧",
     },
+    shareRecipientsCreatorFallback: {
+      type: "string",
+      defaultValue: "Someone",
+    },
+    shareRecipientsDescFallback: {
+      type: "string",
+      defaultValue: "No description",
+    },
+    shareRecipientsExpiresNeverFallback: {
+      type: "string",
+      defaultValue: "in: never",
+    },
+    locale: {
+      type: "string",
+      defaultValue: "en",
+    },
     reverseShareSubject: {
       type: "string",
       defaultValue: "Reverse share link used",

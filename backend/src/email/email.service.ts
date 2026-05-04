@@ -68,15 +68,24 @@ export class EmailService {
       this.config
         .get("email.shareRecipientsMessage")
         .replaceAll("\\n", "\n")
-        .replaceAll("{creator}", creator?.username ?? "Someone")
+        .replaceAll(
+          "{creator}",
+          creator?.username ??
+            this.config.get("email.shareRecipientsCreatorFallback"),
+        )
         .replaceAll("{creatorEmail}", creator?.email ?? "")
         .replaceAll("{shareUrl}", shareUrl)
-        .replaceAll("{desc}", description ?? "No description")
+        .replaceAll(
+          "{desc}",
+          description ?? this.config.get("email.shareRecipientsDescFallback"),
+        )
         .replaceAll(
           "{expires}",
           moment(expiration).unix() != 0
-            ? moment(expiration).fromNow()
-            : "in: never",
+            ? moment(expiration)
+                .locale(this.config.get("email.locale"))
+                .fromNow()
+            : this.config.get("email.shareRecipientsExpiresNeverFallback"),
         ),
     );
   }

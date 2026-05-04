@@ -509,6 +509,22 @@ export default {
   "admin.config.email.share-recipients-message": "Share recipients message",
   "admin.config.email.share-recipients-message.description":
     "Message which gets sent to the share recipients. Available variables:\n {creator} - The username of the creator of the share\n {creatorEmail} - The email of the creator of the share\n {shareUrl} - The URL of the share\n {desc} - The description of the share\n {expires} - The expiration date of the share\n These variables will be replaced with the actual value.",
+  "admin.config.email.share-recipients-creator-fallback":
+    "Share recipients creator fallback",
+  "admin.config.email.share-recipients-creator-fallback.description":
+    "Text used in place of {creator} when the share creator has no username.",
+  "admin.config.email.share-recipients-desc-fallback":
+    "Share recipients description fallback",
+  "admin.config.email.share-recipients-desc-fallback.description":
+    "Text used in place of {desc} when the share has no description. Set to an empty string to omit the description entirely.",
+  "admin.config.email.share-recipients-expires-never-fallback":
+    "Share recipients no-expiration fallback",
+  "admin.config.email.share-recipients-expires-never-fallback.description":
+    "Text used in place of {expires} when the share never expires.",
+  "admin.config.email.locale":
+    "Email locale",
+  "admin.config.email.locale.description":
+    "Locale used to render relative expiration dates in the share recipients email (for example \"en\", \"de\", \"nl\"). Must be a locale supported by moment.js.",
   "admin.config.email.reverse-share-subject": "Reverse share subject",
   "admin.config.email.reverse-share-subject.description":
     "Subject of the sent email when someone created a share with your reverse share link.",
