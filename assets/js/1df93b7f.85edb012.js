@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkpingvindocs=globalThis.webpackChunkpingvindocs||[]).push([[583],{6866(n,i,s){s.r(i),s.d(i,{default:()=>t});s(6540);var o=s(6347),r=s(4848);function t(){return(0,r.jsx)(o.rd,{to:"/pingvin-share-x/introduction"})}}}]);
