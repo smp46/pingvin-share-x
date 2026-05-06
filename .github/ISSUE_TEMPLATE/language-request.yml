@@ -1,0 +1,19 @@
+name: "Language request"
+description: "You want to contribute to a language that isn't on Crowdin yet?"
+title: "Language request: <language name in english>"
+labels: [language-request]
+body:
+  - type: input
+    id: language-name-native
+    attributes:
+      label: "Language name (native)"
+      placeholder: "Schweizerdeutsch"
+    validations:
+      required: true
+  - type: input
+    id: language-code
+    attributes:
+      label: "Language code"
+      placeholder: "de-CH"
+    validations:
+      required: true

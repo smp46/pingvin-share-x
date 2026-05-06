@@ -32,7 +32,12 @@ For more installation options and advanced configurations, please refer to the [
 
 ## Contributing
 
-All contributions are welcome, including issues, feature suggestions, pull requests and more.
+All contributions are welcome, including issues, feature suggestions, pull requests and *translations*.
+
+### Translations
+
+This project supports 28 languages so far (to varying degrees), you can help complete
+those translations or add more at [CrowdIn](https://crowdin.com/project/pingvin-share-x).
 
 ### AI Usage Policy
 

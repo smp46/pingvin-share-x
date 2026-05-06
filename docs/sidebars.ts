@@ -54,6 +54,10 @@ const sidebars: SidebarsConfig = {
           type: "doc",
           id: "help-out/contribute",
         },
+        {
+          type: "doc",
+          id: "help-out/translation",
+        },
       ],
     },
   ],
