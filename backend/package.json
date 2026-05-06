@@ -36,6 +36,7 @@
     "body-parser": "^2.2.0",
     "cache-manager": "^6.4.2",
     "cacheable": "^1.9.0",
+    "check-disk-space": "^3.4.0",
     "clamscan": "^2.4.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
@@ -62,6 +63,8 @@
     "yaml": "^2.7.1"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.5",
+    "@eslint/js": "^9.39.4",
     "@nestjs/cli": "^11.0.16",
     "@nestjs/schematics": "^11.0.5",
     "@nestjs/testing": "^11.0.17",
@@ -89,6 +92,7 @@
     "ts-loader": "^9.5.2",
     "tsconfig-paths": "4.2.0",
     "typescript": "^5.8.3",
+    "typescript-eslint": "^8.59.2",
     "wait-on": "^8.0.3"
   }
 }

@@ -16,6 +16,7 @@ import { EmailService } from "src/email/email.service";
 import { FileService } from "src/file/file.service";
 import { PrismaService } from "src/prisma/prisma.service";
 import { ReverseShareService } from "src/reverseShare/reverseShare.service";
+import { SystemService } from "src/system/system.service";
 import { parseRelativeDateToAbsolute } from "src/utils/date.util";
 import { SHARE_DIRECTORY } from "../constants";
 import { CreateShareDTO } from "./dto/createShare.dto";
@@ -31,9 +32,17 @@ export class ShareService {
     private jwtService: JwtService,
     private reverseShareService: ReverseShareService,
     private clamScanService: ClamScanService,
+    private systemService: SystemService,
   ) {}
 
   async create(share: CreateShareDTO, user?: User, reverseShareToken?: string) {
+    if (share.size) {
+      const systemInfo = await this.systemService.getSystemInfo();
+      if (systemInfo && systemInfo.total - systemInfo.used < share.size) {
+        throw new BadRequestException("Not enough disk space available");
+      }
+    }
+
     if (!(await this.isShareIdAvailable(share.id)).isAvailable)
       throw new BadRequestException("Share id already in use");
 
@@ -75,9 +84,17 @@ export class ShareService {
       recursive: true,
     });
 
+    const {
+      size: _size,
+      security: _security,
+      recipients: _recipients,
+      expiration: _expiration,
+      ...shareData
+    } = share;
+
     const shareTuple = await this.prisma.share.create({
       data: {
-        ...share,
+        ...shareData,
         expiration: expirationDate,
         creator: { connect: user ? { id: user.id } : undefined },
         security: { create: share.security },

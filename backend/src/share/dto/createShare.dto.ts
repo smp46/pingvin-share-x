@@ -1,6 +1,7 @@
 import { Type } from "class-transformer";
 import {
   IsEmail,
+  IsNumber,
   IsOptional,
   IsString,
   Length,
@@ -35,4 +36,8 @@ export class CreateShareDTO {
   @ValidateNested()
   @Type(() => ShareSecurityDTO)
   security: ShareSecurityDTO;
+
+  @IsNumber()
+  @IsOptional()
+  size: number;
 }
