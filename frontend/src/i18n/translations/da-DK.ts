@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Du har ingen delinger.",
   "account.shares.button.create": "Opret en",
   "account.shares.info.title": "Share informations",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Navn",
   "account.shares.table.description": "Beskrivelse",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "Share informations",
   "account.shares.modal.share-link": "Del link",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "Ønsker du virkelig at slette denne deling?",
   // END /account/shares
