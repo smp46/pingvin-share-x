@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Δεν διαμοιράζεστε τίποτα.",
   "account.shares.button.create": "Δημιουργία",
   "account.shares.info.title": "Πληροφορίες διαμοιρασμού",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "Αναγνωριστικό",
   "account.shares.table.name": "Όνομα",
   "account.shares.table.description": "Περιγραφή",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "Πληροφορίες διαμοιρασμού",
   "account.shares.modal.share-link": "Κοινοποίηση συνδέσμου",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "Θέλετε πραγματικά να διαγράψετε αυτό το διαμοιρασμό;",
   // END /account/shares
