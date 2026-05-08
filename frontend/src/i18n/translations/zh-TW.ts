@@ -217,6 +217,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "檔案管理",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "分享 ID",
   "admin.shares.table.username": "建立者",
   "admin.shares.table.visitors": "造訪次數",
