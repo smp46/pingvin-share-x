@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "U heeft geen gedeelde bestanden.",
   "account.shares.button.create": "Maak er één",
   "account.shares.info.title": "Gegevens delen",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Naam",
   "account.shares.table.description": "Beschrijving",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "Gegevens delen",
   "account.shares.modal.share-link": "Deel link",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Share verwijderd: {share}",
   "account.shares.modal.delete.description": "Weet u zeker dat u deze share wilt verwijderen?",
   // END /account/shares
