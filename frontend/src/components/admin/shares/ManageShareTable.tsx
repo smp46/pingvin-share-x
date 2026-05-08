@@ -10,7 +10,7 @@ import {
 import { useClipboard } from "@mantine/hooks";
 import { useModals } from "@mantine/modals";
 import moment from "moment";
-import { TbEdit, TbLink, TbTrash } from "react-icons/tb";
+import { TbInfoCircle, TbLink, TbTrash } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import useConfig from "../../../hooks/config.hook";
 import useTranslate from "../../../hooks/useTranslate.hook";
@@ -111,11 +111,11 @@ const ManageShareTable = ({
                   )}
                   <td>
                     <Group position="right">
-                      <HoverTip label={t("common.button.edit")}>
+                      <HoverTip label={t("common.button.info")}>
                         <ActionIcon
                           color="blue"
                           variant="light"
-                          size="sm"
+                          size={25}
                           onClick={() => {
                             showShareInformationsModal(
                               modals,
@@ -125,11 +125,10 @@ const ManageShareTable = ({
                               config.get("general.appUrl", true),
                               config.get("share.maxExpiration"),
                               updateShare,
-                              true,
                             );
                           }}
                         >
-                          <TbEdit />
+                          <TbInfoCircle />
                         </ActionIcon>
                       </HoverTip>
                       <HoverTip label={t("common.button.copy-link")}>
@@ -160,7 +159,7 @@ const ManageShareTable = ({
                         <ActionIcon
                           variant="light"
                           color="red"
-                          size="sm"
+                          size={25}
                           onClick={() => deleteShare(share)}
                         >
                           <TbTrash />
