@@ -217,7 +217,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Управление Share",
-  "admin.shares.diskUsage": "Disk Usage",
+  "admin.shares.diskUsage": "Использование диска",
   "admin.shares.table.id": "ID раздачи (или Идентификатор раздачи)",
   "admin.shares.table.username": "Автор",
   "admin.shares.table.visitors": "Посетители",
