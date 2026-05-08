@@ -113,7 +113,7 @@ const ManageShareTable = ({
                     <Group position="right">
                       <HoverTip label={t("common.button.edit")}>
                         <ActionIcon
-                          color="orange"
+                          color="blue"
                           variant="light"
                           size="sm"
                           onClick={() => {

@@ -128,7 +128,7 @@ const MyShares = () => {
                     <Group position="right">
                       <Link href={`/share/${share.id}/edit`}>
                         <HoverTip label={t("account.shares.button.edit")}>
-                          <ActionIcon color="yellow" variant="light" size={25}>
+                          <ActionIcon color="orange" variant="light" size={25}>
                             <TbPlusMinus />
                           </ActionIcon>
                         </HoverTip>

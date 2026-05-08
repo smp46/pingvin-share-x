@@ -178,7 +178,7 @@ const Share = ({ shareId }: { shareId: string }) => {
             <>
               <HoverTip label={t("account.shares.button.edit")}>
                 <Link href={`/share/${shareId}/edit`}>
-                  <ActionIcon variant="light" color="yellow" size="lg">
+                  <ActionIcon variant="light" color="orange" size="lg">
                     <TbPlusMinus />
                   </ActionIcon>
                 </Link>
@@ -186,7 +186,7 @@ const Share = ({ shareId }: { shareId: string }) => {
               <HoverTip label={t("common.button.edit")}>
                 <ActionIcon
                   variant="light"
-                  color="victoria"
+                  color="blue"
                   size="lg"
                   onClick={handleEditClick}
                 >
