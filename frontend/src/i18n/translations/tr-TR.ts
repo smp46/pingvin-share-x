@@ -217,6 +217,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Paylaşım Yönetimi",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "Paylaşım ID",
   "admin.shares.table.username": "Oluşturan",
   "admin.shares.table.visitors": "Ziyaretçi Sayısı",
