@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Nie masz żadnych udziałów.",
   "account.shares.button.create": "Utwórz go",
   "account.shares.info.title": "Informacje udziału",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "Nr identyfikacyjny",
   "account.shares.table.name": "Nazwa",
   "account.shares.table.description": "Opis",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "Informacje udziału",
   "account.shares.modal.share-link": "Udostępnij link",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Usuń udostępnianie: {share}",
   "account.shares.modal.delete.description": "Czy na pewno chcesz usunąć to udostępnianie?",
   // END /account/shares
