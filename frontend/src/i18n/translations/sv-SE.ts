@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Du har inga delningar.",
   "account.shares.button.create": "Skapa en",
   "account.shares.info.title": "Information om delning",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Namn",
   "account.shares.table.description": "Beskrivning",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Aldrig",
   "account.shares.modal.share-informations": "Information om delning",
   "account.shares.modal.share-link": "Delningslänk",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Ta bort delning: {share}",
   "account.shares.modal.delete.description": "Vill du verkligen ta bort denna delning?",
   // END /account/shares
