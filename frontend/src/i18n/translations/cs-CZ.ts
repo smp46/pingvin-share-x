@@ -217,6 +217,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Správa sdílení",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "ID sdílení",
   "admin.shares.table.username": "Autor",
   "admin.shares.table.visitors": "Návštěvníci",
