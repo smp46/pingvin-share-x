@@ -152,6 +152,7 @@ export default {
   "account.shares.button.create": "Create one",
 
   "account.shares.info.title": "Share informations",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Name",
   "account.shares.table.description": "Description",
