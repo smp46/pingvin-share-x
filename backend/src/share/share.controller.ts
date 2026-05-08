@@ -29,6 +29,7 @@ import { UpdateShareDTO } from "./dto/updateShare.dto";
 import { GetShare } from "./decorator/getShare.decorator";
 import { CreateShareGuard } from "./guard/createShare.guard";
 import { ShareOwnerGuard } from "./guard/shareOwner.guard";
+import { StrictShareOwnerGuard } from "./guard/strictShareOwner.guard";
 import { ShareSecurityGuard } from "./guard/shareSecurity.guard";
 import { ShareTokenSecurity } from "./guard/shareTokenSecurity.guard";
 import { IdValidation } from "./guard/shareIdValidation.guard";
@@ -62,7 +63,7 @@ export class ShareController {
   }
 
   @Get(":id/from-owner")
-  @UseGuards(IdValidation, ShareOwnerGuard)
+  @UseGuards(IdValidation, StrictShareOwnerGuard)
   async getFromOwner(@Param("id") id: string) {
     return new ShareDTO().from(await this.shareService.get(id));
   }
@@ -101,7 +102,7 @@ export class ShareController {
 
   @Post(":id/complete")
   @HttpCode(202)
-  @UseGuards(IdValidation, CreateShareGuard, ShareOwnerGuard)
+  @UseGuards(IdValidation, CreateShareGuard, StrictShareOwnerGuard)
   async complete(@Param("id") id: string, @Req() request: Request) {
     const { reverse_share_token } = request.cookies;
     return new CompletedShareDTO().from(
@@ -110,7 +111,7 @@ export class ShareController {
   }
 
   @Delete(":id/complete")
-  @UseGuards(IdValidation, ShareOwnerGuard)
+  @UseGuards(IdValidation, StrictShareOwnerGuard)
   async revertComplete(@Param("id") id: string) {
     return new ShareDTO().from(await this.shareService.revertComplete(id));
   }

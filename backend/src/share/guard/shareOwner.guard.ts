@@ -50,8 +50,11 @@ export class ShareOwnerGuard extends JwtGuard {
     await super.canActivate(context);
     const user = request.user as User;
 
+    // If the user is the creator of the share, allow access
+    if (user && share.creatorId == user.id) return true;
+
     // If the user is an admin, allow access
-    if (user?.isAdmin) return true;
+    if (this.allowAdmin && user?.isAdmin) return true;
 
     // If it's a anonymous share, allow access
     if (!share.creatorId) return true;
@@ -59,7 +62,10 @@ export class ShareOwnerGuard extends JwtGuard {
     // If not signed in, deny access
     if (!user) return false;
 
-    // If the user is the creator of the share, allow access
-    return share.creatorId == user.id;
+    return false;
+  }
+
+  protected get allowAdmin(): boolean {
+    return true;
   }
 }

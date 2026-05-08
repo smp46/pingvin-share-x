@@ -15,6 +15,7 @@ import * as contentDisposition from "content-disposition";
 import { Response } from "express";
 import { CreateShareGuard } from "src/share/guard/createShare.guard";
 import { ShareOwnerGuard } from "src/share/guard/shareOwner.guard";
+import { StrictShareOwnerGuard } from "src/share/guard/strictShareOwner.guard";
 import { IdValidation } from "src/share/guard/shareIdValidation.guard";
 import { FileService } from "./file.service";
 import { FileSecurityGuard } from "./guard/fileSecurity.guard";
@@ -26,7 +27,7 @@ export class FileController {
 
   @Post()
   @SkipThrottle()
-  @UseGuards(IdValidation, CreateShareGuard, ShareOwnerGuard)
+  @UseGuards(IdValidation, CreateShareGuard, StrictShareOwnerGuard)
   async create(
     @Query()
     query: {
@@ -97,7 +98,7 @@ export class FileController {
 
   @Delete(":fileId")
   @SkipThrottle()
-  @UseGuards(ShareOwnerGuard)
+  @UseGuards(StrictShareOwnerGuard)
   async remove(
     @Param("fileId") fileId: string,
     @Param("shareId") shareId: string,

@@ -33,7 +33,9 @@ const Share = ({ shareId }: { shareId: string }) => {
   const config = useConfig();
   const t = useTranslate();
 
-  const isOwner =
+  const isOwner = !!user && !!share && share.creator?.id === user.id;
+
+  const isOwnerOrAdmin =
     !!user && !!share && (share.creator?.id === user.id || user.isAdmin);
 
   const handleEditClick = async () => {
@@ -175,25 +177,25 @@ const Share = ({ shareId }: { shareId: string }) => {
 
         <Group spacing="xs">
           {isOwner && (
-            <>
-              <HoverTip label={t("account.shares.button.edit")}>
-                <Link href={`/share/${shareId}/edit`}>
-                  <ActionIcon variant="light" color="orange" size="lg">
-                    <TbPlusMinus />
-                  </ActionIcon>
-                </Link>
-              </HoverTip>
-              <HoverTip label={t("common.button.edit")}>
-                <ActionIcon
-                  variant="light"
-                  color="blue"
-                  size="lg"
-                  onClick={handleEditClick}
-                >
-                  <TbEdit />
+            <HoverTip label={t("account.shares.button.edit")}>
+              <Link href={`/share/${shareId}/edit`}>
+                <ActionIcon variant="light" color="orange" size="lg">
+                  <TbPlusMinus />
                 </ActionIcon>
-              </HoverTip>
-            </>
+              </Link>
+            </HoverTip>
+          )}
+          {isOwnerOrAdmin && (
+            <HoverTip label={t("common.button.edit")}>
+              <ActionIcon
+                variant="light"
+                color="blue"
+                size="lg"
+                onClick={handleEditClick}
+              >
+                <TbEdit />
+              </ActionIcon>
+            </HoverTip>
           )}
           {share?.files.length > 1 && <DownloadAllButton shareId={shareId} />}
         </Group>
