@@ -217,6 +217,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Megosztáskezelés",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "Megosztás ID",
   "admin.shares.table.username": "Létrehozó",
   "admin.shares.table.visitors": "Látogatók",
