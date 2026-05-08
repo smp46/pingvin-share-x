@@ -217,6 +217,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "إدارة المشاركة",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "معرّف المشاركة",
   "admin.shares.table.username": "المُنشئ",
   "admin.shares.table.visitors": "الزوار",
