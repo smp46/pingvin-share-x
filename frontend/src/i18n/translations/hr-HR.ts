@@ -217,6 +217,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Upravljanje dijeljenjima",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "ID dijeljenja",
   "admin.shares.table.username": "Kreator",
   "admin.shares.table.visitors": "Posjetitelji",
