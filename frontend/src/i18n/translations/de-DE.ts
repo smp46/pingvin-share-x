@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Du hast keine Freigaben erstellt.",
   "account.shares.button.create": "Erstelle eine",
   "account.shares.info.title": "Freigabe Informationen",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Name",
   "account.shares.table.description": "Beschreibung",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "nie",
   "account.shares.modal.share-informations": "Teile deine Information",
   "account.shares.modal.share-link": "Freigabe teilen",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Freigabe löschen: {share}",
   "account.shares.modal.delete.description": "Möchtest du diese Freigabe wirklich löschen?",
   // END /account/shares
