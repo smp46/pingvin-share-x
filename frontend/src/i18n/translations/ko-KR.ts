@@ -217,6 +217,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "공유 관리",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "공유 ID",
   "admin.shares.table.username": "만든이",
   "admin.shares.table.visitors": "방문자",
