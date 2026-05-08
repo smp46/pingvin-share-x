@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Nimate nobenih deljenj.",
   "account.shares.button.create": "Ustvarite ga",
   "account.shares.info.title": "Delite informacije",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Ime",
   "account.shares.table.description": "Opis",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "Delite informacije",
   "account.shares.modal.share-link": "Delite povezavo",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "Ali res želite izbrisati to delitev?",
   // END /account/shares
