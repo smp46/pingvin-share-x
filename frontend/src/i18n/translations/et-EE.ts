@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Sul pole ühtegi jagamist.",
   "account.shares.button.create": "Loo üks",
   "account.shares.info.title": "Jagamise andmed",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Nimi",
   "account.shares.table.description": "Kirjeldus",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Mitte kunagi",
   "account.shares.modal.share-informations": "Jagamise andmed",
   "account.shares.modal.share-link": "Jagamise link",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Kustuta jagamine: {share}",
   "account.shares.modal.delete.description": "Kas soovid tõesti seda jagamist kustutada?",
   // END /account/shares
