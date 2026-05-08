@@ -66,7 +66,7 @@ export class ShareSecurityGuard extends JwtGuard {
         "share_password_required",
       );
 
-    if (!(await this.shareService.verifyShareToken(shareId, shareToken)))
+    if (!(await this.shareService.verifyShareToken(share, shareToken)))
       throw new ForbiddenException(
         "Share token required",
         "share_token_required",

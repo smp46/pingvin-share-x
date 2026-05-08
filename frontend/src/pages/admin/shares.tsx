@@ -65,6 +65,13 @@ const Shares = () => {
 
       <ManageShareTable
         shares={shares}
+        updateShare={(updatedShare) =>
+          setShares(
+            shares.map((share) =>
+              share.id === updatedShare.id ? updatedShare : share,
+            ),
+          )
+        }
         deleteShare={deleteShare}
         isLoading={isLoading}
       />
