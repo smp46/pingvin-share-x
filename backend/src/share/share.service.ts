@@ -524,7 +524,7 @@ export class ShareService {
     if (!password) return undefined;
 
     return crypto
-      .createHmac("sha256", this.config.get("internal.jwtSecret"))
+      .createHmac("sha512", this.config.get("internal.jwtSecret"))
       .update(password)
       .digest("hex");
   }
