@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "У вас немає завантажень.",
   "account.shares.button.create": "Створити одну",
   "account.shares.info.title": "Відомості",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Назва",
   "account.shares.table.description": "Опис",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Ніколи",
   "account.shares.modal.share-informations": "Відомості",
   "account.shares.modal.share-link": "Поділитися посиланням",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Видалити завантаження: {share}",
   "account.shares.modal.delete.description": "Ви дійсно хочете видалити це завантаження?",
   // END /account/shares
