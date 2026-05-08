@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Vous n’avez aucun partage.",
   "account.shares.button.create": "Créez-en un",
   "account.shares.info.title": "Détails du partage",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Nom",
   "account.shares.table.description": "Description",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Jamais",
   "account.shares.modal.share-informations": "Détails du partage",
   "account.shares.modal.share-link": "Lien de partage",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Supprimer le partage : {share}",
   "account.shares.modal.delete.description": "Voulez-vous vraiment supprimer ce partage ?",
   // END /account/shares
