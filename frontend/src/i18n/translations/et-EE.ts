@@ -217,6 +217,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Jagamiste haldus",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "Jagamise ID",
   "admin.shares.table.username": "Looja",
   "admin.shares.table.visitors": "Külastajad",
