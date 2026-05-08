@@ -27,6 +27,7 @@ export type CreateShare = {
   recipients: string[];
   expiration: string;
   security: ShareSecurity;
+  size?: number;
 };
 
 export type ShareMetaData = {

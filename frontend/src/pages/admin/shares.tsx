@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
 import ManageShareTable from "../../components/admin/shares/ManageShareTable";
+import DiskUsage from "../../components/admin/shares/DiskUsage";
 import useTranslate from "../../hooks/useTranslate.hook";
 import shareService from "../../services/share.service";
 import { MyShare } from "../../types/share.type";
@@ -55,10 +56,11 @@ const Shares = () => {
   return (
     <>
       <Meta title={t("admin.shares.title")} />
-      <Group position="apart" align="baseline" mb={20}>
-        <Title mb={30} order={3}>
+      <Group position="apart" align="center" mb={20}>
+        <Title mb={0} order={3}>
           <FormattedMessage id="admin.shares.title" />
         </Title>
+        <DiskUsage />
       </Group>
 
       <ManageShareTable

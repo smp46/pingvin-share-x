@@ -57,7 +57,11 @@ const Upload = ({
 
     try {
       const isReverseShare = router.pathname != "/upload";
-      createdShare = await shareService.create(share, isReverseShare);
+      const totalSize = files.reduce((acc, file) => acc + file.size, 0);
+      createdShare = await shareService.create(
+        { ...share, size: totalSize },
+        isReverseShare,
+      );
     } catch (e) {
       toast.axiosError(e);
       setisUploading(false);

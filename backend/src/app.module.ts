@@ -17,6 +17,7 @@ import { PrismaModule } from "./prisma/prisma.module";
 import { ReverseShareModule } from "./reverseShare/reverseShare.module";
 import { ShareModule } from "./share/share.module";
 import { UserModule } from "./user/user.module";
+import { SystemModule } from "./system/system.module";
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { UserModule } from "./user/user.module";
     PrismaModule,
     JobsModule,
     UserModule,
+    SystemModule,
     ThrottlerModule.forRoot([
       {
         ttl: 60,
