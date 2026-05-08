@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Você não tem nenhum compartilhamento.",
   "account.shares.button.create": "Crie um",
   "account.shares.info.title": "Informações do compartilhamento",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Nome",
   "account.shares.table.description": "Descrição",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Nunca",
   "account.shares.modal.share-informations": "Informações do compartilhamento",
   "account.shares.modal.share-link": "Link do compartilhamento",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Excluir o compartilhamento {share}",
   "account.shares.modal.delete.description": "Tem certeza que deseja excluir este compartilhamento?",
   // END /account/shares
