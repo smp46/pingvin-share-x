@@ -1,13 +1,15 @@
 import { ActionIcon, Menu } from "@mantine/core";
 import Link from "next/link";
-import { TbArrowLoopLeft, TbLink } from "react-icons/tb";
+import { TbArrowLoopLeft, TbLink, TbMailbox } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import { HoverTip } from "../../components/core/HoverTip";
+import useConfig from "../../hooks/config.hook";
 import useTranslate from "../../hooks/useTranslate.hook";
 import { useState } from "react";
 
 const NavbarShareMneu = () => {
   const t = useTranslate();
+  const config = useConfig();
   const [menuOpened, setMenuOpened] = useState(false);
 
   return (
@@ -32,6 +34,15 @@ const NavbarShareMneu = () => {
         >
           <FormattedMessage id="navbar.links.reverse" />
         </Menu.Item>
+        {config.get("share.enableUserRecipients") && (
+          <Menu.Item
+            component={Link}
+            href="/account/received"
+            icon={<TbMailbox />}
+          >
+            <FormattedMessage id="navbar.links.received" />
+          </Menu.Item>
+        )}
       </Menu.Dropdown>
     </Menu>
   );

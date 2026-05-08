@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Center,
+  useMantineTheme,
   Group,
   Space,
   Stack,
@@ -15,7 +16,7 @@ import { useModals } from "@mantine/modals";
 import moment from "moment";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { TbEdit, TbInfoCircle, TbLink, TbLock, TbTrash } from "react-icons/tb";
+import { TbEdit, TbInfoCircle, TbLink, TbLock, TbTrash, TbUserCheck } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
 import showShareInformationsModal from "../../components/account/showShareInformationsModal";
@@ -32,6 +33,7 @@ const MyShares = () => {
   const modals = useModals();
   const clipboard = useClipboard();
   const config = useConfig();
+  const theme = useMantineTheme();
   const t = useTranslate();
 
   const [shares, setShares] = useState<MyShare[]>();
@@ -84,7 +86,16 @@ const MyShares = () => {
               </tr>
             </thead>
             <tbody>
-              {shares.map((share) => (
+              {shares.map((share) => {
+                const openShareInformationsModal = () =>
+                  showShareInformationsModal(
+                    modals,
+                    share,
+                    parseInt(config.get("share.maxSize")),
+                    config.get("general.appUrl"),
+                    config.get("general.appUrl", true),
+                  );
+                return (
                 <tr key={share.id}>
                   <td>
                     <Group spacing="xs">
@@ -95,6 +106,17 @@ const MyShares = () => {
                           title={t("account.shares.table.password-protected")}
                         />
                       )}
+                      {config.get("share.enableUserRecipients") &&
+                        share.security.restrictToRecipients && (
+                          <TbUserCheck
+                            color={theme.colors[theme.primaryColor][6]}
+                            title={t(
+                              "upload.modal.accordion.email.restrict-to-recipients",
+                            )}
+                            style={{ cursor: "pointer" }}
+                            onClick={openShareInformationsModal}
+                          />
+                        )}
                     </Group>
                   </td>
                   <td>{share.name}</td>
@@ -132,15 +154,7 @@ const MyShares = () => {
                           color="blue"
                           variant="light"
                           size={25}
-                          onClick={() => {
-                            showShareInformationsModal(
-                              modals,
-                              share,
-                              parseInt(config.get("share.maxSize")),
-                              config.get("general.appUrl"),
-                              config.get("general.appUrl", true),
-                            );
-                          }}
+                          onClick={openShareInformationsModal}
                         >
                           <TbInfoCircle />
                         </ActionIcon>
@@ -206,7 +220,8 @@ const MyShares = () => {
                     </Group>
                   </td>
                 </tr>
-              ))}
+                );
+              })}
             </tbody>
           </Table>
         </Box>

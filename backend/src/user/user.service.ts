@@ -27,6 +27,18 @@ export class UserSevice {
     return await this.prisma.user.findMany();
   }
 
+  async verifyEmails(emails: string[]) {
+    const registered = await this.prisma.user.findMany({
+      where: { email: { in: emails } },
+      select: { email: true },
+    });
+    const registeredSet = new Set(registered.map((u) => u.email));
+    return {
+      registered: emails.filter((e) => registeredSet.has(e)),
+      unregistered: emails.filter((e) => !registeredSet.has(e)),
+    };
+  }
+
   async get(id: string) {
     return await this.prisma.user.findUnique({ where: { id } });
   }

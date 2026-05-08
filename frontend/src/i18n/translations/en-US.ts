@@ -7,6 +7,7 @@ export default {
 
   "navbar.links.shares": "My shares",
   "navbar.links.reverse": "Reverse shares",
+  "navbar.links.received": "Received shares",
 
   "navbar.avatar.account": "My account",
   "navbar.avatar.admin": "Administration",
@@ -171,6 +172,15 @@ export default {
     "Do you really want to delete this share?",
 
   // END /account/shares
+
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty":
+    "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Reverse shares",
@@ -349,6 +359,10 @@ export default {
   "upload.modal.accordion.email.title": "Email recipients",
   "upload.modal.accordion.email.placeholder": "Enter email recipients",
   "upload.modal.accordion.email.invalid-email": "Invalid email address",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Restrict access to these recipients only (requires all to have an account)",
+  "upload.modal.accordion.email.unregistered-warning":
+    "These addresses don't have an account and won't be able to access the share: {emails}",
 
   "upload.modal.accordion.security.title": "Security options",
   "upload.modal.accordion.security.password.label": "Password protection",
@@ -382,6 +396,10 @@ export default {
   "share.error.access-denied.title": "Private share",
   "share.error.access-denied.description":
     "The current account does not have permission to access this share",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description":
+    "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
 
   "share.modal.password.title": "Password required",
   "share.modal.password.description":
@@ -559,6 +577,9 @@ export default {
     "Allow admin access to all shares",
   "admin.config.share.allow-admin-access-all-shares.description":
     "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description":
+    "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description":
     "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled.",

@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "Registrera dig",
   "navbar.links.shares": "Mina delningar",
   "navbar.links.reverse": "Omvända delningar",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Mitt konto",
   "navbar.avatar.admin": "Administration",
   "navbar.avatar.signout": "Logga ut",
@@ -140,6 +141,14 @@ export default {
   "account.shares.modal.delete.description": "Vill du verkligen ta bort denna delning?",
   // END /account/shares
 
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
+
   // /account/reverseShares
   "account.reverseShares.title": "Omvända delningar",
   "account.reverseShares.description": "En omvänd delning gör att du kan generera en unik URL som tillåter externa användare att skapa en delning.",
@@ -269,6 +278,10 @@ export default {
   "upload.modal.accordion.email.title": "E-postmottagare",
   "upload.modal.accordion.email.placeholder": "Ange e-postmottagare",
   "upload.modal.accordion.email.invalid-email": "Ogiltig e-postadress",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Restrict access to these recipients only (requires all to have an account)",
+  "upload.modal.accordion.email.unregistered-warning":
+    "These addresses don't have an account and won't be able to access the share: {emails}",
   "upload.modal.accordion.security.title": "Säkerhetsalternativ",
   "upload.modal.accordion.security.password.label": "Lösenordsskydd",
   "upload.modal.accordion.security.password.placeholder": "Inget lösenord",
@@ -294,6 +307,10 @@ export default {
   "share.error.access-denied.title": "Privat delning",
   "share.error.access-denied.description": "Det aktuella kontot har inte behörighet att komma åt denna delning",
   "share.modal.password.title": "Lösenord krävs",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description":
+    "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.description": "Ange lösenordet för att komma åt denna delning.",
   "share.modal.password": "Lösenord",
   "share.modal.error.invalid-password": "Ogiltigt lösenord",
@@ -416,6 +433,9 @@ export default {
   "admin.config.share.auto-open-share-modal.description": "Modalen för att skapa delning visas automatiskt när en användare väljer filer, vilket tar bort behovet av att manuellt klicka på knappen.",
   "admin.config.share.allow-admin-access-all-shares": "Allow admin access to all shares",
   "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description":
+    "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled.",
   "admin.config.smtp.enabled": "Aktivera",

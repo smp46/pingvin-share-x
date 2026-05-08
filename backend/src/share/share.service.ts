@@ -49,8 +49,39 @@ export class ShareService {
     if (!share.security || Object.keys(share.security).length == 0)
       share.security = undefined;
 
+    if (share.security?.restrictToRecipients && share.security?.password) {
+      throw new BadRequestException(
+        "Cannot set a password on a share restricted to recipients.",
+      );
+    }
+
     if (share.security?.password) {
       share.security.password = await argon.hash(share.security.password);
+    }
+
+    if (
+      this.configService.get("share.enableUserRecipients") &&
+      share.security?.restrictToRecipients
+    ) {
+      if (!share.recipients?.length) {
+        throw new BadRequestException(
+          "A share restricted to recipients must have at least one recipient.",
+        );
+      }
+      const normalizedRecipients = share.recipients.map((e) => e.toLowerCase());
+      const registered = await this.prisma.user.findMany({
+        where: { email: { in: normalizedRecipients } },
+        select: { email: true },
+      });
+      const registeredEmails = new Set(registered.map((u) => u.email.toLowerCase()));
+      const unregistered = share.recipients.filter(
+        (e) => !registeredEmails.has(e.toLowerCase()),
+      );
+      if (unregistered.length > 0) {
+        throw new BadRequestException(
+          `Restricted access requires all recipients to have an account. Not registered: ${unregistered.join(", ")}`,
+        );
+      }
     }
 
     let expirationDate: Date;
@@ -179,6 +210,26 @@ export class ShareService {
       );
     }
 
+    // Auto-link email recipients who are registered users so the share appears in their dashboard
+    if (this.configService.get("share.enableUserRecipients")) {
+      const emails = share.recipients.map((r) => r.email);
+      if (emails.length > 0) {
+        const matchedUsers = await this.prisma.user.findMany({
+          where: { email: { in: emails } },
+          select: { id: true },
+        });
+        for (const matchedUser of matchedUsers) {
+          await this.prisma.shareUserRecipient.upsert({
+            where: {
+              userId_shareId: { userId: matchedUser.id, shareId: share.id },
+            },
+            create: { userId: matchedUser.id, shareId: share.id },
+            update: {},
+          });
+        }
+      }
+    }
+
     const notifyReverseShareCreator = share.reverseShare
       ? this.config.get("smtp.enabled") &&
         share.reverseShare.sendEmailNotification
@@ -260,6 +311,7 @@ export class ShareService {
         security: {
           maxViews: share.security?.maxViews,
           passwordProtected: !!share.security?.password,
+          restrictToRecipients: !!share.security?.restrictToRecipients,
         },
       };
     });
@@ -334,6 +386,22 @@ export class ShareService {
 
   async isShareCompleted(id: string) {
     return (await this.prisma.share.findUnique({ where: { id } })).uploadLocked;
+  }
+
+  async getReceivedShares(userId: string) {
+    return this.prisma.shareUserRecipient.findMany({
+      where: { userId },
+      include: {
+        share: {
+          include: {
+            creator: true,
+            files: true,
+            security: true,
+          },
+        },
+      },
+      orderBy: { createdAt: "desc" },
+    });
   }
 
   async isShareIdAvailable(id: string) {

@@ -36,7 +36,11 @@ export class ShareSecurityGuard extends JwtGuard {
 
     const share = await this.prisma.share.findUnique({
       where: { id: shareId },
-      include: { security: true, reverseShare: true },
+      include: {
+        security: true,
+        reverseShare: true,
+        userRecipients: { select: { userId: true } },
+      },
     });
 
     if (!share) throw new NotFoundException("Share not found");
@@ -58,6 +62,22 @@ export class ShareSecurityGuard extends JwtGuard {
       !moment(share.expiration).isSame(0)
     ) {
       throw new NotFoundException("Share not found");
+    }
+
+    // If user sharing is enabled, check if the authenticated user is a named recipient
+    if (this.configService.get("share.enableUserRecipients") && user) {
+      const isRecipient = share.userRecipients.some(
+        (r) => r.userId === user.id,
+      );
+      if (isRecipient) return true;
+    }
+
+    // If share is restricted to named recipients, block everyone else
+    if (share.security?.restrictToRecipients) {
+      throw new ForbiddenException(
+        "This share is restricted to specific recipients. Please log in to access it.",
+        "share_restricted_to_recipients",
+      );
     }
 
     if (share.security?.password && !shareToken)

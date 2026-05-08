@@ -1,6 +1,8 @@
-import { Box, Group, Text, Title } from "@mantine/core";
+import { Box, Button, Center, Group, Stack, Text, Title } from "@mantine/core";
 import { useModals } from "@mantine/modals";
 import { GetServerSidePropsContext } from "next";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import Meta from "../../../components/Meta";
@@ -22,7 +24,9 @@ export function getServerSideProps(context: GetServerSidePropsContext) {
 
 const Share = ({ shareId }: { shareId: string }) => {
   const modals = useModals();
+  const router = useRouter();
   const [share, setShare] = useState<ShareType>();
+  const [isRestricted, setIsRestricted] = useState(false);
   const t = useTranslate();
 
   const getShareToken = async (password?: string) => {
@@ -73,6 +77,11 @@ const Share = ({ shareId }: { shareId: string }) => {
               "go-home",
             );
           }
+        } else if (
+          e.response.status == 403 &&
+          error == "share_restricted_to_recipients"
+        ) {
+          setIsRestricted(true);
         } else if (e.response.status == 403 && error == "private_share") {
           showErrorModal(
             modals,
@@ -97,6 +106,27 @@ const Share = ({ shareId }: { shareId: string }) => {
   useEffect(() => {
     getFiles();
   }, []);
+
+  if (isRestricted) {
+    return (
+      <Center style={{ height: "70vh" }}>
+        <Stack align="center" spacing="md">
+          <Title order={3}>
+            <FormattedMessage id="share.error.restricted.title" />
+          </Title>
+          <Text color="dimmed" align="center">
+            <FormattedMessage id="share.error.restricted.description" />
+          </Text>
+          <Button
+            component={Link}
+            href={`/auth/signIn?redirect=/share/${shareId}`}
+          >
+            <FormattedMessage id="share.error.restricted.button" />
+          </Button>
+        </Stack>
+      </Center>
+    );
+  }
 
   return (
     <>

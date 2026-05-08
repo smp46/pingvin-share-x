@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "Registrazione",
   "navbar.links.shares": "Le mie condivisioni",
   "navbar.links.reverse": "Condivisioni Inverse",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Il mio account",
   "navbar.avatar.admin": "Amministrazione",
   "navbar.avatar.signout": "Esci",
@@ -140,6 +141,14 @@ export default {
   "account.shares.modal.delete.description": "Vuoi davvero cancellare questa condivisione?",
   // END /account/shares
 
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
+
   // /account/reverseShares
   "account.reverseShares.title": "Condivisione Inversa",
   "account.reverseShares.description": "Una condivisione inversa consente di generare un URL univoco che consente agli utenti esterni di creare una condivisione.",
@@ -269,6 +278,10 @@ export default {
   "upload.modal.accordion.email.title": "Destinatari di posta elettronica",
   "upload.modal.accordion.email.placeholder": "Inserisci le email dei destinatari",
   "upload.modal.accordion.email.invalid-email": "Indirizzo email non valido",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Restrict access to these recipients only (requires all to have an account)",
+  "upload.modal.accordion.email.unregistered-warning":
+    "These addresses don't have an account and won't be able to access the share: {emails}",
   "upload.modal.accordion.security.title": "Opzioni di sicurezza",
   "upload.modal.accordion.security.password.label": "Protezione con password",
   "upload.modal.accordion.security.password.placeholder": "Nessuna password",
@@ -294,6 +307,10 @@ export default {
   "share.error.access-denied.title": "Condivisione privata",
   "share.error.access-denied.description": "L' account non ha il premesso di accedere a questa condivisione",
   "share.modal.password.title": "Password richiesta",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description":
+    "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.description": "Per favore inserisci la password per accedere a questa condivisione.",
   "share.modal.password": "Password",
   "share.modal.error.invalid-password": "Password non valida",
@@ -416,6 +433,9 @@ export default {
   "admin.config.share.auto-open-share-modal.description": "La modalità di creazione della condivisione viene visualizzata automaticamente quando un utente seleziona i file, eliminando la necessità di fare clic manualmente sul pulsante.",
   "admin.config.share.allow-admin-access-all-shares": "Allow admin access to all shares",
   "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description":
+    "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled.",
   "admin.config.smtp.enabled": "Abilita",

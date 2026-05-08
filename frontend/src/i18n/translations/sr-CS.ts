@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "Registracija",
   "navbar.links.shares": "Moja deljenja",
   "navbar.links.reverse": "Obrnuto deljenje",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Moj nalog",
   "navbar.avatar.admin": "Administracija",
   "navbar.avatar.signout": "Odjavi se",
@@ -140,6 +141,14 @@ export default {
   "account.shares.modal.delete.description": "Da li zaista želite da izbrišete ovo deljenje?",
   // END /account/shares
 
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
+
   // /account/reverseShares
   "account.reverseShares.title": "Obrnuto deljenje",
   "account.reverseShares.description": "Obrnuto deljenje vam omogućava da generišete jedinstveni URL koji omogućava spoljnim korisnicima da kreiraju deljenje.",
@@ -269,6 +278,10 @@ export default {
   "upload.modal.accordion.email.title": "Primaoci imejla",
   "upload.modal.accordion.email.placeholder": "Unesite primaoce imejla",
   "upload.modal.accordion.email.invalid-email": "Neispravna adresa imejla",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Restrict access to these recipients only (requires all to have an account)",
+  "upload.modal.accordion.email.unregistered-warning":
+    "These addresses don't have an account and won't be able to access the share: {emails}",
   "upload.modal.accordion.security.title": "Sigurnosna podešavanja",
   "upload.modal.accordion.security.password.label": "Zaštita lozinkom",
   "upload.modal.accordion.security.password.placeholder": "Nema lozinke",
@@ -294,6 +307,10 @@ export default {
   "share.error.access-denied.title": "Privatno deljenje",
   "share.error.access-denied.description": "Trenutni nalog nema dozvolu za pristup ovom deljenju",
   "share.modal.password.title": "Obavezna lozinka",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description":
+    "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.description": "Molimo unesite lozinku za pristup ovom deljenju.",
   "share.modal.password": "Lozinka",
   "share.modal.error.invalid-password": "Neispravna lozinka",
@@ -416,6 +433,9 @@ export default {
   "admin.config.share.auto-open-share-modal.description": "Modal za kreiranje deljenja automatski se pojavljuje kada korisnik izabere datoteke, eliminišući potrebu za ručnim klikom na dugme.",
   "admin.config.share.allow-admin-access-all-shares": "Allow admin access to all shares",
   "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description":
+    "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled.",
   "admin.config.smtp.enabled": "Omogući",

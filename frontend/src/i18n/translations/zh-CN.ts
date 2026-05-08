@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "注册",
   "navbar.links.shares": "我的共享",
   "navbar.links.reverse": "预留共享",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "我的账户",
   "navbar.avatar.admin": "管理",
   "navbar.avatar.signout": "登出",
@@ -140,6 +141,14 @@ export default {
   "account.shares.modal.delete.description": "你真的想删除这个共享吗？",
   // END /account/shares
 
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
+
   // /account/reverseShares
   "account.reverseShares.title": "预留共享",
   "account.reverseShares.description": "预留共享允许你创建一个特定共享链接，以便外部用户以此链接创建共享",
@@ -269,6 +278,10 @@ export default {
   "upload.modal.accordion.email.title": "邮件提醒",
   "upload.modal.accordion.email.placeholder": "收件人电子邮件地址",
   "upload.modal.accordion.email.invalid-email": "邮件地址不可用",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Restrict access to these recipients only (requires all to have an account)",
+  "upload.modal.accordion.email.unregistered-warning":
+    "These addresses don't have an account and won't be able to access the share: {emails}",
   "upload.modal.accordion.security.title": "安全选项",
   "upload.modal.accordion.security.password.label": "密码保护",
   "upload.modal.accordion.security.password.placeholder": "无密码",
@@ -294,6 +307,10 @@ export default {
   "share.error.access-denied.title": "私有共享",
   "share.error.access-denied.description": "当前账户没有权限访问此共享",
   "share.modal.password.title": "需要密码",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description":
+    "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.description": "请输入密码以访问此共享。",
   "share.modal.password": "密码",
   "share.modal.error.invalid-password": "密码错误",
@@ -416,6 +433,9 @@ export default {
   "admin.config.share.auto-open-share-modal.description": "每当用户选择完将要被上传的文件后，自动打开创建共享的对话框。",
   "admin.config.share.allow-admin-access-all-shares": "Allow admin access to all shares",
   "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description":
+    "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled.",
   "admin.config.smtp.enabled": "启用",

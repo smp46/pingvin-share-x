@@ -112,6 +112,11 @@ export const configVariables = {
       defaultValue: "false",
       secret: false,
     },
+    enableUserRecipients: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
     fileRetentionPeriod: {
       type: "timespan",
       defaultValue: "0 days",
