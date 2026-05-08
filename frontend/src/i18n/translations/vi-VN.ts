@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "You don't have any shares.",
   "account.shares.button.create": "Create one",
   "account.shares.info.title": "Share informations",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Tên",
   "account.shares.table.description": "Mô tả",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "Share informations",
   "account.shares.modal.share-link": "Chia sẻ liên kết",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "Do you really want to delete this share?",
   // END /account/shares
