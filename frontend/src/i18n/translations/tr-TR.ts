@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Henüz hiç paylaşımınız yok.",
   "account.shares.button.create": "Bir tane oluştur",
   "account.shares.info.title": "Paylaşım bilgileri",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "İsim",
   "account.shares.table.description": "Açıklama",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Asla",
   "account.shares.modal.share-informations": "Paylaşım bilgileri",
   "account.shares.modal.share-link": "Paylaşım bağlantısı",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Paylaşımı sil: {share}",
   "account.shares.modal.delete.description": "Bu paylaşımı gerçekten silmek istiyor musunuz?",
   // END /account/shares
