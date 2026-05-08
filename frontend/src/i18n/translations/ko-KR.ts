@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "당신은 아무것도 공유한것이 없어요.",
   "account.shares.button.create": "파일 업로드",
   "account.shares.info.title": "공유 정보",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "이름",
   "account.shares.table.description": "설명",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "공유 정보",
   "account.shares.modal.share-link": "공유 링크",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "정말로 이 공유를 삭제하시겠습니까?",
   // END /account/shares
