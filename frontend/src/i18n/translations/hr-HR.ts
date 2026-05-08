@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Nemate nikakva dijeljenja.",
   "account.shares.button.create": "Kreirajte",
   "account.shares.info.title": "Informacije o dijeljenju",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Naziv",
   "account.shares.table.description": "Opis",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Nikad",
   "account.shares.modal.share-informations": "Informacije o dijeljenju",
   "account.shares.modal.share-link": "Podijelite poveznicu",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Izbriši dijeljenje {share}",
   "account.shares.modal.delete.description": "Jeste li sigurni da želite izbrisati ovo dijeljenje?",
   // END /account/shares
