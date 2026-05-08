@@ -217,6 +217,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Керування завантаженнями",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "ID Завантаження",
   "admin.shares.table.username": "Автор",
   "admin.shares.table.visitors": "Відвідувачі",
