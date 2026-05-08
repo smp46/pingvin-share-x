@@ -217,6 +217,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Διαχείριση κοινοποιήσεων",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "Αναγνωριστικό κοινοποίησης",
   "admin.shares.table.username": "Δημιουργός",
   "admin.shares.table.visitors": "Επισκέπτες",
