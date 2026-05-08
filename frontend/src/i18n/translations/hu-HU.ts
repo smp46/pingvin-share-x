@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Nincsenek megosztások.",
   "account.shares.button.create": "Létrehozás",
   "account.shares.info.title": "Megosztás adatai",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Megnevezés",
   "account.shares.table.description": "Leírás",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "Megosztás adatai",
   "account.shares.modal.share-link": "Hivatkozás",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Megosztás törlése: {share}",
   "account.shares.modal.delete.description": "Biztos abban, hogy törölni kívánja ezt a megosztást?",
   // END /account/shares
