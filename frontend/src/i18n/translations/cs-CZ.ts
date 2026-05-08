@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Nemáte žádná sdílení.",
   "account.shares.button.create": "Vytvořit",
   "account.shares.info.title": "Vlastnosti",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Název",
   "account.shares.table.description": "Popis",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Nikdy",
   "account.shares.modal.share-informations": "Vlastnosti",
   "account.shares.modal.share-link": "Odkaz na sdílení",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Odstranit sdílení {share}",
   "account.shares.modal.delete.description": "Opravdu chcete odstranit toto sdílení?",
   // END /account/shares
