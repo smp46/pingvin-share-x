@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "У вас нет загрузок.",
   "account.shares.button.create": "Создать одну",
   "account.shares.info.title": "Сведения",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Название",
   "account.shares.table.description": "Описание",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Никогда",
   "account.shares.modal.share-informations": "Сведения",
   "account.shares.modal.share-link": "Поделиться ссылкой",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Удалить раздачу: {share}",
   "account.shares.modal.delete.description": "Вы действительно хотите удалить эту загрузку?",
   // END /account/shares
