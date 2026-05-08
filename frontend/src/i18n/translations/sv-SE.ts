@@ -217,6 +217,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Delningshantering",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "Delnings ID",
   "admin.shares.table.username": "Skapare",
   "admin.shares.table.visitors": "Besökare",
