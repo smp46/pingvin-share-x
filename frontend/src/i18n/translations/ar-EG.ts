@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "ليس لديك أي مشاركات.",
   "account.shares.button.create": "أنشئ واحدًا",
   "account.shares.info.title": "معلومات المشاركة",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "الرقم التعريفي",
   "account.shares.table.name": "الاسم",
   "account.shares.table.description": "الوصف",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "معلومات المشاركة",
   "account.shares.modal.share-link": "رابط المشاركة",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "هل تريد حذف هذه المشاركة حقاً؟",
   // END /account/shares
