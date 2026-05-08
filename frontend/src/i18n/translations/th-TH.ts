@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "คุณยังไม่ได้สร้างแชร์ใดๆ",
   "account.shares.button.create": "สร้างแชร์",
   "account.shares.info.title": "ข้อมูลแชร์",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "ชื่อ",
   "account.shares.table.description": "คำอธิบาย",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "ข้อมูลแชร์",
   "account.shares.modal.share-link": "แชร์ลิงค์",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "คุณต้องการลบแชร์นี้หรือไม่?",
   // END /account/shares
