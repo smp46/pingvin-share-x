@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "您沒有建立任何分享",
   "account.shares.button.create": "建立分享",
   "account.shares.info.title": "分享資訊",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "分享代號",
   "account.shares.table.description": "描述",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "永不",
   "account.shares.modal.share-informations": "分享資訊",
   "account.shares.modal.share-link": "分享連結",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "刪除： {share}",
   "account.shares.modal.delete.description": "您真的想刪除這個分享嗎？",
   // END /account/shares
