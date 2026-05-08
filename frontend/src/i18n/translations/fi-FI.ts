@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Sinulla ei ole jaettuja tiedostoja.",
   "account.shares.button.create": "Luo yksi",
   "account.shares.info.title": "Jaetun tiedot",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Nimi",
   "account.shares.table.description": "Kuvaus",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "Jaetun tiedot",
   "account.shares.modal.share-link": "Jaa linkki",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "Haluatko todella poistaa tämän jaetun tiedoston/ot?",
   // END /account/shares
