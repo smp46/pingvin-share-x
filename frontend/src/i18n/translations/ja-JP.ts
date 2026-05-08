@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "共有しているアイテムがありません。",
   "account.shares.button.create": "新規作成",
   "account.shares.info.title": "共有情報",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "名前",
   "account.shares.table.description": "説明",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "なし",
   "account.shares.modal.share-informations": "共有情報",
   "account.shares.modal.share-link": "共有リンク",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "共有を削除: {share}",
   "account.shares.modal.delete.description": "この共有を削除してもよろしいですか？",
   // END /account/shares
