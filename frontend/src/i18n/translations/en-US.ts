@@ -442,6 +442,9 @@ export default {
   "admin.config.category.oauth": "Social Login",
   "admin.config.general.app-name": "App name",
   "admin.config.general.app-name.description": "Name of the application",
+  "admin.config.general.default-language": "Default Language",
+  "admin.config.general.default-language.description":
+    "This applies to all users, each user can still personalise their language in their profile.",
   "admin.config.appearance.theme-primary-color": "Theme primary color",
   "admin.config.appearance.theme-primary-color.description":
     "Primary color used for buttons, links, and accents. Choose custom to use a color picker override.",
