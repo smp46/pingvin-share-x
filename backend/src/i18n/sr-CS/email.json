@@ -6,5 +6,6 @@
   "emailServiceDisabled": "Usluga e-pošte je onemogućena",
   "testSubject": "Test e-pošta",
   "testText": "Ovo je test e-pošta",
-  "sendFailed": "Slanje e-pošte nije uspelo"
+  "sendFailed": "Slanje e-pošte nije uspelo",
+  "locale": "sr-CS"
 }

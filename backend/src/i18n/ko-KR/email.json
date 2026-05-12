@@ -6,5 +6,6 @@
   "emailServiceDisabled": "이메일 서비스가 비활성화되었습니다",
   "testSubject": "테스트 이메일",
   "testText": "이것은 테스트 이메일입니다",
-  "sendFailed": "이메일 전송에 실패했습니다"
+  "sendFailed": "이메일 전송에 실패했습니다",
+  "locale": "ko-KR"
 }

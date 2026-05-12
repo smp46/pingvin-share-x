@@ -6,5 +6,6 @@
   "emailServiceDisabled": "Usługa e-mail jest wyłączona",
   "testSubject": "Wiadomość testowa",
   "testText": "To jest wiadomość testowa",
-  "sendFailed": "Nie udało się wysłać e-maila"
+  "sendFailed": "Nie udało się wysłać e-maila",
+  "locale": "pl-PL"
 }

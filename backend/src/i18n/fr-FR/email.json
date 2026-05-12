@@ -6,5 +6,6 @@
   "emailServiceDisabled": "Service d'email désactivé",
   "testSubject": "Email de test",
   "testText": "Ceci est un email de test",
-  "sendFailed": "Échec de l'envoi de l'email"
+  "sendFailed": "Échec de l'envoi de l'email",
+  "locale": "fr-FR"
 }

@@ -6,5 +6,6 @@
   "emailServiceDisabled": "E-mail szolgáltatás letiltva",
   "testSubject": "Teszt e-mail",
   "testText": "Ez egy teszt e-mail",
-  "sendFailed": "Az e-mail küldése nem sikerült"
+  "sendFailed": "Az e-mail küldése nem sikerült",
+  "locale": "hu-HU"
 }

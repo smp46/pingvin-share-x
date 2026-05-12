@@ -6,5 +6,6 @@
   "emailServiceDisabled": "E-posttjänsten är inaktiverad",
   "testSubject": "Testmeddelande",
   "testText": "Detta är ett testmeddelande",
-  "sendFailed": "Misslyckades med att skicka e-post"
+  "sendFailed": "Misslyckades med att skicka e-post",
+  "locale": "sv-SE"
 }

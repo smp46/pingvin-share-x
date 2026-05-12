@@ -6,5 +6,6 @@
   "emailServiceDisabled": "ปิดใช้งานบริการอีเมล",
   "testSubject": "อีเมลทดสอบ",
   "testText": "นี่คืออีเมลทดสอบ",
-  "sendFailed": "ส่งอีเมลไม่สำเร็จ"
+  "sendFailed": "ส่งอีเมลไม่สำเร็จ",
+  "locale": "th-TH"
 }

@@ -6,5 +6,6 @@
   "emailServiceDisabled": "E-posti teenus on keelatud",
   "testSubject": "Test-e-kiri",
   "testText": "See on test-e-kiri",
-  "sendFailed": "E-kirja saatmine ebaõnnestus"
+  "sendFailed": "E-kirja saatmine ebaõnnestus",
+  "locale": "et-EE"
 }

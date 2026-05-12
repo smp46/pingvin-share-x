@@ -6,5 +6,6 @@
   "emailServiceDisabled": "Sähköpostipalvelu on poistettu käytöstä",
   "testSubject": "Testisähköposti",
   "testText": "Tämä on testisähköposti",
-  "sendFailed": "Sähköpostin lähettäminen epäonnistui"
+  "sendFailed": "Sähköpostin lähettäminen epäonnistui",
+  "locale": "fi-FI"
 }

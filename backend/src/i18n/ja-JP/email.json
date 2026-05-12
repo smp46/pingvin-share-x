@@ -6,5 +6,6 @@
   "emailServiceDisabled": "メールサービスが無効になっています",
   "testSubject": "テストメール",
   "testText": "これはテストメールです",
-  "sendFailed": "メールの送信に失敗しました"
+  "sendFailed": "メールの送信に失敗しました",
+  "locale": "ja-JP"
 }

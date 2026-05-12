@@ -6,5 +6,6 @@
   "emailServiceDisabled": "E-mail-tjeneste deaktiveret",
   "testSubject": "Test-e-mail",
   "testText": "Dette er en test-e-mail",
-  "sendFailed": "Kunne ikke sende e-mail"
+  "sendFailed": "Kunne ikke sende e-mail",
+  "locale": "da-DK"
 }

@@ -6,5 +6,6 @@
   "emailServiceDisabled": "E-posta servisi devre dışı",
   "testSubject": "Test e-postası",
   "testText": "Bu bir test e-postasıdır",
-  "sendFailed": "E-posta gönderilemedi"
+  "sendFailed": "E-posta gönderilemedi",
+  "locale": "tr-TR"
 }

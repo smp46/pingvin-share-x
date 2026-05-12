@@ -67,6 +67,8 @@ export class EmailService {
       );
 
     const shareUrl = `${this.config.get("general.appUrl")}/s/${shareId}`;
+    const lang = "";
+    const locale = this.i18n.translate("email.locale", { lang });
 
     await this.sendMail(
       recipientEmail,
@@ -88,7 +90,7 @@ export class EmailService {
         .replaceAll(
           "{expires}",
           moment(expiration).unix() != 0
-            ? moment(expiration).fromNow()
+            ? moment(expiration).locale(locale).fromNow()
             : this.i18n.t("email.shareRecipientsExpiresNeverFallback"),
         ),
     );

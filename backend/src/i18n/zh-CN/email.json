@@ -6,5 +6,6 @@
   "emailServiceDisabled": "电子邮件服务已禁用",
   "testSubject": "测试邮件",
   "testText": "这是一封测试邮件",
-  "sendFailed": "发送邮件失败"
+  "sendFailed": "发送邮件失败",
+  "locale": "zh-CN"
 }

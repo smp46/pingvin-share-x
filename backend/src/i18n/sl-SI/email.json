@@ -6,5 +6,6 @@
   "emailServiceDisabled": "Storitev e-pošte je onemogočena",
   "testSubject": "Testno e-poštno sporočilo",
   "testText": "To je testno e-poštno sporočilo",
-  "sendFailed": "E-poštnega sporočila ni bilo mogoče poslati"
+  "sendFailed": "E-poštnega sporočila ni bilo mogoče poslati",
+  "locale": "sl-SI"
 }

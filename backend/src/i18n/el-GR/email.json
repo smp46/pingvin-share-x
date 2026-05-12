@@ -6,5 +6,6 @@
   "emailServiceDisabled": "Η υπηρεσία email είναι απενεργοποιημένη",
   "testSubject": "Email δοκιμής",
   "testText": "Αυτό είναι ένα email δοκιμής",
-  "sendFailed": "Αποτυχία αποστολής email"
+  "sendFailed": "Αποτυχία αποστολής email",
+  "locale": "el-GR"
 }

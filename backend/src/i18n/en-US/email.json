@@ -6,5 +6,6 @@
   "emailServiceDisabled": "Email service disabled",
   "testSubject": "Test email",
   "testText": "This is a test email",
-  "sendFailed": "Failed to send email"
+  "sendFailed": "Failed to send email",
+  "locale": "en-US"
 }

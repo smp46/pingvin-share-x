@@ -6,5 +6,6 @@
   "emailServiceDisabled": "Dịch vụ email bị vô hiệu hóa",
   "testSubject": "Email kiểm tra",
   "testText": "Đây là một email kiểm tra",
-  "sendFailed": "Gửi email thất bại"
+  "sendFailed": "Gửi email thất bại",
+  "locale": "vi-VN"
 }
