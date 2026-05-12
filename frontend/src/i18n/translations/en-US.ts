@@ -584,6 +584,14 @@ export default {
   "admin.config.smtp.password": "Password",
   "admin.config.smtp.password.description": "Password of the SMTP server",
   "admin.config.smtp.button.test": "Send test email",
+  "admin.config.smtp.test-email.success": "Email sent successfully",
+  "admin.config.smtp.test-email.error.title": "Failed to send email",
+  "admin.config.smtp.test-email.error.description":
+    "While sending the test email, the following error occurred:",
+  "admin.config.smtp.test-email.save.title": "Save configuration",
+  "admin.config.smtp.test-email.save.description":
+    "To continue you need to save the configuration first. Do you want to save the configuration and send the test email?",
+  "admin.config.smtp.test-email.save.confirm": "Save and send",
   "admin.config.smtp.allow-unauthorized-certificates":
     "Trust unauthorized SMTP server certificates",
   "admin.config.smtp.allow-unauthorized-certificates.description":
