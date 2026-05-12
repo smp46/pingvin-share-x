@@ -6,16 +6,20 @@ import {
 import { User } from "@prisma/client";
 import * as moment from "moment";
 import * as nodemailer from "nodemailer";
+import { I18nService } from "nestjs-i18n";
 import { ConfigService } from "src/config/config.service";
 
 @Injectable()
 export class EmailService {
-  constructor(private config: ConfigService) {}
+  constructor(
+    private config: ConfigService,
+    private readonly i18n: I18nService,
+  ) {}
   private readonly logger = new Logger(EmailService.name);
 
   getTransporter() {
     if (!this.config.get("smtp.enabled"))
-      throw new InternalServerErrorException("SMTP is disabled");
+      throw new InternalServerErrorException(this.i18n.t("email.smtpDisabled"));
 
     const username = this.config.get("smtp.username");
     const password = this.config.get("smtp.password");
@@ -46,7 +50,7 @@ export class EmailService {
       })
       .catch((e) => {
         this.logger.error(e);
-        throw new InternalServerErrorException("Failed to send email");
+        throw new InternalServerErrorException(this.i18n.t("email.sendFailed"));
       });
   }
 
@@ -58,7 +62,9 @@ export class EmailService {
     expiration?: Date,
   ) {
     if (!this.config.get("email.enableShareEmailRecipients"))
-      throw new InternalServerErrorException("Email service disabled");
+      throw new InternalServerErrorException(
+        this.i18n.t("email.emailServiceDisabled"),
+      );
 
     const shareUrl = `${this.config.get("general.appUrl")}/s/${shareId}`;
 
@@ -68,15 +74,22 @@ export class EmailService {
       this.config
         .get("email.shareRecipientsMessage")
         .replaceAll("\\n", "\n")
-        .replaceAll("{creator}", creator?.username ?? "Someone")
+        .replaceAll(
+          "{creator}",
+          creator?.username ??
+            this.i18n.t("email.shareRecipientsCreatorFallback"),
+        )
         .replaceAll("{creatorEmail}", creator?.email ?? "")
         .replaceAll("{shareUrl}", shareUrl)
-        .replaceAll("{desc}", description ?? "No description")
+        .replaceAll(
+          "{desc}",
+          description ?? this.i18n.t("email.shareRecipientsDescFallback"),
+        )
         .replaceAll(
           "{expires}",
           moment(expiration).unix() != 0
             ? moment(expiration).fromNow()
-            : "in: never",
+            : this.i18n.t("email.shareRecipientsExpiresNeverFallback"),
         ),
     );
   }
@@ -130,8 +143,8 @@ export class EmailService {
           "smtp.email",
         )}>`,
         to: recipientEmail,
-        subject: "Test email",
-        text: "This is a test email",
+        subject: this.i18n.t("email.testSubject"),
+        text: this.i18n.t("email.testText"),
       })
       .catch((e) => {
         this.logger.error(e);

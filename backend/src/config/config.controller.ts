@@ -16,6 +16,7 @@ import {
 import { FileInterceptor } from "@nestjs/platform-express";
 import { SkipThrottle } from "@nestjs/throttler";
 import { createKeyv } from "@keyv/redis";
+import { I18nService } from "nestjs-i18n";
 import { AdministratorGuard } from "src/auth/guard/isAdmin.guard";
 import { JwtGuard } from "src/auth/guard/jwt.guard";
 import { EmailService } from "src/email/email.service";
@@ -32,6 +33,7 @@ export class ConfigController {
     private configService: ConfigService,
     private logoService: LogoService,
     private emailService: EmailService,
+    private readonly i18n: I18nService,
   ) {}
 
   @Get()
@@ -69,7 +71,7 @@ export class ConfigController {
     const enabled = this.configService.get("cache.redis-enabled");
 
     if (!redisUrl) {
-      throw new InternalServerErrorException("Redis URL is not set");
+      throw new InternalServerErrorException(this.i18n.t("config.redisUrlNotSet"));
     }
 
     const withTimeout = async <T>(
@@ -82,7 +84,12 @@ export class ConfigController {
           promise,
           new Promise<T>((_, reject) => {
             timeout = setTimeout(
-              () => reject(new GatewayTimeoutException("Redis timed out")),
+              () =>
+                reject(
+                  new GatewayTimeoutException(
+                    this.i18n.t("config.redisTimedOut"),
+                  ),
+                ),
               timeoutMs,
             );
           }),
@@ -97,7 +104,8 @@ export class ConfigController {
         url: redisUrl,
         socket: {
           connectTimeout: 3000,
-          reconnectStrategy: () => new Error("Redis connection failed"),
+          reconnectStrategy: () =>
+            new Error(this.i18n.t("config.redisConnectionFailed")),
         },
       } as any,
       { namespace: "pingvin" },
@@ -108,7 +116,7 @@ export class ConfigController {
       await withTimeout(keyv.set(testKey, "ok", 5000), 5000);
       const value = await withTimeout(keyv.get(testKey), 5000);
       if (value !== "ok") {
-        throw new Error("Unexpected response from Redis");
+        throw new Error(this.i18n.t("config.redisUnexpectedResponse"));
       }
 
       return { ok: true, enabled };
@@ -117,7 +125,7 @@ export class ConfigController {
       const message =
         typeof e?.message === "string"
           ? `${e?.name ? `${e.name}: ` : ""}${e.message}`
-          : "Redis error";
+          : this.i18n.t("config.redisError");
       throw new InternalServerErrorException(message);
     } finally {
       const store: any = (keyv as any).store;

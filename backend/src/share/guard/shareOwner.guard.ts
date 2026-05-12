@@ -6,6 +6,7 @@ import {
 } from "@nestjs/common";
 import { User } from "@prisma/client";
 import { Request } from "express";
+import { I18nService } from "nestjs-i18n";
 import { ConfigService } from "src/config/config.service";
 import { PrismaService } from "src/prisma/prisma.service";
 import { JwtGuard } from "../../auth/guard/jwt.guard";
@@ -15,6 +16,7 @@ export class ShareOwnerGuard extends JwtGuard {
   constructor(
     configService: ConfigService,
     private prisma: PrismaService,
+    private readonly i18n: I18nService,
   ) {
     super(configService);
   }
@@ -34,7 +36,7 @@ export class ShareOwnerGuard extends JwtGuard {
       : request.params.id;
 
     if (!this.isBase64(shareId)) {
-      throw new BadRequestException("Invalid ID format");
+      throw new BadRequestException(this.i18n.t("file.invalidIdFormat"));
     }
 
     const share = await this.prisma.share.findUnique({
@@ -42,7 +44,7 @@ export class ShareOwnerGuard extends JwtGuard {
       include: { security: true },
     });
 
-    if (!share) throw new NotFoundException("Share not found");
+    if (!share) throw new NotFoundException(this.i18n.t("share.notFound"));
 
     (request as any).share = share;
 

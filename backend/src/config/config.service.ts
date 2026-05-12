@@ -12,6 +12,7 @@ import * as fs from "fs";
 import { PrismaService } from "src/prisma/prisma.service";
 import { stringToTimespan } from "src/utils/date.util";
 import { parse as yamlParse } from "yaml";
+import { I18nContext } from "nestjs-i18n";
 import { YamlConfig } from "../../prisma/seed/config.seed";
 import { CONFIG_FILE } from "src/constants";
 
@@ -139,7 +140,10 @@ export class ConfigService extends EventEmitter {
   async updateMany(data: { key: string; value: string | number | boolean }[]) {
     if (!this.isEditAllowed())
       throw new BadRequestException(
-        "You are only allowed to update config variables via the config.yaml file",
+        this.t(
+          "config.editNotAllowed",
+          "You are only allowed to update config variables via the config.yaml file",
+        ),
       );
 
     const response: Config[] = [];
@@ -154,7 +158,10 @@ export class ConfigService extends EventEmitter {
   async update(key: string, value: string | number | boolean) {
     if (!this.isEditAllowed())
       throw new BadRequestException(
-        "You are only allowed to update config variables via the config.yaml file",
+        this.t(
+          "config.editNotAllowed",
+          "You are only allowed to update config variables via the config.yaml file",
+        ),
       );
 
     const configVariable = await this.prisma.config.findUnique({
@@ -167,7 +174,9 @@ export class ConfigService extends EventEmitter {
     });
 
     if (!configVariable || configVariable.locked)
-      throw new NotFoundException("Config variable not found");
+      throw new NotFoundException(
+        this.t("config.variableNotFound", "Config variable not found"),
+      );
 
     if (value === "") {
       value = null;
@@ -178,7 +187,9 @@ export class ConfigService extends EventEmitter {
       configVariable.type != "timespan"
     ) {
       throw new BadRequestException(
-        `Config variable must be of type ${configVariable.type}`,
+        this.t("config.invalidType", "Config variable must be of type {type}", {
+          type: configVariable.type,
+        }),
       );
     }
 
@@ -206,12 +217,18 @@ export class ConfigService extends EventEmitter {
       {
         key: "share.shareIdLength",
         condition: (value: number) => value >= 2 && value <= 50,
-        message: "Share ID length must be between 2 and 50",
+        message: this.t(
+          "config.shareIdLengthValidation",
+          "Share ID length must be between 2 and 50",
+        ),
       },
       {
         key: "share.zipCompressionLevel",
         condition: (value: number) => value >= 0 && value <= 9,
-        message: "Zip compression level must be between 0 and 9",
+        message: this.t(
+          "config.zipCompressionLevelValidation",
+          "Zip compression level must be between 0 and 9",
+        ),
       },
       // TODO add validation for timespan type
     ];
@@ -224,5 +241,20 @@ export class ConfigService extends EventEmitter {
 
   isEditAllowed(): boolean {
     return this.yamlConfig === undefined || this.yamlConfig === null;
+  }
+
+  private t(
+    key: string,
+    fallback: string,
+    args?: Record<string, string | number | boolean>,
+  ) {
+    const translated = I18nContext.current()?.t(key, { args });
+    if (translated && translated !== key) return translated;
+
+    return Object.entries(args ?? {}).reduce(
+      (message, [argKey, value]) =>
+        message.replaceAll(`{${argKey}}`, String(value)),
+      fallback,
+    );
   }
 }

@@ -3,6 +3,7 @@ import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 import * as argon from "argon2";
 import * as crypto from "crypto";
 import { Entry } from "ldapts";
+import { I18nService } from "nestjs-i18n";
 import { AuthSignInDTO } from "src/auth/dto/authSignIn.dto";
 import { EmailService } from "src/email/email.service";
 import { PrismaService } from "src/prisma/prisma.service";
@@ -21,6 +22,7 @@ export class UserSevice {
     private emailService: EmailService,
     private fileService: FileService,
     private configService: ConfigService,
+    private readonly i18n: I18nService,
   ) {}
 
   async list() {
@@ -55,7 +57,9 @@ export class UserSevice {
         if (e.code == "P2002") {
           const duplicatedField: string = e.meta.target[0];
           throw new BadRequestException(
-            `A user with this ${duplicatedField} already exists`,
+            this.i18n.t("auth.userAlreadyExists", {
+              args: { field: duplicatedField },
+            }),
           );
         }
       }
@@ -75,7 +79,9 @@ export class UserSevice {
         if (e.code == "P2002") {
           const duplicatedField: string = e.meta.target[0];
           throw new BadRequestException(
-            `A user with this ${duplicatedField} already exists`,
+            this.i18n.t("auth.userAlreadyExists", {
+              args: { field: duplicatedField },
+            }),
           );
         }
       }
@@ -87,7 +93,7 @@ export class UserSevice {
       where: { id },
       include: { shares: true },
     });
-    if (!user) throw new BadRequestException("User not found");
+    if (!user) throw new BadRequestException(this.i18n.t("auth.userNotFound"));
 
     if (user.isAdmin) {
       const userCount = await this.prisma.user.count({
@@ -95,7 +101,7 @@ export class UserSevice {
       });
 
       if (userCount === 1) {
-        throw new BadRequestException("Cannot delete the last admin user");
+        throw new BadRequestException(this.i18n.t("auth.cannotDeleteLastAdmin"));
       }
     }
 
@@ -219,7 +225,9 @@ export class UserSevice {
         if (e.code == "P2002") {
           const duplicatedField: string = e.meta.target[0];
           throw new BadRequestException(
-            `A user with this ${duplicatedField} already exists`,
+            this.i18n.t("auth.userAlreadyExists", {
+              args: { field: duplicatedField },
+            }),
           );
         }
       }

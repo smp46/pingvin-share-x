@@ -1,0 +1,4 @@
+{
+  "notFound": "Reverse share token not found",
+  "maxShareSizeExceeded": "Max share size can't be greater than {maxSize} bytes."
+}
