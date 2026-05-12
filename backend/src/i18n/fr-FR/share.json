@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "Espace disque insuffisant",
+  "idInUse": "ID de partage déjà utilisé",
+  "alreadyCompleted": "Partage déjà terminé",
+  "completionRequiresFile": "Vous avez besoin d'au moins un fichier dans votre partage pour le terminer.",
+  "notFound": "Partage non trouvé",
+  "anonymousNoDelete": "Les partages anonymes ne peuvent pas être supprimés",
+  "anonymousNoExpire": "Les partages anonymes ne peuvent pas expirer",
+  "anonymousNoUpdate": "Les partages anonymes ne peuvent pas être mis à jour",
+  "invalidExpiration": "Date d'expiration invalide",
+  "maxExpirationExceeded": "La date d'expiration dépasse la date d'expiration maximale",
+  "wrongPassword": "Mauvais mot de passe",
+  "tokenRequired": "Jeton de partage requis",
+  "privateShare": "Seul le créateur du partage inversé peut accéder à ce partage",
+  "maxViewsExceeded": "Nombre maximal de vues dépassé"
+}

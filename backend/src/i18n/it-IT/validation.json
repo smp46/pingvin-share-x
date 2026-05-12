@@ -1,0 +1,4 @@
+{
+  "usernamePattern": "Il nome utente può contenere solo lettere, numeri, punti e trattini bassi",
+  "idPattern": "L'ID può contenere solo lettere, numeri, trattini bassi e trattini"
+}

@@ -1,0 +1,4 @@
+{
+  "usernamePattern": "O nome de usuário pode conter apenas letras, números, pontos e sublinhados",
+  "idPattern": "O ID pode conter apenas letras, números, sublinhados e hífens"
+}

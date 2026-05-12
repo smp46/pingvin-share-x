@@ -1,0 +1,15 @@
+{
+  "already_linked": "Detta konto är redan länkat till en annan användare",
+  "not_linked": "Detta konto är inte länkat till någon användare",
+  "no_user": "Ingen användare hittades för detta konto",
+  "no_email": "Ingen e-postadress hittades för detta konto",
+  "unverified_account": "Ditt konto är inte verifierat",
+  "user_not_allowed": "Du har inte tillåtelse att logga in",
+  "invalid_token": "Ogiltig token",
+  "cannot_get_user_info": "Kunde inte hämta användarinformation",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

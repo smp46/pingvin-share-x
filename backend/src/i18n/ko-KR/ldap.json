@@ -1,0 +1,4 @@
+{
+  "urlNotDefined": "LDAP 서버 URL이 정의되지 않았습니다",
+  "bindFailed": "기본 사용자에 바인드하지 못했습니다"
+}

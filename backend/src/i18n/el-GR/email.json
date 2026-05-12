@@ -1,0 +1,10 @@
+{
+  "shareRecipientsCreatorFallback": "Κάποιος",
+  "shareRecipientsDescFallback": "Χωρίς περιγραφή",
+  "shareRecipientsExpiresNeverFallback": "σε: ποτέ",
+  "smtpDisabled": "Το SMTP είναι απενεργοποιημένο",
+  "emailServiceDisabled": "Η υπηρεσία email είναι απενεργοποιημένη",
+  "testSubject": "Email δοκιμής",
+  "testText": "Αυτό είναι ένα email δοκιμής",
+  "sendFailed": "Αποτυχία αποστολής email"
+}

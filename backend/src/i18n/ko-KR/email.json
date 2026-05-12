@@ -1,0 +1,10 @@
+{
+  "shareRecipientsCreatorFallback": "누군가",
+  "shareRecipientsDescFallback": "설명 없음",
+  "shareRecipientsExpiresNeverFallback": "만료: 안 함",
+  "smtpDisabled": "SMTP가 비활성화되었습니다",
+  "emailServiceDisabled": "이메일 서비스가 비활성화되었습니다",
+  "testSubject": "테스트 이메일",
+  "testText": "이것은 테스트 이메일입니다",
+  "sendFailed": "이메일 전송에 실패했습니다"
+}

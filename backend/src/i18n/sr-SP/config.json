@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "Redis URL није постављен",
+  "redisTimedOut": "Redis веза је истекла",
+  "redisConnectionFailed": "Повезивање на Redis није успело",
+  "redisUnexpectedResponse": "Неочекиван одговор од Redis-а",
+  "redisError": "Redis грешка",
+  "variableNotFound": "Конфигурациона варијабла није пронађена",
+  "editNotAllowed": "Конфигурационе варијабле можете ажурирати само путем config.yaml датотеке",
+  "invalidType": "Конфигурациона варијабла мора бити типа {type}",
+  "shareIdLengthValidation": "Дужина ID-а дељења мора бити између 2 и 50",
+  "zipCompressionLevelValidation": "Ниво ZIP компресије мора бити између 0 и 9"
+}

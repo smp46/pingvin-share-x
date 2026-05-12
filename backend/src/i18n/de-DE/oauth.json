@@ -1,0 +1,15 @@
+{
+  "already_linked": "Dieses Konto ist bereits mit einem anderen Benutzer verknüpft",
+  "not_linked": "Dieses Konto ist mit keinem Benutzer verknüpft",
+  "no_user": "Kein Benutzer für dieses Konto gefunden",
+  "no_email": "Keine E-Mail-Adresse für dieses Konto gefunden",
+  "unverified_account": "Ihr Konto ist nicht verifiziert",
+  "user_not_allowed": "Sie dürfen sich nicht anmelden",
+  "invalid_token": "Ungültiges Token",
+  "cannot_get_user_info": "Benutzerinformationen konnten nicht abgerufen werden",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

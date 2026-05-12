@@ -1,0 +1,4 @@
+{
+  "usernamePattern": "Kullanıcı adı yalnızca harf, rakam, nokta ve alt çizgi içerebilir",
+  "idPattern": "ID yalnızca harf, rakam, alt çizgi ve tire içerebilir"
+}

@@ -1,0 +1,15 @@
+{
+  "invalidIdFormat": "Geçersiz ID formatı",
+  "notFound": "Dosya bulunamadı",
+  "passwordProtected": "Bu paylaşım şifre korumalıdır",
+  "alreadyCompleted": "Paylaşım zaten tamamlandı",
+  "notEnoughSpace": "Sunucuda yeterli alan yok",
+  "unexpectedChunk": "Beklenmeyen veri parçası alındı",
+  "maxSizeExceeded": "Maksimum paylaşım boyutu aşıldı",
+  "zipError": "ZIP dosyası oluşturulurken hata oluştu",
+  "s3DeleteError": "Dosya S3'ten silinemedi",
+  "s3UploadInitError": "Çok parçalı yükleme başlatılamadı.",
+  "s3SessionNotFound": "Çok parçalı yükleme oturumu bulunamadı.",
+  "s3UploadFailed": "Çok parçalı yükleme başarısız oldu. Yükleme iptal edildi.",
+  "s3SizeError": "Dosya boyutu alınamadı"
+}

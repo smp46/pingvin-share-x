@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "Redis URL is not set",
+  "redisTimedOut": "Redis timed out",
+  "redisConnectionFailed": "Redis connection failed",
+  "redisUnexpectedResponse": "Unexpected response from Redis",
+  "redisError": "Redis error",
+  "variableNotFound": "設定変数が見つかりません",
+  "editNotAllowed": "設定変数の更新は config.yaml ファイルからのみ行えます",
+  "invalidType": "設定変数は {type} 型である必要があります",
+  "shareIdLengthValidation": "共有IDの長さは2から50の間である必要があります",
+  "zipCompressionLevelValidation": "Zip圧縮レベルは0から9の間である必要があります"
+}

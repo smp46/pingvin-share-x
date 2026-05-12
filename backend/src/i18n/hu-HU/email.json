@@ -1,0 +1,10 @@
+{
+  "shareRecipientsCreatorFallback": "Valaki",
+  "shareRecipientsDescFallback": "Nincs leírás",
+  "shareRecipientsExpiresNeverFallback": "lehetőség: soha",
+  "smtpDisabled": "Az SMTP le van tiltva",
+  "emailServiceDisabled": "E-mail szolgáltatás letiltva",
+  "testSubject": "Teszt e-mail",
+  "testText": "Ez egy teszt e-mail",
+  "sendFailed": "Az e-mail küldése nem sikerült"
+}

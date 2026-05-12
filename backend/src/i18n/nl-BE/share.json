@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "Niet genoeg schijfruimte beschikbaar",
+  "idInUse": "Deel-id is al in gebruik",
+  "alreadyCompleted": "Delen is al voltooid",
+  "completionRequiresFile": "U heeft ten minste één bestand nodig in uw gedeelde item om het te voltooien.",
+  "notFound": "Gedeeld item niet gevonden",
+  "anonymousNoDelete": "Anonieme gedeelde items kunnen niet worden verwijderd",
+  "anonymousNoExpire": "Anonieme gedeelde items kunnen niet verlopen",
+  "anonymousNoUpdate": "Anonieme gedeelde items kunnen niet worden bijgewerkt",
+  "invalidExpiration": "Ongeldige vervaldatum",
+  "maxExpirationExceeded": "Vervaldatum overschrijdt de maximale vervaldatum",
+  "wrongPassword": "Verkeerd wachtwoord",
+  "tokenRequired": "Deeltoken vereist",
+  "privateShare": "Alleen de maker van het gedeelde item kan toegang krijgen tot dit gedeelde item",
+  "maxViewsExceeded": "Maximaal aantal weergaven overschreden"
+}

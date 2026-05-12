@@ -1,0 +1,10 @@
+{
+  "shareRecipientsCreatorFallback": "Někdo",
+  "shareRecipientsDescFallback": "Bez popisu",
+  "shareRecipientsExpiresNeverFallback": "v: nikdy",
+  "smtpDisabled": "SMTP je zakázáno",
+  "emailServiceDisabled": "Emailová služba je zakázána",
+  "testSubject": "Testovací email",
+  "testText": "Toto je testovací email",
+  "sendFailed": "Odeslání emailu se nezdařilo"
+}

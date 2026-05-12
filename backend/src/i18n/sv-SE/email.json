@@ -1,0 +1,10 @@
+{
+  "shareRecipientsCreatorFallback": "Någon",
+  "shareRecipientsDescFallback": "Ingen beskrivning",
+  "shareRecipientsExpiresNeverFallback": "löper ut: aldrig",
+  "smtpDisabled": "SMTP är inaktiverad",
+  "emailServiceDisabled": "E-posttjänsten är inaktiverad",
+  "testSubject": "Testmeddelande",
+  "testText": "Detta är ett testmeddelande",
+  "sendFailed": "Misslyckades med att skicka e-post"
+}

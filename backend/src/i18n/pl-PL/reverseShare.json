@@ -1,0 +1,4 @@
+{
+  "notFound": "Token odwrotnego udostępnienia nie został znaleziony",
+  "maxShareSizeExceeded": "Maksymalny rozmiar udostępnienia nie może być większy niż {maxSize} bajtów."
+}

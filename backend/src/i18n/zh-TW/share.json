@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "磁盤空間不足",
+  "idInUse": "分享 ID 已在使用中",
+  "alreadyCompleted": "分享已完成",
+  "completionRequiresFile": "您的分享中至少需要一個文件才能完成。",
+  "notFound": "未找到分享",
+  "anonymousNoDelete": "匿名分享無法刪除",
+  "anonymousNoExpire": "匿名分享無法過期",
+  "anonymousNoUpdate": "匿名分享無法更新",
+  "invalidExpiration": "過期日期無效",
+  "maxExpirationExceeded": "過期日期超過最大過期日期",
+  "wrongPassword": "密碼錯誤",
+  "tokenRequired": "需要分享權杖",
+  "privateShare": "只有逆向分享創建者可以訪問此分享",
+  "maxViewsExceeded": "超過最大查看次數"
+}

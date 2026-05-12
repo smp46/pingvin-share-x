@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "Nema dovoljno slobodnog prostora na disku",
+  "idInUse": "ID dijeljenja se već koristi",
+  "alreadyCompleted": "Dijeljenje je već završeno",
+  "completionRequiresFile": "Potrebna vam je barem jedna datoteka u vašem dijeljenju kako biste ga završili.",
+  "notFound": "Dijeljenje nije pronađeno",
+  "anonymousNoDelete": "Anonimna dijeljenja se ne mogu obrisati",
+  "anonymousNoExpire": "Anonimna dijeljenja ne mogu isteći",
+  "anonymousNoUpdate": "Anonymna dijeljenja se ne mogu ažurirati",
+  "invalidExpiration": "Nevažeći datum isteka",
+  "maxExpirationExceeded": "Datum isteka premašuje maksimalni datum isteka",
+  "wrongPassword": "Pogrešna lozinka",
+  "tokenRequired": "Potreban je token za dijeljenje",
+  "privateShare": "Samo kreator obrnutog dijeljenja može pristupiti ovom dijeljenju",
+  "maxViewsExceeded": "Premašen maksimalan broj pregleda"
+}

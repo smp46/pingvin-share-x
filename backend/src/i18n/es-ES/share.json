@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "No hay suficiente espacio en disco disponible",
+  "idInUse": "El ID de compartido ya está en uso",
+  "alreadyCompleted": "El compartido ya se ha completado",
+  "completionRequiresFile": "Necesitas al menos un archivo en tu compartido para completarlo.",
+  "notFound": "Compartido no encontrado",
+  "anonymousNoDelete": "Los compartidos anónimos no se pueden eliminar",
+  "anonymousNoExpire": "Los compartidos anónimos no pueden expirar",
+  "anonymousNoUpdate": "Los compartidos anónimos no se pueden actualizar",
+  "invalidExpiration": "Fecha de expiración inválida",
+  "maxExpirationExceeded": "La fecha de expiración supera la fecha de expiración máxima",
+  "wrongPassword": "Contraseña incorrecta",
+  "tokenRequired": "Se requiere token de compartido",
+  "privateShare": "Solo el creador del compartido inverso puede acceder a este compartido",
+  "maxViewsExceeded": "Se ha superado el número máximo de visualizaciones"
+}

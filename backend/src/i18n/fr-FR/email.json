@@ -1,0 +1,10 @@
+{
+  "shareRecipientsCreatorFallback": "Quelqu'un",
+  "shareRecipientsDescFallback": "Pas de description",
+  "shareRecipientsExpiresNeverFallback": "dans : jamais",
+  "smtpDisabled": "SMTP est désactivé",
+  "emailServiceDisabled": "Service d'email désactivé",
+  "testSubject": "Email de test",
+  "testText": "Ceci est un email de test",
+  "sendFailed": "Échec de l'envoi de l'email"
+}

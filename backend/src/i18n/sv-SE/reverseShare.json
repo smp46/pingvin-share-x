@@ -1,0 +1,4 @@
+{
+  "notFound": "Token för omvänd delning hittades inte",
+  "maxShareSizeExceeded": "Maximal delningsstorlek kan inte vara större än {maxSize} byte."
+}

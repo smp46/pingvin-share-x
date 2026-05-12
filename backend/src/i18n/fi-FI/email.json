@@ -1,0 +1,10 @@
+{
+  "shareRecipientsCreatorFallback": "Joku",
+  "shareRecipientsDescFallback": "Ei kuvausta",
+  "shareRecipientsExpiresNeverFallback": "sisään: ei koskaan",
+  "smtpDisabled": "SMTP on poistettu käytöstä",
+  "emailServiceDisabled": "Sähköpostipalvelu on poistettu käytöstä",
+  "testSubject": "Testisähköposti",
+  "testText": "Tämä on testisähköposti",
+  "sendFailed": "Sähköpostin lähettäminen epäonnistui"
+}

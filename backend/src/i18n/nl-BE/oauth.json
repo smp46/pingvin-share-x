@@ -1,0 +1,15 @@
+{
+  "already_linked": "Dit account is al gekoppeld aan een andere gebruiker",
+  "not_linked": "Dit account is niet gekoppeld aan een gebruiker",
+  "no_user": "Geen gebruiker gevonden voor dit account",
+  "no_email": "Geen e-mailadres gevonden voor dit account",
+  "unverified_account": "Uw account is niet geverifieerd",
+  "user_not_allowed": "U bent niet gemachtigd om in te loggen",
+  "invalid_token": "Ongeldig token",
+  "cannot_get_user_info": "Kon gebruikersinformatie niet ophalen",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

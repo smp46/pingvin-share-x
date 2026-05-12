@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "Yeterli disk alanı yok",
+  "idInUse": "Paylaşım ID zaten kullanımda",
+  "alreadyCompleted": "Paylaşım zaten tamamlandı",
+  "completionRequiresFile": "Paylaşımı tamamlamak için en az bir dosyaya ihtiyacınız var.",
+  "notFound": "Paylaşım bulunamadı",
+  "anonymousNoDelete": "Anonim paylaşımlar silinemez",
+  "anonymousNoExpire": "Anonim paylaşımların süresi dolamaz",
+  "anonymousNoUpdate": "Anonim paylaşımlar güncellenemez",
+  "invalidExpiration": "Geçersiz son kullanma tarihi",
+  "maxExpirationExceeded": "Son kullanma tarihi maksimum süreyi aşıyor",
+  "wrongPassword": "Yanlış şifre",
+  "tokenRequired": "Paylaşım belirteci gerekli",
+  "privateShare": "Bu paylaşıma yalnızca ters paylaşım oluşturucusu erişebilir",
+  "maxViewsExceeded": "Maksimum görüntüleme sayısı aşıldı"
+}

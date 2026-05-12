@@ -1,0 +1,15 @@
+{
+  "invalidIdFormat": "Nevažeći format ID-a",
+  "notFound": "Datoteka nije pronađena",
+  "passwordProtected": "Ovo deljenje je zaštićeno lozinkom",
+  "alreadyCompleted": "Deljenje je već završeno",
+  "notEnoughSpace": "Nema dovoljno prostora na serveru",
+  "unexpectedChunk": "Primljen neočekivan deo",
+  "maxSizeExceeded": "Maksimalna veličina deljenja je premašena",
+  "zipError": "Greška pri kreiranju ZIP datoteke",
+  "s3DeleteError": "Nije moguće obrisati datoteku sa S3",
+  "s3UploadInitError": "Inicijalizacija multipart otpremanja nije uspela.",
+  "s3SessionNotFound": "Multipart sesija otpremanja nije pronađena.",
+  "s3UploadFailed": "Multipart otpremanje nije uspelo. Otpremanje je prekinuto.",
+  "s3SizeError": "Nije moguće dobiti veličinu datoteke"
+}

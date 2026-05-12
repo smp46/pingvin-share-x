@@ -1,0 +1,4 @@
+{
+  "notFound": "未找到逆向分享令牌",
+  "maxShareSizeExceeded": "最大分享大小不能大于 {maxSize} 字节。"
+}

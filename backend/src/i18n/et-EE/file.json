@@ -1,0 +1,15 @@
+{
+  "invalidIdFormat": "Vigane ID formaat",
+  "notFound": "Faili ei leitud",
+  "passwordProtected": "See jagamine on parooliga kaitstud",
+  "alreadyCompleted": "Jagamine on juba lõpetatud",
+  "notEnoughSpace": "Serveris pole piisavalt ruumi",
+  "unexpectedChunk": "Saadi ootamatu andmeplokk",
+  "maxSizeExceeded": "Jagamise maksimaalne suurus on ületatud",
+  "zipError": "Viga ZIP-faili loomisel",
+  "s3DeleteError": "Faili kustutamine S3-st ebaõnnestus",
+  "s3UploadInitError": "Multipart upload'i algatamine ebaõnnestus.",
+  "s3SessionNotFound": "Multipart upload'i sessiooni ei leitud.",
+  "s3UploadFailed": "Multipart upload ebaõnnestus. Üleslaadimine on katkestatud.",
+  "s3SizeError": "Faili suurust ei õnnestunud tuvastada"
+}

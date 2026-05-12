@@ -1,0 +1,10 @@
+{
+  "shareRecipientsCreatorFallback": "Keegi",
+  "shareRecipientsDescFallback": "Kirjeldus puudub",
+  "shareRecipientsExpiresNeverFallback": "sisse: mitte kunagi",
+  "smtpDisabled": "SMTP on keelatud",
+  "emailServiceDisabled": "E-posti teenus on keelatud",
+  "testSubject": "Test-e-kiri",
+  "testText": "See on test-e-kiri",
+  "sendFailed": "E-kirja saatmine ebaõnnestus"
+}

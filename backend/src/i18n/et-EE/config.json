@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "Redis URL is not set",
+  "redisTimedOut": "Redis timed out",
+  "redisConnectionFailed": "Redis connection failed",
+  "redisUnexpectedResponse": "Unexpected response from Redis",
+  "redisError": "Redis error",
+  "variableNotFound": "Konfiguratsioonimuutujat ei leitud",
+  "editNotAllowed": "Konfiguratsioonimuutujaid on lubatud uuendada ainult config.yaml faili kaudu",
+  "invalidType": "Konfiguratsioonimuutuja peab olema tüüpi {type}",
+  "shareIdLengthValidation": "Jagamise ID pikkus peab olema vahemikus 2 kuni 50",
+  "zipCompressionLevelValidation": "Zip-pakkimise tase peab olema vahemikus 0 kuni 9"
+}

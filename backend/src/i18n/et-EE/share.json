@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "Kettal pole piisavalt vaba ruumi",
+  "idInUse": "Jagamise ID on juba kasutusel",
+  "alreadyCompleted": "Jagamine on juba lõpetatud",
+  "completionRequiresFile": "Jagamise lõpetamiseks peab selles olema vähemalt üks fail.",
+  "notFound": "Jagamist ei leitud",
+  "anonymousNoDelete": "Anonüümseid jagamisi ei saa kustutada",
+  "anonymousNoExpire": "Anonüümsed jagamised ei saa aeguda",
+  "anonymousNoUpdate": "Anonüümseid jagamisi ei saa uuendada",
+  "invalidExpiration": "Vigane aegumiskuupäev",
+  "maxExpirationExceeded": "Aegumiskuupäev ületab maksimaalset aegumiskuupäeva",
+  "wrongPassword": "Vale parool",
+  "tokenRequired": "Jagamise token on kohustuslik",
+  "privateShare": "Sellele jagamisele pääseb ligi ainult pöörd-jagamise looja",
+  "maxViewsExceeded": "Maksimaalne vaatamiste arv on täis"
+}

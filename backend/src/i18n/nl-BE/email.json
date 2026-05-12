@@ -1,0 +1,10 @@
+{
+  "shareRecipientsCreatorFallback": "Iemand",
+  "shareRecipientsDescFallback": "Geen beschrijving",
+  "shareRecipientsExpiresNeverFallback": "in: nooit",
+  "smtpDisabled": "SMTP is uitgeschakeld",
+  "emailServiceDisabled": "E-mailservice uitgeschakeld",
+  "testSubject": "Test e-mail",
+  "testText": "Dit is een test e-mail",
+  "sendFailed": "Verzenden van e-mail mislukt"
+}

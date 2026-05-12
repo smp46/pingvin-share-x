@@ -1,0 +1,15 @@
+{
+  "invalidIdFormat": "Ugyldigt ID-format",
+  "notFound": "Fil ikke fundet",
+  "passwordProtected": "Denne deling er adgangskodebeskyttet",
+  "alreadyCompleted": "Deling er allerede fuldført",
+  "notEnoughSpace": "Ikke nok plads på serveren",
+  "unexpectedChunk": "Uventet chunk modtaget",
+  "maxSizeExceeded": "Maksimal delingsstørrelse overskredet",
+  "zipError": "Fejl ved oprettelse af ZIP-fil",
+  "s3DeleteError": "Kunne ikke slette fil fra S3",
+  "s3UploadInitError": "Kunne ikke initialisere multipart-upload.",
+  "s3SessionNotFound": "Multipart-upload-session ikke fundet.",
+  "s3UploadFailed": "Multipart-upload mislykkedes. Uploaden er blevet afbrudt.",
+  "s3SizeError": "Kunne ikke hente filstørrelse"
+}

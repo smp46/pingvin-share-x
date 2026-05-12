@@ -1,0 +1,15 @@
+{
+  "already_linked": "このアカウントは既に別のユーザーにリンクされています",
+  "not_linked": "このアカウントはどのユーザーにもリンクされていません",
+  "no_user": "このアカウントのユーザーが見つかりません",
+  "no_email": "このアカウントのメールアドレスが見つかりません",
+  "unverified_account": "アカウントが確認されていません",
+  "user_not_allowed": "サインインを許可されていません",
+  "invalid_token": "トークンが無効です",
+  "cannot_get_user_info": "ユーザー情報を取得できませんでした",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

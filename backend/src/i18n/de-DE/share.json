@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "Nicht genügend Festplattenspeicher verfügbar",
+  "idInUse": "Freigabe-ID bereits in Verwendung",
+  "alreadyCompleted": "Freigabe bereits abgeschlossen",
+  "completionRequiresFile": "Sie benötigen mindestens eine Datei in Ihrer Freigabe, um sie abzuschließen.",
+  "notFound": "Freigabe nicht gefunden",
+  "anonymousNoDelete": "Anonyme Freigaben können nicht gelöscht werden",
+  "anonymousNoExpire": "Anonyme Freigaben können nicht ablaufen",
+  "anonymousNoUpdate": "Anonyme Freigaben können nicht aktualisiert werden",
+  "invalidExpiration": "Ungültiges Ablaufdatum",
+  "maxExpirationExceeded": "Ablaufdatum überschreitet das maximale Ablaufdatum",
+  "wrongPassword": "Falsches Passwort",
+  "tokenRequired": "Freigabe-Token erforderlich",
+  "privateShare": "Nur der Ersteller der Reverse-Freigabe kann auf diese Freigabe zugreifen",
+  "maxViewsExceeded": "Maximale Anzahl an Aufrufen überschritten"
+}

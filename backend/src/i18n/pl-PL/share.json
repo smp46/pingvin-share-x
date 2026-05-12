@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "Brak wolnego miejsca na dysku",
+  "idInUse": "ID udostępnienia jest już w użyciu",
+  "alreadyCompleted": "Udostępnianie zostało już zakończone",
+  "completionRequiresFile": "Aby zakończyć udostępnianie, potrzebujesz co najmniej jednego pliku.",
+  "notFound": "Udostępnienie nie zostało znalezione",
+  "anonymousNoDelete": "Nie można usunąć anonimowych udostępnień",
+  "anonymousNoExpire": "Nie można zmienić daty wygaśnięcia anonimowych udostępnień",
+  "anonymousNoUpdate": "Nie można aktualizować anonimowych udostępnień",
+  "invalidExpiration": "Nieprawidłowa data wygaśnięcia",
+  "maxExpirationExceeded": "Data wygaśnięcia przekracza maksymalną dopuszczalną datę",
+  "wrongPassword": "Błędne hasło",
+  "tokenRequired": "Token udostępnienia jest wymagany",
+  "privateShare": "Tylko twórca odwrotnego udostępnienia ma dostęp do tego udostępnienia",
+  "maxViewsExceeded": "Przekroczono maksymalną liczbę wyświetleń"
+}

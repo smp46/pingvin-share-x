@@ -1,0 +1,10 @@
+{
+  "shareRecipientsCreatorFallback": "Nekdo",
+  "shareRecipientsDescFallback": "Ni opisa",
+  "shareRecipientsExpiresNeverFallback": "poteče: nikoli",
+  "smtpDisabled": "SMTP je onemogočen",
+  "emailServiceDisabled": "Storitev e-pošte je onemogočena",
+  "testSubject": "Testno e-poštno sporočilo",
+  "testText": "To je testno e-poštno sporočilo",
+  "sendFailed": "E-poštnega sporočila ni bilo mogoče poslati"
+}

@@ -1,0 +1,15 @@
+{
+  "already_linked": "Αυτός ο λογαριασμός είναι ήδη συνδεδεμένος με άλλον χρήστη",
+  "not_linked": "Αυτός ο λογαριασμός δεν είναι συνδεδεμένος με κανέναν χρήστη",
+  "no_user": "Δεν βρέθηκε χρήστης για αυτόν τον λογαριασμό",
+  "no_email": "Δεν βρέθηκε διεύθυνση email για αυτόν τον λογαριασμό",
+  "unverified_account": "Ο λογαριασμός σας δεν είναι επαληθευμένος",
+  "user_not_allowed": "Δεν σας επιτρέπεται η σύνδεση",
+  "invalid_token": "Άκυρο διακριτικό",
+  "cannot_get_user_info": "Δεν ήταν δυνατή η λήψη πληροφοριών χρήστη",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

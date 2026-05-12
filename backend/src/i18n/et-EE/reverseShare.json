@@ -1,0 +1,4 @@
+{
+  "notFound": "Pöörd-jagamise tokenit ei leitud",
+  "maxShareSizeExceeded": "Maksimaalne jagamise suurus ei tohi olla suurem kui {maxSize} baiti."
+}

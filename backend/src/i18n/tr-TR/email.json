@@ -1,0 +1,10 @@
+{
+  "shareRecipientsCreatorFallback": "Biri",
+  "shareRecipientsDescFallback": "Açıklama yok",
+  "shareRecipientsExpiresNeverFallback": "içinde: asla",
+  "smtpDisabled": "SMTP devre dışı",
+  "emailServiceDisabled": "E-posta servisi devre dışı",
+  "testSubject": "Test e-postası",
+  "testText": "Bu bir test e-postasıdır",
+  "sendFailed": "E-posta gönderilemedi"
+}

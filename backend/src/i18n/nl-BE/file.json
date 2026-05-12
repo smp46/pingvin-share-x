@@ -1,0 +1,15 @@
+{
+  "invalidIdFormat": "Ongeldig ID-formaat",
+  "notFound": "Bestand niet gevonden",
+  "passwordProtected": "Dit gedeelde item is beveiligd met een wachtwoord",
+  "alreadyCompleted": "Delen is al voltooid",
+  "notEnoughSpace": "Niet genoeg ruimte op de server",
+  "unexpectedChunk": "Onverwacht blok ontvangen",
+  "maxSizeExceeded": "Maximale deelgrootte overschreden",
+  "zipError": "Fout bij het maken van het ZIP-bestands",
+  "s3DeleteError": "Kon bestand niet verwijderen uit S3",
+  "s3UploadInitError": "Initialiseren van multipart upload mislukt.",
+  "s3SessionNotFound": "Multipart uploadsessie niet gevonden.",
+  "s3UploadFailed": "Multipart upload mislukt. De upload is afgebroken.",
+  "s3SizeError": "Kon bestandsgrootte niet ophalen"
+}
