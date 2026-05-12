@@ -3,6 +3,7 @@ import { Module } from "@nestjs/common";
 import { ScheduleModule } from "@nestjs/schedule";
 import { AuthModule } from "./auth/auth.module";
 
+import { existsSync } from "fs";
 import { join } from "path";
 import { I18nModule } from "nestjs-i18n";
 
@@ -23,6 +24,10 @@ import { UserModule } from "./user/user.module";
 import { SystemModule } from "./system/system.module";
 
 import { SystemLanguageResolver } from "./i18n/systemLanguage.resolver";
+
+const i18nPath = existsSync(join(__dirname, "../i18n"))
+  ? join(__dirname, "../i18n")
+  : join(__dirname, "i18n");
 
 @Module({
   imports: [
@@ -49,7 +54,7 @@ import { SystemLanguageResolver } from "./i18n/systemLanguage.resolver";
     I18nModule.forRoot({
       fallbackLanguage: "en-US",
       loaderOptions: {
-        path: join(__dirname, "i18n"),
+        path: i18nPath,
         watch: true,
       },
       resolvers: [SystemLanguageResolver],

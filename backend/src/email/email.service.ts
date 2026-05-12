@@ -137,14 +137,16 @@ export class EmailService {
   }
 
   async sendTestMail(recipientEmail: string) {
+    const subject = this.i18n.t("email.testSubject");
+    const text = this.i18n.t("email.testText");
     await this.getTransporter()
       .sendMail({
         from: `"${this.config.get("general.appName")}" <${this.config.get(
           "smtp.email",
         )}>`,
         to: recipientEmail,
-        subject: this.i18n.t("email.testSubject"),
-        text: this.i18n.t("email.testText"),
+        subject,
+        text,
       })
       .catch((e) => {
         this.logger.error(e);
