@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "Redis URL is not set",
+  "redisTimedOut": "Redis timed out",
+  "redisConnectionFailed": "Redis connection failed",
+  "redisUnexpectedResponse": "Unexpected response from Redis",
+  "redisError": "Redis error",
+  "variableNotFound": "Konfigurationsvariabel ikke fundet",
+  "editNotAllowed": "Du må kun opdatere konfigurationsvariabler via config.yaml-filen",
+  "invalidType": "Konfigurationsvariabel skal være af typen {type}",
+  "shareIdLengthValidation": "Delings-ID skal være mellem 2 og 50",
+  "zipCompressionLevelValidation": "Zip-komprimeringsniveau skal være mellem 0 og 9"
+}

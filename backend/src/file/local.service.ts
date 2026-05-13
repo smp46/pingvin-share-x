@@ -10,6 +10,7 @@ import * as crypto from "crypto";
 import { createReadStream } from "fs";
 import * as fs from "fs/promises";
 import * as mime from "mime-types";
+import { I18nService } from "nestjs-i18n";
 import { ConfigService } from "src/config/config.service";
 import { PrismaService } from "src/prisma/prisma.service";
 import { validate as isValidUUID } from "uuid";
@@ -21,6 +22,7 @@ export class LocalFileService {
   constructor(
     private prisma: PrismaService,
     private config: ConfigService,
+    private readonly i18n: I18nService,
   ) {}
 
   async create(
@@ -32,7 +34,7 @@ export class LocalFileService {
     if (!file.id) {
       file.id = crypto.randomUUID();
     } else if (!isValidUUID(file.id)) {
-      throw new BadRequestException("Invalid file ID format");
+      throw new BadRequestException(this.i18n.t("file.invalidIdFormat"));
     }
 
     const share = await this.prisma.share.findUnique({
@@ -41,7 +43,7 @@ export class LocalFileService {
     });
 
     if (share.uploadLocked)
-      throw new BadRequestException("Share is already completed");
+      throw new BadRequestException(this.i18n.t("file.alreadyCompleted"));
 
     let diskFileSize: number;
     try {
@@ -58,7 +60,7 @@ export class LocalFileService {
 
     if (expectedChunkIndex != chunk.index)
       throw new BadRequestException({
-        message: "Unexpected chunk received",
+        message: this.i18n.t("file.unexpectedChunk"),
         error: "unexpected_chunk_index",
         expectedChunkIndex,
       });
@@ -69,7 +71,7 @@ export class LocalFileService {
     const space = await fs.statfs(SHARE_DIRECTORY);
     const availableSpace = space.bavail * space.bsize;
     if (availableSpace < buffer.byteLength) {
-      throw new InternalServerErrorException("Not enough space on the server");
+      throw new InternalServerErrorException(this.i18n.t("file.notEnoughSpace"));
     }
 
     // Check if share size limit is exceeded
@@ -86,7 +88,7 @@ export class LocalFileService {
         shareSizeSum > parseInt(share.reverseShare.maxShareSize))
     ) {
       throw new HttpException(
-        "Max share size exceeded",
+        this.i18n.t("file.maxSizeExceeded"),
         HttpStatus.PAYLOAD_TOO_LARGE,
       );
     }
@@ -123,7 +125,7 @@ export class LocalFileService {
       where: { id: fileId },
     });
 
-    if (!fileMetaData) throw new NotFoundException("File not found");
+    if (!fileMetaData) throw new NotFoundException(this.i18n.t("file.notFound"));
 
     const file = createReadStream(`${SHARE_DIRECTORY}/${shareId}/${fileId}`);
 
@@ -142,7 +144,7 @@ export class LocalFileService {
       where: { id: fileId },
     });
 
-    if (!fileMetaData) throw new NotFoundException("File not found");
+    if (!fileMetaData) throw new NotFoundException(this.i18n.t("file.notFound"));
 
     await fs.unlink(`${SHARE_DIRECTORY}/${shareId}/${fileId}`);
 

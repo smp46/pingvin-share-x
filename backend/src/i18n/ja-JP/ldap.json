@@ -1,0 +1,4 @@
+{
+  "urlNotDefined": "LDAPサーバーのURLが定義されていません",
+  "bindFailed": "デフォルトユーザーへのバインドに失敗しました"
+}

@@ -15,6 +15,12 @@ export function getDefaultConfig(): Config[] {
       type: "boolean",
     },
     {
+      key: "general.defaultLanguage",
+      value: "en-US",
+      defaultValue: "en-US",
+      type: "string",
+    },
+    {
       key: "share.allowRegistration",
       value: "false",
       defaultValue: "false",

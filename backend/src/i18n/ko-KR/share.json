@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "디스크 공간이 부족합니다",
+  "idInUse": "공유 ID가 이미 사용 중입니다",
+  "alreadyCompleted": "공유가 이미 완료되었습니다",
+  "completionRequiresFile": "공유를 완료하려면 적어도 하나의 파일이 필요합니다.",
+  "notFound": "공유를 찾을 수 없습니다",
+  "anonymousNoDelete": "익명 공유는 삭제할 수 없습니다",
+  "anonymousNoExpire": "익명 공유는 만료될 수 없습니다",
+  "anonymousNoUpdate": "익명 공유는 업데이트할 수 없습니다",
+  "invalidExpiration": "유효하지 않은 만료 날짜입니다",
+  "maxExpirationExceeded": "만료 날짜가 최대 만료 날짜를 초과합니다",
+  "wrongPassword": "잘못된 비밀번호입니다",
+  "tokenRequired": "공유 토큰이 필요합니다",
+  "privateShare": "리버스 공유 생성자만 이 공유에 접근할 수 있습니다",
+  "maxViewsExceeded": "최대 조회수를 초과했습니다"
+}

@@ -1,0 +1,4 @@
+{
+  "usernamePattern": "Tên người dùng chỉ có thể chứa chữ cái, số, dấu chấm và dấu gạch dưới",
+  "idPattern": "ID chỉ có thể chứa chữ cái, số, dấu gạch dưới và dấu gạch ngang"
+}

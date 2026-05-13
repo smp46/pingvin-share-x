@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "Not enough disk space available",
+  "idInUse": "Share id already in use",
+  "alreadyCompleted": "Share already completed",
+  "completionRequiresFile": "You need at least one file in your share to complete it.",
+  "notFound": "Share not found",
+  "anonymousNoDelete": "Anonymous shares can't be deleted",
+  "anonymousNoExpire": "Anonymous shares can't be expired",
+  "anonymousNoUpdate": "Anonymous shares can't be updated",
+  "invalidExpiration": "Invalid expiration date",
+  "maxExpirationExceeded": "Expiration date exceeds maximum expiration date",
+  "wrongPassword": "Wrong password",
+  "tokenRequired": "Share token required",
+  "privateShare": "Only reverse share creator can access this share",
+  "maxViewsExceeded": "Maximum views exceeded"
+}

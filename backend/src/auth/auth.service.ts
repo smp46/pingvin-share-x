@@ -13,6 +13,7 @@ import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 import * as argon from "argon2";
 import { Request, Response } from "express";
 import * as moment from "moment";
+import { I18nService } from "nestjs-i18n";
 import { ConfigService } from "src/config/config.service";
 import { EmailService } from "src/email/email.service";
 import { PrismaService } from "src/prisma/prisma.service";
@@ -33,6 +34,7 @@ export class AuthService {
     private ldapService: LdapService,
     private userService: UserSevice,
     @Inject(forwardRef(() => OAuthService)) private oAuthService: OAuthService,
+    private readonly i18n: I18nService,
   ) {}
   private readonly logger = new Logger(AuthService.name);
 
@@ -62,7 +64,9 @@ export class AuthService {
         if (e.code == "P2002") {
           const duplicatedField: string = e.meta.target[0];
           throw new BadRequestException(
-            `A user with this ${duplicatedField} already exists`,
+            this.i18n.t("auth.userAlreadyExists", {
+              args: { field: duplicatedField },
+            }),
           );
         }
       }
@@ -71,7 +75,7 @@ export class AuthService {
 
   async signIn(dto: AuthSignInDTO, ip: string) {
     if (!dto.email && !dto.username) {
-      throw new BadRequestException("Email or username is required");
+      throw new BadRequestException(this.i18n.t("auth.emailOrUsernameRequired"));
     }
 
     if (!this.config.get("oauth.disablePassword")) {
@@ -114,7 +118,7 @@ export class AuthService {
     this.logger.log(
       `Failed login attempt for user ${dto.email || dto.username} from IP ${ip}`,
     );
-    throw new UnauthorizedException("Wrong email or password");
+    throw new UnauthorizedException(this.i18n.t("auth.wrongCredentials"));
   }
 
   async generateToken(user: User, oauth?: { idToken?: string }) {
@@ -137,7 +141,7 @@ export class AuthService {
 
   async requestResetPassword(email: string) {
     if (this.config.get("oauth.disablePassword"))
-      throw new ForbiddenException("Password sign in is disabled");
+      throw new ForbiddenException(this.i18n.t("auth.passwordSignInDisabled"));
 
     const user = await this.prisma.user.findFirst({
       where: { email },
@@ -150,9 +154,7 @@ export class AuthService {
       this.logger.log(
         `Failed password reset request for user ${email} because it is an LDAP user`,
       );
-      throw new BadRequestException(
-        "This account can't reset its password here. Please contact your administrator.",
-      );
+      throw new BadRequestException(this.i18n.t("auth.ldapResetPasswordNotAllowed"));
     }
 
     // Delete old reset password token
@@ -174,13 +176,13 @@ export class AuthService {
 
   async resetPassword(token: string, newPassword: string) {
     if (this.config.get("oauth.disablePassword"))
-      throw new ForbiddenException("Password sign in is disabled");
+      throw new ForbiddenException(this.i18n.t("auth.passwordSignInDisabled"));
 
     const user = await this.prisma.user.findFirst({
       where: { resetPasswordToken: { token } },
     });
 
-    if (!user) throw new BadRequestException("Token invalid or expired");
+    if (!user) throw new BadRequestException(this.i18n.t("auth.tokenInvalidOrExpired"));
 
     const newPasswordHash = await argon.hash(newPassword);
 
@@ -198,7 +200,7 @@ export class AuthService {
     const isPasswordValid =
       !user.password || (await argon.verify(user.password, oldPassword));
 
-    if (!isPasswordValid) throw new ForbiddenException("Invalid password");
+    if (!isPasswordValid) throw new ForbiddenException(this.i18n.t("auth.invalidPassword"));
 
     const hash = await argon.hash(newPassword);
 

@@ -1,0 +1,15 @@
+{
+  "invalidIdFormat": "유효하지 않은 ID 형식입니다",
+  "notFound": "파일을 찾을 수 없습니다",
+  "passwordProtected": "이 공유는 비밀번호로 보호되어 있습니다",
+  "alreadyCompleted": "공유가 이미 완료되었습니다",
+  "notEnoughSpace": "서버에 공간이 부족합니다",
+  "unexpectedChunk": "예기치 않은 청크를 받았습니다",
+  "maxSizeExceeded": "최대 공유 크기를 초과했습니다",
+  "zipError": "ZIP 파일 생성 중 오류가 발생했습니다",
+  "s3DeleteError": "S3에서 파일을 삭제할 수 없습니다",
+  "s3UploadInitError": "멀티파트 업로드를 초기화하지 못했습니다.",
+  "s3SessionNotFound": "멀티파트 업로드 세션을 찾을 수 없습니다.",
+  "s3UploadFailed": "멀티파트 업로드에 실패했습니다. 업로드가 중단되었습니다.",
+  "s3SizeError": "파일 크기를 가져올 수 없습니다"
+}

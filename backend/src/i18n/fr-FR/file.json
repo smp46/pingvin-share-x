@@ -1,0 +1,15 @@
+{
+  "invalidIdFormat": "Format d'ID invalide",
+  "notFound": "Fichier non trouvé",
+  "passwordProtected": "Ce partage est protégé par mot de passe",
+  "alreadyCompleted": "Le partage est déjà terminé",
+  "notEnoughSpace": "Espace insuffisant sur le serveur",
+  "unexpectedChunk": "Chunk inattendu reçu",
+  "maxSizeExceeded": "Taille maximale de partage dépassée",
+  "zipError": "Erreur lors de la création du fichier ZIP",
+  "s3DeleteError": "Impossible de supprimer le fichier de S3",
+  "s3UploadInitError": "Échec de l'initialisation de l'upload multipart.",
+  "s3SessionNotFound": "Session d'upload multipart non trouvée.",
+  "s3UploadFailed": "Échec de l'upload multipart. L'upload a été abandonné.",
+  "s3SizeError": "Impossible de récupérer la taille du fichier"
+}

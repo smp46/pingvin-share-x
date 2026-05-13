@@ -1,5 +1,6 @@
 import { BadRequestException, Injectable } from "@nestjs/common";
 import * as moment from "moment";
+import { I18nService } from "nestjs-i18n";
 import { ConfigService } from "src/config/config.service";
 import { FileService } from "src/file/file.service";
 import { PrismaService } from "src/prisma/prisma.service";
@@ -12,6 +13,7 @@ export class ReverseShareService {
     private config: ConfigService,
     private prisma: PrismaService,
     private fileService: FileService,
+    private readonly i18n: I18nService,
   ) {}
 
   async create(data: CreateReverseShareDTO, creatorId: string) {
@@ -33,7 +35,7 @@ export class ReverseShareService {
         moment().add(maxExpiration.value, maxExpiration.unit).toDate()
     ) {
       throw new BadRequestException(
-        "Expiration date exceeds maximum expiration date",
+        this.i18n.t("share.maxExpirationExceeded"),
       );
     }
 
@@ -41,7 +43,9 @@ export class ReverseShareService {
 
     if (globalMaxShareSize < data.maxShareSize)
       throw new BadRequestException(
-        `Max share size can't be greater than ${globalMaxShareSize} bytes.`,
+        this.i18n.t("reverseShare.maxShareSizeExceeded", {
+          args: { maxSize: globalMaxShareSize },
+        }),
       );
 
     const reverseShare = await this.prisma.reverseShare.create({

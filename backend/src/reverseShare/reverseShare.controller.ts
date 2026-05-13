@@ -10,6 +10,7 @@ import {
 } from "@nestjs/common";
 import { Throttle } from "@nestjs/throttler";
 import { User } from "@prisma/client";
+import { I18nService } from "nestjs-i18n";
 import { GetUser } from "src/auth/decorator/getUser.decorator";
 import { JwtGuard } from "src/auth/guard/jwt.guard";
 import { ConfigService } from "src/config/config.service";
@@ -24,6 +25,7 @@ export class ReverseShareController {
   constructor(
     private reverseShareService: ReverseShareService,
     private config: ConfigService,
+    private readonly i18n: I18nService,
   ) {}
 
   @Post()
@@ -46,7 +48,8 @@ export class ReverseShareController {
   async getByToken(@Param("reverseShareToken") reverseShareToken: string) {
     const isValid = await this.reverseShareService.isValid(reverseShareToken);
 
-    if (!isValid) throw new NotFoundException("Reverse share token not found");
+    if (!isValid)
+      throw new NotFoundException(this.i18n.t("reverseShare.notFound"));
 
     return new ReverseShareDTO().from(
       await this.reverseShareService.getByToken(reverseShareToken),

@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "Redis URL is not set",
+  "redisTimedOut": "Redis timed out",
+  "redisConnectionFailed": "Redis connection failed",
+  "redisUnexpectedResponse": "Unexpected response from Redis",
+  "redisError": "Redis error",
+  "variableNotFound": "Konfirační proměnná nenalezena",
+  "editNotAllowed": "Konfirační proměnné můžete aktualizovat pouze pomocí souboru config.yaml",
+  "invalidType": "Konfirační proměnná musí být typu {type}",
+  "shareIdLengthValidation": "Délka ID sdílení musí být mezi 2 a 50",
+  "zipCompressionLevelValidation": "Úroveň komprese Zip musí být mezi 0 a 9"
+}

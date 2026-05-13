@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "Inte tillräckligt med diskutrymme",
+  "idInUse": "Delnings-ID används redan",
+  "alreadyCompleted": "Delningen är redan slutförd",
+  "completionRequiresFile": "Du behöver minst en fil i din delning för att slutföra den.",
+  "notFound": "Delningen hittades inte",
+  "anonymousNoDelete": "Anonyma delningar kan inte tas bort",
+  "anonymousNoExpire": "Anonyma delningar kan inte löpa ut",
+  "anonymousNoUpdate": "Anonyma delningar kan inte uppdateras",
+  "invalidExpiration": "Ogiltigt utgångsdatum",
+  "maxExpirationExceeded": "Utgångsdatumet överskrider det maximala utgångsdatumet",
+  "wrongPassword": "Fel lösenord",
+  "tokenRequired": "Delningstoken krävs",
+  "privateShare": "Endast skaparen av den omvända delningen har tillgång till denna delning",
+  "maxViewsExceeded": "Maximalt antal visningar överskridet"
+}

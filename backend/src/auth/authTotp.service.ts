@@ -13,6 +13,7 @@ import {
   createGuardrails,
 } from "otplib";
 import * as qrcode from "qrcode-svg";
+import { I18nService } from "nestjs-i18n";
 import { ConfigService } from "src/config/config.service";
 import { PrismaService } from "src/prisma/prisma.service";
 import { AuthService } from "./auth.service";
@@ -28,6 +29,7 @@ export class AuthTotpService {
     private prisma: PrismaService,
     private configService: ConfigService,
     private authService: AuthService,
+    private readonly i18n: I18nService,
   ) {}
 
   async signInTotp(dto: AuthSignInTotpDTO) {
@@ -41,16 +43,19 @@ export class AuthTotpService {
     });
 
     if (!token || token.used)
-      throw new UnauthorizedException("Invalid login token");
+      throw new UnauthorizedException(this.i18n.t("auth.invalidLoginToken"));
 
     if (token.expiresAt < new Date())
-      throw new UnauthorizedException("Login token expired", "token_expired");
+      throw new UnauthorizedException(
+        this.i18n.t("auth.loginTokenExpired"),
+        "token_expired",
+      );
 
     // Check the TOTP code
     const { totpSecret } = token.user;
 
     if (!totpSecret) {
-      throw new BadRequestException("TOTP is not enabled");
+      throw new BadRequestException(this.i18n.t("auth.totpNotEnabled"));
     }
 
     const verified = await verify({
@@ -59,7 +64,7 @@ export class AuthTotpService {
       guardrails: legacyGuardrails,
     });
     if (!verified.valid) {
-      throw new BadRequestException("Invalid code");
+      throw new BadRequestException(this.i18n.t("auth.invalidCode"));
     }
 
     // Set the login token to used
@@ -80,7 +85,7 @@ export class AuthTotpService {
 
   async enableTotp(user: User, password: string) {
     if (!this.authService.verifyPassword(user, password))
-      throw new ForbiddenException("Invalid password");
+      throw new ForbiddenException(this.i18n.t("auth.invalidPassword"));
 
     // Check if we have a secret already
     const { totpVerified } = await this.prisma.user.findUnique({
@@ -89,7 +94,7 @@ export class AuthTotpService {
     });
 
     if (totpVerified) {
-      throw new BadRequestException("TOTP is already enabled");
+      throw new BadRequestException(this.i18n.t("auth.totpAlreadyEnabled"));
     }
 
     const issuer = this.configService.get("general.appName");
@@ -126,7 +131,7 @@ export class AuthTotpService {
 
   async verifyTotp(user: User, password: string, code: string) {
     if (!this.authService.verifyPassword(user, password))
-      throw new ForbiddenException("Invalid password");
+      throw new ForbiddenException(this.i18n.t("auth.invalidPassword"));
 
     const { totpSecret } = await this.prisma.user.findUnique({
       where: { id: user.id },
@@ -134,7 +139,7 @@ export class AuthTotpService {
     });
 
     if (!totpSecret) {
-      throw new BadRequestException("TOTP is not in progress");
+      throw new BadRequestException(this.i18n.t("auth.totpNotInProgress"));
     }
 
     const expected = await generate({
@@ -143,7 +148,7 @@ export class AuthTotpService {
     });
 
     if (code !== expected) {
-      throw new BadRequestException("Invalid code");
+      throw new BadRequestException(this.i18n.t("auth.invalidCode"));
     }
 
     await this.prisma.user.update({
@@ -158,7 +163,7 @@ export class AuthTotpService {
 
   async disableTotp(user: User, password: string, code: string) {
     if (!this.authService.verifyPassword(user, password))
-      throw new ForbiddenException("Invalid password");
+      throw new ForbiddenException(this.i18n.t("auth.invalidPassword"));
 
     const { totpSecret } = await this.prisma.user.findUnique({
       where: { id: user.id },
@@ -166,7 +171,7 @@ export class AuthTotpService {
     });
 
     if (!totpSecret) {
-      throw new BadRequestException("TOTP is not enabled");
+      throw new BadRequestException(this.i18n.t("auth.totpNotEnabled"));
     }
 
     const expected = await generate({
@@ -175,7 +180,7 @@ export class AuthTotpService {
     });
 
     if (code !== expected) {
-      throw new BadRequestException("Invalid code");
+      throw new BadRequestException(this.i18n.t("auth.invalidCode"));
     }
 
     await this.prisma.user.update({

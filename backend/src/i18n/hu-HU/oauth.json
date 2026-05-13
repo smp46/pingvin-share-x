@@ -1,0 +1,15 @@
+{
+  "already_linked": "Ez a fiók már össze van kapcsolva egy másik felhasználóval",
+  "not_linked": "Ez a fiók nincs összekapcsolva egyetlen felhasználóval sem",
+  "no_user": "Nem található felhasználó ehhez a fiókhoz",
+  "no_email": "Nem található e-mail cím ehhez a fiókhoz",
+  "unverified_account": "A fiókja nincs megerősítve",
+  "user_not_allowed": "Nincs engedélye a bejelentkezésre",
+  "invalid_token": "Érvénytelen token",
+  "cannot_get_user_info": "Nem sikerült lekérni a felhasználói információkat",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

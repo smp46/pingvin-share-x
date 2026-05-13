@@ -1,0 +1,4 @@
+{
+  "notFound": "未找到逆向分享權杖",
+  "maxShareSizeExceeded": "最大分享大小不能大於 {maxSize} 位元組。"
+}

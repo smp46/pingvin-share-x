@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "ไม่ได้ตั้งค่า Redis URL",
+  "redisTimedOut": "Redis หมดเวลา",
+  "redisConnectionFailed": "การเชื่อมต่อ Redis ล้มเหลว",
+  "redisUnexpectedResponse": "การตอบกลับจาก Redis ไม่เป็นไปตามที่คาดไว้",
+  "redisError": "ข้อผิดพลาด Redis",
+  "variableNotFound": "ไม่พบตัวแปรการกำหนดค่า",
+  "editNotAllowed": "คุณสามารถอัปเดตตัวแปรการกำหนดค่าผ่านไฟล์ config.yaml เท่านั้น",
+  "invalidType": "ตัวแปรการกำหนดค่าต้องเป็นประเภท {type}",
+  "shareIdLengthValidation": "ความยาวของ Share ID ต้องอยู่ระหว่าง 2 ถึง 50",
+  "zipCompressionLevelValidation": "ระดับการบีบอัด Zip ต้องอยู่ระหว่าง 0 ถึง 9"
+}

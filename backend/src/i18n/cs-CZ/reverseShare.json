@@ -1,0 +1,4 @@
+{
+  "notFound": "Token reverzního sdílení nenalezen",
+  "maxShareSizeExceeded": "Maximální velikost sdílení nesmí být větší než {maxSize} bajtů."
+}

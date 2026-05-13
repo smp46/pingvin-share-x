@@ -1,0 +1,4 @@
+{
+  "urlNotDefined": "L'URL du serveur LDAP n'est pas définie",
+  "bindFailed": "Échec de la liaison à l'utilisateur par défaut"
+}

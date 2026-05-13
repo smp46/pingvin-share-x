@@ -1,0 +1,15 @@
+{
+  "already_linked": "Bu hesap zaten başka bir kullanıcıya bağlı",
+  "not_linked": "Bu hesap herhangi bir kullanıcıya bağlı değil",
+  "no_user": "Bu hesap için kullanıcı bulunamadı",
+  "no_email": "Bu hesap için e-posta adresi bulunamadı",
+  "unverified_account": "Hesabınız doğrulanmamış",
+  "user_not_allowed": "Giriş yapmanıza izin verilmiyor",
+  "invalid_token": "Geçersiz belirteç",
+  "cannot_get_user_info": "Kullanıcı bilgileri alınamadı",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

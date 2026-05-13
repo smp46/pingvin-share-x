@@ -1,0 +1,11 @@
+{
+  "shareRecipientsCreatorFallback": "บางคน",
+  "shareRecipientsDescFallback": "ไม่มีคำอธิบาย",
+  "shareRecipientsExpiresNeverFallback": "ใน: ไม่เลย",
+  "smtpDisabled": "ปิดใช้งาน SMTP",
+  "emailServiceDisabled": "ปิดใช้งานบริการอีเมล",
+  "testSubject": "อีเมลทดสอบ",
+  "testText": "นี่คืออีเมลทดสอบ",
+  "sendFailed": "ส่งอีเมลไม่สำเร็จ",
+  "locale": "th-TH"
+}

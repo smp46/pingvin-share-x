@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "Nedostatek volného místa na disku",
+  "idInUse": "ID sdílení se již používá",
+  "alreadyCompleted": "Sdílení již bylo dokončeno",
+  "completionRequiresFile": "Pro dokončení sdílení potřebujete alespoň jeden soubor.",
+  "notFound": "Sdílení nenalezeno",
+  "anonymousNoDelete": "Anonymní sdílení nelze smazat",
+  "anonymousNoExpire": "Platnost anonymních sdílení nemůže vypršet",
+  "anonymousNoUpdate": "Anonymní sdílení nelze aktualizovat",
+  "invalidExpiration": "Neplatné datum vypršení platnosti",
+  "maxExpirationExceeded": "Datum vypršení platnosti překračuje maximální datum",
+  "wrongPassword": "Nesprávné heslo",
+  "tokenRequired": "Token sdílení je povinný",
+  "privateShare": "K tomuto sdílení má přístup pouze tvůrce reverzního sdílení",
+  "maxViewsExceeded": "Maximální počet zobrazení byl překročen"
+}

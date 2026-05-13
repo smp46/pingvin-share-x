@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "Nincs elég szabad lemezterület",
+  "idInUse": "A megosztási azonosító már használatban van",
+  "alreadyCompleted": "A megosztás már befejeződött",
+  "completionRequiresFile": "Legalább egy fájlra van szüksége a megosztásban a befejezéshez.",
+  "notFound": "A megosztás nem található",
+  "anonymousNoDelete": "Az anonim megosztások nem törölhetők",
+  "anonymousNoExpire": "Az anonim megosztások nem járhatnak le",
+  "anonymousNoUpdate": "Az anonim megosztások nem frissíthetők",
+  "invalidExpiration": "Érvénytelen lejárati dátum",
+  "maxExpirationExceeded": "A lejárati dátum meghaladja a maximális lejárati dátumot",
+  "wrongPassword": "Hibás jelszó",
+  "tokenRequired": "Megosztási token szükséges",
+  "privateShare": "Csak a fordított megosztás létrehozója férhet hozzá ehhez a megosztáshoz",
+  "maxViewsExceeded": "A megtekintések maximális száma túllépve"
+}

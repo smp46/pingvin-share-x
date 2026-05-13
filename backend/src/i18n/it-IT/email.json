@@ -1,0 +1,11 @@
+{
+  "shareRecipientsCreatorFallback": "Qualcuno",
+  "shareRecipientsDescFallback": "Nessuna descrizione",
+  "shareRecipientsExpiresNeverFallback": "in: mai",
+  "smtpDisabled": "L'SMTP è disabilitato",
+  "emailServiceDisabled": "Servizio email disabilitato",
+  "testSubject": "Email di prova",
+  "testText": "Questa è un'email di prova",
+  "sendFailed": "Invio dell'email fallito",
+  "locale": "it-IT"
+}

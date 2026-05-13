@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "未設置 Redis URL",
+  "redisTimedOut": "Redis 超時",
+  "redisConnectionFailed": "Redis 連接失敗",
+  "redisUnexpectedResponse": "來自 Redis 的意外響應",
+  "redisError": "Redis 錯誤",
+  "variableNotFound": "未找到配置變數",
+  "editNotAllowed": "您只能通過 config.yaml 文件更新配置變數",
+  "invalidType": "配置變數必須為 {type} 類型",
+  "shareIdLengthValidation": "分享 ID 長度必須在 2 到 50 之間",
+  "zipCompressionLevelValidation": "Zip 壓縮級別必須在 0 到 9 之間"
+}

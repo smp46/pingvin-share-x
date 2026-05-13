@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "Redis URL is not set",
+  "redisTimedOut": "Redis timed out",
+  "redisConnectionFailed": "Redis connection failed",
+  "redisUnexpectedResponse": "Unexpected response from Redis",
+  "redisError": "Redis error",
+  "variableNotFound": "Konfiguracijska varijabla nije pronađena",
+  "editNotAllowed": "Dopušteno vam je ažurirati konfiguracijske varijable samo putem datoteke config.yaml",
+  "invalidType": "Konfiguracijska varijabla mora biti tipa {type}",
+  "shareIdLengthValidation": "Duljina ID-a dijeljenja mora biti između 2 i 50",
+  "zipCompressionLevelValidation": "Razina Zip kompresije mora biti između 0 i 9"
+}

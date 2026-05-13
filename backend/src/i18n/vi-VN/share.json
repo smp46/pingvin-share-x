@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "Không đủ dung lượng đĩa khả dụng",
+  "idInUse": "ID chia sẻ đã được sử dụng",
+  "alreadyCompleted": "Chia sẻ đã hoàn tất",
+  "completionRequiresFile": "Bạn cần ít nhất một tệp trong chia sẻ của mình để hoàn tất nó.",
+  "notFound": "Không tìm thấy chia sẻ",
+  "anonymousNoDelete": "Không thể xóa chia sẻ ẩn danh",
+  "anonymousNoExpire": "Chia sẻ ẩn danh không thể hết hạn",
+  "anonymousNoUpdate": "Không thể cập nhật chia sẻ ẩn danh",
+  "invalidExpiration": "Ngày hết hạn không hợp lệ",
+  "maxExpirationExceeded": "Ngày hết hạn vượt quá ngày hết hạn tối đa",
+  "wrongPassword": "Sai mật khẩu",
+  "tokenRequired": "Yêu cầu token chia sẻ",
+  "privateShare": "Chỉ người tạo chia sẻ ngược mới có thể truy cập chia sẻ này",
+  "maxViewsExceeded": "Vượt quá số lượt xem tối đa"
+}

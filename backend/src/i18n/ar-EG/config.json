@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "Redis URL is not set",
+  "redisTimedOut": "Redis timed out",
+  "redisConnectionFailed": "Redis connection failed",
+  "redisUnexpectedResponse": "Unexpected response from Redis",
+  "redisError": "Redis error",
+  "variableNotFound": "متغير التكوين غير موجود",
+  "editNotAllowed": "يسمح لك فقط بتحديث متغيرات التكوين عبر ملف config.yaml",
+  "invalidType": "يجب أن يكون متغير التكوين من نوع {type}",
+  "shareIdLengthValidation": "يجب أن يكون طول معرف المشاركة بين 2 و 50",
+  "zipCompressionLevelValidation": "يجب أن يكون مستوى ضغط Zip بين 0 و 9"
+}

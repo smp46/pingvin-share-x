@@ -1,0 +1,15 @@
+{
+  "already_linked": "Tento účet je již propojen s jiným uživatelem",
+  "not_linked": "Tento účet není propojen s žádným uživatelem",
+  "no_user": "Pro tento účet nebyl nalezen žádný uživatel",
+  "no_email": "Pro tento účet nebyla nalezena žádná emailová adresa",
+  "unverified_account": "Váš účet není ověřen",
+  "user_not_allowed": "Nemáte oprávnění se přihlásit",
+  "invalid_token": "Neplatný token",
+  "cannot_get_user_info": "Nepodařilo se získat informace o uživateli",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

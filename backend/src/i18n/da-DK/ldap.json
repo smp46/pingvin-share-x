@@ -1,0 +1,4 @@
+{
+  "urlNotDefined": "LDAP-server-URL er ikke defineret",
+  "bindFailed": "kunne ikke binde til standardbruger"
+}

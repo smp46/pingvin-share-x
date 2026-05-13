@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "ディスクの空き容量が不足しています",
+  "idInUse": "共有IDは既に使用されています",
+  "alreadyCompleted": "共有は既に完了しています",
+  "completionRequiresFile": "共有を完了するには、少なくとも1つのファイルが必要です。",
+  "notFound": "共有が見つかりません",
+  "anonymousNoDelete": "匿名共有は削除できません",
+  "anonymousNoExpire": "匿名共有は期限切れにできません",
+  "anonymousNoUpdate": "匿名共有は更新できません",
+  "invalidExpiration": "有効期限が無効です",
+  "maxExpirationExceeded": "有効期限が最大有効期限を超えています",
+  "wrongPassword": "パスワードが正しくありません",
+  "tokenRequired": "共有トークンが必要です",
+  "privateShare": "リバース共有の作成者のみがこの共有にアクセスできます",
+  "maxViewsExceeded": "最大閲覧数を超過しました"
+}
