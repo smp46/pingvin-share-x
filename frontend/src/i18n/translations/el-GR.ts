@@ -383,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "Enable email recipient sharing",
-  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. Only enable this if SMTP is activated.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Θέμα στο email διαμοιρασμού",
   "admin.config.email.share-recipients-subject.description": "Το θέμα του email διαμοιρασμού που θα φτάσει στον παραλήπτη.",
   "admin.config.email.share-recipients-message": "Το θέμα του email για τον διαμοιρασμό που θα φτάσει στον παραλήπτη ",
