@@ -507,7 +507,7 @@ export default {
   "admin.config.email.enable-share-email-recipients":
     "Enable email recipient sharing",
   "admin.config.email.enable-share-email-recipients.description":
-    "Whether to allow email sharing with recipients. Only enable this if SMTP is activated.",
+    "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Share recipients subject",
   "admin.config.email.share-recipients-subject.description":
     "Subject of the email which gets sent to the share recipients.",
