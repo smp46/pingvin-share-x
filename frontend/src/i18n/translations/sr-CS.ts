@@ -383,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "Omogući deljenje sa primaocima imejlom",
-  "admin.config.email.enable-share-email-recipients.description": "Da li dozvoliti deljenje sa primaocima putem imejla. Omogućite ovo samo ako je SMTP aktiviran.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Podelite naslov primaoca",
   "admin.config.email.share-recipients-subject.description": "Tema imejla koja se šalje primaocima deljenja.",
   "admin.config.email.share-recipients-message": "Delite poruku primaoca",
