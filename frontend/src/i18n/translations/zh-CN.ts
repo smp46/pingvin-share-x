@@ -383,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "启用邮件收件人共享",
-  "admin.config.email.enable-share-email-recipients.description": "是否允许与收件人分享电子邮件。只有在SMTP被激活时才启用此功能。",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "共享邮件通知主题",
   "admin.config.email.share-recipients-subject.description": "发送共享邮件通知的邮件主题",
   "admin.config.email.share-recipients-message": "共享邮件通知内容",
