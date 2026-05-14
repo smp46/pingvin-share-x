@@ -383,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "Activer le partage par courriel",
-  "admin.config.email.enable-share-email-recipients.description": "Autoriser ou non le partage de courriels avec les destinataires. N'activer cette option que si SMTP est activé.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Sujet d’un partage",
   "admin.config.email.share-recipients-subject.description": "Intitulé du courriel envoyé aux destinataires d’un partage.",
   "admin.config.email.share-recipients-message": "Message d’un partage",
