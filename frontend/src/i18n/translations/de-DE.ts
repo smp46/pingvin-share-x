@@ -383,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "Um fortzufahren, müssen Sie zuerst die Konfiguration speichern. Möchten Sie die Konfiguration speichern und die Redis-Verbindung testen?",
   "admin.config.cache.test-redis.modal.save.confirm": "Speichern und testen",
   "admin.config.email.enable-share-email-recipients": "Erlaube das Teilen der Freigabe via E-Mail",
-  "admin.config.email.enable-share-email-recipients.description": "Gibt an, ob das Teilen von E-Mails mit Empfängern erlaubt werden soll. Aktiviere dies nur, wenn SMTP aktiviert ist.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Betreff für Freigabe-Empfänger",
   "admin.config.email.share-recipients-subject.description": "Betreff der E-Mail, die an die Freigabe-Empfänger gesendet wird.",
   "admin.config.email.share-recipients-message": "Nachricht für Freigabe-Empfänger",
