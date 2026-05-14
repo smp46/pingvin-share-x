@@ -383,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "Чтобы продолжить необходимо сначала сохранить конфигурацию. Вы хотите сохранить конфигурацию и проверить подключение к Redis?",
   "admin.config.cache.test-redis.modal.save.confirm": "Сохранить и проверить",
   "admin.config.email.enable-share-email-recipients": "Включить отправку email получателю",
-  "admin.config.email.enable-share-email-recipients.description": "Разрешить ли обмен электронной почтой с получателями. Включите, только если включен SMTP.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Заголовок письма (загрузка)",
   "admin.config.email.share-recipients-subject.description": "Тема письма, которое отправляется получателям акции.",
   "admin.config.email.share-recipients-message": "Сообщение письма загрузки",
