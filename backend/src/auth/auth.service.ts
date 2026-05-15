@@ -47,6 +47,7 @@ export class AuthService {
           username: dto.username,
           password: hash,
           isAdmin: isAdmin ?? isFirstUser,
+          verifiedEmail: false,
         },
       });
 

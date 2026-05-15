@@ -12,11 +12,12 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  username String  @unique
-  email    String  @unique
-  password String?
-  isAdmin  Boolean @default(false)
-  ldapDN   String? @unique
+  username      String  @unique
+  email         String  @unique
+  verifiedEmail Boolean @default(false)
+  password      String?
+  isAdmin       Boolean @default(false)
+  ldapDN        String? @unique
 
   shares        Share[]
   refreshTokens RefreshToken[]
@@ -41,7 +42,7 @@ model RefreshToken {
   userId String
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  oauthIDToken  String? // prefixed with the ID of the issuing OAuth provider, separated by a colon
+  oauthIDToken String? // prefixed with the ID of the issuing OAuth provider, separated by a colon
 }
 
 model LoginToken {
@@ -92,10 +93,10 @@ model Share {
   reverseShareId String?
   reverseShare   ReverseShare? @relation(fields: [reverseShareId], references: [id], onDelete: Cascade)
 
-  security   ShareSecurity?
-  recipients ShareRecipient[]
-  files      File[]
-  storageProvider String @default("LOCAL")
+  security        ShareSecurity?
+  recipients      ShareRecipient[]
+  files           File[]
+  storageProvider String           @default("LOCAL")
 }
 
 model ReverseShare {

@@ -11,6 +11,7 @@ import {
 import { useForm, yupResolver } from "@mantine/form";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import * as yup from "yup";
 import useConfig from "../../hooks/config.hook";
@@ -24,6 +25,9 @@ const SignUpForm = () => {
   const router = useRouter();
   const t = useTranslate();
   const { refreshUser } = useUser();
+  const [verifyEmail, setVerifyEmail] = useState<boolean>(false);
+  const [emailVerificationEnabled, setEmailVerificationEnabled] =
+    useState<boolean>(false);
 
   const validationSchema = yup.object().shape({
     email: yup.string().email(t("common.error.invalid-email")).required(),
@@ -51,16 +55,33 @@ const SignUpForm = () => {
       .signUp(email.trim(), username.trim(), password.trim())
       .then(async () => {
         const user = await refreshUser();
-        if (user?.isAdmin) {
-          router.replace("/admin/intro");
+        if (emailVerificationEnabled) {
+          if (config.get("email.requireEmailVerification")) {
+            setEmailVerificationEnabled(true);
+          }
+          setVerifyEmail(true);
         } else {
-          router.replace("/upload");
+          if (user?.isAdmin) {
+            router.replace("/admin/intro");
+          } else {
+            router.replace("/upload");
+          }
         }
       })
       .catch(toast.axiosError);
   };
 
-  return (
+  return verifyEmail ? (
+    <Container size={420} my={40}>
+      <Title order={2} align="center" weight={900}>
+        <FormattedMessage id="signup.verifyEmail.title" />
+      </Title>
+      <Text color="dimmed" size="sm" align="center" mt={5}>
+        <FormattedMessage id="signup.verifyEmail.description" />{" "}
+      </Text>
+      <Paper withBorder shadow="md" p={30} mt={30} radius="md"></Paper>
+    </Container>
+  ) : (
     <Container size={420} my={40}>
       <Title order={2} align="center" weight={900}>
         <FormattedMessage id="signup.title" />

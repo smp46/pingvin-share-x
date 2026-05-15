@@ -143,6 +143,11 @@ export const configVariables = {
       defaultValue: "false",
       secret: false,
     },
+    requireEmailVerification: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
     shareRecipientsSubject: {
       type: "string",
       defaultValue: "Files shared with you",
