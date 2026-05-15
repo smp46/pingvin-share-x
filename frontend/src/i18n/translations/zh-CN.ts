@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "你没有创建任何共享",
   "account.shares.button.create": "创建共享",
   "account.shares.info.title": "共享信息",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "共享后缀",
   "account.shares.table.description": "描述",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "永不",
   "account.shares.modal.share-informations": "共享信息",
   "account.shares.modal.share-link": "共享链接",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "删除共享 {share}",
   "account.shares.modal.delete.description": "你真的想删除这个共享吗？",
   // END /account/shares
@@ -217,6 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "共享管理",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "共享 ID",
   "admin.shares.table.username": "创建者",
   "admin.shares.table.visitors": "访问者",
@@ -379,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "启用邮件收件人共享",
-  "admin.config.email.enable-share-email-recipients.description": "是否允许与收件人分享电子邮件。只有在SMTP被激活时才启用此功能。",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "共享邮件通知主题",
   "admin.config.email.share-recipients-subject.description": "发送共享邮件通知的邮件主题",
   "admin.config.email.share-recipients-message": "共享邮件通知内容",

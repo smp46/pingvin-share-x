@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Nemáte žádná sdílení.",
   "account.shares.button.create": "Vytvořit",
   "account.shares.info.title": "Vlastnosti",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Název",
   "account.shares.table.description": "Popis",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Nikdy",
   "account.shares.modal.share-informations": "Vlastnosti",
   "account.shares.modal.share-link": "Odkaz na sdílení",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Odstranit sdílení {share}",
   "account.shares.modal.delete.description": "Opravdu chcete odstranit toto sdílení?",
   // END /account/shares
@@ -217,6 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Správa sdílení",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "ID sdílení",
   "admin.shares.table.username": "Autor",
   "admin.shares.table.visitors": "Návštěvníci",
@@ -379,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "Sdílení přes e-mail",
-  "admin.config.email.enable-share-email-recipients.description": "Určuje, zdali je povoleno sdílení souborů přes e-mail. Povolte pouze pokud je aktivováno SMTP.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Předmět pro příjemce",
   "admin.config.email.share-recipients-subject.description": "Předmět e-mailu, který bude odeslán adresátovi.",
   "admin.config.email.share-recipients-message": "Zpráva pro příjemce",

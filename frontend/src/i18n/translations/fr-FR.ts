@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Vous n’avez aucun partage.",
   "account.shares.button.create": "Créez-en un",
   "account.shares.info.title": "Détails du partage",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Nom",
   "account.shares.table.description": "Description",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Jamais",
   "account.shares.modal.share-informations": "Détails du partage",
   "account.shares.modal.share-link": "Lien de partage",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Supprimer le partage : {share}",
   "account.shares.modal.delete.description": "Voulez-vous vraiment supprimer ce partage ?",
   // END /account/shares
@@ -217,6 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Gestion des partages",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "ID de partage",
   "admin.shares.table.username": "Créateur",
   "admin.shares.table.visitors": "Visiteurs",
@@ -379,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "Activer le partage par courriel",
-  "admin.config.email.enable-share-email-recipients.description": "Autoriser ou non le partage de courriels avec les destinataires. N'activer cette option que si SMTP est activé.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Sujet d’un partage",
   "admin.config.email.share-recipients-subject.description": "Intitulé du courriel envoyé aux destinataires d’un partage.",
   "admin.config.email.share-recipients-message": "Message d’un partage",

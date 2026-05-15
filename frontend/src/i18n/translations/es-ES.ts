@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "No tienes nada compartido.",
   "account.shares.button.create": "Crear uno",
   "account.shares.info.title": "Información del compartido",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Nombre",
   "account.shares.table.description": "Descripción",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Nunca",
   "account.shares.modal.share-informations": "Información del compartido",
   "account.shares.modal.share-link": "Enlace",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Eliminar enlace compartido: {share}",
   "account.shares.modal.delete.description": "¿Seguro que quieres eliminar este compartido?",
   // END /account/shares
@@ -217,6 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Gestión de comparticiones",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "ID de compartición",
   "admin.shares.table.username": "Creador",
   "admin.shares.table.visitors": "Visitantes",
@@ -379,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "Habilitar compartir por correo electrónico",
-  "admin.config.email.enable-share-email-recipients.description": "Si desea permitir compartir por correo electrónico. Solo habilita esto si SMTP está activado.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Asunto destinatario",
   "admin.config.email.share-recipients-subject.description": "Asunto del correo el cual es enviado al destinatario del compartido.",
   "admin.config.email.share-recipients-message": "Mensaje destinatario",

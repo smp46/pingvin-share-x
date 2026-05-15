@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Nemate nikakva deljenja.",
   "account.shares.button.create": "Napravite",
   "account.shares.info.title": "Delite informacije",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Naziv",
   "account.shares.table.description": "Opis",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Nikad",
   "account.shares.modal.share-informations": "Delite informacije",
   "account.shares.modal.share-link": "Deli vezu",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Izbriši deljenje {share}",
   "account.shares.modal.delete.description": "Da li zaista želite da izbrišete ovo deljenje?",
   // END /account/shares
@@ -217,6 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Upravljanje deljenjem",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "ID deljenja",
   "admin.shares.table.username": "Kreator",
   "admin.shares.table.visitors": "Posetioci",
@@ -379,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "Omogući deljenje sa primaocima imejlom",
-  "admin.config.email.enable-share-email-recipients.description": "Da li dozvoliti deljenje sa primaocima putem imejla. Omogućite ovo samo ako je SMTP aktiviran.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Podelite naslov primaoca",
   "admin.config.email.share-recipients-subject.description": "Tema imejla koja se šalje primaocima deljenja.",
   "admin.config.email.share-recipients-message": "Delite poruku primaoca",

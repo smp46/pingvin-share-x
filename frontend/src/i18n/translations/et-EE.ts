@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Sul pole ühtegi jagamist.",
   "account.shares.button.create": "Loo üks",
   "account.shares.info.title": "Jagamise andmed",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Nimi",
   "account.shares.table.description": "Kirjeldus",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Mitte kunagi",
   "account.shares.modal.share-informations": "Jagamise andmed",
   "account.shares.modal.share-link": "Jagamise link",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Kustuta jagamine: {share}",
   "account.shares.modal.delete.description": "Kas soovid tõesti seda jagamist kustutada?",
   // END /account/shares
@@ -217,6 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Jagamiste haldus",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "Jagamise ID",
   "admin.shares.table.username": "Looja",
   "admin.shares.table.visitors": "Külastajad",
@@ -379,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "Luba e-posti teavitused jagamise saajatele",
-  "admin.config.email.enable-share-email-recipients.description": "Kas lubada e-posti teavitusi jagamise saajatele. Lubage ainult, kui SMTP on aktiveeritud.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Jagamise saajate pealkiri",
   "admin.config.email.share-recipients-subject.description": "Pealkiri mis saadetakse jagamise saajatele.",
   "admin.config.email.share-recipients-message": "Jagamise saajate sõnum",

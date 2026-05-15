@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Немате никаква дељења.",
   "account.shares.button.create": "Направите",
   "account.shares.info.title": "Делите информације",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Назив",
   "account.shares.table.description": "Опис",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "Делите информације",
   "account.shares.modal.share-link": "Дели везу",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Избриши дељење {share}",
   "account.shares.modal.delete.description": "Да ли заиста желите да избришете ово дељење?",
   // END /account/shares
@@ -217,6 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Управљање дељењем",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "ID дељења",
   "admin.shares.table.username": "Креатор",
   "admin.shares.table.visitors": "Посетиоци",
@@ -379,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "Омогући дељење са примаоцима имејлом",
-  "admin.config.email.enable-share-email-recipients.description": "Да ли дозволити дељење са примаоцима путем имејла. Омогућите ово само ако је SMTP активиран.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Поделите наслов примаоца",
   "admin.config.email.share-recipients-subject.description": "Тема имејла која се шаље примаоцима дељења.",
   "admin.config.email.share-recipients-message": "Делите поруку примаоца",

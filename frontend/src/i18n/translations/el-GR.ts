@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Δεν διαμοιράζεστε τίποτα.",
   "account.shares.button.create": "Δημιουργία",
   "account.shares.info.title": "Πληροφορίες διαμοιρασμού",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "Αναγνωριστικό",
   "account.shares.table.name": "Όνομα",
   "account.shares.table.description": "Περιγραφή",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "Πληροφορίες διαμοιρασμού",
   "account.shares.modal.share-link": "Κοινοποίηση συνδέσμου",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "Θέλετε πραγματικά να διαγράψετε αυτό το διαμοιρασμό;",
   // END /account/shares
@@ -217,6 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Διαχείριση κοινοποιήσεων",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "Αναγνωριστικό κοινοποίησης",
   "admin.shares.table.username": "Δημιουργός",
   "admin.shares.table.visitors": "Επισκέπτες",
@@ -379,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "Enable email recipient sharing",
-  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. Only enable this if SMTP is activated.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Θέμα στο email διαμοιρασμού",
   "admin.config.email.share-recipients-subject.description": "Το θέμα του email διαμοιρασμού που θα φτάσει στον παραλήπτη.",
   "admin.config.email.share-recipients-message": "Το θέμα του email για τον διαμοιρασμό που θα φτάσει στον παραλήπτη ",

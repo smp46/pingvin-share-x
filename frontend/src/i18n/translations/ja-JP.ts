@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "共有しているアイテムがありません。",
   "account.shares.button.create": "新規作成",
   "account.shares.info.title": "共有情報",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "名前",
   "account.shares.table.description": "説明",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "なし",
   "account.shares.modal.share-informations": "共有情報",
   "account.shares.modal.share-link": "共有リンク",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "共有を削除: {share}",
   "account.shares.modal.delete.description": "この共有を削除してもよろしいですか？",
   // END /account/shares
@@ -217,6 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "共有管理",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "共有ID",
   "admin.shares.table.username": "作成者",
   "admin.shares.table.visitors": "訪問者",
@@ -379,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "メール受信者の共有を有効にする",
-  "admin.config.email.enable-share-email-recipients.description": "受信者とのメール共有を許可するかどうか。SMTPが有効な場合にのみこれを有効にします。",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "宛先への件名",
   "admin.config.email.share-recipients-subject.description": "メールで共有された相手に送信メールの件名です。",
   "admin.config.email.share-recipients-message": "宛先への本文",

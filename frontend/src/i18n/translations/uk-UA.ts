@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "У вас немає завантажень.",
   "account.shares.button.create": "Створити одну",
   "account.shares.info.title": "Відомості",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Назва",
   "account.shares.table.description": "Опис",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Ніколи",
   "account.shares.modal.share-informations": "Відомості",
   "account.shares.modal.share-link": "Поділитися посиланням",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Видалити завантаження: {share}",
   "account.shares.modal.delete.description": "Ви дійсно хочете видалити це завантаження?",
   // END /account/shares
@@ -217,6 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Керування завантаженнями",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "ID Завантаження",
   "admin.shares.table.username": "Автор",
   "admin.shares.table.visitors": "Відвідувачі",
@@ -379,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "Увімкнути спільний доступ для отримувачів через ел. пошту",
-  "admin.config.email.enable-share-email-recipients.description": "Чи дозволяти спільний доступ через ел. пошту для отримувачів. Увімкніть це тільки, якщо SMTP активовано.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Заголовок листа (завантаження)",
   "admin.config.email.share-recipients-subject.description": "Тема листа, який надсилається одержувачам акції.",
   "admin.config.email.share-recipients-message": "Повідомлення листа завантаження",

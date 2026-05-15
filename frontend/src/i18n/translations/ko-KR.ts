@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "당신은 아무것도 공유한것이 없어요.",
   "account.shares.button.create": "파일 업로드",
   "account.shares.info.title": "공유 정보",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "이름",
   "account.shares.table.description": "설명",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "공유 정보",
   "account.shares.modal.share-link": "공유 링크",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "정말로 이 공유를 삭제하시겠습니까?",
   // END /account/shares
@@ -217,6 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "공유 관리",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "공유 ID",
   "admin.shares.table.username": "만든이",
   "admin.shares.table.visitors": "방문자",
@@ -379,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "Enable email recipient sharing",
-  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. Only enable this if SMTP is activated.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "공유 제목",
   "admin.config.email.share-recipients-subject.description": "공유 수신자에게 전송되는 이메일의 제목입니다.",
   "admin.config.email.share-recipients-message": "수신자 메시지 공유",

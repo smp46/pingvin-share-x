@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Nie masz żadnych udziałów.",
   "account.shares.button.create": "Utwórz go",
   "account.shares.info.title": "Informacje udziału",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "Nr identyfikacyjny",
   "account.shares.table.name": "Nazwa",
   "account.shares.table.description": "Opis",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "Informacje udziału",
   "account.shares.modal.share-link": "Udostępnij link",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Usuń udostępnianie: {share}",
   "account.shares.modal.delete.description": "Czy na pewno chcesz usunąć to udostępnianie?",
   // END /account/shares
@@ -217,6 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Zarządzanie udostępnieniami",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "ID Udostępnienia",
   "admin.shares.table.username": "Twórca",
   "admin.shares.table.visitors": "Odwiedzający",
@@ -379,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "Enable email recipient sharing",
-  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. Only enable this if SMTP is activated.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Temat dla odbiorców udziału",
   "admin.config.email.share-recipients-subject.description": "Temat wiadomości e-mail, która zostanie wysłana do odbiorców udziału.",
   "admin.config.email.share-recipients-message": "Wiadomość dla odbiorców udziału",

@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Sinulla ei ole jaettuja tiedostoja.",
   "account.shares.button.create": "Luo yksi",
   "account.shares.info.title": "Jaetun tiedot",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Nimi",
   "account.shares.table.description": "Kuvaus",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "Jaetun tiedot",
   "account.shares.modal.share-link": "Jaa linkki",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "Haluatko todella poistaa tämän jaetun tiedoston/ot?",
   // END /account/shares
@@ -217,6 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Share management",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "Share ID",
   "admin.shares.table.username": "Creator",
   "admin.shares.table.visitors": "Vierailijat",
@@ -379,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "Enable email recipient sharing",
-  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. Only enable this if SMTP is activated.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Sähköpostijaon otsikko",
   "admin.config.email.share-recipients-subject.description": "Sähköpostin aihe, joka saa lähetetään jaon vastaanottajille.",
   "admin.config.email.share-recipients-message": "Sähköpostijaon viesti",

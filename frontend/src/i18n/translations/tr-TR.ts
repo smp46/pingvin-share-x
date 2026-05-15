@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Henüz hiç paylaşımınız yok.",
   "account.shares.button.create": "Bir tane oluştur",
   "account.shares.info.title": "Paylaşım bilgileri",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "İsim",
   "account.shares.table.description": "Açıklama",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Asla",
   "account.shares.modal.share-informations": "Paylaşım bilgileri",
   "account.shares.modal.share-link": "Paylaşım bağlantısı",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Paylaşımı sil: {share}",
   "account.shares.modal.delete.description": "Bu paylaşımı gerçekten silmek istiyor musunuz?",
   // END /account/shares
@@ -217,6 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Paylaşım Yönetimi",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "Paylaşım ID",
   "admin.shares.table.username": "Oluşturan",
   "admin.shares.table.visitors": "Ziyaretçi Sayısı",
@@ -379,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "E-posta alıcılarıyla paylaşımı etkinleştir",
-  "admin.config.email.enable-share-email-recipients.description": "Alıcılarla e-posta paylaşımına izin verilip verilmeyeceği. Yalnızca SMTP etkinse bunu etkinleştirin.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Paylaşım alıcıları e-posta konusu",
   "admin.config.email.share-recipients-subject.description": "Paylaşım alıcılarına gönderilen e-postanın konusu.",
   "admin.config.email.share-recipients-message": "Paylaşım alıcıları e-posta mesajı",

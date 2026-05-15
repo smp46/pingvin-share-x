@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "ليس لديك أي مشاركات.",
   "account.shares.button.create": "أنشئ واحدًا",
   "account.shares.info.title": "معلومات المشاركة",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "الرقم التعريفي",
   "account.shares.table.name": "الاسم",
   "account.shares.table.description": "الوصف",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "معلومات المشاركة",
   "account.shares.modal.share-link": "رابط المشاركة",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "هل تريد حذف هذه المشاركة حقاً؟",
   // END /account/shares
@@ -217,6 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "إدارة المشاركة",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "معرّف المشاركة",
   "admin.shares.table.username": "المُنشئ",
   "admin.shares.table.visitors": "الزوار",
@@ -379,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "Enable email recipient sharing",
-  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. Only enable this if SMTP is activated.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "عنوان الرسالة لمستلمي المشاركة",
   "admin.config.email.share-recipients-subject.description": "عنوان البريد الذي سيُرسَل لمستقبِلي المشاركة.",
   "admin.config.email.share-recipients-message": "رسالتك لمستقبِلي المشاركة",

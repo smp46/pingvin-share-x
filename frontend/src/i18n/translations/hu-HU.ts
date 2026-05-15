@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Nincsenek megosztások.",
   "account.shares.button.create": "Létrehozás",
   "account.shares.info.title": "Megosztás adatai",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Megnevezés",
   "account.shares.table.description": "Leírás",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "Megosztás adatai",
   "account.shares.modal.share-link": "Hivatkozás",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Megosztás törlése: {share}",
   "account.shares.modal.delete.description": "Biztos abban, hogy törölni kívánja ezt a megosztást?",
   // END /account/shares
@@ -217,6 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Megosztáskezelés",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "Megosztás ID",
   "admin.shares.table.username": "Létrehozó",
   "admin.shares.table.visitors": "Látogatók",
@@ -379,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "Enable email recipient sharing",
-  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. Only enable this if SMTP is activated.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Megosztási email tárgya",
   "admin.config.email.share-recipients-subject.description": "A megosztások címzettjeinek küldött email tárgya.",
   "admin.config.email.share-recipients-message": "Megosztási email szövege",

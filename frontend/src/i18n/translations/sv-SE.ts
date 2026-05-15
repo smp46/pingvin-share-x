@@ -124,6 +124,7 @@ export default {
   "account.shares.description.empty": "Du har inga delningar.",
   "account.shares.button.create": "Skapa en",
   "account.shares.info.title": "Information om delning",
+  "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Namn",
   "account.shares.table.description": "Beskrivning",
@@ -136,6 +137,8 @@ export default {
   "account.shares.table.expiry-never": "Aldrig",
   "account.shares.modal.share-informations": "Information om delning",
   "account.shares.modal.share-link": "Delningslänk",
+  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
+  "account.shares.modal.edit.password.remove": "Remove password protection",
   "account.shares.modal.delete.title": "Ta bort delning: {share}",
   "account.shares.modal.delete.description": "Vill du verkligen ta bort denna delning?",
   // END /account/shares
@@ -217,6 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Delningshantering",
+  "admin.shares.diskUsage": "Disk Usage",
   "admin.shares.table.id": "Delnings ID",
   "admin.shares.table.username": "Skapare",
   "admin.shares.table.visitors": "Besökare",
@@ -379,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.enable-share-email-recipients": "Aktivera delning av e-postmottagare",
-  "admin.config.email.enable-share-email-recipients.description": "Om du vill tillåta e-postdelning med mottagare. Aktivera endast detta om SMTP är aktiverat.",
+  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Delning ämne",
   "admin.config.email.share-recipients-subject.description": "Ämne för e-postmeddelandet som skickas till delningsmottagarna.",
   "admin.config.email.share-recipients-message": "Delning meddelande",
