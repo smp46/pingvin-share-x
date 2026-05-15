@@ -124,7 +124,7 @@ export default {
   "account.shares.description.empty": "Du hast keine Freigaben erstellt.",
   "account.shares.button.create": "Erstelle eine",
   "account.shares.info.title": "Freigabe Informationen",
-  "account.shares.button.edit": "Add/Remove Files",
+  "account.shares.button.edit": "Dateien hinzufügen/entfernen",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Name",
   "account.shares.table.description": "Beschreibung",
@@ -137,8 +137,8 @@ export default {
   "account.shares.table.expiry-never": "nie",
   "account.shares.modal.share-informations": "Teile deine Information",
   "account.shares.modal.share-link": "Freigabe teilen",
-  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
-  "account.shares.modal.edit.password.remove": "Remove password protection",
+  "account.shares.modal.edit.password.keep": "Leer lassen, um das aktuelle Passwort beizubehalten",
+  "account.shares.modal.edit.password.remove": "Passwortschutz entfernen",
   "account.shares.modal.delete.title": "Freigabe löschen: {share}",
   "account.shares.modal.delete.description": "Möchtest du diese Freigabe wirklich löschen?",
   // END /account/shares
@@ -220,7 +220,7 @@ export default {
 
   // /admin/shares
   "admin.shares.title": "Freigaben Verwaltung",
-  "admin.shares.diskUsage": "Disk Usage",
+  "admin.shares.diskUsage": "Festplattenbelegung",
   "admin.shares.table.id": "Freigabe ID",
   "admin.shares.table.username": "Ersteller",
   "admin.shares.table.visitors": "Besucher",
@@ -383,7 +383,7 @@ export default {
   "admin.config.cache.test-redis.modal.save.description": "Um fortzufahren, müssen Sie zuerst die Konfiguration speichern. Möchten Sie die Konfiguration speichern und die Redis-Verbindung testen?",
   "admin.config.cache.test-redis.modal.save.confirm": "Speichern und testen",
   "admin.config.email.enable-share-email-recipients": "Erlaube das Teilen der Freigabe via E-Mail",
-  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
+  "admin.config.email.enable-share-email-recipients.description": "Gibt an, ob das Teilen von E-Mails mit Empfängern erlaubt werden soll. Dies kann nur aktiviert werden, wenn SMTP aktiviert ist.",
   "admin.config.email.share-recipients-subject": "Betreff für Freigabe-Empfänger",
   "admin.config.email.share-recipients-subject.description": "Betreff der E-Mail, die an die Freigabe-Empfänger gesendet wird.",
   "admin.config.email.share-recipients-message": "Nachricht für Freigabe-Empfänger",
