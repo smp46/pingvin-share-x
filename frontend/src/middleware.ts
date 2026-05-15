@@ -144,7 +144,9 @@ export async function middleware(request: NextRequest) {
       if (path == "/auth/signIn") {
         path = path + "?redirect=" + encodeURIComponent(route);
       }
-      return NextResponse.redirect(new URL(path, request.url));
+      const response = NextResponse.redirect(new URL(path, request.url));
+      response.headers.set("Vary", "x-nextjs-data");
+      return response;
     }
   }
 }
