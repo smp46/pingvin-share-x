@@ -1,0 +1,15 @@
+{
+  "already_linked": "Tämä tili on jo linkitetty toiseen käyttäjään",
+  "not_linked": "Tätä tiliä ei ole linkitetty mihinkään käyttäjään",
+  "no_user": "Tälle tilille ei löytynyt käyttäjää",
+  "no_email": "Tälle tilille ei löytynyt sähköpostiosoitetta",
+  "unverified_account": "Tiliäsi ei ole vahvistettu",
+  "user_not_allowed": "Sinulla ei ole oikeutta kirjautua sisään",
+  "invalid_token": "Virheellinen tunniste",
+  "cannot_get_user_info": "Käyttäjätietoja ei voitu hakea",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}
