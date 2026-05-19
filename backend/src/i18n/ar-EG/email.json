@@ -1,0 +1,11 @@
+{
+  "shareRecipientsCreatorFallback": "شخص ما",
+  "shareRecipientsDescFallback": "لا يوجد وصف",
+  "shareRecipientsExpiresNeverFallback": "في: أبداً",
+  "smtpDisabled": "SMTP معطل",
+  "emailServiceDisabled": "خدمة البريد الإلكتروني معطلة",
+  "testSubject": "بريد إلكتروني تجريبي",
+  "testText": "هذا بريد إلكتروني تجريبي",
+  "sendFailed": "فشل إرسال البريد الإلكتروني",
+  "locale": "ar-EG"
+}

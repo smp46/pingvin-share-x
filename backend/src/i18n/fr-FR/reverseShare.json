@@ -1,0 +1,4 @@
+{
+  "notFound": "Jeton de partage inversé non trouvé",
+  "maxShareSizeExceeded": "La taille maximale du partage ne peut pas être supérieure à {maxSize} octets."
+}

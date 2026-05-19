@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "Redis URL is not set",
+  "redisTimedOut": "Redis timed out",
+  "redisConnectionFailed": "Redis connection failed",
+  "redisUnexpectedResponse": "Unexpected response from Redis",
+  "redisError": "Redis error",
+  "variableNotFound": "Η μεταβλητή διαμόρφωσης δεν βρέθηκε",
+  "editNotAllowed": "Επιτρέπεται η ενημέρωση των μεταβλητών διαμόρφωσης μόνο μέσω του αρχείου config.yaml",
+  "invalidType": "Η μεταβλητή διαμόρφωσης πρέπει να είναι τύπου {type}",
+  "shareIdLengthValidation": "Το μήκος του ID κοινής χρήσης πρέπει να είναι μεταξύ 2 και 50",
+  "zipCompressionLevelValidation": "Το επίπεδο συμπίεσης Zip πρέπει να είναι μεταξύ 0 και 9"
+}

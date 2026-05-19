@@ -1,0 +1,4 @@
+{
+  "urlNotDefined": "Az LDAP szerver URL-je nincs meghatározva",
+  "bindFailed": "nem sikerült csatlakozni az alapértelmezett felhasználóhoz"
+}

@@ -1,0 +1,4 @@
+{
+  "urlNotDefined": "LDAP-server-URL is niet gedefinieerd",
+  "bindFailed": "fout bij het binden aan de standaardgebruiker"
+}

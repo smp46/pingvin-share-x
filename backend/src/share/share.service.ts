@@ -11,6 +11,7 @@ import * as argon from "argon2";
 import * as crypto from "crypto";
 import * as fs from "fs";
 import * as moment from "moment";
+import { I18nService } from "nestjs-i18n";
 import { ClamScanService } from "src/clamscan/clamscan.service";
 import { ConfigService } from "src/config/config.service";
 import { EmailService } from "src/email/email.service";
@@ -35,18 +36,19 @@ export class ShareService {
     private reverseShareService: ReverseShareService,
     private clamScanService: ClamScanService,
     private systemService: SystemService,
+    private readonly i18n: I18nService,
   ) {}
 
   async create(share: CreateShareDTO, user?: User, reverseShareToken?: string) {
     if (share.size) {
       const systemInfo = await this.systemService.getSystemInfo();
       if (systemInfo && systemInfo.total - systemInfo.used < share.size) {
-        throw new BadRequestException("Not enough disk space available");
+        throw new BadRequestException(this.i18n.t("share.notEnoughSpace"));
       }
     }
 
     if (!(await this.isShareIdAvailable(share.id)).isAvailable)
-      throw new BadRequestException("Share id already in use");
+      throw new BadRequestException(this.i18n.t("share.idInUse"));
 
     if (!share.security || Object.keys(share.security).length == 0)
       share.security = undefined;
@@ -142,12 +144,10 @@ export class ShareService {
     });
 
     if (await this.isShareCompleted(id))
-      throw new BadRequestException("Share already completed");
+      throw new BadRequestException(this.i18n.t("share.alreadyCompleted"));
 
     if (share.files.length == 0)
-      throw new BadRequestException(
-        "You need at least on file in your share to complete it.",
-      );
+      throw new BadRequestException(this.i18n.t("share.completionRequiresFile"));
 
     // Asynchronously create a zip of all files
     if (share.files.length > 1)
@@ -255,7 +255,7 @@ export class ShareService {
       throw new NotFoundException(share.removedReason, "share_removed");
 
     if (!share || !share.uploadLocked)
-      throw new NotFoundException("Share not found");
+      throw new NotFoundException(this.i18n.t("share.notFound"));
     return {
       ...share,
       hasPassword: !!share.security?.password,
@@ -268,7 +268,7 @@ export class ShareService {
     });
 
     if (!share || !share.uploadLocked)
-      throw new NotFoundException("Share not found");
+      throw new NotFoundException(this.i18n.t("share.notFound"));
 
     return share;
   }
@@ -278,10 +278,10 @@ export class ShareService {
       where: { id: shareId },
     });
 
-    if (!share) throw new NotFoundException("Share not found");
+    if (!share) throw new NotFoundException(this.i18n.t("share.notFound"));
 
     if (!share.creatorId && !isDeleterAdmin)
-      throw new ForbiddenException("Anonymous shares can't be deleted");
+      throw new ForbiddenException(this.i18n.t("share.anonymousNoDelete"));
 
     await this.fileService.deleteAllFiles(shareId);
     await this.prisma.share.delete({ where: { id: shareId } });
@@ -292,10 +292,10 @@ export class ShareService {
       where: { id: shareId },
     });
 
-    if (!share) throw new NotFoundException("Share not found");
+    if (!share) throw new NotFoundException(this.i18n.t("share.notFound"));
 
     if (!share.creatorId) {
-      throw new ForbiddenException("Anonymous shares can't be expired");
+      throw new ForbiddenException(this.i18n.t("share.anonymousNoExpire"));
     }
 
     await this.prisma.share.update({
@@ -319,7 +319,7 @@ export class ShareService {
 
     const isUpdaterAdmin = user?.isAdmin === true;
     if (!currentShare.creatorId && !isUpdaterAdmin) {
-      throw new ForbiddenException("Anonymous shares can't be updated");
+      throw new ForbiddenException(this.i18n.t("share.anonymousNoUpdate"));
     }
 
     let expirationDate: Date | undefined;
@@ -419,7 +419,7 @@ export class ShareService {
     const absoluteExpiration = moment(expiration, moment.ISO_8601, true);
     if (absoluteExpiration.isValid()) return absoluteExpiration.toDate();
 
-    throw new BadRequestException("Invalid expiration date");
+    throw new BadRequestException(this.i18n.t("share.invalidExpiration"));
   }
 
   private validateExpiration(expiration: Date) {
@@ -433,7 +433,7 @@ export class ShareService {
           moment().add(maxExpiration.value, maxExpiration.unit).toDate())
     ) {
       throw new BadRequestException(
-        "Expiration date exceeds maximum expiration date",
+        this.i18n.t("share.maxExpirationExceeded"),
       );
     }
   }
@@ -461,7 +461,7 @@ export class ShareService {
     if (share?.security?.password) {
       if (!password) {
         throw new ForbiddenException(
-          "This share is password protected",
+          this.i18n.t("file.passwordProtected"),
           "share_password_required",
         );
       }
@@ -471,13 +471,16 @@ export class ShareService {
         password,
       );
       if (!isPasswordValid) {
-        throw new ForbiddenException("Wrong password", "wrong_password");
+        throw new ForbiddenException(
+          this.i18n.t("share.wrongPassword"),
+          "wrong_password",
+        );
       }
     }
 
     if (share.security?.maxViews && share.security.maxViews <= share.views) {
       throw new ForbiddenException(
-        "Maximum views exceeded",
+        this.i18n.t("share.maxViewsExceeded"),
         "share_max_views_exceeded",
       );
     }

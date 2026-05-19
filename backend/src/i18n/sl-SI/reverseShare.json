@@ -1,0 +1,4 @@
+{
+  "notFound": "Žeton za obrnjeno deljenje ni bil najden",
+  "maxShareSizeExceeded": "Največja velikost deljenja ne more biti večja od {maxSize} bajtov."
+}

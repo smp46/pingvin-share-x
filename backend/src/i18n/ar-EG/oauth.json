@@ -1,0 +1,15 @@
+{
+  "already_linked": "هذا الحساب مرتبط بالفعل بمستخدم آخر",
+  "not_linked": "هذا الحساب غير مرتبط بأي مستخدم",
+  "no_user": "لم يتم العثور على مستخدم لهذا الحساب",
+  "no_email": "لم يتم العثور على عنوان بريد إلكتروني لهذا الحساب",
+  "unverified_account": "حسابك غير موثق",
+  "user_not_allowed": "غير مسموح لك بتسجيل الدخول",
+  "invalid_token": "رمز غير صالح",
+  "cannot_get_user_info": "تعذر الحصول على معلومات المستخدم",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

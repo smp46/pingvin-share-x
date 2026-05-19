@@ -1,0 +1,4 @@
+{
+  "usernamePattern": "Gebruikersnaam mag alleen letters, cijfers, punten en underscores bevatten",
+  "idPattern": "ID mag alleen letters, cijfers, underscores en streepjes bevatten"
+}

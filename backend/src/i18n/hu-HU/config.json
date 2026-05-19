@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "Redis URL is not set",
+  "redisTimedOut": "Redis timed out",
+  "redisConnectionFailed": "Redis connection failed",
+  "redisUnexpectedResponse": "Unexpected response from Redis",
+  "redisError": "Redis error",
+  "variableNotFound": "Konfigurációs változó nem található",
+  "editNotAllowed": "A konfigurációs változókat csak a config.yaml fájlon keresztül frissítheti",
+  "invalidType": "A konfigurációs változónak {type} típusúnak kell lennie",
+  "shareIdLengthValidation": "A megosztási azonosító hosszának 2 és 50 között kell lennie",
+  "zipCompressionLevelValidation": "A Zip tömörítési szintnek 0 és 9 között kell lennie"
+}

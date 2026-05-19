@@ -1,0 +1,15 @@
+{
+  "invalidIdFormat": "ID 格式无效",
+  "notFound": "未找到文件",
+  "passwordProtected": "此分享受密码保护",
+  "alreadyCompleted": "分享已完成",
+  "notEnoughSpace": "服务器空间不足",
+  "unexpectedChunk": "收到意外的分块",
+  "maxSizeExceeded": "超过最大分享限制",
+  "zipError": "创建 ZIP 文件时出错",
+  "s3DeleteError": "无法从 S3 删除文件",
+  "s3UploadInitError": "无法初始化分块上传。",
+  "s3SessionNotFound": "未找到分块上传会话。",
+  "s3UploadFailed": "分块上传失败。上传已中止。",
+  "s3SizeError": "无法检索文件大小"
+}

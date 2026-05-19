@@ -22,6 +22,7 @@ import {
 import { stringToTimespan, timespanToString } from "../../../utils/date.util";
 import FileSizeInput from "../../core/FileSizeInput";
 import TimespanInput from "../../core/TimespanInput";
+import { LOCALES } from "../../../i18n/locales";
 
 const AdminConfigInput = ({
   configVariable,
@@ -44,6 +45,8 @@ const AdminConfigInput = ({
   const isThemeRadiusConfig = configVariable.key === "appearance.themeRadius";
   const isThemeColorSchemeConfig =
     configVariable.key === "appearance.themeColorScheme";
+  const isDefaultLanguageConfig =
+    configVariable.key === "general.defaultLanguage";
   const isEmailShareConfig =
     configVariable.key === "email.enableShareEmailRecipients";
   let isSmtpEnabled = false;
@@ -84,6 +87,11 @@ const AdminConfigInput = ({
     updateConfigVariable({ key: configVariable.key, value: value });
   };
 
+  const languages = Object.values(LOCALES).map((locale) => ({
+    value: locale.code,
+    label: locale.name,
+  }));
+
   return (
     <Stack align="end">
       {configVariable.type == "string" &&
@@ -108,6 +116,19 @@ const AdminConfigInput = ({
             {...form.getInputProps("stringValue")}
             placeholder={configVariable.defaultValue}
             onChange={(e) => onValueChange(configVariable, e.target.value)}
+          />
+        ) : isDefaultLanguageConfig ? (
+          <Select
+            style={{
+              width: "100%",
+            }}
+            disabled={!configVariable.allowEdit}
+            data={languages}
+            value={form.values.stringValue}
+            placeholder={configVariable.defaultValue}
+            onChange={(value) => onValueChange(configVariable, value ?? "")}
+            searchable
+            allowDeselect={false}
           />
         ) : isThemePrimaryColorConfig ? (
           <Select

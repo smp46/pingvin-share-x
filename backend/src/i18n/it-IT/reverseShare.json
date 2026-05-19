@@ -1,0 +1,4 @@
+{
+  "notFound": "Token di condivisione inversa non trovato",
+  "maxShareSizeExceeded": "La dimensione massima della condivisione non può essere superiore a {maxSize} byte."
+}

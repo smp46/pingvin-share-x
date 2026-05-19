@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "Redis URL is not set",
+  "redisTimedOut": "Redis timed out",
+  "redisConnectionFailed": "Redis connection failed",
+  "redisUnexpectedResponse": "Unexpected response from Redis",
+  "redisError": "Redis error",
+  "variableNotFound": "Переменная конфигурации не найдена",
+  "editNotAllowed": "Вы можете обновлять переменные конфигурации только через файл config.yaml",
+  "invalidType": "Переменная конфигурации должна иметь тип {type}",
+  "shareIdLengthValidation": "Длина ID раздачи должна быть от 2 до 50 символов",
+  "zipCompressionLevelValidation": "Уровень сжатия Zip должен быть от 0 до 9"
+}

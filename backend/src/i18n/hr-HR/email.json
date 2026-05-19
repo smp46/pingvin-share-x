@@ -1,0 +1,11 @@
+{
+  "shareRecipientsCreatorFallback": "Netko",
+  "shareRecipientsDescFallback": "Nema opisa",
+  "shareRecipientsExpiresNeverFallback": "u: nikada",
+  "smtpDisabled": "SMTP je onemogućen",
+  "emailServiceDisabled": "Usluga e-pošte onemogućena",
+  "testSubject": "Testna e-pošta",
+  "testText": "Ovo je testna e-pošta",
+  "sendFailed": "Slanje e-pošte nije uspjelo",
+  "locale": "hr-HR"
+}

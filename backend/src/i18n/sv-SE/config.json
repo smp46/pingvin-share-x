@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "Redis URL är inte angiven",
+  "redisTimedOut": "Redis-anslutningen tog för lång tid",
+  "redisConnectionFailed": "Anslutningen till Redis misslyckades",
+  "redisUnexpectedResponse": "Oväntat svar från Redis",
+  "redisError": "Redis-fel",
+  "variableNotFound": "Konfigurationsvariabeln hittades inte",
+  "editNotAllowed": "Du får endast uppdatera konfigurationsvariabler via config.yaml-filen",
+  "invalidType": "Konfigurationsvariabeln måste vara av typen {type}",
+  "shareIdLengthValidation": "Längden på delnings-ID måste vara mellan 2 och 50",
+  "zipCompressionLevelValidation": "Zip-komprimeringsnivå måste vara mellan 0 och 9"
+}

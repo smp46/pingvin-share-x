@@ -34,6 +34,11 @@ export const configVariables = {
       defaultValue: "3 months",
       secret: false,
     },
+    defaultLanguage: {
+      type: "string",
+      defaultValue: "en-US",
+      secret: false,
+    },
   },
   appearance: {
     themePrimaryColor: {

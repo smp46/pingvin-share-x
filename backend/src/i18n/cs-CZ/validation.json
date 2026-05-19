@@ -1,0 +1,4 @@
+{
+  "usernamePattern": "Uživatelské jméno může obsahovat pouze písmena, čísla, tečky a podtržítka",
+  "idPattern": "ID může obsahovat pouze písmena, čísla, podtržítka a pomlčky"
+}

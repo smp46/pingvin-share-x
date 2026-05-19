@@ -1,0 +1,15 @@
+{
+  "already_linked": "Овај налог је већ повезан са другим корисником",
+  "not_linked": "Овај налог није повезан ни са једним корисником",
+  "no_user": "Није пронађен корисник за овај налог",
+  "no_email": "Није пронађена емаил адреса за овај налог",
+  "unverified_account": "Ваш налог није верификован",
+  "user_not_allowed": "Није вам дозвољена пријава",
+  "invalid_token": "Неважећи токен",
+  "cannot_get_user_info": "Није могуће добити информације о кориснику",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

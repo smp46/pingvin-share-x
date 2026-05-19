@@ -1,0 +1,15 @@
+{
+  "already_linked": "이 계정은 이미 다른 사용자와 연결되어 있습니다",
+  "not_linked": "이 계정은 어떤 사용자와도 연결되어 있지 않습니다",
+  "no_user": "이 계정에 대한 사용자를 찾을 수 없습니다",
+  "no_email": "이 계정에 대한 이메일 주소를 찾을 수 없습니다",
+  "unverified_account": "계정이 인증되지 않았습니다",
+  "user_not_allowed": "로그인이 허용되지 않습니다",
+  "invalid_token": "유효하지 않은 토큰입니다",
+  "cannot_get_user_info": "사용자 정보를 가져올 수 없습니다",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

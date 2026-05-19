@@ -1,0 +1,15 @@
+{
+  "already_linked": "Ovaj nalog je već povezan sa drugim korisnikom",
+  "not_linked": "Ovaj nalog nije povezan ni sa jednim korisnikom",
+  "no_user": "Nije pronađen korisnik za ovaj nalog",
+  "no_email": "Nije pronađena email adresa za ovaj nalog",
+  "unverified_account": "Vaš nalog nije verifikovan",
+  "user_not_allowed": "Nije vam dozvoljena prijava",
+  "invalid_token": "Nevažeći token",
+  "cannot_get_user_info": "Nije moguće dobiti informacije o korisniku",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

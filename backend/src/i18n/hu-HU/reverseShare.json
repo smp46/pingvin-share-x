@@ -1,0 +1,4 @@
+{
+  "notFound": "A fordított megosztási token nem található",
+  "maxShareSizeExceeded": "A maximális megosztási méret nem lehet nagyobb, mint {maxSize} bájt."
+}

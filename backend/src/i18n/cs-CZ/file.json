@@ -1,0 +1,15 @@
+{
+  "invalidIdFormat": "Neplatný formát ID",
+  "notFound": "Soubor nenalezen",
+  "passwordProtected": "Toto sdílení je chráněno heslem",
+  "alreadyCompleted": "Sdílení je již dokončeno",
+  "notEnoughSpace": "Nedostatek místa na serveru",
+  "unexpectedChunk": "Přijat neočekávaný blok",
+  "maxSizeExceeded": "Maximální velikost sdílení byla překročena",
+  "zipError": "Chyba při vytváření ZIP souboru",
+  "s3DeleteError": "Nepodařilo se smazat soubor z S3",
+  "s3UploadInitError": "Nepodařilo se inicializovat nahrávání.",
+  "s3SessionNotFound": "Relace nahrávání nebyla nalezena.",
+  "s3UploadFailed": "Nahrávání se nezdařilo. Nahrávání bylo přerušeno.",
+  "s3SizeError": "Nepodařilo se získat velikost souboru"
+}
