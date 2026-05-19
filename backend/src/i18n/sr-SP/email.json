@@ -1,0 +1,11 @@
+{
+  "shareRecipientsCreatorFallback": "Неко",
+  "shareRecipientsDescFallback": "Без описа",
+  "shareRecipientsExpiresNeverFallback": "истиче: никада",
+  "smtpDisabled": "SMTP је онемогућен",
+  "emailServiceDisabled": "Услуга е-поште је онемогућена",
+  "testSubject": "Тест е-пошта",
+  "testText": "Ово је тест е-пошта",
+  "sendFailed": "Слање е-поште није успело",
+  "locale": "sr-SP"
+}
