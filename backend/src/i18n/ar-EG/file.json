@@ -1,0 +1,15 @@
+{
+  "invalidIdFormat": "تنسيق المعرف غير صالح",
+  "notFound": "الملف غير موجود",
+  "passwordProtected": "هذه المشاركة محمية بكلمة مرور",
+  "alreadyCompleted": "المشاركة مكتملة بالفعل",
+  "notEnoughSpace": "لا توجد مساحة كافية على الخادم",
+  "unexpectedChunk": "تم استلام قطعة غير متوقعة",
+  "maxSizeExceeded": "تم تجاوز الحد الأقصى لحجم المشاركة",
+  "zipError": "خطأ في إنشاء ملف ZIP",
+  "s3DeleteError": "تعذر حذف الملف من S3",
+  "s3UploadInitError": "فشل بدء التحميل المتعدد الأجزاء.",
+  "s3SessionNotFound": "جلسة التحميل المتعدد الأجزاء غير موجودة.",
+  "s3UploadFailed": "فشل التحميل المتعدد الأجزاء. تم إلغاء التحميل.",
+  "s3SizeError": "تعذر استرداد حجم الملف"
+}
