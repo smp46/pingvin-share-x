@@ -1,0 +1,15 @@
+{
+  "invalidIdFormat": "Ogiltigt ID-format",
+  "notFound": "Filen hittades inte",
+  "passwordProtected": "Denna delning är lösenordsskyddad",
+  "alreadyCompleted": "Delningen är redan slutförd",
+  "notEnoughSpace": "Inte tillräckligt med utrymme på servern",
+  "unexpectedChunk": "Oväntat fragment mottaget",
+  "maxSizeExceeded": "Maximal delningsstorlek överskriden",
+  "zipError": "Fel vid skapande av ZIP-fil",
+  "s3DeleteError": "Kunde inte ta bort filen från S3",
+  "s3UploadInitError": "Misslyckades med att initiera multipart-uppladdning.",
+  "s3SessionNotFound": "Session för multipart-uppladdning hittades inte.",
+  "s3UploadFailed": "Multipart-uppladdning misslyckades. Uppladdningen har avbrutits.",
+  "s3SizeError": "Kunde inte hämta filstorlek"
+}
