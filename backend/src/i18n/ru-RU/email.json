@@ -1,0 +1,11 @@
+{
+  "shareRecipientsCreatorFallback": "Кто-то",
+  "shareRecipientsDescFallback": "Без описания",
+  "shareRecipientsExpiresNeverFallback": "в: никогда",
+  "smtpDisabled": "SMTP отключен",
+  "emailServiceDisabled": "Служба электронной почты отключена",
+  "testSubject": "Тестовое письмо",
+  "testText": "Это тестовое письмо",
+  "sendFailed": "Не удалось отправить письмо",
+  "locale": "ru-RU"
+}
