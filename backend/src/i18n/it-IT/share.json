@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "Spazio su disco insufficiente",
+  "idInUse": "ID condivisione già in uso",
+  "alreadyCompleted": "Condivisione già completata",
+  "completionRequiresFile": "È necessario almeno un file nella condivisione per completarla.",
+  "notFound": "Condivisione non trovata",
+  "anonymousNoDelete": "Le condivisioni anonime non possono essere eliminate",
+  "anonymousNoExpire": "Le condivisioni anonime non possono scadere",
+  "anonymousNoUpdate": "Le condivisioni anonime non possono essere aggiornate",
+  "invalidExpiration": "Data di scadenza non valida",
+  "maxExpirationExceeded": "La data di scadenza supera la data di scadenza massima",
+  "wrongPassword": "Password errata",
+  "tokenRequired": "Token di condivisione richiesto",
+  "privateShare": "Solo il creatore della condivisione inversa può accedere a questa condivisione",
+  "maxViewsExceeded": "Numero massimo di visualizzazioni superato"
+}
