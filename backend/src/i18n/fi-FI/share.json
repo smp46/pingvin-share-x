@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "Levytilaa ei ole tarpeeksi vapaana",
+  "idInUse": "Jaon ID on jo käytössä",
+  "alreadyCompleted": "Jako on jo valmis",
+  "completionRequiresFile": "Tarvitset vähintään yhden tiedoston jaossasi sen viimeistelemiseksi.",
+  "notFound": "Jakoa ei löytynyt",
+  "anonymousNoDelete": "Anonyymejä jakoja ei voi poistaa",
+  "anonymousNoExpire": "Anonyymit jaot eivät voi vanhentua",
+  "anonymousNoUpdate": "Anonyymejä jakoja ei voi päivittää",
+  "invalidExpiration": "Virheellinen vanhentumispäivä",
+  "maxExpirationExceeded": "Vanhentumispäivä ylittää enimmäisvanhentumispäivän",
+  "wrongPassword": "Väärä salasana",
+  "tokenRequired": "Jaon tunniste vaaditaan",
+  "privateShare": "Vain käänteisen jaon luoja voi käyttää tätä jakoa",
+  "maxViewsExceeded": "Katselukertojen enimmäismäärä ylittyi"
+}
