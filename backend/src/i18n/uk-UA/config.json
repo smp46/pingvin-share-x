@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "URL Redis не вказано",
+  "redisTimedOut": "Час очікування Redis вичерпано",
+  "redisConnectionFailed": "Помилка підключення до Redis",
+  "redisUnexpectedResponse": "Неочікувана відповідь від Redis",
+  "redisError": "Помилка Redis",
+  "variableNotFound": "Змінну конфігурації не знайдено",
+  "editNotAllowed": "Ви можете оновлювати змінні конфігурації лише через файл config.yaml",
+  "invalidType": "Змінна конфігурації повинна мати тип {type}",
+  "shareIdLengthValidation": "Довжина ID поширення повинна бути від 2 до 50 символів",
+  "zipCompressionLevelValidation": "Рівень стиснення Zip повинен бути від 0 до 9"
+}
