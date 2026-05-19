@@ -1,0 +1,15 @@
+{
+  "already_linked": "Tài khoản này đã được liên kết với người dùng khác",
+  "not_linked": "Tài khoản này chưa được liên kết với bất kỳ người dùng nào",
+  "no_user": "Không tìm thấy người dùng cho tài khoản này",
+  "no_email": "Không tìm thấy địa chỉ email cho tài khoản này",
+  "unverified_account": "Tài khoản của bạn chưa được xác minh",
+  "user_not_allowed": "Bạn không được phép đăng nhập",
+  "invalid_token": "Token không hợp lệ",
+  "cannot_get_user_info": "Không thể lấy thông tin người dùng",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}
