@@ -1,0 +1,15 @@
+{
+  "already_linked": "บัญชีนี้เชื่อมโยงกับผู้ใช้รายอื่นแล้ว",
+  "not_linked": "บัญชีนี้ไม่ได้เชื่อมโยงกับผู้ใช้รายใดเลย",
+  "no_user": "ไม่พบผู้ใช้สำหรับบัญชีนี้",
+  "no_email": "ไม่พบที่อยู่อีเมลสำหรับบัญชีนี้",
+  "unverified_account": "บัญชีของคุณยังไม่ได้รับการยืนยัน",
+  "user_not_allowed": "คุณไม่ได้รับอนุญาตให้เข้าสู่ระบบ",
+  "invalid_token": "โทเค็นไม่ถูกต้อง",
+  "cannot_get_user_info": "ไม่สามารถรับข้อมูลผู้ใช้ได้",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}
