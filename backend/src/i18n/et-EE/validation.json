@@ -1,0 +1,4 @@
+{
+  "usernamePattern": "Kasutajanimi võib sisaldada ainult tähti, numbreid, punkte ja alakriipse",
+  "idPattern": "ID võib sisaldada ainult tähti, numbreid, alakriipse ja sidekriipse"
+}
