@@ -1,0 +1,11 @@
+{
+  "shareRecipientsCreatorFallback": "Хтось",
+  "shareRecipientsDescFallback": "Без опису",
+  "shareRecipientsExpiresNeverFallback": "в: ніколи",
+  "smtpDisabled": "SMTP вимкнено",
+  "emailServiceDisabled": "Службу електронної пошти вимкнено",
+  "testSubject": "Тестовий лист",
+  "testText": "Це тестовий електронний лист",
+  "sendFailed": "Не вдалося надіслати лист",
+  "locale": "uk-UA"
+}
