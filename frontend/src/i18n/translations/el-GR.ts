@@ -13,7 +13,7 @@ export default {
 
   // /
   "home.title": "Μια πλατφόρμα κοινής χρήσης αρχείων <h>σε ιδιωτική εγκατάσταση</h>.",
-  "home.description": "Θέλετε πραγματικά να δώσετε τα προσωπικά σας αρχεία στο χέρι τρίτων όπως WeTransfer?",
+  "home.description": "Θέλετε πραγματικά να δώσετε τα προσωπικά σας αρχεία στο χέρι τρίτων όπως WeTransfer;",
   "home.bullet.a.name": "Ιδιωτική εγκατάσταση",
   "home.bullet.a.description": "Φιλοξενήστε το Pingvin Share στο δικό σας μηχάνημα.",
   "home.bullet.b.name": "Απόρρητο",
