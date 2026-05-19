@@ -8,6 +8,7 @@ import {
   MyShare,
   Share,
   ShareMetaData,
+  UpdateShare,
 } from "../types/share.type";
 import api from "./api.service";
 
@@ -56,6 +57,11 @@ const getMetaData = async (id: string): Promise<ShareMetaData> => {
 const remove = async (id: string) => {
   if (!isValidId(id)) throw new Error("Invalid ID");
   await api.delete(`shares/${id}`);
+};
+
+const update = async (id: string, share: UpdateShare): Promise<MyShare> => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
+  return (await api.patch(`shares/${id}`, share)).data;
 };
 
 const expire = async (id: string) => {
@@ -179,6 +185,7 @@ export default {
   getShareToken,
   get,
   getFromOwner,
+  update,
   remove,
   expire,
   getMetaData,

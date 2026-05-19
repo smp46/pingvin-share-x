@@ -161,7 +161,7 @@ const FileList = ({
                       {!share.hasPassword && (
                         <HoverTip label={t("common.button.copy-link")}>
                           <ActionIcon
-                            color="orange"
+                            color="victoria"
                             variant="light"
                             size={25}
                             onClick={() => copyFileLink(file)}
@@ -173,7 +173,7 @@ const FileList = ({
 
                       <HoverTip label={t("common.button.download")}>
                         <ActionIcon
-                          color="victoria"
+                          color="cyan"
                           variant="light"
                           size={25}
                           onClick={async () => {

@@ -5,9 +5,12 @@ import {
   BadRequestException,
 } from "@nestjs/common";
 import { Observable } from "rxjs";
+import { I18nService } from "nestjs-i18n";
 
 @Injectable()
 export class IdValidation implements CanActivate {
+  constructor(private readonly i18n: I18nService) {}
+
   canActivate(
     context: ExecutionContext,
   ): boolean | Promise<boolean> | Observable<boolean> {
@@ -20,7 +23,7 @@ export class IdValidation implements CanActivate {
         request.body?.id ||
         request.params?.shareId;
     } catch {
-      throw new BadRequestException("Invalid ID format");
+      throw new BadRequestException(this.i18n.t("file.invalidIdFormat"));
     }
 
     if (!id) {
@@ -31,7 +34,7 @@ export class IdValidation implements CanActivate {
     const isBase64 = /^[a-zA-Z0-9-]*={0,2}$/.test(id);
 
     if (!isBase64) {
-      throw new BadRequestException("Invalid ID format");
+      throw new BadRequestException(this.i18n.t("file.invalidIdFormat"));
     }
 
     return true;

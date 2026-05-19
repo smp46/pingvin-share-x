@@ -40,7 +40,7 @@ const DownloadAllButton = ({ shareId }: { shareId: string }) => {
   return (
     <Button
       variant="light"
-      color="victoria"
+      color="cyan"
       loading={isLoading}
       onClick={() => {
         if (!isZipReady) {

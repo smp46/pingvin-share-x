@@ -5,6 +5,7 @@ import {
   Get,
   HttpCode,
   Param,
+  Patch,
   Post,
   Req,
   Res,
@@ -12,7 +13,7 @@ import {
 } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
 import { Throttle } from "@nestjs/throttler";
-import { User } from "@prisma/client";
+import { Share, ShareSecurity, User } from "@prisma/client";
 import { Request, Response } from "express";
 import * as moment from "moment";
 import { GetUser } from "src/auth/decorator/getUser.decorator";
@@ -24,8 +25,11 @@ import { MyShareDTO } from "./dto/myShare.dto";
 import { ShareDTO } from "./dto/share.dto";
 import { ShareMetaDataDTO } from "./dto/shareMetaData.dto";
 import { SharePasswordDto } from "./dto/sharePassword.dto";
+import { UpdateShareDTO } from "./dto/updateShare.dto";
+import { GetShare } from "./decorator/getShare.decorator";
 import { CreateShareGuard } from "./guard/createShare.guard";
 import { ShareOwnerGuard } from "./guard/shareOwner.guard";
+import { StrictShareOwnerGuard } from "./guard/strictShareOwner.guard";
 import { ShareSecurityGuard } from "./guard/shareSecurity.guard";
 import { ShareTokenSecurity } from "./guard/shareTokenSecurity.guard";
 import { IdValidation } from "./guard/shareIdValidation.guard";
@@ -59,7 +63,7 @@ export class ShareController {
   }
 
   @Get(":id/from-owner")
-  @UseGuards(IdValidation, ShareOwnerGuard)
+  @UseGuards(IdValidation, StrictShareOwnerGuard)
   async getFromOwner(@Param("id") id: string) {
     return new ShareDTO().from(await this.shareService.get(id));
   }
@@ -83,9 +87,22 @@ export class ShareController {
     );
   }
 
+  @Patch(":id")
+  @UseGuards(IdValidation, ShareOwnerGuard)
+  async update(
+    @Param("id") id: string,
+    @Body() body: UpdateShareDTO,
+    @GetShare() share: Share & { security?: ShareSecurity },
+    @GetUser() user: User,
+  ) {
+    return new MyShareDTO().from(
+      await this.shareService.update(id, body, user, share),
+    );
+  }
+
   @Post(":id/complete")
   @HttpCode(202)
-  @UseGuards(IdValidation, CreateShareGuard, ShareOwnerGuard)
+  @UseGuards(IdValidation, CreateShareGuard, StrictShareOwnerGuard)
   async complete(@Param("id") id: string, @Req() request: Request) {
     const { reverse_share_token } = request.cookies;
     return new CompletedShareDTO().from(
@@ -94,7 +111,7 @@ export class ShareController {
   }
 
   @Delete(":id/complete")
-  @UseGuards(IdValidation, ShareOwnerGuard)
+  @UseGuards(IdValidation, StrictShareOwnerGuard)
   async revertComplete(@Param("id") id: string) {
     return new ShareDTO().from(await this.shareService.revertComplete(id));
   }

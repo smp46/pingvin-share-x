@@ -2,7 +2,6 @@ import {
   ClassSerializerInterceptor,
   Logger,
   LogLevel,
-  ValidationPipe,
 } from "@nestjs/common";
 import { NestFactory, Reflector } from "@nestjs/core";
 import { NestExpressApplication } from "@nestjs/platform-express";
@@ -11,6 +10,7 @@ import * as bodyParser from "body-parser";
 import * as cookieParser from "cookie-parser";
 import { NextFunction, Request, Response } from "express";
 import * as fs from "fs";
+import { I18nValidationExceptionFilter, I18nValidationPipe } from "nestjs-i18n";
 import { AppModule } from "./app.module";
 import { ConfigService } from "./config/config.service";
 import {
@@ -42,7 +42,8 @@ async function bootstrap() {
     logger: logLevels,
   });
 
-  app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
+  app.useGlobalPipes(new I18nValidationPipe({ whitelist: true }));
+  app.useGlobalFilters(new I18nValidationExceptionFilter());
   app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
 
   const config = app.get<ConfigService>(ConfigService);

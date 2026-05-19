@@ -1,5 +1,6 @@
 import { Expose, plainToClass } from "class-transformer";
 import { IsEmail, Length, Matches, MinLength } from "class-validator";
+import { i18nValidationMessage } from "nestjs-i18n";
 
 export class UserDTO {
   @Expose()
@@ -7,7 +8,7 @@ export class UserDTO {
 
   @Expose()
   @Matches("^[a-zA-Z0-9_.]*$", undefined, {
-    message: "Username can only contain letters, numbers, dots and underscores",
+    message: i18nValidationMessage("validation.usernamePattern"),
   })
   @Length(3, 32)
   username: string;

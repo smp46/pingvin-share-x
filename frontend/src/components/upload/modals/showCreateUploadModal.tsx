@@ -132,6 +132,7 @@ const CreateUploadModalBody = ({
   const generatedLink = generateShareId(options.shareIdLength);
 
   const [showNotSignedInAlert, setShowNotSignedInAlert] = useState(true);
+  const [emailSearch, setEmailSearch] = useState("");
 
   const validationSchema = yup.object().shape({
     link: yup
@@ -404,6 +405,8 @@ const CreateUploadModalBody = ({
                     creatable
                     id="recipient-emails"
                     inputMode="email"
+                    searchValue={emailSearch}
+                    onSearchChange={setEmailSearch}
                     getCreateLabel={(query) => `+ ${query}`}
                     onCreate={(query) => {
                       if (!query.match(/^\S+@\S+\.\S+$/)) {
@@ -411,33 +414,29 @@ const CreateUploadModalBody = ({
                           "recipients",
                           t("upload.modal.accordion.email.invalid-email"),
                         );
-                      } else {
-                        form.setFieldError("recipients", null);
-                        form.setFieldValue("recipients", [
-                          ...form.values.recipients,
-                          query,
-                        ]);
-                        return query;
+                        return undefined;
                       }
+                      form.setFieldError("recipients", null);
+                      return query;
                     }}
                     {...form.getInputProps("recipients")}
                     onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
-                      // Add email on comma or semicolon
                       if (e.key === "Enter" || e.key === "," || e.key === ";") {
                         e.preventDefault();
-                        const inputValue = (
-                          e.target as HTMLInputElement
-                        ).value.trim();
-                        if (inputValue.match(/^\S+@\S+\.\S+$/)) {
+                        const inputValue = emailSearch.trim();
+                        if (
+                          inputValue.match(/^\S+@\S+\.\S+$/) &&
+                          !form.values.recipients.includes(inputValue)
+                        ) {
                           form.setFieldValue("recipients", [
                             ...form.values.recipients,
                             inputValue,
                           ]);
-                          (e.target as HTMLInputElement).value = "";
                         }
+                        setEmailSearch("");
                       } else if (e.key === " ") {
                         e.preventDefault();
-                        (e.target as HTMLInputElement).value = "";
+                        setEmailSearch("");
                       }
                     }}
                   />

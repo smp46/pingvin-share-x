@@ -65,6 +65,8 @@ export default function AppShellDemo() {
   const [updatedConfigVariables, setUpdatedConfigVariables] = useState<
     UpdateConfig[]
   >([]);
+  const [optionalConfigVariables, setOptionalConfigVariables] =
+    useState<AdminConfig[]>();
 
   const [logo, setLogo] = useState<File | null>(null);
   const [darkLogo, setDarkLogo] = useState<File | null>(null);
@@ -98,6 +100,14 @@ export default function AppShellDemo() {
       await configService
         .updateMany(updatedConfigVariables)
         .then(() => {
+          setConfigVariables((prev) =>
+            prev?.map((cv) => {
+              const updated = updatedConfigVariables.find(
+                (u) => u.key === cv.key,
+              );
+              return updated ? { ...cv, value: String(updated.value) } : cv;
+            }),
+          );
           setUpdatedConfigVariables([]);
           toast.success(t("admin.config.notify.success"));
         })
@@ -135,6 +145,19 @@ export default function AppShellDemo() {
     configService.getByCategory(categoryId).then((configVariables) => {
       setConfigVariables(configVariables);
     });
+
+    if (categoryId === "email") {
+      configService.getByCategory("smtp").then((smtpConfigVariables) => {
+        const optionalConfigVariables = smtpConfigVariables.filter(
+          (configVariable) => {
+            if (configVariable.key === "smtp.enabled") {
+              return configVariable;
+            }
+          },
+        );
+        setOptionalConfigVariables(optionalConfigVariables);
+      });
+    }
   }, [categoryId]);
 
   return (
@@ -262,6 +285,9 @@ export default function AppShellDemo() {
                                 updateConfigVariable={updateConfigVariable}
                                 allConfigVariables={configVariables}
                                 updatedConfigVariables={updatedConfigVariables}
+                                optionalConfigVariables={
+                                  optionalConfigVariables
+                                }
                               />
                             </Box>
                           </Group>
@@ -317,6 +343,9 @@ export default function AppShellDemo() {
                                 updateConfigVariable={updateConfigVariable}
                                 allConfigVariables={configVariables}
                                 updatedConfigVariables={updatedConfigVariables}
+                                optionalConfigVariables={
+                                  optionalConfigVariables
+                                }
                               />
                             </Box>
                           </Group>

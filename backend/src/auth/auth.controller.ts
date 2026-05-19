@@ -14,6 +14,7 @@ import {
 import { Throttle } from "@nestjs/throttler";
 import { User } from "@prisma/client";
 import { Request, Response } from "express";
+import { I18nService } from "nestjs-i18n";
 import { ConfigService } from "src/config/config.service";
 import { AuthService } from "./auth.service";
 import { AuthTotpService } from "./authTotp.service";
@@ -34,6 +35,7 @@ export class AuthController {
     private authService: AuthService,
     private authTotpService: AuthTotpService,
     private config: ConfigService,
+    private readonly i18n: I18nService,
   ) {}
 
   @Post("signUp")
@@ -49,7 +51,7 @@ export class AuthController {
     @Res({ passthrough: true }) response: Response,
   ) {
     if (!this.config.get("share.allowRegistration"))
-      throw new ForbiddenException("Registration is not allowed");
+      throw new ForbiddenException(this.i18n.t("auth.registrationNotAllowed"));
 
     const result = await this.authService.signUp(dto, ip);
 

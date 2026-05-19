@@ -217,11 +217,12 @@ function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     if (!pageProps.language) return;
     const cookieLanguage = getCookie("language");
-    if (pageProps.language != cookieLanguage) {
+    if (!cookieLanguage) {
       i18nUtil.setLanguageCookie(pageProps.language);
-      if (cookieLanguage) location.reload();
+    } else if (pageProps.language !== cookieLanguage) {
+      location.reload();
     }
-  }, []);
+  }, [pageProps.language]);
 
   useEffect(() => {
     const userColorPreference = userPreferences.get("colorScheme");
@@ -359,7 +360,12 @@ App.getInitialProps = async ({ ctx }: { ctx: GetServerSidePropsContext }) => {
       ctx.req.headers["accept-language"],
     );
 
-    pageProps.language = ctx.req.cookies["language"] ?? requestLanguage;
+    const defaultLanguage = pageProps.configVariables?.find(
+      (item) => item.key === "general.defaultLanguage",
+    )?.value;
+
+    pageProps.language =
+      ctx.req.cookies["language"] || defaultLanguage || requestLanguage;
   }
   return { pageProps };
 };
