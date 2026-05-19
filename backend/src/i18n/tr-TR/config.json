@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "Redis URL'si ayarlanmadı",
+  "redisTimedOut": "Redis zaman aşımına uğradı",
+  "redisConnectionFailed": "Redis bağlantısı başarısız oldu",
+  "redisUnexpectedResponse": "Redis'ten beklenmeyen yanıt",
+  "redisError": "Redis hatası",
+  "variableNotFound": "Yapılandırma değişkeni bulunamadı",
+  "editNotAllowed": "Yapılandırma değişkenlerini yalnızca config.yaml dosyası üzerinden güncellemenize izin verilir",
+  "invalidType": "Yapılandırma değişkeni {type} tipinde olmalıdır",
+  "shareIdLengthValidation": "Paylaşım ID uzunluğu 2 ile 50 arasında olmalıdır",
+  "zipCompressionLevelValidation": "Zip sıkıştırma seviyesi 0 ile 9 arasında olmalıdır"
+}
