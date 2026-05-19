@@ -1,0 +1,11 @@
+{
+  "shareRecipientsCreatorFallback": "誰か",
+  "shareRecipientsDescFallback": "説明なし",
+  "shareRecipientsExpiresNeverFallback": "期限: なし",
+  "smtpDisabled": "SMTPが無効になっています",
+  "emailServiceDisabled": "メールサービスが無効になっています",
+  "testSubject": "テストメール",
+  "testText": "これはテストメールです",
+  "sendFailed": "メールの送信に失敗しました",
+  "locale": "ja-JP"
+}
