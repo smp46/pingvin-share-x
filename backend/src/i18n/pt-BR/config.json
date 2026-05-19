@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "Redis URL is not set",
+  "redisTimedOut": "Redis timed out",
+  "redisConnectionFailed": "Redis connection failed",
+  "redisUnexpectedResponse": "Unexpected response from Redis",
+  "redisError": "Redis error",
+  "variableNotFound": "Variável de configuração não encontrada",
+  "editNotAllowed": "Você só tem permissão para atualizar as variáveis de configuração através do arquivo config.yaml",
+  "invalidType": "A variável de configuração deve ser do tipo {type}",
+  "shareIdLengthValidation": "O comprimento do ID de compartilhamento deve estar entre 2 e 50",
+  "zipCompressionLevelValidation": "O nível de compressione Zip deve estar entre 0 e 9"
+}
