@@ -14,7 +14,11 @@ import {
 import { useForm } from "@mantine/form";
 import { TbDeviceLaptop, TbMoon, TbSun } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
-import { AdminConfig, UpdateConfig } from "../../../types/config.type";
+import {
+  AdminConfig,
+  AdminConfigGroupedByCategory,
+  UpdateConfig,
+} from "../../../types/config.type";
 import { stringToTimespan, timespanToString } from "../../../utils/date.util";
 import FileSizeInput from "../../core/FileSizeInput";
 import TimespanInput from "../../core/TimespanInput";
@@ -25,11 +29,13 @@ const AdminConfigInput = ({
   updateConfigVariable,
   allConfigVariables,
   updatedConfigVariables,
+  optionalConfigVariables,
 }: {
   configVariable: AdminConfig;
   updateConfigVariable: (variable: UpdateConfig) => void;
   allConfigVariables?: AdminConfig[];
   updatedConfigVariables?: UpdateConfig[];
+  optionalConfigVariables?: AdminConfig[];
 }) => {
   const isCustomCssConfig = configVariable.key === "appearance.customCss";
   const isThemePrimaryColorConfig =
@@ -41,6 +47,15 @@ const AdminConfigInput = ({
     configVariable.key === "appearance.themeColorScheme";
   const isDefaultLanguageConfig =
     configVariable.key === "general.defaultLanguage";
+  const isEmailShareConfig =
+    configVariable.key === "email.enableShareEmailRecipients";
+  let isSmtpEnabled = false;
+
+  if (isEmailShareConfig) {
+    isSmtpEnabled =
+      optionalConfigVariables?.find((config) => config.key === "smtp.enabled")
+        ?.value === "true";
+  }
 
   const getEffectiveConfigValue = (key: string): string | undefined => {
     const updatedValue = updatedConfigVariables?.find(
@@ -272,7 +287,16 @@ const AdminConfigInput = ({
           w={201}
         />
       )}
-      {configVariable.type == "boolean" && (
+      {configVariable.type == "boolean" && isEmailShareConfig && (
+        <>
+          <Switch
+            disabled={!isSmtpEnabled}
+            {...form.getInputProps("booleanValue", { type: "checkbox" })}
+            onChange={(e) => onValueChange(configVariable, e.target.checked)}
+          />
+        </>
+      )}
+      {configVariable.type == "boolean" && !isEmailShareConfig && (
         <>
           <Switch
             disabled={!configVariable.allowEdit}
