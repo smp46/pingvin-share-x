@@ -1,0 +1,15 @@
+{
+  "invalidIdFormat": "IDの形式が無効です",
+  "notFound": "ファイルが見つかりません",
+  "passwordProtected": "この共有はパスワードで保護されています",
+  "alreadyCompleted": "共有は既に完了しています",
+  "notEnoughSpace": "サーバーに十分な空き容量がありません",
+  "unexpectedChunk": "予期しないチャックを受信しました",
+  "maxSizeExceeded": "最大共有サイズを超過しました",
+  "zipError": "ZIPファイルの作成中にエラーが発生しました",
+  "s3DeleteError": "S3からファイルを削除できませんでした",
+  "s3UploadInitError": "マルチパートアップロードの初期化に失敗しました。",
+  "s3SessionNotFound": "マルチパートアップロードセッションが見つかりません。",
+  "s3UploadFailed": "マルチパートアップロードに失敗しました。アップロードは中止されました。",
+  "s3SizeError": "ファイルサイズを取得できませんでした"
+}

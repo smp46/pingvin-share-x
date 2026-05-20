@@ -1,0 +1,4 @@
+{
+  "usernamePattern": "Brugernavn kan kun indeholde bogstaver, tal, prikker og understregninger",
+  "idPattern": "ID kan kun indeholde bogstaver, tal, understregninger og bindestreger"
+}

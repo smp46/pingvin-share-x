@@ -1,0 +1,15 @@
+{
+  "already_linked": "Цей обліковий запис уже пов'язаний з іншим користувачем",
+  "not_linked": "Цей обліковий запис не пов'язаний з жодним користувачем",
+  "no_user": "Користувача для цього облікового запису не знайдено",
+  "no_email": "Електронну адресу для цього облікового запису не знайдено",
+  "unverified_account": "Ваш обліковий запис не верифіковано",
+  "user_not_allowed": "Вам не дозволено входити в систему",
+  "invalid_token": "Недійсний токен",
+  "cannot_get_user_info": "Не вдалося отримати інформацію про користувача",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

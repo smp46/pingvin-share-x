@@ -1,0 +1,15 @@
+{
+  "invalidIdFormat": "Định dạng ID không hợp lệ",
+  "notFound": "Không tìm thấy tệp",
+  "passwordProtected": "Chia sẻ này được bảo vệ bằng mật khẩu",
+  "alreadyCompleted": "Chia sẻ đã hoàn tất",
+  "notEnoughSpace": "Không đủ dung lượng trên máy chủ",
+  "unexpectedChunk": "Nhận được phân đoạn dữ liệu không mong đợi",
+  "maxSizeExceeded": "Vượt quá kích thước chia sẻ tối đa",
+  "zipError": "Lỗi khi tạo tệp ZIP",
+  "s3DeleteError": "Không thể xóa tệp khỏi S3",
+  "s3UploadInitError": "Không thể khởi tạo tải lên nhiều phần.",
+  "s3SessionNotFound": "Không tìm thấy phiên tải lên nhiều phần.",
+  "s3UploadFailed": "Tải lên nhiều phần thất bại. Việc tải lên đã bị hủy bỏ.",
+  "s3SizeError": "Không thể lấy kích thước tệp"
+}

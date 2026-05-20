@@ -77,7 +77,7 @@ const FileListRow = ({
             {restorable && (
               <HoverTip label={t("common.button.undo")}>
                 <ActionIcon
-                  color="primary"
+                  color="victoria"
                   variant="light"
                   size={25}
                   onClick={onRestore}

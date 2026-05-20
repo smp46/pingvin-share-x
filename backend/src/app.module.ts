@@ -3,6 +3,10 @@ import { Module } from "@nestjs/common";
 import { ScheduleModule } from "@nestjs/schedule";
 import { AuthModule } from "./auth/auth.module";
 
+import { existsSync } from "fs";
+import { join } from "path";
+import { I18nModule } from "nestjs-i18n";
+
 import { APP_GUARD } from "@nestjs/core";
 import { ThrottlerGuard, ThrottlerModule } from "@nestjs/throttler";
 import { AppCacheModule } from "./cache/cache.module";
@@ -17,6 +21,13 @@ import { PrismaModule } from "./prisma/prisma.module";
 import { ReverseShareModule } from "./reverseShare/reverseShare.module";
 import { ShareModule } from "./share/share.module";
 import { UserModule } from "./user/user.module";
+import { SystemModule } from "./system/system.module";
+
+import { SystemLanguageResolver } from "./i18n/systemLanguage.resolver";
+
+const i18nPath = existsSync(join(__dirname, "../i18n"))
+  ? join(__dirname, "../i18n")
+  : join(__dirname, "i18n");
 
 @Module({
   imports: [
@@ -28,6 +39,7 @@ import { UserModule } from "./user/user.module";
     PrismaModule,
     JobsModule,
     UserModule,
+    SystemModule,
     ThrottlerModule.forRoot([
       {
         ttl: 60,
@@ -39,6 +51,14 @@ import { UserModule } from "./user/user.module";
     ReverseShareModule,
     OAuthModule,
     AppCacheModule,
+    I18nModule.forRoot({
+      fallbackLanguage: "en-US",
+      loaderOptions: {
+        path: i18nPath,
+        watch: true,
+      },
+      resolvers: [SystemLanguageResolver],
+    }),
   ],
   controllers: [AppController],
   providers: [
@@ -46,6 +66,7 @@ import { UserModule } from "./user/user.module";
       provide: APP_GUARD,
       useClass: ThrottlerGuard,
     },
+    SystemLanguageResolver,
   ],
 })
 export class AppModule {}

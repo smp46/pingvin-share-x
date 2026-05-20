@@ -27,6 +27,18 @@ export type CreateShare = {
   recipients: string[];
   expiration: string;
   security: ShareSecurity;
+  size?: number;
+};
+
+export type UpdateShare = {
+  name?: string | null;
+  description?: string | null;
+  expiration?: string;
+  security?: {
+    password?: string;
+    removePassword?: boolean;
+    maxViews?: number | null;
+  };
 };
 
 export type ShareMetaData = {
@@ -63,6 +75,6 @@ export type UserVerifyResult = {
 
 export type MyShareSecurity = {
   passwordProtected: boolean;
-  maxViews: number;
+  maxViews?: number;
   restrictToRecipients: boolean;
 };

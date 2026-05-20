@@ -1,0 +1,15 @@
+{
+  "already_linked": "此帳戶已鏈接到另一個用戶",
+  "not_linked": "此帳戶未鏈接到任何用戶",
+  "no_user": "未找到此帳戶的用戶",
+  "no_email": "未找到此帳戶的電子郵件地址",
+  "unverified_account": "您的帳戶未驗證",
+  "user_not_allowed": "您不被允許登錄",
+  "invalid_token": "無效的權杖",
+  "cannot_get_user_info": "無法獲取用戶資訊",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

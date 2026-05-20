@@ -1,0 +1,4 @@
+{
+  "notFound": "Không tìm thấy token chia sẻ ngược",
+  "maxShareSizeExceeded": "Kích thước chia sẻ tối đa không được lớn hơn {maxSize} byte."
+}

@@ -1,0 +1,15 @@
+{
+  "already_linked": "See konto on juba seotud teise kasutajaga",
+  "not_linked": "See konto pole seotud ühegi kasutajaga",
+  "no_user": "Selle konto jaoks ei leitud kasutajat",
+  "no_email": "Selle konto jaoks ei leitud e-posti aadressi",
+  "unverified_account": "Teie konto pole kinnitatud",
+  "user_not_allowed": "Teil pole lubatud sisse logida",
+  "invalid_token": "Vigane token",
+  "cannot_get_user_info": "Kasutajaandmete hankimine ebaõnnestus",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

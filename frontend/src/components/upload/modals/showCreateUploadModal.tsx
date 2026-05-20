@@ -136,6 +136,7 @@ const CreateUploadModalBody = ({
 
   const [showNotSignedInAlert, setShowNotSignedInAlert] = useState(true);
   const [unregisteredEmails, setUnregisteredEmails] = useState<string[]>([]);
+  const [emailSearch, setEmailSearch] = useState("");
 
   const validationSchema = yup.object().shape({
     link: yup
@@ -435,6 +436,8 @@ const CreateUploadModalBody = ({
                     creatable
                     id="recipient-emails"
                     inputMode="email"
+                    searchValue={emailSearch}
+                    onSearchChange={setEmailSearch}
                     getCreateLabel={(query) => `+ ${query}`}
                     onCreate={(query) => {
                       if (!query.match(/^\S+@\S+\.\S+$/)) {
@@ -442,18 +445,19 @@ const CreateUploadModalBody = ({
                           "recipients",
                           t("upload.modal.accordion.email.invalid-email"),
                         );
-                      } else {
-                        form.setFieldError("recipients", null);
-                        const newRecipients = [
-                          ...form.values.recipients,
-                          query,
-                        ];
-                        form.setFieldValue("recipients", newRecipients);
-                        if (form.values.restrictToRecipients) {
-                          verifyCurrentRecipients(newRecipients);
-                        }
-                        return query;
+                        return undefined;
                       }
+                      form.setFieldError("recipients", null);
+                      const newRecipients = form.values.recipients.includes(
+                        query,
+                      )
+                        ? form.values.recipients
+                        : [...form.values.recipients, query];
+                      form.setFieldValue("recipients", newRecipients);
+                      if (form.values.restrictToRecipients) {
+                        verifyCurrentRecipients(newRecipients);
+                      }
+                      return query;
                     }}
                     {...form.getInputProps("recipients")}
                     onChange={(value: string[]) => {
@@ -463,13 +467,13 @@ const CreateUploadModalBody = ({
                       }
                     }}
                     onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
-                      // Add email on comma or semicolon
                       if (e.key === "Enter" || e.key === "," || e.key === ";") {
                         e.preventDefault();
-                        const inputValue = (
-                          e.target as HTMLInputElement
-                        ).value.trim();
-                        if (inputValue.match(/^\S+@\S+\.\S+$/)) {
+                        const inputValue = emailSearch.trim();
+                        if (
+                          inputValue.match(/^\S+@\S+\.\S+$/) &&
+                          !form.values.recipients.includes(inputValue)
+                        ) {
                           const newRecipients = [
                             ...form.values.recipients,
                             inputValue,
@@ -478,11 +482,11 @@ const CreateUploadModalBody = ({
                           if (form.values.restrictToRecipients) {
                             verifyCurrentRecipients(newRecipients);
                           }
-                          (e.target as HTMLInputElement).value = "";
                         }
+                        setEmailSearch("");
                       } else if (e.key === " ") {
                         e.preventDefault();
-                        (e.target as HTMLInputElement).value = "";
+                        setEmailSearch("");
                       }
                     }}
                   />

@@ -1,0 +1,15 @@
+{
+  "invalidIdFormat": "Ungültiges ID-Format",
+  "notFound": "Datei nicht gefunden",
+  "passwordProtected": "Diese Freigabe ist passwortgeschützt",
+  "alreadyCompleted": "Freigabe ist bereits abgeschlossen",
+  "notEnoughSpace": "Nicht genügend Speicherplatz auf dem Server",
+  "unexpectedChunk": "Unerwarteter Chunk empfangen",
+  "maxSizeExceeded": "Maximale Freigabegröße überschritten",
+  "zipError": "Fehler beim Erstellen der ZIP-Datei",
+  "s3DeleteError": "Datei konnte nicht von S3 gelöscht werden",
+  "s3UploadInitError": "Fehler beim Initialisieren des Multipart-Uploads.",
+  "s3SessionNotFound": "Multipart-Upload-Sitzung nicht gefunden.",
+  "s3UploadFailed": "Multipart-Upload fehlgeschlagen. Der Upload wurde abgebrochen.",
+  "s3SizeError": "Dateigröße konnte nicht ermittelt werden"
+}

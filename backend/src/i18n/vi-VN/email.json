@@ -1,0 +1,11 @@
+{
+  "shareRecipientsCreatorFallback": "Ai đó",
+  "shareRecipientsDescFallback": "Không có mô tả",
+  "shareRecipientsExpiresNeverFallback": "trong: không bao giờ",
+  "smtpDisabled": "SMTP bị vô hiệu hóa",
+  "emailServiceDisabled": "Dịch vụ email bị vô hiệu hóa",
+  "testSubject": "Email kiểm tra",
+  "testText": "Đây là một email kiểm tra",
+  "sendFailed": "Gửi email thất bại",
+  "locale": "vi-VN"
+}

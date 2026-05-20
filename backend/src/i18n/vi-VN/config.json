@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "URL Redis chưa được thiết lập",
+  "redisTimedOut": "Redis hết thời gian chờ",
+  "redisConnectionFailed": "Kết nối Redis thất bại",
+  "redisUnexpectedResponse": "Phản hồi không mong đợi từ Redis",
+  "redisError": "Lỗi Redis",
+  "variableNotFound": "Không tìm thấy biến cấu hình",
+  "editNotAllowed": "Bạn chỉ được phép cập nhật các biến cấu hình thông qua tệp config.yaml",
+  "invalidType": "Biến cấu hình phải có kiểu {type}",
+  "shareIdLengthValidation": "Độ dài ID chia sẻ phải từ 2 đến 50",
+  "zipCompressionLevelValidation": "Mức nén Zip phải từ 0 đến 9"
+}

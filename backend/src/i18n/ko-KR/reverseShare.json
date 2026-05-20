@@ -1,0 +1,4 @@
+{
+  "notFound": "리버스 공유 토큰을 찾을 수 없습니다",
+  "maxShareSizeExceeded": "최대 공유 크기는 {maxSize} 바이트를 초과할 수 없습니다."
+}

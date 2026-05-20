@@ -1,0 +1,15 @@
+{
+  "invalidIdFormat": "Neveljaven format ID-ja",
+  "notFound": "Datoteka ni bila najdena",
+  "passwordProtected": "To deljenje je zaščiteno z geslom",
+  "alreadyCompleted": "Deljenje je že končano",
+  "notEnoughSpace": "Na strežniku ni dovolj prostora",
+  "unexpectedChunk": "Prejet nepričakovan del (chunk)",
+  "maxSizeExceeded": "Največja velikost deljenja je presežena",
+  "zipError": "Napaka pri ustvarjanju datoteke ZIP",
+  "s3DeleteError": "Datoteke ni bilo mogoče izbrisati iz S3",
+  "s3UploadInitError": "Inicializacija večdelnega nalaganja ni uspela.",
+  "s3SessionNotFound": "Seja večdelnega nalaganja ni bila najdena.",
+  "s3UploadFailed": "Večdelno nalaganje ni uspelo. Nalaganje je bilo prekinjeno.",
+  "s3SizeError": "Ni mogoče pridobiti velikosti datoteke"
+}

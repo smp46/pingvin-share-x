@@ -1,0 +1,4 @@
+{
+  "notFound": "Käänteisen jaon tunnistetta ei löytynyt",
+  "maxShareSizeExceeded": "Jaon enimmäiskoko ei voi olla suurempi kuin {maxSize} tavua."
+}

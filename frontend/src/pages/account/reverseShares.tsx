@@ -61,7 +61,7 @@ const MyShares = () => {
             <FormattedMessage id="account.reverseShares.title" />
           </Title>
           <HoverTip label={t("account.reverseShares.description")}>
-            <ActionIcon>
+            <ActionIcon color="blue">
               <TbInfoCircle />
             </ActionIcon>
           </HoverTip>

@@ -6,6 +6,7 @@ import {
 } from "@nestjs/common";
 import { Request } from "express";
 import * as moment from "moment";
+import { I18nService } from "nestjs-i18n";
 import { PrismaService } from "src/prisma/prisma.service";
 import { ShareService } from "src/share/share.service";
 import { ConfigService } from "src/config/config.service";
@@ -18,6 +19,7 @@ export class ShareSecurityGuard extends JwtGuard {
     private shareService: ShareService,
     private prisma: PrismaService,
     private configService: ConfigService,
+    private readonly i18n: I18nService,
   ) {
     super(configService);
   }
@@ -43,7 +45,7 @@ export class ShareSecurityGuard extends JwtGuard {
       },
     });
 
-    if (!share) throw new NotFoundException("Share not found");
+    if (!share) throw new NotFoundException(this.i18n.t("share.notFound"));
 
     // Run the JWTGuard to set the user
     await super.canActivate(context);
@@ -61,7 +63,7 @@ export class ShareSecurityGuard extends JwtGuard {
       moment().isAfter(share.expiration) &&
       !moment(share.expiration).isSame(0)
     ) {
-      throw new NotFoundException("Share not found");
+      throw new NotFoundException(this.i18n.t("share.notFound"));
     }
 
     // If user sharing is enabled, check if the authenticated user is a named recipient
@@ -82,13 +84,13 @@ export class ShareSecurityGuard extends JwtGuard {
 
     if (share.security?.password && !shareToken)
       throw new ForbiddenException(
-        "This share is password protected",
+        this.i18n.t("file.passwordProtected"),
         "share_password_required",
       );
 
-    if (!(await this.shareService.verifyShareToken(shareId, shareToken)))
+    if (!(await this.shareService.verifyShareToken(share, shareToken)))
       throw new ForbiddenException(
-        "Share token required",
+        this.i18n.t("share.tokenRequired"),
         "share_token_required",
       );
 
@@ -100,7 +102,7 @@ export class ShareSecurityGuard extends JwtGuard {
       share.reverseShare.creatorId !== user?.id
     )
       throw new ForbiddenException(
-        "Only reverse share creator can access this share",
+        this.i18n.t("share.privateShare"),
         "private_share",
       );
 

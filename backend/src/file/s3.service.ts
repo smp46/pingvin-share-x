@@ -20,6 +20,7 @@ import {
 } from "@aws-sdk/client-s3";
 import { PrismaService } from "src/prisma/prisma.service";
 import { ConfigService } from "src/config/config.service";
+import { I18nService } from "nestjs-i18n";
 import * as crypto from "crypto";
 import * as mime from "mime-types";
 import { File } from "./file.service";
@@ -42,6 +43,7 @@ export class S3FileService {
   constructor(
     private prisma: PrismaService,
     private config: ConfigService,
+    private readonly i18n: I18nService,
   ) {}
 
   async create(
@@ -53,7 +55,7 @@ export class S3FileService {
     if (!file.id) {
       file.id = crypto.randomUUID();
     } else if (!isValidUUID(file.id)) {
-      throw new BadRequestException("Invalid file ID format");
+      throw new BadRequestException(this.i18n.t("file.invalidIdFormat"));
     }
 
     const buffer = Buffer.from(data, "base64");
@@ -73,7 +75,7 @@ export class S3FileService {
 
         const uploadId = multipartInitResponse.UploadId;
         if (!uploadId) {
-          throw new Error("Failed to initialize multipart upload.");
+          throw new Error(this.i18n.t("file.s3UploadInitError"));
         }
 
         // Store the uploadId and parts list in memory
@@ -87,7 +89,7 @@ export class S3FileService {
       const multipartUpload = this.multipartUploads[file.id];
       if (!multipartUpload) {
         throw new InternalServerErrorException(
-          "Multipart upload session not found.",
+          this.i18n.t("file.s3SessionNotFound"),
         );
       }
 
@@ -146,7 +148,7 @@ export class S3FileService {
         delete this.multipartUploads[file.id];
       }
       this.logger.error(error);
-      throw new Error("Multipart upload failed. The upload has been aborted.");
+      throw new Error(this.i18n.t("file.s3UploadFailed"));
     }
 
     const isLastChunk = chunk.index == chunk.total - 1;
@@ -200,7 +202,7 @@ export class S3FileService {
       where: { id: fileId },
     });
 
-    if (!fileMetaData) throw new NotFoundException("File not found");
+    if (!fileMetaData) throw new NotFoundException(this.i18n.t("file.notFound"));
 
     const key = `${this.getS3Path()}${shareId}/${fileMetaData.name}`;
     const s3Instance = this.getS3Instance();
@@ -213,7 +215,7 @@ export class S3FileService {
         }),
       );
     } catch (error) {
-      throw new Error("Could not delete file from S3");
+      throw new Error(this.i18n.t("file.s3DeleteError"));
     }
 
     await this.prisma.file.delete({ where: { id: fileId } });
@@ -296,7 +298,7 @@ export class S3FileService {
       // Return ContentLength which is the file size in bytes
       return headObjectResponse.ContentLength ?? 0;
     } catch (error) {
-      throw new Error("Could not retrieve file size");
+      throw new Error(this.i18n.t("file.s3SizeError"));
     }
   }
 
@@ -343,7 +345,7 @@ export class S3FileService {
 
         archive.on("error", (err) => {
           this.logger.error("Archive error", err);
-          reject(new InternalServerErrorException("Error creating ZIP file"));
+          reject(new InternalServerErrorException(this.i18n.t("file.zipError")));
         });
 
         const fileKeys = listResponse.Contents.filter(
@@ -403,7 +405,7 @@ export class S3FileService {
       } catch (error) {
         this.logger.error("Error creating ZIP file", error);
 
-        reject(new InternalServerErrorException("Error creating ZIP file"));
+        reject(new InternalServerErrorException(this.i18n.t("file.zipError")));
       }
     });
   }
