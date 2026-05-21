@@ -1,0 +1,120 @@
+
+> pingvin-share-backend@1.17.0 dev
+> cross-env NODE_ENV=development nest start --watch
+
+[2J[3J[H[[90m1:01:09 am[0m] Starting compilation in watch mode...
+
+[[90m1:01:12 am[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [32mShowing verbose, debug, log, warn, error, fatal messages[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m[38;5;3m +4ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +25ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppCacheModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDiscoveryModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mScheduleModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[PrismaService] [39m[32mConnected to the database[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[ConfigService] [39m[32mConfig.yaml is not set. Falling back to UI configuration.[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCacheModule dependencies initialized[39m[38;5;3m +4ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSystemModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mOAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mEmailModule dependencies initialized[39m[38;5;3m +84ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mI18nModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mClamScanModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJobsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mFileModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mReverseShareModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUserModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mShareModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/api}:[39m[38;5;3m +51ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/health, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mConfigController {/api/configs}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/configs, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/configs/admin/:category, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/configs/admin, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/configs/admin/testEmail, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/configs/admin/testRedis, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/configs/admin/logo, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/configs/admin/logoDark, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/api/auth}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/signUp, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/signIn, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/signIn/totp, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/resetPassword/:email, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/resetPassword, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/password, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/token, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/signOut, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/totp/enable, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/totp/verify, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/totp/disable, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mOAuthController {/api/oauth}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/oauth/available, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/oauth/status, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/oauth/auth/:provider, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/oauth/callback/:provider, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/oauth/unlink/:provider, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUserController {/api/users}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/users/me, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/users/me, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/users/me, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/users, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/users, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/users/:id, PATCH} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/users/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mFileController {/api/shares/:shareId/files}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/shares/:shareId/files, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/shares/:shareId/files/zip, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/shares/:shareId/files/:fileId, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/shares/:shareId/files/:fileId, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mReverseShareController {/api/reverseShares}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/reverseShares, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/reverseShares/:reverseShareToken, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/reverseShares, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/reverseShares/:reverseShareId, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mShareController {/api/shares}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/shares/all, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/shares, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/shares/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/shares/:id/from-owner, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/shares/:id/metaData, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/shares, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/shares/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/shares/:id/complete, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/shares/:id/complete, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/shares/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/shares/:id/expire, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/shares/isShareIdAvailable/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/shares/:id/token, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mSystemController {/api/system}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/system/info, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[ClamScanService] [39m[32mClamAV is not active[39m
+[32m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +53ms[39m
+[31m[Nest] 78089  - [39m20/05/2026, 1:01:13 am [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::8080[39m[38;5;3m +2ms[39m
+node:net:1940
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::8080
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at ExpressAdapter.listen (/home/stream/pingvin-share-x/backend/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /home/stream/pingvin-share-x/backend/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/home/stream/pingvin-share-x/backend/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/home/stream/pingvin-share-x/backend/src/main.ts:78:3) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 8080
+}
+
+Node.js v22.22.2

@@ -1,3 +1,19 @@
+## [1.18.0](https://github.com/smp46/pingvin-share-x/compare/v1.17.0...v1.18.0) (2026-05-21)
+
+### Features
+
+* **email:** prevent enabling email without smtp configured ([f7e93a2](https://github.com/smp46/pingvin-share-x/commit/f7e93a2fb8b2bf65d27c278d8a31f469a2a3f00e))
+* **shares:** update share info after creation ([#69](https://github.com/smp46/pingvin-share-x/issues/69)) ([9553c56](https://github.com/smp46/pingvin-share-x/commit/9553c561806f58a79c1bd65a85e7573767399ced))
+* site wide default language support, translations for backend strings ([#70](https://github.com/smp46/pingvin-share-x/issues/70)) ([1d788f7](https://github.com/smp46/pingvin-share-x/commit/1d788f7db317950a18daa66c883c10e3f8ff58ae))
+
+### Bug Fixes
+
+* **config:** show custom color input consistently ([d850519](https://github.com/smp46/pingvin-share-x/commit/d85051979fb1a76ed1fff72855f219aea6059856))
+* **deps:** resolve security vulns via npm audit ([54abd9a](https://github.com/smp46/pingvin-share-x/commit/54abd9a1226c36b2209e608882dfced3b7955577))
+* direct file share link ([#75](https://github.com/smp46/pingvin-share-x/issues/75)) ([b970f44](https://github.com/smp46/pingvin-share-x/commit/b970f44ebf5d77bf11bc3162d71fb89bc8fd4cdd)), closes [#74](https://github.com/smp46/pingvin-share-x/issues/74)
+* **security:** mitigate nextjs vulnerabilties ([b3135c5](https://github.com/smp46/pingvin-share-x/commit/b3135c5555b9461fa157236b67b51c7462cd7470))
+* **upload:** prevent email dupe when pressing Enter in recipients field ([bd89709](https://github.com/smp46/pingvin-share-x/commit/bd8970993bed1c9473fe37cd6619736e25d206d1))
+
 ## [1.17.0](https://github.com/smp46/pingvin-share-x/compare/v1.16.3...v1.17.0) (2026-04-28)
 
 ### Features
