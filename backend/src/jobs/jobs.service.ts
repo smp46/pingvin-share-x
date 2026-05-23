@@ -73,7 +73,7 @@ export class JobsService {
   async deleteUnfinishedShares() {
     const unfinishedShares = await this.prisma.share.findMany({
       where: {
-        createdAt: { lt: moment().subtract(1, "day").toDate() },
+        updatedAt: { lt: moment().subtract(1, "day").toDate() },
         uploadLocked: false,
       },
     });

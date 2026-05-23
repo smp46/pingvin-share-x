@@ -5,6 +5,8 @@ import { ConfigService } from "src/config/config.service";
 import { Readable } from "stream";
 import { PrismaService } from "../prisma/prisma.service";
 
+const UPDATED_AT_THROTTLE_MS = 5 * 60 * 1000;
+
 @Injectable()
 export class FileService {
   constructor(
@@ -37,8 +39,22 @@ export class FileService {
     },
     shareId: string,
   ) {
+    await this.touchShare(shareId);
     const storageService = this.getStorageService();
     return storageService.create(data, chunk, file, shareId);
+  }
+
+  private async touchShare(shareId: string) {
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+      select: { updatedAt: true },
+    });
+    if (!share) return;
+    if (Date.now() - share.updatedAt.getTime() < UPDATED_AT_THROTTLE_MS) return;
+    await this.prisma.share.update({
+      where: { id: shareId },
+      data: { updatedAt: new Date() },
+    });
   }
 
   async get(shareId: string, fileId: string): Promise<File> {
