@@ -50,7 +50,11 @@ export class FileService {
       select: { updatedAt: true },
     });
     if (!share) return;
-    if (Date.now() - share.updatedAt.getTime() < UPDATED_AT_THROTTLE_MS) return;
+    if (
+      share.updatedAt &&
+      Date.now() - share.updatedAt.getTime() < UPDATED_AT_THROTTLE_MS
+    )
+      return;
     await this.prisma.share.update({
       where: { id: shareId },
       data: { updatedAt: new Date() },
