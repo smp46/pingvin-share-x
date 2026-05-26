@@ -55,6 +55,7 @@ export class FileController {
   async getZip(
     @Res({ passthrough: true }) res: Response,
     @Param("shareId") shareId: string,
+    @Query("recipient") recipientId?: string,
   ) {
     const zipStream = await this.fileService.getZip(shareId);
 
@@ -62,6 +63,12 @@ export class FileController {
       "Content-Type": "application/zip",
       "Content-Disposition": contentDisposition(`${shareId}.zip`),
     });
+
+    void this.fileService.notifyRecipientDownload(
+      shareId,
+      `${shareId}.zip`,
+      recipientId,
+    );
 
     return new StreamableFile(zipStream);
   }
@@ -73,25 +80,31 @@ export class FileController {
     @Param("shareId") shareId: string,
     @Param("fileId") fileId: string,
     @Query("download") download = "true",
+    @Query("recipient") recipientId?: string,
   ) {
     const file = await this.fileService.get(shareId, fileId);
+    const isDownload = download === "true";
 
     const headers = {
       "Content-Type":
         mime?.lookup?.(file.metaData.name) || "application/octet-stream",
       "Content-Length": file.metaData.size,
       "Content-Security-Policy": "sandbox",
+      "Content-Disposition": contentDisposition(
+        file.metaData.name,
+        isDownload ? undefined : { type: "inline" },
+      ),
     };
 
-    if (download === "true") {
-      headers["Content-Disposition"] = contentDisposition(file.metaData.name);
-    } else {
-      headers["Content-Disposition"] = contentDisposition(file.metaData.name, {
-        type: "inline",
-      });
-    }
-
     res.set(headers);
+
+    if (isDownload) {
+      void this.fileService.notifyRecipientDownload(
+        shareId,
+        file.metaData.name,
+        recipientId,
+      );
+    }
 
     return new StreamableFile(file.file);
   }
