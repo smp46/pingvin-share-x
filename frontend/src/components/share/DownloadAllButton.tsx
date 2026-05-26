@@ -5,7 +5,13 @@ import useTranslate from "../../hooks/useTranslate.hook";
 import shareService from "../../services/share.service";
 import toast from "../../utils/toast.util";
 
-const DownloadAllButton = ({ shareId }: { shareId: string }) => {
+const DownloadAllButton = ({
+  shareId,
+  recipientId,
+}: {
+  shareId: string;
+  recipientId?: string;
+}) => {
   const [isZipReady, setIsZipReady] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const t = useTranslate();
@@ -13,7 +19,7 @@ const DownloadAllButton = ({ shareId }: { shareId: string }) => {
   const downloadAll = async () => {
     setIsLoading(true);
     await shareService
-      .downloadFile(shareId, "zip")
+      .downloadFile(shareId, "zip", recipientId)
       .then(() => setIsLoading(false));
   };
 
