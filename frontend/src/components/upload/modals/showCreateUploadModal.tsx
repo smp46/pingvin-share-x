@@ -27,6 +27,7 @@ import useTranslate, {
   translateOutsideContext,
 } from "../../../hooks/useTranslate.hook";
 import shareService from "../../../services/share.service";
+import userService from "../../../services/user.service";
 import { FileUpload } from "../../../types/File.type";
 import { CreateShare } from "../../../types/share.type";
 import {
@@ -45,6 +46,7 @@ const showCreateUploadModal = (
     defaultAppUrl: string;
     allowUnauthenticatedShares: boolean;
     enableEmailRecepients: boolean;
+    enableUserRecipients: boolean;
     maxExpiration: Timespan;
     defaultExpiration: Timespan;
     shareIdLength: number;
@@ -121,6 +123,7 @@ const CreateUploadModalBody = ({
     defaultAppUrl: string;
     allowUnauthenticatedShares: boolean;
     enableEmailRecepients: boolean;
+    enableUserRecipients: boolean;
     maxExpiration: Timespan;
     defaultExpiration: Timespan;
     shareIdLength: number;
@@ -132,6 +135,7 @@ const CreateUploadModalBody = ({
   const generatedLink = generateShareId(options.shareIdLength);
 
   const [showNotSignedInAlert, setShowNotSignedInAlert] = useState(true);
+  const [unregisteredEmails, setUnregisteredEmails] = useState<string[]>([]);
   const [emailSearch, setEmailSearch] = useState("");
 
   const validationSchema = yup.object().shape({
@@ -174,9 +178,33 @@ const CreateUploadModalBody = ({
       expiration_num: defaultTimespan.value,
       expiration_unit: `-${defaultTimespan.unit}` as string,
       never_expires: false,
+      restrictToRecipients: false,
     },
     validate: yupResolver(validationSchema),
   });
+
+  const verifyCurrentRecipients = async (recipients: string[]) => {
+    if (recipients.length === 0) {
+      setUnregisteredEmails([]);
+      return;
+    }
+    const result = await userService.verifyEmails(recipients).catch(() => null);
+    if (result) {
+      setUnregisteredEmails(result.unregistered);
+    } else {
+      toast.error(t("common.error.unknown"));
+    }
+  };
+
+  const handleRestrictToggle = async (checked: boolean) => {
+    form.setFieldValue("restrictToRecipients", checked);
+    if (checked) {
+      form.setFieldValue("password", undefined);
+      await verifyCurrentRecipients(form.values.recipients);
+    } else {
+      setUnregisteredEmails([]);
+    }
+  };
 
   const onSubmit = form.onSubmit(async (values) => {
     if (!(await shareService.isShareIdAvailable(values.link))) {
@@ -223,8 +251,11 @@ const CreateUploadModalBody = ({
           recipients: values.recipients,
           description: values.description,
           security: {
-            password: values.password || undefined,
+            password: values.restrictToRecipients
+              ? undefined
+              : values.password || undefined,
             maxViews: values.maxViews || undefined,
+            restrictToRecipients: values.restrictToRecipients || undefined,
           },
         },
         files,
@@ -417,9 +448,24 @@ const CreateUploadModalBody = ({
                         return undefined;
                       }
                       form.setFieldError("recipients", null);
+                      const newRecipients = form.values.recipients.includes(
+                        query,
+                      )
+                        ? form.values.recipients
+                        : [...form.values.recipients, query];
+                      form.setFieldValue("recipients", newRecipients);
+                      if (form.values.restrictToRecipients) {
+                        verifyCurrentRecipients(newRecipients);
+                      }
                       return query;
                     }}
                     {...form.getInputProps("recipients")}
+                    onChange={(value: string[]) => {
+                      form.setFieldValue("recipients", value);
+                      if (form.values.restrictToRecipients) {
+                        verifyCurrentRecipients(value);
+                      }
+                    }}
                     onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
                       if (e.key === "Enter" || e.key === "," || e.key === ";") {
                         e.preventDefault();
@@ -428,10 +474,14 @@ const CreateUploadModalBody = ({
                           inputValue.match(/^\S+@\S+\.\S+$/) &&
                           !form.values.recipients.includes(inputValue)
                         ) {
-                          form.setFieldValue("recipients", [
+                          const newRecipients = [
                             ...form.values.recipients,
                             inputValue,
-                          ]);
+                          ];
+                          form.setFieldValue("recipients", newRecipients);
+                          if (form.values.restrictToRecipients) {
+                            verifyCurrentRecipients(newRecipients);
+                          }
                         }
                         setEmailSearch("");
                       } else if (e.key === " ") {
@@ -440,6 +490,28 @@ const CreateUploadModalBody = ({
                       }
                     }}
                   />
+                  {options.enableUserRecipients && (
+                    <>
+                      <Checkbox
+                        mt="sm"
+                        label={t(
+                          "upload.modal.accordion.email.restrict-to-recipients",
+                        )}
+                        checked={form.values.restrictToRecipients}
+                        onChange={(e) =>
+                          handleRestrictToggle(e.currentTarget.checked)
+                        }
+                      />
+                      {unregisteredEmails.length > 0 && (
+                        <Text size="sm" color="red" mt={4}>
+                          {t(
+                            "upload.modal.accordion.email.unregistered-warning",
+                            { emails: unregisteredEmails.join(", ") },
+                          )}
+                        </Text>
+                      )}
+                    </>
+                  )}
                 </Accordion.Panel>
               </Accordion.Item>
             )}
@@ -450,15 +522,19 @@ const CreateUploadModalBody = ({
               </Accordion.Control>
               <Accordion.Panel>
                 <Stack align="stretch">
-                  <PasswordInput
-                    variant="filled"
-                    placeholder={t(
-                      "upload.modal.accordion.security.password.placeholder",
-                    )}
-                    label={t("upload.modal.accordion.security.password.label")}
-                    autoComplete="new-password"
-                    {...form.getInputProps("password")}
-                  />
+                  {!form.values.restrictToRecipients && (
+                    <PasswordInput
+                      variant="filled"
+                      placeholder={t(
+                        "upload.modal.accordion.security.password.placeholder",
+                      )}
+                      label={t(
+                        "upload.modal.accordion.security.password.label",
+                      )}
+                      autoComplete="new-password"
+                      {...form.getInputProps("password")}
+                    />
+                  )}
                   <NumberInput
                     min={1}
                     type="number"
@@ -473,7 +549,13 @@ const CreateUploadModalBody = ({
               </Accordion.Panel>
             </Accordion.Item>
           </Accordion>
-          <Button type="submit" data-autofocus>
+          <Button
+            type="submit"
+            data-autofocus
+            disabled={
+              form.values.restrictToRecipients && unregisteredEmails.length > 0
+            }
+          >
             <FormattedMessage id="common.button.share" />
           </Button>
         </Stack>

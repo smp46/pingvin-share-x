@@ -73,6 +73,10 @@ const getMyShares = async (): Promise<MyShare[]> => {
   return (await api.get("shares")).data;
 };
 
+const getReceivedShares = async (): Promise<any[]> => {
+  return (await api.get("shares/received")).data;
+};
+
 const getShareToken = async (id: string, password?: string) => {
   if (!isValidId(id)) throw new Error("Invalid ID");
   await api.post(`/shares/${id}/token`, { password });
@@ -192,6 +196,7 @@ export default {
   doesFileSupportPreview,
   isShareTextFile,
   getMyShares,
+  getReceivedShares,
   isShareIdAvailable,
   downloadFile,
   removeFile,

@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "Registrieren",
   "navbar.links.shares": "Meine Freigaben",
   "navbar.links.reverse": "Datei Anfrage",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Mein Konto",
   "navbar.avatar.admin": "Verwaltung",
   "navbar.avatar.signout": "Abmelden",
@@ -143,6 +144,14 @@ export default {
   "account.shares.modal.delete.description": "Möchtest du diese Freigabe wirklich löschen?",
   // END /account/shares
 
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
+
   // /account/reverseShares
   "account.reverseShares.title": "Datei Anfragen",
   "account.reverseShares.description": "Eine Datei Anfrage erlaubt dir eine einzigartige URL zu erstellen, die externen Benutzern erlaubt, Dateien hochzuladen.",
@@ -273,6 +282,10 @@ export default {
   "upload.modal.accordion.email.title": "E-Mail-Empfänger",
   "upload.modal.accordion.email.placeholder": "E-Mail der Empfänger eingeben",
   "upload.modal.accordion.email.invalid-email": "Ungültige E-Mail-Adresse",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Restrict access to these recipients only (requires all to have an account)",
+  "upload.modal.accordion.email.unregistered-warning":
+    "These addresses don't have an account and won't be able to access the share: {emails}",
   "upload.modal.accordion.security.title": "Sicherheitseinstellungen",
   "upload.modal.accordion.security.password.label": "Passwortschutz",
   "upload.modal.accordion.security.password.placeholder": "Kein Passwort",
@@ -298,6 +311,10 @@ export default {
   "share.error.access-denied.title": "Private Freigabe",
   "share.error.access-denied.description": "Das aktuelle Konto hat keine Berechtigung, um auf diese Freigabe zuzugreifen",
   "share.modal.password.title": "Passwort erforderlich",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description":
+    "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.description": "Bitte gib das Passwort ein, um auf diese Freigabe zuzugreifen.",
   "share.modal.password": "Passwort",
   "share.modal.error.invalid-password": "Ungültiges Passwort",
@@ -422,6 +439,9 @@ export default {
   "admin.config.share.auto-open-share-modal.description": "Das Freigabe-Fenster erscheint automatisch, sobald ein Benutzer Dateien ausgewählt hat, ohne extra auf den Button klicken zu müssen.",
   "admin.config.share.allow-admin-access-all-shares": "Admin-Zugriff auf alle Freigaben erlauben",
   "admin.config.share.allow-admin-access-all-shares.description": "Administratoren erlauben, auf alle Freigaben zuzugreifen, selbst wenn sie passwortgeschützt, abgelaufen oder gelöscht sind.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description":
+    "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "Aufbewahrungsfrist für Dateien",
   "admin.config.share.file-retention-period.description": "Wie lange Dateien nach Ablauf oder Löschung einer Freigabe aufbewahrt werden. Nur sinnvoll, wenn die Option „Administratorzugriff auf alle Freigaben erlauben“ ebenfalls aktiviert ist.",
   "admin.config.smtp.enabled": "Aktivieren",

@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "Registreren",
   "navbar.links.shares": "Mijn gedeelde bestanden",
   "navbar.links.reverse": "Omgekeerd delen",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Mijn account",
   "navbar.avatar.admin": "Beheer",
   "navbar.avatar.signout": "Afmelden",
@@ -143,6 +144,14 @@ export default {
   "account.shares.modal.delete.description": "Weet u zeker dat u deze share wilt verwijderen?",
   // END /account/shares
 
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
+
   // /account/reverseShares
   "account.reverseShares.title": "Omgekeerde share",
   "account.reverseShares.description": "Met een omgekeerde share kan een externe gebruiker via unieke genereerde URL bestanden uploaden.",
@@ -273,6 +282,10 @@ export default {
   "upload.modal.accordion.email.title": "E-mail van de ontvangers",
   "upload.modal.accordion.email.placeholder": "Voer e-mail ontvangers in",
   "upload.modal.accordion.email.invalid-email": "Ongeldig e-mailadres",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Restrict access to these recipients only (requires all to have an account)",
+  "upload.modal.accordion.email.unregistered-warning":
+    "These addresses don't have an account and won't be able to access the share: {emails}",
   "upload.modal.accordion.security.title": "Beveiligingsopties",
   "upload.modal.accordion.security.password.label": "Wachtwoordbeveiling",
   "upload.modal.accordion.security.password.placeholder": "Geen wachtwoord",
@@ -298,6 +311,10 @@ export default {
   "share.error.access-denied.title": "Privé deel",
   "share.error.access-denied.description": "Dit account heeft geen toestemming om toegang te krijgen tot deze share",
   "share.modal.password.title": "Wachtwoord vereist",
+  "share.error.restricted.title": "Beperkte share",
+  "share.error.restricted.description":
+    "Deze share is beperkt tot specifieke ontvangers. Log in om toegang te krijgen.",
+  "share.error.restricted.button": "Inloggen",
   "share.modal.password.description": "Voer het wachtwoord in om toegang te krijgen tot deze share.",
   "share.modal.password": "Wachtwoord",
   "share.modal.error.invalid-password": "Ongeldig wachtwoord",
@@ -422,6 +439,9 @@ export default {
   "admin.config.share.auto-open-share-modal.description": "Het venster voor het aanmaken van gedeelde bestanden verschijnt automatisch wanneer een gebruiker bestanden selecteert, waardoor het niet meer nodig is om handmatig op de knop te klikken.",
   "admin.config.share.allow-admin-access-all-shares": "Geef beheerders toegang tot alle gedeelde mappen",
   "admin.config.share.allow-admin-access-all-shares.description": "Sta beheerders toe om toegang te krijgen tot alle gedeelde mappen, zelfs als deze met een wachtwoord zijn beveiligd, verlopen zijn of verwijderd zijn.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description":
+    "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "Bewaartermijn van bestanden",
   "admin.config.share.file-retention-period.description": "Hoe lang bestanden bewaard blijven nadat een gedeelde map is verlopen of verwijderd. Dit is alleen nuttig als de optie 'Beheerderstoegang tot alle gedeelde mappen toestaan' ook is ingeschakeld.",
   "admin.config.smtp.enabled": "Inschakelen",

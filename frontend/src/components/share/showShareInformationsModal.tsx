@@ -131,6 +131,15 @@ const Body = ({
         {currentShare.description || "-"}
       </Text>
 
+      {currentShare.recipients && currentShare.recipients.length > 0 && (
+        <Text size="sm">
+          <b>
+            <FormattedMessage id="upload.modal.accordion.email.title" />:{" "}
+          </b>
+          {currentShare.recipients.join(", ")}
+        </Text>
+      )}
+
       <Text size="sm">
         <b>
           <FormattedMessage id="account.shares.table.createdAt" />:{" "}
