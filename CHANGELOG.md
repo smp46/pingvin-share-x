@@ -1,3 +1,9 @@
+## [1.18.1](https://github.com/smp46/pingvin-share-x/compare/v1.18.0...v1.18.1) (2026-05-26)
+
+### Bug Fixes
+
+* **shares:** don't cleanup shares with ongoing uploads ([#79](https://github.com/smp46/pingvin-share-x/issues/79)) ([4b63770](https://github.com/smp46/pingvin-share-x/commit/4b63770c8d060a514345948895eccbb3d3b77bfd))
+
 ## [1.18.0](https://github.com/smp46/pingvin-share-x/compare/v1.17.0...v1.18.0) (2026-05-21)
 
 ### Features
