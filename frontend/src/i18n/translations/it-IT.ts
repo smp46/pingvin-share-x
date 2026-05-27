@@ -239,7 +239,7 @@ export default {
   "upload.reverse-share.error.invalid.description": "Questa condivisione inversa è scaduta o non è valida.",
   // Dropzone.tsx
   "upload.dropzone.title": "Carica File",
-  "upload.dropzone.description": "Drag'n'drop files here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
+  "upload.dropzone.description": "Trascina qui i file per iniziare la tua condivisione o 'Ctrl+V' per caricare contenuti di testo dagli appunti. Accettiamo solo file fino a {maxSize} in totale.",
   "upload.dropzone.notify.file-too-big": "I tuoi file superano la dimensione massima di condivisione di {maxSize}.",
   // FileList.tsx
   "upload.filelist.name": "Nome",
@@ -289,7 +289,7 @@ export default {
   "share.title": "Condividi {shareId}",
   "share.description": "Guarda cosa ho condiviso con te!",
   "share.fileCount": "{count, plural, =1 {# file} other {# file}} · {size} (il file zip potrebbe essere più piccolo a causa della compressione)",
-  "share.copy-text-contents": "Copy file contents to clipboard",
+  "share.copy-text-contents": "Copia il contenuto del file negli appunti",
   "share.error.visitor-limit-exceeded.title": "Limite visitatori superato",
   "share.error.visitor-limit-exceeded.description": "Il limite di visitatori di questa condivisione è stato superato.",
   "share.error.removed.title": "Condivisione rimossa",
