@@ -1,4 +1,6 @@
-import { Injectable, Logger } from "@nestjs/common";
+import { Inject, Injectable, Logger } from "@nestjs/common";
+import { CACHE_MANAGER } from "@nestjs/cache-manager";
+import { Cache } from "cache-manager";
 import { LocalFileService } from "./local.service";
 import { S3FileService } from "./s3.service";
 import { ConfigService } from "src/config/config.service";
@@ -7,6 +9,7 @@ import { PrismaService } from "../prisma/prisma.service";
 import { EmailService } from "src/email/email.service";
 
 const UPDATED_AT_THROTTLE_MS = 5 * 60 * 1000;
+const DOWNLOAD_NOTIFICATION_COOLDOWN_MS = 15 * 60 * 1000;
 
 @Injectable()
 export class FileService {
@@ -16,6 +19,7 @@ export class FileService {
     private s3FileService: S3FileService,
     private configService: ConfigService,
     private emailService: EmailService,
+    @Inject(CACHE_MANAGER) private cache: Cache,
   ) {}
   private readonly logger = new Logger(FileService.name);
 
@@ -109,6 +113,9 @@ export class FileService {
       )
         return;
 
+      const notificationKey = `share-download-notification:${shareId}:${recipientId}`;
+      if (await this.cache.get<true>(notificationKey)) return;
+
       const share = await this.prisma.share.findUnique({
         where: { id: shareId },
         select: {
@@ -123,6 +130,12 @@ export class FileService {
 
       const recipient = share?.recipients[0];
       if (!share?.creator?.email || !recipient) return;
+
+      await this.cache.set(
+        notificationKey,
+        true,
+        DOWNLOAD_NOTIFICATION_COOLDOWN_MS,
+      );
 
       await this.emailService.sendShareDownloadNotification(
         share.creator.email,

@@ -21,6 +21,13 @@ import { FileService } from "./file.service";
 import { FileSecurityGuard } from "./guard/fileSecurity.guard";
 import * as mime from "mime-types";
 
+const VALID_ID_REGEX = /^[a-zA-Z0-9-]*={0,2}$/;
+
+function getValidRecipientId(recipientId?: string): string | undefined {
+  if (!recipientId) return undefined;
+  return VALID_ID_REGEX.test(recipientId) ? recipientId : undefined;
+}
+
 @Controller("shares/:shareId/files")
 export class FileController {
   constructor(private fileService: FileService) {}
@@ -67,7 +74,7 @@ export class FileController {
     void this.fileService.notifyRecipientDownload(
       shareId,
       `${shareId}.zip`,
-      recipientId,
+      getValidRecipientId(recipientId),
     );
 
     return new StreamableFile(zipStream);
@@ -102,7 +109,7 @@ export class FileController {
       void this.fileService.notifyRecipientDownload(
         shareId,
         file.metaData.name,
-        recipientId,
+        getValidRecipientId(recipientId),
       );
     }
 
