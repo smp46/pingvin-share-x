@@ -26,18 +26,19 @@ WORKDIR /opt/app
 COPY ./backend .
 COPY --from=backend-dependencies /opt/app/node_modules ./node_modules
 RUN npx prisma generate
-RUN npm run build && npm prune --production
+RUN npm run build && npx tsc prisma/seed/config.seed.ts --outDir dist/prisma/seed --rootDir prisma/seed && npm prune --production
 
 # Stage 5: Final image
 FROM node:24-alpine AS runner
 ENV NODE_ENV=docker
 
-# Delete default node user
+# Delete default node user
 RUN deluser --remove-home node
 
 RUN apk update --no-cache \
     && apk upgrade --no-cache \
-    && apk add --no-cache curl caddy su-exec openssl
+    && apk add --no-cache curl caddy su-exec openssl \
+    && rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx
 
 WORKDIR /opt/app/frontend
 COPY --from=frontend-builder /opt/app/public ./public
@@ -47,6 +48,11 @@ COPY --from=frontend-builder /opt/app/public/img /tmp/img
 
 WORKDIR /opt/app/backend
 COPY --from=backend-builder /opt/app/node_modules ./node_modules
+RUN rm -rf ./node_modules/typescript \
+           ./node_modules/esbuild \
+           ./node_modules/@esbuild \
+           ./node_modules/.bin/tsc \
+           ./node_modules/.bin/esbuild
 COPY --from=backend-builder /opt/app/dist ./dist
 COPY --from=backend-builder /opt/app/prisma ./prisma
 COPY --from=backend-builder /opt/app/package.json ./
