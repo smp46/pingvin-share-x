@@ -159,6 +159,7 @@ export class ShareService {
     for (const recipient of share.recipients) {
       await this.emailService.sendMailToShareRecipients(
         recipient.email,
+        recipient.id,
         share.id,
         share.creator,
         share.description,

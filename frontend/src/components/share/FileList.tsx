@@ -29,11 +29,13 @@ const FileList = ({
   setShare,
   share,
   isLoading,
+  recipientId,
 }: {
   files?: FileMetaData[];
   setShare: Dispatch<SetStateAction<Share | undefined>>;
   share: Share;
   isLoading: boolean;
+  recipientId?: string;
 }) => {
   const clipboard = useClipboard();
   const config = useConfig();
@@ -67,9 +69,12 @@ const FileList = ({
   };
 
   const copyFileLink = (file: FileMetaData) => {
+    const recipientQuery = recipientId
+      ? `?recipient=${encodeURIComponent(recipientId)}`
+      : "";
     const link = `${config.get("general.appUrl") !== config.get("general.appUrl", true) ? config.get("general.appUrl") : window.location.origin}/api/shares/${
       share.id
-    }/files/${file.id}`;
+    }/files/${file.id}${recipientQuery}`;
 
     if (window.isSecureContext) {
       clipboard.copy(link);
@@ -125,7 +130,9 @@ const FileList = ({
                             size={25}
                             onClick={() => {
                               api
-                                .get(`/shares/${share.id}/files/${file.id}`)
+                                .get(
+                                  `/shares/${share.id}/files/${file.id}?download=false`,
+                                )
                                 .then((res) => {
                                   if (window.isSecureContext) {
                                     clipboard.copy(res.data);
@@ -177,7 +184,11 @@ const FileList = ({
                           variant="light"
                           size={25}
                           onClick={async () => {
-                            await shareService.downloadFile(share.id, file.id);
+                            await shareService.downloadFile(
+                              share.id,
+                              file.id,
+                              recipientId,
+                            );
                           }}
                         >
                           <TbDownload />

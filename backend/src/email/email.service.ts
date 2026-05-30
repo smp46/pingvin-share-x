@@ -56,6 +56,7 @@ export class EmailService {
 
   async sendMailToShareRecipients(
     recipientEmail: string,
+    recipientId: string,
     shareId: string,
     creator?: User,
     description?: string,
@@ -66,7 +67,9 @@ export class EmailService {
         this.i18n.t("email.emailServiceDisabled"),
       );
 
-    const shareUrl = `${this.config.get("general.appUrl")}/s/${shareId}`;
+    const shareUrl = `${this.config.get(
+      "general.appUrl",
+    )}/s/${shareId}?recipient=${encodeURIComponent(recipientId)}`;
     const lang = "";
     const locale = this.i18n.translate("email.locale", { lang });
 
@@ -93,6 +96,26 @@ export class EmailService {
             ? moment(expiration).locale(locale).fromNow()
             : this.i18n.t("email.shareRecipientsExpiresNeverFallback"),
         ),
+    );
+  }
+
+  async sendShareDownloadNotification(
+    creatorEmail: string,
+    shareId: string,
+    fileName: string,
+    recipientEmail: string,
+  ) {
+    const shareUrl = `${this.config.get("general.appUrl")}/s/${shareId}`;
+
+    await this.sendMail(
+      creatorEmail,
+      this.config.get("email.shareDownloadNotificationSubject"),
+      this.config
+        .get("email.shareDownloadNotificationMessage")
+        .replaceAll("\\n", "\n")
+        .replaceAll("{recipientEmail}", recipientEmail)
+        .replaceAll("{fileName}", fileName)
+        .replaceAll("{shareUrl}", shareUrl),
     );
   }
 

@@ -5,3 +5,9 @@ export function safeRedirectPath(path: string | undefined) {
 
   return path;
 }
+
+export function getQueryString(
+  value: string | string[] | undefined,
+): string | undefined {
+  return typeof value === "string" ? value : undefined;
+}
