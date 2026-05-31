@@ -1,15 +1,15 @@
 {
-  "invalidIdFormat": "Invalid ID format",
-  "notFound": "File not found",
-  "passwordProtected": "This share is password protected",
-  "alreadyCompleted": "Share is already completed",
-  "notEnoughSpace": "Not enough space on the server",
-  "unexpectedChunk": "Unexpected chunk received",
-  "maxSizeExceeded": "Max share size exceeded",
-  "zipError": "Error creating ZIP file",
-  "s3DeleteError": "Could not delete file from S3",
-  "s3UploadInitError": "Failed to initialize multipart upload.",
-  "s3SessionNotFound": "Multipart upload session not found.",
-  "s3UploadFailed": "Multipart upload failed. The upload has been aborted.",
-  "s3SizeError": "Could not retrieve file size"
+  "invalidIdFormat": "Невалиден формат на идентификатора",
+  "notFound": "Файлът не е намерен",
+  "passwordProtected": "Това споделяне е защитено с парола",
+  "alreadyCompleted": "Споделянето вече е завършено",
+  "notEnoughSpace": "Няма достатъчно място на сървъра",
+  "unexpectedChunk": "Получена е неочаквана част",
+  "maxSizeExceeded": "Максималният размер на споделянето е надвишен",
+  "zipError": "Грешка при създаването на ZIP файл",
+  "s3DeleteError": "Файлът не може да бъде изтрит от S3",
+  "s3UploadInitError": "Неуспешно инициализиране на качване от няколко части.",
+  "s3SessionNotFound": "Сесията за качване от няколко части не е намерена.",
+  "s3UploadFailed": "Качването от няколко части е неуспешно. Качването е прекратено.",
+  "s3SizeError": "Не може да бъде извлечен размерът на файла"
 }

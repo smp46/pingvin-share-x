@@ -1,4 +1,4 @@
 {
-  "notFound": "Reverse share token not found",
-  "maxShareSizeExceeded": "Max share size can't be greater than {maxSize} bytes."
+  "notFound": "Токенът за обратно споделяне не е намерен",
+  "maxShareSizeExceeded": "Максималният размер на споделянето не може да бъде по-голям от {maxSize} байта."
 }
