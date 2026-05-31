@@ -319,95 +319,58 @@ export class S3FileService {
     });
   }
 
-  getZip(shareId: string) {
-    return new Promise<Readable>(async (resolve, reject) => {
-      const s3Instance = this.getS3Instance();
-      const bucketName = this.config.get("s3.bucketName");
-      const compressionLevel = this.config.get("share.zipCompressionLevel");
-
-      const prefix = `${this.getS3Path()}${shareId}/`;
-
-      try {
-        const listResponse = await s3Instance.send(
-          new ListObjectsV2Command({
-            Bucket: bucketName,
-            Prefix: prefix,
-          }),
-        );
-
-        if (!listResponse.Contents || listResponse.Contents.length === 0) {
-          throw new NotFoundException(`No files found for share ${shareId}`);
-        }
-
-        const archive = archiver("zip", {
-          zlib: { level: parseInt(compressionLevel) },
-        });
-
-        archive.on("error", (err) => {
-          this.logger.error("Archive error", err);
-          reject(new InternalServerErrorException(this.i18n.t("file.zipError")));
-        });
-
-        const fileKeys = listResponse.Contents.filter(
-          (object) => object.Key && object.Key !== prefix,
-        ).map((object) => object.Key as string);
-
-        if (fileKeys.length === 0) {
-          throw new NotFoundException(
-            `No valid files found for share ${shareId}`,
-          );
-        }
-
-        let filesAdded = 0;
-
-        const processNextFile = async (index: number) => {
-          if (index >= fileKeys.length) {
-            archive.finalize();
-            return;
-          }
-
-          const key = fileKeys[index];
-          const fileName = key.replace(prefix, "");
-
-          try {
-            const response = await s3Instance.send(
-              new GetObjectCommand({
-                Bucket: bucketName,
-                Key: key,
-              }),
-            );
-
-            if (response.Body instanceof Readable) {
-              const fileStream = response.Body;
-
-              fileStream.on("end", () => {
-                filesAdded++;
-                processNextFile(index + 1);
-              });
-
-              fileStream.on("error", (err) => {
-                this.logger.error(`Error streaming file ${fileName}`, err);
-                processNextFile(index + 1);
-              });
-
-              archive.append(fileStream, { name: fileName });
-            } else {
-              processNextFile(index + 1);
-            }
-          } catch (error) {
-            this.logger.error(`Error processing file ${fileName}`, error);
-            processNextFile(index + 1);
-          }
-        };
-
-        resolve(archive);
-        processNextFile(0);
-      } catch (error) {
-        this.logger.error("Error creating ZIP file", error);
-
-        reject(new InternalServerErrorException(this.i18n.t("file.zipError")));
-      }
+  async getZip(shareId: string) {
+    const files = await this.prisma.file.findMany({
+      where: { shareId },
     });
+
+    if (files.length === 0) {
+      throw new NotFoundException(`No files found for share ${shareId}`);
+    }
+
+    const s3Instance = this.getS3Instance();
+    const bucketName = this.config.get("s3.bucketName");
+    const compressionLevel = this.config.get("share.zipCompressionLevel");
+    const s3Path = this.getS3Path();
+
+    const archive = archiver("zip", {
+      zlib: { level: parseInt(compressionLevel) },
+    });
+
+    archive.on("error", (err) => {
+      this.logger.error("Archive error", err);
+    });
+
+    const processFiles = async () => {
+      for (const file of files) {
+        const key = `${s3Path}${shareId}/${file.name}`;
+        try {
+          const response = await s3Instance.send(
+            new GetObjectCommand({
+              Bucket: bucketName,
+              Key: key,
+            }),
+          );
+
+          if (response.Body instanceof Readable) {
+            const body = response.Body as Readable;
+            archive.append(body, { name: file.name });
+            // Wait for this file to be fully appended before moving to the next one to avoid overwhelming memory/connections
+            await new Promise((resolve, reject) => {
+              body.on("end", resolve);
+              body.on("error", reject);
+            });
+          }
+        } catch (error) {
+          this.logger.error(`Error processing file ${file.name}`, error);
+        }
+      }
+      archive.finalize();
+    };
+
+    processFiles();
+
+    return archive;
   }
 
   getS3Path(): string {

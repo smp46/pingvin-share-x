@@ -95,7 +95,11 @@ export class FileService {
   }
 
   async getZip(shareId: string): Promise<Readable> {
-    const storageService = this.getStorageService();
+    const share = await this.prisma.share.findFirst({
+      where: { id: shareId },
+      select: { storageProvider: true },
+    });
+    const storageService = this.getStorageService(share?.storageProvider);
     return await storageService.getZip(shareId);
   }
 
