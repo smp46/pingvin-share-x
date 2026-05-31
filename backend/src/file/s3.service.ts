@@ -202,7 +202,8 @@ export class S3FileService {
       where: { id: fileId },
     });
 
-    if (!fileMetaData) throw new NotFoundException(this.i18n.t("file.notFound"));
+    if (!fileMetaData)
+      throw new NotFoundException(this.i18n.t("file.notFound"));
 
     const key = `${this.getS3Path()}${shareId}/${fileMetaData.name}`;
     const s3Instance = this.getS3Instance();

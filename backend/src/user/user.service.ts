@@ -101,7 +101,9 @@ export class UserSevice {
       });
 
       if (userCount === 1) {
-        throw new BadRequestException(this.i18n.t("auth.cannotDeleteLastAdmin"));
+        throw new BadRequestException(
+          this.i18n.t("auth.cannotDeleteLastAdmin"),
+        );
       }
     }
 

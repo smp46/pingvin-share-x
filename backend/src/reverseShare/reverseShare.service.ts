@@ -34,9 +34,7 @@ export class ReverseShareService {
       parsedExpiration >
         moment().add(maxExpiration.value, maxExpiration.unit).toDate()
     ) {
-      throw new BadRequestException(
-        this.i18n.t("share.maxExpirationExceeded"),
-      );
+      throw new BadRequestException(this.i18n.t("share.maxExpirationExceeded"));
     }
 
     const globalMaxShareSize = this.config.get("share.maxSize");

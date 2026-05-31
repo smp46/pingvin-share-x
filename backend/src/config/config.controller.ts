@@ -71,7 +71,9 @@ export class ConfigController {
     const enabled = this.configService.get("cache.redis-enabled");
 
     if (!redisUrl) {
-      throw new InternalServerErrorException(this.i18n.t("config.redisUrlNotSet"));
+      throw new InternalServerErrorException(
+        this.i18n.t("config.redisUrlNotSet"),
+      );
     }
 
     const withTimeout = async <T>(
