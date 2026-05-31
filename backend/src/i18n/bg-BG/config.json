@@ -1,12 +1,12 @@
 {
-  "redisUrlNotSet": "Redis URL is not set",
-  "redisTimedOut": "Redis timed out",
-  "redisConnectionFailed": "Redis connection failed",
-  "redisUnexpectedResponse": "Unexpected response from Redis",
-  "redisError": "Redis error",
-  "variableNotFound": "Config variable not found",
-  "editNotAllowed": "You are only allowed to update config variables via the config.yaml file",
-  "invalidType": "Config variable must be of type {type}",
-  "shareIdLengthValidation": "Share ID length must be between 2 and 50",
-  "zipCompressionLevelValidation": "Zip compression level must be between 0 and 9"
+  "redisUrlNotSet": "URL адресът на Redis не е зададен",
+  "redisTimedOut": "Времето за изчакване на Redis изтече",
+  "redisConnectionFailed": "Връзката с Redis е неуспешна",
+  "redisUnexpectedResponse": "Неочакван отговор от Redis",
+  "redisError": "Грешка в Redis",
+  "variableNotFound": "Конфигурационната променлива не е намерена",
+  "editNotAllowed": "Разрешено е да актуализирате конфигурационните променливи само чрез файла config.yaml",
+  "invalidType": "Конфигурационната променлива трябва да бъде от тип {type}",
+  "shareIdLengthValidation": "Дължината на идентификатора за споделяне трябва да бъде между 2 и 50",
+  "zipCompressionLevelValidation": "Нивото на компресия на Zip трябва да бъде между 0 и 9"
 }

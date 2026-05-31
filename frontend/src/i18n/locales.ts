@@ -1,4 +1,5 @@
 import arabic from "./translations/ar-EG";
+import bulgarian from "./translations/bg-BG";
 import czech from "./translations/cs-CZ";
 import danish from "./translations/da-DK";
 import german from "./translations/de-DE";
@@ -138,6 +139,11 @@ export const LOCALES = {
     name: "العربية",
     code: "ar-EG",
     messages: arabic,
+  },
+  BULGARIAN: {
+    name: "Български",
+    code: "bg-BG",
+    messages: bulgarian,
   },
   HUNGARIAN: {
     name: "Hungarian",

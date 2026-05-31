@@ -1,11 +1,11 @@
 {
-  "shareRecipientsCreatorFallback": "Someone",
-  "shareRecipientsDescFallback": "No description",
-  "shareRecipientsExpiresNeverFallback": "in: never",
-  "smtpDisabled": "SMTP is disabled",
-  "emailServiceDisabled": "Email service disabled",
-  "testSubject": "Test email",
-  "testText": "This is a test email",
-  "sendFailed": "Failed to send email",
-  "locale": "en-US"
+  "shareRecipientsCreatorFallback": "Някой",
+  "shareRecipientsDescFallback": "Няма описание",
+  "shareRecipientsExpiresNeverFallback": "в: никога",
+  "smtpDisabled": "SMTP е деактивиран",
+  "emailServiceDisabled": "Имейл услугата е деактивирана",
+  "testSubject": "Тестов имейл",
+  "testText": "Това е тестов имейл",
+  "sendFailed": "Неуспешно изпращане на имейл",
+  "locale": "bg-BG"
 }
