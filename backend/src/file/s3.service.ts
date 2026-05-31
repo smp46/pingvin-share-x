@@ -214,7 +214,7 @@ export class S3FileService {
           Key: key,
         }),
       );
-    } catch (error) {
+    } catch {
       throw new Error(this.i18n.t("file.s3DeleteError"));
     }
 
@@ -297,7 +297,7 @@ export class S3FileService {
 
       // Return ContentLength which is the file size in bytes
       return headObjectResponse.ContentLength ?? 0;
-    } catch (error) {
+    } catch {
       throw new Error(this.i18n.t("file.s3SizeError"));
     }
   }

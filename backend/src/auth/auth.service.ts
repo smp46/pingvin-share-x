@@ -263,7 +263,7 @@ export class AuthService {
           signOutFromProviderSupportedAndActivated = this.config.get(
             `oauth.${providerName}-signOut`,
           );
-        } catch (_) {
+        } catch {
           // Ignore error if the provider is not supported or if the provider sign out is not activated
         }
         if (

@@ -45,7 +45,7 @@ export class ConfigService extends EventEmitter {
     let configFile: string = "";
     try {
       configFile = fs.readFileSync(CONFIG_FILE, "utf8");
-    } catch (e) {
+    } catch {
       this.logger.log(
         "Config.yaml is not set. Falling back to UI configuration.",
       );
