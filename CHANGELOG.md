@@ -1,3 +1,15 @@
+## [1.19.0](https://github.com/smp46/pingvin-share-x/compare/v1.18.1...v1.19.0) (2026-05-31)
+
+### Features
+
+* add share download notification emails ([#87](https://github.com/smp46/pingvin-share-x/issues/87)) ([acecad9](https://github.com/smp46/pingvin-share-x/commit/acecad9bf84bf98bf52d13789f528f642aa353bd))
+* bulgarian language support & AI translations ([#91](https://github.com/smp46/pingvin-share-x/issues/91)) ([886c311](https://github.com/smp46/pingvin-share-x/commit/886c31127b78f45e7a80cd85fcbd0aca3022ce34))
+
+### Bug Fixes
+
+* add healthcheck start period ([90af77f](https://github.com/smp46/pingvin-share-x/commit/90af77fa0a65d9e630ce5a933bb8e26396b4b857))
+* download all (as zip) now works with S3 ([#90](https://github.com/smp46/pingvin-share-x/issues/90)) ([b820f3c](https://github.com/smp46/pingvin-share-x/commit/b820f3ca9fc37553db8ebd86f184eb9b2f7c2924))
+
 ## [1.18.1](https://github.com/smp46/pingvin-share-x/compare/v1.18.0...v1.18.1) (2026-05-26)
 
 ### Bug Fixes
