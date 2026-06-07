@@ -1,0 +1,15 @@
+{
+  "already_linked": "This account is already linked to another user",
+  "not_linked": "This account is not linked to any user",
+  "no_user": "No user found for this account",
+  "no_email": "No email address found for this account",
+  "unverified_account": "Your account is not verified",
+  "user_not_allowed": "You are not allowed to sign in",
+  "invalid_token": "Invalid token",
+  "cannot_get_user_info": "Could not get user information",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}
