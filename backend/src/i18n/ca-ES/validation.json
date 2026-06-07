@@ -1,0 +1,4 @@
+{
+  "usernamePattern": "Username can only contain letters, numbers, dots and underscores",
+  "idPattern": "ID can only contain letters, numbers, underscores and hyphens"
+}
