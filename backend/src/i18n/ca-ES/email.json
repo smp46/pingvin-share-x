@@ -1,0 +1,11 @@
+{
+  "shareRecipientsCreatorFallback": "Someone",
+  "shareRecipientsDescFallback": "No description",
+  "shareRecipientsExpiresNeverFallback": "in: never",
+  "smtpDisabled": "SMTP is disabled",
+  "emailServiceDisabled": "Email service disabled",
+  "testSubject": "Test email",
+  "testText": "This is a test email",
+  "sendFailed": "Failed to send email",
+  "locale": "en-US"
+}
