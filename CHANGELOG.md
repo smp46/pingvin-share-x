@@ -1,3 +1,9 @@
+## [1.19.1](https://github.com/smp46/pingvin-share-x/compare/v1.19.0...v1.19.1) (2026-06-08)
+
+### Bug Fixes
+
+* **deps:** resolve security vulns via npm audit ([4617427](https://github.com/smp46/pingvin-share-x/commit/46174275b9315f521d76f1482a98d4abead56ddc))
+
 ## [1.19.0](https://github.com/smp46/pingvin-share-x/compare/v1.18.1...v1.19.0) (2026-05-31)
 
 ### Features
