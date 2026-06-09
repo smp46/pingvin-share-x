@@ -225,7 +225,7 @@ export default {
   "admin.shares.table.username": "作成者",
   "admin.shares.table.visitors": "訪問者",
   "admin.shares.table.expires": "有効期限",
-  "admin.shares.table.deletes": "Deletes on",
+  "admin.shares.table.deletes": "削除対象",
   "admin.shares.edit.delete.title": "共有を削除: {id}",
   "admin.shares.edit.delete.description": "この共有を削除してもよろしいですか？",
   // END /admin/shares
@@ -239,7 +239,7 @@ export default {
   "upload.reverse-share.error.invalid.description": "このファイルリクエストは期限が切れているか無効です。",
   // Dropzone.tsx
   "upload.dropzone.title": "ファイルをアップロード",
-  "upload.dropzone.description": "Drag'n'drop files here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
+  "upload.dropzone.description": "ファイルをドラッグ＆ドロップして共有を開始するか、Ctrl+Vを押してクリップボードからテキストコンテンツをアップロードしてください。合計で{maxSize}までのファイルを受け付けます。",
   "upload.dropzone.notify.file-too-big": "アップロードしようとしたファイルは、最大ファイルサイズの{maxSize} を超えています。",
   // FileList.tsx
   "upload.filelist.name": "ファイル名",
@@ -289,7 +289,7 @@ export default {
   "share.title": "「{shareId}」が共有されました",
   "share.description": "あなたと共有したファイルをご確認ください！",
   "share.fileCount": "{count, plural, =1 {# ファイル} other {# ファイル}} · {size} (圧縮により ZIP ファイルはより小さくなる場合があります)",
-  "share.copy-text-contents": "Copy file contents to clipboard",
+  "share.copy-text-contents": "ファイルの内容をクリップボードにコピー",
   "share.error.visitor-limit-exceeded.title": "訪問者の上限を超えました",
   "share.error.visitor-limit-exceeded.description": "この共有からの訪問者の回数が制限を超えています。",
   "share.error.removed.title": "共有が削除されました",
