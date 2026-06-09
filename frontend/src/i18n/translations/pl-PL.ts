@@ -17,9 +17,9 @@ export default {
   "home.bullet.a.name": "Samodzielnie Utrzymywana",
   "home.bullet.a.description": "Utrzymuj Pingvin Share na własnym serwerze.",
   "home.bullet.b.name": "Prywatność",
-  "home.bullet.b.description": "Your files are yours and will never be accessed by third parties.",
+  "home.bullet.b.description": "Twoje pliki należą do Ciebie i nie będą dostępne dla osób trzecich.",
   "home.bullet.c.name": "Brak irytującego ograniczenia rozmiaru pliku",
-  "home.bullet.c.description": "Upload files as big as you want. Only your hard drive will be your limit.",
+  "home.bullet.c.description": "Przesyłaj pliki, jak duże tylko chcesz. Ograniczeniem jest tylko rozmiar Twojego dysku.",
   "home.button.start": "Zaczynajmy",
   "home.button.source": "Kod źródłowy",
   // END /
@@ -68,7 +68,7 @@ export default {
   "resetPassword.text.resetPassword": "Resetuj hasło",
   "resetPassword.text.enterNewPassword": "Wprowadź nowe hasło",
   "resetPassword.input.password": "Nowe hasło",
-  "resetPassword.notify.passwordReset": "Your password has been successfully reset.",
+  "resetPassword.notify.passwordReset": "Twoje hasło zostało pomyślnie zresetowane.",
   // /account
   "account.title": "Moje konto",
   "account.card.info.title": "Informacje o koncie",
