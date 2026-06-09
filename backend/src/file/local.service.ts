@@ -71,7 +71,9 @@ export class LocalFileService {
     const space = await fs.statfs(SHARE_DIRECTORY);
     const availableSpace = space.bavail * space.bsize;
     if (availableSpace < buffer.byteLength) {
-      throw new InternalServerErrorException(this.i18n.t("file.notEnoughSpace"));
+      throw new InternalServerErrorException(
+        this.i18n.t("file.notEnoughSpace"),
+      );
     }
 
     // Check if share size limit is exceeded
@@ -125,7 +127,8 @@ export class LocalFileService {
       where: { id: fileId },
     });
 
-    if (!fileMetaData) throw new NotFoundException(this.i18n.t("file.notFound"));
+    if (!fileMetaData)
+      throw new NotFoundException(this.i18n.t("file.notFound"));
 
     const file = createReadStream(`${SHARE_DIRECTORY}/${shareId}/${fileId}`);
 
@@ -144,7 +147,8 @@ export class LocalFileService {
       where: { id: fileId },
     });
 
-    if (!fileMetaData) throw new NotFoundException(this.i18n.t("file.notFound"));
+    if (!fileMetaData)
+      throw new NotFoundException(this.i18n.t("file.notFound"));
 
     await fs.unlink(`${SHARE_DIRECTORY}/${shareId}/${fileId}`);
 

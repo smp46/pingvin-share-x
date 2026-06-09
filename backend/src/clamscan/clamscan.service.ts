@@ -79,7 +79,9 @@ export class ClamScanService {
 
           try {
             fs.unlinkSync(tmpPath);
-          } catch {}
+          } catch {
+            // ignore error
+          }
         } catch (err: any) {
           this.logger.warn(
             `ClamAV scan failed for S3 file ${f.id} in share ${shareId}: ${err?.message || "unknown error"}`,

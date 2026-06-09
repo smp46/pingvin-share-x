@@ -184,6 +184,20 @@ export const configVariables = {
       defaultValue:
         'Hey!\n\nYou were invited to Pingvin Share. Click this link to accept the invite: {url}\n\nYou can use the email "{email}" and the password "{password}" to sign in.\n\nPingvin Share 🐧',
     },
+    enableShareDownloadNotifications: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    shareDownloadNotificationSubject: {
+      type: "string",
+      defaultValue: "Your file was downloaded",
+    },
+    shareDownloadNotificationMessage: {
+      type: "text",
+      defaultValue:
+        "Hey!\n\n{recipientEmail} downloaded {fileName} from your share: {shareUrl}\n\nPingvin Share 🐧",
+    },
   },
   smtp: {
     enabled: {

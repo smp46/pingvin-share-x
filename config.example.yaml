@@ -119,6 +119,20 @@ email:
 
 
     Pingvin Share 🐧
+  #Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.
+  enableShareDownloadNotifications: "false"
+  #Subject of the email which gets sent to the share creator when a recipient downloads a file.
+  shareDownloadNotificationSubject: Your file was downloaded
+  #Message which gets sent to the share creator when a recipient downloads a file. Available variables:
+  # {recipientEmail} - The email of the recipient
+  # {fileName} - The downloaded file name
+  # {shareUrl} - The URL of the share
+  shareDownloadNotificationMessage: |-
+    Hey!
+
+    {recipientEmail} downloaded {fileName} from your share: {shareUrl}
+
+    Pingvin Share 🐧
 smtp:
   #Whether SMTP is enabled. Only set this to true if you entered the host, port, email, user and password of your SMTP server.
   enabled: "false"

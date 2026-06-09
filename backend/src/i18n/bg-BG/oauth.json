@@ -1,0 +1,15 @@
+{
+  "already_linked": "Този акаунт вече е свързан с друг потребител",
+  "not_linked": "Този акаунт не е свързан с никой потребител",
+  "no_user": "Не е намерен потребител за този акаунт",
+  "no_email": "Не е намерен имейл адрес за този акаунт",
+  "unverified_account": "Вашият акаунт не е потвърден",
+  "user_not_allowed": "Нямате разрешение да влизате",
+  "invalid_token": "Невалиден токен",
+  "cannot_get_user_info": "Не можа да се извлече информация за потребителя",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

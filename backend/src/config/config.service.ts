@@ -45,7 +45,7 @@ export class ConfigService extends EventEmitter {
     let configFile: string = "";
     try {
       configFile = fs.readFileSync(CONFIG_FILE, "utf8");
-    } catch (e) {
+    } catch {
       this.logger.log(
         "Config.yaml is not set. Falling back to UI configuration.",
       );
@@ -113,7 +113,7 @@ export class ConfigService extends EventEmitter {
   async getByCategory(category: string) {
     const configVariables = this.configVariables
       .filter((c) => !c.locked && category == c.category)
-      .sort((c) => c.order);
+      .sort((a, b) => a.order - b.order);
 
     return configVariables.map((variable) => {
       return {

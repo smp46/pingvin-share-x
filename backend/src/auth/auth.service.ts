@@ -75,7 +75,9 @@ export class AuthService {
 
   async signIn(dto: AuthSignInDTO, ip: string) {
     if (!dto.email && !dto.username) {
-      throw new BadRequestException(this.i18n.t("auth.emailOrUsernameRequired"));
+      throw new BadRequestException(
+        this.i18n.t("auth.emailOrUsernameRequired"),
+      );
     }
 
     if (!this.config.get("oauth.disablePassword")) {
@@ -154,7 +156,9 @@ export class AuthService {
       this.logger.log(
         `Failed password reset request for user ${email} because it is an LDAP user`,
       );
-      throw new BadRequestException(this.i18n.t("auth.ldapResetPasswordNotAllowed"));
+      throw new BadRequestException(
+        this.i18n.t("auth.ldapResetPasswordNotAllowed"),
+      );
     }
 
     // Delete old reset password token
@@ -182,7 +186,8 @@ export class AuthService {
       where: { resetPasswordToken: { token } },
     });
 
-    if (!user) throw new BadRequestException(this.i18n.t("auth.tokenInvalidOrExpired"));
+    if (!user)
+      throw new BadRequestException(this.i18n.t("auth.tokenInvalidOrExpired"));
 
     const newPasswordHash = await argon.hash(newPassword);
 
@@ -200,7 +205,8 @@ export class AuthService {
     const isPasswordValid =
       !user.password || (await argon.verify(user.password, oldPassword));
 
-    if (!isPasswordValid) throw new ForbiddenException(this.i18n.t("auth.invalidPassword"));
+    if (!isPasswordValid)
+      throw new ForbiddenException(this.i18n.t("auth.invalidPassword"));
 
     const hash = await argon.hash(newPassword);
 
@@ -263,7 +269,7 @@ export class AuthService {
           signOutFromProviderSupportedAndActivated = this.config.get(
             `oauth.${providerName}-signOut`,
           );
-        } catch (_) {
+        } catch {
           // Ignore error if the provider is not supported or if the provider sign out is not activated
         }
         if (
@@ -377,7 +383,10 @@ export class AuthService {
 
   async verifyPassword(user: User, password: string) {
     if (!user.password && this.config.get("ldap.enabled")) {
-      return !!this.ldapService.authenticateUser(user.username, password);
+      return !!(await this.ldapService.authenticateUser(
+        user.username,
+        password,
+      ));
     }
 
     return argon.verify(user.password, password);

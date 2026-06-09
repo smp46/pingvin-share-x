@@ -77,6 +77,7 @@ model OAuthUser {
 model Share {
   id        String   @id @default(uuid())
   createdAt DateTime @default(now())
+  updatedAt DateTime? @updatedAt
 
   name          String?
   uploadLocked  Boolean  @default(false)
