@@ -1,5 +1,6 @@
 import arabic from "./translations/ar-EG";
 import bulgarian from "./translations/bg-BG";
+import catalan from "./translations/ca-ES";
 import czech from "./translations/cs-CZ";
 import danish from "./translations/da-DK";
 import german from "./translations/de-DE";
@@ -179,5 +180,10 @@ export const LOCALES = {
     name: "Eesti",
     code: "et-EE",
     messages: estonian,
+  },
+  CATALAN: {
+    name: "Català",
+    code: "ca-ES",
+    messages: catalan,
   },
 };

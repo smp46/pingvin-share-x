@@ -1,4 +1,4 @@
 {
-  "notFound": "Reverse share token not found",
-  "maxShareSizeExceeded": "Max share size can't be greater than {maxSize} bytes."
+  "notFound": "No s'ha trobat el token de compartició inversa",
+  "maxShareSizeExceeded": "La mida màxima de compartició no pot ser superior a {maxSize} bytes."
 }
