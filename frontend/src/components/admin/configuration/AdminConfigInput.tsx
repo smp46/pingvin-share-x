@@ -309,6 +309,7 @@ const AdminConfigInput = ({
         <TimespanInput
           value={stringToTimespan(configVariable.value)}
           disabled={!configVariable.allowEdit}
+          min={configVariable.key === "share.fileRetentionPeriod" ? -1 : 0}
           onChange={(timespan) =>
             onValueChange(configVariable, timespanToString(timespan))
           }

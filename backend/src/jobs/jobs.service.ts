@@ -24,6 +24,11 @@ export class JobsService {
     const fileRetentionPeriod = this.configServer.get(
       "share.fileRetentionPeriod",
     );
+
+    if (fileRetentionPeriod.value === -1) {
+      return;
+    }
+
     const thresholdDate = moment()
       .subtract(fileRetentionPeriod.value, fileRetentionPeriod.unit)
       .toDate();
