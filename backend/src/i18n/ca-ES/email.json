@@ -1,11 +1,11 @@
 {
-  "shareRecipientsCreatorFallback": "Someone",
-  "shareRecipientsDescFallback": "No description",
-  "shareRecipientsExpiresNeverFallback": "in: never",
-  "smtpDisabled": "SMTP is disabled",
-  "emailServiceDisabled": "Email service disabled",
-  "testSubject": "Test email",
-  "testText": "This is a test email",
-  "sendFailed": "Failed to send email",
-  "locale": "en-US"
+  "shareRecipientsCreatorFallback": "Algú",
+  "shareRecipientsDescFallback": "Sense descripció",
+  "shareRecipientsExpiresNeverFallback": "en: mai",
+  "smtpDisabled": "SMTP està desactivat",
+  "emailServiceDisabled": "Servei de correu electrònic desactivat",
+  "testSubject": "Correu de prova",
+  "testText": "Aquest és un correu de prova",
+  "sendFailed": "S'ha produït un error en enviar el correu electrònic",
+  "locale": "ca-ES"
 }

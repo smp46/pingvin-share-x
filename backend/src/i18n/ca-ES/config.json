@@ -1,12 +1,12 @@
 {
-  "redisUrlNotSet": "Redis URL is not set",
-  "redisTimedOut": "Redis timed out",
-  "redisConnectionFailed": "Redis connection failed",
-  "redisUnexpectedResponse": "Unexpected response from Redis",
-  "redisError": "Redis error",
-  "variableNotFound": "Config variable not found",
-  "editNotAllowed": "You are only allowed to update config variables via the config.yaml file",
-  "invalidType": "Config variable must be of type {type}",
-  "shareIdLengthValidation": "Share ID length must be between 2 and 50",
-  "zipCompressionLevelValidation": "Zip compression level must be between 0 and 9"
+  "redisUrlNotSet": "La URL de Redis no està configurada",
+  "redisTimedOut": "S'ha esgotat el temps d'espera de Redis",
+  "redisConnectionFailed": "Ha fallat la connexió a Redis",
+  "redisUnexpectedResponse": "Resposta inesperada de Redis",
+  "redisError": "Error de Redis",
+  "variableNotFound": "No s'ha trobat la variable de configuració",
+  "editNotAllowed": "Només teniu permès actualitzar les variables de configuració mitjançant el fitxer config.yaml",
+  "invalidType": "La variable de configuració ha de ser de tipus {type}",
+  "shareIdLengthValidation": "La longitud de l'ID de compartició ha de ser d'entre 2 i 50",
+  "zipCompressionLevelValidation": "El nivell de compressió Zip ha de ser d'entre 0 i 9"
 }
