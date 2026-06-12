@@ -429,7 +429,7 @@ export default {
   "admin.config.share.allow-admin-access-all-shares": "Allow admin access to all shares",
   "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
   "admin.config.share.file-retention-period": "File retention period",
-  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled.",
+  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "有効",
   "admin.config.smtp.enabled.description": "SMTPを有効にするかどうかを選択してください。SMTPサーバーのホスト名、ポート番号、電子メールアドレス、ユーザー名、パスワードが入力されている場合にのみ、有効にしてください。",
   "admin.config.smtp.host": "ホスト名",
