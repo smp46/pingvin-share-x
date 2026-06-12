@@ -429,7 +429,7 @@ export default {
   "admin.config.share.allow-admin-access-all-shares": "Admin-Zugriff auf alle Freigaben erlauben",
   "admin.config.share.allow-admin-access-all-shares.description": "Administratoren erlauben, auf alle Freigaben zuzugreifen, selbst wenn sie passwortgeschützt, abgelaufen oder gelöscht sind.",
   "admin.config.share.file-retention-period": "Aufbewahrungsfrist für Dateien",
-  "admin.config.share.file-retention-period.description": "Wie lange Dateien nach Ablauf oder Löschung einer Freigabe aufbewahrt werden. Nur sinnvoll, wenn die Option „Administratorzugriff auf alle Freigaben erlauben“ ebenfalls aktiviert ist.",
+  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Aktivieren",
   "admin.config.smtp.enabled.description": "Gibt an, ob SMTP aktiviert ist. Aktiviere dies nur, wenn du den Host, den Port, die E-Mail, den Benutzernamen und das Passwort deines SMTP-Servers eingegeben hast.",
   "admin.config.smtp.host": "Host",
