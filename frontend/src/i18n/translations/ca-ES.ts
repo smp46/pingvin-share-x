@@ -429,7 +429,7 @@ export default {
   "admin.config.share.allow-admin-access-all-shares": "Permetre l'accés de l'administrador a totes les comparticions",
   "admin.config.share.allow-admin-access-all-shares.description": "Permetre aos administradors accedir a totes les comparticions, fins i tot si estan protegides amb contrasenya, caducades o suprimides.",
   "admin.config.share.file-retention-period": "Període de retenció de fitxers",
-  "admin.config.share.file-retention-period.description": "Quant de temps es mantenen els fitxers després que una compartició caduqui o s'elimini. Només és útil si 'Permetre l'accés de l'administrador a totes les comparticions' també està activat.",
+  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Activar",
   "admin.config.smtp.enabled.description": "Si l'SMTP està activat. Només configureu-ho com a cert si heu introduït el servidor, el port, el correu, l'usuari i la contrasenya del vostre servidor SMTP.",
   "admin.config.smtp.host": "Servidor",
