@@ -429,7 +429,7 @@ export default {
   "admin.config.share.allow-admin-access-all-shares": "Allow admin access to all shares",
   "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
   "admin.config.share.file-retention-period": "File retention period",
-  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled.",
+  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Enable",
   "admin.config.smtp.enabled.description": "เปิดใช้งาน SMTP สำหรับการส่งอีเมล เปิดได้เท่านั้นต่อเมื่อคุณใส่ข้อมูลโฮสต์ พอร์ต อีเมล ผู้ใช้ และรหัสผ่านของเซิร์ฟเวอร์ SMTP ของค",
   "admin.config.smtp.host": "โฮสต์",
