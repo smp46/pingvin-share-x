@@ -57,7 +57,8 @@ export class AuthService {
           username: dto.username,
           password: hash,
           isAdmin: isAdmin ?? isFirstUser,
-          isActivated: isFirstUser || skipVerification || !enableEmailVerification,
+          isActivated:
+            isFirstUser || skipVerification || !enableEmailVerification,
           activationToken:
             !isFirstUser && !skipVerification && enableEmailVerification
               ? crypto.randomUUID()
@@ -114,7 +115,9 @@ export class AuthService {
 
       if (user?.password && (await argon.verify(user.password, dto.password))) {
         if (!user.isActivated) {
-          throw new UnauthorizedException(this.i18n.t("auth.accountNotActivated"));
+          throw new UnauthorizedException(
+            this.i18n.t("auth.accountNotActivated"),
+          );
         }
         this.logger.log(
           `Successful password login for user ${user.email} from IP ${ip}`,
@@ -236,7 +239,8 @@ export class AuthService {
 
     if (
       !user ||
-      (user.activationTokenExpiresAt && user.activationTokenExpiresAt < new Date())
+      (user.activationTokenExpiresAt &&
+        user.activationTokenExpiresAt < new Date())
     ) {
       throw new BadRequestException(this.i18n.t("auth.tokenInvalidOrExpired"));
     }

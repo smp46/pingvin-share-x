@@ -289,24 +289,26 @@ const AdminConfigInput = ({
           w={201}
         />
       )}
-      {configVariable.type == "boolean" && (isEmailShareConfig || isEmailVerificationConfig) && (
-        <>
-          <Switch
-            disabled={!isSmtpEnabled}
-            {...form.getInputProps("booleanValue", { type: "checkbox" })}
-            onChange={(e) => onValueChange(configVariable, e.target.checked)}
-          />
-        </>
-      )}
-      {configVariable.type == "boolean" && !(isEmailShareConfig || isEmailVerificationConfig) && (
-        <>
-          <Switch
-            disabled={!configVariable.allowEdit}
-            {...form.getInputProps("booleanValue", { type: "checkbox" })}
-            onChange={(e) => onValueChange(configVariable, e.target.checked)}
-          />
-        </>
-      )}
+      {configVariable.type == "boolean" &&
+        (isEmailShareConfig || isEmailVerificationConfig) && (
+          <>
+            <Switch
+              disabled={!isSmtpEnabled}
+              {...form.getInputProps("booleanValue", { type: "checkbox" })}
+              onChange={(e) => onValueChange(configVariable, e.target.checked)}
+            />
+          </>
+        )}
+      {configVariable.type == "boolean" &&
+        !(isEmailShareConfig || isEmailVerificationConfig) && (
+          <>
+            <Switch
+              disabled={!configVariable.allowEdit}
+              {...form.getInputProps("booleanValue", { type: "checkbox" })}
+              onChange={(e) => onValueChange(configVariable, e.target.checked)}
+            />
+          </>
+        )}
       {configVariable.type == "timespan" && (
         <TimespanInput
           value={stringToTimespan(configVariable.value)}

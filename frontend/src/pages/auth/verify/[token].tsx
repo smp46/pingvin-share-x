@@ -1,4 +1,13 @@
-import { Container, Title, Text, Button, Paper, Stack, Loader, Center } from "@mantine/core";
+import {
+  Container,
+  Title,
+  Text,
+  Button,
+  Paper,
+  Stack,
+  Loader,
+  Center,
+} from "@mantine/core";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
@@ -11,7 +20,9 @@ export default function VerifyAccount() {
   const router = useRouter();
   const { token } = router.query;
   const t = useTranslate();
-  const [status, setStatus] = useState<"loading" | "success" | "error">("loading");
+  const [status, setStatus] = useState<"loading" | "success" | "error">(
+    "loading",
+  );
 
   useEffect(() => {
     if (!token) return;
@@ -42,8 +53,14 @@ export default function VerifyAccount() {
                     id="verify.success"
                   />
                 </Text>
-                <Button fullWidth mt="xl" onClick={() => router.replace("/auth/signIn")}>
-                  <FormattedMessage id="verify.button.signin" />
+                <Button
+                  fullWidth
+                  mt="xl"
+                  onClick={() => router.replace("/auth/signIn")}
+                >
+                  <FormattedMessage
+                    id="verify.button.signin"
+                  />
                 </Button>
               </>
             )}
@@ -60,7 +77,10 @@ export default function VerifyAccount() {
                   variant="light"
                   onClick={() => router.replace("/auth/signIn")}
                 >
-                  <FormattedMessage id="verify.button.signin" />
+                  <FormattedMessage
+                    id="verify.button.signin"
+                    defaultMessage="Go to Sign In"
+                  />
                 </Button>
               </>
             )}

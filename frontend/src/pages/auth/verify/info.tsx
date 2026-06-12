@@ -32,7 +32,9 @@ export default function VerificationInfo() {
       <Meta title={t("verify.info.title")} />
       <Container size={420} my={40}>
         <Title order={2} align="center" weight={900}>
-          <FormattedMessage id="verify.info.title" />
+          <FormattedMessage
+            id="verify.info.title"
+          />
         </Title>
         <Paper withBorder shadow="md" p={30} mt={30} radius="md">
           <Stack align="center">
@@ -64,7 +66,9 @@ export default function VerificationInfo() {
                 />
               </Button>
               <Button fullWidth onClick={() => router.replace("/auth/signIn")}>
-                <FormattedMessage id="verify.button.signin" defaultMessage="Go to Sign In" />
+                <FormattedMessage
+                  id="verify.button.signin"
+                />
               </Button>
             </Stack>
           </Stack>
