@@ -429,7 +429,7 @@ export default {
   "admin.config.share.allow-admin-access-all-shares": "Администраторски достъп до всички споделяния",
   "admin.config.share.allow-admin-access-all-shares.description": "Позволява на администраторите достъп до всички споделяния, дори и защитените, изтеклите или изтритите.",
   "admin.config.share.file-retention-period": "Период на запазване на файловете",
-  "admin.config.share.file-retention-period.description": "Колко дълго се пазят файловете след изтичане или изтриване на споделяне. Полезно само ако е активиран администраторският достъп.",
+  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Активиране",
   "admin.config.smtp.enabled.description": "Дали SMTP е активиран. Активирайте само ако сте въвели хост, порт, имейл, потребител и парола.",
   "admin.config.smtp.host": "Хост",
