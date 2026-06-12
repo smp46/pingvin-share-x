@@ -429,7 +429,7 @@ export default {
   "admin.config.share.allow-admin-access-all-shares": "Geef beheerders toegang tot alle gedeelde mappen",
   "admin.config.share.allow-admin-access-all-shares.description": "Sta beheerders toe om toegang te krijgen tot alle gedeelde mappen, zelfs als deze met een wachtwoord zijn beveiligd, verlopen zijn of verwijderd zijn.",
   "admin.config.share.file-retention-period": "Bewaartermijn van bestanden",
-  "admin.config.share.file-retention-period.description": "Hoe lang bestanden bewaard blijven nadat een gedeelde map is verlopen of verwijderd. Dit is alleen nuttig als de optie 'Beheerderstoegang tot alle gedeelde mappen toestaan' ook is ingeschakeld.",
+  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Inschakelen",
   "admin.config.smtp.enabled.description": "Of SMTP is ingeschakeld. Stel dit alleen in op true als u de host hebt ingevoerd, poort, e-mail, gebruiker en wachtwoord van uw SMTP-server.",
   "admin.config.smtp.host": "Hostnaam",
