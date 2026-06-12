@@ -429,7 +429,7 @@ export default {
   "admin.config.share.allow-admin-access-all-shares": "Autoriser l'accès admin à tous les partages",
   "admin.config.share.allow-admin-access-all-shares.description": "Autoriser les administrateurs à accéder à tous les partages, même s'ils sont protégés par un mot de passe, expirés ou supprimés.",
   "admin.config.share.file-retention-period": "Période de conservation des fichiers",
-  "admin.config.share.file-retention-period.description": "Durée de conservation des fichiers après l'expiration ou la suppression d'un partage. Utile uniquement si l'option « Autoriser l'accès administrateur à tous les partages » est également activée.",
+  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Activer",
   "admin.config.smtp.enabled.description": "Active SMTP. Activez ceci uniquement si vous avez saisi l’hôte, le port, le courriel, l’utilisateur et son mot de passe, de votre serveur SMTP.",
   "admin.config.smtp.host": "Hôte",
