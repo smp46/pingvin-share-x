@@ -23,6 +23,7 @@ import { AuthRegisterDTO } from "./dto/authRegister.dto";
 import { AuthSignInDTO } from "./dto/authSignIn.dto";
 import { AuthSignInTotpDTO } from "./dto/authSignInTotp.dto";
 import { EnableTotpDTO } from "./dto/enableTotp.dto";
+import { ResendVerificationDTO } from "./dto/resendVerification.dto";
 import { ResetPasswordDTO } from "./dto/resetPassword.dto";
 import { TokenDTO } from "./dto/token.dto";
 import { UpdatePasswordDTO } from "./dto/updatePassword.dto";
@@ -141,6 +142,12 @@ export class AuthController {
   @HttpCode(204)
   async verifyAccount(@Param("token") token: string) {
     await this.authService.verifyAccount(token);
+  }
+
+  @Post("verify/resend")
+  @HttpCode(204)
+  async resendVerification(@Body() dto: ResendVerificationDTO) {
+    await this.authService.resendVerification(dto.email);
   }
 
   @Patch("password")

@@ -51,7 +51,10 @@ const SignUpForm = () => {
       .signUp(email.trim(), username.trim(), password.trim())
       .then(async (response) => {
         if (response.data.verificationRequired) {
-          router.replace("/auth/verify/info");
+          router.replace({
+            pathname: "/auth/verify/info",
+            query: { email: email.trim() },
+          });
         } else {
           const user = await refreshUser();
           if (user?.isAdmin) {

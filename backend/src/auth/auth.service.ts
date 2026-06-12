@@ -246,6 +246,33 @@ export class AuthService {
     });
   }
 
+  async resendVerification(email: string) {
+    const user = await this.prisma.user.findFirst({
+      where: { email },
+    });
+
+    if (!user) {
+      throw new BadRequestException(this.i18n.t("auth.userNotFound"));
+    }
+
+    if (user.isActivated) {
+      throw new BadRequestException(this.i18n.t("auth.userAlreadyActivated"));
+    }
+
+    const activationToken = crypto.randomUUID();
+    const activationTokenExpiresAt = moment().add(1, "day").toDate();
+
+    await this.prisma.user.update({
+      where: { id: user.id },
+      data: {
+        activationToken,
+        activationTokenExpiresAt,
+      },
+    });
+
+    await this.emailService.sendVerificationEmail(user.email, activationToken);
+  }
+
   async updatePassword(user: User, newPassword: string, oldPassword?: string) {
     const isPasswordValid =
       !user.password || (await argon.verify(user.password, oldPassword));
