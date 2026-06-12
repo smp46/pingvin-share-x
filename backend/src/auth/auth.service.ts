@@ -38,7 +38,12 @@ export class AuthService {
   ) {}
   private readonly logger = new Logger(AuthService.name);
 
-  async signUp(dto: AuthRegisterDTO, ip: string, isAdmin?: boolean) {
+  async signUp(
+    dto: AuthRegisterDTO,
+    ip: string,
+    isAdmin?: boolean,
+    skipVerification?: boolean,
+  ) {
     const isFirstUser = (await this.prisma.user.count()) == 0;
     const enableEmailVerification = this.config.get(
       "email.enableEmailVerification",
@@ -52,13 +57,13 @@ export class AuthService {
           username: dto.username,
           password: hash,
           isAdmin: isAdmin ?? isFirstUser,
-          isActivated: isFirstUser || !enableEmailVerification,
+          isActivated: isFirstUser || skipVerification || !enableEmailVerification,
           activationToken:
-            !isFirstUser && enableEmailVerification
+            !isFirstUser && !skipVerification && enableEmailVerification
               ? crypto.randomUUID()
               : null,
           activationTokenExpiresAt:
-            !isFirstUser && enableEmailVerification
+            !isFirstUser && !skipVerification && enableEmailVerification
               ? moment().add(1, "day").toDate()
               : null,
         },
