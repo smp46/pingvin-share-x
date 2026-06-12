@@ -429,7 +429,7 @@ export default {
   "admin.config.share.allow-admin-access-all-shares": "Tillåt administratörsåtkomst till alla delningar",
   "admin.config.share.allow-admin-access-all-shares.description": "Tillåt administratörer att komma åt alla delningar, även om de är lösenordsskyddade, har löpt ut eller är borttagna.",
   "admin.config.share.file-retention-period": "Fillagringsperiod",
-  "admin.config.share.file-retention-period.description": "Hur länge filer sparas efter att en delning har upphört att gälla eller tagits bort. Endast användbart om \"Tillåt administratörsåtkomst till alla delningar\" också är aktiverat.",
+  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Aktivera",
   "admin.config.smtp.enabled.description": "Om SMTP skall vara aktiverat. Ange endast detta som sant om du angav adress, port, e-post, användare och lösenord för din SMTP-server.",
   "admin.config.smtp.host": "Adress",
