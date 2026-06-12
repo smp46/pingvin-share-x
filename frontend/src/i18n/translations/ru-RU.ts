@@ -429,7 +429,7 @@ export default {
   "admin.config.share.allow-admin-access-all-shares": "Предоставьте администратору доступ ко всем общим папкам",
   "admin.config.share.allow-admin-access-all-shares.description": "Предоставьте администраторам доступ ко всем общим ресурсам, даже если они защищены паролем, срок их действия истек или они удалены.",
   "admin.config.share.file-retention-period": "Срок хранения файлов",
-  "admin.config.share.file-retention-period.description": "Как долго файлы хранятся после истечения срока действия или удаления общего ресурса. Полезно только в том случае, если также включен параметр «Разрешить администратору доступ ко всем общим ресурсам».",
+  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Включено",
   "admin.config.smtp.enabled.description": "Включено ли SMTP. Установите значение true только если вы ввели хост, порт, email, пользователь и пароль вашего SMTP-сервера.",
   "admin.config.smtp.host": "Хост",
