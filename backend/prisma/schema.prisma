@@ -28,6 +28,10 @@ model User {
   totpSecret         String?
   resetPasswordToken ResetPasswordToken?
 
+  isActivated              Boolean   @default(true)
+  activationToken          String?   @unique
+  activationTokenExpiresAt DateTime?
+
   oAuthUsers OAuthUser[]
 }
 

@@ -60,6 +60,10 @@ const resetPassword = async (token: string, password: string) => {
   await api.post("/auth/resetPassword", { token, password });
 };
 
+const verifyAccount = async (token: string) => {
+  await api.post(`/auth/verify/${token}`);
+};
+
 const updatePassword = async (oldPassword: string, password: string) => {
   await api.patch("/auth/password", { oldPassword, password });
 };
@@ -105,6 +109,7 @@ export default {
   updatePassword,
   requestResetPassword,
   resetPassword,
+  verifyAccount,
   enableTOTP,
   verifyTOTP,
   disableTOTP,

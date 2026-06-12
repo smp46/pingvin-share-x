@@ -198,6 +198,20 @@ export const configVariables = {
       defaultValue:
         "Hey!\n\n{recipientEmail} downloaded {fileName} from your share: {shareUrl}\n\nPingvin Share 🐧",
     },
+    enableEmailVerification: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    verificationSubject: {
+      type: "string",
+      defaultValue: "Verify your Pingvin Share account",
+    },
+    verificationMessage: {
+      type: "text",
+      defaultValue:
+        "Hey!\n\nYou just signed up for Pingvin Share. Click this link to verify your account: {url}\n\nThe link expires in 24 hours.\n\nPingvin Share 🐧",
+    },
   },
   smtp: {
     enabled: {

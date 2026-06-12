@@ -49,12 +49,16 @@ const SignUpForm = () => {
   const signUp = async (email: string, username: string, password: string) => {
     await authService
       .signUp(email.trim(), username.trim(), password.trim())
-      .then(async () => {
-        const user = await refreshUser();
-        if (user?.isAdmin) {
-          router.replace("/admin/intro");
+      .then(async (response) => {
+        if (response.data.verificationRequired) {
+          router.replace("/auth/verify/info");
         } else {
-          router.replace("/upload");
+          const user = await refreshUser();
+          if (user?.isAdmin) {
+            router.replace("/admin/intro");
+          } else {
+            router.replace("/upload");
+          }
         }
       })
       .catch(toast.axiosError);

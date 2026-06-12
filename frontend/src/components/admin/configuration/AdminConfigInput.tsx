@@ -49,9 +49,11 @@ const AdminConfigInput = ({
     configVariable.key === "general.defaultLanguage";
   const isEmailShareConfig =
     configVariable.key === "email.enableShareEmailRecipients";
+  const isEmailVerificationConfig =
+    configVariable.key === "email.enableEmailVerification";
   let isSmtpEnabled = false;
 
-  if (isEmailShareConfig) {
+  if (isEmailShareConfig || isEmailVerificationConfig) {
     isSmtpEnabled =
       optionalConfigVariables?.find((config) => config.key === "smtp.enabled")
         ?.value === "true";
@@ -287,7 +289,7 @@ const AdminConfigInput = ({
           w={201}
         />
       )}
-      {configVariable.type == "boolean" && isEmailShareConfig && (
+      {configVariable.type == "boolean" && (isEmailShareConfig || isEmailVerificationConfig) && (
         <>
           <Switch
             disabled={!isSmtpEnabled}
@@ -296,7 +298,7 @@ const AdminConfigInput = ({
           />
         </>
       )}
-      {configVariable.type == "boolean" && !isEmailShareConfig && (
+      {configVariable.type == "boolean" && !(isEmailShareConfig || isEmailVerificationConfig) && (
         <>
           <Switch
             disabled={!configVariable.allowEdit}

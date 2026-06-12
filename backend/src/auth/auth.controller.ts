@@ -137,6 +137,12 @@ export class AuthController {
     return await this.authService.resetPassword(dto.token, dto.password);
   }
 
+  @Post("verify/:token")
+  @HttpCode(204)
+  async verifyAccount(@Param("token") token: string) {
+    await this.authService.verifyAccount(token);
+  }
+
   @Patch("password")
   @UseGuards(JwtGuard)
   async updatePassword(

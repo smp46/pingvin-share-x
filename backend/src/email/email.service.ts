@@ -161,6 +161,21 @@ export class EmailService {
     );
   }
 
+  async sendVerificationEmail(recipientEmail: string, token: string) {
+    const verificationUrl = `${this.config.get(
+      "general.appUrl",
+    )}/auth/verify/${token}`;
+
+    await this.sendMail(
+      recipientEmail,
+      this.config.get("email.verificationSubject"),
+      this.config
+        .get("email.verificationMessage")
+        .replaceAll("\\n", "\n")
+        .replaceAll("{url}", verificationUrl),
+    );
+  }
+
   async sendTestMail(recipientEmail: string) {
     const subject = this.i18n.t("email.testSubject");
     const text = this.i18n.t("email.testText");

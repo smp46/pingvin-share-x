@@ -40,6 +40,9 @@ export class AuthService {
 
   async signUp(dto: AuthRegisterDTO, ip: string, isAdmin?: boolean) {
     const isFirstUser = (await this.prisma.user.count()) == 0;
+    const enableEmailVerification = this.config.get(
+      "email.enableEmailVerification",
+    );
 
     const hash = dto.password ? await argon.hash(dto.password) : null;
     try {
@@ -49,8 +52,25 @@ export class AuthService {
           username: dto.username,
           password: hash,
           isAdmin: isAdmin ?? isFirstUser,
+          isActivated: isFirstUser || !enableEmailVerification,
+          activationToken:
+            !isFirstUser && enableEmailVerification
+              ? crypto.randomUUID()
+              : null,
+          activationTokenExpiresAt:
+            !isFirstUser && enableEmailVerification
+              ? moment().add(1, "day").toDate()
+              : null,
         },
       });
+
+      if (user.activationToken) {
+        await this.emailService.sendVerificationEmail(
+          user.email,
+          user.activationToken,
+        );
+        return { verificationRequired: true };
+      }
 
       const { refreshToken, refreshTokenId } = await this.createRefreshToken(
         user.id,
@@ -88,6 +108,9 @@ export class AuthService {
       });
 
       if (user?.password && (await argon.verify(user.password, dto.password))) {
+        if (!user.isActivated) {
+          throw new UnauthorizedException(this.i18n.t("auth.accountNotActivated"));
+        }
         this.logger.log(
           `Successful password login for user ${user.email} from IP ${ip}`,
         );
@@ -198,6 +221,28 @@ export class AuthService {
     await this.prisma.user.update({
       where: { id: user.id },
       data: { password: newPasswordHash },
+    });
+  }
+
+  async verifyAccount(token: string) {
+    const user = await this.prisma.user.findFirst({
+      where: { activationToken: token },
+    });
+
+    if (
+      !user ||
+      (user.activationTokenExpiresAt && user.activationTokenExpiresAt < new Date())
+    ) {
+      throw new BadRequestException(this.i18n.t("auth.tokenInvalidOrExpired"));
+    }
+
+    await this.prisma.user.update({
+      where: { id: user.id },
+      data: {
+        isActivated: true,
+        activationToken: null,
+        activationTokenExpiresAt: null,
+      },
     });
   }
 
