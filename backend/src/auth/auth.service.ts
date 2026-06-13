@@ -48,25 +48,24 @@ export class AuthService {
     const enableEmailVerification = this.config.get(
       "email.enableEmailVerification",
     );
+    const email = dto.email.toLowerCase().trim();
 
     const hash = dto.password ? await argon.hash(dto.password) : null;
     try {
+      const needsVerification =
+        !isFirstUser && !skipVerification && enableEmailVerification;
+
       const user = await this.prisma.user.create({
         data: {
-          email: dto.email,
+          email,
           username: dto.username,
           password: hash,
           isAdmin: isAdmin ?? isFirstUser,
-          isActivated:
-            isFirstUser || skipVerification || !enableEmailVerification,
-          activationToken:
-            !isFirstUser && !skipVerification && enableEmailVerification
-              ? crypto.randomUUID()
-              : null,
-          activationTokenExpiresAt:
-            !isFirstUser && !skipVerification && enableEmailVerification
-              ? moment().add(1, "day").toDate()
-              : null,
+          isActivated: !needsVerification,
+          activationToken: needsVerification ? crypto.randomUUID() : null,
+          activationTokenExpiresAt: needsVerification
+            ? moment().add(1, "day").toDate()
+            : null,
         },
       });
 
@@ -107,9 +106,10 @@ export class AuthService {
     }
 
     if (!this.config.get("oauth.disablePassword")) {
+      const email = dto.email?.toLowerCase().trim();
       const user = await this.prisma.user.findFirst({
         where: {
-          OR: [{ email: dto.email }, { username: dto.username }],
+          OR: [{ email }, { username: dto.username }],
         },
       });
 
@@ -172,11 +172,12 @@ export class AuthService {
     return { accessToken, refreshToken };
   }
 
-  async requestResetPassword(email: string) {
+  async requestResetPassword(emailInput: string) {
     if (this.config.get("oauth.disablePassword"))
       throw new ForbiddenException(this.i18n.t("auth.passwordSignInDisabled"));
 
-    const user = await this.prisma.user.findFirst({
+    const email = emailInput.toLowerCase().trim();
+    const user = await this.prisma.user.findUnique({
       where: { email },
       include: { resetPasswordToken: true },
     });
@@ -233,7 +234,7 @@ export class AuthService {
   }
 
   async verifyAccount(token: string) {
-    const user = await this.prisma.user.findFirst({
+    const user = await this.prisma.user.findUnique({
       where: { activationToken: token },
     });
 
@@ -255,14 +256,13 @@ export class AuthService {
     });
   }
 
-  async resendVerification(email: string) {
-    const user = await this.prisma.user.findFirst({
+  async resendVerification(emailInput: string) {
+    const email = emailInput.toLowerCase().trim();
+    const user = await this.prisma.user.findUnique({
       where: { email },
     });
 
-    if (!user) {
-      throw new BadRequestException(this.i18n.t("auth.userNotFound"));
-    }
+    if (!user) return;
 
     if (user.isActivated) {
       throw new BadRequestException(this.i18n.t("auth.userAlreadyActivated"));
