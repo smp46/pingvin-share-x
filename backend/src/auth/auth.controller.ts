@@ -139,12 +139,24 @@ export class AuthController {
   }
 
   @Post("verify/:token")
+  @Throttle({
+    default: {
+      limit: 20,
+      ttl: 5 * 60,
+    },
+  })
   @HttpCode(204)
   async verifyAccount(@Param("token") token: string) {
     await this.authService.verifyAccount(token);
   }
 
   @Post("verify/resend")
+  @Throttle({
+    default: {
+      limit: 20,
+      ttl: 5 * 60,
+    },
+  })
   @HttpCode(204)
   async resendVerification(@Body() dto: ResendVerificationDTO) {
     await this.authService.resendVerification(dto.email);
