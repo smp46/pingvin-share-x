@@ -61,7 +61,7 @@ const resetPassword = async (token: string, password: string) => {
 };
 
 const verifyAccount = async (token: string) => {
-  await api.post(`/auth/verify/${token}`);
+  await api.post(`/auth/verify`, { token });
 };
 
 const resendVerification = async (email: string) => {
