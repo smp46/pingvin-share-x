@@ -383,7 +383,7 @@ export default {
   "admin.config.cache.ttl.description": "Czas w sekundach potrzebny na przechowywanie informacji w pamięci podręcznej.",
   "admin.config.cache.max-items": "Maksymalna liczba elementów",
   "admin.config.cache.max-items.description": "Maksymalna liczba elementów w skrytce.",
-  "admin.config.cache.redis-enabled": "Redis enabled",
+  "admin.config.cache.redis-enabled": "Redis włączony",
   "admin.config.cache.redis-enabled.description": "Normally Pingvin Share caches information in memory. If you run multiple instances of Pingvin Share, you need to enable Redis caching to share the cache between the instances.",
   "admin.config.cache.redis-url": "Redis URL",
   "admin.config.cache.redis-url.description": "Url to connect to the Redis instance used for caching.",
