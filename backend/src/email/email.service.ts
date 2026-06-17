@@ -70,7 +70,7 @@ export class EmailService {
     const shareUrl = `${this.config.get(
       "general.appUrl",
     )}/s/${shareId}?recipient=${encodeURIComponent(recipientId)}`;
-    const lang = "";
+    const lang = this.config.get("general.defaultLanguage");
     const locale = this.i18n.translate("email.locale", { lang });
 
     await this.sendMail(
