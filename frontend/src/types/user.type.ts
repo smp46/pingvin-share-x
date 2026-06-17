@@ -3,6 +3,7 @@ type User = {
   username: string;
   email: string;
   isAdmin: boolean;
+  isActivated: boolean;
   isLdap: boolean;
   totpVerified: boolean;
   hasPassword: boolean;
@@ -20,6 +21,7 @@ export type UpdateUser = {
   email?: string;
   password?: string;
   isAdmin?: boolean;
+  isActivated?: boolean;
 };
 
 export type UpdateCurrentUser = {

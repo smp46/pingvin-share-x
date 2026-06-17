@@ -23,6 +23,8 @@ import { AuthRegisterDTO } from "./dto/authRegister.dto";
 import { AuthSignInDTO } from "./dto/authSignIn.dto";
 import { AuthSignInTotpDTO } from "./dto/authSignInTotp.dto";
 import { EnableTotpDTO } from "./dto/enableTotp.dto";
+import { VerifyAccountDTO } from "./dto/verifyAccount.dto";
+import { ResendVerificationDTO } from "./dto/resendVerification.dto";
 import { ResetPasswordDTO } from "./dto/resetPassword.dto";
 import { TokenDTO } from "./dto/token.dto";
 import { UpdatePasswordDTO } from "./dto/updatePassword.dto";
@@ -135,6 +137,30 @@ export class AuthController {
   @HttpCode(204)
   async resetPassword(@Body() dto: ResetPasswordDTO) {
     return await this.authService.resetPassword(dto.token, dto.password);
+  }
+
+  @Post("verify")
+  @Throttle({
+    default: {
+      limit: 20,
+      ttl: 5 * 60,
+    },
+  })
+  @HttpCode(204)
+  async verifyAccount(@Body() dto: VerifyAccountDTO) {
+    await this.authService.verifyAccount(dto.token);
+  }
+
+  @Post("verify/resend")
+  @Throttle({
+    default: {
+      limit: 20,
+      ttl: 5 * 60,
+    },
+  })
+  @HttpCode(204)
+  async resendVerification(@Body() dto: ResendVerificationDTO) {
+    await this.authService.resendVerification(dto.email);
   }
 
   @Patch("password")

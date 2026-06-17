@@ -27,6 +27,9 @@ export class UserDTO {
   isAdmin: boolean;
 
   @Expose()
+  isActivated: boolean;
+
+  @Expose()
   isLdap: boolean;
 
   ldapDN?: string;
