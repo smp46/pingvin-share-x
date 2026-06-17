@@ -314,7 +314,7 @@ export class S3FileService {
         accessKeyId: this.config.get("s3.key"),
         secretAccessKey: this.config.get("s3.secret"),
       },
-      forcePathStyle: true,
+      forcePathStyle: this.config.get("s3.forcePathStyle"),
       requestChecksumCalculation: checksumCalculation,
       responseChecksumValidation: checksumCalculation,
     });

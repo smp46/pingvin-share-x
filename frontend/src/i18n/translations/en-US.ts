@@ -332,6 +332,7 @@ export default {
 
   "upload.modal.link.label": "Link",
   "upload.modal.expires.label": "Expiration",
+  "upload.modal.expires.unit-label": "Unit",
   "upload.modal.expires.minute-singular": "Minute",
   "upload.modal.expires.minute-plural": "Minutes",
   "upload.modal.expires.hour-singular": "Hour",
@@ -751,6 +752,9 @@ export default {
   "admin.config.s3.use-checksum": "Use checksum",
   "admin.config.s3.use-checksum.description":
     "Turn off for backends that do not support checksum (e.g. B2).",
+  "admin.config.s3.force-path-style": "Force path style",
+  "admin.config.s3.force-path-style.description":
+    "Use path-style addressing (e.g. endpoint/bucket) instead of virtual-hosted style (e.g. bucket.endpoint). Turn off for providers that require virtual-hosted style, such as Tencent COS.",
   "admin.config.category.legal": "Legal",
   "admin.config.legal.enabled": "Enable legal notices",
   "admin.config.legal.enabled.description":

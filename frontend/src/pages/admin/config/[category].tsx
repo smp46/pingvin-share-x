@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   Container,
+  Divider,
   Group,
   Stack,
   Text,
@@ -43,6 +44,16 @@ const categories = [
   "Legal",
   "Cache",
 ];
+
+const OAUTH_PROVIDERS = ["github", "google", "microsoft", "discord", "oidc"];
+
+// Returns the OAuth provider a config key belongs to (e.g. "oauth.github-clientId" -> "github"),
+// or null for non-provider keys. Used to draw a divider between provider groups.
+const getOAuthProvider = (key: string): string | null => {
+  if (!key.startsWith("oauth.")) return null;
+  const provider = key.slice("oauth.".length).split("-")[0];
+  return OAUTH_PROVIDERS.includes(provider) ? provider : null;
+};
 
 export default function AppShellDemo() {
   const theme = useMantineTheme();
@@ -238,7 +249,7 @@ export default function AppShellDemo() {
                       <Title mb="md" order={3}>
                         {t("admin.config.category." + categoryId)}
                       </Title>
-                      {visibleConfigVariables.map((configVariable) => {
+                      {visibleConfigVariables.map((configVariable, index) => {
                         if (
                           configVariable.key ===
                             "appearance.themePrimaryColorOverride" &&
@@ -247,50 +258,68 @@ export default function AppShellDemo() {
                           return null;
                         }
 
-                        return (
-                          <Group key={configVariable.key} position="apart">
-                            <Stack
-                              style={{ maxWidth: isMobile ? "100%" : "40%" }}
-                              spacing={0}
-                            >
-                              <Title order={6}>
-                                <FormattedMessage
-                                  id={`admin.config.${camelToKebab(
-                                    configVariable.key,
-                                  )}`}
-                                />
-                              </Title>
+                        const provider = getOAuthProvider(configVariable.key);
+                        const previousProvider =
+                          index > 0
+                            ? getOAuthProvider(
+                                visibleConfigVariables[index - 1].key,
+                              )
+                            : null;
+                        const showProviderDivider =
+                          provider !== null && provider !== previousProvider;
 
-                              <Text
-                                sx={{
-                                  whiteSpace: "pre-line",
-                                }}
-                                color="dimmed"
-                                size="sm"
-                                mb="xs"
+                        return (
+                          <Box key={configVariable.key}>
+                            {showProviderDivider && <Divider mb="lg" />}
+                            <Group position="apart" align="flex-start">
+                              <Stack
+                                style={{ maxWidth: isMobile ? "100%" : "40%" }}
+                                spacing={0}
                               >
-                                <FormattedMessage
-                                  id={`admin.config.${camelToKebab(
-                                    configVariable.key,
-                                  )}.description`}
-                                  values={{ br: <br /> }}
+                                <Title order={6}>
+                                  <FormattedMessage
+                                    id={`admin.config.${camelToKebab(
+                                      configVariable.key,
+                                    )}`}
+                                  />
+                                </Title>
+
+                                <Text
+                                  sx={{
+                                    whiteSpace: "pre-line",
+                                  }}
+                                  color="dimmed"
+                                  size="sm"
+                                  mb="xs"
+                                >
+                                  <FormattedMessage
+                                    id={`admin.config.${camelToKebab(
+                                      configVariable.key,
+                                    )}.description`}
+                                    values={{ br: <br /> }}
+                                  />
+                                </Text>
+                              </Stack>
+                              <Stack></Stack>
+                              <Box
+                                style={{
+                                  width: isMobile ? "100%" : "50%",
+                                  alignSelf: "center",
+                                }}
+                              >
+                                <AdminConfigInput
+                                  key={configVariable.key}
+                                  configVariable={configVariable}
+                                  updateConfigVariable={updateConfigVariable}
+                                  allConfigVariables={configVariables}
+                                  updatedConfigVariables={updatedConfigVariables}
+                                  optionalConfigVariables={
+                                    optionalConfigVariables
+                                  }
                                 />
-                              </Text>
-                            </Stack>
-                            <Stack></Stack>
-                            <Box style={{ width: isMobile ? "100%" : "50%" }}>
-                              <AdminConfigInput
-                                key={configVariable.key}
-                                configVariable={configVariable}
-                                updateConfigVariable={updateConfigVariable}
-                                allConfigVariables={configVariables}
-                                updatedConfigVariables={updatedConfigVariables}
-                                optionalConfigVariables={
-                                  optionalConfigVariables
-                                }
-                              />
-                            </Box>
-                          </Group>
+                              </Box>
+                            </Group>
+                          </Box>
                         );
                       })}
                       {categoryId == "general" && (
@@ -306,6 +335,7 @@ export default function AppShellDemo() {
                           <Group
                             key={customCssConfigVariable.key}
                             position="apart"
+                            align="flex-start"
                           >
                             <Stack
                               style={{ maxWidth: isMobile ? "100%" : "40%" }}
