@@ -267,6 +267,7 @@ export default {
 
   "admin.users.edit.update.title": "Edit user: {username}",
   "admin.users.edit.update.admin-privileges": "Admin privileges",
+  "admin.users.edit.update.email-verified": "Email verified",
   "admin.users.edit.update.change-password.title": "Change password",
   "admin.users.edit.update.change-password.field": "New password",
   "admin.users.edit.update.change-password.button": "Save new password",

@@ -6,6 +6,10 @@ export class CreateUserDTO extends UserDTO {
   @Allow()
   isAdmin: boolean;
 
+  @Allow()
+  @IsOptional()
+  isActivated: boolean;
+
   @MinLength(8)
   @IsOptional()
   password: string;
