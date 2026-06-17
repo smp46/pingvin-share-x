@@ -8,7 +8,7 @@ import {
   UnauthorizedException,
 } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
-import { User } from "@prisma/client";
+import { Prisma, User } from "@prisma/client";
 import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 import * as argon from "argon2";
 import { Request, Response } from "express";
@@ -55,35 +55,39 @@ export class AuthService {
       const needsVerification =
         !isFirstUser && !skipVerification && enableEmailVerification;
 
-      const user = await this.prisma.user.create({
-        data: {
-          email,
-          username: dto.username,
-          password: hash,
-          isAdmin: isAdmin ?? isFirstUser,
-          isActivated: !needsVerification,
-          activationToken: needsVerification ? crypto.randomUUID() : null,
-          activationTokenExpiresAt: needsVerification
-            ? moment().add(1, "day").toDate()
-            : null,
-        },
-      });
+      return await this.prisma.$transaction(async (tx) => {
+        const user = await tx.user.create({
+          data: {
+            email,
+            username: dto.username,
+            password: hash,
+            isAdmin: isAdmin ?? isFirstUser,
+            isActivated: !needsVerification,
+            activationToken: needsVerification ? crypto.randomUUID() : null,
+            activationTokenExpiresAt: needsVerification
+              ? moment().add(1, "day").toDate()
+              : null,
+          },
+        });
 
-      if (user.activationToken) {
-        await this.emailService.sendVerificationEmail(
-          user.email,
-          user.activationToken,
+        if (user.activationToken) {
+          await this.emailService.sendVerificationEmail(
+            user.email,
+            user.activationToken,
+          );
+          return { verificationRequired: true };
+        }
+
+        const { refreshToken, refreshTokenId } = await this.createRefreshToken(
+          user.id,
+          undefined,
+          tx,
         );
-        return { verificationRequired: true };
-      }
+        const accessToken = await this.createAccessToken(user, refreshTokenId);
 
-      const { refreshToken, refreshTokenId } = await this.createRefreshToken(
-        user.id,
-      );
-      const accessToken = await this.createAccessToken(user, refreshTokenId);
-
-      this.logger.log(`User ${user.email} signed up from IP ${ip}`);
-      return { accessToken, refreshToken, user };
+        this.logger.log(`User ${user.email} signed up from IP ${ip}`);
+        return { accessToken, refreshToken, user };
+      });
     } catch (e) {
       if (e instanceof PrismaClientKnownRequestError) {
         if (e.code == "P2002") {
@@ -193,21 +197,23 @@ export class AuthService {
       );
     }
 
-    // Delete old reset password token
-    if (user.resetPasswordToken) {
-      await this.prisma.resetPasswordToken.delete({
-        where: { token: user.resetPasswordToken.token },
+    await this.prisma.$transaction(async (tx) => {
+      // Delete old reset password token
+      if (user.resetPasswordToken) {
+        await tx.resetPasswordToken.delete({
+          where: { token: user.resetPasswordToken.token },
+        });
+      }
+
+      const { token } = await tx.resetPasswordToken.create({
+        data: {
+          expiresAt: moment().add(1, "hour").toDate(),
+          user: { connect: { id: user.id } },
+        },
       });
-    }
 
-    const { token } = await this.prisma.resetPasswordToken.create({
-      data: {
-        expiresAt: moment().add(1, "hour").toDate(),
-        user: { connect: { id: user.id } },
-      },
+      await this.emailService.sendResetPasswordEmail(user.email, token);
     });
-
-    this.emailService.sendResetPasswordEmail(user.email, token);
   }
 
   async resetPassword(token: string, newPassword: string) {
@@ -271,15 +277,17 @@ export class AuthService {
     const activationToken = crypto.randomUUID();
     const activationTokenExpiresAt = moment().add(1, "day").toDate();
 
-    await this.prisma.user.update({
-      where: { id: user.id },
-      data: {
-        activationToken,
-        activationTokenExpiresAt,
-      },
-    });
+    await this.prisma.$transaction(async (tx) => {
+      await tx.user.update({
+        where: { id: user.id },
+        data: {
+          activationToken,
+          activationTokenExpiresAt,
+        },
+      });
 
-    await this.emailService.sendVerificationEmail(user.email, activationToken);
+      await this.emailService.sendVerificationEmail(user.email, activationToken);
+    });
   }
 
   async updatePassword(user: User, newPassword: string, oldPassword?: string) {
@@ -391,9 +399,14 @@ export class AuthService {
     );
   }
 
-  async createRefreshToken(userId: string, idToken?: string) {
+  async createRefreshToken(
+    userId: string,
+    idToken?: string,
+    tx?: Prisma.TransactionClient,
+  ) {
+    const prisma = tx || this.prisma;
     const sessionDuration = this.config.get("general.sessionDuration");
-    const { id, token } = await this.prisma.refreshToken.create({
+    const { id, token } = await prisma.refreshToken.create({
       data: {
         userId,
         expiresAt: moment()
