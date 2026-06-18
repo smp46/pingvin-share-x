@@ -97,7 +97,8 @@ const ManageShareTable = ({
                   </td>
                   {fileRetentionEnabled ? (
                     <td>
-                      {moment(share.expiration).unix() === 0
+                      {moment(share.expiration).unix() === 0 ||
+                      fileRetentionPeriod.value === -1
                         ? "Never"
                         : moment(share.expiration)
                             .add(

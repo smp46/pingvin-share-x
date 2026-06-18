@@ -63,6 +63,19 @@ export default {
   "signup.input.email.placeholder": "Your email",
   "signup.button.submit": "Let's get started",
 
+  // /auth/verify
+  "verify.title": "Verify Account",
+  "verify.success": "Your account has been successfully verified! You can now sign in.",
+  "verify.error": "The verification link is invalid or has expired.",
+  "verify.button.signin": "Go to Sign In",
+  "verify.info.title": "Account Verification",
+  "verify.info.description":
+    "Email verification is enabled. We've sent a verification link to your email address. Please click the link to activate your account.",
+  "verify.info.note": "If you don't receive the email within a few minutes, please check your spam folder.",
+  "verify.info.resend.button": "Resend verification email",
+  "verify.info.resend.success": "Verification email resent successfully.",
+  "verify.info.resend.error": "Failed to resend verification email.",
+
   // END /auth/signup
 
   // /auth/totp
@@ -254,6 +267,7 @@ export default {
 
   "admin.users.edit.update.title": "Edit user: {username}",
   "admin.users.edit.update.admin-privileges": "Admin privileges",
+  "admin.users.edit.update.email-verified": "Email verified",
   "admin.users.edit.update.change-password.title": "Change password",
   "admin.users.edit.update.change-password.field": "New password",
   "admin.users.edit.update.change-password.button": "Save new password",
@@ -547,6 +561,15 @@ export default {
     "Download notification message",
   "admin.config.email.share-download-notification-message.description":
     "Message which gets sent to the share creator when a recipient downloads a file. Available variables:\n {recipientEmail} - The email of the recipient\n {fileName} - The downloaded file name\n {shareUrl} - The URL of the share",
+  "admin.config.email.enable-email-verification": "Enable email verification",
+  "admin.config.email.enable-email-verification.description":
+    "Whether to require users to verify their email address before being able to sign in. This can only be enabled if SMTP is activated.",
+  "admin.config.email.verification-subject": "Verification subject",
+  "admin.config.email.verification-subject.description":
+    "Subject of the email which gets sent to the user when they sign up.",
+  "admin.config.email.verification-message": "Verification message",
+  "admin.config.email.verification-message.description":
+    "Message which gets sent to the user when they sign up. {url} will be replaced with the verification URL.",
   "admin.config.share.allow-registration": "Allow registration",
   "admin.config.share.allow-registration.description":
     "Whether registration is allowed",
@@ -580,7 +603,7 @@ export default {
     "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description":
-    "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled.",
+    "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Enable",
   "admin.config.smtp.enabled.description":
     "Whether SMTP is enabled. Only set this to true if you entered the host, port, email, user and password of your SMTP server.",

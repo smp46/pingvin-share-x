@@ -46,6 +46,7 @@ const Body = ({
       username: user.username,
       email: user.email,
       isAdmin: user.isAdmin,
+      isActivated: user.isActivated,
     },
     validate: yupResolver(
       yup.object().shape({
@@ -98,6 +99,13 @@ const Body = ({
             labelPosition="left"
             label={t("admin.users.edit.update.admin-privileges")}
             {...accountForm.getInputProps("isAdmin", { type: "checkbox" })}
+          />
+          <Switch
+            mt="xs"
+            labelPosition="left"
+            label={t("admin.users.edit.update.email-verified")}
+            {...accountForm.getInputProps("isActivated", { type: "checkbox" })}
+            disabled={user.isActivated}
           />
         </Stack>
       </form>

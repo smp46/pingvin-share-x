@@ -1,12 +1,15 @@
 name: Label Awaiting Release
 
 on:
-  pull_request:
+  pull_request_target:
     types: [closed]
 
 jobs:
   label:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
     if: github.event.pull_request.merged == true
     steps:
       - name: Add awaiting release label

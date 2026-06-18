@@ -42,6 +42,7 @@ export default {
   "signIn.oauth.microsoft": "Microsoft",
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
+
   // END /auth/signin
 
   // /auth/signup
@@ -598,6 +599,7 @@ export default {
   "error.param.provider_microsoft": "Microsoft",
   "error.param.provider_discord": "Discord",
   "error.param.provider_oidc": "OpenID Connect",
+
   // Common translations
   "common.button.info": "Informació",
   "common.button.undo": "Desfer",

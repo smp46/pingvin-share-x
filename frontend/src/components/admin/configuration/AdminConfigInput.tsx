@@ -49,9 +49,11 @@ const AdminConfigInput = ({
     configVariable.key === "general.defaultLanguage";
   const isEmailShareConfig =
     configVariable.key === "email.enableShareEmailRecipients";
+  const isEmailVerificationConfig =
+    configVariable.key === "email.enableEmailVerification";
   let isSmtpEnabled = false;
 
-  if (isEmailShareConfig) {
+  if (isEmailShareConfig || isEmailVerificationConfig) {
     isSmtpEnabled =
       optionalConfigVariables?.find((config) => config.key === "smtp.enabled")
         ?.value === "true";
@@ -287,28 +289,31 @@ const AdminConfigInput = ({
           w={201}
         />
       )}
-      {configVariable.type == "boolean" && isEmailShareConfig && (
-        <>
-          <Switch
-            disabled={!isSmtpEnabled}
-            {...form.getInputProps("booleanValue", { type: "checkbox" })}
-            onChange={(e) => onValueChange(configVariable, e.target.checked)}
-          />
-        </>
-      )}
-      {configVariable.type == "boolean" && !isEmailShareConfig && (
-        <>
-          <Switch
-            disabled={!configVariable.allowEdit}
-            {...form.getInputProps("booleanValue", { type: "checkbox" })}
-            onChange={(e) => onValueChange(configVariable, e.target.checked)}
-          />
-        </>
-      )}
+      {configVariable.type == "boolean" &&
+        (isEmailShareConfig || isEmailVerificationConfig) && (
+          <>
+            <Switch
+              disabled={!isSmtpEnabled}
+              {...form.getInputProps("booleanValue", { type: "checkbox" })}
+              onChange={(e) => onValueChange(configVariable, e.target.checked)}
+            />
+          </>
+        )}
+      {configVariable.type == "boolean" &&
+        !(isEmailShareConfig || isEmailVerificationConfig) && (
+          <>
+            <Switch
+              disabled={!configVariable.allowEdit}
+              {...form.getInputProps("booleanValue", { type: "checkbox" })}
+              onChange={(e) => onValueChange(configVariable, e.target.checked)}
+            />
+          </>
+        )}
       {configVariable.type == "timespan" && (
         <TimespanInput
           value={stringToTimespan(configVariable.value)}
           disabled={!configVariable.allowEdit}
+          min={configVariable.key === "share.fileRetentionPeriod" ? -1 : 0}
           onChange={(timespan) =>
             onValueChange(configVariable, timespanToString(timespan))
           }
