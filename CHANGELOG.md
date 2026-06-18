@@ -1,3 +1,19 @@
+## [1.20.0](https://github.com/smp46/pingvin-share-x/compare/v1.19.1...v1.20.0) (2026-06-18)
+
+### Features
+
+* catalan language support & AI translations ([#96](https://github.com/smp46/pingvin-share-x/issues/96)) ([7eff4ec](https://github.com/smp46/pingvin-share-x/commit/7eff4ecbd964db03a03cb9629c71a79e1bb147fb))
+* optional email verification ([#99](https://github.com/smp46/pingvin-share-x/issues/99)) ([0296802](https://github.com/smp46/pingvin-share-x/commit/02968027a1dd57cbfea3de7864525c9380cc56b1))
+* **shares:** add infinite file retention period ([f6905fe](https://github.com/smp46/pingvin-share-x/commit/f6905fed9bd99c9be1d57ad4ec69cc275ae3405a))
+
+### Bug Fixes
+
+* add missing permissions to label workflows ([add126a](https://github.com/smp46/pingvin-share-x/commit/add126ad02b29232f92c61d409e44b8554af3fd1))
+* **deps:** resolve security vulns via npm audit ([e748463](https://github.com/smp46/pingvin-share-x/commit/e748463282f5f9c19f4d6ae925537613bec48af4))
+* **deps:** resolve security vulns via overrides ([500e91a](https://github.com/smp46/pingvin-share-x/commit/500e91af361652c18d7175a518dd99f54aef96bf))
+* **email:** localize email variables via defaultLanguage ([#101](https://github.com/smp46/pingvin-share-x/issues/101)) ([f1f829f](https://github.com/smp46/pingvin-share-x/commit/f1f829f0908b0dcc695c6a2fd7c9b01dfeb44445))
+* **reverseShares:** support admin file retention ([b4e2d8a](https://github.com/smp46/pingvin-share-x/commit/b4e2d8a135d9b12a04bfdee4799be20ce32a615c))
+
 ## [1.19.1](https://github.com/smp46/pingvin-share-x/compare/v1.19.0...v1.19.1) (2026-06-08)
 
 ### Bug Fixes
