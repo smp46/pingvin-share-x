@@ -251,7 +251,7 @@ export default {
   "upload.reverse-share.error.invalid.description": "Este enlace de uso compartido inverso ha caducado o no es válido.",
   // Dropzone.tsx
   "upload.dropzone.title": "Subir archivos",
-  "upload.dropzone.description": "Drag'n'drop files here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
+  "upload.dropzone.description": "Arrastra y suelta los archivos aquí para empezar a compartir o 'Ctrl+V' para subir contenido de texto desde el portapapeles. Solo aceptamos archivos hasta {maxSize} en total.",
   "upload.dropzone.notify.file-too-big": "Tus archivos exceden el tamaño máximo de {maxSize}.",
   // FileList.tsx
   "upload.filelist.name": "Nombre",
@@ -431,7 +431,7 @@ export default {
   "admin.config.share.allow-unauthenticated-shares": "Permitir compartir sin iniciar sesión",
   "admin.config.share.allow-unauthenticated-shares.description": "Si los usuarios que no han iniciado sesión pueden compartir",
   "admin.config.share.default-expiration": "Default expiration",
-  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
+  "admin.config.share.default-expiration.description": "El tiempo de caducidad por defecto seleccionado al crear una nueva compartida.",
   "admin.config.share.max-expiration": "Expiración máxima",
   "admin.config.share.max-expiration.description": "Plazo máximo de caducidad. Establecer en 0 para enlaces sin caducidad.",
   "admin.config.share.share-id-length": "Longitud de ID compartido por defecto",
@@ -444,7 +444,7 @@ export default {
   "admin.config.share.chunk-size.description": "Ajusta el tamaño del fragmento para tus subidas y equilibra la eficiencia y la fiabilidad según tu conexión a Internet. Fragmentos más pequeños pueden aumentar las tasas de éxito para conexiones inestables, mientras que fragmentos más grandes hacen que las subidas sean más rápidas para conexiones estables.",
   "admin.config.share.auto-open-share-modal": "Auto abrir un modal de creación de compartidos",
   "admin.config.share.auto-open-share-modal.description": "El modal de creación de compartir aparece automáticamente cuando un usuario selecciona archivos, eliminando la necesidad de hacer clic manualmente en el botón.",
-  "admin.config.share.allow-admin-access-all-shares": "Allow admin access to all shares",
+  "admin.config.share.allow-admin-access-all-shares": "Permitir el acceso del administrador a todas las compartidas",
   "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
