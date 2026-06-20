@@ -41,13 +41,28 @@ The website is now listening on `http://localhost:3000`.
 
 For more installation options and advanced configurations, please refer to the [documentation](https://smp46.github.io/pingvin-share-x/).
 
+## Sponsors
+
+If you find Pingvin Share X useful and would like to support its ongoing development and maintenance please consider becoming a sponsor! 
+
+I would like to host a demo instance online for people to try out Pingvin, your sponsorship would make this possible.
+
+As a token of appreciation, sponsors can have their profile or company logo displayed right here in this section.
+
+### Our Awesome Sponsors
+
+| <a href="https://github.com/sponsors/smp46"><img src="https://github.com/images/modules/logos_page/GitHub-Mark.png" width="60px;" alt=""/><br /><sub><b>Your Name Here</b></sub></a> |
+| :---: |
+
+💖 Support the project via [GitHub Sponsors](https://github.com/sponsors/smp46)
+
 ## Contributing
 
 All contributions are welcome, including issues, feature suggestions, pull requests and *translations*.
 
 ### Translations
 
-This project supports 28 languages so far (to varying degrees), you can help complete
+This project supports 30 languages so far (to varying degrees), you can help complete
 those translations or add more at [CrowdIn](https://crowdin.com/project/pingvin-share-x).
 
 ### AI Usage Policy
@@ -103,18 +118,3 @@ You're all set!
 #### Testing
 
 At the moment we only have system tests for the backend. To run these tests, run `npm run test:system` in the backend folder.
-
-## Sponsors
-
-If you find Pingvin Share X useful and would like to support its ongoing development and maintenance please consider becoming a sponsor! 
-
-I would like to host a demo instance online for people to try out Pingvin, your sponsorship would make this possible.
-
-As a token of appreciation, sponsors can have their profile or company logo displayed right here in this section.
-
-### Our Awesome Sponsors
-
-| <a href="https://github.com/sponsors/smp46"><img src="https://github.com/images/modules/logos_page/GitHub-Mark.png" width="60px;" alt=""/><br /><sub><b>Your Name Here</b></sub></a> |
-| :---: |
-
-💖 Support the project via [GitHub Sponsors](https://github.com/sponsors/smp46)
