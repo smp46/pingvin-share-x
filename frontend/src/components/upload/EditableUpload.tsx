@@ -9,6 +9,7 @@ import Dropzone from "../../components/upload/Dropzone";
 import FileList from "../../components/upload/FileList";
 import useConfig from "../../hooks/config.hook";
 import useTranslate from "../../hooks/useTranslate.hook";
+import useUser from "../../hooks/user.hook";
 import shareService from "../../services/share.service";
 import { FileListItem, FileMetaData, FileUpload } from "../../types/File.type";
 import toast from "../../utils/toast.util";
@@ -29,6 +30,7 @@ const EditableUpload = ({
   const t = useTranslate();
   const router = useRouter();
   const config = useConfig();
+  const { user } = useUser();
 
   const chunkSize = useRef(parseInt(config.get("share.chunkSize")));
 
@@ -59,7 +61,9 @@ const EditableUpload = ({
     setExistingFiles(_existingFiles);
   };
 
-  maxShareSize ??= parseInt(config.get("share.maxSize"));
+  maxShareSize ??= user?.shareSizeLimit
+    ? parseInt(user.shareSizeLimit)
+    : parseInt(config.get("share.maxSize"));
 
   const uploadFiles = async (files: FileUpload[]) => {
     const fileUploadPromises = files.map(async (file, fileIndex) =>

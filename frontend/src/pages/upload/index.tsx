@@ -49,7 +49,9 @@ const Upload = ({
 
   const chunkSize = useRef(parseInt(config.get("share.chunkSize")));
 
-  maxShareSize ??= parseInt(config.get("share.maxSize"));
+  maxShareSize ??= user?.shareSizeLimit
+    ? parseInt(user.shareSizeLimit)
+    : parseInt(config.get("share.maxSize"));
   const autoOpenCreateUploadModal = config.get("share.autoOpenShareModal");
 
   const uploadFiles = async (share: CreateShare, files: FileUpload[]) => {

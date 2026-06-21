@@ -84,9 +84,13 @@ const Body = ({
 
   const link = `${appUrl !== defaultAppUrl ? appUrl : window.location.origin}/s/${currentShare.id}`;
 
+  const resolvedMaxShareSize = currentShare.creator?.shareSizeLimit
+    ? parseInt(currentShare.creator.shareSizeLimit)
+    : maxShareSize;
+
   const formattedShareSize = byteToHumanSizeString(currentShare.size);
-  const formattedMaxShareSize = byteToHumanSizeString(maxShareSize);
-  const shareSizeProgress = (currentShare.size / maxShareSize) * 100;
+  const formattedMaxShareSize = byteToHumanSizeString(resolvedMaxShareSize);
+  const shareSizeProgress = (currentShare.size / resolvedMaxShareSize) * 100;
 
   const formattedCreatedAt = moment(currentShare.createdAt).format("LLL");
   const formattedExpiration =
@@ -159,7 +163,7 @@ const Body = ({
       </Text>
 
       <Flex align="center" justify="center">
-        {currentShare.size / maxShareSize < 0.1 && (
+        {currentShare.size / resolvedMaxShareSize < 0.1 && (
           <Text size="xs" style={{ marginRight: "4px" }}>
             {formattedShareSize}
           </Text>
@@ -167,10 +171,13 @@ const Body = ({
         <Progress
           value={shareSizeProgress}
           label={
-            currentShare.size / maxShareSize >= 0.1 ? formattedShareSize : ""
+            currentShare.size / resolvedMaxShareSize >= 0.1
+              ? formattedShareSize
+              : ""
           }
           style={{
-            width: currentShare.size / maxShareSize < 0.1 ? "70%" : "80%",
+            width:
+              currentShare.size / resolvedMaxShareSize < 0.1 ? "70%" : "80%",
           }}
           size="xl"
           radius="xl"
