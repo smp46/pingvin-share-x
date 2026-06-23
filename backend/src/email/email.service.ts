@@ -39,7 +39,8 @@ export class EmailService {
   }
 
   private async sendMail(email: string, subject: string, text: string) {
-    if (this.config.get("email.sendHtmlEmails")) {
+      const isHtml = this.config.get("email.sendHtmlEmails");
+
       await this.getTransporter()
         .sendMail({
           from: `"${this.config.get("general.appName")}" <${this.config.get(
@@ -47,27 +48,13 @@ export class EmailService {
           )}>`,
           to: email,
           subject: subject,
-          html: text,
+          [isHtml ? "html" : "text"]: text,
         })
         .catch((e) => {
           this.logger.error(e);
           throw new InternalServerErrorException(this.i18n.t("email.sendFailed"));
         });
-    } else {
-      await this.getTransporter()
-        .sendMail({
-          from: `"${this.config.get("general.appName")}" <${this.config.get(
-            "smtp.email",
-          )}>`,
-          to: email,
-          subject: subject,
-          text: text,
-        })
-        .catch((e) => {
-          this.logger.error(e);
-          throw new InternalServerErrorException(this.i18n.t("email.sendFailed"));
-        });
-    }
+  
   }
 
   async sendMailToShareRecipients(
