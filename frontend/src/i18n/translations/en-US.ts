@@ -522,7 +522,7 @@ export default {
     "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.send-html-emails": "Enable HTML email compatibility",
-  "admin.config.email.send-html-emails.description": "Sended emails will be in HTML format. If disabled, emails will be sent in plain text format.",
+  "admin.config.email.send-html-emails.description": "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
   "admin.config.email.enable-share-email-recipients":
     "Enable email recipient sharing",
   "admin.config.email.enable-share-email-recipients.description":
