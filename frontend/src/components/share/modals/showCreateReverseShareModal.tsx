@@ -19,8 +19,6 @@ import * as yup from "yup";
 import useTranslate, {
   translateOutsideContext,
 } from "../../../hooks/useTranslate.hook";
-import useConfig from "../../../hooks/config.hook";
-import useUser from "../../../hooks/user.hook";
 import shareService from "../../../services/share.service";
 import { Timespan } from "../../../types/timespan.type";
 import { getExpirationPreview } from "../../../utils/date.util";
@@ -36,6 +34,7 @@ const showCreateReverseShareModal = (
   defaultExpiration: Timespan,
   appUrl: string,
   defaultAppUrl: string,
+  maxShareSize: number,
   getReverseShares: () => void,
 ) => {
   const t = translateOutsideContext();
@@ -50,6 +49,7 @@ const showCreateReverseShareModal = (
         defaultExpiration={defaultExpiration}
         appUrl={appUrl}
         defaultAppUrl={defaultAppUrl}
+        maxShareSize={maxShareSize}
       />
     ),
   });
@@ -62,6 +62,7 @@ const Body = ({
   defaultExpiration,
   appUrl,
   defaultAppUrl,
+  maxShareSize,
 }: {
   getReverseShares: () => void;
   showSendEmailNotificationOption: boolean;
@@ -69,15 +70,12 @@ const Body = ({
   defaultExpiration: Timespan;
   appUrl: string;
   defaultAppUrl: string;
+  maxShareSize: number;
 }) => {
   const modals = useModals();
   const t = useTranslate();
-  const config = useConfig();
-  const { user } = useUser();
 
-  const userMaxShareSize = user?.shareSizeLimit
-    ? parseInt(user.shareSizeLimit)
-    : parseInt(config.get("share.maxSize"));
+  const userMaxShareSize = maxShareSize;
 
   const defaultTimespan = defaultExpiration
     ? defaultExpiration
@@ -247,8 +245,7 @@ const Body = ({
           </div>
           <FileSizeInput
             label={t("account.reverseShares.modal.max-size.label")}
-            value={form.values.maxShareSize}
-            onChange={(number) => form.setFieldValue("maxShareSize", number)}
+            {...form.getInputProps("maxShareSize")}
           />
           <NumberInput
             min={1}
