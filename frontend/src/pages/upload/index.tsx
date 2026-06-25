@@ -151,6 +151,9 @@ const Upload = ({
         maxExpiration: config.get("share.maxExpiration"),
         defaultExpiration: config.get("share.defaultExpiration"),
         shareIdLength: config.get("share.shareIdLength"),
+        allowAdminBypassMaxExpiration: user?.isAdmin && config.get(
+          "share.allowAdminBypassMaxExpiration",
+        ),
         simplified,
       },
       files,

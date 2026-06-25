@@ -48,6 +48,7 @@ const showCreateUploadModal = (
     maxExpiration: Timespan;
     defaultExpiration: Timespan;
     shareIdLength: number;
+    allowAdminBypassMaxExpiration: boolean;
     simplified: boolean;
   },
   files: FileUpload[],
@@ -124,6 +125,7 @@ const CreateUploadModalBody = ({
     maxExpiration: Timespan;
     defaultExpiration: Timespan;
     shareIdLength: number;
+    allowAdminBypassMaxExpiration: boolean;
   };
 }) => {
   const modals = useModals();
@@ -196,13 +198,13 @@ const CreateUploadModalBody = ({
 
       if (
         options.maxExpiration.value != 0 &&
-        (form.values.never_expires ||
+        (!options.allowAdminBypassMaxExpiration && (form.values.never_expires ||
           expirationDate.isAfter(
             moment().add(
               options.maxExpiration.value,
               options.maxExpiration.unit,
             ),
-          ))
+          )))
       ) {
         form.setFieldError(
           "expiration_num",
@@ -280,6 +282,7 @@ const CreateUploadModalBody = ({
           >
             {`${options.appUrl !== options.defaultAppUrl ? options.appUrl : window.location.origin}/s/${form.values.link}`}
           </Text>
+          <p>{options.allowAdminBypassMaxExpiration ? "true" : "false"}</p>
           {!options.isReverseShare && (
             <>
               <Grid align={form.errors.expiration_num ? "center" : "flex-end"}>
@@ -345,7 +348,7 @@ const CreateUploadModalBody = ({
                   />
                 </Col>
               </Grid>
-              {options.maxExpiration.value == 0 && (
+              {(options.allowAdminBypassMaxExpiration || options.maxExpiration.value == 0) && (
                 <Checkbox
                   label={t("upload.modal.expires.never-long")}
                   {...form.getInputProps("never_expires")}

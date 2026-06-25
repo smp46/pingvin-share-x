@@ -66,7 +66,7 @@ export class ShareService {
       expirationDate = reverseShare.shareExpiration;
     } else {
       expirationDate = this.parseExpiration(share.expiration);
-      this.validateExpiration(expirationDate);
+      this.validateExpiration(expirationDate, user);
     }
 
     fs.mkdirSync(`${SHARE_DIRECTORY}/${share.id}`, {
@@ -328,7 +328,7 @@ export class ShareService {
     let expirationDate: Date | undefined;
     if (body.expiration !== undefined) {
       expirationDate = this.parseExpiration(body.expiration);
-      this.validateExpiration(expirationDate);
+      this.validateExpiration(expirationDate, user);
     }
 
     const data: Prisma.ShareUpdateInput = {
@@ -425,12 +425,13 @@ export class ShareService {
     throw new BadRequestException(this.i18n.t("share.invalidExpiration"));
   }
 
-  private validateExpiration(expiration: Date) {
+  private validateExpiration(expiration: Date, user: User) {
     const expiresNever = moment(expiration).isSame(0);
     const maxExpiration = this.config.get("share.maxExpiration");
+    const canBypassMaxExpiration = user.isAdmin && this.config.get("share.allowAdminBypassMaxExpiration");
 
     if (
-      maxExpiration.value !== 0 &&
+      maxExpiration.value !== 0 && !canBypassMaxExpiration &&
       (expiresNever ||
         expiration >
           moment().add(maxExpiration.value, maxExpiration.unit).toDate())

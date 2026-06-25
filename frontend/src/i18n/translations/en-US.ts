@@ -601,6 +601,8 @@ export default {
     "Allow admin access to all shares",
   "admin.config.share.allow-admin-access-all-shares.description":
     "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
+  "admin.config.share.allow-admin-bypass-max-expiration": "Allow admin to bypass max file expiration",
+  "admin.config.share.allow-admin-bypass-max-expiration.description": "Allow administrators to create shares with an expiration date that exceeds the maximum expiration limit. They can also create shares that never expire, even if the maximum expiration is set to a specific time.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description":
     "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
