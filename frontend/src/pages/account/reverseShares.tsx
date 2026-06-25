@@ -73,6 +73,7 @@ const MyShares = () => {
               config.get("smtp.enabled"),
               config.get("share.maxExpiration"),
               config.get("share.defaultExpiration"),
+              config.get("share.forceReverseShareSimpleModeValue"),
               appUrl,
               defaultAppUrl,
               getReverseShares,

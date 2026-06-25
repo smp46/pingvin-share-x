@@ -31,6 +31,7 @@ const showCreateReverseShareModal = (
   showSendEmailNotificationOption: boolean,
   maxExpiration: Timespan,
   defaultExpiration: Timespan,
+  forceReverseShareSimpleModeValue: string,
   appUrl: string,
   defaultAppUrl: string,
   getReverseShares: () => void,
@@ -45,6 +46,7 @@ const showCreateReverseShareModal = (
         getReverseShares={getReverseShares}
         maxExpiration={maxExpiration}
         defaultExpiration={defaultExpiration}
+        forceReverseShareSimpleModeValue={forceReverseShareSimpleModeValue}
         appUrl={appUrl}
         defaultAppUrl={defaultAppUrl}
       />
@@ -57,6 +59,7 @@ const Body = ({
   showSendEmailNotificationOption,
   maxExpiration,
   defaultExpiration,
+  forceReverseShareSimpleModeValue,
   appUrl,
   defaultAppUrl,
 }: {
@@ -64,6 +67,7 @@ const Body = ({
   showSendEmailNotificationOption: boolean;
   maxExpiration: Timespan;
   defaultExpiration: Timespan;
+  forceReverseShareSimpleModeValue: string | undefined;
   appUrl: string;
   defaultAppUrl: string;
 }) => {
@@ -81,7 +85,7 @@ const Body = ({
       sendEmailNotification: false,
       expiration_num: defaultTimespan.value,
       expiration_unit: `-${defaultTimespan.unit}` as string,
-      simplified: !!(getCookie("reverse-share.simplified") ?? false),
+      simplified: forceReverseShareSimpleModeValue !== "undefined" ? forceReverseShareSimpleModeValue === "simple" : !!(getCookie("reverse-share.simplified") ?? false),
       publicAccess: !!(getCookie("reverse-share.public-access") ?? true),
     },
     validate: yupResolver(
@@ -253,17 +257,19 @@ const Body = ({
               })}
             />
           )}
-          <Switch
-            mt="xs"
-            labelPosition="left"
-            label={t("account.reverseShares.modal.simplified")}
-            description={t(
-              "account.reverseShares.modal.simplified.description",
-            )}
-            {...form.getInputProps("simplified", {
-              type: "checkbox",
-            })}
-          />
+          {forceReverseShareSimpleModeValue === "undefined" &&
+            <Switch
+              mt="xs"
+              labelPosition="left"
+              label={t("account.reverseShares.modal.simplified")}
+              description={t(
+                "account.reverseShares.modal.simplified.description",
+              )}
+              {...form.getInputProps("simplified", {
+                type: "checkbox",
+              })}
+            />
+          }
           <Switch
             mt="xs"
             labelPosition="left"
@@ -279,8 +285,8 @@ const Body = ({
             <FormattedMessage id="common.button.create" />
           </Button>
         </Stack>
-      </form>
-    </Group>
+      </form >
+    </Group >
   );
 };
 
