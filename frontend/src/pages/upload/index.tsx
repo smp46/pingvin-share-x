@@ -3,7 +3,7 @@ import { useModals } from "@mantine/modals";
 import { cleanNotifications } from "@mantine/notifications";
 import { AxiosError } from "axios";
 import pLimit from "p-limit";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
 import Dropzone from "../../components/upload/Dropzone";
@@ -52,6 +52,11 @@ const Upload = ({
   maxShareSize ??= user?.shareSizeLimit
     ? parseInt(user.shareSizeLimit)
     : parseInt(config.get("share.maxSize"));
+
+  const currentFilesSize = useMemo(() => {
+    return files.reduce((acc, file) => acc + file.size, 0);
+  }, [files]);
+
   const autoOpenCreateUploadModal = config.get("share.autoOpenShareModal");
 
   const uploadFiles = async (share: CreateShare, files: FileUpload[]) => {
@@ -279,6 +284,7 @@ const Upload = ({
             : undefined
         }
         maxShareSize={maxShareSize}
+        currentFilesSize={currentFilesSize}
         onFilesChanged={handleDropzoneFilesChanged}
         isUploading={isUploading}
       />

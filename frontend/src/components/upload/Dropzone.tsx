@@ -36,11 +36,13 @@ const Dropzone = ({
   title,
   isUploading,
   maxShareSize,
+  currentFilesSize = 0,
   onFilesChanged,
 }: {
   title?: string;
   isUploading: boolean;
   maxShareSize: number;
+  currentFilesSize?: number;
   onFilesChanged: (files: FileUpload[]) => void;
 }) => {
   const t = useTranslate();
@@ -58,7 +60,7 @@ const Dropzone = ({
         onDrop={(files: FileUpload[]) => {
           const fileSizeSum = files.reduce((n, { size }) => n + size, 0);
 
-          if (fileSizeSum > maxShareSize) {
+          if (fileSizeSum + currentFilesSize > maxShareSize) {
             toast.error(
               t("upload.dropzone.notify.file-too-big", {
                 maxSize: byteToHumanSizeString(maxShareSize),

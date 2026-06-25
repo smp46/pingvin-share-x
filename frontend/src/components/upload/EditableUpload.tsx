@@ -65,6 +65,15 @@ const EditableUpload = ({
     ? parseInt(user.shareSizeLimit)
     : parseInt(config.get("share.maxSize"));
 
+  const currentFilesSize = useMemo(() => {
+    return (
+      existingFiles
+        .filter((file) => !file.deleted)
+        .reduce((acc, file) => acc + parseInt(file.size), 0) +
+      uploadingFiles.reduce((acc, file) => acc + file.size, 0)
+    );
+  }, [existingFiles, uploadingFiles]);
+
   const uploadFiles = async (files: FileUpload[]) => {
     const fileUploadPromises = files.map(async (file, fileIndex) =>
       // Limit the number of concurrent uploads to 3
@@ -221,6 +230,7 @@ const EditableUpload = ({
       <Dropzone
         title={t("share.edit.append-upload")}
         maxShareSize={maxShareSize}
+        currentFilesSize={currentFilesSize}
         onFilesChanged={appendFiles}
         isUploading={isUploading}
       />
