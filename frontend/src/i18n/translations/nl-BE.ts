@@ -396,6 +396,8 @@ export default {
   "admin.config.cache.test-redis.modal.save.title": "Configuratie opslaan",
   "admin.config.cache.test-redis.modal.save.description": "Om verder te gaan, moet u eerst de configuratie opslaan. Wilt u de configuratie opslaan en de Redis-verbinding testen?",
   "admin.config.cache.test-redis.modal.save.confirm": "Opslaan en testen",
+  "admin.config.email.send-html-emails": "Enable HTML email compatibility",
+  "admin.config.email.send-html-emails.description": "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
   "admin.config.email.enable-share-email-recipients": "E-mail delen met ontvangers inschakelen",
   "admin.config.email.enable-share-email-recipients.description": "Of het delen van e-mails met ontvangers is toegestaan. Dit kan alleen worden ingeschakeld als SMTP is geactiveerd.",
   "admin.config.email.share-recipients-subject": "Onderwerp van ontvangers' share",
