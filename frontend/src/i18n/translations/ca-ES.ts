@@ -42,7 +42,6 @@ export default {
   "signIn.oauth.microsoft": "Microsoft",
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
-
   // END /auth/signin
 
   // /auth/signup
@@ -397,6 +396,8 @@ export default {
   "admin.config.cache.test-redis.modal.save.title": "Desar la configuració",
   "admin.config.cache.test-redis.modal.save.description": "Per continuar, primer heu de desar la configuració. Voleu desar la configuració i provar la connexió a Redis?",
   "admin.config.cache.test-redis.modal.save.confirm": "Desar i provar",
+  "admin.config.email.send-html-emails": "Enable HTML email compatibility",
+  "admin.config.email.send-html-emails.description": "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
   "admin.config.email.enable-share-email-recipients": "Activar la compartició de destinataris per correu",
   "admin.config.email.enable-share-email-recipients.description": "Si s'ha de permetre la compartició per correu amb els destinataris. Això només es pot activar si l'SMTP està activat.",
   "admin.config.email.share-recipients-subject": "Assumpte dels destinataris de la compartició",
@@ -599,7 +600,6 @@ export default {
   "error.param.provider_microsoft": "Microsoft",
   "error.param.provider_discord": "Discord",
   "error.param.provider_oidc": "OpenID Connect",
-
   // Common translations
   "common.button.info": "Informació",
   "common.button.undo": "Desfer",
