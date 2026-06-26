@@ -143,6 +143,10 @@ export const configVariables = {
     },
   },
   email: {
+    sendHtmlEmails: {
+      type: "boolean",
+      defaultValue: "false",
+    },
     enableShareEmailRecipients: {
       type: "boolean",
       defaultValue: "false",

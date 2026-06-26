@@ -14,7 +14,7 @@ export class EmailService {
   constructor(
     private config: ConfigService,
     private readonly i18n: I18nService,
-  ) {}
+  ) { }
   private readonly logger = new Logger(EmailService.name);
 
   getTransporter() {
@@ -39,19 +39,22 @@ export class EmailService {
   }
 
   private async sendMail(email: string, subject: string, text: string) {
-    await this.getTransporter()
-      .sendMail({
-        from: `"${this.config.get("general.appName")}" <${this.config.get(
-          "smtp.email",
-        )}>`,
-        to: email,
-        subject,
-        text,
-      })
-      .catch((e) => {
-        this.logger.error(e);
-        throw new InternalServerErrorException(this.i18n.t("email.sendFailed"));
-      });
+      const isHtml = this.config.get("email.sendHtmlEmails");
+
+      await this.getTransporter()
+        .sendMail({
+          from: `"${this.config.get("general.appName")}" <${this.config.get(
+            "smtp.email",
+          )}>`,
+          to: email,
+          subject: subject,
+          [isHtml ? "html" : "text"]: text,
+        })
+        .catch((e) => {
+          this.logger.error(e);
+          throw new InternalServerErrorException(this.i18n.t("email.sendFailed"));
+        });
+  
   }
 
   async sendMailToShareRecipients(
@@ -82,7 +85,7 @@ export class EmailService {
         .replaceAll(
           "{creator}",
           creator?.username ??
-            this.i18n.t("email.shareRecipientsCreatorFallback"),
+          this.i18n.t("email.shareRecipientsCreatorFallback"),
         )
         .replaceAll("{creatorEmail}", creator?.email ?? "")
         .replaceAll("{shareUrl}", shareUrl)
