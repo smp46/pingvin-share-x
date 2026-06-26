@@ -396,6 +396,8 @@ export default {
   "admin.config.cache.test-redis.modal.save.title": "Spara Konfiguration",
   "admin.config.cache.test-redis.modal.save.description": "För att fortsätta måste du först spara konfigurationen. Vill du spara konfigurationen och testa Redis-anslutningen?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
+  "admin.config.email.send-html-emails": "Enable HTML email compatibility",
+  "admin.config.email.send-html-emails.description": "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
   "admin.config.email.enable-share-email-recipients": "Aktivera delning av e-postmottagare",
   "admin.config.email.enable-share-email-recipients.description": "Om e-postdelning med mottagare ska tillåtas. Detta kan endast aktiveras om SMTP är aktiverat.",
   "admin.config.email.share-recipients-subject": "Delning ämne",
