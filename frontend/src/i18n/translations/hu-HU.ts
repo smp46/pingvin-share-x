@@ -396,6 +396,8 @@ export default {
   "admin.config.cache.test-redis.modal.save.title": "Beállítások mentése",
   "admin.config.cache.test-redis.modal.save.description": "A folytatáshoz először mentenie kell a konfigurációt. Szeretné menteni a konfigurációt, és tesztelni a Redis kapcsolatot?",
   "admin.config.cache.test-redis.modal.save.confirm": "Mentés és teszt",
+  "admin.config.email.send-html-emails": "Enable HTML email compatibility",
+  "admin.config.email.send-html-emails.description": "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
   "admin.config.email.enable-share-email-recipients": "E-mail címzettek megosztásának engedélyezése",
   "admin.config.email.enable-share-email-recipients.description": "Meghatározza, hogy engedélyezett legyen-e az e-mailes megosztás a címzettekkel. Ez a funkció csak akkor aktiválható, ha az SMTP be van kapcsolva.",
   "admin.config.email.share-recipients-subject": "Megosztási email tárgya",
