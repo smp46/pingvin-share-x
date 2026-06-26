@@ -68,12 +68,16 @@ export class FileService {
     });
   }
 
-  async get(shareId: string, fileId: string): Promise<File> {
+  async get(
+    shareId: string,
+    fileId: string,
+    rangeHeader?: string,
+  ): Promise<File> {
     const share = await this.prisma.share.findFirst({
       where: { id: shareId },
     });
     const storageService = this.getStorageService(share.storageProvider);
-    return storageService.get(shareId, fileId);
+    return storageService.get(shareId, fileId, rangeHeader);
   }
 
   async remove(shareId: string, fileId: string) {
@@ -176,4 +180,11 @@ export interface File {
     shareId: string;
   };
   file: Readable;
+  // Set when the client sent a `Range` header and a partial body is being
+  // served. `start`/`end` are an inclusive byte range; `size` is the total
+  // file size. The controller turns this into a `206 Partial Content`
+  // response with the appropriate `Content-Range`/`Content-Length` headers.
+  // A valid-but-unservable range instead throws RangeNotSatisfiableError
+  // (see ./range), which the controller catches to answer `416`.
+  range?: { start: number; end: number; size: number };
 }

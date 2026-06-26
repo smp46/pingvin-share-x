@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  Headers,
   Param,
   Post,
   Query,
@@ -18,6 +19,7 @@ import { StrictShareOwnerGuard } from "src/share/guard/strictShareOwner.guard";
 import { IdValidation } from "src/share/guard/shareIdValidation.guard";
 import { FileService } from "./file.service";
 import { FileSecurityGuard } from "./guard/fileSecurity.guard";
+import { RangeNotSatisfiableError } from "./range";
 import * as mime from "mime-types";
 
 const VALID_ID_REGEX = /^[a-zA-Z0-9-]*={0,2}$/;
@@ -87,32 +89,60 @@ export class FileController {
     @Param("fileId") fileId: string,
     @Query("download") download = "true",
     @Query("recipient") recipientId?: string,
+    @Headers("range") rangeHeader?: string,
   ) {
-    const file = await this.fileService.get(shareId, fileId);
     const isDownload = download === "true";
 
-    const headers = {
-      "Content-Type":
-        mime?.lookup?.(file.metaData.name) || "application/octet-stream",
-      "Content-Length": file.metaData.size,
-      "Content-Security-Policy": "sandbox",
-      "Content-Disposition": contentDisposition(
-        file.metaData.name,
-        isDownload ? undefined : { type: "inline" },
-      ),
-    };
+    try {
+      const file = await this.fileService.get(shareId, fileId, rangeHeader);
 
-    res.set(headers);
+      const headers: Record<string, string> = {
+        "Content-Type":
+          mime?.lookup?.(file.metaData.name) || "application/octet-stream",
+        "Content-Length": file.metaData.size,
+        // Advertise range support so players know they can seek even before
+        // they issue a range request.
+        "Accept-Ranges": "bytes",
+        "Content-Security-Policy": "sandbox",
+        "Content-Disposition": contentDisposition(
+          file.metaData.name,
+          isDownload ? undefined : { type: "inline" },
+        ),
+      };
 
-    if (isDownload) {
-      void this.fileService.notifyRecipientDownload(
-        shareId,
-        file.metaData.name,
-        getValidRecipientId(recipientId),
-      );
+      // Partial content -> 206; override Content-Length with the served slice
+      // and add Content-Range so the browser can stream and seek instead of
+      // buffering the whole file first.
+      if (file.range) {
+        const { start, end, size } = file.range;
+        res.status(206);
+        headers["Content-Length"] = (end - start + 1).toString();
+        headers["Content-Range"] = `bytes ${start}-${end}/${size}`;
+      }
+
+      res.set(headers);
+
+      if (isDownload) {
+        void this.fileService.notifyRecipientDownload(
+          shareId,
+          file.metaData.name,
+          getValidRecipientId(recipientId),
+        );
+      }
+
+      return new StreamableFile(file.file);
+    } catch (e) {
+      // Valid Range we can't satisfy -> 416 with the total size.
+      if (e instanceof RangeNotSatisfiableError) {
+        res.status(416);
+        res.set({
+          "Accept-Ranges": "bytes",
+          "Content-Range": `bytes */${e.size}`,
+        });
+        return new StreamableFile(Buffer.alloc(0));
+      }
+      throw e;
     }
-
-    return new StreamableFile(file.file);
   }
 
   @Delete(":fileId")

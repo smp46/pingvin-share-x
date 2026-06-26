@@ -16,6 +16,8 @@ import { PrismaService } from "src/prisma/prisma.service";
 import { validate as isValidUUID } from "uuid";
 import { SHARE_DIRECTORY } from "../constants";
 import { Readable } from "stream";
+import { File } from "./file.service";
+import { parseRangeHeader } from "./range";
 
 @Injectable()
 export class LocalFileService {
@@ -122,7 +124,7 @@ export class LocalFileService {
     return file;
   }
 
-  async get(shareId: string, fileId: string) {
+  async get(shareId: string, fileId: string, rangeHeader?: string) {
     const fileMetaData = await this.prisma.file.findUnique({
       where: { id: fileId },
     });
@@ -130,9 +132,25 @@ export class LocalFileService {
     if (!fileMetaData)
       throw new NotFoundException(this.i18n.t("file.notFound"));
 
-    const file = createReadStream(`${SHARE_DIRECTORY}/${shareId}/${fileId}`);
+    const path = `${SHARE_DIRECTORY}/${shareId}/${fileId}`;
 
-    return {
+    // Throws RangeNotSatisfiableError for a valid-but-unservable range; the
+    // controller catches that and answers 416.
+    const totalSize = parseInt(fileMetaData.size, 10);
+    const parsedRange = rangeHeader
+      ? parseRangeHeader(rangeHeader, totalSize)
+      : null;
+
+    // A satisfiable range streams just the requested slice, enabling seeking
+    // and play-before-fully-downloaded in browser <video>/<audio> players.
+    const file = createReadStream(
+      path,
+      parsedRange
+        ? { start: parsedRange.start, end: parsedRange.end }
+        : undefined,
+    );
+
+    const retVal: File = {
       metaData: {
         mimeType: mime.contentType(fileMetaData.name.split(".").pop()),
         ...fileMetaData,
@@ -140,6 +158,12 @@ export class LocalFileService {
       },
       file,
     };
+
+    if (parsedRange) {
+      retVal.range = { ...parsedRange, size: totalSize };
+    }
+
+    return retVal;
   }
 
   async remove(shareId: string, fileId: string) {

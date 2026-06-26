@@ -25,6 +25,7 @@ import * as crypto from "crypto";
 import * as mime from "mime-types";
 import { File } from "./file.service";
 import { Readable } from "stream";
+import { RangeNotSatisfiableError } from "./range";
 import { validate as isValidUUID } from "uuid";
 import * as archiver from "archiver";
 
@@ -168,33 +169,59 @@ export class S3FileService {
     return file;
   }
 
-  async get(shareId: string, fileId: string): Promise<File> {
+  async get(
+    shareId: string,
+    fileId: string,
+    rangeHeader?: string,
+  ): Promise<File> {
     const fileName = (
       await this.prisma.file.findUnique({ where: { id: fileId } })
     ).name;
 
     const s3Instance = this.getS3Instance();
     const key = `${this.getS3Path()}${shareId}/${fileName}`;
-    const response = await s3Instance.send(
-      new GetObjectCommand({
-        Bucket: this.config.get("s3.bucketName"),
-        Key: key,
-      }),
-    );
 
-    return {
-      metaData: {
-        id: fileId,
-        size: response.ContentLength?.toString() || "0",
-        name: fileName,
-        shareId: shareId,
-        createdAt: response.LastModified || new Date(),
-        mimeType:
-          mime.contentType(fileId.split(".").pop()) ||
-          "application/octet-stream",
-      },
-      file: response.Body as Readable,
-    } as File;
+    try {
+      const response = await s3Instance.send(
+        new GetObjectCommand({
+          Bucket: this.config.get("s3.bucketName"),
+          Key: key,
+          // S3 honours the same `Range` header semantics, replying 206 with a
+          // `ContentRange` we mirror to the client below.
+          Range: rangeHeader || undefined,
+        }),
+      );
+
+      // `ContentRange` ("bytes start-end/total") is only present on a 206.
+      const parsedRange = parseContentRange(response.ContentRange);
+
+      return {
+        metaData: {
+          id: fileId,
+          size:
+            (parsedRange?.size ?? response.ContentLength)?.toString() || "0",
+          name: fileName,
+          shareId: shareId,
+          createdAt: response.LastModified || new Date(),
+          mimeType:
+            mime.contentType(fileId.split(".").pop()) ||
+            "application/octet-stream",
+        },
+        file: response.Body as Readable,
+        ...(parsedRange ? { range: parsedRange } : {}),
+      } as File;
+    } catch (e) {
+      // S3 raises InvalidRange when the requested range can't be served; map it
+      // to the same RangeNotSatisfiableError the local backend throws (-> 416).
+      if (
+        rangeHeader &&
+        (e?.name === "InvalidRange" || e?.Code === "InvalidRange")
+      ) {
+        const total = await this.getFileSize(shareId, fileName);
+        throw new RangeNotSatisfiableError(total);
+      }
+      throw e;
+    }
   }
 
   async remove(shareId: string, fileId: string) {
@@ -380,4 +407,21 @@ export class S3FileService {
     const normalized = `${configS3Path}`.replace(/^\/+|\/+$/g, "");
     return normalized ? `${normalized}/` : "";
   }
+}
+
+/**
+ * Parse an S3 `ContentRange` response header ("bytes start-end/total") into the
+ * inclusive byte range plus total size, or `null` when absent/unparseable.
+ */
+function parseContentRange(
+  contentRange?: string,
+): { start: number; end: number; size: number } | null {
+  if (!contentRange) return null;
+  const match = /^bytes (\d+)-(\d+)\/(\d+)$/.exec(contentRange.trim());
+  if (!match) return null;
+  return {
+    start: parseInt(match[1], 10),
+    end: parseInt(match[2], 10),
+    size: parseInt(match[3], 10),
+  };
 }
