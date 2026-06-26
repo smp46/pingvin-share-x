@@ -396,6 +396,8 @@ export default {
   "admin.config.cache.test-redis.modal.save.title": "Salva configurazione",
   "admin.config.cache.test-redis.modal.save.description": "Per continuare è necessario prima salvare la configurazione. Vuoi salvare la configurazione e testare la connessione a Redis?",
   "admin.config.cache.test-redis.modal.save.confirm": "Salva e testa",
+  "admin.config.email.send-html-emails": "Enable HTML email compatibility",
+  "admin.config.email.send-html-emails.description": "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
   "admin.config.email.enable-share-email-recipients": "Abilita condivisione del destinatario email",
   "admin.config.email.enable-share-email-recipients.description": "Specifica se consentire la condivisione via email con i destinatari. Può essere abilitato solo se SMTP è attivo.",
   "admin.config.email.share-recipients-subject": "Oggetto dell'email di condivisione",
