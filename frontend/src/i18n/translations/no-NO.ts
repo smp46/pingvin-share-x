@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Rediger bruker: {username}",
   "admin.users.edit.update.admin-privileges": "Administratorrettigheter",
   "admin.users.edit.update.email-verified": "E-post verifisert",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Endre passord",
   "admin.users.edit.update.change-password.field": "Nytt passord",
   "admin.users.edit.update.change-password.button": "Lagre nytt passord",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "Passord",
   "admin.users.modal.create.manual-password": "Sett passord manuelt",
   "admin.users.modal.create.manual-password.description": "Hvis dette ikke er merket av, vil brukeren motta en e-post med en lenke for å angi passordet sitt.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Administratorrettigheter",
   "admin.users.modal.create.admin.description": "Hvis merket av, vil brukeren få tilgang til administrasjonspanelet.",
   // END /admin/users
