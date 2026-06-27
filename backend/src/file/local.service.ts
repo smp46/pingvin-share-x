@@ -39,7 +39,7 @@ export class LocalFileService {
 
     const share = await this.prisma.share.findUnique({
       where: { id: shareId },
-      include: { files: true, reverseShare: true },
+      include: { files: true, reverseShare: true, creator: true },
     });
 
     if (share.uploadLocked)
@@ -84,11 +84,14 @@ export class LocalFileService {
 
     const shareSizeSum = fileSizeSum + diskFileSize + buffer.byteLength;
 
-    if (
-      shareSizeSum > this.config.get("share.maxSize") ||
-      (share.reverseShare?.maxShareSize &&
-        shareSizeSum > parseInt(share.reverseShare.maxShareSize))
-    ) {
+    let limit = parseInt(this.config.get("share.maxSize"));
+    if (share.reverseShare?.maxShareSize) {
+      limit = parseInt(share.reverseShare.maxShareSize);
+    } else if (share.creator?.shareSizeLimit) {
+      limit = parseInt(share.creator.shareSizeLimit);
+    }
+
+    if (shareSizeSum > limit) {
       throw new HttpException(
         this.i18n.t("file.maxSizeExceeded"),
         HttpStatus.PAYLOAD_TOO_LARGE,

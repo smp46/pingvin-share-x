@@ -1,5 +1,11 @@
 import { Expose, plainToClass } from "class-transformer";
-import { IsEmail, Length, Matches, MinLength } from "class-validator";
+import {
+  IsEmail,
+  IsOptional,
+  Length,
+  Matches,
+  MinLength,
+} from "class-validator";
 import { i18nValidationMessage } from "nestjs-i18n";
 
 export class UserDTO {
@@ -33,6 +39,13 @@ export class UserDTO {
   isLdap: boolean;
 
   ldapDN?: string;
+
+  @Expose()
+  @IsOptional()
+  @Matches(/^[0-9]+$/, {
+    message: "shareSizeLimit must contain only digits",
+  })
+  shareSizeLimit?: string;
 
   @Expose()
   totpVerified: boolean;

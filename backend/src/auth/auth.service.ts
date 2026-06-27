@@ -286,7 +286,10 @@ export class AuthService {
         },
       });
 
-      await this.emailService.sendVerificationEmail(user.email, activationToken);
+      await this.emailService.sendVerificationEmail(
+        user.email,
+        activationToken,
+      );
     });
   }
 

@@ -22,6 +22,7 @@ import useTranslate, {
 import shareService from "../../../services/share.service";
 import { Timespan } from "../../../types/timespan.type";
 import { getExpirationPreview } from "../../../utils/date.util";
+import { byteToHumanSizeString } from "../../../utils/fileSize.util";
 import toast from "../../../utils/toast.util";
 import FileSizeInput from "../../core/FileSizeInput";
 import showCompletedReverseShareModal from "./showCompletedReverseShareModal";
@@ -33,6 +34,7 @@ const showCreateReverseShareModal = (
   defaultExpiration: Timespan,
   appUrl: string,
   defaultAppUrl: string,
+  maxShareSize: number,
   getReverseShares: () => void,
 ) => {
   const t = translateOutsideContext();
@@ -47,6 +49,7 @@ const showCreateReverseShareModal = (
         defaultExpiration={defaultExpiration}
         appUrl={appUrl}
         defaultAppUrl={defaultAppUrl}
+        maxShareSize={maxShareSize}
       />
     ),
   });
@@ -59,6 +62,7 @@ const Body = ({
   defaultExpiration,
   appUrl,
   defaultAppUrl,
+  maxShareSize,
 }: {
   getReverseShares: () => void;
   showSendEmailNotificationOption: boolean;
@@ -66,9 +70,12 @@ const Body = ({
   defaultExpiration: Timespan;
   appUrl: string;
   defaultAppUrl: string;
+  maxShareSize: number;
 }) => {
   const modals = useModals();
   const t = useTranslate();
+
+  const userMaxShareSize = maxShareSize;
 
   const defaultTimespan = defaultExpiration
     ? defaultExpiration
@@ -76,7 +83,7 @@ const Body = ({
 
   const form = useForm({
     initialValues: {
-      maxShareSize: 104857600,
+      maxShareSize: Math.min(104857600, userMaxShareSize),
       maxUseCount: 1,
       sendEmailNotification: false,
       expiration_num: defaultTimespan.value,
@@ -91,6 +98,16 @@ const Body = ({
           .typeError(t("common.error.invalid-number"))
           .min(1, t("common.error.number-too-small", { min: 1 }))
           .max(1000, t("common.error.number-too-large", { max: 1000 }))
+          .required(t("common.error.field-required")),
+        maxShareSize: yup
+          .number()
+          .typeError(t("common.error.invalid-number"))
+          .max(
+            userMaxShareSize,
+            t("upload.dropzone.notify.file-too-big", {
+              maxSize: byteToHumanSizeString(userMaxShareSize),
+            }),
+          )
           .required(t("common.error.field-required")),
       }),
     ),
@@ -228,8 +245,7 @@ const Body = ({
           </div>
           <FileSizeInput
             label={t("account.reverseShares.modal.max-size.label")}
-            value={form.values.maxShareSize}
-            onChange={(number) => form.setFieldValue("maxShareSize", number)}
+            {...form.getInputProps("maxShareSize")}
           />
           <NumberInput
             min={1}
