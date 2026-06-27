@@ -222,6 +222,11 @@ function App({ Component, pageProps }: AppProps) {
     } else if (pageProps.language !== cookieLanguage) {
       location.reload();
     }
+
+    const current = i18nUtil.getLocaleByCode(pageProps.language);
+
+    document.documentElement.dir = current.direction ?? "ltr";
+    document.documentElement.lang = current.code;
   }, [pageProps.language]);
 
   useEffect(() => {
