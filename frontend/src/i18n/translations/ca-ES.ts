@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Editar usuari: {username}",
   "admin.users.edit.update.admin-privileges": "Privilegis d'administrador",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Canviar contrasenya",
   "admin.users.edit.update.change-password.field": "Nova contrasenya",
   "admin.users.edit.update.change-password.button": "Desar la nova contrasenya",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "Contrasenya",
   "admin.users.modal.create.manual-password": "Configurar contrasenya manualment",
   "admin.users.modal.create.manual-password.description": "Si no està marcat, l'usuari rebrà un correu amb un enllaç per configurar la seva contrasenya.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Privilegis d'administrador",
   "admin.users.modal.create.admin.description": "Si està marcat, l'usuari podrà accedir al panell d'administració.",
   // END /admin/users
