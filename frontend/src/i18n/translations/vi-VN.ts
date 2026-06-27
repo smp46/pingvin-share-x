@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Edit user: {username}",
   "admin.users.edit.update.admin-privileges": "Admin privileges",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Đổi mật khẩu",
   "admin.users.edit.update.change-password.field": "Mật khẩu mới",
   "admin.users.edit.update.change-password.button": "Đổi mật khẩu",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "Mật khẩu",
   "admin.users.modal.create.manual-password": "Set password manually",
   "admin.users.modal.create.manual-password.description": "If not checked, the user will receive an email with a link to set their password.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Admin privileges",
   "admin.users.modal.create.admin.description": "If checked, the user will be able to access the admin panel.",
   // END /admin/users
