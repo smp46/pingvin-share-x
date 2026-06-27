@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Уредите корисника: {username}",
   "admin.users.edit.update.admin-privileges": "Администраторске привилегије",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Промените лозинку",
   "admin.users.edit.update.change-password.field": "Нова лозинка",
   "admin.users.edit.update.change-password.button": "Снимите нову лозинку",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "Лозинка",
   "admin.users.modal.create.manual-password": "Поставите лозинку ручно",
   "admin.users.modal.create.manual-password.description": "Ако није означено, корисник ће добити имејл са везом за постављање лозинке.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Администраторске привилегије",
   "admin.users.modal.create.admin.description": "Ако је означено, корисник ће моћи да приступи административном панелу.",
   // END /admin/users
