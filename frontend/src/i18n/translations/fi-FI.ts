@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Edit user: {username}",
   "admin.users.edit.update.admin-privileges": "Ylläpitäjän oikeudet",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Vaihda salasana",
   "admin.users.edit.update.change-password.field": "Uusi salasana",
   "admin.users.edit.update.change-password.button": "Tallenna uusi salasana",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "Salasana",
   "admin.users.modal.create.manual-password": "Aseta salasana manuaalisesti",
   "admin.users.modal.create.manual-password.description": "Jos ei ole valittuna, käyttäjä saa sähköpostiviestin, jossa on linkki, joka määrittää heidän salasanansa.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Ylläpitäjän oikeudet",
   "admin.users.modal.create.admin.description": "Jos valittu, käyttäjä voi käyttää hallintapaneelia.",
   // END /admin/users
