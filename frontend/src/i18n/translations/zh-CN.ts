@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "编辑用户 {username}",
   "admin.users.edit.update.admin-privileges": "管理员",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "更改密码",
   "admin.users.edit.update.change-password.field": "新密码",
   "admin.users.edit.update.change-password.button": "保存新密码",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "密码",
   "admin.users.modal.create.manual-password": "手动设置密码",
   "admin.users.modal.create.manual-password.description": "如果不勾选，用户将会收到一封电子邮件来设置他们的密码",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "管理员",
   "admin.users.modal.create.admin.description": "如果勾选，用户将能访问管理员面板",
   // END /admin/users
