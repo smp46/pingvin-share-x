@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Kullanıcıyı düzenle: {username}",
   "admin.users.edit.update.admin-privileges": "Yönetici yetkileri",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Şifre değiştir",
   "admin.users.edit.update.change-password.field": "Yeni şifre",
   "admin.users.edit.update.change-password.button": "Yeni şifreyi kaydet",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "Şifre",
   "admin.users.modal.create.manual-password": "Şifreyi manuel olarak ayarla",
   "admin.users.modal.create.manual-password.description": "İşaretlenmezse, kullanıcı şifresini ayarlaması için bir bağlantı içeren bir e-posta alacaktır.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Yönetici yetkileri",
   "admin.users.modal.create.admin.description": "İşaretlenirse, kullanıcı yönetim paneline erişebilecektir.",
   // END /admin/users
