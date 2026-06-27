@@ -1,4 +1,4 @@
 {
-  "notFound": "Reverse share token not found",
-  "maxShareSizeExceeded": "Max share size can't be greater than {maxSize} bytes."
+  "notFound": "Omvendt delingstoken ble ikke funnet",
+  "maxShareSizeExceeded": "Maksimal delingsstørrelse kan ikke være større enn {maxSize} byte."
 }

@@ -1,15 +1,15 @@
 {
-  "invalidIdFormat": "Invalid ID format",
-  "notFound": "File not found",
-  "passwordProtected": "This share is password protected",
-  "alreadyCompleted": "Share is already completed",
-  "notEnoughSpace": "Not enough space on the server",
-  "unexpectedChunk": "Unexpected chunk received",
-  "maxSizeExceeded": "Max share size exceeded",
-  "zipError": "Error creating ZIP file",
-  "s3DeleteError": "Could not delete file from S3",
-  "s3UploadInitError": "Failed to initialize multipart upload.",
-  "s3SessionNotFound": "Multipart upload session not found.",
-  "s3UploadFailed": "Multipart upload failed. The upload has been aborted.",
-  "s3SizeError": "Could not retrieve file size"
+  "invalidIdFormat": "Ugyldig ID-format",
+  "notFound": "Filen ble ikke funnet",
+  "passwordProtected": "Denne delingen er passordbeskyttet",
+  "alreadyCompleted": "Delingen er allerede fullført",
+  "notEnoughSpace": "Ikke nok plass på serveren",
+  "unexpectedChunk": "Uventet del (chunk) mottatt",
+  "maxSizeExceeded": "Maksimal delingsstørrelse er overskredet",
+  "zipError": "Feil under oppretting av ZIP-fil",
+  "s3DeleteError": "Kunne ikke slette fil fra S3",
+  "s3UploadInitError": "Mislyktes i å initialisere flerdelt opplasting (multipart upload).",
+  "s3SessionNotFound": "Flerdelt opplastingsøkt ble ikke funnet.",
+  "s3UploadFailed": "Flerdelt opplasting mislyktes. Opplastingen har blitt avbrutt.",
+  "s3SizeError": "Kunne ikke hente filstørrelse"
 }

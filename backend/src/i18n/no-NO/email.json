@@ -1,11 +1,11 @@
 {
-  "shareRecipientsCreatorFallback": "Someone",
-  "shareRecipientsDescFallback": "No description",
-  "shareRecipientsExpiresNeverFallback": "in: never",
-  "smtpDisabled": "SMTP is disabled",
-  "emailServiceDisabled": "Email service disabled",
-  "testSubject": "Test email",
-  "testText": "This is a test email",
-  "sendFailed": "Failed to send email",
-  "locale": "en-US"
+  "shareRecipientsCreatorFallback": "Noen",
+  "shareRecipientsDescFallback": "Ingen beskrivelse",
+  "shareRecipientsExpiresNeverFallback": "i: aldri",
+  "smtpDisabled": "SMTP er deaktivert",
+  "emailServiceDisabled": "E-posttjeneste deaktivert",
+  "testSubject": "Test-e-post",
+  "testText": "Dette er en test-e-post",
+  "sendFailed": "Kunne ikke sende e-post",
+  "locale": "no-NO"
 }

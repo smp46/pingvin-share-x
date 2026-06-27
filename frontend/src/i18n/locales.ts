@@ -23,6 +23,7 @@ import slovenian from "./translations/sl-SI";
 import serbianLatin from "./translations/sr-CS";
 import serbianCyrillic from "./translations/sr-SP";
 import swedish from "./translations/sv-SE";
+import norwegian from "./translations/no-NO";
 import thai from "./translations/th-TH";
 import turkish from "./translations/tr-TR";
 import ukrainian from "./translations/uk-UA";
@@ -120,6 +121,11 @@ export const LOCALES = {
     name: "Svenska",
     code: "sv-SE",
     messages: swedish,
+  },
+  NORWEGIAN: {
+    name: "Norsk",
+    code: "no-NO",
+    messages: norwegian,
   },
   ITALIAN: {
     name: "Italiano",
