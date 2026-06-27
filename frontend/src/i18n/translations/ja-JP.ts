@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "ユーザーの編集: {username}",
   "admin.users.edit.update.admin-privileges": "管理者権限",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "パスワードを変更",
   "admin.users.edit.update.change-password.field": "新規パスワード",
   "admin.users.edit.update.change-password.button": "新しいパスワードを保存",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "パスワード",
   "admin.users.modal.create.manual-password": "パスワードを手動で設定",
   "admin.users.modal.create.manual-password.description": "チェックされていない場合、ユーザーにパスワードを設定する為のリンクが記載されたメールを送信します。",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "管理者権限",
   "admin.users.modal.create.admin.description": "チェックされている場合、ユーザーは管理画面にアクセスできるようになります。",
   // END /admin/users
