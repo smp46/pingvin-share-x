@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Edit user: {username}",
   "admin.users.edit.update.admin-privileges": "Administratorski privilegiji",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Spremenite geslo",
   "admin.users.edit.update.change-password.field": "Novo geslo",
   "admin.users.edit.update.change-password.button": "Shranite novo geslo",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "Geslo",
   "admin.users.modal.create.manual-password": "Ročno nastavite geslo",
   "admin.users.modal.create.manual-password.description": "Če je omogočeno, bo uporabnik prejel e-poštno sporočilo s povezavo do nastavitve gesla.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Administratorski privilegiji",
   "admin.users.modal.create.admin.description": "Če je omogočeno, bo lahko porabnik dostopal do administratorskega vmesnika.",
   // END /admin/users
