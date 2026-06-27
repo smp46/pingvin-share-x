@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Edit user: {username}",
   "admin.users.edit.update.admin-privileges": "Δικαιώματα διαχειριστή",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Αλλαγή κωδικού πρόσβασής",
   "admin.users.edit.update.change-password.field": "Νέος κωδικός πρόσβασης",
   "admin.users.edit.update.change-password.button": "Αποθήκευση νέου κωδικού πρόσβασης",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "Κωδικός πρόσβασης",
   "admin.users.modal.create.manual-password": "Χειροκίνητος ορισμός κωδικού πρόσβασης",
   "admin.users.modal.create.manual-password.description": "Εάν δεν είναι επιλεγμένο, ο χρήστης θα λάβει ένα email με ένα σύνδεσμο για να ορίσει τον κωδικό πρόσβασής του.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Δικαιώματα διαχειριστή",
   "admin.users.modal.create.admin.description": "Αν ενεργοποιηθεί, ο χρήστης θα μπορεί να έχει πρόσβαση στον πίνακα διαχείρισης.",
   // END /admin/users
