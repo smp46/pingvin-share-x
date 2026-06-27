@@ -396,6 +396,8 @@ export default {
   "admin.config.cache.test-redis.modal.save.title": "Запазване на конфигурацията",
   "admin.config.cache.test-redis.modal.save.description": "За да продължите, първо трябва да запазите конфигурацията. Искате ли да я запазите и да тествате връзката с Redis?",
   "admin.config.cache.test-redis.modal.save.confirm": "Запазване и тестване",
+  "admin.config.email.send-html-emails": "Enable HTML email compatibility",
+  "admin.config.email.send-html-emails.description": "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
   "admin.config.email.enable-share-email-recipients": "Разрешаване на споделяне с имейл получатели",
   "admin.config.email.enable-share-email-recipients.description": "Дали да се разреши споделяне чрез имейл с получатели. Може да се активира само ако е настроен SMTP.",
   "admin.config.email.share-recipients-subject": "Тема на имейла за получатели",
