@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Edit user: {username}",
   "admin.users.edit.update.admin-privileges": "Admin Privilege",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "비밀번호 변경",
   "admin.users.edit.update.change-password.field": "새로운 비밀번호",
   "admin.users.edit.update.change-password.button": "새 비밀번호 저장",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "비밀번호",
   "admin.users.modal.create.manual-password": "수동 암호 설정",
   "admin.users.modal.create.manual-password.description": "선택하지 않으면 사용자는 암호를 설정할 수 있는 링크가 포함된 이메일을 받게 됩니다.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Admin Privilege",
   "admin.users.modal.create.admin.description": "이 옵션을 선택하면 사용자는 관리 패널에 액세스할 수 있습니다.",
   // END /admin/users
