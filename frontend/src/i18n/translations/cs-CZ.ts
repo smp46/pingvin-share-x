@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Upravit uživatele {username}",
   "admin.users.edit.update.admin-privileges": "Administrátorská práva",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Změnit heslo",
   "admin.users.edit.update.change-password.field": "Nové heslo",
   "admin.users.edit.update.change-password.button": "Uložit nové heslo",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "Heslo",
   "admin.users.modal.create.manual-password": "Ručně nastavit heslo",
   "admin.users.modal.create.manual-password.description": "Pokud není zaškrtnuto, uživatel obdrží e-mail s odkazem pro nastavení svého hesla.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Administrátorská práva",
   "admin.users.modal.create.admin.description": "Je-li zaškrtnuto, uživatel bude mít přístup k administračnímu panelu.",
   // END /admin/users
