@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Gebruiker bewerken: {username}",
   "admin.users.edit.update.admin-privileges": "Beheerdersrechten",
   "admin.users.edit.update.email-verified": "E-mailadres geverifieerd",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Wachtwoord wijzigen",
   "admin.users.edit.update.change-password.field": "Nieuw wachtwoord",
   "admin.users.edit.update.change-password.button": "Nieuw wachtwoord opslaan",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "Wachtwoord",
   "admin.users.modal.create.manual-password": "Wachtwoord handmatig instellen",
   "admin.users.modal.create.manual-password.description": "Indien niet aangevinkt, ontvangt de gebruiker een e-mail met een link om zijn wachtwoord in te stellen.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Beheerdersrechten",
   "admin.users.modal.create.admin.description": "Indien aangevinkt, heeft de gebruiker toegang tot de beheeromgeving.",
   // END /admin/users
