@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Edit user: {username}",
   "admin.users.edit.update.admin-privileges": "สิทธิ์ของผู้ดูแลระบบ",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "เปลี่ยนรหัสผ่าน",
   "admin.users.edit.update.change-password.field": "รหัสผ่านใหม่",
   "admin.users.edit.update.change-password.button": "บันทึกรหัสผ่านใหม่",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "รหัสผ่าน",
   "admin.users.modal.create.manual-password": "ตั้งรหัสผ่านด้วยตนเอง",
   "admin.users.modal.create.manual-password.description": "หากไม่ติ๊กเลือก ผู้ใช้จะได้รับอีเมลพร้อมลิงก์เพื่อตั้งรหัสผ่านด้วยตนเอง",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "สิทธิ์ของผู้ดูแลระบบ",
   "admin.users.modal.create.admin.description": "หากติ๊กเลือก ผู้ใช้จะสามารถเข้าถึงแผงควบคุมระบบได้",
   // END /admin/users
