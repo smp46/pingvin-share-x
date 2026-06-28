@@ -1090,6 +1090,104 @@
 							"response": []
 						},
 						{
+							"name": "Get File - Range",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 206\", () => {",
+											"    pm.response.to.have.status(206);",
+											"});",
+											"",
+											"pm.test(\"Partial content headers correct\", () => {",
+											"    pm.expect(pm.response.headers.get(\"Accept-Ranges\")).to.eql(\"bytes\");",
+											"    pm.expect(pm.response.headers.get(\"Content-Length\")).to.eql(\"1\");",
+											"    pm.expect(pm.response.headers.get(\"Content-Range\")).to.match(/^bytes 0-0\\/\\d+$/);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Range",
+										"value": "bytes=0-0"
+									}
+								],
+								"url": {
+									"raw": "{{API_URL}}/shares/:shareId/files/{{fileId}}",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"shares",
+										":shareId",
+										"files",
+										"{{fileId}}"
+									],
+									"variable": [
+										{
+											"key": "shareId",
+											"value": "test-share"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get File - Range not satisfiable",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 416\", () => {",
+											"    pm.response.to.have.status(416);",
+											"});",
+											"",
+											"pm.test(\"Content-Range reports total size\", () => {",
+											"    pm.expect(pm.response.headers.get(\"Content-Range\")).to.match(/^bytes \\*\\/\\d+$/);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Range",
+										"value": "bytes=999999-"
+									}
+								],
+								"url": {
+									"raw": "{{API_URL}}/shares/:shareId/files/{{fileId}}",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"shares",
+										":shareId",
+										"files",
+										"{{fileId}}"
+									],
+									"variable": [
+										{
+											"key": "shareId",
+											"value": "test-share"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Get Zip",
 							"event": [
 								{
