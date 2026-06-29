@@ -137,7 +137,7 @@ export default {
   "account.shares.info.title": "共享信息",
   "account.shares.button.edit": "添加/移除文件",
   "account.shares.table.id": "ID",
-  "account.shares.table.name": "共享后缀",
+  "account.shares.table.name": "共享名称",
   "account.shares.table.description": "描述",
   "account.shares.table.visitors": "已访问",
   "account.shares.table.expiresAt": "过期于",
