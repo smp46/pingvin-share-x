@@ -31,7 +31,7 @@ const showCreateReverseShareModal = (
   showSendEmailNotificationOption: boolean,
   maxExpiration: Timespan,
   defaultExpiration: Timespan,
-  forceReverseShareSimpleModeValue: string,
+  reverseShareSimpleOnly: boolean,
   appUrl: string,
   defaultAppUrl: string,
   getReverseShares: () => void,
@@ -46,7 +46,7 @@ const showCreateReverseShareModal = (
         getReverseShares={getReverseShares}
         maxExpiration={maxExpiration}
         defaultExpiration={defaultExpiration}
-        forceReverseShareSimpleModeValue={forceReverseShareSimpleModeValue}
+        reverseShareSimpleOnly={reverseShareSimpleOnly}
         appUrl={appUrl}
         defaultAppUrl={defaultAppUrl}
       />
@@ -59,7 +59,7 @@ const Body = ({
   showSendEmailNotificationOption,
   maxExpiration,
   defaultExpiration,
-  forceReverseShareSimpleModeValue,
+  reverseShareSimpleOnly,
   appUrl,
   defaultAppUrl,
 }: {
@@ -67,7 +67,7 @@ const Body = ({
   showSendEmailNotificationOption: boolean;
   maxExpiration: Timespan;
   defaultExpiration: Timespan;
-  forceReverseShareSimpleModeValue: string | undefined;
+  reverseShareSimpleOnly: boolean;
   appUrl: string;
   defaultAppUrl: string;
 }) => {
@@ -85,7 +85,7 @@ const Body = ({
       sendEmailNotification: false,
       expiration_num: defaultTimespan.value,
       expiration_unit: `-${defaultTimespan.unit}` as string,
-      simplified: forceReverseShareSimpleModeValue !== "undefined" ? forceReverseShareSimpleModeValue === "simple" : !!(getCookie("reverse-share.simplified") ?? false),
+      simplified: !reverseShareSimpleOnly ? false : !!(getCookie("reverse-share.simplified") ?? false),
       publicAccess: !!(getCookie("reverse-share.public-access") ?? true),
     },
     validate: yupResolver(
@@ -257,7 +257,7 @@ const Body = ({
               })}
             />
           )}
-          {forceReverseShareSimpleModeValue === "undefined" &&
+          {!reverseShareSimpleOnly &&
             <Switch
               mt="xs"
               labelPosition="left"

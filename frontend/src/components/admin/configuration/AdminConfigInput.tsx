@@ -51,8 +51,6 @@ const AdminConfigInput = ({
     configVariable.key === "email.enableShareEmailRecipients";
   const isEmailVerificationConfig =
     configVariable.key === "email.enableEmailVerification";
-  const isShareForceReverseShareSimpleModeConfig =
-    configVariable.key === "share.forceReverseShareSimpleModeValue";
   let isSmtpEnabled = false;
 
   if (isEmailShareConfig || isEmailVerificationConfig) {
@@ -247,18 +245,6 @@ const AdminConfigInput = ({
             ]}
             value={form.values.stringValue}
             onChange={(value) => onValueChange(configVariable, value)}
-          />
-        ) : isShareForceReverseShareSimpleModeConfig ? (
-          <Select
-            style={{
-              width: "100%",
-            }}
-            disabled={!configVariable.allowEdit}
-            data={["undefined", "simple", "advanced"]}
-            value={form.values.stringValue}
-            placeholder={configVariable.defaultValue}
-            onChange={(value) => onValueChange(configVariable, value ?? "")}
-            allowDeselect={false}
           />
         ) : (
           <TextInput

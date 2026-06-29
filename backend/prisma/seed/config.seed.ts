@@ -112,9 +112,9 @@ export const configVariables = {
       defaultValue: "false",
       secret: false,
     },
-    forceReverseShareSimpleModeValue: {
-      type: "string",
-      defaultValue: "undefined",
+    reverseShareSimpleOnly: {
+      type: "boolean",
+      defaultValue: "false",
       secret: false,
     },
     allowAdminAccessAllShares: {
