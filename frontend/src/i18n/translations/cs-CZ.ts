@@ -255,7 +255,7 @@ export default {
   "upload.reverse-share.error.invalid.description": "Toto opačné sdílení vypršelo nebo je neplatné.",
   // Dropzone.tsx
   "upload.dropzone.title": "Nahrát soubory",
-  "upload.dropzone.description": "Drag'n'drop files here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
+  "upload.dropzone.description": "Přetáhněte sem soubory pro zahájení sdílení nebo použijte 'Ctrl+V' pro nahrání textového obsahu ze schránky. Přijímáme pouze soubory do celkové velikosti {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Vaše soubory přesahují maximální velikost {maxSize}.",
   // FileList.tsx
   "upload.filelist.name": "Název",
