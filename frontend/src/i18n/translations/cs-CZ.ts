@@ -56,8 +56,8 @@ export default {
   // /auth/verify
   "verify.title": "Verify Account",
   "verify.success": "Your account has been successfully verified! You can now sign in.",
-  "verify.error": "The verification link is invalid or has expired.",
-  "verify.button.signin": "Go to Sign In",
+  "verify.error": "Ověřovací odkaz je neplatný nebo vypršela platnost.",
+  "verify.button.signin": "Přejít na přihlášení",
   "verify.info.title": "Account Verification",
   "verify.info.description": "Email verification is enabled. We've sent a verification link to your email address. Please click the link to activate your account.",
   "verify.info.note": "If you don't receive the email within a few minutes, please check your spam folder.",
