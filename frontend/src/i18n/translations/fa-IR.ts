@@ -451,6 +451,8 @@ export default {
   "admin.config.share.auto-open-share-modal": "باز شدن خودکار مودال ایجاد اشتراک",
   "admin.config.share.auto-open-share-modal.description": "مودال ایجاد اشتراک وقتی کاربر فایلی انتخاب می‌کند به‌طور خودکار ظاهر می‌شود، بدون نیاز به کلیک دستی روی دکمه.",
   "admin.config.share.allow-admin-access-all-shares": "اجازه دسترسی مدیر به همه اشتراک‌ها",
+  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
+  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "اجازه می‌دهد مدیران به همه اشتراک‌ها دسترسی داشته باشند، حتی اگر با رمز عبور محافظت شده، منقضی یا حذف شده باشند.",
   "admin.config.share.file-retention-period": "دوره نگهداری فایل",
   "admin.config.share.file-retention-period.description": "فایل‌ها بعد از انقضا یا حذف اشتراک تا چه مدت نگه داشته شوند. فقط در صورتی مفید است که 'اجازه دسترسی مدیر به همه اشتراک‌ها' نیز فعال باشد. برای نگهداری همیشگی مقدار -1 قرار دهید.",
