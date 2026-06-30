@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Edit user: {username}",
   "admin.users.edit.update.admin-privileges": "صلاحيات المدير",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "تغيير كلمة السر",
   "admin.users.edit.update.change-password.field": "كلمة السر الجديدة",
   "admin.users.edit.update.change-password.button": "حفظ كلمة السر الجديدة",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "كلمة السر",
   "admin.users.modal.create.manual-password": "تعيين كلمة السر يدوياً",
   "admin.users.modal.create.manual-password.description": "بدون هذا الخيار، سيتلقى المستخدم رسالة بريد إلكتروني فيها رابط لتعيين كلمة السر الخاصة به.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "صلاحيات المدير",
   "admin.users.modal.create.admin.description": "مع هذا الخيار، سيتمكن المستخدم من الدخول إلى لوحة الإدارة.",
   // END /admin/users

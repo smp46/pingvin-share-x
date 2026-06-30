@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Aggiorna utente {username}",
   "admin.users.edit.update.admin-privileges": "Privilegi di amministrazione",
   "admin.users.edit.update.email-verified": "Email verificata",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Cambia la password",
   "admin.users.edit.update.change-password.field": "Nuova password",
   "admin.users.edit.update.change-password.button": "Salva la nuova password",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "Password",
   "admin.users.modal.create.manual-password": "Imposta la password manualmente",
   "admin.users.modal.create.manual-password.description": "Se non selezionato, l'utente riceverà un'email con un link per impostare la propria password.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Privilegi di amministrazione",
   "admin.users.modal.create.admin.description": "Se selezionato, l'utente sarà in grado di accedere al pannello amministratore.",
   // END /admin/users

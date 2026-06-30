@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "{username} felhasználó szerkesztése",
   "admin.users.edit.update.admin-privileges": "Adminisztrátori jogosultságok",
   "admin.users.edit.update.email-verified": "Ellenőrzött e-mail cím",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Jelszó módosítása",
   "admin.users.edit.update.change-password.field": "Új jelszó",
   "admin.users.edit.update.change-password.button": "Új jelszó mentése",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "Jelszó",
   "admin.users.modal.create.manual-password": "Jelszó kézi megadása",
   "admin.users.modal.create.manual-password.description": "Ha nincs bejelölve, akkor a felhasználó egy emailt és benne egy jelszó létrehozási hivatkozást kap.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Adminisztrátori jogosultságok",
   "admin.users.modal.create.admin.description": "Bejelölt állapotában a felhasználó hozzáfér az admin beállító oldalhoz.",
   // END /admin/users

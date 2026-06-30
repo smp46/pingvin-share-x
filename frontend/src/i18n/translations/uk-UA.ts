@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Редагувати користувача: {username}",
   "admin.users.edit.update.admin-privileges": "Права адміністратора",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Змінити пароль",
   "admin.users.edit.update.change-password.field": "Новий пароль",
   "admin.users.edit.update.change-password.button": "Зберегти новий пароль",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "Пароль",
   "admin.users.modal.create.manual-password": "Встановити пароль вручну",
   "admin.users.modal.create.manual-password.description": "Якщо прапорець не встановлено, користувач отримає лист із посиланням для встановлення пароля.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Права адміністратора",
   "admin.users.modal.create.admin.description": "Якщо зазначено, користувач матиме доступ до панелі адміністратора.",
   // END /admin/users

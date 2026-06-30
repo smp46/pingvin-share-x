@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "編輯使用者： {username}",
   "admin.users.edit.update.admin-privileges": "管理員",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "更改密碼",
   "admin.users.edit.update.change-password.field": "新密碼",
   "admin.users.edit.update.change-password.button": "保存新密碼",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "密碼",
   "admin.users.modal.create.manual-password": "手動設置密碼",
   "admin.users.modal.create.manual-password.description": "如果不勾選，使用者將會收到一封Email來設置他們的密碼",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "管理員",
   "admin.users.modal.create.admin.description": "如果勾選，使用者將能查看管理員面板",
   // END /admin/users

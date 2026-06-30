@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Modifier l'utilisateur : {username}",
   "admin.users.edit.update.admin-privileges": "Privilèges d’admin",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Changer le mot de passe",
   "admin.users.edit.update.change-password.field": "Nouveau mot de passe",
   "admin.users.edit.update.change-password.button": "Enregistrer le nouveau mot de passe",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "Mot de passe",
   "admin.users.modal.create.manual-password": "Définir le mot de passe manuellement",
   "admin.users.modal.create.manual-password.description": "S’il n'est pas coché, l’utilisateur recevra un email avec un lien pour définir son mot de passe.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Privilèges d’admin",
   "admin.users.modal.create.admin.description": "Si coché, l’utilisateur pourra accéder au panneau d'administration.",
   // END /admin/users
