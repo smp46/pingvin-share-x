@@ -32,7 +32,14 @@ import chineseSimplified from "./translations/zh-CN";
 import chineseTraditional from "./translations/zh-TW";
 import persian from "./translations/fa-IR";
 
-export const LOCALES = {
+export interface Locale {
+  name: string;
+  code: string;
+  messages: Record<string, string>;
+  direction?: string;
+}
+
+export const LOCALES: Record<string, Locale> = {
   ENGLISH: {
     name: "English",
     code: "en-US",
