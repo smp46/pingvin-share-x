@@ -451,6 +451,8 @@ export default {
   "admin.config.share.auto-open-share-modal": "Obrir automàticament el diàleg de creació",
   "admin.config.share.auto-open-share-modal.description": "El diàleg de creació de compartició apareix automàticament quan un usuari selecciona fitxers, eliminant la necessitat de clicar el botó manualment.",
   "admin.config.share.allow-admin-access-all-shares": "Permetre l'accés de l'administrador a totes les comparticions",
+  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
+  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Permetre aos administradors accedir a totes les comparticions, fins i tot si estan protegides amb contrasenya, caducades o suprimides.",
   "admin.config.share.file-retention-period": "Període de retenció de fitxers",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
