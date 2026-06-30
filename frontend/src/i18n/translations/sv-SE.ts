@@ -451,6 +451,8 @@ export default {
   "admin.config.share.auto-open-share-modal": "Öppna automatiskt skapa delningsmodal",
   "admin.config.share.auto-open-share-modal.description": "Modalen för att skapa delning visas automatiskt när en användare väljer filer, vilket tar bort behovet av att manuellt klicka på knappen.",
   "admin.config.share.allow-admin-access-all-shares": "Tillåt administratörsåtkomst till alla delningar",
+  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
+  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Tillåt administratörer att komma åt alla delningar, även om de är lösenordsskyddade, har löpt ut eller är borttagna.",
   "admin.config.share.file-retention-period": "Fillagringsperiod",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
