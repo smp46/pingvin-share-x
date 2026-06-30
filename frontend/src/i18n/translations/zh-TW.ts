@@ -451,6 +451,8 @@ export default {
   "admin.config.share.auto-open-share-modal": "自動開啟分享設定",
   "admin.config.share.auto-open-share-modal.description": "分享設定會在使用者選擇檔案後自動開啟而無須手動點擊。",
   "admin.config.share.allow-admin-access-all-shares": "Allow admin access to all shares",
+  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
+  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
