@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Redigera användare: {username}",
   "admin.users.edit.update.admin-privileges": "Administratörsbehörigheter",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Ändra lösenord",
   "admin.users.edit.update.change-password.field": "Nytt lösenord",
   "admin.users.edit.update.change-password.button": "Spara nytt lösenord",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "Lösenord",
   "admin.users.modal.create.manual-password": "Sätt lösenord manuellt",
   "admin.users.modal.create.manual-password.description": "Om den inte är markerad kommer användaren att få ett e-postmeddelande med en länk för att ange lösenordet.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Administratörsbehörigheter",
   "admin.users.modal.create.admin.description": "Om detta markeras kommer användaren att kunna komma åt administratörspanelen.",
   // END /admin/users

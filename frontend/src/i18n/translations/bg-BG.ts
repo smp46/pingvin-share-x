@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Редактиране на потребител: {username}",
   "admin.users.edit.update.admin-privileges": "Администраторски права",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Промяна на парола",
   "admin.users.edit.update.change-password.field": "Нова парола",
   "admin.users.edit.update.change-password.button": "Запазване на новата парола",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "Парола",
   "admin.users.modal.create.manual-password": "Ръчно задаване на парола",
   "admin.users.modal.create.manual-password.description": "Ако не е избрано, потребителят ще получи имейл с връзка за задаване на парола.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Администраторски права",
   "admin.users.modal.create.admin.description": "Ако е избрано, потребителят ще има достъп до административния панел.",
   // END /admin/users

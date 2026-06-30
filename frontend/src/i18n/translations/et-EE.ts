@@ -213,6 +213,8 @@ export default {
   "admin.users.edit.update.title": "Muuda kasutajat: {username}",
   "admin.users.edit.update.admin-privileges": "Administraatori õigused",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Muuda parooli",
   "admin.users.edit.update.change-password.field": "Uus parool",
   "admin.users.edit.update.change-password.button": "Salvesta uus parool",
@@ -226,6 +228,8 @@ export default {
   "admin.users.modal.create.password": "Parool",
   "admin.users.modal.create.manual-password": "Sea parool käsitsi",
   "admin.users.modal.create.manual-password.description": "Kui see ei ole märgitud, saab kasutaja e-kirja lingiga mille kaudu oma parooli seada.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Administraatori õigused",
   "admin.users.modal.create.admin.description": "Kui see on märgitud, saab kasutaja pääseda administraatori paneelile.",
   // END /admin/users
