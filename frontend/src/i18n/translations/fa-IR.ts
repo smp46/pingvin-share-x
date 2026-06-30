@@ -1,646 +1,942 @@
 export default {
   // Navbar
-  "navbar.upload": "Upload",
-  "navbar.signin": "Sign in",
-  "navbar.home": "Home",
-  "navbar.signup": "Sign up",
-  "navbar.links.shares": "My shares",
-  "navbar.links.reverse": "Reverse shares",
-  "navbar.avatar.account": "My account",
-  "navbar.avatar.admin": "Administration",
-  "navbar.avatar.signout": "Sign out",
+  "navbar.upload": "بارگذاری",
+  "navbar.signin": "ورود",
+  "navbar.home": "خانه",
+  "navbar.signup": "ثبت نام",
+
+  "navbar.links.shares": "اشتراک‌های من",
+  "navbar.links.reverse": "اشتراک‌های معکوس",
+
+  "navbar.avatar.account": "حساب من",
+  "navbar.avatar.admin": "مدیریت",
+  "navbar.avatar.signout": "خروج",
   // END navbar
 
   // /
-  "home.title": "A <h>self-hosted</h> file sharing platform.",
-  "home.description": "Do you really want to give your personal files in the hand of third parties like WeTransfer?",
-  "home.bullet.a.name": "Self-Hosted",
-  "home.bullet.a.description": "Host Pingvin Share on your own machine.",
-  "home.bullet.b.name": "Privacy",
-  "home.bullet.b.description": "Your files are yours and will never be accessed by third parties.",
-  "home.bullet.c.name": "No annoying file size limit",
-  "home.bullet.c.description": "Upload files as big as you want. Only your hard drive will be your limit.",
-  "home.button.start": "Get started",
-  "home.button.source": "Source code",
+  "home.title": "یک پلتفرم اشتراک‌گذاری فایل <h>خودمیزبان</h>.",
+
+  "home.description":
+    "آیا واقعاً می‌خواهید فایل‌های شخصی‌تان را در دست اشخاص ثالثی مثل WeTransfer قرار دهید؟",
+  "home.bullet.a.name": "خودمیزبان",
+  "home.bullet.a.description": "Pingvin Share را روی ماشین خود میزبانی کنید.",
+  "home.bullet.b.name": "حریم خصوصی",
+  "home.bullet.b.description":
+    "فایل‌های شما مال شماست و هرگز توسط شخص ثالثی دسترسی نخواهند داشت.",
+  "home.bullet.c.name": "بدون محدودیت آزاردهنده حجم فایل",
+  "home.bullet.c.description":
+    "فایل‌ها را به هر اندازه‌ای که می‌خواهید بارگذاری کنید. تنها محدودیت شما، فضای دیسک‌تان است.",
+
+  "home.button.start": "شروع کنید",
+  "home.button.source": "کد منبع",
   // END /
 
   // /auth/signin
-  "signin.title": "Welcome back",
-  "signin.description": "You don't have an account yet?",
-  "signin.button.signup": "Sign up",
-  "signin.input.email-or-username": "Email or username",
-  "signin.input.email-or-username.placeholder": "Your email or username",
-  "signin.input.password": "Password",
-  "signin.input.password.placeholder": "Your password",
-  "signin.button.submit": "Sign in",
-  "signIn.notify.totp-required.title": "Two-factor authentication required",
-  "signIn.notify.totp-required.description": "Please enter your two-factor authentication code",
-  "signIn.oauth.or": "OR",
-  "signIn.oauth.signInWith": "Sign in with",
+  "signin.title": "خوش آمدید",
+  "signin.description": "هنوز حساب کاربری ندارید؟",
+  "signin.button.signup": "ثبت نام",
+  "signin.input.email-or-username": "ایمیل یا نام کاربری",
+  "signin.input.email-or-username.placeholder": "ایمیل یا نام کاربری شما",
+  "signin.input.password": "رمز عبور",
+  "signin.input.password.placeholder": "رمز عبور شما",
+  "signin.button.submit": "ورود",
+  "signIn.notify.totp-required.title": "احراز هویت دومرحله‌ای لازم است",
+  "signIn.notify.totp-required.description":
+    "لطفاً کد احراز هویت دومرحله‌ای خود را وارد کنید",
+  "signIn.oauth.or": "یا",
+  "signIn.oauth.signInWith": "ورود با",
   "signIn.oauth.github": "GitHub",
   "signIn.oauth.google": "Google",
   "signIn.oauth.microsoft": "Microsoft",
   "signIn.oauth.discord": "Discord",
   "signIn.oauth.oidc": "OpenID",
+
   // END /auth/signin
 
   // /auth/signup
-  "signup.title": "Create an account",
-  "signup.description": "Already have an account?",
-  "signup.button.signin": "Sign in",
-  "signup.input.username": "Username",
-  "signup.input.username.placeholder": "Your username",
-  "signup.input.email": "Email",
-  "signup.input.email.placeholder": "Your email",
-  "signup.button.submit": "Let's get started",
+  "signup.title": "ساخت حساب کاربری",
+  "signup.description": "قبلاً حساب دارید؟",
+  "signup.button.signin": "ورود",
+  "signup.input.username": "نام کاربری",
+  "signup.input.username.placeholder": "نام کاربری شما",
+  "signup.input.email": "ایمیل",
+  "signup.input.email.placeholder": "ایمیل شما",
+  "signup.button.submit": "بزن بریم",
+
   // /auth/verify
-  "verify.title": "Verify Account",
-  "verify.success": "Your account has been successfully verified! You can now sign in.",
-  "verify.error": "The verification link is invalid or has expired.",
-  "verify.button.signin": "Go to Sign In",
-  "verify.info.title": "Account Verification",
-  "verify.info.description": "Email verification is enabled. We've sent a verification link to your email address. Please click the link to activate your account.",
-  "verify.info.note": "If you don't receive the email within a few minutes, please check your spam folder.",
-  "verify.info.resend.button": "Resend verification email",
-  "verify.info.resend.success": "Verification email resent successfully.",
-  "verify.info.resend.error": "Failed to resend verification email.",
+  "verify.title": "تأیید حساب",
+  "verify.success":
+    "حساب شما با موفقیت تأیید شد! اکنون می‌توانید وارد شوید.",
+  "verify.error": "لینک تأیید نامعتبر یا منقضی شده است.",
+  "verify.button.signin": "رفتن به صفحه ورود",
+  "verify.info.title": "تأیید حساب",
+  "verify.info.description":
+    "احراز هویت ایمیل فعال است. یک لینک تأیید به آدرس ایمیل شما ارسال شده است. لطفاً روی لینک کلیک کنید تا حساب فعال شود.",
+  "verify.info.note":
+    "اگر ایمیل را در چند دقیقه دریافت نکردید، لطفاً پوشه spam را بررسی کنید.",
+  "verify.info.resend.button": "ارسال مجدد ایمیل تأیید",
+  "verify.info.resend.success": "ایمیل تأیید با موفقیت ارسال شد.",
+  "verify.info.resend.error": "ارسال ایمیل تأیید با شکست مواجه شد.",
+
   // END /auth/signup
 
   // /auth/totp
-  "totp.title": "TOTP Authentication",
-  "totp.button.signIn": "Sign in",
+  "totp.title": "احراز هویت TOTP",
+  "totp.button.signIn": "ورود",
+
   // END /auth/totp
 
   // /auth/reset-password
-  "resetPassword.title": "Forgot your password?",
-  "resetPassword.description": "Enter your email to reset your password.",
-  "resetPassword.notify.success": "A message with a link to reset your password has been sent if the provided email exists.",
-  "resetPassword.button.back": "Back to sign in page",
-  "resetPassword.text.resetPassword": "Reset password",
-  "resetPassword.text.enterNewPassword": "Enter your new password",
-  "resetPassword.input.password": "New password",
-  "resetPassword.notify.passwordReset": "Your password has been successfully reset.",
+  "resetPassword.title": "رمز عبور خود را فراموش کرده‌اید؟",
+  "resetPassword.description": "ایمیل خود را برای بازنشانی رمز وارد کنید.",
+  "resetPassword.notify.success":
+    "در صورتی که ایمیل وارد شده وجود داشته باشد، پیامی با لینک بازنشانی رمز ارسال شد.",
+  "resetPassword.button.back": "بازگشت به صفحه ورود",
+  "resetPassword.text.resetPassword": "بازنشانی رمز عبور",
+  "resetPassword.text.enterNewPassword": "رمز جدید را وارد کنید",
+  "resetPassword.input.password": "رمزعبور جدید",
+  "resetPassword.notify.passwordReset":
+    "رمز عبور شما با موفقیت بازنشانی شد.",
+
   // /account
-  "account.title": "My account",
-  "account.card.info.title": "Account info",
-  "account.card.info.username": "Username",
-  "account.card.info.email": "Email",
-  "account.notify.info.success": "Account updated successfully",
-  "account.card.password.title": "Password",
-  "account.card.password.old": "Old password",
-  "account.card.password.new": "New password",
-  "account.card.password.noPasswordSet": "You do not have a password set. To sign in using your email and password, you need to create a password.",
-  "account.notify.password.success": "Password changed successfully",
-  "account.card.oauth.title": "Social login",
+  "account.title": "حساب من",
+
+  "account.card.info.title": "اطلاعات حساب",
+  "account.card.info.username": "نام کاربری",
+  "account.card.info.email": "ایمیل",
+  "account.notify.info.success": "حساب با موفقیت به‌روزرسانی شد",
+
+  "account.card.password.title": "رمز عبور",
+  "account.card.password.old": "رمز عبور قدیمی",
+  "account.card.password.new": "رمز عبور جدید",
+  "account.card.password.noPasswordSet":
+    "شما رمز عبوری تعیین نکرده‌اید. برای ورود با ایمیل و رمز عبور باید یک رمز جدید بسازید.",
+  "account.notify.password.success": "رمز عبور با موفقیت تغییر کرد",
+
+  "account.card.oauth.title": "ورود اجتماعی",
   "account.card.oauth.github": "GitHub",
   "account.card.oauth.google": "Google",
   "account.card.oauth.microsoft": "Microsoft",
   "account.card.oauth.discord": "Discord",
   "account.card.oauth.oidc": "OpenID",
-  "account.card.oauth.link": "Link",
-  "account.card.oauth.unlink": "Unlink",
-  "account.card.oauth.unlinked": "Unlinked",
-  "account.modal.unlink.title": "Unlink account",
-  "account.modal.unlink.description": "Unlinking your social accounts may cause you to lose your account if you don't remember your login credentials",
-  "account.notify.oauth.unlinked.success": "Unlinked successfully",
-  "account.card.security.title": "Security",
-  "account.card.security.totp.enable.description": "Enter your current password to start enabling TOTP",
-  "account.card.security.totp.disable.description": "Enter your current password to disable TOTP",
-  "account.card.security.totp.button.start": "Start",
-  "account.modal.totp.title": "Enable TOTP",
-  "account.modal.totp.step1": "Step 1: Add your authenticator",
-  "account.modal.totp.step2": "Step 2: Validate your code",
-  "account.modal.totp.enterManually": "Enter manually",
-  "account.modal.totp.code": "Code",
-  "common.button.clickToCopy": "Click to copy",
-  "common.button.showQRCode": "Show QR code",
-  "account.modal.totp.verify": "Verify",
-  "account.notify.totp.disable": "TOTP disabled successfully",
-  "account.notify.totp.enable": "TOTP enabled successfully",
-  "account.card.language.title": "Language",
-  "account.card.language.description": "The project is translated by the community. Some languages might be incomplete.",
-  "account.card.color.title": "Color scheme",
+  "account.card.oauth.link": "پیوند",
+  "account.card.oauth.unlink": "قطع پیوند",
+  "account.card.oauth.unlinked": "قطع شد",
+  "account.modal.unlink.title": "قطع پیوند حساب",
+  "account.modal.unlink.description":
+    "قطع پیوند حساب‌های اجتماعی ممکن است باعث شود حساب شما در صورت فراموشی اطلاعات ورود، از دسترس خارج شود.",
+  "account.notify.oauth.unlinked.success": "قطع پیوند با موفقیت انجام شد",
+
+  "account.card.security.title": "امنیت",
+  "account.card.security.totp.enable.description":
+    "رمز عبور فعلی خود را وارد کنید تا فعال‌سازی TOTP را شروع کنید",
+  "account.card.security.totp.disable.description":
+    "رمز عبور فعلی خود را وارد کنید تا غیرفعال‌سازی TOTP را شروع کنید",
+  "account.card.security.totp.button.start": "شروع",
+  "account.modal.totp.title": "فعال‌سازی TOTP",
+  "account.modal.totp.step1": "مرحله ۱: احراز هویت خود را اضافه کنید",
+  "account.modal.totp.step2": "مرحله ۲: کد را تأیید کنید",
+  "account.modal.totp.enterManually": "به‌صورت دستی وارد کنید",
+  "account.modal.totp.code": "کد",
+  "common.button.clickToCopy": "برای کپی کلیک کنید",
+  "common.button.showQRCode": "نمایش کد QR",
+  "account.modal.totp.verify": "تأیید",
+  "account.notify.totp.disable": "TOTP با موفقیت غیرفعال شد",
+  "account.notify.totp.enable": "TOTP با موفقیت فعال شد",
+
+  "account.card.language.title": "زبان",
+  "account.card.language.description":
+    "این پروژه توسط جامعه ترجمه شده است. ممکن است برخی زبان‌ها ناقص باشند.",
+  "account.card.color.title": "رنگ قالب",
+
   // ThemeSwitcher.tsx
-  "account.theme.dark": "Dark",
-  "account.theme.light": "Light",
-  "account.theme.system": "System",
-  "account.button.delete": "Delete Account",
-  "account.modal.delete.title": "Delete Account",
-  "account.modal.delete.description": "Do you really want to delete your account including all your active shares?",
+  "account.theme.dark": "تاریک",
+  "account.theme.light": "روشن",
+  "account.theme.system": "سیستم",
+
+  "account.button.delete": "حذف حساب",
+  "account.modal.delete.title": "حذف حساب",
+  "account.modal.delete.description":
+    "آیا واقعاً می‌خواهید حساب خود را به همراه همه اشتراک‌های فعالش حذف کنید؟",
   // END /account
 
   // /account/shares
-  "account.shares.title": "My shares",
-  "account.shares.title.empty": "It's empty here 👀",
-  "account.shares.description.empty": "You don't have any shares.",
-  "account.shares.button.create": "Create one",
-  "account.shares.info.title": "Share informations",
-  "account.shares.button.edit": "Add/Remove Files",
-  "account.shares.table.id": "ID",
-  "account.shares.table.name": "Name",
-  "account.shares.table.description": "Description",
-  "account.shares.table.visitors": "Visitors",
-  "account.shares.table.expiresAt": "Expires on",
-  "account.shares.table.createdAt": "Created on",
-  "account.shares.table.size": "Size",
-  "account.shares.table.password-protected": "Password protected",
-  "account.shares.table.visitor-count": "{count} of {max}",
-  "account.shares.table.expiry-never": "Never",
-  "account.shares.modal.share-informations": "Share informations",
-  "account.shares.modal.share-link": "Share link",
-  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
-  "account.shares.modal.edit.password.remove": "Remove password protection",
-  "account.shares.modal.delete.title": "Delete share: {share}",
-  "account.shares.modal.delete.description": "Do you really want to delete this share?",
+  "account.shares.title": "اشتراک‌های من",
+  "account.shares.title.empty": "اینجا خالی است 👀",
+  "account.shares.description.empty": "شما هیچ اشتراکی ندارید.",
+  "account.shares.button.create": "یکی بسازید",
+
+  "account.shares.info.title": "اطلاعات اشتراک",
+  "account.shares.button.edit": "افزودن/حذف فایل",
+  "account.shares.table.id": "شناسه",
+  "account.shares.table.name": "نام",
+  "account.shares.table.description": "توضیحات",
+  "account.shares.table.visitors": "بازدیدکنندگان",
+  "account.shares.table.expiresAt": "منقضی می‌شود در",
+  "account.shares.table.createdAt": "ایجاد شده در",
+  "account.shares.table.size": "حجم",
+  "account.shares.table.password-protected": "محافظت‌شده با رمز عبور",
+  "account.shares.table.visitor-count": "{count} از {max}",
+  "account.shares.table.expiry-never": "هرگز",
+
+  "account.shares.modal.share-informations": "اطلاعات اشتراک",
+  "account.shares.modal.share-link": "لینک اشتراک",
+  "account.shares.modal.edit.password.keep":
+    "برای نگه داشتن رمز فعلی خالی بگذارید",
+  "account.shares.modal.edit.password.remove":
+    "حذف محافظت رمز عبور",
+
+  "account.shares.modal.delete.title": "حذف اشتراک: {share}",
+  "account.shares.modal.delete.description":
+    "آیا واقعاً می‌خواهید این اشتراک را حذف کنید؟",
+
   // END /account/shares
 
   // /account/reverseShares
-  "account.reverseShares.title": "Reverse shares",
-  "account.reverseShares.description": "A reverse share allows you to generate a unique URL that allows external users to create a share.",
-  "account.reverseShares.title.empty": "It's empty here 👀",
-  "account.reverseShares.description.empty": "You don't have any reverse shares.",
+  "account.reverseShares.title": "اشتراک‌های معکوس",
+  "account.reverseShares.description":
+    "یک اشتراک معکوس به شما اجازه می‌دهد یک URL منحصر به فرد ایجاد کنید که به کاربران خارجی اجازه می‌دهد اشتراک ایجاد کنند.",
+
+  "account.reverseShares.title.empty": "اینجا خالی است 👀",
+  "account.reverseShares.description.empty":
+    "شما هیچ اشتراک معکوسی ندارید.",
+
   // showCreateReverseShareModal.tsx
-  "account.reverseShares.modal.title": "Create reverse share",
-  "account.reverseShares.modal.expiration.label": "Expiration",
-  "account.reverseShares.modal.expiration.minute-singular": "Minute",
-  "account.reverseShares.modal.expiration.minute-plural": "Minutes",
-  "account.reverseShares.modal.expiration.hour-singular": "Hour",
-  "account.reverseShares.modal.expiration.hour-plural": "Hours",
-  "account.reverseShares.modal.expiration.day-singular": "Day",
-  "account.reverseShares.modal.expiration.day-plural": "Days",
-  "account.reverseShares.modal.expiration.week-singular": "Week",
-  "account.reverseShares.modal.expiration.week-plural": "Weeks",
-  "account.reverseShares.modal.expiration.month-singular": "Month",
-  "account.reverseShares.modal.expiration.month-plural": "Months",
-  "account.reverseShares.modal.expiration.year-singular": "Year",
-  "account.reverseShares.modal.expiration.year-plural": "Years",
-  "account.reverseShares.modal.max-size.label": "Max share size",
-  "account.reverseShares.modal.send-email": "Send email notifications",
-  "account.reverseShares.modal.send-email.description": "Sends you an email notification when a share is created with this reverse share link.",
-  "account.reverseShares.modal.simplified": "Simple mode",
-  "account.reverseShares.modal.simplified.description": "Make it easy for the person uploading the file to share it with you. They will only be able to customize the name and description of the share.",
-  "account.reverseShares.modal.public-access": "Public access",
-  "account.reverseShares.modal.public-access.description": "Make the shares created with this reverse share public. If disabled, only you and the share creator will have access to view it.",
-  "account.reverseShares.modal.max-use.label": "Max uses",
-  "account.reverseShares.modal.max-use.description": "The maximum amount of times this URL can be used to create a share.",
-  "account.reverseShare.never-expires": "This reverse share will never expire.",
-  "account.reverseShare.expires-on": "This reverse share will expire on {expiration}.",
-  "account.reverseShares.table.no-shares": "No shares created yet",
-  "account.reverseShares.table.count.singular": "share",
-  "account.reverseShares.table.count.plural": "shares",
-  "account.reverseShares.table.shares": "Shares",
-  "account.reverseShares.table.remaining": "Remaining uses",
-  "account.reverseShares.table.max-size": "Max share size",
-  "account.reverseShares.table.expires": "Expires at",
-  "account.reverseShares.modal.reverse-share-link": "Reverse share link",
-  "account.reverseShares.modal.delete.title": "Delete reverse share",
-  "account.reverseShares.modal.delete.description": "Do you really want to delete this reverse share? If you do, the associated shares will be deleted as well.",
+  "account.reverseShares.modal.title": "ایجاد اشتراک معکوس",
+  "account.reverseShares.modal.expiration.label": "انقضا",
+  "account.reverseShares.modal.expiration.minute-singular": "دقیقه",
+  "account.reverseShares.modal.expiration.minute-plural": "دقایق",
+  "account.reverseShares.modal.expiration.hour-singular": "ساعت",
+  "account.reverseShares.modal.expiration.hour-plural": "ساعات",
+  "account.reverseShares.modal.expiration.day-singular": "روز",
+  "account.reverseShares.modal.expiration.day-plural": "روزها",
+  "account.reverseShares.modal.expiration.week-singular": "هفته",
+  "account.reverseShares.modal.expiration.week-plural": "هفته‌ها",
+  "account.reverseShares.modal.expiration.month-singular": "ماه",
+  "account.reverseShares.modal.expiration.month-plural": "ماه‌ها",
+  "account.reverseShares.modal.expiration.year-singular": "سال",
+  "account.reverseShares.modal.expiration.year-plural": "سال‌ها",
+
+  "account.reverseShares.modal.max-size.label": "حداکثر اندازه اشتراک",
+
+  "account.reverseShares.modal.send-email": "ارسال اعلان ایمیل",
+  "account.reverseShares.modal.send-email.description":
+    "هنگام ایجاد یک اشتراک با این لینک اشتراک معکوس برای شما ایمیل اطلاع‌رسانی می‌شود.",
+
+  "account.reverseShares.modal.simplified": "حالت ساده",
+  "account.reverseShares.modal.simplified.description":
+    "برای فرد بارگذاری کننده آسان‌تر کنید. آنها فقط می‌توانند نام و توضیح اشتراک را سفارشی کنند.",
+
+  "account.reverseShares.modal.public-access": "دسترسی عمومی",
+  "account.reverseShares.modal.public-access.description":
+    "اشتراک‌هایی که با این لینک معکوس ساخته می‌شوند را عمومی کنید. اگر غیرفعال باشد، تنها شما و سازنده اشتراک به مشاهده آن دسترسی خواهید داشت.",
+
+  "account.reverseShares.modal.max-use.label": "حداکثر استفاده",
+  "account.reverseShares.modal.max-use.description":
+    "حداکثر تعداد دفعاتی که این URL می‌تواند برای ایجاد اشتراک استفاده شود.",
+  "account.reverseShare.never-expires": "این اشتراک معکوس هرگز منقضی نخواهد شد.",
+  "account.reverseShare.expires-on":
+    "این اشتراک معکوس در {expiration} منقضی خواهد شد.",
+
+  "account.reverseShares.table.no-shares": "هنوز هیچ اشتراکی ایجاد نشده است",
+  "account.reverseShares.table.count.singular": "اشتراک",
+  "account.reverseShares.table.count.plural": "اشتراک‌ها",
+  "account.reverseShares.table.shares": "اشتراک‌ها",
+  "account.reverseShares.table.remaining": "استفاده‌های باقی‌مانده",
+  "account.reverseShares.table.max-size": "حداکثر اندازه اشتراک",
+  "account.reverseShares.table.expires": "منقضی می‌شود در",
+
+  "account.reverseShares.modal.reverse-share-link": "لینک اشتراک معکوس",
+
+  "account.reverseShares.modal.delete.title":
+    "حذف اشتراک معکوس",
+  "account.reverseShares.modal.delete.description":
+    "آیا واقعاً می‌خواهید این اشتراک معکوس را حذف کنید؟ اگر این کار را انجام دهید، اشتراک‌های مرتبط نیز حذف خواهند شد.",
+
   // END /account/reverseShares
 
   // /admin
-  "admin.title": "Administration",
-  "admin.button.users": "User management",
-  "admin.button.shares": "Share management",
-  "admin.button.config": "Configuration",
-  "admin.version": "Version",
+  "admin.title": "مدیریت",
+  "admin.button.users": "مدیریت کاربران",
+  "admin.button.shares": "مدیریت اشتراک‌ها",
+  "admin.button.config": "پیکربندی",
+  "admin.version": "نسخه",
   // END /admin
 
   // /admin/users
-  "admin.users.title": "User management",
-  "admin.users.table.username": "Username",
-  "admin.users.table.email": "Email",
-  "admin.users.table.admin": "Admin",
-  "admin.users.edit.update.title": "Edit user: {username}",
-  "admin.users.edit.update.admin-privileges": "Admin privileges",
-  "admin.users.edit.update.email-verified": "Email verified",
-  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
-  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
-  "admin.users.edit.update.change-password.title": "Change password",
-  "admin.users.edit.update.change-password.field": "New password",
-  "admin.users.edit.update.change-password.button": "Save new password",
-  "admin.users.edit.update.notify.password.success": "Password changed successfully",
-  "admin.users.edit.delete.title": "Delete user: {username} ?",
-  "admin.users.edit.delete.description": "Do you really want to delete this user and all their shares?",
+  "admin.users.title": "مدیریت کاربران",
+  "admin.users.table.username": "نام کاربری",
+  "admin.users.table.email": "ایمیل",
+  "admin.users.table.admin": "مدیر",
+
+  "admin.users.edit.update.title": "ویرایش کاربر: {username}",
+  "admin.users.edit.update.admin-privileges": "اختیارات مدیر",
+  "admin.users.edit.update.email-verified": "ایمیل تأیید شده",
+  "admin.users.edit.update.custom-share-size-limit":
+    "حداکثر اندازه اشتراک سفارشی",
+  "admin.users.edit.update.custom-share-size-limit.description":
+    "محدودیت بارگذاری جهانی را برای این کاربر بازنویسی کنید",
+  "admin.users.edit.update.change-password.title": "تغییر رمز عبور",
+  "admin.users.edit.update.change-password.field": "رمز عبور جدید",
+  "admin.users.edit.update.change-password.button": "ذخیره رمز جدید",
+  "admin.users.edit.update.notify.password.success":
+    "رمز عبور با موفقیت تغییر کرد",
+
+  "admin.users.edit.delete.title":
+    "حذف کاربر: {username} ?",
+  "admin.users.edit.delete.description":
+    "آیا واقعاً می‌خواهید این کاربر و همه اشتراک‌هایشان را حذف کنید؟",
+
   // showCreateUserModal.tsx
-  "admin.users.modal.create.title": "Create user",
-  "admin.users.modal.create.username": "Username",
-  "admin.users.modal.create.email": "Email",
-  "admin.users.modal.create.password": "Password",
-  "admin.users.modal.create.manual-password": "Set password manually",
-  "admin.users.modal.create.manual-password.description": "If not checked, the user will receive an email with a link to set their password.",
-  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
-  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
-  "admin.users.modal.create.admin": "Admin privileges",
-  "admin.users.modal.create.admin.description": "If checked, the user will be able to access the admin panel.",
+  "admin.users.modal.create.title": "ایجاد کاربر",
+  "admin.users.modal.create.username": "نام کاربری",
+  "admin.users.modal.create.email": "ایمیل",
+  "admin.users.modal.create.password": "رمز عبور",
+  "admin.users.modal.create.manual-password":
+    "تنظیم دستی رمز عبور",
+  "admin.users.modal.create.manual-password.description":
+    "اگر انتخاب نشود، کاربر ایمیلی با لینک تعیین رمز دریافت می‌کند.",
+  "admin.users.modal.create.custom-share-size-limit":
+    "حداکثر اندازه اشتراک سفارشی",
+  "admin.users.modal.create.custom-share-size-limit.description":
+    "محدودیت بارگذاری جهانی را برای این کاربر بازنویسی کنید",
+  "admin.users.modal.create.admin": "اختیارات مدیر",
+  "admin.users.modal.create.admin.description":
+    "اگر انتخاب شود، کاربر می‌تواند به پنل مدیریت دسترسی داشته باشد.",
+
   // END /admin/users
 
   // /admin/shares
-  "admin.shares.title": "Share management",
-  "admin.shares.diskUsage": "Disk Usage",
-  "admin.shares.table.id": "Share ID",
-  "admin.shares.table.username": "Creator",
-  "admin.shares.table.visitors": "Visitors",
-  "admin.shares.table.expires": "Expires on",
-  "admin.shares.table.deletes": "Deletes on",
-  "admin.shares.edit.delete.title": "Delete share: {id}",
-  "admin.shares.edit.delete.description": "Do you really want to delete this share?",
+  "admin.shares.title": "مدیریت اشتراک‌ها",
+  "admin.shares.diskUsage": "استفاده از دیسک",
+  "admin.shares.table.id": "شناسه اشتراک",
+  "admin.shares.table.username": "سازنده",
+  "admin.shares.table.visitors": "بازدیدکنندگان",
+  "admin.shares.table.expires": "منقضی می‌شود در",
+  "admin.shares.table.deletes": "حذف می‌شود در",
+
+  "admin.shares.edit.delete.title": "حذف اشتراک: {id}",
+  "admin.shares.edit.delete.description":
+    "آیا واقعاً می‌خواهید این اشتراک را حذف کنید؟",
+
   // END /admin/shares
 
   // /upload
-  "upload.title": "Upload",
-  "upload.notify.confirm-leave": "Are you sure you want to leave this page? Your upload will be canceled.",
-  "upload.notify.generic-error": "An error occurred while finishing your share.",
-  "upload.notify.count-failed": "{count} files failed to upload. Trying again.",
-  "upload.reverse-share.error.invalid.title": "Invalid reverse share link",
-  "upload.reverse-share.error.invalid.description": "This link has no remaining uses or is invalid.",
+  "upload.title": "بارگذاری",
+
+  "upload.notify.confirm-leave":
+    "آیا مطمئن هستید که می‌خواهید این صفحه را ترک کنید؟ بارگذاری شما لغو خواهد شد.",
+  "upload.notify.generic-error":
+    "خطایی هنگام تکمیل اشتراک شما رخ داد.",
+  "upload.notify.count-failed":
+    "{count} فایل بارگذاری نشد. دوباره تلاش می‌کنیم.",
+  "upload.reverse-share.error.invalid.title": "لینک اشتراک معکوس نامعتبر",
+  "upload.reverse-share.error.invalid.description":
+    "این لینک فاقد استفاده‌های باقی‌مانده است یا نامعتبر است.",
+
   // Dropzone.tsx
-  "upload.dropzone.title": "Upload files",
-  "upload.dropzone.description": "Drag'n'drop files here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
-  "upload.dropzone.notify.file-too-big": "Your files exceed the maximum share size of {maxSize}.",
+  "upload.dropzone.title": "بارگذاری فایل‌ها",
+  "upload.dropzone.description":
+    "فایل‌ها را بکشید و رها کنید تا اشتراک خود را شروع کنید یا 'Ctrl+V' را فشار دهید تا محتوای متنی را از کلیپ‌بورد بارگذاری کنید. ما فقط فایل‌هایی تا مجموع {maxSize} را قبول می‌کنیم.",
+  "upload.dropzone.notify.file-too-big":
+    "فایل‌های شما از حداکثر اندازه اشتراک {maxSize} تجاوز می‌کنند.",
+
   // FileList.tsx
-  "upload.filelist.name": "Name",
-  "upload.filelist.size": "Size",
+  "upload.filelist.name": "نام",
+  "upload.filelist.size": "حجم",
+
   // showCreateUploadModal.tsx
-  "upload.modal.title": "Create Share",
-  "upload.modal.link.error.invalid": "Can only contain letters, numbers, underscores, and hyphens",
-  "upload.modal.link.error.taken": "This link is already in use",
-  "upload.modal.not-signed-in": "You're not signed in",
-  "upload.modal.not-signed-in-description": "You will be unable to delete your share manually and view the visitor count.",
-  "upload.modal.expires.never": "never",
-  "upload.modal.expires.never-long": "Permanent share",
-  "upload.modal.expires.error.too-long": "Expiration date exceeds the maximum of {max}.",
-  "upload.modal.link.label": "Link",
-  "upload.modal.expires.label": "Expiration",
-  "upload.modal.expires.minute-singular": "Minute",
-  "upload.modal.expires.minute-plural": "Minutes",
-  "upload.modal.expires.hour-singular": "Hour",
-  "upload.modal.expires.hour-plural": "Hours",
-  "upload.modal.expires.day-singular": "Day",
-  "upload.modal.expires.day-plural": "Days",
-  "upload.modal.expires.week-singular": "Week",
-  "upload.modal.expires.week-plural": "Weeks",
-  "upload.modal.expires.month-singular": "Month",
-  "upload.modal.expires.month-plural": "Months",
-  "upload.modal.expires.year-singular": "Year",
-  "upload.modal.expires.year-plural": "Years",
-  "upload.modal.accordion.name-and-description.title": "Name and description",
-  "upload.modal.accordion.name-and-description.name.placeholder": "Name",
-  "upload.modal.accordion.name-and-description.description.placeholder": "Note for the recipients of this share",
-  "upload.modal.accordion.email.title": "Email recipients",
-  "upload.modal.accordion.email.placeholder": "Enter email recipients",
-  "upload.modal.accordion.email.invalid-email": "Invalid email address",
-  "upload.modal.accordion.security.title": "Security options",
-  "upload.modal.accordion.security.password.label": "Password protection",
-  "upload.modal.accordion.security.password.placeholder": "No password",
-  "upload.modal.accordion.security.max-views.label": "Maximum views",
-  "upload.modal.accordion.security.max-views.placeholder": "No limit",
+  "upload.modal.title": "ایجاد اشتراک",
+  "upload.modal.link.error.invalid":
+    "فقط می‌تواند شامل حروف، عدد، زیرخط و خط تیره باشد",
+  "upload.modal.link.error.taken": "این لینک قبلاً استفاده شده است",
+  "upload.modal.not-signed-in": "شما وارد نشده‌اید",
+  "upload.modal.not-signed-in-description":
+    "نمی‌توانید اشتراک خود را به صورت دستی حذف کنید و تعداد بازدیدکنندگان را مشاهده کنید.",
+
+  "upload.modal.expires.never": "هرگز",
+  "upload.modal.expires.never-long": "اشتراک دائمی",
+  "upload.modal.expires.error.too-long":
+    "تاریخ انقضا از حداکثر {max} فراتر رفته است.",
+
+  "upload.modal.link.label": "لینک",
+  "upload.modal.expires.label": "انقضا",
+  "upload.modal.expires.minute-singular": "دقیقه",
+  "upload.modal.expires.minute-plural": "دقایق",
+  "upload.modal.expires.hour-singular": "ساعت",
+  "upload.modal.expires.hour-plural": "ساعات",
+  "upload.modal.expires.day-singular": "روز",
+  "upload.modal.expires.day-plural": "روزها",
+  "upload.modal.expires.week-singular": "هفته",
+  "upload.modal.expires.week-plural": "هفته‌ها",
+  "upload.modal.expires.month-singular": "ماه",
+  "upload.modal.expires.month-plural": "ماه‌ها",
+  "upload.modal.expires.year-singular": "سال",
+  "upload.modal.expires.year-plural": "سال‌ها",
+
+  "upload.modal.accordion.name-and-description.title":
+    "نام و توضیح",
+  "upload.modal.accordion.name-and-description.name.placeholder": "نام",
+  "upload.modal.accordion.name-and-description.description.placeholder":
+    "یادداشت برای گیرندگان این اشتراک",
+
+  "upload.modal.accordion.email.title": "ایمیل گیرندگان",
+  "upload.modal.accordion.email.placeholder":
+    "ایمیل گیرندگان را وارد کنید",
+  "upload.modal.accordion.email.invalid-email":
+    "آدرس ایمیل نامعتبر",
+
+  "upload.modal.accordion.security.title": "گزینه‌های امنیتی",
+  "upload.modal.accordion.security.password.label":
+    "محافظت با رمز عبور",
+  "upload.modal.accordion.security.password.placeholder":
+    "بدون رمز عبور",
+  "upload.modal.accordion.security.max-views.label": "حداکثر بازدیدها",
+  "upload.modal.accordion.security.max-views.placeholder":
+    "بدون محدودیت",
+
   // showCompletedUploadModal.tsx
-  "upload.modal.completed.never-expires": "This share will never expire.",
-  "upload.modal.completed.expires-on": "This share will expire on {expiration}.",
-  "upload.modal.completed.share-ready": "Share ready",
-  "upload.modal.completed.notified-reverse-share-creator": "We have notified the creator of the reverse share. You can also manually share this link with them through other means.",
+  "upload.modal.completed.never-expires":
+    "این اشتراک هرگز منقضی نخواهد شد.",
+  "upload.modal.completed.expires-on":
+    "این اشتراک در {expiration} منقضی خواهد شد.",
+  "upload.modal.completed.share-ready": "اشتراک آماده است",
+  "upload.modal.completed.notified-reverse-share-creator":
+    "ما به سازنده اشتراک معکوس اطلاع دادیم. شما همچنین می‌توانید این لینک را به صورت دستی از طریق روش‌های دیگر با او به اشتراک بگذارید.",
+
   // END /upload
 
   // /share/[id]
-  "share.title": "Share {shareId}",
-  "share.description": "Look what I've shared with you!",
-  "share.fileCount": "{count, plural, =1 {# file} other {# files}} · {size} (zip file may be smaller due to compression)",
-  "share.copy-text-contents": "Copy file contents to clipboard",
-  "share.error.visitor-limit-exceeded.title": "Visitor limit exceeded",
-  "share.error.visitor-limit-exceeded.description": "The visitor limit from this share has been exceeded.",
-  "share.error.removed.title": "Share removed",
-  "share.error.not-found.title": "Share not found",
-  "share.error.not-found.description": "The share you're looking for doesn't exist.",
-  "share.error.access-denied.title": "Private share",
-  "share.error.access-denied.description": "The current account does not have permission to access this share",
-  "share.modal.password.title": "Password required",
-  "share.modal.password.description": "Please enter the password to access this share.",
-  "share.modal.password": "Password",
-  "share.modal.error.invalid-password": "Invalid password",
-  "share.button.download-all": "Download all",
-  "share.notify.download-all-preparing": "The share is being prepared. Please try again in a few minutes.",
-  "share.notify.copied-contents": "File contents copied to clipboard",
-  "share.notify.copy-too-big-error": "File is too big to copy to clipboard",
-  "share.notify.copy-not-supported-error": "Copying to clipboard requires a HTTPS connection",
-  "share.modal.file-link": "File link",
-  "share.table.name": "Name",
-  "share.table.size": "Size",
-  "share.modal.file-preview.error.not-supported.title": "Preview not supported",
-  "share.modal.file-preview.error.not-supported.description": "Previews are not supported for this type of files. Please download the file to view it.",
+  "share.title": "اشتراک {shareId}",
+  "share.description": "نگاه کن چه چیزی با تو به اشتراک گذاشته‌ام!",
+  "share.fileCount":
+    "{count, plural, =1 {# فایل} other {# فایل}} · {size} (فایل زیپ ممکن است به دلیل فشرده‌سازی کوچک‌تر باشد)",
+  "share.copy-text-contents": "کپی محتوای فایل به کلیپ‌بورد",
+  "share.error.visitor-limit-exceeded.title": "حد بازدیدکننده تمام شده",
+  "share.error.visitor-limit-exceeded.description":
+    "حد بازدید این اشتراک تمام شده است.",
+  "share.error.removed.title": "اشتراک حذف شده",
+  "share.error.not-found.title": "اشتراک پیدا نشد",
+  "share.error.not-found.description":
+    "اشتراکی که دنبال آن هستید وجود ندارد.",
+  "share.error.access-denied.title": "اشتراک خصوصی",
+  "share.error.access-denied.description":
+    "حساب فعلی اجازه دسترسی به این اشتراک را ندارد",
+
+  "share.modal.password.title": "رمز عبور لازم است",
+  "share.modal.password.description":
+    "لطفاً رمز عبور را برای دسترسی به این اشتراک وارد کنید.",
+  "share.modal.password": "رمز عبور",
+  "share.modal.error.invalid-password": "رمز عبور نامعتبر",
+
+  "share.button.download-all": "دانلود همه",
+  "share.notify.download-all-preparing":
+    "اشتراک در حال آماده شدن است. لطفاً چند دقیقه دیگر دوباره تلاش کنید.",
+
+  "share.notify.copied-contents": "محتوای فایل به کلیپ‌بورد کپی شد",
+  "share.notify.copy-too-big-error":
+    "فایل برای کپی شدن به کلیپ‌بورد بیش از حد بزرگ است",
+  "share.notify.copy-not-supported-error":
+    "کپی کردن به کلیپ‌بورد نیازمند اتصال HTTPS است",
+
+  "share.modal.file-link": "لینک فایل",
+  "share.table.name": "نام",
+  "share.table.size": "حجم",
+
+  "share.modal.file-preview.error.not-supported.title":
+    "پیش‌نمایش پشتیبانی نمی‌شود",
+  "share.modal.file-preview.error.not-supported.description":
+    "پیش‌نمایش برای این نوع فایل پشتیبانی نمی‌شود. لطفاً برای مشاهده آن را دانلود کنید.",
+
   // END /share/[id]
 
   // /share/[id]/edit
-  "share.edit.title": "Edit {shareId}",
-  "share.edit.append-upload": "Append file",
-  "share.edit.notify.generic-error": "An error occurred while finishing your share.",
-  "share.edit.notify.save-success": "Share updated successfully",
+  "share.edit.title": "ویرایش {shareId}",
+  "share.edit.append-upload": "افزودن فایل",
+  "share.edit.notify.generic-error":
+    "خطایی هنگام تکمیل اشتراک شما رخ داد.",
+  "share.edit.notify.save-success": "اشتراک با موفقیت به‌روزرسانی شد",
   // END /share/[id]/edit
 
   // /imprint
-  "imprint.title": "Imprint",
+  "imprint.title": "اطلاعات حقوقی",
   // END /imprint
 
   // /privacy
-  "privacy.title": "Privacy Policy",
+  "privacy.title": "سیاست حفظ حریم خصوصی",
   // END /privacy
 
   // /admin/config
-  "admin.config.config-file-warning.title": "Configuration file present",
-  "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
-  "admin.config.title": "Configuration",
-  "admin.config.category.general": "General",
-  "admin.config.category.appearance": "Appearance",
-  "admin.config.category.share": "Share",
-  "admin.config.category.cache": "Cache",
-  "admin.config.category.email": "Email",
+  "admin.config.config-file-warning.title":
+    "فایل پیکربندی موجود است",
+  "admin.config.config-file-warning.description":
+    "از آنجا که Pingvin Share شما با یک فایل پیکربندی تنظیم شده است، نمی‌توانید پیکربندی را از طریق رابط کاربری تغییر دهید.",
+  "admin.config.title": "پیکربندی",
+  "admin.config.category.general": "عمومی",
+  "admin.config.category.appearance": "ظاهر",
+  "admin.config.category.share": "اشتراک",
+  "admin.config.category.cache": "کش",
+  "admin.config.category.email": "ایمیل",
   "admin.config.category.smtp": "SMTP",
-  "admin.config.category.oauth": "Social Login",
-  "admin.config.general.app-name": "App name",
-  "admin.config.general.app-name.description": "Name of the application",
-  "admin.config.general.default-language": "Default Language",
-  "admin.config.general.default-language.description": "This applies to all users, each user can still personalise their language in their profile.",
-  "admin.config.appearance.theme-primary-color": "Theme primary color",
-  "admin.config.appearance.theme-primary-color.description": "Primary color used for buttons, links, and accents. Choose custom to use a color picker override.",
-  "admin.config.appearance.theme-primary-color-override": "Custom primary color",
-  "admin.config.appearance.theme-primary-color-override.description": "Hex color override used when theme primary color is set to custom.",
-  "admin.config.appearance.theme-font-preset": "Theme font preset",
-  "admin.config.appearance.theme-font-preset.description": "Font preset loaded at build time. Choose system default or one of the bundled Google Fonts.",
-  "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
-  "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
-  "admin.config.appearance.theme-radius": "Theme border radius",
-  "admin.config.appearance.theme-radius.description": "Default border radius used by Mantine components.",
-  "admin.config.appearance.custom-css": "Custom CSS",
-  "admin.config.appearance.custom-css.description": "Global CSS applied to the frontend. Use carefully, as invalid CSS may affect the UI.",
-  "admin.config.general.app-url": "App URL",
-  "admin.config.general.app-url.description": "On which URL Pingvin Share is available",
-  "admin.config.general.secure-cookies": "Secure cookies",
-  "admin.config.general.secure-cookies.description": "Whether to set the secure flag on cookies. If enabled, the site will not function when accessed over HTTP.",
-  "admin.config.general.show-home-page": "Show home page",
-  "admin.config.general.show-home-page.description": "Whether to show the home page",
-  "admin.config.general.session-duration": "Session Duration",
-  "admin.config.general.session-duration.description": "Time after which a user must log in again (default: 3 months).",
-  "admin.config.general.logo": "Logo",
-  "admin.config.general.logo.description": "Change your logo by uploading a new image. The image must be a PNG and should have the format 1:1.",
-  "admin.config.general.logo-dark": "Dark mode logo",
-  "admin.config.general.logo-dark.description": "Upload a separate logo for dark mode. The image must be a PNG and should have the format 1:1.",
-  "admin.config.general.logo.placeholder": "Pick image",
+  "admin.config.category.oauth": "ورود اجتماعی",
+  "admin.config.general.app-name": "نام برنامه",
+  "admin.config.general.app-name.description":
+    "نام برنامه",
+  "admin.config.general.default-language": "زبان پیش‌فرض",
+  "admin.config.general.default-language.description":
+    "این برای همه کاربران اعمال می‌شود، هر کاربر هنوز می‌تواند زبان خود را در پروفایلش شخصی کند.",
+  "admin.config.appearance.theme-primary-color": "رنگ اصلی قالب",
+  "admin.config.appearance.theme-primary-color.description":
+    "رنگ اصلی مورد استفاده در دکمه‌ها، لینک‌ها و اجزا. برای استفاده از رنگ دلخواه، جایگزین رنگ سفارشی را انتخاب کنید.",
+  "admin.config.appearance.theme-primary-color-override":
+    "رنگ اصلی سفارشی",
+  "admin.config.appearance.theme-primary-color-override.description":
+    "جایگزین هگز رنگ که هنگام انتخاب رنگ سفارشی استفاده می‌شود.",
+  "admin.config.appearance.theme-font-preset": "پیش‌فرض قلم قالب",
+  "admin.config.appearance.theme-font-preset.description":
+    "پیش‌فرض بارگذاری شده در زمان ساخت. سیستم پیش‌فرض یا یکی از قلم‌های Google موجود را انتخاب کنید.",
+  "admin.config.appearance.theme-color-scheme":
+    "رنگ پیش‌فرض قالب (میهمان)",
+  "admin.config.appearance.theme-color-scheme.description":
+    "حالت روشن/تاریک پیش‌فرض برای کاربران غیر وارد شده. کاربران وارد شده از ترجیح حساب خود استفاده می‌کنند.",
+  "admin.config.appearance.theme-radius": "پرتگاه گوشه قالب",
+  "admin.config.appearance.theme-radius.description":
+    "پرونده گوشه پیش‌فرض مورد استفاده در اجزای Mantine.",
+  "admin.config.appearance.custom-css": "CSS سفارشی",
+  "admin.config.appearance.custom-css.description":
+    "CSS سراسری اعمال شده به فرانت‌اند. با احتیاط استفاده کنید، زیرا CSS نامعتبر ممکن است روی UI تأثیر بگذارد.",
+  "admin.config.general.app-url": "آدرس برنامه",
+  "admin.config.general.app-url.description":
+    "Pingvin Share در چه آدرسی دردسترس است",
+  "admin.config.general.secure-cookies": "کوکی‌های امن",
+  "admin.config.general.secure-cookies.description":
+    "آیا باید فلگ secure روی کوکی‌ها تنظیم شود. اگر فعال باشد، سایت هنگام دسترسی از طریق HTTP کار نخواهد کرد.",
+  "admin.config.general.show-home-page": "نمایش صفحه اصلی",
+  "admin.config.general.show-home-page.description":
+    "آیا صفحه اصلی نمایش داده شود.",
+  "admin.config.general.session-duration": "مدت جلسه",
+  "admin.config.general.session-duration.description":
+    "زمانی که بعد از آن کاربر باید دوباره وارد شود (پیش‌فرض: ۳ ماه).",
+  "admin.config.general.logo": "لوگو",
+  "admin.config.general.logo.description":
+    "لوگوی خود را با بارگذاری تصویر جدید تغییر دهید. تصویر باید PNG باشد و فرمت ۱:۱ داشته باشد.",
+  "admin.config.general.logo-dark": "لوگوی حالت تاریک",
+  "admin.config.general.logo-dark.description":
+    "بارگذاری لوگوی جداگانه برای حالت تاریک. تصویر باید PNG باشد و فرمت ۱:۱ داشته باشد.",
+  "admin.config.general.logo.placeholder": "انتخاب تصویر",
   "admin.config.cache.ttl": "TTL",
-  "admin.config.cache.ttl.description": "Time in second to keep information inside the cache.",
-  "admin.config.cache.max-items": "Maximum items",
-  "admin.config.cache.max-items.description": "Maximum number of items inside the cache.",
-  "admin.config.cache.redis-enabled": "Redis enabled",
-  "admin.config.cache.redis-enabled.description": "Normally Pingvin Share caches information in memory. If you run multiple instances of Pingvin Share, you need to enable Redis caching to share the cache between the instances.",
-  "admin.config.cache.redis-url": "Redis URL",
-  "admin.config.cache.redis-url.description": "Url to connect to the Redis instance used for caching.",
-  "admin.config.cache.button.test-redis": "Test Redis connection",
-  "admin.config.cache.test-redis.success": "Connected to Redis successfully",
-  "admin.config.cache.test-redis.success-disabled": "Connected to Redis successfully (Redis caching is currently disabled).",
-  "admin.config.cache.test-redis.modal.error.title": "Failed to connect to Redis",
-  "admin.config.cache.test-redis.modal.error.description": "While connecting to Redis, the following error occurred:",
-  "admin.config.cache.test-redis.modal.save.title": "Save configuration",
-  "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
-  "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
-  "admin.config.email.send-html-emails": "Enable HTML email compatibility",
-  "admin.config.email.send-html-emails.description": "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
-  "admin.config.email.enable-share-email-recipients": "Enable email recipient sharing",
-  "admin.config.email.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
-  "admin.config.email.share-recipients-subject": "Share recipients subject",
-  "admin.config.email.share-recipients-subject.description": "Subject of the email which gets sent to the share recipients.",
-  "admin.config.email.share-recipients-message": "Share recipients message",
-  "admin.config.email.share-recipients-message.description": "Message which gets sent to the share recipients. Available variables:\n {creator} - The username of the creator of the share\n {creatorEmail} - The email of the creator of the share\n {shareUrl} - The URL of the share\n {desc} - The description of the share\n {expires} - The expiration date of the share\n These variables will be replaced with the actual value.",
-  "admin.config.email.reverse-share-subject": "Reverse share subject",
-  "admin.config.email.reverse-share-subject.description": "Subject of the sent email when someone created a share with your reverse share link.",
-  "admin.config.email.reverse-share-message": "Reverse share message",
-  "admin.config.email.reverse-share-message.description": "Message which gets sent when someone created a share with your reverse share link. {shareUrl} will be replaced with the creator's name and the share URL.",
-  "admin.config.email.reset-password-subject": "Reset password subject",
-  "admin.config.email.reset-password-subject.description": "Subject of the sent email when a user requests a password reset.",
-  "admin.config.email.reset-password-message": "Reset password message",
-  "admin.config.email.reset-password-message.description": "Message which gets sent when a user requests a password reset. {url} will be replaced with the reset password URL.",
-  "admin.config.email.invite-subject": "Invite subject",
-  "admin.config.email.invite-subject.description": "Subject of the sent email when an admin invites a user.",
-  "admin.config.email.invite-message": "Invite message",
-  "admin.config.email.invite-message.description": "Message which gets sent when an admin invites a user. {url} will be replaced with the invite URL, {email} with the email and {password} with the users password.",
-  "admin.config.email.enable-share-download-notifications": "Enable download notifications",
-  "admin.config.email.enable-share-download-notifications.description": "Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.",
-  "admin.config.email.share-download-notification-subject": "Download notification subject",
-  "admin.config.email.share-download-notification-subject.description": "Subject of the email which gets sent to the share creator when a recipient downloads a file.",
-  "admin.config.email.share-download-notification-message": "Download notification message",
-  "admin.config.email.share-download-notification-message.description": "Message which gets sent to the share creator when a recipient downloads a file. Available variables:\n {recipientEmail} - The email of the recipient\n {fileName} - The downloaded file name\n {shareUrl} - The URL of the share",
-  "admin.config.email.enable-email-verification": "Enable email verification",
-  "admin.config.email.enable-email-verification.description": "Whether to require users to verify their email address before being able to sign in. This can only be enabled if SMTP is activated.",
-  "admin.config.email.verification-subject": "Verification subject",
-  "admin.config.email.verification-subject.description": "Subject of the email which gets sent to the user when they sign up.",
-  "admin.config.email.verification-message": "Verification message",
-  "admin.config.email.verification-message.description": "Message which gets sent to the user when they sign up. {url} will be replaced with the verification URL.",
-  "admin.config.share.allow-registration": "Allow registration",
-  "admin.config.share.allow-registration.description": "Whether registration is allowed",
-  "admin.config.share.allow-unauthenticated-shares": "Allow unauthenticated shares",
-  "admin.config.share.allow-unauthenticated-shares.description": "Whether unauthenticated users can create shares",
-  "admin.config.share.default-expiration": "Default expiration",
-  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
-  "admin.config.share.max-expiration": "Max expiration",
-  "admin.config.share.max-expiration.description": "Maximum share expiration. Set to 0 to allow unlimited expiration.",
-  "admin.config.share.share-id-length": "Default share ID length",
-  "admin.config.share.share-id-length.description": "Default length for the generated ID of a share. This value is also used to generate links for reverse shares. A value below 8 is not considered secure.",
-  "admin.config.share.max-size": "Max size",
-  "admin.config.share.max-size.description": "Maximum share size",
-  "admin.config.share.zip-compression-level": "Zip compression level",
-  "admin.config.share.zip-compression-level.description": "Adjust the level to balance between file size and compression speed. Valid values range from 0 to 9, with 0 being no compression and 9 being maximum compression. ",
-  "admin.config.share.chunk-size": "Chunk size",
-  "admin.config.share.chunk-size.description": "Adjust the chunk size for your uploads to balance efficiency and reliability according to your internet connection. Smaller chunks can enhance success rates for unstable connections, while larger chunks make uploads faster for stable connections.",
-  "admin.config.share.auto-open-share-modal": "Auto open create share modal",
-  "admin.config.share.auto-open-share-modal.description": "The share creation modal automatically appears when a user selects files, eliminating the need to manually click the button.",
-  "admin.config.share.allow-admin-access-all-shares": "Allow admin access to all shares",
-  "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
-  "admin.config.share.file-retention-period": "File retention period",
-  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
-  "admin.config.smtp.enabled": "Enable",
-  "admin.config.smtp.enabled.description": "Whether SMTP is enabled. Only set this to true if you entered the host, port, email, user and password of your SMTP server.",
-  "admin.config.smtp.host": "Host",
-  "admin.config.smtp.host.description": "Host of the SMTP server",
-  "admin.config.smtp.port": "Port",
-  "admin.config.smtp.port.description": "Port of the SMTP server",
-  "admin.config.smtp.email": "Email",
-  "admin.config.smtp.email.description": "Email address from which the emails get sent",
-  "admin.config.smtp.username": "Username",
-  "admin.config.smtp.username.description": "Username of the SMTP server",
-  "admin.config.smtp.password": "Password",
-  "admin.config.smtp.password.description": "Password of the SMTP server",
-  "admin.config.smtp.button.test": "Send test email",
-  "admin.config.smtp.test-email.success": "Email sent successfully",
-  "admin.config.smtp.test-email.error.title": "Failed to send email",
-  "admin.config.smtp.test-email.error.description": "While sending the test email, the following error occurred:",
-  "admin.config.smtp.test-email.save.title": "Save configuration",
-  "admin.config.smtp.test-email.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and send the test email?",
-  "admin.config.smtp.test-email.save.confirm": "Save and send",
-  "admin.config.smtp.allow-unauthorized-certificates": "Trust unauthorized SMTP server certificates",
-  "admin.config.smtp.allow-unauthorized-certificates.description": "Only set this to true if you need to trust self signed certificates.",
-  "admin.config.oauth.allow-registration": "Allow registration",
-  "admin.config.oauth.allow-registration.description": "Allow users to register via social login",
-  "admin.config.oauth.ignore-totp": "Ignore TOTP",
-  "admin.config.oauth.ignore-totp.description": "Whether to ignore TOTP when user using social login",
-  "admin.config.oauth.disable-password": "Disable password login",
-  "admin.config.oauth.disable-password.description": "Whether to disable password login\nMake sure that an OAuth provider is properly configured before activating this configuration to avoid being locked out.",
+  "admin.config.cache.ttl.description":
+    "زمان به ثانیه برای نگه داشتن اطلاعات در حافظه کش.",
+  "admin.config.cache.max-items": "حداکثر آیتم‌ها",
+  "admin.config.cache.max-items.description":
+    "حداکثر تعداد آیتم‌ها در کش.",
+  "admin.config.cache.redis-enabled": "Redis فعال",
+  "admin.config.cache.redis-enabled.description":
+    "معمولاً Pingvin Share اطلاعات را در حافظه داخلی کش می‌کند. اگر چندین نمونه Pingvin Share اجرا می‌کنید، باید کش Redis را فعال کنید تا کش بین نمونه‌ها به اشتراک گذاشته شود.",
+  "admin.config.cache.redis-url": "URL Redis",
+  "admin.config.cache.redis-url.description":
+    "آدرس برای اتصال به نمونه Redis مورد استفاده برای کش.",
+  "admin.config.cache.button.test-redis": "تست اتصال Redis",
+  "admin.config.cache.test-redis.success":
+    "با موفقیت به Redis متصل شد",
+  "admin.config.cache.test-redis.success-disabled":
+    "با موفقیت به Redis متصل شد (کَش Redis در حال حاضر غیرفعال است).",
+  "admin.config.cache.test-redis.modal.error.title":
+    "اتصال به Redis ناموفق بود",
+  "admin.config.cache.test-redis.modal.error.description":
+    "هنگام اتصال به Redis خطای زیر رخ داد:",
+  "admin.config.cache.test-redis.modal.save.title":
+    "ذخیره پیکربندی",
+  "admin.config.cache.test-redis.modal.save.description":
+    "برای ادامه باید ابتدا پیکربندی را ذخیره کنید. آیا می‌خواهید پیکربندی را ذخیره کرده و اتصال Redis را تست کنید؟",
+  "admin.config.cache.test-redis.modal.save.confirm":
+    "ذخیره و تست",
+  "admin.config.email.send-html-emails":
+    "فعال‌سازی ایمیل HTML",
+  "admin.config.email.send-html-emails.description":
+    "اگر فعال شود، ایمیل‌ها به صورت HTML ارسال خواهند شد. اطمینان حاصل کنید که قالب‌های ایمیل به‌روزرسانی شده‌اند تا از HTML استفاده کنند.",
+  "admin.config.email.enable-share-email-recipients":
+    "فعال‌سازی اشتراک گیرندگان ایمیل",
+  "admin.config.email.enable-share-email-recipients.description":
+    "آیا اشتراک گیرندگان ایمیل را مجاز کنیم. این تنها در صورت فعال بودن SMTP قابل فعال شدن است.",
+  "admin.config.email.share-recipients-subject":
+    "موضوع ایمیل اشتراک گیرندگان",
+  "admin.config.email.share-recipients-subject.description":
+    "موضوع ایمیلی که برای گیرندگان اشتراک ارسال می‌شود.",
+  "admin.config.email.share-recipients-message":
+    "پیام اشتراک گیرندگان",
+  "admin.config.email.share-recipients-message.description":
+    "متنی که برای گیرندگان اشتراک ارسال می‌شود. متغیرهای موجود:\n {creator} - نام کاربری سازنده اشتراک\n {creatorEmail} - ایمیل سازنده اشتراک\n {shareUrl} - آدرس اشتراک\n {desc} - توضیح اشتراک\n {expires} - تاریخ انقضا اشتراک\n این متغیرها با مقدار واقعی جایگزین خواهند شد.",
+  "admin.config.email.reverse-share-subject":
+    "موضوع اشتراک معکوس",
+  "admin.config.email.reverse-share-subject.description":
+    "موضوع ایمیلی که هنگام ایجاد اشتراک با لینک معکوس شما ارسال می‌شود.",
+  "admin.config.email.reverse-share-message":
+    "پیام اشتراک معکوس",
+  "admin.config.email.reverse-share-message.description":
+    "متنی که هنگام ایجاد اشتراک با لینک معکوس شما ارسال می‌شود. {shareUrl} با نام سازنده و آدرس اشتراک جایگزین خواهد شد.",
+  "admin.config.email.reset-password-subject":
+    "موضوع بازنشانی رمز عبور",
+  "admin.config.email.reset-password-subject.description":
+    "موضوع ایمیلی که هنگام درخواست بازنشانی رمز ارسال می‌شود.",
+  "admin.config.email.reset-password-message":
+    "پیام بازنشانی رمز عبور",
+  "admin.config.email.reset-password-message.description":
+    "متنی که هنگام درخواست بازنشانی رمز ارسال می‌شود. {url} با آدرس بازنشانی رمز جایگزین خواهد شد.",
+  "admin.config.email.invite-subject": "موضوع دعوت",
+  "admin.config.email.invite-subject.description":
+    "موضوع ایمیلی که هنگام دعوت کاربر توسط مدیر ارسال می‌شود.",
+  "admin.config.email.invite-message": "پیام دعوت",
+  "admin.config.email.invite-message.description":
+    "متنی که هنگام دعوت کاربر توسط مدیر ارسال می‌شود. {url} با آدرس دعوت، {email} با ایمیل و {password} با رمز کاربر جایگزین خواهد شد.",
+  "admin.config.email.enable-share-download-notifications":
+    "فعال‌سازی اعلان‌های دانلود",
+  "admin.config.email.enable-share-download-notifications.description":
+    "آیا به سازنده اشتراک هنگام دانلود فایل توسط گیرنده ایمیل اطلاع داده شود. این نیازمند SMTP و اشتراک گیرندگان ایمیل است.",
+  "admin.config.email.share-download-notification-subject":
+    "موضوع اعلان دانلود",
+  "admin.config.email.share-download-notification-subject.description":
+    "موضوع ایمیلی که هنگام دانلود فایل برای سازنده اشتراک ارسال می‌شود.",
+  "admin.config.email.share-download-notification-message":
+    "پیام اعلان دانلود",
+  "admin.config.email.share-download-notification-message.description":
+    "متنی که هنگام دانلود فایل برای سازنده اشتراک ارسال می‌شود. متغیرهای موجود:\n {recipientEmail} - ایمیل گیرنده\n {fileName} - نام فایل دانلود شده\n {shareUrl} - آدرس اشتراک",
+  "admin.config.email.enable-email-verification":
+    "فعال‌سازی تأیید ایمیل",
+  "admin.config.email.enable-email-verification.description":
+    "آیا کاربران باید قبل از ورود، ایمیل خود را تأیید کنند. این فقط در صورت فعال بودن SMTP امکان‌پذیر است.",
+  "admin.config.email.verification-subject":
+    "موضوع تأیید",
+  "admin.config.email.verification-subject.description":
+    "موضوع ایمیلی که هنگام ثبت‌نام به کاربر ارسال می‌شود.",
+  "admin.config.email.verification-message":
+    "پیام تأیید",
+  "admin.config.email.verification-message.description":
+    "متنی که هنگام ثبت‌نام به کاربر ارسال می‌شود. {url} با آدرس تأیید جایگزین خواهد شد.",
+  "admin.config.share.allow-registration": "اجازه ثبت‌نام",
+  "admin.config.share.allow-registration.description":
+    "آیا ثبت‌نام مجاز است",
+  "admin.config.share.allow-unauthenticated-shares":
+    "اجازه اشتراک‌های بدون احراز هویت",
+  "admin.config.share.allow-unauthenticated-shares.description":
+    "آیا کاربران بدون احراز هویت می‌توانند اشتراک ایجاد کنند",
+  "admin.config.share.default-expiration": "انقضای پیش‌فرض",
+  "admin.config.share.default-expiration.description":
+    "زمان انقضای پیش‌فرض انتخاب شده هنگام ایجاد یک اشتراک جدید.",
+  "admin.config.share.max-expiration": "حداکثر انقضا",
+  "admin.config.share.max-expiration.description":
+    "حداکثر انقضای اشتراک. برای اجازه نامحدود، 0 قرار دهید.",
+  "admin.config.share.share-id-length":
+    "طول شناسه اشتراک پیش‌فرض",
+  "admin.config.share.share-id-length.description":
+    "طول پیش‌فرض شناسه تولید شده برای اشتراک. این مقدار همچنین برای تولید لینک‌های اشتراک معکوس استفاده می‌شود. مقدار کمتر از ۸ امن در نظر گرفته نمی‌شود.",
+  "admin.config.share.max-size": "حداکثر اندازه",
+  "admin.config.share.max-size.description": "حداکثر اندازه اشتراک",
+  "admin.config.share.zip-compression-level":
+    "سطح فشرده‌سازی زیپ",
+  "admin.config.share.zip-compression-level.description":
+    "سطح را برای تعادل بین حجم فایل و سرعت فشرده‌سازی تنظیم کنید. مقادیر معتبر از 0 تا 9 هستند، با 0 بدون فشرده‌سازی و 9 حداکثر فشرده‌سازی.",
+  "admin.config.share.chunk-size": "اندازه بخش",
+  "admin.config.share.chunk-size.description":
+    "اندازه بخش بارگذاری را برای تعادل بین کارایی و قابلیت اطمینان با توجه به اتصال اینترنت خود تنظیم کنید. بخش‌های کوچکتر می‌توانند نرخ موفقیت را برای اتصالات ناپایدار بهبود دهند، در حالی که بخش‌های بزرگتر برای اتصالات پایدار بارگذاری را سریع‌تر می‌کنند.",
+  "admin.config.share.auto-open-share-modal":
+    "باز شدن خودکار مودال ایجاد اشتراک",
+  "admin.config.share.auto-open-share-modal.description":
+    "مودال ایجاد اشتراک وقتی کاربر فایلی انتخاب می‌کند به‌طور خودکار ظاهر می‌شود، بدون نیاز به کلیک دستی روی دکمه.",
+  "admin.config.share.allow-admin-access-all-shares":
+    "اجازه دسترسی مدیر به همه اشتراک‌ها",
+  "admin.config.share.allow-admin-access-all-shares.description":
+    "اجازه می‌دهد مدیران به همه اشتراک‌ها دسترسی داشته باشند، حتی اگر با رمز عبور محافظت شده، منقضی یا حذف شده باشند.",
+  "admin.config.share.file-retention-period":
+    "دوره نگهداری فایل",
+  "admin.config.share.file-retention-period.description":
+    "فایل‌ها بعد از انقضا یا حذف اشتراک تا چه مدت نگه داشته شوند. فقط در صورتی مفید است که 'اجازه دسترسی مدیر به همه اشتراک‌ها' نیز فعال باشد. برای نگهداری همیشگی مقدار -1 قرار دهید.",
+  "admin.config.smtp.enabled": "فعال",
+  "admin.config.smtp.enabled.description":
+    "آیا SMTP فعال است. فقط اگر میزبان، پورت، ایمیل، نام کاربری و رمز عبور SMTP خود را وارد کرده‌اید، این را true قرار دهید.",
+  "admin.config.smtp.host": "میزبان",
+  "admin.config.smtp.host.description":
+    "میزبان سرور SMTP",
+  "admin.config.smtp.port": "پورت",
+  "admin.config.smtp.port.description":
+    "پورت سرور SMTP",
+  "admin.config.smtp.email": "ایمیل",
+  "admin.config.smtp.email.description":
+    "آدرس ایمیلی که ایمیل‌ها از آن ارسال می‌شوند",
+  "admin.config.smtp.username": "نام کاربری",
+  "admin.config.smtp.username.description":
+    "نام کاربری سرور SMTP",
+  "admin.config.smtp.password": "رمز عبور",
+  "admin.config.smtp.password.description":
+    "رمز عبور سرور SMTP",
+  "admin.config.smtp.button.test": "ارسال ایمیل آزمایشی",
+  "admin.config.smtp.test-email.success": "ایمیل با موفقیت ارسال شد",
+  "admin.config.smtp.test-email.error.title":
+    "ارسال ایمیل ناموفق بود",
+  "admin.config.smtp.test-email.error.description":
+    "هنگام ارسال ایمیل آزمایشی خطای زیر رخ داد:",
+  "admin.config.smtp.test-email.save.title": "ذخیره پیکربندی",
+  "admin.config.smtp.test-email.save.description":
+    "برای ادامه باید ابتدا پیکربندی را ذخیره کنید. آیا می‌خواهید پیکربندی را ذخیره کرده و ایمیل آزمایشی ارسال کنید؟",
+  "admin.config.smtp.test-email.save.confirm": "ذخیره و ارسال",
+  "admin.config.smtp.allow-unauthorized-certificates":
+    "اعتماد به گواهی‌نامه‌های SMTP غیرمجاز",
+  "admin.config.smtp.allow-unauthorized-certificates.description":
+    "فقط در صورتی این را true قرار دهید که نیاز دارید به گواهی‌های خودامضا اعتماد کنید.",
+  "admin.config.oauth.allow-registration": "اجازه ثبت‌نام",
+  "admin.config.oauth.allow-registration.description":
+    "اجازه می‌دهد کاربران از طریق ورود اجتماعی ثبت‌نام کنند.",
+  "admin.config.oauth.ignore-totp": "نادیده گرفتن TOTP",
+  "admin.config.oauth.ignore-totp.description":
+    "آیا هنگام استفاده از ورود اجتماعی TOTP نادیده گرفته شود.",
+  "admin.config.oauth.disable-password":
+    "غیرفعال کردن ورود با رمز عبور",
+  "admin.config.oauth.disable-password.description":
+    "آیا ورود با رمز عبور غیرفعال شود\nمطمئن شوید که قبل از فعال کردن این پیکربندی، یک ارائه‌دهنده OAuth به درستی پیکربندی شده باشد تا از قفل شدن جلوگیری شود.",
   "admin.config.oauth.github-enabled": "GitHub",
-  "admin.config.oauth.github-enabled.description": "Whether GitHub login is enabled",
-  "admin.config.oauth.github-client-id": "GitHub Client ID",
-  "admin.config.oauth.github-client-id.description": "Client ID of the GitHub OAuth app",
-  "admin.config.oauth.github-client-secret": "GitHub Client secret",
-  "admin.config.oauth.github-client-secret.description": "Client secret of the GitHub OAuth app",
+  "admin.config.oauth.github-enabled.description":
+    "آیا ورود GitHub فعال است",
+  "admin.config.oauth.github-client-id":
+    "شناسه مشتری GitHub",
+  "admin.config.oauth.github-client-id.description":
+    "شناسه مشتری برنامه OAuth GitHub",
+  "admin.config.oauth.github-client-secret":
+    "رمز مشتری GitHub",
+  "admin.config.oauth.github-client-secret.description":
+    "رمز مشتری برنامه OAuth GitHub",
   "admin.config.oauth.google-enabled": "Google",
-  "admin.config.oauth.google-enabled.description": "Whether Google login is enabled",
-  "admin.config.oauth.google-client-id": "Google Client ID",
-  "admin.config.oauth.google-client-id.description": "Client ID of the Google OAuth app",
-  "admin.config.oauth.google-client-secret": "Google Client secret",
-  "admin.config.oauth.google-client-secret.description": "Client secret of the Google OAuth app",
+  "admin.config.oauth.google-enabled.description":
+    "آیا ورود Google فعال است",
+  "admin.config.oauth.google-client-id":
+    "شناسه مشتری Google",
+  "admin.config.oauth.google-client-id.description":
+    "شناسه مشتری برنامه OAuth Google",
+  "admin.config.oauth.google-client-secret":
+    "رمز مشتری Google",
+  "admin.config.oauth.google-client-secret.description":
+    "رمز مشتری برنامه OAuth Google",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
-  "admin.config.oauth.microsoft-enabled.description": "Whether Microsoft login is enabled",
-  "admin.config.oauth.microsoft-tenant": "Microsoft Tenant",
-  "admin.config.oauth.microsoft-tenant.description": "Tenant ID of the Microsoft OAuth app\ncommon: Users with both a personal Microsoft account and a work or school account from Microsoft Entra ID can sign in to the application. organizations: Only users with work or school accounts from Microsoft Entra ID can sign in to the application.\nconsumers: Only users with a personal Microsoft account can sign in to the application.\ndomain name of the Microsoft Entra tenant or the tenant ID in GUID format: Only users from a specific Microsoft Entra tenant (directory members with a work or school account or directory guests with a personal Microsoft account) can sign in to the application.",
-  "admin.config.oauth.microsoft-client-id": "Microsoft Client ID",
-  "admin.config.oauth.microsoft-client-id.description": "Client ID of the Microsoft OAuth app",
-  "admin.config.oauth.microsoft-client-secret": "Microsoft Client secret",
-  "admin.config.oauth.microsoft-client-secret.description": "Client secret of the Microsoft OAuth app",
+  "admin.config.oauth.microsoft-enabled.description":
+    "آیا ورود Microsoft فعال است",
+  "admin.config.oauth.microsoft-tenant": "مستاجر Microsoft",
+  "admin.config.oauth.microsoft-tenant.description":
+    "شناسه مستاجر برنامه OAuth Microsoft\ncommon: کاربران دارای هر دو حساب شخصی Microsoft و حساب کاری یا مدرسه در Microsoft Entra ID می‌توانند وارد برنامه شوند. organizations: فقط کاربران با حساب کاری یا مدرسه در Microsoft Entra ID می‌توانند وارد برنامه شوند. consumers: فقط کاربران با حساب شخصی Microsoft می‌توانند وارد برنامه شوند. نام دامنه مستاجر Microsoft Entra یا شناسه مستاجر به فرمت GUID: فقط کاربران از مستاجر خاصی (اعضای دایرکتوری با حساب کاری یا مدرسه یا مهمانان با حساب شخصی) می‌توانند وارد برنامه شوند.",
+  "admin.config.oauth.microsoft-client-id":
+    "شناسه مشتری Microsoft",
+  "admin.config.oauth.microsoft-client-id.description":
+    "شناسه مشتری برنامه OAuth Microsoft",
+  "admin.config.oauth.microsoft-client-secret":
+    "رمز مشتری Microsoft",
+  "admin.config.oauth.microsoft-client-secret.description":
+    "رمز مشتری برنامه OAuth Microsoft",
   "admin.config.oauth.discord-enabled": "Discord",
-  "admin.config.oauth.discord-enabled.description": "Whether Discord login is enabled",
-  "admin.config.oauth.discord-limited-users": "Discord limited users",
-  "admin.config.oauth.discord-limited-users.description": "Limit signing in to specific users by their Discord ID. Leave it blank to disable.",
-  "admin.config.oauth.discord-limited-guild": "Discord limited server ID",
-  "admin.config.oauth.discord-limited-guild.description": "Limit signing in to users in a specific server. Leave it blank to disable.",
-  "admin.config.oauth.discord-client-id": "Discord Client ID",
-  "admin.config.oauth.discord-client-id.description": "Client ID of the Discord OAuth app",
-  "admin.config.oauth.discord-client-secret": "Discord Client secret",
-  "admin.config.oauth.discord-client-secret.description": "Client secret of the Discord OAuth app",
+  "admin.config.oauth.discord-enabled.description":
+    "آیا ورود Discord فعال است",
+  "admin.config.oauth.discord-limited-users":
+    "کاربران محدود Discord",
+  "admin.config.oauth.discord-limited-users.description":
+    "ورود را به کاربران خاصی با شناسه Discord محدود کنید. برای غیرفعال کردن، آن را خالی بگذارید.",
+  "admin.config.oauth.discord-limited-guild":
+    "شناسه سرور محدود Discord",
+  "admin.config.oauth.discord-limited-guild.description":
+    "ورود را به کاربران یک سرور خاص محدود کنید. برای غیرفعال کردن، آن را خالی بگذارید.",
+  "admin.config.oauth.discord-client-id":
+    "شناسه مشتری Discord",
+  "admin.config.oauth.discord-client-id.description":
+    "شناسه مشتری برنامه OAuth Discord",
+  "admin.config.oauth.discord-client-secret":
+    "رمز مشتری Discord",
+  "admin.config.oauth.discord-client-secret.description":
+    "رمز مشتری برنامه OAuth Discord",
   "admin.config.oauth.oidc-enabled": "OpenID Connect",
-  "admin.config.oauth.oidc-enabled.description": "Whether OpenID Connect login is enabled",
-  "admin.config.oauth.oidc-discovery-uri": "OpenID Connect Discovery URI",
-  "admin.config.oauth.oidc-discovery-uri.description": "Discovery URI of the OpenID Connect OAuth app",
-  "admin.config.oauth.oidc-sign-out": "Sign out from OpenID Connect",
-  "admin.config.oauth.oidc-sign-out.description": "Whether the “Sign out” button will sign out from the OpenID Connect provider",
-  "admin.config.oauth.oidc-scope": "OpenID Connect scope",
-  "admin.config.oauth.oidc-scope.description": "Scopes which should be requested from the OpenID Connect provider.",
-  "admin.config.oauth.oidc-username-claim": "OpenID Connect username claim",
-  "admin.config.oauth.oidc-username-claim.description": "Username claim in OpenID Connect ID token. Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-path": "Path to roles in OpenID Connect token",
-  "admin.config.oauth.oidc-role-path.description": "Must be a valid JMES path referencing an array of roles. " + "Managing access rights using OpenID Connect roles is only recommended if no other identity provider is configured and password login is disabled. " + "Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-general-access": "OpenID Connect role for general access",
-  "admin.config.oauth.oidc-role-general-access.description": "Role required for general access. Must be present in a user’s roles for them to log in. " + "Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-admin-access": "OpenID Connect role for admin access",
-  "admin.config.oauth.oidc-role-admin-access.description": "Role required for administrative access. Must be present in a user’s roles for them to access the admin panel. " + "Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-client-id": "OpenID Connect Client ID",
-  "admin.config.oauth.oidc-client-id.description": "Client ID of the OpenID Connect OAuth app",
-  "admin.config.oauth.oidc-client-secret": "OpenID Connect Client secret",
-  "admin.config.oauth.oidc-client-secret.description": "Client secret of the OpenID Connect OAuth app",
+  "admin.config.oauth.oidc-enabled.description":
+    "آیا OpenID Connect فعال است",
+  "admin.config.oauth.oidc-discovery-uri":
+    "آدرس کشف OpenID Connect",
+  "admin.config.oauth.oidc-discovery-uri.description":
+    "آدرس کشف برنامه OAuth OpenID Connect",
+  "admin.config.oauth.oidc-sign-out":
+    "خروج از OpenID Connect",
+  "admin.config.oauth.oidc-sign-out.description":
+    "آیا دکمه “خروج” کاربر را از ارائه‌دهنده OpenID Connect نیز خارج می‌کند",
+  "admin.config.oauth.oidc-scope":
+    "دامنه OpenID Connect",
+  "admin.config.oauth.oidc-scope.description":
+    "دامنه‌هایی که باید از ارائه‌دهنده OpenID Connect درخواست شوند.",
+  "admin.config.oauth.oidc-username-claim":
+    "مدخل نام کاربری OpenID Connect",
+  "admin.config.oauth.oidc-username-claim.description":
+    "ادعای نام کاربری در توکن شناسه OpenID Connect. اگر نمی‌دانید این پیکربندی چیست، آن را خالی بگذارید.",
+  "admin.config.oauth.oidc-role-path":
+    "مسیر به نقش‌ها در توکن OpenID Connect",
+  "admin.config.oauth.oidc-role-path.description":
+    "باید یک مسیر JMES معتبر باشد که به آرایه‌ای از نقش‌ها اشاره کند. مدیریت حقوق دسترسی با استفاده از نقش‌های OpenID Connect تنها در صورتی توصیه می‌شود که هیچ ارائه‌دهنده هویتی دیگری پیکربندی نشده و ورود با رمز عبور غیرفعال است. اگر نمی‌دانید این پیکربندی چیست، آن را خالی بگذارید.",
+  "admin.config.oauth.oidc-role-general-access":
+    "نقش OpenID Connect برای دسترسی عمومی",
+  "admin.config.oauth.oidc-role-general-access.description":
+    "نقشی که برای دسترسی عمومی لازم است. باید در نقش‌های کاربر وجود داشته باشد تا بتواند وارد شود. اگر نمی‌دانید، آن را خالی بگذارید.",
+  "admin.config.oauth.oidc-role-admin-access":
+    "نقش OpenID Connect برای دسترسی مدیریت",
+  "admin.config.oauth.oidc-role-admin-access.description":
+    "نقشی که برای دسترسی به پنل مدیریت لازم است. باید در نقش‌های کاربر وجود داشته باشد. اگر نمی‌دانید، آن را خالی بگذارید.",
+  "admin.config.oauth.oidc-client-id":
+    "شناسه مشتری OpenID Connect",
+  "admin.config.oauth.oidc-client-id.description":
+    "شناسه مشتری برنامه OAuth OpenID Connect",
+  "admin.config.oauth.oidc-client-secret":
+    "رمز مشتری OpenID Connect",
+  "admin.config.oauth.oidc-client-secret.description":
+    "رمز مشتری برنامه OAuth OpenID Connect",
   "admin.config.category.ldap": "LDAP",
-  "admin.config.ldap.enabled": "Enable LDAP",
-  "admin.config.ldap.enabled.description": "Use LDAP authentication for user login",
-  "admin.config.ldap.url": "Server URL",
-  "admin.config.ldap.url.description": "URL of the LDAP server",
+  "admin.config.ldap.enabled": "فعال کردن LDAP",
+  "admin.config.ldap.enabled.description":
+    "استفاده از احراز هویت LDAP برای ورود کاربران",
+  "admin.config.ldap.url": "آدرس سرور",
+  "admin.config.ldap.url.description":
+    "آدرس سرور LDAP",
   "admin.config.ldap.bind-dn": "Bind DN",
-  "admin.config.ldap.bind-dn.description": "Default user used to perform the user search",
-  "admin.config.ldap.bind-password": "Bind password",
-  "admin.config.ldap.bind-password.description": "Password used to perform the user search",
-  "admin.config.ldap.search-base": "User base",
-  "admin.config.ldap.search-base.description": "Base location, where the user search will be performed",
-  "admin.config.ldap.search-query": "User query",
-  "admin.config.ldap.search-query.description": "The user query will be used to search the 'User base' for the LDAP user. %username% can be used as the placeholder for the user given input.",
-  "admin.config.ldap.admin-groups": "Admin group",
-  "admin.config.ldap.admin-groups.description": "Group required for administrative access.",
-  "admin.config.ldap.field-name-member-of": "User groups attribute name",
-  "admin.config.ldap.field-name-member-of.description": "LDAP attribute name for the groups, an user is a member of. This is used when checking for the admin group.",
-  "admin.config.ldap.field-name-email": "User email attribute name",
-  "admin.config.ldap.field-name-email.description": "LDAP attribute name for the email of an user.",
-  "admin.config.notify.success": "Configuration updated successfully.",
-  "admin.config.notify.logo-success": "Logo updated successfully. It may take a few minutes to update on the website.",
-  "admin.config.notify.no-changes": "No changes to save.",
+  "admin.config.ldap.bind-dn.description":
+    "کاربر پیش‌فرض برای انجام جستجوی کاربر",
+  "admin.config.ldap.bind-password": "رمز bind",
+  "admin.config.ldap.bind-password.description":
+    "رمز استفاده شده برای جستجوی کاربر",
+  "admin.config.ldap.search-base": "پایه کاربران",
+  "admin.config.ldap.search-base.description":
+    "محل پایه‌ای که جستجوی کاربر در آن انجام می‌شود",
+  "admin.config.ldap.search-query": "عبارت جستجوی کاربر",
+  "admin.config.ldap.search-query.description":
+    "عبارت جستجو برای یافتن کاربر LDAP در 'پایه کاربران'. %username% می‌تواند به‌عنوان جایگزین برای ورودی کاربر استفاده شود.",
+  "admin.config.ldap.admin-groups": "گروه مدیر",
+  "admin.config.ldap.admin-groups.description":
+    "گروهی که برای دسترسی مدیریت لازم است.",
+  "admin.config.ldap.field-name-member-of":
+    "نام صفت گروه‌های کاربر",
+  "admin.config.ldap.field-name-member-of.description":
+    "نام صفت LDAP برای گروه‌هایی که کاربر عضو آن‌ها است. این هنگام بررسی گروه مدیر استفاده می‌شود.",
+  "admin.config.ldap.field-name-email":
+    "نام صفت ایمیل کاربر",
+  "admin.config.ldap.field-name-email.description":
+    "نام صفت LDAP برای ایمیل کاربر.",
+  "admin.config.notify.success":
+    "پیکربندی با موفقیت به‌روزرسانی شد.",
+  "admin.config.notify.logo-success":
+    "لوگو با موفقیت به‌روزرسانی شد. ممکن است چند دقیقه طول بکشد تا در وب‌سایت به‌روزرسانی شود.",
+  "admin.config.notify.no-changes": "تغییری برای ذخیره وجود ندارد.",
   "admin.config.category.s3": "S3",
-  "admin.config.s3.enabled": "Enabled",
-  "admin.config.s3.enabled.description": "Whether S3 should be used to store the shared files instead of the local file system. WARNING: If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
+  "admin.config.s3.enabled": "فعال",
+  "admin.config.s3.enabled.description":
+    "آیا باید از S3 برای ذخیره فایل‌های اشتراک استفاده شود به جای سیستم فایل محلی. هشدار: اگر ClamAV فعال باشد، فایل‌ها به‌طور موقت برای بررسی از S3 دانلود می‌شوند.",
   "admin.config.s3.endpoint": "Endpoint",
-  "admin.config.s3.endpoint.description": "The URL of the S3 bucket.",
-  "admin.config.s3.region": "Region",
-  "admin.config.s3.region.description": "The region of the S3 bucket.",
-  "admin.config.s3.bucket-name": "Bucket name",
-  "admin.config.s3.bucket-name.description": "The name of the S3 bucket.",
-  "admin.config.s3.bucket-path": "Path",
-  "admin.config.s3.bucket-path.description": "The default path which should be used to store the files in the S3 bucket.",
-  "admin.config.s3.key": "Key",
-  "admin.config.s3.key.description": "The key which allows you to access the S3 bucket.",
-  "admin.config.s3.secret": "Secret",
-  "admin.config.s3.secret.description": "The secret which allows you to access the S3 bucket.",
-  "admin.config.s3.use-checksum": "Use checksum",
-  "admin.config.s3.use-checksum.description": "Turn off for backends that do not support checksum (e.g. B2).",
-  "admin.config.category.legal": "Legal",
-  "admin.config.legal.enabled": "Enable legal notices",
-  "admin.config.legal.enabled.description": "Whether to show a link to imprint and privacy policy in the footer.",
-  "admin.config.legal.imprint-text": "Imprint text",
-  "admin.config.legal.imprint-text.description": "The text which should be shown in the imprint. Supports Markdown. Leave blank to link to an external imprint page.",
-  "admin.config.legal.imprint-url": "Imprint URL",
-  "admin.config.legal.imprint-url.description": "If you already have an imprint page you can link it here instead of using the text field.",
-  "admin.config.legal.privacy-policy-text": "Privacy policy text",
-  "admin.config.legal.privacy-policy-text.description": "The text which should be shown in the privacy policy. Supports Markdown. Leave blank to link to an external privacy policy page.",
-  "admin.config.legal.privacy-policy-url": "Privacy policy URL",
-  "admin.config.legal.privacy-policy-url.description": "If you already have a privacy policy page you can link it here instead of using the text field.",
+  "admin.config.s3.endpoint.description":
+    "آدرس URL سطل S3.",
+  "admin.config.s3.region": "ناحیه",
+  "admin.config.s3.region.description":
+    "منطقه سطل S3.",
+  "admin.config.s3.bucket-name": "نام سطل",
+  "admin.config.s3.bucket-name.description":
+    "نام سطل S3.",
+  "admin.config.s3.bucket-path": "مسیر",
+  "admin.config.s3.bucket-path.description":
+    "مسیر پیش‌فرضی که باید برای ذخیره فایل‌ها در سطل S3 استفاده شود.",
+  "admin.config.s3.key": "کلید",
+  "admin.config.s3.key.description":
+    "کلیدی که به شما امکان دسترسی به سطل S3 را می‌دهد.",
+  "admin.config.s3.secret": "راز",
+  "admin.config.s3.secret.description":
+    "رازی که به شما امکان دسترسی به سطل S3 را می‌دهد.",
+  "admin.config.s3.use-checksum": "استفاده از checksum",
+  "admin.config.s3.use-checksum.description":
+    "برای بک‌اندهایی که از checksum پشتیبانی نمی‌کنند (مثلاً B2) آن را خاموش کنید.",
+  "admin.config.category.legal": "قانونی",
+  "admin.config.legal.enabled": "فعال کردن اعلامیه‌های قانونی",
+  "admin.config.legal.enabled.description":
+    "آیا لینک به صفحه imprint و سیاست حفظ حریم خصوصی در فوتر نمایش داده شود.",
+  "admin.config.legal.imprint-text": "متن اطلاعات حقوقی",
+  "admin.config.legal.imprint-text.description":
+    "متنی که باید در صفحه imprint نمایش داده شود. از Markdown پشتیبانی می‌کند. خالی بگذارید تا به صفحه imprint خارجی لینک دهد.",
+  "admin.config.legal.imprint-url": "آدرس اطلاعات حقوقی",
+  "admin.config.legal.imprint-url.description":
+    "اگر قبلاً صفحه imprint دارید می‌توانید به جای استفاده از قسمت متن، به آن لینک دهید.",
+  "admin.config.legal.privacy-policy-text":
+    "متن سیاست حفظ حریم خصوصی",
+  "admin.config.legal.privacy-policy-text.description":
+    "متنی که باید در صفحه سیاست حفظ حریم خصوصی نمایش داده شود. از Markdown پشتیبانی می‌کند. خالی بگذارید تا به صفحه سیاست حفظ حریم خصوصی خارجی لینک دهد.",
+  "admin.config.legal.privacy-policy-url":
+    "آدرس سیاست حفظ حریم خصوصی",
+  "admin.config.legal.privacy-policy-url.description":
+    "اگر قبلاً صفحه سیاست حفظ حریم خصوصی دارید می‌توانید به جای استفاده از متن، به آن لینک دهید.",
+
   // 404
-  "404.description": "Oops this page doesn't exist.",
-  "404.button.home": "Bring me back home",
+  "404.description": "اوه، این صفحه وجود ندارد.",
+  "404.button.home": "بازگشت به خانه",
+
   // error
-  "error.title": "Error",
-  "error.description": "Oops!",
-  "error.button.back": "Go back",
-  "error.msg.default": "Something went wrong.",
-  "error.msg.access_denied": "You canceled the authentication process, please try again.",
-  "error.msg.expired_token": "The authentication process took too long, please try again.",
-  "error.msg.invalid_token": "Internal Error",
-  "error.msg.no_user": "User linked to this {0} account doesn't exist.",
-  "error.msg.no_email": "Can't get email address from this {0} account.",
-  "error.msg.already_linked": "This {0} account is already linked to another account.",
-  "error.msg.not_linked": "This {0} account hasn't been linked to any account yet.",
-  "error.msg.unverified_account": "This {0} account is unverified, please try again after verification.",
-  "error.msg.user_not_allowed": "You are not allowed to sign in.",
-  "error.msg.cannot_get_user_info": "Cannot get your user info from this {0} account.",
+  "error.title": "خطا",
+  "error.description": "اوه!",
+  "error.button.back": "بازگشت",
+  "error.msg.default": "مشکلی پیش آمد.",
+  "error.msg.access_denied":
+    "شما فرایند احراز هویت را لغو کردید، لطفاً دوباره تلاش کنید.",
+  "error.msg.expired_token":
+    "فرایند احراز هویت بیش از حد طول کشید، لطفاً دوباره تلاش کنید.",
+  "error.msg.invalid_token": "خطای داخلی",
+  "error.msg.no_user":
+    "کاربر مرتبط با این حساب {0} وجود ندارد.",
+  "error.msg.no_email":
+    "نمی‌توان آدرس ایمیل را از این حساب {0} دریافت کرد.",
+  "error.msg.already_linked":
+    "این حساب {0} قبلاً به یک حساب دیگر پیوند خورده است.",
+  "error.msg.not_linked":
+    "این حساب {0} هنوز به هیچ حسابی پیوند نخورده است.",
+  "error.msg.unverified_account":
+    "این حساب {0} تأیید نشده است، لطفاً پس از تأیید دوباره تلاش کنید.",
+  "error.msg.user_not_allowed": "شما اجازه ورود ندارید.",
+  "error.msg.cannot_get_user_info":
+    "نمی‌توان اطلاعات کاربر را از این حساب {0} دریافت کرد.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
   "error.param.provider_discord": "Discord",
   "error.param.provider_oidc": "OpenID Connect",
+
   // Common translations
-  "common.button.info": "Info",
-  "common.button.undo": "Undo",
-  "common.button.download": "Download",
-  "common.button.copy": "Copy",
-  "common.button.copy-link": "Copy link",
-  "common.button.preview": "Preview",
-  "common.button.edit": "Edit",
-  "common.button.profile": "Profile",
-  "common.button.shares": "Shares",
-  "common.button.save": "Save",
-  "common.button.create": "Create",
-  "common.button.submit": "Submit",
-  "common.button.delete": "Delete",
-  "common.button.cancel": "Cancel",
-  "common.button.confirm": "Confirm",
-  "common.button.disable": "Disable",
-  "common.button.share": "Share",
-  "common.button.generate": "Generate",
-  "common.button.done": "Done",
-  "common.text.link": "Link",
-  "common.text.navigate-to-link": "Visit link",
-  "common.text.or": "or",
-  "common.text.redirecting": "Redirecting...",
-  "common.button.go-back": "Go back",
-  "common.button.go-home": "Go home",
-  "common.notify.copied": "Your link was copied to the clipboard",
-  "common.notify.copied-link": "Your link was copied to the clipboard",
-  "common.success": "Success",
-  "common.error": "Error",
-  "common.error.unknown": "An unknown error occurred",
-  "common.error.invalid-email": "Invalid email address",
-  "common.error.too-short": "Must be at least {length} characters",
-  "common.error.too-long": "Must be at most {length} characters",
-  "common.error.number-too-small": "Must be at least {min}",
-  "common.error.number-too-large": "Must be at most {max}",
-  "common.error.exact-length": "Must be exactly {length} characters",
-  "common.error.invalid-number": "Must be a number",
-  "common.error.field-required": "This field is required"
+  "common.button.info": "اطلاعات",
+  "common.button.undo": "واگرد",
+  "common.button.download": "دانلود",
+  "common.button.copy": "کپی",
+  "common.button.copy-link": "کپی لینک",
+  "common.button.preview": "پیش‌نمایش",
+  "common.button.edit": "ویرایش",
+  "common.button.profile": "پروفایل",
+  "common.button.shares": "اشتراک‌ها",
+  "common.button.save": "ذخیره",
+  "common.button.create": "ایجاد",
+  "common.button.submit": "ارسال",
+  "common.button.delete": "حذف",
+  "common.button.cancel": "لغو",
+  "common.button.confirm": "تأیید",
+  "common.button.disable": "غیرفعال",
+  "common.button.share": "اشتراک‌گذاری",
+  "common.button.generate": "تولید",
+  "common.button.done": "تمام",
+  "common.text.link": "لینک",
+  "common.text.navigate-to-link": "رفتن به لینک",
+  "common.text.or": "یا",
+  "common.text.redirecting": "در حال هدایت...",
+  "common.button.go-back": "بازگشت",
+  "common.button.go-home": "رفتن به خانه",
+  "common.notify.copied": "لینک شما به کلیپ‌بورد کپی شد",
+  "common.notify.copied-link": "لینک شما به کلیپ‌بورد کپی شد",
+  "common.success": "موفقیت",
+
+  "common.error": "خطا",
+  "common.error.unknown": "یک خطای ناشناخته رخ داد",
+  "common.error.invalid-email": "آدرس ایمیل نامعتبر",
+  "common.error.too-short": "باید حداقل {length} کاراکتر باشد",
+  "common.error.too-long": "باید حداکثر {length} کاراکتر باشد",
+  "common.error.number-too-small": "باید حداقل {min} باشد",
+  "common.error.number-too-large": "باید حداکثر {max} باشد",
+  "common.error.exact-length": "باید دقیقاً {length} کاراکتر باشد",
+  "common.error.invalid-number": "باید یک عدد باشد",
+  "common.error.field-required": "این فیلد الزامی است",
 };

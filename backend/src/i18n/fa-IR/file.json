@@ -1,15 +1,15 @@
 {
-  "invalidIdFormat": "Invalid ID format",
-  "notFound": "File not found",
-  "passwordProtected": "This share is password protected",
-  "alreadyCompleted": "Share is already completed",
-  "notEnoughSpace": "Not enough space on the server",
-  "unexpectedChunk": "Unexpected chunk received",
-  "maxSizeExceeded": "Max share size exceeded",
-  "zipError": "Error creating ZIP file",
-  "s3DeleteError": "Could not delete file from S3",
-  "s3UploadInitError": "Failed to initialize multipart upload.",
-  "s3SessionNotFound": "Multipart upload session not found.",
-  "s3UploadFailed": "Multipart upload failed. The upload has been aborted.",
-  "s3SizeError": "Could not retrieve file size"
+  "invalidIdFormat": "فرمت شناسه نامعتبر است",
+  "notFound": "فایل پیدا نشد",
+  "passwordProtected": "این اشتراک با رمز عبور محافظت شده است",
+  "alreadyCompleted": "اشتراک قبلاً تکمیل شده است",
+  "notEnoughSpace": "فضای کافی روی سرور وجود ندارد",
+  "unexpectedChunk": "بخش غیرمنتظره‌ای دریافت شد",
+  "maxSizeExceeded": "حداکثر حجم اشتراک فراتر رفته است",
+  "zipError": "خطا در ایجاد فایل ZIP",
+  "s3DeleteError": "امکان حذف فایل از S3 وجود نداشت",
+  "s3UploadInitError": "راه‌اندازی بارگذاری چندبخشی ناموفق بود.",
+  "s3SessionNotFound": "نشست بارگذاری چندبخشی پیدا نشد.",
+  "s3UploadFailed": "بارگذاری چندبخشی ناموفق بود. بارگذاری لغو شده است.",
+  "s3SizeError": "امکان دریافت اندازه فایل وجود نداشت"
 }

@@ -234,7 +234,7 @@ export class ShareService {
       orderBy: {
         expiration: "desc",
       },
-      include: { recipients: true, files: true, security: true },
+      include: { recipients: true, files: true, security: true, creator: true },
     });
 
     return shares.map((share) => this.transformShare(share));

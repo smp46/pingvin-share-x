@@ -30,8 +30,16 @@ import ukrainian from "./translations/uk-UA";
 import viatnamese from "./translations/vi-VN";
 import chineseSimplified from "./translations/zh-CN";
 import chineseTraditional from "./translations/zh-TW";
+import persian from "./translations/fa-IR";
 
-export const LOCALES = {
+export interface Locale {
+  name: string;
+  code: string;
+  messages: Record<string, string>;
+  direction?: string;
+}
+
+export const LOCALES: Record<string, Locale> = {
   ENGLISH: {
     name: "English",
     code: "en-US",
@@ -146,6 +154,13 @@ export const LOCALES = {
     name: "العربية",
     code: "ar-EG",
     messages: arabic,
+    direction: "rtl",
+  },
+  PERSIAN: {
+    name: "فارسی",
+    code: "fa-IR",
+    messages: persian,
+    direction: "rtl",
   },
   BULGARIAN: {
     name: "Български",

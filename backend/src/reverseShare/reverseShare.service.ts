@@ -37,12 +37,17 @@ export class ReverseShareService {
       throw new BadRequestException(this.i18n.t("share.maxExpirationExceeded"));
     }
 
-    const globalMaxShareSize = this.config.get("share.maxSize");
+    const creator = await this.prisma.user.findUnique({
+      where: { id: creatorId },
+    });
+    const userMaxShareSize = creator?.shareSizeLimit
+      ? parseInt(creator.shareSizeLimit)
+      : parseInt(this.config.get("share.maxSize"));
 
-    if (globalMaxShareSize < data.maxShareSize)
+    if (userMaxShareSize < parseInt(data.maxShareSize))
       throw new BadRequestException(
         this.i18n.t("reverseShare.maxShareSizeExceeded", {
-          args: { maxSize: globalMaxShareSize },
+          args: { maxSize: userMaxShareSize },
         }),
       );
 

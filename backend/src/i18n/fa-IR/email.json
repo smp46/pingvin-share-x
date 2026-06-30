@@ -1,11 +1,11 @@
 {
-  "shareRecipientsCreatorFallback": "Someone",
-  "shareRecipientsDescFallback": "No description",
-  "shareRecipientsExpiresNeverFallback": "in: never",
-  "smtpDisabled": "SMTP is disabled",
-  "emailServiceDisabled": "Email service disabled",
-  "testSubject": "Test email",
-  "testText": "This is a test email",
-  "sendFailed": "Failed to send email",
-  "locale": "en-US"
+  "shareRecipientsCreatorFallback": "کسی",
+  "shareRecipientsDescFallback": "بدون توضیح",
+  "shareRecipientsExpiresNeverFallback": "هرگز",
+  "smtpDisabled": "SMTP غیرفعال است",
+  "emailServiceDisabled": "سرویس ایمیل غیرفعال است",
+  "testSubject": "ایمیل آزمایشی",
+  "testText": "این یک ایمیل آزمایشی است",
+  "sendFailed": "ارسال ایمیل ناموفق بود",
+  "locale": "fa-IR"
 }
