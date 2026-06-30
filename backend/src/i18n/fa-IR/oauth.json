@@ -1,0 +1,15 @@
+{
+  "already_linked": "این حساب قبلاً به کاربر دیگری متصل شده است",
+  "not_linked": "این حساب به هیچ کاربری متصل نیست",
+  "no_user": "برای این حساب هیچ کاربری پیدا نشد",
+  "no_email": "آدرس ایمیلی برای این حساب پیدا نشد",
+  "unverified_account": "حساب شما تأیید نشده است",
+  "user_not_allowed": "شما اجازه ورود ندارید",
+  "invalid_token": "نشانه نامعتبر است",
+  "cannot_get_user_info": "امکان دریافت اطلاعات کاربر وجود نداشت",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

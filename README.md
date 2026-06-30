@@ -62,7 +62,7 @@ All contributions are welcome, including issues, feature suggestions, pull reque
 
 ### Translations
 
-This project supports 30 languages so far (to varying degrees), you can help complete
+This project supports 32 languages so far (to varying degrees), you can help complete
 those translations or add more at [CrowdIn](https://crowdin.com/project/pingvin-share-x).
 
 ### AI Usage Policy

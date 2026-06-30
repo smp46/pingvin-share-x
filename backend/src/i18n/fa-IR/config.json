@@ -1,0 +1,12 @@
+{
+  "redisUrlNotSet": "آدرس Redis تنظیم نشده است",
+  "redisTimedOut": "Redis در مدت مورد نظر پاسخ نداد",
+  "redisConnectionFailed": "اتصال Redis ناموفق بود",
+  "redisUnexpectedResponse": "پاسخ غیرمنتظره از Redis",
+  "redisError": "خطای Redis",
+  "variableNotFound": "تنظیمات پیدا نشد",
+  "editNotAllowed": "شما فقط مجاز به به‌روزرسانی تنظیمات از طریق فایل config.yaml هستید",
+  "invalidType": "مقدار وارد شده برای تنظیمات باید از نوع {type} باشد",
+  "shareIdLengthValidation": "طول شناسه اشتراک باید بین ۲ تا ۵۰ باشد",
+  "zipCompressionLevelValidation": "سطح فشرده‌سازی ZIP باید بین ۰ تا ۹ باشد"
+}
