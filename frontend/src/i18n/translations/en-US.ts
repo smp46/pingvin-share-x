@@ -607,6 +607,9 @@ export default {
     "The share creation modal automatically appears when a user selects files, eliminating the need to manually click the button.",
   "admin.config.share.allow-admin-access-all-shares":
     "Allow admin access to all shares",
+  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
+  "admin.config.share.reverse-share-simple-only.description":
+    "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description":
     "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
   "admin.config.share.file-retention-period": "File retention period",
