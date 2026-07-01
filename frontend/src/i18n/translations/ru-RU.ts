@@ -451,6 +451,8 @@ export default {
   "admin.config.share.auto-open-share-modal": "Автоматически открыть общий доступ",
   "admin.config.share.auto-open-share-modal.description": "Модуль создания общего доступа автоматически появляется, когда пользователь выбирает файлы, устраняя необходимость вручную нажать кнопку.",
   "admin.config.share.allow-admin-access-all-shares": "Предоставьте администратору доступ ко всем общим папкам",
+  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
+  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Предоставьте администраторам доступ ко всем общим ресурсам, даже если они защищены паролем, срок их действия истек или они удалены.",
   "admin.config.share.file-retention-period": "Срок хранения файлов",
   "admin.config.share.file-retention-period.description": "Как долго файлы хранятся по истечении или удаляются. Полезно только в том случае, если опция «Разрешить администратору доступ ко всем ресурсам» также включена. Установите значение -1 для сохранения файлов навсегда.",

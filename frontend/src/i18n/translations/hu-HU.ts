@@ -451,6 +451,8 @@ export default {
   "admin.config.share.auto-open-share-modal": "Megosztás létrehozása felület automatikus megjelenítése",
   "admin.config.share.auto-open-share-modal.description": "A mgosztás létrehozása előugró elem automatikusan megjelenik a fájlok kiválasztásakor, ehhez nem szükséges külön kattintani.",
   "admin.config.share.allow-admin-access-all-shares": "Adminisztrátori hozzáférés engedélyezése az összes megosztáshoz",
+  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
+  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Engedélyezi az adminisztrátorok számára az összes megosztott tartalom elérését, még akkor is, ha azok jelszóval védettek, lejártak vagy töröltek.",
   "admin.config.share.file-retention-period": "Fájlmegőrzési időszak",
   "admin.config.share.file-retention-period.description": "A megosztás lejáratát követően mennyi ideig kerülnek az állományok megőrzésre. Csak akkor értelmezhető, ha az „Adminisztrátori hozzáférés engedélyezése az összes megosztáshoz” is engedélyezve van. Állítsa -1-re a fájlok végleges megőrzéséhez.",

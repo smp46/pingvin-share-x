@@ -451,6 +451,8 @@ export default {
   "admin.config.share.auto-open-share-modal": "Auto abrir un modal de creación de compartidos",
   "admin.config.share.auto-open-share-modal.description": "El modal de creación de compartir aparece automáticamente cuando un usuario selecciona archivos, eliminando la necesidad de hacer clic manualmente en el botón.",
   "admin.config.share.allow-admin-access-all-shares": "Permitir el acceso del administrador a todas las compartidas",
+  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
+  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Permitir a los administradores acceder a todas las compartidas, incluso si están protegidas por contraseña, caducadas o eliminadas.",
   "admin.config.share.file-retention-period": "Período de retención de archivos",
   "admin.config.share.file-retention-period.description": "Cuánto tiempo se guardan los archivos después de que una compartida expira o sea eliminada. Solo es útil si 'Permitir acceso de administrador a todas las compartidas' también está habilitado. Establecer en -1 para mantener los archivos para siempre.",

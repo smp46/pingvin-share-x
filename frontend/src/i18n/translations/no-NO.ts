@@ -451,6 +451,8 @@ export default {
   "admin.config.share.auto-open-share-modal": "Åpne delingsvindu automatisk",
   "admin.config.share.auto-open-share-modal.description": "Delingsvinduet vises automatisk når en bruker velger filer, slik at man slipper å klikke på knappen manuelt.",
   "admin.config.share.allow-admin-access-all-shares": "Tillat administratorer tilgang til alle delinger",
+  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
+  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Tillat administratorer å få tilgang til alle delinger, selv om de er passordbeskyttede, utløpte eller slettede.",
   "admin.config.share.file-retention-period": "Lagringsperiode for filer",
   "admin.config.share.file-retention-period.description": "Hvor lenge filer beholdes etter at en deling har utløpt eller blitt slettet. Kun nyttig dersom 'Tillat administratorer tilgang til alle delinger' også er aktivert. Sett til -1 for å beholde filer for alltid.",

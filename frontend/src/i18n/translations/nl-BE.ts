@@ -451,6 +451,8 @@ export default {
   "admin.config.share.auto-open-share-modal": "Automatisch openen, delen aanmaken modal",
   "admin.config.share.auto-open-share-modal.description": "Het venster voor het aanmaken van gedeelde bestanden verschijnt automatisch wanneer een gebruiker bestanden selecteert, waardoor het niet meer nodig is om handmatig op de knop te klikken.",
   "admin.config.share.allow-admin-access-all-shares": "Geef beheerders toegang tot alle gedeelde mappen",
+  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
+  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Sta beheerders toe om toegang te krijgen tot alle gedeelde mappen, zelfs als deze met een wachtwoord zijn beveiligd, verlopen zijn of verwijderd zijn.",
   "admin.config.share.file-retention-period": "Bewaartermijn van bestanden",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",

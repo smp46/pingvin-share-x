@@ -451,6 +451,8 @@ export default {
   "admin.config.share.auto-open-share-modal": "Freigabe-Fenster automatisch öffnen",
   "admin.config.share.auto-open-share-modal.description": "Das Freigabe-Fenster erscheint automatisch, sobald ein Benutzer Dateien ausgewählt hat, ohne extra auf den Button klicken zu müssen.",
   "admin.config.share.allow-admin-access-all-shares": "Admin-Zugriff auf alle Freigaben erlauben",
+  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
+  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Administratoren erlauben, auf alle Freigaben zuzugreifen, selbst wenn sie passwortgeschützt, abgelaufen oder gelöscht sind.",
   "admin.config.share.file-retention-period": "Aufbewahrungsfrist für Dateien",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",

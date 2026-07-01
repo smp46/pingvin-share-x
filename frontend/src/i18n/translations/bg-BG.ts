@@ -451,6 +451,8 @@ export default {
   "admin.config.share.auto-open-share-modal": "Автоматично отваряне на прозореца за споделяне",
   "admin.config.share.auto-open-share-modal.description": "Прозорецът се появява автоматично след избор на файлове.",
   "admin.config.share.allow-admin-access-all-shares": "Администраторски достъп до всички споделяния",
+  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
+  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Позволява на администраторите достъп до всички споделяния, дори и защитените, изтеклите или изтритите.",
   "admin.config.share.file-retention-period": "Период на запазване на файловете",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
