@@ -1,3 +1,13 @@
+## [1.21.0](https://github.com/smp46/pingvin-share-x/compare/v1.20.1...v1.21.0) (2026-07-01)
+
+### Features
+
+* add Farsi/Persian ([#112](https://github.com/smp46/pingvin-share-x/issues/112)) ([d13350a](https://github.com/smp46/pingvin-share-x/commit/d13350abbcdac767f16d444e5536bf8a553b94a1))
+* **email:** add html email compatibility ([#104](https://github.com/smp46/pingvin-share-x/issues/104)) ([a38ec26](https://github.com/smp46/pingvin-share-x/commit/a38ec269e4f7a07dcdfb7cc8641d3842efe0255b))
+* norwegian language support & AI translations ([#108](https://github.com/smp46/pingvin-share-x/issues/108)) ([8185f44](https://github.com/smp46/pingvin-share-x/commit/8185f44a5faeb2dd53ee1dfc5ff1467ab0eb3841))
+* per user share size limits ([#109](https://github.com/smp46/pingvin-share-x/issues/109)) ([74d6701](https://github.com/smp46/pingvin-share-x/commit/74d6701391581d3e3bd7232e9086ada5d1ead33c))
+* **reverse share:** add simple mode policy in config ([#106](https://github.com/smp46/pingvin-share-x/issues/106)) ([468bbde](https://github.com/smp46/pingvin-share-x/commit/468bbde82bfc4177f147e5d7b1ac7127dfafb5ef))
+
 ## [1.20.1](https://github.com/smp46/pingvin-share-x/compare/v1.20.0...v1.20.1) (2026-06-18)
 
 ## [1.20.0](https://github.com/smp46/pingvin-share-x/compare/v1.19.1...v1.20.0) (2026-06-18)
