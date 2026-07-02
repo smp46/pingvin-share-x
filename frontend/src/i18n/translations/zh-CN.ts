@@ -5,7 +5,7 @@ export default {
   "navbar.home": "首页",
   "navbar.signup": "注册",
   "navbar.links.shares": "我的共享",
-  "navbar.links.reverse": "预留共享",
+  "navbar.links.reverse": "反向分享",
   "navbar.avatar.account": "我的账户",
   "navbar.avatar.admin": "管理",
   "navbar.avatar.signout": "登出",
