@@ -427,7 +427,7 @@ export default {
   "admin.config.email.share-download-notification-message": "下载通知邮件内容",
   "admin.config.email.share-download-notification-message.description": "收件人下载文件时发送给分享创建者的邮件内容。可用变量：\n {recipientEmail} - 收件人的邮箱地址\n {fileName} - 下载的文件名称\n {shareUrl} - 分享链接地址",
   "admin.config.email.enable-email-verification": "启用邮箱验证",
-  "admin.config.email.enable-email-verification.description": "是否要求用户在登录前先验证邮箱。仅当启用 SMTP 后才能启用此选项。",
+  "admin.config.email.enable-email-verification.description": "是否要求用户在登录前先验证邮箱地址。仅在启用 SMTP 后可用。",
   "admin.config.email.verification-subject": "验证邮件主题",
   "admin.config.email.verification-subject.description": "用户注册时发送的邮件主题。",
   "admin.config.email.verification-message": "验证邮件内容",
