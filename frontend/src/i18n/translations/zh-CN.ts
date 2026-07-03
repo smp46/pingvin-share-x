@@ -455,7 +455,7 @@ export default {
   "admin.config.share.reverse-share-simple-only.description": "强制文件收集以简易模式创建。如果关闭此选项，文件收集创建者可自行选择简易模式或高级模式。",
   "admin.config.share.allow-admin-access-all-shares.description": "允许管理员访问所有共享，即使这些共享受密码保护、已过期或已删除。",
   "admin.config.share.file-retention-period": "文件保留期限",
-  "admin.config.share.file-retention-period.description": "设置共享过期或被删除后，文件保留的时长。仅在启用“允许管理员访问所有共享”后生效。设为 -1 表示永久保留文件。",
+  "admin.config.share.file-retention-period.description": "设置分享过期或被删除后文件的保留时长。仅在启用“允许管理员访问所有分享”时生效。设为 -1 表示永久保留文件。",
   "admin.config.smtp.enabled": "启用",
   "admin.config.smtp.enabled.description": "是否开启 SMTP，仅当输入主机名、端口、发送邮箱、用户名和密码后开启",
   "admin.config.smtp.host": "主机名",
