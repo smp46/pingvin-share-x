@@ -1,8 +1,8 @@
 {
   "already_linked": "此帐户已链接到另一个用户",
   "not_linked": "此帐户未链接到任何用户",
-  "no_user": "未找到此帐户的用户",
-  "no_email": "未找到此帐户的电子邮件地址",
+  "no_user": "此账号对应的用户不存在",
+  "no_email": "此账号未关联邮箱地址",
   "unverified_account": "您的帐户未验证",
   "user_not_allowed": "您不被允许登录",
   "invalid_token": "无效的令牌",
