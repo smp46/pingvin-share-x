@@ -54,11 +54,11 @@ export default {
   "signup.input.email.placeholder": "請輸入電子郵件",
   "signup.button.submit": "註冊",
   // /auth/verify
-  "verify.title": "Verify Account",
+  "verify.title": "驗證帳號",
   "verify.success": "Your account has been successfully verified! You can now sign in.",
   "verify.error": "The verification link is invalid or has expired.",
   "verify.button.signin": "Go to Sign In",
-  "verify.info.title": "Account Verification",
+  "verify.info.title": "帳號驗證",
   "verify.info.description": "Email verification is enabled. We've sent a verification link to your email address. Please click the link to activate your account.",
   "verify.info.note": "If you don't receive the email within a few minutes, please check your spam folder.",
   "verify.info.resend.button": "Resend verification email",
