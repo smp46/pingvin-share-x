@@ -70,7 +70,15 @@ const Share = ({ shareId }: { shareId: string }) => {
   return (
     <>
       <Meta title={t("share.edit.title", { shareId })} />
-      <EditableUpload shareId={shareId} files={share?.files || []} />
+      <EditableUpload
+        shareId={shareId}
+        files={share?.files || []}
+        maxShareSize={
+          share?.creator?.shareSizeLimit
+            ? parseInt(share.creator.shareSizeLimit)
+            : undefined
+        }
+      />
     </>
   );
 };

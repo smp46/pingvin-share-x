@@ -11,6 +11,7 @@ import {
 import { useModals } from "@mantine/modals";
 import { GetServerSidePropsContext } from "next";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { TbEdit, TbPlusMinus } from "react-icons/tb";
@@ -27,6 +28,7 @@ import shareService from "../../../services/share.service";
 import { MyShare, Share as ShareType } from "../../../types/share.type";
 import toast from "../../../utils/toast.util";
 import { byteToHumanSizeString } from "../../../utils/fileSize.util";
+import { getQueryString } from "../../../utils/router.util";
 import { HoverTip } from "../../../components/core/HoverTip";
 
 export function getServerSideProps(context: GetServerSidePropsContext) {
@@ -37,6 +39,7 @@ export function getServerSideProps(context: GetServerSidePropsContext) {
 
 const Share = ({ shareId }: { shareId: string }) => {
   const modals = useModals();
+  const router = useRouter();
   const [share, setShare] = useState<ShareType>();
   const [isRestricted, setIsRestricted] = useState(false);
   const { user } = useUser();
@@ -47,6 +50,7 @@ const Share = ({ shareId }: { shareId: string }) => {
 
   const isOwnerOrAdmin =
     !!user && !!share && (share.creator?.id === user.id || user.isAdmin);
+  const recipientId = getQueryString(router.query.recipient);
 
   const handleEditClick = async () => {
     try {
@@ -233,7 +237,9 @@ const Share = ({ shareId }: { shareId: string }) => {
               </ActionIcon>
             </HoverTip>
           )}
-          {share?.files.length > 1 && <DownloadAllButton shareId={shareId} />}
+          {share?.files.length > 1 && (
+            <DownloadAllButton shareId={shareId} recipientId={recipientId} />
+          )}
         </Group>
       </Group>
 
@@ -242,6 +248,7 @@ const Share = ({ shareId }: { shareId: string }) => {
         setShare={setShare}
         share={share!}
         isLoading={!share}
+        recipientId={recipientId}
       />
     </>
   );

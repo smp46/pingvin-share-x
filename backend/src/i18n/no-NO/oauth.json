@@ -1,0 +1,15 @@
+{
+  "already_linked": "Denne kontoen er allerede koblet til en annen bruker",
+  "not_linked": "Denne kontoen er ikke koblet til noen bruker",
+  "no_user": "Ingen bruker funnet for denne kontoen",
+  "no_email": "Ingen e-postadresse funnet for denne kontoen",
+  "unverified_account": "Kontoen din er ikke verifisert",
+  "user_not_allowed": "Du har ikke tillatelse til å logge inn",
+  "invalid_token": "Ugyldig token",
+  "cannot_get_user_info": "Kunne ikke hente brukerinformasjon",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

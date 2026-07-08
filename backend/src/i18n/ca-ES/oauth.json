@@ -1,0 +1,15 @@
+{
+  "already_linked": "Aquest compte ja està vinculat a un altre usuari",
+  "not_linked": "Aquest compte no està vinculat a cap usuari",
+  "no_user": "No s'ha trobat cap usuari per a aquest compte",
+  "no_email": "No s'ha trobat cap adreça de correu electrònic per a aquest compte",
+  "unverified_account": "El vostre compte no està verificat",
+  "user_not_allowed": "No teniu permès iniciar la sessió",
+  "invalid_token": "Token no vàlid",
+  "cannot_get_user_info": "No s'ha pogut obtenir la informació de l'usuari",
+  "provider_github": "GitHub",
+  "provider_google": "Google",
+  "provider_microsoft": "Microsoft",
+  "provider_discord": "Discord",
+  "provider_oidc": "OIDC"
+}

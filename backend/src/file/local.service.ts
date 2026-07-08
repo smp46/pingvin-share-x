@@ -39,7 +39,7 @@ export class LocalFileService {
 
     const share = await this.prisma.share.findUnique({
       where: { id: shareId },
-      include: { files: true, reverseShare: true },
+      include: { files: true, reverseShare: true, creator: true },
     });
 
     if (share.uploadLocked)
@@ -71,7 +71,9 @@ export class LocalFileService {
     const space = await fs.statfs(SHARE_DIRECTORY);
     const availableSpace = space.bavail * space.bsize;
     if (availableSpace < buffer.byteLength) {
-      throw new InternalServerErrorException(this.i18n.t("file.notEnoughSpace"));
+      throw new InternalServerErrorException(
+        this.i18n.t("file.notEnoughSpace"),
+      );
     }
 
     // Check if share size limit is exceeded
@@ -82,11 +84,14 @@ export class LocalFileService {
 
     const shareSizeSum = fileSizeSum + diskFileSize + buffer.byteLength;
 
-    if (
-      shareSizeSum > this.config.get("share.maxSize") ||
-      (share.reverseShare?.maxShareSize &&
-        shareSizeSum > parseInt(share.reverseShare.maxShareSize))
-    ) {
+    let limit = parseInt(this.config.get("share.maxSize"));
+    if (share.reverseShare?.maxShareSize) {
+      limit = parseInt(share.reverseShare.maxShareSize);
+    } else if (share.creator?.shareSizeLimit) {
+      limit = parseInt(share.creator.shareSizeLimit);
+    }
+
+    if (shareSizeSum > limit) {
       throw new HttpException(
         this.i18n.t("file.maxSizeExceeded"),
         HttpStatus.PAYLOAD_TOO_LARGE,
@@ -125,7 +130,8 @@ export class LocalFileService {
       where: { id: fileId },
     });
 
-    if (!fileMetaData) throw new NotFoundException(this.i18n.t("file.notFound"));
+    if (!fileMetaData)
+      throw new NotFoundException(this.i18n.t("file.notFound"));
 
     const file = createReadStream(`${SHARE_DIRECTORY}/${shareId}/${fileId}`);
 
@@ -144,7 +150,8 @@ export class LocalFileService {
       where: { id: fileId },
     });
 
-    if (!fileMetaData) throw new NotFoundException(this.i18n.t("file.notFound"));
+    if (!fileMetaData)
+      throw new NotFoundException(this.i18n.t("file.notFound"));
 
     await fs.unlink(`${SHARE_DIRECTORY}/${shareId}/${fileId}`);
 

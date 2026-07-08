@@ -13,6 +13,7 @@ import * as yup from "yup";
 import useTranslate from "../../../hooks/useTranslate.hook";
 import userService from "../../../services/user.service";
 import toast from "../../../utils/toast.util";
+import FileSizeInput from "../../core/FileSizeInput";
 
 const showCreateUserModal = (
   modals: ModalsContextProps,
@@ -44,6 +45,8 @@ const Body = ({
       password: undefined,
       isAdmin: false,
       setPasswordManually: false,
+      hasCustomShareSizeLimit: false,
+      shareSizeLimit: 104857600,
     },
     validate: yupResolver(
       yup.object().shape({
@@ -64,7 +67,15 @@ const Body = ({
       <form
         onSubmit={form.onSubmit(async (values) => {
           userService
-            .create(values)
+            .create({
+              username: values.username,
+              email: values.email,
+              password: values.password,
+              isAdmin: values.isAdmin,
+              shareSizeLimit: values.hasCustomShareSizeLimit
+                ? values.shareSizeLimit.toString()
+                : null,
+            })
             .then(() => {
               getUsers();
               modals.closeAll();
@@ -98,6 +109,30 @@ const Body = ({
             <PasswordInput
               label={t("admin.users.modal.create.password")}
               {...form.getInputProps("password")}
+            />
+          )}
+          <Switch
+            styles={{
+              body: {
+                display: "flex",
+                justifyContent: "space-between",
+              },
+            }}
+            mt="xs"
+            labelPosition="left"
+            label={t("admin.users.modal.create.custom-share-size-limit")}
+            description={t(
+              "admin.users.modal.create.custom-share-size-limit.description",
+            )}
+            {...form.getInputProps("hasCustomShareSizeLimit", {
+              type: "checkbox",
+            })}
+          />
+          {form.values.hasCustomShareSizeLimit && (
+            <FileSizeInput
+              label={t("admin.users.modal.create.custom-share-size-limit")}
+              value={form.values.shareSizeLimit}
+              onChange={(val) => form.setFieldValue("shareSizeLimit", val)}
             />
           )}
           <Switch

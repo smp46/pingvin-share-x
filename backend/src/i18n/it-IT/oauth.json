@@ -7,7 +7,7 @@
   "user_not_allowed": "Non sei autorizzato ad accedere",
   "invalid_token": "Token non valido",
   "cannot_get_user_info": "Impossibile ottenere le informazioni dell'utente",
-  "provider_github": "GitHub",
+  "provider_github": "Github",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",
   "provider_discord": "Discord",

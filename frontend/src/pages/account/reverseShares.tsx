@@ -24,6 +24,7 @@ import { HoverTip } from "../../components/core/HoverTip";
 import CenterLoader from "../../components/core/CenterLoader";
 import showCreateReverseShareModal from "../../components/share/modals/showCreateReverseShareModal";
 import useConfig from "../../hooks/config.hook";
+import useUser from "../../hooks/user.hook";
 import useTranslate from "../../hooks/useTranslate.hook";
 import shareService from "../../services/share.service";
 import { MyReverseShare } from "../../types/share.type";
@@ -36,8 +37,13 @@ const MyShares = () => {
   const t = useTranslate();
 
   const config = useConfig();
+  const { user } = useUser();
   const appUrl = config.get("general.appUrl");
   const defaultAppUrl = config.get("general.appUrl", true);
+
+  const userMaxShareSize = user?.shareSizeLimit
+    ? parseInt(user.shareSizeLimit)
+    : parseInt(config.get("share.maxSize"));
 
   const [reverseShares, setReverseShares] = useState<MyReverseShare[]>();
 
@@ -73,8 +79,10 @@ const MyShares = () => {
               config.get("smtp.enabled"),
               config.get("share.maxExpiration"),
               config.get("share.defaultExpiration"),
+              config.get("share.reverseShareSimpleOnly"),
               appUrl,
               defaultAppUrl,
+              userMaxShareSize,
               getReverseShares,
             )
           }

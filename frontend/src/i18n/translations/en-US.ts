@@ -64,6 +64,19 @@ export default {
   "signup.input.email.placeholder": "Your email",
   "signup.button.submit": "Let's get started",
 
+  // /auth/verify
+  "verify.title": "Verify Account",
+  "verify.success": "Your account has been successfully verified! You can now sign in.",
+  "verify.error": "The verification link is invalid or has expired.",
+  "verify.button.signin": "Go to Sign In",
+  "verify.info.title": "Account Verification",
+  "verify.info.description":
+    "Email verification is enabled. We've sent a verification link to your email address. Please click the link to activate your account.",
+  "verify.info.note": "If you don't receive the email within a few minutes, please check your spam folder.",
+  "verify.info.resend.button": "Resend verification email",
+  "verify.info.resend.success": "Verification email resent successfully.",
+  "verify.info.resend.error": "Failed to resend verification email.",
+
   // END /auth/signup
 
   // /auth/totp
@@ -264,6 +277,10 @@ export default {
 
   "admin.users.edit.update.title": "Edit user: {username}",
   "admin.users.edit.update.admin-privileges": "Admin privileges",
+  "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
+  "admin.users.edit.update.custom-share-size-limit.description":
+    "Override the global upload limit for this user",
   "admin.users.edit.update.change-password.title": "Change password",
   "admin.users.edit.update.change-password.field": "New password",
   "admin.users.edit.update.change-password.button": "Save new password",
@@ -282,6 +299,9 @@ export default {
   "admin.users.modal.create.manual-password": "Set password manually",
   "admin.users.modal.create.manual-password.description":
     "If not checked, the user will receive an email with a link to set their password.",
+  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
+  "admin.users.modal.create.custom-share-size-limit.description":
+    "Override the global upload limit for this user",
   "admin.users.modal.create.admin": "Admin privileges",
   "admin.users.modal.create.admin.description":
     "If checked, the user will be able to access the admin panel.",
@@ -525,6 +545,8 @@ export default {
   "admin.config.cache.test-redis.modal.save.description":
     "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
+  "admin.config.email.send-html-emails": "Enable HTML email compatibility",
+  "admin.config.email.send-html-emails.description": "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
   "admin.config.email.enable-share-email-recipients":
     "Enable email recipient sharing",
   "admin.config.email.enable-share-email-recipients.description":
@@ -553,6 +575,27 @@ export default {
   "admin.config.email.invite-message": "Invite message",
   "admin.config.email.invite-message.description":
     "Message which gets sent when an admin invites a user. {url} will be replaced with the invite URL, {email} with the email and {password} with the users password.",
+  "admin.config.email.enable-share-download-notifications":
+    "Enable download notifications",
+  "admin.config.email.enable-share-download-notifications.description":
+    "Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.",
+  "admin.config.email.share-download-notification-subject":
+    "Download notification subject",
+  "admin.config.email.share-download-notification-subject.description":
+    "Subject of the email which gets sent to the share creator when a recipient downloads a file.",
+  "admin.config.email.share-download-notification-message":
+    "Download notification message",
+  "admin.config.email.share-download-notification-message.description":
+    "Message which gets sent to the share creator when a recipient downloads a file. Available variables:\n {recipientEmail} - The email of the recipient\n {fileName} - The downloaded file name\n {shareUrl} - The URL of the share",
+  "admin.config.email.enable-email-verification": "Enable email verification",
+  "admin.config.email.enable-email-verification.description":
+    "Whether to require users to verify their email address before being able to sign in. This can only be enabled if SMTP is activated.",
+  "admin.config.email.verification-subject": "Verification subject",
+  "admin.config.email.verification-subject.description":
+    "Subject of the email which gets sent to the user when they sign up.",
+  "admin.config.email.verification-message": "Verification message",
+  "admin.config.email.verification-message.description":
+    "Message which gets sent to the user when they sign up. {url} will be replaced with the verification URL.",
   "admin.config.share.allow-registration": "Allow registration",
   "admin.config.share.allow-registration.description":
     "Whether registration is allowed",
@@ -582,6 +625,9 @@ export default {
     "The share creation modal automatically appears when a user selects files, eliminating the need to manually click the button.",
   "admin.config.share.allow-admin-access-all-shares":
     "Allow admin access to all shares",
+  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
+  "admin.config.share.reverse-share-simple-only.description":
+    "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description":
     "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
   "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
@@ -589,7 +635,7 @@ export default {
     "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description":
-    "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled.",
+    "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Enable",
   "admin.config.smtp.enabled.description":
     "Whether SMTP is enabled. Only set this to true if you entered the host, port, email, user and password of your SMTP server.",

@@ -178,7 +178,9 @@ export class ShareService {
       throw new BadRequestException(this.i18n.t("share.alreadyCompleted"));
 
     if (share.files.length == 0)
-      throw new BadRequestException(this.i18n.t("share.completionRequiresFile"));
+      throw new BadRequestException(
+        this.i18n.t("share.completionRequiresFile"),
+      );
 
     // Asynchronously create a zip of all files
     if (share.files.length > 1)
@@ -190,6 +192,7 @@ export class ShareService {
     for (const recipient of share.recipients) {
       await this.emailService.sendMailToShareRecipients(
         recipient.email,
+        recipient.id,
         share.id,
         share.creator,
         share.description,
@@ -282,7 +285,7 @@ export class ShareService {
       orderBy: {
         expiration: "desc",
       },
-      include: { recipients: true, files: true, security: true },
+      include: { recipients: true, files: true, security: true, creator: true },
     });
 
     return shares.map((share) => this.transformShare(share));
@@ -500,9 +503,7 @@ export class ShareService {
         expiration >
           moment().add(maxExpiration.value, maxExpiration.unit).toDate())
     ) {
-      throw new BadRequestException(
-        this.i18n.t("share.maxExpirationExceeded"),
-      );
+      throw new BadRequestException(this.i18n.t("share.maxExpirationExceeded"));
     }
   }
 

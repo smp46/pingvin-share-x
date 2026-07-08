@@ -3,7 +3,7 @@
   "redisTimedOut": "Redis timed out",
   "redisConnectionFailed": "Redis connection failed",
   "redisUnexpectedResponse": "Unexpected response from Redis",
-  "redisError": "Redis error",
+  "redisError": "Redis fout",
   "variableNotFound": "Configuratievariabele niet gevonden",
   "editNotAllowed": "U mag configuratievariabelen alleen bijwerken via het bestand config.yaml",
   "invalidType": "Configuratievariabele moet van het type {type} zijn",

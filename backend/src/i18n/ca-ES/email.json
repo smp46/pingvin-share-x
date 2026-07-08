@@ -1,0 +1,11 @@
+{
+  "shareRecipientsCreatorFallback": "Algú",
+  "shareRecipientsDescFallback": "Sense descripció",
+  "shareRecipientsExpiresNeverFallback": "en: mai",
+  "smtpDisabled": "SMTP està desactivat",
+  "emailServiceDisabled": "Servei de correu electrònic desactivat",
+  "testSubject": "Correu de prova",
+  "testText": "Aquest és un correu de prova",
+  "sendFailed": "S'ha produït un error en enviar el correu electrònic",
+  "locale": "ca-ES"
+}

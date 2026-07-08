@@ -47,22 +47,30 @@ export class UserSevice {
 
   async create(dto: CreateUserDTO) {
     let hash: string;
+    let randomPassword;
 
     // The password can be undefined if the user is invited by an admin
     if (!dto.password) {
-      const randomPassword = crypto.randomUUID();
+      randomPassword = crypto.randomUUID();
       hash = await argon.hash(randomPassword);
-      await this.emailService.sendInviteEmail(dto.email, randomPassword);
     } else {
       hash = await argon.hash(dto.password);
     }
 
     try {
-      return await this.prisma.user.create({
-        data: {
-          ...dto,
-          password: hash,
-        },
+      return await this.prisma.$transaction(async (tx) => {
+        const user = await tx.user.create({
+          data: {
+            ...dto,
+            password: hash,
+          },
+        });
+
+        if (randomPassword) {
+          await this.emailService.sendInviteEmail(dto.email, randomPassword);
+        }
+
+        return user;
       });
     } catch (e) {
       if (e instanceof PrismaClientKnownRequestError) {
@@ -113,7 +121,9 @@ export class UserSevice {
       });
 
       if (userCount === 1) {
-        throw new BadRequestException(this.i18n.t("auth.cannotDeleteLastAdmin"));
+        throw new BadRequestException(
+          this.i18n.t("auth.cannotDeleteLastAdmin"),
+        );
       }
     }
 

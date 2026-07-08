@@ -1,0 +1,15 @@
+{
+  "invalidIdFormat": "Ugyldig ID-format",
+  "notFound": "Filen ble ikke funnet",
+  "passwordProtected": "Denne delingen er passordbeskyttet",
+  "alreadyCompleted": "Delingen er allerede fullført",
+  "notEnoughSpace": "Ikke nok plass på serveren",
+  "unexpectedChunk": "Uventet del (chunk) mottatt",
+  "maxSizeExceeded": "Maksimal delingsstørrelse er overskredet",
+  "zipError": "Feil under oppretting av ZIP-fil",
+  "s3DeleteError": "Kunne ikke slette fil fra S3",
+  "s3UploadInitError": "Mislyktes i å initialisere flerdelt opplasting (multipart upload).",
+  "s3SessionNotFound": "Flerdelt opplastingsøkt ble ikke funnet.",
+  "s3UploadFailed": "Flerdelt opplasting mislyktes. Opplastingen har blitt avbrutt.",
+  "s3SizeError": "Kunne ikke hente filstørrelse"
+}

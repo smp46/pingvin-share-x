@@ -1,0 +1,11 @@
+{
+  "shareRecipientsCreatorFallback": "کسی",
+  "shareRecipientsDescFallback": "بدون توضیح",
+  "shareRecipientsExpiresNeverFallback": "هرگز",
+  "smtpDisabled": "SMTP غیرفعال است",
+  "emailServiceDisabled": "سرویس ایمیل غیرفعال است",
+  "testSubject": "ایمیل آزمایشی",
+  "testText": "این یک ایمیل آزمایشی است",
+  "sendFailed": "ارسال ایمیل ناموفق بود",
+  "locale": "fa-IR"
+}

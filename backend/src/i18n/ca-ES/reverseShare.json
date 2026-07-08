@@ -1,0 +1,4 @@
+{
+  "notFound": "No s'ha trobat el token de compartició inversa",
+  "maxShareSizeExceeded": "La mida màxima de compartició no pot ser superior a {maxSize} bytes."
+}

@@ -17,6 +17,7 @@ import useTranslate, {
 import userService from "../../../services/user.service";
 import User from "../../../types/user.type";
 import toast from "../../../utils/toast.util";
+import FileSizeInput from "../../core/FileSizeInput";
 
 const showUpdateUserModal = (
   modals: ModalsContextProps,
@@ -46,6 +47,11 @@ const Body = ({
       username: user.username,
       email: user.email,
       isAdmin: user.isAdmin,
+      isActivated: user.isActivated,
+      hasCustomShareSizeLimit: !!user.shareSizeLimit,
+      shareSizeLimit: user.shareSizeLimit
+        ? parseInt(user.shareSizeLimit)
+        : 104857600,
     },
     validate: yupResolver(
       yup.object().shape({
@@ -76,7 +82,15 @@ const Body = ({
         id="accountForm"
         onSubmit={accountForm.onSubmit(async (values) => {
           userService
-            .update(user.id, values)
+            .update(user.id, {
+              username: values.username,
+              email: values.email,
+              isAdmin: values.isAdmin,
+              isActivated: values.isActivated,
+              shareSizeLimit: values.hasCustomShareSizeLimit
+                ? values.shareSizeLimit.toString()
+                : null,
+            })
             .then(() => {
               getUsers();
               modals.closeAll();
@@ -99,6 +113,39 @@ const Body = ({
             label={t("admin.users.edit.update.admin-privileges")}
             {...accountForm.getInputProps("isAdmin", { type: "checkbox" })}
           />
+          <Switch
+            mt="xs"
+            labelPosition="left"
+            label={t("admin.users.edit.update.email-verified")}
+            {...accountForm.getInputProps("isActivated", { type: "checkbox" })}
+            disabled={user.isActivated}
+          />
+          <Switch
+            styles={{
+              body: {
+                display: "flex",
+                justifyContent: "space-between",
+              },
+            }}
+            mt="xs"
+            labelPosition="left"
+            label={t("admin.users.edit.update.custom-share-size-limit")}
+            description={t(
+              "admin.users.edit.update.custom-share-size-limit.description",
+            )}
+            {...accountForm.getInputProps("hasCustomShareSizeLimit", {
+              type: "checkbox",
+            })}
+          />
+          {accountForm.values.hasCustomShareSizeLimit && (
+            <FileSizeInput
+              label={t("admin.users.edit.update.custom-share-size-limit")}
+              value={accountForm.values.shareSizeLimit}
+              onChange={(val) =>
+                accountForm.setFieldValue("shareSizeLimit", val)
+              }
+            />
+          )}
         </Stack>
       </form>
       <Accordion>

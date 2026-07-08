@@ -1,0 +1,15 @@
+{
+  "invalidIdFormat": "Format d'ID no vàlid",
+  "notFound": "No s'ha trobat el fitxer",
+  "passwordProtected": "Aquesta compartició està protegida per contrasenya",
+  "alreadyCompleted": "La compartició ja s'ha completat",
+  "notEnoughSpace": "No hi ha prou espai al servidor",
+  "unexpectedChunk": "S'ha rebut un fragment inesperat",
+  "maxSizeExceeded": "S'ha superat la mida màxima de compartició",
+  "zipError": "Error en crear el fitxer ZIP",
+  "s3DeleteError": "No s'ha pogut suprimir el fitxer de l'S3",
+  "s3UploadInitError": "S'ha produït un error en inicialitzar la càrrega en diverses parts.",
+  "s3SessionNotFound": "No s'ha trobat la sessió de càrrega en diverses parts.",
+  "s3UploadFailed": "Ha fallat la càrrega en diverses parts. S'ha avortat la càrrega.",
+  "s3SizeError": "No s'ha pogut recuperar la mida del fitxer"
+}

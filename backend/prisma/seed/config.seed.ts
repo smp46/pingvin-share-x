@@ -112,6 +112,11 @@ export const configVariables = {
       defaultValue: "false",
       secret: false,
     },
+    reverseShareSimpleOnly: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
     allowAdminAccessAllShares: {
       type: "boolean",
       defaultValue: "false",
@@ -148,6 +153,10 @@ export const configVariables = {
     },
   },
   email: {
+    sendHtmlEmails: {
+      type: "boolean",
+      defaultValue: "false",
+    },
     enableShareEmailRecipients: {
       type: "boolean",
       defaultValue: "false",
@@ -188,6 +197,34 @@ export const configVariables = {
       type: "text",
       defaultValue:
         'Hey!\n\nYou were invited to Pingvin Share. Click this link to accept the invite: {url}\n\nYou can use the email "{email}" and the password "{password}" to sign in.\n\nPingvin Share 🐧',
+    },
+    enableShareDownloadNotifications: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    shareDownloadNotificationSubject: {
+      type: "string",
+      defaultValue: "Your file was downloaded",
+    },
+    shareDownloadNotificationMessage: {
+      type: "text",
+      defaultValue:
+        "Hey!\n\n{recipientEmail} downloaded {fileName} from your share: {shareUrl}\n\nPingvin Share 🐧",
+    },
+    enableEmailVerification: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    verificationSubject: {
+      type: "string",
+      defaultValue: "Verify your Pingvin Share account",
+    },
+    verificationMessage: {
+      type: "text",
+      defaultValue:
+        "Hey!\n\nYou just signed up for Pingvin Share. Click this link to verify your account: {url}\n\nThe link expires in 24 hours.\n\nPingvin Share 🐧",
     },
   },
   smtp: {
@@ -523,7 +560,7 @@ async function migrateConfigVariables() {
   for (const existingConfigVariable of existingConfigVariables) {
     const configVariable =
       configVariables[existingConfigVariable.category]?.[
-        existingConfigVariable.name
+      existingConfigVariable.name
       ];
 
     // Delete the config variable if it doesn't exist in the seed

@@ -1,3 +1,71 @@
+## [1.21.0](https://github.com/smp46/pingvin-share-x/compare/v1.20.1...v1.21.0) (2026-07-01)
+
+### Features
+
+* add Farsi/Persian ([#112](https://github.com/smp46/pingvin-share-x/issues/112)) ([d13350a](https://github.com/smp46/pingvin-share-x/commit/d13350abbcdac767f16d444e5536bf8a553b94a1))
+* **email:** add html email compatibility ([#104](https://github.com/smp46/pingvin-share-x/issues/104)) ([a38ec26](https://github.com/smp46/pingvin-share-x/commit/a38ec269e4f7a07dcdfb7cc8641d3842efe0255b))
+* norwegian language support & AI translations ([#108](https://github.com/smp46/pingvin-share-x/issues/108)) ([8185f44](https://github.com/smp46/pingvin-share-x/commit/8185f44a5faeb2dd53ee1dfc5ff1467ab0eb3841))
+* per user share size limits ([#109](https://github.com/smp46/pingvin-share-x/issues/109)) ([74d6701](https://github.com/smp46/pingvin-share-x/commit/74d6701391581d3e3bd7232e9086ada5d1ead33c))
+* **reverse share:** add simple mode policy in config ([#106](https://github.com/smp46/pingvin-share-x/issues/106)) ([468bbde](https://github.com/smp46/pingvin-share-x/commit/468bbde82bfc4177f147e5d7b1ac7127dfafb5ef))
+
+## [1.20.1](https://github.com/smp46/pingvin-share-x/compare/v1.20.0...v1.20.1) (2026-06-18)
+
+## [1.20.0](https://github.com/smp46/pingvin-share-x/compare/v1.19.1...v1.20.0) (2026-06-18)
+
+### Features
+
+* catalan language support & AI translations ([#96](https://github.com/smp46/pingvin-share-x/issues/96)) ([7eff4ec](https://github.com/smp46/pingvin-share-x/commit/7eff4ecbd964db03a03cb9629c71a79e1bb147fb))
+* optional email verification ([#99](https://github.com/smp46/pingvin-share-x/issues/99)) ([0296802](https://github.com/smp46/pingvin-share-x/commit/02968027a1dd57cbfea3de7864525c9380cc56b1))
+* **shares:** add infinite file retention period ([f6905fe](https://github.com/smp46/pingvin-share-x/commit/f6905fed9bd99c9be1d57ad4ec69cc275ae3405a))
+
+### Bug Fixes
+
+* add missing permissions to label workflows ([add126a](https://github.com/smp46/pingvin-share-x/commit/add126ad02b29232f92c61d409e44b8554af3fd1))
+* **deps:** resolve security vulns via npm audit ([e748463](https://github.com/smp46/pingvin-share-x/commit/e748463282f5f9c19f4d6ae925537613bec48af4))
+* **deps:** resolve security vulns via overrides ([500e91a](https://github.com/smp46/pingvin-share-x/commit/500e91af361652c18d7175a518dd99f54aef96bf))
+* **email:** localize email variables via defaultLanguage ([#101](https://github.com/smp46/pingvin-share-x/issues/101)) ([f1f829f](https://github.com/smp46/pingvin-share-x/commit/f1f829f0908b0dcc695c6a2fd7c9b01dfeb44445))
+* **reverseShares:** support admin file retention ([b4e2d8a](https://github.com/smp46/pingvin-share-x/commit/b4e2d8a135d9b12a04bfdee4799be20ce32a615c))
+
+## [1.19.1](https://github.com/smp46/pingvin-share-x/compare/v1.19.0...v1.19.1) (2026-06-08)
+
+### Bug Fixes
+
+* **deps:** resolve security vulns via npm audit ([4617427](https://github.com/smp46/pingvin-share-x/commit/46174275b9315f521d76f1482a98d4abead56ddc))
+
+## [1.19.0](https://github.com/smp46/pingvin-share-x/compare/v1.18.1...v1.19.0) (2026-05-31)
+
+### Features
+
+* add share download notification emails ([#87](https://github.com/smp46/pingvin-share-x/issues/87)) ([acecad9](https://github.com/smp46/pingvin-share-x/commit/acecad9bf84bf98bf52d13789f528f642aa353bd))
+* bulgarian language support & AI translations ([#91](https://github.com/smp46/pingvin-share-x/issues/91)) ([886c311](https://github.com/smp46/pingvin-share-x/commit/886c31127b78f45e7a80cd85fcbd0aca3022ce34))
+
+### Bug Fixes
+
+* add healthcheck start period ([90af77f](https://github.com/smp46/pingvin-share-x/commit/90af77fa0a65d9e630ce5a933bb8e26396b4b857))
+* download all (as zip) now works with S3 ([#90](https://github.com/smp46/pingvin-share-x/issues/90)) ([b820f3c](https://github.com/smp46/pingvin-share-x/commit/b820f3ca9fc37553db8ebd86f184eb9b2f7c2924))
+
+## [1.18.1](https://github.com/smp46/pingvin-share-x/compare/v1.18.0...v1.18.1) (2026-05-26)
+
+### Bug Fixes
+
+* **shares:** don't cleanup shares with ongoing uploads ([#79](https://github.com/smp46/pingvin-share-x/issues/79)) ([4b63770](https://github.com/smp46/pingvin-share-x/commit/4b63770c8d060a514345948895eccbb3d3b77bfd))
+
+## [1.18.0](https://github.com/smp46/pingvin-share-x/compare/v1.17.0...v1.18.0) (2026-05-21)
+
+### Features
+
+* **email:** prevent enabling email without smtp configured ([f7e93a2](https://github.com/smp46/pingvin-share-x/commit/f7e93a2fb8b2bf65d27c278d8a31f469a2a3f00e))
+* **shares:** update share info after creation ([#69](https://github.com/smp46/pingvin-share-x/issues/69)) ([9553c56](https://github.com/smp46/pingvin-share-x/commit/9553c561806f58a79c1bd65a85e7573767399ced))
+* site wide default language support, translations for backend strings ([#70](https://github.com/smp46/pingvin-share-x/issues/70)) ([1d788f7](https://github.com/smp46/pingvin-share-x/commit/1d788f7db317950a18daa66c883c10e3f8ff58ae))
+
+### Bug Fixes
+
+* **config:** show custom color input consistently ([d850519](https://github.com/smp46/pingvin-share-x/commit/d85051979fb1a76ed1fff72855f219aea6059856))
+* **deps:** resolve security vulns via npm audit ([54abd9a](https://github.com/smp46/pingvin-share-x/commit/54abd9a1226c36b2209e608882dfced3b7955577))
+* direct file share link ([#75](https://github.com/smp46/pingvin-share-x/issues/75)) ([b970f44](https://github.com/smp46/pingvin-share-x/commit/b970f44ebf5d77bf11bc3162d71fb89bc8fd4cdd)), closes [#74](https://github.com/smp46/pingvin-share-x/issues/74)
+* **security:** mitigate nextjs vulnerabilties ([b3135c5](https://github.com/smp46/pingvin-share-x/commit/b3135c5555b9461fa157236b67b51c7462cd7470))
+* **upload:** prevent email dupe when pressing Enter in recipients field ([bd89709](https://github.com/smp46/pingvin-share-x/commit/bd8970993bed1c9473fe37cd6619736e25d206d1))
+
 ## [1.17.0](https://github.com/smp46/pingvin-share-x/compare/v1.16.3...v1.17.0) (2026-04-28)
 
 ### Features

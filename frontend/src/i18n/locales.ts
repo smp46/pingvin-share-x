@@ -1,4 +1,6 @@
 import arabic from "./translations/ar-EG";
+import bulgarian from "./translations/bg-BG";
+import catalan from "./translations/ca-ES";
 import czech from "./translations/cs-CZ";
 import danish from "./translations/da-DK";
 import german from "./translations/de-DE";
@@ -21,14 +23,23 @@ import slovenian from "./translations/sl-SI";
 import serbianLatin from "./translations/sr-CS";
 import serbianCyrillic from "./translations/sr-SP";
 import swedish from "./translations/sv-SE";
+import norwegian from "./translations/no-NO";
 import thai from "./translations/th-TH";
 import turkish from "./translations/tr-TR";
 import ukrainian from "./translations/uk-UA";
 import viatnamese from "./translations/vi-VN";
 import chineseSimplified from "./translations/zh-CN";
 import chineseTraditional from "./translations/zh-TW";
+import persian from "./translations/fa-IR";
 
-export const LOCALES = {
+export interface Locale {
+  name: string;
+  code: string;
+  messages: Record<string, string>;
+  direction?: string;
+}
+
+export const LOCALES: Record<string, Locale> = {
   ENGLISH: {
     name: "English",
     code: "en-US",
@@ -119,6 +130,11 @@ export const LOCALES = {
     code: "sv-SE",
     messages: swedish,
   },
+  NORWEGIAN: {
+    name: "Norsk",
+    code: "no-NO",
+    messages: norwegian,
+  },
   ITALIAN: {
     name: "Italiano",
     code: "it-IT",
@@ -138,6 +154,18 @@ export const LOCALES = {
     name: "العربية",
     code: "ar-EG",
     messages: arabic,
+    direction: "rtl",
+  },
+  PERSIAN: {
+    name: "فارسی",
+    code: "fa-IR",
+    messages: persian,
+    direction: "rtl",
+  },
+  BULGARIAN: {
+    name: "Български",
+    code: "bg-BG",
+    messages: bulgarian,
   },
   HUNGARIAN: {
     name: "Hungarian",
@@ -173,5 +201,10 @@ export const LOCALES = {
     name: "Eesti",
     code: "et-EE",
     messages: estonian,
+  },
+  CATALAN: {
+    name: "Català",
+    code: "ca-ES",
+    messages: catalan,
   },
 };

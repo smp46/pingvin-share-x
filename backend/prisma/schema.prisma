@@ -17,6 +17,7 @@ model User {
   password String?
   isAdmin  Boolean @default(false)
   ldapDN   String? @unique
+  shareSizeLimit String?
 
   shares              Share[]
   refreshTokens       RefreshToken[]
@@ -28,6 +29,10 @@ model User {
   totpVerified       Boolean             @default(false)
   totpSecret         String?
   resetPasswordToken ResetPasswordToken?
+
+  isActivated              Boolean   @default(true)
+  activationToken          String?   @unique
+  activationTokenExpiresAt DateTime?
 
   oAuthUsers OAuthUser[]
 }
@@ -78,6 +83,7 @@ model OAuthUser {
 model Share {
   id        String   @id @default(uuid())
   createdAt DateTime @default(now())
+  updatedAt DateTime? @updatedAt
 
   name          String?
   uploadLocked  Boolean  @default(false)

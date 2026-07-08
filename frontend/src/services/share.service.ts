@@ -111,8 +111,15 @@ const isShareTextFile = (fileName: string) => {
   return mimeType.startsWith("text/");
 };
 
-const downloadFile = async (shareId: string, fileId: string) => {
-  window.location.href = `${window.location.origin}/api/shares/${shareId}/files/${fileId}`;
+const downloadFile = async (
+  shareId: string,
+  fileId: string,
+  recipientId?: string,
+) => {
+  const recipientQuery = recipientId
+    ? `?recipient=${encodeURIComponent(recipientId)}`
+    : "";
+  window.location.href = `${window.location.origin}/api/shares/${shareId}/files/${fileId}${recipientQuery}`;
 };
 
 const removeFile = async (shareId: string, fileId: string) => {

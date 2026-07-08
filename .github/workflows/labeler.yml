@@ -1,0 +1,75 @@
+name: Labeler
+
+on:
+  pull_request_target:
+    types: [opened, edited, synchronize]
+  issues:
+    types: [opened, edited]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Evaluate Title Text
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // 1. Get the current title string directly from the UI payload
+            const isPr = !!context.payload.pull_request;
+            const item = isPr ? context.payload.pull_request : context.payload.issue;
+            const title = item.title.trim();
+            const issueNumber = item.number;
+            
+            // 2. Define standard patterns for title matching
+            const translationRegex = /^chore\(translations\)\s*:/i;
+            const bugRegex = /^fix(\([^)]+\))?\s*:/i;
+            const enhancementRegex = /^feat(\([^)]+\))?\s*:/i;
+
+            let targetLabel = null;
+
+            if (translationRegex.test(title)) {
+              targetLabel = 'language';
+            } else if (bugRegex.test(title)) {
+              targetLabel = 'bug';
+            } else if (enhancementRegex.test(title)) {
+              targetLabel = 'enhancement';
+            }
+
+            // 3. Manage the labels based on the evaluation result
+            const managedLabels = ['language', 'bug', 'enhancement'];
+            
+            // Fetch existing labels on the item to see what is currently applied
+            const { data: currentLabelsData } = await github.rest.issues.listLabelsOnIssue({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber
+            });
+            const currentLabelNames = currentLabelsData.map(l => l.name);
+
+            // Remove any of our managed labels that no longer match the current title
+            for (const label of managedLabels) {
+              if (currentLabelNames.includes(label) && label !== targetLabel) {
+                console.log(`Removing outdated label "${label}" from #${issueNumber}`);
+                await github.rest.issues.removeLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issueNumber,
+                  name: label
+                }).catch(err => console.log(`Label removal skipped or already gone: ${err.message}`));
+              }
+            }
+
+            // Apply the new label if it is not already present
+            if (targetLabel && !currentLabelNames.includes(targetLabel)) {
+              console.log(`Applying label "${targetLabel}" to #${issueNumber} based on title convention`);
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber,
+                labels: [targetLabel]
+              });
+            }
+

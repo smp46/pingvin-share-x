@@ -24,6 +24,11 @@ export class JobsService {
     const fileRetentionPeriod = this.configServer.get(
       "share.fileRetentionPeriod",
     );
+
+    if (fileRetentionPeriod.value === -1) {
+      return;
+    }
+
     const thresholdDate = moment()
       .subtract(fileRetentionPeriod.value, fileRetentionPeriod.unit)
       .toDate();
@@ -71,10 +76,14 @@ export class JobsService {
 
   @Cron("0 */6 * * *")
   async deleteUnfinishedShares() {
+    const cutoff = moment().subtract(1, "day").toDate();
     const unfinishedShares = await this.prisma.share.findMany({
       where: {
-        createdAt: { lt: moment().subtract(1, "day").toDate() },
         uploadLocked: false,
+        OR: [
+          { updatedAt: { lt: cutoff } },
+          { updatedAt: { equals: null }, createdAt: { lt: cutoff } },
+        ],
       },
     });
 
@@ -143,6 +152,29 @@ export class JobsService {
 
     if (deletedTokensCount > 0) {
       this.logger.log(`Deleted ${deletedTokensCount} expired refresh tokens`);
+    }
+  }
+
+  @Cron("0 * * * *")
+  async deleteUnactivatedUsers() {
+    const cutoff = moment().subtract(24, "hours").toDate();
+    const unactivatedUsers = await this.prisma.user.findMany({
+      where: {
+        isActivated: false,
+        createdAt: { lt: cutoff },
+      },
+      include: { shares: true },
+    });
+
+    for (const user of unactivatedUsers) {
+      await Promise.all(
+        user.shares.map((share) => this.fileService.deleteAllFiles(share.id)),
+      );
+      await this.prisma.user.delete({ where: { id: user.id } });
+    }
+
+    if (unactivatedUsers.length > 0) {
+      this.logger.log(`Deleted ${unactivatedUsers.length} unactivated users`);
     }
   }
 }

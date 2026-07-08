@@ -14,7 +14,7 @@ export class EmailService {
   constructor(
     private config: ConfigService,
     private readonly i18n: I18nService,
-  ) {}
+  ) { }
   private readonly logger = new Logger(EmailService.name);
 
   getTransporter() {
@@ -39,23 +39,27 @@ export class EmailService {
   }
 
   private async sendMail(email: string, subject: string, text: string) {
-    await this.getTransporter()
-      .sendMail({
-        from: `"${this.config.get("general.appName")}" <${this.config.get(
-          "smtp.email",
-        )}>`,
-        to: email,
-        subject,
-        text,
-      })
-      .catch((e) => {
-        this.logger.error(e);
-        throw new InternalServerErrorException(this.i18n.t("email.sendFailed"));
-      });
+      const isHtml = this.config.get("email.sendHtmlEmails");
+
+      await this.getTransporter()
+        .sendMail({
+          from: `"${this.config.get("general.appName")}" <${this.config.get(
+            "smtp.email",
+          )}>`,
+          to: email,
+          subject: subject,
+          [isHtml ? "html" : "text"]: text,
+        })
+        .catch((e) => {
+          this.logger.error(e);
+          throw new InternalServerErrorException(this.i18n.t("email.sendFailed"));
+        });
+  
   }
 
   async sendMailToShareRecipients(
     recipientEmail: string,
+    recipientId: string,
     shareId: string,
     creator?: User,
     description?: string,
@@ -66,8 +70,10 @@ export class EmailService {
         this.i18n.t("email.emailServiceDisabled"),
       );
 
-    const shareUrl = `${this.config.get("general.appUrl")}/s/${shareId}`;
-    const lang = "";
+    const shareUrl = `${this.config.get(
+      "general.appUrl",
+    )}/s/${shareId}?recipient=${encodeURIComponent(recipientId)}`;
+    const lang = this.config.get("general.defaultLanguage");
     const locale = this.i18n.translate("email.locale", { lang });
 
     await this.sendMail(
@@ -79,7 +85,7 @@ export class EmailService {
         .replaceAll(
           "{creator}",
           creator?.username ??
-            this.i18n.t("email.shareRecipientsCreatorFallback"),
+          this.i18n.t("email.shareRecipientsCreatorFallback"),
         )
         .replaceAll("{creatorEmail}", creator?.email ?? "")
         .replaceAll("{shareUrl}", shareUrl)
@@ -93,6 +99,26 @@ export class EmailService {
             ? moment(expiration).locale(locale).fromNow()
             : this.i18n.t("email.shareRecipientsExpiresNeverFallback"),
         ),
+    );
+  }
+
+  async sendShareDownloadNotification(
+    creatorEmail: string,
+    shareId: string,
+    fileName: string,
+    recipientEmail: string,
+  ) {
+    const shareUrl = `${this.config.get("general.appUrl")}/s/${shareId}`;
+
+    await this.sendMail(
+      creatorEmail,
+      this.config.get("email.shareDownloadNotificationSubject"),
+      this.config
+        .get("email.shareDownloadNotificationMessage")
+        .replaceAll("\\n", "\n")
+        .replaceAll("{recipientEmail}", recipientEmail)
+        .replaceAll("{fileName}", fileName)
+        .replaceAll("{shareUrl}", shareUrl),
     );
   }
 
@@ -135,6 +161,21 @@ export class EmailService {
         .replaceAll("{url}", loginUrl)
         .replaceAll("{password}", password)
         .replaceAll("{email}", recipientEmail),
+    );
+  }
+
+  async sendVerificationEmail(recipientEmail: string, token: string) {
+    const verificationUrl = `${this.config.get(
+      "general.appUrl",
+    )}/auth/verify/${token}`;
+
+    await this.sendMail(
+      recipientEmail,
+      this.config.get("email.verificationSubject"),
+      this.config
+        .get("email.verificationMessage")
+        .replaceAll("\\n", "\n")
+        .replaceAll("{url}", verificationUrl),
     );
   }
 

@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "Ikke nok diskplass tilgjengelig",
+  "idInUse": "Delings-ID er allerede i bruk",
+  "alreadyCompleted": "Delingen er allerede fullført",
+  "completionRequiresFile": "Du må ha minst én fil i delingen for å fullføre den.",
+  "notFound": "Deling ikke funnet",
+  "anonymousNoDelete": "Anonyme delinger kan ikke slettes",
+  "anonymousNoExpire": "Anonyme delinger kan ikke settes til å utløpe",
+  "anonymousNoUpdate": "Anonyme delinger kan ikke oppdateres",
+  "invalidExpiration": "Ugyldig utløpsdato",
+  "maxExpirationExceeded": "Utløpsdatoen overskrider maksimal utløpsdato",
+  "wrongPassword": "Feil passord",
+  "tokenRequired": "Delingstoken kreves",
+  "privateShare": "Kun oppretteren av den omvendte delingen har tilgang til denne delingen",
+  "maxViewsExceeded": "Maksimalt antall visninger er overskredet"
+}

@@ -1,0 +1,11 @@
+{
+  "shareRecipientsCreatorFallback": "Noen",
+  "shareRecipientsDescFallback": "Ingen beskrivelse",
+  "shareRecipientsExpiresNeverFallback": "i: aldri",
+  "smtpDisabled": "SMTP er deaktivert",
+  "emailServiceDisabled": "E-posttjeneste deaktivert",
+  "testSubject": "Test-e-post",
+  "testText": "Dette er en test-e-post",
+  "sendFailed": "Kunne ikke sende e-post",
+  "locale": "no-NO"
+}

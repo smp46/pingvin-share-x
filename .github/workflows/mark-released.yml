@@ -1,0 +1,36 @@
+name: Mark as Released
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  update-labels:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Environment Setup
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # 1. Find all merged PRs with the 'awaiting release' label
+          pr_numbers=$(gh pr list --state merged --label "awaiting release" --json number --jq '.[].number')
+
+          if [ -z "$pr_numbers" ]; then
+            echo "No PRs found with 'awaiting release' label."
+            exit 0
+          fi
+
+          # 2. Loop through each PR to swap the labels
+          for pr in $pr_numbers; do
+            echo "Updating labels for PR #$pr"
+            
+            # Remove the old label
+            gh pr edit $pr --remove-label "awaiting release"
+            
+            # Add the new label
+            gh pr edit $pr --add-label "released"
+          done
+

@@ -22,6 +22,7 @@ import useTranslate, {
 import shareService from "../../../services/share.service";
 import { Timespan } from "../../../types/timespan.type";
 import { getExpirationPreview } from "../../../utils/date.util";
+import { byteToHumanSizeString } from "../../../utils/fileSize.util";
 import toast from "../../../utils/toast.util";
 import FileSizeInput from "../../core/FileSizeInput";
 import showCompletedReverseShareModal from "./showCompletedReverseShareModal";
@@ -31,8 +32,10 @@ const showCreateReverseShareModal = (
   showSendEmailNotificationOption: boolean,
   maxExpiration: Timespan,
   defaultExpiration: Timespan,
+  reverseShareSimpleOnly: boolean,
   appUrl: string,
   defaultAppUrl: string,
+  maxShareSize: number,
   getReverseShares: () => void,
 ) => {
   const t = translateOutsideContext();
@@ -45,8 +48,10 @@ const showCreateReverseShareModal = (
         getReverseShares={getReverseShares}
         maxExpiration={maxExpiration}
         defaultExpiration={defaultExpiration}
+        reverseShareSimpleOnly={reverseShareSimpleOnly}
         appUrl={appUrl}
         defaultAppUrl={defaultAppUrl}
+        maxShareSize={maxShareSize}
       />
     ),
   });
@@ -57,18 +62,24 @@ const Body = ({
   showSendEmailNotificationOption,
   maxExpiration,
   defaultExpiration,
+  reverseShareSimpleOnly,
   appUrl,
   defaultAppUrl,
+  maxShareSize,
 }: {
   getReverseShares: () => void;
   showSendEmailNotificationOption: boolean;
   maxExpiration: Timespan;
   defaultExpiration: Timespan;
+  reverseShareSimpleOnly: boolean;
   appUrl: string;
   defaultAppUrl: string;
+  maxShareSize: number;
 }) => {
   const modals = useModals();
   const t = useTranslate();
+
+  const userMaxShareSize = maxShareSize;
 
   const defaultTimespan = defaultExpiration
     ? defaultExpiration
@@ -76,12 +87,12 @@ const Body = ({
 
   const form = useForm({
     initialValues: {
-      maxShareSize: 104857600,
+      maxShareSize: Math.min(104857600, userMaxShareSize),
       maxUseCount: 1,
       sendEmailNotification: false,
       expiration_num: defaultTimespan.value,
       expiration_unit: `-${defaultTimespan.unit}` as string,
-      simplified: !!(getCookie("reverse-share.simplified") ?? false),
+      simplified: !reverseShareSimpleOnly ? false : !!(getCookie("reverse-share.simplified") ?? false),
       publicAccess: !!(getCookie("reverse-share.public-access") ?? true),
     },
     validate: yupResolver(
@@ -91,6 +102,16 @@ const Body = ({
           .typeError(t("common.error.invalid-number"))
           .min(1, t("common.error.number-too-small", { min: 1 }))
           .max(1000, t("common.error.number-too-large", { max: 1000 }))
+          .required(t("common.error.field-required")),
+        maxShareSize: yup
+          .number()
+          .typeError(t("common.error.invalid-number"))
+          .max(
+            userMaxShareSize,
+            t("upload.dropzone.notify.file-too-big", {
+              maxSize: byteToHumanSizeString(userMaxShareSize),
+            }),
+          )
           .required(t("common.error.field-required")),
       }),
     ),
@@ -228,8 +249,7 @@ const Body = ({
           </div>
           <FileSizeInput
             label={t("account.reverseShares.modal.max-size.label")}
-            value={form.values.maxShareSize}
-            onChange={(number) => form.setFieldValue("maxShareSize", number)}
+            {...form.getInputProps("maxShareSize")}
           />
           <NumberInput
             min={1}
@@ -253,17 +273,19 @@ const Body = ({
               })}
             />
           )}
-          <Switch
-            mt="xs"
-            labelPosition="left"
-            label={t("account.reverseShares.modal.simplified")}
-            description={t(
-              "account.reverseShares.modal.simplified.description",
-            )}
-            {...form.getInputProps("simplified", {
-              type: "checkbox",
-            })}
-          />
+          {!reverseShareSimpleOnly &&
+            <Switch
+              mt="xs"
+              labelPosition="left"
+              label={t("account.reverseShares.modal.simplified")}
+              description={t(
+                "account.reverseShares.modal.simplified.description",
+              )}
+              {...form.getInputProps("simplified", {
+                type: "checkbox",
+              })}
+            />
+          }
           <Switch
             mt="xs"
             labelPosition="left"
@@ -279,8 +301,8 @@ const Body = ({
             <FormattedMessage id="common.button.create" />
           </Button>
         </Stack>
-      </form>
-    </Group>
+      </form >
+    </Group >
   );
 };
 

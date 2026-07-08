@@ -1,0 +1,16 @@
+{
+  "notEnoughSpace": "No hi ha prou espai lliure al disc",
+  "idInUse": "L'ID de compartició ja s'està utilitzant",
+  "alreadyCompleted": "La compartició ja s'ha completat",
+  "completionRequiresFile": "Necessiteu almenys un fitxer a la vostra compartició per completar-la.",
+  "notFound": "No s'ha trobat la compartició",
+  "anonymousNoDelete": "Les comparticions anònimes no es poden suprimir",
+  "anonymousNoExpire": "Les comparticions anònimes no poden caducar",
+  "anonymousNoUpdate": "Les comparticions anònimes no es poden actualitzar",
+  "invalidExpiration": "Data de caducitat no vàlida",
+  "maxExpirationExceeded": "La data de caducitat supera la data de caducitat màxima",
+  "wrongPassword": "Contrasenya incorrecta",
+  "tokenRequired": "Cal el token de compartició",
+  "privateShare": "Només el creador de la compartició inversa pot accedir a aquesta compartició",
+  "maxViewsExceeded": "S'ha superat el nombre màxim de visualitzacions"
+}

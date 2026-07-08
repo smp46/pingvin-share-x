@@ -1,0 +1,20 @@
+name: Label Awaiting Release
+
+on:
+  pull_request_target:
+    types: [closed]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    if: github.event.pull_request.merged == true
+    steps:
+      - name: Add awaiting release label
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: 'awaiting release'
+

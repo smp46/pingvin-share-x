@@ -34,17 +34,20 @@ export class ReverseShareService {
       parsedExpiration >
         moment().add(maxExpiration.value, maxExpiration.unit).toDate()
     ) {
-      throw new BadRequestException(
-        this.i18n.t("share.maxExpirationExceeded"),
-      );
+      throw new BadRequestException(this.i18n.t("share.maxExpirationExceeded"));
     }
 
-    const globalMaxShareSize = this.config.get("share.maxSize");
+    const creator = await this.prisma.user.findUnique({
+      where: { id: creatorId },
+    });
+    const userMaxShareSize = creator?.shareSizeLimit
+      ? parseInt(creator.shareSizeLimit)
+      : parseInt(this.config.get("share.maxSize"));
 
-    if (globalMaxShareSize < data.maxShareSize)
+    if (userMaxShareSize < parseInt(data.maxShareSize))
       throw new BadRequestException(
         this.i18n.t("reverseShare.maxShareSizeExceeded", {
-          args: { maxSize: globalMaxShareSize },
+          args: { maxSize: userMaxShareSize },
         }),
       );
 
@@ -102,14 +105,13 @@ export class ReverseShareService {
   }
 
   async remove(id: string) {
-    const shares = await this.prisma.share.findMany({
-      where: { reverseShare: { id } },
+    await this.prisma.share.updateMany({
+      where: { reverseShareId: id },
+      data: {
+        reverseShareId: null,
+        expiration: new Date(),
+      },
     });
-
-    for (const share of shares) {
-      await this.prisma.share.delete({ where: { id: share.id } });
-      await this.fileService.deleteAllFiles(share.id);
-    }
 
     await this.prisma.reverseShare.delete({ where: { id } });
   }

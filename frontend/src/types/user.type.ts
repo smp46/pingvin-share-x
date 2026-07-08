@@ -3,9 +3,11 @@ type User = {
   username: string;
   email: string;
   isAdmin: boolean;
+  isActivated: boolean;
   isLdap: boolean;
   totpVerified: boolean;
   hasPassword: boolean;
+  shareSizeLimit?: string;
 };
 
 export type CreateUser = {
@@ -13,6 +15,7 @@ export type CreateUser = {
   email: string;
   password?: string;
   isAdmin?: boolean;
+  shareSizeLimit?: string | null;
 };
 
 export type UpdateUser = {
@@ -20,6 +23,8 @@ export type UpdateUser = {
   email?: string;
   password?: string;
   isAdmin?: boolean;
+  isActivated?: boolean;
+  shareSizeLimit?: string | null;
 };
 
 export type UpdateCurrentUser = {
