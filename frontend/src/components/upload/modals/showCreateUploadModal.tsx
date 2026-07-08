@@ -27,7 +27,6 @@ import useTranslate, {
   translateOutsideContext,
 } from "../../../hooks/useTranslate.hook";
 import shareService from "../../../services/share.service";
-import userService from "../../../services/user.service";
 import { FileUpload } from "../../../types/File.type";
 import { CreateShare } from "../../../types/share.type";
 import {
@@ -135,7 +134,6 @@ const CreateUploadModalBody = ({
   const generatedLink = generateShareId(options.shareIdLength);
 
   const [showNotSignedInAlert, setShowNotSignedInAlert] = useState(true);
-  const [unregisteredEmails, setUnregisteredEmails] = useState<string[]>([]);
   const [emailSearch, setEmailSearch] = useState("");
 
   const validationSchema = yup.object().shape({
@@ -183,26 +181,11 @@ const CreateUploadModalBody = ({
     validate: yupResolver(validationSchema),
   });
 
-  const verifyCurrentRecipients = async (recipients: string[]) => {
-    if (recipients.length === 0) {
-      setUnregisteredEmails([]);
-      return;
-    }
-    const result = await userService.verifyEmails(recipients).catch(() => null);
-    if (result) {
-      setUnregisteredEmails(result.unregistered);
-    } else {
-      toast.error(t("common.error.unknown"));
-    }
-  };
-
-  const handleRestrictToggle = async (checked: boolean) => {
+  const handleRestrictToggle = (checked: boolean) => {
     form.setFieldValue("restrictToRecipients", checked);
     if (checked) {
+      // A share can't be both password-protected and restricted to recipients.
       form.setFieldValue("password", undefined);
-      await verifyCurrentRecipients(form.values.recipients);
-    } else {
-      setUnregisteredEmails([]);
     }
   };
 
@@ -454,17 +437,11 @@ const CreateUploadModalBody = ({
                         ? form.values.recipients
                         : [...form.values.recipients, query];
                       form.setFieldValue("recipients", newRecipients);
-                      if (form.values.restrictToRecipients) {
-                        verifyCurrentRecipients(newRecipients);
-                      }
                       return query;
                     }}
                     {...form.getInputProps("recipients")}
                     onChange={(value: string[]) => {
                       form.setFieldValue("recipients", value);
-                      if (form.values.restrictToRecipients) {
-                        verifyCurrentRecipients(value);
-                      }
                     }}
                     onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
                       if (e.key === "Enter" || e.key === "," || e.key === ";") {
@@ -479,9 +456,6 @@ const CreateUploadModalBody = ({
                             inputValue,
                           ];
                           form.setFieldValue("recipients", newRecipients);
-                          if (form.values.restrictToRecipients) {
-                            verifyCurrentRecipients(newRecipients);
-                          }
                         }
                         setEmailSearch("");
                       } else if (e.key === " ") {
@@ -491,26 +465,16 @@ const CreateUploadModalBody = ({
                     }}
                   />
                   {options.enableUserRecipients && (
-                    <>
-                      <Checkbox
-                        mt="sm"
-                        label={t(
-                          "upload.modal.accordion.email.restrict-to-recipients",
-                        )}
-                        checked={form.values.restrictToRecipients}
-                        onChange={(e) =>
-                          handleRestrictToggle(e.currentTarget.checked)
-                        }
-                      />
-                      {unregisteredEmails.length > 0 && (
-                        <Text size="sm" color="red" mt={4}>
-                          {t(
-                            "upload.modal.accordion.email.unregistered-warning",
-                            { emails: unregisteredEmails.join(", ") },
-                          )}
-                        </Text>
+                    <Checkbox
+                      mt="sm"
+                      label={t(
+                        "upload.modal.accordion.email.restrict-to-recipients",
                       )}
-                    </>
+                      checked={form.values.restrictToRecipients}
+                      onChange={(e) =>
+                        handleRestrictToggle(e.currentTarget.checked)
+                      }
+                    />
                   )}
                 </Accordion.Panel>
               </Accordion.Item>
@@ -549,13 +513,7 @@ const CreateUploadModalBody = ({
               </Accordion.Panel>
             </Accordion.Item>
           </Accordion>
-          <Button
-            type="submit"
-            data-autofocus
-            disabled={
-              form.values.restrictToRecipients && unregisteredEmails.length > 0
-            }
-          >
+          <Button type="submit" data-autofocus>
             <FormattedMessage id="common.button.share" />
           </Button>
         </Stack>

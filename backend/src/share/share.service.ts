@@ -72,20 +72,11 @@ export class ShareService {
           "A share restricted to recipients must have at least one recipient.",
         );
       }
-      const normalizedRecipients = share.recipients.map((e) => e.toLowerCase());
-      const registered = await this.prisma.user.findMany({
-        where: { email: { in: normalizedRecipients } },
-        select: { email: true },
-      });
-      const registeredEmails = new Set(registered.map((u) => u.email.toLowerCase()));
-      const unregistered = share.recipients.filter(
-        (e) => !registeredEmails.has(e.toLowerCase()),
-      );
-      if (unregistered.length > 0) {
-        throw new BadRequestException(
-          `Restricted access requires all recipients to have an account. Not registered: ${unregistered.join(", ")}`,
-        );
-      }
+      // Note: we intentionally do NOT check whether the recipient emails belong
+      // to registered accounts. Doing so would leak which emails have an account
+      // (account enumeration). Recipients who aren't registered yet simply sign
+      // up to gain access (see ShareSecurityGuard); if signups are disabled they
+      // can't access it.
     }
 
     let expirationDate: Date;

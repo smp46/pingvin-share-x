@@ -68,11 +68,6 @@ export type ShareSecurity = {
   restrictToRecipients?: boolean;
 };
 
-export type UserVerifyResult = {
-  registered: string[];
-  unregistered: string[];
-};
-
 export type MyShareSecurity = {
   passwordProtected: boolean;
   maxViews?: number;

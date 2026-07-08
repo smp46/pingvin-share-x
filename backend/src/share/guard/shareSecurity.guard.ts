@@ -42,6 +42,7 @@ export class ShareSecurityGuard extends JwtGuard {
         security: true,
         reverseShare: true,
         userRecipients: { select: { userId: true } },
+        recipients: { select: { email: true } },
       },
     });
 
@@ -66,12 +67,29 @@ export class ShareSecurityGuard extends JwtGuard {
       throw new NotFoundException(this.i18n.t("share.notFound"));
     }
 
-    // If user sharing is enabled, check if the authenticated user is a named recipient
+    // If user sharing is enabled, check if the authenticated user is a recipient
     if (this.configService.get("share.enableUserRecipients") && user) {
-      const isRecipient = share.userRecipients.some(
-        (r) => r.userId === user.id,
-      );
-      if (isRecipient) return true;
+      // Already linked as a recipient of this share.
+      const isLinked = share.userRecipients.some((r) => r.userId === user.id);
+      if (isLinked) return true;
+
+      // Otherwise, if the user's (account-verified) email matches one of the
+      // share's recipients, grant access and link them so the share also shows
+      // up on their "Received shares" page. This lets a recipient who signed up
+      // after the share was created gain access — without the app ever
+      // revealing whether a given email belongs to a registered account.
+      const userEmail = user.email?.toLowerCase();
+      const isEmailRecipient =
+        !!userEmail &&
+        share.recipients.some((r) => r.email.toLowerCase() === userEmail);
+      if (isEmailRecipient) {
+        await this.prisma.shareUserRecipient.upsert({
+          where: { userId_shareId: { userId: user.id, shareId: share.id } },
+          create: { userId: user.id, shareId: share.id },
+          update: {},
+        });
+        return true;
+      }
     }
 
     // If share is restricted to named recipients, block everyone else

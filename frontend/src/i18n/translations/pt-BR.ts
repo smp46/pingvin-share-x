@@ -300,8 +300,6 @@ export default {
   "upload.modal.accordion.email.invalid-email": "Endereço de e-mail inválido",
   "upload.modal.accordion.email.restrict-to-recipients":
     "Restrict access to these recipients only (requires all to have an account)",
-  "upload.modal.accordion.email.unregistered-warning":
-    "These addresses don't have an account and won't be able to access the share: {emails}",
   "upload.modal.accordion.security.title": "Opções de segurança",
   "upload.modal.accordion.security.password.label": "Proteção por senha",
   "upload.modal.accordion.security.password.placeholder": "Sem senha",

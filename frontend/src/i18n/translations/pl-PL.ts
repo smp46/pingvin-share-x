@@ -9,8 +9,6 @@ export default {
   "account.received-shares.button.open": "Open",
   "upload.modal.accordion.email.restrict-to-recipients":
     "Restrict access to these recipients only (requires all to have an account)",
-  "upload.modal.accordion.email.unregistered-warning":
-    "These addresses don't have an account and won't be able to access the share: {emails}",
   "share.error.restricted.title": "Restricted share",
   "share.error.restricted.description":
     "This share is restricted to specific recipients. Please log in to access it.",

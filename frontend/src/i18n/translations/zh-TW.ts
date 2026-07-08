@@ -300,8 +300,6 @@ export default {
   "upload.modal.accordion.email.invalid-email": "Email地址不可用",
   "upload.modal.accordion.email.restrict-to-recipients":
     "Restrict access to these recipients only (requires all to have an account)",
-  "upload.modal.accordion.email.unregistered-warning":
-    "These addresses don't have an account and won't be able to access the share: {emails}",
   "upload.modal.accordion.security.title": "安全性選項",
   "upload.modal.accordion.security.password.label": "密碼保護",
   "upload.modal.accordion.security.password.placeholder": "無密碼",

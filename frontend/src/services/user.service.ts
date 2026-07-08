@@ -4,7 +4,6 @@ import {
   UpdateCurrentUser,
   UpdateUser,
 } from "../types/user.type";
-import { UserVerifyResult } from "../types/share.type";
 import api from "./api.service";
 import authService from "./auth.service";
 
@@ -41,11 +40,6 @@ const getCurrentUser = async (): Promise<CurrentUser | null> => {
   }
 };
 
-const verifyEmails = async (emails: string[]): Promise<UserVerifyResult> => {
-  if (emails.length === 0) return { registered: [], unregistered: [] };
-  return (await api.post("users/verify-emails", { emails })).data;
-};
-
 export default {
   list,
   create,
@@ -54,5 +48,4 @@ export default {
   getCurrentUser,
   updateCurrentUser,
   removeCurrentUser,
-  verifyEmails,
 };
