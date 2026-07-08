@@ -175,6 +175,9 @@ export default {
   "account.shares.table.createdAt": "Created on",
   "account.shares.table.size": "Size",
   "account.shares.table.password-protected": "Password protected",
+  "account.shares.table.recipients": "Recipients",
+  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
+  "account.shares.table.shared-with-recipients": "Shared with recipients",
   "account.shares.table.visitor-count": "{count} of {max}",
   "account.shares.table.expiry-never": "Never",
 

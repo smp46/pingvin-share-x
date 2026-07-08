@@ -23,6 +23,7 @@ import {
   TbLock,
   TbTrash,
   TbUserCheck,
+  TbUsers,
 } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
@@ -83,6 +84,11 @@ const MyShares = () => {
                 <th>
                   <FormattedMessage id="account.shares.table.name" />
                 </th>
+                {config.get("share.enableUserRecipients") && (
+                  <th>
+                    <FormattedMessage id="account.shares.table.recipients" />
+                  </th>
+                )}
                 <th>
                   <FormattedMessage id="account.shares.table.visitors" />
                 </th>
@@ -120,20 +126,32 @@ const MyShares = () => {
                           title={t("account.shares.table.password-protected")}
                         />
                       )}
-                      {config.get("share.enableUserRecipients") &&
-                        share.security?.restrictToRecipients && (
-                          <TbUserCheck
-                            color={theme.colors[theme.primaryColor][6]}
-                            title={t(
-                              "upload.modal.accordion.email.restrict-to-recipients",
-                            )}
-                            style={{ cursor: "pointer" }}
-                            onClick={openShareInformationsModal}
-                          />
-                        )}
                     </Group>
                   </td>
                   <td>{share.name}</td>
+                  {config.get("share.enableUserRecipients") && (
+                    <td>
+                      {share.security?.restrictToRecipients ? (
+                        <TbUserCheck
+                          color={theme.colors[theme.primaryColor][6]}
+                          title={t(
+                            "account.shares.table.restricted-to-recipients",
+                          )}
+                          style={{ cursor: "pointer" }}
+                          onClick={openShareInformationsModal}
+                        />
+                      ) : share.recipients?.length ? (
+                        <TbUsers
+                          color={theme.colors.gray[6]}
+                          title={t(
+                            "account.shares.table.shared-with-recipients",
+                          )}
+                          style={{ cursor: "pointer" }}
+                          onClick={openShareInformationsModal}
+                        />
+                      ) : null}
+                    </td>
+                  )}
                   <td>
                     {share.security?.maxViews ? (
                       <FormattedMessage
