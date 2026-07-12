@@ -1,4 +1,4 @@
-import moment from "moment";
+import * as moment from "moment";
 import { PrismaService } from "src/prisma/prisma.service";
 
 export async function getUserActiveStorageUsage(
