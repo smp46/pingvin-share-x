@@ -52,6 +52,10 @@ const Body = ({
       shareSizeLimit: user.shareSizeLimit
         ? parseInt(user.shareSizeLimit)
         : 104857600,
+      hasCustomStorageQuotaLimit: !!user.storageQuotaLimit,
+      storageQuotaLimit: user.storageQuotaLimit
+        ? parseInt(user.storageQuotaLimit)
+        : 21474836480,
     },
     validate: yupResolver(
       yup.object().shape({
@@ -89,6 +93,9 @@ const Body = ({
               isActivated: values.isActivated,
               shareSizeLimit: values.hasCustomShareSizeLimit
                 ? values.shareSizeLimit.toString()
+                : null,
+              storageQuotaLimit: values.hasCustomStorageQuotaLimit
+                ? values.storageQuotaLimit.toString()
                 : null,
             })
             .then(() => {
@@ -143,6 +150,32 @@ const Body = ({
               value={accountForm.values.shareSizeLimit}
               onChange={(val) =>
                 accountForm.setFieldValue("shareSizeLimit", val)
+              }
+            />
+          )}
+          <Switch
+            styles={{
+              body: {
+                display: "flex",
+                justifyContent: "space-between",
+              },
+            }}
+            mt="xs"
+            labelPosition="left"
+            label={t("admin.users.edit.update.custom-storage-quota-limit")}
+            description={t(
+              "admin.users.edit.update.custom-storage-quota-limit.description",
+            )}
+            {...accountForm.getInputProps("hasCustomStorageQuotaLimit", {
+              type: "checkbox",
+            })}
+          />
+          {accountForm.values.hasCustomStorageQuotaLimit && (
+            <FileSizeInput
+              label={t("admin.users.edit.update.custom-storage-quota-limit")}
+              value={accountForm.values.storageQuotaLimit}
+              onChange={(val) =>
+                accountForm.setFieldValue("storageQuotaLimit", val)
               }
             />
           )}
