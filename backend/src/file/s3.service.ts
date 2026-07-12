@@ -23,6 +23,7 @@ import { ConfigService } from "src/config/config.service";
 import { I18nService } from "nestjs-i18n";
 import * as crypto from "crypto";
 import * as mime from "mime-types";
+import { getUserActiveStorageUsage } from "src/utils/storageQuota.util";
 import { File } from "./file.service";
 import { Readable } from "stream";
 import { validate as isValidUUID } from "uuid";
@@ -37,6 +38,7 @@ export class S3FileService {
     {
       uploadId: string;
       parts: Array<{ ETag: string | undefined; PartNumber: number }>;
+      uploadedBytes: number;
     }
   > = {};
 
@@ -62,6 +64,10 @@ export class S3FileService {
     const key = `${this.getS3Path()}${shareId}/${file.name}`;
     const bucketName = this.config.get("s3.bucketName");
     const s3Instance = this.getS3Instance();
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+      include: { creator: true },
+    });
 
     try {
       // Initialize multipart upload if it's the first chunk
@@ -82,6 +88,7 @@ export class S3FileService {
         this.multipartUploads[file.id] = {
           uploadId,
           parts: [],
+          uploadedBytes: 0,
         };
       }
 
@@ -91,6 +98,24 @@ export class S3FileService {
         throw new InternalServerErrorException(
           this.i18n.t("file.s3SessionNotFound"),
         );
+      }
+
+      if (share?.creatorId && share.creator?.storageQuotaLimit) {
+        const quotaLimit = parseInt(share.creator.storageQuotaLimit);
+        const activeStorageUsage = await getUserActiveStorageUsage(
+          this.prisma,
+          share.creatorId,
+        );
+        const projectedUsage =
+          activeStorageUsage +
+          multipartUpload.uploadedBytes +
+          buffer.byteLength;
+
+        if (projectedUsage > quotaLimit) {
+          throw new BadRequestException(
+            this.i18n.t("file.storageQuotaExceeded"),
+          );
+        }
       }
 
       const uploadId = multipartUpload.uploadId;
@@ -113,6 +138,7 @@ export class S3FileService {
         ETag: uploadPartResponse.ETag,
         PartNumber: partNumber,
       });
+      multipartUpload.uploadedBytes += buffer.byteLength;
 
       // Complete the multipart upload if it's the last chunk
       if (chunk.index === chunk.total - 1) {
