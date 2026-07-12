@@ -48,6 +48,13 @@ export class UserDTO {
   shareSizeLimit?: string;
 
   @Expose()
+  @IsOptional()
+  @Matches(/^[0-9]+$/, {
+    message: "storageQuotaLimit must contain only digits",
+  })
+  storageQuotaLimit?: string;
+
+  @Expose()
   totpVerified: boolean;
 
   from(partial: Partial<UserDTO>) {
