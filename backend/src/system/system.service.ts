@@ -16,7 +16,7 @@ export class SystemService {
       return null;
     }
 
-    const resolvedPath = path.resolve(DATA_DIRECTORY);
+    const resolvedPath = path.resolve(DATA_DIRECTORY, "uploads");
 
     try {
       const diskSpace = await checkDiskSpace(resolvedPath);
