@@ -49,8 +49,8 @@ export class UserDTO {
 
   @Expose()
   @IsOptional()
-  @Matches(/^[0-9]+$/, {
-    message: "storageQuotaLimit must contain only digits",
+  @Matches(/^[1-9][0-9]*$/, {
+    message: "storageQuotaLimit must be greater than 0",
   })
   storageQuotaLimit?: string;
 

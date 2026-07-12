@@ -60,6 +60,14 @@ const Body = ({
           .string()
           .min(8, t("common.error.too-short", { length: 8 }))
           .optional(),
+        storageQuotaLimit: yup.number().test(
+          "storage-quota-positive",
+          "Storage quota must be greater than 0",
+          function (value) {
+            if (!this.parent.hasCustomStorageQuotaLimit) return true;
+            return (value ?? 0) > 0;
+          },
+        ),
       }),
     ),
   });

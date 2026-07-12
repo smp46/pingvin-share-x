@@ -63,6 +63,14 @@ const Body = ({
         username: yup
           .string()
           .min(3, t("common.error.too-short", { length: 3 })),
+        storageQuotaLimit: yup.number().test(
+          "storage-quota-positive",
+          "Storage quota must be greater than 0",
+          function (value) {
+            if (!this.parent.hasCustomStorageQuotaLimit) return true;
+            return (value ?? 0) > 0;
+          },
+        ),
       }),
     ),
   });
