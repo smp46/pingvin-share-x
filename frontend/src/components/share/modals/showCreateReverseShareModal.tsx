@@ -87,7 +87,7 @@ const Body = ({
 
   const form = useForm({
     initialValues: {
-      maxShareSize: Math.min(104857600, userMaxShareSize),
+      maxShareSize: userMaxShareSize,
       maxUseCount: 1,
       sendEmailNotification: false,
       expiration_num: defaultTimespan.value,
