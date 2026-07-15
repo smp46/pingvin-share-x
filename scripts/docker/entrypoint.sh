@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copy default logo to the frontend public folder if it doesn't exist
+# Copy default logo to the frontend public folder if it doesn't exist
 cp -rn /tmp/img/* /opt/app/frontend/public/img
 
 if [ "$CADDY_DISABLED" != "true" ]; then

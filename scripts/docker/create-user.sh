@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # If we aren't running as root, just exec the CMD
 [ "$(id -u)" -ne 0 ] && exec "$@"
 
