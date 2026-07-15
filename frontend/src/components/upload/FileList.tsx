@@ -11,6 +11,19 @@ import { HoverTip } from "../core/HoverTip";
 import showTextEditorModal from "./modals/showTextEditorModal";
 import shareService from "../../services/share.service";
 
+const renderFileName = (name: string) => {
+  const parts = name.split("/");
+  if (parts.length === 1) return name;
+  const fileName = parts.pop();
+  const folderPath = parts.join("/");
+  return (
+    <span>
+      <span style={{ opacity: 0.5 }}>{folderPath}/</span>
+      <strong>{fileName}</strong>
+    </span>
+  );
+};
+
 const FileListRow = ({
   file,
   onRemove,
@@ -43,7 +56,7 @@ const FileListRow = ({
           textDecoration: deleted ? "line-through" : "none",
         }}
       >
-        <td>{file.name}</td>
+        <td>{renderFileName(file.name)}</td>
         <td>{byteToHumanSizeString(+file.size)}</td>
         <td>
           <Group position="right" spacing="xs" noWrap>

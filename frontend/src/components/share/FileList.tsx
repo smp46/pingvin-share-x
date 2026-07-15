@@ -24,6 +24,19 @@ import showFilePreviewModal from "./modals/showFilePreviewModal";
 import { HoverTip } from "../core/HoverTip";
 import api from "../../services/api.service";
 
+const renderFileName = (name: string) => {
+  const parts = name.split("/");
+  if (parts.length === 1) return name;
+  const fileName = parts.pop();
+  const folderPath = parts.join("/");
+  return (
+    <span>
+      <span style={{ opacity: 0.5 }}>{folderPath}/</span>
+      <strong>{fileName}</strong>
+    </span>
+  );
+};
+
 const FileList = ({
   files,
   setShare,
@@ -118,7 +131,7 @@ const FileList = ({
             ? skeletonRows
             : files!.map((file) => (
                 <tr key={file.name}>
-                  <td>{file.name}</td>
+                  <td>{renderFileName(file.name)}</td>
                   <td>{byteToHumanSizeString(parseInt(file.size))}</td>
                   <td>
                     <Group position="right" noWrap>
