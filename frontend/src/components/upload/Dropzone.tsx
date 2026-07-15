@@ -204,36 +204,19 @@ const Dropzone = ({
         </div>
       </MantineDropzone>
       <Center>
-        <Menu shadow="md" width={180} position="bottom">
-          <Menu.Target>
-            <Button
-              className={classes.control}
-              variant="light"
-              size="sm"
-              radius="xl"
-              disabled={isUploading}
-            >
-              <TbUpload style={{ marginRight: 6 }} />
-              <FormattedMessage id="upload.button.add" defaultMessage="Add to upload" />
-            </Button>
-          </Menu.Target>
-          <Menu.Dropdown>
-            <Menu.Item
-              icon={<TbUpload size={14} />}
-              onClick={() => openRef.current && openRef.current()}
-            >
-              <FormattedMessage id="upload.button.files" defaultMessage="Upload files" />
-            </Menu.Item>
-            {isFolderUploadSupported && (
-              <Menu.Item
-                icon={<TbFolder size={14} />}
-                onClick={() => folderInputRef.current?.click()}
-              >
-                <FormattedMessage id="upload.button.folder" defaultMessage="Upload folder" />
-              </Menu.Item>
-            )}
-          </Menu.Dropdown>
-        </Menu>
+        {isFolderUploadSupported && (
+          <Button
+            className={classes.control}
+            variant="light"
+            size="sm"
+            radius="xl"
+            disabled={isUploading}
+            onClick={() => folderInputRef.current?.click()}
+          >
+            <TbFolder style={{ marginRight: 6 }} />
+            <FormattedMessage id="upload.button.folder" defaultMessage="Upload folder" />
+          </Button>
+        )}
       </Center>
     </div>
   );
