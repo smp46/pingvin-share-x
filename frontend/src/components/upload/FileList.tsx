@@ -19,7 +19,7 @@ const renderFileName = (name: string) => {
   return (
     <span>
       <span style={{ opacity: 0.5 }}>{folderPath}/</span>
-      <strong>{fileName}</strong>
+      <span style={{ fontWeight: 600 }}>{fileName}</span>
     </span>
   );
 };
