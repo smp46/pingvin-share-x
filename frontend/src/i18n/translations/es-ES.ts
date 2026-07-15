@@ -121,7 +121,7 @@ export default {
   "account.card.language.description": "El proyecto ha sido traducido por la comunidad. Algunos idiomas pueden estar incompletos.",
   "account.card.color.title": "Esquema de colores",
   // ThemeSwitcher.tsx
-  "account.theme.dark": "Obscuro",
+  "account.theme.dark": "Oscuro",
   "account.theme.light": "Claro",
   "account.theme.system": "Sistema",
   "account.button.delete": "Eliminar Cuenta",
