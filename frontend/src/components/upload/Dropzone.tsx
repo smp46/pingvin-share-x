@@ -1,7 +1,7 @@
-import { Button, Center, createStyles, Group, Text } from "@mantine/core";
+import { Button, Center, createStyles, Group, Text, Menu } from "@mantine/core";
 import { Dropzone as MantineDropzone } from "@mantine/dropzone";
-import { ForwardedRef, useRef } from "react";
-import { TbCloudUpload, TbUpload } from "react-icons/tb";
+import React, { ForwardedRef, useRef } from "react";
+import { TbCloudUpload, TbUpload, TbFolder } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import useTranslate from "../../hooks/useTranslate.hook";
 import { FileUpload } from "../../types/File.type";
@@ -32,6 +32,74 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
+const traverseDirectory = async (entry: any, path = ""): Promise<File[]> => {
+  if (entry.isFile) {
+    return new Promise((resolve) => {
+      entry.file((file: File) => {
+        const relativePath = path ? `${path}/${file.name}` : file.name;
+        Object.defineProperty(file, "webkitRelativePath", {
+          value: relativePath,
+          writable: true,
+          configurable: true,
+        });
+        resolve([file]);
+      });
+    });
+  } else if (entry.isDirectory) {
+    const dirReader = entry.createReader();
+    const readEntries = (): Promise<any[]> => {
+      return new Promise((resolve) => {
+        dirReader.readEntries(
+          (entries: any[]) => resolve(entries),
+          () => resolve([]),
+        );
+      });
+    };
+
+    let entries: any[] = [];
+    let readBatch = await readEntries();
+    while (readBatch.length > 0) {
+      entries = entries.concat(readBatch);
+      readBatch = await readEntries();
+    }
+
+    const promises = entries.map((e) =>
+      traverseDirectory(e, path ? `${path}/${entry.name}` : entry.name)
+    );
+    const results = await Promise.all(promises);
+    return results.flat();
+  }
+  return [];
+};
+
+const getFilesFromEvent = async (event: any): Promise<any[]> => {
+  const items = event.dataTransfer ? event.dataTransfer.items : event.target.files;
+  if (!items) return [];
+
+  const filePromises: Promise<File[]>[] = [];
+
+  if (event.dataTransfer) {
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i];
+      if (item.kind === "file") {
+        const entry = item.webkitGetAsEntry ? item.webkitGetAsEntry() : null;
+        if (entry) {
+          filePromises.push(traverseDirectory(entry));
+        } else {
+          const file = item.getAsFile();
+          if (file) {
+            filePromises.push(Promise.resolve([file]));
+          }
+        }
+      }
+    }
+    const fileArrays = await Promise.all(filePromises);
+    return fileArrays.flat();
+  } else {
+    return Array.from(items) as File[];
+  }
+};
+
 const Dropzone = ({
   title,
   isUploading,
@@ -46,17 +114,60 @@ const Dropzone = ({
   onFilesChanged: (files: FileUpload[]) => void;
 }) => {
   const t = useTranslate();
-
   const { classes } = useStyles();
   const openRef = useRef<() => void>();
+  const folderInputRef = useRef<HTMLInputElement>(null);
+
+  const isFolderUploadSupported =
+    typeof window !== "undefined" &&
+    typeof HTMLInputElement !== "undefined" &&
+    "webkitdirectory" in HTMLInputElement.prototype;
+
+  const handleFolderSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const filesList = event.target.files;
+    if (!filesList) return;
+    const filesArray = Array.from(filesList) as FileUpload[];
+
+    const files = filesArray.map((newFile) => {
+      newFile.uploadingProgress = 0;
+      return newFile;
+    });
+
+    const fileSizeSum = files.reduce((n, { size }) => n + size, 0);
+
+    if (fileSizeSum + currentFilesSize > maxShareSize) {
+      toast.error(
+        t("upload.dropzone.notify.file-too-big", {
+          maxSize: byteToHumanSizeString(maxShareSize),
+        }),
+      );
+    } else {
+      onFilesChanged(files);
+    }
+
+    event.target.value = "";
+  };
+
   return (
     <div className={classes.wrapper}>
+      <input
+        type="file"
+        ref={folderInputRef}
+        style={{ display: "none" }}
+        {...({
+          webkitdirectory: "",
+          directory: "",
+        } as any)}
+        multiple
+        onChange={handleFolderSelect}
+      />
       <MantineDropzone
         onReject={(e) => {
           toast.error(e[0].errors[0].message);
         }}
         disabled={isUploading}
         openRef={openRef as ForwardedRef<() => void>}
+        getFilesFromEvent={getFilesFromEvent}
         onDrop={(files: FileUpload[]) => {
           const fileSizeSum = files.reduce((n, { size }) => n + size, 0);
 
@@ -93,16 +204,36 @@ const Dropzone = ({
         </div>
       </MantineDropzone>
       <Center>
-        <Button
-          className={classes.control}
-          variant="light"
-          size="sm"
-          radius="xl"
-          disabled={isUploading}
-          onClick={() => openRef.current && openRef.current()}
-        >
-          {<TbUpload />}
-        </Button>
+        <Menu shadow="md" width={180} position="bottom">
+          <Menu.Target>
+            <Button
+              className={classes.control}
+              variant="light"
+              size="sm"
+              radius="xl"
+              disabled={isUploading}
+            >
+              <TbUpload style={{ marginRight: 6 }} />
+              <FormattedMessage id="upload.button.add" defaultMessage="Add to upload" />
+            </Button>
+          </Menu.Target>
+          <Menu.Dropdown>
+            <Menu.Item
+              icon={<TbUpload size={14} />}
+              onClick={() => openRef.current && openRef.current()}
+            >
+              <FormattedMessage id="upload.button.files" defaultMessage="Upload files" />
+            </Menu.Item>
+            {isFolderUploadSupported && (
+              <Menu.Item
+                icon={<TbFolder size={14} />}
+                onClick={() => folderInputRef.current?.click()}
+              >
+                <FormattedMessage id="upload.button.folder" defaultMessage="Upload folder" />
+              </Menu.Item>
+            )}
+          </Menu.Dropdown>
+        </Menu>
       </Center>
     </div>
   );
