@@ -17,6 +17,11 @@ import toast from "../../utils/toast.util";
 const promiseLimit = pLimit(3);
 let errorToastShown = false;
 
+const getNormalizedFileName = (file: File): string => {
+  const pathName = file.webkitRelativePath || file.name;
+  return pathName.replace(/\\/g, "/").replace(/^\//, "");
+};
+
 const EditableUpload = ({
   maxShareSize,
   shareId,
@@ -109,7 +114,7 @@ const EditableUpload = ({
                 blob,
                 {
                   id: fileId,
-                  name: file.name,
+                  name: getNormalizedFileName(file),
                 },
                 chunkIndex,
                 chunks,

@@ -24,6 +24,11 @@ const promiseLimit = pLimit(3);
 let errorToastShown = false;
 let createdShare: Share;
 
+const getNormalizedFileName = (file: File): string => {
+  const pathName = file.webkitRelativePath || file.name;
+  return pathName.replace(/\\/g, "/").replace(/^\//, "");
+};
+
 const Upload = ({
   maxShareSize,
   isReverseShare = false,
@@ -109,7 +114,7 @@ const Upload = ({
                 blob,
                 {
                   id: fileId,
-                  name: file.name,
+                  name: getNormalizedFileName(file),
                 },
                 chunkIndex,
                 chunks,
