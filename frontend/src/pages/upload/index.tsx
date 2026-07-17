@@ -19,7 +19,7 @@ import { FileUpload } from "../../types/File.type";
 import { CreateShare, Share } from "../../types/share.type";
 import toast from "../../utils/toast.util";
 import { useRouter } from "next/router";
-import { getNormalizedFileName } from "../../utils/file.util";
+import { getNormalizedFileName, filterDuplicateFiles } from "../../utils/file.util";
 
 const promiseLimit = pLimit(3);
 let errorToastShown = false;
@@ -166,12 +166,19 @@ const Upload = ({
     );
   };
 
-  const handleDropzoneFilesChanged = (files: FileUpload[]) => {
+  const handleDropzoneFilesChanged = (newFiles: FileUpload[]) => {
+    const filtered = filterDuplicateFiles(
+      newFiles,
+      files,
+      (normalizedName) => toast.error(t("upload.notify.duplicate-skipped", { name: normalizedName }))
+    );
+    if (filtered.length === 0) return;
+
     if (autoOpenCreateUploadModal) {
-      setFiles(files);
-      showCreateUploadModalCallback(files);
+      setFiles(filtered);
+      showCreateUploadModalCallback(filtered);
     } else {
-      setFiles((oldArr) => [...oldArr, ...files]);
+      setFiles((oldArr) => [...oldArr, ...filtered]);
     }
   };
 
@@ -206,11 +213,18 @@ const Upload = ({
         const fileUpload = file as FileUpload;
         fileUpload.uploadingProgress = 0;
 
+        const filtered = filterDuplicateFiles(
+          [fileUpload],
+          files,
+          (normalizedName) => toast.error(t("upload.notify.duplicate-skipped", { name: normalizedName }))
+        );
+        if (filtered.length === 0) return;
+
         if (autoOpenCreateUploadModal) {
-          setFiles([fileUpload]);
-          showCreateUploadModalCallback([fileUpload]);
+          setFiles(filtered);
+          showCreateUploadModalCallback(filtered);
         } else {
-          setFiles((oldArr) => [...oldArr, fileUpload]);
+          setFiles((oldArr) => [...oldArr, ...filtered]);
         }
       }
     };
