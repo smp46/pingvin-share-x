@@ -214,7 +214,9 @@ const Dropzone = ({
             onClick={() => folderInputRef.current?.click()}
           >
             <TbFolder style={{ marginRight: 6 }} />
-            <FormattedMessage id="upload.button.folder" defaultMessage="Upload folder" />
+            <FormattedMessage
+              id={currentFilesSize > 0 ? "upload.button.folder.append" : "upload.button.folder"}
+            />
           </Button>
         )}
       </Center>

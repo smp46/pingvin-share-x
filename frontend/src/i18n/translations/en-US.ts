@@ -332,6 +332,7 @@ export default {
   "upload.dropzone.notify.file-too-big":
     "Your files exceed the maximum share size of {maxSize}.",
   "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
   "upload.button.add": "Add to upload",
 
   // FileList.tsx
