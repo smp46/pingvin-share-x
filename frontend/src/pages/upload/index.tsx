@@ -19,15 +19,11 @@ import { FileUpload } from "../../types/File.type";
 import { CreateShare, Share } from "../../types/share.type";
 import toast from "../../utils/toast.util";
 import { useRouter } from "next/router";
+import { getNormalizedFileName } from "../../utils/file.util";
 
 const promiseLimit = pLimit(3);
 let errorToastShown = false;
 let createdShare: Share;
-
-const getNormalizedFileName = (file: File): string => {
-  const pathName = file.webkitRelativePath || file.name;
-  return pathName.replace(/\\/g, "/").replace(/^\//, "");
-};
 
 const Upload = ({
   maxShareSize,
