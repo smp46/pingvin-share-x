@@ -11,6 +11,6 @@
   "maxExpirationExceeded": "過期日期超過最大過期日期",
   "wrongPassword": "密碼錯誤",
   "tokenRequired": "需要分享權杖",
-  "privateShare": "只有逆向分享創建者可以訪問此分享",
+  "privateShare": "只有回傳分享建立者才能存取此分享",
   "maxViewsExceeded": "超過最大查看次數"
 }
