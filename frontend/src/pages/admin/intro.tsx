@@ -32,6 +32,15 @@ const Intro = () => {
               GitHub
             </Anchor>{" "}
           </Text>
+          <Text>
+            You can also support development via {" "}
+            <Anchor
+              target="_blank"
+              href="https://github.com/sponsors/smp46"
+            >
+              GitHub Sponsors ❤️
+            </Anchor>{" "}
+          </Text>
           <Text>Enough talked, have fun with Pingvin Share X!</Text>
           <Text mt="lg">How to you want to continue?</Text>
           <Stack>
