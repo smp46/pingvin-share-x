@@ -33,11 +33,8 @@ const Intro = () => {
             </Anchor>{" "}
           </Text>
           <Text>
-            You can also support development via {" "}
-            <Anchor
-              target="_blank"
-              href="https://github.com/sponsors/smp46"
-            >
+            You can also support development via{" "}
+            <Anchor target="_blank" href="https://github.com/sponsors/smp46">
               GitHub Sponsors ❤️
             </Anchor>{" "}
           </Text>
