@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "Да ли сте сигурни да желите да напустите ову страницу? Ваше отпремање ће бити отказано.",
   "upload.notify.generic-error": "Дошло је до грешке при довршавању дељења.",
   "upload.notify.count-failed": "Отпремање {count} датотека није успело. Покушавам поново.",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "Неправилан линк за обрнуто дељење",
   "upload.reverse-share.error.invalid.description": "Ово обрнуто дељење је истекло или је неважеће.",
   // Dropzone.tsx
   "upload.dropzone.title": "Пошаљи датотеке",
-  "upload.dropzone.description": "Drag'n'drop files here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "Ваше датотеке премашују максималну величину дељења од {maxSize}.",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "Назив",
   "upload.filelist.size": "Величина",
