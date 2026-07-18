@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "Сигурни ли сте, че искате да напуснете тази страница? Вашето качване ще бъде отменено.",
   "upload.notify.generic-error": "Възникна грешка при завършване на споделянето.",
   "upload.notify.count-failed": "Качването на {count} файла не бе успешно. Опитване отново.",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "Невалидна реверсивна връзка за споделяне",
   "upload.reverse-share.error.invalid.description": "Тази връзка няма оставащи използвания или е невалидна.",
   // Dropzone.tsx
   "upload.dropzone.title": "Качване на файлове",
-  "upload.dropzone.description": "Плъзнете и пуснете файлове тук, за да започнете споделянето им, или натиснете 'Ctrl+V', за да качите текстово съдържание от клипборда. Приемат се файлове с общ размер до {maxSize}.",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "Вашите файлове надвишават максималния размер за споделяне от {maxSize}.",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "Име",
   "upload.filelist.size": "Размер",
