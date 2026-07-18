@@ -161,9 +161,7 @@ const CreateUploadModalBody = ({
 
   const defaultTimespan = options.defaultExpiration
     ? options.defaultExpiration
-    : options.maxExpiration && options.maxExpiration.value !== 0
-      ? options.maxExpiration
-      : { value: 7, unit: "days" };
+    : { value: 7, unit: "days" };
 
   const form = useForm({
     initialValues: {

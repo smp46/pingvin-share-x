@@ -83,9 +83,7 @@ const Body = ({
 
   const defaultTimespan = defaultExpiration
     ? defaultExpiration
-    : maxExpiration && maxExpiration.value !== 0
-      ? maxExpiration
-      : { value: 7, unit: "days" };
+    : { value: 7, unit: "days" };
 
   const form = useForm({
     initialValues: {
