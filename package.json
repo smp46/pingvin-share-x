@@ -7,6 +7,8 @@
     "version": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -o CHANGELOG.md && git add CHANGELOG.md",
     "release:patch": "cd backend && npm version patch --commit-hooks false && cd ../frontend && npm version patch --commit-hooks false && cd .. && git add . && npm version patch --force -m 'release: %s' && git push && git push --tags",
     "release:minor": "cd backend && npm version minor --commit-hooks false && cd ../frontend && npm version minor --commit-hooks false && cd .. && git add . && npm version minor --force -m 'release: %s' && git push && git push --tags",
+    "release:beta:patch": "cd backend && npm version prerelease --preid beta --commit-hooks false && cd ../frontend && npm version prerelease --preid beta --commit-hooks false && cd .. && git add . && npm version prerelease --preid beta --force -m 'release: %s' && git push && git push --tags",
+    "release:beta:minor": "cd backend && npm version preminor --preid beta --commit-hooks false && cd ../frontend && npm version preminor --preid beta --commit-hooks false && cd .. && git add . && npm version preminor --preid beta --force -m 'release: %s' && git push && git push --tags",
     "deploy:dev": "docker buildx build --push --tag smp46/pingvin-share-x:development --platform linux/amd64,linux/arm64 ."
   },
   "prettier": {
