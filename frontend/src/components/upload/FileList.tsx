@@ -11,6 +11,26 @@ import { HoverTip } from "../core/HoverTip";
 import showTextEditorModal from "./modals/showTextEditorModal";
 import shareService from "../../services/share.service";
 
+const renderFileName = (name: string) => {
+  const parts = name.split("/");
+  if (parts.length === 1) return name;
+  const fileName = parts.pop();
+  const folderPath = parts.join("/");
+  return (
+    <span>
+      <span style={{ opacity: 0.5 }}>{folderPath}/</span>
+      <span style={{ fontWeight: 600 }}>{fileName}</span>
+    </span>
+  );
+};
+
+const getFileNameOrPath = (file: FileListItem) => {
+  const pathName = ("webkitRelativePath" in file && file.webkitRelativePath)
+    ? file.webkitRelativePath
+    : file.name;
+  return pathName.replace(/\\/g, "/").replace(/^\//, "");
+};
+
 const FileListRow = ({
   file,
   onRemove,
@@ -31,7 +51,8 @@ const FileListRow = ({
     const restorable = onRestore && !uploadable && !!file.deleted;
     const deleted = !uploadable && !!file.deleted;
 
-    const isTextFile = shareService.isShareTextFile(file.name);
+    const fileNameOrPath = getFileNameOrPath(file);
+    const isTextFile = shareService.isShareTextFile(fileNameOrPath);
     const editable = isTextFile && uploadable && file.uploadingProgress === 0;
 
     const t = useTranslate();
@@ -43,7 +64,7 @@ const FileListRow = ({
           textDecoration: deleted ? "line-through" : "none",
         }}
       >
-        <td>{file.name}</td>
+        <td>{renderFileName(fileNameOrPath)}</td>
         <td>{byteToHumanSizeString(+file.size)}</td>
         <td>
           <Group position="right" spacing="xs" noWrap>
