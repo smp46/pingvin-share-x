@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "Kas oled kindel, et soovid sellelt lehelt lahkuda? Sinu üleslaadimine tühistatakse.",
   "upload.notify.generic-error": "Jagamise lõpetamisel tekkis viga.",
   "upload.notify.count-failed": "{count} faili ei õnnestunud üles laadida. Proovime uuesti.",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "Vigane tagasijagamise link",
   "upload.reverse-share.error.invalid.description": "See tagasijagamine on aegunud või vigane.",
   // Dropzone.tsx
   "upload.dropzone.title": "Laadi üles failid",
-  "upload.dropzone.description": "Drag'n'drop files here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "Sinu failid ületavad lubatud suuruse {maxSize}.",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "Nimi",
   "upload.filelist.size": "Suurus",
