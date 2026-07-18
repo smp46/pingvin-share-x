@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "Bu sayfadan ayrılmak istediğinizden emin misiniz? Yüklemeniz iptal edilecek.",
   "upload.notify.generic-error": "Paylaşımınız tamamlanırken bir hata oluştu.",
   "upload.notify.count-failed": "{count} dosya yüklenemedi. Tekrar deneniyor.",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "Geçersiz karşı paylaşım bağlantısı",
   "upload.reverse-share.error.invalid.description": "Bu karşı paylaşımın süresi dolmuş veya geçersiz.",
   // Dropzone.tsx
   "upload.dropzone.title": "Dosyaları Yükle",
-  "upload.dropzone.description": "Drag'n'drop files here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "Dosyalarınız maksimum paylaşım boyutu olan {maxSize} değerini aşıyor.",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "İsim",
   "upload.filelist.size": "Boyut",
