@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "您真的想離開這個網頁嗎？您的上傳會被中止。",
   "upload.notify.generic-error": "建立分享的過程中發生了錯誤",
   "upload.notify.count-failed": "{count} 檔案上傳失敗，請重試",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "無效的回傳分享連結",
   "upload.reverse-share.error.invalid.description": "此回傳分享連結已過期/失效。",
   // Dropzone.tsx
   "upload.dropzone.title": "上傳檔案",
-  "upload.dropzone.description": "將檔案拖放至此以開始分享，或按「Ctrl+V」從剪貼簿上傳文字內容。我們僅接受總大小不超過 {maxSize} 的檔案。",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "您的檔案超過了最大上傳限制 {maxSize}",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "檔案名稱",
   "upload.filelist.size": "檔案大小",
