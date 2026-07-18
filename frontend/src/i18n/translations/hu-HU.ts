@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "Biztosan el akarja hagyni ezt az oldalt? A feltöltés megszakításra kerül.",
   "upload.notify.generic-error": "Hiba lépett fel a megosztás befejezése közben.",
   "upload.notify.count-failed": "{count} darab fájlt nem sikerült feltölteni. Próbálja ismét.",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "Érvénytelen fordított megosztási link",
   "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
   // Dropzone.tsx
   "upload.dropzone.title": "Fájlok feltöltése",
-  "upload.dropzone.description": "Húzza ide a fájlokat a megosztás megkezdéséhez, vagy a 'Ctrl+V' billentyűkombinációval töltse fel a vágólapról a szöveges tartalmat. Maximum {maxSize} méretű fájlok tölthetőek fel.",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "A fájlok mérete meghaladja a megengedett {maxSize} méretet.",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "Megnevezés",
   "upload.filelist.size": "Méret",
