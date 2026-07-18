@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "Weet je zeker dat je deze pagina wilt verlaten? Je upload wordt geannuleerd.",
   "upload.notify.generic-error": "Er is een fout opgetreden tijdens het voltooien van uw share.",
   "upload.notify.count-failed": "{count} bestanden konden niet worden geüpload. Probeer het nogmaals.",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "Ongeldige omgekeerde deel link",
   "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
   // Dropzone.tsx
   "upload.dropzone.title": "Bestanden uploaden",
-  "upload.dropzone.description": "Sleep bestanden hierheen om te beginnen met delen, of gebruik 'Ctrl+V' om tekst vanuit het klembord te uploaden. We accepteren alleen bestanden tot een maximale grootte van {maxSize}.",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "Uw bestanden overschrijden de maximale share-grootte van {maxSize}.",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "Naam",
   "upload.filelist.size": "Grootte",
