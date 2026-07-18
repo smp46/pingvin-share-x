@@ -124,7 +124,7 @@ const ManageShareTable = ({
                               parseInt(config.get("share.maxSize")),
                               config.get("general.appUrl"),
                               config.get("general.appUrl", true),
-                              config.get("share.maxExpiration"),
+                              { value: 0, unit: "days" },
                               updateShare,
                             );
                           }}
