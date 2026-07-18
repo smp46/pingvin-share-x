@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "Esteu segur que voleu sortir d'aquesta pàgina? La pujada se suprimirà.",
   "upload.notify.generic-error": "S'ha produït un error en finalitzar la compartició.",
   "upload.notify.count-failed": "{count} fitxers han fallat en pujar. S'està reintentant.",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "Enllaç de compartició inversa no vàlid",
   "upload.reverse-share.error.invalid.description": "Aquest enllaç no té usos restants o no és vàlid.",
   // Dropzone.tsx
   "upload.dropzone.title": "Pujar fitxers",
-  "upload.dropzone.description": "Arrossegueu i deixeu anar fitxers aquí per començar a compartir o 'Ctrl+V' per pujar el contingut de text del porta-retalls. Només acceptem fitxers de fins a {maxSize} en total.",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "Els vostres fitxers superen la mida màxima de compartició de {maxSize}.",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "Nom",
   "upload.filelist.size": "Mida",
