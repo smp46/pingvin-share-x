@@ -32,16 +32,12 @@ export default function VerificationInfo() {
       <Meta title={t("verify.info.title")} />
       <Container size={420} my={40}>
         <Title order={2} align="center" weight={900}>
-          <FormattedMessage
-            id="verify.info.title"
-          />
+          <FormattedMessage id="verify.info.title" />
         </Title>
         <Paper withBorder shadow="md" p={30} mt={30} radius="md">
           <Stack align="center">
             <Text align="center">
-              <FormattedMessage
-                id="verify.info.description"
-              />
+              <FormattedMessage id="verify.info.description" />
             </Text>
             {email && (
               <Text weight={700} size="sm">
@@ -49,9 +45,7 @@ export default function VerificationInfo() {
               </Text>
             )}
             <Text align="center" size="sm" color="dimmed">
-              <FormattedMessage
-                id="verify.info.note"
-              />
+              <FormattedMessage id="verify.info.note" />
             </Text>
             <Stack w="100%" mt="xl">
               <Button
@@ -61,14 +55,10 @@ export default function VerificationInfo() {
                 disabled={!email}
                 fullWidth
               >
-                <FormattedMessage
-                  id="verify.info.resend.button"
-                />
+                <FormattedMessage id="verify.info.resend.button" />
               </Button>
               <Button fullWidth onClick={() => router.replace("/auth/signIn")}>
-                <FormattedMessage
-                  id="verify.button.signin"
-                />
+                <FormattedMessage id="verify.button.signin" />
               </Button>
             </Stack>
           </Stack>
