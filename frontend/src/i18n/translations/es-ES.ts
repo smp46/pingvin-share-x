@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "¿Estás seguro de que quieres salir de esta página? Tu subida será cancelada.",
   "upload.notify.generic-error": "Ha ocurrido un error mientras se compartía tu archivo.",
   "upload.notify.count-failed": "No se pudo cargar {count} archivos. Intentando nuevamente.",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "Enlace de uso compartido inverso inválido",
   "upload.reverse-share.error.invalid.description": "Este enlace de uso compartido inverso ha caducado o no es válido.",
   // Dropzone.tsx
   "upload.dropzone.title": "Subir archivos",
-  "upload.dropzone.description": "Arrastra y suelta los archivos aquí para empezar a compartir o 'Ctrl+V' para subir contenido de texto desde el portapapeles. Solo aceptamos archivos hasta {maxSize} en total.",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "Tus archivos exceden el tamaño máximo de {maxSize}.",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "Nombre",
   "upload.filelist.size": "Tamaño",
