@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "آیا مطمئن هستید که می‌خواهید این صفحه را ترک کنید؟ بارگذاری شما لغو خواهد شد.",
   "upload.notify.generic-error": "خطایی هنگام تکمیل اشتراک شما رخ داد.",
   "upload.notify.count-failed": "{count} فایل بارگذاری نشد. دوباره تلاش می‌کنیم.",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "لینک اشتراک معکوس نامعتبر",
   "upload.reverse-share.error.invalid.description": "این لینک فاقد استفاده‌های باقی‌مانده است یا نامعتبر است.",
   // Dropzone.tsx
   "upload.dropzone.title": "بارگذاری فایل‌ها",
-  "upload.dropzone.description": "فایل‌ها را بکشید و رها کنید تا اشتراک خود را شروع کنید یا 'Ctrl+V' را فشار دهید تا محتوای متنی را از کلیپ‌بورد بارگذاری کنید. ما فقط فایل‌هایی تا مجموع {maxSize} را قبول می‌کنیم.",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "فایل‌های شما از حداکثر اندازه اشتراک {maxSize} تجاوز می‌کنند.",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "نام",
   "upload.filelist.size": "حجم",
