@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "Are you sure you want to leave this page? Your upload will be canceled.",
   "upload.notify.generic-error": "Prišlo je do napake pri ustvarjanju vašega deljenja.",
   "upload.notify.count-failed": "Prišlo je do napake pri nalaganju toliko datotek: {count}. Poskušamo ponovno.",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "Invalid reverse share link",
   "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
   // Dropzone.tsx
   "upload.dropzone.title": "Naloži datoteke",
-  "upload.dropzone.description": "Drag'n'drop files here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "Vaše datoteke presegajo največjo dovoljeno velikost {maxSize}.",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "Ime",
   "upload.filelist.size": "Velikost",
