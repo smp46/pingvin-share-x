@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "Opravdu chcete opustit tuto stránku? Vaše nahrávání bude zrušeno.",
   "upload.notify.generic-error": "Při dokončování vašeho sdílení došlo k chybě.",
   "upload.notify.count-failed": "{count} souborů se nepodařilo nahrát. Zkouším to znovu.",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "Neplatný odkaz na opačné sdílení",
   "upload.reverse-share.error.invalid.description": "Toto opačné sdílení vypršelo nebo je neplatné.",
   // Dropzone.tsx
   "upload.dropzone.title": "Nahrát soubory",
-  "upload.dropzone.description": "Přetáhněte sem soubory pro zahájení sdílení nebo použijte 'Ctrl+V' pro nahrání textového obsahu ze schránky. Přijímáme pouze soubory do celkové velikosti {maxSize}.",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "Vaše soubory přesahují maximální velikost {maxSize}.",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "Název",
   "upload.filelist.size": "Velikost",
