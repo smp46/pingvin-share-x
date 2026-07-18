@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "Вы уверены, что хотите покинуть эту страницу? Загрузка будет отменена.",
   "upload.notify.generic-error": "Произошла ошибка при завершении вашей загрузки.",
   "upload.notify.count-failed": "Не удалось загрузить файлы {count}. Повтор попытки.",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "Неверная обратная ссылка",
   "upload.reverse-share.error.invalid.description": "Эта обратная доля устарела или является недействительной.",
   // Dropzone.tsx
   "upload.dropzone.title": "Загрузить файлы",
-  "upload.dropzone.description": "Перетащите сюда файлы, для начала загрузки, или нажмите Ctrl+V, чтобы загрузить текстовое содержимое из буфера обмена. Размер всех файлов не должен превышать {maxSize}.",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "Ваши файлы превышают максимальный размер {maxSize}.",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "Название",
   "upload.filelist.size": "Размер",
