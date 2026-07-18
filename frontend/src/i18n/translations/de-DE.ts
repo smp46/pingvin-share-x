@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "Bist du sicher, dass du diese Seite verlassen willst? Dein Upload wird abgebrochen.",
   "upload.notify.generic-error": "Während der Erstellung der Freigabe ist ein Fehler aufgetreten.",
   "upload.notify.count-failed": "{count} Dateien konnten nicht hochgeladen werden. Wird erneut versucht.",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "Ungültiger Link zu externer Freigabe",
   "upload.reverse-share.error.invalid.description": "Diese externe Freigabe ist abgelaufen oder ungültig.",
   // Dropzone.tsx
   "upload.dropzone.title": "Dateien hochladen",
-  "upload.dropzone.description": "Ziehen Sie Dateien per Drag & Drop hierher, um Ihre Freigabe zu starten, oder drücken Sie „Strg+V“, um Textinhalte aus der Zwischenablage hochzuladen. Wir akzeptieren eine maximale Dateigröße von {maxSize}.",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "Ihre Dateien überschreiten die maximale Freigabegröße von {maxSize}.",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "Name",
   "upload.filelist.size": "Größe",
