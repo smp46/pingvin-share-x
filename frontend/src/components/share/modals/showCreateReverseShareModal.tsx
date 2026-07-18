@@ -83,7 +83,9 @@ const Body = ({
 
   const defaultTimespan = defaultExpiration
     ? defaultExpiration
-    : { value: 7, unit: "days" };
+    : maxExpiration && maxExpiration.value !== 0
+      ? maxExpiration
+      : { value: 7, unit: "days" };
 
   const form = useForm({
     initialValues: {
@@ -92,7 +94,9 @@ const Body = ({
       sendEmailNotification: false,
       expiration_num: defaultTimespan.value,
       expiration_unit: `-${defaultTimespan.unit}` as string,
-      simplified: !reverseShareSimpleOnly ? false : !!(getCookie("reverse-share.simplified") ?? false),
+      simplified: !reverseShareSimpleOnly
+        ? false
+        : !!(getCookie("reverse-share.simplified") ?? false),
       publicAccess: !!(getCookie("reverse-share.public-access") ?? true),
     },
     validate: yupResolver(
@@ -273,7 +277,7 @@ const Body = ({
               })}
             />
           )}
-          {!reverseShareSimpleOnly &&
+          {!reverseShareSimpleOnly && (
             <Switch
               mt="xs"
               labelPosition="left"
@@ -285,7 +289,7 @@ const Body = ({
                 type: "checkbox",
               })}
             />
-          }
+          )}
           <Switch
             mt="xs"
             labelPosition="left"
@@ -301,8 +305,8 @@ const Body = ({
             <FormattedMessage id="common.button.create" />
           </Button>
         </Stack>
-      </form >
-    </Group >
+      </form>
+    </Group>
   );
 };
 

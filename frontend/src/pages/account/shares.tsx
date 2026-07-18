@@ -29,6 +29,7 @@ import showShareLinkModal from "../../components/account/showShareLinkModal";
 import { HoverTip } from "../../components/core/HoverTip";
 import CenterLoader from "../../components/core/CenterLoader";
 import useConfig from "../../hooks/config.hook";
+import useUser from "../../hooks/user.hook";
 import useTranslate from "../../hooks/useTranslate.hook";
 import shareService from "../../services/share.service";
 import { MyShare } from "../../types/share.type";
@@ -38,6 +39,7 @@ const MyShares = () => {
   const modals = useModals();
   const clipboard = useClipboard();
   const config = useConfig();
+  const { user } = useUser();
   const t = useTranslate();
 
   const [shares, setShares] = useState<MyShare[]>();
@@ -145,7 +147,9 @@ const MyShares = () => {
                               parseInt(config.get("share.maxSize")),
                               config.get("general.appUrl"),
                               config.get("general.appUrl", true),
-                              config.get("share.maxExpiration"),
+                              user?.isAdmin
+                                ? { value: 0, unit: "days" }
+                                : config.get("share.maxExpiration"),
                               (updatedShare) =>
                                 setShares(
                                   shares.map((item) =>
