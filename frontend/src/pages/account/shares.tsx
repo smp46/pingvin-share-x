@@ -188,7 +188,6 @@ const MyShares = () => {
                           color="blue"
                           variant="light"
                           size={25}
-                          onClick={openShareInformationsModal}
                           onClick={() => {
                             showShareInformationsModal(
                               modals,
