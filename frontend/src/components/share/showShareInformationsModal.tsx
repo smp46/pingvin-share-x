@@ -88,9 +88,8 @@ const Body = ({
     ? parseInt(currentShare.creator.shareSizeLimit)
     : maxShareSize;
 
-  const shareSizeRatio = resolvedMaxShareSize > 0
-    ? currentShare.size / resolvedMaxShareSize
-    : 0;
+  const shareSizeRatio =
+    resolvedMaxShareSize > 0 ? currentShare.size / resolvedMaxShareSize : 0;
 
   const formattedShareSize = byteToHumanSizeString(currentShare.size);
   const formattedMaxShareSize = byteToHumanSizeString(resolvedMaxShareSize);
@@ -183,14 +182,9 @@ const Body = ({
         )}
         <Progress
           value={shareSizeProgress}
-          label={
-            shareSizeRatio >= 0.1
-              ? formattedShareSize
-              : ""
-          }
+          label={shareSizeRatio >= 0.1 ? formattedShareSize : ""}
           style={{
-            width:
-              shareSizeRatio < 0.1 ? "70%" : "80%",
+            width: shareSizeRatio < 0.1 ? "70%" : "80%",
           }}
           size="xl"
           radius="xl"

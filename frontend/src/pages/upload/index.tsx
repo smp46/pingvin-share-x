@@ -19,6 +19,7 @@ import { FileUpload } from "../../types/File.type";
 import { CreateShare, Share } from "../../types/share.type";
 import toast from "../../utils/toast.util";
 import { useRouter } from "next/router";
+import { getNormalizedFileName, filterDuplicateFiles } from "../../utils/file.util";
 
 const promiseLimit = pLimit(3);
 let errorToastShown = false;
@@ -109,7 +110,7 @@ const Upload = ({
                 blob,
                 {
                   id: fileId,
-                  name: file.name,
+                  name: getNormalizedFileName(file),
                 },
                 chunkIndex,
                 chunks,
@@ -157,6 +158,9 @@ const Upload = ({
         enableEmailRecepients: config.get("email.enableShareEmailRecipients"),
         enableUserRecipients: config.get("share.enableUserRecipients"),
         maxExpiration: config.get("share.maxExpiration"),
+        maxExpiration: user?.isAdmin
+          ? { value: 0, unit: "days" }
+          : config.get("share.maxExpiration"),
         defaultExpiration: config.get("share.defaultExpiration"),
         shareIdLength: config.get("share.shareIdLength"),
         simplified,
@@ -166,12 +170,19 @@ const Upload = ({
     );
   };
 
-  const handleDropzoneFilesChanged = (files: FileUpload[]) => {
+  const handleDropzoneFilesChanged = (newFiles: FileUpload[]) => {
+    const filtered = filterDuplicateFiles(
+      newFiles,
+      files,
+      (normalizedName) => toast.error(t("upload.notify.duplicate-skipped", { name: normalizedName }))
+    );
+    if (filtered.length === 0) return;
+
     if (autoOpenCreateUploadModal) {
-      setFiles(files);
-      showCreateUploadModalCallback(files);
+      setFiles(filtered);
+      showCreateUploadModalCallback(filtered);
     } else {
-      setFiles((oldArr) => [...oldArr, ...files]);
+      setFiles((oldArr) => [...oldArr, ...filtered]);
     }
   };
 
@@ -206,11 +217,18 @@ const Upload = ({
         const fileUpload = file as FileUpload;
         fileUpload.uploadingProgress = 0;
 
+        const filtered = filterDuplicateFiles(
+          [fileUpload],
+          files,
+          (normalizedName) => toast.error(t("upload.notify.duplicate-skipped", { name: normalizedName }))
+        );
+        if (filtered.length === 0) return;
+
         if (autoOpenCreateUploadModal) {
-          setFiles([fileUpload]);
-          showCreateUploadModalCallback([fileUpload]);
+          setFiles(filtered);
+          showCreateUploadModalCallback(filtered);
         } else {
-          setFiles((oldArr) => [...oldArr, fileUpload]);
+          setFiles((oldArr) => [...oldArr, ...filtered]);
         }
       }
     };

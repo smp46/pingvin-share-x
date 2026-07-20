@@ -27,19 +27,20 @@ export class ReverseShareService {
       )
       .toDate();
 
+    const creator = await this.prisma.user.findUnique({
+      where: { id: creatorId },
+    });
+
     const parsedExpiration = parseRelativeDateToAbsolute(data.shareExpiration);
     const maxExpiration = this.config.get("share.maxExpiration");
     if (
+      !creator?.isAdmin &&
       maxExpiration.value !== 0 &&
       parsedExpiration >
         moment().add(maxExpiration.value, maxExpiration.unit).toDate()
     ) {
       throw new BadRequestException(this.i18n.t("share.maxExpirationExceeded"));
     }
-
-    const creator = await this.prisma.user.findUnique({
-      where: { id: creatorId },
-    });
     const userMaxShareSize = creator?.shareSizeLimit
       ? parseInt(creator.shareSizeLimit)
       : parseInt(this.config.get("share.maxSize"));

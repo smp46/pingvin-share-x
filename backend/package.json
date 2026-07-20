@@ -1,6 +1,6 @@
 {
   "name": "pingvin-share-backend",
-  "version": "1.21.0",
+  "version": "1.21.1",
   "scripts": {
     "build": "nest build",
     "dev": "cross-env NODE_ENV=development nest start --watch",
@@ -51,13 +51,13 @@
     "moment": "^2.30.1",
     "nanoid": "^5.1.5",
     "nestjs-i18n": "^10.8.4",
-    "nodemailer": "^8.0.4",
+    "nodemailer": "^9.0.1",
     "otplib": "^13.3.0",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
-    "qrcode-svg": "^1.1.0",
     "prisma": "^6.6.0",
+    "qrcode-svg": "^1.1.0",
     "reflect-metadata": "^0.2.2",
     "rimraf": "^6.0.1",
     "rxjs": "^7.8.2",

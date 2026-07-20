@@ -334,6 +334,7 @@ export default {
   "upload.notify.generic-error":
     "An error occurred while finishing your share.",
   "upload.notify.count-failed": "{count} files failed to upload. Trying again.",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "Invalid reverse share link",
   "upload.reverse-share.error.invalid.description":
     "This link has no remaining uses or is invalid.",
@@ -341,9 +342,12 @@ export default {
   // Dropzone.tsx
   "upload.dropzone.title": "Upload files",
   "upload.dropzone.description":
-    "Drag'n'drop files here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
+    "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big":
     "Your files exceed the maximum share size of {maxSize}.",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
 
   // FileList.tsx
   "upload.filelist.name": "Name",

@@ -87,12 +87,14 @@ const Body = ({
 
   const form = useForm({
     initialValues: {
-      maxShareSize: Math.min(104857600, userMaxShareSize),
+      maxShareSize: userMaxShareSize,
       maxUseCount: 1,
       sendEmailNotification: false,
       expiration_num: defaultTimespan.value,
       expiration_unit: `-${defaultTimespan.unit}` as string,
-      simplified: !reverseShareSimpleOnly ? false : !!(getCookie("reverse-share.simplified") ?? false),
+      simplified: !reverseShareSimpleOnly
+        ? false
+        : !!(getCookie("reverse-share.simplified") ?? false),
       publicAccess: !!(getCookie("reverse-share.public-access") ?? true),
     },
     validate: yupResolver(
@@ -273,7 +275,7 @@ const Body = ({
               })}
             />
           )}
-          {!reverseShareSimpleOnly &&
+          {!reverseShareSimpleOnly && (
             <Switch
               mt="xs"
               labelPosition="left"
@@ -285,7 +287,7 @@ const Body = ({
                 type: "checkbox",
               })}
             />
-          }
+          )}
           <Switch
             mt="xs"
             labelPosition="left"
@@ -301,8 +303,8 @@ const Body = ({
             <FormattedMessage id="common.button.create" />
           </Button>
         </Stack>
-      </form >
-    </Group >
+      </form>
+    </Group>
   );
 };
 

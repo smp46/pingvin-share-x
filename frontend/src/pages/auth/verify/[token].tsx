@@ -49,27 +49,21 @@ export default function VerifyAccount() {
             {status === "success" && (
               <>
                 <Text align="center">
-                  <FormattedMessage
-                    id="verify.success"
-                  />
+                  <FormattedMessage id="verify.success" />
                 </Text>
                 <Button
                   fullWidth
                   mt="xl"
                   onClick={() => router.replace("/auth/signIn")}
                 >
-                  <FormattedMessage
-                    id="verify.button.signin"
-                  />
+                  <FormattedMessage id="verify.button.signin" />
                 </Button>
               </>
             )}
             {status === "error" && (
               <>
                 <Text align="center" color="red">
-                  <FormattedMessage
-                    id="verify.error"
-                  />
+                  <FormattedMessage id="verify.error" />
                 </Text>
                 <Button
                   fullWidth

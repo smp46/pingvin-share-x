@@ -57,7 +57,7 @@ export default {
   "signup.input.email.placeholder": "Вашият имейл",
   "signup.button.submit": "Да започваме",
   // /auth/verify
-  "verify.title": "Verify Account",
+  "verify.title": "Потвърждаване на акаунта",
   "verify.success": "Your account has been successfully verified! You can now sign in.",
   "verify.error": "The verification link is invalid or has expired.",
   "verify.button.signin": "Go to Sign In",
@@ -458,7 +458,7 @@ export default {
   "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Позволява на администраторите достъп до всички споделяния, дори и защитените, изтеклите или изтритите.",
   "admin.config.share.file-retention-period": "Период на запазване на файловете",
-  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
+  "admin.config.share.file-retention-period.description": "Колко дълго да се пазят файловете след изтичане или изтриване на споделянето. Полезно е само ако е активирано и „Разрешаване на администраторски достъп до всички споделяния“. Задайте -1, за да се пазят файловете завинаги.",
   "admin.config.smtp.enabled": "Активиране",
   "admin.config.smtp.enabled.description": "Дали SMTP е активиран. Активирайте само ако сте въвели хост, порт, имейл, потребител и парола.",
   "admin.config.smtp.host": "Хост",

@@ -43,8 +43,7 @@ jobs:
           pull: true
           load: true
           tags: ${{ env.IMAGE_REF }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          no-cache: true
 
       - name: Trivy SARIF report
         if: github.event_name != 'pull_request'

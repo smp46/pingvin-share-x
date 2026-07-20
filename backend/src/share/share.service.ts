@@ -88,7 +88,9 @@ export class ShareService {
       expirationDate = reverseShare.shareExpiration;
     } else {
       expirationDate = this.parseExpiration(share.expiration);
-      this.validateExpiration(expirationDate);
+      if (!user?.isAdmin) {
+        this.validateExpiration(expirationDate);
+      }
     }
 
     fs.mkdirSync(`${SHARE_DIRECTORY}/${share.id}`, {
@@ -370,7 +372,9 @@ export class ShareService {
     let expirationDate: Date | undefined;
     if (body.expiration !== undefined) {
       expirationDate = this.parseExpiration(body.expiration);
-      this.validateExpiration(expirationDate);
+      if (!user?.isAdmin) {
+        this.validateExpiration(expirationDate);
+      }
     }
 
     const data: Prisma.ShareUpdateInput = {

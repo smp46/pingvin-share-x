@@ -1,3 +1,11 @@
+## [1.21.1](https://github.com/smp46/pingvin-share-x/compare/v1.21.0...v1.21.1) (2026-07-17)
+
+### Bug Fixes
+
+* **deps:** update nodemailer to non-vuln version ([4bf90e9](https://github.com/smp46/pingvin-share-x/commit/4bf90e9562d4606659d04815564ba2f36777b882))
+* **reverseShares:** align max share size in modal with user/global settings ([#136](https://github.com/smp46/pingvin-share-x/issues/136)) ([88f7d36](https://github.com/smp46/pingvin-share-x/commit/88f7d36805c081329e1c2d967c33508d5bbe05eb))
+* **system:** correctly detect disk usage on mounted filesystems (linux) ([#126](https://github.com/smp46/pingvin-share-x/issues/126)) ([895ce5b](https://github.com/smp46/pingvin-share-x/commit/895ce5b00327efc1c388b3fd92d91e3e6615c2af))
+
 ## [1.21.0](https://github.com/smp46/pingvin-share-x/compare/v1.20.1...v1.21.0) (2026-07-01)
 
 ### Features

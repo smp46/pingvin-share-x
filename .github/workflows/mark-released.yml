@@ -11,26 +11,38 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - name: Environment Setup
+      - name: Swap PR labels
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          IS_PRERELEASE: ${{ github.event.release.prerelease }}
         run: |
-          # 1. Find all merged PRs with the 'awaiting release' label
-          pr_numbers=$(gh pr list --state merged --label "awaiting release" --json number --jq '.[].number')
+          if [ "$IS_PRERELEASE" = "true" ]; then
+            echo "Processing pre-release..."
+            FROM_LABEL="awaiting release"
+            TO_LABEL="in beta"
+          else
+            echo "Processing regular release..."
+            FROM_LABEL="in beta"
+            TO_LABEL="released"
+          fi
+
+          # 1. Find all merged PRs with the source label
+          pr_numbers=$(gh pr list --state merged --label "$FROM_LABEL" --limit 1000 --json number --jq '.[].number')
 
           if [ -z "$pr_numbers" ]; then
-            echo "No PRs found with 'awaiting release' label."
+            echo "No PRs found with '$FROM_LABEL' label."
             exit 0
           fi
 
           # 2. Loop through each PR to swap the labels
           for pr in $pr_numbers; do
-            echo "Updating labels for PR #$pr"
+            echo "Updating labels for PR #$pr (moving from '$FROM_LABEL' to '$TO_LABEL')"
             
             # Remove the old label
-            gh pr edit $pr --remove-label "awaiting release"
+            gh pr edit $pr --remove-label "$FROM_LABEL"
             
             # Add the new label
-            gh pr edit $pr --add-label "released"
+            gh pr edit $pr --add-label "$TO_LABEL"
           done
 
