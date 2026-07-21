@@ -1,0 +1,55 @@
+# Komodo Resource Sync — Pingvin Share X
+#
+# Attach this file to a Resource Sync in Komodo (UI file, host file, or git path).
+# Replace `server` with your Komodo Server name before deploying.
+
+[[stack]]
+name = "pingvin-share-x"
+description = "Pingvin Share X — native filesystem uploads for SMB browsing"
+deploy = true
+tags = ["pingvin", "media"]
+
+[stack.config]
+# Change this to match your Komodo Server resource name
+server = "truenas"
+
+# Poll/pull newer image tags when available
+poll_for_updates = true
+auto_update = false
+
+# Inline compose — written to the host at deploy time
+file_contents = """
+services:
+  pingvin-share-x:
+    container_name: pingvin-share-x
+    image: smp46/pingvin-share-x:latest
+    # To run the native-filesystem fork instead:
+    # image: ghcr.io/jimmy-star-dotcom/pingvin-share-x:feature-native-filesystem-storage
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - TRUST_PROXY=true
+      - PUID=568
+      - PGID=568
+      # Optional: make admin UI show the SMB-visible path
+      # (set displayPathPrefix in Admin → Share, or via config.yaml)
+      - DATA_DIRECTORY=/opt/app/backend/data
+    volumes:
+      - /mnt/tank/Subimods/Marketing/Pingvin:/opt/app/backend/data:rw
+      - /mnt/tank/apps/pingvin/images:/opt/app/frontend/public/img:rw
+      # Uncomment to lock config via YAML instead of the UI:
+      # - /mnt/tank/apps/pingvin/config.yaml:/opt/app/config.yaml:ro
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "curl",
+          "-fs",
+          "http://localhost:3000/api/health",
+        ]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 90s
+"""
