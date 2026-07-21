@@ -30,6 +30,10 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "setup/native-filesystem-storage",
+        },
+        {
+          type: "doc",
           id: "setup/integrations",
         },
         {

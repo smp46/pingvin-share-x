@@ -184,6 +184,26 @@ const removeReverseShare = async (id: string) => {
   await api.delete(`/reverseShares/${id}`);
 };
 
+const getFilesystemLocation = async (
+  id: string,
+): Promise<{
+  shareId: string;
+  storagePath: string;
+  absolutePath: string;
+  displayPath: string;
+}> => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
+  return (await api.get(`shares/${id}/filesystem-location`)).data;
+};
+
+const moveShare = async (
+  id: string,
+  destination: string,
+): Promise<MyShare> => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
+  return (await api.post(`shares/${id}/move`, { destination })).data;
+};
+
 export default {
   list,
   create,
@@ -207,4 +227,6 @@ export default {
   createReverseShare,
   getMyReverseShares,
   removeReverseShare,
+  getFilesystemLocation,
+  moveShare,
 };

@@ -21,6 +21,7 @@ import { AdministratorGuard } from "src/auth/guard/isAdmin.guard";
 import { JwtGuard } from "src/auth/guard/jwt.guard";
 import { AdminShareDTO } from "./dto/adminShare.dto";
 import { CreateShareDTO } from "./dto/createShare.dto";
+import { MoveShareDTO } from "./dto/moveShare.dto";
 import { MyShareDTO } from "./dto/myShare.dto";
 import { ShareDTO } from "./dto/share.dto";
 import { ShareMetaDataDTO } from "./dto/shareMetaData.dto";
@@ -121,6 +122,18 @@ export class ShareController {
   async remove(@Param("id") id: string, @GetUser() user: User) {
     const isDeleterAdmin = user?.isAdmin === true;
     await this.shareService.remove(id, isDeleterAdmin);
+  }
+
+  @Get(":id/filesystem-location")
+  @UseGuards(JwtGuard, AdministratorGuard, IdValidation)
+  async getFilesystemLocation(@Param("id") id: string) {
+    return this.shareService.getFilesystemLocation(id);
+  }
+
+  @Post(":id/move")
+  @UseGuards(JwtGuard, AdministratorGuard, IdValidation)
+  async moveShare(@Param("id") id: string, @Body() body: MoveShareDTO) {
+    return this.shareService.moveShare(id, body.destination);
   }
 
   @Post(":id/expire")

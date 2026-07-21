@@ -13,6 +13,7 @@ import {
   Textarea,
   TextInput,
 } from "@mantine/core";
+import { useClipboard } from "@mantine/hooks";
 import { useForm, yupResolver } from "@mantine/form";
 import { ModalsContextProps } from "@mantine/modals/lib/context";
 import moment from "moment";
@@ -74,6 +75,7 @@ const Body = ({
   initiallyEditing: boolean;
 }) => {
   const t = translateOutsideContext();
+  const clipboard = useClipboard();
   const [currentShare, setCurrentShare] = useState(share);
   const [showQR, setShowQR] = useState(false);
   const [isEditing, setIsEditing] = useState(initiallyEditing);
@@ -130,6 +132,54 @@ const Body = ({
         </b>
         {currentShare.name || "-"}
       </Text>
+
+      {currentShare.filesystemLocation && (
+        <Stack spacing={6}>
+          <Text size="sm">
+            <b>
+              <FormattedMessage id="admin.shares.filesystem-location" />:{" "}
+            </b>
+          </Text>
+          <Text
+            size="sm"
+            sx={{
+              fontFamily: "monospace",
+              wordBreak: "break-all",
+            }}
+          >
+            {currentShare.filesystemLocation}
+          </Text>
+          <Group spacing="xs">
+            <Button
+              size="xs"
+              variant="light"
+              onClick={() => {
+                if (window.isSecureContext) {
+                  clipboard.copy(currentShare.filesystemLocation!);
+                  toast.success(t("admin.shares.path-copied"));
+                }
+              }}
+            >
+              <FormattedMessage id="admin.shares.copy-path" />
+            </Button>
+            <Button size="xs" variant="subtle" disabled title={t("admin.shares.open-folder.future")}>
+              <FormattedMessage id="admin.shares.open-folder" />
+            </Button>
+            <Button
+              size="xs"
+              variant="subtle"
+              onClick={() => {
+                if (window.isSecureContext) {
+                  clipboard.copy(currentShare.filesystemLocation!);
+                  toast.success(t("admin.shares.path-copied"));
+                }
+              }}
+            >
+              <FormattedMessage id="admin.shares.reveal-location" />
+            </Button>
+          </Group>
+        </Stack>
+      )}
 
       <Text size="sm">
         <b>

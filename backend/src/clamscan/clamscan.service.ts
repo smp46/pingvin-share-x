@@ -3,7 +3,10 @@ import * as NodeClam from "clamscan";
 import * as fs from "fs";
 import { FileService } from "src/file/file.service";
 import { PrismaService } from "src/prisma/prisma.service";
-import { CLAMAV_HOST, CLAMAV_PORT, SHARE_DIRECTORY } from "../constants";
+import { StoragePathService } from "src/storage/storage-path.service";
+import { CLAMAV_HOST, CLAMAV_PORT } from "../constants";
+import * as path from "path";
+import * as os from "os";
 
 const clamscanConfig = {
   clamdscan: {
@@ -20,6 +23,7 @@ export class ClamScanService {
   constructor(
     private fileService: FileService,
     private prisma: PrismaService,
+    private storagePath: StoragePathService,
   ) {}
 
   private ClamScan: Promise<NodeClam | null> = new NodeClam()
@@ -47,22 +51,21 @@ export class ClamScanService {
     });
     const storageProvider = share?.storageProvider || "UNKNOWN";
 
-    if (storageProvider === "S3") {
-      const files = await this.prisma.file.findMany({
-        where: { shareId },
-        select: { id: true, name: true },
-      });
+    const files = await this.prisma.file.findMany({
+      where: { shareId },
+      select: { id: true, name: true, storageName: true },
+    });
 
+    if (storageProvider === "S3") {
       for (const f of files) {
         try {
           const fileObj = await this.fileService.get(shareId, f.id);
 
-          const tmpDir = `${SHARE_DIRECTORY}/${shareId}`;
-          const tmpPath = `${tmpDir}/${f.id}`;
+          const tmpPath = path.join(
+            os.tmpdir(),
+            `pingvin-clam-${shareId}-${f.id}`,
+          );
 
-          fs.mkdirSync(tmpDir, { recursive: true });
-
-          // Download S3 object stream to temp local file
           await new Promise<void>((resolve, reject) => {
             const writeStream = fs.createWriteStream(tmpPath);
             (fileObj.file as any).pipe(writeStream);
@@ -92,30 +95,23 @@ export class ClamScanService {
       return infectedFiles;
     }
 
-    let files: string[] = [];
-    try {
-      files = fs
-        .readdirSync(`${SHARE_DIRECTORY}/${shareId}`)
-        .filter((file) => file != "archive.zip");
-    } catch (e) {
-      void e;
-      return [];
-    }
+    for (const f of files) {
+      try {
+        const absolutePath = this.storagePath.getFileAbsolutePath(share, f);
+        const { isInfected } = await clamScan
+          .isInfected(absolutePath)
+          .catch(() => {
+            this.logger.log("ClamAV is not active");
+            return { isInfected: false };
+          });
 
-    for (const fileId of files) {
-      const { isInfected } = await clamScan
-        .isInfected(`${SHARE_DIRECTORY}/${shareId}/${fileId}`)
-        .catch(() => {
-          this.logger.log("ClamAV is not active");
-          return { isInfected: false };
-        });
-
-      const fileName = (
-        await this.prisma.file.findUnique({ where: { id: fileId } })
-      ).name;
-
-      if (isInfected) {
-        infectedFiles.push({ id: fileId, name: fileName });
+        if (isInfected) {
+          infectedFiles.push({ id: f.id, name: f.name });
+        }
+      } catch (err: any) {
+        this.logger.warn(
+          `ClamAV scan failed for file ${f.id} in share ${shareId}: ${err?.message || "unknown error"}`,
+        );
       }
     }
 

@@ -127,6 +127,26 @@ export const configVariables = {
       defaultValue: "0 days",
       secret: false,
     },
+    folderNamingScheme: {
+      type: "string",
+      defaultValue: "shareId",
+      secret: false,
+    },
+    folderNamingTemplate: {
+      type: "string",
+      defaultValue: "Share-{id}",
+      secret: false,
+    },
+    incomingFolder: {
+      type: "string",
+      defaultValue: "Incoming",
+      secret: false,
+    },
+    displayPathPrefix: {
+      type: "string",
+      defaultValue: "",
+      secret: false,
+    },
   },
   cache: {
     "redis-enabled": {

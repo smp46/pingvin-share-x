@@ -45,6 +45,14 @@ share:
   allowAdminAccessAllShares: "false"
   #How long files are kept after shares expire or are deleted by the uploader.
   fileRetentionPeriod: 0 days
+  #How share folders are named on disk. Options: shareId, dateShareId, shareName, uploaderDate, custom
+  folderNamingScheme: shareId
+  #Template used when folderNamingScheme is custom. Variables: {id}, {shareName}, {uploader}, {date}
+  folderNamingTemplate: Share-{id}
+  #Relative folder under uploads where new shares are created (e.g. Incoming). Empty = uploads root.
+  incomingFolder: Incoming
+  #Optional path prefix shown to admins instead of the container path (e.g. /mnt/tank/media/uploads)
+  displayPathPrefix: ""
 cache:
   #Normally Pingvin Share caches information in memory. If you run multiple instances of Pingvin Share, you need to enable Redis caching to share the cache between the instances.
   redis-enabled: "false"

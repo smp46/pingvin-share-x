@@ -102,6 +102,8 @@ model Share {
   recipients ShareRecipient[]
   files      File[]
   storageProvider String @default("LOCAL")
+  // Relative path under uploads root (e.g. Incoming/Share-ABC123). Null = legacy shares/{id}.
+  storagePath String?
 }
 
 model ReverseShare {
@@ -136,6 +138,8 @@ model File {
 
   name String
   size String
+  // Relative path within the share directory. Null = legacy opaque id filename.
+  storageName String?
 
   shareId String
   share   Share  @relation(fields: [shareId], references: [id], onDelete: Cascade)

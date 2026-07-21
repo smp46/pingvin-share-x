@@ -10,7 +10,7 @@ import {
 import { useClipboard } from "@mantine/hooks";
 import { useModals } from "@mantine/modals";
 import moment from "moment";
-import { TbInfoCircle, TbLink, TbTrash } from "react-icons/tb";
+import { TbFolder, TbInfoCircle, TbLink, TbTrash } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import useConfig from "../../../hooks/config.hook";
 import useTranslate from "../../../hooks/useTranslate.hook";
@@ -20,6 +20,7 @@ import toast from "../../../utils/toast.util";
 import showShareInformationsModal from "../../share/showShareInformationsModal";
 import showShareLinkModal from "../../account/showShareLinkModal";
 import { HoverTip } from "../../core/HoverTip";
+import showMoveShareModal from "./showMoveShareModal";
 
 const ManageShareTable = ({
   shares,
@@ -132,6 +133,20 @@ const ManageShareTable = ({
                           <TbInfoCircle />
                         </ActionIcon>
                       </HoverTip>
+                      {share.filesystemLocation && (
+                        <HoverTip label={t("admin.shares.move")}>
+                          <ActionIcon
+                            color="orange"
+                            variant="light"
+                            size={25}
+                            onClick={() => {
+                              showMoveShareModal(modals, share, updateShare);
+                            }}
+                          >
+                            <TbFolder />
+                          </ActionIcon>
+                        </HoverTip>
+                      )}
                       <HoverTip label={t("common.button.copy-link")}>
                         <ActionIcon
                           color="victoria"

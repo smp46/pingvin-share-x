@@ -20,7 +20,7 @@ import { PrismaService } from "src/prisma/prisma.service";
 import { ReverseShareService } from "src/reverseShare/reverseShare.service";
 import { SystemService } from "src/system/system.service";
 import { parseRelativeDateToAbsolute } from "src/utils/date.util";
-import { SHARE_DIRECTORY } from "../constants";
+import { StoragePathService } from "src/storage/storage-path.service";
 import { CreateShareDTO } from "./dto/createShare.dto";
 import { UpdateShareDTO } from "./dto/updateShare.dto";
 
@@ -36,6 +36,7 @@ export class ShareService {
     private reverseShareService: ReverseShareService,
     private clamScanService: ClamScanService,
     private systemService: SystemService,
+    private storagePath: StoragePathService,
     private readonly i18n: I18nService,
   ) {}
 
@@ -71,9 +72,19 @@ export class ShareService {
       }
     }
 
-    fs.mkdirSync(`${SHARE_DIRECTORY}/${share.id}`, {
-      recursive: true,
-    });
+    const storageProvider = this.configService.get("s3.enabled")
+      ? "S3"
+      : "LOCAL";
+
+    let storagePath: string | null = null;
+    if (storageProvider === "LOCAL") {
+      storagePath = await this.storagePath.allocateShareStoragePath({
+        id: share.id,
+        name: share.name,
+        createdAt: new Date(),
+        creatorUsername: user?.username,
+      });
+    }
 
     const {
       size: _size,
@@ -94,9 +105,14 @@ export class ShareService {
             ? share.recipients.map((email) => ({ email }))
             : [],
         },
-        storageProvider: this.configService.get("s3.enabled") ? "S3" : "LOCAL",
+        storageProvider,
+        storagePath,
       },
     });
+
+    if (storageProvider === "LOCAL") {
+      await this.storagePath.ensureShareDirectory(shareTuple);
+    }
 
     if (reverseShare) {
       // Assign share to reverse share token
@@ -116,22 +132,78 @@ export class ShareService {
   async createZip(shareId: string) {
     if (this.config.get("s3.enabled")) return;
 
-    const path = `${SHARE_DIRECTORY}/${shareId}`;
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+    });
+    if (!share) return;
 
     const files = await this.prisma.file.findMany({ where: { shareId } });
     const archive = archiver("zip", {
       zlib: { level: this.config.get("share.zipCompressionLevel") },
     });
-    const writeStream = fs.createWriteStream(`${path}/archive.zip`);
+    const writeStream = fs.createWriteStream(
+      this.storagePath.getArchivePath(share),
+    );
 
     for (const file of files) {
-      archive.append(fs.createReadStream(`${path}/${file.id}`), {
-        name: file.name,
-      });
+      archive.append(
+        fs.createReadStream(this.storagePath.getFileAbsolutePath(share, file)),
+        {
+          name: file.name,
+        },
+      );
     }
 
     archive.pipe(writeStream);
     await archive.finalize();
+  }
+
+  async getFilesystemLocation(shareId: string) {
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+    });
+
+    if (!share) throw new NotFoundException(this.i18n.t("share.notFound"));
+
+    if (share.storageProvider === "S3") {
+      throw new BadRequestException(this.i18n.t("share.s3NotSupported"));
+    }
+
+    return {
+      shareId: share.id,
+      storagePath: this.storagePath.getShareRelativePath(share),
+      absolutePath: this.storagePath.getShareAbsolutePath(share),
+      displayPath: this.storagePath.getDisplayPath(share),
+    };
+  }
+
+  async moveShare(shareId: string, destination: string) {
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+    });
+
+    if (!share) throw new NotFoundException(this.i18n.t("share.notFound"));
+
+    if (share.storageProvider === "S3") {
+      throw new BadRequestException(this.i18n.t("share.moveLocalOnly"));
+    }
+
+    const newStoragePath = await this.storagePath.moveShareDirectory(
+      share,
+      destination,
+    );
+
+    const updated = await this.prisma.share.update({
+      where: { id: shareId },
+      data: { storagePath: newStoragePath },
+      include: { files: true, creator: true, security: true, recipients: true },
+    });
+
+    return {
+      ...this.transformShare(updated),
+      filesystemLocation: this.storagePath.getDisplayPath(updated),
+      storagePath: updated.storagePath,
+    };
   }
 
   async complete(id: string, reverseShareToken?: string) {
@@ -409,6 +481,14 @@ export class ShareService {
         maxViews: share.security?.maxViews,
         passwordProtected: !!share.security?.password,
       },
+      filesystemLocation:
+        share.storageProvider === "S3"
+          ? null
+          : this.storagePath.getDisplayPath(share),
+      storagePath:
+        share.storageProvider === "S3"
+          ? null
+          : this.storagePath.getShareRelativePath(share),
     };
   }
 

@@ -50,6 +50,8 @@ export type MyShare = Omit<Share, "hasPassword"> & {
   views: number;
   createdAt: Date;
   security?: MyShareSecurity;
+  filesystemLocation?: string | null;
+  storagePath?: string | null;
 };
 
 export type MyReverseShare = {

@@ -9,12 +9,13 @@ import {
 import * as crypto from "crypto";
 import { createReadStream } from "fs";
 import * as fs from "fs/promises";
+import * as path from "path";
 import * as mime from "mime-types";
 import { I18nService } from "nestjs-i18n";
 import { ConfigService } from "src/config/config.service";
 import { PrismaService } from "src/prisma/prisma.service";
+import { StoragePathService } from "src/storage/storage-path.service";
 import { validate as isValidUUID } from "uuid";
-import { SHARE_DIRECTORY } from "../constants";
 import { Readable } from "stream";
 
 @Injectable()
@@ -22,6 +23,7 @@ export class LocalFileService {
   constructor(
     private prisma: PrismaService,
     private config: ConfigService,
+    private storagePath: StoragePathService,
     private readonly i18n: I18nService,
   ) {}
 
@@ -45,16 +47,25 @@ export class LocalFileService {
     if (share.uploadLocked)
       throw new BadRequestException(this.i18n.t("file.alreadyCompleted"));
 
+    const shareInfo = {
+      id: share.id,
+      storagePath: share.storagePath,
+      name: share.name,
+      createdAt: share.createdAt,
+      creator: share.creator,
+    };
+
+    await this.storagePath.ensureShareDirectory(shareInfo);
+
+    const tempChunkPath = this.storagePath.getTempChunkPath(shareInfo, file.id);
+
     let diskFileSize: number;
     try {
-      diskFileSize = (
-        await fs.stat(`${SHARE_DIRECTORY}/${shareId}/${file.id}.tmp-chunk`)
-      ).size;
+      diskFileSize = (await fs.stat(tempChunkPath)).size;
     } catch {
       diskFileSize = 0;
     }
 
-    // If the sent chunk index and the expected chunk index doesn't match throw an error
     const chunkSize = this.config.get("share.chunkSize");
     const expectedChunkIndex = Math.ceil(diskFileSize / chunkSize);
 
@@ -67,8 +78,8 @@ export class LocalFileService {
 
     const buffer = Buffer.from(data, "base64");
 
-    // Check if there is enough space on the server
-    const space = await fs.statfs(SHARE_DIRECTORY);
+    const uploadsRoot = this.storagePath.getUploadsRoot();
+    const space = await fs.statfs(uploadsRoot);
     const availableSpace = space.bavail * space.bsize;
     if (availableSpace < buffer.byteLength) {
       throw new InternalServerErrorException(
@@ -76,7 +87,6 @@ export class LocalFileService {
       );
     }
 
-    // Check if share size limit is exceeded
     const fileSizeSum = share.files.reduce(
       (n, { size }) => n + parseInt(size),
       0,
@@ -98,24 +108,36 @@ export class LocalFileService {
       );
     }
 
-    await fs.appendFile(
-      `${SHARE_DIRECTORY}/${shareId}/${file.id}.tmp-chunk`,
-      buffer,
-    );
+    await fs.mkdir(path.dirname(tempChunkPath), { recursive: true });
+    await fs.appendFile(tempChunkPath, buffer);
 
     const isLastChunk = chunk.index == chunk.total - 1;
     if (isLastChunk) {
-      await fs.rename(
-        `${SHARE_DIRECTORY}/${shareId}/${file.id}.tmp-chunk`,
-        `${SHARE_DIRECTORY}/${shareId}/${file.id}`,
+      const existingNames = share.files
+        .map((f) => f.storageName || f.name)
+        .filter(Boolean);
+
+      const storageName = await this.storagePath.allocateStorageName(
+        shareInfo,
+        file.name,
+        existingNames,
       );
-      const fileSize = (
-        await fs.stat(`${SHARE_DIRECTORY}/${shareId}/${file.id}`)
-      ).size;
+
+      const finalPath = this.storagePath.getFileAbsolutePath(shareInfo, {
+        id: file.id,
+        name: file.name,
+        storageName,
+      });
+
+      await fs.mkdir(path.dirname(finalPath), { recursive: true });
+      await fs.rename(tempChunkPath, finalPath);
+
+      const fileSize = (await fs.stat(finalPath)).size;
       await this.prisma.file.create({
         data: {
           id: file.id,
           name: file.name,
+          storageName,
           size: fileSize.toString(),
           share: { connect: { id: shareId } },
         },
@@ -133,7 +155,14 @@ export class LocalFileService {
     if (!fileMetaData)
       throw new NotFoundException(this.i18n.t("file.notFound"));
 
-    const file = createReadStream(`${SHARE_DIRECTORY}/${shareId}/${fileId}`);
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+    });
+
+    if (!share) throw new NotFoundException(this.i18n.t("share.notFound"));
+
+    const absolutePath = this.storagePath.getFileAbsolutePath(share, fileMetaData);
+    const file = createReadStream(absolutePath);
 
     return {
       metaData: {
@@ -153,22 +182,49 @@ export class LocalFileService {
     if (!fileMetaData)
       throw new NotFoundException(this.i18n.t("file.notFound"));
 
-    await fs.unlink(`${SHARE_DIRECTORY}/${shareId}/${fileId}`);
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+    });
+
+    if (!share) throw new NotFoundException(this.i18n.t("share.notFound"));
+
+    const absolutePath = this.storagePath.getFileAbsolutePath(share, fileMetaData);
+    try {
+      await fs.unlink(absolutePath);
+      await this.removeEmptyParents(
+        path.dirname(absolutePath),
+        this.storagePath.getShareAbsolutePath(share),
+      );
+    } catch {
+      // File may already be gone from disk
+    }
 
     await this.prisma.file.delete({ where: { id: fileId } });
   }
 
   async deleteAllFiles(shareId: string) {
-    await fs.rm(`${SHARE_DIRECTORY}/${shareId}`, {
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+    });
+
+    if (!share) return;
+
+    await fs.rm(this.storagePath.getShareAbsolutePath(share), {
       recursive: true,
       force: true,
     });
   }
 
   async getZip(shareId: string): Promise<Readable> {
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+    });
+
+    if (!share) throw new NotFoundException(this.i18n.t("share.notFound"));
+
     return new Promise((resolve, reject) => {
       const zipStream = createReadStream(
-        `${SHARE_DIRECTORY}/${shareId}/archive.zip`,
+        this.storagePath.getArchivePath(share),
       );
 
       zipStream.on("error", (err) => {
@@ -179,5 +235,29 @@ export class LocalFileService {
         resolve(zipStream);
       });
     });
+  }
+
+  private async removeEmptyParents(
+    current: string,
+    stopAt: string,
+  ): Promise<void> {
+    const resolvedCurrent = path.resolve(current);
+    const resolvedStop = path.resolve(stopAt);
+    if (
+      resolvedCurrent === resolvedStop ||
+      !resolvedCurrent.startsWith(resolvedStop + path.sep)
+    ) {
+      return;
+    }
+
+    try {
+      const entries = await fs.readdir(resolvedCurrent);
+      if (entries.length === 0) {
+        await fs.rmdir(resolvedCurrent);
+        await this.removeEmptyParents(path.dirname(resolvedCurrent), stopAt);
+      }
+    } catch {
+      // ignore
+    }
   }
 }

@@ -1,12 +1,13 @@
 import { Injectable, Logger } from "@nestjs/common";
 import { Cron } from "@nestjs/schedule";
 import * as fs from "fs";
+import * as path from "path";
 import * as moment from "moment";
 import { FileService } from "src/file/file.service";
 import { PrismaService } from "src/prisma/prisma.service";
 import { ReverseShareService } from "src/reverseShare/reverseShare.service";
 import { ConfigService } from "src/config/config.service";
-import { SHARE_DIRECTORY } from "../constants";
+import { UPLOADS_DIRECTORY } from "../constants";
 
 @Injectable()
 export class JobsService {
@@ -35,7 +36,6 @@ export class JobsService {
 
     const expiredShares = await this.prisma.share.findMany({
       where: {
-        // We want to remove only shares that have an expiration date + retention period less than the current date, but not 0
         AND: [
           { expiration: { lt: thresholdDate } },
           { expiration: { not: moment(0).toDate() } },
@@ -102,32 +102,43 @@ export class JobsService {
   @Cron("0 0 * * *")
   deleteTemporaryFiles() {
     let filesDeleted = 0;
+    const uploadsRoot = path.resolve(UPLOADS_DIRECTORY);
 
-    const shareDirectories = fs
-      .readdirSync(SHARE_DIRECTORY, { withFileTypes: true })
-      .filter((dirent) => dirent.isDirectory())
-      .map((dirent) => dirent.name);
-
-    for (const shareDirectory of shareDirectories) {
-      const temporaryFiles = fs
-        .readdirSync(`${SHARE_DIRECTORY}/${shareDirectory}`)
-        .filter((file) => file.endsWith(".tmp-chunk"));
-
-      for (const file of temporaryFiles) {
-        const stats = fs.statSync(
-          `${SHARE_DIRECTORY}/${shareDirectory}/${file}`,
-        );
-        const isOlderThanOneDay = moment(stats.mtime)
-          .add(1, "day")
-          .isBefore(moment());
-
-        if (isOlderThanOneDay) {
-          fs.rmSync(`${SHARE_DIRECTORY}/${shareDirectory}/${file}`);
-          filesDeleted++;
-        }
-      }
+    if (!fs.existsSync(uploadsRoot)) {
+      this.logger.log(`Deleted 0 temporary files`);
+      return;
     }
 
+    const walk = (dir: string) => {
+      let entries: fs.Dirent[];
+      try {
+        entries = fs.readdirSync(dir, { withFileTypes: true });
+      } catch {
+        return;
+      }
+
+      for (const entry of entries) {
+        const full = path.join(dir, entry.name);
+        if (entry.isDirectory()) {
+          walk(full);
+        } else if (entry.name.endsWith(".tmp-chunk")) {
+          try {
+            const stats = fs.statSync(full);
+            const isOlderThanOneDay = moment(stats.mtime)
+              .add(1, "day")
+              .isBefore(moment());
+            if (isOlderThanOneDay) {
+              fs.rmSync(full);
+              filesDeleted++;
+            }
+          } catch {
+            // ignore
+          }
+        }
+      }
+    };
+
+    walk(uploadsRoot);
     this.logger.log(`Deleted ${filesDeleted} temporary files`);
   }
 

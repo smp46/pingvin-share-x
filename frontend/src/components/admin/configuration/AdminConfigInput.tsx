@@ -47,6 +47,8 @@ const AdminConfigInput = ({
     configVariable.key === "appearance.themeColorScheme";
   const isDefaultLanguageConfig =
     configVariable.key === "general.defaultLanguage";
+  const isFolderNamingSchemeConfig =
+    configVariable.key === "share.folderNamingScheme";
   const isEmailShareConfig =
     configVariable.key === "email.enableShareEmailRecipients";
   const isEmailVerificationConfig =
@@ -130,6 +132,24 @@ const AdminConfigInput = ({
             placeholder={configVariable.defaultValue}
             onChange={(value) => onValueChange(configVariable, value ?? "")}
             searchable
+            allowDeselect={false}
+          />
+        ) : isFolderNamingSchemeConfig ? (
+          <Select
+            style={{
+              width: "100%",
+            }}
+            disabled={!configVariable.allowEdit}
+            data={[
+              { value: "shareId", label: "Share ID (Share-ABC123)" },
+              { value: "dateShareId", label: "Date + Share ID" },
+              { value: "shareName", label: "Share Name" },
+              { value: "uploaderDate", label: "Uploader + Date" },
+              { value: "custom", label: "Custom Template" },
+            ]}
+            value={form.values.stringValue}
+            placeholder={configVariable.defaultValue}
+            onChange={(value) => onValueChange(configVariable, value ?? "")}
             allowDeselect={false}
           />
         ) : isThemePrimaryColorConfig ? (

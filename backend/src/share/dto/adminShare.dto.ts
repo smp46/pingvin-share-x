@@ -20,6 +20,12 @@ export class AdminShareDTO extends OmitType(ShareDTO, [
   @Expose()
   recipients: string[];
 
+  @Expose()
+  filesystemLocation?: string | null;
+
+  @Expose()
+  storagePath?: string | null;
+
   from(partial: Partial<AdminShareDTO>) {
     return plainToClass(AdminShareDTO, partial, {
       excludeExtraneousValues: true,

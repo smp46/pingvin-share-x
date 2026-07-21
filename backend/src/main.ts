@@ -58,6 +58,12 @@ async function bootstrap() {
   await fs.promises.mkdir(`${DATA_DIRECTORY}/uploads/_temp`, {
     recursive: true,
   });
+  await fs.promises.mkdir(`${DATA_DIRECTORY}/uploads/shares`, {
+    recursive: true,
+  });
+  await fs.promises.mkdir(`${DATA_DIRECTORY}/uploads/Incoming`, {
+    recursive: true,
+  });
 
   app.setGlobalPrefix("api");
 

@@ -12,5 +12,10 @@
   "wrongPassword": "Wrong password",
   "tokenRequired": "Share token required",
   "privateShare": "Only reverse share creator can access this share",
-  "maxViewsExceeded": "Maximum views exceeded"
+  "maxViewsExceeded": "Maximum views exceeded",
+  "invalidIncomingFolder": "Invalid incoming folder path",
+  "invalidMoveDestination": "Invalid move destination path",
+  "moveDestinationExists": "Move destination already exists",
+  "moveLocalOnly": "Moving shares is only supported for local storage",
+  "s3NotSupported": "This operation is only available for local filesystem storage"
 }

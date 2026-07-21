@@ -619,6 +619,31 @@ export default {
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description":
     "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
+  "admin.config.share.folder-naming-scheme": "Share folder naming scheme",
+  "admin.config.share.folder-naming-scheme.description":
+    "How share directories are named on disk for SMB/NFS browsing. Options: shareId (Share-ABC123), dateShareId (2026-07-21_ABC123), shareName, uploaderDate, or custom.",
+  "admin.config.share.folder-naming-template": "Custom folder name template",
+  "admin.config.share.folder-naming-template.description":
+    "Used when naming scheme is custom. Variables: {id}, {shareName}, {uploader}, {date}.",
+  "admin.config.share.incoming-folder": "Incoming folder",
+  "admin.config.share.incoming-folder.description":
+    "Relative folder under the uploads root where new shares are created (e.g. Incoming). Leave empty to place shares directly under uploads.",
+  "admin.config.share.display-path-prefix": "Filesystem display path prefix",
+  "admin.config.share.display-path-prefix.description":
+    "Optional path shown to administrators instead of the container path (e.g. /mnt/tank/media/uploads). Useful when browsing the same volume over SMB.",
+  "admin.shares.filesystem-location": "Filesystem location",
+  "admin.shares.copy-path": "Copy path",
+  "admin.shares.open-folder": "Open folder",
+  "admin.shares.open-folder.future": "Coming soon",
+  "admin.shares.reveal-location": "Reveal location",
+  "admin.shares.move": "Move share",
+  "admin.shares.move.title": "Move share on disk",
+  "admin.shares.move.description":
+    "Move this share directory on the filesystem (rename when possible). Destination is relative to the uploads root.",
+  "admin.shares.move.destination": "Destination path",
+  "admin.shares.move.destination.placeholder": "Events/Gridlife 2026",
+  "admin.shares.move.success": "Share moved successfully",
+  "admin.shares.path-copied": "Path copied to clipboard",
   "admin.config.smtp.enabled": "Enable",
   "admin.config.smtp.enabled.description":
     "Whether SMTP is enabled. Only set this to true if you entered the host, port, email, user and password of your SMTP server.",
