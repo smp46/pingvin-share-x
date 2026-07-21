@@ -1,6 +1,7 @@
 # Komodo Resource Sync — Pingvin Share X
 #
-# Pulls the pre-built image from GHCR (built by GitHub Actions on this branch).
+# Clones this fork and builds on your TrueNAS/Komodo server.
+# No GHCR image required.
 
 [[stack]]
 name = "pingvin-share-x"
@@ -12,37 +13,9 @@ tags = ["pingvin", "media"]
 # Change this to match your Komodo Server resource name
 server = "truenas"
 
-poll_for_updates = true
+repo = "Jimmy-star-dotcom/pingvin-share-x"
+branch = "feature/native-filesystem-storage"
+file_paths = ["compose.komodo.yaml"]
+run_build = true
+poll_for_updates = false
 auto_update = false
-
-file_contents = """
-services:
-  pingvin-share-x:
-    container_name: pingvin-share-x
-    image: ghcr.io/jimmy-star-dotcom/pingvin-share-x:native-fs
-    restart: unless-stopped
-    ports:
-      - "3000:3000"
-    environment:
-      - TRUST_PROXY=true
-      - PUID=568
-      - PGID=568
-      - DATA_DIRECTORY=/opt/app/backend/data
-    volumes:
-      - /mnt/tank/Subimods/Marketing/Pingvin:/opt/app/backend/data:rw
-      - /mnt/tank/apps/pingvin/images:/opt/app/frontend/public/img:rw
-      # Uncomment to lock config via YAML instead of the UI:
-      # - /mnt/tank/apps/pingvin/config.yaml:/opt/app/config.yaml:ro
-    healthcheck:
-      test:
-        [
-          "CMD",
-          "curl",
-          "-fs",
-          "http://localhost:3000/api/health",
-        ]
-      interval: 10s
-      timeout: 3s
-      retries: 5
-      start_period: 90s
-"""
