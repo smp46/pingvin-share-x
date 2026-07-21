@@ -22,9 +22,8 @@ file_contents = """
 services:
   pingvin-share-x:
     container_name: pingvin-share-x
-    image: smp46/pingvin-share-x:latest
-    # To run the native-filesystem fork instead:
-    # image: ghcr.io/jimmy-star-dotcom/pingvin-share-x:feature-native-filesystem-storage
+    # Built from this fork via GitHub Actions → GHCR (public package)
+    image: ghcr.io/jimmy-star-dotcom/pingvin-share-x:native-fs
     restart: unless-stopped
     ports:
       - "3000:3000"
@@ -32,8 +31,6 @@ services:
       - TRUST_PROXY=true
       - PUID=568
       - PGID=568
-      # Optional: make admin UI show the SMB-visible path
-      # (set displayPathPrefix in Admin → Share, or via config.yaml)
       - DATA_DIRECTORY=/opt/app/backend/data
     volumes:
       - /mnt/tank/Subimods/Marketing/Pingvin:/opt/app/backend/data:rw
