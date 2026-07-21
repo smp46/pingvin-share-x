@@ -3,10 +3,10 @@ import { useForm } from "@mantine/form";
 import { ModalsContextProps } from "@mantine/modals/lib/context";
 import { useModals } from "@mantine/modals";
 import { FormattedMessage } from "react-intl";
-import { translateOutsideContext } from "../../hooks/useTranslate.hook";
-import shareService from "../../services/share.service";
-import { MyShare } from "../../types/share.type";
-import toast from "../../utils/toast.util";
+import { translateOutsideContext } from "../../../hooks/useTranslate.hook";
+import shareService from "../../../services/share.service";
+import { MyShare } from "../../../types/share.type";
+import toast from "../../../utils/toast.util";
 
 const showMoveShareModal = (
   modals: ModalsContextProps,
