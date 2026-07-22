@@ -1,9 +1,9 @@
 {
   "redisUrlNotSet": "Redis-URL ist nicht gesetzt",
-  "redisTimedOut": "Redis timed out",
-  "redisConnectionFailed": "Redis connection failed",
-  "redisUnexpectedResponse": "Unexpected response from Redis",
-  "redisError": "Redis error",
+  "redisTimedOut": "Redis Zeitüberschreitung",
+  "redisConnectionFailed": "Verbindung zu Redis fehlgeschlagen",
+  "redisUnexpectedResponse": "Unerwartete Antwort von Redis",
+  "redisError": "Redis Fehler",
   "variableNotFound": "Konfigurationsvariable nicht gefunden",
   "editNotAllowed": "Sie dürfen Konfigurationsvariablen nur über die Datei config.yaml aktualisieren",
   "invalidType": "Konfigurationsvariable muss vom Typ {type} sein",
