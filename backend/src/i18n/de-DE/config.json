@@ -1,5 +1,5 @@
 {
-  "redisUrlNotSet": "Redis URL is not set",
+  "redisUrlNotSet": "Redis-URL ist nicht gesetzt",
   "redisTimedOut": "Redis timed out",
   "redisConnectionFailed": "Redis connection failed",
   "redisUnexpectedResponse": "Unexpected response from Redis",
