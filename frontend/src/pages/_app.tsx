@@ -261,7 +261,11 @@ function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <IntlProvider
-        messages={i18nUtil.getLocaleByCode(language.current)?.messages}
+        messages={{
+          // fall back to english for keys that are not translated yet
+          ...LOCALES.ENGLISH.messages,
+          ...i18nUtil.getLocaleByCode(language.current)?.messages,
+        }}
         locale={language.current}
         defaultLocale={LOCALES.ENGLISH.code}
       >
