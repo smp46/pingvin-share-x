@@ -95,16 +95,16 @@ const ManageShareTable = ({
   };
 
   const selectedShares = shares.filter((share) => selectedIds.has(share.id));
-  const allPageSelected =
-    pageShares.length > 0 &&
-    pageShares.every((share) => selectedIds.has(share.id));
+  const allSelected =
+    visibleShares.length > 0 &&
+    visibleShares.every((share) => selectedIds.has(share.id));
 
   const toggleAll = () => {
     const next = new Set(selectedIds);
-    if (allPageSelected) {
-      pageShares.forEach((share) => next.delete(share.id));
+    if (allSelected) {
+      visibleShares.forEach((share) => next.delete(share.id));
     } else {
-      pageShares.forEach((share) => next.add(share.id));
+      visibleShares.forEach((share) => next.add(share.id));
     }
     setSelectedIds(next);
   };
@@ -160,7 +160,7 @@ const ManageShareTable = ({
           <thead>
             <tr>
               <th style={{ width: 30 }}>
-                <Checkbox checked={allPageSelected} onChange={toggleAll} />
+                <Checkbox checked={allSelected} onChange={toggleAll} />
               </th>
               {sortableTh("id", "account.shares.table.id")}
               {sortableTh("name", "account.shares.table.name")}
