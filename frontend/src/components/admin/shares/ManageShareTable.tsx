@@ -269,7 +269,20 @@ const ManageShareTable = ({
         }}
         onScroll={handleScroll}
       >
-        <Table verticalSpacing="sm">
+        <Table
+          verticalSpacing="sm"
+          sx={(theme) => ({
+            thead: {
+              position: "sticky",
+              top: 0,
+              zIndex: 1,
+              background:
+                theme.colorScheme === "dark"
+                  ? theme.colors.dark[7]
+                  : theme.white,
+            },
+          })}
+        >
           <thead>
             <tr>
               <th style={{ width: 30 }}>
@@ -336,7 +349,7 @@ const ManageShareTable = ({
                       <></>
                     )}
                     <td>
-                      <Group position="right">
+                      <Group position="right" noWrap>
                         <HoverTip label={t("common.button.info")}>
                           <ActionIcon
                             color="blue"
