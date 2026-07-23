@@ -14,7 +14,13 @@ import { useClipboard } from "@mantine/hooks";
 import { useModals } from "@mantine/modals";
 import moment from "moment";
 import { UIEvent, useEffect, useMemo, useRef, useState } from "react";
-import { TbInfoCircle, TbLink, TbSearch, TbTrash } from "react-icons/tb";
+import {
+  TbInfoCircle,
+  TbLink,
+  TbRefresh,
+  TbSearch,
+  TbTrash,
+} from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import useConfig from "../../../hooks/config.hook";
 import useTranslate from "../../../hooks/useTranslate.hook";
@@ -30,12 +36,14 @@ const ManageShareTable = ({
   updateShare,
   deleteShare,
   deleteShares,
+  refreshShares,
   isLoading,
 }: {
   shares: MyShare[];
   updateShare: (share: MyShare) => void;
   deleteShare: (share: MyShare) => void;
   deleteShares: (shares: MyShare[]) => void;
+  refreshShares: () => void;
   isLoading: boolean;
 }) => {
   const modals = useModals();
@@ -50,6 +58,7 @@ const ManageShareTable = ({
   const [sort, setSort] = useState<{ column: string; asc: boolean }>();
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [refreshInterval, setRefreshInterval] = useState<string | null>(null);
 
   // Check if file retention is enabled
   const fileRetentionPeriod = config.get("share.fileRetentionPeriod");
@@ -117,6 +126,13 @@ const ManageShareTable = ({
     }
   }, [visibleCount, visibleShares]);
 
+  useEffect(() => {
+    const interval = REFRESH_INTERVALS.find((r) => r.value === refreshInterval);
+    if (!interval) return;
+    const id = setInterval(refreshShares, interval.ms);
+    return () => clearInterval(id);
+  }, [refreshInterval, refreshShares]);
+
   const handleScroll = (e: UIEvent<HTMLDivElement>) => {
     const el = e.currentTarget;
     if (el.scrollTop + el.clientHeight >= el.scrollHeight - 200) {
@@ -168,62 +184,81 @@ const ManageShareTable = ({
 
   return (
     <Box sx={{ display: "block", overflowX: "auto" }}>
-      <Group position="apart" mb="sm">
-        <TextInput
-          placeholder={t("admin.shares.search")}
-          icon={<TbSearch />}
-          value={search}
-          onChange={(e) => setSearch(e.currentTarget.value)}
-        />
-        {selectedShares.length > 0 && (
-          <Button
-            variant="light"
-            color="red"
-            leftIcon={<TbTrash />}
-            onClick={() => deleteShares(selectedShares)}
-          >
-            {t("admin.shares.button.delete-selected", {
-              count: selectedShares.length,
-            })}
-          </Button>
-        )}
-      </Group>
-      <Group mb="md">
-        <Select
-          placeholder={t("admin.shares.filter.quickRange")}
-          data={[
-            ...QUICK_RANGES.map((r) => ({
+      <Group position="apart" mb="md" align="flex-end">
+        <Group align="flex-end">
+          <TextInput
+            placeholder={t("admin.shares.search")}
+            icon={<TbSearch />}
+            value={search}
+            onChange={(e) => setSearch(e.currentTarget.value)}
+          />
+          {selectedShares.length > 0 && (
+            <Button
+              variant="light"
+              color="red"
+              leftIcon={<TbTrash />}
+              onClick={() => deleteShares(selectedShares)}
+            >
+              {t("admin.shares.button.delete-selected", {
+                count: selectedShares.length,
+              })}
+            </Button>
+          )}
+        </Group>
+        <Group align="flex-end" spacing="xs">
+          <Select
+            placeholder={t("admin.shares.filter.quickRange")}
+            data={[
+              ...QUICK_RANGES.map((r) => ({
+                value: r.value,
+                label: t(`admin.shares.filter.range.${r.value}`),
+              })),
+              {
+                value: OLDER_THAN_7D,
+                label: t("admin.shares.filter.range.older7d"),
+              },
+            ]}
+            value={quickRange}
+            onChange={applyQuickRange}
+            clearable
+            w={180}
+          />
+          <TextInput
+            type="date"
+            label={t("admin.shares.filter.createdFrom")}
+            value={createdFrom}
+            onChange={(e) => {
+              setQuickRange(null);
+              setCreatedFrom(e.currentTarget.value);
+            }}
+          />
+          <TextInput
+            type="date"
+            label={t("admin.shares.filter.createdTo")}
+            value={createdTo}
+            onChange={(e) => {
+              setQuickRange(null);
+              setCreatedTo(e.currentTarget.value);
+            }}
+          />
+          <Select
+            placeholder={t("admin.shares.refresh")}
+            icon={<TbRefresh />}
+            data={REFRESH_INTERVALS.map((r) => ({
               value: r.value,
-              label: t(`admin.shares.filter.range.${r.value}`),
-            })),
-            {
-              value: OLDER_THAN_7D,
-              label: t("admin.shares.filter.range.older7d"),
-            },
-          ]}
-          value={quickRange}
-          onChange={applyQuickRange}
-          clearable
-          w={200}
-        />
-        <TextInput
-          type="date"
-          label={t("admin.shares.filter.createdFrom")}
-          value={createdFrom}
-          onChange={(e) => {
-            setQuickRange(null);
-            setCreatedFrom(e.currentTarget.value);
-          }}
-        />
-        <TextInput
-          type="date"
-          label={t("admin.shares.filter.createdTo")}
-          value={createdTo}
-          onChange={(e) => {
-            setQuickRange(null);
-            setCreatedTo(e.currentTarget.value);
-          }}
-        />
+              label: r.value,
+            }))}
+            value={refreshInterval}
+            onChange={setRefreshInterval}
+            clearable
+            w={120}
+          />
+          <HoverTip label={t("admin.shares.refresh.now")}>
+            <ActionIcon variant="light" size={36} onClick={refreshShares}>
+              <TbRefresh />
+            </ActionIcon>
+          </HoverTip>
+        </Group>
       </Group>
       <Box
         ref={scrollBoxRef}
@@ -370,6 +405,13 @@ const ManageShareTable = ({
 const PAGE_SIZE = 50;
 
 const OLDER_THAN_7D = "older7d";
+
+const REFRESH_INTERVALS: { value: string; ms: number }[] = [
+  { value: "10s", ms: 10000 },
+  { value: "30s", ms: 30000 },
+  { value: "1m", ms: 60000 },
+  { value: "5m", ms: 300000 },
+];
 
 const QUICK_RANGES: {
   value: string;

@@ -324,6 +324,8 @@ export default {
   "admin.shares.filter.range.older7d": "Older than 7 days",
   "admin.shares.filter.createdFrom": "Created from",
   "admin.shares.filter.createdTo": "Created to",
+  "admin.shares.refresh": "Refresh",
+  "admin.shares.refresh.now": "Refresh now",
   "admin.shares.button.delete-selected": "Delete selected ({count})",
   "admin.shares.modal.delete-selected.title": "Delete {count} shares",
   "admin.shares.modal.delete-selected.description":

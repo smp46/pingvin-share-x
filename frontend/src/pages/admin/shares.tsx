@@ -25,6 +25,11 @@ const Shares = () => {
     });
   };
 
+  // refetch without the loading skeleton, used by auto refresh
+  const refreshShares = () => {
+    shareService.list().then(setShares).catch(toast.axiosError);
+  };
+
   const deleteShare = (share: MyShare) => {
     modals.openConfirmModal({
       title: t("admin.shares.edit.delete.title", {
@@ -98,6 +103,7 @@ const Shares = () => {
         }
         deleteShare={deleteShare}
         deleteShares={deleteShares}
+        refreshShares={refreshShares}
         isLoading={isLoading}
       />
       <Space h="xl" />
