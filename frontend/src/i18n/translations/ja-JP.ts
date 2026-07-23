@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "このページから離れますか？アップロードはキャンセルされます。",
   "upload.notify.generic-error": "共有の最終処理でエラーが発生しました。",
   "upload.notify.count-failed": "{count} ファイルがアップロードに失敗しました。再度お試しください。",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "無効なファイルリクエストリンク",
   "upload.reverse-share.error.invalid.description": "このファイルリクエストは期限が切れているか無効です。",
   // Dropzone.tsx
   "upload.dropzone.title": "ファイルをアップロード",
-  "upload.dropzone.description": "ファイルをドラッグ＆ドロップして共有を開始するか、Ctrl+Vを押してクリップボードからテキストコンテンツをアップロードしてください。合計で{maxSize}までのファイルを受け付けます。",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "アップロードしようとしたファイルは、最大ファイルサイズの{maxSize} を超えています。",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "ファイル名",
   "upload.filelist.size": "サイズ",

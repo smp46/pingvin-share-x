@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "Er du sikker på at du vil forlate denne siden? Opplastingen din vil bli avbrutt.",
   "upload.notify.generic-error": "Det oppstod en feil under fullføring av delingen din.",
   "upload.notify.count-failed": "{count} filer kunne ikke lastes opp. Prøver på nytt.",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "Ugyldig omvendt delingslenke",
   "upload.reverse-share.error.invalid.description": "Denne lenken har ingen gjenværende bruksområder eller er ugyldig.",
   // Dropzone.tsx
   "upload.dropzone.title": "Last opp filer",
-  "upload.dropzone.description": "Dra og slipp filer her for å starte delingen, eller bruk 'Ctrl+V' for å laste opp tekstinnhold fra utklippstavlen. Vi godtar bare filer på opptil {maxSize} totalt.",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "Filene dine overskrider den maksimale delingsstørrelsen på {maxSize}.",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "Navn",
   "upload.filelist.size": "Størrelse",

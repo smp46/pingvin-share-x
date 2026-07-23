@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "Jeste li sigurni da želite napustiti ovu stranicu? Vaše učitavanje će biti otkazano.",
   "upload.notify.generic-error": "Došlo je do pogreške prilikom dovršavanja dijeljenja.",
   "upload.notify.count-failed": "Učitavanje {count} datoteka nije uspjelo. Pokušavam ponovno.",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "Nevažeća poveznica za obrnuto dijeljenje",
   "upload.reverse-share.error.invalid.description": "Ovo obrnuto dijeljenje je isteklo ili je nevažeće.",
   // Dropzone.tsx
   "upload.dropzone.title": "Pošaljite datoteke",
-  "upload.dropzone.description": "Drag'n'drop files here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "Vaše datoteke premašuju maksimalnu veličinu dijeljenja od {maxSize}.",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "Naziv",
   "upload.filelist.size": "Veličina",

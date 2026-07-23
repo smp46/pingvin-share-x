@@ -251,12 +251,16 @@ export default {
   "upload.notify.confirm-leave": "Sei sicuro di voler lasciare questa pagina? Il tuo caricamento verrà annullato.",
   "upload.notify.generic-error": "Si è verificato un errore durante il completamento della condivisione.",
   "upload.notify.count-failed": "Impossibile caricare {count} file. Riprovare.",
+  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "Link di condivisione inversa non valido",
   "upload.reverse-share.error.invalid.description": "Questa condivisione inversa è scaduta o non è valida.",
   // Dropzone.tsx
   "upload.dropzone.title": "Carica File",
-  "upload.dropzone.description": "Trascina qui i file per iniziare la tua condivisione o 'Ctrl+V' per caricare contenuti di testo dagli appunti. Accettiamo solo file fino a {maxSize} in totale.",
+  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big": "I tuoi file superano la dimensione massima di condivisione di {maxSize}.",
+  "upload.button.folder": "Upload folder",
+  "upload.button.folder.append": "Append folder",
+  "upload.button.add": "Add to upload",
   // FileList.tsx
   "upload.filelist.name": "Nome",
   "upload.filelist.size": "Dimensione",
