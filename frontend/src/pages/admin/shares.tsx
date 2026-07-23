@@ -1,6 +1,6 @@
 import { Group, Space, Text, Title } from "@mantine/core";
 import { useModals } from "@mantine/modals";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
 import ManageShareTable from "../../components/admin/shares/ManageShareTable";
@@ -26,9 +26,10 @@ const Shares = () => {
   };
 
   // refetch without the loading skeleton, used by auto refresh
-  const refreshShares = () => {
+  // stable reference so the auto refresh interval doesn't restart on every render
+  const refreshShares = useCallback(() => {
     shareService.list().then(setShares).catch(toast.axiosError);
-  };
+  }, []);
 
   const deleteShare = (share: MyShare) => {
     modals.openConfirmModal({
