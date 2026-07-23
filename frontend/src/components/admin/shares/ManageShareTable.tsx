@@ -4,6 +4,7 @@ import {
   Button,
   Checkbox,
   Group,
+  Select,
   Skeleton,
   Table,
   Text,
@@ -43,6 +44,9 @@ const ManageShareTable = ({
   const t = useTranslate();
 
   const [search, setSearch] = useState("");
+  const [quickRange, setQuickRange] = useState<string | null>(null);
+  const [createdFrom, setCreatedFrom] = useState("");
+  const [createdTo, setCreatedTo] = useState("");
   const [sort, setSort] = useState<{ column: string; asc: boolean }>();
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
@@ -53,12 +57,18 @@ const ManageShareTable = ({
 
   const visibleShares = useMemo(() => {
     const needle = search.toLowerCase();
-    const filtered = shares.filter(
-      (share) =>
+    const filtered = shares.filter((share) => {
+      const matchesSearch =
         share.id.toLowerCase().includes(needle) ||
         (share.name ?? "").toLowerCase().includes(needle) ||
-        (share.creator?.username ?? "").toLowerCase().includes(needle),
-    );
+        (share.creator?.username ?? "").toLowerCase().includes(needle);
+      const createdAt = moment(share.createdAt);
+      const matchesFrom =
+        !createdFrom || createdAt.isSameOrAfter(createdFrom, "day");
+      const matchesTo =
+        !createdTo || createdAt.isSameOrBefore(createdTo, "day");
+      return matchesSearch && matchesFrom && matchesTo;
+    });
     if (sort) {
       filtered.sort((a, b) => {
         const va = sortValue(a, sort.column);
@@ -68,14 +78,27 @@ const ManageShareTable = ({
       });
     }
     return filtered;
-  }, [shares, search, sort]);
+  }, [shares, search, createdFrom, createdTo, sort]);
 
   const pageShares = visibleShares.slice(0, visibleCount);
   const scrollBoxRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
-  }, [search, sort]);
+  }, [search, createdFrom, createdTo, sort]);
+
+  const applyQuickRange = (days: string | null) => {
+    setQuickRange(days);
+    if (!days) {
+      setCreatedFrom("");
+      setCreatedTo("");
+      return;
+    }
+    setCreatedFrom(
+      moment().subtract(Number(days), "days").format("YYYY-MM-DD"),
+    );
+    setCreatedTo(moment().format("YYYY-MM-DD"));
+  };
 
   // tall windows can fit the whole batch without a scrollbar, keep loading until it appears
   useEffect(() => {
@@ -142,7 +165,7 @@ const ManageShareTable = ({
 
   return (
     <Box sx={{ display: "block", overflowX: "auto" }}>
-      <Group position="apart" mb="md">
+      <Group position="apart" mb="sm">
         <TextInput
           placeholder={t("admin.shares.search")}
           icon={<TbSearch />}
@@ -161,6 +184,38 @@ const ManageShareTable = ({
             })}
           </Button>
         )}
+      </Group>
+      <Group mb="md">
+        <Select
+          placeholder={t("admin.shares.filter.quickRange")}
+          data={[
+            { value: "7", label: t("admin.shares.filter.last-7-days") },
+            { value: "30", label: t("admin.shares.filter.last-30-days") },
+            { value: "90", label: t("admin.shares.filter.last-90-days") },
+          ]}
+          value={quickRange}
+          onChange={applyQuickRange}
+          clearable
+          w={180}
+        />
+        <TextInput
+          type="date"
+          label={t("admin.shares.filter.createdFrom")}
+          value={createdFrom}
+          onChange={(e) => {
+            setQuickRange(null);
+            setCreatedFrom(e.currentTarget.value);
+          }}
+        />
+        <TextInput
+          type="date"
+          label={t("admin.shares.filter.createdTo")}
+          value={createdTo}
+          onChange={(e) => {
+            setQuickRange(null);
+            setCreatedTo(e.currentTarget.value);
+          }}
+        />
       </Group>
       <Box
         ref={scrollBoxRef}

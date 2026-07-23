@@ -312,6 +312,12 @@ export default {
     "Do you really want to delete this share?",
 
   "admin.shares.search": "Search",
+  "admin.shares.filter.quickRange": "Created in the last...",
+  "admin.shares.filter.last-7-days": "Last 7 days",
+  "admin.shares.filter.last-30-days": "Last 30 days",
+  "admin.shares.filter.last-90-days": "Last 90 days",
+  "admin.shares.filter.createdFrom": "Created from",
+  "admin.shares.filter.createdTo": "Created to",
   "admin.shares.button.delete-selected": "Delete selected ({count})",
   "admin.shares.modal.delete-selected.title": "Delete {count} shares",
   "admin.shares.modal.delete-selected.description":
