@@ -13,7 +13,7 @@ import {
 import { useClipboard } from "@mantine/hooks";
 import { useModals } from "@mantine/modals";
 import moment from "moment";
-import { useMemo, useState } from "react";
+import { UIEvent, useEffect, useMemo, useState } from "react";
 import { TbInfoCircle, TbLink, TbSearch, TbTrash } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import useConfig from "../../../hooks/config.hook";
@@ -46,6 +46,7 @@ const ManageShareTable = ({
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState<{ column: string; asc: boolean }>();
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   // Check if file retention is enabled
   const fileRetentionPeriod = config.get("share.fileRetentionPeriod");
@@ -70,6 +71,21 @@ const ManageShareTable = ({
     return filtered;
   }, [shares, search, sort]);
 
+  const pageShares = visibleShares.slice(0, visibleCount);
+
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [search, sort]);
+
+  const handleScroll = (e: UIEvent<HTMLDivElement>) => {
+    const el = e.currentTarget;
+    if (el.scrollTop + el.clientHeight >= el.scrollHeight - 200) {
+      setVisibleCount((count) =>
+        Math.min(count + PAGE_SIZE, visibleShares.length),
+      );
+    }
+  };
+
   const toggleSort = (column: string) => {
     setSort(
       sort?.column === column
@@ -79,16 +95,16 @@ const ManageShareTable = ({
   };
 
   const selectedShares = shares.filter((share) => selectedIds.has(share.id));
-  const allVisibleSelected =
-    visibleShares.length > 0 &&
-    visibleShares.every((share) => selectedIds.has(share.id));
+  const allPageSelected =
+    pageShares.length > 0 &&
+    pageShares.every((share) => selectedIds.has(share.id));
 
   const toggleAll = () => {
     const next = new Set(selectedIds);
-    if (allVisibleSelected) {
-      visibleShares.forEach((share) => next.delete(share.id));
+    if (allPageSelected) {
+      pageShares.forEach((share) => next.delete(share.id));
     } else {
-      visibleShares.forEach((share) => next.add(share.id));
+      pageShares.forEach((share) => next.add(share.id));
     }
     setSelectedIds(next);
   };
@@ -132,135 +148,139 @@ const ManageShareTable = ({
           </Button>
         )}
       </Group>
-      <Table verticalSpacing="sm">
-        <thead>
-          <tr>
-            <th style={{ width: 30 }}>
-              <Checkbox checked={allVisibleSelected} onChange={toggleAll} />
-            </th>
-            {sortableTh("id", "account.shares.table.id")}
-            {sortableTh("name", "account.shares.table.name")}
-            {sortableTh("username", "admin.shares.table.username")}
-            {sortableTh("views", "account.shares.table.visitors")}
-            {sortableTh("size", "account.shares.table.size")}
-            {sortableTh("expiration", "account.shares.table.expiresAt")}
-            {fileRetentionEnabled ? (
-              <th>
-                <FormattedMessage id="admin.shares.table.deletes" />
+      <Box sx={{ maxHeight: 600, overflowY: "auto" }} onScroll={handleScroll}>
+        <Table verticalSpacing="sm">
+          <thead>
+            <tr>
+              <th style={{ width: 30 }}>
+                <Checkbox checked={allPageSelected} onChange={toggleAll} />
               </th>
-            ) : (
-              <></>
-            )}
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {isLoading
-            ? skeletonRows
-            : visibleShares.map((share) => (
-                <tr key={share.id}>
-                  <td>
-                    <Checkbox
-                      checked={selectedIds.has(share.id)}
-                      onChange={() => toggleRow(share.id)}
-                    />
-                  </td>
-                  <td>{share.id}</td>
-                  <td>{share.name}</td>
-                  <td>
-                    {share.creator ? (
-                      share.creator.username
-                    ) : (
-                      <Text color="dimmed">Anonymous</Text>
-                    )}
-                  </td>
-                  <td>{share.views}</td>
-                  <td>{byteToHumanSizeString(share.size)}</td>
-                  <td>
-                    {moment(share.expiration).unix() === 0
-                      ? "Never"
-                      : moment(share.expiration).format("LLL")}
-                  </td>
-                  {fileRetentionEnabled ? (
+              {sortableTh("id", "account.shares.table.id")}
+              {sortableTh("name", "account.shares.table.name")}
+              {sortableTh("username", "admin.shares.table.username")}
+              {sortableTh("views", "account.shares.table.visitors")}
+              {sortableTh("size", "account.shares.table.size")}
+              {sortableTh("expiration", "account.shares.table.expiresAt")}
+              {fileRetentionEnabled ? (
+                <th>
+                  <FormattedMessage id="admin.shares.table.deletes" />
+                </th>
+              ) : (
+                <></>
+              )}
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {isLoading
+              ? skeletonRows
+              : pageShares.map((share) => (
+                  <tr key={share.id}>
                     <td>
-                      {moment(share.expiration).unix() === 0 ||
-                      fileRetentionPeriod.value === -1
-                        ? "Never"
-                        : moment(share.expiration)
-                            .add(
-                              fileRetentionPeriod.value,
-                              fileRetentionPeriod.unit,
-                            )
-                            .format("LLL")}
+                      <Checkbox
+                        checked={selectedIds.has(share.id)}
+                        onChange={() => toggleRow(share.id)}
+                      />
                     </td>
-                  ) : (
-                    <></>
-                  )}
-                  <td>
-                    <Group position="right">
-                      <HoverTip label={t("common.button.info")}>
-                        <ActionIcon
-                          color="blue"
-                          variant="light"
-                          size={25}
-                          onClick={() => {
-                            showShareInformationsModal(
-                              modals,
-                              share,
-                              parseInt(config.get("share.maxSize")),
-                              config.get("general.appUrl"),
-                              config.get("general.appUrl", true),
-                              { value: 0, unit: "days" },
-                              updateShare,
-                            );
-                          }}
-                        >
-                          <TbInfoCircle />
-                        </ActionIcon>
-                      </HoverTip>
-                      <HoverTip label={t("common.button.copy-link")}>
-                        <ActionIcon
-                          color="victoria"
-                          variant="light"
-                          size={25}
-                          onClick={() => {
-                            if (window.isSecureContext) {
-                              clipboard.copy(
-                                `${config.get("general.appUrl") !== config.get("general.appUrl", true) ? config.get("general.appUrl") : window.location.origin}/s/${share.id}`,
-                              );
-                              toast.success(t("common.notify.copied-link"));
-                            } else {
-                              showShareLinkModal(
+                    <td>{share.id}</td>
+                    <td>{share.name}</td>
+                    <td>
+                      {share.creator ? (
+                        share.creator.username
+                      ) : (
+                        <Text color="dimmed">Anonymous</Text>
+                      )}
+                    </td>
+                    <td>{share.views}</td>
+                    <td>{byteToHumanSizeString(share.size)}</td>
+                    <td>
+                      {moment(share.expiration).unix() === 0
+                        ? "Never"
+                        : moment(share.expiration).format("LLL")}
+                    </td>
+                    {fileRetentionEnabled ? (
+                      <td>
+                        {moment(share.expiration).unix() === 0 ||
+                        fileRetentionPeriod.value === -1
+                          ? "Never"
+                          : moment(share.expiration)
+                              .add(
+                                fileRetentionPeriod.value,
+                                fileRetentionPeriod.unit,
+                              )
+                              .format("LLL")}
+                      </td>
+                    ) : (
+                      <></>
+                    )}
+                    <td>
+                      <Group position="right">
+                        <HoverTip label={t("common.button.info")}>
+                          <ActionIcon
+                            color="blue"
+                            variant="light"
+                            size={25}
+                            onClick={() => {
+                              showShareInformationsModal(
                                 modals,
-                                share.id,
+                                share,
+                                parseInt(config.get("share.maxSize")),
                                 config.get("general.appUrl"),
                                 config.get("general.appUrl", true),
+                                { value: 0, unit: "days" },
+                                updateShare,
                               );
-                            }
-                          }}
-                        >
-                          <TbLink />
-                        </ActionIcon>
-                      </HoverTip>
-                      <HoverTip label={t("common.button.delete")}>
-                        <ActionIcon
-                          variant="light"
-                          color="red"
-                          size={25}
-                          onClick={() => deleteShare(share)}
-                        >
-                          <TbTrash />
-                        </ActionIcon>
-                      </HoverTip>
-                    </Group>
-                  </td>
-                </tr>
-              ))}
-        </tbody>
-      </Table>
+                            }}
+                          >
+                            <TbInfoCircle />
+                          </ActionIcon>
+                        </HoverTip>
+                        <HoverTip label={t("common.button.copy-link")}>
+                          <ActionIcon
+                            color="victoria"
+                            variant="light"
+                            size={25}
+                            onClick={() => {
+                              if (window.isSecureContext) {
+                                clipboard.copy(
+                                  `${config.get("general.appUrl") !== config.get("general.appUrl", true) ? config.get("general.appUrl") : window.location.origin}/s/${share.id}`,
+                                );
+                                toast.success(t("common.notify.copied-link"));
+                              } else {
+                                showShareLinkModal(
+                                  modals,
+                                  share.id,
+                                  config.get("general.appUrl"),
+                                  config.get("general.appUrl", true),
+                                );
+                              }
+                            }}
+                          >
+                            <TbLink />
+                          </ActionIcon>
+                        </HoverTip>
+                        <HoverTip label={t("common.button.delete")}>
+                          <ActionIcon
+                            variant="light"
+                            color="red"
+                            size={25}
+                            onClick={() => deleteShare(share)}
+                          >
+                            <TbTrash />
+                          </ActionIcon>
+                        </HoverTip>
+                      </Group>
+                    </td>
+                  </tr>
+                ))}
+          </tbody>
+        </Table>
+      </Box>
     </Box>
   );
 };
+
+const PAGE_SIZE = 50;
 
 const sortValue = (share: MyShare, column: string) => {
   if (column == "views") return share.views;
