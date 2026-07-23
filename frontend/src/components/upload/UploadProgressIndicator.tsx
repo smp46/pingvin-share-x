@@ -78,8 +78,8 @@ const UploadProgressIndicator = ({ progress }: { progress: number }) => {
             thickness={3}
             size={40}
             label={
-              <Text size="xs" color="victoria" weight={700} align="center">
-                {Math.round(progress)}%
+              <Text size="xs" color="victoria" weight={500} align="center">
+                {Math.min(Math.round(progress), 99)}%
               </Text>
             }
           />
