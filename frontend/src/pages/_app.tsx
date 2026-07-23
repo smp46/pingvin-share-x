@@ -17,7 +17,7 @@ import { GetServerSidePropsContext } from "next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { IntlProvider } from "react-intl";
 import Header from "../components/header/Header";
 import { ConfigContext } from "../hooks/config.hook";
@@ -252,6 +252,16 @@ function App({ Component, pageProps }: AppProps) {
   const language = useRef(pageProps.language);
   moment.locale(language.current);
 
+  // fall back to english for keys that are not translated yet,
+  // memoized so the intl provider isn't rebuilt on every render
+  const messages = useMemo(
+    () => ({
+      ...LOCALES.ENGLISH.messages,
+      ...i18nUtil.getLocaleByCode(language.current)?.messages,
+    }),
+    [],
+  );
+
   return (
     <>
       <Head>
@@ -261,11 +271,7 @@ function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <IntlProvider
-        messages={{
-          // fall back to english for keys that are not translated yet
-          ...LOCALES.ENGLISH.messages,
-          ...i18nUtil.getLocaleByCode(language.current)?.messages,
-        }}
+        messages={messages}
         locale={language.current}
         defaultLocale={LOCALES.ENGLISH.code}
       >
