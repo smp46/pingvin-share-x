@@ -312,6 +312,10 @@ export default {
     "Do you really want to delete this share?",
 
   "admin.shares.search": "Search",
+  "admin.shares.button.delete-selected": "Delete selected ({count})",
+  "admin.shares.modal.delete-selected.title": "Delete {count} shares",
+  "admin.shares.modal.delete-selected.description":
+    "Do you really want to delete these shares?",
 
   // END /admin/shares
 

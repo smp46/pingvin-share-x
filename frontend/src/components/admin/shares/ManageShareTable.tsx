@@ -1,6 +1,8 @@
 import {
   ActionIcon,
   Box,
+  Button,
+  Checkbox,
   Group,
   MediaQuery,
   Skeleton,
@@ -27,11 +29,13 @@ const ManageShareTable = ({
   shares,
   updateShare,
   deleteShare,
+  deleteShares,
   isLoading,
 }: {
   shares: MyShare[];
   updateShare: (share: MyShare) => void;
   deleteShare: (share: MyShare) => void;
+  deleteShares: (shares: MyShare[]) => void;
   isLoading: boolean;
 }) => {
   const modals = useModals();
@@ -41,6 +45,7 @@ const ManageShareTable = ({
 
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState<{ column: string; asc: boolean }>();
+  const [selectedIds, setSelectedIds] = useState<string[]>([]);
 
   // Check if file retention is enabled
   const fileRetentionPeriod = config.get("share.fileRetentionPeriod");
@@ -87,18 +92,63 @@ const ManageShareTable = ({
     </th>
   );
 
+  const selectedShares = shares.filter((share) =>
+    selectedIds.includes(share.id),
+  );
+  const allVisibleSelected =
+    visibleShares.length > 0 &&
+    visibleShares.every((share) => selectedIds.includes(share.id));
+
+  const toggleAll = () => {
+    if (allVisibleSelected) {
+      setSelectedIds(
+        selectedIds.filter(
+          (id) => !visibleShares.some((share) => share.id === id),
+        ),
+      );
+    } else {
+      setSelectedIds([
+        ...new Set([...selectedIds, ...visibleShares.map((share) => share.id)]),
+      ]);
+    }
+  };
+
+  const toggleRow = (id: string) => {
+    setSelectedIds(
+      selectedIds.includes(id)
+        ? selectedIds.filter((v) => v !== id)
+        : [...selectedIds, id],
+    );
+  };
+
   return (
     <Box sx={{ display: "block", overflowX: "auto" }}>
-      <TextInput
-        placeholder={t("admin.shares.search")}
-        icon={<TbSearch />}
-        value={search}
-        onChange={(e) => setSearch(e.currentTarget.value)}
-        mb="md"
-      />
+      <Group position="apart" mb="md">
+        <TextInput
+          placeholder={t("admin.shares.search")}
+          icon={<TbSearch />}
+          value={search}
+          onChange={(e) => setSearch(e.currentTarget.value)}
+        />
+        {selectedShares.length > 0 && (
+          <Button
+            variant="light"
+            color="red"
+            leftIcon={<TbTrash />}
+            onClick={() => deleteShares(selectedShares)}
+          >
+            {t("admin.shares.button.delete-selected", {
+              count: selectedShares.length,
+            })}
+          </Button>
+        )}
+      </Group>
       <Table verticalSpacing="sm">
         <thead>
           <tr>
+            <th style={{ width: 30 }}>
+              <Checkbox checked={allVisibleSelected} onChange={toggleAll} />
+            </th>
             {sortableTh("id", "account.shares.table.id")}
             {sortableTh("name", "account.shares.table.name")}
             {sortableTh("username", "admin.shares.table.username")}
@@ -120,6 +170,12 @@ const ManageShareTable = ({
             ? skeletonRows
             : visibleShares.map((share) => (
                 <tr key={share.id}>
+                  <td>
+                    <Checkbox
+                      checked={selectedIds.includes(share.id)}
+                      onChange={() => toggleRow(share.id)}
+                    />
+                  </td>
                   <td>{share.id}</td>
                   <td>{share.name}</td>
                   <td>

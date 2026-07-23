@@ -49,6 +49,30 @@ const Shares = () => {
     });
   };
 
+  const deleteShares = (toDelete: MyShare[]) => {
+    modals.openConfirmModal({
+      title: t("admin.shares.modal.delete-selected.title", {
+        count: toDelete.length,
+      }),
+      children: (
+        <Text size="sm">
+          <FormattedMessage id="admin.shares.modal.delete-selected.description" />
+        </Text>
+      ),
+      labels: {
+        confirm: t("common.button.delete"),
+        cancel: t("common.button.cancel"),
+      },
+      confirmProps: { color: "red" },
+      onConfirm: async () => {
+        await Promise.all(
+          toDelete.map((share) => shareService.remove(share.id)),
+        ).catch(toast.axiosError);
+        getShares();
+      },
+    });
+  };
+
   useEffect(() => {
     getShares();
   }, []);
@@ -73,6 +97,7 @@ const Shares = () => {
           )
         }
         deleteShare={deleteShare}
+        deleteShares={deleteShares}
         isLoading={isLoading}
       />
       <Space h="xl" />
