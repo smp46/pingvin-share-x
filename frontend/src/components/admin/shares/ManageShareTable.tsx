@@ -57,16 +57,26 @@ const ManageShareTable = ({
 
   const visibleShares = useMemo(() => {
     const needle = search.toLowerCase();
+    const preset = QUICK_RANGES.find((r) => r.value === quickRange);
+    let after: moment.Moment | null = null;
+    let before: moment.Moment | null = null;
+    if (quickRange === OLDER_THAN_7D) {
+      before = moment().subtract(7, "days");
+    } else if (preset) {
+      after = moment().subtract(preset.amount, preset.unit);
+    } else {
+      after = createdFrom ? moment(createdFrom).startOf("day") : null;
+      before = createdTo ? moment(createdTo).endOf("day") : null;
+    }
+
     const filtered = shares.filter((share) => {
       const matchesSearch =
         share.id.toLowerCase().includes(needle) ||
         (share.name ?? "").toLowerCase().includes(needle) ||
         (share.creator?.username ?? "").toLowerCase().includes(needle);
       const createdAt = moment(share.createdAt);
-      const matchesFrom =
-        !createdFrom || createdAt.isSameOrAfter(createdFrom, "day");
-      const matchesTo =
-        !createdTo || createdAt.isSameOrBefore(createdTo, "day");
+      const matchesFrom = !after || createdAt.isSameOrAfter(after);
+      const matchesTo = !before || createdAt.isSameOrBefore(before);
       return matchesSearch && matchesFrom && matchesTo;
     });
     if (sort) {
@@ -78,26 +88,19 @@ const ManageShareTable = ({
       });
     }
     return filtered;
-  }, [shares, search, createdFrom, createdTo, sort]);
+  }, [shares, search, quickRange, createdFrom, createdTo, sort]);
 
   const pageShares = visibleShares.slice(0, visibleCount);
   const scrollBoxRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
-  }, [search, createdFrom, createdTo, sort]);
+  }, [search, quickRange, createdFrom, createdTo, sort]);
 
-  const applyQuickRange = (days: string | null) => {
-    setQuickRange(days);
-    if (!days) {
-      setCreatedFrom("");
-      setCreatedTo("");
-      return;
-    }
-    setCreatedFrom(
-      moment().subtract(Number(days), "days").format("YYYY-MM-DD"),
-    );
-    setCreatedTo(moment().format("YYYY-MM-DD"));
+  const applyQuickRange = (value: string | null) => {
+    setQuickRange(value);
+    setCreatedFrom("");
+    setCreatedTo("");
   };
 
   // tall windows can fit the whole batch without a scrollbar, keep loading until it appears
@@ -189,14 +192,19 @@ const ManageShareTable = ({
         <Select
           placeholder={t("admin.shares.filter.quickRange")}
           data={[
-            { value: "7", label: t("admin.shares.filter.last-7-days") },
-            { value: "30", label: t("admin.shares.filter.last-30-days") },
-            { value: "90", label: t("admin.shares.filter.last-90-days") },
+            ...QUICK_RANGES.map((r) => ({
+              value: r.value,
+              label: t(`admin.shares.filter.range.${r.value}`),
+            })),
+            {
+              value: OLDER_THAN_7D,
+              label: t("admin.shares.filter.range.older7d"),
+            },
           ]}
           value={quickRange}
           onChange={applyQuickRange}
           clearable
-          w={180}
+          w={200}
         />
         <TextInput
           type="date"
@@ -360,6 +368,23 @@ const ManageShareTable = ({
 };
 
 const PAGE_SIZE = 50;
+
+const OLDER_THAN_7D = "older7d";
+
+const QUICK_RANGES: {
+  value: string;
+  amount: number;
+  unit: moment.unitOfTime.DurationConstructor;
+}[] = [
+  { value: "15m", amount: 15, unit: "minutes" },
+  { value: "1h", amount: 1, unit: "hours" },
+  { value: "6h", amount: 6, unit: "hours" },
+  { value: "12h", amount: 12, unit: "hours" },
+  { value: "1d", amount: 1, unit: "days" },
+  { value: "2d", amount: 2, unit: "days" },
+  { value: "3d", amount: 3, unit: "days" },
+  { value: "7d", amount: 7, unit: "days" },
+];
 
 const sortValue = (share: MyShare, column: string) => {
   if (column == "views") return share.views;
