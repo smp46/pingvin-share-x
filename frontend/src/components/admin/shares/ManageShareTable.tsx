@@ -4,7 +4,6 @@ import {
   Button,
   Checkbox,
   Group,
-  MediaQuery,
   Skeleton,
   Table,
   Text,
@@ -180,7 +179,7 @@ const ManageShareTable = ({
           </thead>
           <tbody>
             {isLoading
-              ? skeletonRows
+              ? skeletonRows(fileRetentionEnabled ? 9 : 8)
               : pageShares.map((share) => (
                   <tr key={share.id}>
                     <td>
@@ -298,29 +297,15 @@ const sortValue = (share: MyShare, column: string) => {
   return share.id.toLowerCase();
 };
 
-const skeletonRows = [...Array(10)].map((v, i) => (
-  <tr key={i}>
-    <td>
-      <Skeleton key={i} height={20} />
-    </td>
-    <MediaQuery smallerThan="md" styles={{ display: "none" }}>
-      <td>
-        <Skeleton key={i} height={20} />
-      </td>
-    </MediaQuery>
-    <td>
-      <Skeleton key={i} height={20} />
-    </td>
-    <td>
-      <Skeleton key={i} height={20} />
-    </td>
-    <td>
-      <Skeleton key={i} height={20} />
-    </td>
-    <td>
-      <Skeleton key={i} height={20} />
-    </td>
-  </tr>
-));
+const skeletonRows = (columns: number) =>
+  [...Array(10)].map((v, i) => (
+    <tr key={i}>
+      {[...Array(columns)].map((c, j) => (
+        <td key={j}>
+          <Skeleton height={20} />
+        </td>
+      ))}
+    </tr>
+  ));
 
 export default ManageShareTable;
