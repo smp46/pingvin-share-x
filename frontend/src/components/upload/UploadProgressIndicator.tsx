@@ -15,9 +15,33 @@ const UploadProgressIndicator = ({ progress }: { progress: number }) => {
       />
     );
   } else if (progress >= 100) {
-    return <TbCircleCheck color="green" size={22} />;
+    return (
+      <div
+        style={{
+          display: "inline-flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: 40,
+          height: 40,
+        }}
+      >
+        <TbCircleCheck color="green" size={22} />
+      </div>
+    );
   } else {
-    return <Loader color="red" size={19} />;
+    return (
+      <div
+        style={{
+          display: "inline-flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: 40,
+          height: 40,
+        }}
+      >
+        <Loader color="red" size={19} />
+      </div>
+    );
   }
 };
 
