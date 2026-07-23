@@ -6,12 +6,13 @@ import {
   Skeleton,
   Table,
   Text,
+  TextInput,
 } from "@mantine/core";
 import { useClipboard } from "@mantine/hooks";
 import { useModals } from "@mantine/modals";
 import moment from "moment";
 import { useState } from "react";
-import { TbInfoCircle, TbLink, TbTrash } from "react-icons/tb";
+import { TbInfoCircle, TbLink, TbSearch, TbTrash } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import useConfig from "../../../hooks/config.hook";
 import useTranslate from "../../../hooks/useTranslate.hook";
@@ -38,6 +39,7 @@ const ManageShareTable = ({
   const config = useConfig();
   const t = useTranslate();
 
+  const [search, setSearch] = useState("");
   const [sort, setSort] = useState<{ column: string; asc: boolean }>();
 
   // Check if file retention is enabled
@@ -54,7 +56,13 @@ const ManageShareTable = ({
     return share.id.toLowerCase();
   };
 
-  const visibleShares = [...shares];
+  const needle = search.toLowerCase();
+  const visibleShares = shares.filter(
+    (share) =>
+      share.id.toLowerCase().includes(needle) ||
+      (share.name ?? "").toLowerCase().includes(needle) ||
+      (share.creator?.username ?? "").toLowerCase().includes(needle),
+  );
   if (sort) {
     visibleShares.sort((a, b) => {
       const va = sortValue(a, sort.column);
@@ -81,6 +89,13 @@ const ManageShareTable = ({
 
   return (
     <Box sx={{ display: "block", overflowX: "auto" }}>
+      <TextInput
+        placeholder={t("admin.shares.search")}
+        icon={<TbSearch />}
+        value={search}
+        onChange={(e) => setSearch(e.currentTarget.value)}
+        mb="md"
+      />
       <Table verticalSpacing="sm">
         <thead>
           <tr>

@@ -311,6 +311,8 @@ export default {
   "admin.shares.edit.delete.description":
     "Do you really want to delete this share?",
 
+  "admin.shares.search": "Search",
+
   // END /admin/shares
 
   // /upload
