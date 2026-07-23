@@ -12,7 +12,7 @@ import {
 import { useClipboard } from "@mantine/hooks";
 import { useModals } from "@mantine/modals";
 import moment from "moment";
-import { UIEvent, useEffect, useMemo, useState } from "react";
+import { UIEvent, useEffect, useMemo, useRef, useState } from "react";
 import { TbInfoCircle, TbLink, TbSearch, TbTrash } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import useConfig from "../../../hooks/config.hook";
@@ -71,10 +71,25 @@ const ManageShareTable = ({
   }, [shares, search, sort]);
 
   const pageShares = visibleShares.slice(0, visibleCount);
+  const scrollBoxRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
   }, [search, sort]);
+
+  // tall windows can fit the whole batch without a scrollbar, keep loading until it appears
+  useEffect(() => {
+    const el = scrollBoxRef.current;
+    if (
+      el &&
+      el.scrollHeight <= el.clientHeight &&
+      visibleCount < visibleShares.length
+    ) {
+      setVisibleCount((count) =>
+        Math.min(count + PAGE_SIZE, visibleShares.length),
+      );
+    }
+  }, [visibleCount, visibleShares]);
 
   const handleScroll = (e: UIEvent<HTMLDivElement>) => {
     const el = e.currentTarget;
@@ -148,6 +163,7 @@ const ManageShareTable = ({
         )}
       </Group>
       <Box
+        ref={scrollBoxRef}
         sx={{
           maxHeight: "calc(100vh - 340px)",
           minHeight: 300,
