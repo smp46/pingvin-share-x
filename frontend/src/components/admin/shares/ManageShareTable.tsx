@@ -10,6 +10,7 @@ import {
 import { useClipboard } from "@mantine/hooks";
 import { useModals } from "@mantine/modals";
 import moment from "moment";
+import { useState } from "react";
 import { TbInfoCircle, TbLink, TbTrash } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import useConfig from "../../../hooks/config.hook";
@@ -37,33 +38,58 @@ const ManageShareTable = ({
   const config = useConfig();
   const t = useTranslate();
 
+  const [sort, setSort] = useState<{ column: string; asc: boolean }>();
+
   // Check if file retention is enabled
   const fileRetentionPeriod = config.get("share.fileRetentionPeriod");
   const fileRetentionEnabled = fileRetentionPeriod.value !== 0 ? true : false;
+
+  const sortValue = (share: MyShare, column: string) => {
+    if (column == "views") return share.views;
+    if (column == "size") return share.size;
+    if (column == "expiration") return moment(share.expiration).unix();
+    if (column == "username")
+      return share.creator?.username.toLowerCase() ?? "";
+    if (column == "name") return (share.name ?? "").toLowerCase();
+    return share.id.toLowerCase();
+  };
+
+  const visibleShares = [...shares];
+  if (sort) {
+    visibleShares.sort((a, b) => {
+      const va = sortValue(a, sort.column);
+      const vb = sortValue(b, sort.column);
+      const order = va < vb ? -1 : va > vb ? 1 : 0;
+      return sort.asc ? order : -order;
+    });
+  }
+
+  const toggleSort = (column: string) => {
+    setSort(
+      sort?.column === column
+        ? { column, asc: !sort.asc }
+        : { column, asc: true },
+    );
+  };
+
+  const sortableTh = (column: string, messageId: string) => (
+    <th style={{ cursor: "pointer" }} onClick={() => toggleSort(column)}>
+      <FormattedMessage id={messageId} />
+      {sort?.column === column && (sort.asc ? " ▲" : " ▼")}
+    </th>
+  );
 
   return (
     <Box sx={{ display: "block", overflowX: "auto" }}>
       <Table verticalSpacing="sm">
         <thead>
           <tr>
-            <th>
-              <FormattedMessage id="account.shares.table.id" />
-            </th>
-            <th>
-              <FormattedMessage id="account.shares.table.name" />
-            </th>
-            <th>
-              <FormattedMessage id="admin.shares.table.username" />
-            </th>
-            <th>
-              <FormattedMessage id="account.shares.table.visitors" />
-            </th>
-            <th>
-              <FormattedMessage id="account.shares.table.size" />
-            </th>
-            <th>
-              <FormattedMessage id="account.shares.table.expiresAt" />
-            </th>
+            {sortableTh("id", "account.shares.table.id")}
+            {sortableTh("name", "account.shares.table.name")}
+            {sortableTh("username", "admin.shares.table.username")}
+            {sortableTh("views", "account.shares.table.visitors")}
+            {sortableTh("size", "account.shares.table.size")}
+            {sortableTh("expiration", "account.shares.table.expiresAt")}
             {fileRetentionEnabled ? (
               <th>
                 <FormattedMessage id="admin.shares.table.deletes" />
@@ -77,7 +103,7 @@ const ManageShareTable = ({
         <tbody>
           {isLoading
             ? skeletonRows
-            : shares.map((share) => (
+            : visibleShares.map((share) => (
                 <tr key={share.id}>
                   <td>{share.id}</td>
                   <td>{share.name}</td>
