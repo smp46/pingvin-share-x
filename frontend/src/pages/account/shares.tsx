@@ -42,7 +42,6 @@ const MyShares = () => {
   const modals = useModals();
   const clipboard = useClipboard();
   const config = useConfig();
-  const theme = useMantineTheme();
   const { user } = useUser();
   const t = useTranslate();
 

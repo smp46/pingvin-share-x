@@ -1,3 +1,11 @@
+## [1.21.2](https://github.com/smp46/pingvin-share-x/compare/v1.21.1...v1.21.2) (2026-07-23)
+
+### Bug Fixes
+
+* **deps:** resolve security vulns via npm audit ([945c5e5](https://github.com/smp46/pingvin-share-x/commit/945c5e572dbf08021a15d510c9f12f1fc6ee9630))
+* **deps:** update backend sharp to non-vuln version ([9af800f](https://github.com/smp46/pingvin-share-x/commit/9af800f2a66f9ffd8fbf2926adce490723a77a05))
+* **deps:** update sharp & brace-expansion to non-vuln version ([d0f7ecd](https://github.com/smp46/pingvin-share-x/commit/d0f7ecdd7cb61eda264a61a3eeab346f33e2bf5a))
+
 ## [1.21.1](https://github.com/smp46/pingvin-share-x/compare/v1.21.0...v1.21.1) (2026-07-17)
 
 ### Bug Fixes
