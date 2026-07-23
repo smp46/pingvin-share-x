@@ -49,7 +49,7 @@ const Shares = () => {
       onConfirm: async () => {
         shareService
           .remove(share.id)
-          .then(() => setShares(shares.filter((v) => v.id != share.id)))
+          .then(() => setShares((prev) => prev.filter((v) => v.id != share.id)))
           .catch(toast.axiosError);
       },
     });
@@ -96,8 +96,8 @@ const Shares = () => {
       <ManageShareTable
         shares={shares}
         updateShare={(updatedShare) =>
-          setShares(
-            shares.map((share) =>
+          setShares((prev) =>
+            prev.map((share) =>
               share.id === updatedShare.id ? updatedShare : share,
             ),
           )
