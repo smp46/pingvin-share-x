@@ -148,7 +148,14 @@ const ManageShareTable = ({
           </Button>
         )}
       </Group>
-      <Box sx={{ maxHeight: 600, overflowY: "auto" }} onScroll={handleScroll}>
+      <Box
+        sx={{
+          maxHeight: "calc(100vh - 340px)",
+          minHeight: 300,
+          overflowY: "auto",
+        }}
+        onScroll={handleScroll}
+      >
         <Table verticalSpacing="sm">
           <thead>
             <tr>
