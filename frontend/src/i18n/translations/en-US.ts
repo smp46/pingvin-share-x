@@ -339,6 +339,8 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "Name",
   "upload.filelist.size": "Size",
+  "upload.filelist.estimating": "Estimating...",
+  "upload.filelist.remaining": "{time} remaining",
 
   // showCreateUploadModal.tsx
   "upload.modal.title": "Create Share",
