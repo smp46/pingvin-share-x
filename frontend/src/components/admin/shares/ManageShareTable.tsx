@@ -13,7 +13,7 @@ import {
 import { useClipboard } from "@mantine/hooks";
 import { useModals } from "@mantine/modals";
 import moment from "moment";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { TbInfoCircle, TbLink, TbSearch, TbTrash } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import useConfig from "../../../hooks/config.hook";
@@ -45,37 +45,30 @@ const ManageShareTable = ({
 
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState<{ column: string; asc: boolean }>();
-  const [selectedIds, setSelectedIds] = useState<string[]>([]);
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
 
   // Check if file retention is enabled
   const fileRetentionPeriod = config.get("share.fileRetentionPeriod");
   const fileRetentionEnabled = fileRetentionPeriod.value !== 0 ? true : false;
 
-  const sortValue = (share: MyShare, column: string) => {
-    if (column == "views") return share.views;
-    if (column == "size") return share.size;
-    if (column == "expiration") return moment(share.expiration).unix();
-    if (column == "username")
-      return share.creator?.username.toLowerCase() ?? "";
-    if (column == "name") return (share.name ?? "").toLowerCase();
-    return share.id.toLowerCase();
-  };
-
-  const needle = search.toLowerCase();
-  const visibleShares = shares.filter(
-    (share) =>
-      share.id.toLowerCase().includes(needle) ||
-      (share.name ?? "").toLowerCase().includes(needle) ||
-      (share.creator?.username ?? "").toLowerCase().includes(needle),
-  );
-  if (sort) {
-    visibleShares.sort((a, b) => {
-      const va = sortValue(a, sort.column);
-      const vb = sortValue(b, sort.column);
-      const order = va < vb ? -1 : va > vb ? 1 : 0;
-      return sort.asc ? order : -order;
-    });
-  }
+  const visibleShares = useMemo(() => {
+    const needle = search.toLowerCase();
+    const filtered = shares.filter(
+      (share) =>
+        share.id.toLowerCase().includes(needle) ||
+        (share.name ?? "").toLowerCase().includes(needle) ||
+        (share.creator?.username ?? "").toLowerCase().includes(needle),
+    );
+    if (sort) {
+      filtered.sort((a, b) => {
+        const va = sortValue(a, sort.column);
+        const vb = sortValue(b, sort.column);
+        const order = va < vb ? -1 : va > vb ? 1 : 0;
+        return sort.asc ? order : -order;
+      });
+    }
+    return filtered;
+  }, [shares, search, sort]);
 
   const toggleSort = (column: string) => {
     setSort(
@@ -85,41 +78,37 @@ const ManageShareTable = ({
     );
   };
 
+  const selectedShares = shares.filter((share) => selectedIds.has(share.id));
+  const allVisibleSelected =
+    visibleShares.length > 0 &&
+    visibleShares.every((share) => selectedIds.has(share.id));
+
+  const toggleAll = () => {
+    const next = new Set(selectedIds);
+    if (allVisibleSelected) {
+      visibleShares.forEach((share) => next.delete(share.id));
+    } else {
+      visibleShares.forEach((share) => next.add(share.id));
+    }
+    setSelectedIds(next);
+  };
+
+  const toggleRow = (id: string) => {
+    const next = new Set(selectedIds);
+    if (next.has(id)) {
+      next.delete(id);
+    } else {
+      next.add(id);
+    }
+    setSelectedIds(next);
+  };
+
   const sortableTh = (column: string, messageId: string) => (
     <th style={{ cursor: "pointer" }} onClick={() => toggleSort(column)}>
       <FormattedMessage id={messageId} />
       {sort?.column === column && (sort.asc ? " ▲" : " ▼")}
     </th>
   );
-
-  const selectedShares = shares.filter((share) =>
-    selectedIds.includes(share.id),
-  );
-  const allVisibleSelected =
-    visibleShares.length > 0 &&
-    visibleShares.every((share) => selectedIds.includes(share.id));
-
-  const toggleAll = () => {
-    if (allVisibleSelected) {
-      setSelectedIds(
-        selectedIds.filter(
-          (id) => !visibleShares.some((share) => share.id === id),
-        ),
-      );
-    } else {
-      setSelectedIds([
-        ...new Set([...selectedIds, ...visibleShares.map((share) => share.id)]),
-      ]);
-    }
-  };
-
-  const toggleRow = (id: string) => {
-    setSelectedIds(
-      selectedIds.includes(id)
-        ? selectedIds.filter((v) => v !== id)
-        : [...selectedIds, id],
-    );
-  };
 
   return (
     <Box sx={{ display: "block", overflowX: "auto" }}>
@@ -172,7 +161,7 @@ const ManageShareTable = ({
                 <tr key={share.id}>
                   <td>
                     <Checkbox
-                      checked={selectedIds.includes(share.id)}
+                      checked={selectedIds.has(share.id)}
                       onChange={() => toggleRow(share.id)}
                     />
                   </td>
@@ -271,6 +260,15 @@ const ManageShareTable = ({
       </Table>
     </Box>
   );
+};
+
+const sortValue = (share: MyShare, column: string) => {
+  if (column == "views") return share.views;
+  if (column == "size") return share.size;
+  if (column == "expiration") return moment(share.expiration).unix();
+  if (column == "username") return share.creator?.username.toLowerCase() ?? "";
+  if (column == "name") return (share.name ?? "").toLowerCase();
+  return share.id.toLowerCase();
 };
 
 const skeletonRows = [...Array(10)].map((v, i) => (
