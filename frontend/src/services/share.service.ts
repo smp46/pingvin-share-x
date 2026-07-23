@@ -132,6 +132,7 @@ const uploadFile = async (
   },
   chunkIndex: number,
   totalChunks: number,
+  onUploadProgress?: (progressEvent: any) => void,
 ): Promise<FileUploadResponse> => {
   if (!isValidId(shareId)) throw new Error("Invalid Share ID");
   return (
@@ -143,6 +144,7 @@ const uploadFile = async (
         chunkIndex,
         totalChunks,
       },
+      onUploadProgress,
     })
   ).data;
 };

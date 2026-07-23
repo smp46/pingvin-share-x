@@ -114,6 +114,16 @@ const Upload = ({
                 },
                 chunkIndex,
                 chunks,
+                (progressEvent) => {
+                  if (progressEvent.total && file.size > 0) {
+                    const chunkProgress = progressEvent.loaded / progressEvent.total;
+                    const uploadedBytesBeforeThisChunk = chunkIndex * chunkSize.current;
+                    const uploadedBytesInThisChunk = blob.size * chunkProgress;
+                    const totalUploaded = uploadedBytesBeforeThisChunk + uploadedBytesInThisChunk;
+                    const overallPercent = (totalUploaded / file.size) * 100;
+                    setFileProgress(Math.min(overallPercent, 99.9));
+                  }
+                }
               )
               .then((response) => {
                 fileId = response.id;
