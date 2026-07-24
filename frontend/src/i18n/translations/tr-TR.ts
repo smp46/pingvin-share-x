@@ -264,6 +264,8 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "İsim",
   "upload.filelist.size": "Boyut",
+  "upload.filelist.estimating": "Estimating...",
+  "upload.filelist.remaining": "{time} remaining",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Paylaşım Oluştur",
   "upload.modal.link.error.invalid": "Sadece harf, rakam, alt çizgi ve tire içerebilir",
@@ -375,6 +377,11 @@ export default {
   "admin.config.appearance.theme-radius.description": "Mantine bileşenleri tarafından kullanılan varsayılan köşe yarıçapı.",
   "admin.config.appearance.custom-css": "Özel CSS",
   "admin.config.appearance.custom-css.description": "Frontend'e uygulanan global CSS. Dikkatli kullanın; geçersiz CSS arayüzü etkileyebilir.",
+  "admin.config.appearance.upload-progress-style": "Upload progress style",
+  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
+  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "Uygulama URL'si",
   "admin.config.general.app-url.description": "Pingvin Share'in erişilebilir olduğu URL",
   "admin.config.general.secure-cookies": "Güvenli çerezler",
