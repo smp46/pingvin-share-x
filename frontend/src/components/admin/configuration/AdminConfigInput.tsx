@@ -23,6 +23,7 @@ import { stringToTimespan, timespanToString } from "../../../utils/date.util";
 import FileSizeInput from "../../core/FileSizeInput";
 import TimespanInput from "../../core/TimespanInput";
 import { LOCALES } from "../../../i18n/locales";
+import useTranslate from "../../../hooks/useTranslate.hook";
 
 const AdminConfigInput = ({
   configVariable,
@@ -37,6 +38,7 @@ const AdminConfigInput = ({
   updatedConfigVariables?: UpdateConfig[];
   optionalConfigVariables?: AdminConfig[];
 }) => {
+  const t = useTranslate();
   const isCustomCssConfig = configVariable.key === "appearance.customCss";
   const isThemePrimaryColorConfig =
     configVariable.key === "appearance.themePrimaryColor";
@@ -47,6 +49,8 @@ const AdminConfigInput = ({
     configVariable.key === "appearance.themeColorScheme";
   const isDefaultLanguageConfig =
     configVariable.key === "general.defaultLanguage";
+  const isUploadProgressStyleConfig =
+    configVariable.key === "appearance.uploadProgressStyle";
   const isEmailShareConfig =
     configVariable.key === "email.enableShareEmailRecipients";
   const isEmailVerificationConfig =
@@ -245,6 +249,21 @@ const AdminConfigInput = ({
             ]}
             value={form.values.stringValue}
             onChange={(value) => onValueChange(configVariable, value)}
+          />
+        ) : isUploadProgressStyleConfig ? (
+          <Select
+            style={{
+              width: "100%",
+            }}
+            disabled={!configVariable.allowEdit}
+            data={[
+              { value: "circle", label: t("admin.config.appearance.upload-progress-style.circle") },
+              { value: "percentage-time", label: t("admin.config.appearance.upload-progress-style.percentage-time") },
+            ]}
+            value={form.values.stringValue}
+            placeholder={configVariable.defaultValue}
+            onChange={(value) => onValueChange(configVariable, value ?? "")}
+            allowDeselect={false}
           />
         ) : (
           <TextInput

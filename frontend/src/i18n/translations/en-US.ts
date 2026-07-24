@@ -490,6 +490,11 @@ export default {
   "admin.config.appearance.custom-css": "Custom CSS",
   "admin.config.appearance.custom-css.description":
     "Global CSS applied to the frontend. Use carefully, as invalid CSS may affect the UI.",
+  "admin.config.appearance.upload-progress-style": "Upload progress style",
+  "admin.config.appearance.upload-progress-style.description":
+    "Choose how upload progress is displayed in the file list",
+  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "App URL",
   "admin.config.general.app-url.description":
     "On which URL Pingvin Share is available",

@@ -3,9 +3,12 @@ import { Loader, RingProgress, Text } from "@mantine/core";
 import { TbCircleCheck } from "react-icons/tb";
 import { HoverTip } from "../core/HoverTip";
 import { useIntl } from "react-intl";
+import useConfig from "../../hooks/config.hook";
 
 const UploadProgressIndicator = ({ progress }: { progress: number }) => {
   const intl = useIntl();
+  const config = useConfig();
+  const progressStyle = config.get("appearance.uploadProgressStyle") ?? "circle";
   const startTimeRef = useRef<number | null>(null);
   const [remainingSeconds, setRemainingSeconds] = useState<number | null>(null);
 
@@ -62,30 +65,33 @@ const UploadProgressIndicator = ({ progress }: { progress: number }) => {
 
   if (progress > 0 && progress < 100) {
     const tooltipLabel = formatRemainingTime(remainingSeconds);
-    return (
-      <HoverTip label={tooltipLabel}>
-        <div
-          style={{
-            display: "inline-flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: 40,
-            height: 40,
-          }}
-        >
-          <RingProgress
-            sections={[{ value: progress, color: "victoria" }]}
-            thickness={3}
-            size={40}
-            label={
-              <Text size="xs" color="victoria" weight={500} align="center">
-                {Math.min(Math.round(progress), 99)}%
-              </Text>
-            }
-          />
-        </div>
-      </HoverTip>
-    );
+    if (progressStyle === "circle") {
+      return (
+        <HoverTip label={tooltipLabel}>
+          <div
+            style={{
+              display: "inline-flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: 40,
+              height: 40,
+            }}
+          >
+            <RingProgress
+              sections={[{ value: progress, color: "victoria" }]}
+              thickness={3}
+              size={40}
+            />
+          </div>
+        </HoverTip>
+      );
+    } else {
+      return (
+        <Text size="sm" color="dimmed" style={{ whiteSpace: "nowrap" }}>
+          {Math.min(Math.round(progress), 99)}% • {tooltipLabel}
+        </Text>
+      );
+    }
   } else if (progress >= 100) {
     return (
       <div
