@@ -264,6 +264,8 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "Nimi",
   "upload.filelist.size": "Suurus",
+  "upload.filelist.estimating": "Estimating...",
+  "upload.filelist.remaining": "{time} remaining",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Loo jagamine",
   "upload.modal.link.error.invalid": "Võib sisaldada ainult tähti, numbreid, alakriipse ja kriipse",
@@ -375,6 +377,11 @@ export default {
   "admin.config.appearance.theme-radius.description": "Mantine komponentide vaikimisi nurga raadius.",
   "admin.config.appearance.custom-css": "Kohandatud CSS",
   "admin.config.appearance.custom-css.description": "Frontendile rakendatav globaalne CSS. Kasuta ettevaatlikult; vigane CSS võib mõjutada liidest.",
+  "admin.config.appearance.upload-progress-style": "Upload progress style",
+  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
+  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "Rakenduse URL",
   "admin.config.general.app-url.description": "URL, mille kaudu Pingvin Share on kättesaadav",
   "admin.config.general.secure-cookies": "Turvalised küpsised",
