@@ -13,11 +13,12 @@ If you do end up using AI tools, we ask that you only do so **assistively** (lik
 
 ## Guidelines for Using AI Tools
 
-1. **Understand fully:** You must be able to explain every line of code you submit
-2. **Test thoroughly:** Review and test all code (manually by a human) before submission
-3. **Take responsibility:** You are accountable for bugs, issues, or problems with your contribution
-4. **Disclose usage:** Note which AI tools you used in your PR description
-5. **Follow reasonable coding practices:** Use multiple commits to break down changes,
+1. **Assistance, not Generation:** Do not just copy-paste/save AI output. AI use should assist human development, not replace.
+2.  **Understand fully:** You must be able to explain every line of code you submit
+3. **Test thoroughly:** Review and test all code (manually by a human) before submission
+4. **Take responsibility:** You are accountable for bugs, issues, or problems with your contribution
+5. **Disclose usage:** Note which AI tools you used in your PR description
+6. **Follow reasonable coding practices:** Use multiple commits to break down changes,
 a single large commit makes review and tracking code changes difficult for maintainers.
 
 
