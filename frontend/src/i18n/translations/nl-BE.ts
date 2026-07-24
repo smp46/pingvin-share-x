@@ -424,6 +424,8 @@ export default {
   "admin.config.email.invite-subject.description": "Het onderwerp van de e-mail die wordt verzonden wanneer een beheerder een gebruiker uitnodigt.",
   "admin.config.email.invite-message": "Bericht voor uitnodiging",
   "admin.config.email.invite-message.description": "Dit bericht wordt verzonden wanneer een beheerder een gebruiker uitnodigt. {url} wordt vervangen door de uitnodigings-URL, {email} door het e-mailadres en {password} door het wachtwoord van de gebruiker.",
+  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
   "admin.config.email.enable-share-download-notifications": "Enable download notifications",
   "admin.config.email.enable-share-download-notifications.description": "Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.",
   "admin.config.email.share-download-notification-subject": "Download notification subject",
