@@ -264,6 +264,8 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "Ime",
   "upload.filelist.size": "Velikost",
+  "upload.filelist.estimating": "Estimating...",
+  "upload.filelist.remaining": "{time} remaining",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Ustvarite delitev",
   "upload.modal.link.error.invalid": "Lahko vsebuje samo črke, številke, podčrtaje in pomišljaje",
@@ -375,6 +377,11 @@ export default {
   "admin.config.appearance.theme-radius.description": "Privzeti polmer robov, ki ga uporabljajo komponente Mantine.",
   "admin.config.appearance.custom-css": "CSS po meri",
   "admin.config.appearance.custom-css.description": "Globalni CSS za frontend. Uporabljajte previdno; neveljaven CSS lahko vpliva na vmesnik.",
+  "admin.config.appearance.upload-progress-style": "Upload progress style",
+  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
+  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "URL aplikacije",
   "admin.config.general.app-url.description": "Na katerem URL-ju je dostopen Pingvin Share",
   "admin.config.general.secure-cookies": "Secure cookies",
