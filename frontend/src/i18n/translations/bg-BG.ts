@@ -264,6 +264,8 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "Име",
   "upload.filelist.size": "Размер",
+  "upload.filelist.estimating": "Estimating...",
+  "upload.filelist.remaining": "{time} remaining",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Създаване на споделяне",
   "upload.modal.link.error.invalid": "Може да съдържа само букви, цифри, долни черти и тирета",
@@ -375,6 +377,11 @@ export default {
   "admin.config.appearance.theme-radius.description": "Закръгляне на ъглите по подразбиране за компонентите.",
   "admin.config.appearance.custom-css": "Персонализиран CSS",
   "admin.config.appearance.custom-css.description": "Глобален CSS код. Използвайте внимателно, тъй като невалиден CSS може да развали интерфейса.",
+  "admin.config.appearance.upload-progress-style": "Upload progress style",
+  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
+  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "URL адрес на приложението",
   "admin.config.general.app-url.description": "URL адресът, на който е достъпен Pingvin Share",
   "admin.config.general.secure-cookies": "Защитени бисквитки (Secure cookies)",
