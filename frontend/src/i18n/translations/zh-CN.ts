@@ -264,6 +264,8 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "文件名",
   "upload.filelist.size": "文件大小",
+  "upload.filelist.estimating": "Estimating...",
+  "upload.filelist.remaining": "{time} remaining",
   // showCreateUploadModal.tsx
   "upload.modal.title": "创建分享",
   "upload.modal.link.error.invalid": "只能包括字母，数字，下划线(_)，和横线(-)",
@@ -375,6 +377,11 @@ export default {
   "admin.config.appearance.theme-radius.description": "Mantine 组件使用的默认圆角半径。",
   "admin.config.appearance.custom-css": "自定义 CSS",
   "admin.config.appearance.custom-css.description": "应用到前端的全局 CSS。请谨慎使用，错误的 CSS 可能影响界面。",
+  "admin.config.appearance.upload-progress-style": "Upload progress style",
+  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
+  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "应用 URL",
   "admin.config.general.app-url.description": "Pingvin Share 的访问地址",
   "admin.config.general.secure-cookies": "安全 Cookie",
