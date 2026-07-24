@@ -22,9 +22,9 @@ import {
   TbLink,
   TbLock,
   TbTrash,
-  TbUserCheck,
   TbUsers,
 } from "react-icons/tb";
+import { FaUserLock } from "react-icons/fa";
 import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
 import showShareInformationsModal from "../../components/share/showShareInformationsModal";
@@ -117,8 +117,8 @@ const MyShares = () => {
                         share.security?.restrictToRecipients ? (
                           <HoverTip label="Recipients Only">
                             <span style={{ display: "inline-flex" }}>
-                              <TbUserCheck
-                                color={theme.colors[theme.primaryColor][6]}
+                              <FaUserLock
+                                color={theme.colors.gray[6]}
                                 title={t(
                                   "account.shares.table.restricted-to-recipients",
                                 )}
@@ -126,7 +126,7 @@ const MyShares = () => {
                             </span>
                           </HoverTip>
                         ) : share.recipients?.length ? (
-                          <HoverTip label="Recipients Only">
+                          <HoverTip label="Sent to Recipients">
                             <span style={{ display: "inline-flex" }}>
                               <TbUsers
                                 color={theme.colors.gray[6]}
