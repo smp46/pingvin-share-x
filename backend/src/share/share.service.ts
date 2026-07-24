@@ -165,7 +165,7 @@ export class ShareService {
         recipient.email,
         recipient.id,
         share.id,
-        share.creator,
+        share.creator || share.reverseShare?.creator,
         share.description,
         share.expiration,
       );

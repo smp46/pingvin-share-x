@@ -198,6 +198,11 @@ export const configVariables = {
       defaultValue: "false",
       secret: false,
     },
+    shareRecipientsReplyToCreator: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
     shareDownloadNotificationSubject: {
       type: "string",
       defaultValue: "Your file was downloaded",

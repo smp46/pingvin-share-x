@@ -121,6 +121,8 @@ email:
     Pingvin Share 🐧
   #Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.
   enableShareDownloadNotifications: "false"
+  #Whether to set the Reply-To header to the email address of the user who created the share.
+  shareRecipientsReplyToCreator: "false"
   #Subject of the email which gets sent to the share creator when a recipient downloads a file.
   shareDownloadNotificationSubject: Your file was downloaded
   #Message which gets sent to the share creator when a recipient downloads a file. Available variables:

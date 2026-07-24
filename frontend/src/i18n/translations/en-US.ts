@@ -561,6 +561,10 @@ export default {
   "admin.config.email.invite-message": "Invite message",
   "admin.config.email.invite-message.description":
     "Message which gets sent when an admin invites a user. {url} will be replaced with the invite URL, {email} with the email and {password} with the users password.",
+  "admin.config.email.share-recipients-reply-to-creator":
+    "Set Reply-To to creator's email",
+  "admin.config.email.share-recipients-reply-to-creator.description":
+  "Whether to set the Reply-To header to the email address of the user who created the share.",
   "admin.config.email.enable-share-download-notifications":
     "Enable download notifications",
   "admin.config.email.enable-share-download-notifications.description":
