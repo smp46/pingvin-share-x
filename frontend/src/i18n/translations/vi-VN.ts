@@ -264,6 +264,8 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "Tên",
   "upload.filelist.size": "Kích thước",
+  "upload.filelist.estimating": "Estimating...",
+  "upload.filelist.remaining": "{time} remaining",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Create Share",
   "upload.modal.link.error.invalid": "Chỉ được phép sử dụng chữ, số, dấu gạch dưới và dấu gạch ngang",
@@ -375,6 +377,11 @@ export default {
   "admin.config.appearance.theme-radius.description": "Bán kính bo góc mặc định dùng bởi các thành phần Mantine.",
   "admin.config.appearance.custom-css": "CSS tùy chỉnh",
   "admin.config.appearance.custom-css.description": "CSS toàn cục áp dụng cho frontend. Hãy dùng cẩn thận vì CSS không hợp lệ có thể ảnh hưởng giao diện.",
+  "admin.config.appearance.upload-progress-style": "Upload progress style",
+  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
+  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "URL ứng dụng",
   "admin.config.general.app-url.description": "On which URL Pingvin Share is available",
   "admin.config.general.secure-cookies": "Secure cookies",
