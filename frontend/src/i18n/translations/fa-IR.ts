@@ -264,6 +264,8 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "نام",
   "upload.filelist.size": "حجم",
+  "upload.filelist.estimating": "Estimating...",
+  "upload.filelist.remaining": "{time} remaining",
   // showCreateUploadModal.tsx
   "upload.modal.title": "ایجاد اشتراک",
   "upload.modal.link.error.invalid": "فقط می‌تواند شامل حروف، عدد، زیرخط و خط تیره باشد",
@@ -375,6 +377,11 @@ export default {
   "admin.config.appearance.theme-radius.description": "پرونده گوشه پیش‌فرض مورد استفاده در اجزای Mantine.",
   "admin.config.appearance.custom-css": "CSS سفارشی",
   "admin.config.appearance.custom-css.description": "CSS سراسری اعمال شده به فرانت‌اند. با احتیاط استفاده کنید، زیرا CSS نامعتبر ممکن است روی UI تأثیر بگذارد.",
+  "admin.config.appearance.upload-progress-style": "Upload progress style",
+  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
+  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "آدرس برنامه",
   "admin.config.general.app-url.description": "Pingvin Share در چه آدرسی دردسترس است",
   "admin.config.general.secure-cookies": "کوکی‌های امن",
