@@ -92,8 +92,11 @@ export class ShareSecurityGuard extends JwtGuard {
       }
     }
 
-    // If share is restricted to named recipients, block everyone else
-    if (share.security?.restrictToRecipients) {
+    // If share is restricted to named recipients, block everyone else (excluding the creator)
+    if (
+      share.security?.restrictToRecipients &&
+      (!user || share.creatorId !== user.id)
+    ) {
       throw new ForbiddenException(
         "This share is restricted to specific recipients. Please log in to access it.",
         "share_restricted_to_recipients",
