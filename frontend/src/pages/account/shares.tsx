@@ -44,6 +44,7 @@ const MyShares = () => {
   const config = useConfig();
   const { user } = useUser();
   const t = useTranslate();
+  const theme = useMantineTheme();
 
   const [shares, setShares] = useState<MyShare[]>();
 
