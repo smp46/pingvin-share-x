@@ -424,6 +424,8 @@ export default {
   "admin.config.email.invite-subject.description": "Předmět e-mailu, když administrátor pozve uživatele.",
   "admin.config.email.invite-message": "Zpráva pozvánky",
   "admin.config.email.invite-message.description": "Zpráva, která bude odeslána, když administrátor pozve uživatele. {url} bude nahrazeno odkazem, {email} e-mailem a {password} heslem uživatele.",
+  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
   "admin.config.email.enable-share-download-notifications": "Povolit oznámení o stahování",
   "admin.config.email.enable-share-download-notifications.description": "Zda odeslat e-mail autorovi sdílení, když příjemce e-mailu stáhne soubor. Tato funkce vyžaduje nastavení SMTP a sdílení s příjemci prostřednictvím e-mailu.",
   "admin.config.email.share-download-notification-subject": "Předmět oznámení stažení",
