@@ -424,6 +424,8 @@ export default {
   "admin.config.email.invite-subject.description": "Intitulé du courriel envoyé lorsqu’un administrateur invite un utilisateur.",
   "admin.config.email.invite-message": "Message d’une invitation",
   "admin.config.email.invite-message.description": "Message qui est envoyé lorsqu'un administrateur invite un utilisateur. {url} sera remplacé avec l'URL d'invitation, {email} avec le courriel et {password} avec le mot de passe de l'utilisateur.",
+  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
   "admin.config.email.enable-share-download-notifications": "Activer les notifications de téléchargement",
   "admin.config.email.enable-share-download-notifications.description": "S'il faut envoyer un e-mail au créateur du partage lorsqu'un destinataire télécharge un fichier. Cela nécessite un protocole SMTP et le partage par e-mail.",
   "admin.config.email.share-download-notification-subject": "Sujet de notification de téléchargement",
