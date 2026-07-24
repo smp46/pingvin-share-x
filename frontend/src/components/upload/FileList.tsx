@@ -70,73 +70,43 @@ const FileListRow = ({
         <td>
           <Group position="right" spacing="xs" noWrap>
             {editable && (
-              <div
-                style={{
-                  display: "inline-flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  width: 40,
-                  height: 40,
-                }}
-              >
-                <HoverTip label={t("common.button.edit")}>
-                  <ActionIcon
-                    color="blue"
-                    variant="light"
-                    size={25}
-                    onClick={onEdit}
-                  >
-                    <TbEdit />
-                  </ActionIcon>
-                </HoverTip>
-              </div>
+              <HoverTip label={t("common.button.edit")}>
+                <ActionIcon
+                  color="blue"
+                  variant="light"
+                  size={25}
+                  onClick={onEdit}
+                >
+                  <TbEdit />
+                </ActionIcon>
+              </HoverTip>
             )}
             {removable && (
-              <div
-                style={{
-                  display: "inline-flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  width: 40,
-                  height: 40,
-                }}
-              >
-                <HoverTip label={t("common.button.delete")}>
-                  <ActionIcon
-                    color="red"
-                    variant="light"
-                    size={25}
-                    onClick={onRemove}
-                  >
-                    <TbTrash />
-                  </ActionIcon>
-                </HoverTip>
-              </div>
+              <HoverTip label={t("common.button.delete")}>
+                <ActionIcon
+                  color="red"
+                  variant="light"
+                  size={25}
+                  onClick={onRemove}
+                >
+                  <TbTrash />
+                </ActionIcon>
+              </HoverTip>
             )}
             {uploading && (
               <UploadProgressIndicator progress={file.uploadingProgress} />
             )}
             {restorable && (
-              <div
-                style={{
-                  display: "inline-flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  width: 40,
-                  height: 40,
-                }}
-              >
-                <HoverTip label={t("common.button.undo")}>
-                  <ActionIcon
-                    color="victoria"
-                    variant="light"
-                    size={25}
-                    onClick={onRestore}
-                  >
-                    <GrUndo />
-                  </ActionIcon>
-                </HoverTip>
-              </div>
+              <HoverTip label={t("common.button.undo")}>
+                <ActionIcon
+                  color="victoria"
+                  variant="light"
+                  size={25}
+                  onClick={onRestore}
+                >
+                  <GrUndo />
+                </ActionIcon>
+              </HoverTip>
             )}
           </Group>
         </td>

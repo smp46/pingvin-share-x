@@ -68,21 +68,11 @@ const UploadProgressIndicator = ({ progress }: { progress: number }) => {
     if (progressStyle === "circle") {
       return (
         <HoverTip label={tooltipLabel}>
-          <div
-            style={{
-              display: "inline-flex",
-              justifyContent: "center",
-              alignItems: "center",
-              width: 40,
-              height: 40,
-            }}
-          >
-            <RingProgress
-              sections={[{ value: progress, color: "victoria" }]}
-              thickness={3}
-              size={40}
-            />
-          </div>
+          <RingProgress
+            sections={[{ value: progress, color: "victoria" }]}
+            thickness={3}
+            size={25}
+          />
         </HoverTip>
       );
     } else {
@@ -93,33 +83,9 @@ const UploadProgressIndicator = ({ progress }: { progress: number }) => {
       );
     }
   } else if (progress >= 100) {
-    return (
-      <div
-        style={{
-          display: "inline-flex",
-          justifyContent: "center",
-          alignItems: "center",
-          width: 40,
-          height: 40,
-        }}
-      >
-        <TbCircleCheck color="green" size={22} />
-      </div>
-    );
+    return <TbCircleCheck color="green" size={22} />;
   } else {
-    return (
-      <div
-        style={{
-          display: "inline-flex",
-          justifyContent: "center",
-          alignItems: "center",
-          width: 40,
-          height: 40,
-        }}
-      >
-        <Loader color="red" size={19} />
-      </div>
-    );
+    return <Loader color="red" size={19} />;
   }
 };
 
