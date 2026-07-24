@@ -1,24 +1,4 @@
 export default {
-  "account.shares.table.recipients": "Recipients",
-  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
-  "account.shares.table.shared-with-recipients": "Shared with recipients",
-  // user-share-recipients feature (English fallback until translated)
-  "navbar.links.received": "Received shares",
-  "account.received-shares.title": "Received shares",
-  "account.received-shares.title.empty": "No shares received yet",
-  "account.received-shares.description.empty":
-    "Shares sent to your email address will appear here.",
-  "account.received-shares.table.from": "From",
-  "account.received-shares.button.open": "Open",
-  "upload.modal.accordion.email.restrict-to-recipients":
-    "Restrict access to these recipients only (requires all to have an account)",
-  "share.error.restricted.title": "Restricted share",
-  "share.error.restricted.description":
-    "This share is restricted to specific recipients. Please log in to access it.",
-  "share.error.restricted.button": "Log in",
-  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
-  "admin.config.share.enable-user-recipients.description":
-    "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   // Navbar
   "navbar.upload": "Subir",
   "navbar.signin": "Iniciar sesión",

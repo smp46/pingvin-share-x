@@ -1,7 +1,4 @@
 export default {
-  "account.shares.table.recipients": "Recipients",
-  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
-  "account.shares.table.shared-with-recipients": "Shared with recipients",
   // Navbar
   "navbar.upload": "アップロード",
   "navbar.signin": "サインイン",
@@ -9,7 +6,6 @@ export default {
   "navbar.signup": "新規登録",
   "navbar.links.shares": "自分の共有",
   "navbar.links.reverse": "ファイルリクエスト",
-  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "マイアカウント",
   "navbar.avatar.admin": "管理画面",
   "navbar.avatar.signout": "ログアウト",
@@ -158,14 +154,6 @@ export default {
   "account.shares.modal.delete.description": "この共有を削除してもよろしいですか？",
   // END /account/shares
 
-  // /account/received
-  "account.received-shares.title": "Received shares",
-  "account.received-shares.title.empty": "No shares received yet",
-  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
-  "account.received-shares.table.from": "From",
-  "account.received-shares.button.open": "Open",
-  // END /account/received
-
   // /account/reverseShares
   "account.reverseShares.title": "ファイルリクエスト",
   "account.reverseShares.description": "ファイルリクエストは、外部のユーザーにファイルをアップロードしてもらえるユニークなURLを生成できます。",
@@ -301,8 +289,6 @@ export default {
   "upload.modal.accordion.email.title": "メールで受け取る相手",
   "upload.modal.accordion.email.placeholder": "メールの宛先を入力",
   "upload.modal.accordion.email.invalid-email": "無効なメールアドレスです",
-  "upload.modal.accordion.email.restrict-to-recipients":
-    "Restrict access to these recipients only (requires all to have an account)",
   "upload.modal.accordion.security.title": "セキュリティオプション",
   "upload.modal.accordion.security.password.label": "パスワード保護",
   "upload.modal.accordion.security.password.placeholder": "パスワードなし",
@@ -328,10 +314,6 @@ export default {
   "share.error.access-denied.title": "プライベートシェア",
   "share.error.access-denied.description": "現在のアカウントにはこの共有にアクセスする権限がありません",
   "share.modal.password.title": "パスワードが必要です",
-  "share.error.restricted.title": "Restricted share",
-  "share.error.restricted.description":
-    "This share is restricted to specific recipients. Please log in to access it.",
-  "share.error.restricted.button": "Log in",
   "share.modal.password.description": "この共有にアクセスするにはパスワードを入力してください。",
   "share.modal.password": "パスワード",
   "share.modal.error.invalid-password": "パスワードが間違っています",
@@ -472,9 +454,6 @@ export default {
   "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
   "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
-  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
-  "admin.config.share.enable-user-recipients.description":
-    "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "有効",

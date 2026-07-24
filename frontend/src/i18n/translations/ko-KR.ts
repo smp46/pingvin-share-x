@@ -1,7 +1,4 @@
 export default {
-  "account.shares.table.recipients": "Recipients",
-  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
-  "account.shares.table.shared-with-recipients": "Shared with recipients",
   // Navbar
   "navbar.upload": "업로드",
   "navbar.signin": "로그인",
@@ -9,7 +6,6 @@ export default {
   "navbar.signup": "계정 만들기",
   "navbar.links.shares": "내 공유",
   "navbar.links.reverse": "역방향 공유",
-  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "내 계정",
   "navbar.avatar.admin": "관리자",
   "navbar.avatar.signout": "로그아웃",
@@ -158,14 +154,6 @@ export default {
   "account.shares.modal.delete.description": "정말로 이 공유를 삭제하시겠습니까?",
   // END /account/shares
 
-  // /account/received
-  "account.received-shares.title": "Received shares",
-  "account.received-shares.title.empty": "No shares received yet",
-  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
-  "account.received-shares.table.from": "From",
-  "account.received-shares.button.open": "Open",
-  // END /account/received
-
   // /account/reverseShares
   "account.reverseShares.title": "역방향 공유",
   "account.reverseShares.description": "역방향 공유를 통해 외부 사용자가 공유를 생성할 수 있는 고유 URL을 생성할 수 있습니다.",
@@ -301,8 +289,6 @@ export default {
   "upload.modal.accordion.email.title": "받는 사람 메일 주소",
   "upload.modal.accordion.email.placeholder": "메일 주소 입력",
   "upload.modal.accordion.email.invalid-email": "이메일 주소가 틀립니다",
-  "upload.modal.accordion.email.restrict-to-recipients":
-    "Restrict access to these recipients only (requires all to have an account)",
   "upload.modal.accordion.security.title": "보안 설정",
   "upload.modal.accordion.security.password.label": "비밀번호로 보호",
   "upload.modal.accordion.security.password.placeholder": "비밀번호 없음",
@@ -328,10 +314,6 @@ export default {
   "share.error.access-denied.title": "Private share",
   "share.error.access-denied.description": "The current account does not have permission to access this share",
   "share.modal.password.title": "비밀번호 필요",
-  "share.error.restricted.title": "Restricted share",
-  "share.error.restricted.description":
-    "This share is restricted to specific recipients. Please log in to access it.",
-  "share.error.restricted.button": "Log in",
   "share.modal.password.description": "Please enter the password to access this share.",
   "share.modal.password": "비밀번호",
   "share.modal.error.invalid-password": "잘못된 비밀번호",
@@ -472,9 +454,6 @@ export default {
   "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
   "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
-  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
-  "admin.config.share.enable-user-recipients.description":
-    "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Enable",

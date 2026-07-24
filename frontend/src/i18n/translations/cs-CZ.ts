@@ -1,7 +1,4 @@
 export default {
-  "account.shares.table.recipients": "Recipients",
-  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
-  "account.shares.table.shared-with-recipients": "Shared with recipients",
   // Navbar
   "navbar.upload": "Nahrát",
   "navbar.signin": "Přihlásit se",
@@ -9,7 +6,6 @@ export default {
   "navbar.signup": "Zaregistrovat se",
   "navbar.links.shares": "Má sdílení",
   "navbar.links.reverse": "Opačná sdílení",
-  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Můj účet",
   "navbar.avatar.admin": "Administrace",
   "navbar.avatar.signout": "Odhlásit se",
@@ -158,14 +154,6 @@ export default {
   "account.shares.modal.delete.description": "Opravdu chcete odstranit toto sdílení?",
   // END /account/shares
 
-  // /account/received
-  "account.received-shares.title": "Received shares",
-  "account.received-shares.title.empty": "No shares received yet",
-  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
-  "account.received-shares.table.from": "From",
-  "account.received-shares.button.open": "Open",
-  // END /account/received
-
   // /account/reverseShares
   "account.reverseShares.title": "Opačná sdílení",
   "account.reverseShares.description": "Opačné sdílení umožňuje vygenerovat jedinečné URL, které umožní externím uživatelům vytvořit sdílet soubory.",
@@ -301,8 +289,6 @@ export default {
   "upload.modal.accordion.email.title": "Příjemci e-mailu",
   "upload.modal.accordion.email.placeholder": "Zadejte příjemce e-mailu",
   "upload.modal.accordion.email.invalid-email": "Neplatná e-mailová adresa",
-  "upload.modal.accordion.email.restrict-to-recipients":
-    "Restrict access to these recipients only (requires all to have an account)",
   "upload.modal.accordion.security.title": "Možnosti zabezpečení",
   "upload.modal.accordion.security.password.label": "Ochrana heslem",
   "upload.modal.accordion.security.password.placeholder": "Bez hesla",
@@ -328,10 +314,6 @@ export default {
   "share.error.access-denied.title": "Soukromé sdílení",
   "share.error.access-denied.description": "Aktuální účet nemá oprávnění k přístupu k tomuto sdílení",
   "share.modal.password.title": "Heslo vyžadováno",
-  "share.error.restricted.title": "Restricted share",
-  "share.error.restricted.description":
-    "This share is restricted to specific recipients. Please log in to access it.",
-  "share.error.restricted.button": "Log in",
   "share.modal.password.description": "Zadejte prosím heslo pro přístup k tomuto sdíleni.",
   "share.modal.password": "Heslo",
   "share.modal.error.invalid-password": "Neplatné heslo",
@@ -472,9 +454,6 @@ export default {
   "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
   "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
-  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
-  "admin.config.share.enable-user-recipients.description":
-    "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Povolit",

@@ -1,15 +1,11 @@
 export default {
-  "account.shares.table.recipients": "Recipients",
-  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
-  "account.shares.table.shared-with-recipients": "Shared with recipients",
   // Navbar
   "navbar.upload": "上傳",
   "navbar.signin": "登入",
   "navbar.home": "首頁",
   "navbar.signup": "註冊",
   "navbar.links.shares": "我的分享",
-  "navbar.links.reverse": "回傳分享", 
-  "navbar.links.received": "Received shares",
+  "navbar.links.reverse": "回傳分享",
   "navbar.avatar.account": "帳號設定",
   "navbar.avatar.admin": "管理",
   "navbar.avatar.signout": "登出",
@@ -158,14 +154,6 @@ export default {
   "account.shares.modal.delete.description": "您真的想刪除這個分享嗎？",
   // END /account/shares
 
-  // /account/received
-  "account.received-shares.title": "Received shares",
-  "account.received-shares.title.empty": "No shares received yet",
-  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
-  "account.received-shares.table.from": "From",
-  "account.received-shares.button.open": "Open",
-  // END /account/received
-
   // /account/reverseShares
   "account.reverseShares.title": "回傳分享",
   "account.reverseShares.description": "回傳分享允許您建立一個特定的上傳畫面，以便外部使用者與您分享檔案。",
@@ -301,8 +289,6 @@ export default {
   "upload.modal.accordion.email.title": "Email提醒",
   "upload.modal.accordion.email.placeholder": "收件人Email地址",
   "upload.modal.accordion.email.invalid-email": "Email地址不可用",
-  "upload.modal.accordion.email.restrict-to-recipients":
-    "Restrict access to these recipients only (requires all to have an account)",
   "upload.modal.accordion.security.title": "安全性選項",
   "upload.modal.accordion.security.password.label": "密碼保護",
   "upload.modal.accordion.security.password.placeholder": "無密碼",
@@ -328,10 +314,6 @@ export default {
   "share.error.access-denied.title": "私人分享",
   "share.error.access-denied.description": "您沒有權限存取此檔案",
   "share.modal.password.title": "需要密碼",
-  "share.error.restricted.title": "Restricted share",
-  "share.error.restricted.description":
-    "This share is restricted to specific recipients. Please log in to access it.",
-  "share.error.restricted.button": "Log in",
   "share.modal.password.description": "請輸入密碼取得此分享。",
   "share.modal.password": "密碼",
   "share.modal.error.invalid-password": "密碼錯誤",
@@ -468,15 +450,12 @@ export default {
   "admin.config.share.chunk-size.description": "調整分塊大小 以平衡上傳的效率與可靠度。更小的分塊大小在不穩定的網路環境中可以提升成功率，更大的分塊大小可以在穩定的網路環境中提高上傳速度。",
   "admin.config.share.auto-open-share-modal": "自動開啟分享設定",
   "admin.config.share.auto-open-share-modal.description": "分享設定會在使用者選擇檔案後自動開啟而無須手動點擊。",
-  "admin.config.share.allow-admin-access-all-shares": "Allow admin access to all shares",
-  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
-  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
-  "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
-  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
-  "admin.config.share.enable-user-recipients.description":
-    "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
-  "admin.config.share.file-retention-period": "File retention period",
-  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
+  "admin.config.share.allow-admin-access-all-shares": "允許管理員存取所有分享",
+  "admin.config.share.reverse-share-simple-only": "強制將回傳分享建立為簡易模式",
+  "admin.config.share.reverse-share-simple-only.description": "強制將回傳分享建立為簡易模式。如果停用此功能，回傳分享的建立者可選擇簡易模式或進階模式。",
+  "admin.config.share.allow-admin-access-all-shares.description": "允許管理員存取所有分享，即使該分享已設定密碼、已過期或已刪除。",
+  "admin.config.share.file-retention-period": "檔案保留期限",
+  "admin.config.share.file-retention-period.description": "分享過期或刪除後，檔案保留的時間。僅在同時啟用「允許管理員存取所有分享」時有效。設為 -1 表示永久保留檔案。",
   "admin.config.smtp.enabled": "啟用",
   "admin.config.smtp.enabled.description": "是否開啟 SMTP，需輸入Host、Port、發送郵箱、使用者名稱和密碼後才有作用",
   "admin.config.smtp.host": "主機",

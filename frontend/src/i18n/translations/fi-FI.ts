@@ -1,7 +1,4 @@
 export default {
-  "account.shares.table.recipients": "Recipients",
-  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
-  "account.shares.table.shared-with-recipients": "Shared with recipients",
   // Navbar
   "navbar.upload": "Pilvetä",
   "navbar.signin": "Kirjaudu Sisään",
@@ -9,7 +6,6 @@ export default {
   "navbar.signup": "Rekisteröidy",
   "navbar.links.shares": "Minun jakaukset",
   "navbar.links.reverse": "Takaperin jaetut",
-  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Oma tIli",
   "navbar.avatar.admin": "Ylläpito",
   "navbar.avatar.signout": "Kirjaudu ulos",
@@ -158,14 +154,6 @@ export default {
   "account.shares.modal.delete.description": "Haluatko todella poistaa tämän jaetun tiedoston/ot?",
   // END /account/shares
 
-  // /account/received
-  "account.received-shares.title": "Received shares",
-  "account.received-shares.title.empty": "No shares received yet",
-  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
-  "account.received-shares.table.from": "From",
-  "account.received-shares.button.open": "Open",
-  // END /account/received
-
   // /account/reverseShares
   "account.reverseShares.title": "Takaperin jaetut",
   "account.reverseShares.description": "Käänteisen jaon avulla voit luoda ainutlaatuisen URL-osoitteen, jonka avulla ulkoiset käyttäjät voivat luoda jaon.",
@@ -301,8 +289,6 @@ export default {
   "upload.modal.accordion.email.title": "Sähköpostin vastaanottajat",
   "upload.modal.accordion.email.placeholder": "Syötä sähköpostin vastaanottajat",
   "upload.modal.accordion.email.invalid-email": "Virheellinen sähköpostiosoite",
-  "upload.modal.accordion.email.restrict-to-recipients":
-    "Restrict access to these recipients only (requires all to have an account)",
   "upload.modal.accordion.security.title": "Turvallisuusasetukset",
   "upload.modal.accordion.security.password.label": "Salasanasuojaus",
   "upload.modal.accordion.security.password.placeholder": "Ei salasanaa",
@@ -328,10 +314,6 @@ export default {
   "share.error.access-denied.title": "Yksityinen jako",
   "share.error.access-denied.description": "The current account does not have permission to access this share",
   "share.modal.password.title": "Salasana vaaditaan",
-  "share.error.restricted.title": "Restricted share",
-  "share.error.restricted.description":
-    "This share is restricted to specific recipients. Please log in to access it.",
-  "share.error.restricted.button": "Log in",
   "share.modal.password.description": "Please enter the password to access this share.",
   "share.modal.password": "Salasana",
   "share.modal.error.invalid-password": "Virheellinen salasana",
@@ -472,9 +454,6 @@ export default {
   "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
   "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
-  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
-  "admin.config.share.enable-user-recipients.description":
-    "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Käytä",
