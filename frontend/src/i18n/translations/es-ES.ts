@@ -264,6 +264,8 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "Nombre",
   "upload.filelist.size": "Tamaño",
+  "upload.filelist.estimating": "Estimating...",
+  "upload.filelist.remaining": "{time} remaining",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Crear compartido",
   "upload.modal.link.error.invalid": "Solo puede contener letras, números, guiones y guiones bajos",
@@ -375,6 +377,11 @@ export default {
   "admin.config.appearance.theme-radius.description": "Radio de borde predeterminado usado por los componentes Mantine.",
   "admin.config.appearance.custom-css": "CSS personalizado",
   "admin.config.appearance.custom-css.description": "CSS global aplicado al frontend. Úsalo con cuidado; un CSS inválido puede afectar la interfaz.",
+  "admin.config.appearance.upload-progress-style": "Upload progress style",
+  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
+  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "URL de la aplicación",
   "admin.config.general.app-url.description": "En cuál URL está disponible Pingvin Share",
   "admin.config.general.secure-cookies": "Cookies seguras",
