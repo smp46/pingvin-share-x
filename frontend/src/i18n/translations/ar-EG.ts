@@ -424,6 +424,8 @@ export default {
   "admin.config.email.invite-subject.description": "Subject of the sent email when an admin invites a user.",
   "admin.config.email.invite-message": "رسالة الدعوة",
   "admin.config.email.invite-message.description": "Message which gets sent when an admin invites a user. {url} will be replaced with the invite URL, {email} with the email and {password} with the users password.",
+  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
   "admin.config.email.enable-share-download-notifications": "Enable download notifications",
   "admin.config.email.enable-share-download-notifications.description": "Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.",
   "admin.config.email.share-download-notification-subject": "Download notification subject",
