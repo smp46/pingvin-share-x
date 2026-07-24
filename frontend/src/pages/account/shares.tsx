@@ -104,26 +104,38 @@ const MyShares = () => {
                     <Group spacing="xs">
                       {share.id}{" "}
                       {share.security?.passwordProtected && (
-                        <TbLock
-                          color="orange"
-                          title={t("account.shares.table.password-protected")}
-                        />
+                        <HoverTip label="Password Protected">
+                          <span style={{ display: "inline-flex" }}>
+                            <TbLock
+                              color="orange"
+                              title={t("account.shares.table.password-protected")}
+                            />
+                          </span>
+                        </HoverTip>
                       )}
                       {config.get("share.enableUserRecipients") && (
                         share.security?.restrictToRecipients ? (
-                          <TbUserCheck
-                            color={theme.colors[theme.primaryColor][6]}
-                            title={t(
-                              "account.shares.table.restricted-to-recipients",
-                            )}
-                          />
+                          <HoverTip label="Recipients Only">
+                            <span style={{ display: "inline-flex" }}>
+                              <TbUserCheck
+                                color={theme.colors[theme.primaryColor][6]}
+                                title={t(
+                                  "account.shares.table.restricted-to-recipients",
+                                )}
+                              />
+                            </span>
+                          </HoverTip>
                         ) : share.recipients?.length ? (
-                          <TbUsers
-                            color={theme.colors.gray[6]}
-                            title={t(
-                              "account.shares.table.shared-with-recipients",
-                            )}
-                          />
+                          <HoverTip label="Recipients Only">
+                            <span style={{ display: "inline-flex" }}>
+                              <TbUsers
+                                color={theme.colors.gray[6]}
+                                title={t(
+                                  "account.shares.table.shared-with-recipients",
+                                )}
+                              />
+                            </span>
+                          </HoverTip>
                         ) : null
                       )}
                     </Group>
