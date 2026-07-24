@@ -264,6 +264,8 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "Navn",
   "upload.filelist.size": "Størrelse",
+  "upload.filelist.estimating": "Estimating...",
+  "upload.filelist.remaining": "{time} remaining",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Opprett deling",
   "upload.modal.link.error.invalid": "Kan bare inneholde bokstaver, tall, understreker og bindestreker",
@@ -375,6 +377,11 @@ export default {
   "admin.config.appearance.theme-radius.description": "Standard hjørneradius brukt av Mantine-komponenter.",
   "admin.config.appearance.custom-css": "Egendefinert CSS",
   "admin.config.appearance.custom-css.description": "Global CSS som brukes på frontend. Brukes med forsiktighet, ettersom ugyldig CSS kan påvirke brukergrensesnittet.",
+  "admin.config.appearance.upload-progress-style": "Upload progress style",
+  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
+  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "App-URL",
   "admin.config.general.app-url.description": "Hvilken URL Pingvin Share er tilgjengelig på",
   "admin.config.general.secure-cookies": "Sikre informasjonskapsler (Secure cookies)",
