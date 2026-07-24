@@ -86,11 +86,7 @@ const MyShares = () => {
                 <th>
                   <FormattedMessage id="account.shares.table.name" />
                 </th>
-                {config.get("share.enableUserRecipients") && (
-                  <th>
-                    <FormattedMessage id="account.shares.table.recipients" />
-                  </th>
-                )}
+
                 <th>
                   <FormattedMessage id="account.shares.table.visitors" />
                 </th>
@@ -102,21 +98,6 @@ const MyShares = () => {
             </thead>
             <tbody>
               {shares.map((share) => {
-                const openShareInformationsModal = () =>
-                  showShareInformationsModal(
-                    modals,
-                    share,
-                    parseInt(config.get("share.maxSize")),
-                    config.get("general.appUrl"),
-                    config.get("general.appUrl", true),
-                    config.get("share.maxExpiration"),
-                    (updatedShare) =>
-                      setShares(
-                        shares.map((item) =>
-                          item.id === updatedShare.id ? updatedShare : item,
-                        ),
-                      ),
-                  );
                 return (
                 <tr key={share.id}>
                   <td>
@@ -128,32 +109,26 @@ const MyShares = () => {
                           title={t("account.shares.table.password-protected")}
                         />
                       )}
+                      {config.get("share.enableUserRecipients") && (
+                        share.security?.restrictToRecipients ? (
+                          <TbUserCheck
+                            color={theme.colors[theme.primaryColor][6]}
+                            title={t(
+                              "account.shares.table.restricted-to-recipients",
+                            )}
+                          />
+                        ) : share.recipients?.length ? (
+                          <TbUsers
+                            color={theme.colors.gray[6]}
+                            title={t(
+                              "account.shares.table.shared-with-recipients",
+                            )}
+                          />
+                        ) : null
+                      )}
                     </Group>
                   </td>
                   <td>{share.name}</td>
-                  {config.get("share.enableUserRecipients") && (
-                    <td>
-                      {share.security?.restrictToRecipients ? (
-                        <TbUserCheck
-                          color={theme.colors[theme.primaryColor][6]}
-                          title={t(
-                            "account.shares.table.restricted-to-recipients",
-                          )}
-                          style={{ cursor: "pointer" }}
-                          onClick={openShareInformationsModal}
-                        />
-                      ) : share.recipients?.length ? (
-                        <TbUsers
-                          color={theme.colors.gray[6]}
-                          title={t(
-                            "account.shares.table.shared-with-recipients",
-                          )}
-                          style={{ cursor: "pointer" }}
-                          onClick={openShareInformationsModal}
-                        />
-                      ) : null}
-                    </td>
-                  )}
                   <td>
                     {share.security?.maxViews ? (
                       <FormattedMessage
