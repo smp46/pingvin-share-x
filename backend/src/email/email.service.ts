@@ -14,7 +14,7 @@ export class EmailService {
   constructor(
     private config: ConfigService,
     private readonly i18n: I18nService,
-  ) { }
+  ) {}
   private readonly logger = new Logger(EmailService.name);
 
   getTransporter() {
