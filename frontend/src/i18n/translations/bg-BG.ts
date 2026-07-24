@@ -424,6 +424,8 @@ export default {
   "admin.config.email.invite-subject.description": "Тема на имейла при покана на нов потребител.",
   "admin.config.email.invite-message": "Съобщение на поканата",
   "admin.config.email.invite-message.description": "Съобщение при покана на нов потребител. {url} се заменя с адреса на поканата, {email} с имейла и {password} с паролата.",
+  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
   "admin.config.email.enable-share-download-notifications": "Активиране на известия при изтегляне",
   "admin.config.email.enable-share-download-notifications.description": "Дали да се изпраща имейл до създателя, когато получател изтегли файл. Изисква SMTP и активирано споделяне с получатели.",
   "admin.config.email.share-download-notification-subject": "Тема на известието за изтегляне",
