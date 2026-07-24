@@ -6,4 +6,7 @@ export class MyShareSecurityDTO {
 
   @Expose()
   maxViews: number;
+
+  @Expose()
+  restrictToRecipients: boolean;
 }
