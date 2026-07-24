@@ -264,6 +264,8 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "الاسم",
   "upload.filelist.size": "الحجم",
+  "upload.filelist.estimating": "Estimating...",
+  "upload.filelist.remaining": "{time} remaining",
   // showCreateUploadModal.tsx
   "upload.modal.title": "إنشاء مشاركة",
   "upload.modal.link.error.invalid": "يمكن أن يحتوي فقط على الأحرف والأرقام والشرطات السفلية والواصلات",
@@ -375,6 +377,11 @@ export default {
   "admin.config.appearance.theme-radius.description": "استدارة الحواف الافتراضية المستخدمة في مكونات Mantine.",
   "admin.config.appearance.custom-css": "CSS مخصص",
   "admin.config.appearance.custom-css.description": "CSS عام يُطبَّق على الواجهة. استخدمه بحذر، فالقيم غير الصحيحة قد تؤثر على الواجهة.",
+  "admin.config.appearance.upload-progress-style": "Upload progress style",
+  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
+  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "رابط التطبيق",
   "admin.config.general.app-url.description": "الرابط الذي تكون مشاركة Pingvin صالحة عليه",
   "admin.config.general.secure-cookies": "Secure cookies",
