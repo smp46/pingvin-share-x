@@ -257,8 +257,24 @@ const AdminConfigInput = ({
             }}
             disabled={!configVariable.allowEdit}
             data={[
-              { value: "circle", label: t("admin.config.appearance.upload-progress-style.circle") },
-              { value: "percentage-time", label: t("admin.config.appearance.upload-progress-style.percentage-time") },
+              {
+                value: "circle",
+                label: t(
+                  "admin.config.appearance.upload-progress-style.circle",
+                ),
+              },
+              {
+                value: "circle-percentage",
+                label: t(
+                  "admin.config.appearance.upload-progress-style.circle-percentage",
+                ),
+              },
+              {
+                value: "percentage-time",
+                label: t(
+                  "admin.config.appearance.upload-progress-style.percentage-time",
+                ),
+              },
             ]}
             value={form.values.stringValue}
             placeholder={configVariable.defaultValue}

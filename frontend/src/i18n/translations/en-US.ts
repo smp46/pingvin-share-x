@@ -494,6 +494,7 @@ export default {
   "admin.config.appearance.upload-progress-style.description":
     "Choose how upload progress is displayed in the file list.",
   "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage text inside",
   "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "App URL",
   "admin.config.general.app-url.description":

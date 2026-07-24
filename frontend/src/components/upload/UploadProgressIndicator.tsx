@@ -4,11 +4,11 @@ import { TbCircleCheck } from "react-icons/tb";
 import { HoverTip } from "../core/HoverTip";
 import { useIntl } from "react-intl";
 import useConfig from "../../hooks/config.hook";
-
 const UploadProgressIndicator = ({ progress }: { progress: number }) => {
   const intl = useIntl();
   const config = useConfig();
-  const progressStyle = config.get("appearance.uploadProgressStyle") ?? "circle";
+  const progressStyle =
+    config.get("appearance.uploadProgressStyle") ?? "circle";
   const startTimeRef = useRef<number | null>(null);
   const [remainingSeconds, setRemainingSeconds] = useState<number | null>(null);
 
@@ -75,6 +75,31 @@ const UploadProgressIndicator = ({ progress }: { progress: number }) => {
           />
         </HoverTip>
       );
+    } else if (progressStyle === "circle-percentage") {
+      return (
+        <HoverTip label={tooltipLabel}>
+          <div
+            style={{
+              display: "inline-flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: 40,
+              height: 40,
+            }}
+          >
+            <RingProgress
+              sections={[{ value: progress, color: "victoria" }]}
+              thickness={3}
+              size={40}
+              label={
+                <Text size="xs" color="victoria" weight={500} align="center">
+                  {Math.min(Math.round(progress), 99)}%
+                </Text>
+              }
+            />
+          </div>
+        </HoverTip>
+      );
     } else {
       return (
         <Text size="sm" color="dimmed" style={{ whiteSpace: "nowrap" }}>
@@ -83,8 +108,38 @@ const UploadProgressIndicator = ({ progress }: { progress: number }) => {
       );
     }
   } else if (progress >= 100) {
+    if (progressStyle === "circle-percentage") {
+      return (
+        <div
+          style={{
+            display: "inline-flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: 40,
+            height: 40,
+          }}
+        >
+          <TbCircleCheck color="green" size={35} />
+        </div>
+      );
+    }
     return <TbCircleCheck color="green" size={22} />;
   } else {
+    if (progressStyle === "circle-percentage") {
+      return (
+        <div
+          style={{
+            display: "inline-flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: 40,
+            height: 40,
+          }}
+        >
+          <Loader color="red" size={30} />
+        </div>
+      );
+    }
     return <Loader color="red" size={19} />;
   }
 };
