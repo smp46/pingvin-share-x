@@ -264,6 +264,8 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "이름",
   "upload.filelist.size": "크기",
+  "upload.filelist.estimating": "Estimating...",
+  "upload.filelist.remaining": "{time} remaining",
   // showCreateUploadModal.tsx
   "upload.modal.title": "공유 생성",
   "upload.modal.link.error.invalid": "문자, 숫자, 밑줄 및 하이픈만 포함할 수 있습니다",
@@ -375,6 +377,11 @@ export default {
   "admin.config.appearance.theme-radius.description": "Mantine 컴포넌트에 사용되는 기본 모서리 반경입니다.",
   "admin.config.appearance.custom-css": "사용자 지정 CSS",
   "admin.config.appearance.custom-css.description": "프런트엔드에 적용되는 전역 CSS입니다. 잘못된 CSS는 UI에 영향을 줄 수 있으니 주의해서 사용하세요.",
+  "admin.config.appearance.upload-progress-style": "Upload progress style",
+  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
+  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "앱 URL",
   "admin.config.general.app-url.description": "Pingvin Share를 사용할 수 있는 URL",
   "admin.config.general.secure-cookies": "Secure cookies",
