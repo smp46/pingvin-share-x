@@ -424,6 +424,8 @@ export default {
   "admin.config.email.invite-subject.description": "A kiküldött e-mail tárgya, amikor egy rendszergazda meghív egy felhasználót.",
   "admin.config.email.invite-message": "Meghívó szövege",
   "admin.config.email.invite-message.description": "Üzenet, amely akkor kerül kiküldésre, amikor egy admin meghív egy új felhasználót. A {url} helyére a meghívás URL hivatkozása, a {email} helyére az e-mail cím, a {password} helyére pedig a felhasználó jelszava kerül.",
+  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
   "admin.config.email.enable-share-download-notifications": "Letöltési értesítések engedélyezése",
   "admin.config.email.enable-share-download-notifications.description": "Meghatározza, hogy küldjön-e a rendszer e-mailt a megosztás létrehozójának, amikor egy e-mail címzett letölt egy fájlt. Ehhez SMTP és e-mailes címzett-megosztás szükséges.",
   "admin.config.email.share-download-notification-subject": "Letöltési értesítés tárgya",
