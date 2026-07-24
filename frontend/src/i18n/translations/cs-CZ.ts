@@ -264,6 +264,8 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "Název",
   "upload.filelist.size": "Velikost",
+  "upload.filelist.estimating": "Estimating...",
+  "upload.filelist.remaining": "{time} remaining",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Vytvořit sdílení",
   "upload.modal.link.error.invalid": "Může obsahovat pouze písmena, číslice, podtržítka a pomlčky",
@@ -375,6 +377,11 @@ export default {
   "admin.config.appearance.theme-radius.description": "Výchozí poloměr zaoblení používaný komponentami Mantine.",
   "admin.config.appearance.custom-css": "Vlastní CSS",
   "admin.config.appearance.custom-css.description": "Globální CSS použité na frontend. Používejte opatrně; neplatné CSS může ovlivnit rozhraní.",
+  "admin.config.appearance.upload-progress-style": "Upload progress style",
+  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
+  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "URL aplikace",
   "admin.config.general.app-url.description": "Na kterém URL je Pingvin Share k dispozici",
   "admin.config.general.secure-cookies": "Bezpečné cookies",
