@@ -264,6 +264,8 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "ชื่อ",
   "upload.filelist.size": "ขนาด",
+  "upload.filelist.estimating": "Estimating...",
+  "upload.filelist.remaining": "{time} remaining",
   // showCreateUploadModal.tsx
   "upload.modal.title": "สร้างการแชร์",
   "upload.modal.link.error.invalid": "สามารถใช้ได้เฉพาะตัวอักษร ตัวเลข ขีดล่าง และขีดเส้น",
@@ -375,6 +377,11 @@ export default {
   "admin.config.appearance.theme-radius.description": "ค่าความโค้งมุมเริ่มต้นที่ใช้โดยคอมโพเนนต์ Mantine",
   "admin.config.appearance.custom-css": "CSS แบบกำหนดเอง",
   "admin.config.appearance.custom-css.description": "CSS ส่วนกลางที่ใช้กับหน้าเว็บส่วนหน้า ใช้อย่างระมัดระวัง เพราะ CSS ที่ไม่ถูกต้องอาจกระทบหน้าตาได้",
+  "admin.config.appearance.upload-progress-style": "Upload progress style",
+  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
+  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "URL ของแอพ",
   "admin.config.general.app-url.description": "URL ที่สามารถเข้าถึงแอพพลิเคชัน Pingvin Share ได้",
   "admin.config.general.secure-cookies": "Secure cookies",
