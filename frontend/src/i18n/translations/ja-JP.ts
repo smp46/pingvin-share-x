@@ -424,6 +424,8 @@ export default {
   "admin.config.email.invite-subject.description": "管理者がユーザーを招待するときに送信されるメールの件名。",
   "admin.config.email.invite-message": "無効な本文",
   "admin.config.email.invite-message.description": "管理者がユーザーを招待したときに送信されるメッセージ。{url}は招待URLに、{email}はメールアドレスに、{password}はユーザーのパスワードに置き換えられます。",
+  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
   "admin.config.email.enable-share-download-notifications": "Enable download notifications",
   "admin.config.email.enable-share-download-notifications.description": "Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.",
   "admin.config.email.share-download-notification-subject": "Download notification subject",
