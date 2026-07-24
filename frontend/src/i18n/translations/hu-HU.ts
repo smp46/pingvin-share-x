@@ -264,6 +264,8 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "Megnevezés",
   "upload.filelist.size": "Méret",
+  "upload.filelist.estimating": "Estimating...",
+  "upload.filelist.remaining": "{time} remaining",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Megosztás létrehozása",
   "upload.modal.link.error.invalid": "Csak betű, szám, aláhúzás és kötőjel karaktereket tartalmazhat",
@@ -375,6 +377,11 @@ export default {
   "admin.config.appearance.theme-radius.description": "A Mantine komponensek által használt alapértelmezett sarokkerekítés.",
   "admin.config.appearance.custom-css": "Egyéni CSS",
   "admin.config.appearance.custom-css.description": "A frontendhez alkalmazott globális CSS. Óvatosan használd; az érvénytelen CSS hatással lehet a felületre.",
+  "admin.config.appearance.upload-progress-style": "Upload progress style",
+  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
+  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "Alkalmazás URL hivatkozás",
   "admin.config.general.app-url.description": "A Pingvin Share megosztáskezelőre mutató hivatkozás",
   "admin.config.general.secure-cookies": "Biztonságos sütik",
