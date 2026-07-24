@@ -424,6 +424,8 @@ export default {
   "admin.config.email.invite-subject.description": "Assumpte del correu enviat quan un administrador convida un usuari.",
   "admin.config.email.invite-message": "Missatge de la invitació",
   "admin.config.email.invite-message.description": "Missatge que s'envia quan un administrador convida un usuari. {url} se substituirà per la URL d'invitació, {email} pel correu i {password} per la contrasenya de l'usuari.",
+  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
   "admin.config.email.enable-share-download-notifications": "Activar les notificacions de descàrrega",
   "admin.config.email.enable-share-download-notifications.description": "Si s'ha d'enviar un correu al creador de la compartició quan un destinatari del correu descarrega un fitxer. Això requereix l'SMTP i la compartició de destinataris per correu.",
   "admin.config.email.share-download-notification-subject": "Assumpte de la notificació de descàrrega",
