@@ -424,6 +424,8 @@ export default {
   "admin.config.email.invite-subject.description": "管理员邀请用户时发送邮件的主题。",
   "admin.config.email.invite-message": "邀请邮件内容",
   "admin.config.email.invite-message.description": "管理员邀请用户时发送的邮件内容。{url} 将替换为邀请链接，{email} 将替换为用户邮箱地址，{password} 将替换为用户密码。",
+  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
   "admin.config.email.enable-share-download-notifications": "启用下载通知",
   "admin.config.email.enable-share-download-notifications.description": "收件人下载文件后，是否通过邮件通知分享创建者。仅在启用 SMTP 和邮件分享功能后才能开启。",
   "admin.config.email.share-download-notification-subject": "下载通知邮件主题",
