@@ -6,6 +6,7 @@
   "notEnoughSpace": "Not enough space on the server",
   "unexpectedChunk": "Unexpected chunk received",
   "maxSizeExceeded": "Max share size exceeded",
+  "storageQuotaExceeded": "Your storage quota has been exceeded",
   "zipError": "Error creating ZIP file",
   "s3DeleteError": "Could not delete file from S3",
   "s3UploadInitError": "Failed to initialize multipart upload.",

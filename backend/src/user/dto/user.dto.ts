@@ -48,6 +48,13 @@ export class UserDTO {
   shareSizeLimit?: string;
 
   @Expose()
+  @IsOptional()
+  @Matches(/^[1-9][0-9]*$/, {
+    message: "storageQuotaLimit must be greater than 0",
+  })
+  storageQuotaLimit?: string;
+
+  @Expose()
   totpVerified: boolean;
 
   from(partial: Partial<UserDTO>) {

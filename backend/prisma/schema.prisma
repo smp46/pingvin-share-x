@@ -18,6 +18,7 @@ model User {
   isAdmin  Boolean @default(false)
   ldapDN   String? @unique
   shareSizeLimit String?
+  storageQuotaLimit String?
 
   shares        Share[]
   refreshTokens RefreshToken[]
