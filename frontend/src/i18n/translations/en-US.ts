@@ -492,7 +492,7 @@ export default {
     "Global CSS applied to the frontend. Use carefully, as invalid CSS may affect the UI.",
   "admin.config.appearance.upload-progress-style": "Upload progress style",
   "admin.config.appearance.upload-progress-style.description":
-    "Choose how upload progress is displayed in the file list",
+    "Choose how upload progress is displayed in the file list.",
   "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
   "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "App URL",
