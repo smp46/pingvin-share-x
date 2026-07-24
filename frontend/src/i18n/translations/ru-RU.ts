@@ -424,6 +424,8 @@ export default {
   "admin.config.email.invite-subject.description": "Тема письма, которое отправляется, когда администратор приглашает пользователя.",
   "admin.config.email.invite-message": "Сообщение с приглашением",
   "admin.config.email.invite-message.description": "Сообщение приглашения. {url} будет заменён ссылкой приглашения, а {password} паролем.",
+  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
   "admin.config.email.enable-share-download-notifications": "Включить уведомления о загрузке",
   "admin.config.email.enable-share-download-notifications.description": "Отправлять письмо создателю сообщения, когда получатель электронной почты скачивает файл. Это требует SMTP и email получателя.",
   "admin.config.email.share-download-notification-subject": "Загрузить тему уведомления",
