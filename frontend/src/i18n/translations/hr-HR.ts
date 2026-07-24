@@ -424,6 +424,8 @@ export default {
   "admin.config.email.invite-subject.description": "Predmet emaila koji se šalje kada administrator pozove korisnika.",
   "admin.config.email.invite-message": "Poruka pozivnice",
   "admin.config.email.invite-message.description": "Poruka koja se šalje kada administrator pozove korisnika. {url} će biti zamijenjen poveznicom za poziv, {email} emailom, a {password} lozinkom korisnika.",
+  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
   "admin.config.email.enable-share-download-notifications": "Enable download notifications",
   "admin.config.email.enable-share-download-notifications.description": "Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.",
   "admin.config.email.share-download-notification-subject": "Download notification subject",
