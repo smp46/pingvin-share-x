@@ -264,6 +264,8 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "ファイル名",
   "upload.filelist.size": "サイズ",
+  "upload.filelist.estimating": "Estimating...",
+  "upload.filelist.remaining": "{time} remaining",
   // showCreateUploadModal.tsx
   "upload.modal.title": "共有を作成",
   "upload.modal.link.error.invalid": "文字、数字、アンダースコア、ハイフンのみ使用できます",
@@ -375,6 +377,11 @@ export default {
   "admin.config.appearance.theme-radius.description": "Mantine コンポーネントで使用する既定の角丸です。",
   "admin.config.appearance.custom-css": "カスタム CSS",
   "admin.config.appearance.custom-css.description": "フロントエンドに適用されるグローバル CSS。無効な CSS は UI に影響するため注意して使用してください。",
+  "admin.config.appearance.upload-progress-style": "Upload progress style",
+  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
+  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "アプリのURL",
   "admin.config.general.app-url.description": "Pingvin Shareで利用できるURL",
   "admin.config.general.secure-cookies": "セキュアクッキー",
