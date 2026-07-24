@@ -66,6 +66,11 @@ export const configVariables = {
       defaultValue: "",
       secret: false,
     },
+    uploadProgressStyle: {
+      type: "string",
+      defaultValue: "circle",
+      secret: false,
+    },
   },
   share: {
     allowRegistration: {
