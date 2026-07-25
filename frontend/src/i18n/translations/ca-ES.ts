@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "Registrar-se",
   "navbar.links.shares": "Les meves comparticions",
   "navbar.links.reverse": "Comparticions inverses",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "El meu compte",
   "navbar.avatar.admin": "Administració",
   "navbar.avatar.signout": "Tancar sessió",
@@ -144,6 +145,9 @@ export default {
   "account.shares.table.createdAt": "Creat el",
   "account.shares.table.size": "Mida",
   "account.shares.table.password-protected": "Protegit amb contrasenya",
+  "account.shares.table.recipients": "Recipients",
+  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
+  "account.shares.table.shared-with-recipients": "Shared with recipients",
   "account.shares.table.visitor-count": "{count} de {max}",
   "account.shares.table.expiry-never": "Mai",
   "account.shares.modal.share-informations": "Informació de la compartició",
@@ -153,6 +157,14 @@ export default {
   "account.shares.modal.delete.title": "Suprimir compartició: {share}",
   "account.shares.modal.delete.description": "Realment voleu suprimir aquesta compartició?",
   // END /account/shares
+
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Comparticions inverses",
@@ -295,6 +307,7 @@ export default {
   "upload.modal.accordion.email.title": "Destinataris per correu",
   "upload.modal.accordion.email.placeholder": "Introduïu els destinataris",
   "upload.modal.accordion.email.invalid-email": "Adreça de correu no vàlida",
+  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
   "upload.modal.accordion.security.title": "Opcions de seguretat",
   "upload.modal.accordion.security.password.label": "Protecció amb contrasenya",
   "upload.modal.accordion.security.password.placeholder": "Sense contrasenya",
@@ -319,6 +332,9 @@ export default {
   "share.error.not-found.description": "La compartició que busqueu no existeix.",
   "share.error.access-denied.title": "Compartició privada",
   "share.error.access-denied.description": "El compte actual no té permís per accedir a aquesta compartició",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.title": "Cal contrasenya",
   "share.modal.password.description": "Introduïu la contrasenya per accedir a aquesta compartició.",
   "share.modal.password": "Contrasenya",
@@ -467,6 +483,8 @@ export default {
   "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
   "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Permetre aos administradors accedir a totes les comparticions, fins i tot si estan protegides amb contrasenya, caducades o suprimides.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "Període de retenció de fitxers",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Activar",
