@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "Зарегистрироваться",
   "navbar.links.shares": "Мои загрузки",
   "navbar.links.reverse": "Обратные загрузки",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Мой аккаунт",
   "navbar.avatar.admin": "Администрирование",
   "navbar.avatar.signout": "Выйти",
@@ -144,6 +145,9 @@ export default {
   "account.shares.table.createdAt": "Создан",
   "account.shares.table.size": "Размер",
   "account.shares.table.password-protected": "Защищено паролем",
+  "account.shares.table.recipients": "Recipients",
+  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
+  "account.shares.table.shared-with-recipients": "Shared with recipients",
   "account.shares.table.visitor-count": "{count} из {max}",
   "account.shares.table.expiry-never": "Никогда",
   "account.shares.modal.share-informations": "Сведения",
@@ -153,6 +157,14 @@ export default {
   "account.shares.modal.delete.title": "Удалить раздачу: {share}",
   "account.shares.modal.delete.description": "Вы действительно хотите удалить эту загрузку?",
   // END /account/shares
+
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Обратные загрузки",
@@ -295,6 +307,7 @@ export default {
   "upload.modal.accordion.email.title": "Получатели письма",
   "upload.modal.accordion.email.placeholder": "Получатели e-mail",
   "upload.modal.accordion.email.invalid-email": "Недопустимый адрес электронной почты",
+  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
   "upload.modal.accordion.security.title": "Параметры безопасности",
   "upload.modal.accordion.security.password.label": "Защита паролем",
   "upload.modal.accordion.security.password.placeholder": "Без пароля",
@@ -319,6 +332,9 @@ export default {
   "share.error.not-found.description": "Страница, которую вы ищете, не существует.",
   "share.error.access-denied.title": "Приватное доступ",
   "share.error.access-denied.description": "У текущей учетной записи нет разрешения на доступ к этому ресурсу",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.title": "Требуется пароль",
   "share.modal.password.description": "Пожалуйста, введите пароль для доступа к этому ресурсу.",
   "share.modal.password": "Пароль",
@@ -467,6 +483,8 @@ export default {
   "admin.config.share.reverse-share-simple-only": "Принудительно использовать простой режим общего доступа",
   "admin.config.share.reverse-share-simple-only.description": "Принудительно создавать обратные доли в простом режиме. Если отключено, создатель обратной доли может выбирать между простым и продвинутым режимом.",
   "admin.config.share.allow-admin-access-all-shares.description": "Предоставьте администраторам доступ ко всем общим ресурсам, даже если они защищены паролем, срок их действия истек или они удалены.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "Срок хранения файлов",
   "admin.config.share.file-retention-period.description": "Как долго файлы хранятся по истечении или удаляются. Полезно только в том случае, если опция «Разрешить администратору доступ ко всем ресурсам» также включена. Установите значение -1 для сохранения файлов навсегда.",
   "admin.config.smtp.enabled": "Включено",
