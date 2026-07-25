@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "註冊",
   "navbar.links.shares": "我的分享",
   "navbar.links.reverse": "回傳分享",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "帳號設定",
   "navbar.avatar.admin": "管理",
   "navbar.avatar.signout": "登出",
@@ -144,6 +145,9 @@ export default {
   "account.shares.table.createdAt": "創建於",
   "account.shares.table.size": "檔案大小",
   "account.shares.table.password-protected": "密碼保護",
+  "account.shares.table.recipients": "Recipients",
+  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
+  "account.shares.table.shared-with-recipients": "Shared with recipients",
   "account.shares.table.visitor-count": "{count} / {max}",
   "account.shares.table.expiry-never": "永不",
   "account.shares.modal.share-informations": "分享資訊",
@@ -153,6 +157,14 @@ export default {
   "account.shares.modal.delete.title": "刪除： {share}",
   "account.shares.modal.delete.description": "您真的想刪除這個分享嗎？",
   // END /account/shares
+
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "回傳分享",
@@ -295,6 +307,7 @@ export default {
   "upload.modal.accordion.email.title": "Email提醒",
   "upload.modal.accordion.email.placeholder": "收件人Email地址",
   "upload.modal.accordion.email.invalid-email": "Email地址不可用",
+  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
   "upload.modal.accordion.security.title": "安全性選項",
   "upload.modal.accordion.security.password.label": "密碼保護",
   "upload.modal.accordion.security.password.placeholder": "無密碼",
@@ -319,6 +332,9 @@ export default {
   "share.error.not-found.description": "分享檔案遺失了",
   "share.error.access-denied.title": "私人分享",
   "share.error.access-denied.description": "您沒有權限存取此檔案",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.title": "需要密碼",
   "share.modal.password.description": "請輸入密碼取得此分享。",
   "share.modal.password": "密碼",
@@ -467,6 +483,8 @@ export default {
   "admin.config.share.reverse-share-simple-only": "強制將回傳分享建立為簡易模式",
   "admin.config.share.reverse-share-simple-only.description": "強制將回傳分享建立為簡易模式。如果停用此功能，回傳分享的建立者可選擇簡易模式或進階模式。",
   "admin.config.share.allow-admin-access-all-shares.description": "允許管理員存取所有分享，即使該分享已設定密碼、已過期或已刪除。",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "檔案保留期限",
   "admin.config.share.file-retention-period.description": "分享過期或刪除後，檔案保留的時間。僅在同時啟用「允許管理員存取所有分享」時有效。設為 -1 表示永久保留檔案。",
   "admin.config.smtp.enabled": "啟用",
