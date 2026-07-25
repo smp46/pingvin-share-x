@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "ثبت نام",
   "navbar.links.shares": "اشتراک‌های من",
   "navbar.links.reverse": "اشتراک‌های معکوس",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "حساب من",
   "navbar.avatar.admin": "مدیریت",
   "navbar.avatar.signout": "خروج",
@@ -144,6 +145,9 @@ export default {
   "account.shares.table.createdAt": "ایجاد شده در",
   "account.shares.table.size": "حجم",
   "account.shares.table.password-protected": "محافظت‌شده با رمز عبور",
+  "account.shares.table.recipients": "Recipients",
+  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
+  "account.shares.table.shared-with-recipients": "Shared with recipients",
   "account.shares.table.visitor-count": "{count} از {max}",
   "account.shares.table.expiry-never": "هرگز",
   "account.shares.modal.share-informations": "اطلاعات اشتراک",
@@ -153,6 +157,14 @@ export default {
   "account.shares.modal.delete.title": "حذف اشتراک: {share}",
   "account.shares.modal.delete.description": "آیا واقعاً می‌خواهید این اشتراک را حذف کنید؟",
   // END /account/shares
+
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "اشتراک‌های معکوس",
@@ -295,6 +307,7 @@ export default {
   "upload.modal.accordion.email.title": "ایمیل گیرندگان",
   "upload.modal.accordion.email.placeholder": "ایمیل گیرندگان را وارد کنید",
   "upload.modal.accordion.email.invalid-email": "آدرس ایمیل نامعتبر",
+  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
   "upload.modal.accordion.security.title": "گزینه‌های امنیتی",
   "upload.modal.accordion.security.password.label": "محافظت با رمز عبور",
   "upload.modal.accordion.security.password.placeholder": "بدون رمز عبور",
@@ -319,6 +332,9 @@ export default {
   "share.error.not-found.description": "اشتراکی که دنبال آن هستید وجود ندارد.",
   "share.error.access-denied.title": "اشتراک خصوصی",
   "share.error.access-denied.description": "حساب فعلی اجازه دسترسی به این اشتراک را ندارد",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.title": "رمز عبور لازم است",
   "share.modal.password.description": "لطفاً رمز عبور را برای دسترسی به این اشتراک وارد کنید.",
   "share.modal.password": "رمز عبور",
@@ -467,6 +483,8 @@ export default {
   "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
   "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "اجازه می‌دهد مدیران به همه اشتراک‌ها دسترسی داشته باشند، حتی اگر با رمز عبور محافظت شده، منقضی یا حذف شده باشند.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "دوره نگهداری فایل",
   "admin.config.share.file-retention-period.description": "فایل‌ها بعد از انقضا یا حذف اشتراک تا چه مدت نگه داشته شوند. فقط در صورتی مفید است که 'اجازه دسترسی مدیر به همه اشتراک‌ها' نیز فعال باشد. برای نگهداری همیشگی مقدار -1 قرار دهید.",
   "admin.config.smtp.enabled": "فعال",
