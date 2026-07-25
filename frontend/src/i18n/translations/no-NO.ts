@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "Registrer deg",
   "navbar.links.shares": "Mine delinger",
   "navbar.links.reverse": "Omvendte delinger",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Min konto",
   "navbar.avatar.admin": "Administrasjon",
   "navbar.avatar.signout": "Logg ut",
@@ -144,6 +145,9 @@ export default {
   "account.shares.table.createdAt": "Opprettet den",
   "account.shares.table.size": "Størrelse",
   "account.shares.table.password-protected": "Passordbeskyttet",
+  "account.shares.table.recipients": "Recipients",
+  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
+  "account.shares.table.shared-with-recipients": "Shared with recipients",
   "account.shares.table.visitor-count": "{count} av {max}",
   "account.shares.table.expiry-never": "Aldri",
   "account.shares.modal.share-informations": "Delingsinformasjon",
@@ -153,6 +157,14 @@ export default {
   "account.shares.modal.delete.title": "Slett deling: {share}",
   "account.shares.modal.delete.description": "Vil du virkelig slette denne delingen?",
   // END /account/shares
+
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Omvendte delinger",
@@ -295,6 +307,7 @@ export default {
   "upload.modal.accordion.email.title": "E-postmottakere",
   "upload.modal.accordion.email.placeholder": "Skriv inn e-postmottakere",
   "upload.modal.accordion.email.invalid-email": "Ugyldig e-postadresse",
+  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
   "upload.modal.accordion.security.title": "Sikkerhetsalternativer",
   "upload.modal.accordion.security.password.label": "Passordbeskyttelse",
   "upload.modal.accordion.security.password.placeholder": "Ikke noe passord",
@@ -319,6 +332,9 @@ export default {
   "share.error.not-found.description": "Delingen du leter etter eksisterer ikke.",
   "share.error.access-denied.title": "Privat deling",
   "share.error.access-denied.description": "Den gjeldende kontoen har ikke tilgang til denne delingen",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.title": "Passord kreves",
   "share.modal.password.description": "Vennligst skriv inn passordet for å få tilgang til denne delingen.",
   "share.modal.password": "Passord",
@@ -467,6 +483,8 @@ export default {
   "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
   "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Tillat administratorer å få tilgang til alle delinger, selv om de er passordbeskyttede, utløpte eller slettede.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "Lagringsperiode for filer",
   "admin.config.share.file-retention-period.description": "Hvor lenge filer beholdes etter at en deling har utløpt eller blitt slettet. Kun nyttig dersom 'Tillat administratorer tilgang til alle delinger' også er aktivert. Sett til -1 for å beholde filer for alltid.",
   "admin.config.smtp.enabled": "Aktiver",
