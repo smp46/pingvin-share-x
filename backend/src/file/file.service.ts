@@ -230,6 +230,23 @@ export class FileService {
     }
   }
 
+  async getStorageProvider(shareId: string): Promise<string> {
+    const share = await this.prisma.share.findFirst({
+      where: { id: shareId },
+      select: { storageProvider: true },
+    });
+    return share?.storageProvider || "LOCAL";
+  }
+
+  async getFileName(fileId: string): Promise<string> {
+    const file = await this.prisma.file.findUnique({
+      where: { id: fileId },
+      select: { name: true },
+    });
+    if (!file) throw new BadRequestException("File not found");
+    return file.name;
+  }
+
   private async streamToUint8Array(stream: Readable): Promise<Uint8Array> {
     const chunks: Buffer[] = [];
 

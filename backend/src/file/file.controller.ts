@@ -31,6 +31,65 @@ function getValidRecipientId(recipientId?: string): string | undefined {
 export class FileController {
   constructor(private fileService: FileService) {}
 
+  @Post("upload-init")
+  @SkipThrottle()
+  @UseGuards(IdValidation, CreateShareGuard, StrictShareOwnerGuard)
+  async uploadInit(
+    @Body()
+    body: {
+      id?: string;
+      name: string;
+      totalChunks: number;
+    },
+    @Param("shareId") shareId: string,
+  ) {
+    return await this.fileService.createPreSignedUploadUrls(
+      shareId,
+      body.name,
+      body.totalChunks,
+    );
+  }
+
+  @Post("upload-complete")
+  @SkipThrottle()
+  @UseGuards(IdValidation, CreateShareGuard, StrictShareOwnerGuard)
+  async uploadComplete(
+    @Body()
+    body: {
+      id?: string;
+      name: string;
+      uploadId: string;
+      parts: Array<{ ETag: string; PartNumber: number }>;
+    },
+    @Param("shareId") shareId: string,
+  ) {
+    return await this.fileService.completePreSignedUpload(
+      shareId,
+      body.id,
+      body.name,
+      body.uploadId,
+      body.parts,
+    );
+  }
+
+  @Post("upload-abort")
+  @SkipThrottle()
+  @UseGuards(IdValidation, CreateShareGuard, StrictShareOwnerGuard)
+  async uploadAbort(
+    @Body()
+    body: {
+      name: string;
+      uploadId: string;
+    },
+    @Param("shareId") shareId: string,
+  ) {
+    await this.fileService.abortPreSignedUpload(
+      shareId,
+      body.name,
+      body.uploadId,
+    );
+  }
+
   @Post()
   @SkipThrottle()
   @UseGuards(IdValidation, CreateShareGuard, StrictShareOwnerGuard)
@@ -88,8 +147,24 @@ export class FileController {
     @Query("download") download = "true",
     @Query("recipient") recipientId?: string,
   ) {
-    const file = await this.fileService.get(shareId, fileId);
     const isDownload = download === "true";
+    const storageProvider = await this.fileService.getStorageProvider(shareId);
+
+    if (storageProvider === "S3") {
+      const url = await this.fileService.getPreSignedDownloadUrl(shareId, fileId, isDownload);
+      const fileName = await this.fileService.getFileName(fileId);
+      if (isDownload) {
+        void this.fileService.notifyRecipientDownload(
+          shareId,
+          fileName,
+          getValidRecipientId(recipientId),
+        );
+      }
+      res.redirect(302, url);
+      return;
+    }
+
+    const file = await this.fileService.get(shareId, fileId);
 
     const headers = {
       "Content-Type":
