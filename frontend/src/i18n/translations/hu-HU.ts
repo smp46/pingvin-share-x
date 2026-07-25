@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "Regisztráció",
   "navbar.links.shares": "Megosztásaim",
   "navbar.links.reverse": "Fordított megosztások",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Fiókom",
   "navbar.avatar.admin": "Admin ügyek",
   "navbar.avatar.signout": "Kijelentkezés",
@@ -144,6 +145,9 @@ export default {
   "account.shares.table.createdAt": "Létrehozva",
   "account.shares.table.size": "Méret",
   "account.shares.table.password-protected": "Jelszóval védett",
+  "account.shares.table.recipients": "Recipients",
+  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
+  "account.shares.table.shared-with-recipients": "Shared with recipients",
   "account.shares.table.visitor-count": "{count} a {max}-ból",
   "account.shares.table.expiry-never": "Soha",
   "account.shares.modal.share-informations": "Megosztás adatai",
@@ -153,6 +157,14 @@ export default {
   "account.shares.modal.delete.title": "Megosztás törlése: {share}",
   "account.shares.modal.delete.description": "Biztos abban, hogy törölni kívánja ezt a megosztást?",
   // END /account/shares
+
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Fordított megosztás",
@@ -295,6 +307,7 @@ export default {
   "upload.modal.accordion.email.title": "Email címzettek",
   "upload.modal.accordion.email.placeholder": "Adja meg az email címzetteket",
   "upload.modal.accordion.email.invalid-email": "Érvénytelen emailcím",
+  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
   "upload.modal.accordion.security.title": "Biztonsági beállítások",
   "upload.modal.accordion.security.password.label": "Jelszavas védelem",
   "upload.modal.accordion.security.password.placeholder": "Nincs jelszó",
@@ -319,6 +332,9 @@ export default {
   "share.error.not-found.description": "A keresett megosztás nem létezik.",
   "share.error.access-denied.title": "Privát megosztás",
   "share.error.access-denied.description": "Ez a fiók nem rendelkezik jogosultsággal a megosztás eléréséhez",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.title": "Jelszó szükséges",
   "share.modal.password.description": "Kérjük, adja meg a jelszót a megosztás eléréséhez.",
   "share.modal.password": "Jelszó",
@@ -467,6 +483,8 @@ export default {
   "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
   "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Engedélyezi az adminisztrátorok számára az összes megosztott tartalom elérését, még akkor is, ha azok jelszóval védettek, lejártak vagy töröltek.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "Fájlmegőrzési időszak",
   "admin.config.share.file-retention-period.description": "A megosztás lejáratát követően mennyi ideig kerülnek az állományok megőrzésre. Csak akkor értelmezhető, ha az „Adminisztrátori hozzáférés engedélyezése az összes megosztáshoz” is engedélyezve van. Állítsa -1-re a fájlok végleges megőrzéséhez.",
   "admin.config.smtp.enabled": "Engedélyezés",
