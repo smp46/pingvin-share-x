@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "Registreren",
   "navbar.links.shares": "Mijn gedeelde bestanden",
   "navbar.links.reverse": "Omgekeerd delen",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Mijn account",
   "navbar.avatar.admin": "Beheer",
   "navbar.avatar.signout": "Afmelden",
@@ -144,6 +145,9 @@ export default {
   "account.shares.table.createdAt": "Gemaakt op",
   "account.shares.table.size": "Grootte",
   "account.shares.table.password-protected": "Wachtwoordbeveiligd",
+  "account.shares.table.recipients": "Recipients",
+  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
+  "account.shares.table.shared-with-recipients": "Shared with recipients",
   "account.shares.table.visitor-count": "{count} van {max}",
   "account.shares.table.expiry-never": "Nooit",
   "account.shares.modal.share-informations": "Gegevens delen",
@@ -153,6 +157,14 @@ export default {
   "account.shares.modal.delete.title": "Share verwijderd: {share}",
   "account.shares.modal.delete.description": "Weet u zeker dat u deze share wilt verwijderen?",
   // END /account/shares
+
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Omgekeerde share",
@@ -295,6 +307,7 @@ export default {
   "upload.modal.accordion.email.title": "E-mail van de ontvangers",
   "upload.modal.accordion.email.placeholder": "Voer e-mail ontvangers in",
   "upload.modal.accordion.email.invalid-email": "Ongeldig e-mailadres",
+  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
   "upload.modal.accordion.security.title": "Beveiligingsopties",
   "upload.modal.accordion.security.password.label": "Wachtwoordbeveiling",
   "upload.modal.accordion.security.password.placeholder": "Geen wachtwoord",
@@ -319,6 +332,9 @@ export default {
   "share.error.not-found.description": "De share die u zoekt kan niet gevonden worden.",
   "share.error.access-denied.title": "Privé deel",
   "share.error.access-denied.description": "Dit account heeft geen toestemming om toegang te krijgen tot deze share",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.title": "Wachtwoord vereist",
   "share.modal.password.description": "Voer het wachtwoord in om toegang te krijgen tot deze share.",
   "share.modal.password": "Wachtwoord",
@@ -467,6 +483,8 @@ export default {
   "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
   "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Sta beheerders toe om toegang te krijgen tot alle gedeelde mappen, zelfs als deze met een wachtwoord zijn beveiligd, verlopen zijn of verwijderd zijn.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "Bewaartermijn van bestanden",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Inschakelen",
