@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "Регистрация",
   "navbar.links.shares": "Моите споделяния",
   "navbar.links.reverse": "Реверсивни споделяния",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Моят акаунт",
   "navbar.avatar.admin": "Администрация",
   "navbar.avatar.signout": "Излизане",
@@ -144,6 +145,9 @@ export default {
   "account.shares.table.createdAt": "Създадено на",
   "account.shares.table.size": "Размер",
   "account.shares.table.password-protected": "Защитено с парола",
+  "account.shares.table.recipients": "Recipients",
+  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
+  "account.shares.table.shared-with-recipients": "Shared with recipients",
   "account.shares.table.visitor-count": "{count} от {max}",
   "account.shares.table.expiry-never": "Никога",
   "account.shares.modal.share-informations": "Информация за споделянето",
@@ -153,6 +157,14 @@ export default {
   "account.shares.modal.delete.title": "Изтриване на споделяне: {share}",
   "account.shares.modal.delete.description": "Наистина ли искате да изтриете това споделяне?",
   // END /account/shares
+
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Реверсивни споделяния",
@@ -295,6 +307,7 @@ export default {
   "upload.modal.accordion.email.title": "Получатели по имейл",
   "upload.modal.accordion.email.placeholder": "Въведете имейл адреси",
   "upload.modal.accordion.email.invalid-email": "Невалиден имейл адрес",
+  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
   "upload.modal.accordion.security.title": "Опции за сигурност",
   "upload.modal.accordion.security.password.label": "Защита с парола",
   "upload.modal.accordion.security.password.placeholder": "Без парола",
@@ -319,6 +332,9 @@ export default {
   "share.error.not-found.description": "Споделянето, което търсите, не съществува.",
   "share.error.access-denied.title": "Частно споделяне",
   "share.error.access-denied.description": "Текущият акаунт няма разрешение за достъп до това споделяне",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.title": "Изисква се парола",
   "share.modal.password.description": "Моля, въведете паролата за достъп до това споделяне.",
   "share.modal.password": "Парола",
@@ -467,6 +483,8 @@ export default {
   "admin.config.share.reverse-share-simple-only": "Принудителен опростен режим за обратно споделяне",
   "admin.config.share.reverse-share-simple-only.description": "Принудително създаване на обратните споделяния в опростен режим. Ако е деактивирано, създателят на обратното споделяне може да избира между опростен и разширен режим.",
   "admin.config.share.allow-admin-access-all-shares.description": "Позволява на администраторите достъп до всички споделяния, дори и защитените, изтеклите или изтритите.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "Период на запазване на файловете",
   "admin.config.share.file-retention-period.description": "Колко дълго да се пазят файловете след изтичане или изтриване на споделянето. Полезно е само ако е активирано и „Разрешаване на администраторски достъп до всички споделяния“. Задайте -1, за да се пазят файловете завинаги.",
   "admin.config.smtp.enabled": "Активиране",
