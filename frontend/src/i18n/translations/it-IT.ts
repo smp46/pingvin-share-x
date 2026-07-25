@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "Registrazione",
   "navbar.links.shares": "Le mie condivisioni",
   "navbar.links.reverse": "Richieste di file",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Il mio account",
   "navbar.avatar.admin": "Amministrazione",
   "navbar.avatar.signout": "Esci",
@@ -144,6 +145,9 @@ export default {
   "account.shares.table.createdAt": "Creato il",
   "account.shares.table.size": "Dimensione",
   "account.shares.table.password-protected": "Protetto da password",
+  "account.shares.table.recipients": "Recipients",
+  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
+  "account.shares.table.shared-with-recipients": "Shared with recipients",
   "account.shares.table.visitor-count": "{count} di {max}",
   "account.shares.table.expiry-never": "Mai",
   "account.shares.modal.share-informations": "Condividi le informazioni",
@@ -153,6 +157,14 @@ export default {
   "account.shares.modal.delete.title": "Elimina condivisione {share}",
   "account.shares.modal.delete.description": "Vuoi davvero cancellare questa condivisione?",
   // END /account/shares
+
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Condivisione Inversa",
@@ -295,6 +307,7 @@ export default {
   "upload.modal.accordion.email.title": "Destinatari di posta elettronica",
   "upload.modal.accordion.email.placeholder": "Inserisci le email dei destinatari",
   "upload.modal.accordion.email.invalid-email": "Indirizzo email non valido",
+  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
   "upload.modal.accordion.security.title": "Opzioni di sicurezza",
   "upload.modal.accordion.security.password.label": "Protezione con password",
   "upload.modal.accordion.security.password.placeholder": "Nessuna password",
@@ -319,6 +332,9 @@ export default {
   "share.error.not-found.description": "La condivisione che stai cercando non esiste.",
   "share.error.access-denied.title": "Condivisione privata",
   "share.error.access-denied.description": "L' account non ha il premesso di accedere a questa condivisione",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.title": "Password richiesta",
   "share.modal.password.description": "Per favore inserisci la password per accedere a questa condivisione.",
   "share.modal.password": "Password",
@@ -467,6 +483,8 @@ export default {
   "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
   "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Consente agli amministratori di accedere a tutte le condivisioni, anche se protette da password, scadute o eliminate.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "Periodo di conservazione dei file",
   "admin.config.share.file-retention-period.description": "Per quanto tempo i file vengono conservati dopo la scadenza o l'eliminazione di una condivisione. Utile solo se è abilitata anche l'opzione 'Consenti l'accesso dell'amministratore a tutte le condivisioni'. Imposta su -1 per conservare i file per sempre.",
   "admin.config.smtp.enabled": "Abilita",
