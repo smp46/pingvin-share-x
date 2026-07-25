@@ -48,7 +48,11 @@ export class FileSecurityGuard extends ShareSecurityGuard {
 
     const share = await this._prisma.share.findUnique({
       where: { id: shareId },
-      include: { security: true },
+      include: {
+        security: true,
+        userRecipients: { select: { userId: true } },
+        recipients: { select: { email: true } },
+      },
     });
 
     // If there is no share token the user requests a file directly
@@ -68,6 +72,19 @@ export class FileSecurityGuard extends ShareSecurityGuard {
           !moment(share.expiration).isSame(0))
       ) {
         throw new NotFoundException(this._i18n.t("file.notFound"));
+      }
+
+      if (share.security?.restrictToRecipients) {
+        const user = await this.authenticateUser(context);
+        const isCreator = user && share.creatorId === user.id;
+        const isRecipient = await this.isRecipient(share, user);
+
+        if (!isCreator && !isRecipient) {
+          throw new ForbiddenException(
+            this._i18n.t("share.restrictedToRecipients"),
+            "share_restricted_to_recipients",
+          );
+        }
       }
 
       if (share.security?.password)
