@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "Registreeru",
   "navbar.links.shares": "Minu jagamised",
   "navbar.links.reverse": "Pööratud jagamised",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Minu konto",
   "navbar.avatar.admin": "Administreerimine",
   "navbar.avatar.signout": "Logi välja",
@@ -144,6 +145,9 @@ export default {
   "account.shares.table.createdAt": "Loodud",
   "account.shares.table.size": "Suurus",
   "account.shares.table.password-protected": "Parooliga kaitstud",
+  "account.shares.table.recipients": "Recipients",
+  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
+  "account.shares.table.shared-with-recipients": "Shared with recipients",
   "account.shares.table.visitor-count": "{count} / {max}",
   "account.shares.table.expiry-never": "Mitte kunagi",
   "account.shares.modal.share-informations": "Jagamise andmed",
@@ -153,6 +157,14 @@ export default {
   "account.shares.modal.delete.title": "Kustuta jagamine: {share}",
   "account.shares.modal.delete.description": "Kas soovid tõesti seda jagamist kustutada?",
   // END /account/shares
+
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Tagasijagamine",
@@ -295,6 +307,7 @@ export default {
   "upload.modal.accordion.email.title": "E-kirja saajad",
   "upload.modal.accordion.email.placeholder": "Sisesta e-posti aadressid",
   "upload.modal.accordion.email.invalid-email": "Vigane e-posti aadress",
+  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
   "upload.modal.accordion.security.title": "Turvavalikud",
   "upload.modal.accordion.security.password.label": "Paroolikaitse",
   "upload.modal.accordion.security.password.placeholder": "Parool puudub",
@@ -319,6 +332,9 @@ export default {
   "share.error.not-found.description": "Otsitavat jagamist ei eksisteeri.",
   "share.error.access-denied.title": "Privaatne jagamine",
   "share.error.access-denied.description": "Praegusel kontol puudub luba sellele jagamisele juurde pääseda",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.title": "Parool vajalik",
   "share.modal.password.description": "Palun sisesta parool, et sellele jagamisele juurde pääseda.",
   "share.modal.password": "Parool",
@@ -467,6 +483,8 @@ export default {
   "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
   "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Luba",
