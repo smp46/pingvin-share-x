@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "S’inscrire",
   "navbar.links.shares": "Mes partages",
   "navbar.links.reverse": "Partages inversés",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Mon compte",
   "navbar.avatar.admin": "Administration",
   "navbar.avatar.signout": "Se déconnecter",
@@ -144,6 +145,9 @@ export default {
   "account.shares.table.createdAt": "Créé le",
   "account.shares.table.size": "Taille",
   "account.shares.table.password-protected": "Protégé par un mot de passe",
+  "account.shares.table.recipients": "Recipients",
+  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
+  "account.shares.table.shared-with-recipients": "Shared with recipients",
   "account.shares.table.visitor-count": "{count} sur {max}",
   "account.shares.table.expiry-never": "Jamais",
   "account.shares.modal.share-informations": "Détails du partage",
@@ -153,6 +157,14 @@ export default {
   "account.shares.modal.delete.title": "Supprimer le partage : {share}",
   "account.shares.modal.delete.description": "Voulez-vous vraiment supprimer ce partage ?",
   // END /account/shares
+
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Partages inversés",
@@ -295,6 +307,7 @@ export default {
   "upload.modal.accordion.email.title": "Adresse courriel des destinataires",
   "upload.modal.accordion.email.placeholder": "Saisir les destinataires de ce partage",
   "upload.modal.accordion.email.invalid-email": "Courriel invalide",
+  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
   "upload.modal.accordion.security.title": "Options de sécurité",
   "upload.modal.accordion.security.password.label": "Protection par mot de passe",
   "upload.modal.accordion.security.password.placeholder": "Aucun mot de passe",
@@ -319,6 +332,9 @@ export default {
   "share.error.not-found.description": "Le partage que vous cherchez n’existe pas.",
   "share.error.access-denied.title": "Partage privé",
   "share.error.access-denied.description": "Le compte actuel n'a pas la permission d'accéder à ce partage",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.title": "Mot de passe requis",
   "share.modal.password.description": "Veuillez entrer le mot de passe pour accéder à ce partage.",
   "share.modal.password": "Mot de passe",
@@ -467,6 +483,8 @@ export default {
   "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
   "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Autoriser les administrateurs à accéder à tous les partages, même s'ils sont protégés par un mot de passe, expirés ou supprimés.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "Période de conservation des fichiers",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Activer",
