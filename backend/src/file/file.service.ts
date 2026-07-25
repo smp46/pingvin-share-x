@@ -1,4 +1,4 @@
-import { Inject, Injectable, Logger } from "@nestjs/common";
+import { Inject, Injectable, Logger, BadRequestException } from "@nestjs/common";
 import { CACHE_MANAGER } from "@nestjs/cache-manager";
 import { Cache } from "cache-manager";
 import { LocalFileService } from "./local.service";
@@ -66,6 +66,81 @@ export class FileService {
       where: { id: shareId },
       data: { updatedAt: new Date() },
     });
+  }
+
+  async createPreSignedUploadUrls(
+    shareId: string,
+    fileName: string,
+    totalChunks: number,
+  ) {
+    await this.touchShare(shareId);
+    const share = await this.prisma.share.findFirst({
+      where: { id: shareId },
+      select: { storageProvider: true },
+    });
+    if (share?.storageProvider !== "S3") {
+      return { directToS3: false };
+    }
+    const res = await this.s3FileService.createPreSignedUploadUrls(
+      shareId,
+      fileName,
+      totalChunks,
+    );
+    return { directToS3: true, ...res };
+  }
+
+  async completePreSignedUpload(
+    shareId: string,
+    fileId: string,
+    fileName: string,
+    uploadId: string,
+    parts: Array<{ ETag: string; PartNumber: number }>,
+  ) {
+    await this.touchShare(shareId);
+    const share = await this.prisma.share.findFirst({
+      where: { id: shareId },
+      select: { storageProvider: true },
+    });
+    if (share?.storageProvider !== "S3") {
+      throw new BadRequestException("Pre-signed uploads are only supported for S3 storage.");
+    }
+    return this.s3FileService.completePreSignedUpload(
+      shareId,
+      fileId,
+      fileName,
+      uploadId,
+      parts,
+    );
+  }
+
+  async abortPreSignedUpload(
+    shareId: string,
+    fileName: string,
+    uploadId: string,
+  ) {
+    const share = await this.prisma.share.findFirst({
+      where: { id: shareId },
+      select: { storageProvider: true },
+    });
+    if (share?.storageProvider !== "S3") {
+      throw new BadRequestException("Pre-signed uploads are only supported for S3 storage.");
+    }
+    return this.s3FileService.abortPreSignedUpload(shareId, fileName, uploadId);
+  }
+
+  async getPreSignedDownloadUrl(
+    shareId: string,
+    fileId: string,
+    isDownload: boolean,
+  ): Promise<string> {
+    const share = await this.prisma.share.findFirst({
+      where: { id: shareId },
+      select: { storageProvider: true },
+    });
+    if (share?.storageProvider !== "S3") {
+      throw new BadRequestException("Pre-signed downloads are only supported for S3 storage.");
+    }
+    return this.s3FileService.getPreSignedDownloadUrl(shareId, fileId, isDownload);
   }
 
   async get(shareId: string, fileId: string): Promise<File> {
