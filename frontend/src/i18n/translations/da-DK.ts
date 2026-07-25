@@ -6,6 +6,7 @@ export default {
   "navbar.signup": "Opret bruger",
   "navbar.links.shares": "Mine delte filer",
   "navbar.links.reverse": "Omvendt deling",
+  "navbar.links.received": "Received shares",
   "navbar.avatar.account": "Min bruger",
   "navbar.avatar.admin": "Administration",
   "navbar.avatar.signout": "Log ud",
@@ -144,6 +145,9 @@ export default {
   "account.shares.table.createdAt": "Created on",
   "account.shares.table.size": "Størrelse",
   "account.shares.table.password-protected": "Password protected",
+  "account.shares.table.recipients": "Recipients",
+  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
+  "account.shares.table.shared-with-recipients": "Shared with recipients",
   "account.shares.table.visitor-count": "{count} of {max}",
   "account.shares.table.expiry-never": "Never",
   "account.shares.modal.share-informations": "Share informations",
@@ -153,6 +157,14 @@ export default {
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description": "Ønsker du virkelig at slette denne deling?",
   // END /account/shares
+
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Omvendt deling",
@@ -295,6 +307,7 @@ export default {
   "upload.modal.accordion.email.title": "E-mail modtagere",
   "upload.modal.accordion.email.placeholder": "Indtast e-mail modtagere",
   "upload.modal.accordion.email.invalid-email": "Ugyldig e-mailadresse",
+  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
   "upload.modal.accordion.security.title": "Sikkerhedsindstillinger",
   "upload.modal.accordion.security.password.label": "Adgangskodebeskyttelse",
   "upload.modal.accordion.security.password.placeholder": "Ingen adgangskode",
@@ -319,6 +332,9 @@ export default {
   "share.error.not-found.description": "Den deling, du leder efter, eksisterer ikke.",
   "share.error.access-denied.title": "Privat deling",
   "share.error.access-denied.description": "The current account does not have permission to access this share",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
   "share.modal.password.title": "Adgangskode påkrævet",
   "share.modal.password.description": "Please enter the password to access this share.",
   "share.modal.password": "Adgangskode",
@@ -467,6 +483,8 @@ export default {
   "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
   "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Enable",
