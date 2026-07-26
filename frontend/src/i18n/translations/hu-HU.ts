@@ -145,7 +145,7 @@ export default {
   "account.shares.table.createdAt": "Létrehozva",
   "account.shares.table.size": "Méret",
   "account.shares.table.password-protected": "Jelszóval védett",
-  "account.shares.table.recipients": "Recipients",
+  "account.shares.table.recipients": "Címzettek",
   "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
   "account.shares.table.shared-with-recipients": "Shared with recipients",
   "account.shares.table.visitor-count": "{count} a {max}-ból",
@@ -162,8 +162,8 @@ export default {
   "account.received-shares.title": "Received shares",
   "account.received-shares.title.empty": "No shares received yet",
   "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
-  "account.received-shares.table.from": "From",
-  "account.received-shares.button.open": "Open",
+  "account.received-shares.table.from": "Feladó",
+  "account.received-shares.button.open": "Megnyitás",
   // END /account/received
 
   // /account/reverseShares
@@ -334,7 +334,7 @@ export default {
   "share.error.access-denied.description": "Ez a fiók nem rendelkezik jogosultsággal a megosztás eléréséhez",
   "share.error.restricted.title": "Restricted share",
   "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
-  "share.error.restricted.button": "Log in",
+  "share.error.restricted.button": "Bejelentkezés",
   "share.modal.password.title": "Jelszó szükséges",
   "share.modal.password.description": "Kérjük, adja meg a jelszót a megosztás eléréséhez.",
   "share.modal.password": "Jelszó",
