@@ -12,5 +12,6 @@
   "wrongPassword": "รหัสผ่านผิด",
   "tokenRequired": "จำเป็นต้องใช้โทเค็นการแชร์",
   "privateShare": "เฉพาะผู้สร้างการแชร์ย้อนกลับเท่านั้นที่สามารถเข้าถึงการแชร์นี้ได้",
-  "maxViewsExceeded": "เกินจำนวนการเข้าชมสูงสุด"
+  "maxViewsExceeded": "เกินจำนวนการเข้าชมสูงสุด",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }
