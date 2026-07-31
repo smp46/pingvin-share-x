@@ -12,5 +12,6 @@
   "wrongPassword": "Napačno geslo",
   "tokenRequired": "Žeton za deljenje je obvezen",
   "privateShare": "Samo ustvarjalec obrnjenega deljenja lahko dostopa do tega deljenja",
-  "maxViewsExceeded": "Največje število ogledov je preseženo"
+  "maxViewsExceeded": "Največje število ogledov je preseženo",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }
