@@ -12,5 +12,6 @@
   "wrongPassword": "Contrasenya incorrecta",
   "tokenRequired": "Cal el token de compartició",
   "privateShare": "Només el creador de la compartició inversa pot accedir a aquesta compartició",
-  "maxViewsExceeded": "S'ha superat el nombre màxim de visualitzacions"
+  "maxViewsExceeded": "S'ha superat el nombre màxim de visualitzacions",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }
