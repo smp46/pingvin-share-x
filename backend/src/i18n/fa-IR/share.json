@@ -12,5 +12,6 @@
   "wrongPassword": "رمز عبور اشتباه است",
   "tokenRequired": "نشانه اشتراک لازم است",
   "privateShare": "فقط سازنده اشتراک معکوس می‌تواند به این اشتراک دسترسی داشته باشد",
-  "maxViewsExceeded": "حداکثر بازدید مجاز عبور کرده است"
+  "maxViewsExceeded": "حداکثر بازدید مجاز عبور کرده است",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }
