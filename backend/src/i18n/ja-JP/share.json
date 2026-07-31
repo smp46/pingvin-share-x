@@ -12,5 +12,6 @@
   "wrongPassword": "パスワードが正しくありません",
   "tokenRequired": "共有トークンが必要です",
   "privateShare": "リバース共有の作成者のみがこの共有にアクセスできます",
-  "maxViewsExceeded": "最大閲覧数を超過しました"
+  "maxViewsExceeded": "最大閲覧数を超過しました",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }
