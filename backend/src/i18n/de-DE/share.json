@@ -12,5 +12,6 @@
   "wrongPassword": "Falsches Passwort",
   "tokenRequired": "Freigabe-Token erforderlich",
   "privateShare": "Nur der Ersteller der Reverse-Freigabe kann auf diese Freigabe zugreifen",
-  "maxViewsExceeded": "Maximale Anzahl an Aufrufen überschritten"
+  "maxViewsExceeded": "Maximale Anzahl an Aufrufen überschritten",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }
