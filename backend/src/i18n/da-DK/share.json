@@ -12,5 +12,6 @@
   "wrongPassword": "Forkert adgangskode",
   "tokenRequired": "Delings-token påkrævet",
   "privateShare": "Kun skaberen af den omvendte deling har adgang til denne deling",
-  "maxViewsExceeded": "Maksimalt antal visninger overskredet"
+  "maxViewsExceeded": "Maksimalt antal visninger overskredet",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }
