@@ -12,5 +12,6 @@
   "wrongPassword": "Feil passord",
   "tokenRequired": "Delingstoken kreves",
   "privateShare": "Kun oppretteren av den omvendte delingen har tilgang til denne delingen",
-  "maxViewsExceeded": "Maksimalt antall visninger er overskredet"
+  "maxViewsExceeded": "Maksimalt antall visninger er overskredet",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }
