@@ -12,5 +12,6 @@
   "wrongPassword": "Błędne hasło",
   "tokenRequired": "Token udostępnienia jest wymagany",
   "privateShare": "Tylko twórca odwrotnego udostępnienia ma dostęp do tego udostępnienia",
-  "maxViewsExceeded": "Przekroczono maksymalną liczbę wyświetleń"
+  "maxViewsExceeded": "Przekroczono maksymalną liczbę wyświetleń",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }
