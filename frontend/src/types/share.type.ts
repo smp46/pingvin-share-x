@@ -49,7 +49,8 @@ export type ShareMetaData = {
 export type MyShare = Omit<Share, "hasPassword"> & {
   views: number;
   createdAt: Date;
-  security?: MyShareSecurity;
+  recipients: string[];
+  security: MyShareSecurity;
   removedReason?: string;
 };
 
@@ -65,9 +66,11 @@ export type MyReverseShare = {
 export type ShareSecurity = {
   maxViews?: number;
   password?: string;
+  restrictToRecipients?: boolean;
 };
 
 export type MyShareSecurity = {
   passwordProtected: boolean;
   maxViews?: number;
+  restrictToRecipients: boolean;
 };

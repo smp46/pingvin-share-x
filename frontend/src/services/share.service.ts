@@ -74,6 +74,10 @@ const getMyShares = async (): Promise<MyShare[]> => {
   return (await api.get("shares")).data;
 };
 
+const getReceivedShares = async (): Promise<any[]> => {
+  return (await api.get("shares/received")).data;
+};
+
 const getShareToken = async (id: string, password?: string) => {
   if (!isValidId(id)) throw new Error("Invalid ID");
   await api.post(`/shares/${id}/token`, { password });
@@ -133,6 +137,7 @@ const uploadFile = async (
   },
   chunkIndex: number,
   totalChunks: number,
+  onUploadProgress?: (progressEvent: any) => void,
 ): Promise<FileUploadResponse> => {
   if (!isValidId(shareId)) throw new Error("Invalid Share ID");
   return (
@@ -144,6 +149,7 @@ const uploadFile = async (
         chunkIndex,
         totalChunks,
       },
+      onUploadProgress,
     })
   ).data;
 };
@@ -200,6 +206,7 @@ export default {
   doesFileSupportPreview,
   isShareTextFile,
   getMyShares,
+  getReceivedShares,
   isShareIdAvailable,
   downloadFile,
   removeFile,

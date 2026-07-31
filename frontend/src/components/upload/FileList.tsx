@@ -25,9 +25,10 @@ const renderFileName = (name: string) => {
 };
 
 const getFileNameOrPath = (file: FileListItem) => {
-  const pathName = ("webkitRelativePath" in file && file.webkitRelativePath)
-    ? file.webkitRelativePath
-    : file.name;
+  const pathName =
+    "webkitRelativePath" in file && file.webkitRelativePath
+      ? file.webkitRelativePath
+      : file.name;
   return pathName.replace(/\\/g, "/").replace(/^\//, "");
 };
 
