@@ -12,5 +12,6 @@
   "wrongPassword": "Pogrešna lozinka",
   "tokenRequired": "Token deljenja je obavezan",
   "privateShare": "Samo kreator obrnutog deljenja može pristupiti ovom deljenju",
-  "maxViewsExceeded": "Maksimalan broj pregleda je premašen"
+  "maxViewsExceeded": "Maksimalan broj pregleda je premašen",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }
