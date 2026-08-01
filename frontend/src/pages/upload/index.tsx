@@ -19,7 +19,10 @@ import { FileUpload } from "../../types/File.type";
 import { CreateShare, Share } from "../../types/share.type";
 import toast from "../../utils/toast.util";
 import { useRouter } from "next/router";
-import { getNormalizedFileName, filterDuplicateFiles } from "../../utils/file.util";
+import {
+  getNormalizedFileName,
+  filterDuplicateFiles,
+} from "../../utils/file.util";
 
 const promiseLimit = pLimit(3);
 let errorToastShown = false;
@@ -114,6 +117,19 @@ const Upload = ({
                 },
                 chunkIndex,
                 chunks,
+                (progressEvent) => {
+                  if (progressEvent.total && file.size > 0) {
+                    const chunkProgress =
+                      progressEvent.loaded / progressEvent.total;
+                    const uploadedBytesBeforeThisChunk =
+                      chunkIndex * chunkSize.current;
+                    const uploadedBytesInThisChunk = blob.size * chunkProgress;
+                    const totalUploaded =
+                      uploadedBytesBeforeThisChunk + uploadedBytesInThisChunk;
+                    const overallPercent = (totalUploaded / file.size) * 100;
+                    setFileProgress(Math.min(overallPercent, 99.9));
+                  }
+                },
               )
               .then((response) => {
                 fileId = response.id;
@@ -156,6 +172,7 @@ const Upload = ({
           "share.allowUnauthenticatedShares",
         ),
         enableEmailRecepients: config.get("email.enableShareEmailRecipients"),
+        enableUserRecipients: config.get("share.enableUserRecipients"),
         maxExpiration: user?.isAdmin
           ? { value: 0, unit: "days" }
           : config.get("share.maxExpiration"),
@@ -169,10 +186,10 @@ const Upload = ({
   };
 
   const handleDropzoneFilesChanged = (newFiles: FileUpload[]) => {
-    const filtered = filterDuplicateFiles(
-      newFiles,
-      files,
-      (normalizedName) => toast.error(t("upload.notify.duplicate-skipped", { name: normalizedName }))
+    const filtered = filterDuplicateFiles(newFiles, files, (normalizedName) =>
+      toast.error(
+        t("upload.notify.duplicate-skipped", { name: normalizedName }),
+      ),
     );
     if (filtered.length === 0) return;
 
@@ -218,7 +235,10 @@ const Upload = ({
         const filtered = filterDuplicateFiles(
           [fileUpload],
           files,
-          (normalizedName) => toast.error(t("upload.notify.duplicate-skipped", { name: normalizedName }))
+          (normalizedName) =>
+            toast.error(
+              t("upload.notify.duplicate-skipped", { name: normalizedName }),
+            ),
         );
         if (filtered.length === 0) return;
 

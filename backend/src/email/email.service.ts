@@ -14,7 +14,7 @@ export class EmailService {
   constructor(
     private config: ConfigService,
     private readonly i18n: I18nService,
-  ) { }
+  ) {}
   private readonly logger = new Logger(EmailService.name);
 
   getTransporter() {
@@ -38,23 +38,28 @@ export class EmailService {
     });
   }
 
-  private async sendMail(email: string, subject: string, text: string) {
-      const isHtml = this.config.get("email.sendHtmlEmails");
+  private async sendMail(
+    email: string,
+    subject: string,
+    text: string,
+    replyTo?: string,
+  ) {
+    const isHtml = this.config.get("email.sendHtmlEmails");
 
-      await this.getTransporter()
-        .sendMail({
-          from: `"${this.config.get("general.appName")}" <${this.config.get(
-            "smtp.email",
-          )}>`,
-          to: email,
-          subject: subject,
-          [isHtml ? "html" : "text"]: text,
-        })
-        .catch((e) => {
-          this.logger.error(e);
-          throw new InternalServerErrorException(this.i18n.t("email.sendFailed"));
-        });
-  
+    await this.getTransporter()
+      .sendMail({
+        from: `"${this.config.get("general.appName")}" <${this.config.get(
+          "smtp.email",
+        )}>`,
+        to: email,
+        subject: subject,
+        [isHtml ? "html" : "text"]: text,
+        ...(replyTo && { replyTo }),
+      })
+      .catch((e) => {
+        this.logger.error(e);
+        throw new InternalServerErrorException(this.i18n.t("email.sendFailed"));
+      });
   }
 
   async sendMailToShareRecipients(
@@ -76,6 +81,14 @@ export class EmailService {
     const lang = this.config.get("general.defaultLanguage");
     const locale = this.i18n.translate("email.locale", { lang });
 
+    let replyTo: string | undefined = undefined;
+    if (
+      this.config.get("email.shareRecipientsReplyToCreator") &&
+      creator?.email
+    ) {
+      replyTo = `"${creator.username}" <${creator.email}>`;
+    }
+
     await this.sendMail(
       recipientEmail,
       this.config.get("email.shareRecipientsSubject"),
@@ -85,7 +98,7 @@ export class EmailService {
         .replaceAll(
           "{creator}",
           creator?.username ??
-          this.i18n.t("email.shareRecipientsCreatorFallback"),
+            this.i18n.t("email.shareRecipientsCreatorFallback"),
         )
         .replaceAll("{creatorEmail}", creator?.email ?? "")
         .replaceAll("{shareUrl}", shareUrl)
@@ -99,6 +112,7 @@ export class EmailService {
             ? moment(expiration).locale(locale).fromNow()
             : this.i18n.t("email.shareRecipientsExpiresNeverFallback"),
         ),
+      replyTo,
     );
   }
 

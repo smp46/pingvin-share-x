@@ -1,6 +1,6 @@
 {
   "name": "pingvin-share-backend",
-  "version": "1.21.1",
+  "version": "1.21.2",
   "scripts": {
     "build": "nest build",
     "dev": "cross-env NODE_ENV=development nest start --watch",
@@ -62,7 +62,7 @@
     "rimraf": "^6.0.1",
     "rxjs": "^7.8.2",
     "serialize-javascript": "^7.0.3",
-    "sharp": "^0.34.1",
+    "sharp": "^0.35.3",
     "uuid": "^11.1.1",
     "yaml": "^2.7.1"
   },

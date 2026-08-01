@@ -1,6 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import * as fs from "fs";
-import * as sharp from "sharp";
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const sharp = require("sharp");
 
 const IMAGES_PATH = "../frontend/public/img";
 

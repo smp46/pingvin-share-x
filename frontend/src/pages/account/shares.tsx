@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Center,
+  useMantineTheme,
   Group,
   Space,
   Stack,
@@ -21,7 +22,9 @@ import {
   TbLink,
   TbLock,
   TbTrash,
+  TbUsers,
 } from "react-icons/tb";
+import { FaUserLock } from "react-icons/fa";
 import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
 import showShareInformationsModal from "../../components/share/showShareInformationsModal";
@@ -41,6 +44,7 @@ const MyShares = () => {
   const config = useConfig();
   const { user } = useUser();
   const t = useTranslate();
+  const theme = useMantineTheme();
 
   const [shares, setShares] = useState<MyShare[]>();
 
@@ -82,6 +86,7 @@ const MyShares = () => {
                 <th>
                   <FormattedMessage id="account.shares.table.name" />
                 </th>
+
                 <th>
                   <FormattedMessage id="account.shares.table.visitors" />
                 </th>
@@ -92,16 +97,46 @@ const MyShares = () => {
               </tr>
             </thead>
             <tbody>
-              {shares.map((share) => (
+              {shares.map((share) => {
+                return (
                 <tr key={share.id}>
                   <td>
                     <Group spacing="xs">
                       {share.id}{" "}
                       {share.security?.passwordProtected && (
-                        <TbLock
-                          color="orange"
-                          title={t("account.shares.table.password-protected")}
-                        />
+                        <HoverTip label="Password Protected">
+                          <span style={{ display: "inline-flex" }}>
+                            <TbLock
+                              color="orange"
+                              title={t("account.shares.table.password-protected")}
+                            />
+                          </span>
+                        </HoverTip>
+                      )}
+                      {config.get("share.enableUserRecipients") && (
+                        share.security?.restrictToRecipients ? (
+                          <HoverTip label="Recipients Only">
+                            <span style={{ display: "inline-flex" }}>
+                              <FaUserLock
+                                color={theme.colors.gray[6]}
+                                title={t(
+                                  "account.shares.table.restricted-to-recipients",
+                                )}
+                              />
+                            </span>
+                          </HoverTip>
+                        ) : share.recipients?.length ? (
+                          <HoverTip label="Sent to Recipients">
+                            <span style={{ display: "inline-flex" }}>
+                              <TbUsers
+                                color={theme.colors.gray[6]}
+                                title={t(
+                                  "account.shares.table.shared-with-recipients",
+                                )}
+                              />
+                            </span>
+                          </HoverTip>
+                        ) : null
                       )}
                     </Group>
                   </td>
@@ -225,7 +260,8 @@ const MyShares = () => {
                     </Group>
                   </td>
                 </tr>
-              ))}
+                );
+              })}
             </tbody>
           </Table>
         </Box>

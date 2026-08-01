@@ -66,6 +66,11 @@ export const configVariables = {
       defaultValue: "",
       secret: false,
     },
+    uploadProgressStyle: {
+      type: "string",
+      defaultValue: "circle",
+      secret: false,
+    },
   },
   share: {
     allowRegistration: {
@@ -118,6 +123,11 @@ export const configVariables = {
       secret: false,
     },
     allowAdminAccessAllShares: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    enableUserRecipients: {
       type: "boolean",
       defaultValue: "false",
       secret: false,
@@ -194,6 +204,11 @@ export const configVariables = {
         'Hey!\n\nYou were invited to Pingvin Share. Click this link to accept the invite: {url}\n\nYou can use the email "{email}" and the password "{password}" to sign in.\n\nPingvin Share 🐧',
     },
     enableShareDownloadNotifications: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    shareRecipientsReplyToCreator: {
       type: "boolean",
       defaultValue: "false",
       secret: false,

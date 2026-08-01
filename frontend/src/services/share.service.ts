@@ -13,7 +13,7 @@ import {
 import api from "./api.service";
 
 const isValidId = (id: string) => {
-  return /^[a-zA-Z0-9-]+$/.test(id);
+  return /^[a-zA-Z0-9_-]+$/.test(id);
 };
 
 const list = async (): Promise<MyShare[]> => {
@@ -71,6 +71,10 @@ const expire = async (id: string) => {
 
 const getMyShares = async (): Promise<MyShare[]> => {
   return (await api.get("shares")).data;
+};
+
+const getReceivedShares = async (): Promise<any[]> => {
+  return (await api.get("shares/received")).data;
 };
 
 const getShareToken = async (id: string, password?: string) => {
@@ -132,6 +136,7 @@ const uploadFile = async (
   },
   chunkIndex: number,
   totalChunks: number,
+  onUploadProgress?: (progressEvent: any) => void,
 ): Promise<FileUploadResponse> => {
   if (!isValidId(shareId)) throw new Error("Invalid Share ID");
   return (
@@ -143,6 +148,7 @@ const uploadFile = async (
         chunkIndex,
         totalChunks,
       },
+      onUploadProgress,
     })
   ).data;
 };
@@ -199,6 +205,7 @@ export default {
   doesFileSupportPreview,
   isShareTextFile,
   getMyShares,
+  getReceivedShares,
   isShareIdAvailable,
   downloadFile,
   removeFile,

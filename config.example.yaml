@@ -3,7 +3,7 @@
 
 general:
   #Name of the application
-  appName: Pingvin Share
+  appName: Pingvin Share X
   #On which URL Pingvin Share is available
   appUrl: http://localhost:3000
   #Whether to set the secure flag on cookies. If enabled, the site will not function when accessed over HTTP.
@@ -12,18 +12,21 @@ general:
   showHomePage: "true"
   #Time after which a user must log in again (default: 3 months).
   sessionDuration: 3 months
+  #This applies to all users, each user can still personalise their language in their profile.
+  defaultLanguage: en-US
 appearance:
-  #Mantine primary color used across the UI.
-  #Use one of the named colors: dark, gray, red, pink, grape, violet, indigo, blue, cyan, teal, green, lime, yellow, orange, victoria, custom
+  #Primary color used for buttons, links, and accents. Choose custom to use a color picker override.
   themePrimaryColor: victoria
-  #If themePrimaryColor is set to custom, this hex color will be used as override.
+  #Hex color override used when theme primary color is set to custom.
   themePrimaryColorOverride: ""
-  #Mantine default border radius (xs, sm, md, lg, xl).
+  #Default border radius used by Mantine components.
   themeRadius: sm
-  #Default color scheme for the UI. Options: system, light, dark
+  #Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.
   themeColorScheme: system
-  #Custom CSS that will be injected globally into the frontend. Use carefully, as invalid CSS may impact the UI.
+  #Global CSS applied to the frontend. Use carefully, as invalid CSS may affect the UI.
   customCss: ""
+  #Choose how upload progress is displayed in the file list.
+  uploadProgressStyle: circle
 share:
   #Whether registration is allowed
   allowRegistration: "true"
@@ -31,19 +34,25 @@ share:
   allowUnauthenticatedShares: "false"
   #Maximum share expiration. Set to 0 to allow unlimited expiration.
   maxExpiration: 0 days
+  #The default expiration time selected when creating a new share.
+  defaultExpiration: 7 days
   #Default length for the generated ID of a share. This value is also used to generate links for reverse shares. A value below 8 is not considered secure.
   shareIdLength: "8"
   #Maximum share size
   maxSize: "1000000000"
-  #Adjust the level to balance between file size and compression speed. Valid values range from 0 to 9, with 0 being no compression and 9 being maximum compression.
+  #Adjust the level to balance between file size and compression speed. Valid values range from 0 to 9, with 0 being no compression and 9 being maximum compression. 
   zipCompressionLevel: "9"
   #Adjust the chunk size for your uploads to balance efficiency and reliability according to your internet connection. Smaller chunks can enhance success rates for unstable connections, while larger chunks make uploads faster for stable connections.
   chunkSize: "10000000"
   #The share creation modal automatically appears when a user selects files, eliminating the need to manually click the button.
   autoOpenShareModal: "false"
-  #Whether admins can access all shares without tokens/passwords
+  #Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.
+  reverseShareSimpleOnly: "false"
+  #Allow administrators to access all shares, even if they are password protected, expired or deleted.
   allowAdminAccessAllShares: "false"
-  #How long files are kept after shares expire or are deleted by the uploader.
+  #When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.
+  enableUserRecipients: "false"
+  #How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.
   fileRetentionPeriod: 0 days
 cache:
   #Normally Pingvin Share caches information in memory. If you run multiple instances of Pingvin Share, you need to enable Redis caching to share the cache between the instances.
@@ -55,7 +64,9 @@ cache:
   #Maximum number of items inside the cache.
   maxItems: "1000"
 email:
-  #Whether to allow email sharing with recipients. Only enable this if SMTP is activated.
+  #If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.
+  sendHtmlEmails: "false"
+  #Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.
   enableShareEmailRecipients: "false"
   #Subject of the email which gets sent to the share recipients.
   shareRecipientsSubject: Files shared with you
@@ -70,8 +81,8 @@ email:
     Hey!
 
 
-    {creator} ({creatorEmail}) shared some files with you. You can view or download the
-    files with this link: {shareUrl}
+    {creator} ({creatorEmail}) shared some files with you. You can view or
+    download the files with this link: {shareUrl}
 
 
     The share will expire {expires}.
@@ -121,6 +132,8 @@ email:
     Pingvin Share 🐧
   #Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.
   enableShareDownloadNotifications: "false"
+  #Whether to set the Reply-To header to the email address of the user who created the share.
+  shareRecipientsReplyToCreator: "false"
   #Subject of the email which gets sent to the share creator when a recipient downloads a file.
   shareDownloadNotificationSubject: Your file was downloaded
   #Message which gets sent to the share creator when a recipient downloads a file. Available variables:
@@ -131,6 +144,23 @@ email:
     Hey!
 
     {recipientEmail} downloaded {fileName} from your share: {shareUrl}
+
+    Pingvin Share 🐧
+  #Whether to require users to verify their email address before being able to sign in. This can only be enabled if SMTP is activated.
+  enableEmailVerification: "false"
+  #Subject of the email which gets sent to the user when they sign up.
+  verificationSubject: Verify your Pingvin Share account
+  #Message which gets sent to the user when they sign up. {url} will be replaced with the verification URL.
+  verificationMessage: >-
+    Hey!
+
+
+    You just signed up for Pingvin Share. Click this link to verify your
+    account: {url}
+
+
+    The link expires in 24 hours.
+
 
     Pingvin Share 🐧
 smtp:
@@ -229,7 +259,7 @@ oauth:
   #Client secret of the OpenID Connect OAuth app
   oidc-clientSecret: ""
 s3:
-  #Whether S3 should be used to store the shared files instead of the local file system.
+  #Whether S3 should be used to store the shared files instead of the local file system. WARNING: If ClamAV is active, files will be temporarily downloaded from S3 to be checked.
   enabled: "false"
   #The URL of the S3 bucket.
   endpoint: ""

@@ -7,6 +7,7 @@ export default {
 
   "navbar.links.shares": "My shares",
   "navbar.links.reverse": "Reverse shares",
+  "navbar.links.received": "Received shares",
 
   "navbar.avatar.account": "My account",
   "navbar.avatar.admin": "Administration",
@@ -174,6 +175,9 @@ export default {
   "account.shares.table.createdAt": "Created on",
   "account.shares.table.size": "Size",
   "account.shares.table.password-protected": "Password protected",
+  "account.shares.table.recipients": "Recipients",
+  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
+  "account.shares.table.shared-with-recipients": "Shared with recipients",
   "account.shares.table.visitor-count": "{count} of {max}",
   "account.shares.table.expiry-never": "Never",
 
@@ -188,6 +192,15 @@ export default {
     "Do you really want to delete this share?",
 
   // END /account/shares
+
+  // /account/received
+  "account.received-shares.title": "Received shares",
+  "account.received-shares.title.empty": "No shares received yet",
+  "account.received-shares.description.empty":
+    "Shares sent to your email address will appear here.",
+  "account.received-shares.table.from": "From",
+  "account.received-shares.button.open": "Open",
+  // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Reverse shares",
@@ -339,6 +352,8 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "Name",
   "upload.filelist.size": "Size",
+  "upload.filelist.estimating": "Estimating...",
+  "upload.filelist.remaining": "{time} remaining",
 
   // showCreateUploadModal.tsx
   "upload.modal.title": "Create Share",
@@ -377,6 +392,8 @@ export default {
   "upload.modal.accordion.email.title": "Email recipients",
   "upload.modal.accordion.email.placeholder": "Enter email recipients",
   "upload.modal.accordion.email.invalid-email": "Invalid email address",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Restrict access to these recipients only (they must sign in to access it)",
 
   "upload.modal.accordion.security.title": "Security options",
   "upload.modal.accordion.security.password.label": "Password protection",
@@ -410,6 +427,10 @@ export default {
   "share.error.access-denied.title": "Private share",
   "share.error.access-denied.description":
     "The current account does not have permission to access this share",
+  "share.error.restricted.title": "Restricted share",
+  "share.error.restricted.description":
+    "This share is restricted to specific recipients. Please log in to access it.",
+  "share.error.restricted.button": "Log in",
 
   "share.modal.password.title": "Password required",
   "share.modal.password.description":
@@ -488,6 +509,12 @@ export default {
   "admin.config.appearance.custom-css": "Custom CSS",
   "admin.config.appearance.custom-css.description":
     "Global CSS applied to the frontend. Use carefully, as invalid CSS may affect the UI.",
+  "admin.config.appearance.upload-progress-style": "Upload progress style",
+  "admin.config.appearance.upload-progress-style.description":
+    "Choose how upload progress is displayed in the file list.",
+  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
   "admin.config.general.app-url": "App URL",
   "admin.config.general.app-url.description":
     "On which URL Pingvin Share is available",
@@ -561,6 +588,10 @@ export default {
   "admin.config.email.invite-message": "Invite message",
   "admin.config.email.invite-message.description":
     "Message which gets sent when an admin invites a user. {url} will be replaced with the invite URL, {email} with the email and {password} with the users password.",
+  "admin.config.email.share-recipients-reply-to-creator":
+    "Set Reply-To to creator's email",
+  "admin.config.email.share-recipients-reply-to-creator.description":
+  "Whether to set the Reply-To header to the email address of the user who created the share.",
   "admin.config.email.enable-share-download-notifications":
     "Enable download notifications",
   "admin.config.email.enable-share-download-notifications.description":
@@ -616,6 +647,9 @@ export default {
     "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.share.allow-admin-access-all-shares.description":
     "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
+  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients.description":
+    "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description":
     "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
