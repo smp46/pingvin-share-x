@@ -1,3 +1,18 @@
+## [1.22.0-beta.0](https://github.com/smp46/pingvin-share-x/compare/v1.21.2...v1.22.0-beta.0) (2026-08-01)
+
+### Features
+
+* **email:** add option to set reply-to to creator's email ([#159](https://github.com/smp46/pingvin-share-x/issues/159)) ([57704e5](https://github.com/smp46/pingvin-share-x/commit/57704e5943809bec0a7f12bbae4fe10576515b24))
+* managed user shares ([#63](https://github.com/smp46/pingvin-share-x/issues/63)) ([d69281a](https://github.com/smp46/pingvin-share-x/commit/d69281aeff9209f61294c2abff8222ee2dc9c602))
+* **shares:** allow admins to bypass max file expiration ([#144](https://github.com/smp46/pingvin-share-x/issues/144)) ([48c9f57](https://github.com/smp46/pingvin-share-x/commit/48c9f571f0acb779395aa1cd8d672054c17868bb))
+* support folder uploads via drag'n'drop and selection ([#142](https://github.com/smp46/pingvin-share-x/issues/142)) ([be15cc8](https://github.com/smp46/pingvin-share-x/commit/be15cc828f06042440a97fb83b3bd939bb1cdd3e))
+* **uploads:** text based progress indicator & time remaining ([#154](https://github.com/smp46/pingvin-share-x/issues/154)) ([27414e6](https://github.com/smp46/pingvin-share-x/commit/27414e6d97611ad9fae811f172664eec35246b2f))
+
+### Bug Fixes
+
+* **lang:** dont set lang cookie from fallback value ([#164](https://github.com/smp46/pingvin-share-x/issues/164)) ([4bcdbfd](https://github.com/smp46/pingvin-share-x/commit/4bcdbfd1b1db5697aac3e48e8592b8cc66269cba))
+* **share_id:** underscores allowed everywhere ids are validated ([#168](https://github.com/smp46/pingvin-share-x/issues/168)) ([80c4708](https://github.com/smp46/pingvin-share-x/commit/80c4708746364de9ff3dfa6b426b2653730a5dea))
+
 ## [1.21.2](https://github.com/smp46/pingvin-share-x/compare/v1.21.1...v1.21.2) (2026-07-23)
 
 ### Bug Fixes
