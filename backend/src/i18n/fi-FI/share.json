@@ -12,5 +12,6 @@
   "wrongPassword": "Väärä salasana",
   "tokenRequired": "Jaon tunniste vaaditaan",
   "privateShare": "Vain käänteisen jaon luoja voi käyttää tätä jakoa",
-  "maxViewsExceeded": "Katselukertojen enimmäismäärä ylittyi"
+  "maxViewsExceeded": "Katselukertojen enimmäismäärä ylittyi",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }

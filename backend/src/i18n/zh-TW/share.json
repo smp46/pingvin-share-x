@@ -12,5 +12,6 @@
   "wrongPassword": "密碼錯誤",
   "tokenRequired": "需要分享權杖",
   "privateShare": "只有回傳分享建立者才能存取此分享",
-  "maxViewsExceeded": "超過最大查看次數"
+  "maxViewsExceeded": "超過最大查看次數",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }

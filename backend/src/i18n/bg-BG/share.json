@@ -12,5 +12,6 @@
   "wrongPassword": "Грешна парола",
   "tokenRequired": "Изисква се токен за споделяне",
   "privateShare": "Само създателят на обратно споделяне има достъп до това споделяне",
-  "maxViewsExceeded": "Максималният брой преглеждания е надвишен"
+  "maxViewsExceeded": "Максималният брой преглеждания е надвишен",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }
