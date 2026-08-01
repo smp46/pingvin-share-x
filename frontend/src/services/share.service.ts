@@ -13,7 +13,7 @@ import {
 import api from "./api.service";
 
 const isValidId = (id: string) => {
-  return /^[a-zA-Z0-9-]+$/.test(id);
+  return /^[a-zA-Z0-9_-]+$/.test(id);
 };
 
 const list = async (): Promise<MyShare[]> => {

@@ -31,7 +31,7 @@ export class IdValidation implements CanActivate {
     }
 
     // Regular expression to check for Base64
-    const isBase64 = /^[a-zA-Z0-9-]*={0,2}$/.test(id);
+    const isBase64 = /^[a-zA-Z0-9_-]*={0,2}$/.test(id);
 
     if (!isBase64) {
       throw new BadRequestException(this.i18n.t("file.invalidIdFormat"));
