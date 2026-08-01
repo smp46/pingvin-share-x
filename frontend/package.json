@@ -15,7 +15,7 @@
     },
     "postcss": "8.5.15",
     "minimatch@9": {
-      "brace-expansion": "^2.1.2"
+      "brace-expansion": "^2.1.4"
     }
   },
   "dependencies": {
