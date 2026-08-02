@@ -1,5 +1,6 @@
 import { deleteCookie, setCookie } from "cookies-next";
 import mime from "mime-types";
+import { translateOutsideContext } from "../hooks/useTranslate.hook";
 import { FileUploadResponse } from "../types/File.type";
 
 import {
@@ -153,6 +154,12 @@ const uploadFile = async (
   ).data;
 };
 
+const isReverseShareTokenAvailable = async (token: string): Promise<boolean> => {
+  if (!isValidId(token))
+    throw new Error(translateOutsideContext()("upload.modal.link.error.invalid"));
+  return (await api.get(`/reverseShares/isReverseShareTokenAvailable/${token}`)).data.isAvailable;
+};
+
 const createReverseShare = async (
   shareExpiration: string,
   maxShareSize: number,
@@ -160,6 +167,7 @@ const createReverseShare = async (
   sendEmailNotification: boolean,
   simplified: boolean,
   publicAccess: boolean,
+  token?: string,
 ) => {
   return (
     await api.post("reverseShares", {
@@ -169,6 +177,7 @@ const createReverseShare = async (
       sendEmailNotification,
       simplified,
       publicAccess,
+      token,
     })
   ).data;
 };
@@ -179,7 +188,7 @@ const getMyReverseShares = async (): Promise<MyReverseShare[]> => {
 
 const setReverseShare = async (reverseShareToken: string) => {
   if (!isValidId(reverseShareToken))
-    throw new Error("Invalid Reverse Share Token");
+    throw new Error(translateOutsideContext()("upload.modal.link.error.invalid"));
   const { data } = await api.get(`/reverseShares/${reverseShareToken}`);
   setCookie("reverse_share_token", reverseShareToken);
   return data;
@@ -207,6 +216,7 @@ export default {
   getMyShares,
   getReceivedShares,
   isShareIdAvailable,
+  isReverseShareTokenAvailable,
   downloadFile,
   removeFile,
   uploadFile,
