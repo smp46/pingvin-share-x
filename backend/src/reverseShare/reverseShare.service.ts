@@ -52,8 +52,15 @@ export class ReverseShareService {
         }),
       );
 
+    if (data.token) {
+      if (!(await this.isReverseShareTokenAvailable(data.token)).isAvailable) {
+        throw new BadRequestException(this.i18n.t("reverseShare.tokenInUse"));
+      }
+    }
+
     const reverseShare = await this.prisma.reverseShare.create({
       data: {
+        token: data.token || undefined,
         shareExpiration: expirationDate,
         remainingUses: data.maxUseCount,
         maxShareSize: data.maxShareSize,
@@ -65,6 +72,13 @@ export class ReverseShareService {
     });
 
     return reverseShare.token;
+  }
+
+  async isReverseShareTokenAvailable(token: string) {
+    const reverseShare = await this.prisma.reverseShare.findUnique({
+      where: { token },
+    });
+    return { isAvailable: !reverseShare };
   }
 
   async getByToken(reverseShareToken?: string) {
