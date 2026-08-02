@@ -30,7 +30,7 @@ const CustomUrlInput = ({
 
   return (
     <>
-      <Group align={hasError ? "center" : "flex-end"}>
+      <Group align={hasError ? "center" : "flex-end"} noWrap>
         <TextInput
           style={{ flex: "1" }}
           variant="filled"
@@ -50,11 +50,11 @@ const CustomUrlInput = ({
       </Group>
 
       <Text
-        truncate
         italic
         size="xs"
         sx={(theme) => ({
           color: theme.colors.gray[6],
+          wordBreak: "break-all",
         })}
       >
         {`${baseUrl}${pathPrefix}${fieldValue}`}
