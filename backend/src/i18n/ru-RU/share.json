@@ -13,5 +13,5 @@
   "tokenRequired": "Требуется токен раздачи",
   "privateShare": "Только создатель обратной раздачи может получить доступ к этой раздаче",
   "maxViewsExceeded": "Превышено максимальное количество просмотров",
-  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
+  "restrictedToRecipients": "Эта загрузка ограничена определенными получателями. Пожалуйста, войдите в систему для доступа к ней."
 }
