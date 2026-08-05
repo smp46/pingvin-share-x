@@ -1,4 +1,5 @@
 {
   "notFound": "Käänteisen jaon tunnistetta ei löytynyt",
-  "maxShareSizeExceeded": "Jaon enimmäiskoko ei voi olla suurempi kuin {maxSize} tavua."
+  "maxShareSizeExceeded": "Jaon enimmäiskoko ei voi olla suurempi kuin {maxSize} tavua.",
+  "tokenInUse": "Reverse share token already in use"
 }
