@@ -1,4 +1,5 @@
 import { BadRequestException, Injectable } from "@nestjs/common";
+import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 import * as moment from "moment";
 import { I18nService } from "nestjs-i18n";
 import { ConfigService } from "src/config/config.service";
@@ -58,20 +59,27 @@ export class ReverseShareService {
       }
     }
 
-    const reverseShare = await this.prisma.reverseShare.create({
-      data: {
-        token: data.token || undefined,
-        shareExpiration: expirationDate,
-        remainingUses: data.maxUseCount,
-        maxShareSize: data.maxShareSize,
-        sendEmailNotification: data.sendEmailNotification,
-        simplified: data.simplified,
-        publicAccess: data.publicAccess,
-        creatorId,
-      },
-    });
+    try {
+      const reverseShare = await this.prisma.reverseShare.create({
+        data: {
+          token: data.token || undefined,
+          shareExpiration: expirationDate,
+          remainingUses: data.maxUseCount,
+          maxShareSize: data.maxShareSize,
+          sendEmailNotification: data.sendEmailNotification,
+          simplified: data.simplified,
+          publicAccess: data.publicAccess,
+          creatorId,
+        },
+      });
 
-    return reverseShare.token;
+      return reverseShare.token;
+    } catch (e) {
+      if (e instanceof PrismaClientKnownRequestError && e.code === "P2002") {
+        throw new BadRequestException(this.i18n.t("reverseShare.tokenInUse"));
+      }
+      throw e;
+    }
   }
 
   async isReverseShareTokenAvailable(token: string) {
