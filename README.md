@@ -27,12 +27,6 @@ Pingvin Share X is a fork of [Pingvin Share](https://github.com/stonith404/pingv
 
 ## Setup
 
-### Managed hosting
-
-[![Deploy with Zenith](https://cdn.zenith.hosting/buttons/deploy-with-zenith.svg)](https://zenith.hosting/host/pingvin-share)
-
-One-click managed Pingvin Share with storage, backups, email and a free subdomain included, and a share of every subscription goes back to the project.
-
 ### Installation with Docker (recommended)
 
 1. Download the `docker-compose.yml` file
@@ -61,6 +55,10 @@ To use the Beta channel:
 
 > [!IMPORTANT]
 > If you encounter any bugs, regressions, or have any other feedback while running the beta version, please [open a GitHub Issue](https://github.com/smp46/pingvin-share-x/issues). Please ensure you specify the exact version (including the beta tag).
+
+### Alternative Deployments
+
+Pingvin Share X can also be deployed through other platforms. For more information, see the [documentation](https://smp46.github.io/pingvin-share-x/setup/installation#alternative-deployments).
 
 ## Documentation
 

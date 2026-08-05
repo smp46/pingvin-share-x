@@ -53,3 +53,17 @@ pm2 start npm --name "pingvin-share-x-frontend" -- run start
 **Uploading Large Files**: By default, Pingvin Share X uses a built-in reverse proxy to reduce the installation steps. However, this reverse proxy is not optimized for uploading large files. If you wish to upload larger files, you can either use the Docker installation or set up your own reverse proxy. An example configuration for Caddy can be found in `./reverse-proxy/Caddyfile`.
 
 The website is now listening on `http://localhost:3000`, have fun with Pingvin Share X!
+
+### Alternative Deployments
+
+Pingvin Share X can also be deployed via the following platforms:
+
+#### Zenith
+
+[![Deploy with Zenith](https://cdn.zenith.hosting/buttons/deploy-with-zenith.svg)](https://zenith.hosting/host/pingvin-share)
+
+One-click managed Pingvin Share X.<br />
+DISCLAIMER: A portion of each subscription goes to the Pingvin Share X project.
+
+If you run a platform or know of a platform which supports deployments of Pingvin, please open a PR and it can be added here.
+
