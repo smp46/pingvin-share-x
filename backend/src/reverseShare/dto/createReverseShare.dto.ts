@@ -34,7 +34,7 @@ export class CreateReverseShareDTO {
 
   @IsString()
   @IsOptional()
-  @Matches("^[a-zA-Z0-9_-]*$", undefined, {
+  @Matches("^[a-zA-Z0-9_-]+$", undefined, {
     message: i18nValidationMessage("validation.idPattern"),
   })
   @Length(3, 50)
