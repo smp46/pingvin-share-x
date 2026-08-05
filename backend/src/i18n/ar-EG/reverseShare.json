@@ -1,4 +1,5 @@
 {
   "notFound": "رمز المشاركة العكسية غير موجود",
-  "maxShareSizeExceeded": "لا يمكن أن يكون الحد الأقصى لحجم المشاركة أكبر من {maxSize} بايت."
+  "maxShareSizeExceeded": "لا يمكن أن يكون الحد الأقصى لحجم المشاركة أكبر من {maxSize} بايت.",
+  "tokenInUse": "Reverse share token already in use"
 }
