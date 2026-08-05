@@ -28,6 +28,18 @@ export class ReverseShareController {
     private readonly i18n: I18nService,
   ) {}
 
+  @UseGuards(JwtGuard)
+  @Throttle({
+    default: {
+      limit: 10,
+      ttl: 60,
+    },
+  })
+  @Get("isReverseShareTokenAvailable/:token")
+  async isReverseShareTokenAvailable(@Param("token") token: string) {
+    return this.reverseShareService.isReverseShareTokenAvailable(token);
+  }
+
   @Post()
   @UseGuards(JwtGuard)
   async create(@Body() body: CreateReverseShareDTO, @GetUser() user: User) {

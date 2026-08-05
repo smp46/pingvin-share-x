@@ -35,6 +35,8 @@ import {
 } from "../../../utils/date.util";
 import toast from "../../../utils/toast.util";
 import { Timespan } from "../../../types/timespan.type";
+import { generateShareId } from "../../../utils/share.util";
+import CustomUrlInput from "../../share/CustomUrlInput";
 
 const showCreateUploadModal = (
   modals: ModalsContextProps,
@@ -81,17 +83,7 @@ const showCreateUploadModal = (
   });
 };
 
-const generateShareId = (length: number = 16) => {
-  const chars =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  let result = "";
-  const randomArray = new Uint8Array(length >= 3 ? length : 3);
-  crypto.getRandomValues(randomArray);
-  randomArray.forEach((number) => {
-    result += chars[number % chars.length];
-  });
-  return result;
-};
+
 
 const generateAvailableLink = async (
   shareIdLength: number,
@@ -262,38 +254,14 @@ const CreateUploadModalBody = ({
       )}
       <form onSubmit={onSubmit}>
         <Stack align="stretch">
-          <Group align={form.errors.link ? "center" : "flex-end"}>
-            <TextInput
-              style={{ flex: "1" }}
-              variant="filled"
-              label={t("upload.modal.link.label")}
-              placeholder="myAwesomeShare"
-              {...form.getInputProps("link")}
-            />
-            <Button
-              style={{ flex: "0 0 auto" }}
-              variant="outline"
-              onClick={() =>
-                form.setFieldValue(
-                  "link",
-                  generateShareId(options.shareIdLength),
-                )
-              }
-            >
-              <FormattedMessage id="common.button.generate" />
-            </Button>
-          </Group>
-
-          <Text
-            truncate
-            italic
-            size="xs"
-            sx={(theme) => ({
-              color: theme.colors.gray[6],
-            })}
-          >
-            {`${options.appUrl !== options.defaultAppUrl ? options.appUrl : window.location.origin}/s/${form.values.link}`}
-          </Text>
+          <CustomUrlInput
+            form={form}
+            fieldName="link"
+            shareIdLength={options.shareIdLength}
+            appUrl={options.appUrl}
+            defaultAppUrl={options.defaultAppUrl}
+            pathPrefix="/s/"
+          />
           {!options.isReverseShare && (
             <>
               <Grid align={form.errors.expiration_num ? "center" : "flex-end"}>

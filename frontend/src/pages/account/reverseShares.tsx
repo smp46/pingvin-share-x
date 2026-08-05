@@ -86,6 +86,7 @@ const MyShares = () => {
               defaultAppUrl,
               userMaxShareSize,
               getReverseShares,
+              config.get("share.shareIdLength"),
             )
           }
           leftIcon={<TbPlus size={20} />}
