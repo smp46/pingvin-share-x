@@ -28,6 +28,7 @@ export class ReverseShareController {
     private readonly i18n: I18nService,
   ) {}
 
+  @UseGuards(JwtGuard)
   @Throttle({
     default: {
       limit: 10,
