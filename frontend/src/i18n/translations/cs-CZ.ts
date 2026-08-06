@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "Z tohoto účtu {0} nelze získat e-mailovou adresu.",
   "error.msg.already_linked": "Tento účet {0} je již propojen s jiným účtem.",
   "error.msg.not_linked": "Tento účet {0} ještě nebyl propojen s žádným účtem.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "Tento účet {0} není ověřen, zkuste to prosím znovu po ověření.",
   "error.msg.user_not_allowed": "Nemáte oprávnění k přihlášení.",
   "error.msg.cannot_get_user_info": "Nelze získat informace o uživateli z tohoto účtu {0}.",
