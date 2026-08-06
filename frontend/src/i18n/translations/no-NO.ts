@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "Can't get email address from this {0} account.",
   "error.msg.already_linked": "Denne {0}-kontoen er allerede koblet til en annen konto.",
   "error.msg.not_linked": "Denne {0}-kontoen har ikke blitt koblet til noen konto ennå.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "Denne {0}-kontoen er ikke verifisert. Prøv igjen etter verifisering.",
   "error.msg.user_not_allowed": "Du har ikke tillatelse til å logge inn.",
   "error.msg.cannot_get_user_info": "Kan ikke hente brukerinformasjonen din fra denne {0}-kontoen.",
