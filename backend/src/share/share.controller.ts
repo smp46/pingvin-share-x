@@ -144,7 +144,7 @@ export class ShareController {
   @Throttle({
     default: {
       limit: 10,
-      ttl: 60,
+      ttl: 60 * 1000,
     },
   })
   @Get("isShareIdAvailable/:id")
@@ -156,7 +156,7 @@ export class ShareController {
   @Throttle({
     default: {
       limit: 20,
-      ttl: 5 * 60,
+      ttl: 5 * 60 * 1000,
     },
   })
   @UseGuards(IdValidation, ShareTokenSecurity)

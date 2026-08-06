@@ -32,7 +32,7 @@ export class ReverseShareController {
   @Throttle({
     default: {
       limit: 10,
-      ttl: 60,
+      ttl: 60 * 1000,
     },
   })
   @Get("isReverseShareTokenAvailable/:token")
@@ -53,7 +53,7 @@ export class ReverseShareController {
   @Throttle({
     default: {
       limit: 20,
-      ttl: 60,
+      ttl: 60 * 1000,
     },
   })
   @Get(":reverseShareToken")

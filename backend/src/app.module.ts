@@ -42,7 +42,7 @@ const i18nPath = existsSync(join(__dirname, "../i18n"))
     SystemModule,
     ThrottlerModule.forRoot([
       {
-        ttl: 60,
+        ttl: 60 * 1000,
         limit: 100,
       },
     ]),
