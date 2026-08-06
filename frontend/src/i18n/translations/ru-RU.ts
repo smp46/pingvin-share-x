@@ -136,7 +136,7 @@ export default {
   "account.shares.description.empty": "У вас нет загрузок.",
   "account.shares.button.create": "Создать одну",
   "account.shares.info.title": "Сведения",
-  "account.shares.button.edit": "Добавить/удалить файлы",
+  "account.shares.button.edit": "Добавить/Удалить Файлы",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Название",
   "account.shares.table.description": "Описание",
