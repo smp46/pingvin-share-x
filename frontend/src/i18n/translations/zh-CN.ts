@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "无法获取此 {0} 账号的邮箱地址。",
   "error.msg.already_linked": "此 {0} 账号已关联到其他账号。",
   "error.msg.not_linked": "此 {0} 账号尚未关联任何账号。",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "此 {0} 账号尚未完成验证，请验证后重试。",
   "error.msg.user_not_allowed": "您无权登录。",
   "error.msg.cannot_get_user_info": "无法获取此 {0} 账号的用户信息。",
