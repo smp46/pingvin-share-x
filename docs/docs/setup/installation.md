@@ -60,7 +60,7 @@ Pingvin Share X can also be deployed via the following platforms:
 
 #### Zenith
 
-[![Deploy with Zenith](https://cdn.zenith.hosting/buttons/deploy-with-zenith.svg)](https://zenith.hosting/host/pingvin-share)
+[![Deploy with Zenith](https://cdn.zenith.hosting/buttons/deploy-with-zenith.svg)](https://zenith.hosting/host/pingvin-share-x)
 
 One-click managed Pingvin Share X.<br />
 DISCLAIMER: A portion of each subscription goes to the Pingvin Share X project.
