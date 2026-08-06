@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "Nije moguće dobiti adresu emaila s ovog {0} računa.",
   "error.msg.already_linked": "Ovaj {0} račun je već povezan s drugim računom.",
   "error.msg.not_linked": "Ovaj {0} račun još uvijek nije povezan ni s jednim računom.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "Ovaj {0} račun je nepotvrđen, molimo pokušajte ponovno nakon verifikacije.",
   "error.msg.user_not_allowed": "Nemate dozvolu za prijavu.",
   "error.msg.cannot_get_user_info": "Nije moguće dohvatiti vaše korisničke informacije s ovog {0} računa.",
