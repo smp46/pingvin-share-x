@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "Nem nyerhető ki a(z) {0} fiók emailcíme.",
   "error.msg.already_linked": "Ez a(z) {0} fiók már kapcsolódik egy másik fiókhoz.",
   "error.msg.not_linked": "Ez a(z) {0} fiók még nincs összekapcsolva egyetlen fiókkal sem.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "Ezt a(z) {0} fiókot még nem igazolták vissza, kérem próbálja újra a megerősítés után.",
   "error.msg.user_not_allowed": "Nem jelentkezhet be.",
   "error.msg.cannot_get_user_info": "Nem sikerült lekérni a felhasználói adatokat erről a(z) {0} fiókról.",
