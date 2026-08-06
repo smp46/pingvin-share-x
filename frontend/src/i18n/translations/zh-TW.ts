@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "無法從此帳號 {0} 取得Email地址。",
   "error.msg.already_linked": "此帳號 {0} 已與另一個帳號關聯。",
   "error.msg.not_linked": "此帳號 {0} 尚未關聯到任何帳號。",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "此帳號 {0} 並未驗證，請驗證後再嘗試。",
   "error.msg.user_not_allowed": "您不被允許登入。",
   "error.msg.cannot_get_user_info": "無法從此帳號 {0} 取得使用者資料。",
