@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "Kan inte hämta e-postadress från detta {0} konto.",
   "error.msg.already_linked": "Detta {0} konto är redan länkat till ett annat konto.",
   "error.msg.not_linked": "Detta {0} konto har ännu inte länkat till något konto.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "Detta {0} -konto är overifierat, försök igen efter verifiering.",
   "error.msg.user_not_allowed": "Du är inte tillåten att logga in.",
   "error.msg.cannot_get_user_info": "Kan inte hämta din användarinformation från detta {0} konto.",
