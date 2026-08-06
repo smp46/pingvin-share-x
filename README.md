@@ -56,6 +56,10 @@ To use the Beta channel:
 > [!IMPORTANT]
 > If you encounter any bugs, regressions, or have any other feedback while running the beta version, please [open a GitHub Issue](https://github.com/smp46/pingvin-share-x/issues). Please ensure you specify the exact version (including the beta tag).
 
+### Alternative Deployments
+
+Pingvin Share X can also be deployed through other platforms. For more information, see the [documentation](https://smp46.github.io/pingvin-share-x/setup/installation#alternative-deployments).
+
 ## Documentation
 
 For more installation options and advanced configurations, please refer to the [documentation](https://smp46.github.io/pingvin-share-x/).
