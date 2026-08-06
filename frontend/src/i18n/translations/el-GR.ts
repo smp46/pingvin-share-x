@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "Δεν είναι δυνατή η λήψη διεύθυνσης ηλεκτρονικού ταχυδρομείου για αυτόν τον λογαριασμό {0}.",
   "error.msg.already_linked": "Αυτός ο λογαριασμός {0} είναι ήδη συνδεδεμένος με άλλο λογαριασμό.",
   "error.msg.not_linked": "This {0} account hasn't been linked to any account yet.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "Αυτός ο λογαριασμός {0} δεν έχει επαληθευτεί, παρακαλώ προσπαθήστε ξανά μετά την επαλήθευση.",
   "error.msg.user_not_allowed": "Δεν σας επιτρέπεται η σύνδεση.",
   "error.msg.cannot_get_user_info": "Cannot get your user info from this {0} account.",
