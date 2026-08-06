@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "Не удается получить адрес электронной почты от учетной записи {0}.",
   "error.msg.already_linked": "Эта учетная запись {0} уже привязана к другому аккаунту.",
   "error.msg.not_linked": "Этот аккаунт {0} ещё не привязан ни к одной учётной записи.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "Эта учетная запись {0} не подтверждена, повторите попытку после подтверждения.",
   "error.msg.user_not_allowed": "У вас нет разрешения на вход.",
   "error.msg.cannot_get_user_info": "Не удалось получить информацию о пользователе из этого аккаунта {0}.",
