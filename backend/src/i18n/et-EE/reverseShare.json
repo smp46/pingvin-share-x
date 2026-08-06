@@ -1,4 +1,5 @@
 {
   "notFound": "Pöörd-jagamise tokenit ei leitud",
-  "maxShareSizeExceeded": "Maksimaalne jagamise suurus ei tohi olla suurem kui {maxSize} baiti."
+  "maxShareSizeExceeded": "Maksimaalne jagamise suurus ei tohi olla suurem kui {maxSize} baiti.",
+  "tokenInUse": "Reverse share token already in use"
 }

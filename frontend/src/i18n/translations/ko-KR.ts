@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "이 {0} 계정에서 메일 주소를 가져올 수 없습니다.",
   "error.msg.already_linked": "이 {0} 계정은 이미 다른 계정에 연결되어 있습니다.",
   "error.msg.not_linked": "This {0} account hasn't been linked to any account yet.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "이 {0} 계정은 확인되지 않았습니다. 확인 후 다시 시도하십시오.",
   "error.msg.user_not_allowed": "로그인할 수 없습니다.",
   "error.msg.cannot_get_user_info": "Cannot get your user info from this {0} account.",

@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "Nie można pobrać adresu e-mail z tego konta {0}.",
   "error.msg.already_linked": "To konto {0} zostało już połączone z innym kontem.",
   "error.msg.not_linked": "This {0} account hasn't been linked to any account yet.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "To konto {0} nie zostało zweryfikowane, spróbuj ponownie po weryfikacji.",
   "error.msg.user_not_allowed": "Nie możesz się zalogować.",
   "error.msg.cannot_get_user_info": "Cannot get your user info from this {0} account.",

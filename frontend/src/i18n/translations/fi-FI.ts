@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "Sähköpostiosoitetta ei saada tältä {0} -tililtä.",
   "error.msg.already_linked": "Tämä {0} -tili on jo linkitetty toiseen tiliin.",
   "error.msg.not_linked": "Tätä {0} -tiliä ei ole vielä linkitetty mihinkään tiliin.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "Tätä {0} -tiliä ei ole vahvistettu, yritä uudelleen vahvistuksen jälkeen.",
   "error.msg.user_not_allowed": "Sinulla ei ole oikeutta kirjautua sisään.",
   "error.msg.cannot_get_user_info": "Käyttäjätietojasi ei voi saada tältä {0} -tililtä.",

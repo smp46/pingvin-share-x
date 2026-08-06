@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "Не може да се получи имейл адрес от този {0} акаунт.",
   "error.msg.already_linked": "Този {0} акаунт вече е свързан с друг акаунт.",
   "error.msg.not_linked": "Този {0} акаунт все още не е свързан с никой акаунт.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "Този {0} акаунт не е потвърден, опитайте отново след потвърждение.",
   "error.msg.user_not_allowed": "Нямате разрешение за влизане.",
   "error.msg.cannot_get_user_info": "Не може да се получи информация за потребителя от този {0} акаунт.",

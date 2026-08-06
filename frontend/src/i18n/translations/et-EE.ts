@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "Ei saa sellest {0} kontost e-posti aadressi hankida.",
   "error.msg.already_linked": "See {0} konto on juba seotud teise kontoga.",
   "error.msg.not_linked": "See {0} konto pole veel ühegi kontoga seotud.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "See {0} konto on kinnitamata, palun proovi pärast kinnitamist uuesti.",
   "error.msg.user_not_allowed": "Sul ei ole luba sisse logida.",
   "error.msg.cannot_get_user_info": "Ei õnnestunud saada sinu kasutaja andmeid sellest {0} kontost.",

@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "No s'ha pogut obtenir l'adreça de correu d'aquest compte de {0}.",
   "error.msg.already_linked": "Aquest compte de {0} ja està vinculat a un altre compte.",
   "error.msg.not_linked": "Aquest compte de {0} encara no s'ha vinculat a cap compte.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "Aquest compte de {0} no està verificat, torneu-ho a provar després de la verificació.",
   "error.msg.user_not_allowed": "No teniu permès iniciar la sessió.",
   "error.msg.cannot_get_user_info": "No s'ha pogut obtenir la vostra informació d'usuari d'aquest compte de {0}.",

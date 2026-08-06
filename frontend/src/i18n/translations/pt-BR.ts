@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "Não é possível obter o endereço de e-mail desta conta {0}.",
   "error.msg.already_linked": "Esta conta {0} já está vinculada a outra conta.",
   "error.msg.not_linked": "Esta conta {0} ainda não foi vinculada a nenhuma conta.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "Esta conta {0} não foi verificada, tente novamente após a verificação.",
   "error.msg.user_not_allowed": "Você não tem permissão para acessar.",
   "error.msg.cannot_get_user_info": "Não é possível obter suas informações de usuário desta conta {0}.",

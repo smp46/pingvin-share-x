@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "この{0} アカウントからメールアドレスを取得出来ません。",
   "error.msg.already_linked": "この{0} アカウントは、既に別のアカウントにリンクされています。",
   "error.msg.not_linked": "この{0}アカウントはまだどのアカウントにもリンクされていません。",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "この {0} アカウントは認証されていません。認証後にもう一度お試しください。",
   "error.msg.user_not_allowed": "サインインできません。",
   "error.msg.cannot_get_user_info": "この{0}アカウントからユーザー情報を取得できません。",

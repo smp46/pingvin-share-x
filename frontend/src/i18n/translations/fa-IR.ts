@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "نمی‌توان آدرس ایمیل را از این حساب {0} دریافت کرد.",
   "error.msg.already_linked": "این حساب {0} قبلاً به یک حساب دیگر پیوند خورده است.",
   "error.msg.not_linked": "این حساب {0} هنوز به هیچ حسابی پیوند نخورده است.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "این حساب {0} تأیید نشده است، لطفاً پس از تأیید دوباره تلاش کنید.",
   "error.msg.user_not_allowed": "شما اجازه ورود ندارید.",
   "error.msg.cannot_get_user_info": "نمی‌توان اطلاعات کاربر را از این حساب {0} دریافت کرد.",

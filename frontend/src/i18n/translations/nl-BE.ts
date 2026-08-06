@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "Kan geen e-mailadres ophalen van dit {0} account.",
   "error.msg.already_linked": "Dit {0} account is al gekoppeld aan een ander account.",
   "error.msg.not_linked": "Dit {0} account is nog niet aan een account gekoppeld.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "Dit {0} account is nog niet geverifieerd, probeer het opnieuw na de verificatie.",
   "error.msg.user_not_allowed": "U heeft geen toestemming om in te loggen.",
   "error.msg.cannot_get_user_info": "Kan uw gebruikersgegevens van dit {0} account niet ophalen.",

@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "Bu {0} hesabından e-posta adresi alınamıyor.",
   "error.msg.already_linked": "Bu {0} hesabı zaten başka bir hesaba bağlı.",
   "error.msg.not_linked": "Bu {0} hesabı henüz hiçbir hesaba bağlanmamış.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "Bu {0} hesabı doğrulanmamış, lütfen doğruladıktan sonra tekrar deneyin.",
   "error.msg.user_not_allowed": "Giriş yapmanıza izin verilmiyor.",
   "error.msg.cannot_get_user_info": "Bu {0} hesabından kullanıcı bilgileriniz alınamıyor.",

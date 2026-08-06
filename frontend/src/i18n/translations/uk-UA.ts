@@ -629,6 +629,8 @@ export default {
   "error.msg.no_email": "Не вдається отримати адресу електронної пошти від облікового запису {0}.",
   "error.msg.already_linked": "Цей обліковий запис {0} уже прив'язано до іншого акаунта.",
   "error.msg.not_linked": "Цей акаунт {0} ще не пов'язаний з жодним акаунтом.",
+  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account": "Цей обліковий запис {0} не підтверджено, повторіть спробу після підтвердження.",
   "error.msg.user_not_allowed": "У вас немає дозволу на вхід.",
   "error.msg.cannot_get_user_info": "Неможливо отримати інформацію про користувача з цього акаунта {0}.",

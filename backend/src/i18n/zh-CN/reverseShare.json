@@ -1,4 +1,5 @@
 {
   "notFound": "未找到反向分享令牌",
-  "maxShareSizeExceeded": "分享大小上限不能超过 {maxSize} 字节。"
+  "maxShareSizeExceeded": "分享大小上限不能超过 {maxSize} 字节。",
+  "tokenInUse": "Reverse share token already in use"
 }
