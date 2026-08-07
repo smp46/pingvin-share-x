@@ -1,4 +1,16 @@
-## [1.22.0-beta.0](https://github.com/smp46/pingvin-share-x/compare/v1.21.2...v1.22.0-beta.0) (2026-08-01)
+## [1.22.0](https://github.com/smp46/pingvin-share-x/compare/v1.21.2...v1.22.0) (2026-08-07)
+
+### Features
+
+* customise reverse share urls ([#172](https://github.com/smp46/pingvin-share-x/issues/172)) ([7f221df](https://github.com/smp46/pingvin-share-x/commit/7f221dfaacbe7931eceee7fbbf90821d70347d8a))
+
+### Bug Fixes
+
+* change oidc provider email verification behavior ([07aa8c0](https://github.com/smp46/pingvin-share-x/commit/07aa8c0a96030c439e9018ce94a2778bd37304e6))
+* correctly check for TRUST_PROXY env variable ([25e9cee](https://github.com/smp46/pingvin-share-x/commit/25e9cee7fb1c155300b5663fc5fedeea32d20954))
+* correctly specify ttl in ms ([dc0aa5f](https://github.com/smp46/pingvin-share-x/commit/dc0aa5f66287038d5f919e74948462f994b1d6b1))
+
+## 1.22.0-beta.0 (2026-08-01)
 
 ### Features
 
