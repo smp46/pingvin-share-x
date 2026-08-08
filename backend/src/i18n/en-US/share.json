@@ -9,6 +9,7 @@
   "anonymousNoUpdate": "Anonymous shares can't be updated",
   "invalidExpiration": "Invalid expiration date",
   "maxExpirationExceeded": "Expiration date exceeds maximum expiration date",
+  "storageQuotaExceeded": "User storage quota exceeded",
   "wrongPassword": "Wrong password",
   "tokenRequired": "Share token required",
   "privateShare": "Only reverse share creator can access this share",

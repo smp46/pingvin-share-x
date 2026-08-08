@@ -13,6 +13,7 @@ import * as mime from "mime-types";
 import { I18nService } from "nestjs-i18n";
 import { ConfigService } from "src/config/config.service";
 import { PrismaService } from "src/prisma/prisma.service";
+import { getUserActiveStorageUsage } from "src/utils/storageQuota.util";
 import { validate as isValidUUID } from "uuid";
 import { SHARE_DIRECTORY } from "../constants";
 import { Readable } from "stream";
@@ -96,6 +97,23 @@ export class LocalFileService {
         this.i18n.t("file.maxSizeExceeded"),
         HttpStatus.PAYLOAD_TOO_LARGE,
       );
+    }
+
+    if (share.creatorId && share.creator?.storageQuotaLimit) {
+      const quotaLimit = parseInt(share.creator.storageQuotaLimit);
+      const activeStorageUsage = await getUserActiveStorageUsage(
+        this.prisma,
+        share.creatorId,
+      );
+      const projectedUsage =
+        activeStorageUsage + diskFileSize + buffer.byteLength;
+
+      if (projectedUsage > quotaLimit) {
+        throw new HttpException(
+          this.i18n.t("file.storageQuotaExceeded"),
+          HttpStatus.PAYLOAD_TOO_LARGE,
+        );
+      }
     }
 
     await fs.appendFile(

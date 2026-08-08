@@ -8,6 +8,7 @@ type User = {
   totpVerified: boolean;
   hasPassword: boolean;
   shareSizeLimit?: string;
+  storageQuotaLimit?: string;
 };
 
 export type CreateUser = {
@@ -16,6 +17,7 @@ export type CreateUser = {
   password?: string;
   isAdmin?: boolean;
   shareSizeLimit?: string | null;
+  storageQuotaLimit?: string | null;
 };
 
 export type UpdateUser = {
@@ -25,6 +27,7 @@ export type UpdateUser = {
   isAdmin?: boolean;
   isActivated?: boolean;
   shareSizeLimit?: string | null;
+  storageQuotaLimit?: string | null;
 };
 
 export type UpdateCurrentUser = {

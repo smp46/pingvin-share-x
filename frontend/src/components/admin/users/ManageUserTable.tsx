@@ -3,9 +3,10 @@ import { useModals } from "@mantine/modals";
 import { TbCheck, TbEdit, TbTrash } from "react-icons/tb";
 import User from "../../../types/user.type";
 import showUpdateUserModal from "./showUpdateUserModal";
-import { FormattedMessage, useIntl } from "react-intl";
+import { FormattedMessage } from "react-intl";
 import useTranslate from "../../../hooks/useTranslate.hook";
 import { HoverTip } from "../../core/HoverTip";
+import { byteToHumanSizeString } from "../../../utils/fileSize.util";
 
 const ManageUserTable = ({
   users,
@@ -35,6 +36,9 @@ const ManageUserTable = ({
             <th>
               <FormattedMessage id="admin.users.table.admin" />
             </th>
+            <th>
+              <FormattedMessage id="admin.users.table.storageQuota" />
+            </th>
             <th></th>
           </tr>
         </thead>
@@ -51,6 +55,11 @@ const ManageUserTable = ({
                   </td>
                   <td>{user.email}</td>
                   <td>{user.isAdmin && <TbCheck />}</td>
+                  <td>
+                    {user.storageQuotaLimit
+                      ? byteToHumanSizeString(parseInt(user.storageQuotaLimit))
+                      : "-"}
+                  </td>
                   <td>
                     <Group position="right">
                       {user.isLdap ? null : (
@@ -89,6 +98,9 @@ const ManageUserTable = ({
 
 const skeletonRows = [...Array(10)].map((v, i) => (
   <tr key={i}>
+    <td>
+      <Skeleton key={i} height={20} />
+    </td>
     <td>
       <Skeleton key={i} height={20} />
     </td>
