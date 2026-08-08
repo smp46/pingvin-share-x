@@ -1,5 +1,6 @@
 import { Button, Group, Text, TextInput } from "@mantine/core";
 import { UseFormReturnType } from "@mantine/form";
+import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import useTranslate from "../../hooks/useTranslate.hook";
 import { generateShareId } from "../../utils/share.util";
@@ -25,8 +26,14 @@ const CustomUrlInput = ({
   const fieldValue = form.values[fieldName] || "";
   const hasError = !!form.errors[fieldName];
 
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const baseUrl =
-    appUrl !== defaultAppUrl ? appUrl : typeof window !== "undefined" ? window.location.origin : "";
+    appUrl !== defaultAppUrl ? appUrl : isMounted ? window.location.origin : "";
 
   return (
     <>

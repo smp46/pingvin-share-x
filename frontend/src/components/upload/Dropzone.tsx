@@ -1,6 +1,6 @@
 import { Button, Center, createStyles, Group, Text, Menu } from "@mantine/core";
 import { Dropzone as MantineDropzone } from "@mantine/dropzone";
-import React, { ForwardedRef, useRef } from "react";
+import React, { ForwardedRef, useEffect, useRef, useState } from "react";
 import { TbCloudUpload, TbUpload, TbFolder } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import { fromEvent } from "file-selector";
@@ -131,9 +131,14 @@ const Dropzone = ({
   const { classes } = useStyles();
   const openRef = useRef<() => void>();
   const folderInputRef = useRef<HTMLInputElement>(null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const isFolderUploadSupported =
-    typeof window !== "undefined" &&
+    isMounted &&
     typeof HTMLInputElement !== "undefined" &&
     "webkitdirectory" in HTMLInputElement.prototype;
 
