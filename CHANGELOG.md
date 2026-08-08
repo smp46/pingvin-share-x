@@ -1,3 +1,5 @@
+## [1.22.1-beta.0](https://github.com/smp46/pingvin-share-x/compare/v1.22.1...v1.22.1-beta.0) (2026-08-08)
+
 ## [1.22.1](https://github.com/smp46/pingvin-share-x/compare/v1.22.0...v1.22.1) (2026-08-08)
 
 ### Bug Fixes
