@@ -12,5 +12,6 @@
   "wrongPassword": "Λάθος κωδικός πρόσβασης",
   "tokenRequired": "Απαιτείται διακριτικό κοινής χρήσης",
   "privateShare": "Μόνο ο δημιουργός της αντίστροφης κοινής χρήσης μπορεί να έχει πρόσβαση σε αυτήν την κοινή χρήση",
-  "maxViewsExceeded": "Υπέρβαση μέγιστων προβολών"
+  "maxViewsExceeded": "Υπέρβαση μέγιστων προβολών",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }

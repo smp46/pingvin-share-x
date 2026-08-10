@@ -12,5 +12,6 @@
   "wrongPassword": "Password errata",
   "tokenRequired": "Token di condivisione richiesto",
   "privateShare": "Solo il creatore della condivisione inversa può accedere a questa condivisione",
-  "maxViewsExceeded": "Numero massimo di visualizzazioni superato"
+  "maxViewsExceeded": "Numero massimo di visualizzazioni superato",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }

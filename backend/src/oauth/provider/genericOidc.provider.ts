@@ -192,6 +192,12 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
       ]);
     }
 
+    if (idTokenData.email && idTokenData.email_verified === false) {
+      throw new ErrorPageException("email_not_verified", "/auth/signIn", [
+        `provider_${this.name}`,
+      ]);
+    }
+
     return {
       provider: this.name as any,
       email: idTokenData.email,
@@ -284,6 +290,7 @@ export interface OidcIdToken {
   exp: number;
   iat: number;
   email: string;
+  email_verified?: boolean;
   name: string;
   nickname: string;
   preferred_username: string;

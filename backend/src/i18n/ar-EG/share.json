@@ -12,5 +12,6 @@
   "wrongPassword": "كلمة مرور خاطئة",
   "tokenRequired": "رمز المشاركة مطلوب",
   "privateShare": "يمكن لمنشئ المشاركة العكسية فقط الوصول إلى هذه المشاركة",
-  "maxViewsExceeded": "تم تجاوز الحد الأقصى للمشاهدات"
+  "maxViewsExceeded": "تم تجاوز الحد الأقصى للمشاهدات",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }

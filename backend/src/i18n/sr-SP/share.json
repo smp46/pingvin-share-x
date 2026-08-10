@@ -12,5 +12,6 @@
   "wrongPassword": "Погрешна лозинка",
   "tokenRequired": "Токен дељења је обавезан",
   "privateShare": "Само креатор обрнутог дељења може приступити овом дељењу",
-  "maxViewsExceeded": "Максималан број прегледа је премашен"
+  "maxViewsExceeded": "Максималан број прегледа је премашен",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }

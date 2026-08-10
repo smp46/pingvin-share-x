@@ -12,5 +12,6 @@
   "wrongPassword": "Fel lösenord",
   "tokenRequired": "Delningstoken krävs",
   "privateShare": "Endast skaparen av den omvända delningen har tillgång till denna delning",
-  "maxViewsExceeded": "Maximalt antal visningar överskridet"
+  "maxViewsExceeded": "Maximalt antal visningar överskridet",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }

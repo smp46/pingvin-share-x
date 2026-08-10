@@ -12,5 +12,6 @@
   "wrongPassword": "Verkeerd wachtwoord",
   "tokenRequired": "Deeltoken vereist",
   "privateShare": "Alleen de maker van het gedeelde item kan toegang krijgen tot dit gedeelde item",
-  "maxViewsExceeded": "Maximaal aantal weergaven overschreden"
+  "maxViewsExceeded": "Maximaal aantal weergaven overschreden",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }

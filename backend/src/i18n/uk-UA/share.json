@@ -12,5 +12,6 @@
   "wrongPassword": "Невірний пароль",
   "tokenRequired": "Потрібен токен поширення",
   "privateShare": "Тільки творець зворотного поширення має доступ до цього поширення",
-  "maxViewsExceeded": "Перевищено максимальну кількість переглядів"
+  "maxViewsExceeded": "Перевищено максимальну кількість переглядів",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }

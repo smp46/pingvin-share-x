@@ -44,7 +44,7 @@ export class AuthController {
   @Throttle({
     default: {
       limit: 20,
-      ttl: 5 * 60,
+      ttl: 5 * 60 * 1000,
     },
   })
   async signUp(
@@ -70,7 +70,7 @@ export class AuthController {
   @Throttle({
     default: {
       limit: 20,
-      ttl: 5 * 60,
+      ttl: 5 * 60 * 1000,
     },
   })
   @HttpCode(200)
@@ -96,7 +96,7 @@ export class AuthController {
   @Throttle({
     default: {
       limit: 20,
-      ttl: 5 * 60,
+      ttl: 5 * 60 * 1000,
     },
   })
   @HttpCode(200)
@@ -119,7 +119,7 @@ export class AuthController {
   @Throttle({
     default: {
       limit: 20,
-      ttl: 5 * 60,
+      ttl: 5 * 60 * 1000,
     },
   })
   @HttpCode(202)
@@ -131,7 +131,7 @@ export class AuthController {
   @Throttle({
     default: {
       limit: 20,
-      ttl: 5 * 60,
+      ttl: 5 * 60 * 1000,
     },
   })
   @HttpCode(204)
@@ -143,7 +143,7 @@ export class AuthController {
   @Throttle({
     default: {
       limit: 20,
-      ttl: 5 * 60,
+      ttl: 5 * 60 * 1000,
     },
   })
   @HttpCode(204)
@@ -155,7 +155,7 @@ export class AuthController {
   @Throttle({
     default: {
       limit: 20,
-      ttl: 5 * 60,
+      ttl: 5 * 60 * 1000,
     },
   })
   @HttpCode(204)

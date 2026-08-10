@@ -12,5 +12,6 @@
   "wrongPassword": "Sai mật khẩu",
   "tokenRequired": "Yêu cầu token chia sẻ",
   "privateShare": "Chỉ người tạo chia sẻ ngược mới có thể truy cập chia sẻ này",
-  "maxViewsExceeded": "Vượt quá số lượt xem tối đa"
+  "maxViewsExceeded": "Vượt quá số lượt xem tối đa",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }

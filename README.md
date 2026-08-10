@@ -37,6 +37,29 @@ The website is now listening on `http://localhost:3000`.
 > [!TIP]
 > Checkout [stonith404/Pocket ID](https://github.com/stonith404/pocket-id), a user-friendly OIDC provider that lets you easily log in to services like Pingvin Share X using Passkeys. Made by the original creator of Pingvin Share.
 
+### Beta Channel (Testing)
+
+Pingvin Share X now has a beta, this is where all (non-time sensitive) bug fixes, features and other updates will go before reaching stable.
+
+To use the Beta channel:
+1. Update the container image tag in your `docker-compose.yml` to `:beta`:
+   ```yaml
+   image: smp46/pingvin-share-x:beta
+   # or ghcr.io/smp46/pingvin-share-x:beta
+   ```
+2. Pull the latest beta image and recreate the container:
+   ```bash
+   docker compose pull
+   docker compose up -d
+   ```
+
+> [!IMPORTANT]
+> If you encounter any bugs, regressions, or have any other feedback while running the beta version, please [open a GitHub Issue](https://github.com/smp46/pingvin-share-x/issues). Please ensure you specify the exact version (including the beta tag).
+
+### Alternative Deployments
+
+Pingvin Share X can also be deployed through other platforms. For more information, see the [documentation](https://smp46.github.io/pingvin-share-x/setup/installation#alternative-deployments).
+
 ## Documentation
 
 For more installation options and advanced configurations, please refer to the [documentation](https://smp46.github.io/pingvin-share-x/).

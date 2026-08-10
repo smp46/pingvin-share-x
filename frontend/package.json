@@ -1,6 +1,6 @@
 {
   "name": "pingvin-share-frontend",
-  "version": "1.21.2",
+  "version": "1.22.1-beta.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,7 +15,7 @@
     },
     "postcss": "8.5.15",
     "minimatch@9": {
-      "brace-expansion": "^2.1.2"
+      "brace-expansion": "^2.1.4"
     }
   },
   "dependencies": {

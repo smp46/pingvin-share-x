@@ -12,5 +12,6 @@
   "wrongPassword": "Mauvais mot de passe",
   "tokenRequired": "Jeton de partage requis",
   "privateShare": "Seul le créateur du partage inversé peut accéder à ce partage",
-  "maxViewsExceeded": "Nombre maximal de vues dépassé"
+  "maxViewsExceeded": "Nombre maximal de vues dépassé",
+  "restrictedToRecipients": "Ce partage est limité à certains destinataires. Veuillez vous connecter pour y accéder."
 }

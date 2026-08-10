@@ -12,5 +12,6 @@
   "wrongPassword": "Vale parool",
   "tokenRequired": "Jagamise token on kohustuslik",
   "privateShare": "Sellele jagamisele pääseb ligi ainult pöörd-jagamise looja",
-  "maxViewsExceeded": "Maksimaalne vaatamiste arv on täis"
+  "maxViewsExceeded": "Maksimaalne vaatamiste arv on täis",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }

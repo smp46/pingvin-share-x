@@ -1,3 +1,31 @@
+## [1.22.1-beta.0](https://github.com/smp46/pingvin-share-x/compare/v1.22.1...v1.22.1-beta.0) (2026-08-08)
+
+## [1.22.1](https://github.com/smp46/pingvin-share-x/compare/v1.22.0...v1.22.1) (2026-08-08)
+
+### Bug Fixes
+
+* **uploadPage:** properly handle chromium file pickers, prevent hydration error ([#176](https://github.com/smp46/pingvin-share-x/issues/176)) ([e38083b](https://github.com/smp46/pingvin-share-x/commit/e38083bef666a1819dbebb9e7017220016ff0989))
+
+## [1.22.0](https://github.com/smp46/pingvin-share-x/compare/v1.21.2...v1.22.0) (2026-08-07)
+
+### Features
+
+* **reverseshares**: customise reverse share urls ([#172](https://github.com/smp46/pingvin-share-x/issues/172)) ([7f221df](https://github.com/smp46/pingvin-share-x/commit/7f221dfaacbe7931eceee7fbbf90821d70347d8a))
+* **email:** add option to set reply-to to creator's email ([#159](https://github.com/smp46/pingvin-share-x/issues/159)) ([57704e5](https://github.com/smp46/pingvin-share-x/commit/57704e5943809bec0a7f12bbae4fe10576515b24))
+* **shares**:managed user shares ([#63](https://github.com/smp46/pingvin-share-x/issues/63)) ([d69281a](https://github.com/smp46/pingvin-share-x/commit/d69281aeff9209f61294c2abff8222ee2dc9c602))
+* **shares:** allow admins to bypass max file expiration ([#144](https://github.com/smp46/pingvin-share-x/issues/144)) ([48c9f57](https://github.com/smp46/pingvin-share-x/commit/48c9f571f0acb779395aa1cd8d672054c17868bb))
+* **shares**support folder uploads via drag'n'drop and selection ([#142](https://github.com/smp46/pingvin-share-x/issues/142)) ([be15cc8](https://github.com/smp46/pingvin-share-x/commit/be15cc828f06042440a97fb83b3bd939bb1cdd3e))
+* **uploads:** text based progress indicator & time remaining ([#154](https://github.com/smp46/pingvin-share-x/issues/154)) ([27414e6](https://github.com/smp46/pingvin-share-x/commit/27414e6d97611ad9fae811f172664eec35246b2f))
+
+
+### Bug Fixes
+
+* change oidc provider email verification behavior ([07aa8c0](https://github.com/smp46/pingvin-share-x/commit/07aa8c0a96030c439e9018ce94a2778bd37304e6))
+* correctly check for TRUST_PROXY env variable ([25e9cee](https://github.com/smp46/pingvin-share-x/commit/25e9cee7fb1c155300b5663fc5fedeea32d20954))
+* correctly specify ttl in ms ([dc0aa5f](https://github.com/smp46/pingvin-share-x/commit/dc0aa5f66287038d5f919e74948462f994b1d6b1))
+* **lang:** dont set lang cookie from fallback value ([#164](https://github.com/smp46/pingvin-share-x/issues/164)) ([4bcdbfd](https://github.com/smp46/pingvin-share-x/commit/4bcdbfd1b1db5697aac3e48e8592b8cc66269cba))
+* **share_id:** underscores allowed everywhere ids are validated ([#168](https://github.com/smp46/pingvin-share-x/issues/168)) ([80c4708](https://github.com/smp46/pingvin-share-x/commit/80c4708746364de9ff3dfa6b426b2653730a5dea))
+
 ## [1.21.2](https://github.com/smp46/pingvin-share-x/compare/v1.21.1...v1.21.2) (2026-07-23)
 
 ### Bug Fixes

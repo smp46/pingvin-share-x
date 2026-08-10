@@ -53,7 +53,7 @@ async function bootstrap() {
   });
 
   app.use(cookieParser());
-  app.set("trust proxy", true);
+  app.set("trust proxy", process.env.TRUST_PROXY === "true");
 
   await fs.promises.mkdir(`${DATA_DIRECTORY}/uploads/_temp`, {
     recursive: true,

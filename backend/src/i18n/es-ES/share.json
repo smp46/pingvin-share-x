@@ -12,5 +12,6 @@
   "wrongPassword": "Contraseña incorrecta",
   "tokenRequired": "Se requiere token de compartido",
   "privateShare": "Solo el creador del compartido inverso puede acceder a este compartido",
-  "maxViewsExceeded": "Se ha superado el número máximo de visualizaciones"
+  "maxViewsExceeded": "Se ha superado el número máximo de visualizaciones",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }

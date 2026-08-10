@@ -162,16 +162,9 @@ export class OAuthService {
     });
 
     if (existingUser) {
-      await this.prisma.oAuthUser.create({
-        data: {
-          provider: user.provider,
-          providerUserId: user.providerId.toString(),
-          providerUsername: user.providerUsername,
-          userId: existingUser.id,
-        },
-      });
-      await this.updateIsAdmin(existingUser.id, user.isAdmin);
-      return this.auth.generateToken(existingUser, { idToken: user.idToken });
+      throw new ErrorPageException("email_already_exists", "/auth/signIn", [
+        `provider_${user.provider}`,
+      ]);
     }
 
     const result = await this.auth.signUp(
