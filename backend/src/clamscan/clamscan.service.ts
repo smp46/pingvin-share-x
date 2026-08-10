@@ -10,6 +10,9 @@ const clamscanConfig = {
     host: CLAMAV_HOST,
     port: CLAMAV_PORT,
     localFallback: false,
+    // clamscan's own default (20s) is too short once share.maxSize allows
+    // files in the hundreds of MB, the socket just times out mid-stream
+    timeout: 300_000,
   },
   preference: "clamdscan",
 };

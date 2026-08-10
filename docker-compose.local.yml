@@ -19,4 +19,16 @@ services:
     container_name: pingvin-share-x-clamav
     restart: unless-stopped
     image: clamav/clamav-debian:latest
+    environment:
+      # clamd's INSTREAM/file size limits default well below pingvin's own
+      # max share size (1GB by default), so anything over ~25MB got rejected
+      # mid-scan instead of actually being scanned.
+      - CLAMD_CONF_StreamMaxLength=2000M
+      - CLAMD_CONF_MaxFileSize=2000M
+      - CLAMD_CONF_MaxScanSize=2000M
+    volumes:
+      - "clamav-db:/var/lib/clamav"
+
+volumes:
+  clamav-db:
 
