@@ -46,12 +46,15 @@ export type ShareMetaData = {
   isZipReady: boolean;
 };
 
+export type ShareScanStatus = "PENDING" | "CLEAN" | "INFECTED" | "FAILED";
+
 export type MyShare = Omit<Share, "hasPassword"> & {
   views: number;
   createdAt: Date;
   recipients: string[];
   security: MyShareSecurity;
   removedReason?: string;
+  scanStatus: ShareScanStatus;
 };
 
 export type MyReverseShare = {

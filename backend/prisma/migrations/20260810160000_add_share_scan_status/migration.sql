@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Share" ADD COLUMN "scanStatus" TEXT NOT NULL DEFAULT 'PENDING';

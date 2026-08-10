@@ -92,6 +92,8 @@ model Share {
   expiration    DateTime
   description   String?
   removedReason String?
+  // PENDING | CLEAN | INFECTED | FAILED (FAILED also covers "ClamAV unreachable")
+  scanStatus    String  @default("PENDING")
 
   creatorId String?
   creator   User?   @relation(fields: [creatorId], references: [id], onDelete: Cascade)

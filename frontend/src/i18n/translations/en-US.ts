@@ -320,6 +320,11 @@ export default {
   "admin.shares.table.expires": "Expires on",
   "admin.shares.table.deletes": "Deletes on",
   "admin.shares.table.removed": "Removed",
+  "admin.shares.table.scan": "Scan",
+  "admin.shares.scan.pending": "Waiting for antivirus scan",
+  "admin.shares.scan.clean": "Scanned - no threats found",
+  "admin.shares.scan.failed": "Antivirus scan failed or ClamAV is unreachable",
+  "admin.shares.scan.infected": "Scanned - malicious file(s) found",
 
   "admin.shares.edit.delete.title": "Delete share: {id}",
   "admin.shares.edit.delete.description":

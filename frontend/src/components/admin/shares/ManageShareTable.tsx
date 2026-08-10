@@ -10,22 +10,34 @@ import {
   Table,
   Text,
   TextInput,
+  ThemeIcon,
 } from "@mantine/core";
 import { useClipboard } from "@mantine/hooks";
 import { useModals } from "@mantine/modals";
 import moment from "moment";
-import { UIEvent, useEffect, useMemo, useRef, useState } from "react";
 import {
+  ReactNode,
+  UIEvent,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import {
+  TbAlertTriangle,
+  TbClock,
   TbInfoCircle,
   TbLink,
   TbRefresh,
   TbSearch,
+  TbShieldCheck,
   TbTrash,
+  TbVirus,
 } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import useConfig from "../../../hooks/config.hook";
 import useTranslate from "../../../hooks/useTranslate.hook";
-import { MyShare } from "../../../types/share.type";
+import { MyShare, ShareScanStatus } from "../../../types/share.type";
 import { byteToHumanSizeString } from "../../../utils/fileSize.util";
 import toast from "../../../utils/toast.util";
 import showShareInformationsModal from "../../share/showShareInformationsModal";
@@ -294,6 +306,7 @@ const ManageShareTable = ({
               </th>
               {sortableTh("createdAt", "account.shares.table.createdAt")}
               {sortableTh("id", "account.shares.table.id")}
+              {sortableTh("scanStatus", "admin.shares.table.scan")}
               {sortableTh("name", "account.shares.table.name")}
               {sortableTh("username", "admin.shares.table.username")}
               {sortableTh("views", "account.shares.table.visitors")}
@@ -311,7 +324,7 @@ const ManageShareTable = ({
           </thead>
           <tbody>
             {isLoading
-              ? skeletonRows(fileRetentionEnabled ? 10 : 9)
+              ? skeletonRows(fileRetentionEnabled ? 11 : 10)
               : pageShares.map((share) => (
                   <tr key={share.id}>
                     <td>
@@ -322,6 +335,15 @@ const ManageShareTable = ({
                     </td>
                     <td>{moment(share.createdAt).format("LLL")}</td>
                     <td>{share.id}</td>
+                    <td>
+                      <ScanStatusIcon
+                        status={share.scanStatus ?? "PENDING"}
+                        label={t(
+                          SCAN_STATUS_ICON[share.scanStatus]?.messageId ??
+                            "admin.shares.scan.pending",
+                        )}
+                      />
+                    </td>
                     <td>
                       <Group spacing="xs" noWrap>
                         {share.name}
@@ -463,7 +485,51 @@ const sortValue = (share: MyShare, column: string) => {
   if (column == "createdAt") return moment(share.createdAt).unix();
   if (column == "username") return share.creator?.username.toLowerCase() ?? "";
   if (column == "name") return (share.name ?? "").toLowerCase();
+  if (column == "scanStatus") return share.scanStatus ?? "";
   return share.id.toLowerCase();
+};
+
+const SCAN_STATUS_ICON: Record<
+  ShareScanStatus,
+  { icon: ReactNode; color: string; messageId: string }
+> = {
+  PENDING: {
+    icon: <TbClock />,
+    color: "gray",
+    messageId: "admin.shares.scan.pending",
+  },
+  CLEAN: {
+    icon: <TbShieldCheck />,
+    color: "green",
+    messageId: "admin.shares.scan.clean",
+  },
+  FAILED: {
+    icon: <TbAlertTriangle />,
+    color: "orange",
+    messageId: "admin.shares.scan.failed",
+  },
+  INFECTED: {
+    icon: <TbVirus />,
+    color: "red",
+    messageId: "admin.shares.scan.infected",
+  },
+};
+
+const ScanStatusIcon = ({
+  status,
+  label,
+}: {
+  status: ShareScanStatus;
+  label: string;
+}) => {
+  const entry = SCAN_STATUS_ICON[status] ?? SCAN_STATUS_ICON.PENDING;
+  return (
+    <HoverTip label={label}>
+      <ThemeIcon color={entry.color} variant="light" size={24} radius="xl">
+        {entry.icon}
+      </ThemeIcon>
+    </HoverTip>
+  );
 };
 
 const skeletonRows = (columns: number) =>

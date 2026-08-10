@@ -76,13 +76,16 @@ export class ClamScanService {
     return { isInfected: false, failed: true };
   }
 
-  async check(shareId: string) {
+  async check(
+    shareId: string,
+  ): Promise<{ infectedFiles: { id: string; name: string }[]; scanFailed: boolean }> {
     const clamScan = await this.getClamScan();
 
     if (!clamScan) {
-      return [];
+      return { infectedFiles: [], scanFailed: true };
     }
 
+    let scanFailed = false;
     const infectedFiles = [];
 
     const share = await this.prisma.share.findUnique({
@@ -120,6 +123,7 @@ export class ClamScanService {
           );
 
           if (failed) {
+            scanFailed = true;
             this.logger.error(
               `ClamAV scan could not complete for file ${f.id} (${f.name}) in share ${shareId} after ${SCAN_RETRY_ATTEMPTS} attempts, file was not confirmed clean`,
             );
@@ -133,13 +137,14 @@ export class ClamScanService {
             // ignore error
           }
         } catch (err: any) {
+          scanFailed = true;
           this.logger.warn(
             `ClamAV scan failed for S3 file ${f.id} in share ${shareId}: ${err?.message || "unknown error"}`,
           );
         }
       }
 
-      return infectedFiles;
+      return { infectedFiles, scanFailed };
     }
 
     let files: string[] = [];
@@ -149,7 +154,7 @@ export class ClamScanService {
         .filter((file) => file != "archive.zip");
     } catch (e) {
       void e;
-      return [];
+      return { infectedFiles: [], scanFailed: false };
     }
 
     for (const fileId of files) {
@@ -163,6 +168,7 @@ export class ClamScanService {
       ).name;
 
       if (failed) {
+        scanFailed = true;
         this.logger.error(
           `ClamAV scan could not complete for file ${fileId} (${fileName}) in share ${shareId} after ${SCAN_RETRY_ATTEMPTS} attempts, file was not confirmed clean`,
         );
@@ -173,11 +179,11 @@ export class ClamScanService {
       }
     }
 
-    return infectedFiles;
+    return { infectedFiles, scanFailed };
   }
 
   async checkAndRemove(shareId: string) {
-    const infectedFiles = await this.check(shareId);
+    const { infectedFiles, scanFailed } = await this.check(shareId);
 
     if (infectedFiles.length > 0) {
       try {
@@ -195,6 +201,7 @@ export class ClamScanService {
       await this.prisma.share.update({
         where: { id: shareId },
         data: {
+          scanStatus: "INFECTED",
           removedReason: `Your share got removed because the file(s) ${fileNames} are malicious.`,
         },
       });
@@ -202,6 +209,16 @@ export class ClamScanService {
       this.logger.warn(
         `Share ${shareId} deleted because it contained ${infectedFiles.length} malicious file(s)`,
       );
+      return;
+    }
+
+    try {
+      await this.prisma.share.update({
+        where: { id: shareId },
+        data: { scanStatus: scanFailed ? "FAILED" : "CLEAN" },
+      });
+    } catch {
+      // share may have been deleted concurrently, nothing to persist
     }
   }
 }
