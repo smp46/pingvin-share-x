@@ -3,6 +3,9 @@ services:
     container_name: pingvin-share-x
     build: .
     restart: unless-stopped
+    depends_on:
+      clamav:
+        condition: service_healthy
     ports:
       - 3001:3000
     environment:
@@ -11,4 +14,9 @@ services:
       - "./data:/opt/app/backend/data:rw,z"
       - "./data/images:/opt/app/frontend/public/img:rw,z"
 #      - "./config.yaml:/opt/app/config.yaml"
+
+  clamav:
+    container_name: pingvin-share-x-clamav
+    restart: unless-stopped
+    image: clamav/clamav-debian:latest
 
