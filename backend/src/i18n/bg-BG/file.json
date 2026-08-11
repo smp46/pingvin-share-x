@@ -6,6 +6,8 @@
   "notEnoughSpace": "Няма достатъчно място на сървъра",
   "unexpectedChunk": "Получена е неочаквана част",
   "maxSizeExceeded": "Максималният размер на споделянето е надвишен",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "Грешка при създаването на ZIP файл",
   "s3DeleteError": "Файлът не може да бъде изтрит от S3",
   "s3UploadInitError": "Неуспешно инициализиране на качване от няколко части.",
