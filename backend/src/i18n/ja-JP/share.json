@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "匿名共有は更新できません",
   "invalidExpiration": "有効期限が無効です",
   "maxExpirationExceeded": "有効期限が最大有効期限を超えています",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "パスワードが正しくありません",
   "tokenRequired": "共有トークンが必要です",
   "privateShare": "リバース共有の作成者のみがこの共有にアクセスできます",
