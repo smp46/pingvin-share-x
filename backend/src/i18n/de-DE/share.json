@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "Anonyme Freigaben können nicht aktualisiert werden",
   "invalidExpiration": "Ungültiges Ablaufdatum",
   "maxExpirationExceeded": "Ablaufdatum überschreitet das maximale Ablaufdatum",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "Falsches Passwort",
   "tokenRequired": "Freigabe-Token erforderlich",
   "privateShare": "Nur der Ersteller der Reverse-Freigabe kann auf diese Freigabe zugreifen",
