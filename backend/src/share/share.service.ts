@@ -20,6 +20,7 @@ import { PrismaService } from "src/prisma/prisma.service";
 import { ReverseShareService } from "src/reverseShare/reverseShare.service";
 import { SystemService } from "src/system/system.service";
 import { parseRelativeDateToAbsolute } from "src/utils/date.util";
+import { byteToHumanSizeString } from "src/utils/fileSize.util";
 import { getUserActiveStorageUsage } from "src/utils/storageQuota.util";
 import { SHARE_DIRECTORY } from "../constants";
 import { CreateShareDTO } from "./dto/createShare.dto";
@@ -58,11 +59,18 @@ export class ShareService {
           quotaOwner.id,
         );
 
-        if (activeStorageUsage + share.size > quotaLimit) {
+        const projectedUsage = activeStorageUsage + share.size;
+        if (projectedUsage > quotaLimit) {
+          const exceededBytes = projectedUsage - quotaLimit;
+          const exceededSize = byteToHumanSizeString(exceededBytes);
           throw new BadRequestException(
             reverseShare
-              ? this.i18n.t("share.reverseShareQuotaExceeded")
-              : this.i18n.t("share.storageQuotaExceeded"),
+              ? this.i18n.t("share.reverseShareQuotaExceeded", {
+                  args: { exceededSize },
+                })
+              : this.i18n.t("share.storageQuotaExceeded", {
+                  args: { exceededSize },
+                }),
           );
         }
       }

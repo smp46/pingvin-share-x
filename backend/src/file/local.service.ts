@@ -13,6 +13,7 @@ import * as mime from "mime-types";
 import { I18nService } from "nestjs-i18n";
 import { ConfigService } from "src/config/config.service";
 import { PrismaService } from "src/prisma/prisma.service";
+import { byteToHumanSizeString } from "src/utils/fileSize.util";
 import { getUserActiveStorageUsage } from "src/utils/storageQuota.util";
 import { validate as isValidUUID } from "uuid";
 import { SHARE_DIRECTORY } from "../constants";
@@ -120,10 +121,16 @@ export class LocalFileService {
         activeStorageUsage + diskFileSize + buffer.byteLength;
 
       if (projectedUsage > quotaLimit) {
+        const exceededBytes = projectedUsage - quotaLimit;
+        const exceededSize = byteToHumanSizeString(exceededBytes);
         throw new HttpException(
           share.reverseShare
-            ? this.i18n.t("file.reverseShareQuotaExceeded")
-            : this.i18n.t("file.storageQuotaExceeded"),
+            ? this.i18n.t("file.reverseShareQuotaExceeded", {
+                args: { exceededSize },
+              })
+            : this.i18n.t("file.storageQuotaExceeded", {
+                args: { exceededSize },
+              }),
           HttpStatus.PAYLOAD_TOO_LARGE,
         );
       }
