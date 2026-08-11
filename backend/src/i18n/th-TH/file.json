@@ -6,6 +6,8 @@
   "notEnoughSpace": "พื้นที่บนเซิร์ฟเวอร์ไม่เพียงพอ",
   "unexpectedChunk": "ได้รับชุดข้อมูลที่ไม่คาดคิด",
   "maxSizeExceeded": "ขนาดการแชร์เกินขีดจำกัดสูงสุด",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "เกิดข้อผิดพลาดในการสร้างไฟล์ ZIP",
   "s3DeleteError": "ไม่สามารถลบไฟล์จาก S3",
   "s3UploadInitError": "ไม่สามารถเริ่มต้นการอัปโหลดแบบหลายส่วน",
