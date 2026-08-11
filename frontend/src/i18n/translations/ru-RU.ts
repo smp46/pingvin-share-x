@@ -376,7 +376,7 @@ export default {
   "admin.config.category.cache": "Кэш",
   "admin.config.category.email": "Электронная почта",
   "admin.config.category.smtp": "SMTP",
-  "admin.config.category.oauth": "Авторизация через социальные сети",
+  "admin.config.category.oauth": "Авторизация OAuth",
   "admin.config.general.app-name": "Название приложения",
   "admin.config.general.app-name.description": "Видимое название приложения",
   "admin.config.general.default-language": "Язык по умолчанию",
