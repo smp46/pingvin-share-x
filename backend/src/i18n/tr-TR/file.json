@@ -6,6 +6,8 @@
   "notEnoughSpace": "Sunucuda yeterli alan yok",
   "unexpectedChunk": "Beklenmeyen veri parçası alındı",
   "maxSizeExceeded": "Maksimum paylaşım boyutu aşıldı",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "ZIP dosyası oluşturulurken hata oluştu",
   "s3DeleteError": "Dosya S3'ten silinemedi",
   "s3UploadInitError": "Çok parçalı yükleme başlatılamadı.",
