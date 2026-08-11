@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "Anonieme gedeelde items kunnen niet worden bijgewerkt",
   "invalidExpiration": "Ongeldige vervaldatum",
   "maxExpirationExceeded": "Vervaldatum overschrijdt de maximale vervaldatum",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "Verkeerd wachtwoord",
   "tokenRequired": "Deeltoken vereist",
   "privateShare": "Alleen de maker van het gedeelde item kan toegang krijgen tot dit gedeelde item",
