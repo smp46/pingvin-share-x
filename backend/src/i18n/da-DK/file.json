@@ -6,6 +6,8 @@
   "notEnoughSpace": "Ikke nok plads på serveren",
   "unexpectedChunk": "Uventet chunk modtaget",
   "maxSizeExceeded": "Maksimal delingsstørrelse overskredet",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "Fejl ved oprettelse af ZIP-fil",
   "s3DeleteError": "Kunne ikke slette fil fra S3",
   "s3UploadInitError": "Kunne ikke initialisere multipart-upload.",
