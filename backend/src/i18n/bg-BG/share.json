@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "Анонимни споделяния не могат да бъдат актуализирани",
   "invalidExpiration": "Невалидна дата на изтичане",
   "maxExpirationExceeded": "Датата на изтичане надвишава максималната дата на изтичане",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "Грешна парола",
   "tokenRequired": "Изисква се токен за споделяне",
   "privateShare": "Само създателят на обратно споделяне има достъп до това споделяне",
