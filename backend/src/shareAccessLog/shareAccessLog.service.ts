@@ -23,10 +23,31 @@ export class ShareAccessLogService {
   }
 
   async findByShare(shareId: string) {
-    return this.prisma.shareAccessLog.findMany({
+    const totalEvents = await this.prisma.shareAccessLog.count({
       where: { shareId },
-      orderBy: { createdAt: "desc" },
-      select: { event: true, ip: true, createdAt: true },
     });
+
+    const grouped = await this.prisma.shareAccessLog.groupBy({
+      by: ["ip", "event"],
+      where: { shareId },
+      _count: { _all: true },
+      _min: { createdAt: true },
+      _max: { createdAt: true },
+      orderBy: { _max: { createdAt: "desc" } },
+      take: MAX_GROUPED_ENTRIES,
+    });
+
+    return {
+      totalEvents,
+      entries: grouped.map((g) => ({
+        ip: g.ip,
+        event: g.event as ShareAccessEvent,
+        count: g._count._all,
+        firstSeen: g._min.createdAt,
+        lastSeen: g._max.createdAt,
+      })),
+    };
   }
 }
+
+const MAX_GROUPED_ENTRIES = 200;

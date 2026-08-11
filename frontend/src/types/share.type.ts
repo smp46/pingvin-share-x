@@ -51,7 +51,14 @@ export type ShareScanStatus = "PENDING" | "CLEAN" | "INFECTED" | "FAILED";
 export type ShareAccessLogEntry = {
   event: "CREATED" | "VIEWED";
   ip: string;
-  createdAt: string;
+  count: number;
+  firstSeen: string;
+  lastSeen: string;
+};
+
+export type ShareAccessLog = {
+  totalEvents: number;
+  entries: ShareAccessLogEntry[];
 };
 
 export type MyShare = Omit<Share, "hasPassword"> & {

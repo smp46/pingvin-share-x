@@ -23,7 +23,7 @@ import { FormattedMessage } from "react-intl";
 import * as yup from "yup";
 import { translateOutsideContext } from "../../hooks/useTranslate.hook";
 import shareService from "../../services/share.service";
-import { MyShare, ShareAccessLogEntry, UpdateShare } from "../../types/share.type";
+import { MyShare, ShareAccessLog, UpdateShare } from "../../types/share.type";
 import { Timespan } from "../../types/timespan.type";
 import { byteToHumanSizeString } from "../../utils/fileSize.util";
 import toast from "../../utils/toast.util";
@@ -84,7 +84,10 @@ const Body = ({
   const [currentShare, setCurrentShare] = useState(share);
   const [showQR, setShowQR] = useState(false);
   const [isEditing, setIsEditing] = useState(initiallyEditing);
-  const [accessLogs, setAccessLogs] = useState<ShareAccessLogEntry[]>([]);
+  const [accessLog, setAccessLog] = useState<ShareAccessLog>({
+    totalEvents: 0,
+    entries: [],
+  });
 
   const handleToggleQR = () => {
     setShowQR(!showQR);
@@ -94,8 +97,8 @@ const Body = ({
     if (!isAdmin) return;
     shareService
       .getAccessLogs(currentShare.id)
-      .then(setAccessLogs)
-      .catch(() => setAccessLogs([]));
+      .then(setAccessLog)
+      .catch(() => setAccessLog({ totalEvents: 0, entries: [] }));
   }, [isAdmin, currentShare.id]);
 
   const link = `${appUrl !== defaultAppUrl ? appUrl : window.location.origin}/s/${currentShare.id}`;
@@ -209,15 +212,23 @@ const Body = ({
           {formattedMaxShareSize}
         </Text>
       </Flex>
-      {isAdmin && accessLogs.length > 0 && (
+      {isAdmin && accessLog.entries.length > 0 && (
         <>
           <Divider />
-          <Text size="sm" weight={700}>
-            <FormattedMessage id="account.shares.modal.accessLog.title" />
-          </Text>
-          <Box sx={{ maxHeight: 180, overflowY: "auto" }}>
+          <Group position="apart">
+            <Text size="sm" weight={700}>
+              <FormattedMessage id="account.shares.modal.accessLog.title" />
+            </Text>
+            <Text size="xs" color="dimmed">
+              <FormattedMessage
+                id="account.shares.modal.accessLog.totalEvents"
+                values={{ count: accessLog.totalEvents }}
+              />
+            </Text>
+          </Group>
+          <Box sx={{ maxHeight: 220, overflowY: "auto" }}>
             <Stack spacing={4}>
-              {accessLogs.map((entry, i) => (
+              {accessLog.entries.map((entry, i) => (
                 <Group key={i} position="apart" spacing="xs" noWrap>
                   <Badge
                     size="sm"
@@ -236,8 +247,13 @@ const Body = ({
                   >
                     {entry.ip}
                   </Anchor>
-                  <Text size="xs" color="dimmed">
-                    {moment(entry.createdAt).format("LLL")}
+                  {entry.count > 1 && (
+                    <Badge size="sm" color="grape" variant="outline">
+                      x{entry.count}
+                    </Badge>
+                  )}
+                  <Text size="xs" color="dimmed" sx={{ marginLeft: "auto" }}>
+                    {moment(entry.lastSeen).format("LLL")}
                   </Text>
                 </Group>
               ))}
