@@ -6,6 +6,8 @@
   "notEnoughSpace": "Serveris pole piisavalt ruumi",
   "unexpectedChunk": "Saadi ootamatu andmeplokk",
   "maxSizeExceeded": "Jagamise maksimaalne suurus on ületatud",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "Viga ZIP-faili loomisel",
   "s3DeleteError": "Faili kustutamine S3-st ebaõnnestus",
   "s3UploadInitError": "Multipart upload'i algatamine ebaõnnestus.",
