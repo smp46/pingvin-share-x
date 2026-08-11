@@ -94,7 +94,12 @@ export class ShareController {
   ) {
     const { reverse_share_token } = request.cookies;
     return new ShareDTO().from(
-      await this.shareService.create(body, user, reverse_share_token),
+      await this.shareService.create(
+        body,
+        user,
+        reverse_share_token,
+        request.ip,
+      ),
     );
   }
 
@@ -167,7 +172,11 @@ export class ShareController {
     @Res({ passthrough: true }) response: Response,
     @Body() body: SharePasswordDto,
   ) {
-    const token = await this.shareService.getShareToken(id, body.password);
+    const token = await this.shareService.getShareToken(
+      id,
+      body.password,
+      request.ip,
+    );
 
     this.clearShareTokenCookies(request, response);
     response.cookie(`share_${id}_token`, token, {

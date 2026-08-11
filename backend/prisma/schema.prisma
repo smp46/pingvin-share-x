@@ -105,7 +105,19 @@ model Share {
   recipients     ShareRecipient[]
   userRecipients ShareUserRecipient[]
   files          File[]
+  accessLogs     ShareAccessLog[]
   storageProvider String @default("LOCAL")
+}
+
+model ShareAccessLog {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+
+  event String // CREATED | VIEWED
+  ip    String // IPv4 or IPv6, whatever request.ip / X-Forwarded-For gave us
+
+  shareId String
+  share   Share  @relation(fields: [shareId], references: [id], onDelete: Cascade)
 }
 
 model ReverseShare {

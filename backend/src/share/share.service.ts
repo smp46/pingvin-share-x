@@ -18,6 +18,7 @@ import { EmailService } from "src/email/email.service";
 import { FileService } from "src/file/file.service";
 import { PrismaService } from "src/prisma/prisma.service";
 import { ReverseShareService } from "src/reverseShare/reverseShare.service";
+import { ShareAccessLogService } from "src/shareAccessLog/shareAccessLog.service";
 import { SystemService } from "src/system/system.service";
 import { parseRelativeDateToAbsolute } from "src/utils/date.util";
 import { SHARE_DIRECTORY } from "../constants";
@@ -36,10 +37,16 @@ export class ShareService {
     private reverseShareService: ReverseShareService,
     private clamScanService: ClamScanService,
     private systemService: SystemService,
+    private shareAccessLogService: ShareAccessLogService,
     private readonly i18n: I18nService,
   ) {}
 
-  async create(share: CreateShareDTO, user?: User, reverseShareToken?: string) {
+  async create(
+    share: CreateShareDTO,
+    user?: User,
+    reverseShareToken?: string,
+    ip?: string,
+  ) {
     if (share.size) {
       const systemInfo = await this.systemService.getSystemInfo();
       if (systemInfo && systemInfo.total - systemInfo.used < share.size) {
@@ -131,6 +138,8 @@ export class ShareService {
         },
       });
     }
+
+    if (ip) await this.shareAccessLogService.log(shareTuple.id, ip, "CREATED");
 
     return shareTuple;
   }
@@ -507,14 +516,15 @@ export class ShareService {
     return { isAvailable: !share };
   }
 
-  async increaseViewCount(share: Share) {
+  async increaseViewCount(share: Share, ip?: string) {
     await this.prisma.share.update({
       where: { id: share.id },
       data: { views: share.views + 1 },
     });
+    if (ip) await this.shareAccessLogService.log(share.id, ip, "VIEWED");
   }
 
-  async getShareToken(shareId: string, password: string) {
+  async getShareToken(shareId: string, password: string, ip?: string) {
     const share = await this.prisma.share.findFirst({
       where: { id: shareId },
       include: {
@@ -550,7 +560,7 @@ export class ShareService {
     }
 
     const token = await this.generateShareToken(share);
-    await this.increaseViewCount(share);
+    await this.increaseViewCount(share, ip);
     return token;
   }
 
