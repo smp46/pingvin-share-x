@@ -25,6 +25,30 @@ Pingvin Share X is a fork of [Pingvin Share](https://github.com/stonith404/pingv
 - Integration with ClamAV for security scans
 - Different file providers: local storage and S3
 
+## What's different from upstream
+
+This fork tracks [smp46/pingvin-share-x](https://github.com/smp46/pingvin-share-x) and adds:
+
+**Admin panel**
+- Sortable, searchable share table with checkbox multi-select and bulk delete (partial failures are reported instead of failing silently)
+- Filter shares by creation date, with quick ranges or a custom range
+- Auto refresh with a Grafana style time range picker
+- Batched loading so large share lists stay smooth
+- Per-share ClamAV scan status (pending, clean, infected, failed) shown as an icon
+- Access log per share: who created it and who opened it, grouped by IP with a visit count, each IP links out to ipinfo.io
+- Shows why a share got removed, for example when ClamAV deletes it for containing a malicious file
+
+**ClamAV**
+- Retries a scan instead of treating a ClamAV hiccup as "file is clean"
+- Keeps retrying the connection instead of giving up on ClamAV forever after one failed attempt
+- Fixed scanning large files: the client library's default timeout was too short for big uploads
+
+**i18n**
+- Falls back to English instead of showing blank text for missing translations
+
+**Uploads**
+- More robust handling of Chromium's own file picker
+
 ## Setup
 
 ### Installation with Docker (recommended)
