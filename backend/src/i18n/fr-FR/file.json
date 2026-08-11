@@ -6,6 +6,8 @@
   "notEnoughSpace": "Espace insuffisant sur le serveur",
   "unexpectedChunk": "Chunk inattendu reçu",
   "maxSizeExceeded": "Taille maximale de partage dépassée",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "Erreur lors de la création du fichier ZIP",
   "s3DeleteError": "Impossible de supprimer le fichier de S3",
   "s3UploadInitError": "Échec de l'initialisation de l'upload multipart.",
