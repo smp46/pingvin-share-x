@@ -9,7 +9,11 @@ services:
     ports:
       - 3001:3000
     environment:
-      - TRUST_PROXY=false
+      # true so the bundled Caddy + backend actually honor X-Forwarded-For
+      # and real client IPs land in ShareAccessLog instead of Caddy's own
+      # loopback address. fine for a local lab with no real proxy in front;
+      # in prod only set this when there IS a trusted reverse proxy in front.
+      - TRUST_PROXY=true
     volumes:
       - "./data:/opt/app/backend/data:rw,z"
       - "./data/images:/opt/app/frontend/public/img:rw,z"
