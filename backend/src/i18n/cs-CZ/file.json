@@ -6,6 +6,8 @@
   "notEnoughSpace": "Nedostatek místa na serveru",
   "unexpectedChunk": "Přijat neočekávaný blok",
   "maxSizeExceeded": "Maximální velikost sdílení byla překročena",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "Chyba při vytváření ZIP souboru",
   "s3DeleteError": "Nepodařilo se smazat soubor z S3",
   "s3UploadInitError": "Nepodařilo se inicializovat nahrávání.",
