@@ -66,7 +66,10 @@ export class S3FileService {
     const s3Instance = this.getS3Instance();
     const share = await this.prisma.share.findUnique({
       where: { id: shareId },
-      include: { creator: true },
+      include: {
+        creator: true,
+        reverseShare: { include: { creator: true } },
+      },
     });
 
     try {
@@ -100,11 +103,18 @@ export class S3FileService {
         );
       }
 
-      if (share?.creatorId && share.creator?.storageQuotaLimit) {
-        const quotaLimit = parseInt(share.creator.storageQuotaLimit);
+      const quotaOwner = share?.reverseShare
+        ? share.reverseShare.creator
+        : share?.creator;
+      const quotaOwnerId = share?.reverseShare
+        ? share.reverseShare.creatorId
+        : share?.creatorId;
+
+      if (quotaOwnerId && quotaOwner?.storageQuotaLimit) {
+        const quotaLimit = parseInt(quotaOwner.storageQuotaLimit);
         const activeStorageUsage = await getUserActiveStorageUsage(
           this.prisma,
-          share.creatorId,
+          quotaOwnerId,
         );
         const projectedUsage =
           activeStorageUsage +
@@ -113,7 +123,9 @@ export class S3FileService {
 
         if (projectedUsage > quotaLimit) {
           throw new BadRequestException(
-            this.i18n.t("file.storageQuotaExceeded"),
+            share?.reverseShare
+              ? this.i18n.t("file.reverseShareQuotaExceeded")
+              : this.i18n.t("file.storageQuotaExceeded"),
           );
         }
       }

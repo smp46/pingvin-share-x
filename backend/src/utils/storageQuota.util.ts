@@ -8,11 +8,18 @@ export async function getUserActiveStorageUsage(
   const files = await prisma.file.findMany({
     where: {
       share: {
-        creatorId: userId,
         removedReason: null,
         OR: [
           { expiration: { gt: new Date() } },
           { expiration: moment(0).toDate() },
+        ],
+        AND: [
+          {
+            OR: [
+              { reverseShare: { creatorId: userId } },
+              { reverseShareId: null, creatorId: userId },
+            ],
+          },
         ],
       },
     },

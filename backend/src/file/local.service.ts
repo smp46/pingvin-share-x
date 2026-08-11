@@ -40,7 +40,11 @@ export class LocalFileService {
 
     const share = await this.prisma.share.findUnique({
       where: { id: shareId },
-      include: { files: true, reverseShare: true, creator: true },
+      include: {
+        files: true,
+        reverseShare: { include: { creator: true } },
+        creator: true,
+      },
     });
 
     if (share.uploadLocked)
@@ -99,18 +103,27 @@ export class LocalFileService {
       );
     }
 
-    if (share.creatorId && share.creator?.storageQuotaLimit) {
-      const quotaLimit = parseInt(share.creator.storageQuotaLimit);
+    const quotaOwner = share.reverseShare
+      ? share.reverseShare.creator
+      : share.creator;
+    const quotaOwnerId = share.reverseShare
+      ? share.reverseShare.creatorId
+      : share.creatorId;
+
+    if (quotaOwnerId && quotaOwner?.storageQuotaLimit) {
+      const quotaLimit = parseInt(quotaOwner.storageQuotaLimit);
       const activeStorageUsage = await getUserActiveStorageUsage(
         this.prisma,
-        share.creatorId,
+        quotaOwnerId,
       );
       const projectedUsage =
         activeStorageUsage + diskFileSize + buffer.byteLength;
 
       if (projectedUsage > quotaLimit) {
         throw new HttpException(
-          this.i18n.t("file.storageQuotaExceeded"),
+          share.reverseShare
+            ? this.i18n.t("file.reverseShareQuotaExceeded")
+            : this.i18n.t("file.storageQuotaExceeded"),
           HttpStatus.PAYLOAD_TOO_LARGE,
         );
       }

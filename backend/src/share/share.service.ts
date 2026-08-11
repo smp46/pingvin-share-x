@@ -41,22 +41,28 @@ export class ShareService {
   ) {}
 
   async create(share: CreateShareDTO, user?: User, reverseShareToken?: string) {
+    const reverseShare =
+      await this.reverseShareService.getByToken(reverseShareToken);
+    const quotaOwner = reverseShare ? reverseShare.creator : user;
+
     if (share.size) {
       const systemInfo = await this.systemService.getSystemInfo();
       if (systemInfo && systemInfo.total - systemInfo.used < share.size) {
         throw new BadRequestException(this.i18n.t("share.notEnoughSpace"));
       }
 
-      if (user?.storageQuotaLimit) {
-        const quotaLimit = parseInt(user.storageQuotaLimit);
+      if (quotaOwner?.storageQuotaLimit) {
+        const quotaLimit = parseInt(quotaOwner.storageQuotaLimit);
         const activeStorageUsage = await getUserActiveStorageUsage(
           this.prisma,
-          user.id,
+          quotaOwner.id,
         );
 
         if (activeStorageUsage + share.size > quotaLimit) {
           throw new BadRequestException(
-            this.i18n.t("share.storageQuotaExceeded"),
+            reverseShare
+              ? this.i18n.t("share.reverseShareQuotaExceeded")
+              : this.i18n.t("share.storageQuotaExceeded"),
           );
         }
       }
@@ -75,8 +81,6 @@ export class ShareService {
     let expirationDate: Date;
 
     // If share is created by a reverse share token override the expiration date
-    const reverseShare =
-      await this.reverseShareService.getByToken(reverseShareToken);
     if (reverseShare) {
       expirationDate = reverseShare.shareExpiration;
     } else {
