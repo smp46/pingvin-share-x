@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "Anonim paylaşımlar güncellenemez",
   "invalidExpiration": "Geçersiz son kullanma tarihi",
   "maxExpirationExceeded": "Son kullanma tarihi maksimum süreyi aşıyor",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "Yanlış şifre",
   "tokenRequired": "Paylaşım belirteci gerekli",
   "privateShare": "Bu paylaşıma yalnızca ters paylaşım oluşturucusu erişebilir",
