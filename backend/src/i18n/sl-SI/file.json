@@ -6,6 +6,8 @@
   "notEnoughSpace": "Na strežniku ni dovolj prostora",
   "unexpectedChunk": "Prejet nepričakovan del (chunk)",
   "maxSizeExceeded": "Največja velikost deljenja je presežena",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "Napaka pri ustvarjanju datoteke ZIP",
   "s3DeleteError": "Datoteke ni bilo mogoče izbrisati iz S3",
   "s3UploadInitError": "Inicializacija večdelnega nalaganja ni uspela.",
