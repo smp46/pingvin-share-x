@@ -6,6 +6,8 @@
   "notEnoughSpace": "サーバーに十分な空き容量がありません",
   "unexpectedChunk": "予期しないチャックを受信しました",
   "maxSizeExceeded": "最大共有サイズを超過しました",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "ZIPファイルの作成中にエラーが発生しました",
   "s3DeleteError": "S3からファイルを削除できませんでした",
   "s3UploadInitError": "マルチパートアップロードの初期化に失敗しました。",
