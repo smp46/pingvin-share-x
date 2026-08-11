@@ -13,6 +13,8 @@ import * as mime from "mime-types";
 import { I18nService } from "nestjs-i18n";
 import { ConfigService } from "src/config/config.service";
 import { PrismaService } from "src/prisma/prisma.service";
+import { byteToHumanSizeString } from "src/utils/fileSize.util";
+import { getUserActiveStorageUsage } from "src/utils/storageQuota.util";
 import { validate as isValidUUID } from "uuid";
 import { SHARE_DIRECTORY } from "../constants";
 import { Readable } from "stream";
@@ -39,7 +41,11 @@ export class LocalFileService {
 
     const share = await this.prisma.share.findUnique({
       where: { id: shareId },
-      include: { files: true, reverseShare: true, creator: true },
+      include: {
+        files: true,
+        reverseShare: { include: { creator: true } },
+        creator: true,
+      },
     });
 
     if (share.uploadLocked)
@@ -96,6 +102,38 @@ export class LocalFileService {
         this.i18n.t("file.maxSizeExceeded"),
         HttpStatus.PAYLOAD_TOO_LARGE,
       );
+    }
+
+    const quotaOwner = share.reverseShare
+      ? share.reverseShare.creator
+      : share.creator;
+    const quotaOwnerId = share.reverseShare
+      ? share.reverseShare.creatorId
+      : share.creatorId;
+
+    if (quotaOwnerId && quotaOwner?.storageQuotaLimit) {
+      const quotaLimit = parseInt(quotaOwner.storageQuotaLimit);
+      const activeStorageUsage = await getUserActiveStorageUsage(
+        this.prisma,
+        quotaOwnerId,
+      );
+      const projectedUsage =
+        activeStorageUsage + diskFileSize + buffer.byteLength;
+
+      if (projectedUsage > quotaLimit) {
+        const exceededBytes = projectedUsage - quotaLimit;
+        const exceededSize = byteToHumanSizeString(exceededBytes);
+        throw new HttpException(
+          share.reverseShare
+            ? this.i18n.t("file.reverseShareQuotaExceeded", {
+                args: { exceededSize },
+              })
+            : this.i18n.t("file.storageQuotaExceeded", {
+                args: { exceededSize },
+              }),
+          HttpStatus.PAYLOAD_TOO_LARGE,
+        );
+      }
     }
 
     await fs.appendFile(

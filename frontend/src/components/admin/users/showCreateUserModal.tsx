@@ -47,6 +47,8 @@ const Body = ({
       setPasswordManually: false,
       hasCustomShareSizeLimit: false,
       shareSizeLimit: 104857600,
+      hasCustomStorageQuotaLimit: false,
+      storageQuotaLimit: 21474836480,
     },
     validate: yupResolver(
       yup.object().shape({
@@ -58,6 +60,14 @@ const Body = ({
           .string()
           .min(8, t("common.error.too-short", { length: 8 }))
           .optional(),
+        storageQuotaLimit: yup.number().test(
+          "storage-quota-positive",
+          "Storage quota must be greater than 0",
+          function (value) {
+            if (!this.parent.hasCustomStorageQuotaLimit) return true;
+            return (value ?? 0) > 0;
+          },
+        ),
       }),
     ),
   });
@@ -74,6 +84,9 @@ const Body = ({
               isAdmin: values.isAdmin,
               shareSizeLimit: values.hasCustomShareSizeLimit
                 ? values.shareSizeLimit.toString()
+                : null,
+              storageQuotaLimit: values.hasCustomStorageQuotaLimit
+                ? values.storageQuotaLimit.toString()
                 : null,
             })
             .then(() => {
@@ -133,6 +146,30 @@ const Body = ({
               label={t("admin.users.modal.create.custom-share-size-limit")}
               value={form.values.shareSizeLimit}
               onChange={(val) => form.setFieldValue("shareSizeLimit", val)}
+            />
+          )}
+          <Switch
+            styles={{
+              body: {
+                display: "flex",
+                justifyContent: "space-between",
+              },
+            }}
+            mt="xs"
+            labelPosition="left"
+            label={t("admin.users.modal.create.custom-storage-quota-limit")}
+            description={t(
+              "admin.users.modal.create.custom-storage-quota-limit.description",
+            )}
+            {...form.getInputProps("hasCustomStorageQuotaLimit", {
+              type: "checkbox",
+            })}
+          />
+          {form.values.hasCustomStorageQuotaLimit && (
+            <FileSizeInput
+              label={t("admin.users.modal.create.custom-storage-quota-limit")}
+              value={form.values.storageQuotaLimit}
+              onChange={(val) => form.setFieldValue("storageQuotaLimit", val)}
             />
           )}
           <Switch

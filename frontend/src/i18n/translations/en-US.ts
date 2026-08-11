@@ -277,6 +277,8 @@ export default {
   "admin.users.table.username": "Username",
   "admin.users.table.email": "Email",
   "admin.users.table.admin": "Admin",
+  "admin.users.table.storageQuota": "Storage quota",
+  "admin.users.table.maxShareSize": "Max share size",
 
   "admin.users.edit.update.title": "Edit user: {username}",
   "admin.users.edit.update.admin-privileges": "Admin privileges",
@@ -284,6 +286,10 @@ export default {
   "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
   "admin.users.edit.update.custom-share-size-limit.description":
     "Override the global upload limit for this user",
+  "admin.users.edit.update.custom-storage-quota-limit":
+    "Custom storage quota",
+  "admin.users.edit.update.custom-storage-quota-limit.description":
+    "Limit the user's total storage usage across active shares",
   "admin.users.edit.update.change-password.title": "Change password",
   "admin.users.edit.update.change-password.field": "New password",
   "admin.users.edit.update.change-password.button": "Save new password",
@@ -305,6 +311,10 @@ export default {
   "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
   "admin.users.modal.create.custom-share-size-limit.description":
     "Override the global upload limit for this user",
+  "admin.users.modal.create.custom-storage-quota-limit":
+    "Custom storage quota",
+  "admin.users.modal.create.custom-storage-quota-limit.description":
+    "Limit the user's total storage usage across active shares",
   "admin.users.modal.create.admin": "Admin privileges",
   "admin.users.modal.create.admin.description":
     "If checked, the user will be able to access the admin panel.",

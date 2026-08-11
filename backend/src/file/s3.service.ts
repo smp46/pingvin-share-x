@@ -23,6 +23,8 @@ import { ConfigService } from "src/config/config.service";
 import { I18nService } from "nestjs-i18n";
 import * as crypto from "crypto";
 import * as mime from "mime-types";
+import { byteToHumanSizeString } from "src/utils/fileSize.util";
+import { getUserActiveStorageUsage } from "src/utils/storageQuota.util";
 import { File } from "./file.service";
 import { Readable } from "stream";
 import { validate as isValidUUID } from "uuid";
@@ -37,6 +39,7 @@ export class S3FileService {
     {
       uploadId: string;
       parts: Array<{ ETag: string | undefined; PartNumber: number }>;
+      uploadedBytes: number;
     }
   > = {};
 
@@ -62,6 +65,13 @@ export class S3FileService {
     const key = `${this.getS3Path()}${shareId}/${file.name}`;
     const bucketName = this.config.get("s3.bucketName");
     const s3Instance = this.getS3Instance();
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+      include: {
+        creator: true,
+        reverseShare: { include: { creator: true } },
+      },
+    });
 
     try {
       // Initialize multipart upload if it's the first chunk
@@ -82,6 +92,7 @@ export class S3FileService {
         this.multipartUploads[file.id] = {
           uploadId,
           parts: [],
+          uploadedBytes: 0,
         };
       }
 
@@ -91,6 +102,39 @@ export class S3FileService {
         throw new InternalServerErrorException(
           this.i18n.t("file.s3SessionNotFound"),
         );
+      }
+
+      const quotaOwner = share?.reverseShare
+        ? share.reverseShare.creator
+        : share?.creator;
+      const quotaOwnerId = share?.reverseShare
+        ? share.reverseShare.creatorId
+        : share?.creatorId;
+
+      if (quotaOwnerId && quotaOwner?.storageQuotaLimit) {
+        const quotaLimit = parseInt(quotaOwner.storageQuotaLimit);
+        const activeStorageUsage = await getUserActiveStorageUsage(
+          this.prisma,
+          quotaOwnerId,
+        );
+        const projectedUsage =
+          activeStorageUsage +
+          multipartUpload.uploadedBytes +
+          buffer.byteLength;
+
+        if (projectedUsage > quotaLimit) {
+          const exceededBytes = projectedUsage - quotaLimit;
+          const exceededSize = byteToHumanSizeString(exceededBytes);
+          throw new BadRequestException(
+            share?.reverseShare
+              ? this.i18n.t("file.reverseShareQuotaExceeded", {
+                  args: { exceededSize },
+                })
+              : this.i18n.t("file.storageQuotaExceeded", {
+                  args: { exceededSize },
+                }),
+          );
+        }
       }
 
       const uploadId = multipartUpload.uploadId;
@@ -113,6 +157,7 @@ export class S3FileService {
         ETag: uploadPartResponse.ETag,
         PartNumber: partNumber,
       });
+      multipartUpload.uploadedBytes += buffer.byteLength;
 
       // Complete the multipart upload if it's the last chunk
       if (chunk.index === chunk.total - 1) {
