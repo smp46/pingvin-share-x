@@ -6,6 +6,8 @@
   "notEnoughSpace": "Δεν υπάρχει αρκετός χώρος στον διακομιστή",
   "unexpectedChunk": "Λήφθηκε μη αναμενόμενο κομμάτι",
   "maxSizeExceeded": "Υπέρβαση μέγιστου μεγέθους κοινής χρήσης",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "Σφάλμα κατά τη δημιουργία αρχείου ZIP",
   "s3DeleteError": "Δεν ήταν δυνατή η διαγραφή του αρχείου από το S3",
   "s3UploadInitError": "Αποτυχία προετοιμασίας μεταφόρτωσης πολλών μερών.",
