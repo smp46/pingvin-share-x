@@ -6,6 +6,8 @@
   "notEnoughSpace": "فضای کافی روی سرور وجود ندارد",
   "unexpectedChunk": "بخش غیرمنتظره‌ای دریافت شد",
   "maxSizeExceeded": "حداکثر حجم اشتراک فراتر رفته است",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "خطا در ایجاد فایل ZIP",
   "s3DeleteError": "امکان حذف فایل از S3 وجود نداشت",
   "s3UploadInitError": "راه‌اندازی بارگذاری چندبخشی ناموفق بود.",
