@@ -6,6 +6,8 @@
   "notEnoughSpace": "No hi ha prou espai al servidor",
   "unexpectedChunk": "S'ha rebut un fragment inesperat",
   "maxSizeExceeded": "S'ha superat la mida màxima de compartició",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "Error en crear el fitxer ZIP",
   "s3DeleteError": "No s'ha pogut suprimir el fitxer de l'S3",
   "s3UploadInitError": "S'ha produït un error en inicialitzar la càrrega en diverses parts.",
