@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "Les partages anonymes ne peuvent pas être mis à jour",
   "invalidExpiration": "Date d'expiration invalide",
   "maxExpirationExceeded": "La date d'expiration dépasse la date d'expiration maximale",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "Mauvais mot de passe",
   "tokenRequired": "Jeton de partage requis",
   "privateShare": "Seul le créateur du partage inversé peut accéder à ce partage",
