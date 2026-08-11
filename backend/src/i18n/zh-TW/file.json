@@ -6,6 +6,8 @@
   "notEnoughSpace": "伺服器空間不足",
   "unexpectedChunk": "收到意外的分塊",
   "maxSizeExceeded": "超過最大分享限制",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "創建 ZIP 文件時出錯",
   "s3DeleteError": "無法從 S3 刪除文件",
   "s3UploadInitError": "無法初始化分塊上傳。",
