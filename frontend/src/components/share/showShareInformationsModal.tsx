@@ -1,4 +1,7 @@
 import {
+  Anchor,
+  Badge,
+  Box,
   Button,
   Checkbox,
   Collapse,
@@ -20,13 +23,13 @@ import { FormattedMessage } from "react-intl";
 import * as yup from "yup";
 import { translateOutsideContext } from "../../hooks/useTranslate.hook";
 import shareService from "../../services/share.service";
-import { MyShare, UpdateShare } from "../../types/share.type";
+import { MyShare, ShareAccessLogEntry, UpdateShare } from "../../types/share.type";
 import { Timespan } from "../../types/timespan.type";
 import { byteToHumanSizeString } from "../../utils/fileSize.util";
 import toast from "../../utils/toast.util";
 import CopyTextField from "../upload/CopyTextField";
 import QRCode from "./QRCode";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const showShareInformationsModal = (
   modals: ModalsContextProps,
@@ -37,6 +40,7 @@ const showShareInformationsModal = (
   maxExpiration?: Timespan,
   onShareUpdated?: (share: MyShare) => void,
   initiallyEditing = false,
+  isAdmin = false,
 ) => {
   const t = translateOutsideContext();
 
@@ -51,6 +55,7 @@ const showShareInformationsModal = (
         maxExpiration={maxExpiration}
         onShareUpdated={onShareUpdated}
         initiallyEditing={initiallyEditing}
+        isAdmin={isAdmin}
       />
     ),
   });
@@ -64,6 +69,7 @@ const Body = ({
   maxExpiration,
   onShareUpdated,
   initiallyEditing,
+  isAdmin,
 }: {
   share: MyShare;
   maxShareSize: number;
@@ -72,15 +78,25 @@ const Body = ({
   maxExpiration?: Timespan;
   onShareUpdated?: (share: MyShare) => void;
   initiallyEditing: boolean;
+  isAdmin: boolean;
 }) => {
   const t = translateOutsideContext();
   const [currentShare, setCurrentShare] = useState(share);
   const [showQR, setShowQR] = useState(false);
   const [isEditing, setIsEditing] = useState(initiallyEditing);
+  const [accessLogs, setAccessLogs] = useState<ShareAccessLogEntry[]>([]);
 
   const handleToggleQR = () => {
     setShowQR(!showQR);
   };
+
+  useEffect(() => {
+    if (!isAdmin) return;
+    shareService
+      .getAccessLogs(currentShare.id)
+      .then(setAccessLogs)
+      .catch(() => setAccessLogs([]));
+  }, [isAdmin, currentShare.id]);
 
   const link = `${appUrl !== defaultAppUrl ? appUrl : window.location.origin}/s/${currentShare.id}`;
 
@@ -193,6 +209,42 @@ const Body = ({
           {formattedMaxShareSize}
         </Text>
       </Flex>
+      {isAdmin && accessLogs.length > 0 && (
+        <>
+          <Divider />
+          <Text size="sm" weight={700}>
+            <FormattedMessage id="account.shares.modal.accessLog.title" />
+          </Text>
+          <Box sx={{ maxHeight: 180, overflowY: "auto" }}>
+            <Stack spacing={4}>
+              {accessLogs.map((entry, i) => (
+                <Group key={i} position="apart" spacing="xs" noWrap>
+                  <Badge
+                    size="sm"
+                    color={entry.event === "CREATED" ? "blue" : "gray"}
+                    variant="light"
+                  >
+                    {entry.event === "CREATED"
+                      ? t("account.shares.modal.accessLog.created")
+                      : t("account.shares.modal.accessLog.viewed")}
+                  </Badge>
+                  <Anchor
+                    href={`https://ipinfo.io/${entry.ip}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    size="sm"
+                  >
+                    {entry.ip}
+                  </Anchor>
+                  <Text size="xs" color="dimmed">
+                    {moment(entry.createdAt).format("LLL")}
+                  </Text>
+                </Group>
+              ))}
+            </Stack>
+          </Box>
+        </>
+      )}
       <Button variant="light" onClick={() => setIsEditing(true)}>
         {t("common.button.edit")}
       </Button>

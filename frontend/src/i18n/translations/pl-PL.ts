@@ -154,6 +154,9 @@ export default {
   "account.shares.modal.share-link": "Udostępnij link",
   "account.shares.modal.edit.password.keep": "Pozostaw puste, aby zachować obecne hasło",
   "account.shares.modal.edit.password.remove": "Usuń ochronę hasłem",
+  "account.shares.modal.accessLog.title": "Log dostępu",
+  "account.shares.modal.accessLog.created": "Utworzono",
+  "account.shares.modal.accessLog.viewed": "Otworzono",
   "account.shares.modal.delete.title": "Usuń udostępnianie: {share}",
   "account.shares.modal.delete.description": "Czy na pewno chcesz usunąć to udostępnianie?",
   // END /account/shares

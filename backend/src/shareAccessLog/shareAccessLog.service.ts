@@ -21,4 +21,12 @@ export class ShareAccessLogService {
       );
     }
   }
+
+  async findByShare(shareId: string) {
+    return this.prisma.shareAccessLog.findMany({
+      where: { shareId },
+      orderBy: { createdAt: "desc" },
+      select: { event: true, ip: true, createdAt: true },
+    });
+  }
 }

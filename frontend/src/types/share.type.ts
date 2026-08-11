@@ -48,6 +48,12 @@ export type ShareMetaData = {
 
 export type ShareScanStatus = "PENDING" | "CLEAN" | "INFECTED" | "FAILED";
 
+export type ShareAccessLogEntry = {
+  event: "CREATED" | "VIEWED";
+  ip: string;
+  createdAt: string;
+};
+
 export type MyShare = Omit<Share, "hasPassword"> & {
   views: number;
   createdAt: Date;

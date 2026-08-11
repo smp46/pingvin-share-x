@@ -516,6 +516,10 @@ export class ShareService {
     return { isAvailable: !share };
   }
 
+  async getAccessLogs(shareId: string) {
+    return this.shareAccessLogService.findByShare(shareId);
+  }
+
   async increaseViewCount(share: Share, ip?: string) {
     await this.prisma.share.update({
       where: { id: share.id },

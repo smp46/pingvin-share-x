@@ -186,6 +186,9 @@ export default {
   "account.shares.modal.edit.password.keep":
     "Leave blank to keep the current password",
   "account.shares.modal.edit.password.remove": "Remove password protection",
+  "account.shares.modal.accessLog.title": "Access log",
+  "account.shares.modal.accessLog.created": "Created",
+  "account.shares.modal.accessLog.viewed": "Viewed",
 
   "account.shares.modal.delete.title": "Delete share: {share}",
   "account.shares.modal.delete.description":

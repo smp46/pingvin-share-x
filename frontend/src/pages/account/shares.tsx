@@ -193,6 +193,8 @@ const MyShares = () => {
                                       : item,
                                   ),
                                 ),
+                              false,
+                              user?.isAdmin,
                             );
                           }}
                         >

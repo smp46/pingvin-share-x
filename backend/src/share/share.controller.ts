@@ -51,6 +51,12 @@ export class ShareController {
     return new AdminShareDTO().fromList(await this.shareService.getShares());
   }
 
+  @Get(":id/accessLogs")
+  @UseGuards(JwtGuard, AdministratorGuard)
+  async getShareAccessLogs(@Param("id") id: string) {
+    return this.shareService.getAccessLogs(id);
+  }
+
   @Get()
   @UseGuards(JwtGuard)
   async getMyShares(@GetUser() user: User) {

@@ -8,6 +8,7 @@ import {
   MyReverseShare,
   MyShare,
   Share,
+  ShareAccessLogEntry,
   ShareMetaData,
   UpdateShare,
 } from "../types/share.type";
@@ -82,6 +83,11 @@ const getReceivedShares = async (): Promise<any[]> => {
 const getShareToken = async (id: string, password?: string) => {
   if (!isValidId(id)) throw new Error("Invalid ID");
   await api.post(`/shares/${id}/token`, { password });
+};
+
+const getAccessLogs = async (id: string): Promise<ShareAccessLogEntry[]> => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
+  return (await api.get(`shares/${id}/accessLogs`)).data;
 };
 
 const isShareIdAvailable = async (id: string): Promise<boolean> => {
@@ -212,6 +218,7 @@ export default {
   remove,
   expire,
   getMetaData,
+  getAccessLogs,
   doesFileSupportPreview,
   isShareTextFile,
   getMyShares,

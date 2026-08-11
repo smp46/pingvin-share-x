@@ -401,6 +401,8 @@ const ManageShareTable = ({
                                 config.get("general.appUrl", true),
                                 { value: 0, unit: "days" },
                                 updateShare,
+                                false,
+                                true,
                               );
                             }}
                           >
