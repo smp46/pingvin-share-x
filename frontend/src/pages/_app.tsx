@@ -34,6 +34,8 @@ import i18nUtil from "../utils/i18n.util";
 import userPreferences from "../utils/userPreferences.util";
 import Footer from "../components/footer/Footer";
 import { getDefaultConfig } from "../utils/defaultConfig.util";
+import AdminNoticeModal, { AdminNotice } from "../components/admin/AdminNoticeModal";
+import adminNoticeService from "../services/adminNotice.service";
 
 const excludeDefaultLayoutRoutes = ["/admin/config/[category]"];
 const availableMantineColors = [
@@ -252,6 +254,33 @@ function App({ Component, pageProps }: AppProps) {
   const language = useRef(pageProps.language);
   moment.locale(language.current);
 
+  const [pendingNotices, setPendingNotices] = useState<AdminNotice[]>([]);
+
+  useEffect(() => {
+    if (user?.isAdmin) {
+      adminNoticeService
+        .getPendingNotices()
+        .then((notices) => {
+          if (notices && Array.isArray(notices)) {
+            setPendingNotices(notices);
+          }
+        })
+        .catch(() => {});
+    }
+  }, [user?.id, user?.isAdmin]);
+
+  const handleDismissNotice = async (noticeId: string) => {
+    setPendingNotices((prev) => prev.filter((n) => n.id !== noticeId));
+    try {
+      await adminNoticeService.dismissNotice(noticeId);
+    } catch {
+      adminNoticeService
+        .getPendingNotices()
+        .then((notices) => setPendingNotices(notices || []))
+        .catch(() => {});
+    }
+  };
+
   return (
     <>
       <Head>
@@ -296,6 +325,10 @@ function App({ Component, pageProps }: AppProps) {
                     },
                   }}
                 >
+                  <AdminNoticeModal
+                    notice={pendingNotices[0] || null}
+                    onDismiss={handleDismissNotice}
+                  />
                   {excludeDefaultLayoutRoutes.includes(route) ? (
                     <Component {...pageProps} />
                   ) : (
