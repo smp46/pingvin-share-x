@@ -644,5 +644,12 @@ export default {
   "common.error.number-too-large": "En fazla {max} olabilir",
   "common.error.exact-length": "Tam olarak {length} karakter olmalıdır",
   "common.error.invalid-number": "Bir sayı olmalıdır",
-  "common.error.field-required": "Bu alan gereklidir"
+  "common.error.field-required": "Bu alan gereklidir",
+
+  "admin.notice.modal.headerTag": "YÖNETİCİ EYLEMİ GEREKLİ",
+  "admin.notice.modal.defaultCheckboxLabel": "Bu bildirimi okuduğumu ve köklü değişiklikleri anladığımı onaylıyorum.",
+  "admin.notice.modal.button.acknowledge": "Onayla ve Kapat",
+  "admin.notice.modal.button.acknowledging": "Onaylanıyor...",
+  "admin.notice.modal.docsLink": "Dokümantasyonu Görüntüle",
+  "admin.notice.modal.globalNoticeFooter": "Not: Onaylandıktan sonra bu bildirim, tüm cihazlardaki tüm yöneticiler için kalıcı olarak kapatılacaktır.",
 };

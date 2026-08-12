@@ -644,5 +644,12 @@ export default {
   "common.error.number-too-large": "Must be at most {max}",
   "common.error.exact-length": "Bằng {length} kí tự",
   "common.error.invalid-number": "Phải là số",
-  "common.error.field-required": "Trường bắt buộc"
+  "common.error.field-required": "Trường bắt buộc",
+
+  "admin.notice.modal.headerTag": "YÊU CẦU THAO TÁC QUẢN TRỊ",
+  "admin.notice.modal.defaultCheckboxLabel": "Tôi xác nhận đã đọc thông báo này và hiểu các thay đổi quan trọng.",
+  "admin.notice.modal.button.acknowledge": "Xác nhận & Đóng",
+  "admin.notice.modal.button.acknowledging": "Đang xác nhận...",
+  "admin.notice.modal.docsLink": "Xem tài liệu hướng dẫn",
+  "admin.notice.modal.globalNoticeFooter": "Lưu ý: Sau khi xác nhận, thông báo này sẽ bị ẩn vĩnh viễn đối với tất cả quản trị viên trên mọi thiết bị.",
 };

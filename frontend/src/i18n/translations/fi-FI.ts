@@ -644,5 +644,12 @@ export default {
   "common.error.number-too-large": "Must be at most {max}",
   "common.error.exact-length": "On oltava tarkasti {length} merkkiä pitkä",
   "common.error.invalid-number": "Pitää olla luku",
-  "common.error.field-required": "Tämä kenttä on pakollinen"
+  "common.error.field-required": "Tämä kenttä on pakollinen",
+
+  "admin.notice.modal.headerTag": "VAATII YLLÄPIDON TOIMENPITEITÄ",
+  "admin.notice.modal.defaultCheckboxLabel": "Vahvistan lukeneeni tämän ilmoituksen ja ymmärtäväni kriittiset muutokset.",
+  "admin.notice.modal.button.acknowledge": "Vahvista ja sulje",
+  "admin.notice.modal.button.acknowledging": "Vahvistetaan...",
+  "admin.notice.modal.docsLink": "Näytä dokumentaatio",
+  "admin.notice.modal.globalNoticeFooter": "Huomautus: Kun tämä ilmoitus on vahvistettu, se poistetaan pysyvästi kaikilta ylläpitäjiltä kaikilla laitteilla.",
 };

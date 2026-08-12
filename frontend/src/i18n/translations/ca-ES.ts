@@ -644,5 +644,12 @@ export default {
   "common.error.number-too-large": "Ha de ser com a màxim {max}",
   "common.error.exact-length": "Ha de tenir exactament {length} caràcters",
   "common.error.invalid-number": "Ha de ser un número",
-  "common.error.field-required": "Aquest camp és obligatori"
+  "common.error.field-required": "Aquest camp és obligatori",
+
+  "admin.notice.modal.headerTag": "CAL UNA ACCIÓ ADMINISTRATIVA",
+  "admin.notice.modal.defaultCheckboxLabel": "Confirmo que he llegit aquest avís i entenc els canvis radicals.",
+  "admin.notice.modal.button.acknowledge": "Reconèixer i descartar",
+  "admin.notice.modal.button.acknowledging": "Reconeixent...",
+  "admin.notice.modal.docsLink": "Veure la documentació",
+  "admin.notice.modal.globalNoticeFooter": "Nota: Un cop reconegut, aquest avís es descartarà permanentment per a tots els administradors en tots els dispositius.",
 };

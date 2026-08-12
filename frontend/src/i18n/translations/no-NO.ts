@@ -644,5 +644,12 @@ export default {
   "common.error.number-too-large": "Må være maksimalt {max}",
   "common.error.exact-length": "Må være nøyaktig {length} tegn",
   "common.error.invalid-number": "Må være et tall",
-  "common.error.field-required": "Dette feltet er obligatorisk"
+  "common.error.field-required": "Dette feltet er obligatorisk",
+
+  "admin.notice.modal.headerTag": "ADMINISTRATIV HANDLING KREVES",
+  "admin.notice.modal.defaultCheckboxLabel": "Jeg bekrefter at jeg har lest denne meldingen og forstår de omfattende endringene.",
+  "admin.notice.modal.button.acknowledge": "Bekreft og lukk",
+  "admin.notice.modal.button.acknowledging": "Bekrefter...",
+  "admin.notice.modal.docsLink": "Se dokumentasjon",
+  "admin.notice.modal.globalNoticeFooter": "Merk: Når den er bekræftet, vil denne meldingen bli permanent fjernet for alle administratorer på tvers av alle enheter.",
 };

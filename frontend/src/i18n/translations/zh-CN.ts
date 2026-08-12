@@ -644,5 +644,12 @@ export default {
   "common.error.number-too-large": "必须至多为 {max}",
   "common.error.exact-length": "必须为 {length} 个字符",
   "common.error.invalid-number": "必须为数字",
-  "common.error.field-required": "必填项"
+  "common.error.field-required": "必填项",
+
+  "admin.notice.modal.headerTag": "需要管理员操作",
+  "admin.notice.modal.defaultCheckboxLabel": "我确认已阅读此通知并理解重大变更。",
+  "admin.notice.modal.button.acknowledge": "确认并关闭",
+  "admin.notice.modal.button.acknowledging": "正在确认...",
+  "admin.notice.modal.docsLink": "查看文档",
+  "admin.notice.modal.globalNoticeFooter": "注意：一旦确认，此通知将在所有设备上对所有管理员永久关闭。",
 };

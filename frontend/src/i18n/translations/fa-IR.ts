@@ -644,5 +644,12 @@ export default {
   "common.error.number-too-large": "باید حداکثر {max} باشد",
   "common.error.exact-length": "باید دقیقاً {length} کاراکتر باشد",
   "common.error.invalid-number": "باید یک عدد باشد",
-  "common.error.field-required": "این فیلد الزامی است"
+  "common.error.field-required": "این فیلد الزامی است",
+
+  "admin.notice.modal.headerTag": "اقدام مدیریتی لازم است",
+  "admin.notice.modal.defaultCheckboxLabel": "تایید می‌کنم که این اطلاعیه را خوانده‌ام و تغییرات بنیادی را درک می‌کنم.",
+  "admin.notice.modal.button.acknowledge": "تایید و بستن",
+  "admin.notice.modal.button.acknowledging": "در حال تایید...",
+  "admin.notice.modal.docsLink": "مشاهده مستندات",
+  "admin.notice.modal.globalNoticeFooter": "توجه: پس از تایید، این اطلاعیه برای همه مدیران در تمام دستگاه‌ها به طور دائمی بسته خواهد شد.",
 };

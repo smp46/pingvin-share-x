@@ -889,4 +889,11 @@ export default {
   "common.error.exact-length": "Must be exactly {length} characters",
   "common.error.invalid-number": "Must be a number",
   "common.error.field-required": "This field is required",
+
+  "admin.notice.modal.headerTag": "ADMINISTRATIVE ACTION REQUIRED",
+  "admin.notice.modal.defaultCheckboxLabel": "I confirm that I have read this notice and understand the breaking changes.",
+  "admin.notice.modal.button.acknowledge": "Acknowledge & Dismiss",
+  "admin.notice.modal.button.acknowledging": "Acknowledging...",
+  "admin.notice.modal.docsLink": "View Documentation",
+  "admin.notice.modal.globalNoticeFooter": "Note: Once acknowledged, this notice will be permanently dismissed for all administrators across all devices.",
 };

@@ -1,0 +1,9 @@
+[
+  {
+    "id": "s3_cors_update",
+    "title": "Action Required: Update S3 CORS Configuration",
+    "message": "This version introduces direct S3 uploads and downloads. You must update your S3 bucket's CORS configuration to support this.",
+    "conditionKey": "REQUIRE_S3_ENABLED",
+    "actionLink": "https://smp46.github.io/pingvin-share-x/setup/s3#cors-configuration"
+  }
+]
