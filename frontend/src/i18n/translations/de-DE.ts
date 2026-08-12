@@ -644,5 +644,12 @@ export default {
   "common.error.number-too-large": "Darf höchstens {max} sein",
   "common.error.exact-length": "Muss genau {length} Zeichen lang sein",
   "common.error.invalid-number": "Muss eine Zahl sein",
-  "common.error.field-required": "Dieses Feld ist erforderlich"
+  "common.error.field-required": "Dieses Feld ist erforderlich",
+
+  "admin.notice.modal.headerTag": "ADMINISTRATIVE AKTION ERFORDERLICH",
+  "admin.notice.modal.defaultCheckboxLabel": "Ich bestätige, dass ich diesen Hinweis gelesen habe und die grundlegenden Änderungen verstehe.",
+  "admin.notice.modal.button.acknowledge": "Bestätigen & Schließen",
+  "admin.notice.modal.button.acknowledging": "Wird bestätigt...",
+  "admin.notice.modal.docsLink": "Dokumentation anzeigen",
+  "admin.notice.modal.globalNoticeFooter": "Hinweis: Nach der Bestätigung wird dieser Hinweis für alle Administratoren auf allen Geräten dauerhaft ausgeblendet.",
 };

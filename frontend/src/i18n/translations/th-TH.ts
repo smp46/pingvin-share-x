@@ -644,5 +644,12 @@ export default {
   "common.error.number-too-large": "Must be at most {max}",
   "common.error.exact-length": "ต้องมีความยาว {length} ตัวอักษร",
   "common.error.invalid-number": "ต้องเป็นตัวเลข",
-  "common.error.field-required": "ต้องกรอกข้อมูลนี้"
+  "common.error.field-required": "ต้องกรอกข้อมูลนี้",
+
+  "admin.notice.modal.headerTag": "จำเป็นต้องดำเนินการโดยผู้ดูแลระบบ",
+  "admin.notice.modal.defaultCheckboxLabel": "ฉันยืนยันว่าได้อ่านประกาศนี้และเข้าใจการเปลี่ยนแปลงที่สำคัญแล้ว",
+  "admin.notice.modal.button.acknowledge": "รับทราบและปิด",
+  "admin.notice.modal.button.acknowledging": "กำลังรับทราบ...",
+  "admin.notice.modal.docsLink": "ดูเอกสารประกอบ",
+  "admin.notice.modal.globalNoticeFooter": "หมายเหตุ: เมื่อรับทราบแล้ว ประกาศนี้จะถูกปิดอย่างถาวรสำหรับผู้ดูแลระบบทุกคนในทุกอุปกรณ์",
 };

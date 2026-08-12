@@ -644,5 +644,12 @@ export default {
   "common.error.number-too-large": "Must be at most {max}",
   "common.error.exact-length": "يجب أن يكون بالضبط {length} حرفًا",
   "common.error.invalid-number": "يجب أن يكون رقماً",
-  "common.error.field-required": "هذا الحقل مطلوب"
+  "common.error.field-required": "هذا الحقل مطلوب",
+
+  "admin.notice.modal.headerTag": "إجراء إداري مطلوب",
+  "admin.notice.modal.defaultCheckboxLabel": "أؤكد أنني قرأت هذا الإشعار وأفهم التغييرات الجذرية.",
+  "admin.notice.modal.button.acknowledge": "إقرار وتجاهل",
+  "admin.notice.modal.button.acknowledging": "جاري الإقرار...",
+  "admin.notice.modal.docsLink": "عرض الوثائق",
+  "admin.notice.modal.globalNoticeFooter": "ملاحظة: بمجرد الإقرار، سيتم إغلاق هذا الإشعار نهائيًا لجميع المسؤولين عبر جميع الأجهزة.",
 };
