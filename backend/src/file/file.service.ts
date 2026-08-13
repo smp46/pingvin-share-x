@@ -238,9 +238,9 @@ export class FileService {
     return share?.storageProvider || "LOCAL";
   }
 
-  async getFileName(fileId: string): Promise<string> {
-    const file = await this.prisma.file.findUnique({
-      where: { id: fileId },
+  async getFileName(shareId: string, fileId: string): Promise<string> {
+    const file = await this.prisma.file.findFirst({
+      where: { id: fileId, shareId },
       select: { name: true },
     });
     if (!file) throw new BadRequestException("File not found");

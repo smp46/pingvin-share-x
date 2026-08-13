@@ -152,7 +152,7 @@ export class FileController {
 
     if (storageProvider === "S3") {
       const url = await this.fileService.getPreSignedDownloadUrl(shareId, fileId, isDownload);
-      const fileName = await this.fileService.getFileName(fileId);
+      const fileName = await this.fileService.getFileName(shareId, fileId);
       if (isDownload) {
         void this.fileService.notifyRecipientDownload(
           shareId,
@@ -160,7 +160,7 @@ export class FileController {
           getValidRecipientId(recipientId),
         );
       }
-      res.redirect(302, url);
+      res.status(302).setHeader("Location", url);
       return;
     }
 

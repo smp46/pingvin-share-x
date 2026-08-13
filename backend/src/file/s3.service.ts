@@ -480,9 +480,9 @@ export class S3FileService {
     const bucketName = this.config.get("s3.bucketName");
     const s3Instance = this.getS3Instance();
 
-    try {
-      const sortedParts = [...parts].sort((a, b) => a.PartNumber - b.PartNumber);
+    const sortedParts = [...parts].sort((a, b) => a.PartNumber - b.PartNumber);
 
+    try {
       await s3Instance.send(
         new CompleteMultipartUploadCommand({
           Bucket: bucketName,
@@ -493,22 +493,33 @@ export class S3FileService {
           },
         }),
       );
+    } catch (error) {
+      this.logger.error("Failed to complete S3 multipart upload:", error);
+      throw new BadRequestException(this.i18n.t("file.s3UploadFailed"));
+    }
 
+    try {
       const fileSize = await this.getFileSize(shareId, fileName);
 
-      await this.prisma.file.create({
-        data: {
-          id: fileId,
-          name: fileName,
-          size: fileSize.toString(),
-          share: { connect: { id: shareId } },
-        },
+      const existingFile = await this.prisma.file.findUnique({
+        where: { id: fileId },
       });
+
+      if (!existingFile) {
+        await this.prisma.file.create({
+          data: {
+            id: fileId,
+            name: fileName,
+            size: fileSize.toString(),
+            share: { connect: { id: shareId } },
+          },
+        });
+      }
 
       return { id: fileId, name: fileName };
     } catch (error) {
-      this.logger.error(error);
-      throw new Error(this.i18n.t("file.s3UploadFailed") || "S3 upload completion failed");
+      this.logger.error("Error creating database record after S3 upload completion:", error);
+      throw new InternalServerErrorException(this.i18n.t("file.s3UploadFailed"));
     }
   }
 
@@ -539,8 +550,8 @@ export class S3FileService {
     fileId: string,
     isDownload: boolean,
   ): Promise<string> {
-    const fileRecord = await this.prisma.file.findUnique({
-      where: { id: fileId },
+    const fileRecord = await this.prisma.file.findFirst({
+      where: { id: fileId, shareId },
     });
     if (!fileRecord) {
       throw new NotFoundException(this.i18n.t("file.notFound"));
