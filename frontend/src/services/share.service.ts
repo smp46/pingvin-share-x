@@ -147,10 +147,10 @@ const uploadFileDirectS3 = async (
   totalChunks: number,
   onUploadProgress?: (progressEvent: any) => void,
 ): Promise<FileUploadResponse> => {
-  const sessionKey = `${shareId}:${file.name}`;
+  const sessionKey = `${shareId}:${file.id || file.name}`;
 
   try {
-    if (chunkIndex === 0) {
+    if (chunkIndex === 0 && !s3UploadSessions[sessionKey]) {
       const initResponse = await api.post(`shares/${shareId}/files/upload-init`, {
         id: file.id,
         name: file.name,
@@ -250,7 +250,7 @@ const uploadFile = async (
 ): Promise<FileUploadResponse> => {
   if (!isValidId(shareId)) throw new Error("Invalid Share ID");
 
-  const sessionKey = `${shareId}:${file.name}`;
+  const sessionKey = `${shareId}:${file.id || file.name}`;
 
   if (s3UploadSessions[sessionKey]) {
     return uploadFileDirectS3(shareId, chunk, file, chunkIndex, totalChunks, onUploadProgress);
@@ -270,6 +270,12 @@ const uploadFile = async (
 
       if (initResponse.data && initResponse.data.directToS3) {
         s3UploadSupportedShares[shareId] = true;
+        s3UploadSessions[sessionKey] = {
+          uploadId: initResponse.data.uploadId,
+          urls: initResponse.data.urls,
+          parts: [],
+          fileId: file.id || "",
+        };
         return uploadFileDirectS3(shareId, chunk, file, chunkIndex, totalChunks, onUploadProgress);
       } else {
         s3UploadSupportedShares[shareId] = false;
