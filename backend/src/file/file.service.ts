@@ -1,4 +1,4 @@
-import { Inject, Injectable, Logger, BadRequestException } from "@nestjs/common";
+import { Inject, Injectable, Logger, BadRequestException, NotFoundException } from "@nestjs/common";
 import { CACHE_MANAGER } from "@nestjs/cache-manager";
 import { Cache } from "cache-manager";
 import { LocalFileService } from "./local.service";
@@ -7,6 +7,7 @@ import { ConfigService } from "src/config/config.service";
 import { Readable } from "stream";
 import { PrismaService } from "../prisma/prisma.service";
 import { EmailService } from "src/email/email.service";
+import { I18nService } from "nestjs-i18n";
 
 const UPDATED_AT_THROTTLE_MS = 5 * 60 * 1000;
 const DOWNLOAD_NOTIFICATION_COOLDOWN_MS = 15 * 60 * 1000;
@@ -19,6 +20,7 @@ export class FileService {
     private s3FileService: S3FileService,
     private configService: ConfigService,
     private emailService: EmailService,
+    private readonly i18n: I18nService,
     @Inject(CACHE_MANAGER) private cache: Cache,
   ) {}
   private readonly logger = new Logger(FileService.name);
@@ -102,7 +104,7 @@ export class FileService {
       select: { storageProvider: true },
     });
     if (share?.storageProvider !== "S3") {
-      throw new BadRequestException("Pre-signed uploads are only supported for S3 storage.");
+      throw new BadRequestException(this.i18n.t("file.s3NotSupported"));
     }
     return this.s3FileService.completePreSignedUpload(
       shareId,
@@ -123,7 +125,7 @@ export class FileService {
       select: { storageProvider: true },
     });
     if (share?.storageProvider !== "S3") {
-      throw new BadRequestException("Pre-signed uploads are only supported for S3 storage.");
+      throw new BadRequestException(this.i18n.t("file.s3NotSupported"));
     }
     return this.s3FileService.abortPreSignedUpload(shareId, fileName, uploadId);
   }
@@ -138,7 +140,7 @@ export class FileService {
       select: { storageProvider: true },
     });
     if (share?.storageProvider !== "S3") {
-      throw new BadRequestException("Pre-signed downloads are only supported for S3 storage.");
+      throw new BadRequestException(this.i18n.t("file.s3NotSupported"));
     }
     return this.s3FileService.getPreSignedDownloadUrl(shareId, fileId, isDownload);
   }
@@ -243,7 +245,7 @@ export class FileService {
       where: { id: fileId, shareId },
       select: { name: true },
     });
-    if (!file) throw new BadRequestException("File not found");
+    if (!file) throw new NotFoundException(this.i18n.t("file.notFound"));
     return file.name;
   }
 

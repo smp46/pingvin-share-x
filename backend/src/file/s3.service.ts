@@ -440,7 +440,7 @@ export class S3FileService {
 
       const uploadId = multipartInitResponse.UploadId;
       if (!uploadId) {
-        throw new Error(this.i18n.t("file.s3UploadInitError"));
+        throw new InternalServerErrorException(this.i18n.t("file.s3UploadInitError"));
       }
 
       const urls: string[] = [];
@@ -459,7 +459,7 @@ export class S3FileService {
       return { uploadId, key, urls };
     } catch (error) {
       this.logger.error(error);
-      throw new Error(this.i18n.t("file.s3UploadInitError") || "S3 upload initialization failed");
+      throw new InternalServerErrorException(this.i18n.t("file.s3UploadInitError"));
     }
   }
 

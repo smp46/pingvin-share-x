@@ -4,15 +4,9 @@ import axios from "axios";
 import { translateOutsideContext } from "../hooks/useTranslate.hook";
 import { FileUploadResponse } from "../types/File.type";
 
-import {
-  CreateShare,
-  MyReverseShare,
-  MyShare,
-  Share,
-  ShareMetaData,
-  UpdateShare,
-} from "../types/share.type";
+import { CreateShare, MyReverseShare, MyShare, Share, ShareMetaData, UpdateShare } from "../types/share.type";
 import api from "./api.service";
+import { translateOutsideContext } from "../hooks/useTranslate.hook";
 
 const isValidId = (id: string) => {
   return /^[a-zA-Z0-9_-]+$/.test(id);
@@ -167,7 +161,7 @@ const uploadFileDirectS3 = async (
 
     const session = s3UploadSessions[sessionKey];
     if (!session) {
-      throw new Error(`S3 upload session not found for ${file.name}`);
+      throw new Error(translateOutsideContext()("upload.modal.link.error.s3-session-not-found"));
     }
 
     const url = session.urls[chunkIndex];
@@ -178,7 +172,7 @@ const uploadFileDirectS3 = async (
 
     const etag = response.headers["etag"];
     if (!etag) {
-      throw new Error("Missing ETag header in S3 response. Ensure CORS exposes the ETag header.");
+      throw new Error(translateOutsideContext()("upload.modal.link.error.s3-etag-missing"));
     }
 
     session.parts.push({
@@ -248,7 +242,7 @@ const uploadFile = async (
   totalChunks: number,
   onUploadProgress?: (progressEvent: any) => void,
 ): Promise<FileUploadResponse> => {
-  if (!isValidId(shareId)) throw new Error("Invalid Share ID");
+  if (!isValidId(shareId)) throw new Error(translateOutsideContext()("upload.modal.link.error.invalid"));
 
   const sessionKey = `${shareId}:${file.id || file.name}`;
 
