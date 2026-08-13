@@ -3,10 +3,8 @@ import mime from "mime-types";
 import axios from "axios";
 import { translateOutsideContext } from "../hooks/useTranslate.hook";
 import { FileUploadResponse } from "../types/File.type";
-
 import { CreateShare, MyReverseShare, MyShare, Share, ShareMetaData, UpdateShare } from "../types/share.type";
 import api from "./api.service";
-import { translateOutsideContext } from "../hooks/useTranslate.hook";
 
 const isValidId = (id: string) => {
   return /^[a-zA-Z0-9_-]+$/.test(id);
