@@ -1,4 +1,5 @@
 {
   "notFound": "Token de compartilhamento reverso não encontrado",
-  "maxShareSizeExceeded": "O tamanho máximo do compartilhamento não pode ser maior que {maxSize} bytes."
+  "maxShareSizeExceeded": "O tamanho máximo do compartilhamento não pode ser maior que {maxSize} bytes.",
+  "tokenInUse": "Reverse share token already in use"
 }

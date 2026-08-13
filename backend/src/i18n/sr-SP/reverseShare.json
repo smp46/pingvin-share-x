@@ -1,4 +1,5 @@
 {
   "notFound": "Токен за обрнуто дељење није пронађен",
-  "maxShareSizeExceeded": "Максимална величина дељења не може бити већа од {maxSize} бајтова."
+  "maxShareSizeExceeded": "Максимална величина дељења не може бити већа од {maxSize} бајтова.",
+  "tokenInUse": "Reverse share token already in use"
 }

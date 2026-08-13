@@ -23,8 +23,10 @@ import shareService from "../../../services/share.service";
 import { Timespan } from "../../../types/timespan.type";
 import { getExpirationPreview } from "../../../utils/date.util";
 import { byteToHumanSizeString } from "../../../utils/fileSize.util";
+import { generateShareId } from "../../../utils/share.util";
 import toast from "../../../utils/toast.util";
 import FileSizeInput from "../../core/FileSizeInput";
+import CustomUrlInput from "../CustomUrlInput";
 import showCompletedReverseShareModal from "./showCompletedReverseShareModal";
 
 const showCreateReverseShareModal = (
@@ -37,6 +39,7 @@ const showCreateReverseShareModal = (
   defaultAppUrl: string,
   maxShareSize: number,
   getReverseShares: () => void,
+  shareIdLength: number = 16,
 ) => {
   const t = translateOutsideContext();
 
@@ -52,6 +55,7 @@ const showCreateReverseShareModal = (
         appUrl={appUrl}
         defaultAppUrl={defaultAppUrl}
         maxShareSize={maxShareSize}
+        shareIdLength={shareIdLength}
       />
     ),
   });
@@ -66,6 +70,7 @@ const Body = ({
   appUrl,
   defaultAppUrl,
   maxShareSize,
+  shareIdLength = 16,
 }: {
   getReverseShares: () => void;
   showSendEmailNotificationOption: boolean;
@@ -75,11 +80,13 @@ const Body = ({
   appUrl: string;
   defaultAppUrl: string;
   maxShareSize: number;
+  shareIdLength?: number;
 }) => {
   const modals = useModals();
   const t = useTranslate();
 
   const userMaxShareSize = maxShareSize;
+  const generatedToken = generateShareId(shareIdLength);
 
   const defaultTimespan = defaultExpiration
     ? defaultExpiration
@@ -87,6 +94,7 @@ const Body = ({
 
   const form = useForm({
     initialValues: {
+      token: generatedToken,
       maxShareSize: userMaxShareSize,
       maxUseCount: 1,
       sendEmailNotification: false,
@@ -99,6 +107,14 @@ const Body = ({
     },
     validate: yupResolver(
       yup.object().shape({
+        token: yup
+          .string()
+          .required(t("common.error.field-required"))
+          .min(3, t("common.error.too-short", { length: 3 }))
+          .max(50, t("common.error.too-long", { length: 50 }))
+          .matches(new RegExp("^[a-zA-Z0-9_-]*$"), {
+            message: t("upload.modal.link.error.invalid"),
+          }),
         maxUseCount: yup
           .number()
           .typeError(t("common.error.invalid-number"))
@@ -120,6 +136,11 @@ const Body = ({
   });
 
   const onSubmit = form.onSubmit(async (values) => {
+    if (!(await shareService.isReverseShareTokenAvailable(values.token))) {
+      form.setFieldError("token", t("upload.modal.link.error.taken"));
+      return;
+    }
+
     // remember simplified and publicAccess in cookies
     setCookie("reverse-share.simplified", values.simplified);
     setCookie("reverse-share.public-access", values.publicAccess);
@@ -156,6 +177,7 @@ const Body = ({
         values.sendEmailNotification,
         values.simplified,
         values.publicAccess,
+        values.token,
       )
       .then(({ token }) => {
         modals.closeAll();
@@ -169,6 +191,14 @@ const Body = ({
     <Group>
       <form onSubmit={onSubmit}>
         <Stack align="stretch">
+          <CustomUrlInput
+            form={form}
+            fieldName="token"
+            shareIdLength={shareIdLength}
+            appUrl={appUrl}
+            defaultAppUrl={defaultAppUrl}
+            pathPrefix="/upload/"
+          />
           <div>
             <Grid align={form.errors.expiration_num ? "center" : "flex-end"}>
               <Col xs={6}>

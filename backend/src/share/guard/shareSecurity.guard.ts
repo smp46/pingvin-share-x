@@ -24,6 +24,46 @@ export class ShareSecurityGuard extends JwtGuard {
     super(configService);
   }
 
+  protected async authenticateUser(
+    context: ExecutionContext,
+  ): Promise<User | undefined> {
+    await super.canActivate(context);
+    const request: Request = context.switchToHttp().getRequest();
+    return request.user as User;
+  }
+
+  protected async isRecipient(
+    share: {
+      id: string;
+      userRecipients: { userId: string }[];
+      recipients: { email: string }[];
+    },
+    user?: User,
+  ): Promise<boolean> {
+    if (!user) return false;
+    if (!this.configService.get("share.enableUserRecipients")) return false;
+
+    // Already linked as a recipient of this share.
+    const isLinked = share.userRecipients.some((r) => r.userId === user.id);
+    if (isLinked) return true;
+
+    // Otherwise, if the user's (account-verified) email matches one of the
+    // share's recipients, grant access and link them
+    const userEmail = user.email?.toLowerCase();
+    const isEmailRecipient =
+      !!userEmail &&
+      share.recipients.some((r) => r.email.toLowerCase() === userEmail);
+    if (isEmailRecipient) {
+      await this.prisma.shareUserRecipient.upsert({
+        where: { userId_shareId: { userId: user.id, shareId: share.id } },
+        create: { userId: user.id, shareId: share.id },
+        update: {},
+      });
+      return true;
+    }
+    return false;
+  }
+
   async canActivate(context: ExecutionContext) {
     const request: Request = context.switchToHttp().getRequest();
 
@@ -38,14 +78,17 @@ export class ShareSecurityGuard extends JwtGuard {
 
     const share = await this.prisma.share.findUnique({
       where: { id: shareId },
-      include: { security: true, reverseShare: true },
+      include: {
+        security: true,
+        reverseShare: true,
+        userRecipients: { select: { userId: true } },
+        recipients: { select: { email: true } },
+      },
     });
 
     if (!share) throw new NotFoundException(this.i18n.t("share.notFound"));
 
-    // Run the JWTGuard to set the user
-    await super.canActivate(context);
-    const user = request.user as User;
+    const user = await this.authenticateUser(context);
 
     // If admin access is enabled and user is admin, allow access
     if (
@@ -60,6 +103,22 @@ export class ShareSecurityGuard extends JwtGuard {
       !moment(share.expiration).isSame(0)
     ) {
       throw new NotFoundException(this.i18n.t("share.notFound"));
+    }
+
+    // If user sharing is enabled, check if the authenticated user is a recipient
+    if (await this.isRecipient(share, user)) {
+      return true;
+    }
+
+    // If share is restricted to named recipients, block everyone else (excluding the creator)
+    if (
+      share.security?.restrictToRecipients &&
+      (!user || share.creatorId !== user.id)
+    ) {
+      throw new ForbiddenException(
+        this.i18n.t("share.restrictedToRecipients"),
+        "share_restricted_to_recipients",
+      );
     }
 
     if (share.security?.password && !shareToken)

@@ -217,6 +217,14 @@ const Header = () => {
       link: "/account/reverseShares",
       label: t("navbar.links.reverse"),
     },
+    ...(config.get("share.enableUserRecipients")
+      ? [
+          {
+            link: "/account/received",
+            label: t("navbar.links.received"),
+          },
+        ]
+      : []),
   ];
 
   const mobileProfileLinks: NavLink[] = [

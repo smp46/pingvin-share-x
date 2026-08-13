@@ -12,5 +12,6 @@
   "wrongPassword": "Hibás jelszó",
   "tokenRequired": "Megosztási token szükséges",
   "privateShare": "Csak a fordított megosztás létrehozója férhet hozzá ehhez a megosztáshoz",
-  "maxViewsExceeded": "A megtekintések maximális száma túllépve"
+  "maxViewsExceeded": "A megtekintések maximális száma túllépve",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }

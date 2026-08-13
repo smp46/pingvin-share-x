@@ -220,7 +220,9 @@ function App({ Component, pageProps }: AppProps) {
     if (!pageProps.language) return;
     const cookieLanguage = getCookie("language");
     if (!cookieLanguage) {
-      i18nUtil.setLanguageCookie(pageProps.language);
+      if (!pageProps.isConfigFallback) {
+        i18nUtil.setLanguageCookie(pageProps.language);
+      }
     } else if (pageProps.language !== cookieLanguage) {
       location.reload();
     }
@@ -229,7 +231,7 @@ function App({ Component, pageProps }: AppProps) {
 
     document.documentElement.dir = current.direction ?? "ltr";
     document.documentElement.lang = current.code;
-  }, [pageProps.language]);
+  }, [pageProps.language, pageProps.isConfigFallback]);
 
   useEffect(() => {
     const userColorPreference = userPreferences.get("colorScheme");
@@ -366,6 +368,7 @@ App.getInitialProps = async ({ ctx }: { ctx: GetServerSidePropsContext }) => {
     route?: string;
     colorScheme: ColorScheme;
     language?: string;
+    isConfigFallback?: boolean;
   } = {
     route: ctx.resolvedUrl,
     colorScheme:
@@ -390,6 +393,7 @@ App.getInitialProps = async ({ ctx }: { ctx: GetServerSidePropsContext }) => {
       ).data;
     } catch (e) {
       pageProps.configVariables = getDefaultConfig();
+      pageProps.isConfigFallback = true;
     }
 
     pageProps.route = ctx.req.url;

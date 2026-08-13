@@ -12,5 +12,6 @@
   "wrongPassword": "Nesprávné heslo",
   "tokenRequired": "Token sdílení je povinný",
   "privateShare": "K tomuto sdílení má přístup pouze tvůrce reverzního sdílení",
-  "maxViewsExceeded": "Maximální počet zobrazení byl překročen"
+  "maxViewsExceeded": "Maximální počet zobrazení byl překročen",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }

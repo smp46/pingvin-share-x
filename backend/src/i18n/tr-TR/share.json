@@ -12,5 +12,6 @@
   "wrongPassword": "Yanlış şifre",
   "tokenRequired": "Paylaşım belirteci gerekli",
   "privateShare": "Bu paylaşıma yalnızca ters paylaşım oluşturucusu erişebilir",
-  "maxViewsExceeded": "Maksimum görüntüleme sayısı aşıldı"
+  "maxViewsExceeded": "Maksimum görüntüleme sayısı aşıldı",
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
 }

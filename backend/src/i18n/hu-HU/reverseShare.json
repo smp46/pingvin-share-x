@@ -1,4 +1,5 @@
 {
   "notFound": "A fordított megosztási token nem található",
-  "maxShareSizeExceeded": "A maximális megosztási méret nem lehet nagyobb, mint {maxSize} bájt."
+  "maxShareSizeExceeded": "A maximális megosztási méret nem lehet nagyobb, mint {maxSize} bájt.",
+  "tokenInUse": "Reverse share token already in use"
 }

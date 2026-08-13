@@ -20,6 +20,8 @@ import { PrismaService } from "src/prisma/prisma.service";
 import { ReverseShareService } from "src/reverseShare/reverseShare.service";
 import { SystemService } from "src/system/system.service";
 import { parseRelativeDateToAbsolute } from "src/utils/date.util";
+import { byteToHumanSizeString } from "src/utils/fileSize.util";
+import { getUserActiveStorageUsage } from "src/utils/storageQuota.util";
 import { SHARE_DIRECTORY } from "../constants";
 import { CreateShareDTO } from "./dto/createShare.dto";
 import { UpdateShareDTO } from "./dto/updateShare.dto";
@@ -40,10 +42,37 @@ export class ShareService {
   ) {}
 
   async create(share: CreateShareDTO, user?: User, reverseShareToken?: string) {
+    const reverseShare =
+      await this.reverseShareService.getByToken(reverseShareToken);
+    const quotaOwner = reverseShare ? reverseShare.creator : user;
+
     if (share.size) {
       const systemInfo = await this.systemService.getSystemInfo();
       if (systemInfo && systemInfo.total - systemInfo.used < share.size) {
         throw new BadRequestException(this.i18n.t("share.notEnoughSpace"));
+      }
+
+      if (quotaOwner?.storageQuotaLimit) {
+        const quotaLimit = parseInt(quotaOwner.storageQuotaLimit);
+        const activeStorageUsage = await getUserActiveStorageUsage(
+          this.prisma,
+          quotaOwner.id,
+        );
+
+        const projectedUsage = activeStorageUsage + share.size;
+        if (projectedUsage > quotaLimit) {
+          const exceededBytes = projectedUsage - quotaLimit;
+          const exceededSize = byteToHumanSizeString(exceededBytes);
+          throw new BadRequestException(
+            reverseShare
+              ? this.i18n.t("share.reverseShareQuotaExceeded", {
+                  args: { exceededSize },
+                })
+              : this.i18n.t("share.storageQuotaExceeded", {
+                  args: { exceededSize },
+                }),
+          );
+        }
       }
     }
 
@@ -53,15 +82,35 @@ export class ShareService {
     if (!share.security || Object.keys(share.security).length == 0)
       share.security = undefined;
 
+    if (share.security?.restrictToRecipients && share.security?.password) {
+      throw new BadRequestException(
+        "Cannot set a password on a share restricted to recipients.",
+      );
+    }
+
     if (share.security?.password) {
       share.security.password = await argon.hash(share.security.password);
+    }
+
+    if (
+      this.configService.get("share.enableUserRecipients") &&
+      share.security?.restrictToRecipients
+    ) {
+      if (!share.recipients?.length) {
+        throw new BadRequestException(
+          "A share restricted to recipients must have at least one recipient.",
+        );
+      }
+      // Note: we intentionally do NOT check whether the recipient emails belong
+      // to registered accounts. Doing so would leak which emails have an account
+      // (account enumeration). Recipients who aren't registered yet simply sign
+      // up to gain access (see ShareSecurityGuard); if signups are disabled they
+      // can't access it.
     }
 
     let expirationDate: Date;
 
     // If share is created by a reverse share token override the expiration date
-    const reverseShare =
-      await this.reverseShareService.getByToken(reverseShareToken);
     if (reverseShare) {
       expirationDate = reverseShare.shareExpiration;
     } else {
@@ -169,6 +218,26 @@ export class ShareService {
         share.description,
         share.expiration,
       );
+    }
+
+    // Auto-link email recipients who are registered users so the share appears in their dashboard
+    if (this.configService.get("share.enableUserRecipients")) {
+      const emails = share.recipients.map((r) => r.email);
+      if (emails.length > 0) {
+        const matchedUsers = await this.prisma.user.findMany({
+          where: { email: { in: emails } },
+          select: { id: true },
+        });
+        for (const matchedUser of matchedUsers) {
+          await this.prisma.shareUserRecipient.upsert({
+            where: {
+              userId_shareId: { userId: matchedUser.id, shareId: share.id },
+            },
+            create: { userId: matchedUser.id, shareId: share.id },
+            update: {},
+          });
+        }
+      }
     }
 
     const notifyReverseShareCreator = share.reverseShare
@@ -399,6 +468,22 @@ export class ShareService {
     return (await this.prisma.share.findUnique({ where: { id } })).uploadLocked;
   }
 
+  async getReceivedShares(userId: string) {
+    return this.prisma.shareUserRecipient.findMany({
+      where: { userId },
+      include: {
+        share: {
+          include: {
+            creator: true,
+            files: true,
+            security: true,
+          },
+        },
+      },
+      orderBy: { createdAt: "desc" },
+    });
+  }
+
   private transformShare(share: any) {
     return {
       ...share,
@@ -408,6 +493,7 @@ export class ShareService {
       security: {
         maxViews: share.security?.maxViews,
         passwordProtected: !!share.security?.password,
+        restrictToRecipients: !!share.security?.restrictToRecipients,
       },
     };
   }
