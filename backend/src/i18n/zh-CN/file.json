@@ -13,5 +13,6 @@
   "s3UploadInitError": "无法初始化分块上传。",
   "s3SessionNotFound": "未找到分块上传会话。",
   "s3UploadFailed": "分块上传失败。上传已中止。",
-  "s3SizeError": "无法检索文件大小"
+  "s3SizeError": "无法检索文件大小",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }
