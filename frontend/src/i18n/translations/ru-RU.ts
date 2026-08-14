@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Загрузить",
   "upload.modal.link.error.invalid": "Имя пользователя должно состоять только из букв, цифр, подчёркиваний и дефисов",
   "upload.modal.link.error.taken": "Эта ссылка уже используется",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Вы не авторизованы",
   "upload.modal.not-signed-in-description": "Вы не сможете удалить свои файлы вручную и просмотреть количество посетителей.",
   "upload.modal.expires.never": "никогда",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Должно быть не больше {max}",
   "common.error.exact-length": "Должно быть ровно {length} символов",
   "common.error.invalid-number": "Должно быть числом",
-  "common.error.field-required": "Поле обязательно для заполнения"
+  "common.error.field-required": "Поле обязательно для заполнения",
+  "admin.notice.modal.headerTag": "ТРЕБУЕТСЯ ДЕЙСТВИЕ АДМИНИСТРАТОРА",
+  "admin.notice.modal.defaultCheckboxLabel": "Я подтверждаю, что прочитал(а) это уведомление и понимаю критические изменения.",
+  "admin.notice.modal.button.acknowledge": "Подтвердить и закрыть",
+  "admin.notice.modal.button.acknowledging": "Подтверждение...",
+  "admin.notice.modal.docsLink": "Просмотреть документацию",
+  "admin.notice.modal.globalNoticeFooter": "Примечание: После подтверждения это уведомление будет навсегда скрыто для всех администраторов на всех устройствах."
 };
