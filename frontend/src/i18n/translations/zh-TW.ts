@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "建立分享",
   "upload.modal.link.error.invalid": "只能包括字母，數字，下劃線(_)，和橫線(-)",
   "upload.modal.link.error.taken": "這個分享代號已經存在了",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "當前沒有登入",
   "upload.modal.not-signed-in-description": "您將不能刪除您的分享或查看查看次數",
   "upload.modal.expires.never": "永不",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "必須小於 {max}",
   "common.error.exact-length": "必須為 {length} 個字元",
   "common.error.invalid-number": "必須為數字",
-  "common.error.field-required": "必填"
+  "common.error.field-required": "必填",
+  "admin.notice.modal.headerTag": "需要管理員操作",
+  "admin.notice.modal.defaultCheckboxLabel": "我確認已閱讀此通知並理解重大變更。",
+  "admin.notice.modal.button.acknowledge": "確認並關閉",
+  "admin.notice.modal.button.acknowledging": "正在確認...",
+  "admin.notice.modal.docsLink": "檢視文件",
+  "admin.notice.modal.globalNoticeFooter": "注意：一旦確認，此通知將在所有裝置上對所有管理員永久關閉。"
 };
