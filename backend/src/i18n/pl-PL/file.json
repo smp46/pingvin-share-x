@@ -6,10 +6,13 @@
   "notEnoughSpace": "Brak miejsca na serwerze",
   "unexpectedChunk": "Otrzymano nieoczekiwany fragment",
   "maxSizeExceeded": "Przekroczono maksymalny rozmiar udostępnienia",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "Błąd podczas tworzenia pliku ZIP",
   "s3DeleteError": "Nie można usunąć pliku z S3",
   "s3UploadInitError": "Nie udało się zainicjować przesyłania wieloczęściowego.",
   "s3SessionNotFound": "Nie znaleziono sesji przesyłania wieloczęściowego.",
   "s3UploadFailed": "Przesyłanie wieloczęściowe nie powiodło się. Przesyłanie zostało przerwane.",
-  "s3SizeError": "Nie można pobrać rozmiaru pliku"
+  "s3SizeError": "Nie można pobrać rozmiaru pliku",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }

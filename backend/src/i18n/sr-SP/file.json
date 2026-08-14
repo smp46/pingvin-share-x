@@ -6,10 +6,13 @@
   "notEnoughSpace": "Нема довољно простора на серверу",
   "unexpectedChunk": "Примљен неочекиван део",
   "maxSizeExceeded": "Максимална величина дељења је премашена",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "Грешка при креирању ZIP датотеке",
   "s3DeleteError": "Није могуће обрисати датотеку са S3",
   "s3UploadInitError": "Иницијализација multipart отпремања није успела.",
   "s3SessionNotFound": "Multipart сесија отпремања није пронађена.",
   "s3UploadFailed": "Multipart отпремање није успело. Отпремање је прекинуто.",
-  "s3SizeError": "Није могуће добити величину датотеке"
+  "s3SizeError": "Није могуће добити величину датотеке",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }

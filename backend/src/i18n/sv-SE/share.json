@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "Anonyma delningar kan inte uppdateras",
   "invalidExpiration": "Ogiltigt utgångsdatum",
   "maxExpirationExceeded": "Utgångsdatumet överskrider det maximala utgångsdatumet",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "Fel lösenord",
   "tokenRequired": "Delningstoken krävs",
   "privateShare": "Endast skaparen av den omvända delningen har tillgång till denna delning",

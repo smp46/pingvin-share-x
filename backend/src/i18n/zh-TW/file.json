@@ -6,10 +6,13 @@
   "notEnoughSpace": "伺服器空間不足",
   "unexpectedChunk": "收到意外的分塊",
   "maxSizeExceeded": "超過最大分享限制",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "創建 ZIP 文件時出錯",
   "s3DeleteError": "無法從 S3 刪除文件",
   "s3UploadInitError": "無法初始化分塊上傳。",
   "s3SessionNotFound": "未找到分塊上傳會話。",
   "s3UploadFailed": "分塊上傳失敗。上傳已中止。",
-  "s3SizeError": "無法檢索文件大小"
+  "s3SizeError": "無法檢索文件大小",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }

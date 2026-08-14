@@ -6,10 +6,13 @@
   "notEnoughSpace": "لا توجد مساحة كافية على الخادم",
   "unexpectedChunk": "تم استلام قطعة غير متوقعة",
   "maxSizeExceeded": "تم تجاوز الحد الأقصى لحجم المشاركة",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "خطأ في إنشاء ملف ZIP",
   "s3DeleteError": "تعذر حذف الملف من S3",
   "s3UploadInitError": "فشل بدء التحميل المتعدد الأجزاء.",
   "s3SessionNotFound": "جلسة التحميل المتعدد الأجزاء غير موجودة.",
   "s3UploadFailed": "فشل التحميل المتعدد الأجزاء. تم إلغاء التحميل.",
-  "s3SizeError": "تعذر استرداد حجم الملف"
+  "s3SizeError": "تعذر استرداد حجم الملف",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }

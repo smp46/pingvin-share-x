@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "Anonüümseid jagamisi ei saa uuendada",
   "invalidExpiration": "Vigane aegumiskuupäev",
   "maxExpirationExceeded": "Aegumiskuupäev ületab maksimaalset aegumiskuupäeva",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "Vale parool",
   "tokenRequired": "Jagamise token on kohustuslik",
   "privateShare": "Sellele jagamisele pääseb ligi ainult pöörd-jagamise looja",

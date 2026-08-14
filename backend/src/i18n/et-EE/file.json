@@ -6,10 +6,13 @@
   "notEnoughSpace": "Serveris pole piisavalt ruumi",
   "unexpectedChunk": "Saadi ootamatu andmeplokk",
   "maxSizeExceeded": "Jagamise maksimaalne suurus on ületatud",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "Viga ZIP-faili loomisel",
   "s3DeleteError": "Faili kustutamine S3-st ebaõnnestus",
   "s3UploadInitError": "Multipart upload'i algatamine ebaõnnestus.",
   "s3SessionNotFound": "Multipart upload'i sessiooni ei leitud.",
   "s3UploadFailed": "Multipart upload ebaõnnestus. Üleslaadimine on katkestatud.",
-  "s3SizeError": "Faili suurust ei õnnestunud tuvastada"
+  "s3SizeError": "Faili suurust ei õnnestunud tuvastada",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }

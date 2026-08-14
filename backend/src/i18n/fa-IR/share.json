@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "اشتراک‌های ناشناس قابل به‌روزرسانی نیستند",
   "invalidExpiration": "تاریخ انقضای نامعتبر",
   "maxExpirationExceeded": "تاریخ انقضا از حداکثر تاریخ مجاز فراتر رفته است",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "رمز عبور اشتباه است",
   "tokenRequired": "نشانه اشتراک لازم است",
   "privateShare": "فقط سازنده اشتراک معکوس می‌تواند به این اشتراک دسترسی داشته باشد",

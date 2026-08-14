@@ -6,10 +6,13 @@
   "notEnoughSpace": "Недостаточно места на сервере",
   "unexpectedChunk": "Получен неожиданный фрагмент",
   "maxSizeExceeded": "Превышен максимальный размер раздачи",
+  "storageQuotaExceeded": "Ваш лимит хранилища превышен на {exceededSize}",
+  "reverseShareQuotaExceeded": "Лимит хранилища владельца обратной раздачи превышен на {exceededSize}",
   "zipError": "Ошибка при создании ZIP-файла",
   "s3DeleteError": "Не удалось удалить файл из S3",
   "s3UploadInitError": "Не удалось инициализировать многокомпонентную загрузку.",
   "s3SessionNotFound": "Сессия многокомпонентной загрузки не найдена.",
   "s3UploadFailed": "Многокомпонентная загрузка не удалась. Загрузка была прервана.",
-  "s3SizeError": "Не удалось получить размер файла"
+  "s3SizeError": "Не удалось получить размер файла",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }

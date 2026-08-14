@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "Anonyme delinger kan ikke oppdateres",
   "invalidExpiration": "Ugyldig utløpsdato",
   "maxExpirationExceeded": "Utløpsdatoen overskrider maksimal utløpsdato",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "Feil passord",
   "tokenRequired": "Delingstoken kreves",
   "privateShare": "Kun oppretteren av den omvendte delingen har tilgang til denne delingen",
