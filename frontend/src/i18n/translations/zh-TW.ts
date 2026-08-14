@@ -611,6 +611,7 @@ export default {
   "admin.config.s3.secret.description": "用於存取 S3 儲存桶的密鑰。",
   "admin.config.s3.use-checksum": "使用校驗碼",
   "admin.config.s3.use-checksum.description": "請在不支援校驗碼（checksum）的後端中關閉此功能（例如 B2）。",
+  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
   "admin.config.category.legal": "法律",
   "admin.config.legal.enabled": "啟用法律提醒",
   "admin.config.legal.enabled.description": "是否在 footer 顯示版權宣告及隱私權政策。",
