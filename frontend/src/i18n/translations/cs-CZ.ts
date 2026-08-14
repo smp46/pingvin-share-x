@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Vytvořit sdílení",
   "upload.modal.link.error.invalid": "Může obsahovat pouze písmena, číslice, podtržítka a pomlčky",
   "upload.modal.link.error.taken": "Tento odkaz je již používán",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Nejste přihlášeni",
   "upload.modal.not-signed-in-description": "Nebudete moci ručně odstranit své sdílení a zobrazit počet návštěvníků.",
   "upload.modal.expires.never": "nikdy",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Musí být nejvýše {max}",
   "common.error.exact-length": "Musí mít přesně {length} znaků",
   "common.error.invalid-number": "Musí být číslo",
-  "common.error.field-required": "Toto pole je povinné"
+  "common.error.field-required": "Toto pole je povinné",
+  "admin.notice.modal.headerTag": "VYŽADOVÁNA ADMINISTRATIVNÍ AKCE",
+  "admin.notice.modal.defaultCheckboxLabel": "Potvrzuji, že jsem si toto upozornění přečetl(a) a rozumím všem zásadním změnám.",
+  "admin.notice.modal.button.acknowledge": "Potvrdit a skrýt",
+  "admin.notice.modal.button.acknowledging": "Potvrzování...",
+  "admin.notice.modal.docsLink": "Zobrazit dokumentaci",
+  "admin.notice.modal.globalNoticeFooter": "Poznámka: Po potvrzení bude toto upozornění trvale skryto všem administrátorům na všech zařízeních."
 };
