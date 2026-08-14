@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Loo jagamine",
   "upload.modal.link.error.invalid": "Võib sisaldada ainult tähti, numbreid, alakriipse ja kriipse",
   "upload.modal.link.error.taken": "See link on juba kasutusel",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Sa ei ole sisse logitud",
   "upload.modal.not-signed-in-description": "Sa ei saa oma jagamist käsitsi kustutada ega külastajate arvu vaadata.",
   "upload.modal.expires.never": "mitte kunagi",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Peab olema maksimaalselt {max}",
   "common.error.exact-length": "Peab olema täpselt {length} tähemärki",
   "common.error.invalid-number": "Peab olema number",
-  "common.error.field-required": "See väli on kohustuslik"
+  "common.error.field-required": "See väli on kohustuslik",
+  "admin.notice.modal.headerTag": "NÕUTAV ADMINISTRATIIVNE TEGEVUS",
+  "admin.notice.modal.defaultCheckboxLabel": "Kinnitan, et olen seda teavitust lugenud ja mõistan katkestavaid muudatusi.",
+  "admin.notice.modal.button.acknowledge": "Kinnita ja sulge",
+  "admin.notice.modal.button.acknowledging": "Kinnitamine...",
+  "admin.notice.modal.docsLink": "Vaata dokumentatsiooni",
+  "admin.notice.modal.globalNoticeFooter": "Märkus: Pärast kinnitamist eemaldatakse see teavitus jäädavalt kõigi administraatorite jaoks kõigis seadmetes."
 };
