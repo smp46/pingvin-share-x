@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Paylaşım Oluştur",
   "upload.modal.link.error.invalid": "Sadece harf, rakam, alt çizgi ve tire içerebilir",
   "upload.modal.link.error.taken": "Bu bağlantı zaten kullanılıyor",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Giriş yapmadınız",
   "upload.modal.not-signed-in-description": "Paylaşımınızı manuel olarak silemez ve ziyaretçi sayısını göremezsiniz.",
   "upload.modal.expires.never": "asla",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "En fazla {max} olabilir",
   "common.error.exact-length": "Tam olarak {length} karakter olmalıdır",
   "common.error.invalid-number": "Bir sayı olmalıdır",
-  "common.error.field-required": "Bu alan gereklidir"
+  "common.error.field-required": "Bu alan gereklidir",
+  "admin.notice.modal.headerTag": "YÖNETİCİ EYLEMİ GEREKLİ",
+  "admin.notice.modal.defaultCheckboxLabel": "Bu bildirimi okuduğumu ve köklü değişiklikleri anladığımı onaylıyorum.",
+  "admin.notice.modal.button.acknowledge": "Onayla ve Kapat",
+  "admin.notice.modal.button.acknowledging": "Onaylanıyor...",
+  "admin.notice.modal.docsLink": "Dokümantasyonu Görüntüle",
+  "admin.notice.modal.globalNoticeFooter": "Not: Onaylandıktan sonra bu bildirim, tüm cihazlardaki tüm yöneticiler için kalıcı olarak kapatılacaktır."
 };
