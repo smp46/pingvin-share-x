@@ -13,5 +13,6 @@
   "s3UploadInitError": "Error al inicializar la carga multiparte.",
   "s3SessionNotFound": "Sesión de carga multiparte no encontrada.",
   "s3UploadFailed": "Error en la carga multiparte. La carga ha sido abortada.",
-  "s3SizeError": "No se pudo obtener el tamaño del archivo"
+  "s3SizeError": "No se pudo obtener el tamaño del archivo",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }
