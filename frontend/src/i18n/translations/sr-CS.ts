@@ -611,6 +611,7 @@ export default {
   "admin.config.s3.secret.description": "Tajna koja vam omogućava pristup S3 bucket-u.",
   "admin.config.s3.use-checksum": "Koristi kontrolnu sumu",
   "admin.config.s3.use-checksum.description": "Isključi za bekende koji ne podržavaju kontrolnu sumu (npr. B2).",
+  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
   "admin.config.category.legal": "Pravno",
   "admin.config.legal.enabled": "Omogući pravna obaveštenja",
   "admin.config.legal.enabled.description": "Da li prikazati link do impresuma i politike privatnosti u podnožju.",
