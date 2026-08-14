@@ -13,5 +13,6 @@
   "s3UploadInitError": "S'ha produït un error en inicialitzar la càrrega en diverses parts.",
   "s3SessionNotFound": "No s'ha trobat la sessió de càrrega en diverses parts.",
   "s3UploadFailed": "Ha fallat la càrrega en diverses parts. S'ha avortat la càrrega.",
-  "s3SizeError": "No s'ha pogut recuperar la mida del fitxer"
+  "s3SizeError": "No s'ha pogut recuperar la mida del fitxer",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }
