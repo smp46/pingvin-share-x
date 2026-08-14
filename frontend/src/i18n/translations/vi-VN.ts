@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Create Share",
   "upload.modal.link.error.invalid": "Chỉ được phép sử dụng chữ, số, dấu gạch dưới và dấu gạch ngang",
   "upload.modal.link.error.taken": "Liên kết đã được sử dụng",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Bạn chưa đăng nhập",
   "upload.modal.not-signed-in-description": "You will be unable to delete your share manually and view the visitor count.",
   "upload.modal.expires.never": "never",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Must be at most {max}",
   "common.error.exact-length": "Bằng {length} kí tự",
   "common.error.invalid-number": "Phải là số",
-  "common.error.field-required": "Trường bắt buộc"
+  "common.error.field-required": "Trường bắt buộc",
+  "admin.notice.modal.headerTag": "YÊU CẦU THAO TÁC QUẢN TRỊ",
+  "admin.notice.modal.defaultCheckboxLabel": "Tôi xác nhận đã đọc thông báo này và hiểu các thay đổi quan trọng.",
+  "admin.notice.modal.button.acknowledge": "Xác nhận & Đóng",
+  "admin.notice.modal.button.acknowledging": "Đang xác nhận...",
+  "admin.notice.modal.docsLink": "Xem tài liệu hướng dẫn",
+  "admin.notice.modal.globalNoticeFooter": "Lưu ý: Sau khi xác nhận, thông báo này sẽ bị ẩn vĩnh viễn đối với tất cả quản trị viên trên mọi thiết bị."
 };
