@@ -611,6 +611,7 @@ export default {
   "admin.config.s3.secret.description": "Az S3 tároló eléréséhez szükséges titkos kulcs.",
   "admin.config.s3.use-checksum": "Ellenőrzőösszeg használata",
   "admin.config.s3.use-checksum.description": "Kapcsolja ki azon háttérrendszerek esetében, amelyek nem támogatják az ellenőrzőösszeget (pl. B2).",
+  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
   "admin.config.category.legal": "Jogi nyilatkozat",
   "admin.config.legal.enabled": "Jogi nyilatkozat megjelenítése",
   "admin.config.legal.enabled.description": "Meghatározza, hogy az impresszum és az adatvédelmi tájékoztató hivatkozása megjelenjen-e a láblécben.",
