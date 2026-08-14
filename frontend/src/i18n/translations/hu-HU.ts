@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Megosztás létrehozása",
   "upload.modal.link.error.invalid": "Csak betű, szám, aláhúzás és kötőjel karaktereket tartalmazhat",
   "upload.modal.link.error.taken": "Ez a hivatkozás név már használatban van",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Nincs bejelentkezve",
   "upload.modal.not-signed-in-description": "Nem lesz képes megosztását kézzel törölni vagy megtekinteni a látogatók számát.",
   "upload.modal.expires.never": "soha",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Legfeljebb {max} értéket lehet megadni",
   "common.error.exact-length": "Pontosan {length} karakter szükséges",
   "common.error.invalid-number": "Számot kell megadnia",
-  "common.error.field-required": "Ez egy kötelező mező"
+  "common.error.field-required": "Ez egy kötelező mező",
+  "admin.notice.modal.headerTag": "ADMINISZTRÁTORI INTÉZKEDÉS SZÜKSÉGES",
+  "admin.notice.modal.defaultCheckboxLabel": "Megerősítem, hogy elolvastam ezt az értesítést, és megértettem a lényegi változtatásokat.",
+  "admin.notice.modal.button.acknowledge": "Tudomásul veszem és bezárom",
+  "admin.notice.modal.button.acknowledging": "Feldolgozás...",
+  "admin.notice.modal.docsLink": "Dokumentáció megtekintése",
+  "admin.notice.modal.globalNoticeFooter": "Megjegyzés: A tudomásulvételt követően ez az értesítés minden adminisztrátor számára véglegesen elrejtésre kerül az összes eszközön."
 };
