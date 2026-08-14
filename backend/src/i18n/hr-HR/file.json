@@ -13,5 +13,6 @@
   "s3UploadInitError": "Inicijalizacija multipart prijenosa nije uspjela.",
   "s3SessionNotFound": "Sesija multipart prijenosa nije pronađena.",
   "s3UploadFailed": "Multipart prijenos nije uspio. Prijenos je prekinut.",
-  "s3SizeError": "Nije moguće dohvatiti veličinu datoteke"
+  "s3SizeError": "Nije moguće dohvatiti veličinu datoteke",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }
