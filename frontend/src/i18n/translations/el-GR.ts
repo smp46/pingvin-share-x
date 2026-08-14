@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Δημιουργία Κοινοποίησης",
   "upload.modal.link.error.invalid": "Μπορεί να περιέχει μόνο γράμματα, αριθμούς, κάτω παύλες και παύλες",
   "upload.modal.link.error.taken": "Αυτός ο σύνδεσμος χρησιμοποιείται ήδη",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Δεν είστε συνδεδεμένος/η",
   "upload.modal.not-signed-in-description": "Δεν θα μπορείτε να διαγράψετε την κοινή χρήση σας χειροκίνητα και να δείτε την αρίθμηση επισκεπτών.",
   "upload.modal.expires.never": "ποτέ",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Must be at most {max}",
   "common.error.exact-length": "Πρέπει να αποτελείται ακριβώς από {length} χαρακτήρες",
   "common.error.invalid-number": "Πρέπει να είναι αριθμός",
-  "common.error.field-required": "Αυτό το πεδίο είναι υποχρεωτικό"
+  "common.error.field-required": "Αυτό το πεδίο είναι υποχρεωτικό",
+  "admin.notice.modal.headerTag": "ΑΠΑΙΤΕΙΤΑΙ ΔΙΑΧΕΙΡΙΣΤΙΚΗ ΕΝΕΡΓΕΙΑ",
+  "admin.notice.modal.defaultCheckboxLabel": "Επιβεβαιώνω ότι έχω διαβάσει αυτή την ειδοποίηση και κατανοώ τις ριζικές αλλαγές.",
+  "admin.notice.modal.button.acknowledge": "Επιβεβαίωση & Απόρριψη",
+  "admin.notice.modal.button.acknowledging": "Επιβεβαίωση...",
+  "admin.notice.modal.docsLink": "Προβολή τεκμηρίωσης",
+  "admin.notice.modal.globalNoticeFooter": "Σημείωση: Μόλις επιβεβαιωθεί, αυτή η ειδοποίηση θα απορριφθεί οριστικά για όλους τους διαχειριστές σε όλες τις συσκευές."
 };
