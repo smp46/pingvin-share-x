@@ -2,7 +2,6 @@ import { Injectable, Logger } from "@nestjs/common";
 import * as NodeClam from "clamscan";
 import * as fs from "fs";
 import { Readable } from "stream";
-import { pipeline } from "stream/promises";
 import { FileService } from "src/file/file.service";
 import { PrismaService } from "src/prisma/prisma.service";
 import { CLAMAV_HOST, CLAMAV_PORT, SHARE_DIRECTORY } from "../constants";
@@ -36,7 +35,7 @@ export class ClamScanService {
       this.logger.log("ClamAV is active and connected");
       this.clamScanInstance = instance;
       return instance;
-    } catch (err: any) {
+    } catch (_) {
       this.logger.log("ClamAV is not active or unreachable");
       return null;
     }

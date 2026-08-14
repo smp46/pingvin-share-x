@@ -33,6 +33,8 @@ export default tseslint.config(
               "varsIgnorePattern": "^_",
               "args": "after-used",
               "argsIgnorePattern": "^_",
+              "caughtErrors": "all",
+              "caughtErrorsIgnorePattern": "^_"
           },
       ],
     },
