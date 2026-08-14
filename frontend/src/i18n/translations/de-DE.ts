@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Erstelle Freigabe",
   "upload.modal.link.error.invalid": "Darf nur Buchstaben, Zahlen, Unterstriche und Bindestriche enthalten",
   "upload.modal.link.error.taken": "Dieser Link wird bereits verwendet",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Du bist nicht angemeldet",
   "upload.modal.not-signed-in-description": "Du wirst deine Freigabe nicht löschen können oder die Besucheranzahl sehen.",
   "upload.modal.expires.never": "nie",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Darf höchstens {max} sein",
   "common.error.exact-length": "Muss genau {length} Zeichen lang sein",
   "common.error.invalid-number": "Muss eine Zahl sein",
-  "common.error.field-required": "Dieses Feld ist erforderlich"
+  "common.error.field-required": "Dieses Feld ist erforderlich",
+  "admin.notice.modal.headerTag": "ADMINISTRATIVE AKTION ERFORDERLICH",
+  "admin.notice.modal.defaultCheckboxLabel": "Ich bestätige, dass ich diesen Hinweis gelesen habe und die grundlegenden Änderungen verstehe.",
+  "admin.notice.modal.button.acknowledge": "Bestätigen & Schließen",
+  "admin.notice.modal.button.acknowledging": "Wird bestätigt...",
+  "admin.notice.modal.docsLink": "Dokumentation anzeigen",
+  "admin.notice.modal.globalNoticeFooter": "Hinweis: Nach der Bestätigung wird dieser Hinweis für alle Administratoren auf allen Geräten dauerhaft ausgeblendet."
 };
