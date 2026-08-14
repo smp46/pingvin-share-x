@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Créer un partage",
   "upload.modal.link.error.invalid": "Ne peut contenir que des lettres, des chiffres, des tirets bas et des traits d'union",
   "upload.modal.link.error.taken": "Ce lien est déjà utilisé",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Vous n'êtes pas connecté",
   "upload.modal.not-signed-in-description": "Vous ne pourrez pas supprimer votre partage manuellement et afficher le nombre de visiteurs.",
   "upload.modal.expires.never": "jamais",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Doit être au plus {max}",
   "common.error.exact-length": "Doit comporter exactement {length} caractères",
   "common.error.invalid-number": "Doit être un nombre",
-  "common.error.field-required": "Ce champ est obligatoire"
+  "common.error.field-required": "Ce champ est obligatoire",
+  "admin.notice.modal.headerTag": "ACTION ADMINISTRATIVE REQUISE",
+  "admin.notice.modal.defaultCheckboxLabel": "Je confirme avoir lu cet avertissement et comprendre les changements majeurs.",
+  "admin.notice.modal.button.acknowledge": "Confirmer et ignorer",
+  "admin.notice.modal.button.acknowledging": "Confirmation...",
+  "admin.notice.modal.docsLink": "Voir la documentation",
+  "admin.notice.modal.globalNoticeFooter": "Remarque : Une fois confirmé, cet avertissement sera définitivement masqué pour tous les administrateurs sur tous les appareils."
 };
