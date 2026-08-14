@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "สร้างการแชร์",
   "upload.modal.link.error.invalid": "สามารถใช้ได้เฉพาะตัวอักษร ตัวเลข ขีดล่าง และขีดเส้น",
   "upload.modal.link.error.taken": "ลิงก์นี้ถูกใช้งานแล้ว",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "คุณยังไม่ได้เข้าสู่ระบบ",
   "upload.modal.not-signed-in-description": "คุณจะไม่สามารถลบการแชร์ของคุณด้วยตนเองและดูจำนวนผู้เข้าชมได้",
   "upload.modal.expires.never": "ไม่มีกำหนด",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Must be at most {max}",
   "common.error.exact-length": "ต้องมีความยาว {length} ตัวอักษร",
   "common.error.invalid-number": "ต้องเป็นตัวเลข",
-  "common.error.field-required": "ต้องกรอกข้อมูลนี้"
+  "common.error.field-required": "ต้องกรอกข้อมูลนี้",
+  "admin.notice.modal.headerTag": "จำเป็นต้องดำเนินการโดยผู้ดูแลระบบ",
+  "admin.notice.modal.defaultCheckboxLabel": "ฉันยืนยันว่าได้อ่านประกาศนี้และเข้าใจการเปลี่ยนแปลงที่สำคัญแล้ว",
+  "admin.notice.modal.button.acknowledge": "รับทราบและปิด",
+  "admin.notice.modal.button.acknowledging": "กำลังรับทราบ...",
+  "admin.notice.modal.docsLink": "ดูเอกสารประกอบ",
+  "admin.notice.modal.globalNoticeFooter": "หมายเหตุ: เมื่อรับทราบแล้ว ประกาศนี้จะถูกปิดอย่างถาวรสำหรับผู้ดูแลระบบทุกคนในทุกอุปกรณ์"
 };
