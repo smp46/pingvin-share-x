@@ -13,5 +13,6 @@
   "s3UploadInitError": "Неуспешно инициализиране на качване от няколко части.",
   "s3SessionNotFound": "Сесията за качване от няколко части не е намерена.",
   "s3UploadFailed": "Качването от няколко части е неуспешно. Качването е прекратено.",
-  "s3SizeError": "Не може да бъде извлечен размерът на файла"
+  "s3SizeError": "Не може да бъде извлечен размерът на файла",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }
