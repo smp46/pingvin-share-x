@@ -13,5 +13,6 @@
   "s3UploadInitError": "Multipart upload'i algatamine ebaõnnestus.",
   "s3SessionNotFound": "Multipart upload'i sessiooni ei leitud.",
   "s3UploadFailed": "Multipart upload ebaõnnestus. Üleslaadimine on katkestatud.",
-  "s3SizeError": "Faili suurust ei õnnestunud tuvastada"
+  "s3SizeError": "Faili suurust ei õnnestunud tuvastada",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }
