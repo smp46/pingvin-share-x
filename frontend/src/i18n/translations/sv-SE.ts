@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Skapa delning",
   "upload.modal.link.error.invalid": "Kan endast innehålla bokstäver, siffror, understreck och bindestreck",
   "upload.modal.link.error.taken": "Denna länk används redan",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Du är inte inloggad",
   "upload.modal.not-signed-in-description": "Du kommer inte att kunna ta bort din delning manuellt och visa antalet besökare.",
   "upload.modal.expires.never": "aldrig",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Måste vara som mest {max}",
   "common.error.exact-length": "Måste vara exakt {length} tecken långt",
   "common.error.invalid-number": "Måste vara ett tal",
-  "common.error.field-required": "Obligatoriskt fält"
+  "common.error.field-required": "Obligatoriskt fält",
+  "admin.notice.modal.headerTag": "ADMINISTRATIV ÅTGÄRD KRÄVS",
+  "admin.notice.modal.defaultCheckboxLabel": "Jag bekräftar att jag har läst detta meddelande och förstår de genomgripande ändringarna.",
+  "admin.notice.modal.button.acknowledge": "Bekräfta och stäng",
+  "admin.notice.modal.button.acknowledging": "Bekräftar...",
+  "admin.notice.modal.docsLink": "Visa dokumentation",
+  "admin.notice.modal.globalNoticeFooter": "Obs: När det har bekräftats kommer detta meddelande att tas bort permanent för alla administratörer på alla enheter."
 };
