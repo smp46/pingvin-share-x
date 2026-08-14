@@ -611,6 +611,7 @@ export default {
   "admin.config.s3.secret.description": "Tajný kód, který vám umožňuje přístup do bloku S3.",
   "admin.config.s3.use-checksum": "Použít checksum",
   "admin.config.s3.use-checksum.description": "Vypněte pro backendy které nepodporují checksum (např. B2)",
+  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
   "admin.config.category.legal": "Právní ustanovení",
   "admin.config.legal.enabled": "Povolit právní oznámení",
   "admin.config.legal.enabled.description": "Zda v zápatí zobrazit odkaz na tiráž a zásady ochrany osobních údajů.",
