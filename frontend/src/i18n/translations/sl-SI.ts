@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Ustvarite delitev",
   "upload.modal.link.error.invalid": "Lahko vsebuje samo črke, številke, podčrtaje in pomišljaje",
   "upload.modal.link.error.taken": "Ta povezava je že v uporabi",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Niste prijavljeni",
   "upload.modal.not-signed-in-description": "Ne boste mogli izbrisati vaših delitev in pregledati števila obiskovalcev.",
   "upload.modal.expires.never": "nikoli",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Must be at most {max}",
   "common.error.exact-length": "Dolžina mora biti točno {length} znakov",
   "common.error.invalid-number": "Mora biti številka",
-  "common.error.field-required": "To polje je obvezno"
+  "common.error.field-required": "To polje je obvezno",
+  "admin.notice.modal.headerTag": "ZAHTEVANO JE ADMINISTRATIVNO DEJANJE",
+  "admin.notice.modal.defaultCheckboxLabel": "Potrjujem, da sem prebral/a to obvestilo in razumem bistvene spremembe.",
+  "admin.notice.modal.button.acknowledge": "Potrdi in zapri",
+  "admin.notice.modal.button.acknowledging": "Potrjevanje...",
+  "admin.notice.modal.docsLink": "Ogled dokumentacije",
+  "admin.notice.modal.globalNoticeFooter": "Opomba: Ko je obvestilo potrjeno, bo trajno odstranjeno za vse administratorje na vseh napravah."
 };
