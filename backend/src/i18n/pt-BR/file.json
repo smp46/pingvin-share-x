@@ -13,5 +13,6 @@
   "s3UploadInitError": "Falha ao inicializar o upload multipart.",
   "s3SessionNotFound": "Sessão de upload multipart não encontrada.",
   "s3UploadFailed": "Upload multipart falhou. O upload foi abortado.",
-  "s3SizeError": "Não foi possível recuperar o tamanho do arquivo"
+  "s3SizeError": "Não foi possível recuperar o tamanho do arquivo",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }
