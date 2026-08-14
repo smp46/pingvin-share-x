@@ -611,6 +611,7 @@ export default {
   "admin.config.s3.secret.description": "S3 ämbri saladus.",
   "admin.config.s3.use-checksum": "Kasuta kontrollsummat",
   "admin.config.s3.use-checksum.description": "Lülita välja, kui tagaliides ei toeta kontrollsummasid (nt B2).",
+  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
   "admin.config.category.legal": "Juriidiline",
   "admin.config.legal.enabled": "Luba juriidilised teated",
   "admin.config.legal.enabled.description": "Kas kuvada linki kontaktandmetele ja privaatsuspoliitikale jaluses.",
