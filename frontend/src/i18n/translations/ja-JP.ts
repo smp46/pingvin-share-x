@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "共有を作成",
   "upload.modal.link.error.invalid": "文字、数字、アンダースコア、ハイフンのみ使用できます",
   "upload.modal.link.error.taken": "このリンクは既に使用されています",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "サインインしていません",
   "upload.modal.not-signed-in-description": "共有の手動削除と訪問者カウンターは表示できません。",
   "upload.modal.expires.never": "永久",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "最大で{max} である必要があります",
   "common.error.exact-length": "{length} 文字である必要があります",
   "common.error.invalid-number": "数字でなければなりません",
-  "common.error.field-required": "これは必須項目です"
+  "common.error.field-required": "これは必須項目です",
+  "admin.notice.modal.headerTag": "管理者による対応が必要です",
+  "admin.notice.modal.defaultCheckboxLabel": "この通知を確認し、互換性に影響する変更を理解したことを確認します。",
+  "admin.notice.modal.button.acknowledge": "確認して閉じる",
+  "admin.notice.modal.button.acknowledging": "確認中...",
+  "admin.notice.modal.docsLink": "ドキュメントを表示",
+  "admin.notice.modal.globalNoticeFooter": "注: 一度確認すると、この通知はすべてのデバイスのすべての管理者に対して永久に非表示になります。"
 };
