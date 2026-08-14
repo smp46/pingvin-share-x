@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Създаване на споделяне",
   "upload.modal.link.error.invalid": "Може да съдържа само букви, цифри, долни черти и тирета",
   "upload.modal.link.error.taken": "Тази връзка вече се използва",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Не сте влезли в акаунта си",
   "upload.modal.not-signed-in-description": "Няма да можете да изтриете споделянето си ръчно, нито да виждате броя на посетителите.",
   "upload.modal.expires.never": "никога",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Трябва да е максимум {max}",
   "common.error.exact-length": "Трябва да е точно {length} знака",
   "common.error.invalid-number": "Трябва да е число",
-  "common.error.field-required": "Това поле е задължително"
+  "common.error.field-required": "Това поле е задължително",
+  "admin.notice.modal.headerTag": "ИЗИСКВА СЕ АДМИНИСТРАТИВНО ДЕЙСТВИЕ",
+  "admin.notice.modal.defaultCheckboxLabel": "Потвърждавам, че прочетох това известие и разбирам съществените промени.",
+  "admin.notice.modal.button.acknowledge": "Потвърди и затвори",
+  "admin.notice.modal.button.acknowledging": "Потвърждаване...",
+  "admin.notice.modal.docsLink": "Преглед на документацията",
+  "admin.notice.modal.globalNoticeFooter": "Забележка: След като бъде потвърдено, това известие ще бъде премахнато завинаги за всички администратори на всички устройства."
 };
