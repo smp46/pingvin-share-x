@@ -13,5 +13,6 @@
   "s3UploadInitError": "Fehler beim Initialisieren des Multipart-Uploads.",
   "s3SessionNotFound": "Multipart-Upload-Sitzung nicht gefunden.",
   "s3UploadFailed": "Multipart-Upload fehlgeschlagen. Der Upload wurde abgebrochen.",
-  "s3SizeError": "Dateigröße konnte nicht ermittelt werden"
+  "s3SizeError": "Dateigröße konnte nicht ermittelt werden",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }
