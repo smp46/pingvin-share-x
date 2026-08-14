@@ -611,6 +611,7 @@ export default {
   "admin.config.s3.secret.description": "Секрет, який дозволяє отримати доступ до S3 бакету.",
   "admin.config.s3.use-checksum": "Використовувати контрольну суму",
   "admin.config.s3.use-checksum.description": "Вимкніть для непідтримуваних контрольних сум (напр. B2).",
+  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
   "admin.config.category.legal": "Юридична інформація",
   "admin.config.legal.enabled": "Увімкнути правові сповіщення",
   "admin.config.legal.enabled.description": "Чи відображати посилання на вихідні дані та політику конфіденційності у нижньому колонтитулі.",
