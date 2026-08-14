@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Luo Jako",
   "upload.modal.link.error.invalid": "Voi sisältää vain kirjaimia, numeroita, alaviivoja ja väliviivoja",
   "upload.modal.link.error.taken": "Tämä linkki on jo käytössä",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Et ole kirjautunut sisään",
   "upload.modal.not-signed-in-description": "Et voi poistaa jakoasi manuaalisesti ja tarkastella kävijöiden määrää.",
   "upload.modal.expires.never": "ei koskaan",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Must be at most {max}",
   "common.error.exact-length": "On oltava tarkasti {length} merkkiä pitkä",
   "common.error.invalid-number": "Pitää olla luku",
-  "common.error.field-required": "Tämä kenttä on pakollinen"
+  "common.error.field-required": "Tämä kenttä on pakollinen",
+  "admin.notice.modal.headerTag": "VAATII YLLÄPIDON TOIMENPITEITÄ",
+  "admin.notice.modal.defaultCheckboxLabel": "Vahvistan lukeneeni tämän ilmoituksen ja ymmärtäväni kriittiset muutokset.",
+  "admin.notice.modal.button.acknowledge": "Vahvista ja sulje",
+  "admin.notice.modal.button.acknowledging": "Vahvistetaan...",
+  "admin.notice.modal.docsLink": "Näytä dokumentaatio",
+  "admin.notice.modal.globalNoticeFooter": "Huomautus: Kun tämä ilmoitus on vahvistettu, se poistetaan pysyvästi kaikilta ylläpitäjiltä kaikilla laitteilla."
 };
