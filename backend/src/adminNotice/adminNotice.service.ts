@@ -46,24 +46,10 @@ export class AdminNoticeService implements OnModuleInit {
   }
 
   async getPendingNotices(): Promise<AdminNoticeDto[]> {
-    const records = await this.prisma.config.findMany({
-      where: { category: "admin_notices" },
-    });
-
-    const dismissedNoticeIds = new Set<string>();
-
-    for (const record of records) {
-      if (record.name === "dismissed" && record.value) {
-        try {
-          const legacyMap = JSON.parse(record.value);
-          Object.keys(legacyMap).forEach((id) => dismissedNoticeIds.add(id));
-        } catch {
-          // Ignore malformed JSON
-        }
-      } else if (record.name.startsWith("dismissed_")) {
-        dismissedNoticeIds.add(record.name.replace(/^dismissed_/, ""));
-      }
-    }
+    const dismissals = await this.prisma.adminNoticeDismissal.findMany();
+    const dismissedNoticeIds = new Set<string>(
+      dismissals.map((d) => d.noticeId),
+    );
 
     let isS3Enabled = false;
     try {
@@ -86,22 +72,16 @@ export class AdminNoticeService implements OnModuleInit {
   }
 
   async dismissNotice(noticeId: string, user: User): Promise<void> {
-    const configName = `dismissed_${noticeId}`;
-    const value = JSON.stringify({
-      dismissedAt: new Date().toISOString(),
-      dismissedBy: user.id,
-      dismissedByUsername: user.username,
-    });
-
-    await this.prisma.config.upsert({
-      where: { name_category: { name: configName, category: "admin_notices" } },
-      update: { value },
+    await this.prisma.adminNoticeDismissal.upsert({
+      where: { noticeId },
+      update: {
+        dismissedByUserId: user.id,
+        dismissedByUsername: user.username,
+      },
       create: {
-        name: configName,
-        category: "admin_notices",
-        type: "string",
-        value,
-        order: 0,
+        noticeId,
+        dismissedByUserId: user.id,
+        dismissedByUsername: user.username,
       },
     });
   }
