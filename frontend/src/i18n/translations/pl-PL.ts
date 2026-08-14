@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Utwórz Udział",
   "upload.modal.link.error.invalid": "Może zawierać tylko litery, cyfry, znaki podkreślenia i myślniki",
   "upload.modal.link.error.taken": "Ten link jest już w użyciu",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Nie jesteś zalogowany/a",
   "upload.modal.not-signed-in-description": "Nie możesz ręcznie usunąć swojego udziału ani wyświetlić licznika odwiedzających.",
   "upload.modal.expires.never": "nigdy",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Musi wynosić co najwyżej {max}",
   "common.error.exact-length": "Musi mieć dokładnie {length} znaków",
   "common.error.invalid-number": "Musi być liczbą",
-  "common.error.field-required": "To pole jest wymagane"
+  "common.error.field-required": "To pole jest wymagane",
+  "admin.notice.modal.headerTag": "WYMAGANE DZIAŁANIE ADMINISTRACYJNE",
+  "admin.notice.modal.defaultCheckboxLabel": "Potwierdzam, że przeczytałem(am) to powiadomienie i rozumiem wprowadzane zmiany.",
+  "admin.notice.modal.button.acknowledge": "Potwierdź i odrzuć",
+  "admin.notice.modal.button.acknowledging": "Potwierdzanie...",
+  "admin.notice.modal.docsLink": "Zobacz dokumentację",
+  "admin.notice.modal.globalNoticeFooter": "Uwaga: Po potwierdzeniu to powiadomienie zostanie trwale usunięte dla wszystkich administratorów na wszystkich urządzeniach."
 };
