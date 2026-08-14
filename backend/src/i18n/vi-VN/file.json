@@ -13,5 +13,6 @@
   "s3UploadInitError": "Không thể khởi tạo tải lên nhiều phần.",
   "s3SessionNotFound": "Không tìm thấy phiên tải lên nhiều phần.",
   "s3UploadFailed": "Tải lên nhiều phần thất bại. Việc tải lên đã bị hủy bỏ.",
-  "s3SizeError": "Không thể lấy kích thước tệp"
+  "s3SizeError": "Không thể lấy kích thước tệp",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }
