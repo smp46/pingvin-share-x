@@ -687,10 +687,11 @@ export default {
   "common.error.exact-length": "Pontosan {length} karakter szükséges",
   "common.error.invalid-number": "Számot kell megadnia",
   "common.error.field-required": "Ez egy kötelező mező",
+
   "admin.notice.modal.headerTag": "ADMINISZTRÁTORI INTÉZKEDÉS SZÜKSÉGES",
   "admin.notice.modal.defaultCheckboxLabel": "Megerősítem, hogy elolvastam ezt az értesítést, és megértettem a lényegi változtatásokat.",
   "admin.notice.modal.button.acknowledge": "Tudomásul veszem és bezárom",
   "admin.notice.modal.button.acknowledging": "Feldolgozás...",
   "admin.notice.modal.docsLink": "Dokumentáció megtekintése",
-  "admin.notice.modal.globalNoticeFooter": "Megjegyzés: A tudomásulvételt követően ez az értesítés minden adminisztrátor számára véglegesen elrejtésre kerül az összes eszközön."
+  "admin.notice.modal.globalNoticeFooter": "Megjegyzés: A tudomásulvételt követően ez az értesítés minden adminisztrátor számára véglegesen elrejtésre kerül az összes eszközön.",
 };

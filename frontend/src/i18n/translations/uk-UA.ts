@@ -687,10 +687,11 @@ export default {
   "common.error.exact-length": "Повинно бути рівно {length} символів",
   "common.error.invalid-number": "Повинно бути числом",
   "common.error.field-required": "Поле обов'язкове для заповнення",
+
   "admin.notice.modal.headerTag": "ПОТРІБНА ДІЯ АДМІНІСТРАТОРА",
   "admin.notice.modal.defaultCheckboxLabel": "Я підтверджую, що прочитав(ла) це сповіщення та розумію критичні зміни.",
   "admin.notice.modal.button.acknowledge": "Підтвердити та закрити",
   "admin.notice.modal.button.acknowledging": "Підтвердження...",
   "admin.notice.modal.docsLink": "Переглянути документацію",
-  "admin.notice.modal.globalNoticeFooter": "Примітка: Після підтвердження це сповіщення буде назавжди приховано для всіх адміністраторів на всіх пристроях."
+  "admin.notice.modal.globalNoticeFooter": "Примітка: Після підтвердження це сповіщення буде назавжди приховано для всіх адміністраторів на всіх пристроях.",
 };

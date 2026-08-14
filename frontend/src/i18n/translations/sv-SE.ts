@@ -687,10 +687,11 @@ export default {
   "common.error.exact-length": "Måste vara exakt {length} tecken långt",
   "common.error.invalid-number": "Måste vara ett tal",
   "common.error.field-required": "Obligatoriskt fält",
+
   "admin.notice.modal.headerTag": "ADMINISTRATIV ÅTGÄRD KRÄVS",
   "admin.notice.modal.defaultCheckboxLabel": "Jag bekräftar att jag har läst detta meddelande och förstår de genomgripande ändringarna.",
   "admin.notice.modal.button.acknowledge": "Bekräfta och stäng",
   "admin.notice.modal.button.acknowledging": "Bekräftar...",
   "admin.notice.modal.docsLink": "Visa dokumentation",
-  "admin.notice.modal.globalNoticeFooter": "Obs: När det har bekräftats kommer detta meddelande att tas bort permanent för alla administratörer på alla enheter."
+  "admin.notice.modal.globalNoticeFooter": "Obs: När det har bekräftats kommer detta meddelande att tas bort permanent för alla administratörer på alla enheter.",
 };

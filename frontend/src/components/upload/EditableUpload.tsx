@@ -13,7 +13,10 @@ import useUser from "../../hooks/user.hook";
 import shareService from "../../services/share.service";
 import { FileListItem, FileMetaData, FileUpload } from "../../types/File.type";
 import toast from "../../utils/toast.util";
-import { getNormalizedFileName, filterDuplicateFiles } from "../../utils/file.util";
+import {
+  getNormalizedFileName,
+  filterDuplicateFiles,
+} from "../../utils/file.util";
 
 const promiseLimit = pLimit(3);
 let errorToastShown = false;
@@ -199,7 +202,10 @@ const EditableUpload = ({
     const filtered = filterDuplicateFiles(
       appendingFiles,
       combinedExisting,
-      (normalizedName) => toast.error(t("upload.notify.duplicate-skipped", { name: normalizedName }))
+      (normalizedName) =>
+        toast.error(
+          t("upload.notify.duplicate-skipped", { name: normalizedName }),
+        ),
     );
     if (filtered.length === 0) return;
     setUploadingFiles([...filtered, ...uploadingFiles]);

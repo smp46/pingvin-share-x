@@ -687,10 +687,11 @@ export default {
   "common.error.exact-length": "Skal være præcis {length} tegn",
   "common.error.invalid-number": "Skal være et tal",
   "common.error.field-required": "Dette felt er påkrævet",
+
   "admin.notice.modal.headerTag": "ADMINISTRATIV HANDLING KRÆVES",
   "admin.notice.modal.defaultCheckboxLabel": "Jeg bekræfter, at jeg har læst denne meddelelse og forstår de ændringer, der introduceres.",
   "admin.notice.modal.button.acknowledge": "Bekræft og luk",
   "admin.notice.modal.button.acknowledging": "Bekræfter...",
   "admin.notice.modal.docsLink": "Se dokumentation",
-  "admin.notice.modal.globalNoticeFooter": "Bemærk: Når den er bekræftet, vil denne meddelelse blive fjernet permanent for alle administratorer på tværs af alle enheder."
+  "admin.notice.modal.globalNoticeFooter": "Bemærk: Når den er bekræftet, vil denne meddelelse blive fjernet permanent for alle administratorer på tværs af alle enheder.",
 };

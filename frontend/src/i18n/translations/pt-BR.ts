@@ -687,10 +687,11 @@ export default {
   "common.error.exact-length": "Deve ter exatamente {length} caracteres",
   "common.error.invalid-number": "Tem que ser um número",
   "common.error.field-required": "Este campo é obrigatório",
+
   "admin.notice.modal.headerTag": "AÇÃO ADMINISTRATIVA NECESSÁRIA",
   "admin.notice.modal.defaultCheckboxLabel": "Confirmo que li este aviso e entendo as alterações de compatibilidade.",
   "admin.notice.modal.button.acknowledge": "Confirmar e dispensar",
   "admin.notice.modal.button.acknowledging": "Confirmando...",
   "admin.notice.modal.docsLink": "Ver documentação",
-  "admin.notice.modal.globalNoticeFooter": "Nota: Uma vez confirmado, este aviso será permanentemente dispensado para todos os administradores em todos os dispositivos."
+  "admin.notice.modal.globalNoticeFooter": "Nota: Uma vez confirmado, este aviso será permanentemente dispensado para todos os administradores em todos os dispositivos.",
 };

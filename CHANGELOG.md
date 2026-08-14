@@ -1,3 +1,11 @@
+## [1.22.1-beta.0](https://github.com/smp46/pingvin-share-x/compare/v1.22.1...v1.22.1-beta.0) (2026-08-08)
+
+## [1.22.1](https://github.com/smp46/pingvin-share-x/compare/v1.22.0...v1.22.1) (2026-08-08)
+
+### Bug Fixes
+
+* **uploadPage:** properly handle chromium file pickers, prevent hydration error ([#176](https://github.com/smp46/pingvin-share-x/issues/176)) ([e38083b](https://github.com/smp46/pingvin-share-x/commit/e38083bef666a1819dbebb9e7017220016ff0989))
+
 ## [1.22.0](https://github.com/smp46/pingvin-share-x/compare/v1.21.2...v1.22.0) (2026-08-07)
 
 ### Features

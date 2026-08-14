@@ -687,10 +687,11 @@ export default {
   "common.error.exact-length": "Mora da ima tačno {length} znakova",
   "common.error.invalid-number": "Mora biti broj",
   "common.error.field-required": "Polje je obavezno",
+
   "admin.notice.modal.headerTag": "POTREBNA JE ADMINISTRATIVNA AKCIJA",
   "admin.notice.modal.defaultCheckboxLabel": "Potvrđujem da sam pročitao/la ovo obaveštenje i razumem ključne promene.",
   "admin.notice.modal.button.acknowledge": "Potvrdi i zatvori",
   "admin.notice.modal.button.acknowledging": "Potvrđivanje...",
   "admin.notice.modal.docsLink": "Prikaži dokumentaciju",
-  "admin.notice.modal.globalNoticeFooter": "Napomena: Nakon što se potvrdi, ovo obaveštenje će biti trajno uklonjeno za sve administratore na svim uređajima."
+  "admin.notice.modal.globalNoticeFooter": "Napomena: Nakon što se potvrdi, ovo obaveštenje će biti trajno uklonjeno za sve administratore na svim uređajima.",
 };

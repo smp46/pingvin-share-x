@@ -687,10 +687,11 @@ export default {
   "common.error.exact-length": "Debe tener exactamente {length} caracteres",
   "common.error.invalid-number": "Debe ser un número",
   "common.error.field-required": "Este campo es requerido",
+
   "admin.notice.modal.headerTag": "ACCIÓN ADMINISTRATIVA REQUERIDA",
   "admin.notice.modal.defaultCheckboxLabel": "Confirmo que he leído este aviso y entiendo los cambios disruptivos.",
   "admin.notice.modal.button.acknowledge": "Confirmar y descartar",
   "admin.notice.modal.button.acknowledging": "Confirmando...",
   "admin.notice.modal.docsLink": "Ver documentación",
-  "admin.notice.modal.globalNoticeFooter": "Nota: Una vez confirmado, este aviso se descartará permanentemente para todos los administradores en todos los dispositivos."
+  "admin.notice.modal.globalNoticeFooter": "Nota: Una vez confirmado, este aviso se descartará permanentemente para todos los administradores en todos los dispositivos.",
 };

@@ -18,12 +18,14 @@ model User {
   isAdmin  Boolean @default(false)
   ldapDN   String? @unique
   shareSizeLimit String?
+  storageQuotaLimit String?
 
   shares              Share[]
   refreshTokens       RefreshToken[]
   loginTokens         LoginToken[]
   reverseShares       ReverseShare[]
   shareUserRecipients ShareUserRecipient[]
+  adminNoticeDismissals AdminNoticeDismissal[]
 
   totpEnabled        Boolean             @default(false)
   totpVerified       Boolean             @default(false)
@@ -183,3 +185,14 @@ model Config {
 
   @@id([name, category])
 }
+
+model AdminNoticeDismissal {
+  id                  String   @id @default(uuid())
+  createdAt           DateTime @default(now())
+
+  noticeId            String   @unique
+  dismissedByUserId   String?
+  dismissedByUsername String?
+  dismissedByUser     User?    @relation(fields: [dismissedByUserId], references: [id], onDelete: SetNull)
+}
+

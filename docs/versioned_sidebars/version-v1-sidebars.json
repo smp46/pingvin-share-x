@@ -1,0 +1,52 @@
+{
+  "docsSidebar": [
+    {
+      "type": "doc",
+      "id": "introduction"
+    },
+    {
+      "type": "category",
+      "label": "Getting Started",
+      "items": [
+        {
+          "type": "doc",
+          "id": "setup/installation"
+        },
+        {
+          "type": "doc",
+          "id": "setup/configuration"
+        },
+        {
+          "type": "doc",
+          "id": "setup/integrations"
+        },
+        {
+          "type": "doc",
+          "id": "setup/oauth2login"
+        },
+        {
+          "type": "doc",
+          "id": "setup/s3"
+        },
+        {
+          "type": "doc",
+          "id": "setup/upgrading"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Helping Out",
+      "items": [
+        {
+          "type": "doc",
+          "id": "help-out/contribute"
+        },
+        {
+          "type": "doc",
+          "id": "help-out/translation"
+        }
+      ]
+    }
+  ]
+}
