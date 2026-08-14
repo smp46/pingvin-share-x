@@ -611,6 +611,7 @@ export default {
   "admin.config.s3.secret.description": "允许您访问 S3 桶的密钥。",
   "admin.config.s3.use-checksum": "启用校验和",
   "admin.config.s3.use-checksum.description": "对于不支持校验和的存储后端（例如 B2），请关闭此选项。",
+  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
   "admin.config.category.legal": "合规",
   "admin.config.legal.enabled": "启用合规提醒",
   "admin.config.legal.enabled.description": "是否在页脚中显示版权信息和隐私政策。",
