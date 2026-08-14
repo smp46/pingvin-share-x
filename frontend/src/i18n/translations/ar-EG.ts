@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "إنشاء مشاركة",
   "upload.modal.link.error.invalid": "يمكن أن يحتوي فقط على الأحرف والأرقام والشرطات السفلية والواصلات",
   "upload.modal.link.error.taken": "هذا الرابط مستخدم مسبقاً",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "لم تقم بتسجيل الدخول",
   "upload.modal.not-signed-in-description": "لن تتمكن من حذف مشاركتك يدوياً أو عرض عدد الزوار.",
   "upload.modal.expires.never": "أبدًا",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Must be at most {max}",
   "common.error.exact-length": "يجب أن يكون بالضبط {length} حرفًا",
   "common.error.invalid-number": "يجب أن يكون رقماً",
-  "common.error.field-required": "هذا الحقل مطلوب"
+  "common.error.field-required": "هذا الحقل مطلوب",
+  "admin.notice.modal.headerTag": "إجراء إداري مطلوب",
+  "admin.notice.modal.defaultCheckboxLabel": "أؤكد أنني قرأت هذا الإشعار وأفهم التغييرات الجذرية.",
+  "admin.notice.modal.button.acknowledge": "إقرار وتجاهل",
+  "admin.notice.modal.button.acknowledging": "جاري الإقرار...",
+  "admin.notice.modal.docsLink": "عرض الوثائق",
+  "admin.notice.modal.globalNoticeFooter": "ملاحظة: بمجرد الإقرار، سيتم إغلاق هذا الإشعار نهائيًا لجميع المسؤولين عبر جميع الأجهزة."
 };
