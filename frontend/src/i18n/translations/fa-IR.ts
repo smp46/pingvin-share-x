@@ -611,6 +611,7 @@ export default {
   "admin.config.s3.secret.description": "رازی که به شما امکان دسترسی به سطل S3 را می‌دهد.",
   "admin.config.s3.use-checksum": "استفاده از checksum",
   "admin.config.s3.use-checksum.description": "برای بک‌اندهایی که از checksum پشتیبانی نمی‌کنند (مثلاً B2) آن را خاموش کنید.",
+  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
   "admin.config.category.legal": "قانونی",
   "admin.config.legal.enabled": "فعال کردن اعلامیه‌های قانونی",
   "admin.config.legal.enabled.description": "آیا لینک به صفحه imprint و سیاست حفظ حریم خصوصی در فوتر نمایش داده شود.",
