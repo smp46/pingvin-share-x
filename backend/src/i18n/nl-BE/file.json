@@ -13,5 +13,6 @@
   "s3UploadInitError": "Initialiseren van multipart upload mislukt.",
   "s3SessionNotFound": "Multipart uploadsessie niet gevonden.",
   "s3UploadFailed": "Multipart upload mislukt. De upload is afgebroken.",
-  "s3SizeError": "Kon bestandsgrootte niet ophalen"
+  "s3SizeError": "Kon bestandsgrootte niet ophalen",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }
