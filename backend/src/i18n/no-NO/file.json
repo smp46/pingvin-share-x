@@ -13,5 +13,6 @@
   "s3UploadInitError": "Mislyktes i å initialisere flerdelt opplasting (multipart upload).",
   "s3SessionNotFound": "Flerdelt opplastingsøkt ble ikke funnet.",
   "s3UploadFailed": "Flerdelt opplasting mislyktes. Opplastingen har blitt avbrutt.",
-  "s3SizeError": "Kunne ikke hente filstørrelse"
+  "s3SizeError": "Kunne ikke hente filstørrelse",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }
