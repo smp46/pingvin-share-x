@@ -37,9 +37,7 @@ export class ClamScanService {
       this.clamScanInstance = instance;
       return instance;
     } catch (err: any) {
-      this.logger.log(
-        "ClamAV is not active or unreachable",
-      );
+      this.logger.log("ClamAV is not active or unreachable");
       return null;
     }
   }
@@ -158,4 +156,3 @@ export class ClamScanService {
     }
   }
 }
-

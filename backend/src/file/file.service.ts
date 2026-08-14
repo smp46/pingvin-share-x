@@ -1,4 +1,10 @@
-import { Inject, Injectable, Logger, BadRequestException, NotFoundException } from "@nestjs/common";
+import {
+  Inject,
+  Injectable,
+  Logger,
+  BadRequestException,
+  NotFoundException,
+} from "@nestjs/common";
 import { CACHE_MANAGER } from "@nestjs/cache-manager";
 import { Cache } from "cache-manager";
 import { LocalFileService } from "./local.service";
@@ -142,7 +148,11 @@ export class FileService {
     if (share?.storageProvider !== "S3") {
       throw new BadRequestException(this.i18n.t("file.s3NotSupported"));
     }
-    return this.s3FileService.getPreSignedDownloadUrl(shareId, fileId, isDownload);
+    return this.s3FileService.getPreSignedDownloadUrl(
+      shareId,
+      fileId,
+      isDownload,
+    );
   }
 
   async get(shareId: string, fileId: string): Promise<File> {

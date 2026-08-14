@@ -440,7 +440,9 @@ export class S3FileService {
 
       const uploadId = multipartInitResponse.UploadId;
       if (!uploadId) {
-        throw new InternalServerErrorException(this.i18n.t("file.s3UploadInitError"));
+        throw new InternalServerErrorException(
+          this.i18n.t("file.s3UploadInitError"),
+        );
       }
 
       const urls: string[] = [];
@@ -452,14 +454,18 @@ export class S3FileService {
           PartNumber: partNumber,
           UploadId: uploadId,
         });
-        const url = await getSignedUrl(s3Instance, command, { expiresIn: 3600 });
+        const url = await getSignedUrl(s3Instance, command, {
+          expiresIn: 3600,
+        });
         urls.push(url);
       }
 
       return { uploadId, key, urls };
     } catch (error) {
       this.logger.error(error);
-      throw new InternalServerErrorException(this.i18n.t("file.s3UploadInitError"));
+      throw new InternalServerErrorException(
+        this.i18n.t("file.s3UploadInitError"),
+      );
     }
   }
 
@@ -518,8 +524,13 @@ export class S3FileService {
 
       return { id: fileId, name: fileName };
     } catch (error) {
-      this.logger.error("Error creating database record after S3 upload completion:", error);
-      throw new InternalServerErrorException(this.i18n.t("file.s3UploadFailed"));
+      this.logger.error(
+        "Error creating database record after S3 upload completion:",
+        error,
+      );
+      throw new InternalServerErrorException(
+        this.i18n.t("file.s3UploadFailed"),
+      );
     }
   }
 

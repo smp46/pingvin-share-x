@@ -236,7 +236,10 @@ export default function AppShellDemo() {
                           <FormattedMessage id="admin.config.config-file-warning.description" />
                         </Alert>
                       )}
-                      <Title mb={categoryId.toLowerCase() === "s3" ? "xs" : "md"} order={3}>
+                      <Title
+                        mb={categoryId.toLowerCase() === "s3" ? "xs" : "md"}
+                        order={3}
+                      >
                         {t("admin.config.category." + categoryId)}
                       </Title>
                       {categoryId.toLowerCase() === "s3" && (

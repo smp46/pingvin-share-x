@@ -83,8 +83,6 @@ const showCreateUploadModal = (
   });
 };
 
-
-
 const generateAvailableLink = async (
   shareIdLength: number,
   times: number = 10,

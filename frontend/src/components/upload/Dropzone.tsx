@@ -65,7 +65,7 @@ const traverseDirectory = async (entry: any, path = ""): Promise<File[]> => {
     }
 
     const promises = entries.map((e) =>
-      traverseDirectory(e, path ? `${path}/${entry.name}` : entry.name)
+      traverseDirectory(e, path ? `${path}/${entry.name}` : entry.name),
     );
     const results = await Promise.all(promises);
     return results.flat();
@@ -234,7 +234,11 @@ const Dropzone = ({
           >
             <TbFolder style={{ marginRight: 6 }} />
             <FormattedMessage
-              id={currentFilesSize > 0 ? "upload.button.folder.append" : "upload.button.folder"}
+              id={
+                currentFilesSize > 0
+                  ? "upload.button.folder.append"
+                  : "upload.button.folder"
+              }
             />
           </Button>
         )}

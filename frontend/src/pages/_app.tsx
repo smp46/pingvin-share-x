@@ -34,7 +34,9 @@ import i18nUtil from "../utils/i18n.util";
 import userPreferences from "../utils/userPreferences.util";
 import Footer from "../components/footer/Footer";
 import { getDefaultConfig } from "../utils/defaultConfig.util";
-import AdminNoticeModal, { AdminNotice } from "../components/admin/AdminNoticeModal";
+import AdminNoticeModal, {
+  AdminNotice,
+} from "../components/admin/AdminNoticeModal";
 import adminNoticeService from "../services/adminNotice.service";
 
 const excludeDefaultLayoutRoutes = ["/admin/config/[category]"];

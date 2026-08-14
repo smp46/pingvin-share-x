@@ -151,7 +151,11 @@ export class FileController {
     const storageProvider = await this.fileService.getStorageProvider(shareId);
 
     if (storageProvider === "S3") {
-      const url = await this.fileService.getPreSignedDownloadUrl(shareId, fileId, isDownload);
+      const url = await this.fileService.getPreSignedDownloadUrl(
+        shareId,
+        fileId,
+        isDownload,
+      );
       const fileName = await this.fileService.getFileName(shareId, fileId);
       if (isDownload) {
         void this.fileService.notifyRecipientDownload(
