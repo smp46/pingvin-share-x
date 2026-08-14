@@ -611,6 +611,7 @@ export default {
   "admin.config.s3.secret.description": "S3バケットにアクセスするための秘密。",
   "admin.config.s3.use-checksum": "チェックサムを使用",
   "admin.config.s3.use-checksum.description": "チェックサムをサポートしていないバックエンド（例：B2）では無効にしてください。",
+  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
   "admin.config.category.legal": "法的事項",
   "admin.config.legal.enabled": "法的通知を有効にする",
   "admin.config.legal.enabled.description": "フッターにインプリントとプライバシーポリシーへのリンクを表示するか。",
