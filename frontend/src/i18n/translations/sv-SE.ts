@@ -611,6 +611,7 @@ export default {
   "admin.config.s3.secret.description": "Hemligheten som gör att du kan komma åt S3 bucket.",
   "admin.config.s3.use-checksum": "Använd kontrollsumma",
   "admin.config.s3.use-checksum.description": "Stäng av för backends som inte stöder kontrollsumma (t.ex. B2).",
+  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
   "admin.config.category.legal": "Juridisk",
   "admin.config.legal.enabled": "Aktivera juridiska meddelanden",
   "admin.config.legal.enabled.description": "Om en länk till utgivarinformation och integritetspolicy ska visas i sidfoten.",
