@@ -611,6 +611,7 @@ export default {
   "admin.config.s3.secret.description": "Das Geheimnis, das den Zugriff auf den S3-Bucket ermöglicht.",
   "admin.config.s3.use-checksum": "Prüfsumme verwenden",
   "admin.config.s3.use-checksum.description": "Deaktivieren für Backends, die keine Prüfsummen unterstützen (z. B. B2).",
+  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
   "admin.config.category.legal": "Datenschutz",
   "admin.config.legal.enabled": "Impressum und Datenschutz aktivieren",
   "admin.config.legal.enabled.description": "Gibt an, ob die Links zum Impressum und zur Datenschutzerklärung im Footer angezeigt werden sollen.",
