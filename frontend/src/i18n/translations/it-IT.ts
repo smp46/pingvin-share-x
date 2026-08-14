@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Crea Condivisione",
   "upload.modal.link.error.invalid": "Può contenere solo lettere, numeri, underscore e trattini",
   "upload.modal.link.error.taken": "Questo link è gia in uso",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Non sei loggato",
   "upload.modal.not-signed-in-description": "Non sarai in grado di eliminare la tua condivisione manualmente e visualizzare il numero dei visitatori.",
   "upload.modal.expires.never": "mai",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Deve essere al massimo {max}",
   "common.error.exact-length": "Deve essere esattamente {length} caratteri",
   "common.error.invalid-number": "Deve essere un numero",
-  "common.error.field-required": "Questo campo è obbligatorio"
+  "common.error.field-required": "Questo campo è obbligatorio",
+  "admin.notice.modal.headerTag": "AZIONE AMMINISTRATIVA RICHIESTA",
+  "admin.notice.modal.defaultCheckboxLabel": "Confermo di aver letto questo avviso e di aver compreso le modifiche sostanziali.",
+  "admin.notice.modal.button.acknowledge": "Conferma e chiudi",
+  "admin.notice.modal.button.acknowledging": "Conferma in corso...",
+  "admin.notice.modal.docsLink": "Visualizza la documentazione",
+  "admin.notice.modal.globalNoticeFooter": "Nota: Una volta confermato, questo avviso verrà rimosso definitivamente per tutti gli amministratori su tutti i dispositivi."
 };
