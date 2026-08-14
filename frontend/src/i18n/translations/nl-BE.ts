@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Share aanmaken",
   "upload.modal.link.error.invalid": "Het mag alleen letters, cijfers, onderstrepingstekens en koppeltekens bevatten",
   "upload.modal.link.error.taken": "Deze link is al in gebruik",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "U bent niet aangemeld",
   "upload.modal.not-signed-in-description": "Het is niet mogelijk uw gedeelde bestanden handmatig te verwijderen en het aantal bezoekers te bekijken.",
   "upload.modal.expires.never": "nooit",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Mag maximaal {max} zijn",
   "common.error.exact-length": "Moet precies {length} tekens bevatten",
   "common.error.invalid-number": "Moet een getal zijn",
-  "common.error.field-required": "Dit veld is verplicht"
+  "common.error.field-required": "Dit veld is verplicht",
+  "admin.notice.modal.headerTag": "ADMINISTRATIEVE ACTIE VEREIST",
+  "admin.notice.modal.defaultCheckboxLabel": "Ik bevestig dat ik deze melding heb gelezen en de ingrijpende wijzigingen begrijp.",
+  "admin.notice.modal.button.acknowledge": "Bevestigen en sluiten",
+  "admin.notice.modal.button.acknowledging": "Bevestigen...",
+  "admin.notice.modal.docsLink": "Documentatie bekijken",
+  "admin.notice.modal.globalNoticeFooter": "Opmerking: Zodra dit is bevestigd, wordt deze melding permanent verborgen voor alle beheerders op alle apparaten."
 };
