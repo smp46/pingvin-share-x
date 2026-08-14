@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Opprett deling",
   "upload.modal.link.error.invalid": "Kan bare inneholde bokstaver, tall, understreker og bindestreker",
   "upload.modal.link.error.taken": "Denne lenken er allerede i bruk",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Du er ikke logget inn",
   "upload.modal.not-signed-in-description": "Du vil ikke kunne slette delingen din manuelt eller se antall besøkende.",
   "upload.modal.expires.never": "aldri",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Må være maksimalt {max}",
   "common.error.exact-length": "Må være nøyaktig {length} tegn",
   "common.error.invalid-number": "Må være et tall",
-  "common.error.field-required": "Dette feltet er obligatorisk"
+  "common.error.field-required": "Dette feltet er obligatorisk",
+  "admin.notice.modal.headerTag": "ADMINISTRATIV HANDLING KREVES",
+  "admin.notice.modal.defaultCheckboxLabel": "Jeg bekrefter at jeg har lest denne meldingen og forstår de omfattende endringene.",
+  "admin.notice.modal.button.acknowledge": "Bekreft og lukk",
+  "admin.notice.modal.button.acknowledging": "Bekrefter...",
+  "admin.notice.modal.docsLink": "Se dokumentasjon",
+  "admin.notice.modal.globalNoticeFooter": "Merk: Når den er bekræftet, vil denne meldingen bli permanent fjernet for alle administratorer på tvers av alle enheter."
 };
