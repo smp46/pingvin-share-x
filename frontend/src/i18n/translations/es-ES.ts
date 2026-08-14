@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Crear compartido",
   "upload.modal.link.error.invalid": "Solo puede contener letras, números, guiones y guiones bajos",
   "upload.modal.link.error.taken": "Este enlace ya está en uso",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "No has iniciado sesión",
   "upload.modal.not-signed-in-description": "No podrás eliminar tus compartidos manualmente ni ver el número de visitas.",
   "upload.modal.expires.never": "nunca",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Debe ser como máximo {max}",
   "common.error.exact-length": "Debe tener exactamente {length} caracteres",
   "common.error.invalid-number": "Debe ser un número",
-  "common.error.field-required": "Este campo es requerido"
+  "common.error.field-required": "Este campo es requerido",
+  "admin.notice.modal.headerTag": "ACCIÓN ADMINISTRATIVA REQUERIDA",
+  "admin.notice.modal.defaultCheckboxLabel": "Confirmo que he leído este aviso y entiendo los cambios disruptivos.",
+  "admin.notice.modal.button.acknowledge": "Confirmar y descartar",
+  "admin.notice.modal.button.acknowledging": "Confirmando...",
+  "admin.notice.modal.docsLink": "Ver documentación",
+  "admin.notice.modal.globalNoticeFooter": "Nota: Una vez confirmado, este aviso se descartará permanentemente para todos los administradores en todos los dispositivos."
 };
