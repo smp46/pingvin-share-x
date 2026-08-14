@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Направи дељење",
   "upload.modal.link.error.invalid": "Може да садржи само слова, бројеве, доње црте и цртице",
   "upload.modal.link.error.taken": "Овај линк је већ у употреби",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Нисте пријављени",
   "upload.modal.not-signed-in-description": "Нећете моћи ручно да избришете своје дељење и видите број посетилаца.",
   "upload.modal.expires.never": "никад",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Мора бити највише {max}",
   "common.error.exact-length": "Мора да има тачно {length} знакова",
   "common.error.invalid-number": "Мора бити број",
-  "common.error.field-required": "Поље је обавезно"
+  "common.error.field-required": "Поље је обавезно",
+  "admin.notice.modal.headerTag": "ПОТРЕБНА ЈЕ АДМИНИСТРАТИВНА АКЦИЈА",
+  "admin.notice.modal.defaultCheckboxLabel": "Потврђујем да сам прочитао/ла ово обавештење и разумем кључне промене.",
+  "admin.notice.modal.button.acknowledge": "Потврди и затвори",
+  "admin.notice.modal.button.acknowledging": "Потврђивање...",
+  "admin.notice.modal.docsLink": "Прикажи документацију",
+  "admin.notice.modal.globalNoticeFooter": "Напомена: Након што се потврди, ово обавештење ће бити трајно уклоњено за све администраторе на свим уређајима."
 };
