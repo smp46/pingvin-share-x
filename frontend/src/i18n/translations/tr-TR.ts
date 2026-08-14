@@ -611,6 +611,7 @@ export default {
   "admin.config.s3.secret.description": "S3 bucket'ına erişmenizi sağlayan sır.",
   "admin.config.s3.use-checksum": "Sağlama toplamı (checksum) kullan",
   "admin.config.s3.use-checksum.description": "Sağlama toplamını desteklemeyen (ör. B2) arka uçlar için kapatın.",
+  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
   "admin.config.category.legal": "Yasal",
   "admin.config.legal.enabled": "Yasal bildirimleri etkinleştir",
   "admin.config.legal.enabled.description": "Altbilgide künye ve gizlilik politikası bağlantısı gösterilip gösterilmeyeceği.",
