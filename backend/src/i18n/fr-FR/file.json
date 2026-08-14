@@ -13,5 +13,6 @@
   "s3UploadInitError": "Échec de l'initialisation de l'upload multipart.",
   "s3SessionNotFound": "Session d'upload multipart non trouvée.",
   "s3UploadFailed": "Échec de l'upload multipart. L'upload a été abandonné.",
-  "s3SizeError": "Impossible de récupérer la taille du fichier"
+  "s3SizeError": "Impossible de récupérer la taille du fichier",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }
