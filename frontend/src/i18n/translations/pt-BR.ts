@@ -611,6 +611,7 @@ export default {
   "admin.config.s3.secret.description": "O segredo que permite a você acessar o bucket S3.",
   "admin.config.s3.use-checksum": "Usar Checksum",
   "admin.config.s3.use-checksum.description": "Desligar para backends que não suportem checksum (por exemplo, B2).",
+  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
   "admin.config.category.legal": "Aviso legal",
   "admin.config.legal.enabled": "Habilitar avisos legais",
   "admin.config.legal.enabled.description": "Exibir um link para imprimir e política de privacidade no rodapé.",
