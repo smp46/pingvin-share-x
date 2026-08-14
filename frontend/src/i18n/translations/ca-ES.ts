@@ -611,6 +611,7 @@ export default {
   "admin.config.s3.secret.description": "El secret que us permet accedir a l'espai S3.",
   "admin.config.s3.use-checksum": "Utilitzar suma de verificació (checksum)",
   "admin.config.s3.use-checksum.description": "Desactiveu-ho per a backends que no suporten sumes de verificació (p. ex., B2).",
+  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
   "admin.config.category.legal": "Legal",
   "admin.config.legal.enabled": "Activar avisos legals",
   "admin.config.legal.enabled.description": "Si s'ha de mostrar un enllaç a l'avís legal i a la política de privadesa al peu de pàgina.",
