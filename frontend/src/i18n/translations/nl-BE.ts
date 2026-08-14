@@ -677,5 +677,12 @@ export default {
   "common.error.number-too-large": "Mag maximaal {max} zijn",
   "common.error.exact-length": "Moet precies {length} tekens bevatten",
   "common.error.invalid-number": "Moet een getal zijn",
-  "common.error.field-required": "Dit veld is verplicht"
+  "common.error.field-required": "Dit veld is verplicht",
+
+  "admin.notice.modal.headerTag": "ADMINISTRATIEVE ACTIE VEREIST",
+  "admin.notice.modal.defaultCheckboxLabel": "Ik bevestig dat ik deze melding heb gelezen en de ingrijpende wijzigingen begrijp.",
+  "admin.notice.modal.button.acknowledge": "Bevestigen en sluiten",
+  "admin.notice.modal.button.acknowledging": "Bevestigen...",
+  "admin.notice.modal.docsLink": "Documentatie bekijken",
+  "admin.notice.modal.globalNoticeFooter": "Opmerking: Zodra dit is bevestigd, wordt deze melding permanent verborgen voor alle beheerders op alle apparaten.",
 };

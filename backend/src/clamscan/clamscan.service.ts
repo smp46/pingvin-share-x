@@ -1,6 +1,8 @@
 import { Injectable, Logger } from "@nestjs/common";
 import * as NodeClam from "clamscan";
 import * as fs from "fs";
+import { Readable } from "stream";
+import { pipeline } from "stream/promises";
 import { FileService } from "src/file/file.service";
 import { PrismaService } from "src/prisma/prisma.service";
 import { CLAMAV_HOST, CLAMAV_PORT, SHARE_DIRECTORY } from "../constants";
@@ -22,30 +24,40 @@ export class ClamScanService {
     private prisma: PrismaService,
   ) {}
 
-  private ClamScan: Promise<NodeClam | null> = new NodeClam()
-    .init(clamscanConfig)
-    .then((res) => {
-      this.logger.log("ClamAV is active");
-      return res;
-    })
-    .catch(() => {
-      this.logger.log("ClamAV is not active");
+  private clamScanInstance: NodeClam | null = null;
+
+  private async getClamScan(): Promise<NodeClam | null> {
+    if (this.clamScanInstance) {
+      return this.clamScanInstance;
+    }
+
+    try {
+      const instance = await new NodeClam().init(clamscanConfig);
+      this.logger.log("ClamAV is active and connected");
+      this.clamScanInstance = instance;
+      return instance;
+    } catch (err: any) {
+      this.logger.log(
+        "ClamAV is not active or unreachable",
+      );
       return null;
-    });
+    }
+  }
 
   async check(shareId: string) {
-    const clamScan = await this.ClamScan;
+    const clamScan = await this.getClamScan();
 
     if (!clamScan) {
       return [];
     }
 
-    const infectedFiles = [];
-
     const share = await this.prisma.share.findUnique({
       where: { id: shareId },
+      select: { storageProvider: true },
     });
-    const storageProvider = share?.storageProvider || "UNKNOWN";
+
+    const storageProvider = share?.storageProvider || "LOCAL";
+    const infectedFiles = [];
 
     if (storageProvider === "S3") {
       const files = await this.prisma.file.findMany({
@@ -56,42 +68,24 @@ export class ClamScanService {
       for (const f of files) {
         try {
           const fileObj = await this.fileService.get(shareId, f.id);
-
-          const tmpDir = `${SHARE_DIRECTORY}/${shareId}`;
-          const tmpPath = `${tmpDir}/${f.id}`;
-
-          fs.mkdirSync(tmpDir, { recursive: true });
-
-          // Download S3 object stream to temp local file
-          await new Promise<void>((resolve, reject) => {
-            const writeStream = fs.createWriteStream(tmpPath);
-            (fileObj.file as any).pipe(writeStream);
-            writeStream.on("finish", resolve);
-            writeStream.on("error", reject);
-            (fileObj.file as any).on("error", reject);
-          });
-
-          const { isInfected } = await clamScan
-            .isInfected(tmpPath)
-            .catch(() => ({ isInfected: false }));
+          const result = await clamScan.scanStream(fileObj.file as Readable);
+          const isInfected = !!result?.isInfected;
 
           if (isInfected) infectedFiles.push({ id: f.id, name: f.name });
-
-          try {
-            fs.unlinkSync(tmpPath);
-          } catch {
-            // ignore error
-          }
         } catch (err: any) {
           this.logger.warn(
-            `ClamAV scan failed for S3 file ${f.id} in share ${shareId}: ${err?.message || "unknown error"}`,
+            `ClamAV scan failed for S3 file ${f.name} (${f.id}) in share ${shareId}: ${err?.message || "unknown error"}`,
           );
         }
       }
 
+      this.logger.log(
+        `ClamAV scan completed for S3 share ${shareId}: ${infectedFiles.length} infected file(s) found`,
+      );
       return infectedFiles;
     }
 
+    // Local Storage Provider
     let files: string[] = [];
     try {
       files = fs
@@ -103,51 +97,65 @@ export class ClamScanService {
     }
 
     for (const fileId of files) {
-      const { isInfected } = await clamScan
-        .isInfected(`${SHARE_DIRECTORY}/${shareId}/${fileId}`)
-        .catch(() => {
-          this.logger.log("ClamAV is not active");
-          return { isInfected: false };
-        });
+      try {
+        const filePath = `${SHARE_DIRECTORY}/${shareId}/${fileId}`;
+        const readStream = fs.createReadStream(filePath);
+        const result = await clamScan.scanStream(readStream);
+        const isInfected = !!result?.isInfected;
 
-      const fileName = (
-        await this.prisma.file.findUnique({ where: { id: fileId } })
-      ).name;
+        const fileName =
+          (await this.prisma.file.findUnique({ where: { id: fileId } }))
+            ?.name || fileId;
 
-      if (isInfected) {
-        infectedFiles.push({ id: fileId, name: fileName });
+        if (isInfected) {
+          infectedFiles.push({ id: fileId, name: fileName });
+        }
+      } catch (err: any) {
+        this.logger.warn(
+          `ClamAV scan failed for local file ${fileId} in share ${shareId}: ${err?.message || "unknown error"}`,
+        );
       }
     }
 
+    this.logger.log(
+      `ClamAV scan completed for local share ${shareId}: ${infectedFiles.length} infected file(s) found`,
+    );
     return infectedFiles;
   }
 
   async checkAndRemove(shareId: string) {
-    const infectedFiles = await this.check(shareId);
+    try {
+      const infectedFiles = await this.check(shareId);
 
-    if (infectedFiles.length > 0) {
-      try {
-        await this.fileService.deleteAllFiles(shareId);
-        await this.prisma.file.deleteMany({ where: { shareId } });
-      } catch (err: any) {
-        this.logger.error(
-          `Failed to delete malicious share ${shareId}: ${err?.message || "unknown error"}`,
+      if (infectedFiles.length > 0) {
+        try {
+          await this.fileService.deleteAllFiles(shareId);
+          await this.prisma.file.deleteMany({ where: { shareId } });
+        } catch (err: any) {
+          this.logger.error(
+            `Failed to delete malicious share ${shareId}: ${err?.message || "unknown error"}`,
+          );
+          return;
+        }
+
+        const fileNames = infectedFiles.map((file) => file.name).join(", ");
+
+        await this.prisma.share.update({
+          where: { id: shareId },
+          data: {
+            removedReason: `Your share got removed because the file(s) ${fileNames} are malicious.`,
+          },
+        });
+
+        this.logger.warn(
+          `Share ${shareId} deleted because it contained ${infectedFiles.length} malicious file(s)`,
         );
-        return;
       }
-
-      const fileNames = infectedFiles.map((file) => file.name).join(", ");
-
-      await this.prisma.share.update({
-        where: { id: shareId },
-        data: {
-          removedReason: `Your share got removed because the file(s) ${fileNames} are malicious.`,
-        },
-      });
-
-      this.logger.warn(
-        `Share ${shareId} deleted because it contained ${infectedFiles.length} malicious file(s)`,
+    } catch (err: any) {
+      this.logger.error(
+        `Error during ClamAV scan for share ${shareId}: ${err?.message || "unknown error"}`,
       );
     }
   }
 }
+

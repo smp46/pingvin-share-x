@@ -370,6 +370,9 @@ export default {
   "upload.modal.link.error.invalid":
     "Can only contain letters, numbers, underscores, and hyphens",
   "upload.modal.link.error.taken": "This link is already in use",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing":
+    "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "You're not signed in",
   "upload.modal.not-signed-in-description":
     "You will be unable to delete your share manually and view the visitor count.",
@@ -925,4 +928,11 @@ export default {
   "common.error.exact-length": "Must be exactly {length} characters",
   "common.error.invalid-number": "Must be a number",
   "common.error.field-required": "This field is required",
+
+  "admin.notice.modal.headerTag": "ADMINISTRATIVE ACTION REQUIRED",
+  "admin.notice.modal.defaultCheckboxLabel": "I confirm that I have read this notice and understand the breaking changes.",
+  "admin.notice.modal.button.acknowledge": "Acknowledge & Dismiss",
+  "admin.notice.modal.button.acknowledging": "Acknowledging...",
+  "admin.notice.modal.docsLink": "View Documentation",
+  "admin.notice.modal.globalNoticeFooter": "Note: Once acknowledged, this notice will be permanently dismissed for all administrators across all devices.",
 };

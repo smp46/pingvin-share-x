@@ -677,5 +677,12 @@ export default {
   "common.error.number-too-large": "Must be at most {max}",
   "common.error.exact-length": "Πρέπει να αποτελείται ακριβώς από {length} χαρακτήρες",
   "common.error.invalid-number": "Πρέπει να είναι αριθμός",
-  "common.error.field-required": "Αυτό το πεδίο είναι υποχρεωτικό"
+  "common.error.field-required": "Αυτό το πεδίο είναι υποχρεωτικό",
+
+  "admin.notice.modal.headerTag": "ΑΠΑΙΤΕΙΤΑΙ ΔΙΑΧΕΙΡΙΣΤΙΚΗ ΕΝΕΡΓΕΙΑ",
+  "admin.notice.modal.defaultCheckboxLabel": "Επιβεβαιώνω ότι έχω διαβάσει αυτή την ειδοποίηση και κατανοώ τις ριζικές αλλαγές.",
+  "admin.notice.modal.button.acknowledge": "Επιβεβαίωση & Απόρριψη",
+  "admin.notice.modal.button.acknowledging": "Επιβεβαίωση...",
+  "admin.notice.modal.docsLink": "Προβολή τεκμηρίωσης",
+  "admin.notice.modal.globalNoticeFooter": "Σημείωση: Μόλις επιβεβαιωθεί, αυτή η ειδοποίηση θα απορριφθεί οριστικά για όλους τους διαχειριστές σε όλες τις συσκευές.",
 };

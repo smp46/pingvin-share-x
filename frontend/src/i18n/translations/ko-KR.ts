@@ -677,5 +677,12 @@ export default {
   "common.error.number-too-large": "Must be at most {max}",
   "common.error.exact-length": "{length} 자 이어야 합니다.",
   "common.error.invalid-number": "숫자만 가능합니다.",
-  "common.error.field-required": "이 필드는 필수입니다"
+  "common.error.field-required": "이 필드는 필수입니다",
+
+  "admin.notice.modal.headerTag": "관리자 조치 필요",
+  "admin.notice.modal.defaultCheckboxLabel": "이 공지 사항을 읽었으며 호환성을 깨뜨리는 변경 사항을 이해했음을 확인합니다.",
+  "admin.notice.modal.button.acknowledge": "확인 및 닫기",
+  "admin.notice.modal.button.acknowledging": "확인 중...",
+  "admin.notice.modal.docsLink": "문서 보기",
+  "admin.notice.modal.globalNoticeFooter": "참고: 일단 확인하면 이 공지 사항은 모든 기기의 모든 관리자에 대해 영구적으로 닫힙니다.",
 };

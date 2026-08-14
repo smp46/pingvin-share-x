@@ -677,5 +677,12 @@ export default {
   "common.error.number-too-large": "Должно быть не больше {max}",
   "common.error.exact-length": "Должно быть ровно {length} символов",
   "common.error.invalid-number": "Должно быть числом",
-  "common.error.field-required": "Поле обязательно для заполнения"
+  "common.error.field-required": "Поле обязательно для заполнения",
+
+  "admin.notice.modal.headerTag": "ТРЕБУЕТСЯ ДЕЙСТВИЕ АДМИНИСТРАТОРА",
+  "admin.notice.modal.defaultCheckboxLabel": "Я подтверждаю, что прочитал(а) это уведомление и понимаю критические изменения.",
+  "admin.notice.modal.button.acknowledge": "Подтвердить и закрыть",
+  "admin.notice.modal.button.acknowledging": "Подтверждение...",
+  "admin.notice.modal.docsLink": "Просмотреть документацию",
+  "admin.notice.modal.globalNoticeFooter": "Примечание: После подтверждения это уведомление будет навсегда скрыто для всех администраторов на всех устройствах.",
 };

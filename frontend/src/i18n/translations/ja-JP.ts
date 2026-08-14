@@ -677,5 +677,12 @@ export default {
   "common.error.number-too-large": "最大で{max} である必要があります",
   "common.error.exact-length": "{length} 文字である必要があります",
   "common.error.invalid-number": "数字でなければなりません",
-  "common.error.field-required": "これは必須項目です"
+  "common.error.field-required": "これは必須項目です",
+
+  "admin.notice.modal.headerTag": "管理者による対応が必要です",
+  "admin.notice.modal.defaultCheckboxLabel": "この通知を確認し、互換性に影響する変更を理解したことを確認します。",
+  "admin.notice.modal.button.acknowledge": "確認して閉じる",
+  "admin.notice.modal.button.acknowledging": "確認中...",
+  "admin.notice.modal.docsLink": "ドキュメントを表示",
+  "admin.notice.modal.globalNoticeFooter": "注: 一度確認すると、この通知はすべてのデバイスのすべての管理者に対して永久に非表示になります。",
 };

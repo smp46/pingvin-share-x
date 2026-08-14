@@ -677,5 +677,12 @@ export default {
   "common.error.number-too-large": "必須小於 {max}",
   "common.error.exact-length": "必須為 {length} 個字元",
   "common.error.invalid-number": "必須為數字",
-  "common.error.field-required": "必填"
+  "common.error.field-required": "必填",
+
+  "admin.notice.modal.headerTag": "需要管理員操作",
+  "admin.notice.modal.defaultCheckboxLabel": "我確認已閱讀此通知並理解重大變更。",
+  "admin.notice.modal.button.acknowledge": "確認並關閉",
+  "admin.notice.modal.button.acknowledging": "正在確認...",
+  "admin.notice.modal.docsLink": "檢視文件",
+  "admin.notice.modal.globalNoticeFooter": "注意：一旦確認，此通知將在所有裝置上對所有管理員永久關閉。",
 };

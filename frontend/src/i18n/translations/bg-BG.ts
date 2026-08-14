@@ -677,5 +677,12 @@ export default {
   "common.error.number-too-large": "Трябва да е максимум {max}",
   "common.error.exact-length": "Трябва да е точно {length} знака",
   "common.error.invalid-number": "Трябва да е число",
-  "common.error.field-required": "Това поле е задължително"
+  "common.error.field-required": "Това поле е задължително",
+
+  "admin.notice.modal.headerTag": "ИЗИСКВА СЕ АДМИНИСТРАТИВНО ДЕЙСТВИЕ",
+  "admin.notice.modal.defaultCheckboxLabel": "Потвърждавам, че прочетох това известие и разбирам съществените промени.",
+  "admin.notice.modal.button.acknowledge": "Потвърди и затвори",
+  "admin.notice.modal.button.acknowledging": "Потвърждаване...",
+  "admin.notice.modal.docsLink": "Преглед на документацията",
+  "admin.notice.modal.globalNoticeFooter": "Забележка: След като бъде потвърдено, това известие ще бъде премахнато завинаги за всички администратори на всички устройства.",
 };

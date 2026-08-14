@@ -677,5 +677,12 @@ export default {
   "common.error.number-too-large": "Doit être au plus {max}",
   "common.error.exact-length": "Doit comporter exactement {length} caractères",
   "common.error.invalid-number": "Doit être un nombre",
-  "common.error.field-required": "Ce champ est obligatoire"
+  "common.error.field-required": "Ce champ est obligatoire",
+
+  "admin.notice.modal.headerTag": "ACTION ADMINISTRATIVE REQUISE",
+  "admin.notice.modal.defaultCheckboxLabel": "Je confirme avoir lu cet avertissement et comprendre les changements majeurs.",
+  "admin.notice.modal.button.acknowledge": "Confirmer et ignorer",
+  "admin.notice.modal.button.acknowledging": "Confirmation...",
+  "admin.notice.modal.docsLink": "Voir la documentation",
+  "admin.notice.modal.globalNoticeFooter": "Remarque : Une fois confirmé, cet avertissement sera définitivement masqué pour tous les administrateurs sur tous les appareils.",
 };

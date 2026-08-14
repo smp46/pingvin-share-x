@@ -20,7 +20,8 @@
     "uuid": "^11.1.1"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.787.0",
+    "@aws-sdk/client-s3": "^3.1095.0",
+    "@aws-sdk/s3-request-presigner": "^3.1095.0",
     "@keyv/redis": "^4.4.0",
     "@nestjs/cache-manager": "^3.0.1",
     "@nestjs/common": "^11.1.27",

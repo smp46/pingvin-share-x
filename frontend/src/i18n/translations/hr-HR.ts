@@ -677,5 +677,12 @@ export default {
   "common.error.number-too-large": "Mora biti najviše {max}",
   "common.error.exact-length": "Mora imati točno {length} znakova",
   "common.error.invalid-number": "Mora biti broj",
-  "common.error.field-required": "Polje je obavezno"
+  "common.error.field-required": "Polje je obavezno",
+
+  "admin.notice.modal.headerTag": "POTREBNA JE ADMINISTRATIVNA AKCIJA",
+  "admin.notice.modal.defaultCheckboxLabel": "Potvrđujem da sam pročitao/la ovu obavijest i razumijem ključne promjene.",
+  "admin.notice.modal.button.acknowledge": "Potvrdi i zatvori",
+  "admin.notice.modal.button.acknowledging": "Potvrđivanje...",
+  "admin.notice.modal.docsLink": "Prikaži dokumentaciju",
+  "admin.notice.modal.globalNoticeFooter": "Napomena: Nakon što se potvrdi, ova će obavijest biti trajno uklonjena za sve administratore na svim uređajima.",
 };

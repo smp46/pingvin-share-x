@@ -1,16 +1,9 @@
 import { deleteCookie, setCookie } from "cookies-next";
 import mime from "mime-types";
+import axios from "axios";
 import { translateOutsideContext } from "../hooks/useTranslate.hook";
 import { FileUploadResponse } from "../types/File.type";
-
-import {
-  CreateShare,
-  MyReverseShare,
-  MyShare,
-  Share,
-  ShareMetaData,
-  UpdateShare,
-} from "../types/share.type";
+import { CreateShare, MyReverseShare, MyShare, Share, ShareMetaData, UpdateShare } from "../types/share.type";
 import api from "./api.service";
 
 const isValidId = (id: string) => {
@@ -128,18 +121,100 @@ const removeFile = async (shareId: string, fileId: string) => {
   await api.delete(`shares/${shareId}/files/${fileId}`);
 };
 
-const uploadFile = async (
+interface S3UploadSession {
+  uploadId: string;
+  urls: string[];
+  parts: Array<{ ETag: string; PartNumber: number }>;
+  fileId: string;
+}
+
+const s3UploadSessions: Record<string, S3UploadSession> = {};
+const s3UploadSupportedShares: Record<string, boolean> = {};
+
+const uploadFileDirectS3 = async (
   shareId: string,
   chunk: Blob,
-  file: {
-    id?: string;
-    name: string;
-  },
+  file: { id?: string; name: string },
   chunkIndex: number,
   totalChunks: number,
   onUploadProgress?: (progressEvent: any) => void,
 ): Promise<FileUploadResponse> => {
-  if (!isValidId(shareId)) throw new Error("Invalid Share ID");
+  const sessionKey = `${shareId}:${file.id || file.name}`;
+
+  try {
+    if (chunkIndex === 0 && !s3UploadSessions[sessionKey]) {
+      const initResponse = await api.post(`shares/${shareId}/files/upload-init`, {
+        id: file.id,
+        name: file.name,
+        totalChunks,
+      });
+
+      s3UploadSessions[sessionKey] = {
+        uploadId: initResponse.data.uploadId,
+        urls: initResponse.data.urls,
+        parts: [],
+        fileId: file.id || "",
+      };
+    }
+
+    const session = s3UploadSessions[sessionKey];
+    if (!session) {
+      throw new Error(translateOutsideContext()("upload.modal.link.error.s3-session-not-found"));
+    }
+
+    const url = session.urls[chunkIndex];
+    const response = await axios.put(url, chunk, {
+      headers: { "Content-Type": "application/octet-stream" },
+      onUploadProgress,
+    });
+
+    const etag = response.headers["etag"];
+    if (!etag) {
+      throw new Error(translateOutsideContext()("upload.modal.link.error.s3-etag-missing"));
+    }
+
+    session.parts.push({
+      ETag: etag,
+      PartNumber: chunkIndex + 1,
+    });
+
+    if (chunkIndex === totalChunks - 1) {
+      const completeResponse = await api.post(`shares/${shareId}/files/upload-complete`, {
+        id: session.fileId || undefined,
+        name: file.name,
+        uploadId: session.uploadId,
+        parts: session.parts,
+      });
+      delete s3UploadSessions[sessionKey];
+      return completeResponse.data;
+    }
+
+    return { id: session.fileId || "s3-upload-in-progress" } as FileUploadResponse;
+  } catch (error) {
+    const session = s3UploadSessions[sessionKey];
+    if (session) {
+      try {
+        await api.post(`shares/${shareId}/files/upload-abort`, {
+          name: file.name,
+          uploadId: session.uploadId,
+        });
+      } catch (abortError) {
+        console.error("Failed to abort multipart S3 upload:", abortError);
+      }
+      delete s3UploadSessions[sessionKey];
+    }
+    throw error;
+  }
+};
+
+const uploadFileProxied = async (
+  shareId: string,
+  chunk: Blob,
+  file: { id?: string; name: string },
+  chunkIndex: number,
+  totalChunks: number,
+  onUploadProgress?: (progressEvent: any) => void,
+): Promise<FileUploadResponse> => {
   return (
     await api.post(`shares/${shareId}/files`, chunk, {
       headers: { "Content-Type": "application/octet-stream" },
@@ -154,6 +229,58 @@ const uploadFile = async (
   ).data;
 };
 
+const uploadFile = async (
+  shareId: string,
+  chunk: Blob,
+  file: {
+    id?: string;
+    name: string;
+  },
+  chunkIndex: number,
+  totalChunks: number,
+  onUploadProgress?: (progressEvent: any) => void,
+): Promise<FileUploadResponse> => {
+  if (!isValidId(shareId)) throw new Error(translateOutsideContext()("upload.modal.link.error.invalid"));
+
+  const sessionKey = `${shareId}:${file.id || file.name}`;
+
+  if (s3UploadSessions[sessionKey]) {
+    return uploadFileDirectS3(shareId, chunk, file, chunkIndex, totalChunks, onUploadProgress);
+  }
+
+  if (s3UploadSupportedShares[shareId] === false) {
+    return uploadFileProxied(shareId, chunk, file, chunkIndex, totalChunks, onUploadProgress);
+  }
+
+  if (chunkIndex === 0) {
+    try {
+      const initResponse = await api.post(`shares/${shareId}/files/upload-init`, {
+        id: file.id,
+        name: file.name,
+        totalChunks,
+      });
+
+      if (initResponse.data && initResponse.data.directToS3) {
+        s3UploadSupportedShares[shareId] = true;
+        s3UploadSessions[sessionKey] = {
+          uploadId: initResponse.data.uploadId,
+          urls: initResponse.data.urls,
+          parts: [],
+          fileId: file.id || "",
+        };
+        return uploadFileDirectS3(shareId, chunk, file, chunkIndex, totalChunks, onUploadProgress);
+      } else {
+        s3UploadSupportedShares[shareId] = false;
+      }
+    } catch (err) {
+      console.warn("Direct S3 upload init failed. Falling back to proxied upload.", err);
+      s3UploadSupportedShares[shareId] = false;
+    }
+  }
+
+  return uploadFileProxied(shareId, chunk, file, chunkIndex, totalChunks, onUploadProgress);
+};
+  
 const isReverseShareTokenAvailable = async (token: string): Promise<boolean> => {
   if (!isValidId(token))
     throw new Error(translateOutsideContext()("upload.modal.link.error.invalid"));

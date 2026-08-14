@@ -677,5 +677,12 @@ export default {
   "common.error.number-too-large": "Peab olema maksimaalselt {max}",
   "common.error.exact-length": "Peab olema täpselt {length} tähemärki",
   "common.error.invalid-number": "Peab olema number",
-  "common.error.field-required": "See väli on kohustuslik"
+  "common.error.field-required": "See väli on kohustuslik",
+
+  "admin.notice.modal.headerTag": "NÕUTAV ADMINISTRATIIVNE TEGEVUS",
+  "admin.notice.modal.defaultCheckboxLabel": "Kinnitan, et olen seda teavitust lugenud ja mõistan katkestavaid muudatusi.",
+  "admin.notice.modal.button.acknowledge": "Kinnita ja sulge",
+  "admin.notice.modal.button.acknowledging": "Kinnitamine...",
+  "admin.notice.modal.docsLink": "Vaata dokumentatsiooni",
+  "admin.notice.modal.globalNoticeFooter": "Märkus: Pärast kinnitamist eemaldatakse see teavitus jäädavalt kõigi administraatorite jaoks kõigis seadmetes.",
 };
