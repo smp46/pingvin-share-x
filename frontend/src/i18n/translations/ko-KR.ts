@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "공유 생성",
   "upload.modal.link.error.invalid": "문자, 숫자, 밑줄 및 하이픈만 포함할 수 있습니다",
   "upload.modal.link.error.taken": "이미 사용 중인 링크입니다",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "로그인하지 않았습니다",
   "upload.modal.not-signed-in-description": "공유를 수동으로 삭제하고 방문자 수를 볼 수 없습니다.",
   "upload.modal.expires.never": "절대 안 함",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Must be at most {max}",
   "common.error.exact-length": "{length} 자 이어야 합니다.",
   "common.error.invalid-number": "숫자만 가능합니다.",
-  "common.error.field-required": "이 필드는 필수입니다"
+  "common.error.field-required": "이 필드는 필수입니다",
+  "admin.notice.modal.headerTag": "관리자 조치 필요",
+  "admin.notice.modal.defaultCheckboxLabel": "이 공지 사항을 읽었으며 호환성을 깨뜨리는 변경 사항을 이해했음을 확인합니다.",
+  "admin.notice.modal.button.acknowledge": "확인 및 닫기",
+  "admin.notice.modal.button.acknowledging": "확인 중...",
+  "admin.notice.modal.docsLink": "문서 보기",
+  "admin.notice.modal.globalNoticeFooter": "참고: 일단 확인하면 이 공지 사항은 모든 기기의 모든 관리자에 대해 영구적으로 닫힙니다."
 };
