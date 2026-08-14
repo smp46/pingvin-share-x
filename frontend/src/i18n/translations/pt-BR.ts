@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Criar Compartilhamento",
   "upload.modal.link.error.invalid": "Pode conter apenas letras, números, sublinhados e hífens",
   "upload.modal.link.error.taken": "Este link já está em uso",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Você não está conectado",
   "upload.modal.not-signed-in-description": "Você não poderá excluir seu compartilhamento manualmente e visualizar a contagem de visitantes.",
   "upload.modal.expires.never": "nunca",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Deve ser no máximo {max}",
   "common.error.exact-length": "Deve ter exatamente {length} caracteres",
   "common.error.invalid-number": "Tem que ser um número",
-  "common.error.field-required": "Este campo é obrigatório"
+  "common.error.field-required": "Este campo é obrigatório",
+  "admin.notice.modal.headerTag": "AÇÃO ADMINISTRATIVA NECESSÁRIA",
+  "admin.notice.modal.defaultCheckboxLabel": "Confirmo que li este aviso e entendo as alterações de compatibilidade.",
+  "admin.notice.modal.button.acknowledge": "Confirmar e dispensar",
+  "admin.notice.modal.button.acknowledging": "Confirmando...",
+  "admin.notice.modal.docsLink": "Ver documentação",
+  "admin.notice.modal.globalNoticeFooter": "Nota: Uma vez confirmado, este aviso será permanentemente dispensado para todos os administradores em todos os dispositivos."
 };
