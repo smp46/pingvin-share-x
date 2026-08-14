@@ -92,7 +92,7 @@ export default {
   "account.card.password.new": "Новый пароль",
   "account.card.password.noPasswordSet": "У вас не установлен пароль. Чтобы войти в систему, используя свой адрес электронной почты и пароль, вам необходимо создать пароль.",
   "account.notify.password.success": "Пароль успешно изменён",
-  "account.card.oauth.title": "Авторизация через социальные сети",
+  "account.card.oauth.title": "Авторизация OAuth",
   "account.card.oauth.github": "GitHub",
   "account.card.oauth.google": "Google",
   "account.card.oauth.microsoft": "Microsoft",
@@ -687,11 +687,10 @@ export default {
   "common.error.exact-length": "Должно быть ровно {length} символов",
   "common.error.invalid-number": "Должно быть числом",
   "common.error.field-required": "Поле обязательно для заполнения",
-
   "admin.notice.modal.headerTag": "ТРЕБУЕТСЯ ДЕЙСТВИЕ АДМИНИСТРАТОРА",
   "admin.notice.modal.defaultCheckboxLabel": "Я подтверждаю, что прочитал(а) это уведомление и понимаю критические изменения.",
   "admin.notice.modal.button.acknowledge": "Подтвердить и закрыть",
   "admin.notice.modal.button.acknowledging": "Подтверждение...",
   "admin.notice.modal.docsLink": "Просмотреть документацию",
-  "admin.notice.modal.globalNoticeFooter": "Примечание: После подтверждения это уведомление будет навсегда скрыто для всех администраторов на всех устройствах.",
+  "admin.notice.modal.globalNoticeFooter": "Примечание: После подтверждения это уведомление будет навсегда скрыто для всех администраторов на всех устройствах."
 };
