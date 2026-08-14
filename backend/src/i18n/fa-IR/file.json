@@ -13,5 +13,6 @@
   "s3UploadInitError": "راه‌اندازی بارگذاری چندبخشی ناموفق بود.",
   "s3SessionNotFound": "نشست بارگذاری چندبخشی پیدا نشد.",
   "s3UploadFailed": "بارگذاری چندبخشی ناموفق بود. بارگذاری لغو شده است.",
-  "s3SizeError": "امکان دریافت اندازه فایل وجود نداشت"
+  "s3SizeError": "امکان دریافت اندازه فایل وجود نداشت",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }
