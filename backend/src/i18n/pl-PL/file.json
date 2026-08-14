@@ -13,5 +13,6 @@
   "s3UploadInitError": "Nie udało się zainicjować przesyłania wieloczęściowego.",
   "s3SessionNotFound": "Nie znaleziono sesji przesyłania wieloczęściowego.",
   "s3UploadFailed": "Przesyłanie wieloczęściowe nie powiodło się. Przesyłanie zostało przerwane.",
-  "s3SizeError": "Nie można pobrać rozmiaru pliku"
+  "s3SizeError": "Nie można pobrać rozmiaru pliku",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }
