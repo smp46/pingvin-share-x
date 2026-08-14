@@ -611,6 +611,7 @@ export default {
   "admin.config.s3.secret.description": "Hemmeligheten som gir deg tilgang til S3-bøtten.",
   "admin.config.s3.use-checksum": "Bruk sjekksum",
   "admin.config.s3.use-checksum.description": "Slå av for backender som ikke støtter sjekksum (f.eks. B2).",
+  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
   "admin.config.category.legal": "Juridisk",
   "admin.config.legal.enabled": "Aktiver juridiske merknader",
   "admin.config.legal.enabled.description": "Om det skal vises en lenke to impressum og personvernerklæring i bunnteksten.",
