@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "Завантажити",
   "upload.modal.link.error.invalid": "Ім'я користувача повинно складатися тільки з букв, цифр, підкреслень і дефісів",
   "upload.modal.link.error.taken": "Це посилання вже використовується",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "Ви не авторизовані",
   "upload.modal.not-signed-in-description": "Ви не зможете видалити свої файли вручну і переглянути кількість відвідувачів.",
   "upload.modal.expires.never": "ніколи",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "Повинно бути не більше ніж {max}",
   "common.error.exact-length": "Повинно бути рівно {length} символів",
   "common.error.invalid-number": "Повинно бути числом",
-  "common.error.field-required": "Поле обов'язкове для заповнення"
+  "common.error.field-required": "Поле обов'язкове для заповнення",
+  "admin.notice.modal.headerTag": "ПОТРІБНА ДІЯ АДМІНІСТРАТОРА",
+  "admin.notice.modal.defaultCheckboxLabel": "Я підтверджую, що прочитав(ла) це сповіщення та розумію критичні зміни.",
+  "admin.notice.modal.button.acknowledge": "Підтвердити та закрити",
+  "admin.notice.modal.button.acknowledging": "Підтвердження...",
+  "admin.notice.modal.docsLink": "Переглянути документацію",
+  "admin.notice.modal.globalNoticeFooter": "Примітка: Після підтвердження це сповіщення буде назавжди приховано для всіх адміністраторів на всіх пристроях."
 };
