@@ -288,6 +288,8 @@ export default {
   "upload.modal.title": "ایجاد اشتراک",
   "upload.modal.link.error.invalid": "فقط می‌تواند شامل حروف، عدد، زیرخط و خط تیره باشد",
   "upload.modal.link.error.taken": "این لینک قبلاً استفاده شده است",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "شما وارد نشده‌اید",
   "upload.modal.not-signed-in-description": "نمی‌توانید اشتراک خود را به صورت دستی حذف کنید و تعداد بازدیدکنندگان را مشاهده کنید.",
   "upload.modal.expires.never": "هرگز",
@@ -683,5 +685,11 @@ export default {
   "common.error.number-too-large": "باید حداکثر {max} باشد",
   "common.error.exact-length": "باید دقیقاً {length} کاراکتر باشد",
   "common.error.invalid-number": "باید یک عدد باشد",
-  "common.error.field-required": "این فیلد الزامی است"
+  "common.error.field-required": "این فیلد الزامی است",
+  "admin.notice.modal.headerTag": "اقدام مدیریتی لازم است",
+  "admin.notice.modal.defaultCheckboxLabel": "تایید می‌کنم که این اطلاعیه را خوانده‌ام و تغییرات بنیادی را درک می‌کنم.",
+  "admin.notice.modal.button.acknowledge": "تایید و بستن",
+  "admin.notice.modal.button.acknowledging": "در حال تایید...",
+  "admin.notice.modal.docsLink": "مشاهده مستندات",
+  "admin.notice.modal.globalNoticeFooter": "توجه: پس از تایید، این اطلاعیه برای همه مدیران در تمام دستگاه‌ها به طور دائمی بسته خواهد شد."
 };
