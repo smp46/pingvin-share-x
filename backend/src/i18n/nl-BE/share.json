@@ -9,11 +9,11 @@
   "anonymousNoUpdate": "Anonieme gedeelde items kunnen niet worden bijgewerkt",
   "invalidExpiration": "Ongeldige vervaldatum",
   "maxExpirationExceeded": "Vervaldatum overschrijdt de maximale vervaldatum",
-  "storageQuotaExceeded": "Opslaglimiet van gebruiker overschreden met {exceededSize}",
-  "reverseShareQuotaExceeded": "De opslaglimiet van de omgekeerde share is overschreden door {exceededSize}",
+  "storageQuotaExceeded": "De opslaglimiet van de gebruiker is met {exceededSize} overschreden",
+  "reverseShareQuotaExceeded": "De opslaglimiet van de eigenaar van de omgekeerde share is met {exceededSize} overschreden",
   "wrongPassword": "Verkeerd wachtwoord",
   "tokenRequired": "Deeltoken vereist",
   "privateShare": "Alleen de maker van het gedeelde item kan toegang krijgen tot dit gedeelde item",
   "maxViewsExceeded": "Maximaal aantal weergaven overschreden",
-  "restrictedToRecipients": "Dit deel is alleen toegankelijk voor specifieke ontvangers. Log eerst in."
+  "restrictedToRecipients": "Deze share is alleen toegankelijk voor specifieke ontvangers. Meld je aan om toegang te krijgen."
 }
