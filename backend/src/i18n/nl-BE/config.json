@@ -1,8 +1,8 @@
 {
-  "redisUrlNotSet": "Redis URL is niet ingesteld",
-  "redisTimedOut": "Redis time-out",
+  "redisUrlNotSet": "De Redis-URL is niet ingesteld",
+  "redisTimedOut": "Time-out bij Redis",
   "redisConnectionFailed": "Redis-verbinding mislukt",
-  "redisUnexpectedResponse": "Onverwachte reactie van Redis",
+  "redisUnexpectedResponse": "Onverwacht antwoord van Redis",
   "redisError": "Redis fout",
   "variableNotFound": "Configuratievariabele niet gevonden",
   "editNotAllowed": "U mag configuratievariabelen alleen bijwerken via het bestand config.yaml",
