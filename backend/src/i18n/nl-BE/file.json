@@ -6,13 +6,13 @@
   "notEnoughSpace": "Niet genoeg ruimte op de server",
   "unexpectedChunk": "Onverwacht blok ontvangen",
   "maxSizeExceeded": "Maximale deelgrootte overschreden",
-  "storageQuotaExceeded": "Je opslagimiet is overschreden met {exceededSize}",
-  "reverseShareQuotaExceeded": "De opslaglimiet van de eigenaar van deze omgekeerde share is overschreden door {exceededSize}",
+  "storageQuotaExceeded": "Je opslaglimiet is met {exceededSize} overschreden",
+  "reverseShareQuotaExceeded": "De opslaglimiet van de eigenaar van de omgekeerde share is met {exceededSize} overschreden",
   "zipError": "Fout bij het maken van het ZIP-bestands",
   "s3DeleteError": "Kon bestand niet verwijderen uit S3",
   "s3UploadInitError": "Initialiseren van multipart upload mislukt.",
   "s3SessionNotFound": "Multipart uploadsessie niet gevonden.",
   "s3UploadFailed": "Multipart upload mislukt. De upload is afgebroken.",
   "s3SizeError": "Kon bestandsgrootte niet ophalen",
-  "s3NotSupported": "Pre-signed operaties worden alleen ondersteund wanneer je S3-opslag gebruikt."
+  "s3NotSupported": "Vooraf ondertekende bewerkingen worden alleen ondersteund voor S3-opslag."
 }
