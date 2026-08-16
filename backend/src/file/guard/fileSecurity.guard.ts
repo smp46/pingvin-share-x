@@ -7,7 +7,6 @@ import {
 } from "@nestjs/common";
 import { Request } from "express";
 import * as moment from "moment";
-import { User } from "@prisma/client";
 import { I18nService } from "nestjs-i18n";
 import { PrismaService } from "src/prisma/prisma.service";
 import { ShareSecurityGuard } from "src/share/guard/shareSecurity.guard";
@@ -57,10 +56,12 @@ export class FileSecurityGuard extends ShareSecurityGuard {
 
     // If there is no share token the user requests a file directly
     if (!shareToken) {
-      // If admin access is enabled and user is admin, allow access
+      // If admin access is enabled and user is admin, allow access.
+      // Uses authenticateUser (JwtGuard, never throws) instead of
+      // super.canActivate (ShareSecurityGuard), which would unconditionally
+      // demand a share token and 403 anonymous requests to public shares.
       if (this._config.get("share.allowAdminAccessAllShares")) {
-        await super.canActivate(context);
-        const user = request.user as User | undefined;
+        const user = await this.authenticateUser(context);
         if (user?.isAdmin) {
           return true;
         }
