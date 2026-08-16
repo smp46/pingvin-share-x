@@ -6,10 +6,13 @@
   "notEnoughSpace": "Nincs elég hely a szerveren",
   "unexpectedChunk": "Váratlan adatdarab érkezett",
   "maxSizeExceeded": "Maximális megosztási méret túllépve",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "Hiba a ZIP fájl létrehozásakor",
   "s3DeleteError": "Nem sikerült törölni a fájlt az S3-ról",
   "s3UploadInitError": "Nem sikerült inicializálni a többrészes feltöltést.",
   "s3SessionNotFound": "A többrészes feltöltési munkamenet nem található.",
   "s3UploadFailed": "A többrészes feltöltés nem sikerült. A feltöltés megszakadt.",
-  "s3SizeError": "Nem sikerült lekérni a fájlméretet"
+  "s3SizeError": "Nem sikerült lekérni a fájlméretet",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }

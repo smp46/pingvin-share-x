@@ -1,5 +1,6 @@
 import {
   Alert,
+  Anchor,
   AppShell,
   Box,
   Button,
@@ -235,9 +236,30 @@ export default function AppShellDemo() {
                           <FormattedMessage id="admin.config.config-file-warning.description" />
                         </Alert>
                       )}
-                      <Title mb="md" order={3}>
+                      <Title
+                        mb={categoryId.toLowerCase() === "s3" ? "xs" : "md"}
+                        order={3}
+                      >
                         {t("admin.config.category." + categoryId)}
                       </Title>
+                      {categoryId.toLowerCase() === "s3" && (
+                        <Text color="dimmed" size="sm" mb="md">
+                          <FormattedMessage
+                            id="admin.config.s3.docs-link"
+                            values={{
+                              wikiLink: (
+                                <Anchor
+                                  href="https://smp46.github.io/pingvin-share-x/v2/setup/s3#cors-configuration"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  wiki
+                                </Anchor>
+                              ),
+                            }}
+                          />
+                        </Text>
+                      )}
                       {visibleConfigVariables.map((configVariable) => {
                         if (
                           configVariable.key ===

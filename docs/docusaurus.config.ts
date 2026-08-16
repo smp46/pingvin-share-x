@@ -29,6 +29,18 @@ const config: Config = {
           routeBasePath: "/",
           sidebarPath: "./sidebars.ts",
           editUrl: "https://github.com/smp46/pingvin-share-x/edit/main/docs",
+          lastVersion: "v1",
+          versions: {
+            v1: {
+              label: "v1.x.x",
+              banner: "none",
+            },
+            current: {
+              label: "v2.x.x",
+              path: "v2",
+              banner: "unreleased",
+            },
+          },
         },
         blog: false,
       } satisfies Preset.Options,
@@ -47,6 +59,10 @@ const config: Config = {
         src: "img/pingvinshare.svg",
       },
       items: [
+        {
+          type: "docsVersionDropdown",
+          position: "right",
+        },
         {
           href: "https://github.com/smp46/pingvin-share-x",
           label: "GitHub",

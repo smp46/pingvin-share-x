@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "Anonymní sdílení nelze aktualizovat",
   "invalidExpiration": "Neplatné datum vypršení platnosti",
   "maxExpirationExceeded": "Datum vypršení platnosti překračuje maximální datum",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "Nesprávné heslo",
   "tokenRequired": "Token sdílení je povinný",
   "privateShare": "K tomuto sdílení má přístup pouze tvůrce reverzního sdílení",

@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "لا يمكن تحديث المشاركات المجهولة",
   "invalidExpiration": "تاريخ انتهاء صلاحية غير صالح",
   "maxExpirationExceeded": "تاريخ انتهاء الصلاحية يتجاوز الحد الأقصى لتاريخ انتهاء الصلاحية",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "كلمة مرور خاطئة",
   "tokenRequired": "رمز المشاركة مطلوب",
   "privateShare": "يمكن لمنشئ المشاركة العكسية فقط الوصول إلى هذه المشاركة",

@@ -281,6 +281,8 @@ export default {
   "admin.users.table.username": "Username",
   "admin.users.table.email": "Email",
   "admin.users.table.admin": "Admin",
+  "admin.users.table.storageQuota": "Storage quota",
+  "admin.users.table.maxShareSize": "Max share size",
 
   "admin.users.edit.update.title": "Edit user: {username}",
   "admin.users.edit.update.admin-privileges": "Admin privileges",
@@ -288,6 +290,10 @@ export default {
   "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
   "admin.users.edit.update.custom-share-size-limit.description":
     "Override the global upload limit for this user",
+  "admin.users.edit.update.custom-storage-quota-limit":
+    "Custom storage quota",
+  "admin.users.edit.update.custom-storage-quota-limit.description":
+    "Limit the user's total storage usage across active shares",
   "admin.users.edit.update.change-password.title": "Change password",
   "admin.users.edit.update.change-password.field": "New password",
   "admin.users.edit.update.change-password.button": "Save new password",
@@ -309,6 +315,10 @@ export default {
   "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
   "admin.users.modal.create.custom-share-size-limit.description":
     "Override the global upload limit for this user",
+  "admin.users.modal.create.custom-storage-quota-limit":
+    "Custom storage quota",
+  "admin.users.modal.create.custom-storage-quota-limit.description":
+    "Limit the user's total storage usage across active shares",
   "admin.users.modal.create.admin": "Admin privileges",
   "admin.users.modal.create.admin.description":
     "If checked, the user will be able to access the admin panel.",
@@ -392,6 +402,9 @@ export default {
   "upload.modal.link.error.invalid":
     "Can only contain letters, numbers, underscores, and hyphens",
   "upload.modal.link.error.taken": "This link is already in use",
+  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
+  "upload.modal.link.error.s3-etag-missing":
+    "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "You're not signed in",
   "upload.modal.not-signed-in-description":
     "You will be unable to delete your share manually and view the visitor count.",
@@ -855,6 +868,8 @@ export default {
   "admin.config.s3.use-checksum": "Use checksum",
   "admin.config.s3.use-checksum.description":
     "Turn off for backends that do not support checksum (e.g. B2).",
+  "admin.config.s3.docs-link":
+    "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
   "admin.config.category.legal": "Legal",
   "admin.config.legal.enabled": "Enable legal notices",
   "admin.config.legal.enabled.description":
@@ -947,4 +962,11 @@ export default {
   "common.error.exact-length": "Must be exactly {length} characters",
   "common.error.invalid-number": "Must be a number",
   "common.error.field-required": "This field is required",
+
+  "admin.notice.modal.headerTag": "ADMINISTRATIVE ACTION REQUIRED",
+  "admin.notice.modal.defaultCheckboxLabel": "I confirm that I have read this notice and understand the breaking changes.",
+  "admin.notice.modal.button.acknowledge": "Acknowledge & Dismiss",
+  "admin.notice.modal.button.acknowledging": "Acknowledging...",
+  "admin.notice.modal.docsLink": "View Documentation",
+  "admin.notice.modal.globalNoticeFooter": "Note: Once acknowledged, this notice will be permanently dismissed for all administrators across all devices.",
 };

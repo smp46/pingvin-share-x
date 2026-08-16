@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "Nie można aktualizować anonimowych udostępnień",
   "invalidExpiration": "Nieprawidłowa data wygaśnięcia",
   "maxExpirationExceeded": "Data wygaśnięcia przekracza maksymalną dopuszczalną datę",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "Błędne hasło",
   "tokenRequired": "Token udostępnienia jest wymagany",
   "privateShare": "Tylko twórca odwrotnego udostępnienia ma dostęp do tego udostępnienia",

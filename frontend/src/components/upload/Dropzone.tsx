@@ -1,4 +1,12 @@
-import { Button, Center, createStyles, Group, Text, Menu } from "@mantine/core";
+import {
+  Button,
+  Center,
+  createStyles,
+  Group,
+  Text,
+  Menu,
+  useMantineColorScheme,
+} from "@mantine/core";
 import { Dropzone as MantineDropzone } from "@mantine/dropzone";
 import React, { ForwardedRef, useEffect, useRef, useState } from "react";
 import { TbCloudUpload, TbUpload, TbFolder } from "react-icons/tb";
@@ -134,6 +142,8 @@ const Dropzone = ({
   const openRef = useRef<() => void>();
   const folderInputRef = useRef<HTMLInputElement>(null);
   const [isMounted, setIsMounted] = useState(false);
+  const { colorScheme } = useMantineColorScheme();
+  const dark = colorScheme === "dark";
 
   useEffect(() => {
     setIsMounted(true);
@@ -228,7 +238,7 @@ const Dropzone = ({
         {isFolderUploadSupported && (
           <Button
             className={classes.control}
-            variant="light"
+            variant={dark ? "filled" : "light"}
             size="sm"
             radius="xl"
             disabled={isUploading}

@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "ไม่สามารถอัปเดตการแชร์แบบไม่ระบุตัวตนได้",
   "invalidExpiration": "วันหมดอายุไม่ถูกต้อง",
   "maxExpirationExceeded": "วันหมดอายุเกินวันหมดอายุสูงสุด",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "รหัสผ่านผิด",
   "tokenRequired": "จำเป็นต้องใช้โทเค็นการแชร์",
   "privateShare": "เฉพาะผู้สร้างการแชร์ย้อนกลับเท่านั้นที่สามารถเข้าถึงการแชร์นี้ได้",

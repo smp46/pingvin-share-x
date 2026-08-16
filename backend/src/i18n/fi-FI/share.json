@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "Anonyymejä jakoja ei voi päivittää",
   "invalidExpiration": "Virheellinen vanhentumispäivä",
   "maxExpirationExceeded": "Vanhentumispäivä ylittää enimmäisvanhentumispäivän",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "Väärä salasana",
   "tokenRequired": "Jaon tunniste vaaditaan",
   "privateShare": "Vain käänteisen jaon luoja voi käyttää tätä jakoa",

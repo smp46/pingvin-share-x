@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "Không thể cập nhật chia sẻ ẩn danh",
   "invalidExpiration": "Ngày hết hạn không hợp lệ",
   "maxExpirationExceeded": "Ngày hết hạn vượt quá ngày hết hạn tối đa",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "Sai mật khẩu",
   "tokenRequired": "Yêu cầu token chia sẻ",
   "privateShare": "Chỉ người tạo chia sẻ ngược mới có thể truy cập chia sẻ này",

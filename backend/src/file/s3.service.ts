@@ -18,11 +18,15 @@ import {
   UploadPartCommand,
   UploadPartCommandOutput,
 } from "@aws-sdk/client-s3";
+import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
+import * as contentDisposition from "content-disposition";
 import { PrismaService } from "src/prisma/prisma.service";
 import { ConfigService } from "src/config/config.service";
 import { I18nService } from "nestjs-i18n";
 import * as crypto from "crypto";
 import * as mime from "mime-types";
+import { byteToHumanSizeString } from "src/utils/fileSize.util";
+import { getUserActiveStorageUsage } from "src/utils/storageQuota.util";
 import { File } from "./file.service";
 import { Readable } from "stream";
 import { validate as isValidUUID } from "uuid";
@@ -37,6 +41,7 @@ export class S3FileService {
     {
       uploadId: string;
       parts: Array<{ ETag: string | undefined; PartNumber: number }>;
+      uploadedBytes: number;
     }
   > = {};
 
@@ -62,6 +67,13 @@ export class S3FileService {
     const key = `${this.getS3Path()}${shareId}/${file.name}`;
     const bucketName = this.config.get("s3.bucketName");
     const s3Instance = this.getS3Instance();
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+      include: {
+        creator: true,
+        reverseShare: { include: { creator: true } },
+      },
+    });
 
     try {
       // Initialize multipart upload if it's the first chunk
@@ -82,6 +94,7 @@ export class S3FileService {
         this.multipartUploads[file.id] = {
           uploadId,
           parts: [],
+          uploadedBytes: 0,
         };
       }
 
@@ -91,6 +104,39 @@ export class S3FileService {
         throw new InternalServerErrorException(
           this.i18n.t("file.s3SessionNotFound"),
         );
+      }
+
+      const quotaOwner = share?.reverseShare
+        ? share.reverseShare.creator
+        : share?.creator;
+      const quotaOwnerId = share?.reverseShare
+        ? share.reverseShare.creatorId
+        : share?.creatorId;
+
+      if (quotaOwnerId && quotaOwner?.storageQuotaLimit) {
+        const quotaLimit = parseInt(quotaOwner.storageQuotaLimit);
+        const activeStorageUsage = await getUserActiveStorageUsage(
+          this.prisma,
+          quotaOwnerId,
+        );
+        const projectedUsage =
+          activeStorageUsage +
+          multipartUpload.uploadedBytes +
+          buffer.byteLength;
+
+        if (projectedUsage > quotaLimit) {
+          const exceededBytes = projectedUsage - quotaLimit;
+          const exceededSize = byteToHumanSizeString(exceededBytes);
+          throw new BadRequestException(
+            share?.reverseShare
+              ? this.i18n.t("file.reverseShareQuotaExceeded", {
+                  args: { exceededSize },
+                })
+              : this.i18n.t("file.storageQuotaExceeded", {
+                  args: { exceededSize },
+                }),
+          );
+        }
       }
 
       const uploadId = multipartUpload.uploadId;
@@ -113,6 +159,7 @@ export class S3FileService {
         ETag: uploadPartResponse.ETag,
         PartNumber: partNumber,
       });
+      multipartUpload.uploadedBytes += buffer.byteLength;
 
       // Complete the multipart upload if it's the last chunk
       if (chunk.index === chunk.total - 1) {
@@ -372,6 +419,169 @@ export class S3FileService {
     processFiles();
 
     return archive;
+  }
+
+  async createPreSignedUploadUrls(
+    shareId: string,
+    fileName: string,
+    totalChunks: number,
+  ): Promise<{ uploadId: string; key: string; urls: string[] }> {
+    const key = `${this.getS3Path()}${shareId}/${fileName}`;
+    const bucketName = this.config.get("s3.bucketName");
+    const s3Instance = this.getS3Instance();
+
+    try {
+      const multipartInitResponse = await s3Instance.send(
+        new CreateMultipartUploadCommand({
+          Bucket: bucketName,
+          Key: key,
+        }),
+      );
+
+      const uploadId = multipartInitResponse.UploadId;
+      if (!uploadId) {
+        throw new InternalServerErrorException(
+          this.i18n.t("file.s3UploadInitError"),
+        );
+      }
+
+      const urls: string[] = [];
+      for (let i = 0; i < totalChunks; i++) {
+        const partNumber = i + 1;
+        const command = new UploadPartCommand({
+          Bucket: bucketName,
+          Key: key,
+          PartNumber: partNumber,
+          UploadId: uploadId,
+        });
+        const url = await getSignedUrl(s3Instance, command, {
+          expiresIn: 3600,
+        });
+        urls.push(url);
+      }
+
+      return { uploadId, key, urls };
+    } catch (error) {
+      this.logger.error(error);
+      throw new InternalServerErrorException(
+        this.i18n.t("file.s3UploadInitError"),
+      );
+    }
+  }
+
+  async completePreSignedUpload(
+    shareId: string,
+    fileId: string,
+    fileName: string,
+    uploadId: string,
+    parts: Array<{ ETag: string; PartNumber: number }>,
+  ): Promise<{ id: string; name: string }> {
+    if (!fileId) {
+      fileId = crypto.randomUUID();
+    } else if (!isValidUUID(fileId)) {
+      throw new BadRequestException(this.i18n.t("file.invalidIdFormat"));
+    }
+
+    const key = `${this.getS3Path()}${shareId}/${fileName}`;
+    const bucketName = this.config.get("s3.bucketName");
+    const s3Instance = this.getS3Instance();
+
+    const sortedParts = [...parts].sort((a, b) => a.PartNumber - b.PartNumber);
+
+    try {
+      await s3Instance.send(
+        new CompleteMultipartUploadCommand({
+          Bucket: bucketName,
+          Key: key,
+          UploadId: uploadId,
+          MultipartUpload: {
+            Parts: sortedParts,
+          },
+        }),
+      );
+    } catch (error) {
+      this.logger.error("Failed to complete S3 multipart upload:", error);
+      throw new BadRequestException(this.i18n.t("file.s3UploadFailed"));
+    }
+
+    try {
+      const fileSize = await this.getFileSize(shareId, fileName);
+
+      const existingFile = await this.prisma.file.findUnique({
+        where: { id: fileId },
+      });
+
+      if (!existingFile) {
+        await this.prisma.file.create({
+          data: {
+            id: fileId,
+            name: fileName,
+            size: fileSize.toString(),
+            share: { connect: { id: shareId } },
+          },
+        });
+      }
+
+      return { id: fileId, name: fileName };
+    } catch (error) {
+      this.logger.error(
+        "Error creating database record after S3 upload completion:",
+        error,
+      );
+      throw new InternalServerErrorException(
+        this.i18n.t("file.s3UploadFailed"),
+      );
+    }
+  }
+
+  async abortPreSignedUpload(
+    shareId: string,
+    fileName: string,
+    uploadId: string,
+  ): Promise<void> {
+    const key = `${this.getS3Path()}${shareId}/${fileName}`;
+    const bucketName = this.config.get("s3.bucketName");
+    const s3Instance = this.getS3Instance();
+
+    try {
+      await s3Instance.send(
+        new AbortMultipartUploadCommand({
+          Bucket: bucketName,
+          Key: key,
+          UploadId: uploadId,
+        }),
+      );
+    } catch (error) {
+      this.logger.error("Error aborting multipart upload:", error);
+    }
+  }
+
+  async getPreSignedDownloadUrl(
+    shareId: string,
+    fileId: string,
+    isDownload: boolean,
+  ): Promise<string> {
+    const fileRecord = await this.prisma.file.findFirst({
+      where: { id: fileId, shareId },
+    });
+    if (!fileRecord) {
+      throw new NotFoundException(this.i18n.t("file.notFound"));
+    }
+
+    const key = `${this.getS3Path()}${shareId}/${fileRecord.name}`;
+    const bucketName = this.config.get("s3.bucketName");
+    const s3Instance = this.getS3Instance();
+
+    const getObjectCommand = new GetObjectCommand({
+      Bucket: bucketName,
+      Key: key,
+      ResponseContentDisposition: contentDisposition(
+        fileRecord.name,
+        isDownload ? undefined : { type: "inline" },
+      ),
+    });
+
+    return await getSignedUrl(s3Instance, getObjectCommand, { expiresIn: 300 });
   }
 
   getS3Path(): string {

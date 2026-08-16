@@ -21,6 +21,8 @@ import { ReverseShareService } from "src/reverseShare/reverseShare.service";
 import { ShareAccessLogService } from "src/shareAccessLog/shareAccessLog.service";
 import { SystemService } from "src/system/system.service";
 import { parseRelativeDateToAbsolute } from "src/utils/date.util";
+import { byteToHumanSizeString } from "src/utils/fileSize.util";
+import { getUserActiveStorageUsage } from "src/utils/storageQuota.util";
 import { SHARE_DIRECTORY } from "../constants";
 import { CreateShareDTO } from "./dto/createShare.dto";
 import { UpdateShareDTO } from "./dto/updateShare.dto";
@@ -47,10 +49,37 @@ export class ShareService {
     reverseShareToken?: string,
     ip?: string,
   ) {
+    const reverseShare =
+      await this.reverseShareService.getByToken(reverseShareToken);
+    const quotaOwner = reverseShare ? reverseShare.creator : user;
+
     if (share.size) {
       const systemInfo = await this.systemService.getSystemInfo();
       if (systemInfo && systemInfo.total - systemInfo.used < share.size) {
         throw new BadRequestException(this.i18n.t("share.notEnoughSpace"));
+      }
+
+      if (quotaOwner?.storageQuotaLimit) {
+        const quotaLimit = parseInt(quotaOwner.storageQuotaLimit);
+        const activeStorageUsage = await getUserActiveStorageUsage(
+          this.prisma,
+          quotaOwner.id,
+        );
+
+        const projectedUsage = activeStorageUsage + share.size;
+        if (projectedUsage > quotaLimit) {
+          const exceededBytes = projectedUsage - quotaLimit;
+          const exceededSize = byteToHumanSizeString(exceededBytes);
+          throw new BadRequestException(
+            reverseShare
+              ? this.i18n.t("share.reverseShareQuotaExceeded", {
+                  args: { exceededSize },
+                })
+              : this.i18n.t("share.storageQuotaExceeded", {
+                  args: { exceededSize },
+                }),
+          );
+        }
       }
     }
 
@@ -89,8 +118,6 @@ export class ShareService {
     let expirationDate: Date;
 
     // If share is created by a reverse share token override the expiration date
-    const reverseShare =
-      await this.reverseShareService.getByToken(reverseShareToken);
     if (reverseShare) {
       expirationDate = reverseShare.shareExpiration;
     } else {

@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "Anonimna deljenja se ne mogu ažurirati",
   "invalidExpiration": "Nevažeći datum isteka",
   "maxExpirationExceeded": "Datum isteka premašuje maksimalni dozvoljeni datum",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "Pogrešna lozinka",
   "tokenRequired": "Token deljenja je obavezan",
   "privateShare": "Samo kreator obrnutog deljenja može pristupiti ovom deljenju",

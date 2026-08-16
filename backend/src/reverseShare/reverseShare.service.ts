@@ -94,6 +94,7 @@ export class ReverseShareService {
 
     const reverseShare = await this.prisma.reverseShare.findUnique({
       where: { token: reverseShareToken },
+      include: { creator: true },
     });
 
     return reverseShare;

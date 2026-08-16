@@ -9,6 +9,8 @@
   "anonymousNoUpdate": "Az anonim megosztások nem frissíthetők",
   "invalidExpiration": "Érvénytelen lejárati dátum",
   "maxExpirationExceeded": "A lejárati dátum meghaladja a maximális lejárati dátumot",
+  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "wrongPassword": "Hibás jelszó",
   "tokenRequired": "Megosztási token szükséges",
   "privateShare": "Csak a fordított megosztás létrehozója férhet hozzá ehhez a megosztáshoz",

@@ -6,10 +6,13 @@
   "notEnoughSpace": "Nicht genügend Speicherplatz auf dem Server",
   "unexpectedChunk": "Unerwarteter Chunk empfangen",
   "maxSizeExceeded": "Maximale Freigabegröße überschritten",
+  "storageQuotaExceeded": "Your storage quota has been exceeded by {exceededSize}",
+  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
   "zipError": "Fehler beim Erstellen der ZIP-Datei",
   "s3DeleteError": "Datei konnte nicht von S3 gelöscht werden",
   "s3UploadInitError": "Fehler beim Initialisieren des Multipart-Uploads.",
   "s3SessionNotFound": "Multipart-Upload-Sitzung nicht gefunden.",
   "s3UploadFailed": "Multipart-Upload fehlgeschlagen. Der Upload wurde abgebrochen.",
-  "s3SizeError": "Dateigröße konnte nicht ermittelt werden"
+  "s3SizeError": "Dateigröße konnte nicht ermittelt werden",
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
 }
