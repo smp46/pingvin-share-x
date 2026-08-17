@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --end-of-line=auto --write \"src/**/*.ts*\""
+    "format": "prettier --end-of-line=auto --write \"src/**/*.ts*\"",
+    "test": "jest"
   },
   "overrides": {
     "serialize-javascript": "^7.0.5",
@@ -51,6 +52,9 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/jest": "^30.0.0",
     "@types/mime-types": "^2.1.4",
     "@types/node": "22.5.5",
     "@types/qrcode": "^1.5.5",
@@ -61,8 +65,12 @@
     "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.35",
     "eslint-config-prettier": "^9.1.0",
+    "jest": "^30.4.2",
+    "jest-environment-jsdom": "^30.4.1",
     "prettier": "^3.3.3",
     "tar": "^7.4.3",
+    "ts-jest": "^29.4.12",
+    "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
   }
 }

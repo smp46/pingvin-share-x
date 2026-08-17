@@ -8,5 +8,11 @@
     "no-unused-vars": ["off"],
     "react/no-unescaped-entities": ["off"],
     "@next/next/no-img-element": ["off"]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.ts", "**/*.test.tsx"],
+      "env": { "jest": true }
+    }
+  ]
 }
