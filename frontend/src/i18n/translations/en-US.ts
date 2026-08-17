@@ -493,6 +493,7 @@ export default {
   "admin.config.title": "Configuration",
   "admin.config.category.general": "General",
   "admin.config.category.appearance": "Appearance",
+  "admin.config.category.security": "Security & Access",
   "admin.config.category.share": "Share",
   "admin.config.category.cache": "Cache",
   "admin.config.category.email": "Email",
@@ -547,6 +548,18 @@ export default {
   "admin.config.general.logo-dark.description":
     "Upload a separate logo for dark mode. The image must be a PNG and should have the format 1:1.",
   "admin.config.general.logo.placeholder": "Pick image",
+  "admin.config.security.custom-password-policy": "Custom password policy",
+  "admin.config.security.custom-password-policy.description": "Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.",
+  "admin.config.security.min-length": "Minimum length",
+  "admin.config.security.min-length.description": "Minimum number of characters required for a password.",
+  "admin.config.security.require-uppercase": "Require uppercase",
+  "admin.config.security.require-uppercase.description": "Whether to require at least one uppercase letter in the password.",
+  "admin.config.security.require-lowercase": "Require lowercase",
+  "admin.config.security.require-lowercase.description": "Whether to require at least one lowercase letter in the password.",
+  "admin.config.security.require-number": "Require number",
+  "admin.config.security.require-number.description": "Whether to require at least one number in the password.",
+  "admin.config.security.require-special-character": "Require special character",
+  "admin.config.security.require-special-character.description": "Whether to require at least one special character in the password.",
   "admin.config.cache.ttl": "TTL",
   "admin.config.cache.ttl.description":
     "Time in second to keep information inside the cache.",
@@ -604,7 +617,7 @@ export default {
   "admin.config.email.share-recipients-reply-to-creator":
     "Set Reply-To to creator's email",
   "admin.config.email.share-recipients-reply-to-creator.description":
-  "Whether to set the Reply-To header to the email address of the user who created the share.",
+    "Whether to set the Reply-To header to the email address of the user who created the share.",
   "admin.config.email.enable-share-download-notifications":
     "Enable download notifications",
   "admin.config.email.enable-share-download-notifications.description":
