@@ -944,6 +944,11 @@ export default {
   "common.error.invalid-number": "Must be a number",
   "common.error.field-required": "This field is required",
 
+  "common.error.password.lowercase": "Password must contain at least one lowercase letter",
+  "common.error.password.uppercase": "Password must contain at least one uppercase letter",
+  "common.error.password.number": "Password must contain at least one number",
+  "common.error.password.special": "Password must contain at least one special character",
+
   "admin.notice.modal.headerTag": "ADMINISTRATIVE ACTION REQUIRED",
   "admin.notice.modal.defaultCheckboxLabel": "I confirm that I have read this notice and understand the breaking changes.",
   "admin.notice.modal.button.acknowledge": "Acknowledge & Dismiss",
