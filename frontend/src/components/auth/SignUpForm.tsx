@@ -25,6 +25,20 @@ const SignUpForm = () => {
   const t = useTranslate();
   const { refreshUser } = useUser();
 
+  let minLength = 8;
+  let requireLowercase = false;
+  let requireUppercase = false;
+  let requireNumber = false;
+  let requireSpecialCharacter = false;
+
+  if (config.get("security.customPasswordPolicy")) {
+    minLength = config.get("security.minLength");
+    requireLowercase = config.get("security.requireLowercase");
+    requireUppercase = config.get("security.requireUppercase");
+    requireNumber = config.get("security.requireNumber");
+    requireSpecialCharacter = config.get("security.requireSpecialCharacter");
+  } 
+
   const validationSchema = yup.object().shape({
     email: yup.string().email(t("common.error.invalid-email")).required(),
     username: yup
@@ -33,7 +47,11 @@ const SignUpForm = () => {
       .required(t("common.error.field-required")),
     password: yup
       .string()
-      .min(8, t("common.error.too-short", { length: 8 }))
+      .min(minLength, t("common.error.too-short", { length: minLength }))
+      .matches(requireLowercase ? /[a-z]/ : /.*/, t("common.error.password.lowercase"))
+      .matches(requireUppercase ? /[A-Z]/ : /.*/, t("common.error.password.uppercase"))
+      .matches(requireNumber ? /[0-9]/ : /.*/, t("common.error.password.number"))
+      .matches(requireSpecialCharacter ? /[^a-zA-Z0-9]/ : /.*/, t("common.error.password.special"))
       .required(t("common.error.field-required")),
   });
 

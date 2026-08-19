@@ -35,6 +35,7 @@ import toast from "../../../utils/toast.util";
 const categories = [
   "General",
   "Appearance",
+  "Security",
   "Email",
   "Share",
   "SMTP",
@@ -217,6 +218,7 @@ export default function AppShellDemo() {
                 const shouldShowPrimaryColorOverride =
                   getEffectiveConfigValue("appearance.themePrimaryColor") ===
                   "custom";
+                const shouldShowCustomPasswordPolicies = getEffectiveConfigValue("security.customPasswordPolicy") === "true";
                 const visibleConfigVariables = configVariables.filter(
                   (configVariable) =>
                     configVariable.key !== "appearance.customCss",
@@ -262,9 +264,20 @@ export default function AppShellDemo() {
                       )}
                       {visibleConfigVariables.map((configVariable) => {
                         if (
-                          configVariable.key ===
+                          (configVariable.key ===
                             "appearance.themePrimaryColorOverride" &&
-                          !shouldShowPrimaryColorOverride
+                            !shouldShowPrimaryColorOverride) ||
+                          (configVariable.key === "security.minLength" &&
+                            !shouldShowCustomPasswordPolicies) ||
+                          (configVariable.key === "security.requireLowercase" &&
+                            !shouldShowCustomPasswordPolicies) ||
+                          (configVariable.key === "security.requireUppercase" &&
+                            !shouldShowCustomPasswordPolicies) ||
+                          (configVariable.key === "security.requireNumber" &&
+                            !shouldShowCustomPasswordPolicies) ||
+                          (configVariable.key ===
+                            "security.requireSpecialCharacter" &&
+                            !shouldShowCustomPasswordPolicies)
                         ) {
                           return null;
                         }
@@ -372,6 +385,9 @@ export default function AppShellDemo() {
                             </Box>
                           </Group>
                         )}
+                      {/* {categoryId === "security" && shouldShowCustomPasswordPolicies && ( */}
+                      {/**/}
+                      {/* )} */}
                     </Stack>
                   </>
                 );

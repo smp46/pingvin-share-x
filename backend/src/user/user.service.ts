@@ -35,7 +35,11 @@ export class UserSevice {
 
   async create(dto: CreateUserDTO) {
     let hash: string;
-    let randomPassword;
+    let randomPassword: string;
+
+    if (dto.password && !(await this.enforcePasswordPolicy(dto.password))) {
+      throw new BadRequestException(this.i18n.t("auth.passwordPolicyNotMet"));
+    }
 
     // The password can be undefined if the user is invited by an admin
     if (!dto.password) {
@@ -76,6 +80,13 @@ export class UserSevice {
 
   async update(id: string, user: UpdateUserDto) {
     try {
+
+      if (user.password && !(await this.enforcePasswordPolicy(user.password))) {
+        throw new BadRequestException(
+          this.i18n.t("auth.passwordPolicyNotMet"),
+        );
+      }
+
       const hash = user.password && (await argon.hash(user.password));
 
       return await this.prisma.user.update({
@@ -242,5 +253,35 @@ export class UserSevice {
         }
       }
     }
+  }
+
+  async enforcePasswordPolicy(password: string): Promise<boolean> {
+    if (!this.configService.get("security.customPasswordPolicy")) {
+      return true;
+    }
+
+    const minLength = this.configService.get("security.minLength");
+    const requireUppercase = this.configService.get(
+      "security.requireUppercase",
+    );
+    const requireLowercase = this.configService.get(
+      "security.requireLowercase",
+    );
+    const requireNumber = this.configService.get("security.requireNumber");
+    const requireSpecialCharacter = this.configService.get(
+      "security.requireSpecialCharacter",
+    );
+
+    if (
+      password.length < minLength ||
+      (!password.match(/[A-Z]/) && requireUppercase) ||
+      (!password.match(/[a-z]/) && requireLowercase) ||
+      (!password.match(/[0-9]/) && requireNumber) ||
+      (!password.match(/[^A-Za-z0-9]/) && requireSpecialCharacter)
+    ) {
+      return false;
+    }
+
+    return true;
   }
 }
