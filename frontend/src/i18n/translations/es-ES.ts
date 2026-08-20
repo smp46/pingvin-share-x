@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "Enlace del archivo",
   "share.table.name": "Nombre",
   "share.table.size": "Tamaño",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "Vista previa no disponible",
   "share.modal.file-preview.error.not-supported.description": "Las vistas previas no son compatibles con este tipo de archivos. Por favor, descargue el archivo para verlo.",
   // END /share/[id]
