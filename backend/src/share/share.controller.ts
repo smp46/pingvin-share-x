@@ -57,6 +57,13 @@ export class ShareController {
     return this.shareService.getAccessLogs(id);
   }
 
+  @Post(":id/rescan")
+  @HttpCode(202)
+  @UseGuards(JwtGuard, AdministratorGuard)
+  async rescanShare(@Param("id") id: string) {
+    await this.shareService.rescan(id);
+  }
+
   @Get()
   @UseGuards(JwtGuard)
   async getMyShares(@GetUser() user: User) {

@@ -395,6 +395,29 @@ export class ShareService {
     });
   }
 
+  // Admin triggered ClamAV rescan. The scan itself runs in the background,
+  // same as after an upload, so the caller only gets the share back to PENDING.
+  async rescan(shareId: string) {
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+      include: { _count: { select: { files: true } } },
+    });
+
+    if (!share) throw new NotFoundException(this.i18n.t("share.notFound"));
+
+    // an infected share has already had its files removed, rescanning it
+    // would find nothing and quietly mark it clean
+    if (share._count.files === 0)
+      throw new BadRequestException(this.i18n.t("share.nothingToScan"));
+
+    await this.prisma.share.update({
+      where: { id: shareId },
+      data: { scanStatus: "PENDING" },
+    });
+
+    void this.clamScanService.checkAndRemove(shareId);
+  }
+
   async update(
     shareId: string,
     body: UpdateShareDTO,

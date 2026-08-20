@@ -4,6 +4,7 @@
   "alreadyCompleted": "Share already completed",
   "completionRequiresFile": "You need at least one file in your share to complete it.",
   "notFound": "Share not found",
+  "nothingToScan": "This share has no files left to scan",
   "anonymousNoDelete": "Anonymous shares can't be deleted",
   "anonymousNoExpire": "Anonymous shares can't be expired",
   "anonymousNoUpdate": "Anonymous shares can't be updated",

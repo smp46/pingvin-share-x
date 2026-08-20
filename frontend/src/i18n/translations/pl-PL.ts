@@ -270,6 +270,8 @@ export default {
   "admin.shares.scan.clean": "Przeskanowano - brak zagrożeń",
   "admin.shares.scan.failed": "Skan antywirusowy nieudany lub ClamAV niedostępny",
   "admin.shares.scan.infected": "Przeskanowano - znaleziono złośliwe pliki",
+  "admin.shares.scan.rescan": "Skanuj ponownie",
+  "admin.shares.scan.rescan.started": "Skan zakolejkowany, status zmieni się po zakończeniu",
   "admin.shares.edit.delete.title": "Usuń udostępnianie: {id}",
   "admin.shares.edit.delete.description": "Czy na pewno chcesz usunąć to udostępnienie?",
   "admin.shares.search": "Szukaj",

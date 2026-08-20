@@ -339,6 +339,9 @@ export default {
   "admin.shares.scan.clean": "Scanned - no threats found",
   "admin.shares.scan.failed": "Antivirus scan failed or ClamAV is unreachable",
   "admin.shares.scan.infected": "Scanned - malicious file(s) found",
+  "admin.shares.scan.rescan": "Scan again",
+  "admin.shares.scan.rescan.started":
+    "Scan queued, the status updates once it finishes",
 
   "admin.shares.edit.delete.title": "Delete share: {id}",
   "admin.shares.edit.delete.description":

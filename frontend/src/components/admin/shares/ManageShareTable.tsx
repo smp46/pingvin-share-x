@@ -33,10 +33,12 @@ import {
   TbShieldCheck,
   TbTrash,
   TbVirus,
+  TbVirusSearch,
 } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import useConfig from "../../../hooks/config.hook";
 import useTranslate from "../../../hooks/useTranslate.hook";
+import shareService from "../../../services/share.service";
 import { MyShare, ShareScanStatus } from "../../../types/share.type";
 import { byteToHumanSizeString } from "../../../utils/fileSize.util";
 import toast from "../../../utils/toast.util";
@@ -75,6 +77,26 @@ const ManageShareTable = ({
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [refreshInterval, setRefreshInterval] = useState<string | null>(null);
+  const [rescanning, setRescanning] = useState<Set<string>>(new Set());
+
+  // The scan runs in the background, so all we can show right away is the
+  // share going back to PENDING. The auto refresh picks up the result.
+  const rescanShare = async (share: MyShare) => {
+    setRescanning((prev) => new Set(prev).add(share.id));
+    try {
+      await shareService.rescan(share.id);
+      updateShare({ ...share, scanStatus: "PENDING" });
+      toast.success(t("admin.shares.scan.rescan.started"));
+    } catch (e) {
+      toast.axiosError(e);
+    } finally {
+      setRescanning((prev) => {
+        const next = new Set(prev);
+        next.delete(share.id);
+        return next;
+      });
+    }
+  };
 
   // Check if file retention is enabled
   const fileRetentionPeriod = config.get("share.fileRetentionPeriod");
@@ -431,6 +453,17 @@ const ManageShareTable = ({
                             }}
                           >
                             <TbLink />
+                          </ActionIcon>
+                        </HoverTip>
+                        <HoverTip label={t("admin.shares.scan.rescan")}>
+                          <ActionIcon
+                            color="teal"
+                            variant="light"
+                            size={25}
+                            loading={rescanning.has(share.id)}
+                            onClick={() => rescanShare(share)}
+                          >
+                            <TbVirusSearch />
                           </ActionIcon>
                         </HoverTip>
                         <HoverTip label={t("common.button.delete")}>

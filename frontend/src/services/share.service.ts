@@ -90,6 +90,12 @@ const getAccessLogs = async (id: string): Promise<ShareAccessLog> => {
   return (await api.get(`shares/${id}/accessLogs`)).data;
 };
 
+// admin only, queues another ClamAV scan for a share that already has files
+const rescan = async (id: string) => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
+  return (await api.post(`shares/${id}/rescan`)).data;
+};
+
 const isShareIdAvailable = async (id: string): Promise<boolean> => {
   if (!isValidId(id)) throw new Error("Invalid Share ID");
   return (await api.get(`/shares/isShareIdAvailable/${id}`)).data.isAvailable;
@@ -411,6 +417,7 @@ export default {
   expire,
   getMetaData,
   getAccessLogs,
+  rescan,
   doesFileSupportPreview,
   isShareTextFile,
   getMyShares,
