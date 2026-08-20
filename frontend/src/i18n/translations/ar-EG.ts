@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "رابط الملف",
   "share.table.name": "الاسم",
   "share.table.size": "الحجم",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "المعاينة غير مدعومة",
   "share.modal.file-preview.error.not-supported.description": "Previews are not supported for this type of files. Please download the file to view it.",
   // END /share/[id]
