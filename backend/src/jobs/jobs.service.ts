@@ -77,25 +77,56 @@ export class JobsService {
   @Cron("0 */6 * * *")
   async deleteUnfinishedShares() {
     const cutoff = moment().subtract(1, "day").toDate();
+    const condition = {
+      uploadLocked: false,
+      OR: [
+        { updatedAt: { lt: cutoff } },
+        { updatedAt: { equals: null }, createdAt: { lt: cutoff } },
+      ],
+    };
+
     const unfinishedShares = await this.prisma.share.findMany({
-      where: {
-        uploadLocked: false,
-        OR: [
-          { updatedAt: { lt: cutoff } },
-          { updatedAt: { equals: null }, createdAt: { lt: cutoff } },
-        ],
-      },
+      where: condition,
     });
 
-    for (const unfinishedShare of unfinishedShares) {
-      await this.fileService.deleteAllFiles(unfinishedShare.id);
-      await this.prisma.share.delete({
-        where: { id: unfinishedShare.id },
-      });
+    const successfullyCleanedIds: string[] = [];
+    const chunkSize = 5;
+
+    for (let i = 0; i < unfinishedShares.length; i += chunkSize) {
+      const batch = unfinishedShares.slice(i, i + chunkSize);
+      const results = await Promise.allSettled(
+        batch.map(async ({ id }) => {
+          await this.fileService.deleteAllFiles(id);
+          return id;
+        }),
+      );
+
+      for (const result of results) {
+        if (result.status === "fulfilled") {
+          successfullyCleanedIds.push(result.value);
+        } else {
+          this.logger.error(
+            "Failed to delete files for an unfinished share",
+            result.reason instanceof Error
+              ? result.reason.stack
+              : String(result.reason),
+          );
+        }
+      }
     }
 
-    if (unfinishedShares.length > 0) {
-      this.logger.log(`Deleted ${unfinishedShares.length} unfinished shares`);
+    if (successfullyCleanedIds.length > 0) {
+      await this.prisma.share.deleteMany({
+        where: {
+          id: {
+            in: successfullyCleanedIds,
+          },
+          ...condition,
+        },
+      });
+      this.logger.log(
+        `Deleted ${successfullyCleanedIds.length} unfinished shares`,
+      );
     }
   }
 

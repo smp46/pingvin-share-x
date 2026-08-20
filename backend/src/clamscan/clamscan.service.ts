@@ -82,9 +82,7 @@ export class ClamScanService {
     return { isInfected: false, failed: true };
   }
 
-  async check(
-    shareId: string,
-  ): Promise<{
+  async check(shareId: string): Promise<{
     infectedFiles: { id: string; name: string }[];
     scanFailed: boolean;
   }> {
@@ -155,8 +153,8 @@ export class ClamScanService {
     for (const fileId of files) {
       const filePath = `${SHARE_DIRECTORY}/${shareId}/${fileId}`;
       const fileName =
-        (await this.prisma.file.findUnique({ where: { id: fileId } }))
-          ?.name || fileId;
+        (await this.prisma.file.findUnique({ where: { id: fileId } }))?.name ||
+        fileId;
 
       try {
         const { isInfected, failed } = await this.scanFile(clamScan, () =>
