@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "Посилання на файл",
   "share.table.name": "Назва",
   "share.table.size": "Розмір",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "Попередній перегляд не підтримується",
   "share.modal.file-preview.error.not-supported.description": "Попередні перегляди не підтримуються для цього типу файлів. Будь ласка, завантажте файл, щоб переглянути його.",
   // END /share/[id]
