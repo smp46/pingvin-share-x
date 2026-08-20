@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "Връзка към файла",
   "share.table.name": "Име",
   "share.table.size": "Размер",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "Прегледът не се поддържа",
   "share.modal.file-preview.error.not-supported.description": "Прегледът не се поддържа за този тип файлове. Моля, изтеглете файла, за да го разгледате.",
   // END /share/[id]
