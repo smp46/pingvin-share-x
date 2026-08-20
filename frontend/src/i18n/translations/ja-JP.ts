@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "ファイルリンク",
   "share.table.name": "ファイル名",
   "share.table.size": "サイズ",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "プレビューに対応していません",
   "share.modal.file-preview.error.not-supported.description": "このファイル形式のプレビューはサポートされていません。ファイルをダウンロードして表示してください。",
   // END /share/[id]
