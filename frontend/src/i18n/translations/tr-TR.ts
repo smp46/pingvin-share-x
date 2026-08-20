@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "Dosya bağlantısı",
   "share.table.name": "İsim",
   "share.table.size": "Boyut",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "Önizleme desteklenmiyor",
   "share.modal.file-preview.error.not-supported.description": "Bu dosya türü için önizleme desteklenmemektedir. Görüntülemek için lütfen dosyayı indirin.",
   // END /share/[id]
