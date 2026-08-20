@@ -41,6 +41,11 @@ export const configVariables = {
       defaultValue: "3 months",
       secret: false,
     },
+    enableEmailVerification: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
     customPasswordPolicy: {
       type: "boolean",
       defaultValue: "false",
@@ -253,11 +258,6 @@ export const configVariables = {
       type: "text",
       defaultValue:
         "Hey!\n\n{recipientEmail} downloaded {fileName} from your share: {shareUrl}\n\nPingvin Share 🐧",
-    },
-    enableEmailVerification: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
     },
     verificationSubject: {
       type: "string",

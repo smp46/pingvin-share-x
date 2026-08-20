@@ -148,7 +148,7 @@ export default function AppShellDemo() {
       setConfigVariables(configVariables);
     });
 
-    if (categoryId === "email") {
+    if (categoryId === "email" || categoryId === "security") {
       configService.getByCategory("smtp").then((smtpConfigVariables) => {
         const optionalConfigVariables = smtpConfigVariables.filter(
           (configVariable) => {

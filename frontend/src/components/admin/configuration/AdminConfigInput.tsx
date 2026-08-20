@@ -54,7 +54,7 @@ const AdminConfigInput = ({
   const isEmailShareConfig =
     configVariable.key === "email.enableShareEmailRecipients";
   const isEmailVerificationConfig =
-    configVariable.key === "email.enableEmailVerification";
+    configVariable.key === "security.enableEmailVerification";
   let isSmtpEnabled = false;
 
   if (isEmailShareConfig || isEmailVerificationConfig) {

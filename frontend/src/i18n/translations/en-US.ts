@@ -630,8 +630,8 @@ export default {
     "Download notification message",
   "admin.config.email.share-download-notification-message.description":
     "Message which gets sent to the share creator when a recipient downloads a file. Available variables:\n {recipientEmail} - The email of the recipient\n {fileName} - The downloaded file name\n {shareUrl} - The URL of the share",
-  "admin.config.email.enable-email-verification": "Enable email verification",
-  "admin.config.email.enable-email-verification.description":
+  "admin.config.security.enable-email-verification": "Enable email verification",
+  "admin.config.security.enable-email-verification.description":
     "Whether to require users to verify their email address before being able to sign in. This can only be enabled if SMTP is activated.",
   "admin.config.email.verification-subject": "Verification subject",
   "admin.config.email.verification-subject.description":

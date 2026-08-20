@@ -15,6 +15,8 @@ general:
 security:
   #Time after which a user must log in again (default: 3 months).
   sessionDuration: 3 months
+  #Whether to require users to verify their email address before being able to sign in. This can only be enabled if SMTP is activated.
+  enableEmailVerification: "false"
   #Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.
   customPasswordPolicy: "false"
   #Minimum number of characters required for a password.
@@ -159,8 +161,6 @@ email:
     {recipientEmail} downloaded {fileName} from your share: {shareUrl}
 
     Pingvin Share 🐧
-  #Whether to require users to verify their email address before being able to sign in. This can only be enabled if SMTP is activated.
-  enableEmailVerification: "false"
   #Subject of the email which gets sent to the user when they sign up.
   verificationSubject: Verify your Pingvin Share account
   #Message which gets sent to the user when they sign up. {url} will be replaced with the verification URL.

@@ -46,7 +46,7 @@ export class AuthService {
   ) {
     const isFirstUser = (await this.prisma.user.count()) == 0;
     const enableEmailVerification = this.config.get(
-      "email.enableEmailVerification",
+      "security.enableEmailVerification",
     );
     const email = dto.email.toLowerCase().trim();
 
