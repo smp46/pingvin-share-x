@@ -10,10 +10,19 @@ import useConfig from "../../hooks/config.hook";
 import useTranslate from "../../hooks/useTranslate.hook";
 import userService from "../../services/user.service";
 import User from "../../types/user.type";
+import { CustomPasswordPolicy } from "../../types/config.type";
 import toast from "../../utils/toast.util";
 
 const Users = () => {
   const [users, setUsers] = useState<User[]>([]);
+  const [customPasswordPolicy, setCustomPasswordPolicy] =
+    useState<CustomPasswordPolicy>({
+      minLength: 8,
+      requireUppercase: false,
+      requireLowercase: false,
+      requireNumber: false,
+      requireSpecialCharacter: false,
+    });
   const [isLoading, setIsLoading] = useState(true);
 
   const config = useConfig();
@@ -54,6 +63,20 @@ const Users = () => {
 
   useEffect(() => {
     getUsers();
+
+    let customPasswordPolicy: CustomPasswordPolicy;
+    if (config.get("security.customPasswordPolicy")) {
+      customPasswordPolicy = {
+        minLength: config.get("security.minLength"),
+        requireUppercase: config.get("security.requireUppercase"),
+        requireLowercase: config.get("security.requireLowercase"),
+        requireNumber: config.get("security.requireNumber"),
+        requireSpecialCharacter: config.get(
+          "security.requireSpecialCharacter",
+        ),
+      };
+      setCustomPasswordPolicy(customPasswordPolicy);
+    }
   }, []);
 
   return (
@@ -65,7 +88,7 @@ const Users = () => {
         </Title>
         <Button
           onClick={() =>
-            showCreateUserModal(modals, config.get("smtp.enabled"), getUsers)
+            showCreateUserModal(modals, config.get("smtp.enabled"), getUsers, customPasswordPolicy)
           }
           leftIcon={<TbPlus size={20} />}
         >
@@ -78,6 +101,7 @@ const Users = () => {
         getUsers={getUsers}
         deleteUser={deleteUser}
         isLoading={isLoading}
+        customPasswordPolicy={customPasswordPolicy}
       />
       <Space h="xl" />
     </>

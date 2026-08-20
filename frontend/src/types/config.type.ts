@@ -41,4 +41,12 @@ export type ConfigHook = {
   refresh: () => void;
 };
 
+export type CustomPasswordPolicy= {
+  minLength: number;
+  requireLowercase: boolean;
+  requireUppercase: boolean;
+  requireNumber: boolean;
+  requireSpecialCharacter: boolean;
+};
+
 export default Config;

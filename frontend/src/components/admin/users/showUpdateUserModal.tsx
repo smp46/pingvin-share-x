@@ -18,16 +18,25 @@ import userService from "../../../services/user.service";
 import User from "../../../types/user.type";
 import toast from "../../../utils/toast.util";
 import FileSizeInput from "../../core/FileSizeInput";
+import { CustomPasswordPolicy } from "../../../types/config.type";
 
 const showUpdateUserModal = (
   modals: ModalsContextProps,
   user: User,
   getUsers: () => void,
+  customPasswordPolicy: CustomPasswordPolicy,
 ) => {
   const t = translateOutsideContext();
   return modals.openModal({
     title: t("admin.users.edit.update.title", { username: user.username }),
-    children: <Body user={user} modals={modals} getUsers={getUsers} />,
+    children: (
+      <Body
+        user={user}
+        modals={modals}
+        getUsers={getUsers}
+        customPasswordPolicy={customPasswordPolicy}
+      />
+    ),
   });
 };
 
@@ -35,10 +44,12 @@ const Body = ({
   user,
   modals,
   getUsers,
+  customPasswordPolicy,
 }: {
   modals: ModalsContextProps;
   user: User;
   getUsers: () => void;
+  customPasswordPolicy: CustomPasswordPolicy;
 }) => {
   const t = useTranslate();
 
@@ -85,7 +96,31 @@ const Body = ({
       yup.object().shape({
         password: yup
           .string()
-          .min(8, t("common.error.too-short", { length: 8 })),
+          .min(
+            customPasswordPolicy.minLength,
+            t("common.error.too-short", {
+              length: customPasswordPolicy.minLength,
+            }),
+          )
+          .matches(
+            customPasswordPolicy.requireLowercase ? /[a-z]/ : /.*/,
+            t("common.error.password.lowercase"),
+          )
+          .matches(
+            customPasswordPolicy.requireUppercase ? /[A-Z]/ : /.*/,
+            t("common.error.password.uppercase"),
+          )
+          .matches(
+            customPasswordPolicy.requireNumber ? /[0-9]/ : /.*/,
+            t("common.error.password.number"),
+          )
+          .matches(
+            customPasswordPolicy.requireSpecialCharacter
+              ? /[^a-zA-Z0-9]/
+              : /.*/,
+            t("common.error.password.special"),
+          )
+          .required(t("common.error.field-required")),
       }),
     ),
   });

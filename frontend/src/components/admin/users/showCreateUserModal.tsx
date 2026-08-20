@@ -14,16 +14,18 @@ import useTranslate from "../../../hooks/useTranslate.hook";
 import userService from "../../../services/user.service";
 import toast from "../../../utils/toast.util";
 import FileSizeInput from "../../core/FileSizeInput";
+import { CustomPasswordPolicy } from "../../../types/config.type";
 
 const showCreateUserModal = (
   modals: ModalsContextProps,
   smtpEnabled: boolean,
   getUsers: () => void,
+  customPasswordPolicy: CustomPasswordPolicy,
 ) => {
   return modals.openModal({
     title: "Create user",
     children: (
-      <Body modals={modals} smtpEnabled={smtpEnabled} getUsers={getUsers} />
+      <Body modals={modals} smtpEnabled={smtpEnabled} getUsers={getUsers} customPasswordPolicy={customPasswordPolicy} />
     ),
   });
 };
@@ -32,12 +34,15 @@ const Body = ({
   modals,
   smtpEnabled,
   getUsers,
+  customPasswordPolicy,
 }: {
   modals: ModalsContextProps;
   smtpEnabled: boolean;
   getUsers: () => void;
+  customPasswordPolicy: CustomPasswordPolicy;
 }) => {
   const t = useTranslate();
+
   const form = useForm({
     initialValues: {
       username: "",
@@ -58,7 +63,12 @@ const Body = ({
           .min(3, t("common.error.too-short", { length: 3 })),
         password: yup
           .string()
-          .min(8, t("common.error.too-short", { length: 8 }))
+          .min(customPasswordPolicy.minLength, t("common.error.too-short", { length: customPasswordPolicy.minLength }))
+          .matches(customPasswordPolicy.requireLowercase ? /[a-z]/ : /.*/, t("common.error.password.lowercase"))
+          .matches(customPasswordPolicy.requireUppercase ? /[A-Z]/ : /.*/, t("common.error.password.uppercase"))
+          .matches(customPasswordPolicy.requireNumber ? /[0-9]/ : /.*/, t("common.error.password.number"))
+          .matches(customPasswordPolicy.requireSpecialCharacter ? /[^a-zA-Z0-9]/ : /.*/, t("common.error.password.special"))
+          .required(t("common.error.field-required"))
           .optional(),
         storageQuotaLimit: yup
           .number()

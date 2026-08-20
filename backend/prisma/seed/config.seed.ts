@@ -40,6 +40,38 @@ export const configVariables = {
       secret: false,
     },
   },
+  security: {
+    customPasswordPolicy: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    minLength: {
+      type: "number",
+      defaultValue: "8",
+      secret: false,
+    },
+    requireUppercase: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    requireLowercase: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    requireNumber: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    requireSpecialCharacter: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+  },
   appearance: {
     themePrimaryColor: {
       type: "string",
@@ -570,7 +602,7 @@ async function migrateConfigVariables() {
   for (const existingConfigVariable of existingConfigVariables) {
     const configVariable =
       configVariables[existingConfigVariable.category]?.[
-      existingConfigVariable.name
+        existingConfigVariable.name
       ];
 
     // Delete the config variable if it doesn't exist in the seed

@@ -7,17 +7,20 @@ import { FormattedMessage } from "react-intl";
 import useTranslate from "../../../hooks/useTranslate.hook";
 import { HoverTip } from "../../core/HoverTip";
 import { byteToHumanSizeString } from "../../../utils/fileSize.util";
+import { CustomPasswordPolicy } from "../../../types/config.type";
 
 const ManageUserTable = ({
   users,
   getUsers,
   deleteUser,
   isLoading,
+  customPasswordPolicy,
 }: {
   users: User[];
   getUsers: () => void;
   deleteUser: (user: User) => void;
   isLoading: boolean;
+  customPasswordPolicy: CustomPasswordPolicy;
 }) => {
   const modals = useModals();
   const t = useTranslate();
@@ -90,7 +93,7 @@ const ManageUserTable = ({
                             color="blue"
                             size={25}
                             onClick={() =>
-                              showUpdateUserModal(modals, user, getUsers)
+                              showUpdateUserModal(modals, user, getUsers, customPasswordPolicy)
                             }
                           >
                             <TbEdit />

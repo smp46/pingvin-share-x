@@ -15,6 +15,7 @@ import {
   TbAt,
   TbBinaryTree,
   TbBucket,
+  TbLock,
   TbMail,
   TbPalette,
   TbScale,
@@ -28,6 +29,7 @@ import { FormattedMessage } from "react-intl";
 export const categories = [
   { name: "General", icon: <TbSettings /> },
   { name: "Appearance", icon: <TbPalette /> },
+  { name: "Security", icon: <TbLock /> },
   { name: "Email", icon: <TbMail /> },
   { name: "Share", icon: <TbShare /> },
   { name: "SMTP", icon: <TbAt /> },
