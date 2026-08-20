@@ -38,6 +38,7 @@ export async function middleware(request: NextRequest) {
       "/s/*",
       "/upload/*",
       "/error",
+      "/404",
       "/imprint",
       "/privacy",
     ]),
