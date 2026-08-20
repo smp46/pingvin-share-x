@@ -56,7 +56,7 @@ export class OAuthController {
     const state = nanoid(16);
     const url = await this.providers[provider].getAuthEndpoint(state);
 
-    const isSecure = this.config.get("general.secureCookies");
+    const isSecure = this.config.get("security.secureCookies");
     response.cookie(`oauth_${provider}_state`, state, {
       sameSite: "lax",
       secure: isSecure,

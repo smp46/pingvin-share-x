@@ -20,10 +20,6 @@ export const configVariables = {
       defaultValue: "http://localhost:3000",
       secret: false,
     },
-    secureCookies: {
-      type: "boolean",
-      defaultValue: "false",
-    },
     showHomePage: {
       type: "boolean",
       defaultValue: "true",
@@ -40,6 +36,10 @@ export const configVariables = {
       type: "timespan",
       defaultValue: "3 months",
       secret: false,
+    },
+    secureCookies: {
+      type: "boolean",
+      defaultValue: "false",
     },
     enableEmailVerification: {
       type: "boolean",

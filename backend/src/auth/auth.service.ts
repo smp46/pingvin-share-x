@@ -437,7 +437,7 @@ export class AuthService {
     refreshToken?: string,
     accessToken?: string,
   ) {
-    const isSecure = this.config.get("general.secureCookies");
+    const isSecure = this.config.get("security.secureCookies");
     if (accessToken)
       response.cookie("access_token", accessToken, {
         sameSite: "lax",

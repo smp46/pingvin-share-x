@@ -6,8 +6,6 @@ general:
   appName: Pingvin Share X
   #On which URL Pingvin Share is available
   appUrl: http://localhost:3000
-  #Whether to set the secure flag on cookies. If enabled, the site will not function when accessed over HTTP.
-  secureCookies: "false"
   #Whether to show the home page
   showHomePage: "true"
   #This applies to all users, each user can still personalise their language in their profile.
@@ -15,6 +13,8 @@ general:
 security:
   #Time after which a user must log in again (default: 3 months).
   sessionDuration: 3 months
+  #Whether to set the secure flag on cookies. If enabled, the site will not function when accessed over HTTP.
+  secureCookies: "false"
   #Whether to require users to verify their email address before being able to sign in. This can only be enabled if SMTP is activated.
   enableEmailVerification: "false"
   #Whether registration is allowed

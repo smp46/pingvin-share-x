@@ -204,7 +204,7 @@ export class AuthController {
       request.cookies.access_token,
     );
 
-    const isSecure = this.config.get("general.secureCookies");
+    const isSecure = this.config.get("security.secureCookies");
     response.cookie("access_token", "", {
       maxAge: -1,
       secure: isSecure,
