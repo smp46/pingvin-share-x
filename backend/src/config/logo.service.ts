@@ -27,13 +27,13 @@ export class LogoService {
   async createPWAIcons(file: Buffer) {
     const sizes = [48, 72, 96, 128, 144, 152, 192, 384, 512];
 
-    for (const size of sizes) {
-      const resized = await sharp(file).resize(size).toBuffer();
-      fs.promises.writeFile(
-        `${IMAGES_PATH}/icons/icon-${size}x${size}.png`,
-        resized,
-        "binary",
-      );
-    }
+    await Promise.all(
+      sizes.map((size) =>
+        sharp(file)
+          .resize(size)
+          .png()
+          .toFile(`${IMAGES_PATH}/icons/icon-${size}x${size}.png`),
+      ),
+    );
   }
 }
