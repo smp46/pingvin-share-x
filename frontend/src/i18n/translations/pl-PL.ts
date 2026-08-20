@@ -655,6 +655,15 @@ export default {
   // 404
   "404.description": "Ups! Ta strona nie istnieje.",
   "404.button.home": "Wróć do strony domowej",
+  "404.tetris.title": "Nie ma tu nic poza klockami",
+  "404.tetris.start": "Zagraj",
+  "404.tetris.again": "Zagraj ponownie",
+  "404.tetris.over": "Koniec gry",
+  "404.tetris.next": "Następne",
+  "404.tetris.score": "Wynik",
+  "404.tetris.level": "Poziom",
+  "404.tetris.lines": "Linie",
+  "404.tetris.controls": "Strzałki przesuwają i obracają, spacja zrzuca",
   // error
   "error.title": "Błąd",
   "error.description": "Ups!",

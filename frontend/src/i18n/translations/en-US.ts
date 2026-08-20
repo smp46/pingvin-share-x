@@ -903,6 +903,15 @@ export default {
   // 404
   "404.description": "Oops this page doesn't exist.",
   "404.button.home": "Bring me back home",
+  "404.tetris.title": "Nothing here but blocks",
+  "404.tetris.start": "Play",
+  "404.tetris.again": "Play again",
+  "404.tetris.over": "Game over",
+  "404.tetris.next": "Next",
+  "404.tetris.score": "Score",
+  "404.tetris.level": "Level",
+  "404.tetris.lines": "Lines",
+  "404.tetris.controls": "Arrows to move and rotate, space to drop",
 
   // error
   "error.title": "Error",
