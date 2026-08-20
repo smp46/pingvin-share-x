@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "Faili link",
   "share.table.name": "Nimi",
   "share.table.size": "Suurus",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "Eelvaadet ei toetata",
   "share.modal.file-preview.error.not-supported.description": "Selle failitüübi eelvaateid ei toetata. Faili vaatamiseks laadi see alla.",
   // END /share/[id]
