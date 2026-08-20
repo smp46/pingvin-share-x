@@ -1,4 +1,5 @@
 import axios from "axios";
+import semver from "semver";
 import Config, { AdminConfig, UpdateConfig } from "../types/config.type";
 import api from "./api.service";
 import { stringToTimespan } from "../utils/date.util";
@@ -81,7 +82,10 @@ const isNewReleaseAvailable = async () => {
       "https://api.github.com/repos/smp46/pingvin-share-x/releases/latest",
     )
   ).data;
-  return response.tag_name.replace("v", "") != process.env.VERSION;
+  const latestVersion = response.tag_name.replace("v", "");
+  // != would flag an update on any mismatch, including when we're already
+  // ahead on a beta version that just isn't the latest stable tag.
+  return semver.gt(latestVersion, process.env.VERSION ?? "0.0.0");
 };
 
 const changeLogo = async (file: File) => {
