@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "Dateilink",
   "share.table.name": "Name",
   "share.table.size": "Größe",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "Vorschau wird nicht unterstützt",
   "share.modal.file-preview.error.not-supported.description": "Vorschaubilder werden für diesen Dateityp nicht unterstützt. Bitte lade die Datei herunter, um sie anzuzeigen.",
   // END /share/[id]
