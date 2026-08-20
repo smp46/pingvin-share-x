@@ -418,8 +418,17 @@ App.getInitialProps = async ({ ctx }: { ctx: GetServerSidePropsContext }) => {
       (item) => item.key === "general.defaultLanguage",
     )?.value;
 
-    pageProps.language =
-      ctx.req.cookies["language"] || defaultLanguage || requestLanguage;
+    // Admin opt-in: for visitors who haven't picked a language yet, prefer
+    // what their browser reports (Accept-Language, which reflects the OS
+    // language) over the fixed site default.
+    const detectLanguageFromBrowser =
+      pageProps.configVariables?.find(
+        (item) => item.key === "general.detectLanguageFromBrowser",
+      )?.value === "true";
+
+    pageProps.language = detectLanguageFromBrowser
+      ? ctx.req.cookies["language"] || requestLanguage || defaultLanguage
+      : ctx.req.cookies["language"] || defaultLanguage || requestLanguage;
   }
   return { pageProps };
 };

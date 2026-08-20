@@ -431,6 +431,8 @@ export default {
   "admin.config.general.app-name.description": "Nazwa aplikacji",
   "admin.config.general.default-language": "Język domyślny",
   "admin.config.general.default-language.description": "Dotyczy to wszystkich użytkowników, każdy użytkownik może nadal spersonalizować swój język w swoim profilu.",
+  "admin.config.general.detect-language-from-browser": "Wykrywaj język z przeglądarki",
+  "admin.config.general.detect-language-from-browser.description": "Dla gości, którzy jeszcze nie wybrali języka, użyj języka zgłoszonego przez ich przeglądarkę (języka systemu) zamiast domyślnego języka powyżej.",
   "admin.config.appearance.theme-primary-color": "Podstawowy kolor motywu",
   "admin.config.appearance.theme-primary-color.description": "Podstawowy kolor przycisków, linków i akcentów. Wybierz niestandardowy, aby użyć nadpisania koloru.",
   "admin.config.appearance.theme-primary-color-override": "Niestandardowy kolor podstawowy",

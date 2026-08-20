@@ -551,6 +551,10 @@ export default {
   "admin.config.general.default-language": "Default Language",
   "admin.config.general.default-language.description":
     "This applies to all users, each user can still personalise their language in their profile.",
+  "admin.config.general.detect-language-from-browser":
+    "Detect language from browser",
+  "admin.config.general.detect-language-from-browser.description":
+    "For visitors who haven't picked a language yet, use the language reported by their browser (their OS/system language) instead of the default language above.",
   "admin.config.appearance.theme-primary-color": "Theme primary color",
   "admin.config.appearance.theme-primary-color.description":
     "Primary color used for buttons, links, and accents. Choose custom to use a color picker override.",

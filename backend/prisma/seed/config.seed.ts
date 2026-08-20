@@ -39,6 +39,11 @@ export const configVariables = {
       defaultValue: "en-US",
       secret: false,
     },
+    detectLanguageFromBrowser: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
   },
   security: {
     customPasswordPolicy: {

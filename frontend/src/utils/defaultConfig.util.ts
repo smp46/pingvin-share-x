@@ -21,6 +21,12 @@ export function getDefaultConfig(): Config[] {
       type: "string",
     },
     {
+      key: "general.detectLanguageFromBrowser",
+      value: "false",
+      defaultValue: "false",
+      type: "boolean",
+    },
+    {
       key: "share.allowRegistration",
       value: "false",
       defaultValue: "false",
