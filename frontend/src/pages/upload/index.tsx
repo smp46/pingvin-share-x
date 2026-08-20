@@ -169,7 +169,7 @@ const Upload = ({
         appUrl: config.get("general.appUrl"),
         defaultAppUrl: config.get("general.appUrl", true),
         allowUnauthenticatedShares: config.get(
-          "share.allowUnauthenticatedShares",
+          "security.allowUnauthenticatedShares",
         ),
         enableEmailRecepients: config.get("email.enableShareEmailRecipients"),
         enableUserRecipients: config.get("share.enableUserRecipients"),

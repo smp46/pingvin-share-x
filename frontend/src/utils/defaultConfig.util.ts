@@ -27,7 +27,7 @@ export function getDefaultConfig(): Config[] {
       type: "boolean",
     },
     {
-      key: "share.allowUnauthenticatedShares",
+      key: "security.allowUnauthenticatedShares",
       value: "false",
       defaultValue: "false",
       type: "boolean",

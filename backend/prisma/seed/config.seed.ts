@@ -51,6 +51,11 @@ export const configVariables = {
       defaultValue: "true",
       secret: false,
     },
+    allowUnauthenticatedShares: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
     customPasswordPolicy: {
       type: "boolean",
       defaultValue: "false",
@@ -115,11 +120,6 @@ export const configVariables = {
     },
   },
   share: {
-    allowUnauthenticatedShares: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
-    },
     maxExpiration: {
       type: "timespan",
       defaultValue: "0 days",

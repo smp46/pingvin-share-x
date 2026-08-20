@@ -11,7 +11,7 @@ export class JwtGuard extends AuthGuard("jwt") {
     try {
       return (await super.canActivate(context)) as boolean;
     } catch {
-      return this.config.get("share.allowUnauthenticatedShares");
+      return this.config.get("security.allowUnauthenticatedShares");
     }
   }
 }

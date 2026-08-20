@@ -174,7 +174,7 @@ const Header = () => {
     },
   ];
 
-  if (config.get("share.allowUnauthenticatedShares")) {
+  if (config.get("security.allowUnauthenticatedShares")) {
     unauthenticatedLinks.unshift({
       link: "/upload",
       label: t("navbar.upload"),

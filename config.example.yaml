@@ -19,6 +19,8 @@ security:
   enableEmailVerification: "false"
   #Whether registration is allowed
   allowRegistration: "true"
+  #Whether unauthenticated users can create shares
+  allowUnauthenticatedShares: "false"
   #Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.
   customPasswordPolicy: "false"
   #Minimum number of characters required for a password.
@@ -45,8 +47,6 @@ appearance:
   #Choose how upload progress is displayed in the file list.
   uploadProgressStyle: circle
 share:
-  #Whether unauthenticated users can create shares
-  allowUnauthenticatedShares: "false"
   #Maximum share expiration. Set to 0 to allow unlimited expiration.
   maxExpiration: 0 days
   #The default expiration time selected when creating a new share.

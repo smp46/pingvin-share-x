@@ -642,9 +642,9 @@ export default {
   "admin.config.security.allow-registration": "Allow registration",
   "admin.config.security.allow-registration.description":
     "Whether registration is allowed",
-  "admin.config.share.allow-unauthenticated-shares":
+  "admin.config.security.allow-unauthenticated-shares":
     "Allow unauthenticated shares",
-  "admin.config.share.allow-unauthenticated-shares.description":
+  "admin.config.security.allow-unauthenticated-shares.description":
     "Whether unauthenticated users can create shares",
   "admin.config.share.default-expiration": "Default expiration",
   "admin.config.share.default-expiration.description":

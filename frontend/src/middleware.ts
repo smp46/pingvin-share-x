@@ -73,7 +73,7 @@ export async function middleware(request: NextRequest) {
     routes.disabled.routes.push("/auth/signUp");
   }
 
-  if (getConfig("share.allowUnauthenticatedShares")) {
+  if (getConfig("security.allowUnauthenticatedShares")) {
     routes.public.routes = ["*"];
   }
 
@@ -104,7 +104,7 @@ export async function middleware(request: NextRequest) {
     },
      // Authenticated state
      {
-      condition: user && routes.unauthenticated.contains(route) && !getConfig("share.allowUnauthenticatedShares"),
+      condition: user && routes.unauthenticated.contains(route) && !getConfig("security.allowUnauthenticatedShares"),
       path: "/upload",
     },
     // Unauthenticated state
