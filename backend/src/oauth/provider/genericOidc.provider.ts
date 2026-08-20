@@ -121,9 +121,7 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
     const idTokenData = this.decodeIdToken(token.idToken);
 
     if (!idTokenData) {
-      this.logger.error(
-        `Can not get ID Token from response ${JSON.stringify(token.rawToken, undefined, 2)}`,
-      );
+      this.logger.error("Can not get ID Token from response");
       throw new InternalServerErrorException();
     }
 
