@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "Fil link",
   "share.table.name": "Navn",
   "share.table.size": "Størrelse",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "Forhåndsvisning ikke understøttet",
   "share.modal.file-preview.error.not-supported.description": "Previews are not supported for this type of files. Please download the file to view it.",
   // END /share/[id]
