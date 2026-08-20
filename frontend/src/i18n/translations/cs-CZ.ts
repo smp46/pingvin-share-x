@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "Odkaz na soubor",
   "share.table.name": "Název",
   "share.table.size": "Velikost",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "Náhled není podporován",
   "share.modal.file-preview.error.not-supported.description": "Náhledy nejsou podporovány pro tento typ souborů. Stáhněte si soubor pro jeho zobrazení.",
   // END /share/[id]
