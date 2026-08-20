@@ -170,16 +170,28 @@ export class FileController {
 
     const file = await this.fileService.get(shareId, fileId);
 
-    const headers = {
-      "Content-Type":
-        mime?.lookup?.(file.metaData.name) || "application/octet-stream",
+    const mimeType =
+      mime?.lookup?.(file.metaData.name) || "application/octet-stream";
+
+    const isPassiveMedia =
+      mimeType.startsWith("video/") ||
+      mimeType.startsWith("audio/") ||
+      (mimeType.startsWith("image/") && mimeType !== "image/svg+xml") ||
+      mimeType === "text/plain";
+
+    const headers: Record<string, any> = {
+      "Content-Type": mimeType,
       "Content-Length": file.metaData.size,
-      "Content-Security-Policy": "sandbox",
+      "X-Content-Type-Options": "nosniff",
       "Content-Disposition": contentDisposition(
         file.metaData.name,
         isDownload ? undefined : { type: "inline" },
       ),
     };
+
+    if (!isPassiveMedia) {
+      headers["Content-Security-Policy"] = "sandbox";
+    }
 
     res.set(headers);
 
