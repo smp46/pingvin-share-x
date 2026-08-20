@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "Link do pliku",
   "share.table.name": "Nazwa",
   "share.table.size": "Rozmiar",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "Podgląd nie jest obsługiwany",
   "share.modal.file-preview.error.not-supported.description": "Podgląd nie jest obsługiwany dla tego typu plików. Pobierz plik, aby go zobaczyć.",
   // END /share/[id]
