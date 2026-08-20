@@ -90,7 +90,7 @@ const SignUpForm = () => {
       <Title order={2} align="center" weight={900}>
         <FormattedMessage id="signup.title" />
       </Title>
-      {config.get("share.allowRegistration") && (
+      {config.get("security.allowRegistration") && (
         <Text color="dimmed" size="sm" align="center" mt={5}>
           <FormattedMessage id="signup.description" />{" "}
           <Anchor component={Link} href={"signIn"} size="sm">

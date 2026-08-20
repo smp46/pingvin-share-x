@@ -46,6 +46,11 @@ export const configVariables = {
       defaultValue: "false",
       secret: false,
     },
+    allowRegistration: {
+      type: "boolean",
+      defaultValue: "true",
+      secret: false,
+    },
     customPasswordPolicy: {
       type: "boolean",
       defaultValue: "false",
@@ -110,11 +115,6 @@ export const configVariables = {
     },
   },
   share: {
-    allowRegistration: {
-      type: "boolean",
-      defaultValue: "true",
-      secret: false,
-    },
     allowUnauthenticatedShares: {
       type: "boolean",
       defaultValue: "false",

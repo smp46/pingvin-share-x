@@ -21,7 +21,7 @@ export function getDefaultConfig(): Config[] {
       type: "string",
     },
     {
-      key: "share.allowRegistration",
+      key: "security.allowRegistration",
       value: "false",
       defaultValue: "false",
       type: "boolean",

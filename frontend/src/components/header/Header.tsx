@@ -187,7 +187,7 @@ const Header = () => {
       label: t("navbar.home"),
     });
 
-  if (config.get("share.allowRegistration"))
+  if (config.get("security.allowRegistration"))
     unauthenticatedLinks.push({
       link: "/auth/signUp",
       label: t("navbar.signup"),

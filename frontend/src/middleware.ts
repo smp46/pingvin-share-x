@@ -69,7 +69,7 @@ export async function middleware(request: NextRequest) {
     user = null;
   }
 
-  if (!getConfig("share.allowRegistration")) {
+  if (!getConfig("security.allowRegistration")) {
     routes.disabled.routes.push("/auth/signUp");
   }
 

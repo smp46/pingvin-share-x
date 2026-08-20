@@ -639,8 +639,8 @@ export default {
   "admin.config.email.verification-message": "Verification message",
   "admin.config.email.verification-message.description":
     "Message which gets sent to the user when they sign up. {url} will be replaced with the verification URL.",
-  "admin.config.share.allow-registration": "Allow registration",
-  "admin.config.share.allow-registration.description":
+  "admin.config.security.allow-registration": "Allow registration",
+  "admin.config.security.allow-registration.description":
     "Whether registration is allowed",
   "admin.config.share.allow-unauthenticated-shares":
     "Allow unauthenticated shares",
