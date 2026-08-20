@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "Link naar bestand",
   "share.table.name": "Naam",
   "share.table.size": "Grootte",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "Voorbeeld niet ondersteund",
   "share.modal.file-preview.error.not-supported.description": "Voorbeelden van dit type bestand worden niet ondersteund. Download het bestand om het te bekijken.",
   // END /share/[id]
