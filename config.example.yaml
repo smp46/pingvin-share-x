@@ -14,6 +14,19 @@ general:
   sessionDuration: 3 months
   #This applies to all users, each user can still personalise their language in their profile.
   defaultLanguage: en-US
+security:
+  #Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.
+  customPasswordPolicy: "false"
+  #Minimum number of characters required for a password.
+  minLength: "8"
+  #Whether to require at least one uppercase letter in the password.
+  requireUppercase: "false"
+  #Whether to require at least one lowercase letter in the password.
+  requireLowercase: "false"
+  #Whether to require at least one number in the password.
+  requireNumber: "false"
+  #Whether to require at least one special character in the password.
+  requireSpecialCharacter: "false"
 appearance:
   #Primary color used for buttons, links, and accents. Choose custom to use a color picker override.
   themePrimaryColor: victoria
