@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "파일 링크",
   "share.table.name": "이름",
   "share.table.size": "크기",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "미리보기는 지원되지 않습니다",
   "share.modal.file-preview.error.not-supported.description": "Previews are not supported for this type of files. Please download the file to view it.",
   // END /share/[id]
