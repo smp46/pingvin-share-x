@@ -53,6 +53,14 @@ export class ShareOwnerGuard extends JwtGuard {
     await super.canActivate(context);
     const user = request.user as User;
 
+    // Once a share is blocked only admins may touch it, otherwise the person
+    // being investigated could simply delete the evidence. Owner only actions
+    // like completing a share stay closed even for admins, same as always.
+    if (share.blockedAt) {
+      if (this.allowAdmin && user?.isAdmin) return true;
+      throw new NotFoundException(this.i18n.t("share.notFound"));
+    }
+
     // If the user is the creator of the share, allow access
     if (user && share.creatorId == user.id) return true;
 

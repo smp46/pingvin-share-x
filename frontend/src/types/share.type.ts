@@ -68,6 +68,8 @@ export type MyShare = Omit<Share, "hasPassword"> & {
   security: MyShareSecurity;
   removedReason?: string;
   scanStatus: ShareScanStatus;
+  blockedAt?: Date | null;
+  blockedReason?: string | null;
 };
 
 export type MyReverseShare = {

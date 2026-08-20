@@ -395,6 +395,28 @@ export class ShareService {
     });
   }
 
+  // Blocking hides a share from everyone but admins and keeps the files on
+  // disk, so a report can be looked into instead of deleted straight away.
+  async block(shareId: string, reason?: string) {
+    const share = await this.prisma.share.findUnique({ where: { id: shareId } });
+    if (!share) throw new NotFoundException(this.i18n.t("share.notFound"));
+
+    return this.prisma.share.update({
+      where: { id: shareId },
+      data: { blockedAt: new Date(), blockedReason: reason || null },
+    });
+  }
+
+  async unblock(shareId: string) {
+    const share = await this.prisma.share.findUnique({ where: { id: shareId } });
+    if (!share) throw new NotFoundException(this.i18n.t("share.notFound"));
+
+    return this.prisma.share.update({
+      where: { id: shareId },
+      data: { blockedAt: null, blockedReason: null },
+    });
+  }
+
   // Admin triggered ClamAV rescan. The scan itself runs in the background,
   // same as after an upload, so the caller only gets the share back to PENDING.
   async rescan(shareId: string) {

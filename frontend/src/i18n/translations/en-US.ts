@@ -339,6 +339,18 @@ export default {
   "admin.shares.scan.clean": "Scanned - no threats found",
   "admin.shares.scan.failed": "Antivirus scan failed or ClamAV is unreachable",
   "admin.shares.scan.infected": "Scanned - malicious file(s) found",
+  "admin.shares.block.block": "Block share",
+  "admin.shares.block.unblock": "Unblock share",
+  "admin.shares.block.action": "Block",
+  "admin.shares.block.badge": "Blocked",
+  "admin.shares.block.title": "Block share: {id}",
+  "admin.shares.block.description":
+    "The files stay on the server so you can still look into them, but only admins will be able to open the share. Everyone else, the owner included, gets a not found.",
+  "admin.shares.block.reason": "Reason",
+  "admin.shares.block.reason.placeholder": "Only visible to admins",
+  "admin.shares.block.no-reason": "No reason given",
+  "admin.shares.block.blocked": "Share blocked",
+  "admin.shares.block.unblocked": "Share unblocked",
   "admin.shares.scan.rescan": "Scan again",
   "admin.shares.scan.rescan.started":
     "Scan queued, the status updates once it finishes",

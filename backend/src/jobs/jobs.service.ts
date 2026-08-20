@@ -39,6 +39,8 @@ export class JobsService {
         AND: [
           { expiration: { lt: thresholdDate } },
           { expiration: { not: moment(0).toDate() } },
+          // a blocked share is being kept on purpose, expiry must not wipe it
+          { blockedAt: null },
         ],
       },
     });
@@ -79,6 +81,8 @@ export class JobsService {
     const cutoff = moment().subtract(1, "day").toDate();
     const condition = {
       uploadLocked: false,
+      // same as above, a blocked share is evidence and stays put
+      blockedAt: null,
       OR: [
         { updatedAt: { lt: cutoff } },
         { updatedAt: { equals: null }, createdAt: { lt: cutoff } },

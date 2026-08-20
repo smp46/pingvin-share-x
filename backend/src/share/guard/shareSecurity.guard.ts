@@ -90,6 +90,15 @@ export class ShareSecurityGuard extends JwtGuard {
 
     const user = await this.authenticateUser(context);
 
+    // A blocked share is kept around for investigation. Admins always get in,
+    // regardless of allowAdminAccessAllShares, since blocking is already a
+    // deliberate admin action. Everyone else, the creator included, just sees
+    // a not found so nobody gets tipped off.
+    if (share.blockedAt) {
+      if (user?.isAdmin) return true;
+      throw new NotFoundException(this.i18n.t("share.notFound"));
+    }
+
     // If admin access is enabled and user is admin, allow access
     if (
       user?.isAdmin &&

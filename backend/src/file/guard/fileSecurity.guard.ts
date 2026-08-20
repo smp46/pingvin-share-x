@@ -54,6 +54,14 @@ export class FileSecurityGuard extends ShareSecurityGuard {
       },
     });
 
+    // Blocked shares keep their files for investigation but are admin only,
+    // whether the caller has a share token or not.
+    if (share?.blockedAt) {
+      const user = await this.authenticateUser(context);
+      if (user?.isAdmin) return true;
+      throw new NotFoundException(this._i18n.t("file.notFound"));
+    }
+
     // If there is no share token the user requests a file directly
     if (!shareToken) {
       // If admin access is enabled and user is admin, allow access.

@@ -96,6 +96,17 @@ const rescan = async (id: string) => {
   return (await api.post(`shares/${id}/rescan`)).data;
 };
 
+// admin only, hides a share from everyone but admins while keeping the files
+const block = async (id: string, reason?: string) => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
+  return (await api.post(`shares/${id}/block`, { reason })).data;
+};
+
+const unblock = async (id: string) => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
+  return (await api.post(`shares/${id}/unblock`)).data;
+};
+
 const isShareIdAvailable = async (id: string): Promise<boolean> => {
   if (!isValidId(id)) throw new Error("Invalid Share ID");
   return (await api.get(`/shares/isShareIdAvailable/${id}`)).data.isAvailable;
@@ -418,6 +429,8 @@ export default {
   getMetaData,
   getAccessLogs,
   rescan,
+  block,
+  unblock,
   doesFileSupportPreview,
   isShareTextFile,
   getMyShares,

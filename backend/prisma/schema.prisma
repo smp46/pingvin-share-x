@@ -97,6 +97,12 @@ model Share {
   // PENDING | CLEAN | INFECTED | FAILED (FAILED also covers "ClamAV unreachable")
   scanStatus    String  @default("PENDING")
 
+  // Set when an admin blocks the share. The files stay on disk so the share
+  // can be investigated, but only admins can reach it and the cleanup jobs
+  // leave it alone.
+  blockedAt     DateTime?
+  blockedReason String?
+
   creatorId String?
   creator   User?   @relation(fields: [creatorId], references: [id], onDelete: Cascade)
 

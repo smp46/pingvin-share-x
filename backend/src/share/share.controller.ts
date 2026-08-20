@@ -22,6 +22,7 @@ import { AdministratorGuard } from "src/auth/guard/isAdmin.guard";
 import { JwtGuard } from "src/auth/guard/jwt.guard";
 import { ConfigService } from "src/config/config.service";
 import { AdminShareDTO } from "./dto/adminShare.dto";
+import { BlockShareDTO } from "./dto/blockShare.dto";
 import { CreateShareDTO } from "./dto/createShare.dto";
 import { MyShareDTO } from "./dto/myShare.dto";
 import { ShareDTO } from "./dto/share.dto";
@@ -62,6 +63,21 @@ export class ShareController {
   @UseGuards(JwtGuard, AdministratorGuard)
   async rescanShare(@Param("id") id: string) {
     await this.shareService.rescan(id);
+  }
+
+  @Post(":id/block")
+  @UseGuards(JwtGuard, AdministratorGuard)
+  async blockShare(
+    @Param("id") id: string,
+    @Body() body: BlockShareDTO,
+  ) {
+    await this.shareService.block(id, body?.reason);
+  }
+
+  @Post(":id/unblock")
+  @UseGuards(JwtGuard, AdministratorGuard)
+  async unblockShare(@Param("id") id: string) {
+    await this.shareService.unblock(id);
   }
 
   @Get()

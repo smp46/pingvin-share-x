@@ -28,6 +28,8 @@ import {
   TbClock,
   TbInfoCircle,
   TbLink,
+  TbLock,
+  TbLockOpen,
   TbRefresh,
   TbSearch,
   TbShieldCheck,
@@ -78,6 +80,55 @@ const ManageShareTable = ({
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [refreshInterval, setRefreshInterval] = useState<string | null>(null);
   const [rescanning, setRescanning] = useState<Set<string>>(new Set());
+
+  // Blocking keeps the files but hides the share from everyone except admins,
+  // so a report can be looked into before deciding to delete it.
+  const blockShare = (share: MyShare) => {
+    const reason = { value: "" };
+    modals.openConfirmModal({
+      title: t("admin.shares.block.title", { id: share.id }),
+      children: (
+        <>
+          <Text size="sm" mb="sm">
+            <FormattedMessage id="admin.shares.block.description" />
+          </Text>
+          <TextInput
+            label={t("admin.shares.block.reason")}
+            placeholder={t("admin.shares.block.reason.placeholder")}
+            onChange={(e) => (reason.value = e.currentTarget.value)}
+          />
+        </>
+      ),
+      labels: {
+        confirm: t("admin.shares.block.action"),
+        cancel: t("common.button.cancel"),
+      },
+      confirmProps: { color: "orange" },
+      onConfirm: async () => {
+        try {
+          await shareService.block(share.id, reason.value || undefined);
+          updateShare({
+            ...share,
+            blockedAt: new Date(),
+            blockedReason: reason.value || null,
+          });
+          toast.success(t("admin.shares.block.blocked"));
+        } catch (e) {
+          toast.axiosError(e);
+        }
+      },
+    });
+  };
+
+  const unblockShare = async (share: MyShare) => {
+    try {
+      await shareService.unblock(share.id);
+      updateShare({ ...share, blockedAt: null, blockedReason: null });
+      toast.success(t("admin.shares.block.unblocked"));
+    } catch (e) {
+      toast.axiosError(e);
+    }
+  };
 
   // The scan runs in the background, so all we can show right away is the
   // share going back to PENDING. The auto refresh picks up the result.
@@ -369,6 +420,18 @@ const ManageShareTable = ({
                     <td>
                       <Group spacing="xs" noWrap>
                         {share.name}
+                        {share.blockedAt && (
+                          <HoverTip
+                            label={
+                              share.blockedReason ||
+                              t("admin.shares.block.no-reason")
+                            }
+                          >
+                            <Badge color="orange" variant="light" size="sm">
+                              <FormattedMessage id="admin.shares.block.badge" />
+                            </Badge>
+                          </HoverTip>
+                        )}
                         {share.removedReason && (
                           <HoverTip label={share.removedReason}>
                             <Badge color="red" variant="light" size="sm">
@@ -464,6 +527,26 @@ const ManageShareTable = ({
                             onClick={() => rescanShare(share)}
                           >
                             <TbVirusSearch />
+                          </ActionIcon>
+                        </HoverTip>
+                        <HoverTip
+                          label={
+                            share.blockedAt
+                              ? t("admin.shares.block.unblock")
+                              : t("admin.shares.block.block")
+                          }
+                        >
+                          <ActionIcon
+                            color={share.blockedAt ? "orange" : "gray"}
+                            variant="light"
+                            size={25}
+                            onClick={() =>
+                              share.blockedAt
+                                ? unblockShare(share)
+                                : blockShare(share)
+                            }
+                          >
+                            {share.blockedAt ? <TbLockOpen /> : <TbLock />}
                           </ActionIcon>
                         </HoverTip>
                         <HoverTip label={t("common.button.delete")}>

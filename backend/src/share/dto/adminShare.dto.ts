@@ -26,6 +26,12 @@ export class AdminShareDTO extends OmitType(ShareDTO, [
   @Expose()
   scanStatus: string;
 
+  @Expose()
+  blockedAt?: Date;
+
+  @Expose()
+  blockedReason?: string;
+
   from(partial: Partial<AdminShareDTO>) {
     return plainToClass(AdminShareDTO, partial, {
       excludeExtraneousValues: true,
