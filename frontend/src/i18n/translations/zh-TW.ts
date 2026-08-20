@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "檔案連結",
   "share.table.name": "檔案名稱",
   "share.table.size": "檔案大小",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "該檔案類型不支持預覽",
   "share.modal.file-preview.error.not-supported.description": "該檔案類型不支援預覽，請下載後再瀏覽。",
   // END /share/[id]
