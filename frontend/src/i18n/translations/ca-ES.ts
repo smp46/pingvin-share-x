@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "Enllaç del fitxer",
   "share.table.name": "Nom",
   "share.table.size": "Mida",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "Vista prèvia no compatible",
   "share.modal.file-preview.error.not-supported.description": "Les vistes prèvies no són compatibles amb aquest tipus de fitxers. Descarregueu el fitxer per veure'l.",
   // END /share/[id]
