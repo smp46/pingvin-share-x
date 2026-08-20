@@ -190,7 +190,7 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
       ]);
     }
 
-    if (idTokenData.email && idTokenData.email_verified === false) {
+    if (idTokenData.email && idTokenData.email_verified !== true) {
       throw new ErrorPageException("email_not_verified", "/auth/signIn", [
         `provider_${this.name}`,
       ]);
