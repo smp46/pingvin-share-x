@@ -11,7 +11,7 @@
 </div>
 
 
-Pingvin Share X is a fork of [Pingvin Share](https://github.com/stonith404/pingvin-share), a self-hosted file sharing platform and an alternative for WeTransfer. It is developed in parallel by a different team while maintaining full compatibility with the original project.
+This repository is [dzaczek](https://github.com/dzaczek)'s fork of [smp46/pingvin-share-x](https://github.com/smp46/pingvin-share-x). That project is a fork of the original [Pingvin Share](https://github.com/stonith404/pingvin-share), a self-hosted file sharing platform and an alternative to WeTransfer, developed in parallel by a different team. This fork stays fully compatible with smp46/pingvin-share-x, using the same configuration, database schema, and Docker setup. The focus here is making it easier to operate at scale: managing, auditing, and cleaning up large numbers of shares day to day. See [What's different from upstream](#whats-different-from-upstream) below for the full list of additions.
 
 ## Features
 
