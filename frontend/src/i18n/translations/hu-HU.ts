@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "Fájl hivatkozás",
   "share.table.name": "Megnevezés",
   "share.table.size": "Méret",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "Az előnézetek nem támogatottak",
   "share.modal.file-preview.error.not-supported.description": "Az ilyen típusú fájlok előnézete nem támogatott. Kérjük, töltse le a fájlt a megtekintéshez.",
   // END /share/[id]
