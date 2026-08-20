@@ -11,7 +11,7 @@
 </div>
 
 
-Pingvin Share X is a fork of [Pingvin Share](https://github.com/stonith404/pingvin-share), a self-hosted file sharing platform and an alternative for WeTransfer.
+Pingvin Share X is a fork of [Pingvin Share](https://github.com/stonith404/pingvin-share), a self-hosted file sharing platform and an alternative for WeTransfer. It is developed in parallel by a different team while maintaining full compatibility with the original project.
 
 ## Features
 
