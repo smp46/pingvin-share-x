@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "Σύνδεσμος αρχείου",
   "share.table.name": "Όνομα",
   "share.table.size": "Μέγεθος",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "Η προεπισκόπηση δεν υποστηρίζεται",
   "share.modal.file-preview.error.not-supported.description": "Previews are not supported for this type of files. Please download the file to view it.",
   // END /share/[id]
