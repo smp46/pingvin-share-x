@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "Tiedoston linkki",
   "share.table.name": "Nimi",
   "share.table.size": "Koko",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "Esikatselua ei tuettu",
   "share.modal.file-preview.error.not-supported.description": "Esikatselua ei tueta tämäntyyppisille tiedostoille. Ole hyvä ja lataa tiedosto nähdäksesi sen.",
   // END /share/[id]
