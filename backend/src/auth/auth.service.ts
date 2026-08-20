@@ -408,7 +408,7 @@ export class AuthService {
     tx?: Prisma.TransactionClient,
   ) {
     const prisma = tx || this.prisma;
-    const sessionDuration = this.config.get("general.sessionDuration");
+    const sessionDuration = this.config.get("security.sessionDuration");
     const { id, token } = await prisma.refreshToken.create({
       data: {
         userId,
@@ -446,7 +446,7 @@ export class AuthService {
       });
     if (refreshToken) {
       const now = moment();
-      const sessionDuration = this.config.get("general.sessionDuration");
+      const sessionDuration = this.config.get("security.sessionDuration");
       const maxAge = moment(now)
         .add(sessionDuration.value, sessionDuration.unit)
         .diff(now);

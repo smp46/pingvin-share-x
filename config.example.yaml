@@ -10,11 +10,11 @@ general:
   secureCookies: "false"
   #Whether to show the home page
   showHomePage: "true"
-  #Time after which a user must log in again (default: 3 months).
-  sessionDuration: 3 months
   #This applies to all users, each user can still personalise their language in their profile.
   defaultLanguage: en-US
 security:
+  #Time after which a user must log in again (default: 3 months).
+  sessionDuration: 3 months
   #Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.
   customPasswordPolicy: "false"
   #Minimum number of characters required for a password.

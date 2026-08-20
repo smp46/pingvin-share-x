@@ -538,8 +538,8 @@ export default {
   "admin.config.general.show-home-page": "Show home page",
   "admin.config.general.show-home-page.description":
     "Whether to show the home page",
-  "admin.config.general.session-duration": "Session Duration",
-  "admin.config.general.session-duration.description":
+  "admin.config.security.session-duration": "Session Duration",
+  "admin.config.security.session-duration.description":
     "Time after which a user must log in again (default: 3 months).",
   "admin.config.general.logo": "Logo",
   "admin.config.general.logo.description":

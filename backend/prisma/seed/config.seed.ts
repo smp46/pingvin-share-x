@@ -29,11 +29,6 @@ export const configVariables = {
       defaultValue: "true",
       secret: false,
     },
-    sessionDuration: {
-      type: "timespan",
-      defaultValue: "3 months",
-      secret: false,
-    },
     defaultLanguage: {
       type: "string",
       defaultValue: "en-US",
@@ -41,6 +36,11 @@ export const configVariables = {
     },
   },
   security: {
+    sessionDuration: {
+      type: "timespan",
+      defaultValue: "3 months",
+      secret: false,
+    },
     customPasswordPolicy: {
       type: "boolean",
       defaultValue: "false",
