@@ -355,6 +355,7 @@ export default {
   "share.modal.file-link": "Link dei File",
   "share.table.name": "Nome",
   "share.table.size": "Dimensione",
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "Anteprima non supportata",
   "share.modal.file-preview.error.not-supported.description": "Le anteprime non sono supportate per questo tipo di file. Scarica il file per visualizzarlo.",
   // END /share/[id]
