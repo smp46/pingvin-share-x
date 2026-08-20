@@ -237,14 +237,22 @@ export class ShareService {
           where: { email: { in: emails } },
           select: { id: true },
         });
-        for (const matchedUser of matchedUsers) {
-          await this.prisma.shareUserRecipient.upsert({
-            where: {
-              userId_shareId: { userId: matchedUser.id, shareId: share.id },
-            },
-            create: { userId: matchedUser.id, shareId: share.id },
-            update: {},
-          });
+        if (matchedUsers.length > 0) {
+          // Batch upserts inside a transaction to improve performance and maintain correctness.
+          // This reduces transaction overhead, although it does not completely eliminate N+1 statements.
+          // A true bulk findMany + createMany would be unsafe here due to potential unique constraint
+          // violations during concurrent requests (as skipDuplicates is not supported by SQLite in Prisma).
+          await this.prisma.$transaction(
+            matchedUsers.map((matchedUser) =>
+              this.prisma.shareUserRecipient.upsert({
+                where: {
+                  userId_shareId: { userId: matchedUser.id, shareId: share.id },
+                },
+                create: { userId: matchedUser.id, shareId: share.id },
+                update: {},
+              }),
+            ),
+          );
         }
       }
     }
