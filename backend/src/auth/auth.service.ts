@@ -9,13 +9,13 @@ import {
 } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
 import { Prisma, User } from "@prisma/client";
-import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 import * as argon from "argon2";
 import { Request, Response } from "express";
 import * as moment from "moment";
 import { I18nService } from "nestjs-i18n";
 import { ConfigService } from "src/config/config.service";
 import { EmailService } from "src/email/email.service";
+import { duplicatedField } from "src/prisma/prismaError";
 import { PrismaService } from "src/prisma/prisma.service";
 import { OAuthService } from "../oauth/oauth.service";
 import { GenericOidcProvider } from "../oauth/provider/genericOidc.provider";
@@ -89,12 +89,12 @@ export class AuthService {
         return { accessToken, refreshToken, user };
       });
     } catch (e) {
-      if (e instanceof PrismaClientKnownRequestError) {
+      if (e instanceof Prisma.PrismaClientKnownRequestError) {
         if (e.code == "P2002") {
-          const duplicatedField: string = e.meta.target[0];
+          const duplicatedFieldName = duplicatedField(e);
           throw new BadRequestException(
             this.i18n.t("auth.userAlreadyExists", {
-              args: { field: duplicatedField },
+              args: { field: duplicatedFieldName },
             }),
           );
         }

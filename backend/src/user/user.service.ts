@@ -1,11 +1,12 @@
 import { BadRequestException, Injectable, Logger } from "@nestjs/common";
-import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
+import { Prisma } from "@prisma/client";
 import * as argon from "argon2";
 import * as crypto from "crypto";
 import { Entry } from "ldapts";
 import { I18nService } from "nestjs-i18n";
 import { AuthSignInDTO } from "src/auth/dto/authSignIn.dto";
 import { EmailService } from "src/email/email.service";
+import { duplicatedField } from "src/prisma/prismaError";
 import { PrismaService } from "src/prisma/prisma.service";
 import { inspect } from "util";
 import { ConfigService } from "../config/config.service";
@@ -65,12 +66,12 @@ export class UserSevice {
         return user;
       });
     } catch (e) {
-      if (e instanceof PrismaClientKnownRequestError) {
+      if (e instanceof Prisma.PrismaClientKnownRequestError) {
         if (e.code == "P2002") {
-          const duplicatedField: string = e.meta.target[0];
+          const duplicatedFieldName = duplicatedField(e);
           throw new BadRequestException(
             this.i18n.t("auth.userAlreadyExists", {
-              args: { field: duplicatedField },
+              args: { field: duplicatedFieldName },
             }),
           );
         }
@@ -94,12 +95,12 @@ export class UserSevice {
         data: { ...user, password: hash },
       });
     } catch (e) {
-      if (e instanceof PrismaClientKnownRequestError) {
+      if (e instanceof Prisma.PrismaClientKnownRequestError) {
         if (e.code == "P2002") {
-          const duplicatedField: string = e.meta.target[0];
+          const duplicatedFieldName = duplicatedField(e);
           throw new BadRequestException(
             this.i18n.t("auth.userAlreadyExists", {
-              args: { field: duplicatedField },
+              args: { field: duplicatedFieldName },
             }),
           );
         }
@@ -242,12 +243,12 @@ export class UserSevice {
 
       return user;
     } catch (e) {
-      if (e instanceof PrismaClientKnownRequestError) {
+      if (e instanceof Prisma.PrismaClientKnownRequestError) {
         if (e.code == "P2002") {
-          const duplicatedField: string = e.meta.target[0];
+          const duplicatedFieldName = duplicatedField(e);
           throw new BadRequestException(
             this.i18n.t("auth.userAlreadyExists", {
-              args: { field: duplicatedField },
+              args: { field: duplicatedFieldName },
             }),
           );
         }
