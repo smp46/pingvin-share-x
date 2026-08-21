@@ -1,3 +1,4 @@
+import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "@prisma/client";
 import { execFileSync } from "child_process";
 import * as fs from "fs";
@@ -32,7 +33,7 @@ const makeUser = async () => {
 };
 
 beforeAll(async () => {
-  prisma = new PrismaClient({ datasources: { db: { url: DB_URL } } });
+  prisma = new PrismaClient({ adapter: new PrismaBetterSqlite3({ url: DB_PATH }) });
   await prisma.$connect();
 });
 
@@ -104,10 +105,8 @@ describe("migrations and model agree", () => {
           "diff",
           "--from-migrations",
           "prisma/migrations",
-          "--to-schema-datamodel",
+          "--to-schema",
           "prisma/schema.prisma",
-          "--shadow-database-url",
-          `file:${DB_PATH}.shadow`,
           "--exit-code",
         ],
         { cwd: backend, env: { ...process.env, DATABASE_URL: DB_URL }, encoding: "utf8" },
