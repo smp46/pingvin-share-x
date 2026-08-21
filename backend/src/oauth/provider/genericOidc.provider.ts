@@ -190,7 +190,10 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
       ]);
     }
 
-    if (idTokenData.email && idTokenData.email_verified !== true) {
+    // Only reject when the provider explicitly says the address is not
+    // verified. The claim is optional and Microsoft/Entra ID never sends it,
+    // so requiring it locks out every Microsoft user.
+    if (idTokenData.email && idTokenData.email_verified === false) {
       throw new ErrorPageException("email_not_verified", "/auth/signIn", [
         `provider_${this.name}`,
       ]);
