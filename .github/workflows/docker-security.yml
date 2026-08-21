@@ -54,7 +54,8 @@ jobs:
           output: trivy-pingvin-share-x.sarif
           severity: CRITICAL,HIGH,MEDIUM
           scanners: vuln,secret
-          vuln-type: os
+          # os covers the alpine packages, library covers the npm dependencies
+          vuln-type: os,library
           ignore-unfixed: true
           exit-code: "0"
           limit-severities-for-sarif: true
@@ -73,6 +74,7 @@ jobs:
           format: table
           severity: CRITICAL,HIGH,MEDIUM
           scanners: vuln,secret
-          vuln-type: os
+          # os covers the alpine packages, library covers the npm dependencies
+          vuln-type: os,library
           ignore-unfixed: true
           exit-code: "0"

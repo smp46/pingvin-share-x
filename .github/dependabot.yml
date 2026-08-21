@@ -1,0 +1,53 @@
+version: 2
+
+# Version updates are grouped on purpose. Ungrouped Dependabot opens one PR
+# per package, which drowns the queue. Security updates are separate and are
+# not affected by the limits here, they still come through on their own.
+updates:
+  - package-ecosystem: npm
+    directory: /backend
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    groups:
+      backend-minor-patch:
+        update-types:
+          - minor
+          - patch
+      backend-major:
+        update-types:
+          - major
+
+  - package-ecosystem: npm
+    directory: /frontend
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    groups:
+      frontend-minor-patch:
+        update-types:
+          - minor
+          - patch
+      frontend-major:
+        update-types:
+          - major
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 2
+    groups:
+      root-tooling:
+        patterns:
+          - "*"
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 2
+    groups:
+      actions:
+        patterns:
+          - "*"
