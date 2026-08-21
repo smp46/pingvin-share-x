@@ -169,6 +169,11 @@ export const configVariables = {
       defaultValue: "false",
       secret: false,
     },
+    enableShareDownloadNotifications: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
     enableUserRecipients: {
       type: "boolean",
       defaultValue: "false",
@@ -239,11 +244,6 @@ export const configVariables = {
       type: "text",
       defaultValue:
         'Hey!\n\nYou were invited to Pingvin Share. Click this link to accept the invite: {url}\n\nYou can use the email "{email}" and the password "{password}" to sign in.\n\nPingvin Share 🐧',
-    },
-    enableShareDownloadNotifications: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
     },
     shareRecipientsReplyToCreator: {
       type: "boolean",

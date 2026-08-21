@@ -618,9 +618,9 @@ export default {
     "Set Reply-To to creator's email",
   "admin.config.email.share-recipients-reply-to-creator.description":
     "Whether to set the Reply-To header to the email address of the user who created the share.",
-  "admin.config.email.enable-share-download-notifications":
+  "admin.config.share.enable-share-download-notifications":
     "Enable download notifications",
-  "admin.config.email.enable-share-download-notifications.description":
+  "admin.config.share.enable-share-download-notifications.description":
     "Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.",
   "admin.config.email.share-download-notification-subject":
     "Download notification subject",
