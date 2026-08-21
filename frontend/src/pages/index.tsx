@@ -87,7 +87,7 @@ export default function Home() {
 
     // If registration is disabled, get started button should redirect to the sign in page
     try {
-      const allowRegistration = config.get("share.allowRegistration");
+      const allowRegistration = config.get("security.allowRegistration");
       setSignupEnabled(allowRegistration !== false);
     } catch (error) {
       setSignupEnabled(true);

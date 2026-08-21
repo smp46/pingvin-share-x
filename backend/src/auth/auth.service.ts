@@ -46,7 +46,7 @@ export class AuthService {
   ) {
     const isFirstUser = (await this.prisma.user.count()) == 0;
     const enableEmailVerification = this.config.get(
-      "email.enableEmailVerification",
+      "security.enableEmailVerification",
     );
     const email = dto.email.toLowerCase().trim();
 
@@ -408,7 +408,7 @@ export class AuthService {
     tx?: Prisma.TransactionClient,
   ) {
     const prisma = tx || this.prisma;
-    const sessionDuration = this.config.get("general.sessionDuration");
+    const sessionDuration = this.config.get("security.sessionDuration");
     const { id, token } = await prisma.refreshToken.create({
       data: {
         userId,
@@ -437,7 +437,7 @@ export class AuthService {
     refreshToken?: string,
     accessToken?: string,
   ) {
-    const isSecure = this.config.get("general.secureCookies");
+    const isSecure = this.config.get("security.secureCookies");
     if (accessToken)
       response.cookie("access_token", accessToken, {
         sameSite: "lax",
@@ -446,7 +446,7 @@ export class AuthService {
       });
     if (refreshToken) {
       const now = moment();
-      const sessionDuration = this.config.get("general.sessionDuration");
+      const sessionDuration = this.config.get("security.sessionDuration");
       const maxAge = moment(now)
         .add(sessionDuration.value, sessionDuration.unit)
         .diff(now);

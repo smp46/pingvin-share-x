@@ -155,7 +155,7 @@ const SignInForm = ({ redirectPath }: { redirectPath: string }) => {
       <Title order={2} align="center" weight={900}>
         <FormattedMessage id="signin.title" />
       </Title>
-      {config.get("share.allowRegistration") && (
+      {config.get("security.allowRegistration") && (
         <Text color="dimmed" size="sm" align="center" mt={5}>
           <FormattedMessage id="signin.description" />{" "}
           <Anchor component={Link} href={"signUp"} size="sm">

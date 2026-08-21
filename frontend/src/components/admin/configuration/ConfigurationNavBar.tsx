@@ -29,15 +29,15 @@ import { FormattedMessage } from "react-intl";
 export const categories = [
   { name: "General", icon: <TbSettings /> },
   { name: "Appearance", icon: <TbPalette /> },
-  { name: "Security", icon: <TbLock /> },
-  { name: "Email", icon: <TbMail /> },
   { name: "Share", icon: <TbShare /> },
+  { name: "Email", icon: <TbMail /> },
   { name: "SMTP", icon: <TbAt /> },
+  { name: "Security", icon: <TbLock /> },
   { name: "OAuth", icon: <TbSocial /> },
   { name: "LDAP", icon: <TbBinaryTree /> },
   { name: "S3", icon: <TbBucket /> },
-  { name: "Legal", icon: <TbScale /> },
   { name: "Cache", icon: <TbServerBolt /> },
+  { name: "Legal", icon: <TbScale /> },
 ];
 
 const useStyles = createStyles((theme) => ({

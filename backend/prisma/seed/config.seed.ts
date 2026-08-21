@@ -20,18 +20,9 @@ export const configVariables = {
       defaultValue: "http://localhost:3000",
       secret: false,
     },
-    secureCookies: {
-      type: "boolean",
-      defaultValue: "false",
-    },
     showHomePage: {
       type: "boolean",
       defaultValue: "true",
-      secret: false,
-    },
-    sessionDuration: {
-      type: "timespan",
-      defaultValue: "3 months",
       secret: false,
     },
     defaultLanguage: {
@@ -41,6 +32,35 @@ export const configVariables = {
     },
   },
   security: {
+    sessionDuration: {
+      type: "timespan",
+      defaultValue: "3 months",
+      secret: false,
+    },
+    secureCookies: {
+      type: "boolean",
+      defaultValue: "false",
+    },
+    enableEmailVerification: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    allowRegistration: {
+      type: "boolean",
+      defaultValue: "true",
+      secret: false,
+    },
+    allowUnauthenticatedShares: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    allowAdminAccessAllShares: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
     customPasswordPolicy: {
       type: "boolean",
       defaultValue: "false",
@@ -105,12 +125,27 @@ export const configVariables = {
     },
   },
   share: {
-    allowRegistration: {
+    enableShareEmailRecipients: {
       type: "boolean",
-      defaultValue: "true",
+      defaultValue: "false",
       secret: false,
     },
-    allowUnauthenticatedShares: {
+    enableShareDownloadNotifications: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    enableUserRecipients: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    autoOpenShareModal: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    reverseShareSimpleOnly: {
       type: "boolean",
       defaultValue: "false",
       secret: false,
@@ -144,26 +179,6 @@ export const configVariables = {
       defaultValue: "10000000",
       secret: false,
     },
-    autoOpenShareModal: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
-    },
-    reverseShareSimpleOnly: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
-    },
-    allowAdminAccessAllShares: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
-    },
-    enableUserRecipients: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
-    },
     fileRetentionPeriod: {
       type: "timespan",
       defaultValue: "0 days",
@@ -194,7 +209,7 @@ export const configVariables = {
       type: "boolean",
       defaultValue: "false",
     },
-    enableShareEmailRecipients: {
+    shareRecipientsReplyToCreator: {
       type: "boolean",
       defaultValue: "false",
       secret: false,
@@ -235,16 +250,6 @@ export const configVariables = {
       defaultValue:
         'Hey!\n\nYou were invited to Pingvin Share. Click this link to accept the invite: {url}\n\nYou can use the email "{email}" and the password "{password}" to sign in.\n\nPingvin Share 🐧',
     },
-    enableShareDownloadNotifications: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
-    },
-    shareRecipientsReplyToCreator: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
-    },
     shareDownloadNotificationSubject: {
       type: "string",
       defaultValue: "Your file was downloaded",
@@ -253,11 +258,6 @@ export const configVariables = {
       type: "text",
       defaultValue:
         "Hey!\n\n{recipientEmail} downloaded {fileName} from your share: {shareUrl}\n\nPingvin Share 🐧",
-    },
-    enableEmailVerification: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
     },
     verificationSubject: {
       type: "string",
