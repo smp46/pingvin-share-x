@@ -1,5 +1,7 @@
+import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { Prisma, PrismaClient } from "@prisma/client";
 import * as crypto from "crypto";
+import * as path from "path";
 
 export const configVariables = {
   internal: {
@@ -562,14 +564,24 @@ type ConfigVariables = {
   };
 };
 
+const databaseUrl =
+  process.env.DATABASE_URL || "file:../data/pingvin-share.db?connection_limit=1";
+
+// Same two adjustments as src/prisma/sqliteUrl.ts, repeated rather than
+// imported because this file is compiled on its own with prisma/seed as the
+// root: drop the query parameters the adapter would treat as part of the file
+// name, and anchor a relative path on the schema directory the way Prisma 6
+// did.
+function toAdapterUrl(url: string): string {
+  const withoutQuery = url.split("?")[0];
+  if (!withoutQuery.startsWith("file:")) return withoutQuery;
+  const filePath = withoutQuery.slice("file:".length);
+  if (path.isAbsolute(filePath)) return `file:${filePath}`;
+  return `file:${path.resolve(process.cwd(), "prisma", filePath)}`;
+}
+
 const prisma = new PrismaClient({
-  datasources: {
-    db: {
-      url:
-        process.env.DATABASE_URL ||
-        "file:../data/pingvin-share.db?connection_limit=1",
-    },
-  },
+  adapter: new PrismaBetterSqlite3({ url: toAdapterUrl(databaseUrl) }),
 });
 
 async function seedConfigVariables() {
