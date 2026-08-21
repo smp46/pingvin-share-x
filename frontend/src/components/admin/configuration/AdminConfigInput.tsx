@@ -52,7 +52,7 @@ const AdminConfigInput = ({
   const isUploadProgressStyleConfig =
     configVariable.key === "appearance.uploadProgressStyle";
   const isEmailShareConfig =
-    configVariable.key === "email.enableShareEmailRecipients";
+    configVariable.key === "share.enableShareEmailRecipients";
   const isEmailVerificationConfig =
     configVariable.key === "security.enableEmailVerification";
   let isSmtpEnabled = false;

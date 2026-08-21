@@ -70,7 +70,7 @@ export class EmailService {
     description?: string,
     expiration?: Date,
   ) {
-    if (!this.config.get("email.enableShareEmailRecipients"))
+    if (!this.config.get("share.enableShareEmailRecipients"))
       throw new InternalServerErrorException(
         this.i18n.t("email.emailServiceDisabled"),
       );

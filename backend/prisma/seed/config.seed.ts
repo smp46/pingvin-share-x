@@ -164,6 +164,11 @@ export const configVariables = {
       defaultValue: "false",
       secret: false,
     },
+    enableShareEmailRecipients: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
     enableUserRecipients: {
       type: "boolean",
       defaultValue: "false",
@@ -198,11 +203,6 @@ export const configVariables = {
     sendHtmlEmails: {
       type: "boolean",
       defaultValue: "false",
-    },
-    enableShareEmailRecipients: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
     },
     shareRecipientsSubject: {
       type: "string",

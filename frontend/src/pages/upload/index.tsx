@@ -171,7 +171,7 @@ const Upload = ({
         allowUnauthenticatedShares: config.get(
           "security.allowUnauthenticatedShares",
         ),
-        enableEmailRecepients: config.get("email.enableShareEmailRecipients"),
+        enableEmailRecepients: config.get("share.enableShareEmailRecipients"),
         enableUserRecipients: config.get("share.enableUserRecipients"),
         maxExpiration: user?.isAdmin
           ? { value: 0, unit: "days" }
