@@ -4,7 +4,12 @@ module.exports = {
   testEnvironment: 'node',
   testRegex: '.*\\.spec\\.ts$',
   // the integration suite needs a running server, it has its own config
-  testPathIgnorePatterns: ['/node_modules/', '\\.integration\\.spec\\.ts$'],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '\\.integration\\.spec\\.ts$',
+    // needs a migrated sqlite file, see jest.db.config.js
+    '\\.db\\.spec\\.ts$',
+  ],
   transform: {
     '^.+\\.(t|j)s$': 'ts-jest',
   },

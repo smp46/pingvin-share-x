@@ -46,6 +46,12 @@ jobs:
 
       - run: npm test
 
+      # builds a throwaway sqlite file from the migrations and checks the
+      # query shapes the app relies on, plus that the model still matches
+      # what the migrations produce
+      - name: Database checks
+        run: npm run test:db
+
   frontend:
     name: Frontend
     runs-on: ubuntu-latest

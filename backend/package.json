@@ -10,7 +10,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:integration": "jest --config jest.integration.config.js --runInBand",
-    "test:system": "prisma migrate reset -f && nest start & wait-on http://localhost:8080/api/configs && npx newman run ./test/newman-system-tests.json"
+    "test:system": "prisma migrate reset -f && nest start & wait-on http://localhost:8080/api/configs && npx newman run ./test/newman-system-tests.json",
+    "test:db": "jest --config jest.db.config.js --runInBand"
   },
   "prisma": {
     "seed": "ts-node prisma/seed/config.seed.ts"
@@ -36,7 +37,7 @@
     "@nestjs/schedule": "^5.0.1",
     "@nestjs/swagger": "^11.4.7",
     "@nestjs/throttler": "^6.5.0",
-    "@prisma/client": "^6.6.0",
+    "@prisma/client": "^6.19.3",
     "@types/jmespath": "^0.15.2",
     "archiver": "^7.0.1",
     "argon2": "^0.45.1",
@@ -60,7 +61,7 @@
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
-    "prisma": "^6.6.0",
+    "prisma": "^6.19.3",
     "qrcode-svg": "^1.1.0",
     "reflect-metadata": "^0.2.2",
     "rimraf": "^6.1.3",
