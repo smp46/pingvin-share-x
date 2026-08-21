@@ -541,13 +541,13 @@ export default {
   "admin.config.security.session-duration": "Session Duration",
   "admin.config.security.session-duration.description":
     "Time after which a user must log in again (default: 3 months).",
-  "admin.config.general.logo": "Logo",
-  "admin.config.general.logo.description":
+  "admin.config.appearance.logo": "Logo",
+  "admin.config.appearance.logo.description":
     "Change your logo by uploading a new image. The image must be a PNG and should have the format 1:1.",
-  "admin.config.general.logo-dark": "Dark mode logo",
-  "admin.config.general.logo-dark.description":
+  "admin.config.appearance.logo-dark": "Dark mode logo",
+  "admin.config.appearance.logo-dark.description":
     "Upload a separate logo for dark mode. The image must be a PNG and should have the format 1:1.",
-  "admin.config.general.logo.placeholder": "Pick image",
+  "admin.config.appearance.logo.placeholder": "Pick image",
   "admin.config.security.custom-password-policy": "Custom password policy",
   "admin.config.security.custom-password-policy.description": "Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.",
   "admin.config.security.min-length": "Minimum length",

@@ -328,7 +328,7 @@ export default function AppShellDemo() {
                           </Group>
                         );
                       })}
-                      {categoryId == "general" && (
+                      {categoryId == "appearance" && (
                         <LogoConfigInput
                           logo={logo}
                           setLogo={setLogo}
