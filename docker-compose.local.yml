@@ -14,6 +14,10 @@ services:
       # loopback address. fine for a local lab with no real proxy in front;
       # in prod only set this when there IS a trusted reverse proxy in front.
       - TRUST_PROXY=true
+      # uncomment while running backend/npm run test:integration, the suite
+      # creates more accounts than the 20 per 5 minutes the limiter allows.
+      # never do this on an instance anyone else can reach.
+      - DISABLE_RATE_LIMIT=${DISABLE_RATE_LIMIT:-false}
     volumes:
       - "./data:/opt/app/backend/data:rw,z"
       - "./data/images:/opt/app/frontend/public/img:rw,z"

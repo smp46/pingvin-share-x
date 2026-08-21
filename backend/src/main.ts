@@ -14,6 +14,7 @@ import {
   LOG_LEVEL_AVAILABLE,
   LOG_LEVEL_DEFAULT,
   LOG_LEVEL_ENV,
+  RATE_LIMIT_DISABLED,
 } from "./constants";
 
 function generateNestJsLogLevels(): LogLevel[] {
@@ -33,6 +34,14 @@ function generateNestJsLogLevels(): LogLevel[] {
 async function bootstrap() {
   const logLevels = generateNestJsLogLevels();
   Logger.log(`Showing ${logLevels.join(", ")} messages`);
+
+  if (RATE_LIMIT_DISABLED) {
+    Logger.warn(
+      "DISABLE_RATE_LIMIT is set, request rate limiting is OFF. This is for " +
+        "running the integration suite. Never leave it on for an instance " +
+        "that is reachable, it is what stops password guessing.",
+    );
+  }
 
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
     logger: logLevels,

@@ -12,6 +12,11 @@ export const CLAMAV_HOST =
   (process.env.NODE_ENV == "docker" ? "clamav" : "127.0.0.1");
 export const CLAMAV_PORT = parseInt(process.env.CLAMAV_PORT) || 3310;
 
+// Turns off the request rate limits. Only for running the integration suite,
+// which otherwise burns through the 20 auth calls per 5 minutes. Never set
+// this on a reachable instance, it is what stops password guessing.
+export const RATE_LIMIT_DISABLED = process.env.DISABLE_RATE_LIMIT === "true";
+
 export const LOG_LEVEL_AVAILABLE: LogLevel[] = ['verbose', 'debug', 'log', 'warn', 'error', 'fatal'];
 export const LOG_LEVEL_DEFAULT: LogLevel = process.env.NODE_ENV === 'development' ? "verbose" : "log";
 export const LOG_LEVEL_ENV = `${process.env.PV_LOG_LEVEL || ""}`;
