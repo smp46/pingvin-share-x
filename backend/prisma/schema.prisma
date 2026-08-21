@@ -126,6 +126,11 @@ model ShareAccessLog {
 
   shareId String
   share   Share  @relation(fields: [shareId], references: [id], onDelete: Cascade)
+
+  // the add_share_access_log migration already created this index, but the
+  // model never declared it. Without it here, migrate dev generates a DROP
+  // and the per-share log lookup falls back to a full table scan.
+  @@index([shareId])
 }
 
 model ReverseShare {
