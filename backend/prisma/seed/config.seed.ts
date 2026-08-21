@@ -125,6 +125,31 @@ export const configVariables = {
     },
   },
   share: {
+    enableShareEmailRecipients: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    enableShareDownloadNotifications: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    enableUserRecipients: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    autoOpenShareModal: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    reverseShareSimpleOnly: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
     maxExpiration: {
       type: "timespan",
       defaultValue: "0 days",
@@ -152,31 +177,6 @@ export const configVariables = {
     chunkSize: {
       type: "filesize",
       defaultValue: "10000000",
-      secret: false,
-    },
-    autoOpenShareModal: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
-    },
-    reverseShareSimpleOnly: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
-    },
-    enableShareEmailRecipients: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
-    },
-    enableShareDownloadNotifications: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
-    },
-    enableUserRecipients: {
-      type: "boolean",
-      defaultValue: "false",
       secret: false,
     },
     fileRetentionPeriod: {
@@ -208,6 +208,11 @@ export const configVariables = {
     sendHtmlEmails: {
       type: "boolean",
       defaultValue: "false",
+    },
+    shareRecipientsReplyToCreator: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
     },
     shareRecipientsSubject: {
       type: "string",
@@ -244,11 +249,6 @@ export const configVariables = {
       type: "text",
       defaultValue:
         'Hey!\n\nYou were invited to Pingvin Share. Click this link to accept the invite: {url}\n\nYou can use the email "{email}" and the password "{password}" to sign in.\n\nPingvin Share 🐧',
-    },
-    shareRecipientsReplyToCreator: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
     },
     shareDownloadNotificationSubject: {
       type: "string",

@@ -49,6 +49,16 @@ appearance:
   #Choose how upload progress is displayed in the file list.
   uploadProgressStyle: circle
 share:
+  #Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.
+  enableShareEmailRecipients: "false"
+  #Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.
+  enableShareDownloadNotifications: "false"
+  #When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.
+  enableUserRecipients: "false"
+  #The share creation modal automatically appears when a user selects files, eliminating the need to manually click the button.
+  autoOpenShareModal: "false"
+  #Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.
+  reverseShareSimpleOnly: "false"
   #Maximum share expiration. Set to 0 to allow unlimited expiration.
   maxExpiration: 0 days
   #The default expiration time selected when creating a new share.
@@ -61,16 +71,6 @@ share:
   zipCompressionLevel: "9"
   #Adjust the chunk size for your uploads to balance efficiency and reliability according to your internet connection. Smaller chunks can enhance success rates for unstable connections, while larger chunks make uploads faster for stable connections.
   chunkSize: "10000000"
-  #The share creation modal automatically appears when a user selects files, eliminating the need to manually click the button.
-  autoOpenShareModal: "false"
-  #Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.
-  reverseShareSimpleOnly: "false"
-  #Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.
-  enableShareEmailRecipients: "false"
-  #Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.
-  enableShareDownloadNotifications: "false"
-  #When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.
-  enableUserRecipients: "false"
   #How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.
   fileRetentionPeriod: 0 days
 cache:
@@ -85,6 +85,8 @@ cache:
 email:
   #If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.
   sendHtmlEmails: "false"
+  #Whether to set the Reply-To header to the email address of the user who created the share.
+  shareRecipientsReplyToCreator: "false"
   #Subject of the email which gets sent to the share recipients.
   shareRecipientsSubject: Files shared with you
   #Message which gets sent to the share recipients. Available variables:
@@ -147,8 +149,6 @@ email:
 
 
     Pingvin Share 🐧
-  #Whether to set the Reply-To header to the email address of the user who created the share.
-  shareRecipientsReplyToCreator: "false"
   #Subject of the email which gets sent to the share creator when a recipient downloads a file.
   shareDownloadNotificationSubject: Your file was downloaded
   #Message which gets sent to the share creator when a recipient downloads a file. Available variables:
