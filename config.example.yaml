@@ -21,6 +21,8 @@ security:
   allowRegistration: "true"
   #Whether unauthenticated users can create shares
   allowUnauthenticatedShares: "false"
+  #Allow administrators to access all shares, even if they are password protected, expired or deleted.
+  allowAdminAccessAllShares: "false"
   #Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.
   customPasswordPolicy: "false"
   #Minimum number of characters required for a password.
@@ -63,8 +65,6 @@ share:
   autoOpenShareModal: "false"
   #Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.
   reverseShareSimpleOnly: "false"
-  #Allow administrators to access all shares, even if they are password protected, expired or deleted.
-  allowAdminAccessAllShares: "false"
   #Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.
   enableShareEmailRecipients: "false"
   #Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.

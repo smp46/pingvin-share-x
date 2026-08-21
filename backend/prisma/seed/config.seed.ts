@@ -56,6 +56,11 @@ export const configVariables = {
       defaultValue: "false",
       secret: false,
     },
+    allowAdminAccessAllShares: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
     customPasswordPolicy: {
       type: "boolean",
       defaultValue: "false",
@@ -155,11 +160,6 @@ export const configVariables = {
       secret: false,
     },
     reverseShareSimpleOnly: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
-    },
-    allowAdminAccessAllShares: {
       type: "boolean",
       defaultValue: "false",
       secret: false,
