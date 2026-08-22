@@ -18,6 +18,12 @@ jobs:
       - name: Install Dependencies
         working-directory: ./backend
         run: npm install
+      # @prisma/client dropped its postinstall hook in Prisma 7, so installing
+      # no longer leaves a generated client behind. Without this the server
+      # fails to compile and the newman step waits for a port that never opens.
+      - name: Generate Prisma client
+        working-directory: ./backend
+        run: npx prisma generate
       - name: Run Server and Test with Newman
         working-directory: ./backend
         run: npm run test:system
