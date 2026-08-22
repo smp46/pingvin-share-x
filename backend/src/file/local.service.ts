@@ -18,6 +18,8 @@ import { getUserActiveStorageUsage } from "src/utils/storageQuota.util";
 import { validate as isValidUUID } from "uuid";
 import { SHARE_DIRECTORY } from "../constants";
 import { Readable } from "stream";
+import rangeParser from "range-parser";
+import { File } from "./file.service";
 
 @Injectable()
 export class LocalFileService {
@@ -163,7 +165,11 @@ export class LocalFileService {
     return file;
   }
 
-  async get(shareId: string, fileId: string) {
+  async get(
+    shareId: string,
+    fileId: string,
+    range?: { start: number; end?: number } | string,
+  ): Promise<File> {
     const fileMetaData = await this.prisma.file.findUnique({
       where: { id: fileId },
     });
@@ -171,7 +177,32 @@ export class LocalFileService {
     if (!fileMetaData)
       throw new NotFoundException(this.i18n.t("file.notFound"));
 
-    const file = createReadStream(`${SHARE_DIRECTORY}/${shareId}/${fileId}`);
+    const totalSize = parseInt(fileMetaData.size, 10);
+    let activeRange: { start: number; end: number } | undefined;
+    let isRangeNotSatisfiable = false;
+
+    if (typeof range === "string") {
+      const ranges = rangeParser(totalSize, range, { combine: true });
+      if (ranges === -1) {
+        isRangeNotSatisfiable = true;
+      } else if (Array.isArray(ranges) && ranges.length > 0 && totalSize > 0) {
+        activeRange = ranges[0];
+      }
+    } else if (range && typeof range === "object") {
+      activeRange = {
+        start: range.start,
+        end: range.end ?? totalSize - 1,
+      };
+    }
+
+    const file = isRangeNotSatisfiable
+      ? undefined
+      : createReadStream(
+          `${SHARE_DIRECTORY}/${shareId}/${fileId}`,
+          activeRange
+            ? { start: activeRange.start, end: activeRange.end }
+            : undefined,
+        );
 
     return {
       metaData: {
@@ -180,6 +211,8 @@ export class LocalFileService {
         size: fileMetaData.size,
       },
       file,
+      range: activeRange,
+      isRangeNotSatisfiable,
     };
   }
 
