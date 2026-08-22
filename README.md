@@ -149,9 +149,12 @@ Before you submit the pull request for review please ensure that
 
 1. Open the `backend` folder
 2. Install the dependencies with `npm install`
-3. Push the database schema to the database by running `npx prisma db push`
-4. Seed the database with `npx prisma db seed`
-5. Start the backend with `npm run dev`
+3. Generate the Prisma client with `npx prisma generate`. Prisma 7 no longer
+   does this during install or `db push`, and without it the project will not
+   compile
+4. Push the database schema to the database by running `npx prisma db push`
+5. Seed the database with `npx prisma db seed`
+6. Start the backend with `npm run dev`
 
 #### Frontend
 
