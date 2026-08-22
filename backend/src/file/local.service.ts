@@ -18,7 +18,7 @@ import { getUserActiveStorageUsage } from "src/utils/storageQuota.util";
 import { validate as isValidUUID } from "uuid";
 import { SHARE_DIRECTORY } from "../constants";
 import { Readable } from "stream";
-import rangeParser from "range-parser";
+import * as rangeParser from "range-parser";
 import { File } from "./file.service";
 
 @Injectable()
