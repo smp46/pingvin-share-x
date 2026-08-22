@@ -77,9 +77,6 @@ and hides which of your commits broke what.
 ```bash
 # backend
 cd backend
-# prisma 7 does not generate the client on install, and a stale one fails in
-# ways that look like your change broke something
-npx prisma generate
 npm run lint && npx tsc --noEmit && npm test && npm run test:db
 
 # frontend
