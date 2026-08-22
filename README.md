@@ -114,7 +114,7 @@ those translations or add more at [CrowdIn](https://crowdin.com/project/pingvin-
 
 ### AI Usage Policy
 
-Anyone submitting code to this repo needs to read and comply with the project's [AI Usage Policy](https://github.com/smp46/pingvin-share-x/blob/main/AI_USAGE_POLICY.md). Submissions that do not comply with be closed.
+AI is allowed here, and this fork's [AI Usage Policy](AI_USAGE_POLICY.md) differs from upstream's on that point. What it asks for instead is a specific instruction rather than a vague one, a test that fails without your change, and the full suite run before you open the pull request. Please read it before submitting code.
 
 ### Getting started
 
