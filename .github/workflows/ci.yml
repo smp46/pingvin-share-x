@@ -35,10 +35,6 @@ jobs:
 
       - run: npm ci
 
-      # the client is generated from schema.prisma, without it the types
-      # imported from @prisma/client do not exist yet
-      - run: npx prisma generate
-
       - run: npm run lint
 
       - name: Typecheck
