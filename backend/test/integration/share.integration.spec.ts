@@ -161,7 +161,7 @@ describe("password protected shares", () => {
 
 describe("anonymous uploads", () => {
   it("follows the allowUnauthenticatedShares setting", async () => {
-    const allowed = (await getConfig("share.allowUnauthenticatedShares")) === "true";
+    const allowed = (await getConfig("security.allowUnauthenticatedShares")) === "true";
     const shareId = `${RUN_ID}-anon`;
 
     const res = await api("/shares", {
