@@ -57,7 +57,7 @@ export class UserController {
   ) {
     await this.userService.delete(user.id);
 
-    const isSecure = this.config.get("general.secureCookies");
+    const isSecure = this.config.get("security.secureCookies");
 
     response.cookie("access_token", "accessToken", {
       maxAge: -1,

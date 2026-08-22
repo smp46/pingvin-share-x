@@ -27,13 +27,13 @@ export function getDefaultConfig(): Config[] {
       type: "boolean",
     },
     {
-      key: "share.allowRegistration",
+      key: "security.allowRegistration",
       value: "false",
       defaultValue: "false",
       type: "boolean",
     },
     {
-      key: "share.allowUnauthenticatedShares",
+      key: "security.allowUnauthenticatedShares",
       value: "false",
       defaultValue: "false",
       type: "boolean",
