@@ -14,7 +14,13 @@ function resolveUrl(url) {
 
 module.exports = {
   schema: "prisma/schema.prisma",
-  migrations: { path: "prisma/migrations" },
+  migrations: {
+    path: "prisma/migrations",
+    // Prisma 7 no longer seeds automatically after a reset, and the old
+    // package.json#prisma block it used to read is gone, so the command lives
+    // here now. Production seeds from the entrypoint with the compiled file.
+    seed: "ts-node prisma/seed/config.seed.ts",
+  },
   datasource: {
     url: resolveUrl(
       process.env.DATABASE_URL || "file:../data/pingvin-share.db",
