@@ -24,10 +24,10 @@ const LogoConfigInput = ({
       <Group position="apart">
         <Stack style={{ maxWidth: isMobile ? "100%" : "40%" }} spacing={0}>
           <Title order={6}>
-            <FormattedMessage id="admin.config.general.logo" />
+            <FormattedMessage id="admin.config.appearance.logo" />
           </Title>
           <Text color="dimmed" size="sm" mb="xs">
-            <FormattedMessage id="admin.config.general.logo.description" />
+            <FormattedMessage id="admin.config.appearance.logo.description" />
           </Text>
         </Stack>
         <Stack></Stack>
@@ -39,17 +39,17 @@ const LogoConfigInput = ({
             onChange={(v) => setLogo(v)}
             accept=".png"
             // @ts-ignore (https://github.com/mantinedev/mantine/issues/5401)
-            placeholder={t("admin.config.general.logo.placeholder")}
+            placeholder={t("admin.config.appearance.logo.placeholder")}
           />
         </Box>
       </Group>
       <Group position="apart">
         <Stack style={{ maxWidth: isMobile ? "100%" : "40%" }} spacing={0}>
           <Title order={6}>
-            <FormattedMessage id="admin.config.general.logo-dark" />
+            <FormattedMessage id="admin.config.appearance.logo-dark" />
           </Title>
           <Text color="dimmed" size="sm" mb="xs">
-            <FormattedMessage id="admin.config.general.logo-dark.description" />
+            <FormattedMessage id="admin.config.appearance.logo-dark.description" />
           </Text>
         </Stack>
         <Stack></Stack>
@@ -61,7 +61,7 @@ const LogoConfigInput = ({
             onChange={(v) => setDarkLogo(v)}
             accept=".png"
             // @ts-ignore (https://github.com/mantinedev/mantine/issues/5401)
-            placeholder={t("admin.config.general.logo.placeholder")}
+            placeholder={t("admin.config.appearance.logo.placeholder")}
           />
         </Box>
       </Group>

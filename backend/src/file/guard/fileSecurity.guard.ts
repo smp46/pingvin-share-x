@@ -68,7 +68,7 @@ export class FileSecurityGuard extends ShareSecurityGuard {
       // Uses authenticateUser (JwtGuard, never throws) instead of
       // super.canActivate (ShareSecurityGuard), which would unconditionally
       // demand a share token and 403 anonymous requests to public shares.
-      if (this._config.get("share.allowAdminAccessAllShares")) {
+      if (this._config.get("security.allowAdminAccessAllShares")) {
         const user = await this.authenticateUser(context);
         if (user?.isAdmin) {
           return true;

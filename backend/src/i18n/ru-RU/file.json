@@ -14,5 +14,5 @@
   "s3SessionNotFound": "Сессия многокомпонентной загрузки не найдена.",
   "s3UploadFailed": "Многокомпонентная загрузка не удалась. Загрузка была прервана.",
   "s3SizeError": "Не удалось получить размер файла",
-  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
+  "s3NotSupported": "Предварительно подписанные операции поддерживаются только для S3 хранилища."
 }

@@ -6,9 +6,7 @@ import {
   Title,
   useMantineTheme,
 } from "@mantine/core";
-import { modals } from "@mantine/modals";
 import Markdown, { MarkdownToJSX } from "markdown-to-jsx";
-import Link from "next/link";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import api from "../../services/api.service";
@@ -46,13 +44,12 @@ const FilePreview = ({
       </FilePreviewContext.Provider>
       <Button
         variant="subtle"
-        component={Link}
-        onClick={() => modals.closeAll()}
+        component="a"
         target="_blank"
+        rel="noreferrer"
         href={`/api/shares/${shareId}/files/${fileId}?download=false`}
       >
-        View original file
-        {/* Add translation? */}
+        <FormattedMessage id="share.modal.file-preview.original_file" />
       </Button>
     </Stack>
   );

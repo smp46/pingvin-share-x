@@ -511,6 +511,7 @@ export default {
   "share.table.name": "Name",
   "share.table.size": "Size",
 
+  "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "Preview not supported",
   "share.modal.file-preview.error.not-supported.description":
     "Previews are not supported for this type of files. Please download the file to view it.",
@@ -583,22 +584,22 @@ export default {
   "admin.config.general.app-url": "App URL",
   "admin.config.general.app-url.description":
     "On which URL Pingvin Share is available",
-  "admin.config.general.secure-cookies": "Secure cookies",
-  "admin.config.general.secure-cookies.description":
+  "admin.config.security.secure-cookies": "Secure cookies",
+  "admin.config.security.secure-cookies.description":
     "Whether to set the secure flag on cookies. If enabled, the site will not function when accessed over HTTP.",
   "admin.config.general.show-home-page": "Show home page",
   "admin.config.general.show-home-page.description":
     "Whether to show the home page",
-  "admin.config.general.session-duration": "Session Duration",
-  "admin.config.general.session-duration.description":
+  "admin.config.security.session-duration": "Session Duration",
+  "admin.config.security.session-duration.description":
     "Time after which a user must log in again (default: 3 months).",
-  "admin.config.general.logo": "Logo",
-  "admin.config.general.logo.description":
+  "admin.config.appearance.logo": "Logo",
+  "admin.config.appearance.logo.description":
     "Change your logo by uploading a new image. The image must be a PNG and should have the format 1:1.",
-  "admin.config.general.logo-dark": "Dark mode logo",
-  "admin.config.general.logo-dark.description":
+  "admin.config.appearance.logo-dark": "Dark mode logo",
+  "admin.config.appearance.logo-dark.description":
     "Upload a separate logo for dark mode. The image must be a PNG and should have the format 1:1.",
-  "admin.config.general.logo.placeholder": "Pick image",
+  "admin.config.appearance.logo.placeholder": "Pick image",
   "admin.config.security.custom-password-policy": "Custom password policy",
   "admin.config.security.custom-password-policy.description": "Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.",
   "admin.config.security.min-length": "Minimum length",
@@ -637,9 +638,9 @@ export default {
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.send-html-emails": "Enable HTML email compatibility",
   "admin.config.email.send-html-emails.description": "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
-  "admin.config.email.enable-share-email-recipients":
+  "admin.config.share.enable-share-email-recipients":
     "Enable email recipient sharing",
-  "admin.config.email.enable-share-email-recipients.description":
+  "admin.config.share.enable-share-email-recipients.description":
     "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Share recipients subject",
   "admin.config.email.share-recipients-subject.description":
@@ -669,9 +670,9 @@ export default {
     "Set Reply-To to creator's email",
   "admin.config.email.share-recipients-reply-to-creator.description":
     "Whether to set the Reply-To header to the email address of the user who created the share.",
-  "admin.config.email.enable-share-download-notifications":
+  "admin.config.share.enable-share-download-notifications":
     "Enable download notifications",
-  "admin.config.email.enable-share-download-notifications.description":
+  "admin.config.share.enable-share-download-notifications.description":
     "Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.",
   "admin.config.email.share-download-notification-subject":
     "Download notification subject",
@@ -681,8 +682,8 @@ export default {
     "Download notification message",
   "admin.config.email.share-download-notification-message.description":
     "Message which gets sent to the share creator when a recipient downloads a file. Available variables:\n {recipientEmail} - The email of the recipient\n {fileName} - The downloaded file name\n {shareUrl} - The URL of the share",
-  "admin.config.email.enable-email-verification": "Enable email verification",
-  "admin.config.email.enable-email-verification.description":
+  "admin.config.security.enable-email-verification": "Enable email verification",
+  "admin.config.security.enable-email-verification.description":
     "Whether to require users to verify their email address before being able to sign in. This can only be enabled if SMTP is activated.",
   "admin.config.email.verification-subject": "Verification subject",
   "admin.config.email.verification-subject.description":
@@ -690,12 +691,12 @@ export default {
   "admin.config.email.verification-message": "Verification message",
   "admin.config.email.verification-message.description":
     "Message which gets sent to the user when they sign up. {url} will be replaced with the verification URL.",
-  "admin.config.share.allow-registration": "Allow registration",
-  "admin.config.share.allow-registration.description":
+  "admin.config.security.allow-registration": "Allow registration",
+  "admin.config.security.allow-registration.description":
     "Whether registration is allowed",
-  "admin.config.share.allow-unauthenticated-shares":
+  "admin.config.security.allow-unauthenticated-shares":
     "Allow unauthenticated shares",
-  "admin.config.share.allow-unauthenticated-shares.description":
+  "admin.config.security.allow-unauthenticated-shares.description":
     "Whether unauthenticated users can create shares",
   "admin.config.share.default-expiration": "Default expiration",
   "admin.config.share.default-expiration.description":
@@ -717,12 +718,12 @@ export default {
   "admin.config.share.auto-open-share-modal": "Auto open create share modal",
   "admin.config.share.auto-open-share-modal.description":
     "The share creation modal automatically appears when a user selects files, eliminating the need to manually click the button.",
-  "admin.config.share.allow-admin-access-all-shares":
+  "admin.config.security.allow-admin-access-all-shares":
     "Allow admin access to all shares",
   "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
   "admin.config.share.reverse-share-simple-only.description":
     "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
-  "admin.config.share.allow-admin-access-all-shares.description":
+  "admin.config.security.allow-admin-access-all-shares.description":
     "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
   "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
   "admin.config.share.enable-user-recipients.description":

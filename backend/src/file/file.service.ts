@@ -199,8 +199,8 @@ export class FileService {
       if (
         !recipientId ||
         !this.configService.get("smtp.enabled") ||
-        !this.configService.get("email.enableShareEmailRecipients") ||
-        !this.configService.get("email.enableShareDownloadNotifications")
+        !this.configService.get("share.enableShareEmailRecipients") ||
+        !this.configService.get("share.enableShareDownloadNotifications")
       )
         return;
 

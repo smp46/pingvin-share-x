@@ -14,10 +14,10 @@ describe("accounts and sign in", () => {
   let account: Awaited<ReturnType<typeof signUp>>;
 
   beforeAll(async () => {
-    const allowRegistration = await getConfig("share.allowRegistration");
+    const allowRegistration = await getConfig("security.allowRegistration");
     if (allowRegistration !== "true") {
       throw new Error(
-        "share.allowRegistration is off, the integration suite cannot create accounts",
+        "security.allowRegistration is off, the integration suite cannot create accounts",
       );
     }
     account = await signUp("auth");
