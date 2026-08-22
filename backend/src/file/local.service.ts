@@ -11,6 +11,7 @@ import { createReadStream } from "fs";
 import * as fs from "fs/promises";
 import * as mime from "mime-types";
 import { I18nService } from "nestjs-i18n";
+import { resolve, sep } from "path";
 import { ConfigService } from "src/config/config.service";
 import { PrismaService } from "src/prisma/prisma.service";
 import { byteToHumanSizeString } from "src/utils/fileSize.util";
@@ -195,10 +196,12 @@ export class LocalFileService {
       };
     }
 
+    const filePath = this.getSafeFilePath(shareId, fileId);
+
     const file = isRangeNotSatisfiable
       ? undefined
       : createReadStream(
-          `${SHARE_DIRECTORY}/${shareId}/${fileId}`,
+          filePath,
           activeRange
             ? { start: activeRange.start, end: activeRange.end }
             : undefined,
@@ -224,9 +227,21 @@ export class LocalFileService {
     if (!fileMetaData)
       throw new NotFoundException(this.i18n.t("file.notFound"));
 
-    await fs.unlink(`${SHARE_DIRECTORY}/${shareId}/${fileId}`);
+    const filePath = this.getSafeFilePath(shareId, fileId);
+    await fs.unlink(filePath);
 
     await this.prisma.file.delete({ where: { id: fileId } });
+  }
+
+  private getSafeFilePath(shareId: string, fileId: string): string {
+    const baseDir = resolve(SHARE_DIRECTORY, shareId);
+    const resolvedPath = resolve(baseDir, fileId);
+
+    if (!resolvedPath.startsWith(baseDir + sep)) {
+      throw new BadRequestException(this.i18n.t("file.invalidIdFormat"));
+    }
+
+    return resolvedPath;
   }
 
   async deleteAllFiles(shareId: string) {
