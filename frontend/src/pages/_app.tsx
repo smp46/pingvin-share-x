@@ -30,6 +30,7 @@ import GlobalStyle from "../styles/global.style";
 import globalStyle from "../styles/mantine.style";
 import Config from "../types/config.type";
 import { CurrentUser } from "../types/user.type";
+import { emotionCache } from "../utils/emotionCache";
 import i18nUtil from "../utils/i18n.util";
 import userPreferences from "../utils/userPreferences.util";
 import Footer from "../components/footer/Footer";
@@ -308,7 +309,12 @@ function App({ Component, pageProps }: AppProps) {
         locale={language.current}
         defaultLocale={LOCALES.ENGLISH.code}
       >
-        <MantineProvider withGlobalStyles withNormalizeCSS theme={mergedTheme}>
+        <MantineProvider
+          withGlobalStyles
+          withNormalizeCSS
+          emotionCache={emotionCache}
+          theme={mergedTheme}
+        >
           {customCss && (
             <style id="admin-custom-css">
               {customCss.replace(/<\/style/gi, "<\\/style")}
