@@ -11,7 +11,8 @@
     "test:watch": "jest --watch",
     "test:integration": "jest --config jest.integration.config.js --runInBand",
     "test:system": "prisma migrate reset -f && prisma db seed && nest start & wait-on http://localhost:8080/api/configs && npx newman run ./test/newman-system-tests.json",
-    "test:db": "jest --config jest.db.config.js --runInBand"
+    "test:db": "jest --config jest.db.config.js --runInBand",
+    "postinstall": "prisma generate"
   },
   "overrides": {
     "handlebars": "^4.7.9",
