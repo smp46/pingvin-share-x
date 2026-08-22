@@ -16,6 +16,10 @@ FROM node:24-alpine AS backend-dependencies
 RUN apk add --no-cache python3
 WORKDIR /opt/app
 COPY backend/package.json backend/package-lock.json ./
+# the postinstall hook generates the prisma client, which needs the schema.
+# Only the schema is copied, so editing a migration does not invalidate the
+# install layer.
+COPY backend/prisma/schema.prisma ./prisma/schema.prisma
 RUN npm ci
 
 # Stage 4: Build backend
@@ -25,7 +29,6 @@ RUN apk add openssl
 WORKDIR /opt/app
 COPY ./backend .
 COPY --from=backend-dependencies /opt/app/node_modules ./node_modules
-RUN npx prisma generate
 # naming the file explicitly makes tsc ignore tsconfig.json, so the compiler
 # options it needs have to be repeated here. Without them it falls back to the
 # ES3 default and chokes on the private fields in prisma's own type defs.
