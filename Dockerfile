@@ -34,6 +34,10 @@ RUN npm run build && npx tsc prisma/seed/config.seed.ts --outDir dist/prisma/see
 # Stage 5: Final image
 FROM node:24-alpine AS runner
 ENV NODE_ENV=docker
+# The Prisma CLI keeps state under HOME, and the container runs as an
+# arbitrary PUID whose home would otherwise be "/", which is not writable.
+# Without this, migrate deploy dies with a permission error on startup.
+ENV HOME=/tmp
 
 # Delete default node user
 RUN deluser --remove-home node
@@ -60,6 +64,10 @@ COPY --from=backend-builder /opt/app/dist ./dist
 COPY --from=backend-builder /opt/app/prisma ./prisma
 COPY --from=backend-builder /opt/app/package.json ./
 COPY --from=backend-builder /opt/app/tsconfig.json ./
+# prisma migrate deploy runs from the entrypoint and refuses to start without
+# this. Kept as plain js on purpose: the image has no typescript after the
+# production prune, so a prisma.config.ts could not be loaded here.
+COPY --from=backend-builder /opt/app/prisma.config.js ./
 
 WORKDIR /opt/app
 

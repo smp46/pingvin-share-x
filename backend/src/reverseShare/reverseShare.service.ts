@@ -1,5 +1,5 @@
 import { BadRequestException, Injectable } from "@nestjs/common";
-import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
+import { Prisma } from "@prisma/client";
 import * as moment from "moment";
 import { I18nService } from "nestjs-i18n";
 import { ConfigService } from "src/config/config.service";
@@ -75,7 +75,7 @@ export class ReverseShareService {
 
       return reverseShare.token;
     } catch (e) {
-      if (e instanceof PrismaClientKnownRequestError && e.code === "P2002") {
+      if (e instanceof Prisma.PrismaClientKnownRequestError && e.code === "P2002") {
         throw new BadRequestException(this.i18n.t("reverseShare.tokenInUse"));
       }
       throw e;
