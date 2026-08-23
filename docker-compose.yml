@@ -1,7 +1,13 @@
 services:
   pingvin-share-x:
     container_name: pingvin-share-x
-    build: .
+    build:
+      context: .
+      args:
+        # Stamps the admin page with the commit this image came from:
+        #   BUILD_COMMIT=$(git rev-parse HEAD) docker compose build
+        # Left out, the page just shows the version as before.
+        BUILD_COMMIT: ${BUILD_COMMIT:-}
     restart: unless-stopped
     ports:
       - 3000:3000
