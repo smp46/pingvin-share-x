@@ -571,7 +571,7 @@ export default {
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect Discovery URI",
   "admin.config.oauth.oidc-discovery-uri.description": "Discovery URI för OpenID Connect OAuth appen",
   "admin.config.oauth.oidc-sign-out": "Logga ut från OpenID Connect",
-  "admin.config.oauth.oidc-sign-out.description": 'Om "Logga ut" knappen kommer att logga ut från OpenID Connect leverantör',
+  "admin.config.oauth.oidc-sign-out.description": "Om \"Logga ut\" knappen kommer att logga ut från OpenID Connect leverantör",
   "admin.config.oauth.oidc-scope": "OpenID Connect scope",
   "admin.config.oauth.oidc-scope.description": "Scopes som ska begäras från OpenID Connect-provider.",
   "admin.config.oauth.oidc-username-claim": "OpenID Connect användarnamn claim",
@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Bekräfta och stäng",
   "admin.notice.modal.button.acknowledging": "Bekräftar...",
   "admin.notice.modal.docsLink": "Visa dokumentation",
-  "admin.notice.modal.globalNoticeFooter": "Obs: När det har bekräftats kommer detta meddelande att tas bort permanent för alla administratörer på alla enheter.",
+  "admin.notice.modal.globalNoticeFooter": "Obs: När det har bekräftats kommer detta meddelande att tas bort permanent för alla administratörer på alla enheter."
 };
