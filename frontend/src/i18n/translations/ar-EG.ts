@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "إقرار وتجاهل",
   "admin.notice.modal.button.acknowledging": "جاري الإقرار...",
   "admin.notice.modal.docsLink": "عرض الوثائق",
-  "admin.notice.modal.globalNoticeFooter": "ملاحظة: بمجرد الإقرار، سيتم إغلاق هذا الإشعار نهائيًا لجميع المسؤولين عبر جميع الأجهزة.",
+  "admin.notice.modal.globalNoticeFooter": "ملاحظة: بمجرد الإقرار، سيتم إغلاق هذا الإشعار نهائيًا لجميع المسؤولين عبر جميع الأجهزة."
 };
