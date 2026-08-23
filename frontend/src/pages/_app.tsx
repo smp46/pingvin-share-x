@@ -39,6 +39,7 @@ import AdminNoticeModal, {
   AdminNotice,
 } from "../components/admin/AdminNoticeModal";
 import adminNoticeService from "../services/adminNotice.service";
+import { watchForNewServiceWorker } from "../utils/serviceWorkerReload";
 
 const excludeDefaultLayoutRoutes = ["/admin/config/[category]"];
 const availableMantineColors = [
@@ -218,6 +219,10 @@ function App({ Component, pageProps }: AppProps) {
 
     return () => clearInterval(interval);
   }, []);
+
+  // a deploy swaps every chunk hash, so a tab left open has to fetch itself
+  // again once the new worker takes over
+  useEffect(() => watchForNewServiceWorker(), []);
 
   useEffect(() => {
     if (!pageProps.language) return;
