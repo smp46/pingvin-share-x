@@ -65,10 +65,37 @@ console.log("  integrity            " + one("PRAGMA integrity_check"));
 
 const span = all("SELECT MIN(createdAt) a, MAX(createdAt) b FROM Share")[0];
 if (span && span.a) {
-  const d = (v) => new Date(Number(v)).toISOString().slice(0,16).replace("T"," ");
+  // Prisma 6 left these as integer milliseconds, Prisma 7 writes iso text, and
+  // a database part way through the upgrade holds both
+  const d = (v) => {
+    const t = typeof v === "string" ? Date.parse(v) : Number(v);
+    return Number.isFinite(t) ? new Date(t).toISOString().slice(0,16).replace("T"," ") : String(v);
+  };
   console.log("  oldest share         " + d(span.a));
   console.log("  newest share         " + d(span.b));
 }
+
+// The upgrade to Prisma 7 changed how dates are stored. An integer left in a
+// DATETIME column is a row the conversion migration did not reach, and SQLite
+// sorts every integer below every string, so a date filter would quietly match
+// it. Worth knowing before the expiry job runs rather than after.
+console.log("");
+console.log("== date storage, integers here mean the conversion is incomplete ==");
+const tables = all("SELECT name FROM sqlite_master WHERE type = 'table' AND name NOT LIKE 'sqlite_%' AND name <> '_prisma_migrations'");
+const tally = {};
+const stale = [];
+for (const { name } of tables)
+  for (const c of all(`PRAGMA table_info("${name}")`)) {
+    if (String(c.type).toUpperCase() !== "DATETIME") continue;
+    for (const r of all(`SELECT typeof("${c.name}") t, COUNT(*) n FROM "${name}" GROUP BY 1`)) {
+      tally[r.t] = (tally[r.t] || 0) + Number(r.n);
+      if (r.t === "integer") stale.push(`${name}.${c.name} (${r.n})`);
+    }
+  }
+console.log("  " + Object.entries(tally).map(([k, v]) => `${k}=${v}`).join("  "));
+console.log(stale.length
+  ? "  NOT CONVERTED: " + stale.join(", ")
+  : "  all converted");
 
 console.log("");
 console.log("== migrations, newest first ==");
