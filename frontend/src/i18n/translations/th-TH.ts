@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "รับทราบและปิด",
   "admin.notice.modal.button.acknowledging": "กำลังรับทราบ...",
   "admin.notice.modal.docsLink": "ดูเอกสารประกอบ",
-  "admin.notice.modal.globalNoticeFooter": "หมายเหตุ: เมื่อรับทราบแล้ว ประกาศนี้จะถูกปิดอย่างถาวรสำหรับผู้ดูแลระบบทุกคนในทุกอุปกรณ์",
+  "admin.notice.modal.globalNoticeFooter": "หมายเหตุ: เมื่อรับทราบแล้ว ประกาศนี้จะถูกปิดอย่างถาวรสำหรับผู้ดูแลระบบทุกคนในทุกอุปกรณ์"
 };
