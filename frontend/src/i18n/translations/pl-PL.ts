@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Potwierdź i odrzuć",
   "admin.notice.modal.button.acknowledging": "Potwierdzanie...",
   "admin.notice.modal.docsLink": "Zobacz dokumentację",
-  "admin.notice.modal.globalNoticeFooter": "Uwaga: Po potwierdzeniu to powiadomienie zostanie trwale usunięte dla wszystkich administratorów na wszystkich urządzeniach.",
+  "admin.notice.modal.globalNoticeFooter": "Uwaga: Po potwierdzeniu to powiadomienie zostanie trwale usunięte dla wszystkich administratorów na wszystkich urządzeniach."
 };
