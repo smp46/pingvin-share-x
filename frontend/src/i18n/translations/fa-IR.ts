@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "تایید و بستن",
   "admin.notice.modal.button.acknowledging": "در حال تایید...",
   "admin.notice.modal.docsLink": "مشاهده مستندات",
-  "admin.notice.modal.globalNoticeFooter": "توجه: پس از تایید، این اطلاعیه برای همه مدیران در تمام دستگاه‌ها به طور دائمی بسته خواهد شد.",
+  "admin.notice.modal.globalNoticeFooter": "توجه: پس از تایید، این اطلاعیه برای همه مدیران در تمام دستگاه‌ها به طور دائمی بسته خواهد شد."
 };
