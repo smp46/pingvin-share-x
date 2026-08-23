@@ -529,7 +529,7 @@ export default {
   "admin.config.smtp.test-email.save.description": "Per continuare è necessario prima salvare la configurazione. Vuoi salvare la configurazione e inviare l'email di test?",
   "admin.config.smtp.test-email.save.confirm": "Salva e invia",
   "admin.config.smtp.allow-unauthorized-certificates": "Fidati di certificati server SMTP non autorizzati",
-  "admin.config.smtp.allow-unauthorized-certificates.description": 'Imposta il parametro a "vero" solo se vuoi fidarti di certificati self signed.',
+  "admin.config.smtp.allow-unauthorized-certificates.description": "Imposta il parametro a \"vero\" solo se vuoi fidarti di certificati self signed.",
   "admin.config.oauth.allow-registration": "Consenti la registrazione",
   "admin.config.oauth.allow-registration.description": "Consenti agli utenti di registrarsi tramite social login",
   "admin.config.oauth.ignore-totp": "Ignora TOTP",
@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Conferma e chiudi",
   "admin.notice.modal.button.acknowledging": "Conferma in corso...",
   "admin.notice.modal.docsLink": "Visualizza la documentazione",
-  "admin.notice.modal.globalNoticeFooter": "Nota: Una volta confermato, questo avviso verrà rimosso definitivamente per tutti gli amministratori su tutti i dispositivi.",
+  "admin.notice.modal.globalNoticeFooter": "Nota: Una volta confermato, questo avviso verrà rimosso definitivamente per tutti gli amministratori su tutti i dispositivi."
 };
