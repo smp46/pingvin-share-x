@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Reconèixer i descartar",
   "admin.notice.modal.button.acknowledging": "Reconeixent...",
   "admin.notice.modal.docsLink": "Veure la documentació",
-  "admin.notice.modal.globalNoticeFooter": "Nota: Un cop reconegut, aquest avís es descartarà permanentment per a tots els administradors en tots els dispositius.",
+  "admin.notice.modal.globalNoticeFooter": "Nota: Un cop reconegut, aquest avís es descartarà permanentment per a tots els administradors en tots els dispositius."
 };
