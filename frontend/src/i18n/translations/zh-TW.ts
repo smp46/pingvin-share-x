@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "確認並關閉",
   "admin.notice.modal.button.acknowledging": "正在確認...",
   "admin.notice.modal.docsLink": "檢視文件",
-  "admin.notice.modal.globalNoticeFooter": "注意：一旦確認，此通知將在所有裝置上對所有管理員永久關閉。",
+  "admin.notice.modal.globalNoticeFooter": "注意：一旦確認，此通知將在所有裝置上對所有管理員永久關閉。"
 };
