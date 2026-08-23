@@ -14,16 +14,13 @@ export default {
 
   // /
   "home.title": '<h>"Itse isännöitty"</h> tiedostojen jakamisen alusta.',
-  "home.description":
-    "Haluatko oikeasti jakaa yksityisiä tiedostojasi kolmannen osapuolen yhtiöille niin kuin WeTransfer?",
+  "home.description": "Haluatko oikeasti jakaa yksityisiä tiedostojasi kolmannen osapuolen yhtiöille niin kuin WeTransfer?",
   "home.bullet.a.name": "Itse-Isännöitty",
   "home.bullet.a.description": 'Isännöi "Pingvin Share" omalla palvelimellasi.',
   "home.bullet.b.name": "Yksityisyys",
-  "home.bullet.b.description":
-    "Tiedostosi ovat sinun, eivätkä kolmannet osapuolet pääse niihin koskaan käsiksi.",
+  "home.bullet.b.description": "Tiedostosi ovat sinun, eivätkä kolmannet osapuolet pääse niihin koskaan käsiksi.",
   "home.bullet.c.name": "Ei ärsyttävää tiedoston kokorajoitusta",
-  "home.bullet.c.description":
-    "Lataa niin suuria tiedostoja kuin haluat. Vain kiintolevysi tila on rajana.",
+  "home.bullet.c.description": "Lataa niin suuria tiedostoja kuin haluat. Vain kiintolevysi tila on rajana.",
   "home.button.start": "Aloita",
   "home.button.source": "Lähdekoodi",
   // END /
@@ -33,15 +30,12 @@ export default {
   "signin.description": "Eikö sinulla ole vielä tiliä?",
   "signin.button.signup": "Rekisteröidy",
   "signin.input.email-or-username": "Sähköposti tai käyttäjänimi",
-  "signin.input.email-or-username.placeholder":
-    "Sähköpostisi tai käyttäjänimesi",
+  "signin.input.email-or-username.placeholder": "Sähköpostisi tai käyttäjänimesi",
   "signin.input.password": "Salasana",
   "signin.input.password.placeholder": "Salasana",
   "signin.button.submit": "Kirjaudu sisään",
-  "signIn.notify.totp-required.title":
-    "Kaksivaiheinen tunnistautuminen vaadittu",
-  "signIn.notify.totp-required.description":
-    "Syötä kaksivaiheisen tunnistautumisen koodi tähän",
+  "signIn.notify.totp-required.title": "Kaksivaiheinen tunnistautuminen vaadittu",
+  "signIn.notify.totp-required.description": "Syötä kaksivaiheisen tunnistautumisen koodi tähän",
   "signIn.oauth.or": "TAI",
   "signIn.oauth.signInWith": "Kirjaudu käyttäen",
   "signIn.oauth.github": "GitHubia",
@@ -62,20 +56,15 @@ export default {
   "signup.button.submit": "Aloitetaan",
   // /auth/verify
   "verify.title": "Vahvista tili",
-  "verify.success":
-    "Tilisi on vahvistettu onnistuneesti! Voit nyt kirjautua sisään.",
+  "verify.success": "Tilisi on vahvistettu onnistuneesti! Voit nyt kirjautua sisään.",
   "verify.error": "Vahvistuslinkki on virheellinen tai vanhentunut.",
   "verify.button.signin": "Siirry kirjautumiseen",
   "verify.info.title": "Tilin vahvistus",
-  "verify.info.description":
-    "Sähköpostivahvistus on käytössä. Olemme lähettäneet vahvistuslinkin sähköpostiosoitteeseesi. Klikkaa linkkiä aktivoidaksesi tilisi.",
-  "verify.info.note":
-    "Jos et saa sähköpostia muutaman minuutin kuluessa, tarkista roskapostikansiosi.",
+  "verify.info.description": "Sähköpostivahvistus on käytössä. Olemme lähettäneet vahvistuslinkin sähköpostiosoitteeseesi. Klikkaa linkkiä aktivoidaksesi tilisi.",
+  "verify.info.note": "Jos et saa sähköpostia muutaman minuutin kuluessa, tarkista roskapostikansiosi.",
   "verify.info.resend.button": "Lähetä vahvistussähköposti uudelleen",
-  "verify.info.resend.success":
-    "Vahvistussähköposti lähetetty onnistuneesti uudelleen.",
-  "verify.info.resend.error":
-    "Vahvistussähköpostin uudelleenlähetys epäonnistui.",
+  "verify.info.resend.success": "Vahvistussähköposti lähetetty onnistuneesti uudelleen.",
+  "verify.info.resend.error": "Vahvistussähköpostin uudelleenlähetys epäonnistui.",
   // END /auth/signup
 
   // /auth/totp
@@ -85,16 +74,13 @@ export default {
 
   // /auth/reset-password
   "resetPassword.title": "Unohditko salasanan?",
-  "resetPassword.description":
-    "Kirjoita sähköpostiosoitteesi palauttaaksesi salasanasi.",
-  "resetPassword.notify.success":
-    "Viesti salasanan palautuslinkillä on lähetetty, jos annettu sähköpostiosoite löytyy.",
+  "resetPassword.description": "Kirjoita sähköpostiosoitteesi palauttaaksesi salasanasi.",
+  "resetPassword.notify.success": "Viesti salasanan palautuslinkillä on lähetetty, jos annettu sähköpostiosoite löytyy.",
   "resetPassword.button.back": "Takaisin kirjautumiseen",
   "resetPassword.text.resetPassword": "Nollaa salasana",
   "resetPassword.text.enterNewPassword": "Anna uusi salasana",
   "resetPassword.input.password": "Uusi salasana",
-  "resetPassword.notify.passwordReset":
-    "Salasanasi on palautettu onnistuneesti.",
+  "resetPassword.notify.passwordReset": "Salasanasi on palautettu onnistuneesti.",
   // /account
   "account.title": "Oma tIli",
   "account.card.info.title": "Tilin tiedot",
@@ -104,8 +90,7 @@ export default {
   "account.card.password.title": "Salasana",
   "account.card.password.old": "Vanha salasana",
   "account.card.password.new": "Uusi salasana",
-  "account.card.password.noPasswordSet":
-    "Sinulle ei ole asetettu salasanaa. Kirjautuaksesi sähköpostilla ja salasanalla sinun täytyy luoda salasana.",
+  "account.card.password.noPasswordSet": "Sinulle ei ole asetettu salasanaa. Kirjautuaksesi sähköpostilla ja salasanalla sinun täytyy luoda salasana.",
   "account.notify.password.success": "Salasana vaihdettu",
   "account.card.oauth.title": "Sosiaalisen median kirjautuminen",
   "account.card.oauth.github": "GitHubia",
@@ -117,14 +102,11 @@ export default {
   "account.card.oauth.unlink": "Poista linkitys",
   "account.card.oauth.unlinked": "Linkitys poistettu",
   "account.modal.unlink.title": "Poista tilin linkitys",
-  "account.modal.unlink.description":
-    "Sosiaalisen median tiliesi linkityksen poistaminen voi johtaa tilin menettämiseen, jos et muista kirjautumistietojasi",
+  "account.modal.unlink.description": "Sosiaalisen median tiliesi linkityksen poistaminen voi johtaa tilin menettämiseen, jos et muista kirjautumistietojasi",
   "account.notify.oauth.unlinked.success": "Linkitys poistettu onnistuneesti",
   "account.card.security.title": "Turvallisuus",
-  "account.card.security.totp.enable.description":
-    "Anna nykyinen salasanasi aloittaaksesi TOTP käytön",
-  "account.card.security.totp.disable.description":
-    "Syötä nykyinen salasanasi poistaaksesi TOTP käytöstä",
+  "account.card.security.totp.enable.description": "Anna nykyinen salasanasi aloittaaksesi TOTP käytön",
+  "account.card.security.totp.disable.description": "Syötä nykyinen salasanasi poistaaksesi TOTP käytöstä",
   "account.card.security.totp.button.start": "Aloita",
   "account.modal.totp.title": "Ota Käyttöön TOTP",
   "account.modal.totp.step1": "Vaihe 1: Lisää todentaja",
@@ -137,8 +119,7 @@ export default {
   "account.notify.totp.disable": "TOTP poistettu käytöstä",
   "account.notify.totp.enable": "TOTP otettu käyttöön onnistuneesti",
   "account.card.language.title": "Kieli",
-  "account.card.language.description":
-    "Projekti on yhteisön kääntämä. Jotkut kielet saattavat olla puutteellisia.",
+  "account.card.language.description": "Projekti on yhteisön kääntämä. Jotkut kielet saattavat olla puutteellisia.",
   "account.card.color.title": "Väriteema",
   // ThemeSwitcher.tsx
   "account.theme.dark": "Tumma",
@@ -146,8 +127,7 @@ export default {
   "account.theme.system": "Järjestelmä",
   "account.button.delete": "Poista tili",
   "account.modal.delete.title": "Poista tili",
-  "account.modal.delete.description":
-    "Haluatko varmasti poistaa tilisi mukaan lukien kaikki aktiiviset jaetut tiedostot?",
+  "account.modal.delete.description": "Haluatko varmasti poistaa tilisi mukaan lukien kaikki aktiiviset jaetut tiedostot?",
   // END /account
 
   // /account/shares
@@ -166,38 +146,31 @@ export default {
   "account.shares.table.size": "Koko",
   "account.shares.table.password-protected": "Salasanasuojattu",
   "account.shares.table.recipients": "Vastaanottajat",
-  "account.shares.table.restricted-to-recipients":
-    "Rajoitettu vain vastaanottajille",
-  "account.shares.table.shared-with-recipients":
-    "Jaettu vastaanottajien kanssa",
+  "account.shares.table.restricted-to-recipients": "Rajoitettu vain vastaanottajille",
+  "account.shares.table.shared-with-recipients": "Jaettu vastaanottajien kanssa",
   "account.shares.table.visitor-count": "{count} / {max}",
   "account.shares.table.expiry-never": "Ei koskaan",
   "account.shares.modal.share-informations": "Jaetun tiedot",
   "account.shares.modal.share-link": "Jaa linkki",
-  "account.shares.modal.edit.password.keep":
-    "Jätä tyhjäksi säilyttääksesi nykyisen salasanan",
+  "account.shares.modal.edit.password.keep": "Jätä tyhjäksi säilyttääksesi nykyisen salasanan",
   "account.shares.modal.edit.password.remove": "Poista salasanasuojaus",
   "account.shares.modal.delete.title": "Poista jako: {share}",
-  "account.shares.modal.delete.description":
-    "Haluatko todella poistaa tämän jaetun tiedoston/ot?",
+  "account.shares.modal.delete.description": "Haluatko todella poistaa tämän jaetun tiedoston/ot?",
   // END /account/shares
 
   // /account/received
   "account.received-shares.title": "Vastaanotetut jaot",
   "account.received-shares.title.empty": "Ei vastaanotettuja jakoja vielä",
-  "account.received-shares.description.empty":
-    "Sähköpostiisi lähetetyt jaot näkyvät täällä.",
+  "account.received-shares.description.empty": "Sähköpostiisi lähetetyt jaot näkyvät täällä.",
   "account.received-shares.table.from": "Lähettäjä",
   "account.received-shares.button.open": "Avaa",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Takaperin jaetut",
-  "account.reverseShares.description":
-    "Käänteisen jaon avulla voit luoda ainutlaatuisen URL-osoitteen, jonka avulla ulkoiset käyttäjät voivat luoda jaon.",
+  "account.reverseShares.description": "Käänteisen jaon avulla voit luoda ainutlaatuisen URL-osoitteen, jonka avulla ulkoiset käyttäjät voivat luoda jaon.",
   "account.reverseShares.title.empty": "Täällä on tyhjää 👀",
-  "account.reverseShares.description.empty":
-    "Sinulla ei ole käänteisiä jakoja.",
+  "account.reverseShares.description.empty": "Sinulla ei ole käänteisiä jakoja.",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Luo käänteinen jako",
   "account.reverseShares.modal.expiration.label": "Vanhentuminen",
@@ -215,21 +188,15 @@ export default {
   "account.reverseShares.modal.expiration.year-plural": "Vuotta",
   "account.reverseShares.modal.max-size.label": "Suurin tiedostonkoko",
   "account.reverseShares.modal.send-email": "Lähetä sähköposti-ilmoituksia",
-  "account.reverseShares.modal.send-email.description":
-    "Lähettää sinulle sähköposti-ilmoituksen, kun joku luo jaon tällä käänteisellä jakolinkillä.",
+  "account.reverseShares.modal.send-email.description": "Lähettää sinulle sähköposti-ilmoituksen, kun joku luo jaon tällä käänteisellä jakolinkillä.",
   "account.reverseShares.modal.simplified": "Yksinkertainen tila",
-  "account.reverseShares.modal.simplified.description":
-    "Tee tiedoston lataamisesta helppoa henkilölle, joka jakaa sen kanssasi. Hän voi muokata vain jaon nimeä ja kuvausta.",
+  "account.reverseShares.modal.simplified.description": "Tee tiedoston lataamisesta helppoa henkilölle, joka jakaa sen kanssasi. Hän voi muokata vain jaon nimeä ja kuvausta.",
   "account.reverseShares.modal.public-access": "Julkinen pääsy",
-  "account.reverseShares.modal.public-access.description":
-    "Tee tällä käänteisellä jaolla luoduista jaoista julkisia. Jos poistettu käytöstä, vain sinulla ja jaon luojalla on katseluoikeus.",
+  "account.reverseShares.modal.public-access.description": "Tee tällä käänteisellä jaolla luoduista jaoista julkisia. Jos poistettu käytöstä, vain sinulla ja jaon luojalla on katseluoikeus.",
   "account.reverseShares.modal.max-use.label": "Käyttökertoja enintään",
-  "account.reverseShares.modal.max-use.description":
-    "Enimmäismäärä kertoja, joilla tämä URL-osoite voidaan käyttää joita luomiseen.",
-  "account.reverseShare.never-expires":
-    "Tämä käänteinen jako ei koskaan vanhene.",
-  "account.reverseShare.expires-on":
-    "Tämä käänteinen jako vanhenee kun on {expiration}.",
+  "account.reverseShares.modal.max-use.description": "Enimmäismäärä kertoja, joilla tämä URL-osoite voidaan käyttää joita luomiseen.",
+  "account.reverseShare.never-expires": "Tämä käänteinen jako ei koskaan vanhene.",
+  "account.reverseShare.expires-on": "Tämä käänteinen jako vanhenee kun on {expiration}.",
   "account.reverseShares.table.no-shares": "Ei vielä luotuja jakoja",
   "account.reverseShares.table.count.singular": "jaa",
   "account.reverseShares.table.count.plural": "jaot",
@@ -237,11 +204,9 @@ export default {
   "account.reverseShares.table.remaining": "Jäljellä olevat käyttökerrat",
   "account.reverseShares.table.max-size": "Suurin tiedostonkoko",
   "account.reverseShares.table.expires": "Vanhenee",
-  "account.reverseShares.modal.reverse-share-link":
-    "Takaperin jaetun jaon linkki",
+  "account.reverseShares.modal.reverse-share-link": "Takaperin jaetun jaon linkki",
   "account.reverseShares.modal.delete.title": "Poista käänteinen jako",
-  "account.reverseShares.modal.delete.description":
-    "Haluatko varmasti poistaa tämän käänteisen jaon? Jos kyllä, myös siihen liittyvät jaot poistetaan.",
+  "account.reverseShares.modal.delete.description": "Haluatko varmasti poistaa tämän käänteisen jaon? Jos kyllä, myös siihen liittyvät jaot poistetaan.",
   // END /account/reverseShares
 
   // /admin
@@ -262,40 +227,29 @@ export default {
   "admin.users.edit.update.title": "Muokkaa käyttäjää: {username}",
   "admin.users.edit.update.admin-privileges": "Ylläpitäjän oikeudet",
   "admin.users.edit.update.email-verified": "Sähköposti vahvistettu",
-  "admin.users.edit.update.custom-share-size-limit":
-    "Mukautettu jaon kokorajoitus",
-  "admin.users.edit.update.custom-share-size-limit.description":
-    "Ohita yleinen latausrajoitus tälle käyttäjälle",
-  "admin.users.edit.update.custom-storage-quota-limit":
-    "Mukautettu tallennustilakiintiö",
-  "admin.users.edit.update.custom-storage-quota-limit.description":
-    "Rajoita käyttäjän kokonaistallennustilan käyttöä aktiivisissa jaoissa",
+  "admin.users.edit.update.custom-share-size-limit": "Mukautettu jaon kokorajoitus",
+  "admin.users.edit.update.custom-share-size-limit.description": "Ohita yleinen latausrajoitus tälle käyttäjälle",
+  "admin.users.edit.update.custom-storage-quota-limit": "Mukautettu tallennustilakiintiö",
+  "admin.users.edit.update.custom-storage-quota-limit.description": "Rajoita käyttäjän kokonaistallennustilan käyttöä aktiivisissa jaoissa",
   "admin.users.edit.update.change-password.title": "Vaihda salasana",
   "admin.users.edit.update.change-password.field": "Uusi salasana",
   "admin.users.edit.update.change-password.button": "Tallenna uusi salasana",
   "admin.users.edit.update.notify.password.success": "Salasana vaihdettu",
   "admin.users.edit.delete.title": "Poista käyttäjä: {username} ?",
-  "admin.users.edit.delete.description":
-    "Haluatko varmasti poistaa tämän käyttäjän ja kaikki hänen jakonsa?",
+  "admin.users.edit.delete.description": "Haluatko varmasti poistaa tämän käyttäjän ja kaikki hänen jakonsa?",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Luo käyttäjä",
   "admin.users.modal.create.username": "Käyttäjätunnus",
   "admin.users.modal.create.email": "Sähköposti",
   "admin.users.modal.create.password": "Salasana",
   "admin.users.modal.create.manual-password": "Aseta salasana manuaalisesti",
-  "admin.users.modal.create.manual-password.description":
-    "Jos ei ole valittuna, käyttäjä saa sähköpostiviestin, jossa on linkki, joka määrittää heidän salasanansa.",
-  "admin.users.modal.create.custom-share-size-limit":
-    "Mukautettu jaon kokorajoitus",
-  "admin.users.modal.create.custom-share-size-limit.description":
-    "Ohita yleinen latausrajoitus tälle käyttäjälle",
-  "admin.users.modal.create.custom-storage-quota-limit":
-    "Mukautettu tallennustilakiintiö",
-  "admin.users.modal.create.custom-storage-quota-limit.description":
-    "Rajoita käyttäjän kokonaistallennustilan käyttöä aktiivisissa jaoissa",
+  "admin.users.modal.create.manual-password.description": "Jos ei ole valittuna, käyttäjä saa sähköpostiviestin, jossa on linkki, joka määrittää heidän salasanansa.",
+  "admin.users.modal.create.custom-share-size-limit": "Mukautettu jaon kokorajoitus",
+  "admin.users.modal.create.custom-share-size-limit.description": "Ohita yleinen latausrajoitus tälle käyttäjälle",
+  "admin.users.modal.create.custom-storage-quota-limit": "Mukautettu tallennustilakiintiö",
+  "admin.users.modal.create.custom-storage-quota-limit.description": "Rajoita käyttäjän kokonaistallennustilan käyttöä aktiivisissa jaoissa",
   "admin.users.modal.create.admin": "Ylläpitäjän oikeudet",
-  "admin.users.modal.create.admin.description":
-    "Jos valittu, käyttäjä voi käyttää hallintapaneelia.",
+  "admin.users.modal.create.admin.description": "Jos valittu, käyttäjä voi käyttää hallintapaneelia.",
   // END /admin/users
 
   // /admin/shares
@@ -307,29 +261,21 @@ export default {
   "admin.shares.table.expires": "Vanhenee",
   "admin.shares.table.deletes": "Poistuu",
   "admin.shares.edit.delete.title": "Poista jako: {id}",
-  "admin.shares.edit.delete.description":
-    "Haluatko todella poistaa tämän jaetun tiedoston/ot?",
+  "admin.shares.edit.delete.description": "Haluatko todella poistaa tämän jaetun tiedoston/ot?",
   // END /admin/shares
 
   // /upload
   "upload.title": "Pilvetä",
-  "upload.notify.confirm-leave":
-    "Haluatko varmasti poistua tältä sivulta? Latauksesi peruutetaan.",
-  "upload.notify.generic-error":
-    "Kohdattiin odottamaton virhe jaon luomisessa.",
-  "upload.notify.count-failed":
-    "{count} tiedostoa ei voitu ladata. Yritetään uudelleen.",
+  "upload.notify.confirm-leave": "Haluatko varmasti poistua tältä sivulta? Latauksesi peruutetaan.",
+  "upload.notify.generic-error": "Kohdattiin odottamaton virhe jaon luomisessa.",
+  "upload.notify.count-failed": "{count} tiedostoa ei voitu ladata. Yritetään uudelleen.",
   "upload.notify.duplicate-skipped": "Ohitettiin kaksoiskappale: {name}",
-  "upload.reverse-share.error.invalid.title":
-    "Virheellinen käänteisen jaon linkki",
-  "upload.reverse-share.error.invalid.description":
-    "This reverse share has expired or is invalid.",
+  "upload.reverse-share.error.invalid.title": "Virheellinen käänteisen jaon linkki",
+  "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
   // Dropzone.tsx
   "upload.dropzone.title": "Pilvetä tiedostoja",
-  "upload.dropzone.description":
-    "Vedä ja pudota tiedostoja tai kansioita tähän aloittaaksesi jakamisen tai paina 'Ctrl+V' ladataksesi tekstisisältöä leikepöydältä. Hyväksymme tiedostoja yhteensä enintään {maxSize} asti.",
-  "upload.dropzone.notify.file-too-big":
-    "Tiedostojen enimmäiskoko ylittää {maxSize} -arvon enimmäismäärän.",
+  "upload.dropzone.description": "Vedä ja pudota tiedostoja tai kansioita tähän aloittaaksesi jakamisen tai paina 'Ctrl+V' ladataksesi tekstisisältöä leikepöydältä. Hyväksymme tiedostoja yhteensä enintään {maxSize} asti.",
+  "upload.dropzone.notify.file-too-big": "Tiedostojen enimmäiskoko ylittää {maxSize} -arvon enimmäismäärän.",
   "upload.button.folder": "Lataa kansio",
   "upload.button.folder.append": "Lisää kansio",
   "upload.button.add": "Lisää lataukseen",
@@ -340,20 +286,15 @@ export default {
   "upload.filelist.remaining": "{time} jäljellä",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Luo Jako",
-  "upload.modal.link.error.invalid":
-    "Voi sisältää vain kirjaimia, numeroita, alaviivoja ja väliviivoja",
+  "upload.modal.link.error.invalid": "Voi sisältää vain kirjaimia, numeroita, alaviivoja ja väliviivoja",
   "upload.modal.link.error.taken": "Tämä linkki on jo käytössä",
-  "upload.modal.link.error.s3-session-not-found":
-    "S3-latausistuntoa ei löytynyt",
-  "upload.modal.link.error.s3-etag-missing":
-    "ETag-otsake puuttuu S3-vastauksesta. Varmista, että CORS paljastaa ETag-otsakkeen.",
+  "upload.modal.link.error.s3-session-not-found": "S3-latausistuntoa ei löytynyt",
+  "upload.modal.link.error.s3-etag-missing": "ETag-otsake puuttuu S3-vastauksesta. Varmista, että CORS paljastaa ETag-otsakkeen.",
   "upload.modal.not-signed-in": "Et ole kirjautunut sisään",
-  "upload.modal.not-signed-in-description":
-    "Et voi poistaa jakoasi manuaalisesti ja tarkastella kävijöiden määrää.",
+  "upload.modal.not-signed-in-description": "Et voi poistaa jakoasi manuaalisesti ja tarkastella kävijöiden määrää.",
   "upload.modal.expires.never": "ei koskaan",
   "upload.modal.expires.never-long": "Pysyvä jako",
-  "upload.modal.expires.error.too-long":
-    "Viimeinen voimassaolopäivä ylittää enimmäisarvon {max}.",
+  "upload.modal.expires.error.too-long": "Viimeinen voimassaolopäivä ylittää enimmäisarvon {max}.",
   "upload.modal.link.label": "Linkki",
   "upload.modal.expires.label": "Vanhentuminen",
   "upload.modal.expires.minute-singular": "Minuutti",
@@ -370,68 +311,53 @@ export default {
   "upload.modal.expires.year-plural": "Vuotta",
   "upload.modal.accordion.name-and-description.title": "Nimi ja kuvaus",
   "upload.modal.accordion.name-and-description.name.placeholder": "Nimi",
-  "upload.modal.accordion.name-and-description.description.placeholder":
-    "Huomautus tämän jaon vastaanottajille",
+  "upload.modal.accordion.name-and-description.description.placeholder": "Huomautus tämän jaon vastaanottajille",
   "upload.modal.accordion.email.title": "Sähköpostin vastaanottajat",
-  "upload.modal.accordion.email.placeholder":
-    "Syötä sähköpostin vastaanottajat",
+  "upload.modal.accordion.email.placeholder": "Syötä sähköpostin vastaanottajat",
   "upload.modal.accordion.email.invalid-email": "Virheellinen sähköpostiosoite",
-  "upload.modal.accordion.email.restrict-to-recipients":
-    "Rajoita pääsy vain näille vastaanottajille (heidän on kirjauduttava sisään päästäkseen käsiksi)",
+  "upload.modal.accordion.email.restrict-to-recipients": "Rajoita pääsy vain näille vastaanottajille (heidän on kirjauduttava sisään päästäkseen käsiksi)",
   "upload.modal.accordion.security.title": "Turvallisuusasetukset",
   "upload.modal.accordion.security.password.label": "Salasanasuojaus",
   "upload.modal.accordion.security.password.placeholder": "Ei salasanaa",
   "upload.modal.accordion.security.max-views.label": "Näkymien enimmäismäärä",
   "upload.modal.accordion.security.max-views.placeholder": "Ei rajoitusta",
   // showCompletedUploadModal.tsx
-  "upload.modal.completed.never-expires":
-    "Tämä käänteinen jako ei koskaan vanhene.",
-  "upload.modal.completed.expires-on":
-    "Tämä käänteinen jako vanhenee kun on {expiration}.",
+  "upload.modal.completed.never-expires": "Tämä käänteinen jako ei koskaan vanhene.",
+  "upload.modal.completed.expires-on": "Tämä käänteinen jako vanhenee kun on {expiration}.",
   "upload.modal.completed.share-ready": "Jako valmiina",
-  "upload.modal.completed.notified-reverse-share-creator":
-    "Olemme ilmoittaneet käänteisen jaon luojalle. Voit myös jakaa tämän linkin hänelle manuaalisesti muilla tavoilla.",
+  "upload.modal.completed.notified-reverse-share-creator": "Olemme ilmoittaneet käänteisen jaon luojalle. Voit myös jakaa tämän linkin hänelle manuaalisesti muilla tavoilla.",
   // END /upload
 
   // /share/[id]
   "share.title": "Jaa {shareId}",
   "share.description": "Katso, mitä olen jakanut kanssasi!",
-  "share.fileCount":
-    "{count, plural, one {}=1 {# tiedosto} other {# tiedostoa}} · {size} (zip tiedosto voi olla pienempi pakkauksesta)",
+  "share.fileCount": "{count, plural, one {}=1 {# tiedosto} other {# tiedostoa}} · {size} (zip tiedosto voi olla pienempi pakkauksesta)",
   "share.copy-text-contents": "Kopioi tiedoston sisältö leikepöydälle",
   "share.error.visitor-limit-exceeded.title": "Vierailijoiden raja ylitetty",
-  "share.error.visitor-limit-exceeded.description":
-    "Tämän jaon kävijäraja on ylittynyt.",
+  "share.error.visitor-limit-exceeded.description": "Tämän jaon kävijäraja on ylittynyt.",
   "share.error.removed.title": "Jako poistettu",
   "share.error.not-found.title": "Jakoa ei löydetty",
   "share.error.not-found.description": "Etsimääsi sivua ei ole olemassa.",
   "share.error.access-denied.title": "Yksityinen jako",
-  "share.error.access-denied.description":
-    "Nykyisellä tilillä ei ole oikeutta käyttää tätä jakoa",
+  "share.error.access-denied.description": "Nykyisellä tilillä ei ole oikeutta käyttää tätä jakoa",
   "share.error.restricted.title": "Rajoitettu jako",
-  "share.error.restricted.description":
-    "Tämä jako on rajoitettu tietyille vastaanottajille. Kirjaudu sisään päästäksesi käsiksi siihen.",
+  "share.error.restricted.description": "Tämä jako on rajoitettu tietyille vastaanottajille. Kirjaudu sisään päästäksesi käsiksi siihen.",
   "share.error.restricted.button": "Kirjaudu sisään",
   "share.modal.password.title": "Salasana vaaditaan",
-  "share.modal.password.description":
-    "Syötä salasana päästäksesi käsiksi tähän jakoon.",
+  "share.modal.password.description": "Syötä salasana päästäksesi käsiksi tähän jakoon.",
   "share.modal.password": "Salasana",
   "share.modal.error.invalid-password": "Virheellinen salasana",
   "share.button.download-all": "Lataa kaikki",
-  "share.notify.download-all-preparing":
-    "Jako on valmistumassa. Yritä uudelleen muutaman minuutin kuluttua.",
+  "share.notify.download-all-preparing": "Jako on valmistumassa. Yritä uudelleen muutaman minuutin kuluttua.",
   "share.notify.copied-contents": "Tiedoston sisältö kopioitu leikepöydälle",
-  "share.notify.copy-too-big-error":
-    "Tiedosto on liian suuri kopioitavaksi leikepöydälle",
-  "share.notify.copy-not-supported-error":
-    "Kopiointi leikepöydälle vaatii HTTPS-yhteyden",
+  "share.notify.copy-too-big-error": "Tiedosto on liian suuri kopioitavaksi leikepöydälle",
+  "share.notify.copy-not-supported-error": "Kopiointi leikepöydälle vaatii HTTPS-yhteyden",
   "share.modal.file-link": "Tiedoston linkki",
   "share.table.name": "Nimi",
   "share.table.size": "Koko",
   "share.modal.file-preview.original_file": "Näytä alkuperäinen tiedosto",
   "share.modal.file-preview.error.not-supported.title": "Esikatselua ei tuettu",
-  "share.modal.file-preview.error.not-supported.description":
-    "Esikatselua ei tueta tämäntyyppisille tiedostoille. Ole hyvä ja lataa tiedosto nähdäksesi sen.",
+  "share.modal.file-preview.error.not-supported.description": "Esikatselua ei tueta tämäntyyppisille tiedostoille. Ole hyvä ja lataa tiedosto nähdäksesi sen.",
   // END /share/[id]
 
   // /share/[id]/edit
@@ -451,8 +377,7 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "Asetustiedosto läsnä",
-  "admin.config.config-file-warning.description":
-    "Koska Pingvin Share on määritetty asetustiedostolla, et voi muuttaa asetuksia käyttöliittymän kautta.",
+  "admin.config.config-file-warning.description": "Koska Pingvin Share on määritetty asetustiedostolla, et voi muuttaa asetuksia käyttöliittymän kautta.",
   "admin.config.title": "Asetukset",
   "admin.config.category.general": "Yleiset",
   "admin.config.category.appearance": "Ulkoasu",
@@ -465,206 +390,133 @@ export default {
   "admin.config.general.app-name": "Sovelluksen nimi",
   "admin.config.general.app-name.description": "Sovelluksen nimi",
   "admin.config.general.default-language": "Oletuskieli",
-  "admin.config.general.default-language.description":
-    "Tämä koskee kaikkia käyttäjiä; jokainen käyttäjä voi silti mukauttaa kieltään profiilissaan.",
+  "admin.config.general.default-language.description": "Tämä koskee kaikkia käyttäjiä; jokainen käyttäjä voi silti mukauttaa kieltään profiilissaan.",
   "admin.config.appearance.theme-primary-color": "Teeman pääväri",
-  "admin.config.appearance.theme-primary-color.description":
-    "Pääväri painikkeille, linkeille ja korostuksille. Valitse mukautettu käyttääksesi värin ohitusta.",
+  "admin.config.appearance.theme-primary-color.description": "Pääväri painikkeille, linkeille ja korostuksille. Valitse mukautettu käyttääksesi värin ohitusta.",
   "admin.config.appearance.theme-primary-color-override": "Mukautettu pääväri",
-  "admin.config.appearance.theme-primary-color-override.description":
-    "Hex-väriohitus, jota käytetään kun teeman pääväri on asetettu mukautetuksi.",
+  "admin.config.appearance.theme-primary-color-override.description": "Hex-väriohitus, jota käytetään kun teeman pääväri on asetettu mukautetuksi.",
   "admin.config.appearance.theme-font-preset": "Fonttiesiasetus",
-  "admin.config.appearance.theme-font-preset.description":
-    "Build-vaiheessa ladattava fonttiesiasetus. Valitse järjestelmä tai jokin mukana tulevista Google Fonts -fonteista.",
+  "admin.config.appearance.theme-font-preset.description": "Build-vaiheessa ladattava fonttiesiasetus. Valitse järjestelmä tai jokin mukana tulevista Google Fonts -fonteista.",
   "admin.config.appearance.theme-color-scheme": "Oletusväriteema (vieraat)",
-  "admin.config.appearance.theme-color-scheme.description":
-    "Oletuksena vaalea/tumma tila kirjautumattomille käyttäjille. Kirjautuneet käyttäjät käyttävät omaa tilinsä asetusta.",
+  "admin.config.appearance.theme-color-scheme.description": "Oletuksena vaalea/tumma tila kirjautumattomille käyttäjille. Kirjautuneet käyttäjät käyttävät omaa tilinsä asetusta.",
   "admin.config.appearance.theme-radius": "Teeman reunasäde",
-  "admin.config.appearance.theme-radius.description":
-    "Mantine-komponenttien oletusreunasäde.",
+  "admin.config.appearance.theme-radius.description": "Mantine-komponenttien oletusreunasäde.",
   "admin.config.appearance.custom-css": "Mukautettu CSS",
-  "admin.config.appearance.custom-css.description":
-    "Frontendiin sovellettava globaali CSS. Käytä varoen; virheellinen CSS voi vaikuttaa käyttöliittymään.",
-  "admin.config.appearance.upload-progress-style":
-    "Latauksen edistymisen tyyli",
-  "admin.config.appearance.upload-progress-style.description":
-    "Valitse, miten latauksen edistyminen näytetään tiedostoluettelossa.",
+  "admin.config.appearance.custom-css.description": "Frontendiin sovellettava globaali CSS. Käytä varoen; virheellinen CSS voi vaikuttaa käyttöliittymään.",
+  "admin.config.appearance.upload-progress-style": "Latauksen edistymisen tyyli",
+  "admin.config.appearance.upload-progress-style.description": "Valitse, miten latauksen edistyminen näytetään tiedostoluettelossa.",
   "admin.config.appearance.upload-progress-style.circle": "Ympyräilmaisin",
-  "admin.config.appearance.upload-progress-style.circle-percentage":
-    "Ympyrä prosentilla",
-  "admin.config.appearance.upload-progress-style.percentage-time":
-    "Prosentti ja jäljellä oleva aika",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Ympyrä prosentilla",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Prosentti ja jäljellä oleva aika",
   "admin.config.general.app-url": "Sovelluksen URL",
-  "admin.config.general.app-url.description":
-    "Millä URL-osoitteella Pingvin Share on saatavilla",
+  "admin.config.general.app-url.description": "Millä URL-osoitteella Pingvin Share on saatavilla",
   "admin.config.security.secure-cookies": "Suojatut evästeet",
-  "admin.config.security.secure-cookies.description":
-    "Asetetaanko secure-lippu evästeisiin. Jos käytössä, sivusto ei toimi HTTP-yhteydellä.",
+  "admin.config.security.secure-cookies.description": "Asetetaanko secure-lippu evästeisiin. Jos käytössä, sivusto ei toimi HTTP-yhteydellä.",
   "admin.config.general.show-home-page": "Näytä kotisivu",
-  "admin.config.general.show-home-page.description":
-    "Näytetäänkö kotisivu vai ei",
+  "admin.config.general.show-home-page.description": "Näytetäänkö kotisivu vai ei",
   "admin.config.security.session-duration": "Istunnon kesto",
-  "admin.config.security.session-duration.description":
-    "Aika, jonka jälkeen käyttäjän on kirjauduttava uudelleen (oletus: 3 kuukautta).",
+  "admin.config.security.session-duration.description": "Aika, jonka jälkeen käyttäjän on kirjauduttava uudelleen (oletus: 3 kuukautta).",
   "admin.config.appearance.logo": "Logo",
-  "admin.config.appearance.logo.description":
-    "Muuta logoa lataamalla uusi kuva. Kuvan on oltava PNG ja sen on oltava formaatti 1:1.",
+  "admin.config.appearance.logo.description": "Muuta logoa lataamalla uusi kuva. Kuvan on oltava PNG ja sen on oltava formaatti 1:1.",
   "admin.config.appearance.logo-dark": "Tumman tilan logo",
-  "admin.config.appearance.logo-dark.description":
-    "Lataa erillinen logo tummalle tilalle. Kuvan on oltava PNG ja sen kuvasuhteen tulisi olla 1:1.",
+  "admin.config.appearance.logo-dark.description": "Lataa erillinen logo tummalle tilalle. Kuvan on oltava PNG ja sen kuvasuhteen tulisi olla 1:1.",
   "admin.config.appearance.logo.placeholder": "Valitse kuva",
   "admin.config.security.custom-password-policy": "Mukautettu salasanakäytäntö",
-  "admin.config.security.custom-password-policy.description":
-    "Otetaanko salasanakäytännön mukauttaminen käyttöön. Jos poistettu käytöstä, käytetään oletussalasanakäytäntöä (vähintään 8 merkkiä).",
+  "admin.config.security.custom-password-policy.description": "Otetaanko salasanakäytännön mukauttaminen käyttöön. Jos poistettu käytöstä, käytetään oletussalasanakäytäntöä (vähintään 8 merkkiä).",
   "admin.config.security.min-length": "Vähimmäispituus",
-  "admin.config.security.min-length.description":
-    "Salasanassa vaadittava vähimmäismerkkimäärä.",
+  "admin.config.security.min-length.description": "Salasanassa vaadittava vähimmäismerkkimäärä.",
   "admin.config.security.require-uppercase": "Vaadi suuraakkosia",
-  "admin.config.security.require-uppercase.description":
-    "Vaaditaanko salasanassa vähintään yksi suuraakkonen.",
+  "admin.config.security.require-uppercase.description": "Vaaditaanko salasanassa vähintään yksi suuraakkonen.",
   "admin.config.security.require-lowercase": "Vaadi pienaakkosia",
-  "admin.config.security.require-lowercase.description":
-    "Vaaditaanko salasanassa vähintään yksi pienaakkonen.",
+  "admin.config.security.require-lowercase.description": "Vaaditaanko salasanassa vähintään yksi pienaakkonen.",
   "admin.config.security.require-number": "Vaadi numero",
-  "admin.config.security.require-number.description":
-    "Vaaditaanko salasanassa vähintään yksi numero.",
+  "admin.config.security.require-number.description": "Vaaditaanko salasanassa vähintään yksi numero.",
   "admin.config.security.require-special-character": "Vaadi erikoismerkki",
-  "admin.config.security.require-special-character.description":
-    "Vaaditaanko salasanassa vähintään yksi erikoismerkki.",
+  "admin.config.security.require-special-character.description": "Vaaditaanko salasanassa vähintään yksi erikoismerkki.",
   "admin.config.cache.ttl": "TTL",
-  "admin.config.cache.ttl.description":
-    "Aika sekunneissa tietojen pitämiseksi välimuistissa.",
+  "admin.config.cache.ttl.description": "Aika sekunneissa tietojen pitämiseksi välimuistissa.",
   "admin.config.cache.max-items": "Kohteiden enimmäismäärä",
-  "admin.config.cache.max-items.description":
-    "Kohteiden enimmäismäärä välimuistissa.",
+  "admin.config.cache.max-items.description": "Kohteiden enimmäismäärä välimuistissa.",
   "admin.config.cache.redis-enabled": "Redis käytössä",
-  "admin.config.cache.redis-enabled.description":
-    "Tavallisesti Pingvin Share tallentaa tiedot muistin välimuistiin. Jos käytät useita Pingvin Sharen ilmentymiä, sinun on otettava Redis-välimuisti käyttöön jakaaksesi välimuistin ilmentymien välillä.",
+  "admin.config.cache.redis-enabled.description": "Tavallisesti Pingvin Share tallentaa tiedot muistin välimuistiin. Jos käytät useita Pingvin Sharen ilmentymiä, sinun on otettava Redis-välimuisti käyttöön jakaaksesi välimuistin ilmentymien välillä.",
   "admin.config.cache.redis-url": "Redis URL",
-  "admin.config.cache.redis-url.description":
-    "URL-osoite yhteyden muodostamiseksi välimuistiin käytettävään Redis-ilmentymään.",
+  "admin.config.cache.redis-url.description": "URL-osoite yhteyden muodostamiseksi välimuistiin käytettävään Redis-ilmentymään.",
   "admin.config.cache.button.test-redis": "Testaa Redis-yhteyttä",
   "admin.config.cache.test-redis.success": "Yhdistetty Redikseen onnistuneesti",
-  "admin.config.cache.test-redis.success-disabled":
-    "Yhdistetty Redikseen onnistuneesti (Redis-välimuisti on tällä hetkellä poistettu käytöstä).",
-  "admin.config.cache.test-redis.modal.error.title":
-    "Yhteyden muodostaminen Redikseen epäonnistui",
-  "admin.config.cache.test-redis.modal.error.description":
-    "Yhdistettäessä Redikseen tapahtui seuraava virhe:",
+  "admin.config.cache.test-redis.success-disabled": "Yhdistetty Redikseen onnistuneesti (Redis-välimuisti on tällä hetkellä poistettu käytöstä).",
+  "admin.config.cache.test-redis.modal.error.title": "Yhteyden muodostaminen Redikseen epäonnistui",
+  "admin.config.cache.test-redis.modal.error.description": "Yhdistettäessä Redikseen tapahtui seuraava virhe:",
   "admin.config.cache.test-redis.modal.save.title": "Tallenna määritykset",
-  "admin.config.cache.test-redis.modal.save.description":
-    "Jatkaaksesi sinun on ensin tallennettava määritykset. Haluatko tallentaa määritykset ja testata Redis-yhteyttä?",
+  "admin.config.cache.test-redis.modal.save.description": "Jatkaaksesi sinun on ensin tallennettava määritykset. Haluatko tallentaa määritykset ja testata Redis-yhteyttä?",
   "admin.config.cache.test-redis.modal.save.confirm": "Tallenna ja testaa",
-  "admin.config.email.send-html-emails":
-    "Ota käyttöön HTML-sähköpostien yhteensopivuus",
-  "admin.config.email.send-html-emails.description":
-    "Jos käytössä, sähköpostit lähetetään HTML-muodossa. Varmista, että sähköpostipohjat on päivitetty käyttämään HTML-muotoa.",
-  "admin.config.share.enable-share-email-recipients":
-    "Ota käyttöön jakaminen sähköpostivastaanottajille",
-  "admin.config.share.enable-share-email-recipients.description":
-    "Sallitaanko jakaminen sähköpostivastaanottajien kanssa. Tämä voidaan ottaa käyttöön vain, jos SMTP on aktivoitu.",
+  "admin.config.email.send-html-emails": "Ota käyttöön HTML-sähköpostien yhteensopivuus",
+  "admin.config.email.send-html-emails.description": "Jos käytössä, sähköpostit lähetetään HTML-muodossa. Varmista, että sähköpostipohjat on päivitetty käyttämään HTML-muotoa.",
+  "admin.config.share.enable-share-email-recipients": "Ota käyttöön jakaminen sähköpostivastaanottajille",
+  "admin.config.share.enable-share-email-recipients.description": "Sallitaanko jakaminen sähköpostivastaanottajien kanssa. Tämä voidaan ottaa käyttöön vain, jos SMTP on aktivoitu.",
   "admin.config.email.share-recipients-subject": "Sähköpostijaon otsikko",
-  "admin.config.email.share-recipients-subject.description":
-    "Sähköpostin aihe, joka saa lähetetään jaon vastaanottajille.",
+  "admin.config.email.share-recipients-subject.description": "Sähköpostin aihe, joka saa lähetetään jaon vastaanottajille.",
   "admin.config.email.share-recipients-message": "Sähköpostijaon viesti",
-  "admin.config.email.share-recipients-message.description":
-    "Viesti, joka lähetetään jaon vastaanottajille. Käytettävissä olevat muuttujat:\n {creator} - Jaon luojan käyttäjätunnus\n {creatorEmail} - Jaon luojan sähköposti\n {shareUrl} - Jaon URL-osoite\n {desc} - Jaon kuvaus\n {expires} - Jaon vanhentumispäivämäärä\n Nämä muuttujat korvataan todellisilla arvoilla.",
+  "admin.config.email.share-recipients-message.description": "Viesti, joka lähetetään jaon vastaanottajille. Käytettävissä olevat muuttujat:\n {creator} - Jaon luojan käyttäjätunnus\n {creatorEmail} - Jaon luojan sähköposti\n {shareUrl} - Jaon URL-osoite\n {desc} - Jaon kuvaus\n {expires} - Jaon vanhentumispäivämäärä\n Nämä muuttujat korvataan todellisilla arvoilla.",
   "admin.config.email.reverse-share-subject": "Käänteisen jaon aihe",
-  "admin.config.email.reverse-share-subject.description":
-    "Lähetettävän sähköpostin aihe, kun joku loi jaon käänteisellä jakolinkilläsi.",
+  "admin.config.email.reverse-share-subject.description": "Lähetettävän sähköpostin aihe, kun joku loi jaon käänteisellä jakolinkilläsi.",
   "admin.config.email.reverse-share-message": "Käänteisen jakoviestin viesti",
-  "admin.config.email.reverse-share-message.description":
-    "Viesti joka lähetetään kun joku loi jaon käänteisen jakolinkin kanssa. {shareUrl} korvataan luojan nimellä ja jaon URL:lla.",
+  "admin.config.email.reverse-share-message.description": "Viesti joka lähetetään kun joku loi jaon käänteisen jakolinkin kanssa. {shareUrl} korvataan luojan nimellä ja jaon URL:lla.",
   "admin.config.email.reset-password-subject": "Nollaa salasanan aihe",
-  "admin.config.email.reset-password-subject.description":
-    "Lähetettävän sähköpostin aihe, kun käyttäjä pyytää salasanan nollausta.",
+  "admin.config.email.reset-password-subject.description": "Lähetettävän sähköpostin aihe, kun käyttäjä pyytää salasanan nollausta.",
   "admin.config.email.reset-password-message": "Nollaa salasanan viesti",
-  "admin.config.email.reset-password-message.description":
-    "Viesti joka lähetetään kun käyttäjä pyytää salasanan nollausta. {url} korvataan nollaussalasanan URL-osoitteella.",
+  "admin.config.email.reset-password-message.description": "Viesti joka lähetetään kun käyttäjä pyytää salasanan nollausta. {url} korvataan nollaussalasanan URL-osoitteella.",
   "admin.config.email.invite-subject": "Kutsun aihe",
-  "admin.config.email.invite-subject.description":
-    "Lähetettävän sähköpostin aihe, kun ylläpitäjä kutsuu käyttäjän.",
+  "admin.config.email.invite-subject.description": "Lähetettävän sähköpostin aihe, kun ylläpitäjä kutsuu käyttäjän.",
   "admin.config.email.invite-message": "Kutsun viesti",
-  "admin.config.email.invite-message.description":
-    "Viesti, joka lähetetään ylläpitäjän kutsuessa käyttäjän. {url} korvataan kutsulinkillä, {email} sähköpostilla ja {password} käyttäjän salasanalla.",
-  "admin.config.email.share-recipients-reply-to-creator":
-    "Aseta Reply-To luojan sähköpostiksi",
-  "admin.config.email.share-recipients-reply-to-creator.description":
-    "Asetetaanko Reply-To-otsake jaon luoneen käyttäjän sähköpostiosoitteeksi.",
-  "admin.config.share.enable-share-download-notifications":
-    "Ota käyttöön latausilmoitukset",
-  "admin.config.share.enable-share-download-notifications.description":
-    "Lähetetäänkö jaon luojalle sähköposti, kun sähköpostivastaanottaja lataa tiedoston. Tämä vaatii SMTP:n ja sähköpostivastaanottajien jakamisen.",
-  "admin.config.email.share-download-notification-subject":
-    "Latausilmoituksen aihe",
-  "admin.config.email.share-download-notification-subject.description":
-    "Sähköpostin aihe, joka lähetetään jaon luojalle, kun vastaanottaja lataa tiedoston.",
-  "admin.config.email.share-download-notification-message":
-    "Latausilmoitusviesti",
-  "admin.config.email.share-download-notification-message.description":
-    "Viesti, joka lähetetään jaon luojalle, kun vastaanottaja lataa tiedoston. Käytettävissä olevat muuttujat:\n {recipientEmail} - Vastaanottajan sähköposti\n {fileName} - Ladatun tiedoston nimi\n {shareUrl} - Jaon URL-osoite",
-  "admin.config.security.enable-email-verification":
-    "Ota käyttöön sähköpostivahvistus",
-  "admin.config.security.enable-email-verification.description":
-    "Vaaditaanko käyttäjiä vahvistamaan sähköpostiosoitteensa ennen kuin he voivat kirjautua sisään. Tämä voidaan ottaa käyttöön vain, jos SMTP on aktivoitu.",
+  "admin.config.email.invite-message.description": "Viesti, joka lähetetään ylläpitäjän kutsuessa käyttäjän. {url} korvataan kutsulinkillä, {email} sähköpostilla ja {password} käyttäjän salasanalla.",
+  "admin.config.email.share-recipients-reply-to-creator": "Aseta Reply-To luojan sähköpostiksi",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Asetetaanko Reply-To-otsake jaon luoneen käyttäjän sähköpostiosoitteeksi.",
+  "admin.config.share.enable-share-download-notifications": "Ota käyttöön latausilmoitukset",
+  "admin.config.share.enable-share-download-notifications.description": "Lähetetäänkö jaon luojalle sähköposti, kun sähköpostivastaanottaja lataa tiedoston. Tämä vaatii SMTP:n ja sähköpostivastaanottajien jakamisen.",
+  "admin.config.email.share-download-notification-subject": "Latausilmoituksen aihe",
+  "admin.config.email.share-download-notification-subject.description": "Sähköpostin aihe, joka lähetetään jaon luojalle, kun vastaanottaja lataa tiedoston.",
+  "admin.config.email.share-download-notification-message": "Latausilmoitusviesti",
+  "admin.config.email.share-download-notification-message.description": "Viesti, joka lähetetään jaon luojalle, kun vastaanottaja lataa tiedoston. Käytettävissä olevat muuttujat:\n {recipientEmail} - Vastaanottajan sähköposti\n {fileName} - Ladatun tiedoston nimi\n {shareUrl} - Jaon URL-osoite",
+  "admin.config.security.enable-email-verification": "Ota käyttöön sähköpostivahvistus",
+  "admin.config.security.enable-email-verification.description": "Vaaditaanko käyttäjiä vahvistamaan sähköpostiosoitteensa ennen kuin he voivat kirjautua sisään. Tämä voidaan ottaa käyttöön vain, jos SMTP on aktivoitu.",
   "admin.config.email.verification-subject": "Vahvistuksen aihe",
-  "admin.config.email.verification-subject.description":
-    "Sähköpostin aihe, joka lähetetään käyttäjälle rekisteröitymisen yhteydessä.",
+  "admin.config.email.verification-subject.description": "Sähköpostin aihe, joka lähetetään käyttäjälle rekisteröitymisen yhteydessä.",
   "admin.config.email.verification-message": "Vahvistusviesti",
-  "admin.config.email.verification-message.description":
-    "Viesti, joka lähetetään käyttäjälle rekisteröitymisen yhteydessä. {url} korvataan vahvistuslinkillä.",
+  "admin.config.email.verification-message.description": "Viesti, joka lähetetään käyttäjälle rekisteröitymisen yhteydessä. {url} korvataan vahvistuslinkillä.",
   "admin.config.security.allow-registration": "Salli rekisteröinti",
-  "admin.config.security.allow-registration.description":
-    "Onko rekisteröinti sallittu",
+  "admin.config.security.allow-registration.description": "Onko rekisteröinti sallittu",
   "admin.config.security.allow-unauthenticated-shares": "Salli anonyymit jaot",
-  "admin.config.security.allow-unauthenticated-shares.description":
-    "Voiko tunnistamattomat käyttäjät luoda jakoja",
+  "admin.config.security.allow-unauthenticated-shares.description": "Voiko tunnistamattomat käyttäjät luoda jakoja",
   "admin.config.share.default-expiration": "Oletusvanheneminen",
-  "admin.config.share.default-expiration.description":
-    "Oletusvanhentumisaika, joka on valittuna uutta jakoa luotaessa.",
+  "admin.config.share.default-expiration.description": "Oletusvanhentumisaika, joka on valittuna uutta jakoa luotaessa.",
   "admin.config.share.max-expiration": "Enimmäisvanhenemisaika",
-  "admin.config.share.max-expiration.description":
-    "Jaon suurin vanhentumisaika. Aseta 0 salliaksesi rajoittamattoman vanhenemisen.",
+  "admin.config.share.max-expiration.description": "Jaon suurin vanhentumisaika. Aseta 0 salliaksesi rajoittamattoman vanhenemisen.",
   "admin.config.share.share-id-length": "Jaon tunnuksen oletuspituus",
-  "admin.config.share.share-id-length.description":
-    "Jaon luodun tunnuksen oletuspituus. Tätä arvoa käytetään myös käänteisten jakojen linkkien luomiseen. Alle 8:n pituutta ei pidetä turvallisena.",
+  "admin.config.share.share-id-length.description": "Jaon luodun tunnuksen oletuspituus. Tätä arvoa käytetään myös käänteisten jakojen linkkien luomiseen. Alle 8:n pituutta ei pidetä turvallisena.",
   "admin.config.share.max-size": "Maksimikoko",
   "admin.config.share.max-size.description": "Jaon enimmäiskoko tavuissa",
   "admin.config.share.zip-compression-level": "Zip puristustaso",
-  "admin.config.share.zip-compression-level.description":
-    "Säädä tasoa tiedoston koon ja pakkausnopeuden välillä. Kelvolliset arvot vaihtelevat 0–9, 0 ei puristusta ja 9 on suurin puristusvoima. ",
+  "admin.config.share.zip-compression-level.description": "Säädä tasoa tiedoston koon ja pakkausnopeuden välillä. Kelvolliset arvot vaihtelevat 0–9, 0 ei puristusta ja 9 on suurin puristusvoima. ",
   "admin.config.share.chunk-size": "Lohkojen koko",
-  "admin.config.share.chunk-size.description":
-    "Säädä latausten lohkokokoa tasapainottaaksesi tehokkuutta ja luotettavuutta internetyhteytesi mukaan. Pienemmät lohkot voivat parantaa onnistumisastetta epävakailla yhteyksillä, kun taas suuremmat lohkot nopeuttavat latauksia vakailla yhteyksillä.",
-  "admin.config.share.auto-open-share-modal":
-    "Avaa automaattisesti jakomodaali",
-  "admin.config.share.auto-open-share-modal.description":
-    "Jaon luonti-ikkuna avautuu automaattisesti, kun käyttäjä valitsee tiedostoja, jolloin painiketta ei tarvitse napsauttaa manuaalisesti.",
-  "admin.config.security.allow-admin-access-all-shares":
-    "Salli ylläpitäjän pääsy kaikkiin jakoihin",
-  "admin.config.share.reverse-share-simple-only":
-    "Pakota käänteisen jaon yksinkertainen tila",
-  "admin.config.share.reverse-share-simple-only.description":
-    "Pakota käänteiset jaot luotavaksi yksinkertaisessa tilassa. Jos poistettu käytöstä, käänteisen jaon luoja voi valita yksinkertaisen ja edistyneen tilan välillä.",
-  "admin.config.security.allow-admin-access-all-shares.description":
-    "Salli ylläpitäjien pääsy kaikkiin jakoihin, vaikka ne olisivat salasanasuojattuja, vanhentuneita tai poistettuja.",
-  "admin.config.share.enable-user-recipients":
-    "Ota käyttöön jakaminen rekisteröityneille käyttäjille",
-  "admin.config.share.enable-user-recipients.description":
-    "Kun käytössä, rekisteröidyn käyttäjän sähköpostiosoitteeseen lähetetyt jaot näkyvät automaattisesti hänen tilillään. Käyttäjät voivat myös rajoittaa jaon pääsyn vain nimetyille vastaanottajille.",
+  "admin.config.share.chunk-size.description": "Säädä latausten lohkokokoa tasapainottaaksesi tehokkuutta ja luotettavuutta internetyhteytesi mukaan. Pienemmät lohkot voivat parantaa onnistumisastetta epävakailla yhteyksillä, kun taas suuremmat lohkot nopeuttavat latauksia vakailla yhteyksillä.",
+  "admin.config.share.auto-open-share-modal": "Avaa automaattisesti jakomodaali",
+  "admin.config.share.auto-open-share-modal.description": "Jaon luonti-ikkuna avautuu automaattisesti, kun käyttäjä valitsee tiedostoja, jolloin painiketta ei tarvitse napsauttaa manuaalisesti.",
+  "admin.config.security.allow-admin-access-all-shares": "Salli ylläpitäjän pääsy kaikkiin jakoihin",
+  "admin.config.share.reverse-share-simple-only": "Pakota käänteisen jaon yksinkertainen tila",
+  "admin.config.share.reverse-share-simple-only.description": "Pakota käänteiset jaot luotavaksi yksinkertaisessa tilassa. Jos poistettu käytöstä, käänteisen jaon luoja voi valita yksinkertaisen ja edistyneen tilan välillä.",
+  "admin.config.security.allow-admin-access-all-shares.description": "Salli ylläpitäjien pääsy kaikkiin jakoihin, vaikka ne olisivat salasanasuojattuja, vanhentuneita tai poistettuja.",
+  "admin.config.share.enable-user-recipients": "Ota käyttöön jakaminen rekisteröityneille käyttäjille",
+  "admin.config.share.enable-user-recipients.description": "Kun käytössä, rekisteröidyn käyttäjän sähköpostiosoitteeseen lähetetyt jaot näkyvät automaattisesti hänen tilillään. Käyttäjät voivat myös rajoittaa jaon pääsyn vain nimetyille vastaanottajille.",
   "admin.config.share.file-retention-period": "Tiedostojen säilytysaika",
-  "admin.config.share.file-retention-period.description":
-    "Kuinka kauan tiedostoja säilytetään jaon vanhenemisen tai poistamisen jälkeen. Hyödyllinen vain, jos myös 'Salli ylläpitäjän pääsy kaikkiin jakoihin' on käytössä. Aseta -1 säilyttääksesi tiedostot ikuisesti.",
+  "admin.config.share.file-retention-period.description": "Kuinka kauan tiedostoja säilytetään jaon vanhenemisen tai poistamisen jälkeen. Hyödyllinen vain, jos myös 'Salli ylläpitäjän pääsy kaikkiin jakoihin' on käytössä. Aseta -1 säilyttääksesi tiedostot ikuisesti.",
   "admin.config.smtp.enabled": "Käytä",
-  "admin.config.smtp.enabled.description":
-    "Onko SMTP käytössä. Aseta tämä todeksi vain, jos olet syöttänyt SMTP-palvelimen isäntän, portin, sähköpostin, käyttäjän ja salasanan.",
+  "admin.config.smtp.enabled.description": "Onko SMTP käytössä. Aseta tämä todeksi vain, jos olet syöttänyt SMTP-palvelimen isäntän, portin, sähköpostin, käyttäjän ja salasanan.",
   "admin.config.smtp.host": "Isäntä",
   "admin.config.smtp.host.description": "SMTP palvelimen isäntä",
   "admin.config.smtp.port": "Portti",
   "admin.config.smtp.port.description": "SMTP palvelimen portti",
   "admin.config.smtp.email": "Sähköposti",
-  "admin.config.smtp.email.description":
-    "Sähköpostiosoite, josta sähköpostit lähetetään",
+  "admin.config.smtp.email.description": "Sähköpostiosoite, josta sähköpostit lähetetään",
   "admin.config.smtp.username": "Käyttäjätunnus",
   "admin.config.smtp.username.description": "SMTP palvelimen käyttäjänimi",
   "admin.config.smtp.password": "Salasana",
@@ -672,145 +524,93 @@ export default {
   "admin.config.smtp.button.test": "Lähetä testisähköposti",
   "admin.config.smtp.test-email.success": "Sähköposti lähetetty onnistuneesti",
   "admin.config.smtp.test-email.error.title": "Sähköpostin lähetys epäonnistui",
-  "admin.config.smtp.test-email.error.description":
-    "Testisähköpostia lähetettäessä tapahtui seuraava virhe:",
+  "admin.config.smtp.test-email.error.description": "Testisähköpostia lähetettäessä tapahtui seuraava virhe:",
   "admin.config.smtp.test-email.save.title": "Tallenna määritykset",
-  "admin.config.smtp.test-email.save.description":
-    "Jatkaaksesi sinun on ensin tallennettava määritykset. Haluatko tallentaa määritykset ja lähettää testisähköpostin?",
+  "admin.config.smtp.test-email.save.description": "Jatkaaksesi sinun on ensin tallennettava määritykset. Haluatko tallentaa määritykset ja lähettää testisähköpostin?",
   "admin.config.smtp.test-email.save.confirm": "Tallenna ja lähetä",
-  "admin.config.smtp.allow-unauthorized-certificates":
-    "Luota valtuuttamattomiin SMTP-palvelimen varmenteisiin",
-  "admin.config.smtp.allow-unauthorized-certificates.description":
-    "Aseta arvoksi tosi vain, jos sinun täytyy luottaa itse allekirjoitettuihin varmenteisiin.",
+  "admin.config.smtp.allow-unauthorized-certificates": "Luota valtuuttamattomiin SMTP-palvelimen varmenteisiin",
+  "admin.config.smtp.allow-unauthorized-certificates.description": "Aseta arvoksi tosi vain, jos sinun täytyy luottaa itse allekirjoitettuihin varmenteisiin.",
   "admin.config.oauth.allow-registration": "Salli rekisteröinti",
-  "admin.config.oauth.allow-registration.description":
-    "Salli käyttäjien rekisteröityä sosiaalisen median kirjautumisen kautta",
+  "admin.config.oauth.allow-registration.description": "Salli käyttäjien rekisteröityä sosiaalisen median kirjautumisen kautta",
   "admin.config.oauth.ignore-totp": "Ohita TOTP",
-  "admin.config.oauth.ignore-totp.description":
-    "Ohitetaanko TOTP, kun käyttäjä käyttää sosiaalisen median kirjautumista",
-  "admin.config.oauth.disable-password":
-    "Poista salasanakirjautuminen käytöstä",
-  "admin.config.oauth.disable-password.description":
-    "Poistetaanko salasanakirjautuminen käytöstä\nVarmista, että OAuth-palveluntarjoaja on määritetty oikein ennen tämän asetuksen aktivoimista, jotta et joudu lukituksi ulos.",
+  "admin.config.oauth.ignore-totp.description": "Ohitetaanko TOTP, kun käyttäjä käyttää sosiaalisen median kirjautumista",
+  "admin.config.oauth.disable-password": "Poista salasanakirjautuminen käytöstä",
+  "admin.config.oauth.disable-password.description": "Poistetaanko salasanakirjautuminen käytöstä\nVarmista, että OAuth-palveluntarjoaja on määritetty oikein ennen tämän asetuksen aktivoimista, jotta et joudu lukituksi ulos.",
   "admin.config.oauth.github-enabled": "GitHubia",
-  "admin.config.oauth.github-enabled.description":
-    "Onko GitHub-kirjautuminen käytössä",
+  "admin.config.oauth.github-enabled.description": "Onko GitHub-kirjautuminen käytössä",
   "admin.config.oauth.github-client-id": "GitHub Client ID",
-  "admin.config.oauth.github-client-id.description":
-    "GitHub OAuth -sovelluksen Client ID",
+  "admin.config.oauth.github-client-id.description": "GitHub OAuth -sovelluksen Client ID",
   "admin.config.oauth.github-client-secret": "GitHub Client secret",
-  "admin.config.oauth.github-client-secret.description":
-    "GitHub OAuth -sovelluksen Client secret",
+  "admin.config.oauth.github-client-secret.description": "GitHub OAuth -sovelluksen Client secret",
   "admin.config.oauth.google-enabled": "Googlea",
-  "admin.config.oauth.google-enabled.description":
-    "Onko Google-kirjautuminen käytössä",
+  "admin.config.oauth.google-enabled.description": "Onko Google-kirjautuminen käytössä",
   "admin.config.oauth.google-client-id": "Google Client ID",
-  "admin.config.oauth.google-client-id.description":
-    "Google OAuth -sovelluksen Client ID",
+  "admin.config.oauth.google-client-id.description": "Google OAuth -sovelluksen Client ID",
   "admin.config.oauth.google-client-secret": "Google Client secret",
-  "admin.config.oauth.google-client-secret.description":
-    "Google OAuth -sovelluksen Client secret",
+  "admin.config.oauth.google-client-secret.description": "Google OAuth -sovelluksen Client secret",
   "admin.config.oauth.microsoft-enabled": "Microsofta",
-  "admin.config.oauth.microsoft-enabled.description":
-    "Onko Microsoft-kirjautuminen käytössä",
+  "admin.config.oauth.microsoft-enabled.description": "Onko Microsoft-kirjautuminen käytössä",
   "admin.config.oauth.microsoft-tenant": "Microsoft Tenant",
-  "admin.config.oauth.microsoft-tenant.description":
-    "Microsoft OAuth -sovelluksen vuokralaisen tunnus (Tenant ID)\ncommon: Käyttäjät, joilla on henkilökohtainen Microsoft-tili tai työ-/koulutili Microsoft Entra ID:stä, voivat kirjautua sovellukseen.\norganizations: Vain käyttäjät, joilla on työ- tai koulutili Microsoft Entra ID:stä, voivat kirjautua sovellukseen.\nconsumers: Vain käyttäjät, joilla on henkilökohtainen Microsoft-tili, voivat kirjautua sovellukseen.\nMicrosoft Entra -vuokralaisen toimialuenimi tai vuokralaisen GUID-tunnus: Vain tietyn Microsoft Entra -vuokralaisen käyttäjät (hakemiston jäsenet työ- tai koulutilillä tai vieraat henkilökohtaisella tilillä) voivat kirjautua sovellukseen.",
+  "admin.config.oauth.microsoft-tenant.description": "Microsoft OAuth -sovelluksen vuokralaisen tunnus (Tenant ID)\ncommon: Käyttäjät, joilla on henkilökohtainen Microsoft-tili tai työ-/koulutili Microsoft Entra ID:stä, voivat kirjautua sovellukseen.\norganizations: Vain käyttäjät, joilla on työ- tai koulutili Microsoft Entra ID:stä, voivat kirjautua sovellukseen.\nconsumers: Vain käyttäjät, joilla on henkilökohtainen Microsoft-tili, voivat kirjautua sovellukseen.\nMicrosoft Entra -vuokralaisen toimialuenimi tai vuokralaisen GUID-tunnus: Vain tietyn Microsoft Entra -vuokralaisen käyttäjät (hakemiston jäsenet työ- tai koulutilillä tai vieraat henkilökohtaisella tilillä) voivat kirjautua sovellukseen.",
   "admin.config.oauth.microsoft-client-id": "Microsoft Client ID",
-  "admin.config.oauth.microsoft-client-id.description":
-    "Microsoft OAuth -sovelluksen Client ID",
+  "admin.config.oauth.microsoft-client-id.description": "Microsoft OAuth -sovelluksen Client ID",
   "admin.config.oauth.microsoft-client-secret": "Microsoft Client secret",
-  "admin.config.oauth.microsoft-client-secret.description":
-    "Microsoft OAuth -sovelluksen Client secret",
+  "admin.config.oauth.microsoft-client-secret.description": "Microsoft OAuth -sovelluksen Client secret",
   "admin.config.oauth.discord-enabled": "Discordia",
-  "admin.config.oauth.discord-enabled.description":
-    "Onko Discord-kirjautuminen käytössä",
+  "admin.config.oauth.discord-enabled.description": "Onko Discord-kirjautuminen käytössä",
   "admin.config.oauth.discord-limited-users": "Discordin rajoitetut käyttäjät",
-  "admin.config.oauth.discord-limited-users.description":
-    "Rajoita kirjautuminen tiettyihin käyttäjiin heidän Discord-tunnuksensa perusteella. Jätä tyhjäksi poistaaksesi käytöstä.",
-  "admin.config.oauth.discord-limited-guild":
-    "Discordin rajoitettu palvelintunnus",
-  "admin.config.oauth.discord-limited-guild.description":
-    "Rajoita kirjautuminen tietyn palvelimen käyttäjiin. Jätä tyhjäksi poistaaksesi käytöstä.",
+  "admin.config.oauth.discord-limited-users.description": "Rajoita kirjautuminen tiettyihin käyttäjiin heidän Discord-tunnuksensa perusteella. Jätä tyhjäksi poistaaksesi käytöstä.",
+  "admin.config.oauth.discord-limited-guild": "Discordin rajoitettu palvelintunnus",
+  "admin.config.oauth.discord-limited-guild.description": "Rajoita kirjautuminen tietyn palvelimen käyttäjiin. Jätä tyhjäksi poistaaksesi käytöstä.",
   "admin.config.oauth.discord-client-id": "Discord Client ID",
-  "admin.config.oauth.discord-client-id.description":
-    "Discord OAuth -sovelluksen Client ID",
+  "admin.config.oauth.discord-client-id.description": "Discord OAuth -sovelluksen Client ID",
   "admin.config.oauth.discord-client-secret": "Discord Client secret",
-  "admin.config.oauth.discord-client-secret.description":
-    "Discord OAuth -sovelluksen Client secret",
+  "admin.config.oauth.discord-client-secret.description": "Discord OAuth -sovelluksen Client secret",
   "admin.config.oauth.oidc-enabled": "OpenID Connect",
-  "admin.config.oauth.oidc-enabled.description":
-    "Onko OpenID Connect -kirjautuminen käytössä",
+  "admin.config.oauth.oidc-enabled.description": "Onko OpenID Connect -kirjautuminen käytössä",
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect Discovery URI",
-  "admin.config.oauth.oidc-discovery-uri.description":
-    "OpenID Connect OAuth -sovelluksen Discovery URI",
+  "admin.config.oauth.oidc-discovery-uri.description": "OpenID Connect OAuth -sovelluksen Discovery URI",
   "admin.config.oauth.oidc-sign-out": "Kirjaudu ulos OpenID Connectista",
-  "admin.config.oauth.oidc-sign-out.description":
-    "Kirjaako ”Kirjaudu ulos” -painike ulos myös OpenID Connect -palveluntarjoajalta",
+  "admin.config.oauth.oidc-sign-out.description": "Kirjaako ”Kirjaudu ulos” -painike ulos myös OpenID Connect -palveluntarjoajalta",
   "admin.config.oauth.oidc-scope": "OpenID Connect scope",
-  "admin.config.oauth.oidc-scope.description":
-    "Käyttöoikeudet (scopes), joita pyydetään OpenID Connect -palveluntarjoajalta.",
+  "admin.config.oauth.oidc-scope.description": "Käyttöoikeudet (scopes), joita pyydetään OpenID Connect -palveluntarjoajalta.",
   "admin.config.oauth.oidc-username-claim": "OpenID Connect username claim",
-  "admin.config.oauth.oidc-username-claim.description":
-    "Käyttäjänimitunnus (username claim) OpenID Connect ID -tokenissa. Jätä tyhjäksi, jos et tiedä mikä tämä asetus on.",
-  "admin.config.oauth.oidc-role-path":
-    "Roolien polku OpenID Connect -tokenissa",
-  "admin.config.oauth.oidc-role-path.description":
-    "Täytyy olla kelvollinen JMES-polku, joka viittaa roolitaulukkoon. Käyttöoikeuksien hallintaa OpenID Connect -roolien avulla suositellaan vain, jos muuta identiteettipalveluntarjoajaa ei ole määritetty ja salasanakirjautuminen on poistettu käytöstä. Jätä tyhjäksi, jos et tiedä mikä tämä asetus on." +
-    "Managing access rights using OpenID Connect roles is only recommended if no other identity provider is configured and password login is disabled. " +
-    "Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-general-access":
-    "OpenID Connect -rooli yleiseen pääsyyn",
-  "admin.config.oauth.oidc-role-general-access.description":
-    "Rooli, jota vaaditaan yleiseen pääsyyn. Täytyy löytyä käyttäjän rooleista kirjautumista varten. Jätä tyhjäksi, jos et tiedä mikä tämä asetus on." +
-    "Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-admin-access":
-    "OpenID Connect -rooli ylläpitäjän pääsyyn",
-  "admin.config.oauth.oidc-role-admin-access.description":
-    "Rooli, jota vaaditaan ylläpitäjän pääsyyn. Täytyy löytyä käyttäjän rooleista ylläpitopaneeliin pääsyä varten. Jätä tyhjäksi, jos et tiedä mikä tämä asetus on." +
-    "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-username-claim.description": "Käyttäjänimitunnus (username claim) OpenID Connect ID -tokenissa. Jätä tyhjäksi, jos et tiedä mikä tämä asetus on.",
+  "admin.config.oauth.oidc-role-path": "Roolien polku OpenID Connect -tokenissa",
+  "admin.config.oauth.oidc-role-path.description": "Täytyy olla kelvollinen JMES-polku, joka viittaa roolitaulukkoon. Käyttöoikeuksien hallintaa OpenID Connect -roolien avulla suositellaan vain, jos muuta identiteettipalveluntarjoajaa ei ole määritetty ja salasanakirjautuminen on poistettu käytöstä. Jätä tyhjäksi, jos et tiedä mikä tämä asetus on." + "Managing access rights using OpenID Connect roles is only recommended if no other identity provider is configured and password login is disabled. " + "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-general-access": "OpenID Connect -rooli yleiseen pääsyyn",
+  "admin.config.oauth.oidc-role-general-access.description": "Rooli, jota vaaditaan yleiseen pääsyyn. Täytyy löytyä käyttäjän rooleista kirjautumista varten. Jätä tyhjäksi, jos et tiedä mikä tämä asetus on." + "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-admin-access": "OpenID Connect -rooli ylläpitäjän pääsyyn",
+  "admin.config.oauth.oidc-role-admin-access.description": "Rooli, jota vaaditaan ylläpitäjän pääsyyn. Täytyy löytyä käyttäjän rooleista ylläpitopaneeliin pääsyä varten. Jätä tyhjäksi, jos et tiedä mikä tämä asetus on." + "Leave it blank if you don't know what this config is.",
   "admin.config.oauth.oidc-client-id": "OpenID Connect Client ID",
-  "admin.config.oauth.oidc-client-id.description":
-    "OpenID Connect OAuth -sovelluksen Client ID",
+  "admin.config.oauth.oidc-client-id.description": "OpenID Connect OAuth -sovelluksen Client ID",
   "admin.config.oauth.oidc-client-secret": "OpenID Connect Client secret",
-  "admin.config.oauth.oidc-client-secret.description":
-    "OpenID Connect OAuth -sovelluksen Client secret",
+  "admin.config.oauth.oidc-client-secret.description": "OpenID Connect OAuth -sovelluksen Client secret",
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "Ota LDAP käyttöön",
-  "admin.config.ldap.enabled.description":
-    "Käytä LDAP-todennusta käyttäjän kirjautumiseen",
+  "admin.config.ldap.enabled.description": "Käytä LDAP-todennusta käyttäjän kirjautumiseen",
   "admin.config.ldap.url": "Server URL",
   "admin.config.ldap.url.description": "LDAP-palvelimen URL-osoite",
   "admin.config.ldap.bind-dn": "Bind DN",
-  "admin.config.ldap.bind-dn.description":
-    "Oletuskäyttäjä käyttäjähakujen suorittamiseen",
+  "admin.config.ldap.bind-dn.description": "Oletuskäyttäjä käyttäjähakujen suorittamiseen",
   "admin.config.ldap.bind-password": "Bind password",
-  "admin.config.ldap.bind-password.description":
-    "Salasana käyttäjähakujen suorittamiseen",
+  "admin.config.ldap.bind-password.description": "Salasana käyttäjähakujen suorittamiseen",
   "admin.config.ldap.search-base": "User base",
-  "admin.config.ldap.search-base.description":
-    "Juurisijainti, josta käyttäjähaku suoritetaan",
+  "admin.config.ldap.search-base.description": "Juurisijainti, josta käyttäjähaku suoritetaan",
   "admin.config.ldap.search-query": "User query",
-  "admin.config.ldap.search-query.description":
-    "Käyttäjäkyselyä käytetään LDAP-käyttäjän etsimiseen 'User base' -sijainnista. %username% voidaan käyttää paikkamerkkinä käyttäjän antamalle syötteelle.",
+  "admin.config.ldap.search-query.description": "Käyttäjäkyselyä käytetään LDAP-käyttäjän etsimiseen 'User base' -sijainnista. %username% voidaan käyttää paikkamerkkinä käyttäjän antamalle syötteelle.",
   "admin.config.ldap.admin-groups": "Admin group",
-  "admin.config.ldap.admin-groups.description":
-    "Ryhmä, jota vaaditaan ylläpitäjän pääsyyn.",
+  "admin.config.ldap.admin-groups.description": "Ryhmä, jota vaaditaan ylläpitäjän pääsyyn.",
   "admin.config.ldap.field-name-member-of": "Käyttäjäryhmien attribuutin nimi",
-  "admin.config.ldap.field-name-member-of.description":
-    "LDAP-attribuutin nimi ryhmille, joiden jäsen käyttäjä on. Tätä käytetään ylläpitäjäryhmää tarkistettaessa.",
-  "admin.config.ldap.field-name-email":
-    "Käyttäjän sähköpostin attribuutin nimi",
-  "admin.config.ldap.field-name-email.description":
-    "Käyttäjän sähköpostin LDAP-attribuutin nimi.",
+  "admin.config.ldap.field-name-member-of.description": "LDAP-attribuutin nimi ryhmille, joiden jäsen käyttäjä on. Tätä käytetään ylläpitäjäryhmää tarkistettaessa.",
+  "admin.config.ldap.field-name-email": "Käyttäjän sähköpostin attribuutin nimi",
+  "admin.config.ldap.field-name-email.description": "Käyttäjän sähköpostin LDAP-attribuutin nimi.",
   "admin.config.notify.success": "Määritykset päivitetty onnistuneesti.",
-  "admin.config.notify.logo-success":
-    "Logo päivitetty onnistuneesti. Sivuston päivittymisessä voi kestää muutama minuutti.",
+  "admin.config.notify.logo-success": "Logo päivitetty onnistuneesti. Sivuston päivittymisessä voi kestää muutama minuutti.",
   "admin.config.notify.no-changes": "Ei tallennettavia muutoksia.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Käytössä",
-  "admin.config.s3.enabled.description":
-    "Käytetäänkö S3-tallennustilaa jaettujen tiedostojen tallentamiseen paikallisen tiedostojärjestelmän sijaan. VAROITUS: Jos ClamAV on aktiivinen, tiedostot ladataan tilapäisesti S3:sta tarkistettavaksi.",
+  "admin.config.s3.enabled.description": "Käytetäänkö S3-tallennustilaa jaettujen tiedostojen tallentamiseen paikallisen tiedostojärjestelmän sijaan. VAROITUS: Jos ClamAV on aktiivinen, tiedostot ladataan tilapäisesti S3:sta tarkistettavaksi.",
   "admin.config.s3.endpoint": "Endpoint",
   "admin.config.s3.endpoint.description": "S3-säilön URL-osoite.",
   "admin.config.s3.region": "Region",
@@ -818,34 +618,25 @@ export default {
   "admin.config.s3.bucket-name": "Säilön nimi",
   "admin.config.s3.bucket-name.description": "S3-säilön nimi.",
   "admin.config.s3.bucket-path": "Polku",
-  "admin.config.s3.bucket-path.description":
-    "Oletuspolku, jota tulisi käyttää tiedostojen tallentamiseen S3-säilöön.",
+  "admin.config.s3.bucket-path.description": "Oletuspolku, jota tulisi käyttää tiedostojen tallentamiseen S3-säilöön.",
   "admin.config.s3.key": "Key",
   "admin.config.s3.key.description": "Avain, jolla pääset käsiksi S3-säilöön.",
   "admin.config.s3.secret": "Secret",
-  "admin.config.s3.secret.description":
-    "Salaisuus (secret), jolla pääset käsiksi S3-säilöön.",
+  "admin.config.s3.secret.description": "Salaisuus (secret), jolla pääset käsiksi S3-säilöön.",
   "admin.config.s3.use-checksum": "Käytä tarkistussummaa",
-  "admin.config.s3.use-checksum.description":
-    "Ota pois käytöstä taustajärjestelmille, jotka eivät tue tarkistussummaa (esim. B2).",
-  "admin.config.s3.docs-link":
-    "CORS on määritettävä uudelleen säilössäsi, katso lisätietoja: {wikiLink}.",
+  "admin.config.s3.use-checksum.description": "Ota pois käytöstä taustajärjestelmille, jotka eivät tue tarkistussummaa (esim. B2).",
+  "admin.config.s3.docs-link": "CORS on määritettävä uudelleen säilössäsi, katso lisätietoja: {wikiLink}.",
   "admin.config.category.legal": "Oikeudelliset tiedot",
   "admin.config.legal.enabled": "Ota käyttöön oikeudelliset ilmoitukset",
-  "admin.config.legal.enabled.description":
-    "Näytetäänkö alatunnisteessa linkki julkaisijan tietoihin ja tietosuojakäytäntöön.",
+  "admin.config.legal.enabled.description": "Näytetäänkö alatunnisteessa linkki julkaisijan tietoihin ja tietosuojakäytäntöön.",
   "admin.config.legal.imprint-text": "Julkaisijan tiedot -teksti",
-  "admin.config.legal.imprint-text.description":
-    "Teksti, joka näytetään julkaisijan tiedoissa. Tukee Markdownia. Jätä tyhjäksi linkittääksesi ulkoiselle sivulle.",
+  "admin.config.legal.imprint-text.description": "Teksti, joka näytetään julkaisijan tiedoissa. Tukee Markdownia. Jätä tyhjäksi linkittääksesi ulkoiselle sivulle.",
   "admin.config.legal.imprint-url": "Julkaisijan tietojen URL",
-  "admin.config.legal.imprint-url.description":
-    "Jos sinulla on jo julkaisijan tietojen sivu, voit linkittää sen tähän tekstikentän käytön sijaan.",
+  "admin.config.legal.imprint-url.description": "Jos sinulla on jo julkaisijan tietojen sivu, voit linkittää sen tähän tekstikentän käytön sijaan.",
   "admin.config.legal.privacy-policy-text": "Tietosuojakäytännön teksti",
-  "admin.config.legal.privacy-policy-text.description":
-    "Teksti, joka näytetään tietosuojakäytännössä. Tukee Markdownia. Jätä tyhjäksi linkittääksesi ulkoiselle tietosuojasivulle.",
+  "admin.config.legal.privacy-policy-text.description": "Teksti, joka näytetään tietosuojakäytännössä. Tukee Markdownia. Jätä tyhjäksi linkittääksesi ulkoiselle tietosuojasivulle.",
   "admin.config.legal.privacy-policy-url": "Tietosuojakäytännön URL",
-  "admin.config.legal.privacy-policy-url.description":
-    "Jos sinulla on jo tietosuojakäytännön sivu, voit linkittää sen tähän tekstikentän käytön sijaan.",
+  "admin.config.legal.privacy-policy-url.description": "Jos sinulla on jo tietosuojakäytännön sivu, voit linkittää sen tähän tekstikentän käytön sijaan.",
   // 404
   "404.description": "Hups tätä sivua ei ole olemassa.",
   "404.button.home": "Tuo minut takaisin kotiin",
@@ -854,25 +645,18 @@ export default {
   "error.description": "Hups!",
   "error.button.back": "Takaisin",
   "error.msg.default": "Jokin meni pieleen.",
-  "error.msg.access_denied":
-    "Peruutit tunnistautumisprosessin, ole hyvä ja yritä uudelleen.",
-  "error.msg.expired_token":
-    "Todennusprosessi kesti liian kauan, yritä uudelleen.",
+  "error.msg.access_denied": "Peruutit tunnistautumisprosessin, ole hyvä ja yritä uudelleen.",
+  "error.msg.expired_token": "Todennusprosessi kesti liian kauan, yritä uudelleen.",
   "error.msg.invalid_token": "Sisäinen virhe",
   "error.msg.no_user": "Käyttäjä linkitetty tähän {0} tiliin ei ole olemassa.",
   "error.msg.no_email": "Sähköpostiosoitetta ei saada tältä {0} -tililtä.",
   "error.msg.already_linked": "Tämä {0} -tili on jo linkitetty toiseen tiliin.",
-  "error.msg.not_linked":
-    "Tätä {0} -tiliä ei ole vielä linkitetty mihinkään tiliin.",
-  "error.msg.email_already_exists":
-    "Tili tällä sähköpostiosoitteella on jo olemassa. Kirjaudu sisään salasanallasi ja linkitä {0}-tilisi manuaalisesti Oma tili -sivullasi.",
-  "error.msg.email_not_verified":
-    "Sähköpostiosoitettasi tällä {0}-tilillä ei ole vahvistettu. Vahvista sähköpostisi identiteettipalveluntarjoajallasi ennen kirjautumista.",
-  "error.msg.unverified_account":
-    "Tätä {0} -tiliä ei ole vahvistettu, yritä uudelleen vahvistuksen jälkeen.",
+  "error.msg.not_linked": "Tätä {0} -tiliä ei ole vielä linkitetty mihinkään tiliin.",
+  "error.msg.email_already_exists": "Tili tällä sähköpostiosoitteella on jo olemassa. Kirjaudu sisään salasanallasi ja linkitä {0}-tilisi manuaalisesti Oma tili -sivullasi.",
+  "error.msg.email_not_verified": "Sähköpostiosoitettasi tällä {0}-tilillä ei ole vahvistettu. Vahvista sähköpostisi identiteettipalveluntarjoajallasi ennen kirjautumista.",
+  "error.msg.unverified_account": "Tätä {0} -tiliä ei ole vahvistettu, yritä uudelleen vahvistuksen jälkeen.",
   "error.msg.user_not_allowed": "Sinulla ei ole oikeutta kirjautua sisään.",
-  "error.msg.cannot_get_user_info":
-    "Käyttäjätietojasi ei voi saada tältä {0} -tililtä.",
+  "error.msg.cannot_get_user_info": "Käyttäjätietojasi ei voi saada tältä {0} -tililtä.",
   "error.param.provider_github": "GitHubia",
   "error.param.provider_google": "Googlea",
   "error.param.provider_microsoft": "Microsofta",
@@ -917,20 +701,14 @@ export default {
   "common.error.exact-length": "On oltava tarkasti {length} merkkiä pitkä",
   "common.error.invalid-number": "Pitää olla luku",
   "common.error.field-required": "Tämä kenttä on pakollinen",
-  "common.error.password.lowercase":
-    "Salasanan täytyy sisältää vähintään yksi pienaakkonen",
-  "common.error.password.uppercase":
-    "Salasanan täytyy sisältää vähintään yksi suuraakkonen",
-  "common.error.password.number":
-    "Salasanan täytyy sisältää vähintään yksi numero",
-  "common.error.password.special":
-    "Salasanan täytyy sisältää vähintään yksi erikoismerkki",
+  "common.error.password.lowercase": "Salasanan täytyy sisältää vähintään yksi pienaakkonen",
+  "common.error.password.uppercase": "Salasanan täytyy sisältää vähintään yksi suuraakkonen",
+  "common.error.password.number": "Salasanan täytyy sisältää vähintään yksi numero",
+  "common.error.password.special": "Salasanan täytyy sisältää vähintään yksi erikoismerkki",
   "admin.notice.modal.headerTag": "VAATII YLLÄPIDON TOIMENPITEITÄ",
-  "admin.notice.modal.defaultCheckboxLabel":
-    "Vahvistan lukeneeni tämän ilmoituksen ja ymmärtäväni kriittiset muutokset.",
+  "admin.notice.modal.defaultCheckboxLabel": "Vahvistan lukeneeni tämän ilmoituksen ja ymmärtäväni kriittiset muutokset.",
   "admin.notice.modal.button.acknowledge": "Vahvista ja sulje",
   "admin.notice.modal.button.acknowledging": "Vahvistetaan...",
   "admin.notice.modal.docsLink": "Näytä dokumentaatio",
-  "admin.notice.modal.globalNoticeFooter":
-    "Huomautus: Kun tämä ilmoitus on vahvistettu, se poistetaan pysyvästi kaikilta ylläpitäjiltä kaikilla laitteilla.",
+  "admin.notice.modal.globalNoticeFooter": "Huomautus: Kun tämä ilmoitus on vahvistettu, se poistetaan pysyvästi kaikilta ylläpitäjiltä kaikilla laitteilla.",
 };

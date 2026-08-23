@@ -14,16 +14,13 @@ export default {
 
   // /
   "home.title": "En <h>self-hosted</h> fildelingsplatform.",
-  "home.description":
-    "Er du sikker på, at du vil overlade dine personlige filer til tredjeparter som WeTransfer?",
+  "home.description": "Er du sikker på, at du vil overlade dine personlige filer til tredjeparter som WeTransfer?",
   "home.bullet.a.name": "Self-Hosted",
   "home.bullet.a.description": "Host Pingvin Share på din egen maskine.",
   "home.bullet.b.name": "Privatliv",
-  "home.bullet.b.description":
-    "Dine filer tilhører dig og vil aldrig være tilgængelige for tredjeparter.",
+  "home.bullet.b.description": "Dine filer tilhører dig og vil aldrig være tilgængelige for tredjeparter.",
   "home.bullet.c.name": "Ingen irriterende grænse for filstørrelse",
-  "home.bullet.c.description":
-    "Upload filer så store du vil. Kun din harddisk sætter grænsen.",
+  "home.bullet.c.description": "Upload filer så store du vil. Kun din harddisk sætter grænsen.",
   "home.button.start": "Kom i gang",
   "home.button.source": "Kildekode",
   // END /
@@ -33,14 +30,12 @@ export default {
   "signin.description": "Har du ikke en bruger endnu?",
   "signin.button.signup": "Opret bruger",
   "signin.input.email-or-username": "E-mail eller brugernavn",
-  "signin.input.email-or-username.placeholder":
-    "Din e-mail eller dit brugernavn",
+  "signin.input.email-or-username.placeholder": "Din e-mail eller dit brugernavn",
   "signin.input.password": "Adgangskode",
   "signin.input.password.placeholder": "Din adgangskode",
   "signin.button.submit": "Log ind",
   "signIn.notify.totp-required.title": "2-faktor login påkrævet",
-  "signIn.notify.totp-required.description":
-    "Indtast den aktuelle engangskode fra din 2-faktor Authenticator",
+  "signIn.notify.totp-required.description": "Indtast den aktuelle engangskode fra din 2-faktor Authenticator",
   "signIn.oauth.or": "ELLER",
   "signIn.oauth.signInWith": "Log ind med",
   "signIn.oauth.github": "GitHub",
@@ -65,10 +60,8 @@ export default {
   "verify.error": "Bekræftelseslinket er ugyldigt eller udløbet.",
   "verify.button.signin": "Gå til Log ind",
   "verify.info.title": "Kontobekræftelse",
-  "verify.info.description":
-    "E-mailbekræftelse er aktiveret. Vi har sendt et bekræftelseslink til din e-mailadresse. Klik venligst på linket for at aktivere din konto.",
-  "verify.info.note":
-    "Hvis du ikke modtager e-mailen inden for få minutter, skal du tjekke din spam-mappe.",
+  "verify.info.description": "E-mailbekræftelse er aktiveret. Vi har sendt et bekræftelseslink til din e-mailadresse. Klik venligst på linket for at aktivere din konto.",
+  "verify.info.note": "Hvis du ikke modtager e-mailen inden for få minutter, skal du tjekke din spam-mappe.",
   "verify.info.resend.button": "Gensend bekræftelses-e-mail",
   "verify.info.resend.success": "Bekræftelses-e-mail er blevet gensendt.",
   "verify.info.resend.error": "Kunne ikke gensende bekræftelses-e-mail.",
@@ -81,10 +74,8 @@ export default {
 
   // /auth/reset-password
   "resetPassword.title": "Glemt din adgangskode?",
-  "resetPassword.description":
-    "Indtast din e-mail for at nulstille din adgangskode.",
-  "resetPassword.notify.success":
-    "En besked med et link til at nulstille din adgangskode er blevet sendt, hvis den angivne e-mail findes.",
+  "resetPassword.description": "Indtast din e-mail for at nulstille din adgangskode.",
+  "resetPassword.notify.success": "En besked med et link til at nulstille din adgangskode er blevet sendt, hvis den angivne e-mail findes.",
   "resetPassword.button.back": "Tilbage til login",
   "resetPassword.text.resetPassword": "Nulstil adgangskode",
   "resetPassword.text.enterNewPassword": "Indtast din nye adgangskode",
@@ -99,8 +90,7 @@ export default {
   "account.card.password.title": "Adgangskode",
   "account.card.password.old": "Gammel adgangskode",
   "account.card.password.new": "Ny adgangskode",
-  "account.card.password.noPasswordSet":
-    "Du har ikke angivet en adgangskode. For at logge ind med din e-mail og adgangskode skal du oprette en adgangskode.",
+  "account.card.password.noPasswordSet": "Du har ikke angivet en adgangskode. For at logge ind med din e-mail og adgangskode skal du oprette en adgangskode.",
   "account.notify.password.success": "Adgangskoden er ændret",
   "account.card.oauth.title": "Socialt login",
   "account.card.oauth.github": "GitHub",
@@ -112,14 +102,11 @@ export default {
   "account.card.oauth.unlink": "Fjern tilknytning",
   "account.card.oauth.unlinked": "Tilknytning fjernet",
   "account.modal.unlink.title": "Fjern kontotilknytning",
-  "account.modal.unlink.description":
-    "Fjernelse af tilknytning til sociale konti kan medføre, at du mister adgangen til din konto, hvis du ikke husker dine loginoplysninger",
+  "account.modal.unlink.description": "Fjernelse af tilknytning til sociale konti kan medføre, at du mister adgangen til din konto, hvis du ikke husker dine loginoplysninger",
   "account.notify.oauth.unlinked.success": "Tilknytning fjernet med succes",
   "account.card.security.title": "Sikkerhed",
-  "account.card.security.totp.enable.description":
-    "Indtast din nuværende adgangskode for at begynde opsætningen af 2-faktor login",
-  "account.card.security.totp.disable.description":
-    "Indtast din nuværende adgangskode for at begynde opsætningen af 2-faktor login",
+  "account.card.security.totp.enable.description": "Indtast din nuværende adgangskode for at begynde opsætningen af 2-faktor login",
+  "account.card.security.totp.disable.description": "Indtast din nuværende adgangskode for at begynde opsætningen af 2-faktor login",
   "account.card.security.totp.button.start": "Start",
   "account.modal.totp.title": "Aktiver 2-faktor login",
   "account.modal.totp.step1": "Trin 1: Tilføj din 2-faktor Authenticator",
@@ -132,8 +119,7 @@ export default {
   "account.notify.totp.disable": "2-faktor blev deaktiveret",
   "account.notify.totp.enable": "2-faktor blev deaktiveret",
   "account.card.language.title": "Sprog",
-  "account.card.language.description":
-    "Projektet er oversat af fællesskabet. Nogle sprog kan være ufuldstændige.",
+  "account.card.language.description": "Projektet er oversat af fællesskabet. Nogle sprog kan være ufuldstændige.",
   "account.card.color.title": "Farveskema",
   // ThemeSwitcher.tsx
   "account.theme.dark": "Mørkt",
@@ -141,8 +127,7 @@ export default {
   "account.theme.system": "System",
   "account.button.delete": "Slet bruger",
   "account.modal.delete.title": "Slet bruger",
-  "account.modal.delete.description":
-    "Er du sikker på at du vil slette din bruger, herunder alle dine aktive delinger?",
+  "account.modal.delete.description": "Er du sikker på at du vil slette din bruger, herunder alle dine aktive delinger?",
   // END /account
 
   // /account/shares
@@ -161,34 +146,29 @@ export default {
   "account.shares.table.size": "Størrelse",
   "account.shares.table.password-protected": "Beskyttet med adgangskode",
   "account.shares.table.recipients": "Modtagere",
-  "account.shares.table.restricted-to-recipients":
-    "Kun begrænset til modtagere",
+  "account.shares.table.restricted-to-recipients": "Kun begrænset til modtagere",
   "account.shares.table.shared-with-recipients": "Delt med modtagere",
   "account.shares.table.visitor-count": "{count} af {max}",
   "account.shares.table.expiry-never": "Aldrig",
   "account.shares.modal.share-informations": "Delingsoplysninger",
   "account.shares.modal.share-link": "Del link",
-  "account.shares.modal.edit.password.keep":
-    "Efterlad tomt for at beholde den nuværende adgangskode",
+  "account.shares.modal.edit.password.keep": "Efterlad tomt for at beholde den nuværende adgangskode",
   "account.shares.modal.edit.password.remove": "Fjern adgangskodebeskyttelse",
   "account.shares.modal.delete.title": "Slet deling: {share}",
-  "account.shares.modal.delete.description":
-    "Ønsker du virkelig at slette denne deling?",
+  "account.shares.modal.delete.description": "Ønsker du virkelig at slette denne deling?",
   // END /account/shares
 
   // /account/received
   "account.received-shares.title": "Modtagne delinger",
   "account.received-shares.title.empty": "Ingen delinger modtaget endnu",
-  "account.received-shares.description.empty":
-    "Delinger sendt til din e-mailadresse vil blive vist her.",
+  "account.received-shares.description.empty": "Delinger sendt til din e-mailadresse vil blive vist her.",
   "account.received-shares.table.from": "Fra",
   "account.received-shares.button.open": "Åbn",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Omvendt deling",
-  "account.reverseShares.description":
-    "En omvendt deling giver dig mulighed for at generere en unik URL, så eksterne brugere kan oprette en deling.",
+  "account.reverseShares.description": "En omvendt deling giver dig mulighed for at generere en unik URL, så eksterne brugere kan oprette en deling.",
   "account.reverseShares.title.empty": "Der er tomt her 👀",
   "account.reverseShares.description.empty": "Du har ingen omvendte delinger.",
   // showCreateReverseShareModal.tsx
@@ -208,22 +188,16 @@ export default {
   "account.reverseShares.modal.expiration.year-plural": "År",
   "account.reverseShares.modal.max-size.label": "Maksimal størrelse for deling",
   "account.reverseShares.modal.send-email": "Send e-mailnotifikationer",
-  "account.reverseShares.modal.send-email.description":
-    "Sender dig en e-mailnotifikation, når en deling oprettes med dette omvendte delingslink.",
+  "account.reverseShares.modal.send-email.description": "Sender dig en e-mailnotifikation, når en deling oprettes med dette omvendte delingslink.",
   "account.reverseShares.modal.simplified": "Simpel tilstand",
-  "account.reverseShares.modal.simplified.description":
-    "Gør det nemt for den person, der uploader filen, at dele den med dig. De vil kun kunne tilpasse navn og beskrivelse af delingen.",
+  "account.reverseShares.modal.simplified.description": "Gør det nemt for den person, der uploader filen, at dele den med dig. De vil kun kunne tilpasse navn og beskrivelse af delingen.",
   "account.reverseShares.modal.public-access": "Offentlig adgang",
-  "account.reverseShares.modal.public-access.description":
-    "Lav filerne i denne omvendte deling offentlige. Hvis deaktiveret kan kun dig og delingens ejer have adgang til filerne.",
+  "account.reverseShares.modal.public-access.description": "Lav filerne i denne omvendte deling offentlige. Hvis deaktiveret kan kun dig og delingens ejer have adgang til filerne.",
   "account.reverseShares.modal.max-use.label": "Maksimal anvendelser",
-  "account.reverseShares.modal.max-use.description":
-    "Det maksimale antal gange, denne URL kan bruges til at oprette en deling.",
+  "account.reverseShares.modal.max-use.description": "Det maksimale antal gange, denne URL kan bruges til at oprette en deling.",
   "account.reverseShare.never-expires": "Denne omvendte deling udløber aldrig.",
-  "account.reverseShare.expires-on":
-    "Denne omvendte deling udløber den {expiration}.",
-  "account.reverseShares.table.no-shares":
-    "Der er ikke oprettet nogle delinger endnu",
+  "account.reverseShare.expires-on": "Denne omvendte deling udløber den {expiration}.",
+  "account.reverseShares.table.no-shares": "Der er ikke oprettet nogle delinger endnu",
   "account.reverseShares.table.count.singular": "del",
   "account.reverseShares.table.count.plural": "delinger",
   "account.reverseShares.table.shares": "Delinger",
@@ -232,8 +206,7 @@ export default {
   "account.reverseShares.table.expires": "Udløber d",
   "account.reverseShares.modal.reverse-share-link": "Omvendt delingslink",
   "account.reverseShares.modal.delete.title": "Slet omvendt deling",
-  "account.reverseShares.modal.delete.description":
-    "Ønsker du virkelig at slette denne omvendte deling? Hvis du gør det, vil de tilknyttede delinger også blive slettet.",
+  "account.reverseShares.modal.delete.description": "Ønsker du virkelig at slette denne omvendte deling? Hvis du gør det, vil de tilknyttede delinger også blive slettet.",
   // END /account/reverseShares
 
   // /admin
@@ -254,38 +227,29 @@ export default {
   "admin.users.edit.update.title": "Rediger bruger: {username}",
   "admin.users.edit.update.admin-privileges": "Admin rettigheder",
   "admin.users.edit.update.email-verified": "E-mail bekræftet",
-  "admin.users.edit.update.custom-share-size-limit":
-    "Tilpasset grænse for delingsstørrelse",
-  "admin.users.edit.update.custom-share-size-limit.description":
-    "Tilsidesæt den globale uploadgrænse for denne bruger",
+  "admin.users.edit.update.custom-share-size-limit": "Tilpasset grænse for delingsstørrelse",
+  "admin.users.edit.update.custom-share-size-limit.description": "Tilsidesæt den globale uploadgrænse for denne bruger",
   "admin.users.edit.update.custom-storage-quota-limit": "Tilpasset lagerkvote",
-  "admin.users.edit.update.custom-storage-quota-limit.description":
-    "Begræns brugerens samlede lagerforbrug på tværs af aktive delinger",
+  "admin.users.edit.update.custom-storage-quota-limit.description": "Begræns brugerens samlede lagerforbrug på tværs af aktive delinger",
   "admin.users.edit.update.change-password.title": "Skift adgangskode",
   "admin.users.edit.update.change-password.field": "Ny adgangskode",
   "admin.users.edit.update.change-password.button": "Gem ny adgangskode",
   "admin.users.edit.update.notify.password.success": "Adgangskoden er ændret",
   "admin.users.edit.delete.title": "Slet bruger: {username} ?",
-  "admin.users.edit.delete.description":
-    "Vil du virkelig slette denne bruger og alle vedkommendes delinger?",
+  "admin.users.edit.delete.description": "Vil du virkelig slette denne bruger og alle vedkommendes delinger?",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Opret bruger",
   "admin.users.modal.create.username": "Brugernavn",
   "admin.users.modal.create.email": "E-mail",
   "admin.users.modal.create.password": "Adgangskode",
   "admin.users.modal.create.manual-password": "Angiv adgangskode manuelt",
-  "admin.users.modal.create.manual-password.description":
-    "Hvis ikke markeret, vil brugeren modtage en e-mail med et link til at indstille deres adgangskode.",
-  "admin.users.modal.create.custom-share-size-limit":
-    "Tilpasset grænse for delingsstørrelse",
-  "admin.users.modal.create.custom-share-size-limit.description":
-    "Tilsidesæt den globale uploadgrænse for denne bruger",
+  "admin.users.modal.create.manual-password.description": "Hvis ikke markeret, vil brugeren modtage en e-mail med et link til at indstille deres adgangskode.",
+  "admin.users.modal.create.custom-share-size-limit": "Tilpasset grænse for delingsstørrelse",
+  "admin.users.modal.create.custom-share-size-limit.description": "Tilsidesæt den globale uploadgrænse for denne bruger",
   "admin.users.modal.create.custom-storage-quota-limit": "Tilpasset lagerkvote",
-  "admin.users.modal.create.custom-storage-quota-limit.description":
-    "Begræns brugerens samlede lagerforbrug på tværs af aktive delinger",
+  "admin.users.modal.create.custom-storage-quota-limit.description": "Begræns brugerens samlede lagerforbrug på tværs af aktive delinger",
   "admin.users.modal.create.admin": "Admin rettigheder",
-  "admin.users.modal.create.admin.description":
-    "Hvis markeret, vil brugeren have adgang til administrationspanelet.",
+  "admin.users.modal.create.admin.description": "Hvis markeret, vil brugeren have adgang til administrationspanelet.",
   // END /admin/users
 
   // /admin/shares
@@ -297,28 +261,21 @@ export default {
   "admin.shares.table.expires": "Udløber",
   "admin.shares.table.deletes": "Slettes den",
   "admin.shares.edit.delete.title": "Slet deling: {id}",
-  "admin.shares.edit.delete.description":
-    "Ønsker du virkelig at slette denne deling?",
+  "admin.shares.edit.delete.description": "Ønsker du virkelig at slette denne deling?",
   // END /admin/shares
 
   // /upload
   "upload.title": "Upload",
-  "upload.notify.confirm-leave":
-    "Er du sikker på, at du vil forlade denne side? Din upload vil blive annulleret.",
-  "upload.notify.generic-error":
-    "Der opstod en fejl under afslutningen af din deling.",
-  "upload.notify.count-failed":
-    "{count} filer fejlede ved upload. Prøver igen.",
+  "upload.notify.confirm-leave": "Er du sikker på, at du vil forlade denne side? Din upload vil blive annulleret.",
+  "upload.notify.generic-error": "Der opstod en fejl under afslutningen af din deling.",
+  "upload.notify.count-failed": "{count} filer fejlede ved upload. Prøver igen.",
   "upload.notify.duplicate-skipped": "Sprang over duplikeret fil: {name}",
   "upload.reverse-share.error.invalid.title": "Ugyldigt omvendt delingslink",
-  "upload.reverse-share.error.invalid.description":
-    "This reverse share has expired or is invalid.",
+  "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
   // Dropzone.tsx
   "upload.dropzone.title": "Upload filer",
-  "upload.dropzone.description":
-    "Træk og slip filer eller mapper her for at starte din deling, eller tryk på 'Ctrl+V' for at uploade tekstindhold fra udklipsholderen. Vi accepterer kun filer op til i alt {maxSize}.",
-  "upload.dropzone.notify.file-too-big":
-    "Dine filer overskrider den maksimale delingsstørrelse på {maxSize}.",
+  "upload.dropzone.description": "Træk og slip filer eller mapper her for at starte din deling, eller tryk på 'Ctrl+V' for at uploade tekstindhold fra udklipsholderen. Vi accepterer kun filer op til i alt {maxSize}.",
+  "upload.dropzone.notify.file-too-big": "Dine filer overskrider den maksimale delingsstørrelse på {maxSize}.",
   "upload.button.folder": "Upload mappe",
   "upload.button.folder.append": "Tilføj mappe",
   "upload.button.add": "Tilføj til upload",
@@ -329,20 +286,15 @@ export default {
   "upload.filelist.remaining": "{time} tilbage",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Opret Deling",
-  "upload.modal.link.error.invalid":
-    "Må kun indeholde bogstaver, tal, understregninger og bindestreger",
+  "upload.modal.link.error.invalid": "Må kun indeholde bogstaver, tal, understregninger og bindestreger",
   "upload.modal.link.error.taken": "Det valgte link er allerede i brug",
-  "upload.modal.link.error.s3-session-not-found":
-    "S3-uploadsession blev ikke fundet",
-  "upload.modal.link.error.s3-etag-missing":
-    "Manglende ETag-header i S3-svar. Sørg for, at CORS eksponerer ETag-headeren.",
+  "upload.modal.link.error.s3-session-not-found": "S3-uploadsession blev ikke fundet",
+  "upload.modal.link.error.s3-etag-missing": "Manglende ETag-header i S3-svar. Sørg for, at CORS eksponerer ETag-headeren.",
   "upload.modal.not-signed-in": "Du er ikke logget ind",
-  "upload.modal.not-signed-in-description":
-    "Du vil ikke være i stand til at slette din deling manuelt og se antallet af besøgende.",
+  "upload.modal.not-signed-in-description": "Du vil ikke være i stand til at slette din deling manuelt og se antallet af besøgende.",
   "upload.modal.expires.never": "aldrig",
   "upload.modal.expires.never-long": "Permanent deling",
-  "upload.modal.expires.error.too-long":
-    "Udløbsdatoen overskrider maksimum på {max}.",
+  "upload.modal.expires.error.too-long": "Udløbsdatoen overskrider maksimum på {max}.",
   "upload.modal.link.label": "Link",
   "upload.modal.expires.label": "Udløb",
   "upload.modal.expires.minute-singular": "Minut",
@@ -359,13 +311,11 @@ export default {
   "upload.modal.expires.year-plural": "År",
   "upload.modal.accordion.name-and-description.title": "Navn og beskrivelse",
   "upload.modal.accordion.name-and-description.name.placeholder": "Navn",
-  "upload.modal.accordion.name-and-description.description.placeholder":
-    "Note til modtagerne af denne deling",
+  "upload.modal.accordion.name-and-description.description.placeholder": "Note til modtagerne af denne deling",
   "upload.modal.accordion.email.title": "E-mail modtagere",
   "upload.modal.accordion.email.placeholder": "Indtast e-mail modtagere",
   "upload.modal.accordion.email.invalid-email": "Ugyldig e-mailadresse",
-  "upload.modal.accordion.email.restrict-to-recipients":
-    "Begræns kun adgang til disse modtagere (de skal logge ind for at få adgang)",
+  "upload.modal.accordion.email.restrict-to-recipients": "Begræns kun adgang til disse modtagere (de skal logge ind for at få adgang)",
   "upload.modal.accordion.security.title": "Sikkerhedsindstillinger",
   "upload.modal.accordion.security.password.label": "Adgangskodebeskyttelse",
   "upload.modal.accordion.security.password.placeholder": "Ingen adgangskode",
@@ -375,59 +325,45 @@ export default {
   "upload.modal.completed.never-expires": "Denne deling vil aldrig udløbe.",
   "upload.modal.completed.expires-on": "Denne deling udløber den {expiration}.",
   "upload.modal.completed.share-ready": "Delingen er klar",
-  "upload.modal.completed.notified-reverse-share-creator":
-    "Vi har underrettet opretteren af den omvendte deling. Du kan også manuelt dele dette link med dem på anden vis.",
+  "upload.modal.completed.notified-reverse-share-creator": "Vi har underrettet opretteren af den omvendte deling. Du kan også manuelt dele dette link med dem på anden vis.",
   // END /upload
 
   // /share/[id]
   "share.title": "Del {shareId}",
   "share.description": "Se hvad jeg har delt med dig!",
-  "share.fileCount":
-    "{count, plural, =1 {# fil} other {# filer}} · {size} (zip-fil kan være mindre på grund af komprimering)",
+  "share.fileCount": "{count, plural, =1 {# fil} other {# filer}} · {size} (zip-fil kan være mindre på grund af komprimering)",
   "share.copy-text-contents": "Kopier filindhold til udklipsholder",
-  "share.error.visitor-limit-exceeded.title":
-    "Grænsen for besøgende overskredet",
-  "share.error.visitor-limit-exceeded.description":
-    "Besøgsgrænsen for denne deling er blevet overskredet.",
+  "share.error.visitor-limit-exceeded.title": "Grænsen for besøgende overskredet",
+  "share.error.visitor-limit-exceeded.description": "Besøgsgrænsen for denne deling er blevet overskredet.",
   "share.error.removed.title": "Deling fjernet",
   "share.error.not-found.title": "Delingen blev ikke fundet",
-  "share.error.not-found.description":
-    "Den deling, du leder efter, eksisterer ikke.",
+  "share.error.not-found.description": "Den deling, du leder efter, eksisterer ikke.",
   "share.error.access-denied.title": "Privat deling",
-  "share.error.access-denied.description":
-    "Den aktuelle konto har ikke tilladelse til at få adgang til denne deling",
+  "share.error.access-denied.description": "Den aktuelle konto har ikke tilladelse til at få adgang til denne deling",
   "share.error.restricted.title": "Begrænset deling",
-  "share.error.restricted.description":
-    "Denne deling er begrænset til specifikke modtagere. Log venligst ind for at få adgang.",
+  "share.error.restricted.description": "Denne deling er begrænset til specifikke modtagere. Log venligst ind for at få adgang.",
   "share.error.restricted.button": "Log ind",
   "share.modal.password.title": "Adgangskode påkrævet",
-  "share.modal.password.description":
-    "Indtast venligst adgangskoden for at få adgang til denne deling.",
+  "share.modal.password.description": "Indtast venligst adgangskoden for at få adgang til denne deling.",
   "share.modal.password": "Adgangskode",
   "share.modal.error.invalid-password": "Ugyldig adgangskode",
   "share.button.download-all": "Download alle",
-  "share.notify.download-all-preparing":
-    "Delingen forberedes. Prøv venligst igen om et par minutter.",
+  "share.notify.download-all-preparing": "Delingen forberedes. Prøv venligst igen om et par minutter.",
   "share.notify.copied-contents": "Filindhold kopieret til udklipsholder",
-  "share.notify.copy-too-big-error":
-    "Filen er for stor til at blive kopieret til udklipsholderen",
-  "share.notify.copy-not-supported-error":
-    "Kopiering til udklipsholder kræver en HTTPS-forbindelse",
+  "share.notify.copy-too-big-error": "Filen er for stor til at blive kopieret til udklipsholderen",
+  "share.notify.copy-not-supported-error": "Kopiering til udklipsholder kræver en HTTPS-forbindelse",
   "share.modal.file-link": "Fil link",
   "share.table.name": "Navn",
   "share.table.size": "Størrelse",
   "share.modal.file-preview.original_file": "Vis original fil",
-  "share.modal.file-preview.error.not-supported.title":
-    "Forhåndsvisning ikke understøttet",
-  "share.modal.file-preview.error.not-supported.description":
-    "Forhåndsvisning understøttes ikke for denne filtype. Download venligst filen for at se den.",
+  "share.modal.file-preview.error.not-supported.title": "Forhåndsvisning ikke understøttet",
+  "share.modal.file-preview.error.not-supported.description": "Forhåndsvisning understøttes ikke for denne filtype. Download venligst filen for at se den.",
   // END /share/[id]
 
   // /share/[id]/edit
   "share.edit.title": "Rediger {shareId}",
   "share.edit.append-upload": "Tilføj fil",
-  "share.edit.notify.generic-error":
-    "Der opstod en fejl under afslutningen af din deling.",
+  "share.edit.notify.generic-error": "Der opstod en fejl under afslutningen af din deling.",
   "share.edit.notify.save-success": "Deling opdateret",
   // END /share/[id]/edit
 
@@ -441,8 +377,7 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "Konfigurationsfil til stede",
-  "admin.config.config-file-warning.description":
-    "Da du har konfigureret Pingvin Share med en konfigurationsfil, kan du ikke ændre konfigurationen via brugergrænsefladen.",
+  "admin.config.config-file-warning.description": "Da du har konfigureret Pingvin Share med en konfigurationsfil, kan du ikke ændre konfigurationen via brugergrænsefladen.",
   "admin.config.title": "Konfiguration",
   "admin.config.category.general": "Generelt",
   "admin.config.category.appearance": "Udseende",
@@ -455,200 +390,127 @@ export default {
   "admin.config.general.app-name": "App-navn",
   "admin.config.general.app-name.description": "Navnet på applikationen",
   "admin.config.general.default-language": "Standardsprog",
-  "admin.config.general.default-language.description":
-    "Dette gælder for alle brugere, hver bruger kan stadig tilpasse deres sprog i deres profil.",
+  "admin.config.general.default-language.description": "Dette gælder for alle brugere, hver bruger kan stadig tilpasse deres sprog i deres profil.",
   "admin.config.appearance.theme-primary-color": "Temaets primærfarve",
-  "admin.config.appearance.theme-primary-color.description":
-    "Primærfarve til knapper, links og accenter. Vælg tilpasset for at bruge en farveoverride.",
-  "admin.config.appearance.theme-primary-color-override":
-    "Tilpasset primærfarve",
-  "admin.config.appearance.theme-primary-color-override.description":
-    "Hex-farveoverride, der bruges når temaets primærfarve er sat til tilpasset.",
+  "admin.config.appearance.theme-primary-color.description": "Primærfarve til knapper, links og accenter. Vælg tilpasset for at bruge en farveoverride.",
+  "admin.config.appearance.theme-primary-color-override": "Tilpasset primærfarve",
+  "admin.config.appearance.theme-primary-color-override.description": "Hex-farveoverride, der bruges når temaets primærfarve er sat til tilpasset.",
   "admin.config.appearance.theme-font-preset": "Forudindstillet skrifttype",
-  "admin.config.appearance.theme-font-preset.description":
-    "Skrifttype-forudindstilling, der indlæses ved build. Vælg system eller en af de medfølgende Google Fonts.",
+  "admin.config.appearance.theme-font-preset.description": "Skrifttype-forudindstilling, der indlæses ved build. Vælg system eller en af de medfølgende Google Fonts.",
   "admin.config.appearance.theme-color-scheme": "Standard farveskema (gæster)",
-  "admin.config.appearance.theme-color-scheme.description":
-    "Standard lys/mørk tilstand for ikke-loggede brugere. Loggede brugere bruger deres egen kontoindstilling.",
+  "admin.config.appearance.theme-color-scheme.description": "Standard lys/mørk tilstand for ikke-loggede brugere. Loggede brugere bruger deres egen kontoindstilling.",
   "admin.config.appearance.theme-radius": "Temaets hjørneradius",
-  "admin.config.appearance.theme-radius.description":
-    "Standard hjørneradius brugt af Mantine-komponenter.",
+  "admin.config.appearance.theme-radius.description": "Standard hjørneradius brugt af Mantine-komponenter.",
   "admin.config.appearance.custom-css": "Tilpasset CSS",
-  "admin.config.appearance.custom-css.description":
-    "Global CSS anvendt på frontend. Brug med omtanke; ugyldig CSS kan påvirke grænsefladen.",
+  "admin.config.appearance.custom-css.description": "Global CSS anvendt på frontend. Brug med omtanke; ugyldig CSS kan påvirke grænsefladen.",
   "admin.config.appearance.upload-progress-style": "Stil for upload-fremskridt",
-  "admin.config.appearance.upload-progress-style.description":
-    "Vælg, hvordan upload-fremskridt vises i fillisten.",
+  "admin.config.appearance.upload-progress-style.description": "Vælg, hvordan upload-fremskridt vises i fillisten.",
   "admin.config.appearance.upload-progress-style.circle": "Cirkelindikator",
-  "admin.config.appearance.upload-progress-style.circle-percentage":
-    "Cirkel med procent",
-  "admin.config.appearance.upload-progress-style.percentage-time":
-    "Procent og resterende tid",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Cirkel med procent",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Procent og resterende tid",
   "admin.config.general.app-url": "App-URL",
-  "admin.config.general.app-url.description":
-    "På hvilken URL Pingvin Share er tilgængelig",
+  "admin.config.general.app-url.description": "På hvilken URL Pingvin Share er tilgængelig",
   "admin.config.security.secure-cookies": "Sikre cookies",
-  "admin.config.security.secure-cookies.description":
-    "Hvorvidt secure-flaget skal sættes på cookies. Hvis aktiveret, fungerer webstedet ikke via HTTP.",
+  "admin.config.security.secure-cookies.description": "Hvorvidt secure-flaget skal sættes på cookies. Hvis aktiveret, fungerer webstedet ikke via HTTP.",
   "admin.config.general.show-home-page": "Vis forside",
   "admin.config.general.show-home-page.description": "Om forsiden skal vises",
   "admin.config.security.session-duration": "Sessionsvarighed",
-  "admin.config.security.session-duration.description":
-    "Tid efter hvilken en bruger skal logge ind igen (standard: 3 måneder).",
+  "admin.config.security.session-duration.description": "Tid efter hvilken en bruger skal logge ind igen (standard: 3 måneder).",
   "admin.config.appearance.logo": "Logo",
-  "admin.config.appearance.logo.description":
-    "Skift dit logo ved at uploade et nyt billede. Billedet skal være PNG og skal have formatet 1:1.",
+  "admin.config.appearance.logo.description": "Skift dit logo ved at uploade et nyt billede. Billedet skal være PNG og skal have formatet 1:1.",
   "admin.config.appearance.logo-dark": "Mørk tilstand logo",
-  "admin.config.appearance.logo-dark.description":
-    "Upload et separat logo til mørk tilstand. Billedet skal være en PNG og have formatet 1:1.",
+  "admin.config.appearance.logo-dark.description": "Upload et separat logo til mørk tilstand. Billedet skal være en PNG og have formatet 1:1.",
   "admin.config.appearance.logo.placeholder": "Vælg billede",
-  "admin.config.security.custom-password-policy":
-    "Tilpasset adgangskodepolitik",
-  "admin.config.security.custom-password-policy.description":
-    "Hvorvidt tilpasning af adgangskodepolitikken skal aktiveres. Hvis deaktiveret, bruges standardpolitikken med minimum 8 tegn.",
+  "admin.config.security.custom-password-policy": "Tilpasset adgangskodepolitik",
+  "admin.config.security.custom-password-policy.description": "Hvorvidt tilpasning af adgangskodepolitikken skal aktiveres. Hvis deaktiveret, bruges standardpolitikken med minimum 8 tegn.",
   "admin.config.security.min-length": "Minimumslængde",
-  "admin.config.security.min-length.description":
-    "Minimum antal tegn påkrævet for en adgangskode.",
+  "admin.config.security.min-length.description": "Minimum antal tegn påkrævet for en adgangskode.",
   "admin.config.security.require-uppercase": "Kræv store bogstaver",
-  "admin.config.security.require-uppercase.description":
-    "Hvorvidt der kræves mindst ét stort bogstav i adgangskoden.",
+  "admin.config.security.require-uppercase.description": "Hvorvidt der kræves mindst ét stort bogstav i adgangskoden.",
   "admin.config.security.require-lowercase": "Kræv små bogstaver",
-  "admin.config.security.require-lowercase.description":
-    "Hvorvidt der kræves mindst ét lille bogstav i adgangskoden.",
+  "admin.config.security.require-lowercase.description": "Hvorvidt der kræves mindst ét lille bogstav i adgangskoden.",
   "admin.config.security.require-number": "Kræv tal",
-  "admin.config.security.require-number.description":
-    "Hvorvidt der kræves mindst ét tal i adgangskoden.",
+  "admin.config.security.require-number.description": "Hvorvidt der kræves mindst ét tal i adgangskoden.",
   "admin.config.security.require-special-character": "Kræv specialtegn",
-  "admin.config.security.require-special-character.description":
-    "Hvorvidt der kræves mindst ét specialtegn i adgangskoden.",
+  "admin.config.security.require-special-character.description": "Hvorvidt der kræves mindst ét specialtegn i adgangskoden.",
   "admin.config.cache.ttl": "TTL",
-  "admin.config.cache.ttl.description":
-    "Tid i sekunder til at opbevare information i cachen.",
+  "admin.config.cache.ttl.description": "Tid i sekunder til at opbevare information i cachen.",
   "admin.config.cache.max-items": "Maksimalt antal elementer",
-  "admin.config.cache.max-items.description":
-    "Maksimalt antal elementer i cachen.",
+  "admin.config.cache.max-items.description": "Maksimalt antal elementer i cachen.",
   "admin.config.cache.redis-enabled": "Redis aktiveret",
-  "admin.config.cache.redis-enabled.description":
-    "Normalt cacher Pingvin Share information i hukommelsen. Hvis du kører flere forekomster af Pingvin Share, skal du aktivere Redis-caching for at dele cachen mellem forekomsterne.",
+  "admin.config.cache.redis-enabled.description": "Normalt cacher Pingvin Share information i hukommelsen. Hvis du kører flere forekomster af Pingvin Share, skal du aktivere Redis-caching for at dele cachen mellem forekomsterne.",
   "admin.config.cache.redis-url": "Redis-URL",
-  "admin.config.cache.redis-url.description":
-    "URL til at oprette forbindelse til den Redis-forekomst, der bruges til caching.",
+  "admin.config.cache.redis-url.description": "URL til at oprette forbindelse til den Redis-forekomst, der bruges til caching.",
   "admin.config.cache.button.test-redis": "Test Redis-forbindelse",
   "admin.config.cache.test-redis.success": "Forbundet til Redis med succes",
-  "admin.config.cache.test-redis.success-disabled":
-    "Forbundet til Redis med succes (Redis-caching er i øjeblikket deaktiveret).",
-  "admin.config.cache.test-redis.modal.error.title":
-    "Kunne ikke oprette forbindelse til Redis",
-  "admin.config.cache.test-redis.modal.error.description":
-    "Under forbindelsen til Redis opstod følgende fejl:",
+  "admin.config.cache.test-redis.success-disabled": "Forbundet til Redis med succes (Redis-caching er i øjeblikket deaktiveret).",
+  "admin.config.cache.test-redis.modal.error.title": "Kunne ikke oprette forbindelse til Redis",
+  "admin.config.cache.test-redis.modal.error.description": "Under forbindelsen til Redis opstod følgende fejl:",
   "admin.config.cache.test-redis.modal.save.title": "Gem konfiguration",
-  "admin.config.cache.test-redis.modal.save.description":
-    "For at fortsætte skal du først gemme konfigurationen. Vil du gemme konfigurationen og teste Redis-forbindelsen?",
+  "admin.config.cache.test-redis.modal.save.description": "For at fortsætte skal du først gemme konfigurationen. Vil du gemme konfigurationen og teste Redis-forbindelsen?",
   "admin.config.cache.test-redis.modal.save.confirm": "Gem og test",
   "admin.config.email.send-html-emails": "Aktivér HTML-e-mailkompatibilitet",
-  "admin.config.email.send-html-emails.description":
-    "Hvis aktiveret, vil e-mails blive sendt i HTML-format. Sørg for, at e-mailskabeloner er opdateret til at bruge HTML.",
-  "admin.config.share.enable-share-email-recipients":
-    "Aktivér deling med e-mailmodtagere",
-  "admin.config.share.enable-share-email-recipients.description":
-    "Hvorvidt e-maildeling med modtagere skal tillades. Dette kan kun aktiveres, hvis SMTP er aktiveret.",
+  "admin.config.email.send-html-emails.description": "Hvis aktiveret, vil e-mails blive sendt i HTML-format. Sørg for, at e-mailskabeloner er opdateret til at bruge HTML.",
+  "admin.config.share.enable-share-email-recipients": "Aktivér deling med e-mailmodtagere",
+  "admin.config.share.enable-share-email-recipients.description": "Hvorvidt e-maildeling med modtagere skal tillades. Dette kan kun aktiveres, hvis SMTP er aktiveret.",
   "admin.config.email.share-recipients-subject": "Emne for delingsmodtagere",
-  "admin.config.email.share-recipients-subject.description":
-    "Emne for den e-mail, der sendes til delingsmodtagerne.",
+  "admin.config.email.share-recipients-subject.description": "Emne for den e-mail, der sendes til delingsmodtagerne.",
   "admin.config.email.share-recipients-message": "Besked til delingsmodtagere",
-  "admin.config.email.share-recipients-message.description":
-    "Besked, der sendes til delingsmodtagerne. Tilgængelige variabler:\n {creator} - Brugernavnet på opretteren af delingen\n {creatorEmail} - E-mailadressen på opretteren af delingen\n {shareUrl} - Delingens URL\n {desc} - Beskrivelsen af delingen\n {expires} - Udløbsdatoen for delingen\n Disse variabler vil blive erstattet med den faktiske værdi.",
+  "admin.config.email.share-recipients-message.description": "Besked, der sendes til delingsmodtagerne. Tilgængelige variabler:\n {creator} - Brugernavnet på opretteren af delingen\n {creatorEmail} - E-mailadressen på opretteren af delingen\n {shareUrl} - Delingens URL\n {desc} - Beskrivelsen af delingen\n {expires} - Udløbsdatoen for delingen\n Disse variabler vil blive erstattet med den faktiske værdi.",
   "admin.config.email.reverse-share-subject": "Emne for omvendt deling",
-  "admin.config.email.reverse-share-subject.description":
-    "Emne for den sendte e-mail, når nogen har oprettet en deling med dit omvendte delingslink.",
+  "admin.config.email.reverse-share-subject.description": "Emne for den sendte e-mail, når nogen har oprettet en deling med dit omvendte delingslink.",
   "admin.config.email.reverse-share-message": "Besked om omvendt deling",
-  "admin.config.email.reverse-share-message.description":
-    "Besked, der sendes, når nogen har oprettet en deling med dit omvendte delingslink. {shareUrl} vil blive erstattet med opretterens navn og delings-URL'en.",
-  "admin.config.email.reset-password-subject":
-    "Emne for nulstilling af adgangskode",
-  "admin.config.email.reset-password-subject.description":
-    "Emne for den sendte e-mail, når en bruger anmoder om en nulstilling af adgangskode.",
+  "admin.config.email.reverse-share-message.description": "Besked, der sendes, når nogen har oprettet en deling med dit omvendte delingslink. {shareUrl} vil blive erstattet med opretterens navn og delings-URL'en.",
+  "admin.config.email.reset-password-subject": "Emne for nulstilling af adgangskode",
+  "admin.config.email.reset-password-subject.description": "Emne for den sendte e-mail, når en bruger anmoder om en nulstilling af adgangskode.",
   "admin.config.email.reset-password-message": "Nulstil adgangskode besked",
-  "admin.config.email.reset-password-message.description":
-    "Besked, der sendes, når en bruger anmoder om nulstilling af adgangskode. {url} vil blive erstattet med URL'en til nulstilling af adgangskode.",
+  "admin.config.email.reset-password-message.description": "Besked, der sendes, når en bruger anmoder om nulstilling af adgangskode. {url} vil blive erstattet med URL'en til nulstilling af adgangskode.",
   "admin.config.email.invite-subject": "Invitations emne",
-  "admin.config.email.invite-subject.description":
-    "Emne for den sendte e-mail, når en administrator inviterer en bruger.",
+  "admin.config.email.invite-subject.description": "Emne for den sendte e-mail, når en administrator inviterer en bruger.",
   "admin.config.email.invite-message": "Invitations besked",
-  "admin.config.email.invite-message.description":
-    "Besked, der sendes, når en administrator inviterer en bruger. {url} vil blive erstattet med invitations-URL'en, {email} med e-mailen og {password} med brugerens adgangskode.",
-  "admin.config.email.share-recipients-reply-to-creator":
-    "Indstil Reply-To til opretterens e-mail",
-  "admin.config.email.share-recipients-reply-to-creator.description":
-    "Hvorvidt Reply-To-headeren skal indstilles til e-mailadressen på den bruger, der oprettede delingen.",
-  "admin.config.share.enable-share-download-notifications":
-    "Aktivér download-notifikationer",
-  "admin.config.share.enable-share-download-notifications.description":
-    "Hvorvidt der skal sendes en e-mail til delingsopretteren, når en e-mailmodtager downloader en fil. Dette kræver SMTP og deling med e-mailmodtagere.",
-  "admin.config.email.share-download-notification-subject":
-    "Emne for download-notifikation",
-  "admin.config.email.share-download-notification-subject.description":
-    "Emne for den e-mail, der sendes til delingsopretteren, når en modtager downloader en fil.",
-  "admin.config.email.share-download-notification-message":
-    "Besked om download-notifikation",
-  "admin.config.email.share-download-notification-message.description":
-    "Besked, der sendes til delingsopretteren, når en modtager downloader en fil. Tilgængelige variabler:\n {recipientEmail} - Modtagerens e-mail\n {fileName} - Det downloadede filnavn\n {shareUrl} - Delingens URL",
-  "admin.config.security.enable-email-verification":
-    "Aktivér e-mailbekræftelse",
-  "admin.config.security.enable-email-verification.description":
-    "Hvorvidt brugere skal bekræfte deres e-mailadresse, før de kan logge ind. Dette kan kun aktiveres, hvis SMTP er aktiveret.",
+  "admin.config.email.invite-message.description": "Besked, der sendes, når en administrator inviterer en bruger. {url} vil blive erstattet med invitations-URL'en, {email} med e-mailen og {password} med brugerens adgangskode.",
+  "admin.config.email.share-recipients-reply-to-creator": "Indstil Reply-To til opretterens e-mail",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Hvorvidt Reply-To-headeren skal indstilles til e-mailadressen på den bruger, der oprettede delingen.",
+  "admin.config.share.enable-share-download-notifications": "Aktivér download-notifikationer",
+  "admin.config.share.enable-share-download-notifications.description": "Hvorvidt der skal sendes en e-mail til delingsopretteren, når en e-mailmodtager downloader en fil. Dette kræver SMTP og deling med e-mailmodtagere.",
+  "admin.config.email.share-download-notification-subject": "Emne for download-notifikation",
+  "admin.config.email.share-download-notification-subject.description": "Emne for den e-mail, der sendes til delingsopretteren, når en modtager downloader en fil.",
+  "admin.config.email.share-download-notification-message": "Besked om download-notifikation",
+  "admin.config.email.share-download-notification-message.description": "Besked, der sendes til delingsopretteren, når en modtager downloader en fil. Tilgængelige variabler:\n {recipientEmail} - Modtagerens e-mail\n {fileName} - Det downloadede filnavn\n {shareUrl} - Delingens URL",
+  "admin.config.security.enable-email-verification": "Aktivér e-mailbekræftelse",
+  "admin.config.security.enable-email-verification.description": "Hvorvidt brugere skal bekræfte deres e-mailadresse, før de kan logge ind. Dette kan kun aktiveres, hvis SMTP er aktiveret.",
   "admin.config.email.verification-subject": "Bekræftelsesemne",
-  "admin.config.email.verification-subject.description":
-    "Emne for den e-mail, der sendes til brugeren, når de opretter sig.",
+  "admin.config.email.verification-subject.description": "Emne for den e-mail, der sendes til brugeren, når de opretter sig.",
   "admin.config.email.verification-message": "Bekræftelsesbesked",
-  "admin.config.email.verification-message.description":
-    "Besked, der sendes til brugeren, når de opretter sig. {url} vil blive erstattet med bekræftelses-URL'en.",
+  "admin.config.email.verification-message.description": "Besked, der sendes til brugeren, når de opretter sig. {url} vil blive erstattet med bekræftelses-URL'en.",
   "admin.config.security.allow-registration": "Tillad oprettelser",
-  "admin.config.security.allow-registration.description":
-    "Om alle skal kunne oprette en bruger",
-  "admin.config.security.allow-unauthenticated-shares":
-    "Tillad uautoriserede delinger",
-  "admin.config.security.allow-unauthenticated-shares.description":
-    "Hvorvidt uautoriserede brugere kan oprette delinger",
+  "admin.config.security.allow-registration.description": "Om alle skal kunne oprette en bruger",
+  "admin.config.security.allow-unauthenticated-shares": "Tillad uautoriserede delinger",
+  "admin.config.security.allow-unauthenticated-shares.description": "Hvorvidt uautoriserede brugere kan oprette delinger",
   "admin.config.share.default-expiration": "Standardudløb",
-  "admin.config.share.default-expiration.description":
-    "Den valgte standardudløbstid ved oprettelse af en ny deling.",
+  "admin.config.share.default-expiration.description": "Den valgte standardudløbstid ved oprettelse af en ny deling.",
   "admin.config.share.max-expiration": "Maks. udløb",
-  "admin.config.share.max-expiration.description":
-    "Maksimalt delingsudløb. Sæt til 0 for at tillade ubegrænset udløb.",
+  "admin.config.share.max-expiration.description": "Maksimalt delingsudløb. Sæt til 0 for at tillade ubegrænset udløb.",
   "admin.config.share.share-id-length": "Standard længde på delings-ID",
-  "admin.config.share.share-id-length.description":
-    "Standardlængde for det genererede ID for en deling. Denne værdi bruges også til at generere links til omvendte delinger. En værdi under 8 betragtes ikke som sikker.",
+  "admin.config.share.share-id-length.description": "Standardlængde for det genererede ID for en deling. Denne værdi bruges også til at generere links til omvendte delinger. En værdi under 8 betragtes ikke som sikker.",
   "admin.config.share.max-size": "Maks. størrelse",
   "admin.config.share.max-size.description": "Maksimal filstørrelse",
   "admin.config.share.zip-compression-level": "Zip-komprimeringsniveau",
-  "admin.config.share.zip-compression-level.description":
-    "Juster niveauet for at balancere mellem filstørrelse og komprimeringshastighed. Gyldige værdier varierer fra 0 til 9, hvor 0 er ingen komprimering og 9 er maksimal komprimering.",
+  "admin.config.share.zip-compression-level.description": "Juster niveauet for at balancere mellem filstørrelse og komprimeringshastighed. Gyldige værdier varierer fra 0 til 9, hvor 0 er ingen komprimering og 9 er maksimal komprimering.",
   "admin.config.share.chunk-size": "Blokstørrelse",
-  "admin.config.share.chunk-size.description":
-    "Juster blokstørrelsen for dine uploads for at balancere effektivitet og pålidelighed i forhold til din internetforbindelse. Mindre blokke kan forbedre succesrater for ustabile forbindelser, mens større blokke gør uploads hurtigere ved stabile forbindelser.",
-  "admin.config.share.auto-open-share-modal":
-    "Åbn opret deling-modal automatisk",
-  "admin.config.share.auto-open-share-modal.description":
-    "Delingsoprettelsesmodalen vises automatisk, når en bruger vælger filer, hvilket eliminerer behovet for manuelt at klikke på knappen.",
-  "admin.config.security.allow-admin-access-all-shares":
-    "Tillad administratoradgang til alle delinger",
-  "admin.config.share.reverse-share-simple-only":
-    "Gennemtving simpel tilstand for omvendt deling",
-  "admin.config.share.reverse-share-simple-only.description":
-    "Gennemtving at omvendte delinger oprettes i simpel tilstand. Hvis deaktiveret, kan opretteren af den omvendte deling vælge mellem simpel og avanceret tilstand.",
-  "admin.config.security.allow-admin-access-all-shares.description":
-    "Tillad administratorer adgang til alle delinger, selvom de er adgangskodebeskyttede, udløbne eller slettede.",
-  "admin.config.share.enable-user-recipients":
-    "Aktivér deling med registrerede brugere",
-  "admin.config.share.enable-user-recipients.description":
-    "Når aktiveret, vil delinger sendt til en registreret brugers e-mailadresse automatisk blive vist på deres konto. Brugere kan også begrænse delingsadgang til kun navngivne modtagere.",
+  "admin.config.share.chunk-size.description": "Juster blokstørrelsen for dine uploads for at balancere effektivitet og pålidelighed i forhold til din internetforbindelse. Mindre blokke kan forbedre succesrater for ustabile forbindelser, mens større blokke gør uploads hurtigere ved stabile forbindelser.",
+  "admin.config.share.auto-open-share-modal": "Åbn opret deling-modal automatisk",
+  "admin.config.share.auto-open-share-modal.description": "Delingsoprettelsesmodalen vises automatisk, når en bruger vælger filer, hvilket eliminerer behovet for manuelt at klikke på knappen.",
+  "admin.config.security.allow-admin-access-all-shares": "Tillad administratoradgang til alle delinger",
+  "admin.config.share.reverse-share-simple-only": "Gennemtving simpel tilstand for omvendt deling",
+  "admin.config.share.reverse-share-simple-only.description": "Gennemtving at omvendte delinger oprettes i simpel tilstand. Hvis deaktiveret, kan opretteren af den omvendte deling vælge mellem simpel og avanceret tilstand.",
+  "admin.config.security.allow-admin-access-all-shares.description": "Tillad administratorer adgang til alle delinger, selvom de er adgangskodebeskyttede, udløbne eller slettede.",
+  "admin.config.share.enable-user-recipients": "Aktivér deling med registrerede brugere",
+  "admin.config.share.enable-user-recipients.description": "Når aktiveret, vil delinger sendt til en registreret brugers e-mailadresse automatisk blive vist på deres konto. Brugere kan også begrænse delingsadgang til kun navngivne modtagere.",
   "admin.config.share.file-retention-period": "Filopbevaringsperiode",
-  "admin.config.share.file-retention-period.description":
-    "Hvor længe filer opbevares efter en deling udløber eller bliver slettet. Kun nyttigt, hvis 'Tillad administratoradgang til alle delinger' også er aktiveret. Sæt til -1 for at beholde filer for evigt.",
+  "admin.config.share.file-retention-period.description": "Hvor længe filer opbevares efter en deling udløber eller bliver slettet. Kun nyttigt, hvis 'Tillad administratoradgang til alle delinger' også er aktiveret. Sæt til -1 for at beholde filer for evigt.",
   "admin.config.smtp.enabled": "Aktivér",
-  "admin.config.smtp.enabled.description":
-    "Om SMTP er aktiveret. Aktiver kun SMTP, hvis du har indtastet SMTP-server vært, port, e-mail, bruger og adgangskode.",
+  "admin.config.smtp.enabled.description": "Om SMTP er aktiveret. Aktiver kun SMTP, hvis du har indtastet SMTP-server vært, port, e-mail, bruger og adgangskode.",
   "admin.config.smtp.host": "Vært",
   "admin.config.smtp.host.description": "Vært for SMTP serveren",
   "admin.config.smtp.port": "Port",
@@ -662,141 +524,93 @@ export default {
   "admin.config.smtp.button.test": "Send test e-mail",
   "admin.config.smtp.test-email.success": "E-mail sendt med succes",
   "admin.config.smtp.test-email.error.title": "Kunne ikke sende e-mail",
-  "admin.config.smtp.test-email.error.description":
-    "Under afsendelse af test-e-mailen opstod følgende fejl:",
+  "admin.config.smtp.test-email.error.description": "Under afsendelse af test-e-mailen opstod følgende fejl:",
   "admin.config.smtp.test-email.save.title": "Gem konfiguration",
-  "admin.config.smtp.test-email.save.description":
-    "For at fortsætte skal du først gemme konfigurationen. Vil du gemme konfigurationen og sende test-e-mailen?",
+  "admin.config.smtp.test-email.save.description": "For at fortsætte skal du først gemme konfigurationen. Vil du gemme konfigurationen og sende test-e-mailen?",
   "admin.config.smtp.test-email.save.confirm": "Gem og send",
-  "admin.config.smtp.allow-unauthorized-certificates":
-    "Tillid til uautoriserede SMTP-servercertifikater",
-  "admin.config.smtp.allow-unauthorized-certificates.description":
-    "Sæt kun dette til sandt, hvis du har brug for at have tillid til selvsignerede certifikater.",
+  "admin.config.smtp.allow-unauthorized-certificates": "Tillid til uautoriserede SMTP-servercertifikater",
+  "admin.config.smtp.allow-unauthorized-certificates.description": "Sæt kun dette til sandt, hvis du har brug for at have tillid til selvsignerede certifikater.",
   "admin.config.oauth.allow-registration": "Tillad registrering",
-  "admin.config.oauth.allow-registration.description":
-    "Tillad brugere at registrere sig via socialt login",
+  "admin.config.oauth.allow-registration.description": "Tillad brugere at registrere sig via socialt login",
   "admin.config.oauth.ignore-totp": "Ignorer TOTP",
-  "admin.config.oauth.ignore-totp.description":
-    "Hvorvidt TOTP skal ignoreres, når brugeren benytter socialt login",
+  "admin.config.oauth.ignore-totp.description": "Hvorvidt TOTP skal ignoreres, når brugeren benytter socialt login",
   "admin.config.oauth.disable-password": "Deaktiver login med password",
-  "admin.config.oauth.disable-password.description":
-    "Hvorvidt login med adgangskode skal deaktiveres\nSørg for, at en OAuth-udbyder er korrekt konfigureret, før du aktiverer denne konfiguration for at undgå at blive låst ude.",
+  "admin.config.oauth.disable-password.description": "Hvorvidt login med adgangskode skal deaktiveres\nSørg for, at en OAuth-udbyder er korrekt konfigureret, før du aktiverer denne konfiguration for at undgå at blive låst ude.",
   "admin.config.oauth.github-enabled": "GitHub",
-  "admin.config.oauth.github-enabled.description":
-    "Om GitHub login er aktiveret",
+  "admin.config.oauth.github-enabled.description": "Om GitHub login er aktiveret",
   "admin.config.oauth.github-client-id": "GitHub Client ID",
-  "admin.config.oauth.github-client-id.description":
-    "Client ID for GitHub OAuth-appen",
+  "admin.config.oauth.github-client-id.description": "Client ID for GitHub OAuth-appen",
   "admin.config.oauth.github-client-secret": "GitHub Client secret",
-  "admin.config.oauth.github-client-secret.description":
-    "Client secret for GitHub OAuth-appen",
+  "admin.config.oauth.github-client-secret.description": "Client secret for GitHub OAuth-appen",
   "admin.config.oauth.google-enabled": "Google",
-  "admin.config.oauth.google-enabled.description":
-    "Hvorvidt Google-login er aktiveret",
+  "admin.config.oauth.google-enabled.description": "Hvorvidt Google-login er aktiveret",
   "admin.config.oauth.google-client-id": "Google Client ID",
-  "admin.config.oauth.google-client-id.description":
-    "Client ID for Google OAuth-appen",
+  "admin.config.oauth.google-client-id.description": "Client ID for Google OAuth-appen",
   "admin.config.oauth.google-client-secret": "Google Client secret",
-  "admin.config.oauth.google-client-secret.description":
-    "Client secret for Google OAuth-appen",
+  "admin.config.oauth.google-client-secret.description": "Client secret for Google OAuth-appen",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
-  "admin.config.oauth.microsoft-enabled.description":
-    "Hvorvidt Microsoft-login er aktiveret",
+  "admin.config.oauth.microsoft-enabled.description": "Hvorvidt Microsoft-login er aktiveret",
   "admin.config.oauth.microsoft-tenant": "Microsoft Tenant",
-  "admin.config.oauth.microsoft-tenant.description":
-    "Tenant ID for Microsoft OAuth-appen\ncommon: Brugere med både en personlig Microsoft-konto og en arbejds- eller skolekonto fra Microsoft Entra ID kan logge ind i applikationen.\norganizations: Kun brugere med arbejds- eller skolekonti fra Microsoft Entra ID kan logge ind i applikationen.\nconsumers: Kun brugere med en personlig Microsoft-konto kan logge ind i applikationen.\ndomænenavn for Microsoft Entra-tenanten eller tenant-ID i GUID-format: Kun brugere fra en specifik Microsoft Entra-tenant (katalogmedlemmer med en arbejds- eller skolekonto eller katalog-gæster med en personlig Microsoft-konto) kan logge ind i applikationen.",
+  "admin.config.oauth.microsoft-tenant.description": "Tenant ID for Microsoft OAuth-appen\ncommon: Brugere med både en personlig Microsoft-konto og en arbejds- eller skolekonto fra Microsoft Entra ID kan logge ind i applikationen.\norganizations: Kun brugere med arbejds- eller skolekonti fra Microsoft Entra ID kan logge ind i applikationen.\nconsumers: Kun brugere med en personlig Microsoft-konto kan logge ind i applikationen.\ndomænenavn for Microsoft Entra-tenanten eller tenant-ID i GUID-format: Kun brugere fra en specifik Microsoft Entra-tenant (katalogmedlemmer med en arbejds- eller skolekonto eller katalog-gæster med en personlig Microsoft-konto) kan logge ind i applikationen.",
   "admin.config.oauth.microsoft-client-id": "Microsoft Client ID",
-  "admin.config.oauth.microsoft-client-id.description":
-    "Client ID for Microsoft OAuth-appen",
+  "admin.config.oauth.microsoft-client-id.description": "Client ID for Microsoft OAuth-appen",
   "admin.config.oauth.microsoft-client-secret": "Microsoft Client secret",
-  "admin.config.oauth.microsoft-client-secret.description":
-    "Client secret for Microsoft OAuth-appen",
+  "admin.config.oauth.microsoft-client-secret.description": "Client secret for Microsoft OAuth-appen",
   "admin.config.oauth.discord-enabled": "Discord",
-  "admin.config.oauth.discord-enabled.description":
-    "Hvorvidt Discord-login er aktiveret",
+  "admin.config.oauth.discord-enabled.description": "Hvorvidt Discord-login er aktiveret",
   "admin.config.oauth.discord-limited-users": "Discord begrænsede brugere",
-  "admin.config.oauth.discord-limited-users.description":
-    "Begræns login til specifikke brugere via deres Discord ID. Efterlad tomt for at deaktivere.",
+  "admin.config.oauth.discord-limited-users.description": "Begræns login til specifikke brugere via deres Discord ID. Efterlad tomt for at deaktivere.",
   "admin.config.oauth.discord-limited-guild": "Discord begrænset server-ID",
-  "admin.config.oauth.discord-limited-guild.description":
-    "Begræns login til brugere på en specifik server. Efterlad tomt for at deaktivere.",
+  "admin.config.oauth.discord-limited-guild.description": "Begræns login til brugere på en specifik server. Efterlad tomt for at deaktivere.",
   "admin.config.oauth.discord-client-id": "Discord Client ID",
-  "admin.config.oauth.discord-client-id.description":
-    "Client ID for Discord OAuth-appen",
+  "admin.config.oauth.discord-client-id.description": "Client ID for Discord OAuth-appen",
   "admin.config.oauth.discord-client-secret": "Discord Client secret",
-  "admin.config.oauth.discord-client-secret.description":
-    "Client secret for Discord OAuth-appen",
+  "admin.config.oauth.discord-client-secret.description": "Client secret for Discord OAuth-appen",
   "admin.config.oauth.oidc-enabled": "OpenID Connect",
-  "admin.config.oauth.oidc-enabled.description":
-    "Hvorvidt OpenID Connect-login er aktiveret",
+  "admin.config.oauth.oidc-enabled.description": "Hvorvidt OpenID Connect-login er aktiveret",
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect Discovery URI",
-  "admin.config.oauth.oidc-discovery-uri.description":
-    "Discovery URI for OpenID Connect OAuth-appen",
+  "admin.config.oauth.oidc-discovery-uri.description": "Discovery URI for OpenID Connect OAuth-appen",
   "admin.config.oauth.oidc-sign-out": "Log ud fra OpenID Connect",
-  "admin.config.oauth.oidc-sign-out.description":
-    "Hvorvidt knappen «Log ud» vil logge ud fra OpenID Connect-udbyderen",
+  "admin.config.oauth.oidc-sign-out.description": "Hvorvidt knappen «Log ud» vil logge ud fra OpenID Connect-udbyderen",
   "admin.config.oauth.oidc-scope": "OpenID Connect scope",
-  "admin.config.oauth.oidc-scope.description":
-    "Scopes som skal anmodes om fra OpenID Connect-udbyderen.",
+  "admin.config.oauth.oidc-scope.description": "Scopes som skal anmodes om fra OpenID Connect-udbyderen.",
   "admin.config.oauth.oidc-username-claim": "OpenID Connect username claim",
-  "admin.config.oauth.oidc-username-claim.description":
-    "Brugernavn-claim i OpenID Connect ID-token. Efterlad tomt, hvis du ikke ved, hvad denne konfiguration er.",
+  "admin.config.oauth.oidc-username-claim.description": "Brugernavn-claim i OpenID Connect ID-token. Efterlad tomt, hvis du ikke ved, hvad denne konfiguration er.",
   "admin.config.oauth.oidc-role-path": "Sti til roller i OpenID Connect-token",
-  "admin.config.oauth.oidc-role-path.description":
-    "Skal være en gyldig JMES-sti, der refererer til et array af roller. Håndtering af adgangsrettigheder ved hjælp af OpenID Connect-roller anbefales kun, hvis der ikke er konfigureret nogen anden identitetsudbyder, og adgangskodelogin er deaktiveret. Efterlad tomt, hvis du ikke ved, hvad denne konfiguration er." +
-    "Managing access rights using OpenID Connect roles is only recommended if no other identity provider is configured and password login is disabled. " +
-    "Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-general-access":
-    "OpenID Connect-rolle til generel adgang",
-  "admin.config.oauth.oidc-role-general-access.description":
-    "Rolle påkrævet for generel adgang. Skal være til stede i en brugers roller for at de kan logge ind. Efterlad tomt, hvis du ikke ved, hvad denne konfiguration er." +
-    "Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-admin-access":
-    "OpenID Connect-rolle til administratoradgang",
-  "admin.config.oauth.oidc-role-admin-access.description":
-    "Rolle påkrævet for administrativ adgang. Skal være til stede i en brugers roller for at de kan få adgang til administratorpanelet. Efterlad tomt, hvis du ikke ved, hvad denne konfiguration er." +
-    "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-path.description": "Skal være en gyldig JMES-sti, der refererer til et array af roller. Håndtering af adgangsrettigheder ved hjælp af OpenID Connect-roller anbefales kun, hvis der ikke er konfigureret nogen anden identitetsudbyder, og adgangskodelogin er deaktiveret. Efterlad tomt, hvis du ikke ved, hvad denne konfiguration er." + "Managing access rights using OpenID Connect roles is only recommended if no other identity provider is configured and password login is disabled. " + "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-general-access": "OpenID Connect-rolle til generel adgang",
+  "admin.config.oauth.oidc-role-general-access.description": "Rolle påkrævet for generel adgang. Skal være til stede i en brugers roller for at de kan logge ind. Efterlad tomt, hvis du ikke ved, hvad denne konfiguration er." + "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-admin-access": "OpenID Connect-rolle til administratoradgang",
+  "admin.config.oauth.oidc-role-admin-access.description": "Rolle påkrævet for administrativ adgang. Skal være til stede i en brugers roller for at de kan få adgang til administratorpanelet. Efterlad tomt, hvis du ikke ved, hvad denne konfiguration er." + "Leave it blank if you don't know what this config is.",
   "admin.config.oauth.oidc-client-id": "OpenID Connect Client ID",
-  "admin.config.oauth.oidc-client-id.description":
-    "Client ID for OpenID Connect OAuth-appen",
+  "admin.config.oauth.oidc-client-id.description": "Client ID for OpenID Connect OAuth-appen",
   "admin.config.oauth.oidc-client-secret": "OpenID Connect Client secret",
-  "admin.config.oauth.oidc-client-secret.description":
-    "Client secret for OpenID Connect OAuth-appen",
+  "admin.config.oauth.oidc-client-secret.description": "Client secret for OpenID Connect OAuth-appen",
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "Aktivér LDAP",
-  "admin.config.ldap.enabled.description":
-    "Brug LDAP-godkendelse til brugerlogin",
+  "admin.config.ldap.enabled.description": "Brug LDAP-godkendelse til brugerlogin",
   "admin.config.ldap.url": "Server-URL",
   "admin.config.ldap.url.description": "URL til LDAP-serveren",
   "admin.config.ldap.bind-dn": "Bind DN",
-  "admin.config.ldap.bind-dn.description":
-    "Standardbruger der bruges til at udføre brugersøgningen",
+  "admin.config.ldap.bind-dn.description": "Standardbruger der bruges til at udføre brugersøgningen",
   "admin.config.ldap.bind-password": "Bind-adgangskode",
-  "admin.config.ldap.bind-password.description":
-    "Adgangskode der bruges til at udføre brugersøgningen",
+  "admin.config.ldap.bind-password.description": "Adgangskode der bruges til at udføre brugersøgningen",
   "admin.config.ldap.search-base": "Brugerbase",
-  "admin.config.ldap.search-base.description":
-    "Basisplacering, hvor brugersøgningen vil blive udført",
+  "admin.config.ldap.search-base.description": "Basisplacering, hvor brugersøgningen vil blive udført",
   "admin.config.ldap.search-query": "Brugerforespørgsel",
-  "admin.config.ldap.search-query.description":
-    "Brugerforespørgslen vil blive brugt til at søge i 'Brugerbase' efter LDAP-brugeren. %username% kan bruges som pladsholder for brugerens input.",
+  "admin.config.ldap.search-query.description": "Brugerforespørgslen vil blive brugt til at søge i 'Brugerbase' efter LDAP-brugeren. %username% kan bruges som pladsholder for brugerens input.",
   "admin.config.ldap.admin-groups": "Admin gruppe",
-  "admin.config.ldap.admin-groups.description":
-    "Gruppe påkrævet for administrativ adgang.",
+  "admin.config.ldap.admin-groups.description": "Gruppe påkrævet for administrativ adgang.",
   "admin.config.ldap.field-name-member-of": "Attributnavn for brugergrupper",
-  "admin.config.ldap.field-name-member-of.description":
-    "LDAP-attributnavn for de grupper, en bruger er medlem af. Dette bruges ved kontrol af administratorgruppen.",
+  "admin.config.ldap.field-name-member-of.description": "LDAP-attributnavn for de grupper, en bruger er medlem af. Dette bruges ved kontrol af administratorgruppen.",
   "admin.config.ldap.field-name-email": "Attributnavn for bruger-e-mail",
-  "admin.config.ldap.field-name-email.description":
-    "LDAP-attributnavn for en brugers e-mail.",
+  "admin.config.ldap.field-name-email.description": "LDAP-attributnavn for en brugers e-mail.",
   "admin.config.notify.success": "Konfiguration opdateret med succes.",
-  "admin.config.notify.logo-success":
-    "Logo opdateret med succes. Det kan tage et par minutter at opdatere på webstedet.",
+  "admin.config.notify.logo-success": "Logo opdateret med succes. Det kan tage et par minutter at opdatere på webstedet.",
   "admin.config.notify.no-changes": "Ingen ændringer at gemme.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Aktiveret",
-  "admin.config.s3.enabled.description":
-    "Hvorvidt S3 skal bruges til at gemme de delte filer i stedet for det lokale filsystem. ADVARSEL: Hvis ClamAV er aktiv, vil filer midlertidigt blive downloadet fra S3 for at blive kontrolleret.",
+  "admin.config.s3.enabled.description": "Hvorvidt S3 skal bruges til at gemme de delte filer i stedet for det lokale filsystem. ADVARSEL: Hvis ClamAV er aktiv, vil filer midlertidigt blive downloadet fra S3 for at blive kontrolleret.",
   "admin.config.s3.endpoint": "Endpoint",
   "admin.config.s3.endpoint.description": "URL til S3-bucket.",
   "admin.config.s3.region": "Region",
@@ -804,35 +618,25 @@ export default {
   "admin.config.s3.bucket-name": "Bucket-navn",
   "admin.config.s3.bucket-name.description": "Navnet på S3-bucket.",
   "admin.config.s3.bucket-path": "Sti",
-  "admin.config.s3.bucket-path.description":
-    "Standardstien, som skal bruges til at gemme filerne i S3-bucket.",
+  "admin.config.s3.bucket-path.description": "Standardstien, som skal bruges til at gemme filerne i S3-bucket.",
   "admin.config.s3.key": "Nøgle",
-  "admin.config.s3.key.description":
-    "Nøglen, der giver dig adgang til S3-bucket.",
+  "admin.config.s3.key.description": "Nøglen, der giver dig adgang til S3-bucket.",
   "admin.config.s3.secret": "Hemmelighed",
-  "admin.config.s3.secret.description":
-    "Hemmeligheden, der giver dig adgang til S3-bucket.",
+  "admin.config.s3.secret.description": "Hemmeligheden, der giver dig adgang til S3-bucket.",
   "admin.config.s3.use-checksum": "Brug tjeksum",
-  "admin.config.s3.use-checksum.description":
-    "Slå fra for backends, der ikke understøtter tjeksum (f.eks. B2).",
-  "admin.config.s3.docs-link":
-    "CORS skal genkonfigureres på din bucket, se {wikiLink} for detaljer.",
+  "admin.config.s3.use-checksum.description": "Slå fra for backends, der ikke understøtter tjeksum (f.eks. B2).",
+  "admin.config.s3.docs-link": "CORS skal genkonfigureres på din bucket, se {wikiLink} for detaljer.",
   "admin.config.category.legal": "Juridisk",
   "admin.config.legal.enabled": "Aktivér juridiske meddelelser",
-  "admin.config.legal.enabled.description":
-    "Hvorvidt der skal vises et link til juridisk information (imprint) og privatlivspolitik i sidefoden.",
+  "admin.config.legal.enabled.description": "Hvorvidt der skal vises et link til juridisk information (imprint) og privatlivspolitik i sidefoden.",
   "admin.config.legal.imprint-text": "Tekst til juridisk information",
-  "admin.config.legal.imprint-text.description":
-    "Teksten, der skal vises i juridisk information. Understøtter Markdown. Efterlad tomt for at linke til en ekstern side for juridisk information.",
+  "admin.config.legal.imprint-text.description": "Teksten, der skal vises i juridisk information. Understøtter Markdown. Efterlad tomt for at linke til en ekstern side for juridisk information.",
   "admin.config.legal.imprint-url": "URL til juridisk information",
-  "admin.config.legal.imprint-url.description":
-    "Hvis du allerede har en side med juridisk information, kan du linke den her i stedet for at bruge tekstfeltet.",
+  "admin.config.legal.imprint-url.description": "Hvis du allerede har en side med juridisk information, kan du linke den her i stedet for at bruge tekstfeltet.",
   "admin.config.legal.privacy-policy-text": "Privatlivspolitik-tekst",
-  "admin.config.legal.privacy-policy-text.description":
-    "Teksten, der skal vises i privatlivspolitikken. Understøtter Markdown. Efterlad tomt for at linke til en ekstern privatlivspolitikside.",
+  "admin.config.legal.privacy-policy-text.description": "Teksten, der skal vises i privatlivspolitikken. Understøtter Markdown. Efterlad tomt for at linke til en ekstern privatlivspolitikside.",
   "admin.config.legal.privacy-policy-url": "URL til privatlivspolitik",
-  "admin.config.legal.privacy-policy-url.description":
-    "Hvis du allerede har en privatlivspolitikside, kan du linke den her i stedet for at bruge tekstfeltet.",
+  "admin.config.legal.privacy-policy-url.description": "Hvis du allerede har en privatlivspolitikside, kan du linke den her i stedet for at bruge tekstfeltet.",
   // 404
   "404.description": "Ups! Denne side findes ikke.",
   "404.button.home": "Gå tilbage",
@@ -841,26 +645,18 @@ export default {
   "error.description": "Hovsa!",
   "error.button.back": "Gå tilbage",
   "error.msg.default": "Noget gik galt.",
-  "error.msg.access_denied":
-    "Du annullerede godkendelsesprocessen, prøv venligst igen.",
-  "error.msg.expired_token":
-    "Godkendelsesprocessen tog for lang tid, prøv venligst igen.",
+  "error.msg.access_denied": "Du annullerede godkendelsesprocessen, prøv venligst igen.",
+  "error.msg.expired_token": "Godkendelsesprocessen tog for lang tid, prøv venligst igen.",
   "error.msg.invalid_token": "Intern Fejl",
   "error.msg.no_user": "Bruger tilknyttet denne {0}-konto findes ikke.",
   "error.msg.no_email": "Kan ikke hente e-mailadresse fra denne {0}-konto.",
-  "error.msg.already_linked":
-    "Denne {0}-konto er allerede tilknyttet en anden konto.",
-  "error.msg.not_linked":
-    "Denne {0}-konto er endnu ikke tilknyttet nogen konto.",
-  "error.msg.email_already_exists":
-    "En konto med denne e-mailadresse findes allerede. Log venligst ind med din adgangskode og tilknyt manuelt din {0}-konto på siden Min bruger.",
-  "error.msg.email_not_verified":
-    "Din e-mailadresse på denne {0}-konto er ikke bekræftet. Bekræft venligst din e-mail hos din identitetsudbyder, før du logger ind.",
-  "error.msg.unverified_account":
-    "Denne {0}-konto er ubekræftet, prøv venligst igen efter bekræftelse.",
+  "error.msg.already_linked": "Denne {0}-konto er allerede tilknyttet en anden konto.",
+  "error.msg.not_linked": "Denne {0}-konto er endnu ikke tilknyttet nogen konto.",
+  "error.msg.email_already_exists": "En konto med denne e-mailadresse findes allerede. Log venligst ind med din adgangskode og tilknyt manuelt din {0}-konto på siden Min bruger.",
+  "error.msg.email_not_verified": "Din e-mailadresse på denne {0}-konto er ikke bekræftet. Bekræft venligst din e-mail hos din identitetsudbyder, før du logger ind.",
+  "error.msg.unverified_account": "Denne {0}-konto er ubekræftet, prøv venligst igen efter bekræftelse.",
   "error.msg.user_not_allowed": "Du har ikke tilladelse til at logge ind.",
-  "error.msg.cannot_get_user_info":
-    "Kan ikke hente dine brugeroplysninger fra denne {0}-konto.",
+  "error.msg.cannot_get_user_info": "Kan ikke hente dine brugeroplysninger fra denne {0}-konto.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
@@ -905,19 +701,14 @@ export default {
   "common.error.exact-length": "Skal være præcis {length} tegn",
   "common.error.invalid-number": "Skal være et tal",
   "common.error.field-required": "Dette felt er påkrævet",
-  "common.error.password.lowercase":
-    "Adgangskoden skal indeholde mindst ét lille bogstav",
-  "common.error.password.uppercase":
-    "Adgangskoden skal indeholde mindst ét stort bogstav",
+  "common.error.password.lowercase": "Adgangskoden skal indeholde mindst ét lille bogstav",
+  "common.error.password.uppercase": "Adgangskoden skal indeholde mindst ét stort bogstav",
   "common.error.password.number": "Adgangskoden skal indeholde mindst ét tal",
-  "common.error.password.special":
-    "Adgangskoden skal indeholde mindst ét specialtegn",
+  "common.error.password.special": "Adgangskoden skal indeholde mindst ét specialtegn",
   "admin.notice.modal.headerTag": "ADMINISTRATIV HANDLING KRÆVES",
-  "admin.notice.modal.defaultCheckboxLabel":
-    "Jeg bekræfter, at jeg har læst denne meddelelse og forstår de ændringer, der introduceres.",
+  "admin.notice.modal.defaultCheckboxLabel": "Jeg bekræfter, at jeg har læst denne meddelelse og forstår de ændringer, der introduceres.",
   "admin.notice.modal.button.acknowledge": "Bekræft og luk",
   "admin.notice.modal.button.acknowledging": "Bekræfter...",
   "admin.notice.modal.docsLink": "Se dokumentation",
-  "admin.notice.modal.globalNoticeFooter":
-    "Bemærk: Når den er bekræftet, vil denne meddelelse blive fjernet permanent for alle administratorer på tværs af alle enheder.",
+  "admin.notice.modal.globalNoticeFooter": "Bemærk: Når den er bekræftet, vil denne meddelelse blive fjernet permanent for alle administratorer på tværs af alle enheder.",
 };

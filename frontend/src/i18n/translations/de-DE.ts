@@ -14,17 +14,13 @@ export default {
 
   // /
   "home.title": "Eine <h>selbst gehostete</h> Dateifreigabe-Plattform.",
-  "home.description":
-    "Möchtest du wirklich deine persönlichen Dateien an Drittanbieter wie WeTransfer weitergeben?",
+  "home.description": "Möchtest du wirklich deine persönlichen Dateien an Drittanbieter wie WeTransfer weitergeben?",
   "home.bullet.a.name": "Selbst gehostet",
-  "home.bullet.a.description":
-    "Betreibe Pingvin Share auf deinem eigenen Server.",
+  "home.bullet.a.description": "Betreibe Pingvin Share auf deinem eigenen Server.",
   "home.bullet.b.name": "Privatsphäre",
-  "home.bullet.b.description":
-    "Deine Dateien gehören dir und sind niemals durch Dritte zugänglich.",
+  "home.bullet.b.description": "Deine Dateien gehören dir und sind niemals durch Dritte zugänglich.",
   "home.bullet.c.name": "Keine lästige Dateigrößenbegrenzung",
-  "home.bullet.c.description":
-    "Lade so große Dateien hoch, wie du willst. Nur deine Festplatte ist dein Limit.",
+  "home.bullet.c.description": "Lade so große Dateien hoch, wie du willst. Nur deine Festplatte ist dein Limit.",
   "home.button.start": "Lege los",
   "home.button.source": "Quellcode",
   // END /
@@ -34,14 +30,12 @@ export default {
   "signin.description": "Du hast noch kein Konto?",
   "signin.button.signup": "Registrieren",
   "signin.input.email-or-username": "E-Mail oder Benutzername",
-  "signin.input.email-or-username.placeholder":
-    "Deine E-Mail-Adresse oder Benutzername",
+  "signin.input.email-or-username.placeholder": "Deine E-Mail-Adresse oder Benutzername",
   "signin.input.password": "Passwort",
   "signin.input.password.placeholder": "Dein Passwort",
   "signin.button.submit": "Anmelden",
   "signIn.notify.totp-required.title": "Zwei-Faktor-Authentifizierung benötigt",
-  "signIn.notify.totp-required.description":
-    "Bitte gib deinen Zwei-Faktor-Authentifizierungscode ein",
+  "signIn.notify.totp-required.description": "Bitte gib deinen Zwei-Faktor-Authentifizierungscode ein",
   "signIn.oauth.or": "ODER",
   "signIn.oauth.signInWith": "Anmelden mit",
   "signIn.oauth.github": "GitHub",
@@ -62,19 +56,15 @@ export default {
   "signup.button.submit": "Lass uns loslegen",
   // /auth/verify
   "verify.title": "Konto verifizieren",
-  "verify.success":
-    "Ihr Konto wurde erfolgreich verifiziert! Sie können sich jetzt anmelden.",
+  "verify.success": "Ihr Konto wurde erfolgreich verifiziert! Sie können sich jetzt anmelden.",
   "verify.error": "Der Bestätigungslink ist ungültig oder abgelaufen.",
   "verify.button.signin": "Zur Anmeldung",
   "verify.info.title": "Account-Verifizierung",
-  "verify.info.description":
-    "E-Mail-Verifizierung ist aktiviert. Wir haben einen Bestätigungslink an Ihre E-Mail-Adresse gesendet. Bitte klicken Sie auf den Link, um Ihr Konto zu aktivieren.",
-  "verify.info.note":
-    "Sollten Sie die E-Mail nicht innerhalb weniger Minuten erhalten, überprüfen Sie bitte Ihren Spam-Ordner.",
+  "verify.info.description": "E-Mail-Verifizierung ist aktiviert. Wir haben einen Bestätigungslink an Ihre E-Mail-Adresse gesendet. Bitte klicken Sie auf den Link, um Ihr Konto zu aktivieren.",
+  "verify.info.note": "Sollten Sie die E-Mail nicht innerhalb weniger Minuten erhalten, überprüfen Sie bitte Ihren Spam-Ordner.",
   "verify.info.resend.button": "Verifizierungscode erneut versenden",
   "verify.info.resend.success": "Bestätigungs-E-Mail erfolgreich gesendet.",
-  "verify.info.resend.error":
-    "Fehler beim erneuten Senden der Bestätigungs-E-Mail.",
+  "verify.info.resend.error": "Fehler beim erneuten Senden der Bestätigungs-E-Mail.",
   // END /auth/signup
 
   // /auth/totp
@@ -84,16 +74,13 @@ export default {
 
   // /auth/reset-password
   "resetPassword.title": "Passwort vergessen?",
-  "resetPassword.description":
-    "Gib deine E-Mail-Adresse ein, um dein Passwort zurückzusetzen.",
-  "resetPassword.notify.success":
-    "Wir haben dir einen Link gesendet, unter dem du dein Passwort zurücksetzen kannst.",
+  "resetPassword.description": "Gib deine E-Mail-Adresse ein, um dein Passwort zurückzusetzen.",
+  "resetPassword.notify.success": "Wir haben dir einen Link gesendet, unter dem du dein Passwort zurücksetzen kannst.",
   "resetPassword.button.back": "Zurück zur Anmeldeseite",
   "resetPassword.text.resetPassword": "Passwort zurücksetzen",
   "resetPassword.text.enterNewPassword": "Gib dein neues Passwort ein",
   "resetPassword.input.password": "Neues Passwort",
-  "resetPassword.notify.passwordReset":
-    "Dein Passwort wurde erfolgreich zurückgesetzt.",
+  "resetPassword.notify.passwordReset": "Dein Passwort wurde erfolgreich zurückgesetzt.",
   // /account
   "account.title": "Mein Konto",
   "account.card.info.title": "Kontoinformationen",
@@ -103,8 +90,7 @@ export default {
   "account.card.password.title": "Passwort",
   "account.card.password.old": "Altes Passwort",
   "account.card.password.new": "Neues Passwort",
-  "account.card.password.noPasswordSet":
-    "Du hast kein Passwort erstellt. Wenn du dich mit E-Mail und Passwort anmelden möchtest, musst du ein Passwort festlegen.",
+  "account.card.password.noPasswordSet": "Du hast kein Passwort erstellt. Wenn du dich mit E-Mail und Passwort anmelden möchtest, musst du ein Passwort festlegen.",
   "account.notify.password.success": "Passwort erfolgreich geändert",
   "account.card.oauth.title": "Anmeldung über soziale Netzwerke",
   "account.card.oauth.github": "GitHub",
@@ -116,14 +102,11 @@ export default {
   "account.card.oauth.unlink": "Verknüpfung aufheben",
   "account.card.oauth.unlinked": "Verknüpfung aufgehoben",
   "account.modal.unlink.title": "Kontoverknüpfung aufheben",
-  "account.modal.unlink.description":
-    "Die Aufhebung der Verknüpfung mit deinen sozialen Konten kann dazu führen, dass du dein Konto verlierst, wenn du dich nicht an deine Anmeldedaten erinnerst",
+  "account.modal.unlink.description": "Die Aufhebung der Verknüpfung mit deinen sozialen Konten kann dazu führen, dass du dein Konto verlierst, wenn du dich nicht an deine Anmeldedaten erinnerst",
   "account.notify.oauth.unlinked.success": "Verknüpfung erfolgreich aufgehoben",
   "account.card.security.title": "Sicherheit",
-  "account.card.security.totp.enable.description":
-    "Gib dein aktuelles Passwort ein, um TOTP zu aktivieren",
-  "account.card.security.totp.disable.description":
-    "Gib dein aktuelles Passwort ein, um TOTP zu deaktivieren",
+  "account.card.security.totp.enable.description": "Gib dein aktuelles Passwort ein, um TOTP zu aktivieren",
+  "account.card.security.totp.disable.description": "Gib dein aktuelles Passwort ein, um TOTP zu deaktivieren",
   "account.card.security.totp.button.start": "Starten",
   "account.modal.totp.title": "TOTP aktivieren",
   "account.modal.totp.step1": "Schritt 1: Füge deinen Authenticator hinzu",
@@ -136,8 +119,7 @@ export default {
   "account.notify.totp.disable": "TOTP erfolgreich deaktiviert",
   "account.notify.totp.enable": "TOTP erfolgreich aktiviert",
   "account.card.language.title": "Sprache",
-  "account.card.language.description":
-    "Das Projekt wird von der Community übersetzt. Einige Sprachen könnten unvollständig sein.",
+  "account.card.language.description": "Das Projekt wird von der Community übersetzt. Einige Sprachen könnten unvollständig sein.",
   "account.card.color.title": "Farbschema",
   // ThemeSwitcher.tsx
   "account.theme.dark": "Dunkel",
@@ -145,8 +127,7 @@ export default {
   "account.theme.system": "System",
   "account.button.delete": "Konto löschen",
   "account.modal.delete.title": "Konto löschen",
-  "account.modal.delete.description":
-    "Möchtest du wirklich dein Konto inklusive aller aktiven Freigaben löschen?",
+  "account.modal.delete.description": "Möchtest du wirklich dein Konto inklusive aller aktiven Freigaben löschen?",
   // END /account
 
   // /account/shares
@@ -165,34 +146,29 @@ export default {
   "account.shares.table.size": "Größe",
   "account.shares.table.password-protected": "Passwortgeschützt",
   "account.shares.table.recipients": "Empfänger",
-  "account.shares.table.restricted-to-recipients":
-    "Nur auf Empfänger beschränkt",
+  "account.shares.table.restricted-to-recipients": "Nur auf Empfänger beschränkt",
   "account.shares.table.shared-with-recipients": "Mit Empfängern geteilt",
   "account.shares.table.visitor-count": "{count} von {max}",
   "account.shares.table.expiry-never": "nie",
   "account.shares.modal.share-informations": "Teile deine Information",
   "account.shares.modal.share-link": "Freigabe teilen",
-  "account.shares.modal.edit.password.keep":
-    "Leer lassen, um das aktuelle Passwort beizubehalten",
+  "account.shares.modal.edit.password.keep": "Leer lassen, um das aktuelle Passwort beizubehalten",
   "account.shares.modal.edit.password.remove": "Passwortschutz entfernen",
   "account.shares.modal.delete.title": "Freigabe löschen: {share}",
-  "account.shares.modal.delete.description":
-    "Möchtest du diese Freigabe wirklich löschen?",
+  "account.shares.modal.delete.description": "Möchtest du diese Freigabe wirklich löschen?",
   // END /account/shares
 
   // /account/received
   "account.received-shares.title": "Empfangene Freigaben",
   "account.received-shares.title.empty": "Noch keine Freigaben empfangen",
-  "account.received-shares.description.empty":
-    "Freigaben, die an deine E-Mail-Adresse gesendet wurden, erscheinen hier.",
+  "account.received-shares.description.empty": "Freigaben, die an deine E-Mail-Adresse gesendet wurden, erscheinen hier.",
   "account.received-shares.table.from": "Von",
   "account.received-shares.button.open": "Öffnen",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Datei Anfragen",
-  "account.reverseShares.description":
-    "Eine Datei Anfrage erlaubt dir eine einzigartige URL zu erstellen, die externen Benutzern erlaubt, Dateien hochzuladen.",
+  "account.reverseShares.description": "Eine Datei Anfrage erlaubt dir eine einzigartige URL zu erstellen, die externen Benutzern erlaubt, Dateien hochzuladen.",
   "account.reverseShares.title.empty": "Es ist leer hier 👀",
   "account.reverseShares.description.empty": "Du hast keine Datei Anfrage.",
   // showCreateReverseShareModal.tsx
@@ -212,21 +188,15 @@ export default {
   "account.reverseShares.modal.expiration.year-plural": "Jahre",
   "account.reverseShares.modal.max-size.label": "Maximale Freigabegröße",
   "account.reverseShares.modal.send-email": "E-Mail Benachrichtigungen senden",
-  "account.reverseShares.modal.send-email.description":
-    "Sendet eine E-Mail Benachrichtigung, wenn eine Datei auf Ihrer externen Freigabe hochgeladen wurde.",
+  "account.reverseShares.modal.send-email.description": "Sendet eine E-Mail Benachrichtigung, wenn eine Datei auf Ihrer externen Freigabe hochgeladen wurde.",
   "account.reverseShares.modal.simplified": "Einfacher Modus",
-  "account.reverseShares.modal.simplified.description":
-    "Mache es der Person, die die Datei hochlädt, einfach, sie mit dir zu teilen. Sie werden nur den Namen und die Beschreibung der Freigabe ändern können.",
+  "account.reverseShares.modal.simplified.description": "Mache es der Person, die die Datei hochlädt, einfach, sie mit dir zu teilen. Sie werden nur den Namen und die Beschreibung der Freigabe ändern können.",
   "account.reverseShares.modal.public-access": "Öffentlicher Zugriff",
-  "account.reverseShares.modal.public-access.description":
-    "Mache die Freigaben die mit dieser externen Freigabe erstellt werden öffentlich. Wenn dies deaktiviert ist, haben nur du und der Ersteller der Freigabe Zugriff darauf.",
+  "account.reverseShares.modal.public-access.description": "Mache die Freigaben die mit dieser externen Freigabe erstellt werden öffentlich. Wenn dies deaktiviert ist, haben nur du und der Ersteller der Freigabe Zugriff darauf.",
   "account.reverseShares.modal.max-use.label": "Maximale Nutzungen",
-  "account.reverseShares.modal.max-use.description":
-    "Die maximale Anzahl von Verwendungen der URL, um Dateien hochzuladen.",
-  "account.reverseShare.never-expires":
-    "Diese externe Freigabe wird nicht ablaufen.",
-  "account.reverseShare.expires-on":
-    "Diese externe Freigabe wird am {expiration} ablaufen.",
+  "account.reverseShares.modal.max-use.description": "Die maximale Anzahl von Verwendungen der URL, um Dateien hochzuladen.",
+  "account.reverseShare.never-expires": "Diese externe Freigabe wird nicht ablaufen.",
+  "account.reverseShare.expires-on": "Diese externe Freigabe wird am {expiration} ablaufen.",
   "account.reverseShares.table.no-shares": "Noch keine Freigaben erstellt",
   "account.reverseShares.table.count.singular": "Freigabe",
   "account.reverseShares.table.count.plural": "Freigaben",
@@ -236,8 +206,7 @@ export default {
   "account.reverseShares.table.expires": "Läuft ab am",
   "account.reverseShares.modal.reverse-share-link": "Link zu externer Freigabe",
   "account.reverseShares.modal.delete.title": "Externe Freigabe löschen",
-  "account.reverseShares.modal.delete.description":
-    "Möchtest du diese externe Freigabe wirklich löschen? In diesem Fall werden auch hiermit verbundene Freigaben gelöscht.",
+  "account.reverseShares.modal.delete.description": "Möchtest du diese externe Freigabe wirklich löschen? In diesem Fall werden auch hiermit verbundene Freigaben gelöscht.",
   // END /account/reverseShares
 
   // /admin
@@ -258,41 +227,29 @@ export default {
   "admin.users.edit.update.title": "Benutzer bearbeiten: {username}",
   "admin.users.edit.update.admin-privileges": "Administratorrechte",
   "admin.users.edit.update.email-verified": "E-Mail-Adresse verifiziert",
-  "admin.users.edit.update.custom-share-size-limit":
-    "Individuelles Freigabegrößenlimit",
-  "admin.users.edit.update.custom-share-size-limit.description":
-    "Überschreibt das globale Upload-Limit für diesen Benutzer",
-  "admin.users.edit.update.custom-storage-quota-limit":
-    "Individuelles Speicherkontingent",
-  "admin.users.edit.update.custom-storage-quota-limit.description":
-    "Begrenzt den gesamten Speicherverbrauch des Benutzers über alle aktiven Freigaben",
+  "admin.users.edit.update.custom-share-size-limit": "Individuelles Freigabegrößenlimit",
+  "admin.users.edit.update.custom-share-size-limit.description": "Überschreibt das globale Upload-Limit für diesen Benutzer",
+  "admin.users.edit.update.custom-storage-quota-limit": "Individuelles Speicherkontingent",
+  "admin.users.edit.update.custom-storage-quota-limit.description": "Begrenzt den gesamten Speicherverbrauch des Benutzers über alle aktiven Freigaben",
   "admin.users.edit.update.change-password.title": "Passwort ändern",
   "admin.users.edit.update.change-password.field": "Neues Passwort",
   "admin.users.edit.update.change-password.button": "Neues Passwort speichern",
-  "admin.users.edit.update.notify.password.success":
-    "Passwort erfolgreich geändert",
+  "admin.users.edit.update.notify.password.success": "Passwort erfolgreich geändert",
   "admin.users.edit.delete.title": "Benutzer löschen: {username}?",
-  "admin.users.edit.delete.description":
-    "Möchtest du wirklich diesen Benutzer und all seine Freigaben löschen?",
+  "admin.users.edit.delete.description": "Möchtest du wirklich diesen Benutzer und all seine Freigaben löschen?",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Benutzer erstellen",
   "admin.users.modal.create.username": "Benutzername",
   "admin.users.modal.create.email": "E-Mail",
   "admin.users.modal.create.password": "Passwort",
   "admin.users.modal.create.manual-password": "Passwort manuell festlegen",
-  "admin.users.modal.create.manual-password.description":
-    "Wenn nicht aktiviert, erhält der Benutzer eine E-Mail mit einem Link, um sein Passwort festzulegen.",
-  "admin.users.modal.create.custom-share-size-limit":
-    "Individuelles Freigabegrößenlimit",
-  "admin.users.modal.create.custom-share-size-limit.description":
-    "Überschreibt das globale Upload-Limit für diesen Benutzer",
-  "admin.users.modal.create.custom-storage-quota-limit":
-    "Individuelles Speicherkontingent",
-  "admin.users.modal.create.custom-storage-quota-limit.description":
-    "Begrenzt den gesamten Speicherverbrauch des Benutzers über alle aktiven Freigaben",
+  "admin.users.modal.create.manual-password.description": "Wenn nicht aktiviert, erhält der Benutzer eine E-Mail mit einem Link, um sein Passwort festzulegen.",
+  "admin.users.modal.create.custom-share-size-limit": "Individuelles Freigabegrößenlimit",
+  "admin.users.modal.create.custom-share-size-limit.description": "Überschreibt das globale Upload-Limit für diesen Benutzer",
+  "admin.users.modal.create.custom-storage-quota-limit": "Individuelles Speicherkontingent",
+  "admin.users.modal.create.custom-storage-quota-limit.description": "Begrenzt den gesamten Speicherverbrauch des Benutzers über alle aktiven Freigaben",
   "admin.users.modal.create.admin": "Administratorrechte",
-  "admin.users.modal.create.admin.description":
-    "Wenn aktiviert, kann der Benutzer auf das Administrator-Panel zugreifen.",
+  "admin.users.modal.create.admin.description": "Wenn aktiviert, kann der Benutzer auf das Administrator-Panel zugreifen.",
   // END /admin/users
 
   // /admin/shares
@@ -304,29 +261,21 @@ export default {
   "admin.shares.table.expires": "Läuft ab am",
   "admin.shares.table.deletes": "Wird gelöscht am",
   "admin.shares.edit.delete.title": "Freigabe löschen: {id}",
-  "admin.shares.edit.delete.description":
-    "Möchtest du diese Freigabe wirklich löschen?",
+  "admin.shares.edit.delete.description": "Möchtest du diese Freigabe wirklich löschen?",
   // END /admin/shares
 
   // /upload
   "upload.title": "Hochladen",
-  "upload.notify.confirm-leave":
-    "Bist du sicher, dass du diese Seite verlassen willst? Dein Upload wird abgebrochen.",
-  "upload.notify.generic-error":
-    "Während der Erstellung der Freigabe ist ein Fehler aufgetreten.",
-  "upload.notify.count-failed":
-    "{count} Dateien konnten nicht hochgeladen werden. Wird erneut versucht.",
+  "upload.notify.confirm-leave": "Bist du sicher, dass du diese Seite verlassen willst? Dein Upload wird abgebrochen.",
+  "upload.notify.generic-error": "Während der Erstellung der Freigabe ist ein Fehler aufgetreten.",
+  "upload.notify.count-failed": "{count} Dateien konnten nicht hochgeladen werden. Wird erneut versucht.",
   "upload.notify.duplicate-skipped": "Doppelte Datei übersprungen: {name}",
-  "upload.reverse-share.error.invalid.title":
-    "Ungültiger Link zu externer Freigabe",
-  "upload.reverse-share.error.invalid.description":
-    "Diese externe Freigabe ist abgelaufen oder ungültig.",
+  "upload.reverse-share.error.invalid.title": "Ungültiger Link zu externer Freigabe",
+  "upload.reverse-share.error.invalid.description": "Diese externe Freigabe ist abgelaufen oder ungültig.",
   // Dropzone.tsx
   "upload.dropzone.title": "Dateien hochladen",
-  "upload.dropzone.description":
-    "Ziehe Dateien oder Ordner hierher, um deine Freigabe zu starten, oder drücke 'Strg+V', um Textinhalte aus der Zwischenablage hochzuladen. Wir akzeptieren nur Dateien bis insgesamt {maxSize}.",
-  "upload.dropzone.notify.file-too-big":
-    "Ihre Dateien überschreiten die maximale Freigabegröße von {maxSize}.",
+  "upload.dropzone.description": "Ziehe Dateien oder Ordner hierher, um deine Freigabe zu starten, oder drücke 'Strg+V', um Textinhalte aus der Zwischenablage hochzuladen. Wir akzeptieren nur Dateien bis insgesamt {maxSize}.",
+  "upload.dropzone.notify.file-too-big": "Ihre Dateien überschreiten die maximale Freigabegröße von {maxSize}.",
   "upload.button.folder": "Ordner hochladen",
   "upload.button.folder.append": "Ordner anhängen",
   "upload.button.add": "Zum Upload hinzufügen",
@@ -337,20 +286,15 @@ export default {
   "upload.filelist.remaining": "{time} verbleibend",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Erstelle Freigabe",
-  "upload.modal.link.error.invalid":
-    "Darf nur Buchstaben, Zahlen, Unterstriche und Bindestriche enthalten",
+  "upload.modal.link.error.invalid": "Darf nur Buchstaben, Zahlen, Unterstriche und Bindestriche enthalten",
   "upload.modal.link.error.taken": "Dieser Link wird bereits verwendet",
-  "upload.modal.link.error.s3-session-not-found":
-    "S3-Upload-Sitzung nicht gefunden",
-  "upload.modal.link.error.s3-etag-missing":
-    "ETag-Header fehlt in der S3-Antwort. Stelle sicher, dass CORS den ETag-Header bereitstellt.",
+  "upload.modal.link.error.s3-session-not-found": "S3-Upload-Sitzung nicht gefunden",
+  "upload.modal.link.error.s3-etag-missing": "ETag-Header fehlt in der S3-Antwort. Stelle sicher, dass CORS den ETag-Header bereitstellt.",
   "upload.modal.not-signed-in": "Du bist nicht angemeldet",
-  "upload.modal.not-signed-in-description":
-    "Du wirst deine Freigabe nicht löschen können oder die Besucheranzahl sehen.",
+  "upload.modal.not-signed-in-description": "Du wirst deine Freigabe nicht löschen können oder die Besucheranzahl sehen.",
   "upload.modal.expires.never": "nie",
   "upload.modal.expires.never-long": "Permanente Freigabe",
-  "upload.modal.expires.error.too-long":
-    "Das Ablaufdatum überschreitet das Maximum von {max}.",
+  "upload.modal.expires.error.too-long": "Das Ablaufdatum überschreitet das Maximum von {max}.",
   "upload.modal.link.label": "Verknüpfen",
   "upload.modal.expires.label": "Gültig bis",
   "upload.modal.expires.minute-singular": "Minute",
@@ -367,13 +311,11 @@ export default {
   "upload.modal.expires.year-plural": "Jahre",
   "upload.modal.accordion.name-and-description.title": "Name und Beschreibung",
   "upload.modal.accordion.name-and-description.name.placeholder": "Name",
-  "upload.modal.accordion.name-and-description.description.placeholder":
-    "Hinweis für die Empfänger dieser Freigabe",
+  "upload.modal.accordion.name-and-description.description.placeholder": "Hinweis für die Empfänger dieser Freigabe",
   "upload.modal.accordion.email.title": "E-Mail-Empfänger",
   "upload.modal.accordion.email.placeholder": "E-Mail der Empfänger eingeben",
   "upload.modal.accordion.email.invalid-email": "Ungültige E-Mail-Adresse",
-  "upload.modal.accordion.email.restrict-to-recipients":
-    "Zugriff nur auf diese Empfänger beschränken (sie müssen sich anmelden, um darauf zuzugreifen)",
+  "upload.modal.accordion.email.restrict-to-recipients": "Zugriff nur auf diese Empfänger beschränken (sie müssen sich anmelden, um darauf zuzugreifen)",
   "upload.modal.accordion.security.title": "Sicherheitseinstellungen",
   "upload.modal.accordion.security.password.label": "Passwortschutz",
   "upload.modal.accordion.security.password.placeholder": "Kein Passwort",
@@ -381,60 +323,47 @@ export default {
   "upload.modal.accordion.security.max-views.placeholder": "Unbegrenzt",
   // showCompletedUploadModal.tsx
   "upload.modal.completed.never-expires": "Diese Freigabe läuft niemals ab.",
-  "upload.modal.completed.expires-on":
-    "Diese Freigabe wird am {expiration} ablaufen.",
+  "upload.modal.completed.expires-on": "Diese Freigabe wird am {expiration} ablaufen.",
   "upload.modal.completed.share-ready": "Freigabe bereit",
-  "upload.modal.completed.notified-reverse-share-creator":
-    "Wir haben den Ersteller der externen Freigabe benachrichtigt. Du kannst den Link auch auf andere Wege teilen.",
+  "upload.modal.completed.notified-reverse-share-creator": "Wir haben den Ersteller der externen Freigabe benachrichtigt. Du kannst den Link auch auf andere Wege teilen.",
   // END /upload
 
   // /share/[id]
   "share.title": "Freigabe {shareId}",
   "share.description": "Schau, was ich mit dir geteilt habe!",
-  "share.fileCount":
-    "{count, plural, one {}=1 {# Datei} other {# Dateien}} · {size} (Die ZIP-Datei kann aufgrund der Komprimierung kleiner sein)",
+  "share.fileCount": "{count, plural, one {}=1 {# Datei} other {# Dateien}} · {size} (Die ZIP-Datei kann aufgrund der Komprimierung kleiner sein)",
   "share.copy-text-contents": "Dateiinhalt in die Zwischenablage kopieren",
   "share.error.visitor-limit-exceeded.title": "Besucherlimit überschritten",
-  "share.error.visitor-limit-exceeded.description":
-    "Die maximale Besucheranzahl für diese Freigabe ist überschritten.",
+  "share.error.visitor-limit-exceeded.description": "Die maximale Besucheranzahl für diese Freigabe ist überschritten.",
   "share.error.removed.title": "Freigabe entfernt",
   "share.error.not-found.title": "Freigabe nicht gefunden",
   "share.error.not-found.description": "Die gesuchte Freigabe existiert nicht.",
   "share.error.access-denied.title": "Private Freigabe",
-  "share.error.access-denied.description":
-    "Das aktuelle Konto hat keine Berechtigung, um auf diese Freigabe zuzugreifen",
+  "share.error.access-denied.description": "Das aktuelle Konto hat keine Berechtigung, um auf diese Freigabe zuzugreifen",
   "share.error.restricted.title": "Eingeschränkte Freigabe",
-  "share.error.restricted.description":
-    "Diese Freigabe ist auf bestimmte Empfänger beschränkt. Bitte melde dich an, um darauf zuzugreifen.",
+  "share.error.restricted.description": "Diese Freigabe ist auf bestimmte Empfänger beschränkt. Bitte melde dich an, um darauf zuzugreifen.",
   "share.error.restricted.button": "Anmelden",
   "share.modal.password.title": "Passwort erforderlich",
-  "share.modal.password.description":
-    "Bitte gib das Passwort ein, um auf diese Freigabe zuzugreifen.",
+  "share.modal.password.description": "Bitte gib das Passwort ein, um auf diese Freigabe zuzugreifen.",
   "share.modal.password": "Passwort",
   "share.modal.error.invalid-password": "Ungültiges Passwort",
   "share.button.download-all": "Alles herunterladen",
-  "share.notify.download-all-preparing":
-    "Die Freigabe wird vorbereitet. Bitte versuche es in ein paar Minuten erneut.",
+  "share.notify.download-all-preparing": "Die Freigabe wird vorbereitet. Bitte versuche es in ein paar Minuten erneut.",
   "share.notify.copied-contents": "Dateiinhalt in die Zwischenablage kopiert",
-  "share.notify.copy-too-big-error":
-    "Die Datei ist zu groß, um in die Zwischenablage kopiert zu werden",
-  "share.notify.copy-not-supported-error":
-    "Zum Kopieren in die Zwischenablage ist eine HTTPS-Verbindung erforderlich",
+  "share.notify.copy-too-big-error": "Die Datei ist zu groß, um in die Zwischenablage kopiert zu werden",
+  "share.notify.copy-not-supported-error": "Zum Kopieren in die Zwischenablage ist eine HTTPS-Verbindung erforderlich",
   "share.modal.file-link": "Dateilink",
   "share.table.name": "Name",
   "share.table.size": "Größe",
   "share.modal.file-preview.original_file": "Originaldatei anzeigen",
-  "share.modal.file-preview.error.not-supported.title":
-    "Vorschau wird nicht unterstützt",
-  "share.modal.file-preview.error.not-supported.description":
-    "Vorschaubilder werden für diesen Dateityp nicht unterstützt. Bitte lade die Datei herunter, um sie anzuzeigen.",
+  "share.modal.file-preview.error.not-supported.title": "Vorschau wird nicht unterstützt",
+  "share.modal.file-preview.error.not-supported.description": "Vorschaubilder werden für diesen Dateityp nicht unterstützt. Bitte lade die Datei herunter, um sie anzuzeigen.",
   // END /share/[id]
 
   // /share/[id]/edit
   "share.edit.title": "{shareId} bearbeiten",
   "share.edit.append-upload": "Datei anfügen",
-  "share.edit.notify.generic-error":
-    "Während der Erstellung der Freigabe ist ein Fehler aufgetreten.",
+  "share.edit.notify.generic-error": "Während der Erstellung der Freigabe ist ein Fehler aufgetreten.",
   "share.edit.notify.save-success": "Freigabe erfolgreich aktualisiert",
   // END /share/[id]/edit
 
@@ -448,8 +377,7 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "Konfigurationsdatei aktiv",
-  "admin.config.config-file-warning.description":
-    "Da Pingvin Share mit einer Konfigurationsdatei konfiguriert ist, kann die Konfiguration nicht über die Benutzeroberfläche geändert werden.",
+  "admin.config.config-file-warning.description": "Da Pingvin Share mit einer Konfigurationsdatei konfiguriert ist, kann die Konfiguration nicht über die Benutzeroberfläche geändert werden.",
   "admin.config.title": "Einstellungen",
   "admin.config.category.general": "Allgemein",
   "admin.config.category.appearance": "Darstellung",
@@ -462,361 +390,227 @@ export default {
   "admin.config.general.app-name": "App-Name",
   "admin.config.general.app-name.description": "Name der Applikation",
   "admin.config.general.default-language": "Standardsprache",
-  "admin.config.general.default-language.description":
-    "Dies gilt für alle Benutzer. Jeder Benutzer kann die Sprache in seinem Profil dennoch individuell anpassen.",
+  "admin.config.general.default-language.description": "Dies gilt für alle Benutzer. Jeder Benutzer kann die Sprache in seinem Profil dennoch individuell anpassen.",
   "admin.config.appearance.theme-primary-color": "Primärfarbe des Themes",
-  "admin.config.appearance.theme-primary-color.description":
-    "Primärfarbe für Buttons, Links und Akzente. Wähle „Benutzerdefiniert“, um eine Farbpicker-Überschreibung zu verwenden.",
-  "admin.config.appearance.theme-primary-color-override":
-    "Benutzerdefinierte Primärfarbe",
-  "admin.config.appearance.theme-primary-color-override.description":
-    "Hex-Farbüberschreibung, wenn die Primärfarbe auf „Benutzerdefiniert“ steht.",
+  "admin.config.appearance.theme-primary-color.description": "Primärfarbe für Buttons, Links und Akzente. Wähle „Benutzerdefiniert“, um eine Farbpicker-Überschreibung zu verwenden.",
+  "admin.config.appearance.theme-primary-color-override": "Benutzerdefinierte Primärfarbe",
+  "admin.config.appearance.theme-primary-color-override.description": "Hex-Farbüberschreibung, wenn die Primärfarbe auf „Benutzerdefiniert“ steht.",
   "admin.config.appearance.theme-font-preset": "Schriftart-Voreinstellung",
-  "admin.config.appearance.theme-font-preset.description":
-    "Schriftart-Voreinstellung, die beim Build geladen wird. Wähle Standard oder eine der eingebundenen Google Fonts.",
+  "admin.config.appearance.theme-font-preset.description": "Schriftart-Voreinstellung, die beim Build geladen wird. Wähle Standard oder eine der eingebundenen Google Fonts.",
   "admin.config.appearance.theme-color-scheme": "Standardfarbschema (Gäste)",
-  "admin.config.appearance.theme-color-scheme.description":
-    "Standard light/dark mode für nicht-eingeloggte Benutzer. Eingeloggte Benutzer verwenden ihre eigenen Account-Einstellungen.",
+  "admin.config.appearance.theme-color-scheme.description": "Standard light/dark mode für nicht-eingeloggte Benutzer. Eingeloggte Benutzer verwenden ihre eigenen Account-Einstellungen.",
   "admin.config.appearance.theme-radius": "Theme-Eckenradius",
-  "admin.config.appearance.theme-radius.description":
-    "Standard-Eckenradius der Mantine-Komponenten.",
+  "admin.config.appearance.theme-radius.description": "Standard-Eckenradius der Mantine-Komponenten.",
   "admin.config.appearance.custom-css": "Benutzerdefiniertes CSS",
-  "admin.config.appearance.custom-css.description":
-    "Globales CSS für das Frontend. Vorsichtig verwenden, ungültiges CSS kann die Oberfläche beeinträchtigen.",
-  "admin.config.appearance.upload-progress-style":
-    "Stil des Upload-Fortschritts",
-  "admin.config.appearance.upload-progress-style.description":
-    "Wähle, wie der Upload-Fortschritt in der Dateiliste angezeigt werden soll.",
+  "admin.config.appearance.custom-css.description": "Globales CSS für das Frontend. Vorsichtig verwenden, ungültiges CSS kann die Oberfläche beeinträchtigen.",
+  "admin.config.appearance.upload-progress-style": "Stil des Upload-Fortschritts",
+  "admin.config.appearance.upload-progress-style.description": "Wähle, wie der Upload-Fortschritt in der Dateiliste angezeigt werden soll.",
   "admin.config.appearance.upload-progress-style.circle": "Kreisanzeige",
-  "admin.config.appearance.upload-progress-style.circle-percentage":
-    "Kreis mit Prozentangabe",
-  "admin.config.appearance.upload-progress-style.percentage-time":
-    "Prozentangabe und verbleibende Zeit",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Kreis mit Prozentangabe",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Prozentangabe und verbleibende Zeit",
   "admin.config.general.app-url": "App-URL",
-  "admin.config.general.app-url.description":
-    "Auf welcher URL Pingvin Share verfügbar ist",
+  "admin.config.general.app-url.description": "Auf welcher URL Pingvin Share verfügbar ist",
   "admin.config.security.secure-cookies": "Sichere Cookies",
-  "admin.config.security.secure-cookies.description":
-    "Gibt an, ob die secure flag bei Cookies gesetzt werden soll. Falls aktiviert, wird die Seite nicht funktionieren, wenn sie über HTTP aufgerufen wird.",
+  "admin.config.security.secure-cookies.description": "Gibt an, ob die secure flag bei Cookies gesetzt werden soll. Falls aktiviert, wird die Seite nicht funktionieren, wenn sie über HTTP aufgerufen wird.",
   "admin.config.general.show-home-page": "Startseite anzeigen",
-  "admin.config.general.show-home-page.description":
-    "Ob die Startseite angezeigt werden soll",
+  "admin.config.general.show-home-page.description": "Ob die Startseite angezeigt werden soll",
   "admin.config.security.session-duration": "Session-Dauer",
-  "admin.config.security.session-duration.description":
-    "Zeit in Stunden, nach der ein Benutzer sich erneut anmelden muss (Voreinstellung: 3 Monate).",
+  "admin.config.security.session-duration.description": "Zeit in Stunden, nach der ein Benutzer sich erneut anmelden muss (Voreinstellung: 3 Monate).",
   "admin.config.appearance.logo": "Logo",
-  "admin.config.appearance.logo.description":
-    "Ändere dein Logo durch Hochladen eines Bildes. Das Bild muss im PNG-Format vorliegen und sollte im Seitenverhältnis 1:1 sein.",
+  "admin.config.appearance.logo.description": "Ändere dein Logo durch Hochladen eines Bildes. Das Bild muss im PNG-Format vorliegen und sollte im Seitenverhältnis 1:1 sein.",
   "admin.config.appearance.logo-dark": "Logo für Dark Mode",
-  "admin.config.appearance.logo-dark.description":
-    "Laden Sie ein separates Logo für den Dark Mode hoch. Das Bild muss im PNG-Format vorliegen und das Seitenverhältnis 1:1 haben.",
+  "admin.config.appearance.logo-dark.description": "Laden Sie ein separates Logo für den Dark Mode hoch. Das Bild muss im PNG-Format vorliegen und das Seitenverhältnis 1:1 haben.",
   "admin.config.appearance.logo.placeholder": "Bild auswählen",
-  "admin.config.security.custom-password-policy":
-    "Benutzerdefinierte Passwortrichtlinie",
-  "admin.config.security.custom-password-policy.description":
-    "Ob eine Anpassung der Passwortrichtlinie aktiviert werden soll. Wenn deaktiviert, gilt die Standardrichtlinie von mindestens 8 Zeichen.",
+  "admin.config.security.custom-password-policy": "Benutzerdefinierte Passwortrichtlinie",
+  "admin.config.security.custom-password-policy.description": "Ob eine Anpassung der Passwortrichtlinie aktiviert werden soll. Wenn deaktiviert, gilt die Standardrichtlinie von mindestens 8 Zeichen.",
   "admin.config.security.min-length": "Mindestlänge",
-  "admin.config.security.min-length.description":
-    "Mindestanzahl an erforderlichen Zeichen für ein Passwort.",
+  "admin.config.security.min-length.description": "Mindestanzahl an erforderlichen Zeichen für ein Passwort.",
   "admin.config.security.require-uppercase": "Großbuchstaben erforderlich",
-  "admin.config.security.require-uppercase.description":
-    "Ob mindestens ein Großbuchstabe im Passwort enthalten sein muss.",
+  "admin.config.security.require-uppercase.description": "Ob mindestens ein Großbuchstabe im Passwort enthalten sein muss.",
   "admin.config.security.require-lowercase": "Kleinbuchstaben erforderlich",
-  "admin.config.security.require-lowercase.description":
-    "Ob mindestens ein Kleinbuchstabe im Passwort enthalten sein muss.",
+  "admin.config.security.require-lowercase.description": "Ob mindestens ein Kleinbuchstabe im Passwort enthalten sein muss.",
   "admin.config.security.require-number": "Zahl erforderlich",
-  "admin.config.security.require-number.description":
-    "Ob mindestens eine Zahl im Passwort enthalten sein muss.",
-  "admin.config.security.require-special-character":
-    "Sonderzeichen erforderlich",
-  "admin.config.security.require-special-character.description":
-    "Ob mindestens ein Sonderzeichen im Passwort enthalten sein muss.",
+  "admin.config.security.require-number.description": "Ob mindestens eine Zahl im Passwort enthalten sein muss.",
+  "admin.config.security.require-special-character": "Sonderzeichen erforderlich",
+  "admin.config.security.require-special-character.description": "Ob mindestens ein Sonderzeichen im Passwort enthalten sein muss.",
   "admin.config.cache.ttl": "TTL (Time to live - Gültigkeitsdauer)",
-  "admin.config.cache.ttl.description":
-    "Zeit in Sekunden, während der die Informationen im Cache gespeichert werden.",
+  "admin.config.cache.ttl.description": "Zeit in Sekunden, während der die Informationen im Cache gespeichert werden.",
   "admin.config.cache.max-items": "Maximale Elemente",
-  "admin.config.cache.max-items.description":
-    "Maximale Anzahl an Elementen im Cache.",
+  "admin.config.cache.max-items.description": "Maximale Anzahl an Elementen im Cache.",
   "admin.config.cache.redis-enabled": "Redis aktiviert",
-  "admin.config.cache.redis-enabled.description":
-    "Normalerweise speichert Pingvin Share Infos im Speicher. Wenn du mehrere Instanzen von Pingvin Share laufen hast, musst du Redis Caching aktivieren, damit der Cache zwischen den Instanzen geteilt wird.",
+  "admin.config.cache.redis-enabled.description": "Normalerweise speichert Pingvin Share Infos im Speicher. Wenn du mehrere Instanzen von Pingvin Share laufen hast, musst du Redis Caching aktivieren, damit der Cache zwischen den Instanzen geteilt wird.",
   "admin.config.cache.redis-url": "Redis-URL",
-  "admin.config.cache.redis-url.description":
-    "URL zur Verbindung mit der für das Caching verwendeten Redis-Instanz.",
+  "admin.config.cache.redis-url.description": "URL zur Verbindung mit der für das Caching verwendeten Redis-Instanz.",
   "admin.config.cache.button.test-redis": "Redis-Verbindung testen",
-  "admin.config.cache.test-redis.success":
-    "Verbindung zu Redis erfolgreich hergestellt",
-  "admin.config.cache.test-redis.success-disabled":
-    "Verbindung zu Redis erfolgreich hergestellt (Redis-Caching ist derzeit deaktiviert).",
-  "admin.config.cache.test-redis.modal.error.title":
-    "Verbindung zu Redis fehlgeschlagen",
-  "admin.config.cache.test-redis.modal.error.description":
-    "Beim Verbindungsaufbau zu Redis ist folgender Fehler aufgetreten:",
+  "admin.config.cache.test-redis.success": "Verbindung zu Redis erfolgreich hergestellt",
+  "admin.config.cache.test-redis.success-disabled": "Verbindung zu Redis erfolgreich hergestellt (Redis-Caching ist derzeit deaktiviert).",
+  "admin.config.cache.test-redis.modal.error.title": "Verbindung zu Redis fehlgeschlagen",
+  "admin.config.cache.test-redis.modal.error.description": "Beim Verbindungsaufbau zu Redis ist folgender Fehler aufgetreten:",
   "admin.config.cache.test-redis.modal.save.title": "Einstellungen speichern",
-  "admin.config.cache.test-redis.modal.save.description":
-    "Um fortzufahren, müssen Sie zuerst die Konfiguration speichern. Möchten Sie die Konfiguration speichern und die Redis-Verbindung testen?",
+  "admin.config.cache.test-redis.modal.save.description": "Um fortzufahren, müssen Sie zuerst die Konfiguration speichern. Möchten Sie die Konfiguration speichern und die Redis-Verbindung testen?",
   "admin.config.cache.test-redis.modal.save.confirm": "Speichern und testen",
-  "admin.config.email.send-html-emails":
-    "HTML-E-Mail-Kompatibilität aktivieren",
-  "admin.config.email.send-html-emails.description":
-    "Wenn aktiviert, werden E-Mails im HTML-Format versendet. Stelle sicher, dass E-Mail-Vorlagen aktualisiert wurden, um HTML zu verwenden.",
-  "admin.config.share.enable-share-email-recipients":
-    "Erlaube das Teilen der Freigabe via E-Mail",
-  "admin.config.share.enable-share-email-recipients.description":
-    "Gibt an, ob das Teilen von E-Mails mit Empfängern erlaubt werden soll. Dies kann nur aktiviert werden, wenn SMTP aktiviert ist.",
-  "admin.config.email.share-recipients-subject":
-    "Betreff für Freigabe-Empfänger",
-  "admin.config.email.share-recipients-subject.description":
-    "Betreff der E-Mail, die an die Freigabe-Empfänger gesendet wird.",
-  "admin.config.email.share-recipients-message":
-    "Nachricht für Freigabe-Empfänger",
-  "admin.config.email.share-recipients-message.description":
-    "Nachricht, die an die Freigabe-Empfänger gesendet wird. Verfügbare Variablen:\n- {creator} - Der Benutzername des Erstellers der Freigabe\n- {creatorEmail} - E-Mail-Adresse des Erstellers der Freigabe\n- {shareUrl} - Die URL der Freigabe\n- {desc} - Die Beschreibung der Freigabe\n- {expires} - Das Ablaufdatum der Freigabe\nVariablen werden durch die tatsächlichen Werte ersetzt.",
+  "admin.config.email.send-html-emails": "HTML-E-Mail-Kompatibilität aktivieren",
+  "admin.config.email.send-html-emails.description": "Wenn aktiviert, werden E-Mails im HTML-Format versendet. Stelle sicher, dass E-Mail-Vorlagen aktualisiert wurden, um HTML zu verwenden.",
+  "admin.config.share.enable-share-email-recipients": "Erlaube das Teilen der Freigabe via E-Mail",
+  "admin.config.share.enable-share-email-recipients.description": "Gibt an, ob das Teilen von E-Mails mit Empfängern erlaubt werden soll. Dies kann nur aktiviert werden, wenn SMTP aktiviert ist.",
+  "admin.config.email.share-recipients-subject": "Betreff für Freigabe-Empfänger",
+  "admin.config.email.share-recipients-subject.description": "Betreff der E-Mail, die an die Freigabe-Empfänger gesendet wird.",
+  "admin.config.email.share-recipients-message": "Nachricht für Freigabe-Empfänger",
+  "admin.config.email.share-recipients-message.description": "Nachricht, die an die Freigabe-Empfänger gesendet wird. Verfügbare Variablen:\n- {creator} - Der Benutzername des Erstellers der Freigabe\n- {creatorEmail} - E-Mail-Adresse des Erstellers der Freigabe\n- {shareUrl} - Die URL der Freigabe\n- {desc} - Die Beschreibung der Freigabe\n- {expires} - Das Ablaufdatum der Freigabe\nVariablen werden durch die tatsächlichen Werte ersetzt.",
   "admin.config.email.reverse-share-subject": "Name der externen Freigabe",
-  "admin.config.email.reverse-share-subject.description":
-    "Betreff der gesendeten E-Mail, wenn jemand eine Freigabe mit Ihrem externen Freigabe-Link erstellt hat.",
+  "admin.config.email.reverse-share-subject.description": "Betreff der gesendeten E-Mail, wenn jemand eine Freigabe mit Ihrem externen Freigabe-Link erstellt hat.",
   "admin.config.email.reverse-share-message": "Nachricht für externe Freigabe",
-  "admin.config.email.reverse-share-message.description":
-    "Nachricht, die gesendet wird, wenn jemand eine Freigabe mit deinem externen Freigabe-Link erstellt. {shareUrl} wird durch den Namen des Erstellers und die Freigabe-URL ersetzt.",
-  "admin.config.email.reset-password-subject":
-    "Betreff für Passwortzurücksetzung",
-  "admin.config.email.reset-password-subject.description":
-    "Betreff der gesendeten E-Mail, wenn ein Benutzer ein Passwort zurücksetzen möchte.",
-  "admin.config.email.reset-password-message":
-    "Nachricht für Passwortzurücksetzung",
-  "admin.config.email.reset-password-message.description":
-    "Nachricht, die gesendet wird, wenn ein Benutzer eine Passwortzurücksetzung anfordert. {url} wird durch die URL für das Zurücksetzen des Passworts ersetzt.",
+  "admin.config.email.reverse-share-message.description": "Nachricht, die gesendet wird, wenn jemand eine Freigabe mit deinem externen Freigabe-Link erstellt. {shareUrl} wird durch den Namen des Erstellers und die Freigabe-URL ersetzt.",
+  "admin.config.email.reset-password-subject": "Betreff für Passwortzurücksetzung",
+  "admin.config.email.reset-password-subject.description": "Betreff der gesendeten E-Mail, wenn ein Benutzer ein Passwort zurücksetzen möchte.",
+  "admin.config.email.reset-password-message": "Nachricht für Passwortzurücksetzung",
+  "admin.config.email.reset-password-message.description": "Nachricht, die gesendet wird, wenn ein Benutzer eine Passwortzurücksetzung anfordert. {url} wird durch die URL für das Zurücksetzen des Passworts ersetzt.",
   "admin.config.email.invite-subject": "Betreff für Einladung",
-  "admin.config.email.invite-subject.description":
-    "Betreff der gesendeten E-Mail, wenn ein Administrator einen Benutzer einlädt.",
+  "admin.config.email.invite-subject.description": "Betreff der gesendeten E-Mail, wenn ein Administrator einen Benutzer einlädt.",
   "admin.config.email.invite-message": "Nachricht für Einladung",
-  "admin.config.email.invite-message.description":
-    "Nachricht, die gesendet wird, wenn ein Administrator einen Benutzer einlädt. {url} wird durch die Einladung-URL ersetzt, {email} durch die E-Mail und {password} durch das Passwort des Benutzers.",
-  "admin.config.email.share-recipients-reply-to-creator":
-    "Reply-To auf E-Mail des Erstellers setzen",
-  "admin.config.email.share-recipients-reply-to-creator.description":
-    "Ob der Reply-To-Header auf die E-Mail-Adresse des Benutzers gesetzt werden soll, der die Freigabe erstellt hat.",
-  "admin.config.share.enable-share-download-notifications":
-    "Download-Benachrichtigungen aktivieren",
-  "admin.config.share.enable-share-download-notifications.description":
-    "Ob eine E-Mail an den Ersteller der Freigabe gesendet werden soll, wenn ein E-Mail-Empfänger eine Datei herunterlädt. Dies erfordert SMTP und die Freigabe an E-Mail-Empfänger.",
-  "admin.config.email.share-download-notification-subject":
-    "Betreff der Download-Benachrichtigung",
-  "admin.config.email.share-download-notification-subject.description":
-    "Betreff der E-Mail, die an den Freigabe-Ersteller gesendet wird, wenn ein Empfänger eine Datei herunterlädt.",
-  "admin.config.email.share-download-notification-message":
-    "Nachricht der Download-Benachrichtigung",
-  "admin.config.email.share-download-notification-message.description":
-    "Nachricht, die an den Freigabe-Ersteller gesendet wird, wenn ein Empfänger eine Datei herunterlädt. Verfügbare Variablen:\n {recipientEmail} - Die E-Mail des Empfängers\n {fileName} - Der Name der heruntergeladenen Datei\n {shareUrl} - Die URL der Freigabe",
-  "admin.config.security.enable-email-verification":
-    "E-Mail-Verifizierung aktivieren",
-  "admin.config.security.enable-email-verification.description":
-    "Ob Benutzer ihre E-Mail-Adresse bestätigen müssen, bevor sie sich anmelden können. Dies kann nur aktiviert werden, wenn SMTP aktiviert ist.",
+  "admin.config.email.invite-message.description": "Nachricht, die gesendet wird, wenn ein Administrator einen Benutzer einlädt. {url} wird durch die Einladung-URL ersetzt, {email} durch die E-Mail und {password} durch das Passwort des Benutzers.",
+  "admin.config.email.share-recipients-reply-to-creator": "Reply-To auf E-Mail des Erstellers setzen",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Ob der Reply-To-Header auf die E-Mail-Adresse des Benutzers gesetzt werden soll, der die Freigabe erstellt hat.",
+  "admin.config.share.enable-share-download-notifications": "Download-Benachrichtigungen aktivieren",
+  "admin.config.share.enable-share-download-notifications.description": "Ob eine E-Mail an den Ersteller der Freigabe gesendet werden soll, wenn ein E-Mail-Empfänger eine Datei herunterlädt. Dies erfordert SMTP und die Freigabe an E-Mail-Empfänger.",
+  "admin.config.email.share-download-notification-subject": "Betreff der Download-Benachrichtigung",
+  "admin.config.email.share-download-notification-subject.description": "Betreff der E-Mail, die an den Freigabe-Ersteller gesendet wird, wenn ein Empfänger eine Datei herunterlädt.",
+  "admin.config.email.share-download-notification-message": "Nachricht der Download-Benachrichtigung",
+  "admin.config.email.share-download-notification-message.description": "Nachricht, die an den Freigabe-Ersteller gesendet wird, wenn ein Empfänger eine Datei herunterlädt. Verfügbare Variablen:\n {recipientEmail} - Die E-Mail des Empfängers\n {fileName} - Der Name der heruntergeladenen Datei\n {shareUrl} - Die URL der Freigabe",
+  "admin.config.security.enable-email-verification": "E-Mail-Verifizierung aktivieren",
+  "admin.config.security.enable-email-verification.description": "Ob Benutzer ihre E-Mail-Adresse bestätigen müssen, bevor sie sich anmelden können. Dies kann nur aktiviert werden, wenn SMTP aktiviert ist.",
   "admin.config.email.verification-subject": "Verifizierungs-Betreff",
-  "admin.config.email.verification-subject.description":
-    "Betreff der E-Mail, die beim Registrieren an den Benutzer gesendet wird.",
+  "admin.config.email.verification-subject.description": "Betreff der E-Mail, die beim Registrieren an den Benutzer gesendet wird.",
   "admin.config.email.verification-message": "Verifizierungs-Nachricht",
-  "admin.config.email.verification-message.description":
-    "Nachricht, die beim Registrieren an den Benutzer gesendet wird. {url} wird durch die Verifizierungs-URL ersetzt.",
+  "admin.config.email.verification-message.description": "Nachricht, die beim Registrieren an den Benutzer gesendet wird. {url} wird durch die Verifizierungs-URL ersetzt.",
   "admin.config.security.allow-registration": "Registrierung erlauben",
-  "admin.config.security.allow-registration.description":
-    "Gibt an, ob eine Registrierung erlaubt ist",
-  "admin.config.security.allow-unauthenticated-shares":
-    "Nicht authentifizierte Freigaben erlauben",
-  "admin.config.security.allow-unauthenticated-shares.description":
-    "Gibt an, ob nicht authentifizierte Benutzer Freigaben erstellen können",
+  "admin.config.security.allow-registration.description": "Gibt an, ob eine Registrierung erlaubt ist",
+  "admin.config.security.allow-unauthenticated-shares": "Nicht authentifizierte Freigaben erlauben",
+  "admin.config.security.allow-unauthenticated-shares.description": "Gibt an, ob nicht authentifizierte Benutzer Freigaben erstellen können",
   "admin.config.share.default-expiration": "Standardablaufdatum",
-  "admin.config.share.default-expiration.description":
-    "Die standardmäßige Ablaufzeit beim Erstellen einer neuen Freigabe.",
+  "admin.config.share.default-expiration.description": "Die standardmäßige Ablaufzeit beim Erstellen einer neuen Freigabe.",
   "admin.config.share.max-expiration": "Max. Ablaufdatum",
-  "admin.config.share.max-expiration.description":
-    "Maximale Ablaufzeit. Auf 0 setzen, um kein Ablaufdatum zu definieren.",
+  "admin.config.share.max-expiration.description": "Maximale Ablaufzeit. Auf 0 setzen, um kein Ablaufdatum zu definieren.",
   "admin.config.share.share-id-length": "Standardlänge der Freigabe-ID",
-  "admin.config.share.share-id-length.description":
-    "Standardlänge für die generierte ID einer Freigabe. Dieser Wert wird auch verwendet, um Links für umgekehrte Freigaben zu generieren. Ein Wert unter 8 wird als nicht sicher betrachtet.",
+  "admin.config.share.share-id-length.description": "Standardlänge für die generierte ID einer Freigabe. Dieser Wert wird auch verwendet, um Links für umgekehrte Freigaben zu generieren. Ein Wert unter 8 wird als nicht sicher betrachtet.",
   "admin.config.share.max-size": "Maximale Größe",
   "admin.config.share.max-size.description": "Maximale Größe einer Freigabe",
   "admin.config.share.zip-compression-level": "ZIP-Kompressionslevel",
-  "admin.config.share.zip-compression-level.description":
-    "Passe den Wert an, um ein Gleichgewicht zwischen Dateigröße und Kompressionsgeschwindigkeit herzustellen. Gültige Werte liegen zwischen 0 und 9, wobei 0 für keine Komprimierung und 9 für maximale Komprimierung steht. ",
+  "admin.config.share.zip-compression-level.description": "Passe den Wert an, um ein Gleichgewicht zwischen Dateigröße und Kompressionsgeschwindigkeit herzustellen. Gültige Werte liegen zwischen 0 und 9, wobei 0 für keine Komprimierung und 9 für maximale Komprimierung steht. ",
   "admin.config.share.chunk-size": "Chunk Größe",
-  "admin.config.share.chunk-size.description":
-    "Passe die Chunk-Größe für deine Uploads an, um Effizienz und Zuverlässigkeit entsprechend deiner Internetverbindung auszubalancieren. Kleinere Chunks können die Erfolgsraten bei instabilen Verbindungen erhöhen, während größere Chunks Uploads bei stabilen Verbindungen beschleunigen.",
-  "admin.config.share.auto-open-share-modal":
-    "Freigabe-Fenster automatisch öffnen",
-  "admin.config.share.auto-open-share-modal.description":
-    "Das Freigabe-Fenster erscheint automatisch, sobald ein Benutzer Dateien ausgewählt hat, ohne extra auf den Button klicken zu müssen.",
-  "admin.config.security.allow-admin-access-all-shares":
-    "Admin-Zugriff auf alle Freigaben erlauben",
-  "admin.config.share.reverse-share-simple-only":
-    "Einfachen Modus für Datei-Anfragen erzwingen",
-  "admin.config.share.reverse-share-simple-only.description":
-    "Erzwingt, dass Datei-Anfragen im einfachen Modus erstellt werden. Wenn deaktiviert, kann der Ersteller der Datei-Anfrage zwischen einfachem und erweitertem Modus wählen.",
-  "admin.config.security.allow-admin-access-all-shares.description":
-    "Administratoren erlauben, auf alle Freigaben zuzugreifen, selbst wenn sie passwortgeschützt, abgelaufen oder gelöscht sind.",
-  "admin.config.share.enable-user-recipients":
-    "Teilen mit registrierten Benutzern aktivieren",
-  "admin.config.share.enable-user-recipients.description":
-    "Wenn aktiviert, erscheinen Freigaben, die an die E-Mail-Adresse eines registrierten Benutzers gesendet wurden, automatisch in dessen Konto. Benutzer können den Freigabezugriff auch nur auf benannte Empfänger beschränken.",
+  "admin.config.share.chunk-size.description": "Passe die Chunk-Größe für deine Uploads an, um Effizienz und Zuverlässigkeit entsprechend deiner Internetverbindung auszubalancieren. Kleinere Chunks können die Erfolgsraten bei instabilen Verbindungen erhöhen, während größere Chunks Uploads bei stabilen Verbindungen beschleunigen.",
+  "admin.config.share.auto-open-share-modal": "Freigabe-Fenster automatisch öffnen",
+  "admin.config.share.auto-open-share-modal.description": "Das Freigabe-Fenster erscheint automatisch, sobald ein Benutzer Dateien ausgewählt hat, ohne extra auf den Button klicken zu müssen.",
+  "admin.config.security.allow-admin-access-all-shares": "Admin-Zugriff auf alle Freigaben erlauben",
+  "admin.config.share.reverse-share-simple-only": "Einfachen Modus für Datei-Anfragen erzwingen",
+  "admin.config.share.reverse-share-simple-only.description": "Erzwingt, dass Datei-Anfragen im einfachen Modus erstellt werden. Wenn deaktiviert, kann der Ersteller der Datei-Anfrage zwischen einfachem und erweitertem Modus wählen.",
+  "admin.config.security.allow-admin-access-all-shares.description": "Administratoren erlauben, auf alle Freigaben zuzugreifen, selbst wenn sie passwortgeschützt, abgelaufen oder gelöscht sind.",
+  "admin.config.share.enable-user-recipients": "Teilen mit registrierten Benutzern aktivieren",
+  "admin.config.share.enable-user-recipients.description": "Wenn aktiviert, erscheinen Freigaben, die an die E-Mail-Adresse eines registrierten Benutzers gesendet wurden, automatisch in dessen Konto. Benutzer können den Freigabezugriff auch nur auf benannte Empfänger beschränken.",
   "admin.config.share.file-retention-period": "Aufbewahrungsfrist für Dateien",
-  "admin.config.share.file-retention-period.description":
-    "Wie lange Dateien aufbewahrt werden, nachdem eine Freigabe abgelaufen ist oder gelöscht wurde. Nur nützlich, wenn die Option 'Administratorzugriff auf alle Freigaben erlauben' ebenfalls aktiviert ist. Auf -1 setzen, um Dateien für immer zu behalten.",
+  "admin.config.share.file-retention-period.description": "Wie lange Dateien aufbewahrt werden, nachdem eine Freigabe abgelaufen ist oder gelöscht wurde. Nur nützlich, wenn die Option 'Administratorzugriff auf alle Freigaben erlauben' ebenfalls aktiviert ist. Auf -1 setzen, um Dateien für immer zu behalten.",
   "admin.config.smtp.enabled": "Aktivieren",
-  "admin.config.smtp.enabled.description":
-    "Gibt an, ob SMTP aktiviert ist. Aktiviere dies nur, wenn du den Host, den Port, die E-Mail, den Benutzernamen und das Passwort deines SMTP-Servers eingegeben hast.",
+  "admin.config.smtp.enabled.description": "Gibt an, ob SMTP aktiviert ist. Aktiviere dies nur, wenn du den Host, den Port, die E-Mail, den Benutzernamen und das Passwort deines SMTP-Servers eingegeben hast.",
   "admin.config.smtp.host": "Host",
   "admin.config.smtp.host.description": "Host des SMTP-Servers",
   "admin.config.smtp.port": "Port",
   "admin.config.smtp.port.description": "Port des SMTP-Servers",
   "admin.config.smtp.email": "E-Mail",
-  "admin.config.smtp.email.description":
-    "E-Mail-Adresse, von der die E-Mails gesendet werden",
+  "admin.config.smtp.email.description": "E-Mail-Adresse, von der die E-Mails gesendet werden",
   "admin.config.smtp.username": "Benutzername",
   "admin.config.smtp.username.description": "Benutzername des SMTP-Servers",
   "admin.config.smtp.password": "Passwort",
   "admin.config.smtp.password.description": "Passwort des SMTP-Servers",
   "admin.config.smtp.button.test": "Test-E-Mail senden",
   "admin.config.smtp.test-email.success": "E-Mail erfolgreich versendet",
-  "admin.config.smtp.test-email.error.title":
-    "E-Mail konnte nicht gesendet werden",
-  "admin.config.smtp.test-email.error.description":
-    "Während des Versands der Test-E-Mail ist folgender Fehler aufgetreten:",
+  "admin.config.smtp.test-email.error.title": "E-Mail konnte nicht gesendet werden",
+  "admin.config.smtp.test-email.error.description": "Während des Versands der Test-E-Mail ist folgender Fehler aufgetreten:",
   "admin.config.smtp.test-email.save.title": "Einstellungen speichern",
-  "admin.config.smtp.test-email.save.description":
-    "Um fortzufahren müssen Sie zuerst die Konfiguration speichern. Möchten Sie die Konfiguration speichern und die Test-E-Mail senden?",
+  "admin.config.smtp.test-email.save.description": "Um fortzufahren müssen Sie zuerst die Konfiguration speichern. Möchten Sie die Konfiguration speichern und die Test-E-Mail senden?",
   "admin.config.smtp.test-email.save.confirm": "Speichern und senden",
-  "admin.config.smtp.allow-unauthorized-certificates":
-    "Vertrauen von nicht authentifizierten SMTP-Server-Zertifikaten",
-  "admin.config.smtp.allow-unauthorized-certificates.description":
-    "Verwende diese Option nur, wenn du selbst signierten Zertifikaten vertrauen musst.",
+  "admin.config.smtp.allow-unauthorized-certificates": "Vertrauen von nicht authentifizierten SMTP-Server-Zertifikaten",
+  "admin.config.smtp.allow-unauthorized-certificates.description": "Verwende diese Option nur, wenn du selbst signierten Zertifikaten vertrauen musst.",
   "admin.config.oauth.allow-registration": "Registrierung erlauben",
-  "admin.config.oauth.allow-registration.description":
-    "Benutzern erlauben, sich über soziale Netzwerke zu registrieren",
+  "admin.config.oauth.allow-registration.description": "Benutzern erlauben, sich über soziale Netzwerke zu registrieren",
   "admin.config.oauth.ignore-totp": "TOTP ignorieren",
-  "admin.config.oauth.ignore-totp.description":
-    "Gibt an, ob TOTP ignoriert werden soll, wenn sich der Benutzer über soziale Netzwerke anmeldet",
+  "admin.config.oauth.ignore-totp.description": "Gibt an, ob TOTP ignoriert werden soll, wenn sich der Benutzer über soziale Netzwerke anmeldet",
   "admin.config.oauth.disable-password": "Anmelden mit Passwort deaktivieren",
-  "admin.config.oauth.disable-password.description":
-    "Deaktiviert das Anmelden mit Passwort\nStelle vor Aktivierung dieser Konfiguration sicher, dass ein OAuth-Provider korrekt konfiguriert ist, um nicht ausgesperrt zu werden.",
+  "admin.config.oauth.disable-password.description": "Deaktiviert das Anmelden mit Passwort\nStelle vor Aktivierung dieser Konfiguration sicher, dass ein OAuth-Provider korrekt konfiguriert ist, um nicht ausgesperrt zu werden.",
   "admin.config.oauth.github-enabled": "GitHub",
-  "admin.config.oauth.github-enabled.description":
-    "Anmeldung mit GitHub erlauben",
+  "admin.config.oauth.github-enabled.description": "Anmeldung mit GitHub erlauben",
   "admin.config.oauth.github-client-id": "GitHub Client-ID",
-  "admin.config.oauth.github-client-id.description":
-    "Client-ID der GitHub OAuth-App",
+  "admin.config.oauth.github-client-id.description": "Client-ID der GitHub OAuth-App",
   "admin.config.oauth.github-client-secret": "GitHub Client Secret",
-  "admin.config.oauth.github-client-secret.description":
-    "Client Secret der GitHub OAuth App",
+  "admin.config.oauth.github-client-secret.description": "Client Secret der GitHub OAuth App",
   "admin.config.oauth.google-enabled": "Google",
-  "admin.config.oauth.google-enabled.description":
-    "Anmeldung mit Google erlauben",
+  "admin.config.oauth.google-enabled.description": "Anmeldung mit Google erlauben",
   "admin.config.oauth.google-client-id": "Google Client-ID",
-  "admin.config.oauth.google-client-id.description":
-    "Client-ID der Google OAuth-App",
+  "admin.config.oauth.google-client-id.description": "Client-ID der Google OAuth-App",
   "admin.config.oauth.google-client-secret": "Google Client Secret",
-  "admin.config.oauth.google-client-secret.description":
-    "Client Secret der Google OAuth App",
+  "admin.config.oauth.google-client-secret.description": "Client Secret der Google OAuth App",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
-  "admin.config.oauth.microsoft-enabled.description":
-    "Microsoft Anmeldung erlaubt",
+  "admin.config.oauth.microsoft-enabled.description": "Microsoft Anmeldung erlaubt",
   "admin.config.oauth.microsoft-tenant": "Microsoft Mandant",
-  "admin.config.oauth.microsoft-tenant.description":
-    "Mandanten-ID der Microsoft OAuth App\ncommon: Benutzer mit einem persönlichen Microsoft-Konto und einem Arbeits- oder Schulkonto von Microsoft Entra ID können sich in der Anwendung anmelden.\norganizations: Nur Benutzer mit Arbeits- oder Schulkonten von Microsoft Entra ID können sich in der Anwendung anmelden.\nconsumers: Nur Benutzer mit einem persönlichen Microsoft-Konto können sich in der Anwendung anmelden.\nDomänenname des Microsoft Entra Mandanten oder die Mandanten-ID im GUID-Format: Nur Benutzer eines bestimmten Microsoft Entra Mandanten (Verzeichnismitglieder mit einem Arbeits- oder Schulkonto oder Verzeichnis Gäste mit einem persönlichen Microsoft-Konto) können sich anmelden.",
+  "admin.config.oauth.microsoft-tenant.description": "Mandanten-ID der Microsoft OAuth App\ncommon: Benutzer mit einem persönlichen Microsoft-Konto und einem Arbeits- oder Schulkonto von Microsoft Entra ID können sich in der Anwendung anmelden.\norganizations: Nur Benutzer mit Arbeits- oder Schulkonten von Microsoft Entra ID können sich in der Anwendung anmelden.\nconsumers: Nur Benutzer mit einem persönlichen Microsoft-Konto können sich in der Anwendung anmelden.\nDomänenname des Microsoft Entra Mandanten oder die Mandanten-ID im GUID-Format: Nur Benutzer eines bestimmten Microsoft Entra Mandanten (Verzeichnismitglieder mit einem Arbeits- oder Schulkonto oder Verzeichnis Gäste mit einem persönlichen Microsoft-Konto) können sich anmelden.",
   "admin.config.oauth.microsoft-client-id": "Microsoft Client-ID",
-  "admin.config.oauth.microsoft-client-id.description":
-    "Client-ID der Microsoft OAuth-App",
+  "admin.config.oauth.microsoft-client-id.description": "Client-ID der Microsoft OAuth-App",
   "admin.config.oauth.microsoft-client-secret": "Microsoft Client Secret",
-  "admin.config.oauth.microsoft-client-secret.description":
-    "Client Secret der Microsoft OAuth App",
+  "admin.config.oauth.microsoft-client-secret.description": "Client Secret der Microsoft OAuth App",
   "admin.config.oauth.discord-enabled": "Zwietracht",
-  "admin.config.oauth.discord-enabled.description":
-    "Anmeldung mit Discord erlauben",
+  "admin.config.oauth.discord-enabled.description": "Anmeldung mit Discord erlauben",
   "admin.config.oauth.discord-limited-users": "Discord limitierte Benutzer",
-  "admin.config.oauth.discord-limited-users.description":
-    "Limitiere die Anmeldung für spezifische Benutzer anhand ihrer Discord ID. Lasse dieses Feld leer, um es zu deaktivieren.",
+  "admin.config.oauth.discord-limited-users.description": "Limitiere die Anmeldung für spezifische Benutzer anhand ihrer Discord ID. Lasse dieses Feld leer, um es zu deaktivieren.",
   "admin.config.oauth.discord-limited-guild": "Discord Server-ID",
-  "admin.config.oauth.discord-limited-guild.description":
-    "Die Anmeldung auf Benutzer in einem bestimmten Server beschränken. Leer lassen, um zu deaktivieren.",
+  "admin.config.oauth.discord-limited-guild.description": "Die Anmeldung auf Benutzer in einem bestimmten Server beschränken. Leer lassen, um zu deaktivieren.",
   "admin.config.oauth.discord-client-id": "Discord Client-ID",
-  "admin.config.oauth.discord-client-id.description":
-    "Client-ID der Discord OAuth-App",
+  "admin.config.oauth.discord-client-id.description": "Client-ID der Discord OAuth-App",
   "admin.config.oauth.discord-client-secret": "Discord Client Secret",
-  "admin.config.oauth.discord-client-secret.description":
-    "Client Secret der Discord OAuth App",
+  "admin.config.oauth.discord-client-secret.description": "Client Secret der Discord OAuth App",
   "admin.config.oauth.oidc-enabled": "OpenID Connect",
-  "admin.config.oauth.oidc-enabled.description":
-    "Anmeldung mit OpenID Connect erlauben",
+  "admin.config.oauth.oidc-enabled.description": "Anmeldung mit OpenID Connect erlauben",
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect Discovery URL",
-  "admin.config.oauth.oidc-discovery-uri.description":
-    "Discovery-URL der OpenID Connect OAuth App",
+  "admin.config.oauth.oidc-discovery-uri.description": "Discovery-URL der OpenID Connect OAuth App",
   "admin.config.oauth.oidc-sign-out": "Von OpenID Connect abmelden",
-  "admin.config.oauth.oidc-sign-out.description":
-    "Wenn aktiviert, wird der Benutzer mit der „Abmelden“-Schaltfläche vom OpenID-Connect-Provider abgemeldet",
+  "admin.config.oauth.oidc-sign-out.description": "Wenn aktiviert, wird der Benutzer mit der „Abmelden“-Schaltfläche vom OpenID-Connect-Provider abgemeldet",
   "admin.config.oauth.oidc-scope": "OpenID Connect",
-  "admin.config.oauth.oidc-scope.description":
-    "Scopes, die vom OpenID Connect Provider angefordert werden sollen.",
-  "admin.config.oauth.oidc-username-claim":
-    "OpenID Connect Benutzername anfordern",
-  "admin.config.oauth.oidc-username-claim.description":
-    "Benutzername im OpenID Token. Leer lassen, wenn du nicht weißt, was diese Konfiguration bedeutet.",
-  "admin.config.oauth.oidc-role-path":
-    "Pfad zu den Rollen im OpenID Verbindungs-Token",
-  "admin.config.oauth.oidc-role-path.description":
-    "Muss ein valider JMES-Pfad sein, der zu einem Array an Rollen führt. " +
-    "Die Zugangsverwaltung über Rollen in OpenID Connect ist nur empfohlen, wenn kein anderer Identitätsprovider konfiguriert und die Anmeldung per Password deaktiviert ist. " +
-    "Leer lassen, wenn du nicht weißt, was diese Konfiguration bedeutet.",
-  "admin.config.oauth.oidc-role-general-access":
-    "OpenID Connect Rolle für allgemeinen Zugriff",
-  "admin.config.oauth.oidc-role-general-access.description":
-    "Rolle für generellen Zugriff. Muss Teil der Rollen eines Benutzers sein, damit dieser sich anmelden kann. " +
-    "Leer lassen, wenn du nicht weißt, was diese Konfiguration bedeutet.",
-  "admin.config.oauth.oidc-role-admin-access":
-    "OpenID Connect Rolle für Admin-Zugriff",
-  "admin.config.oauth.oidc-role-admin-access.description":
-    "Rolle für administrativen Zugriff. Muss Teil der Rollen eines Benutzers sein, damit dieser auf das Administrator-Panel zugreifen kann. " +
-    "Leer lassen, wenn du nicht weißt, was diese Konfiguration bedeutet.",
+  "admin.config.oauth.oidc-scope.description": "Scopes, die vom OpenID Connect Provider angefordert werden sollen.",
+  "admin.config.oauth.oidc-username-claim": "OpenID Connect Benutzername anfordern",
+  "admin.config.oauth.oidc-username-claim.description": "Benutzername im OpenID Token. Leer lassen, wenn du nicht weißt, was diese Konfiguration bedeutet.",
+  "admin.config.oauth.oidc-role-path": "Pfad zu den Rollen im OpenID Verbindungs-Token",
+  "admin.config.oauth.oidc-role-path.description": "Muss ein valider JMES-Pfad sein, der zu einem Array an Rollen führt. " + "Die Zugangsverwaltung über Rollen in OpenID Connect ist nur empfohlen, wenn kein anderer Identitätsprovider konfiguriert und die Anmeldung per Password deaktiviert ist. " + "Leer lassen, wenn du nicht weißt, was diese Konfiguration bedeutet.",
+  "admin.config.oauth.oidc-role-general-access": "OpenID Connect Rolle für allgemeinen Zugriff",
+  "admin.config.oauth.oidc-role-general-access.description": "Rolle für generellen Zugriff. Muss Teil der Rollen eines Benutzers sein, damit dieser sich anmelden kann. " + "Leer lassen, wenn du nicht weißt, was diese Konfiguration bedeutet.",
+  "admin.config.oauth.oidc-role-admin-access": "OpenID Connect Rolle für Admin-Zugriff",
+  "admin.config.oauth.oidc-role-admin-access.description": "Rolle für administrativen Zugriff. Muss Teil der Rollen eines Benutzers sein, damit dieser auf das Administrator-Panel zugreifen kann. " + "Leer lassen, wenn du nicht weißt, was diese Konfiguration bedeutet.",
   "admin.config.oauth.oidc-client-id": "OpenID Connect Client-ID",
-  "admin.config.oauth.oidc-client-id.description":
-    "Client-ID der OpenID Connect OAuth-App",
+  "admin.config.oauth.oidc-client-id.description": "Client-ID der OpenID Connect OAuth-App",
   "admin.config.oauth.oidc-client-secret": "OpenID Connect Client-Secret",
-  "admin.config.oauth.oidc-client-secret.description":
-    "Client-Secret der OpenID Connect OAuth-App",
+  "admin.config.oauth.oidc-client-secret.description": "Client-Secret der OpenID Connect OAuth-App",
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "LDAP aktivieren",
-  "admin.config.ldap.enabled.description":
-    "LDAP-Authentifizierung für die Benutzeranmeldung verwenden",
+  "admin.config.ldap.enabled.description": "LDAP-Authentifizierung für die Benutzeranmeldung verwenden",
   "admin.config.ldap.url": "Server-URL",
   "admin.config.ldap.url.description": "URL des LDAP-Servers",
   "admin.config.ldap.bind-dn": "Binde DN",
-  "admin.config.ldap.bind-dn.description":
-    "Standard-Benutzer, der zur Benutzersuche verwendet wird",
+  "admin.config.ldap.bind-dn.description": "Standard-Benutzer, der zur Benutzersuche verwendet wird",
   "admin.config.ldap.bind-password": "Binde Passwort",
-  "admin.config.ldap.bind-password.description":
-    "Passwort der zur Benutzersuche verwendet wird",
+  "admin.config.ldap.bind-password.description": "Passwort der zur Benutzersuche verwendet wird",
   "admin.config.ldap.search-base": "Benutzerbasis",
-  "admin.config.ldap.search-base.description":
-    "Basisstandort, an dem die Benutzersuche durchgeführt wird",
+  "admin.config.ldap.search-base.description": "Basisstandort, an dem die Benutzersuche durchgeführt wird",
   "admin.config.ldap.search-query": "Benutzerabfrage",
-  "admin.config.ldap.search-query.description":
-    'Die Benutzer Abfrage wird in der "Benutzerdatenbank" gesucht für den LDAP Benutzer. %username% kann als Platzhalter für den Benutzer eingegeben werden.',
+  "admin.config.ldap.search-query.description": 'Die Benutzer Abfrage wird in der "Benutzerdatenbank" gesucht für den LDAP Benutzer. %username% kann als Platzhalter für den Benutzer eingegeben werden.',
   "admin.config.ldap.admin-groups": "Admin-Gruppe",
-  "admin.config.ldap.admin-groups.description":
-    "Gruppe benötigt für den Administrationszugang.",
+  "admin.config.ldap.admin-groups.description": "Gruppe benötigt für den Administrationszugang.",
   "admin.config.ldap.field-name-member-of": "Benutzergruppen-Attributname",
-  "admin.config.ldap.field-name-member-of.description":
-    "LDAP-Attributname für die Gruppen, in denen ein Benutzer Mitglied ist. Dies wird bei der Überprüfung der Admin-Gruppe verwendet.",
-  "admin.config.ldap.field-name-email":
-    "Attributname für die E-Mail-Adresse des Benutzers",
-  "admin.config.ldap.field-name-email.description":
-    "LDAP-Attributname für die E-Mail-Adresse eines Benutzers.",
+  "admin.config.ldap.field-name-member-of.description": "LDAP-Attributname für die Gruppen, in denen ein Benutzer Mitglied ist. Dies wird bei der Überprüfung der Admin-Gruppe verwendet.",
+  "admin.config.ldap.field-name-email": "Attributname für die E-Mail-Adresse des Benutzers",
+  "admin.config.ldap.field-name-email.description": "LDAP-Attributname für die E-Mail-Adresse eines Benutzers.",
   "admin.config.notify.success": "Konfiguration erfolgreich aktualisiert.",
-  "admin.config.notify.logo-success":
-    "Logo erfolgreich aktualisiert. Es kann einige Minuten dauern, bis es auf der Website aktualisiert wird.",
+  "admin.config.notify.logo-success": "Logo erfolgreich aktualisiert. Es kann einige Minuten dauern, bis es auf der Website aktualisiert wird.",
   "admin.config.notify.no-changes": "Keine Änderungen zu speichern.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Aktiviert",
-  "admin.config.s3.enabled.description":
-    "Soll S3 zum Speichern der freigegebenen Dateien anstelle des lokalen Dateisystems benutzt werden. WARNUNG: Wenn ClamAV aktiv ist, werden Dateien vorübergehend von S3 heruntergeladen.",
+  "admin.config.s3.enabled.description": "Soll S3 zum Speichern der freigegebenen Dateien anstelle des lokalen Dateisystems benutzt werden. WARNUNG: Wenn ClamAV aktiv ist, werden Dateien vorübergehend von S3 heruntergeladen.",
   "admin.config.s3.endpoint": "Endpunkt",
   "admin.config.s3.endpoint.description": "Die URL des S3-Buckets.",
   "admin.config.s3.region": "Region",
@@ -824,35 +618,25 @@ export default {
   "admin.config.s3.bucket-name": "Bucket-Name",
   "admin.config.s3.bucket-name.description": "Der Name des S3-Buckets.",
   "admin.config.s3.bucket-path": "Pfad",
-  "admin.config.s3.bucket-path.description":
-    "Der Standardpfad, der zum Speichern der Dateien im S3-Bucket verwendet werden soll.",
+  "admin.config.s3.bucket-path.description": "Der Standardpfad, der zum Speichern der Dateien im S3-Bucket verwendet werden soll.",
   "admin.config.s3.key": "Schlüssel",
-  "admin.config.s3.key.description":
-    "Der Schlüssel, der den Zugriff auf den S3-Bucket ermöglicht.",
+  "admin.config.s3.key.description": "Der Schlüssel, der den Zugriff auf den S3-Bucket ermöglicht.",
   "admin.config.s3.secret": "Geheimnis",
-  "admin.config.s3.secret.description":
-    "Das Geheimnis, das den Zugriff auf den S3-Bucket ermöglicht.",
+  "admin.config.s3.secret.description": "Das Geheimnis, das den Zugriff auf den S3-Bucket ermöglicht.",
   "admin.config.s3.use-checksum": "Prüfsumme verwenden",
-  "admin.config.s3.use-checksum.description":
-    "Deaktivieren für Backends, die keine Prüfsummen unterstützen (z. B. B2).",
-  "admin.config.s3.docs-link":
-    "CORS muss auf deinem Bucket neu konfiguriert werden, siehe das {wikiLink} für Details.",
+  "admin.config.s3.use-checksum.description": "Deaktivieren für Backends, die keine Prüfsummen unterstützen (z. B. B2).",
+  "admin.config.s3.docs-link": "CORS muss auf deinem Bucket neu konfiguriert werden, siehe das {wikiLink} für Details.",
   "admin.config.category.legal": "Datenschutz",
   "admin.config.legal.enabled": "Impressum und Datenschutz aktivieren",
-  "admin.config.legal.enabled.description":
-    "Gibt an, ob die Links zum Impressum und zur Datenschutzerklärung im Footer angezeigt werden sollen.",
+  "admin.config.legal.enabled.description": "Gibt an, ob die Links zum Impressum und zur Datenschutzerklärung im Footer angezeigt werden sollen.",
   "admin.config.legal.imprint-text": "Impressum-Text",
-  "admin.config.legal.imprint-text.description":
-    "Der Text, der im Impressum angezeigt wird. Unterstützt Markdown. Leer lassen, um auf eine externe Impressumsseite zu verlinken.",
+  "admin.config.legal.imprint-text.description": "Der Text, der im Impressum angezeigt wird. Unterstützt Markdown. Leer lassen, um auf eine externe Impressumsseite zu verlinken.",
   "admin.config.legal.imprint-url": "Impressum-URL",
-  "admin.config.legal.imprint-url.description":
-    "Wenn bereits eine Impressumsseite vorhanden ist, kann sie hier verlinkt werden, anstatt den Text einzugeben.",
+  "admin.config.legal.imprint-url.description": "Wenn bereits eine Impressumsseite vorhanden ist, kann sie hier verlinkt werden, anstatt den Text einzugeben.",
   "admin.config.legal.privacy-policy-text": "Datenschutzerklärungstext",
-  "admin.config.legal.privacy-policy-text.description":
-    "Der Text, der in der Datenschutzerklärung angezeigt wird. Unterstützt Markdown. Leer lassen, um auf eine externe Datenschutzerklärungsseite zu verlinken.",
+  "admin.config.legal.privacy-policy-text.description": "Der Text, der in der Datenschutzerklärung angezeigt wird. Unterstützt Markdown. Leer lassen, um auf eine externe Datenschutzerklärungsseite zu verlinken.",
   "admin.config.legal.privacy-policy-url": "Datenschutzerklärungs-URL",
-  "admin.config.legal.privacy-policy-url.description":
-    "Wenn bereits eine Datenschutzerklärungsseite vorhanden ist, kann sie hier verlinkt werden, anstatt den Text einzugeben.",
+  "admin.config.legal.privacy-policy-url.description": "Wenn bereits eine Datenschutzerklärungsseite vorhanden ist, kann sie hier verlinkt werden, anstatt den Text einzugeben.",
   // 404
   "404.description": "Ups, diese Seite existiert nicht.",
   "404.button.home": "Zurück zur Startseite",
@@ -861,28 +645,18 @@ export default {
   "error.description": "Ups!",
   "error.button.back": "Zurück",
   "error.msg.default": "Etwas ist schiefgelaufen.",
-  "error.msg.access_denied":
-    "Du hast den Authentifizierungsprozess abgebrochen, bitte versuche es erneut.",
-  "error.msg.expired_token":
-    "Der Authentifizierungsprozess hat zu lange gedauert, bitte versuche es erneut.",
+  "error.msg.access_denied": "Du hast den Authentifizierungsprozess abgebrochen, bitte versuche es erneut.",
+  "error.msg.expired_token": "Der Authentifizierungsprozess hat zu lange gedauert, bitte versuche es erneut.",
   "error.msg.invalid_token": "Interner Fehler",
-  "error.msg.no_user":
-    "Der mit diesem {0} Konto verknüpfte Benutzer existiert nicht.",
-  "error.msg.no_email":
-    "Kann die E-Mail-Adresse von dem Konto {0} nicht abrufen.",
-  "error.msg.already_linked":
-    "Das Konto {0} ist bereits mit einem anderen Konto verknüpft.",
-  "error.msg.not_linked":
-    "Das Konto {0} wurde noch nicht mit einem Konto verknüpft.",
-  "error.msg.email_already_exists":
-    "Ein Konto mit dieser E-Mail-Adresse existiert bereits. Bitte melde dich mit deinem Passwort an und verknüpfe dein {0}-Konto manuell auf der Seite 'Mein Konto'.",
-  "error.msg.email_not_verified":
-    "Deine E-Mail-Adresse für dieses {0}-Konto ist nicht verifiziert. Bitte bestätige deine E-Mail-Adresse bei deinem Identitätsanbieter, bevor du dich anmeldest.",
-  "error.msg.unverified_account":
-    "Dieses Konto {0} wurde noch nicht verifiziert, bitte versuche es nach der Verifikation erneut.",
+  "error.msg.no_user": "Der mit diesem {0} Konto verknüpfte Benutzer existiert nicht.",
+  "error.msg.no_email": "Kann die E-Mail-Adresse von dem Konto {0} nicht abrufen.",
+  "error.msg.already_linked": "Das Konto {0} ist bereits mit einem anderen Konto verknüpft.",
+  "error.msg.not_linked": "Das Konto {0} wurde noch nicht mit einem Konto verknüpft.",
+  "error.msg.email_already_exists": "Ein Konto mit dieser E-Mail-Adresse existiert bereits. Bitte melde dich mit deinem Passwort an und verknüpfe dein {0}-Konto manuell auf der Seite 'Mein Konto'.",
+  "error.msg.email_not_verified": "Deine E-Mail-Adresse für dieses {0}-Konto ist nicht verifiziert. Bitte bestätige deine E-Mail-Adresse bei deinem Identitätsanbieter, bevor du dich anmeldest.",
+  "error.msg.unverified_account": "Dieses Konto {0} wurde noch nicht verifiziert, bitte versuche es nach der Verifikation erneut.",
   "error.msg.user_not_allowed": "Du bist nicht berechtigt, dich anzumelden.",
-  "error.msg.cannot_get_user_info":
-    "Ihre Benutzerinformationen können von diesem {0} Konto nicht abgerufen werden.",
+  "error.msg.cannot_get_user_info": "Ihre Benutzerinformationen können von diesem {0} Konto nicht abgerufen werden.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
@@ -927,20 +701,14 @@ export default {
   "common.error.exact-length": "Muss genau {length} Zeichen lang sein",
   "common.error.invalid-number": "Muss eine Zahl sein",
   "common.error.field-required": "Dieses Feld ist erforderlich",
-  "common.error.password.lowercase":
-    "Passwort muss mindestens einen Kleinbuchstaben enthalten",
-  "common.error.password.uppercase":
-    "Passwort muss mindestens einen Großbuchstaben enthalten",
-  "common.error.password.number":
-    "Passwort muss mindestens eine Zahl enthalten",
-  "common.error.password.special":
-    "Passwort muss mindestens ein Sonderzeichen enthalten",
+  "common.error.password.lowercase": "Passwort muss mindestens einen Kleinbuchstaben enthalten",
+  "common.error.password.uppercase": "Passwort muss mindestens einen Großbuchstaben enthalten",
+  "common.error.password.number": "Passwort muss mindestens eine Zahl enthalten",
+  "common.error.password.special": "Passwort muss mindestens ein Sonderzeichen enthalten",
   "admin.notice.modal.headerTag": "ADMINISTRATIVE AKTION ERFORDERLICH",
-  "admin.notice.modal.defaultCheckboxLabel":
-    "Ich bestätige, dass ich diesen Hinweis gelesen habe und die grundlegenden Änderungen verstehe.",
+  "admin.notice.modal.defaultCheckboxLabel": "Ich bestätige, dass ich diesen Hinweis gelesen habe und die grundlegenden Änderungen verstehe.",
   "admin.notice.modal.button.acknowledge": "Bestätigen & Schließen",
   "admin.notice.modal.button.acknowledging": "Wird bestätigt...",
   "admin.notice.modal.docsLink": "Dokumentation anzeigen",
-  "admin.notice.modal.globalNoticeFooter":
-    "Hinweis: Nach der Bestätigung wird dieser Hinweis für alle Administratoren auf allen Geräten dauerhaft ausgeblendet.",
+  "admin.notice.modal.globalNoticeFooter": "Hinweis: Nach der Bestätigung wird dieser Hinweis für alle Administratoren auf allen Geräten dauerhaft ausgeblendet.",
 };

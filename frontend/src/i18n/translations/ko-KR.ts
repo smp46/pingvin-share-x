@@ -14,17 +14,13 @@ export default {
 
   // /
   "home.title": "<h>직접 호스팅</h>하는 파일 공유 플랫폼.",
-  "home.description":
-    "정말 WeTransfer와 같은 제3자에게 개인 파일을 맡기고 싶으세요?",
+  "home.description": "정말 WeTransfer와 같은 제3자에게 개인 파일을 맡기고 싶으세요?",
   "home.bullet.a.name": "직접 호스팅",
-  "home.bullet.a.description":
-    "자신의 컴퓨터에서 Pingvin Share를 호스팅하세요.",
+  "home.bullet.a.description": "자신의 컴퓨터에서 Pingvin Share를 호스팅하세요.",
   "home.bullet.b.name": "개인 정보 보호",
-  "home.bullet.b.description":
-    "파일은 사용자의 소유이며 제3자가 절대 접근할 수 없습니다.",
+  "home.bullet.b.description": "파일은 사용자의 소유이며 제3자가 절대 접근할 수 없습니다.",
   "home.bullet.c.name": "귀찮은 파일 크기 제한 없음",
-  "home.bullet.c.description":
-    "원하는 만큼 큰 파일을 업로드하세요. 유일한 한계는 하드 드라이브뿐입니다.",
+  "home.bullet.c.description": "원하는 만큼 큰 파일을 업로드하세요. 유일한 한계는 하드 드라이브뿐입니다.",
   "home.button.start": "시작하기",
   "home.button.source": "소스 코드",
   // END /
@@ -34,8 +30,7 @@ export default {
   "signin.description": "아직 계정이 없으신가요?",
   "signin.button.signup": "계정 만들기",
   "signin.input.email-or-username": "이메일 또는 사용자 이름",
-  "signin.input.email-or-username.placeholder":
-    "당신의 이메일 또는 사용자 이름",
+  "signin.input.email-or-username.placeholder": "당신의 이메일 또는 사용자 이름",
   "signin.input.password": "비밀번호",
   "signin.input.password.placeholder": "당신의 비밀번호",
   "signin.button.submit": "로그인",
@@ -61,15 +56,12 @@ export default {
   "signup.button.submit": "시작하기",
   // /auth/verify
   "verify.title": "계정 인증",
-  "verify.success":
-    "계정이 성공적으로 인증되었습니다! 이제 로그인할 수 있습니다.",
+  "verify.success": "계정이 성공적으로 인증되었습니다! 이제 로그인할 수 있습니다.",
   "verify.error": "인증 링크가 유효하지 않거나 만료되었습니다.",
   "verify.button.signin": "로그인으로 이동",
   "verify.info.title": "계정 인증",
-  "verify.info.description":
-    "이메일 인증이 활성화되어 있습니다. 입력하신 이메일 주소로 인증 링크를 보냈습니다. 링크를 클릭하여 계정을 활성화해주세요.",
-  "verify.info.note":
-    "몇 분 내에 이메일을 받지 못하셨다면 스팸 폴더를 확인해주세요.",
+  "verify.info.description": "이메일 인증이 활성화되어 있습니다. 입력하신 이메일 주소로 인증 링크를 보냈습니다. 링크를 클릭하여 계정을 활성화해주세요.",
+  "verify.info.note": "몇 분 내에 이메일을 받지 못하셨다면 스팸 폴더를 확인해주세요.",
   "verify.info.resend.button": "인증 이메일 재전송",
   "verify.info.resend.success": "인증 이메일이 성공적으로 재전송되었습니다.",
   "verify.info.resend.error": "인증 이메일 재전송에 실패했습니다.",
@@ -83,14 +75,12 @@ export default {
   // /auth/reset-password
   "resetPassword.title": "비밀번호를 잊으셨나요?",
   "resetPassword.description": "비밀번호를 재설정하려면 이메일을 입력하세요.",
-  "resetPassword.notify.success":
-    "제공된 이메일이 존재하는 경우 비밀번호 재설정 링크가 포함된 메시지가 전송되었습니다.",
+  "resetPassword.notify.success": "제공된 이메일이 존재하는 경우 비밀번호 재설정 링크가 포함된 메시지가 전송되었습니다.",
   "resetPassword.button.back": "로그인 페이지로 돌아가기",
   "resetPassword.text.resetPassword": "비밀번호 재설정",
   "resetPassword.text.enterNewPassword": "새로운 비밀번호를 입력하세요",
   "resetPassword.input.password": "새로운 비밀번호",
-  "resetPassword.notify.passwordReset":
-    "비밀번호가 성공적으로 재설정되었습니다.",
+  "resetPassword.notify.passwordReset": "비밀번호가 성공적으로 재설정되었습니다.",
   // /account
   "account.title": "내 계정",
   "account.card.info.title": "계정 정보",
@@ -100,8 +90,7 @@ export default {
   "account.card.password.title": "비밀번호",
   "account.card.password.old": "기존 비밀번호",
   "account.card.password.new": "새로운 비밀번호",
-  "account.card.password.noPasswordSet":
-    "비밀번호가 설정되어 있지 않습니다. 이메일과 비밀번호로 로그인하려면 비밀번호를 생성해야 합니다.",
+  "account.card.password.noPasswordSet": "비밀번호가 설정되어 있지 않습니다. 이메일과 비밀번호로 로그인하려면 비밀번호를 생성해야 합니다.",
   "account.notify.password.success": "비밀번호 변경 완료",
   "account.card.oauth.title": "소셜 로그인",
   "account.card.oauth.github": "깃허브",
@@ -113,14 +102,11 @@ export default {
   "account.card.oauth.unlink": "연결 해제",
   "account.card.oauth.unlinked": "연결 해제",
   "account.modal.unlink.title": "계정 연결 해제",
-  "account.modal.unlink.description":
-    "소셜 계정 연결을 해제하면 로그인 정보를 기억하지 못할 경우 계정에 접근하지 못할 수 있습니다.",
+  "account.modal.unlink.description": "소셜 계정 연결을 해제하면 로그인 정보를 기억하지 못할 경우 계정에 접근하지 못할 수 있습니다.",
   "account.notify.oauth.unlinked.success": "연결 해제됨",
   "account.card.security.title": "보안",
-  "account.card.security.totp.enable.description":
-    "TOTP 활성화를 시작하려면 현재 비밀번호를 입력하세요.",
-  "account.card.security.totp.disable.description":
-    "TOTP 를 비활성화 하려면 비밀번호를 입력하세요.",
+  "account.card.security.totp.enable.description": "TOTP 활성화를 시작하려면 현재 비밀번호를 입력하세요.",
+  "account.card.security.totp.disable.description": "TOTP 를 비활성화 하려면 비밀번호를 입력하세요.",
   "account.card.security.totp.button.start": "시작",
   "account.modal.totp.title": "TOTP 활성화",
   "account.modal.totp.step1": "1단계: 인증기를 추가하세요.",
@@ -133,8 +119,7 @@ export default {
   "account.notify.totp.disable": "TOTP가 비활성화되었습니다.",
   "account.notify.totp.enable": "TOTP가 활성화 되었습니다.",
   "account.card.language.title": "언어",
-  "account.card.language.description":
-    "이 프로젝트는 커뮤니티에 의해 번역됩니다. 일부 언어는 불완전할 수 있습니다.",
+  "account.card.language.description": "이 프로젝트는 커뮤니티에 의해 번역됩니다. 일부 언어는 불완전할 수 있습니다.",
   "account.card.color.title": "배경 설정",
   // ThemeSwitcher.tsx
   "account.theme.dark": "어두운 배경",
@@ -142,8 +127,7 @@ export default {
   "account.theme.system": "시스템",
   "account.button.delete": "계정 삭제",
   "account.modal.delete.title": "계정 삭제",
-  "account.modal.delete.description":
-    "정말로 활성화된 모든 공유를 포함하여 계정을 삭제하시겠습니까?",
+  "account.modal.delete.description": "정말로 활성화된 모든 공유를 포함하여 계정을 삭제하시겠습니까?",
   // END /account
 
   // /account/shares
@@ -168,27 +152,23 @@ export default {
   "account.shares.table.expiry-never": "만료 없음",
   "account.shares.modal.share-informations": "공유 정보",
   "account.shares.modal.share-link": "공유 링크",
-  "account.shares.modal.edit.password.keep":
-    "현재 비밀번호를 유지하려면 비워두세요",
+  "account.shares.modal.edit.password.keep": "현재 비밀번호를 유지하려면 비워두세요",
   "account.shares.modal.edit.password.remove": "비밀번호 보호 제거",
   "account.shares.modal.delete.title": "공유 삭제: {share}",
-  "account.shares.modal.delete.description":
-    "정말로 이 공유를 삭제하시겠습니까?",
+  "account.shares.modal.delete.description": "정말로 이 공유를 삭제하시겠습니까?",
   // END /account/shares
 
   // /account/received
   "account.received-shares.title": "받은 공유",
   "account.received-shares.title.empty": "아직 받은 공유가 없습니다",
-  "account.received-shares.description.empty":
-    "내 이메일 주소로 전송된 공유가 여기에 표시됩니다.",
+  "account.received-shares.description.empty": "내 이메일 주소로 전송된 공유가 여기에 표시됩니다.",
   "account.received-shares.table.from": "보낸 사람",
   "account.received-shares.button.open": "열기",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "역방향 공유",
-  "account.reverseShares.description":
-    "역방향 공유를 통해 외부 사용자가 공유를 생성할 수 있는 고유 URL을 생성할 수 있습니다.",
+  "account.reverseShares.description": "역방향 공유를 통해 외부 사용자가 공유를 생성할 수 있는 고유 URL을 생성할 수 있습니다.",
   "account.reverseShares.title.empty": "이곳은 아무것도 없는것 같아요 👀",
   "account.reverseShares.description.empty": "당신은 역방향 공유한것이 없어요.",
   // showCreateReverseShareModal.tsx
@@ -208,20 +188,15 @@ export default {
   "account.reverseShares.modal.expiration.year-plural": "년",
   "account.reverseShares.modal.max-size.label": "최대 공유 크기",
   "account.reverseShares.modal.send-email": "이메일 알림 보내기",
-  "account.reverseShares.modal.send-email.description":
-    "이 역방향 공유 링크로 공유가 생성되면 이메일 알림을 받습니다.",
+  "account.reverseShares.modal.send-email.description": "이 역방향 공유 링크로 공유가 생성되면 이메일 알림을 받습니다.",
   "account.reverseShares.modal.simplified": "단순 모드",
-  "account.reverseShares.modal.simplified.description":
-    "파일을 업로드하는 사람이 쉽게 공유할 수 있도록 합니다. 공유의 이름과 설명만 설정할 수 있습니다.",
+  "account.reverseShares.modal.simplified.description": "파일을 업로드하는 사람이 쉽게 공유할 수 있도록 합니다. 공유의 이름과 설명만 설정할 수 있습니다.",
   "account.reverseShares.modal.public-access": "공개 액세스",
-  "account.reverseShares.modal.public-access.description":
-    "이 역방향 공유로 생성된 공유를 공개로 설정합니다. 비활성화하면 본인과 공유 생성자만 볼 수 있습니다.",
+  "account.reverseShares.modal.public-access.description": "이 역방향 공유로 생성된 공유를 공개로 설정합니다. 비활성화하면 본인과 공유 생성자만 볼 수 있습니다.",
   "account.reverseShares.modal.max-use.label": "공유 생성 제한",
-  "account.reverseShares.modal.max-use.description":
-    "이 URL을 사용하여 공유를 생성할 수 있는 최대 횟수입니다.",
+  "account.reverseShares.modal.max-use.description": "이 URL을 사용하여 공유를 생성할 수 있는 최대 횟수입니다.",
   "account.reverseShare.never-expires": "이 역공유 링크는 만료되지 않습니다.",
-  "account.reverseShare.expires-on":
-    "이 역방향 공유는 {expiration} 에 만료됩니다.",
+  "account.reverseShare.expires-on": "이 역방향 공유는 {expiration} 에 만료됩니다.",
   "account.reverseShares.table.no-shares": "아직 생성된 공유가 없습니다.",
   "account.reverseShares.table.count.singular": "공유",
   "account.reverseShares.table.count.plural": "공유",
@@ -231,8 +206,7 @@ export default {
   "account.reverseShares.table.expires": "만료 날짜",
   "account.reverseShares.modal.reverse-share-link": "역방향 공유 링크",
   "account.reverseShares.modal.delete.title": "역방향 공유 삭제",
-  "account.reverseShares.modal.delete.description":
-    "이 역방향 공유를 삭제하시겠습니까? 삭제하면 관련 공유도 삭제됩니다.",
+  "account.reverseShares.modal.delete.description": "이 역방향 공유를 삭제하시겠습니까? 삭제하면 관련 공유도 삭제됩니다.",
   // END /account/reverseShares
 
   // /admin
@@ -254,36 +228,28 @@ export default {
   "admin.users.edit.update.admin-privileges": "Admin Privilege",
   "admin.users.edit.update.email-verified": "이메일 인증됨",
   "admin.users.edit.update.custom-share-size-limit": "개별 공유 크기 제한",
-  "admin.users.edit.update.custom-share-size-limit.description":
-    "이 사용자에 대해 전역 업로드 제한을 재정의합니다",
+  "admin.users.edit.update.custom-share-size-limit.description": "이 사용자에 대해 전역 업로드 제한을 재정의합니다",
   "admin.users.edit.update.custom-storage-quota-limit": "개별 저장 공간 할당량",
-  "admin.users.edit.update.custom-storage-quota-limit.description":
-    "활성 공유 전체에 대한 사용자의 총 저장 공간 사용량을 제한합니다",
+  "admin.users.edit.update.custom-storage-quota-limit.description": "활성 공유 전체에 대한 사용자의 총 저장 공간 사용량을 제한합니다",
   "admin.users.edit.update.change-password.title": "비밀번호 변경",
   "admin.users.edit.update.change-password.field": "새로운 비밀번호",
   "admin.users.edit.update.change-password.button": "새 비밀번호 저장",
   "admin.users.edit.update.notify.password.success": "비밀번호 변경 완료",
   "admin.users.edit.delete.title": "사용자 삭제: {username} ?",
-  "admin.users.edit.delete.description":
-    "정말로 이 사용자와 해당 사용자의 모든 공유를 삭제하시겠습니까?",
+  "admin.users.edit.delete.description": "정말로 이 사용자와 해당 사용자의 모든 공유를 삭제하시겠습니까?",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "사용자 생성",
   "admin.users.modal.create.username": "사용자 이름",
   "admin.users.modal.create.email": "이메일",
   "admin.users.modal.create.password": "비밀번호",
   "admin.users.modal.create.manual-password": "수동 암호 설정",
-  "admin.users.modal.create.manual-password.description":
-    "선택하지 않으면 사용자는 암호를 설정할 수 있는 링크가 포함된 이메일을 받게 됩니다.",
+  "admin.users.modal.create.manual-password.description": "선택하지 않으면 사용자는 암호를 설정할 수 있는 링크가 포함된 이메일을 받게 됩니다.",
   "admin.users.modal.create.custom-share-size-limit": "개별 공유 크기 제한",
-  "admin.users.modal.create.custom-share-size-limit.description":
-    "이 사용자에 대해 전역 업로드 제한을 재정의합니다",
-  "admin.users.modal.create.custom-storage-quota-limit":
-    "개별 저장 공간 할당량",
-  "admin.users.modal.create.custom-storage-quota-limit.description":
-    "활성 공유 전체에 대한 사용자의 총 저장 공간 사용량을 제한합니다",
+  "admin.users.modal.create.custom-share-size-limit.description": "이 사용자에 대해 전역 업로드 제한을 재정의합니다",
+  "admin.users.modal.create.custom-storage-quota-limit": "개별 저장 공간 할당량",
+  "admin.users.modal.create.custom-storage-quota-limit.description": "활성 공유 전체에 대한 사용자의 총 저장 공간 사용량을 제한합니다",
   "admin.users.modal.create.admin": "Admin Privilege",
-  "admin.users.modal.create.admin.description":
-    "이 옵션을 선택하면 사용자는 관리 패널에 액세스할 수 있습니다.",
+  "admin.users.modal.create.admin.description": "이 옵션을 선택하면 사용자는 관리 패널에 액세스할 수 있습니다.",
   // END /admin/users
 
   // /admin/shares
@@ -300,21 +266,16 @@ export default {
 
   // /upload
   "upload.title": "업로드",
-  "upload.notify.confirm-leave":
-    "정말 이 페이지를 벗어나시겠습니까? 업로드가 취소됩니다.",
+  "upload.notify.confirm-leave": "정말 이 페이지를 벗어나시겠습니까? 업로드가 취소됩니다.",
   "upload.notify.generic-error": "공유를 완료하는 동안 오류가 발생했습니다.",
-  "upload.notify.count-failed":
-    "{count}개의 파일을 업로드하지 못했습니다. 다시 시도하세요.",
+  "upload.notify.count-failed": "{count}개의 파일을 업로드하지 못했습니다. 다시 시도하세요.",
   "upload.notify.duplicate-skipped": "중복 파일 건너뜀: {name}",
   "upload.reverse-share.error.invalid.title": "유효하지 않은 역방향 공유 링크",
-  "upload.reverse-share.error.invalid.description":
-    "This reverse share has expired or is invalid.",
+  "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
   // Dropzone.tsx
   "upload.dropzone.title": "파일 업로드",
-  "upload.dropzone.description":
-    "공유를 시작하려면 파일이나 폴더를 여기로 드래그 앤 드롭하거나 클립보드의 텍스트 내용을 업로드하려면 'Ctrl+V'를 누르세요. 총 {maxSize} 이하의 파일만 허용됩니다.",
-  "upload.dropzone.notify.file-too-big":
-    "파일이 {maxSize} 의 최대 공유 크기를 초과합니다.",
+  "upload.dropzone.description": "공유를 시작하려면 파일이나 폴더를 여기로 드래그 앤 드롭하거나 클립보드의 텍스트 내용을 업로드하려면 'Ctrl+V'를 누르세요. 총 {maxSize} 이하의 파일만 허용됩니다.",
+  "upload.dropzone.notify.file-too-big": "파일이 {maxSize} 의 최대 공유 크기를 초과합니다.",
   "upload.button.folder": "폴더 업로드",
   "upload.button.folder.append": "폴더 추가",
   "upload.button.add": "업로드에 추가",
@@ -325,20 +286,15 @@ export default {
   "upload.filelist.remaining": "{time} 남음",
   // showCreateUploadModal.tsx
   "upload.modal.title": "공유 생성",
-  "upload.modal.link.error.invalid":
-    "문자, 숫자, 밑줄 및 하이픈만 포함할 수 있습니다",
+  "upload.modal.link.error.invalid": "문자, 숫자, 밑줄 및 하이픈만 포함할 수 있습니다",
   "upload.modal.link.error.taken": "이미 사용 중인 링크입니다",
-  "upload.modal.link.error.s3-session-not-found":
-    "S3 업로드 세션을 찾을 수 없습니다",
-  "upload.modal.link.error.s3-etag-missing":
-    "S3 응답에 ETag 헤더가 없습니다. CORS가 ETag 헤더를 노출하도록 설정되어 있는지 확인하세요.",
+  "upload.modal.link.error.s3-session-not-found": "S3 업로드 세션을 찾을 수 없습니다",
+  "upload.modal.link.error.s3-etag-missing": "S3 응답에 ETag 헤더가 없습니다. CORS가 ETag 헤더를 노출하도록 설정되어 있는지 확인하세요.",
   "upload.modal.not-signed-in": "로그인하지 않았습니다",
-  "upload.modal.not-signed-in-description":
-    "공유를 수동으로 삭제하고 방문자 수를 볼 수 없습니다.",
+  "upload.modal.not-signed-in-description": "공유를 수동으로 삭제하고 방문자 수를 볼 수 없습니다.",
   "upload.modal.expires.never": "절대 안 함",
   "upload.modal.expires.never-long": "영구 공유",
-  "upload.modal.expires.error.too-long":
-    "만료 날짜가 최대 {max}을(를) 초과합니다.",
+  "upload.modal.expires.error.too-long": "만료 날짜가 최대 {max}을(를) 초과합니다.",
   "upload.modal.link.label": "링크",
   "upload.modal.expires.label": "만료일",
   "upload.modal.expires.minute-singular": "분",
@@ -355,13 +311,11 @@ export default {
   "upload.modal.expires.year-plural": "년",
   "upload.modal.accordion.name-and-description.title": "이름과 설명",
   "upload.modal.accordion.name-and-description.name.placeholder": "이름",
-  "upload.modal.accordion.name-and-description.description.placeholder":
-    "공유를 받을 사람에게 메모",
+  "upload.modal.accordion.name-and-description.description.placeholder": "공유를 받을 사람에게 메모",
   "upload.modal.accordion.email.title": "받는 사람 메일 주소",
   "upload.modal.accordion.email.placeholder": "메일 주소 입력",
   "upload.modal.accordion.email.invalid-email": "이메일 주소가 틀립니다",
-  "upload.modal.accordion.email.restrict-to-recipients":
-    "지정된 수신자만 접근할 수 있도록 제한 (접근하려면 로그인해야 함)",
+  "upload.modal.accordion.email.restrict-to-recipients": "지정된 수신자만 접근할 수 있도록 제한 (접근하려면 로그인해야 함)",
   "upload.modal.accordion.security.title": "보안 설정",
   "upload.modal.accordion.security.password.label": "비밀번호로 보호",
   "upload.modal.accordion.security.password.placeholder": "비밀번호 없음",
@@ -371,57 +325,45 @@ export default {
   "upload.modal.completed.never-expires": "이 공유 만료되지 않습니다.",
   "upload.modal.completed.expires-on": "이 공유는 {expiration} 에 만료됩니다.",
   "upload.modal.completed.share-ready": "공유 준비",
-  "upload.modal.completed.notified-reverse-share-creator":
-    "역방향 공유 생성자에게 알림을 보냈습니다. 다른 방법을 통해 직접 이 링크를 공유할 수도 있습니다.",
+  "upload.modal.completed.notified-reverse-share-creator": "역방향 공유 생성자에게 알림을 보냈습니다. 다른 방법을 통해 직접 이 링크를 공유할 수도 있습니다.",
   // END /upload
 
   // /share/[id]
   "share.title": "공유 {shareId}",
   "share.description": "내가 당신과 공유한 것을 보세요!",
-  "share.fileCount":
-    "{count, plural, =1 {#개 파일} other {#개 파일}} · {size} (압축으로 인해 ZIP 파일이 더 작을 수 있습니다)",
+  "share.fileCount": "{count, plural, =1 {#개 파일} other {#개 파일}} · {size} (압축으로 인해 ZIP 파일이 더 작을 수 있습니다)",
   "share.copy-text-contents": "파일 내용을 클립보드에 복사",
   "share.error.visitor-limit-exceeded.title": "방문자 한도 초과",
-  "share.error.visitor-limit-exceeded.description":
-    "이 공유의 방문자 한도를 초과했습니다.",
+  "share.error.visitor-limit-exceeded.description": "이 공유의 방문자 한도를 초과했습니다.",
   "share.error.removed.title": "공유가 삭제됨",
   "share.error.not-found.title": "공유를 찾을 수 없습니다.",
   "share.error.not-found.description": "당신이 찾는 공유는 존재하지 않습니다.",
   "share.error.access-denied.title": "비공개 공유",
-  "share.error.access-denied.description":
-    "현재 계정에는 이 공유에 접근할 권한이 없습니다",
+  "share.error.access-denied.description": "현재 계정에는 이 공유에 접근할 권한이 없습니다",
   "share.error.restricted.title": "제한된 공유",
-  "share.error.restricted.description":
-    "이 공유는 특정 수신자에게만 제한되어 있습니다. 접근하려면 로그인해주세요.",
+  "share.error.restricted.description": "이 공유는 특정 수신자에게만 제한되어 있습니다. 접근하려면 로그인해주세요.",
   "share.error.restricted.button": "로그인",
   "share.modal.password.title": "비밀번호 필요",
-  "share.modal.password.description":
-    "이 공유에 접근하려면 비밀번호를 입력하세요.",
+  "share.modal.password.description": "이 공유에 접근하려면 비밀번호를 입력하세요.",
   "share.modal.password": "비밀번호",
   "share.modal.error.invalid-password": "잘못된 비밀번호",
   "share.button.download-all": "모두 다운로드",
-  "share.notify.download-all-preparing":
-    "공유를 준비하는 중입니다. 몇 분 후에 다시 시도해주세요.",
+  "share.notify.download-all-preparing": "공유를 준비하는 중입니다. 몇 분 후에 다시 시도해주세요.",
   "share.notify.copied-contents": "파일 내용이 클립보드에 복사되었습니다",
-  "share.notify.copy-too-big-error":
-    "파일이 너무 커서 클립보드에 복사할 수 없습니다",
-  "share.notify.copy-not-supported-error":
-    "클립보드에 복사하려면 HTTPS 연결이 필요합니다",
+  "share.notify.copy-too-big-error": "파일이 너무 커서 클립보드에 복사할 수 없습니다",
+  "share.notify.copy-not-supported-error": "클립보드에 복사하려면 HTTPS 연결이 필요합니다",
   "share.modal.file-link": "파일 링크",
   "share.table.name": "이름",
   "share.table.size": "크기",
   "share.modal.file-preview.original_file": "원본 파일 보기",
-  "share.modal.file-preview.error.not-supported.title":
-    "미리보기는 지원되지 않습니다",
-  "share.modal.file-preview.error.not-supported.description":
-    "이 유형의 파일은 미리보기를 지원하지 않습니다. 파일을 보려면 다운로드하세요.",
+  "share.modal.file-preview.error.not-supported.title": "미리보기는 지원되지 않습니다",
+  "share.modal.file-preview.error.not-supported.description": "이 유형의 파일은 미리보기를 지원하지 않습니다. 파일을 보려면 다운로드하세요.",
   // END /share/[id]
 
   // /share/[id]/edit
   "share.edit.title": "수정 {shareId}",
   "share.edit.append-upload": "파일 추가",
-  "share.edit.notify.generic-error":
-    "공유를 완료하는 동안 오류가 발생했습니다.",
+  "share.edit.notify.generic-error": "공유를 완료하는 동안 오류가 발생했습니다.",
   "share.edit.notify.save-success": "공유가 업데이트 되었습니다.",
   // END /share/[id]/edit
 
@@ -435,8 +377,7 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "설정 파일 감지됨",
-  "admin.config.config-file-warning.description":
-    "설정 파일로 구성된 Pingvin Share를 사용 중이므로 UI를 통해 설정을 변경할 수 없습니다.",
+  "admin.config.config-file-warning.description": "설정 파일로 구성된 Pingvin Share를 사용 중이므로 UI를 통해 설정을 변경할 수 없습니다.",
   "admin.config.title": "구성",
   "admin.config.category.general": "일반",
   "admin.config.category.appearance": "모양",
@@ -449,191 +390,127 @@ export default {
   "admin.config.general.app-name": "앱 이름",
   "admin.config.general.app-name.description": "이 앱의 이름",
   "admin.config.general.default-language": "기본 언어",
-  "admin.config.general.default-language.description":
-    "모든 사용자에게 적용되며, 각 사용자는 프로필에서 개별적으로 언어를 변경할 수 있습니다.",
+  "admin.config.general.default-language.description": "모든 사용자에게 적용되며, 각 사용자는 프로필에서 개별적으로 언어를 변경할 수 있습니다.",
   "admin.config.appearance.theme-primary-color": "테마 기본 색상",
-  "admin.config.appearance.theme-primary-color.description":
-    "버튼, 링크, 강조 요소에 사용하는 기본 색상입니다. 사용자 지정을 선택하면 색상 오버라이드를 사용합니다.",
-  "admin.config.appearance.theme-primary-color-override":
-    "사용자 지정 기본 색상",
-  "admin.config.appearance.theme-primary-color-override.description":
-    "테마 기본 색상이 사용자 지정일 때 사용하는 HEX 색상 오버라이드입니다.",
+  "admin.config.appearance.theme-primary-color.description": "버튼, 링크, 강조 요소에 사용하는 기본 색상입니다. 사용자 지정을 선택하면 색상 오버라이드를 사용합니다.",
+  "admin.config.appearance.theme-primary-color-override": "사용자 지정 기본 색상",
+  "admin.config.appearance.theme-primary-color-override.description": "테마 기본 색상이 사용자 지정일 때 사용하는 HEX 색상 오버라이드입니다.",
   "admin.config.appearance.theme-font-preset": "글꼴 프리셋",
-  "admin.config.appearance.theme-font-preset.description":
-    "빌드 시 로드되는 글꼴 프리셋입니다. 시스템 기본 또는 포함된 Google Fonts 중에서 선택하세요.",
+  "admin.config.appearance.theme-font-preset.description": "빌드 시 로드되는 글꼴 프리셋입니다. 시스템 기본 또는 포함된 Google Fonts 중에서 선택하세요.",
   "admin.config.appearance.theme-color-scheme": "기본 색상 테마 (게스트)",
-  "admin.config.appearance.theme-color-scheme.description":
-    "로그인하지 않은 사용자의 기본 라이트/다크 모드입니다. 로그인한 사용자는 자신의 계정 설정을 따릅니다.",
+  "admin.config.appearance.theme-color-scheme.description": "로그인하지 않은 사용자의 기본 라이트/다크 모드입니다. 로그인한 사용자는 자신의 계정 설정을 따릅니다.",
   "admin.config.appearance.theme-radius": "테마 모서리 반경",
-  "admin.config.appearance.theme-radius.description":
-    "Mantine 컴포넌트에 사용되는 기본 모서리 반경입니다.",
+  "admin.config.appearance.theme-radius.description": "Mantine 컴포넌트에 사용되는 기본 모서리 반경입니다.",
   "admin.config.appearance.custom-css": "사용자 지정 CSS",
-  "admin.config.appearance.custom-css.description":
-    "프런트엔드에 적용되는 전역 CSS입니다. 잘못된 CSS는 UI에 영향을 줄 수 있으니 주의해서 사용하세요.",
+  "admin.config.appearance.custom-css.description": "프런트엔드에 적용되는 전역 CSS입니다. 잘못된 CSS는 UI에 영향을 줄 수 있으니 주의해서 사용하세요.",
   "admin.config.appearance.upload-progress-style": "업로드 진행 상태 스타일",
-  "admin.config.appearance.upload-progress-style.description":
-    "파일 목록에서 업로드 진행 상태가 표시되는 방식을 선택합니다.",
+  "admin.config.appearance.upload-progress-style.description": "파일 목록에서 업로드 진행 상태가 표시되는 방식을 선택합니다.",
   "admin.config.appearance.upload-progress-style.circle": "원형 표시기",
-  "admin.config.appearance.upload-progress-style.circle-percentage":
-    "백분율 포함 원형 표시기",
-  "admin.config.appearance.upload-progress-style.percentage-time":
-    "백분율 및 남은 시간",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "백분율 포함 원형 표시기",
+  "admin.config.appearance.upload-progress-style.percentage-time": "백분율 및 남은 시간",
   "admin.config.general.app-url": "앱 URL",
-  "admin.config.general.app-url.description":
-    "Pingvin Share를 사용할 수 있는 URL",
+  "admin.config.general.app-url.description": "Pingvin Share를 사용할 수 있는 URL",
   "admin.config.security.secure-cookies": "보안 쿠키",
-  "admin.config.security.secure-cookies.description":
-    "쿠키에 secure 플래그를 설정할지 여부입니다. 활성화하면 HTTP로 접속 시 사이트가 작동하지 않습니다.",
+  "admin.config.security.secure-cookies.description": "쿠키에 secure 플래그를 설정할지 여부입니다. 활성화하면 HTTP로 접속 시 사이트가 작동하지 않습니다.",
   "admin.config.general.show-home-page": "홈 페이지 표시",
-  "admin.config.general.show-home-page.description":
-    "홈 페이지를 표시할지 여부",
+  "admin.config.general.show-home-page.description": "홈 페이지를 표시할지 여부",
   "admin.config.security.session-duration": "세션 기간",
-  "admin.config.security.session-duration.description":
-    "사용자가 다시 로그인해야 하는 시간입니다 (기본값: 3개월).",
+  "admin.config.security.session-duration.description": "사용자가 다시 로그인해야 하는 시간입니다 (기본값: 3개월).",
   "admin.config.appearance.logo": "로고",
-  "admin.config.appearance.logo.description":
-    "새 이미지를 업로드하여 로고를 변경하십시오. 이미지는 PNG여야 하며 1:1 비율이어야 합니다.",
+  "admin.config.appearance.logo.description": "새 이미지를 업로드하여 로고를 변경하십시오. 이미지는 PNG여야 하며 1:1 비율이어야 합니다.",
   "admin.config.appearance.logo-dark": "다크 모드 로고",
-  "admin.config.appearance.logo-dark.description":
-    "다크 모드용 별도 로고를 업로드합니다. 이미지는 1:1 비율의 PNG여야 합니다.",
+  "admin.config.appearance.logo-dark.description": "다크 모드용 별도 로고를 업로드합니다. 이미지는 1:1 비율의 PNG여야 합니다.",
   "admin.config.appearance.logo.placeholder": "이미지 선택",
   "admin.config.security.custom-password-policy": "사용자 지정 비밀번호 정책",
-  "admin.config.security.custom-password-policy.description":
-    "비밀번호 정책 사용자 지정을 활성화할지 여부입니다. 비활성화하면 최소 8자의 기본 비밀번호 정책이 사용됩니다.",
+  "admin.config.security.custom-password-policy.description": "비밀번호 정책 사용자 지정을 활성화할지 여부입니다. 비활성화하면 최소 8자의 기본 비밀번호 정책이 사용됩니다.",
   "admin.config.security.min-length": "최소 길이",
-  "admin.config.security.min-length.description":
-    "비밀번호에 필요한 최소 문자 수입니다.",
+  "admin.config.security.min-length.description": "비밀번호에 필요한 최소 문자 수입니다.",
   "admin.config.security.require-uppercase": "대문자 필수",
-  "admin.config.security.require-uppercase.description":
-    "비밀번호에 최소 1개 이상의 대문자를 포함하도록 요구할지 여부입니다.",
+  "admin.config.security.require-uppercase.description": "비밀번호에 최소 1개 이상의 대문자를 포함하도록 요구할지 여부입니다.",
   "admin.config.security.require-lowercase": "소문자 필수",
-  "admin.config.security.require-lowercase.description":
-    "비밀번호에 최소 1개 이상의 소문자를 포함하도록 요구할지 여부입니다.",
+  "admin.config.security.require-lowercase.description": "비밀번호에 최소 1개 이상의 소문자를 포함하도록 요구할지 여부입니다.",
   "admin.config.security.require-number": "숫자 필수",
-  "admin.config.security.require-number.description":
-    "비밀번호에 최소 1개 이상의 숫자를 포함하도록 요구할지 여부입니다.",
+  "admin.config.security.require-number.description": "비밀번호에 최소 1개 이상의 숫자를 포함하도록 요구할지 여부입니다.",
   "admin.config.security.require-special-character": "특수문자 필수",
-  "admin.config.security.require-special-character.description":
-    "비밀번호에 최소 1개 이상의 특수문자를 포함하도록 요구할지 여부입니다.",
+  "admin.config.security.require-special-character.description": "비밀번호에 최소 1개 이상의 특수문자를 포함하도록 요구할지 여부입니다.",
   "admin.config.cache.ttl": "TTL",
   "admin.config.cache.ttl.description": "정보를 캐시에 보관할 시간(초)입니다.",
   "admin.config.cache.max-items": "최대 항목 수",
   "admin.config.cache.max-items.description": "캐시 내 최대 항목 수입니다.",
   "admin.config.cache.redis-enabled": "Redis 활성화",
-  "admin.config.cache.redis-enabled.description":
-    "일반적으로 Pingvin Share는 메모리에 정보를 캐시합니다. 여러 개의 Pingvin Share 인스턴스를 실행하는 경우 인스턴스 간에 캐시를 공유하려면 Redis 캐싱을 활성화해야 합니다.",
+  "admin.config.cache.redis-enabled.description": "일반적으로 Pingvin Share는 메모리에 정보를 캐시합니다. 여러 개의 Pingvin Share 인스턴스를 실행하는 경우 인스턴스 간에 캐시를 공유하려면 Redis 캐싱을 활성화해야 합니다.",
   "admin.config.cache.redis-url": "Redis URL",
-  "admin.config.cache.redis-url.description":
-    "캐싱에 사용되는 Redis 인스턴스 연결 URL입니다.",
+  "admin.config.cache.redis-url.description": "캐싱에 사용되는 Redis 인스턴스 연결 URL입니다.",
   "admin.config.cache.button.test-redis": "Redis 연결 테스트",
   "admin.config.cache.test-redis.success": "Redis에 성공적으로 연결되었습니다",
-  "admin.config.cache.test-redis.success-disabled":
-    "Redis에 성공적으로 연결되었습니다 (현재 Redis 캐싱이 비활성화되어 있습니다).",
+  "admin.config.cache.test-redis.success-disabled": "Redis에 성공적으로 연결되었습니다 (현재 Redis 캐싱이 비활성화되어 있습니다).",
   "admin.config.cache.test-redis.modal.error.title": "Redis 연결 실패",
-  "admin.config.cache.test-redis.modal.error.description":
-    "Redis에 연결하는 동안 다음 오류가 발생했습니다:",
+  "admin.config.cache.test-redis.modal.error.description": "Redis에 연결하는 동안 다음 오류가 발생했습니다:",
   "admin.config.cache.test-redis.modal.save.title": "설정 저장",
-  "admin.config.cache.test-redis.modal.save.description":
-    "계속하려면 먼저 설정을 저장해야 합니다. 설정을 저장하고 Redis 연결을 테스트하시겠습니까?",
+  "admin.config.cache.test-redis.modal.save.description": "계속하려면 먼저 설정을 저장해야 합니다. 설정을 저장하고 Redis 연결을 테스트하시겠습니까?",
   "admin.config.cache.test-redis.modal.save.confirm": "저장 및 테스트",
   "admin.config.email.send-html-emails": "HTML 이메일 호환성 활성화",
-  "admin.config.email.send-html-emails.description":
-    "활성화하면 이메일이 HTML 형식으로 전송됩니다. 이메일 템플릿이 HTML을 사용하도록 업데이트되었는지 확인하세요.",
-  "admin.config.share.enable-share-email-recipients":
-    "이메일 수신자 공유 활성화",
-  "admin.config.share.enable-share-email-recipients.description":
-    "수신자와 이메일 공유를 허용할지 여부입니다. SMTP가 활성화된 경우에만 켤 수 있습니다.",
+  "admin.config.email.send-html-emails.description": "활성화하면 이메일이 HTML 형식으로 전송됩니다. 이메일 템플릿이 HTML을 사용하도록 업데이트되었는지 확인하세요.",
+  "admin.config.share.enable-share-email-recipients": "이메일 수신자 공유 활성화",
+  "admin.config.share.enable-share-email-recipients.description": "수신자와 이메일 공유를 허용할지 여부입니다. SMTP가 활성화된 경우에만 켤 수 있습니다.",
   "admin.config.email.share-recipients-subject": "공유 제목",
-  "admin.config.email.share-recipients-subject.description":
-    "공유 수신자에게 전송되는 이메일의 제목입니다.",
+  "admin.config.email.share-recipients-subject.description": "공유 수신자에게 전송되는 이메일의 제목입니다.",
   "admin.config.email.share-recipients-message": "수신자 메시지 공유",
-  "admin.config.email.share-recipients-message.description":
-    "공유 수신자에게 전송되는 메시지입니다. 사용 가능한 변수:\n {creator} - 공유 생성자의 사용자 이름\n {creatorEmail} - 공유 생성자의 이메일\n {shareUrl} - 공유 URL\n {desc} - 공유 설명\n {expires} - 공유 만료 날짜\n 이 변수들은 실제 값으로 대체됩니다.",
+  "admin.config.email.share-recipients-message.description": "공유 수신자에게 전송되는 메시지입니다. 사용 가능한 변수:\n {creator} - 공유 생성자의 사용자 이름\n {creatorEmail} - 공유 생성자의 이메일\n {shareUrl} - 공유 URL\n {desc} - 공유 설명\n {expires} - 공유 만료 날짜\n 이 변수들은 실제 값으로 대체됩니다.",
   "admin.config.email.reverse-share-subject": "역방향 공유 제목",
-  "admin.config.email.reverse-share-subject.description":
-    "누군가 역방향 공유 링크로 공유를 생성했을 때 전송되는 이메일의 제목입니다.",
+  "admin.config.email.reverse-share-subject.description": "누군가 역방향 공유 링크로 공유를 생성했을 때 전송되는 이메일의 제목입니다.",
   "admin.config.email.reverse-share-message": "역방향 공유 메시지",
-  "admin.config.email.reverse-share-message.description":
-    "누군가 귀하의 역방향 공유 링크를 사용하여 공유를 생성하면 전송되는 메시지입니다.. {shareUrl} 은 작성자 이름 및 공유 URL로 대체됩니다.",
+  "admin.config.email.reverse-share-message.description": "누군가 귀하의 역방향 공유 링크를 사용하여 공유를 생성하면 전송되는 메시지입니다.. {shareUrl} 은 작성자 이름 및 공유 URL로 대체됩니다.",
   "admin.config.email.reset-password-subject": "비밀번호 재설정 제목",
-  "admin.config.email.reset-password-subject.description":
-    "사용자가 비밀번호 재설정을 요청할 때 전송되는 이메일의 제목입니다.",
+  "admin.config.email.reset-password-subject.description": "사용자가 비밀번호 재설정을 요청할 때 전송되는 이메일의 제목입니다.",
   "admin.config.email.reset-password-message": "비밀번호 재설정 메시지",
-  "admin.config.email.reset-password-message.description":
-    "사용자가 비밀번호 재설정을 요청할 때 전송되는 메시지입니다. {url} 은 비밀번호 재설정 URL로 대체됩니다.",
+  "admin.config.email.reset-password-message.description": "사용자가 비밀번호 재설정을 요청할 때 전송되는 메시지입니다. {url} 은 비밀번호 재설정 URL로 대체됩니다.",
   "admin.config.email.invite-subject": "초대 제목",
-  "admin.config.email.invite-subject.description":
-    "관리자가 사용자를 초대할 때 전송되는 이메일의 제목입니다.",
+  "admin.config.email.invite-subject.description": "관리자가 사용자를 초대할 때 전송되는 이메일의 제목입니다.",
   "admin.config.email.invite-message": "초대 메시지",
-  "admin.config.email.invite-message.description":
-    "관리자가 사용자를 초대할 때 전송되는 메시지입니다. {url}은(는) 초대 URL로, {email}은(는) 이메일로, {password}은(는) 사용자 비밀번호로 대체됩니다.",
-  "admin.config.email.share-recipients-reply-to-creator":
-    "Reply-To를 생성자 이메일로 설정",
-  "admin.config.email.share-recipients-reply-to-creator.description":
-    "Reply-To 헤더를 공유를 생성한 사용자의 이메일 주소로 설정할지 여부입니다.",
-  "admin.config.share.enable-share-download-notifications":
-    "다운로드 알림 활성화",
-  "admin.config.share.enable-share-download-notifications.description":
-    "이메일 수신자가 파일을 다운로드할 때 공유 생성자에게 이메일을 보낼지 여부입니다. SMTP 및 이메일 수신자 공유가 필요합니다.",
-  "admin.config.email.share-download-notification-subject":
-    "다운로드 알림 제목",
-  "admin.config.email.share-download-notification-subject.description":
-    "수신자가 파일을 다운로드할 때 공유 생성자에게 전송되는 이메일의 제목입니다.",
-  "admin.config.email.share-download-notification-message":
-    "다운로드 알림 메시지",
-  "admin.config.email.share-download-notification-message.description":
-    "수신자가 파일을 다운로드할 때 공유 생성자에게 전송되는 메시지입니다. 사용 가능한 변수:\n {recipientEmail} - 수신자의 이메일\n {fileName} - 다운로드된 파일 이름\n {shareUrl} - 공유 URL",
+  "admin.config.email.invite-message.description": "관리자가 사용자를 초대할 때 전송되는 메시지입니다. {url}은(는) 초대 URL로, {email}은(는) 이메일로, {password}은(는) 사용자 비밀번호로 대체됩니다.",
+  "admin.config.email.share-recipients-reply-to-creator": "Reply-To를 생성자 이메일로 설정",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Reply-To 헤더를 공유를 생성한 사용자의 이메일 주소로 설정할지 여부입니다.",
+  "admin.config.share.enable-share-download-notifications": "다운로드 알림 활성화",
+  "admin.config.share.enable-share-download-notifications.description": "이메일 수신자가 파일을 다운로드할 때 공유 생성자에게 이메일을 보낼지 여부입니다. SMTP 및 이메일 수신자 공유가 필요합니다.",
+  "admin.config.email.share-download-notification-subject": "다운로드 알림 제목",
+  "admin.config.email.share-download-notification-subject.description": "수신자가 파일을 다운로드할 때 공유 생성자에게 전송되는 이메일의 제목입니다.",
+  "admin.config.email.share-download-notification-message": "다운로드 알림 메시지",
+  "admin.config.email.share-download-notification-message.description": "수신자가 파일을 다운로드할 때 공유 생성자에게 전송되는 메시지입니다. 사용 가능한 변수:\n {recipientEmail} - 수신자의 이메일\n {fileName} - 다운로드된 파일 이름\n {shareUrl} - 공유 URL",
   "admin.config.security.enable-email-verification": "이메일 인증 활성화",
-  "admin.config.security.enable-email-verification.description":
-    "사용자가 로그인하기 전에 이메일 주소를 인증하도록 요구할지 여부입니다. SMTP가 활성화된 경우에만 켤 수 있습니다.",
+  "admin.config.security.enable-email-verification.description": "사용자가 로그인하기 전에 이메일 주소를 인증하도록 요구할지 여부입니다. SMTP가 활성화된 경우에만 켤 수 있습니다.",
   "admin.config.email.verification-subject": "인증 이메일 제목",
-  "admin.config.email.verification-subject.description":
-    "사용자가 가입할 때 전송되는 이메일의 제목입니다.",
+  "admin.config.email.verification-subject.description": "사용자가 가입할 때 전송되는 이메일의 제목입니다.",
   "admin.config.email.verification-message": "인증 메시지",
-  "admin.config.email.verification-message.description":
-    "사용자가 가입할 때 전송되는 메시지입니다. {url}은(는) 인증 URL로 대체됩니다.",
+  "admin.config.email.verification-message.description": "사용자가 가입할 때 전송되는 메시지입니다. {url}은(는) 인증 URL로 대체됩니다.",
   "admin.config.security.allow-registration": "가입 허용",
   "admin.config.security.allow-registration.description": "등록 가능 여부",
-  "admin.config.security.allow-unauthenticated-shares":
-    "인증되지 않은 공유 허용",
-  "admin.config.security.allow-unauthenticated-shares.description":
-    "인증되지 않은 사용자가 공유를 생성할 수 있는지 여부",
+  "admin.config.security.allow-unauthenticated-shares": "인증되지 않은 공유 허용",
+  "admin.config.security.allow-unauthenticated-shares.description": "인증되지 않은 사용자가 공유를 생성할 수 있는지 여부",
   "admin.config.share.default-expiration": "기본 만료 시간",
-  "admin.config.share.default-expiration.description":
-    "새 공유를 생성할 때 선택되는 기본 만료 시간입니다.",
+  "admin.config.share.default-expiration.description": "새 공유를 생성할 때 선택되는 기본 만료 시간입니다.",
   "admin.config.share.max-expiration": "최대 만료 시간",
-  "admin.config.share.max-expiration.description":
-    "최대 공유 만료 시간입니다. 무제한 만료를 허용하려면 0으로 설정하세요.",
+  "admin.config.share.max-expiration.description": "최대 공유 만료 시간입니다. 무제한 만료를 허용하려면 0으로 설정하세요.",
   "admin.config.share.share-id-length": "기본 공유 ID 길이",
-  "admin.config.share.share-id-length.description":
-    "공유의 생성된 ID 기본 길이입니다. 이 값은 역방향 공유 링크를 생성하는 데에도 사용됩니다. 8 미만의 값은 안전하지 않은 것으로 간주됩니다.",
+  "admin.config.share.share-id-length.description": "공유의 생성된 ID 기본 길이입니다. 이 값은 역방향 공유 링크를 생성하는 데에도 사용됩니다. 8 미만의 값은 안전하지 않은 것으로 간주됩니다.",
   "admin.config.share.max-size": "최대 크기",
   "admin.config.share.max-size.description": "공유의 최대 크기",
   "admin.config.share.zip-compression-level": "Zip 압축 레벨",
-  "admin.config.share.zip-compression-level.description":
-    "파일 크기와 압축 속도 간의 균형을 맞추도록 레벨을 조정합니다. 유효한 값의 범위는 0에서 9까지이며, 0은 압축되지 않고 9는 최대 압축입니다. ",
+  "admin.config.share.zip-compression-level.description": "파일 크기와 압축 속도 간의 균형을 맞추도록 레벨을 조정합니다. 유효한 값의 범위는 0에서 9까지이며, 0은 압축되지 않고 9는 최대 압축입니다. ",
   "admin.config.share.chunk-size": "청크 크기",
-  "admin.config.share.chunk-size.description":
-    "인터넷 연결 상태에 따라 효율성과 안정성의 균형을 맞추기 위해 업로드 청크 크기를 조정하세요. 청크 크기가 작을수록 불안정한 연결에서 성공률이 높아지고, 청크 크기가 클수록 안정적인 연결에서 업로드 속도가 빨라집니다.",
+  "admin.config.share.chunk-size.description": "인터넷 연결 상태에 따라 효율성과 안정성의 균형을 맞추기 위해 업로드 청크 크기를 조정하세요. 청크 크기가 작을수록 불안정한 연결에서 성공률이 높아지고, 청크 크기가 클수록 안정적인 연결에서 업로드 속도가 빨라집니다.",
   "admin.config.share.auto-open-share-modal": "공유 생성 창 자동 열기",
-  "admin.config.share.auto-open-share-modal.description":
-    "사용자가 파일을 선택하면 공유 생성 창이 자동으로 나타나서 버튼을 수동으로 클릭할 필요가 없습니다.",
-  "admin.config.security.allow-admin-access-all-shares":
-    "관리자의 모든 공유 접근 허용",
+  "admin.config.share.auto-open-share-modal.description": "사용자가 파일을 선택하면 공유 생성 창이 자동으로 나타나서 버튼을 수동으로 클릭할 필요가 없습니다.",
+  "admin.config.security.allow-admin-access-all-shares": "관리자의 모든 공유 접근 허용",
   "admin.config.share.reverse-share-simple-only": "역방향 공유 단순 모드 강제",
-  "admin.config.share.reverse-share-simple-only.description":
-    "역방향 공유를 강제로 단순 모드로 생성하도록 합니다. 비활성화하면 역방향 공유 생성자가 단순 모드와 고급 모드 중에서 선택할 수 있습니다.",
-  "admin.config.security.allow-admin-access-all-shares.description":
-    "비밀번호로 보호되어 있거나 만료되었거나 삭제된 공유라도 관리자가 모든 공유에 접근할 수 있도록 허용합니다.",
+  "admin.config.share.reverse-share-simple-only.description": "역방향 공유를 강제로 단순 모드로 생성하도록 합니다. 비활성화하면 역방향 공유 생성자가 단순 모드와 고급 모드 중에서 선택할 수 있습니다.",
+  "admin.config.security.allow-admin-access-all-shares.description": "비밀번호로 보호되어 있거나 만료되었거나 삭제된 공유라도 관리자가 모든 공유에 접근할 수 있도록 허용합니다.",
   "admin.config.share.enable-user-recipients": "가입된 사용자와의 공유 활성화",
-  "admin.config.share.enable-user-recipients.description":
-    "활성화하면 가입된 사용자의 이메일 주소로 전송된 공유가 해당 사용자의 계정에 자동으로 표시됩니다. 사용자는 지정된 수신자만 공유에 접근할 수 있도록 제한할 수도 있습니다.",
+  "admin.config.share.enable-user-recipients.description": "활성화하면 가입된 사용자의 이메일 주소로 전송된 공유가 해당 사용자의 계정에 자동으로 표시됩니다. 사용자는 지정된 수신자만 공유에 접근할 수 있도록 제한할 수도 있습니다.",
   "admin.config.share.file-retention-period": "파일 보존 기간",
-  "admin.config.share.file-retention-period.description":
-    "공유가 만료되거나 삭제된 후 파일을 보관하는 기간입니다. '관리자의 모든 공유 접근 허용' 옵션이 활성화된 경우에만 유용합니다. 파일을 영구 보관하려면 -1로 설정하세요.",
+  "admin.config.share.file-retention-period.description": "공유가 만료되거나 삭제된 후 파일을 보관하는 기간입니다. '관리자의 모든 공유 접근 허용' 옵션이 활성화된 경우에만 유용합니다. 파일을 영구 보관하려면 -1로 설정하세요.",
   "admin.config.smtp.enabled": "활성화",
-  "admin.config.smtp.enabled.description":
-    "SMTP 사용 여부 SMTP 서버의 호스트, 포트, 전자 메일, 사용자 및 암호를 입력한 경우에만 true로 설정합니다.",
+  "admin.config.smtp.enabled.description": "SMTP 사용 여부 SMTP 서버의 호스트, 포트, 전자 메일, 사용자 및 암호를 입력한 경우에만 true로 설정합니다.",
   "admin.config.smtp.host": "호스트",
   "admin.config.smtp.host.description": "SMTP 서버의 호스트",
   "admin.config.smtp.port": "포트",
@@ -647,137 +524,93 @@ export default {
   "admin.config.smtp.button.test": "테스트 이메일 보내기",
   "admin.config.smtp.test-email.success": "이메일이 성공적으로 전송되었습니다",
   "admin.config.smtp.test-email.error.title": "이메일 전송 실패",
-  "admin.config.smtp.test-email.error.description":
-    "테스트 이메일을 보내는 동안 다음 오류가 발생했습니다:",
+  "admin.config.smtp.test-email.error.description": "테스트 이메일을 보내는 동안 다음 오류가 발생했습니다:",
   "admin.config.smtp.test-email.save.title": "설정 저장",
-  "admin.config.smtp.test-email.save.description":
-    "계속하려면 먼저 설정을 저장해야 합니다. 설정을 저장하고 테스트 이메일을 보내시겠습니까?",
+  "admin.config.smtp.test-email.save.description": "계속하려면 먼저 설정을 저장해야 합니다. 설정을 저장하고 테스트 이메일을 보내시겠습니까?",
   "admin.config.smtp.test-email.save.confirm": "저장 및 전송",
-  "admin.config.smtp.allow-unauthorized-certificates":
-    "신뢰할 수 없는 SMTP 서버 인증서 신뢰",
-  "admin.config.smtp.allow-unauthorized-certificates.description":
-    "자체 서명된 인증서를 신뢰해야 하는 경우에만 true로 설정하세요.",
+  "admin.config.smtp.allow-unauthorized-certificates": "신뢰할 수 없는 SMTP 서버 인증서 신뢰",
+  "admin.config.smtp.allow-unauthorized-certificates.description": "자체 서명된 인증서를 신뢰해야 하는 경우에만 true로 설정하세요.",
   "admin.config.oauth.allow-registration": "가입 허용",
-  "admin.config.oauth.allow-registration.description":
-    "사용자가 소셜 로그인을 통해 등록할 수 있도록 허용",
+  "admin.config.oauth.allow-registration.description": "사용자가 소셜 로그인을 통해 등록할 수 있도록 허용",
   "admin.config.oauth.ignore-totp": "TOTP 무시",
-  "admin.config.oauth.ignore-totp.description":
-    "사용자가 소셜 로그인을 사용하는 경우 TOTP를 무시할 것인지 여부",
+  "admin.config.oauth.ignore-totp.description": "사용자가 소셜 로그인을 사용하는 경우 TOTP를 무시할 것인지 여부",
   "admin.config.oauth.disable-password": "비밀번호 로그인 비활성화",
-  "admin.config.oauth.disable-password.description":
-    "비밀번호 로그인을 비활성화할지 여부입니다.\n계정 잠금을 방지하기 위해 이 설정을 활성화하기 전에 OAuth 공급자가 제대로 구성되었는지 확인하세요.",
+  "admin.config.oauth.disable-password.description": "비밀번호 로그인을 비활성화할지 여부입니다.\n계정 잠금을 방지하기 위해 이 설정을 활성화하기 전에 OAuth 공급자가 제대로 구성되었는지 확인하세요.",
   "admin.config.oauth.github-enabled": "깃허브",
   "admin.config.oauth.github-enabled.description": "깃허브 로그인 사용 여부",
   "admin.config.oauth.github-client-id": "GitHub 클라이언트 ID",
-  "admin.config.oauth.github-client-id.description":
-    "GitHub OAuth 앱의 클라이언트 ID",
+  "admin.config.oauth.github-client-id.description": "GitHub OAuth 앱의 클라이언트 ID",
   "admin.config.oauth.github-client-secret": "GitHub 클라이언트 secret",
-  "admin.config.oauth.github-client-secret.description":
-    "GitHub OAuth 앱의 클라이언트 secret",
+  "admin.config.oauth.github-client-secret.description": "GitHub OAuth 앱의 클라이언트 secret",
   "admin.config.oauth.google-enabled": "구글",
   "admin.config.oauth.google-enabled.description": "구글 로그인 활성화 여부",
   "admin.config.oauth.google-client-id": "Google 클라이언트 ID",
-  "admin.config.oauth.google-client-id.description":
-    "Google OAuth 앱의 클라이언트 ID",
+  "admin.config.oauth.google-client-id.description": "Google OAuth 앱의 클라이언트 ID",
   "admin.config.oauth.google-client-secret": "Google 클라이언트 secret",
-  "admin.config.oauth.google-client-secret.description":
-    "Google OAuth 앱의 클라이언트 secret",
+  "admin.config.oauth.google-client-secret.description": "Google OAuth 앱의 클라이언트 secret",
   "admin.config.oauth.microsoft-enabled": "마이크로소프트",
-  "admin.config.oauth.microsoft-enabled.description":
-    "마이크로소프트 로그인 사용 여부",
+  "admin.config.oauth.microsoft-enabled.description": "마이크로소프트 로그인 사용 여부",
   "admin.config.oauth.microsoft-tenant": "마이크로소프트 테넌트",
-  "admin.config.oauth.microsoft-tenant.description":
-    "Microsoft OAuth 앱의 테넌트 ID\n공통: Microsoft 개인 계정과 Microsoft Entra ID의 직장 또는 학교 계정을 모두 가진 사용자는 응용 프로그램에 로그인할 수 있습니다. 조직: Microsoft Entra ID의 직장 또는 학교 계정을 가진 사용자만 응용 프로그램에 로그인할 수 있습니다.\n소비자: 개인 마이크로소프트 계정을 가진 사용자만 애플리케이션에 로그인할 수 있습니다.\nMicrosoft Entra 테넌트의 도메인 이름 또는 GUID 형식의 테넌트 ID: 특정 Microsoft Entra 테넌트의 사용자(직장 또는 학교 계정을 가진 디렉토리 구성원 또는 개인 Microsoft 계정을 가진 디렉토리 게스트)만 응용 프로그램에 로그인할 수 있습니다.",
+  "admin.config.oauth.microsoft-tenant.description": "Microsoft OAuth 앱의 테넌트 ID\n공통: Microsoft 개인 계정과 Microsoft Entra ID의 직장 또는 학교 계정을 모두 가진 사용자는 응용 프로그램에 로그인할 수 있습니다. 조직: Microsoft Entra ID의 직장 또는 학교 계정을 가진 사용자만 응용 프로그램에 로그인할 수 있습니다.\n소비자: 개인 마이크로소프트 계정을 가진 사용자만 애플리케이션에 로그인할 수 있습니다.\nMicrosoft Entra 테넌트의 도메인 이름 또는 GUID 형식의 테넌트 ID: 특정 Microsoft Entra 테넌트의 사용자(직장 또는 학교 계정을 가진 디렉토리 구성원 또는 개인 Microsoft 계정을 가진 디렉토리 게스트)만 응용 프로그램에 로그인할 수 있습니다.",
   "admin.config.oauth.microsoft-client-id": "마이크로소프트 클라이언트 ID",
-  "admin.config.oauth.microsoft-client-id.description":
-    "Microsoft OAuth 앱의 클라이언트 ID",
+  "admin.config.oauth.microsoft-client-id.description": "Microsoft OAuth 앱의 클라이언트 ID",
   "admin.config.oauth.microsoft-client-secret": "Microsoft 클라이언트 secret",
-  "admin.config.oauth.microsoft-client-secret.description":
-    "Microsoft OAuth 앱의 클라이언트 비밀",
+  "admin.config.oauth.microsoft-client-secret.description": "Microsoft OAuth 앱의 클라이언트 비밀",
   "admin.config.oauth.discord-enabled": "디스코드",
-  "admin.config.oauth.discord-enabled.description":
-    "Discord 로그인 활성화 여부",
+  "admin.config.oauth.discord-enabled.description": "Discord 로그인 활성화 여부",
   "admin.config.oauth.discord-limited-users": "Discord 제한된 사용자",
-  "admin.config.oauth.discord-limited-users.description":
-    "Discord ID로 특정 사용자만 로그인하도록 제한합니다. 비활성화하려면 비워두세요.",
+  "admin.config.oauth.discord-limited-users.description": "Discord ID로 특정 사용자만 로그인하도록 제한합니다. 비활성화하려면 비워두세요.",
   "admin.config.oauth.discord-limited-guild": "디스코드 제한 서버 ID",
-  "admin.config.oauth.discord-limited-guild.description":
-    "특정 서버의 사용자로 로그인을 제한합니다. 사용하지 않으려면 비워 둡니다.",
+  "admin.config.oauth.discord-limited-guild.description": "특정 서버의 사용자로 로그인을 제한합니다. 사용하지 않으려면 비워 둡니다.",
   "admin.config.oauth.discord-client-id": "디스코드 클라이언트 ID",
-  "admin.config.oauth.discord-client-id.description":
-    "Discord OAuth 앱의 클라이언트 ID",
+  "admin.config.oauth.discord-client-id.description": "Discord OAuth 앱의 클라이언트 ID",
   "admin.config.oauth.discord-client-secret": "Discord 클라이언트 secret",
-  "admin.config.oauth.discord-client-secret.description":
-    "Discord OAuth 앱의 클라이언트 secret",
+  "admin.config.oauth.discord-client-secret.description": "Discord OAuth 앱의 클라이언트 secret",
   "admin.config.oauth.oidc-enabled": "OpenID 연결",
-  "admin.config.oauth.oidc-enabled.description":
-    "OpenID Connect 로그인 사용 여부",
+  "admin.config.oauth.oidc-enabled.description": "OpenID Connect 로그인 사용 여부",
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect Discovery URI",
-  "admin.config.oauth.oidc-discovery-uri.description":
-    "OpenID Connect OAuth 앱의 Discovery URI",
+  "admin.config.oauth.oidc-discovery-uri.description": "OpenID Connect OAuth 앱의 Discovery URI",
   "admin.config.oauth.oidc-sign-out": "OpenID Connect에서 로그아웃",
-  "admin.config.oauth.oidc-sign-out.description":
-    "“로그아웃” 버튼을 누르면 OpenID Connect 공급자에서도 로그아웃할지 여부입니다",
+  "admin.config.oauth.oidc-sign-out.description": "“로그아웃” 버튼을 누르면 OpenID Connect 공급자에서도 로그아웃할지 여부입니다",
   "admin.config.oauth.oidc-scope": "OpenID Connect 스코프",
-  "admin.config.oauth.oidc-scope.description":
-    "OpenID Connect 공급자에게 요청할 스코프입니다.",
+  "admin.config.oauth.oidc-scope.description": "OpenID Connect 공급자에게 요청할 스코프입니다.",
   "admin.config.oauth.oidc-username-claim": "OpenID Connect 사용자명 클레임",
-  "admin.config.oauth.oidc-username-claim.description":
-    "OpenID Connect ID 토큰의 Username claim 입니다. 이 구성이 무엇인지 모르면 비워 둡니다.",
+  "admin.config.oauth.oidc-username-claim.description": "OpenID Connect ID 토큰의 Username claim 입니다. 이 구성이 무엇인지 모르면 비워 둡니다.",
   "admin.config.oauth.oidc-role-path": "OpenID Connect 토큰 내 역할(Role) 경로",
-  "admin.config.oauth.oidc-role-path.description":
-    "역할 배열을 참조하는 유효한 JMES 경로여야 합니다. OpenID Connect 역할을 통한 접근 권한 관리는 다른 신원 공급자가 구성되지 않았고 비밀번호 로그인이 비활성화된 경우에만 권장됩니다. 이 설정이 무엇인지 모르는 경우 비워두세요." +
-    "Managing access rights using OpenID Connect roles is only recommended if no other identity provider is configured and password login is disabled. " +
-    "Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-general-access":
-    "일반 접근용 OpenID Connect 역할",
-  "admin.config.oauth.oidc-role-general-access.description":
-    "일반 접근에 필요한 역할입니다. 사용자가 로그인하려면 사용자의 역할에 포함되어 있어야 합니다. 이 설정이 무엇인지 모르는 경우 비워두세요." +
-    "Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-admin-access":
-    "관리자 접근용 OpenID Connect 역할",
-  "admin.config.oauth.oidc-role-admin-access.description":
-    "관리자 접근에 필요한 역할입니다. 사용자가 관리 패널에 접근하려면 사용자의 역할에 포함되어 있어야 합니다. 이 설정이 무엇인지 모르는 경우 비워두세요." +
-    "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-path.description": "역할 배열을 참조하는 유효한 JMES 경로여야 합니다. OpenID Connect 역할을 통한 접근 권한 관리는 다른 신원 공급자가 구성되지 않았고 비밀번호 로그인이 비활성화된 경우에만 권장됩니다. 이 설정이 무엇인지 모르는 경우 비워두세요." + "Managing access rights using OpenID Connect roles is only recommended if no other identity provider is configured and password login is disabled. " + "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-general-access": "일반 접근용 OpenID Connect 역할",
+  "admin.config.oauth.oidc-role-general-access.description": "일반 접근에 필요한 역할입니다. 사용자가 로그인하려면 사용자의 역할에 포함되어 있어야 합니다. 이 설정이 무엇인지 모르는 경우 비워두세요." + "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-admin-access": "관리자 접근용 OpenID Connect 역할",
+  "admin.config.oauth.oidc-role-admin-access.description": "관리자 접근에 필요한 역할입니다. 사용자가 관리 패널에 접근하려면 사용자의 역할에 포함되어 있어야 합니다. 이 설정이 무엇인지 모르는 경우 비워두세요." + "Leave it blank if you don't know what this config is.",
   "admin.config.oauth.oidc-client-id": "OpenID Connect 클라이언트 ID",
-  "admin.config.oauth.oidc-client-id.description":
-    "OpenID Connect OAuth 앱의 클라이언트 ID",
+  "admin.config.oauth.oidc-client-id.description": "OpenID Connect OAuth 앱의 클라이언트 ID",
   "admin.config.oauth.oidc-client-secret": "OpenID 클라이언트 secret",
-  "admin.config.oauth.oidc-client-secret.description":
-    "OpenID Connect OAuth 앱의 클라이언트 secret",
+  "admin.config.oauth.oidc-client-secret.description": "OpenID Connect OAuth 앱의 클라이언트 secret",
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "LDAP 활성화",
   "admin.config.ldap.enabled.description": "사용자 로그인에 LDAP 인증 사용",
   "admin.config.ldap.url": "서버 URL",
   "admin.config.ldap.url.description": "LDAP 서버의 URL",
   "admin.config.ldap.bind-dn": "Bind DN",
-  "admin.config.ldap.bind-dn.description":
-    "사용자 검색을 수행하는 데 사용되는 기본 사용자",
+  "admin.config.ldap.bind-dn.description": "사용자 검색을 수행하는 데 사용되는 기본 사용자",
   "admin.config.ldap.bind-password": "Bind 비밀번호",
-  "admin.config.ldap.bind-password.description":
-    "사용자 검색을 수행하는 데 사용되는 비밀번호",
+  "admin.config.ldap.bind-password.description": "사용자 검색을 수행하는 데 사용되는 비밀번호",
   "admin.config.ldap.search-base": "사용자 기본 위치",
   "admin.config.ldap.search-base.description": "사용자 검색이 수행될 기본 위치",
   "admin.config.ldap.search-query": "사용자 쿼리",
-  "admin.config.ldap.search-query.description":
-    "LDAP 사용자를 찾기 위해 '사용자 기본 위치'를 검색할 때 사용할 사용자 쿼리입니다. %username%을(를) 사용자가 입력한 값의 자리 표시자로 사용할 수 있습니다.",
+  "admin.config.ldap.search-query.description": "LDAP 사용자를 찾기 위해 '사용자 기본 위치'를 검색할 때 사용할 사용자 쿼리입니다. %username%을(를) 사용자가 입력한 값의 자리 표시자로 사용할 수 있습니다.",
   "admin.config.ldap.admin-groups": "관리자 그룹",
-  "admin.config.ldap.admin-groups.description":
-    "관리자 접근 권한에 필요한 그룹입니다.",
+  "admin.config.ldap.admin-groups.description": "관리자 접근 권한에 필요한 그룹입니다.",
   "admin.config.ldap.field-name-member-of": "사용자 그룹 속성 이름",
-  "admin.config.ldap.field-name-member-of.description":
-    "사용자가 속한 그룹에 대한 LDAP 속성 이름입니다. 관리자 그룹 확인 시 사용됩니다.",
+  "admin.config.ldap.field-name-member-of.description": "사용자가 속한 그룹에 대한 LDAP 속성 이름입니다. 관리자 그룹 확인 시 사용됩니다.",
   "admin.config.ldap.field-name-email": "사용자 이메일 속성 이름",
-  "admin.config.ldap.field-name-email.description":
-    "사용자 이메일에 대한 LDAP 속성 이름입니다.",
+  "admin.config.ldap.field-name-email.description": "사용자 이메일에 대한 LDAP 속성 이름입니다.",
   "admin.config.notify.success": "설정이 성공적으로 업데이트되었습니다.",
-  "admin.config.notify.logo-success":
-    "로고가 성공적으로 업데이트되었습니다. 웹사이트에 반영되기까지 몇 분 정도 걸릴 수 있습니다.",
+  "admin.config.notify.logo-success": "로고가 성공적으로 업데이트되었습니다. 웹사이트에 반영되기까지 몇 분 정도 걸릴 수 있습니다.",
   "admin.config.notify.no-changes": "저장할 변경 사항이 없습니다.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "활성화됨",
-  "admin.config.s3.enabled.description":
-    "로컬 파일 시스템 대신 S3를 사용하여 공유 파일을 저장할지 여부입니다. 경고: ClamAV가 활성화되어 있으면 검사를 위해 S3에서 파일을 일시적으로 다운로드합니다.",
+  "admin.config.s3.enabled.description": "로컬 파일 시스템 대신 S3를 사용하여 공유 파일을 저장할지 여부입니다. 경고: ClamAV가 활성화되어 있으면 검사를 위해 S3에서 파일을 일시적으로 다운로드합니다.",
   "admin.config.s3.endpoint": "엔드포인트",
   "admin.config.s3.endpoint.description": "S3 버킷의 URL입니다.",
   "admin.config.s3.region": "리전",
@@ -785,34 +618,25 @@ export default {
   "admin.config.s3.bucket-name": "버킷 이름",
   "admin.config.s3.bucket-name.description": "S3 버킷의 이름입니다.",
   "admin.config.s3.bucket-path": "경로",
-  "admin.config.s3.bucket-path.description":
-    "S3 버킷에 파일을 저장할 때 사용할 기본 경로입니다.",
+  "admin.config.s3.bucket-path.description": "S3 버킷에 파일을 저장할 때 사용할 기본 경로입니다.",
   "admin.config.s3.key": "키",
   "admin.config.s3.key.description": "S3 버킷에 접근할 수 있는 키입니다.",
   "admin.config.s3.secret": "시크릿",
-  "admin.config.s3.secret.description":
-    "S3 버킷에 접근할 수 있는 시크릿입니다.",
+  "admin.config.s3.secret.description": "S3 버킷에 접근할 수 있는 시크릿입니다.",
   "admin.config.s3.use-checksum": "체크섬 사용",
-  "admin.config.s3.use-checksum.description":
-    "체크섬을 지원하지 않는 백엔드(예: B2)에서는 끄세요.",
-  "admin.config.s3.docs-link":
-    "버킷에서 CORS를 재구성해야 합니다. 자세한 내용은 {wikiLink}을(를) 참조하세요.",
+  "admin.config.s3.use-checksum.description": "체크섬을 지원하지 않는 백엔드(예: B2)에서는 끄세요.",
+  "admin.config.s3.docs-link": "버킷에서 CORS를 재구성해야 합니다. 자세한 내용은 {wikiLink}을(를) 참조하세요.",
   "admin.config.category.legal": "법적 정보",
   "admin.config.legal.enabled": "법적 고지 활성화",
-  "admin.config.legal.enabled.description":
-    "푸터에 법적 고지 및 개인정보 처리방침 링크를 표시할지 여부입니다.",
+  "admin.config.legal.enabled.description": "푸터에 법적 고지 및 개인정보 처리방침 링크를 표시할지 여부입니다.",
   "admin.config.legal.imprint-text": "법적 고지 본문",
-  "admin.config.legal.imprint-text.description":
-    "법적 고지에 표시할 텍스트입니다. Markdown을 지원합니다. 외부 법적 고지 페이지로 링크하려면 비워두세요.",
+  "admin.config.legal.imprint-text.description": "법적 고지에 표시할 텍스트입니다. Markdown을 지원합니다. 외부 법적 고지 페이지로 링크하려면 비워두세요.",
   "admin.config.legal.imprint-url": "법적 고지 URL",
-  "admin.config.legal.imprint-url.description":
-    "이미 법적 고지 페이지가 있는 경우 텍스트 필드 대신 여기에 링크를 입력할 수 있습니다.",
+  "admin.config.legal.imprint-url.description": "이미 법적 고지 페이지가 있는 경우 텍스트 필드 대신 여기에 링크를 입력할 수 있습니다.",
   "admin.config.legal.privacy-policy-text": "개인정보 처리방침 본문",
-  "admin.config.legal.privacy-policy-text.description":
-    "개인정보 처리방침에 표시할 텍스트입니다. Markdown을 지원합니다. 외부 개인정보 처리방침 페이지로 링크하려면 비워두세요.",
+  "admin.config.legal.privacy-policy-text.description": "개인정보 처리방침에 표시할 텍스트입니다. Markdown을 지원합니다. 외부 개인정보 처리방침 페이지로 링크하려면 비워두세요.",
   "admin.config.legal.privacy-policy-url": "개인정보 처리방침 URL",
-  "admin.config.legal.privacy-policy-url.description":
-    "이미 개인정보 처리방침 페이지가 있는 경우 텍스트 필드 대신 여기에 링크를 입력할 수 있습니다.",
+  "admin.config.legal.privacy-policy-url.description": "이미 개인정보 처리방침 페이지가 있는 경우 텍스트 필드 대신 여기에 링크를 입력할 수 있습니다.",
   // 404
   "404.description": "이런, 이 페이지는 존재하지 않습니다.",
   "404.button.home": "나를 집으로 데려다 줘",
@@ -821,26 +645,18 @@ export default {
   "error.description": "이런!",
   "error.button.back": "뒤로 가기",
   "error.msg.default": "문제가 발생했습니다",
-  "error.msg.access_denied":
-    "인증 프로세스가 취소되었습니다. 다시 시도하십시오.",
-  "error.msg.expired_token":
-    "인증 절차가 너무 오래 걸렸습니다. 다시 시도하십시오.",
+  "error.msg.access_denied": "인증 프로세스가 취소되었습니다. 다시 시도하십시오.",
+  "error.msg.expired_token": "인증 절차가 너무 오래 걸렸습니다. 다시 시도하십시오.",
   "error.msg.invalid_token": "내부 오류",
   "error.msg.no_user": "{0} 계정에 연결된 사용자가 없습니다.",
   "error.msg.no_email": "이 {0} 계정에서 메일 주소를 가져올 수 없습니다.",
-  "error.msg.already_linked":
-    "이 {0} 계정은 이미 다른 계정에 연결되어 있습니다.",
-  "error.msg.not_linked":
-    "이 {0} 계정은 아직 어떤 계정에도 연결되지 않았습니다.",
-  "error.msg.email_already_exists":
-    "이 이메일 주소를 사용하는 계정이 이미 존재합니다. 비밀번호로 로그인한 후 내 계정 페이지에서 {0} 계정을 수동으로 연결해주세요.",
-  "error.msg.email_not_verified":
-    "이 {0} 계정의 이메일 주소가 인증되지 않았습니다. 로그인하기 전에 신원 공급자에서 이메일을 인증해주세요.",
-  "error.msg.unverified_account":
-    "이 {0} 계정은 확인되지 않았습니다. 확인 후 다시 시도하십시오.",
+  "error.msg.already_linked": "이 {0} 계정은 이미 다른 계정에 연결되어 있습니다.",
+  "error.msg.not_linked": "이 {0} 계정은 아직 어떤 계정에도 연결되지 않았습니다.",
+  "error.msg.email_already_exists": "이 이메일 주소를 사용하는 계정이 이미 존재합니다. 비밀번호로 로그인한 후 내 계정 페이지에서 {0} 계정을 수동으로 연결해주세요.",
+  "error.msg.email_not_verified": "이 {0} 계정의 이메일 주소가 인증되지 않았습니다. 로그인하기 전에 신원 공급자에서 이메일을 인증해주세요.",
+  "error.msg.unverified_account": "이 {0} 계정은 확인되지 않았습니다. 확인 후 다시 시도하십시오.",
   "error.msg.user_not_allowed": "로그인할 수 없습니다.",
-  "error.msg.cannot_get_user_info":
-    "이 {0} 계정에서 사용자 정보를 가져올 수 없습니다.",
+  "error.msg.cannot_get_user_info": "이 {0} 계정에서 사용자 정보를 가져올 수 없습니다.",
   "error.param.provider_github": "깃허브",
   "error.param.provider_google": "구글",
   "error.param.provider_microsoft": "마이크로소프트",
@@ -885,20 +701,14 @@ export default {
   "common.error.exact-length": "{length} 자 이어야 합니다.",
   "common.error.invalid-number": "숫자만 가능합니다.",
   "common.error.field-required": "이 필드는 필수입니다",
-  "common.error.password.lowercase":
-    "비밀번호에는 최소 1개 이상의 소문자가 포함되어야 합니다",
-  "common.error.password.uppercase":
-    "비밀번호에는 최소 1개 이상의 대문자가 포함되어야 합니다",
-  "common.error.password.number":
-    "비밀번호에는 최소 1개 이상의 숫자가 포함되어야 합니다",
-  "common.error.password.special":
-    "비밀번호에는 최소 1개 이상의 특수문자가 포함되어야 합니다",
+  "common.error.password.lowercase": "비밀번호에는 최소 1개 이상의 소문자가 포함되어야 합니다",
+  "common.error.password.uppercase": "비밀번호에는 최소 1개 이상의 대문자가 포함되어야 합니다",
+  "common.error.password.number": "비밀번호에는 최소 1개 이상의 숫자가 포함되어야 합니다",
+  "common.error.password.special": "비밀번호에는 최소 1개 이상의 특수문자가 포함되어야 합니다",
   "admin.notice.modal.headerTag": "관리자 조치 필요",
-  "admin.notice.modal.defaultCheckboxLabel":
-    "이 공지 사항을 읽었으며 호환성을 깨뜨리는 변경 사항을 이해했음을 확인합니다.",
+  "admin.notice.modal.defaultCheckboxLabel": "이 공지 사항을 읽었으며 호환성을 깨뜨리는 변경 사항을 이해했음을 확인합니다.",
   "admin.notice.modal.button.acknowledge": "확인 및 닫기",
   "admin.notice.modal.button.acknowledging": "확인 중...",
   "admin.notice.modal.docsLink": "문서 보기",
-  "admin.notice.modal.globalNoticeFooter":
-    "참고: 일단 확인하면 이 공지 사항은 모든 기기의 모든 관리자에 대해 영구적으로 닫힙니다.",
+  "admin.notice.modal.globalNoticeFooter": "참고: 일단 확인하면 이 공지 사항은 모든 기기의 모든 관리자에 대해 영구적으로 닫힙니다.",
 };

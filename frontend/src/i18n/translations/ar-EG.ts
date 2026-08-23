@@ -14,16 +14,13 @@ export default {
 
   // /
   "home.title": "منصة لمشاركة الملفات <h>باستضافة ذاتية</h>.",
-  "home.description":
-    "أحقًا تريد تسليم ملفاتك الشخصية لطرف ثالث مثل WeTransfer؟",
+  "home.description": "أحقًا تريد تسليم ملفاتك الشخصية لطرف ثالث مثل WeTransfer؟",
   "home.bullet.a.name": "استضافة ذاتية",
   "home.bullet.a.description": "قم باستضافة Pingvin Share على جهازك.",
   "home.bullet.b.name": "الخصوصية",
-  "home.bullet.b.description":
-    "ملفاتك ملك لك ولن يتم الوصول إليها أبدًا من قبل أطراف ثالثة.",
+  "home.bullet.b.description": "ملفاتك ملك لك ولن يتم الوصول إليها أبدًا من قبل أطراف ثالثة.",
   "home.bullet.c.name": "ليس هناك أية قيود على حجم الملفات",
-  "home.bullet.c.description":
-    "ارفع ملفات بالحجم الذي تريده. سيكون القرص الصلب الخاص بك هو الحد الوحيد.",
+  "home.bullet.c.description": "ارفع ملفات بالحجم الذي تريده. سيكون القرص الصلب الخاص بك هو الحد الوحيد.",
   "home.button.start": "ابدأ",
   "home.button.source": "النص البرمجي المصدري",
   // END /
@@ -63,10 +60,8 @@ export default {
   "verify.error": "رابط التأكيد غير صالح أو انتهت صلاحيته.",
   "verify.button.signin": "الانتقال إلى تسجيل الدخول",
   "verify.info.title": "تأكيد الحساب",
-  "verify.info.description":
-    "تم تفعيل التأكيد عبر البريد الإلكتروني. لقد أرسلنا رابط تأكيد إلى عنوان بريدك الإلكتروني. يرجى النقر على الرابط لتفعيل حسابك.",
-  "verify.info.note":
-    "إذا لم تستلم البريد الإلكتروني في غضون بضع دقائق، يرجى التحقق من مجلد الرسائل غير المرغوب فيها.",
+  "verify.info.description": "تم تفعيل التأكيد عبر البريد الإلكتروني. لقد أرسلنا رابط تأكيد إلى عنوان بريدك الإلكتروني. يرجى النقر على الرابط لتفعيل حسابك.",
+  "verify.info.note": "إذا لم تستلم البريد الإلكتروني في غضون بضع دقائق، يرجى التحقق من مجلد الرسائل غير المرغوب فيها.",
   "verify.info.resend.button": "إعادة إرسال بريد التأكيد",
   "verify.info.resend.success": "تمت إعادة إرسال بريد التأكيد بنجاح.",
   "verify.info.resend.error": "فشل في إعادة إرسال بريد التأكيد.",
@@ -80,8 +75,7 @@ export default {
   // /auth/reset-password
   "resetPassword.title": "نسيت كلمة سرّك؟",
   "resetPassword.description": "اكتب بريدك لتعيد تعيين كلمة السر.",
-  "resetPassword.notify.success":
-    "تم إرسال رسالة تحتوي على رابط لإعادة تعيين كلمة المرور الخاصة بك إذا كان البريد الإلكتروني المقدم موجودًا.",
+  "resetPassword.notify.success": "تم إرسال رسالة تحتوي على رابط لإعادة تعيين كلمة المرور الخاصة بك إذا كان البريد الإلكتروني المقدم موجودًا.",
   "resetPassword.button.back": "العودة لصفحة تسجيل الدخول",
   "resetPassword.text.resetPassword": "إعادة تعيين كلمة السر",
   "resetPassword.text.enterNewPassword": "أدخل كلمة السر الجديدة",
@@ -96,8 +90,7 @@ export default {
   "account.card.password.title": "كلمة السر",
   "account.card.password.old": "كلمة السر القديمة",
   "account.card.password.new": "كلمة السر الجديدة",
-  "account.card.password.noPasswordSet":
-    "ليس لديك كلمة مرور محددة. لتسجيل الدخول باستخدام بريدك الإلكتروني وكلمة المرور، يتعين عليك إنشاء كلمة مرور.",
+  "account.card.password.noPasswordSet": "ليس لديك كلمة مرور محددة. لتسجيل الدخول باستخدام بريدك الإلكتروني وكلمة المرور، يتعين عليك إنشاء كلمة مرور.",
   "account.notify.password.success": "غيرت كلمة السر بنجاح",
   "account.card.oauth.title": "الدخول بحساب تواصل اجتماعي",
   "account.card.oauth.github": "GitHub",
@@ -109,14 +102,11 @@ export default {
   "account.card.oauth.unlink": "فك الربط",
   "account.card.oauth.unlinked": "تم فك الربط",
   "account.modal.unlink.title": "فك ربط الحساب",
-  "account.modal.unlink.description":
-    "قد يؤدي إلغاء ربط حسابات التواصل الاجتماعي الخاصة بك إلى فقدان حسابك إذا كنت لا تتذكر بيانات تسجيل الدخول الخاصة بك",
+  "account.modal.unlink.description": "قد يؤدي إلغاء ربط حسابات التواصل الاجتماعي الخاصة بك إلى فقدان حسابك إذا كنت لا تتذكر بيانات تسجيل الدخول الخاصة بك",
   "account.notify.oauth.unlinked.success": "تم فك الربط بنجاح",
   "account.card.security.title": "الأمان",
-  "account.card.security.totp.enable.description":
-    "اكتب كلمة سرّك لبدء تمكين TOTP",
-  "account.card.security.totp.disable.description":
-    "اكتب كلمة سرّك لتعطيل TOTP",
+  "account.card.security.totp.enable.description": "اكتب كلمة سرّك لبدء تمكين TOTP",
+  "account.card.security.totp.disable.description": "اكتب كلمة سرّك لتعطيل TOTP",
   "account.card.security.totp.button.start": "ابدأ",
   "account.modal.totp.title": "تمكين TOTP",
   "account.modal.totp.step1": "الخطوة 1: أضف تطبيق المصادقة",
@@ -129,8 +119,7 @@ export default {
   "account.notify.totp.disable": "تم تعطيل TOTP بنجاح",
   "account.notify.totp.enable": "تم تمكين TOTP بنجاح",
   "account.card.language.title": "اللغة",
-  "account.card.language.description":
-    "يقوم المجتمع بترجمة هذا المشروع. ربما بعض اللغات لم تكتمل ترجمتها بعد.",
+  "account.card.language.description": "يقوم المجتمع بترجمة هذا المشروع. ربما بعض اللغات لم تكتمل ترجمتها بعد.",
   "account.card.color.title": "نظام الألوان",
   // ThemeSwitcher.tsx
   "account.theme.dark": "داكن",
@@ -138,8 +127,7 @@ export default {
   "account.theme.system": "حسب النظام",
   "account.button.delete": "حذف الحساب",
   "account.modal.delete.title": "حذف الحساب",
-  "account.modal.delete.description":
-    "هل تريد حقاً حذف حسابك بما في ذلك جميع مشاركاتك النشطة؟",
+  "account.modal.delete.description": "هل تريد حقاً حذف حسابك بما في ذلك جميع مشاركاتك النشطة؟",
   // END /account
 
   // /account/shares
@@ -164,8 +152,7 @@ export default {
   "account.shares.table.expiry-never": "أبدًا",
   "account.shares.modal.share-informations": "معلومات المشاركة",
   "account.shares.modal.share-link": "رابط المشاركة",
-  "account.shares.modal.edit.password.keep":
-    "اتركه فارغًا للاحتفاظ بكلمة المرور الحالية",
+  "account.shares.modal.edit.password.keep": "اتركه فارغًا للاحتفاظ بكلمة المرور الحالية",
   "account.shares.modal.edit.password.remove": "إزالة الحماية بكلمة المرور",
   "account.shares.modal.delete.title": "حذف المشاركة: {share}",
   "account.shares.modal.delete.description": "هل تريد حذف هذه المشاركة حقاً؟",
@@ -174,16 +161,14 @@ export default {
   // /account/received
   "account.received-shares.title": "المشاركات المستلمة",
   "account.received-shares.title.empty": "لم يتم استلام أي مشاركات بعد",
-  "account.received-shares.description.empty":
-    "المشاركات المرسلة إلى عنوان بريدك الإلكتروني ستظهر هنا.",
+  "account.received-shares.description.empty": "المشاركات المرسلة إلى عنوان بريدك الإلكتروني ستظهر هنا.",
   "account.received-shares.table.from": "من",
   "account.received-shares.button.open": "فتح",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "المشاركات العكسية",
-  "account.reverseShares.description":
-    "تسمح لك المشاركة العكسية بإنشاء رابط فريد يسمح للمستخدمين الخارجيين بإنشاء مشاركة.",
+  "account.reverseShares.description": "تسمح لك المشاركة العكسية بإنشاء رابط فريد يسمح للمستخدمين الخارجيين بإنشاء مشاركة.",
   "account.reverseShares.title.empty": "المكان خالٍ هنا 👀",
   "account.reverseShares.description.empty": "ليس لديك أي مشاركات عكسية.",
   // showCreateReverseShareModal.tsx
@@ -203,21 +188,15 @@ export default {
   "account.reverseShares.modal.expiration.year-plural": "سنوات",
   "account.reverseShares.modal.max-size.label": "الحد الأقصى لحجم المشاركة",
   "account.reverseShares.modal.send-email": "إرسال إشعارات البريد الإلكتروني",
-  "account.reverseShares.modal.send-email.description":
-    "يرسل لك إشعارًا عبر البريد الإلكتروني عند إنشاء مشاركة باستخدام رابط المشاركة العكسية هذا.",
+  "account.reverseShares.modal.send-email.description": "يرسل لك إشعارًا عبر البريد الإلكتروني عند إنشاء مشاركة باستخدام رابط المشاركة العكسية هذا.",
   "account.reverseShares.modal.simplified": "الوضع البسيط",
-  "account.reverseShares.modal.simplified.description":
-    "اجعل من السهل على الشخص الذي يرفع الملف مشاركته معك. سيتمكن فقط من تخصيص اسم المشاركة ووصفها.",
+  "account.reverseShares.modal.simplified.description": "اجعل من السهل على الشخص الذي يرفع الملف مشاركته معك. سيتمكن فقط من تخصيص اسم المشاركة ووصفها.",
   "account.reverseShares.modal.public-access": "وصول عام",
-  "account.reverseShares.modal.public-access.description":
-    "اجعل المشاركات التي تم إنشاؤها باستخدام هذه المشاركة العكسية عامة. إذا تم التعطيل، فلن يتمكن سوى أنت ومنشئ المشاركة من الوصول لعرضها.",
+  "account.reverseShares.modal.public-access.description": "اجعل المشاركات التي تم إنشاؤها باستخدام هذه المشاركة العكسية عامة. إذا تم التعطيل، فلن يتمكن سوى أنت ومنشئ المشاركة من الوصول لعرضها.",
   "account.reverseShares.modal.max-use.label": "الحد الأقصى لعدد الاستخدامات",
-  "account.reverseShares.modal.max-use.description":
-    "أقصى عدد من المرّات التي يمكن فيها استخدام هذا الرابط لإنشاء مشاركة.",
-  "account.reverseShare.never-expires":
-    "لن تنتهي صلاحية هذه المشاركة العكسية أبدًا.",
-  "account.reverseShare.expires-on":
-    "هذه المشاركة العكسية ستنتهي صلاحيتها في {expiration}.",
+  "account.reverseShares.modal.max-use.description": "أقصى عدد من المرّات التي يمكن فيها استخدام هذا الرابط لإنشاء مشاركة.",
+  "account.reverseShare.never-expires": "لن تنتهي صلاحية هذه المشاركة العكسية أبدًا.",
+  "account.reverseShare.expires-on": "هذه المشاركة العكسية ستنتهي صلاحيتها في {expiration}.",
   "account.reverseShares.table.no-shares": "لم يتم إنشاء أي مشاركة بعد",
   "account.reverseShares.table.count.singular": "مشاركة",
   "account.reverseShares.table.count.plural": "مشاركات",
@@ -227,8 +206,7 @@ export default {
   "account.reverseShares.table.expires": "تاريخ انتهاء الصلاحية",
   "account.reverseShares.modal.reverse-share-link": "رابط المشاركة العكسية",
   "account.reverseShares.modal.delete.title": "حذف المشاركة العكسية",
-  "account.reverseShares.modal.delete.description":
-    "هل تريد حقاً حذف هذه المشاركة العكسية؟ إذا قمت بذلك، فسيتم حذف المشاركات المرتبطة بها أيضاً.",
+  "account.reverseShares.modal.delete.description": "هل تريد حقاً حذف هذه المشاركة العكسية؟ إذا قمت بذلك، فسيتم حذف المشاركات المرتبطة بها أيضاً.",
   // END /account/reverseShares
 
   // /admin
@@ -250,35 +228,28 @@ export default {
   "admin.users.edit.update.admin-privileges": "صلاحيات المدير",
   "admin.users.edit.update.email-verified": "تم تأكيد البريد الإلكتروني",
   "admin.users.edit.update.custom-share-size-limit": "حد حجم مشاركة مخصص",
-  "admin.users.edit.update.custom-share-size-limit.description":
-    "تجاوز حد الرفع العام لهذا المستخدم",
+  "admin.users.edit.update.custom-share-size-limit.description": "تجاوز حد الرفع العام لهذا المستخدم",
   "admin.users.edit.update.custom-storage-quota-limit": "حصة تخزين مخصصة",
-  "admin.users.edit.update.custom-storage-quota-limit.description":
-    "الحد من إجمالي استخدام التخزين للمستخدم عبر المشاركات النشطة",
+  "admin.users.edit.update.custom-storage-quota-limit.description": "الحد من إجمالي استخدام التخزين للمستخدم عبر المشاركات النشطة",
   "admin.users.edit.update.change-password.title": "تغيير كلمة السر",
   "admin.users.edit.update.change-password.field": "كلمة السر الجديدة",
   "admin.users.edit.update.change-password.button": "حفظ كلمة السر الجديدة",
   "admin.users.edit.update.notify.password.success": "غيرت كلمة السر بنجاح",
   "admin.users.edit.delete.title": "حذف المستخدم: {username}؟",
-  "admin.users.edit.delete.description":
-    "هل تريد حقًا حذف هذا المستخدم وجميع مشاركاته؟",
+  "admin.users.edit.delete.description": "هل تريد حقًا حذف هذا المستخدم وجميع مشاركاته؟",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "أنشئ مستخدمًا",
   "admin.users.modal.create.username": "اسم المستخدم",
   "admin.users.modal.create.email": "البريد",
   "admin.users.modal.create.password": "كلمة السر",
   "admin.users.modal.create.manual-password": "تعيين كلمة السر يدوياً",
-  "admin.users.modal.create.manual-password.description":
-    "بدون هذا الخيار، سيتلقى المستخدم رسالة بريد إلكتروني فيها رابط لتعيين كلمة السر الخاصة به.",
+  "admin.users.modal.create.manual-password.description": "بدون هذا الخيار، سيتلقى المستخدم رسالة بريد إلكتروني فيها رابط لتعيين كلمة السر الخاصة به.",
   "admin.users.modal.create.custom-share-size-limit": "حد حجم مشاركة مخصص",
-  "admin.users.modal.create.custom-share-size-limit.description":
-    "تجاوز حد الرفع العام لهذا المستخدم",
+  "admin.users.modal.create.custom-share-size-limit.description": "تجاوز حد الرفع العام لهذا المستخدم",
   "admin.users.modal.create.custom-storage-quota-limit": "حصة تخزين مخصصة",
-  "admin.users.modal.create.custom-storage-quota-limit.description":
-    "الحد من إجمالي استخدام التخزين للمستخدم عبر المشاركات النشطة",
+  "admin.users.modal.create.custom-storage-quota-limit.description": "الحد من إجمالي استخدام التخزين للمستخدم عبر المشاركات النشطة",
   "admin.users.modal.create.admin": "صلاحيات المدير",
-  "admin.users.modal.create.admin.description":
-    "مع هذا الخيار، سيتمكن المستخدم من الدخول إلى لوحة الإدارة.",
+  "admin.users.modal.create.admin.description": "مع هذا الخيار، سيتمكن المستخدم من الدخول إلى لوحة الإدارة.",
   // END /admin/users
 
   // /admin/shares
@@ -295,20 +266,16 @@ export default {
 
   // /upload
   "upload.title": "رفع",
-  "upload.notify.confirm-leave":
-    "هل أنت متأكد أنك تريد مغادرة هذه الصفحة؟ سيتم إلغاء عملية الرفع.",
+  "upload.notify.confirm-leave": "هل أنت متأكد أنك تريد مغادرة هذه الصفحة؟ سيتم إلغاء عملية الرفع.",
   "upload.notify.generic-error": "حدث خطأ أثناء إنهاء مشاركتك.",
   "upload.notify.count-failed": "فشل رفع {count} ملفات. تجري المحاولة مجددًا.",
   "upload.notify.duplicate-skipped": "تم تخطي الملف المكرر: {name}",
   "upload.reverse-share.error.invalid.title": "رابط مشاركة عكسية غير صالح",
-  "upload.reverse-share.error.invalid.description":
-    "This reverse share has expired or is invalid.",
+  "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
   // Dropzone.tsx
   "upload.dropzone.title": "رفع الملفات",
-  "upload.dropzone.description":
-    "اسحب وأفلت الملفات أو المجلدات هنا لبدء مشاركتك أو اضغط على 'Ctrl+V' لرفع محتوى نصي من الحافظة. نحن نقبل الملفات حتى {maxSize} إجمالاً فقط.",
-  "upload.dropzone.notify.file-too-big":
-    "تتجاوز ملفاتك الحجم الأقصى للمشاركة والذي هو {maxSize}.",
+  "upload.dropzone.description": "اسحب وأفلت الملفات أو المجلدات هنا لبدء مشاركتك أو اضغط على 'Ctrl+V' لرفع محتوى نصي من الحافظة. نحن نقبل الملفات حتى {maxSize} إجمالاً فقط.",
+  "upload.dropzone.notify.file-too-big": "تتجاوز ملفاتك الحجم الأقصى للمشاركة والذي هو {maxSize}.",
   "upload.button.folder": "رفع مجلد",
   "upload.button.folder.append": "إلحاق مجلد",
   "upload.button.add": "إضافة إلى الرفع",
@@ -319,20 +286,15 @@ export default {
   "upload.filelist.remaining": "متبقي {time}",
   // showCreateUploadModal.tsx
   "upload.modal.title": "إنشاء مشاركة",
-  "upload.modal.link.error.invalid":
-    "يمكن أن يحتوي فقط على الأحرف والأرقام والشرطات السفلية والواصلات",
+  "upload.modal.link.error.invalid": "يمكن أن يحتوي فقط على الأحرف والأرقام والشرطات السفلية والواصلات",
   "upload.modal.link.error.taken": "هذا الرابط مستخدم مسبقاً",
-  "upload.modal.link.error.s3-session-not-found":
-    "لم يتم العثور على جلسة رفع S3",
-  "upload.modal.link.error.s3-etag-missing":
-    "ترويسة ETag مفقودة في استجابة S3. تأكد من أن CORS يكشف ترويسة ETag.",
+  "upload.modal.link.error.s3-session-not-found": "لم يتم العثور على جلسة رفع S3",
+  "upload.modal.link.error.s3-etag-missing": "ترويسة ETag مفقودة في استجابة S3. تأكد من أن CORS يكشف ترويسة ETag.",
   "upload.modal.not-signed-in": "لم تقم بتسجيل الدخول",
-  "upload.modal.not-signed-in-description":
-    "لن تتمكن من حذف مشاركتك يدوياً أو عرض عدد الزوار.",
+  "upload.modal.not-signed-in-description": "لن تتمكن من حذف مشاركتك يدوياً أو عرض عدد الزوار.",
   "upload.modal.expires.never": "أبدًا",
   "upload.modal.expires.never-long": "مشاركة دائمة",
-  "upload.modal.expires.error.too-long":
-    "تاريخ انتهاء الصلاحية يتجاوز الحد الأقصى وهو {max}.",
+  "upload.modal.expires.error.too-long": "تاريخ انتهاء الصلاحية يتجاوز الحد الأقصى وهو {max}.",
   "upload.modal.link.label": "الرابط",
   "upload.modal.expires.label": "انتهاء الصلاحية",
   "upload.modal.expires.minute-singular": "دقيقة",
@@ -349,13 +311,11 @@ export default {
   "upload.modal.expires.year-plural": "سنوات",
   "upload.modal.accordion.name-and-description.title": "الاسم والوصف",
   "upload.modal.accordion.name-and-description.name.placeholder": "الاسم",
-  "upload.modal.accordion.name-and-description.description.placeholder":
-    "ملاحظة لمستقبلي هذه المشاركة",
+  "upload.modal.accordion.name-and-description.description.placeholder": "ملاحظة لمستقبلي هذه المشاركة",
   "upload.modal.accordion.email.title": "مستلمو البريد الإلكتروني",
   "upload.modal.accordion.email.placeholder": "أدخل مستلمي البريد",
   "upload.modal.accordion.email.invalid-email": "عنوان البريد غير صحيح",
-  "upload.modal.accordion.email.restrict-to-recipients":
-    "تقييد الوصول لهؤلاء المستلمين فقط (يجب عليهم تسجيل الدخول للوصول إليها)",
+  "upload.modal.accordion.email.restrict-to-recipients": "تقييد الوصول لهؤلاء المستلمين فقط (يجب عليهم تسجيل الدخول للوصول إليها)",
   "upload.modal.accordion.security.title": "خيارات الأمان",
   "upload.modal.accordion.security.password.label": "الحماية بكلمة السر",
   "upload.modal.accordion.security.password.placeholder": "لا توجد كلمة سر",
@@ -363,52 +323,41 @@ export default {
   "upload.modal.accordion.security.max-views.placeholder": "لا يوجد حد",
   // showCompletedUploadModal.tsx
   "upload.modal.completed.never-expires": "لن تنتهي صلاحية هذه المشاركة أبدًا.",
-  "upload.modal.completed.expires-on":
-    "هذه المشاركة ستنتهي صلاحيتها في {expiration}.",
+  "upload.modal.completed.expires-on": "هذه المشاركة ستنتهي صلاحيتها في {expiration}.",
   "upload.modal.completed.share-ready": "المشاركة جاهزة",
-  "upload.modal.completed.notified-reverse-share-creator":
-    "لقد أبلغنا منشئ المشاركة العكسية. يمكنك أيضًا مشاركة هذا الرابط معه يدويًا عبر وسائل أخرى.",
+  "upload.modal.completed.notified-reverse-share-creator": "لقد أبلغنا منشئ المشاركة العكسية. يمكنك أيضًا مشاركة هذا الرابط معه يدويًا عبر وسائل أخرى.",
   // END /upload
 
   // /share/[id]
   "share.title": "المشاركة {shareId}",
   "share.description": "انظر ما الذي شاركته معك!",
-  "share.fileCount":
-    "{count, plural, =1 {# ملف} other {# ملفات}} · {size} (قد يكون ملف ZIP أصغر بسبب الضغط)",
+  "share.fileCount": "{count, plural, =1 {# ملف} other {# ملفات}} · {size} (قد يكون ملف ZIP أصغر بسبب الضغط)",
   "share.copy-text-contents": "نسخ محتويات الملف إلى الحافظة",
   "share.error.visitor-limit-exceeded.title": "تم تجاوز حد المشاهدات",
-  "share.error.visitor-limit-exceeded.description":
-    "تم تجاوز الحد الأقصى لزوار هذه المشاركة.",
+  "share.error.visitor-limit-exceeded.description": "تم تجاوز الحد الأقصى لزوار هذه المشاركة.",
   "share.error.removed.title": "تمت إزالة المشاركة",
   "share.error.not-found.title": "المشاركة غير موجودة",
   "share.error.not-found.description": "المشاركة التي تبحث عنها غير موجودة.",
   "share.error.access-denied.title": "مشاركة خاصة",
-  "share.error.access-denied.description":
-    "الحساب الحالي ليس لديه إذن للوصول إلى هذه المشاركة",
+  "share.error.access-denied.description": "الحساب الحالي ليس لديه إذن للوصول إلى هذه المشاركة",
   "share.error.restricted.title": "مشاركة مقيدة",
-  "share.error.restricted.description":
-    "هذه المشاركة مقيدة لمستلمين محددين. يرجى تسجيل الدخول للوصول إليها.",
+  "share.error.restricted.description": "هذه المشاركة مقيدة لمستلمين محددين. يرجى تسجيل الدخول للوصول إليها.",
   "share.error.restricted.button": "تسجيل الدخول",
   "share.modal.password.title": "كلمة السر مطلوبة",
-  "share.modal.password.description":
-    "يرجى إدخال كلمة المرور للوصول إلى هذه المشاركة.",
+  "share.modal.password.description": "يرجى إدخال كلمة المرور للوصول إلى هذه المشاركة.",
   "share.modal.password": "كلمة السر",
   "share.modal.error.invalid-password": "كلمة السر غير صحيحة",
   "share.button.download-all": "تنزيل الكل",
-  "share.notify.download-all-preparing":
-    "يتم تجهيز المشاركة. يرجى المحاولة مرة أخرى بعد بضع دقائق.",
+  "share.notify.download-all-preparing": "يتم تجهيز المشاركة. يرجى المحاولة مرة أخرى بعد بضع دقائق.",
   "share.notify.copied-contents": "تم نسخ محتويات الملف إلى الحافظة",
-  "share.notify.copy-too-big-error":
-    "الملف كبير جدًا بحيث لا يمكن نسخه إلى الحافظة",
-  "share.notify.copy-not-supported-error":
-    "يتطلب النسخ إلى الحافظة اتصال HTTPS",
+  "share.notify.copy-too-big-error": "الملف كبير جدًا بحيث لا يمكن نسخه إلى الحافظة",
+  "share.notify.copy-not-supported-error": "يتطلب النسخ إلى الحافظة اتصال HTTPS",
   "share.modal.file-link": "رابط الملف",
   "share.table.name": "الاسم",
   "share.table.size": "الحجم",
   "share.modal.file-preview.original_file": "عرض الملف الأصلي",
   "share.modal.file-preview.error.not-supported.title": "المعاينة غير مدعومة",
-  "share.modal.file-preview.error.not-supported.description":
-    "المعاينة غير مدعومة لهذا النوع من الملفات. يرجى تنزيل الملف لعرضه.",
+  "share.modal.file-preview.error.not-supported.description": "المعاينة غير مدعومة لهذا النوع من الملفات. يرجى تنزيل الملف لعرضه.",
   // END /share/[id]
 
   // /share/[id]/edit
@@ -428,8 +377,7 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "ملف التكوين موجود",
-  "admin.config.config-file-warning.description":
-    "نظرًا لأنك قمت بتكوين Pingvin Share باستخدام ملف تكوين، فلا يمكنك تغيير التكوين من خلال واجهة المستخدم.",
+  "admin.config.config-file-warning.description": "نظرًا لأنك قمت بتكوين Pingvin Share باستخدام ملف تكوين، فلا يمكنك تغيير التكوين من خلال واجهة المستخدم.",
   "admin.config.title": "الإعدادات",
   "admin.config.category.general": "عام",
   "admin.config.category.appearance": "المظهر",
@@ -442,207 +390,133 @@ export default {
   "admin.config.general.app-name": "اسم التطبيق",
   "admin.config.general.app-name.description": "اسم التطبيق",
   "admin.config.general.default-language": "اللغة الافتراضية",
-  "admin.config.general.default-language.description":
-    "ينطبق هذا على جميع المستخدمين، ولا يزال بإمكان كل مستخدم تخصيص لغته في ملفه الشخصي.",
+  "admin.config.general.default-language.description": "ينطبق هذا على جميع المستخدمين، ولا يزال بإمكان كل مستخدم تخصيص لغته في ملفه الشخصي.",
   "admin.config.appearance.theme-primary-color": "اللون الأساسي للمظهر",
-  "admin.config.appearance.theme-primary-color.description":
-    "اللون الأساسي للأزرار والروابط والعناصر البارزة. اختر مخصص لاستخدام تجاوز لون.",
+  "admin.config.appearance.theme-primary-color.description": "اللون الأساسي للأزرار والروابط والعناصر البارزة. اختر مخصص لاستخدام تجاوز لون.",
   "admin.config.appearance.theme-primary-color-override": "لون أساسي مخصص",
-  "admin.config.appearance.theme-primary-color-override.description":
-    "تجاوز لون بصيغة Hex يُستخدم عندما يكون اللون الأساسي مضبوطًا على مخصص.",
+  "admin.config.appearance.theme-primary-color-override.description": "تجاوز لون بصيغة Hex يُستخدم عندما يكون اللون الأساسي مضبوطًا على مخصص.",
   "admin.config.appearance.theme-font-preset": "إعداد الخط المسبق",
-  "admin.config.appearance.theme-font-preset.description":
-    "إعداد خط يُحمَّل وقت البناء. اختر النظام أو أحد خطوط Google المضمّنة.",
-  "admin.config.appearance.theme-color-scheme":
-    "نظام الألوان الافتراضي (للضيوف)",
-  "admin.config.appearance.theme-color-scheme.description":
-    "الوضع الفاتح/الداكن الافتراضي للمستخدمين غير المسجلين. يستخدم المستخدمون المسجلون تفضيلات حساباتهم الخاصة.",
+  "admin.config.appearance.theme-font-preset.description": "إعداد خط يُحمَّل وقت البناء. اختر النظام أو أحد خطوط Google المضمّنة.",
+  "admin.config.appearance.theme-color-scheme": "نظام الألوان الافتراضي (للضيوف)",
+  "admin.config.appearance.theme-color-scheme.description": "الوضع الفاتح/الداكن الافتراضي للمستخدمين غير المسجلين. يستخدم المستخدمون المسجلون تفضيلات حساباتهم الخاصة.",
   "admin.config.appearance.theme-radius": "استدارة حواف المظهر",
-  "admin.config.appearance.theme-radius.description":
-    "استدارة الحواف الافتراضية المستخدمة في مكونات Mantine.",
+  "admin.config.appearance.theme-radius.description": "استدارة الحواف الافتراضية المستخدمة في مكونات Mantine.",
   "admin.config.appearance.custom-css": "CSS مخصص",
-  "admin.config.appearance.custom-css.description":
-    "CSS عام يُطبَّق على الواجهة. استخدمه بحذر، فالقيم غير الصحيحة قد تؤثر على الواجهة.",
+  "admin.config.appearance.custom-css.description": "CSS عام يُطبَّق على الواجهة. استخدمه بحذر، فالقيم غير الصحيحة قد تؤثر على الواجهة.",
   "admin.config.appearance.upload-progress-style": "نمط تقدم الرفع",
-  "admin.config.appearance.upload-progress-style.description":
-    "اختر كيفية عرض تقدم الرفع في قائمة الملفات.",
+  "admin.config.appearance.upload-progress-style.description": "اختر كيفية عرض تقدم الرفع في قائمة الملفات.",
   "admin.config.appearance.upload-progress-style.circle": "مؤشر دائري",
-  "admin.config.appearance.upload-progress-style.circle-percentage":
-    "دائرة مع نسبة مئوية",
-  "admin.config.appearance.upload-progress-style.percentage-time":
-    "النسبة المئوية والوقت المتبقي",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "دائرة مع نسبة مئوية",
+  "admin.config.appearance.upload-progress-style.percentage-time": "النسبة المئوية والوقت المتبقي",
   "admin.config.general.app-url": "رابط التطبيق",
-  "admin.config.general.app-url.description":
-    "الرابط الذي تكون مشاركة Pingvin صالحة عليه",
+  "admin.config.general.app-url.description": "الرابط الذي تكون مشاركة Pingvin صالحة عليه",
   "admin.config.security.secure-cookies": "ملفات تعريف ارتباط آمنة",
-  "admin.config.security.secure-cookies.description":
-    "ما إذا كان سيتم تعيين علامة الأمان على ملفات تعريف الارتباط. إذا تم التمكين، فلن يعمل الموقع عند الوصول إليه عبر HTTP.",
+  "admin.config.security.secure-cookies.description": "ما إذا كان سيتم تعيين علامة الأمان على ملفات تعريف الارتباط. إذا تم التمكين، فلن يعمل الموقع عند الوصول إليه عبر HTTP.",
   "admin.config.general.show-home-page": "إظهار الصفحة الرئيسية",
-  "admin.config.general.show-home-page.description":
-    "تحديد ما إذا كان سيتم عرض الصفحة الرئيسية",
+  "admin.config.general.show-home-page.description": "تحديد ما إذا كان سيتم عرض الصفحة الرئيسية",
   "admin.config.security.session-duration": "مدة الجلسة",
-  "admin.config.security.session-duration.description":
-    "الوقت الذي يجب على المستخدم بعده تسجيل الدخول مرة أخرى (افتراضي: 3 أشهر).",
+  "admin.config.security.session-duration.description": "الوقت الذي يجب على المستخدم بعده تسجيل الدخول مرة أخرى (افتراضي: 3 أشهر).",
   "admin.config.appearance.logo": "الشعار",
-  "admin.config.appearance.logo.description":
-    "يمكنك تغيير شعارك عن طريق تحميل صورة جديدة. يجب أن تكون الصورة PNG ويجب أن يكون تنسيقها 1:1.",
+  "admin.config.appearance.logo.description": "يمكنك تغيير شعارك عن طريق تحميل صورة جديدة. يجب أن تكون الصورة PNG ويجب أن يكون تنسيقها 1:1.",
   "admin.config.appearance.logo-dark": "شعار الوضع الداكن",
-  "admin.config.appearance.logo-dark.description":
-    "ارفع شعارًا منفصلاً للوضع الداكن. يجب أن تكون الصورة بتنسيق PNG وبنسبة 1:1.",
+  "admin.config.appearance.logo-dark.description": "ارفع شعارًا منفصلاً للوضع الداكن. يجب أن تكون الصورة بتنسيق PNG وبنسبة 1:1.",
   "admin.config.appearance.logo.placeholder": "اختر صورة",
   "admin.config.security.custom-password-policy": "سياسة كلمة مرور مخصصة",
-  "admin.config.security.custom-password-policy.description":
-    "ما إذا كان سيتم تمكين تخصيص سياسة كلمة المرور. في حالة التعطيل، يتم استخدام سياسة كلمة المرور الافتراضية بحد أدنى 8 أحرف.",
+  "admin.config.security.custom-password-policy.description": "ما إذا كان سيتم تمكين تخصيص سياسة كلمة المرور. في حالة التعطيل، يتم استخدام سياسة كلمة المرور الافتراضية بحد أدنى 8 أحرف.",
   "admin.config.security.min-length": "الحد الأدنى للطول",
-  "admin.config.security.min-length.description":
-    "الحد الأدنى لعدد الأحرف المطلوبة لكلمة المرور.",
+  "admin.config.security.min-length.description": "الحد الأدنى لعدد الأحرف المطلوبة لكلمة المرور.",
   "admin.config.security.require-uppercase": "طلب حرف كبير",
-  "admin.config.security.require-uppercase.description":
-    "ما إذا كان يجب طلب حرف كبير واحد على الأقل في كلمة المرور.",
+  "admin.config.security.require-uppercase.description": "ما إذا كان يجب طلب حرف كبير واحد على الأقل في كلمة المرور.",
   "admin.config.security.require-lowercase": "طلب حرف صغير",
-  "admin.config.security.require-lowercase.description":
-    "ما إذا كان يجب طلب حرف صغير واحد على الأقل في كلمة المرور.",
+  "admin.config.security.require-lowercase.description": "ما إذا كان يجب طلب حرف صغير واحد على الأقل في كلمة المرور.",
   "admin.config.security.require-number": "طلب رقم",
-  "admin.config.security.require-number.description":
-    "ما إذا كان يجب طلب رقم واحد على الأقل في كلمة المرور.",
+  "admin.config.security.require-number.description": "ما إذا كان يجب طلب رقم واحد على الأقل في كلمة المرور.",
   "admin.config.security.require-special-character": "طلب رمز خاص",
-  "admin.config.security.require-special-character.description":
-    "ما إذا كان يجب طلب رمز خاص واحد على الأقل في كلمة المرور.",
+  "admin.config.security.require-special-character.description": "ما إذا كان يجب طلب رمز خاص واحد على الأقل في كلمة المرور.",
   "admin.config.cache.ttl": "TTL",
-  "admin.config.cache.ttl.description":
-    "الوقت بالثواني للاحتفاظ بالمعلومات داخل ذاكرة التخزين المؤقت.",
+  "admin.config.cache.ttl.description": "الوقت بالثواني للاحتفاظ بالمعلومات داخل ذاكرة التخزين المؤقت.",
   "admin.config.cache.max-items": "الحد الأقصى للعناصر",
-  "admin.config.cache.max-items.description":
-    "أقصى عدد من العناصر داخل ذاكرة التخزين المؤقت.",
+  "admin.config.cache.max-items.description": "أقصى عدد من العناصر داخل ذاكرة التخزين المؤقت.",
   "admin.config.cache.redis-enabled": "تمكين Redis",
-  "admin.config.cache.redis-enabled.description":
-    "يقوم Pingvin Share عادةً بتخزين المعلومات في الذاكرة. إذا كنت تشغل مثيلات متعددة من Pingvin Share، فأنت بحاجة إلى تمكين التخزين المؤقت في Redis لمشاركة ذاكرة التخزين المؤقت بين المثيلات.",
+  "admin.config.cache.redis-enabled.description": "يقوم Pingvin Share عادةً بتخزين المعلومات في الذاكرة. إذا كنت تشغل مثيلات متعددة من Pingvin Share، فأنت بحاجة إلى تمكين التخزين المؤقت في Redis لمشاركة ذاكرة التخزين المؤقت بين المثيلات.",
   "admin.config.cache.redis-url": "رابط Redis URL",
-  "admin.config.cache.redis-url.description":
-    "الرابط للاتصال بمثيل Redis المستخدم للتخزين المؤقت.",
+  "admin.config.cache.redis-url.description": "الرابط للاتصال بمثيل Redis المستخدم للتخزين المؤقت.",
   "admin.config.cache.button.test-redis": "اختبار الاتصال بـ Redis",
   "admin.config.cache.test-redis.success": "تم الاتصال بـ Redis بنجاح",
-  "admin.config.cache.test-redis.success-disabled":
-    "تم الاتصال بـ Redis بنجاح (التخزين المؤقت عبر Redis معطل حاليًا).",
+  "admin.config.cache.test-redis.success-disabled": "تم الاتصال بـ Redis بنجاح (التخزين المؤقت عبر Redis معطل حاليًا).",
   "admin.config.cache.test-redis.modal.error.title": "فشل الاتصال بـ Redis",
-  "admin.config.cache.test-redis.modal.error.description":
-    "أثناء الاتصال بـ Redis، حدث الخطأ التالي:",
+  "admin.config.cache.test-redis.modal.error.description": "أثناء الاتصال بـ Redis، حدث الخطأ التالي:",
   "admin.config.cache.test-redis.modal.save.title": "حفظ التكوين",
-  "admin.config.cache.test-redis.modal.save.description":
-    "للمتابعة، تحتاج إلى حفظ التكوين أولاً. هل تريد حفظ التكوين واختبار الاتصال بـ Redis؟",
+  "admin.config.cache.test-redis.modal.save.description": "للمتابعة، تحتاج إلى حفظ التكوين أولاً. هل تريد حفظ التكوين واختبار الاتصال بـ Redis؟",
   "admin.config.cache.test-redis.modal.save.confirm": "حفظ واختبار",
-  "admin.config.email.send-html-emails":
-    "تمكين توافق البريد الإلكتروني بتنسيق HTML",
-  "admin.config.email.send-html-emails.description":
-    "إذا تم التمكين، فسيتم إرسال رسائل البريد الإلكتروني بتنسيق HTML. تأكد من تحديث قوالب البريد الإلكتروني لاستخدام HTML.",
-  "admin.config.share.enable-share-email-recipients":
-    "تمكين مشاركة البريد الإلكتروني مع المستلمين",
-  "admin.config.share.enable-share-email-recipients.description":
-    "ما إذا كان سيتم السماح بمشاركة البريد الإلكتروني مع المستلمين. لا يمكن تمكين هذا إلا في حالة تنشيط SMTP.",
-  "admin.config.email.share-recipients-subject":
-    "عنوان الرسالة لمستلمي المشاركة",
-  "admin.config.email.share-recipients-subject.description":
-    "عنوان البريد الذي سيُرسَل لمستقبِلي المشاركة.",
+  "admin.config.email.send-html-emails": "تمكين توافق البريد الإلكتروني بتنسيق HTML",
+  "admin.config.email.send-html-emails.description": "إذا تم التمكين، فسيتم إرسال رسائل البريد الإلكتروني بتنسيق HTML. تأكد من تحديث قوالب البريد الإلكتروني لاستخدام HTML.",
+  "admin.config.share.enable-share-email-recipients": "تمكين مشاركة البريد الإلكتروني مع المستلمين",
+  "admin.config.share.enable-share-email-recipients.description": "ما إذا كان سيتم السماح بمشاركة البريد الإلكتروني مع المستلمين. لا يمكن تمكين هذا إلا في حالة تنشيط SMTP.",
+  "admin.config.email.share-recipients-subject": "عنوان الرسالة لمستلمي المشاركة",
+  "admin.config.email.share-recipients-subject.description": "عنوان البريد الذي سيُرسَل لمستقبِلي المشاركة.",
   "admin.config.email.share-recipients-message": "رسالتك لمستقبِلي المشاركة",
-  "admin.config.email.share-recipients-message.description":
-    "الرسالة التي يتم إرسالها إلى مستلمي المشاركة. المتغيرات المتاحة:\n {creator} - اسم مستخدم منشئ المشاركة\n {creatorEmail} - البريد الإلكتروني لمنشئ المشاركة\n {shareUrl} - رابط المشاركة\n {desc} - وصف المشاركة\n {expires} - تاريخ انتهاء صلاحية المشاركة\n سيتم استبدال هذه المتغيرات بالقيمة الفعلية.",
+  "admin.config.email.share-recipients-message.description": "الرسالة التي يتم إرسالها إلى مستلمي المشاركة. المتغيرات المتاحة:\n {creator} - اسم مستخدم منشئ المشاركة\n {creatorEmail} - البريد الإلكتروني لمنشئ المشاركة\n {shareUrl} - رابط المشاركة\n {desc} - وصف المشاركة\n {expires} - تاريخ انتهاء صلاحية المشاركة\n سيتم استبدال هذه المتغيرات بالقيمة الفعلية.",
   "admin.config.email.reverse-share-subject": "عنوان المشاركة العكسية",
-  "admin.config.email.reverse-share-subject.description":
-    "موضوع البريد الإلكتروني المرسل عندما يقوم شخص ما بإنشاء مشاركة باستخدام رابط المشاركة العكسية الخاص بك.",
+  "admin.config.email.reverse-share-subject.description": "موضوع البريد الإلكتروني المرسل عندما يقوم شخص ما بإنشاء مشاركة باستخدام رابط المشاركة العكسية الخاص بك.",
   "admin.config.email.reverse-share-message": "رسالة المشاركة العكسية",
-  "admin.config.email.reverse-share-message.description":
-    "الرسالة التي ستُرسل عندما يُنشئ شخص ما مشاركة باستخدام رابط المشاركة الخاص بك. سيُوضع اسم المُنشِئ ورابط المشاركة مكان {shareUrl}.",
+  "admin.config.email.reverse-share-message.description": "الرسالة التي ستُرسل عندما يُنشئ شخص ما مشاركة باستخدام رابط المشاركة الخاص بك. سيُوضع اسم المُنشِئ ورابط المشاركة مكان {shareUrl}.",
   "admin.config.email.reset-password-subject": "رسالة إعادة تعيين كلمة السر",
-  "admin.config.email.reset-password-subject.description":
-    "موضوع البريد الإلكتروني المرسل عندما يطلب المستخدم إعادة تعيين كلمة المرور.",
+  "admin.config.email.reset-password-subject.description": "موضوع البريد الإلكتروني المرسل عندما يطلب المستخدم إعادة تعيين كلمة المرور.",
   "admin.config.email.reset-password-message": "رسالة إعادة تعيين كلمة السر",
-  "admin.config.email.reset-password-message.description":
-    "الرسالة التي ستُرسل عندما يطلب المستخدم إعادة تعيين كلمة سرّه. سيُوضع رابط إعادة تعيين كلمة السر مكان {url}.",
+  "admin.config.email.reset-password-message.description": "الرسالة التي ستُرسل عندما يطلب المستخدم إعادة تعيين كلمة سرّه. سيُوضع رابط إعادة تعيين كلمة السر مكان {url}.",
   "admin.config.email.invite-subject": "عنوان الدعوة",
-  "admin.config.email.invite-subject.description":
-    "موضوع البريد الإلكتروني المرسل عندما يقوم المسؤول بدعوة مستخدم.",
+  "admin.config.email.invite-subject.description": "موضوع البريد الإلكتروني المرسل عندما يقوم المسؤول بدعوة مستخدم.",
   "admin.config.email.invite-message": "رسالة الدعوة",
-  "admin.config.email.invite-message.description":
-    "الرسالة التي يتم إرسالها عندما يقوم المسؤول بدعوة مستخدم. سيتم استبدال {url} برابط الدعوة، و{email} بالبريد الإلكتروني، و{password} بكلمة مرور المستخدمين.",
-  "admin.config.email.share-recipients-reply-to-creator":
-    "تعيين 'الرد إلى' إلى بريد المنشئ",
-  "admin.config.email.share-recipients-reply-to-creator.description":
-    "ما إذا كان سيتم تعيين ترويسة Reply-To إلى عنوان البريد الإلكتروني للمستخدم الذي قام بإنشاء المشاركة.",
-  "admin.config.share.enable-share-download-notifications":
-    "تمكين إشعارات التنزيل",
-  "admin.config.share.enable-share-download-notifications.description":
-    "ما إذا كان سيتم إرسال بريد إلكتروني إلى منشئ المشاركة عندما يقوم مستلم البريد الإلكتروني بتنزيل ملف. يتطلب هذا SMTP ومشاركة البريد الإلكتروني مع المستلمين.",
-  "admin.config.email.share-download-notification-subject":
-    "موضوع إشعار التنزيل",
-  "admin.config.email.share-download-notification-subject.description":
-    "موضوع البريد الإلكتروني الذي يتم إرساله إلى منشئ المشاركة عندما يقوم المستلم بتنزيل ملف.",
-  "admin.config.email.share-download-notification-message":
-    "رسالة إشعار التنزيل",
-  "admin.config.email.share-download-notification-message.description":
-    "الرسالة التي يتم إرسالها إلى منشئ المشاركة عندما يقوم المستلم بتنزيل ملف. المتغيرات المتاحة:\n {recipientEmail} - البريد الإلكتروني للمستلم\n {fileName} - اسم الملف الذي تم تنزيله\n {shareUrl} - رابط المشاركة",
-  "admin.config.security.enable-email-verification":
-    "تمكين تأكيد البريد الإلكتروني",
-  "admin.config.security.enable-email-verification.description":
-    "ما إذا كان يجب مطالبة المستخدمين بتأكيد عنوان بريدهم الإلكتروني قبل التمكن من تسجيل الدخول. لا يمكن تمكين هذا إلا في حالة تنشيط SMTP.",
+  "admin.config.email.invite-message.description": "الرسالة التي يتم إرسالها عندما يقوم المسؤول بدعوة مستخدم. سيتم استبدال {url} برابط الدعوة، و{email} بالبريد الإلكتروني، و{password} بكلمة مرور المستخدمين.",
+  "admin.config.email.share-recipients-reply-to-creator": "تعيين 'الرد إلى' إلى بريد المنشئ",
+  "admin.config.email.share-recipients-reply-to-creator.description": "ما إذا كان سيتم تعيين ترويسة Reply-To إلى عنوان البريد الإلكتروني للمستخدم الذي قام بإنشاء المشاركة.",
+  "admin.config.share.enable-share-download-notifications": "تمكين إشعارات التنزيل",
+  "admin.config.share.enable-share-download-notifications.description": "ما إذا كان سيتم إرسال بريد إلكتروني إلى منشئ المشاركة عندما يقوم مستلم البريد الإلكتروني بتنزيل ملف. يتطلب هذا SMTP ومشاركة البريد الإلكتروني مع المستلمين.",
+  "admin.config.email.share-download-notification-subject": "موضوع إشعار التنزيل",
+  "admin.config.email.share-download-notification-subject.description": "موضوع البريد الإلكتروني الذي يتم إرساله إلى منشئ المشاركة عندما يقوم المستلم بتنزيل ملف.",
+  "admin.config.email.share-download-notification-message": "رسالة إشعار التنزيل",
+  "admin.config.email.share-download-notification-message.description": "الرسالة التي يتم إرسالها إلى منشئ المشاركة عندما يقوم المستلم بتنزيل ملف. المتغيرات المتاحة:\n {recipientEmail} - البريد الإلكتروني للمستلم\n {fileName} - اسم الملف الذي تم تنزيله\n {shareUrl} - رابط المشاركة",
+  "admin.config.security.enable-email-verification": "تمكين تأكيد البريد الإلكتروني",
+  "admin.config.security.enable-email-verification.description": "ما إذا كان يجب مطالبة المستخدمين بتأكيد عنوان بريدهم الإلكتروني قبل التمكن من تسجيل الدخول. لا يمكن تمكين هذا إلا في حالة تنشيط SMTP.",
   "admin.config.email.verification-subject": "موضوع بريد التأكيد",
-  "admin.config.email.verification-subject.description":
-    "موضوع البريد الإلكتروني الذي يتم إرساله إلى المستخدم عند تسجيله.",
+  "admin.config.email.verification-subject.description": "موضوع البريد الإلكتروني الذي يتم إرساله إلى المستخدم عند تسجيله.",
   "admin.config.email.verification-message": "رسالة بريد التأكيد",
-  "admin.config.email.verification-message.description":
-    "الرسالة التي يتم إرسالها إلى المستخدم عند تسجيله. سيتم استبدال {url} برابط التأكيد.",
+  "admin.config.email.verification-message.description": "الرسالة التي يتم إرسالها إلى المستخدم عند تسجيله. سيتم استبدال {url} برابط التأكيد.",
   "admin.config.security.allow-registration": "السماح بالتسجيل",
-  "admin.config.security.allow-registration.description":
-    "إتاحة تسجيل حساب جديد",
-  "admin.config.security.allow-unauthenticated-shares":
-    "السماح بالمشاركات غير المصادق عليها",
-  "admin.config.security.allow-unauthenticated-shares.description":
-    "إتاحة إنشاء المشاركات للمستخدمين غير الموثقين",
+  "admin.config.security.allow-registration.description": "إتاحة تسجيل حساب جديد",
+  "admin.config.security.allow-unauthenticated-shares": "السماح بالمشاركات غير المصادق عليها",
+  "admin.config.security.allow-unauthenticated-shares.description": "إتاحة إنشاء المشاركات للمستخدمين غير الموثقين",
   "admin.config.share.default-expiration": "انتهاء الصلاحية الافتراضي",
-  "admin.config.share.default-expiration.description":
-    "وقت انتهاء الصلاحية الافتراضي المحدد عند إنشاء مشاركة جديدة.",
+  "admin.config.share.default-expiration.description": "وقت انتهاء الصلاحية الافتراضي المحدد عند إنشاء مشاركة جديدة.",
   "admin.config.share.max-expiration": "أبعد زمن لانتهاء الصلاحية",
-  "admin.config.share.max-expiration.description":
-    "الحد الأقصى لانتهاء صلاحية المشاركة. اضبط على 0 للسماح بانتهاء صلاحية غير محدود.",
+  "admin.config.share.max-expiration.description": "الحد الأقصى لانتهاء صلاحية المشاركة. اضبط على 0 للسماح بانتهاء صلاحية غير محدود.",
   "admin.config.share.share-id-length": "طول معرّف المشاركة الافتراضي",
-  "admin.config.share.share-id-length.description":
-    "الطول الافتراضي للمعرّف المنشأ للمشاركة. تُستخدم هذه القيمة أيضًا لإنشاء روابط للمشاركات العكسية. تعتبر القيمة الأقل من 8 غير آمنة.",
+  "admin.config.share.share-id-length.description": "الطول الافتراضي للمعرّف المنشأ للمشاركة. تُستخدم هذه القيمة أيضًا لإنشاء روابط للمشاركات العكسية. تعتبر القيمة الأقل من 8 غير آمنة.",
   "admin.config.share.max-size": "أكبر حجم",
   "admin.config.share.max-size.description": "أكبر حجم للمشاركة",
   "admin.config.share.zip-compression-level": "مستوى ضغط الZip",
-  "admin.config.share.zip-compression-level.description":
-    "ضبط الميزان بين حجم الملف وسرعة الضغط. يمكنك إدخال قيم بين 0 إلى 9، حيث 0 تعني بدون ضغط و9 تعني أقصى ضغط. ",
+  "admin.config.share.zip-compression-level.description": "ضبط الميزان بين حجم الملف وسرعة الضغط. يمكنك إدخال قيم بين 0 إلى 9، حيث 0 تعني بدون ضغط و9 تعني أقصى ضغط. ",
   "admin.config.share.chunk-size": "حجم القطعة",
-  "admin.config.share.chunk-size.description":
-    "اضبط حجم الأجزاء لعمليات الرفع لموازنة الكفاءة والموثوقية وفقًا لاتصالك بالإنترنت. يمكن للأجزاء الأصغر تعزيز معدلات النجاح للاتصالات غير المستقرة، بينما تجعل الأجزاء الأكبر عمليات الرفع أسرع للاتصالات المستقرة.",
-  "admin.config.share.auto-open-share-modal":
-    "فتح نافذة إنشاء المشاركة تلقائيًا",
-  "admin.config.share.auto-open-share-modal.description":
-    "تظهر نافذة إنشاء المشاركة تلقائيًا عندما يحدد المستخدم الملفات، مما يلغي الحاجة إلى النقر فوق الزر يدويًا.",
-  "admin.config.security.allow-admin-access-all-shares":
-    "السماح للمسؤول بالوصول إلى جميع المشاركات",
-  "admin.config.share.reverse-share-simple-only":
-    "فرض الوضع البسيط للمشاركة العكسية",
-  "admin.config.share.reverse-share-simple-only.description":
-    "فرض إنشاء المشاركات العكسية في الوضع البسيط. إذا تم التعطيل، يمكن لمنشئ المشاركة العكسية الاختيار بين الوضع البسيط والمتقدم.",
-  "admin.config.security.allow-admin-access-all-shares.description":
-    "السماح للمسؤولين بالوصول إلى جميع المشاركات، حتى لو كانت محمية بكلمة مرور أو منتهية الصلاحية أو محذوفة.",
-  "admin.config.share.enable-user-recipients":
-    "تمكين المشاركة مع المستخدمين المسجلين",
-  "admin.config.share.enable-user-recipients.description":
-    "عند التمكين، ستظهر المشاركات المرسلة إلى عنوان البريد الإلكتروني لمستخدم مسجل تلقائيًا في حسابه. يمكن للمستخدمين أيضًا تقييد الوصول إلى المشاركة للمستلمين المحددين فقط.",
+  "admin.config.share.chunk-size.description": "اضبط حجم الأجزاء لعمليات الرفع لموازنة الكفاءة والموثوقية وفقًا لاتصالك بالإنترنت. يمكن للأجزاء الأصغر تعزيز معدلات النجاح للاتصالات غير المستقرة، بينما تجعل الأجزاء الأكبر عمليات الرفع أسرع للاتصالات المستقرة.",
+  "admin.config.share.auto-open-share-modal": "فتح نافذة إنشاء المشاركة تلقائيًا",
+  "admin.config.share.auto-open-share-modal.description": "تظهر نافذة إنشاء المشاركة تلقائيًا عندما يحدد المستخدم الملفات، مما يلغي الحاجة إلى النقر فوق الزر يدويًا.",
+  "admin.config.security.allow-admin-access-all-shares": "السماح للمسؤول بالوصول إلى جميع المشاركات",
+  "admin.config.share.reverse-share-simple-only": "فرض الوضع البسيط للمشاركة العكسية",
+  "admin.config.share.reverse-share-simple-only.description": "فرض إنشاء المشاركات العكسية في الوضع البسيط. إذا تم التعطيل، يمكن لمنشئ المشاركة العكسية الاختيار بين الوضع البسيط والمتقدم.",
+  "admin.config.security.allow-admin-access-all-shares.description": "السماح للمسؤولين بالوصول إلى جميع المشاركات، حتى لو كانت محمية بكلمة مرور أو منتهية الصلاحية أو محذوفة.",
+  "admin.config.share.enable-user-recipients": "تمكين المشاركة مع المستخدمين المسجلين",
+  "admin.config.share.enable-user-recipients.description": "عند التمكين، ستظهر المشاركات المرسلة إلى عنوان البريد الإلكتروني لمستخدم مسجل تلقائيًا في حسابه. يمكن للمستخدمين أيضًا تقييد الوصول إلى المشاركة للمستلمين المحددين فقط.",
   "admin.config.share.file-retention-period": "فترة الاحتفاظ بالملفات",
-  "admin.config.share.file-retention-period.description":
-    "ما هي المدة التي يتم فيها الاحتفاظ بالملفات بعد انتهاء صلاحية المشاركة أو حذفها. مفيد فقط إذا تم تمكين 'السماح للمسؤول بالوصول إلى جميع المشاركات' أيضًا. اضبط على -1 للاحتفاظ بالملفات إلى الأبد.",
+  "admin.config.share.file-retention-period.description": "ما هي المدة التي يتم فيها الاحتفاظ بالملفات بعد انتهاء صلاحية المشاركة أو حذفها. مفيد فقط إذا تم تمكين 'السماح للمسؤول بالوصول إلى جميع المشاركات' أيضًا. اضبط على -1 للاحتفاظ بالملفات إلى الأبد.",
   "admin.config.smtp.enabled": "تمكين",
-  "admin.config.smtp.enabled.description":
-    "تفعيل الـSMTP. لا تفعّله إلا إذا قمت بإدخال المضيف، والمنفذ، والبريد الإلكتروني، واسم المستخدم، وكلمة السر لخادم الـSMTP.",
+  "admin.config.smtp.enabled.description": "تفعيل الـSMTP. لا تفعّله إلا إذا قمت بإدخال المضيف، والمنفذ، والبريد الإلكتروني، واسم المستخدم، وكلمة السر لخادم الـSMTP.",
   "admin.config.smtp.host": "المُضيف",
   "admin.config.smtp.host.description": "مضيف خادم الـSMTP",
   "admin.config.smtp.port": "المنفذ",
   "admin.config.smtp.port.description": "منفذ خادم الـSMTP",
   "admin.config.smtp.email": "البريد الإلكتروني",
-  "admin.config.smtp.email.description":
-    "عنوان البريد الإلكتروني الذي يتم إرسال الرسائل منه",
+  "admin.config.smtp.email.description": "عنوان البريد الإلكتروني الذي يتم إرسال الرسائل منه",
   "admin.config.smtp.username": "اسم المستخدم",
   "admin.config.smtp.username.description": "اسم المستخدم لخادم الـSMTP",
   "admin.config.smtp.password": "كلمة السر",
@@ -650,144 +524,93 @@ export default {
   "admin.config.smtp.button.test": "إرسال رسالة بريد تجريبية",
   "admin.config.smtp.test-email.success": "تم إرسال البريد الإلكتروني بنجاح",
   "admin.config.smtp.test-email.error.title": "فشل في إرسال البريد الإلكتروني",
-  "admin.config.smtp.test-email.error.description":
-    "أثناء إرسال بريد الاختبار، حدث الخطأ التالي:",
+  "admin.config.smtp.test-email.error.description": "أثناء إرسال بريد الاختبار، حدث الخطأ التالي:",
   "admin.config.smtp.test-email.save.title": "حفظ التكوين",
-  "admin.config.smtp.test-email.save.description":
-    "للمتابعة، تحتاج إلى حفظ التكوين أولاً. هل تريد حفظ التكوين وإرسال بريد الاختبار؟",
+  "admin.config.smtp.test-email.save.description": "للمتابعة، تحتاج إلى حفظ التكوين أولاً. هل تريد حفظ التكوين وإرسال بريد الاختبار؟",
   "admin.config.smtp.test-email.save.confirm": "حفظ وإرسال",
-  "admin.config.smtp.allow-unauthorized-certificates":
-    "الوثوق بشهادات خادم SMTP غير المعتمدة",
-  "admin.config.smtp.allow-unauthorized-certificates.description":
-    "قم بتعيين هذا على 'صحيح' فقط إذا كنت بحاجة إلى الوثوق بالشهادات الموقعة ذاتيًا.",
+  "admin.config.smtp.allow-unauthorized-certificates": "الوثوق بشهادات خادم SMTP غير المعتمدة",
+  "admin.config.smtp.allow-unauthorized-certificates.description": "قم بتعيين هذا على 'صحيح' فقط إذا كنت بحاجة إلى الوثوق بالشهادات الموقعة ذاتيًا.",
   "admin.config.oauth.allow-registration": "السماح بتسجيل الحسابات الجديدة",
-  "admin.config.oauth.allow-registration.description":
-    "السماح للمستخدمين بالدخول بواسطة حساباتهم الاجتماعية",
+  "admin.config.oauth.allow-registration.description": "السماح للمستخدمين بالدخول بواسطة حساباتهم الاجتماعية",
   "admin.config.oauth.ignore-totp": "تجاهل TOTP",
-  "admin.config.oauth.ignore-totp.description":
-    "تجاهل TOTP إذا دخل المستخدم بحسابه الاجتماعي",
-  "admin.config.oauth.disable-password":
-    "تعطيل تسجيل الدخول باستخدام كلمة السر",
-  "admin.config.oauth.disable-password.description":
-    "ما إذا كان سيتم تعطيل تسجيل الدخول بكلمة المرور\nتأكد من تكوين موفر OAuth بشكل صحيح قبل تنشيط هذا التكوين لتجنب منعك من الوصول.",
+  "admin.config.oauth.ignore-totp.description": "تجاهل TOTP إذا دخل المستخدم بحسابه الاجتماعي",
+  "admin.config.oauth.disable-password": "تعطيل تسجيل الدخول باستخدام كلمة السر",
+  "admin.config.oauth.disable-password.description": "ما إذا كان سيتم تعطيل تسجيل الدخول بكلمة المرور\nتأكد من تكوين موفر OAuth بشكل صحيح قبل تنشيط هذا التكوين لتجنب منعك من الوصول.",
   "admin.config.oauth.github-enabled": "GitHub",
-  "admin.config.oauth.github-enabled.description":
-    "تفعيل خيار الدخول بحساب GitHub",
+  "admin.config.oauth.github-enabled.description": "تفعيل خيار الدخول بحساب GitHub",
   "admin.config.oauth.github-client-id": "GitHub Client ID",
-  "admin.config.oauth.github-client-id.description":
-    "معرف العميل لتطبيق GitHub OAuth",
+  "admin.config.oauth.github-client-id.description": "معرف العميل لتطبيق GitHub OAuth",
   "admin.config.oauth.github-client-secret": "الرمز السرّي لـGitHub Client",
-  "admin.config.oauth.github-client-secret.description":
-    "الرّمز السرّي للعميل لتطبيق GitHub OAuth",
+  "admin.config.oauth.github-client-secret.description": "الرّمز السرّي للعميل لتطبيق GitHub OAuth",
   "admin.config.oauth.google-enabled": "Google",
-  "admin.config.oauth.google-enabled.description":
-    "تفعيل خيار الدخول بحساب Google",
+  "admin.config.oauth.google-enabled.description": "تفعيل خيار الدخول بحساب Google",
   "admin.config.oauth.google-client-id": "Google Client ID",
-  "admin.config.oauth.google-client-id.description":
-    "معرف العميل لتطبيق Google OAuth",
+  "admin.config.oauth.google-client-id.description": "معرف العميل لتطبيق Google OAuth",
   "admin.config.oauth.google-client-secret": "الرمز السرّي لـ Google Client",
-  "admin.config.oauth.google-client-secret.description":
-    "الرّمز السرّي للعميل لتطبيق Google OAuth",
+  "admin.config.oauth.google-client-secret.description": "الرّمز السرّي للعميل لتطبيق Google OAuth",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
-  "admin.config.oauth.microsoft-enabled.description":
-    "تفعيل خيار الدخول بحساب Microsoft",
+  "admin.config.oauth.microsoft-enabled.description": "تفعيل خيار الدخول بحساب Microsoft",
   "admin.config.oauth.microsoft-tenant": "Microsoft Tenant",
-  "admin.config.oauth.microsoft-tenant.description":
-    "معرف Tenant لتطبيق مايكروسوفت OAuth\nالشائع: يمكن للمستخدمين الذين لديهم حساب مايكروسوفت شخصي وحساب عمل أو مدرسة من معرف Microsoft Entra أن يسجلوا الدخول إلى التطبيق. بالنسبة المؤسسات: يمكن فقط للمستخدمين الذين لديهم حسابات عمل أو مدرسة من Microsoft Entra ID تسجيل الدخول إلى التطبيق.\nالمستهلكين: يمكن فقط للمستخدمين الذين لديهم حساب مايكروسوفت الشخصي تسجيل الدخول إلى التطبيق.\nاسم نطاق مستأجر Microsoft Entra أو معرف المستأجر بتنسيق GUID: يمكن فقط للمستخدمين من مستأجر Microsoft Entra محدد (أعضاء الإدارة الذين لديهم حساب عمل أو مدرسة أو ضيوف الإدارة الذين لديهم حساب شخصي لمايكروسوفت) تسجيل الدخول إلى التطبيق.",
+  "admin.config.oauth.microsoft-tenant.description": "معرف Tenant لتطبيق مايكروسوفت OAuth\nالشائع: يمكن للمستخدمين الذين لديهم حساب مايكروسوفت شخصي وحساب عمل أو مدرسة من معرف Microsoft Entra أن يسجلوا الدخول إلى التطبيق. بالنسبة المؤسسات: يمكن فقط للمستخدمين الذين لديهم حسابات عمل أو مدرسة من Microsoft Entra ID تسجيل الدخول إلى التطبيق.\nالمستهلكين: يمكن فقط للمستخدمين الذين لديهم حساب مايكروسوفت الشخصي تسجيل الدخول إلى التطبيق.\nاسم نطاق مستأجر Microsoft Entra أو معرف المستأجر بتنسيق GUID: يمكن فقط للمستخدمين من مستأجر Microsoft Entra محدد (أعضاء الإدارة الذين لديهم حساب عمل أو مدرسة أو ضيوف الإدارة الذين لديهم حساب شخصي لمايكروسوفت) تسجيل الدخول إلى التطبيق.",
   "admin.config.oauth.microsoft-client-id": "Microsoft Client ID",
-  "admin.config.oauth.microsoft-client-id.description":
-    "معرف العميل لتطبيق Microsoft OAuth",
-  "admin.config.oauth.microsoft-client-secret":
-    "الرمز السرّي لـMicrosoft Client",
-  "admin.config.oauth.microsoft-client-secret.description":
-    "الرّمز السرّي للعميل لتطبيق Microsoft OAuth",
+  "admin.config.oauth.microsoft-client-id.description": "معرف العميل لتطبيق Microsoft OAuth",
+  "admin.config.oauth.microsoft-client-secret": "الرمز السرّي لـMicrosoft Client",
+  "admin.config.oauth.microsoft-client-secret.description": "الرّمز السرّي للعميل لتطبيق Microsoft OAuth",
   "admin.config.oauth.discord-enabled": "Discord",
-  "admin.config.oauth.discord-enabled.description":
-    "تفعيل خيار الدخول بحساب Discord",
+  "admin.config.oauth.discord-enabled.description": "تفعيل خيار الدخول بحساب Discord",
   "admin.config.oauth.discord-limited-users": "مستخدمو Discord المحدودون",
-  "admin.config.oauth.discord-limited-users.description":
-    "تقييد تسجيل الدخول لمستخدمين محددين بواسطة معرّف Discord الخاص بهم. اتركه فارغًا للتعطيل.",
+  "admin.config.oauth.discord-limited-users.description": "تقييد تسجيل الدخول لمستخدمين محددين بواسطة معرّف Discord الخاص بهم. اتركه فارغًا للتعطيل.",
   "admin.config.oauth.discord-limited-guild": "مُعرِّف خادم Discord المحدود",
-  "admin.config.oauth.discord-limited-guild.description":
-    "حصر تسجيل الدخول على المستخدمين الموجودين في خادم محدّد. اترك هذا الخيار فارغًا لتعطيله.",
+  "admin.config.oauth.discord-limited-guild.description": "حصر تسجيل الدخول على المستخدمين الموجودين في خادم محدّد. اترك هذا الخيار فارغًا لتعطيله.",
   "admin.config.oauth.discord-client-id": "Discord Client ID",
-  "admin.config.oauth.discord-client-id.description":
-    "معرف العميل لتطبيق Discord OAuth",
+  "admin.config.oauth.discord-client-id.description": "معرف العميل لتطبيق Discord OAuth",
   "admin.config.oauth.discord-client-secret": "الرمز السرّي لـDiscord Client",
-  "admin.config.oauth.discord-client-secret.description":
-    "الرّمز السرّي للعميل لتطبيق Discord OAuth",
+  "admin.config.oauth.discord-client-secret.description": "الرّمز السرّي للعميل لتطبيق Discord OAuth",
   "admin.config.oauth.oidc-enabled": "OpenID Connect",
-  "admin.config.oauth.oidc-enabled.description":
-    "تفعيل الدخول باستخدام OpenID Connect",
+  "admin.config.oauth.oidc-enabled.description": "تفعيل الدخول باستخدام OpenID Connect",
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect Discovery URI",
-  "admin.config.oauth.oidc-discovery-uri.description":
-    "رابط الاستكشاف لتطبيق OpenID Connect OAuth",
+  "admin.config.oauth.oidc-discovery-uri.description": "رابط الاستكشاف لتطبيق OpenID Connect OAuth",
   "admin.config.oauth.oidc-sign-out": "تسجيل الخروج من OpenID Connect",
-  "admin.config.oauth.oidc-sign-out.description":
-    "ما إذا كان زر 'تسجيل الخروج' سيسجل الخروج من موفر OpenID Connect",
+  "admin.config.oauth.oidc-sign-out.description": "ما إذا كان زر 'تسجيل الخروج' سيسجل الخروج من موفر OpenID Connect",
   "admin.config.oauth.oidc-scope": "نطاق OpenID Connect",
-  "admin.config.oauth.oidc-scope.description":
-    "النطاقات التي يجب طلبها من موفر OpenID Connect.",
+  "admin.config.oauth.oidc-scope.description": "النطاقات التي يجب طلبها من موفر OpenID Connect.",
   "admin.config.oauth.oidc-username-claim": "مطالبة اسم مستخدم OpenID Connect",
-  "admin.config.oauth.oidc-username-claim.description":
-    "طلب اسم المستخدم في رمز معرف OpenID Connect. إذا كنت لا تعرف معنى هذا الإعداد، اتركه فارغًا.",
-  "admin.config.oauth.oidc-role-path":
-    "المسار إلى الأدوار في رمز OpenID Connect",
-  "admin.config.oauth.oidc-role-path.description":
-    "يجب أن يكون مسار JMES صالحًا يشير إلى مصفوفة من الأدوار. يوصى بإدارة حقوق الوصول باستخدام أدوار OpenID Connect فقط في حالة عدم تكوين موفر هوية آخر وتعطيل تسجيل الدخول بكلمة المرور. اتركه فارغًا إذا كنت لا تعرف ما هو هذا التكوين." +
-    "Managing access rights using OpenID Connect roles is only recommended if no other identity provider is configured and password login is disabled. " +
-    "Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-general-access":
-    "دور OpenID Connect للوصول العام",
-  "admin.config.oauth.oidc-role-general-access.description":
-    "الدور المطلوب للوصول العام. يجب أن يكون موجودًا في أدوار المستخدم ليتمكن من تسجيل الدخول. اتركه فارغًا إذا كنت لا تعرف ما هو هذا التكوين." +
-    "Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-admin-access":
-    "دور OpenID Connect لوصول المسؤول",
-  "admin.config.oauth.oidc-role-admin-access.description":
-    "الدور المطلوب للوصول الإداري. يجب أن يكون موجودًا في أدوار المستخدم للوصول إلى لوحة الإدارة. اتركه فارغًا إذا كنت لا تعرف ما هو هذا التكوين." +
-    "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-username-claim.description": "طلب اسم المستخدم في رمز معرف OpenID Connect. إذا كنت لا تعرف معنى هذا الإعداد، اتركه فارغًا.",
+  "admin.config.oauth.oidc-role-path": "المسار إلى الأدوار في رمز OpenID Connect",
+  "admin.config.oauth.oidc-role-path.description": "يجب أن يكون مسار JMES صالحًا يشير إلى مصفوفة من الأدوار. يوصى بإدارة حقوق الوصول باستخدام أدوار OpenID Connect فقط في حالة عدم تكوين موفر هوية آخر وتعطيل تسجيل الدخول بكلمة المرور. اتركه فارغًا إذا كنت لا تعرف ما هو هذا التكوين." + "Managing access rights using OpenID Connect roles is only recommended if no other identity provider is configured and password login is disabled. " + "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-general-access": "دور OpenID Connect للوصول العام",
+  "admin.config.oauth.oidc-role-general-access.description": "الدور المطلوب للوصول العام. يجب أن يكون موجودًا في أدوار المستخدم ليتمكن من تسجيل الدخول. اتركه فارغًا إذا كنت لا تعرف ما هو هذا التكوين." + "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-admin-access": "دور OpenID Connect لوصول المسؤول",
+  "admin.config.oauth.oidc-role-admin-access.description": "الدور المطلوب للوصول الإداري. يجب أن يكون موجودًا في أدوار المستخدم للوصول إلى لوحة الإدارة. اتركه فارغًا إذا كنت لا تعرف ما هو هذا التكوين." + "Leave it blank if you don't know what this config is.",
   "admin.config.oauth.oidc-client-id": "OpenID Connect Client ID",
-  "admin.config.oauth.oidc-client-id.description":
-    "معرف العميل لتطبيق OpenID Connect OAuth",
+  "admin.config.oauth.oidc-client-id.description": "معرف العميل لتطبيق OpenID Connect OAuth",
   "admin.config.oauth.oidc-client-secret": "OpenID Connect Client secret",
-  "admin.config.oauth.oidc-client-secret.description":
-    "الرّمز السرّي للعميل لتطبيق OpenID Connect OAuth",
+  "admin.config.oauth.oidc-client-secret.description": "الرّمز السرّي للعميل لتطبيق OpenID Connect OAuth",
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "تمكين LDAP",
-  "admin.config.ldap.enabled.description":
-    "استخدام مصادقة LDAP لتسجيل دخول المستخدمين",
+  "admin.config.ldap.enabled.description": "استخدام مصادقة LDAP لتسجيل دخول المستخدمين",
   "admin.config.ldap.url": "رابط الخادم URL",
   "admin.config.ldap.url.description": "رابط URL الخاص بخادم LDAP",
   "admin.config.ldap.bind-dn": "Bind DN",
-  "admin.config.ldap.bind-dn.description":
-    "المستخدم الافتراضي المستخدم لإجراء بحث المستخدمين",
+  "admin.config.ldap.bind-dn.description": "المستخدم الافتراضي المستخدم لإجراء بحث المستخدمين",
   "admin.config.ldap.bind-password": "كلمة مرور الربط",
-  "admin.config.ldap.bind-password.description":
-    "كلمة المرور المستخدمة لإجراء بحث المستخدمين",
+  "admin.config.ldap.bind-password.description": "كلمة المرور المستخدمة لإجراء بحث المستخدمين",
   "admin.config.ldap.search-base": "قاعدة المستخدمين",
-  "admin.config.ldap.search-base.description":
-    "الموقع الأساسي حيث سيتم إجراء بحث المستخدمين",
+  "admin.config.ldap.search-base.description": "الموقع الأساسي حيث سيتم إجراء بحث المستخدمين",
   "admin.config.ldap.search-query": "استعلام المستخدم",
-  "admin.config.ldap.search-query.description":
-    "سيتم استخدام استعلام المستخدم للبحث في 'قاعدة المستخدمين' عن مستخدم LDAP. يمكن استخدام %username% كعنصر نائب للإدخال المقدم من المستخدم.",
+  "admin.config.ldap.search-query.description": "سيتم استخدام استعلام المستخدم للبحث في 'قاعدة المستخدمين' عن مستخدم LDAP. يمكن استخدام %username% كعنصر نائب للإدخال المقدم من المستخدم.",
   "admin.config.ldap.admin-groups": "مجموعة المسؤولين",
-  "admin.config.ldap.admin-groups.description":
-    "المجموعة المطلوبة للوصول الإداري.",
+  "admin.config.ldap.admin-groups.description": "المجموعة المطلوبة للوصول الإداري.",
   "admin.config.ldap.field-name-member-of": "اسم سمة مجموعات المستخدمين",
-  "admin.config.ldap.field-name-member-of.description":
-    "اسم سمة LDAP للمجموعات التي يكون المستخدم عضوًا فيها. يتم استخدام هذا عند التحقق من مجموعة المسؤولين.",
+  "admin.config.ldap.field-name-member-of.description": "اسم سمة LDAP للمجموعات التي يكون المستخدم عضوًا فيها. يتم استخدام هذا عند التحقق من مجموعة المسؤولين.",
   "admin.config.ldap.field-name-email": "اسم سمة البريد الإلكتروني للمستخدم",
-  "admin.config.ldap.field-name-email.description":
-    "اسم سمة LDAP للبريد الإلكتروني للمستخدم.",
+  "admin.config.ldap.field-name-email.description": "اسم سمة LDAP للبريد الإلكتروني للمستخدم.",
   "admin.config.notify.success": "تم تحديث التكوين بنجاح.",
-  "admin.config.notify.logo-success":
-    "تم تحديث الشعار بنجاح. قد يستغرق التحديث على الموقع بضع دقائق.",
+  "admin.config.notify.logo-success": "تم تحديث الشعار بنجاح. قد يستغرق التحديث على الموقع بضع دقائق.",
   "admin.config.notify.no-changes": "لا توجد تغييرات للحفظ.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "مُمكَّن",
-  "admin.config.s3.enabled.description":
-    "ما إذا كان سيتم استخدام S3 لتخزين الملفات المشتركة بدلاً من نظام الملفات المحلي. تحذير: إذا كان ClamAV نشطًا، فسيتم تنزيل الملفات مؤقتًا من S3 لفحصها.",
+  "admin.config.s3.enabled.description": "ما إذا كان سيتم استخدام S3 لتخزين الملفات المشتركة بدلاً من نظام الملفات المحلي. تحذير: إذا كان ClamAV نشطًا، فسيتم تنزيل الملفات مؤقتًا من S3 لفحصها.",
   "admin.config.s3.endpoint": "نقطة النهاية",
   "admin.config.s3.endpoint.description": "عنوان URL الخاص بحاوية S3.",
   "admin.config.s3.region": "المنطقة",
@@ -795,35 +618,25 @@ export default {
   "admin.config.s3.bucket-name": "اسم الحاوية",
   "admin.config.s3.bucket-name.description": "اسم حاوية S3.",
   "admin.config.s3.bucket-path": "المسار",
-  "admin.config.s3.bucket-path.description":
-    "المسار الافتراضي الذي يجب استخدامه لتخزين الملفات في حاوية S3.",
+  "admin.config.s3.bucket-path.description": "المسار الافتراضي الذي يجب استخدامه لتخزين الملفات في حاوية S3.",
   "admin.config.s3.key": "المفتاح",
-  "admin.config.s3.key.description":
-    "المفتاح الذي يتيح لك الوصول إلى حاوية S3.",
+  "admin.config.s3.key.description": "المفتاح الذي يتيح لك الوصول إلى حاوية S3.",
   "admin.config.s3.secret": "السر",
-  "admin.config.s3.secret.description":
-    "السر الذي يتيح لك الوصول إلى حاوية S3.",
+  "admin.config.s3.secret.description": "السر الذي يتيح لك الوصول إلى حاوية S3.",
   "admin.config.s3.use-checksum": "استخدام المجموع التحققي",
-  "admin.config.s3.use-checksum.description":
-    "قم بإيقاف التشغيل للواجهات الخلفية التي لا تدعم المجموع التحققي (مثل B2).",
-  "admin.config.s3.docs-link":
-    "يجب إعادة تكوين CORS على الحاوية الخاصة بك، راجع {wikiLink} للحصول على التفاصيل.",
+  "admin.config.s3.use-checksum.description": "قم بإيقاف التشغيل للواجهات الخلفية التي لا تدعم المجموع التحققي (مثل B2).",
+  "admin.config.s3.docs-link": "يجب إعادة تكوين CORS على الحاوية الخاصة بك، راجع {wikiLink} للحصول على التفاصيل.",
   "admin.config.category.legal": "قانوني",
   "admin.config.legal.enabled": "تمكين الإشعارات القانونية",
-  "admin.config.legal.enabled.description":
-    "ما إذا كان سيتم إظهار رابط لبيانات النشر والمسؤولية القانونية وسياسة الخصوصية في التذييل.",
+  "admin.config.legal.enabled.description": "ما إذا كان سيتم إظهار رابط لبيانات النشر والمسؤولية القانونية وسياسة الخصوصية في التذييل.",
   "admin.config.legal.imprint-text": "نص بيانات النشر والمسؤولية القانونية",
-  "admin.config.legal.imprint-text.description":
-    "النص الذي يجب إظهاره في بيانات النشر. يدعم Markdown. اتركه فارغًا للربط بصفحة بيانات نشر خارجية.",
+  "admin.config.legal.imprint-text.description": "النص الذي يجب إظهاره في بيانات النشر. يدعم Markdown. اتركه فارغًا للربط بصفحة بيانات نشر خارجية.",
   "admin.config.legal.imprint-url": "رابط بيانات النشر URL",
-  "admin.config.legal.imprint-url.description":
-    "إذا كان لديك بالفعل صفحة بيانات نشر، يمكنك ربطها هنا بدلاً من استخدام حقل النص.",
+  "admin.config.legal.imprint-url.description": "إذا كان لديك بالفعل صفحة بيانات نشر، يمكنك ربطها هنا بدلاً من استخدام حقل النص.",
   "admin.config.legal.privacy-policy-text": "نص سياسة الخصوصية",
-  "admin.config.legal.privacy-policy-text.description":
-    "النص الذي يجب إظهاره في سياسة الخصوصية. يدعم Markdown. اتركه فارغًا للربط بصفحة سياسة خصوصية خارجية.",
+  "admin.config.legal.privacy-policy-text.description": "النص الذي يجب إظهاره في سياسة الخصوصية. يدعم Markdown. اتركه فارغًا للربط بصفحة سياسة خصوصية خارجية.",
   "admin.config.legal.privacy-policy-url": "رابط سياسة الخصوصية URL",
-  "admin.config.legal.privacy-policy-url.description":
-    "إذا كان لديك بالفعل صفحة سياسة خصوصية، يمكنك ربطها هنا بدلاً من استخدام حقل النص.",
+  "admin.config.legal.privacy-policy-url.description": "إذا كان لديك بالفعل صفحة سياسة خصوصية، يمكنك ربطها هنا بدلاً من استخدام حقل النص.",
   // 404
   "404.description": "هذه الصفحة غير موجودة.",
   "404.button.home": "أعدني للصفحة الرئيسية",
@@ -832,25 +645,18 @@ export default {
   "error.description": "عذرًا!",
   "error.button.back": "العودة",
   "error.msg.default": "حَدث خطأ ما.",
-  "error.msg.access_denied":
-    "قمت بإلغاء عملية المصادقة، الرجاء المحاولة مرة أخرى.",
-  "error.msg.expired_token":
-    "استغرقت عملية المصادقة وقتًا طويلًا، يرجى المحاولة مرة أخرى.",
+  "error.msg.access_denied": "قمت بإلغاء عملية المصادقة، الرجاء المحاولة مرة أخرى.",
+  "error.msg.expired_token": "استغرقت عملية المصادقة وقتًا طويلًا، يرجى المحاولة مرة أخرى.",
   "error.msg.invalid_token": "خطأ داخلي",
   "error.msg.no_user": "المستخدم المرتبط بهذا الحساب {0} غير موجود.",
-  "error.msg.no_email":
-    "لا يمكن الحصول على عنوان البريد الإلكتروني من هذا الحساب {0}.",
+  "error.msg.no_email": "لا يمكن الحصول على عنوان البريد الإلكتروني من هذا الحساب {0}.",
   "error.msg.already_linked": "حساب {0} هذا مرتبط بالفعل بحساب آخر.",
   "error.msg.not_linked": "حساب {0} هذا غير مرتبط بأي حساب حتى الآن.",
-  "error.msg.email_already_exists":
-    "يوجد حساب بالفعل بعنوان البريد الإلكتروني هذا. يرجى تسجيل الدخول باستخدام كلمة المرور الخاصة بك وربط حساب {0} الخاص بك يدويًا في صفحة حسابي.",
-  "error.msg.email_not_verified":
-    "عنوان بريدك الإلكتروني في حساب {0} هذا غير مؤكد. يرجى تأكيد بريدك الإلكتروني مع موفر الهوية الخاص بك قبل تسجيل الدخول.",
-  "error.msg.unverified_account":
-    "لم يتم التحقق من حساب {0} هذا، يرجى المحاولة مرة أخرى بعد التحقق.",
+  "error.msg.email_already_exists": "يوجد حساب بالفعل بعنوان البريد الإلكتروني هذا. يرجى تسجيل الدخول باستخدام كلمة المرور الخاصة بك وربط حساب {0} الخاص بك يدويًا في صفحة حسابي.",
+  "error.msg.email_not_verified": "عنوان بريدك الإلكتروني في حساب {0} هذا غير مؤكد. يرجى تأكيد بريدك الإلكتروني مع موفر الهوية الخاص بك قبل تسجيل الدخول.",
+  "error.msg.unverified_account": "لم يتم التحقق من حساب {0} هذا، يرجى المحاولة مرة أخرى بعد التحقق.",
   "error.msg.user_not_allowed": "غير مسموح لك بتسجيل الدخول.",
-  "error.msg.cannot_get_user_info":
-    "تعذر الحصول على معلومات المستخدم الخاصة بك من حساب {0} هذا.",
+  "error.msg.cannot_get_user_info": "تعذر الحصول على معلومات المستخدم الخاصة بك من حساب {0} هذا.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
@@ -895,20 +701,14 @@ export default {
   "common.error.exact-length": "يجب أن يكون بالضبط {length} حرفًا",
   "common.error.invalid-number": "يجب أن يكون رقماً",
   "common.error.field-required": "هذا الحقل مطلوب",
-  "common.error.password.lowercase":
-    "يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل",
-  "common.error.password.uppercase":
-    "يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل",
-  "common.error.password.number":
-    "يجب أن تحتوي كلمة المرور على رقم واحد على الأقل",
-  "common.error.password.special":
-    "يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل",
+  "common.error.password.lowercase": "يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل",
+  "common.error.password.uppercase": "يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل",
+  "common.error.password.number": "يجب أن تحتوي كلمة المرور على رقم واحد على الأقل",
+  "common.error.password.special": "يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل",
   "admin.notice.modal.headerTag": "إجراء إداري مطلوب",
-  "admin.notice.modal.defaultCheckboxLabel":
-    "أؤكد أنني قرأت هذا الإشعار وأفهم التغييرات الجذرية.",
+  "admin.notice.modal.defaultCheckboxLabel": "أؤكد أنني قرأت هذا الإشعار وأفهم التغييرات الجذرية.",
   "admin.notice.modal.button.acknowledge": "إقرار وتجاهل",
   "admin.notice.modal.button.acknowledging": "جاري الإقرار...",
   "admin.notice.modal.docsLink": "عرض الوثائق",
-  "admin.notice.modal.globalNoticeFooter":
-    "ملاحظة: بمجرد الإقرار، سيتم إغلاق هذا الإشعار نهائيًا لجميع المسؤولين عبر جميع الأجهزة.",
+  "admin.notice.modal.globalNoticeFooter": "ملاحظة: بمجرد الإقرار، سيتم إغلاق هذا الإشعار نهائيًا لجميع المسؤولين عبر جميع الأجهزة.",
 };

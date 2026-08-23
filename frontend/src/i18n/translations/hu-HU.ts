@@ -14,17 +14,13 @@ export default {
 
   // /
   "home.title": "<h>Saját üzemeltetésű</h> fájl megosztó platform.",
-  "home.description":
-    "Valóban hozzáférhetővé akarja tenni fájljait a WeTransfer és más hasonló harmadik felek számára?",
+  "home.description": "Valóban hozzáférhetővé akarja tenni fájljait a WeTransfer és más hasonló harmadik felek számára?",
   "home.bullet.a.name": "Saját üzemeltetés",
-  "home.bullet.a.description":
-    "A Pingvin Share megosztót saját gépéről futtathatja.",
+  "home.bullet.a.description": "A Pingvin Share megosztót saját gépéről futtathatja.",
   "home.bullet.b.name": "Adatvédelem",
-  "home.bullet.b.description":
-    "A te fájljaid a tiéd, és harmadik felek soha nem férnek hozzá.",
+  "home.bullet.b.description": "A te fájljaid a tiéd, és harmadik felek soha nem férnek hozzá.",
   "home.bullet.c.name": "Nincs bosszantó fájl méretkorlát",
-  "home.bullet.c.description":
-    "Akkora fájlokat oszt meg, amekkorákat csak akar. Határt csak a lemezterület szab.",
+  "home.bullet.c.description": "Akkora fájlokat oszt meg, amekkorákat csak akar. Határt csak a lemezterület szab.",
   "home.button.start": "Nosza, kezdjük",
   "home.button.source": "Forráskód",
   // END /
@@ -34,14 +30,12 @@ export default {
   "signin.description": "Nincsen még fiókja?",
   "signin.button.signup": "Feliratkozás",
   "signin.input.email-or-username": "Email vagy felhasználónév",
-  "signin.input.email-or-username.placeholder":
-    "Az Ön emailcíme vagy felhasználóneve",
+  "signin.input.email-or-username.placeholder": "Az Ön emailcíme vagy felhasználóneve",
   "signin.input.password": "Jelszó",
   "signin.input.password.placeholder": "Az Ön jelszava",
   "signin.button.submit": "Bejelentkezés",
   "signIn.notify.totp-required.title": "Kétfaktoros hitelesítésre van szükség",
-  "signIn.notify.totp-required.description":
-    "Adja meg a másik úton kapott kódját",
+  "signIn.notify.totp-required.description": "Adja meg a másik úton kapott kódját",
   "signIn.oauth.or": "VAGY",
   "signIn.oauth.signInWith": "Bejelentkezés a következővel",
   "signIn.oauth.github": "GitHub",
@@ -66,13 +60,10 @@ export default {
   "verify.error": "Az ellenőrző link érvénytelen vagy lejárt.",
   "verify.button.signin": "Bejelentkezési oldal megnyitása",
   "verify.info.title": "Fiók hitelesítése",
-  "verify.info.description":
-    "E-mail-cím hitelesítés engedélyezve. Elküldtünk egy ellenőrző linket az e-mail címére. Kérjük, kattintson a hivatkozásra fiókja aktiválásához.",
-  "verify.info.note":
-    "Amennyiben nem érkezik meg az e-mail néhány percen belül, ellenőrizze a levélszemét mappát.",
+  "verify.info.description": "E-mail-cím hitelesítés engedélyezve. Elküldtünk egy ellenőrző linket az e-mail címére. Kérjük, kattintson a hivatkozásra fiókja aktiválásához.",
+  "verify.info.note": "Amennyiben nem érkezik meg az e-mail néhány percen belül, ellenőrizze a levélszemét mappát.",
   "verify.info.resend.button": "Megerősítő e-mail újraküldése",
-  "verify.info.resend.success":
-    "A hitelesítő e-mail sikeresen újraküldésre került.",
+  "verify.info.resend.success": "A hitelesítő e-mail sikeresen újraküldésre került.",
   "verify.info.resend.error": "Nem sikerült újraküldeni a hitelesítő e-mailt.",
   // END /auth/signup
 
@@ -83,16 +74,13 @@ export default {
 
   // /auth/reset-password
   "resetPassword.title": "Elfelejtette jelszavát?",
-  "resetPassword.description":
-    "Adja meg emailcímét a jelszó alaphelyzetbe állításához.",
-  "resetPassword.notify.success":
-    "A jelszó visszaállítására szolgáló linket tartalmazó üzenetet küldtünk, abban az esetben, ha az e-mail létezik.",
+  "resetPassword.description": "Adja meg emailcímét a jelszó alaphelyzetbe állításához.",
+  "resetPassword.notify.success": "A jelszó visszaállítására szolgáló linket tartalmazó üzenetet küldtünk, abban az esetben, ha az e-mail létezik.",
   "resetPassword.button.back": "Vissza a bejelentkezési oldalra",
   "resetPassword.text.resetPassword": "Jelszó alaphelyzetbe állítása",
   "resetPassword.text.enterNewPassword": "Adja meg új jelszavát",
   "resetPassword.input.password": "Új jelszó",
-  "resetPassword.notify.passwordReset":
-    "A jelszavát sikeresen helyreállította.",
+  "resetPassword.notify.passwordReset": "A jelszavát sikeresen helyreállította.",
   // /account
   "account.title": "Fiókom",
   "account.card.info.title": "Fiókinformáció",
@@ -102,8 +90,7 @@ export default {
   "account.card.password.title": "Jelszó",
   "account.card.password.old": "Régi jelszó",
   "account.card.password.new": "Új jelszó",
-  "account.card.password.noPasswordSet":
-    "Még nincs jelszava. Ha email és jelszó kombinációval kíván bejelentkezni, létre kell hoznia egy jelszót.",
+  "account.card.password.noPasswordSet": "Még nincs jelszava. Ha email és jelszó kombinációval kíván bejelentkezni, létre kell hoznia egy jelszót.",
   "account.notify.password.success": "A jelszó sikeresen frissítésre került",
   "account.card.oauth.title": "Közösségi bejelentkezés",
   "account.card.oauth.github": "GitHub",
@@ -115,14 +102,11 @@ export default {
   "account.card.oauth.unlink": "Leválasztás",
   "account.card.oauth.unlinked": "Leválasztva",
   "account.modal.unlink.title": "Fiók leválasztása",
-  "account.modal.unlink.description":
-    "A közösségi hálón keresztül csatolt fiók leválasztásával elveszítheti hozzáférését a fiókhoz, ha a név és jelszó kombinációra nem emlékszik",
+  "account.modal.unlink.description": "A közösségi hálón keresztül csatolt fiók leválasztásával elveszítheti hozzáférését a fiókhoz, ha a név és jelszó kombinációra nem emlékszik",
   "account.notify.oauth.unlinked.success": "Leválasztás sikeres",
   "account.card.security.title": "Biztonság",
-  "account.card.security.totp.enable.description":
-    "Adja meg az aktuális jelszavát a TOTP engedélyezéséhez",
-  "account.card.security.totp.disable.description":
-    "Adja meg aktuális jelszavát a TOTP letiltásához",
+  "account.card.security.totp.enable.description": "Adja meg az aktuális jelszavát a TOTP engedélyezéséhez",
+  "account.card.security.totp.disable.description": "Adja meg aktuális jelszavát a TOTP letiltásához",
   "account.card.security.totp.button.start": "Kezdés",
   "account.modal.totp.title": "TOTP engedélyezése",
   "account.modal.totp.step1": "1. lépés: Hitelesítő megadása",
@@ -135,8 +119,7 @@ export default {
   "account.notify.totp.disable": "TOTP sikeresen letiltva",
   "account.notify.totp.enable": "TOTP sikeresen engedélyezve",
   "account.card.language.title": "Nyelv",
-  "account.card.language.description":
-    "A projekt nyelvi verzióit a közösség fordítja. Egyes nyelvi verziók nem feltétlenül teljesek.",
+  "account.card.language.description": "A projekt nyelvi verzióit a közösség fordítja. Egyes nyelvi verziók nem feltétlenül teljesek.",
   "account.card.color.title": "Színséma",
   // ThemeSwitcher.tsx
   "account.theme.dark": "Sötét",
@@ -144,8 +127,7 @@ export default {
   "account.theme.system": "Rendszer",
   "account.button.delete": "Fiók törlése",
   "account.modal.delete.title": "Fiók törlése",
-  "account.modal.delete.description":
-    "Valóban törölni kívánja a fiókot és vele az összes meglévő aktív megosztást?",
+  "account.modal.delete.description": "Valóban törölni kívánja a fiókot és vele az összes meglévő aktív megosztást?",
   // END /account
 
   // /account/shares
@@ -164,34 +146,29 @@ export default {
   "account.shares.table.size": "Méret",
   "account.shares.table.password-protected": "Jelszóval védett",
   "account.shares.table.recipients": "Címzettek",
-  "account.shares.table.restricted-to-recipients":
-    "Csak a címzettekre korlátozva",
+  "account.shares.table.restricted-to-recipients": "Csak a címzettekre korlátozva",
   "account.shares.table.shared-with-recipients": "Megosztva a címzettekkel",
   "account.shares.table.visitor-count": "{count} a {max}-ból",
   "account.shares.table.expiry-never": "Soha",
   "account.shares.modal.share-informations": "Megosztás adatai",
   "account.shares.modal.share-link": "Hivatkozás",
-  "account.shares.modal.edit.password.keep":
-    "Hagyja üresen a jelenlegi jelszó megtartásához",
+  "account.shares.modal.edit.password.keep": "Hagyja üresen a jelenlegi jelszó megtartásához",
   "account.shares.modal.edit.password.remove": "Jelszóvédelem eltávolítása",
   "account.shares.modal.delete.title": "Megosztás törlése: {share}",
-  "account.shares.modal.delete.description":
-    "Biztos abban, hogy törölni kívánja ezt a megosztást?",
+  "account.shares.modal.delete.description": "Biztos abban, hogy törölni kívánja ezt a megosztást?",
   // END /account/shares
 
   // /account/received
   "account.received-shares.title": "Beérkezett megosztások",
   "account.received-shares.title.empty": "Még nem érkezett megosztás",
-  "account.received-shares.description.empty":
-    "Az Ön e-mail címére küldött megosztások itt fognak megjelenni.",
+  "account.received-shares.description.empty": "Az Ön e-mail címére küldött megosztások itt fognak megjelenni.",
   "account.received-shares.table.from": "Feladó",
   "account.received-shares.button.open": "Megnyitás",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Fordított megosztás",
-  "account.reverseShares.description":
-    "A fordított megosztással egy egyedi URL azonosító készül, amivel a rendszeren kívülről készíthető megosztás.",
+  "account.reverseShares.description": "A fordított megosztással egy egyedi URL azonosító készül, amivel a rendszeren kívülről készíthető megosztás.",
   "account.reverseShares.title.empty": "Üres 👀, itt nincs semmi",
   "account.reverseShares.description.empty": "Nincsenek fordított megosztások.",
   // showCreateReverseShareModal.tsx
@@ -209,24 +186,17 @@ export default {
   "account.reverseShares.modal.expiration.month-plural": "hónap",
   "account.reverseShares.modal.expiration.year-singular": "év",
   "account.reverseShares.modal.expiration.year-plural": "év",
-  "account.reverseShares.modal.max-size.label":
-    "Megosztás megengedett max mérete",
+  "account.reverseShares.modal.max-size.label": "Megosztás megengedett max mérete",
   "account.reverseShares.modal.send-email": "E-mail értesítések",
-  "account.reverseShares.modal.send-email.description":
-    "E-mailben értesít, amikor a fordított megosztási hivatkozást használva megosztást hoznak létre.",
+  "account.reverseShares.modal.send-email.description": "E-mailben értesít, amikor a fordított megosztási hivatkozást használva megosztást hoznak létre.",
   "account.reverseShares.modal.simplified": "Egyszerű mód",
-  "account.reverseShares.modal.simplified.description":
-    "A fájlt feltöltő személy számára egyszerűsíthető az Önnel történő megosztás. A megosztásnak csak a neve és a leírása módosítható.",
+  "account.reverseShares.modal.simplified.description": "A fájlt feltöltő személy számára egyszerűsíthető az Önnel történő megosztás. A megosztásnak csak a neve és a leírása módosítható.",
   "account.reverseShares.modal.public-access": "Nyilvános megosztás",
-  "account.reverseShares.modal.public-access.description":
-    "A fordított megosztással létrehozott megosztások nyilvánossá tétele. Kikapcsolása esetén csak a megosztás létrehozója és Ön láthatja a megosztást.",
+  "account.reverseShares.modal.public-access.description": "A fordított megosztással létrehozott megosztások nyilvánossá tétele. Kikapcsolása esetén csak a megosztás létrehozója és Ön láthatja a megosztást.",
   "account.reverseShares.modal.max-use.label": "Megengedett alkalmak száma",
-  "account.reverseShares.modal.max-use.description":
-    "A megosztási hivatkozás megengedett felhasználási alkalmainak száma.",
-  "account.reverseShare.never-expires":
-    "Ez a fordított megosztás soha nem fog lejárni.",
-  "account.reverseShare.expires-on":
-    "A fordított megosztás lejárata: {expiration}.",
+  "account.reverseShares.modal.max-use.description": "A megosztási hivatkozás megengedett felhasználási alkalmainak száma.",
+  "account.reverseShare.never-expires": "Ez a fordított megosztás soha nem fog lejárni.",
+  "account.reverseShare.expires-on": "A fordított megosztás lejárata: {expiration}.",
   "account.reverseShares.table.no-shares": "Még nincsenek megosztások",
   "account.reverseShares.table.count.singular": "megosztás",
   "account.reverseShares.table.count.plural": "megosztás",
@@ -234,11 +204,9 @@ export default {
   "account.reverseShares.table.remaining": "Fennmaradó alkalmak",
   "account.reverseShares.table.max-size": "Megengedett max méret",
   "account.reverseShares.table.expires": "Lejárat",
-  "account.reverseShares.modal.reverse-share-link":
-    "Fordított megosztási hivatkozás",
+  "account.reverseShares.modal.reverse-share-link": "Fordított megosztási hivatkozás",
   "account.reverseShares.modal.delete.title": "Fordított megosztás törlése",
-  "account.reverseShares.modal.delete.description":
-    "Valóban törölni kívánja ezt a fordított megosztást? A használatával készített megosztások is törlésre kerülnek.",
+  "account.reverseShares.modal.delete.description": "Valóban törölni kívánja ezt a fordított megosztást? A használatával készített megosztások is törlésre kerülnek.",
   // END /account/reverseShares
 
   // /admin
@@ -259,39 +227,29 @@ export default {
   "admin.users.edit.update.title": "{username} felhasználó szerkesztése",
   "admin.users.edit.update.admin-privileges": "Adminisztrátori jogosultságok",
   "admin.users.edit.update.email-verified": "Ellenőrzött e-mail cím",
-  "admin.users.edit.update.custom-share-size-limit":
-    "Egyéni megosztási méretkorlát",
-  "admin.users.edit.update.custom-share-size-limit.description":
-    "A globális feltöltési korlát felülbírálása ennél a felhasználónál",
+  "admin.users.edit.update.custom-share-size-limit": "Egyéni megosztási méretkorlát",
+  "admin.users.edit.update.custom-share-size-limit.description": "A globális feltöltési korlát felülbírálása ennél a felhasználónál",
   "admin.users.edit.update.custom-storage-quota-limit": "Egyéni tárhelykvóta",
-  "admin.users.edit.update.custom-storage-quota-limit.description":
-    "A felhasználó teljes tárhelyhasználatának korlátozása az aktív megosztásokban",
+  "admin.users.edit.update.custom-storage-quota-limit.description": "A felhasználó teljes tárhelyhasználatának korlátozása az aktív megosztásokban",
   "admin.users.edit.update.change-password.title": "Jelszó módosítása",
   "admin.users.edit.update.change-password.field": "Új jelszó",
   "admin.users.edit.update.change-password.button": "Új jelszó mentése",
-  "admin.users.edit.update.notify.password.success":
-    "A jelszó sikeresen frissítésre került",
+  "admin.users.edit.update.notify.password.success": "A jelszó sikeresen frissítésre került",
   "admin.users.edit.delete.title": "{username} felhasználó törlése ?",
-  "admin.users.edit.delete.description":
-    "Biztosan törölni szeretné ezt a felhasználót és az összes megosztását?",
+  "admin.users.edit.delete.description": "Biztosan törölni szeretné ezt a felhasználót és az összes megosztását?",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Felhasználó létrehozása",
   "admin.users.modal.create.username": "Felhasználónév",
   "admin.users.modal.create.email": "E-mail",
   "admin.users.modal.create.password": "Jelszó",
   "admin.users.modal.create.manual-password": "Jelszó kézi megadása",
-  "admin.users.modal.create.manual-password.description":
-    "Ha nincs bejelölve, akkor a felhasználó egy emailt és benne egy jelszó létrehozási hivatkozást kap.",
-  "admin.users.modal.create.custom-share-size-limit":
-    "Egyéni megosztási méretkorlát",
-  "admin.users.modal.create.custom-share-size-limit.description":
-    "A globális feltöltési korlát felülbírálása ennél a felhasználónál",
+  "admin.users.modal.create.manual-password.description": "Ha nincs bejelölve, akkor a felhasználó egy emailt és benne egy jelszó létrehozási hivatkozást kap.",
+  "admin.users.modal.create.custom-share-size-limit": "Egyéni megosztási méretkorlát",
+  "admin.users.modal.create.custom-share-size-limit.description": "A globális feltöltési korlát felülbírálása ennél a felhasználónál",
   "admin.users.modal.create.custom-storage-quota-limit": "Egyéni tárhelykvóta",
-  "admin.users.modal.create.custom-storage-quota-limit.description":
-    "A felhasználó teljes tárhelyhasználatának korlátozása az aktív megosztásokban",
+  "admin.users.modal.create.custom-storage-quota-limit.description": "A felhasználó teljes tárhelyhasználatának korlátozása az aktív megosztásokban",
   "admin.users.modal.create.admin": "Adminisztrátori jogosultságok",
-  "admin.users.modal.create.admin.description":
-    "Bejelölt állapotában a felhasználó hozzáfér az admin beállító oldalhoz.",
+  "admin.users.modal.create.admin.description": "Bejelölt állapotában a felhasználó hozzáfér az admin beállító oldalhoz.",
   // END /admin/users
 
   // /admin/shares
@@ -303,29 +261,21 @@ export default {
   "admin.shares.table.expires": "Lejár",
   "admin.shares.table.deletes": "Törlések ekkor",
   "admin.shares.edit.delete.title": "Megosztás törlése: {id}",
-  "admin.shares.edit.delete.description":
-    "Valóban törölni kívánja ezt a megosztást?",
+  "admin.shares.edit.delete.description": "Valóban törölni kívánja ezt a megosztást?",
   // END /admin/shares
 
   // /upload
   "upload.title": "Feltöltés",
-  "upload.notify.confirm-leave":
-    "Biztosan el akarja hagyni ezt az oldalt? A feltöltés megszakításra kerül.",
-  "upload.notify.generic-error":
-    "Hiba lépett fel a megosztás befejezése közben.",
-  "upload.notify.count-failed":
-    "{count} darab fájlt nem sikerült feltölteni. Próbálja ismét.",
+  "upload.notify.confirm-leave": "Biztosan el akarja hagyni ezt az oldalt? A feltöltés megszakításra kerül.",
+  "upload.notify.generic-error": "Hiba lépett fel a megosztás befejezése közben.",
+  "upload.notify.count-failed": "{count} darab fájlt nem sikerült feltölteni. Próbálja ismét.",
   "upload.notify.duplicate-skipped": "Ismétlődő fájl kihagyva: {name}",
-  "upload.reverse-share.error.invalid.title":
-    "Érvénytelen fordított megosztási link",
-  "upload.reverse-share.error.invalid.description":
-    "This reverse share has expired or is invalid.",
+  "upload.reverse-share.error.invalid.title": "Érvénytelen fordított megosztási link",
+  "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
   // Dropzone.tsx
   "upload.dropzone.title": "Fájlok feltöltése",
-  "upload.dropzone.description":
-    "Húzza ide a fájlokat vagy mappákat a megosztás megkezdéséhez, vagy használja a 'Ctrl+V' billentyűkombinációt a vágólapon lévő szöveges tartalom feltöltéséhez. Összesen legfeljebb {maxSize} méretű fájlokat fogadunk el.",
-  "upload.dropzone.notify.file-too-big":
-    "A fájlok mérete meghaladja a megengedett {maxSize} méretet.",
+  "upload.dropzone.description": "Húzza ide a fájlokat vagy mappákat a megosztás megkezdéséhez, vagy használja a 'Ctrl+V' billentyűkombinációt a vágólapon lévő szöveges tartalom feltöltéséhez. Összesen legfeljebb {maxSize} méretű fájlokat fogadunk el.",
+  "upload.dropzone.notify.file-too-big": "A fájlok mérete meghaladja a megengedett {maxSize} méretet.",
   "upload.button.folder": "Mappa feltöltése",
   "upload.button.folder.append": "Mappa hozzáfűzése",
   "upload.button.add": "Hozzáadás a feltöltéshez",
@@ -336,20 +286,15 @@ export default {
   "upload.filelist.remaining": "Hátralévő idő: {time}",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Megosztás létrehozása",
-  "upload.modal.link.error.invalid":
-    "Csak betű, szám, aláhúzás és kötőjel karaktereket tartalmazhat",
+  "upload.modal.link.error.invalid": "Csak betű, szám, aláhúzás és kötőjel karaktereket tartalmazhat",
   "upload.modal.link.error.taken": "Ez a hivatkozás név már használatban van",
-  "upload.modal.link.error.s3-session-not-found":
-    "S3 feltöltési munkamenet nem található",
-  "upload.modal.link.error.s3-etag-missing":
-    "Hiányzik az ETag fejléc az S3 válaszból. Győződjön meg arról, hogy a CORS engedélyezi az ETag fejlécet.",
+  "upload.modal.link.error.s3-session-not-found": "S3 feltöltési munkamenet nem található",
+  "upload.modal.link.error.s3-etag-missing": "Hiányzik az ETag fejléc az S3 válaszból. Győződjön meg arról, hogy a CORS engedélyezi az ETag fejlécet.",
   "upload.modal.not-signed-in": "Nincs bejelentkezve",
-  "upload.modal.not-signed-in-description":
-    "Nem lesz képes megosztását kézzel törölni vagy megtekinteni a látogatók számát.",
+  "upload.modal.not-signed-in-description": "Nem lesz képes megosztását kézzel törölni vagy megtekinteni a látogatók számát.",
   "upload.modal.expires.never": "soha",
   "upload.modal.expires.never-long": "Állandó megosztás",
-  "upload.modal.expires.error.too-long":
-    "A lejárati dátum meghaladja a {max} maximális értéket.",
+  "upload.modal.expires.error.too-long": "A lejárati dátum meghaladja a {max} maximális értéket.",
   "upload.modal.link.label": "Hivatkozás",
   "upload.modal.expires.label": "Lejárat",
   "upload.modal.expires.minute-singular": "perc",
@@ -366,73 +311,59 @@ export default {
   "upload.modal.expires.year-plural": "év",
   "upload.modal.accordion.name-and-description.title": "Megnevezés és leírás",
   "upload.modal.accordion.name-and-description.name.placeholder": "Megnevezés",
-  "upload.modal.accordion.name-and-description.description.placeholder":
-    "A megosztást kapóknak küldendő üzenet",
+  "upload.modal.accordion.name-and-description.description.placeholder": "A megosztást kapóknak küldendő üzenet",
   "upload.modal.accordion.email.title": "Email címzettek",
   "upload.modal.accordion.email.placeholder": "Adja meg az email címzetteket",
   "upload.modal.accordion.email.invalid-email": "Érvénytelen emailcím",
-  "upload.modal.accordion.email.restrict-to-recipients":
-    "Hozzáférés korlátozása csak ezekre a címzettekre (a hozzáféréshez be kell jelentkezniük)",
+  "upload.modal.accordion.email.restrict-to-recipients": "Hozzáférés korlátozása csak ezekre a címzettekre (a hozzáféréshez be kell jelentkezniük)",
   "upload.modal.accordion.security.title": "Biztonsági beállítások",
   "upload.modal.accordion.security.password.label": "Jelszavas védelem",
   "upload.modal.accordion.security.password.placeholder": "Nincs jelszó",
   "upload.modal.accordion.security.max-views.label": "Megtekintések max száma",
   "upload.modal.accordion.security.max-views.placeholder": "Nincs korlát",
   // showCompletedUploadModal.tsx
-  "upload.modal.completed.never-expires":
-    "Ez a megosztás soha nem fog lejárni.",
+  "upload.modal.completed.never-expires": "Ez a megosztás soha nem fog lejárni.",
   "upload.modal.completed.expires-on": "A megosztás lejárata: {expiration}.",
   "upload.modal.completed.share-ready": "A megosztás készen áll",
-  "upload.modal.completed.notified-reverse-share-creator":
-    "Értesítettük a fordított megosztás létrehozóját. Ezt a linket kézzel is megoszthatja velük más csatornákon keresztül.",
+  "upload.modal.completed.notified-reverse-share-creator": "Értesítettük a fordított megosztás létrehozóját. Ezt a linket kézzel is megoszthatja velük más csatornákon keresztül.",
   // END /upload
 
   // /share/[id]
   "share.title": "Megosztás: {shareId}",
   "share.description": "Megosztottak Önnel valami fontosat!",
-  "share.fileCount":
-    "{count, plural, one {}=1 {# fájl} other {# fájlok}} · {size} (a zip fájl mérete a tömörítés miatt kisebb lehet)",
+  "share.fileCount": "{count, plural, one {}=1 {# fájl} other {# fájlok}} · {size} (a zip fájl mérete a tömörítés miatt kisebb lehet)",
   "share.copy-text-contents": "Fájl tartalmának vágólapra másolása",
   "share.error.visitor-limit-exceeded.title": "Túl sok látogató",
-  "share.error.visitor-limit-exceeded.description":
-    "A látogatók száma elérte a megszabott korlátot.",
+  "share.error.visitor-limit-exceeded.description": "A látogatók száma elérte a megszabott korlátot.",
   "share.error.removed.title": "Korábban már eltávolított megosztás",
   "share.error.not-found.title": "Fel nem lelhető megosztás",
   "share.error.not-found.description": "A keresett megosztás nem létezik.",
   "share.error.access-denied.title": "Privát megosztás",
-  "share.error.access-denied.description":
-    "Ez a fiók nem rendelkezik jogosultsággal a megosztás eléréséhez",
+  "share.error.access-denied.description": "Ez a fiók nem rendelkezik jogosultsággal a megosztás eléréséhez",
   "share.error.restricted.title": "Korlátozott megosztás",
-  "share.error.restricted.description":
-    "Ez a megosztás csak meghatározott címzettek számára érhető el. Kérjük, jelentkezzen be a hozzáféréshez.",
+  "share.error.restricted.description": "Ez a megosztás csak meghatározott címzettek számára érhető el. Kérjük, jelentkezzen be a hozzáféréshez.",
   "share.error.restricted.button": "Bejelentkezés",
   "share.modal.password.title": "Jelszó szükséges",
-  "share.modal.password.description":
-    "Kérjük, adja meg a jelszót a megosztás eléréséhez.",
+  "share.modal.password.description": "Kérjük, adja meg a jelszót a megosztás eléréséhez.",
   "share.modal.password": "Jelszó",
   "share.modal.error.invalid-password": "Érvénytelen jelszó",
   "share.button.download-all": "Mindet letölti",
-  "share.notify.download-all-preparing":
-    "A megosztás előkészítés alatt áll. Kérjük, próbálja újra néhány perc múlva.",
+  "share.notify.download-all-preparing": "A megosztás előkészítés alatt áll. Kérjük, próbálja újra néhány perc múlva.",
   "share.notify.copied-contents": "Fájl tartalma a vágólapra másolva",
   "share.notify.copy-too-big-error": "A fájl túl nagy a vágólapra másoláshoz",
-  "share.notify.copy-not-supported-error":
-    "A vágólapra másoláshoz HTTPS kapcsolat szükséges.",
+  "share.notify.copy-not-supported-error": "A vágólapra másoláshoz HTTPS kapcsolat szükséges.",
   "share.modal.file-link": "Fájl hivatkozás",
   "share.table.name": "Megnevezés",
   "share.table.size": "Méret",
   "share.modal.file-preview.original_file": "Eredeti fájl megtekintése",
-  "share.modal.file-preview.error.not-supported.title":
-    "Az előnézetek nem támogatottak",
-  "share.modal.file-preview.error.not-supported.description":
-    "Az ilyen típusú fájlok előnézete nem támogatott. Kérjük, töltse le a fájlt a megtekintéshez.",
+  "share.modal.file-preview.error.not-supported.title": "Az előnézetek nem támogatottak",
+  "share.modal.file-preview.error.not-supported.description": "Az ilyen típusú fájlok előnézete nem támogatott. Kérjük, töltse le a fájlt a megtekintéshez.",
   // END /share/[id]
 
   // /share/[id]/edit
   "share.edit.title": "Módosítás: {shareId}",
   "share.edit.append-upload": "Fájl hozzáfűzése",
-  "share.edit.notify.generic-error":
-    "Hiba lépett fel a megosztás befejezése közben.",
+  "share.edit.notify.generic-error": "Hiba lépett fel a megosztás befejezése közben.",
   "share.edit.notify.save-success": "A megosztás frissítésre került",
   // END /share/[id]/edit
 
@@ -446,8 +377,7 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "Konfigurációs fájl észlelve",
-  "admin.config.config-file-warning.description":
-    "Mivel a Pingvin Share egy konfigurációs fájllal került beállításra, a beállításokat nem módosíthatja a felhasználói felületen.",
+  "admin.config.config-file-warning.description": "Mivel a Pingvin Share egy konfigurációs fájllal került beállításra, a beállításokat nem módosíthatja a felhasználói felületen.",
   "admin.config.title": "Konfiguráció",
   "admin.config.category.general": "Általános",
   "admin.config.category.appearance": "Megjelenés",
@@ -460,360 +390,227 @@ export default {
   "admin.config.general.app-name": "Alkalmazás neve",
   "admin.config.general.app-name.description": "Az alkalmazás neve",
   "admin.config.general.default-language": "Alapértelmezett nyelv",
-  "admin.config.general.default-language.description":
-    "Ez minden felhasználóra vonatkozik, azonban minden felhasználó személyre szabhatja a nyelvi beállításokat a profiljában.",
+  "admin.config.general.default-language.description": "Ez minden felhasználóra vonatkozik, azonban minden felhasználó személyre szabhatja a nyelvi beállításokat a profiljában.",
   "admin.config.appearance.theme-primary-color": "Téma elsődleges színe",
-  "admin.config.appearance.theme-primary-color.description":
-    "Elsődleges szín gombokhoz, linkekhez és kiemelésekhez. Válaszd az egyéni opciót színfelülíráshoz.",
-  "admin.config.appearance.theme-primary-color-override":
-    "Egyéni elsődleges szín",
-  "admin.config.appearance.theme-primary-color-override.description":
-    "Hex színfelülírás, amikor a téma elsődleges színe egyénire van állítva.",
+  "admin.config.appearance.theme-primary-color.description": "Elsődleges szín gombokhoz, linkekhez és kiemelésekhez. Válaszd az egyéni opciót színfelülíráshoz.",
+  "admin.config.appearance.theme-primary-color-override": "Egyéni elsődleges szín",
+  "admin.config.appearance.theme-primary-color-override.description": "Hex színfelülírás, amikor a téma elsődleges színe egyénire van állítva.",
   "admin.config.appearance.theme-font-preset": "Betűtípus előbeállítás",
-  "admin.config.appearance.theme-font-preset.description":
-    "Build során betöltött betűtípus-előbeállítás. Válaszd a rendszert vagy egy beépített Google Fonts készletet.",
-  "admin.config.appearance.theme-color-scheme":
-    "Alapértelmezett színséma (vendégek)",
-  "admin.config.appearance.theme-color-scheme.description":
-    "Alapértelmezett világos/sötét mód nem azonosított felhasználók számára. A bejelentkezett felhasználókra a saját fiókbeállításaik vonatkoznak.",
+  "admin.config.appearance.theme-font-preset.description": "Build során betöltött betűtípus-előbeállítás. Válaszd a rendszert vagy egy beépített Google Fonts készletet.",
+  "admin.config.appearance.theme-color-scheme": "Alapértelmezett színséma (vendégek)",
+  "admin.config.appearance.theme-color-scheme.description": "Alapértelmezett világos/sötét mód nem azonosított felhasználók számára. A bejelentkezett felhasználókra a saját fiókbeállításaik vonatkoznak.",
   "admin.config.appearance.theme-radius": "Téma sarokkerekítés",
-  "admin.config.appearance.theme-radius.description":
-    "A Mantine komponensek által használt alapértelmezett sarokkerekítés.",
+  "admin.config.appearance.theme-radius.description": "A Mantine komponensek által használt alapértelmezett sarokkerekítés.",
   "admin.config.appearance.custom-css": "Egyéni CSS",
-  "admin.config.appearance.custom-css.description":
-    "A frontendhez alkalmazott globális CSS. Óvatosan használd; az érvénytelen CSS hatással lehet a felületre.",
-  "admin.config.appearance.upload-progress-style":
-    "Feltöltési folyamatjelző stílusa",
-  "admin.config.appearance.upload-progress-style.description":
-    "Válassza ki, hogyan jelenjen meg a feltöltési folyamat a fájllistán.",
+  "admin.config.appearance.custom-css.description": "A frontendhez alkalmazott globális CSS. Óvatosan használd; az érvénytelen CSS hatással lehet a felületre.",
+  "admin.config.appearance.upload-progress-style": "Feltöltési folyamatjelző stílusa",
+  "admin.config.appearance.upload-progress-style.description": "Válassza ki, hogyan jelenjen meg a feltöltési folyamat a fájllistán.",
   "admin.config.appearance.upload-progress-style.circle": "Kör alakú indikátor",
-  "admin.config.appearance.upload-progress-style.circle-percentage":
-    "Kör százalékértékkel",
-  "admin.config.appearance.upload-progress-style.percentage-time":
-    "Százalék és hátralévő idő",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Kör százalékértékkel",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Százalék és hátralévő idő",
   "admin.config.general.app-url": "Alkalmazás URL hivatkozás",
-  "admin.config.general.app-url.description":
-    "A Pingvin Share megosztáskezelőre mutató hivatkozás",
+  "admin.config.general.app-url.description": "A Pingvin Share megosztáskezelőre mutató hivatkozás",
   "admin.config.security.secure-cookies": "Biztonságos sütik",
-  "admin.config.security.secure-cookies.description":
-    "Beállítja-e a sütik biztonságossá tételét. Ha engedélyezve van, az oldal nem fog működni HTTP-n keresztüli hozzáférés esetén.",
+  "admin.config.security.secure-cookies.description": "Beállítja-e a sütik biztonságossá tételét. Ha engedélyezve van, az oldal nem fog működni HTTP-n keresztüli hozzáférés esetén.",
   "admin.config.general.show-home-page": "Kezdőlap mutatása",
-  "admin.config.general.show-home-page.description":
-    "A kezdőlap mutatásának ki- és bekapcsolása",
+  "admin.config.general.show-home-page.description": "A kezdőlap mutatásának ki- és bekapcsolása",
   "admin.config.security.session-duration": "Munkamenet időtartama",
-  "admin.config.security.session-duration.description":
-    "Az az időtartam, amely elteltével a felhasználónak újra be kell jelentkeznie (alapértelmezett: 3 hónap).",
+  "admin.config.security.session-duration.description": "Az az időtartam, amely elteltével a felhasználónak újra be kell jelentkeznie (alapértelmezett: 3 hónap).",
   "admin.config.appearance.logo": "Logó",
-  "admin.config.appearance.logo.description":
-    "A logó személyessé tételéhez töltsön fel egy új képet. A formátum legyen PNG, az oldalarány 1:1.",
+  "admin.config.appearance.logo.description": "A logó személyessé tételéhez töltsön fel egy új képet. A formátum legyen PNG, az oldalarány 1:1.",
   "admin.config.appearance.logo-dark": "Logo sötét módban",
-  "admin.config.appearance.logo-dark.description":
-    "Sötét módhoz kapcsolódóan külön logo feltöltése. A képnek PNG formátumúnak és 1:1 arányúnak kell lennie.",
+  "admin.config.appearance.logo-dark.description": "Sötét módhoz kapcsolódóan külön logo feltöltése. A képnek PNG formátumúnak és 1:1 arányúnak kell lennie.",
   "admin.config.appearance.logo.placeholder": "Kép kiválasztása",
   "admin.config.security.custom-password-policy": "Egyéni jelszóházirend",
-  "admin.config.security.custom-password-policy.description":
-    "Egyéni jelszóházirend engedélyezése. Ha le van tiltva, az alapértelmezett, legalább 8 karakteres jelszóházirend lép érvénybe.",
+  "admin.config.security.custom-password-policy.description": "Egyéni jelszóházirend engedélyezése. Ha le van tiltva, az alapértelmezett, legalább 8 karakteres jelszóházirend lép érvénybe.",
   "admin.config.security.min-length": "Minimális hossz",
-  "admin.config.security.min-length.description":
-    "A jelszóhoz szükséges karakterek minimális száma.",
+  "admin.config.security.min-length.description": "A jelszóhoz szükséges karakterek minimális száma.",
   "admin.config.security.require-uppercase": "Nagybetű kötelező",
-  "admin.config.security.require-uppercase.description":
-    "Kötelező legyen-e legalább egy nagybetű a jelszóban.",
+  "admin.config.security.require-uppercase.description": "Kötelező legyen-e legalább egy nagybetű a jelszóban.",
   "admin.config.security.require-lowercase": "Kisbetű kötelező",
-  "admin.config.security.require-lowercase.description":
-    "Kötelező legyen-e legalább egy kisbetű a jelszóban.",
+  "admin.config.security.require-lowercase.description": "Kötelező legyen-e legalább egy kisbetű a jelszóban.",
   "admin.config.security.require-number": "Számjegy kötelező",
-  "admin.config.security.require-number.description":
-    "Kötelező legyen-e legalább egy számjegy a jelszóban.",
-  "admin.config.security.require-special-character":
-    "Különleges karakter kötelező",
-  "admin.config.security.require-special-character.description":
-    "Kötelező legyen-e legalább egy különleges karakter a jelszóban.",
+  "admin.config.security.require-number.description": "Kötelező legyen-e legalább egy számjegy a jelszóban.",
+  "admin.config.security.require-special-character": "Különleges karakter kötelező",
+  "admin.config.security.require-special-character.description": "Kötelező legyen-e legalább egy különleges karakter a jelszóban.",
   "admin.config.cache.ttl": "TTL",
-  "admin.config.cache.ttl.description":
-    "Az információk gyorsítótárban tartásának ideje másodpercben.",
+  "admin.config.cache.ttl.description": "Az információk gyorsítótárban tartásának ideje másodpercben.",
   "admin.config.cache.max-items": "Maximális elemszám",
-  "admin.config.cache.max-items.description":
-    "A gyorsítótárban lévő elemek maximális száma.",
+  "admin.config.cache.max-items.description": "A gyorsítótárban lévő elemek maximális száma.",
   "admin.config.cache.redis-enabled": "Redis engedélyezve",
-  "admin.config.cache.redis-enabled.description":
-    "A Pingvin Share alapértelmezetten a memóriában gyorsítótárazza az információkat. Ha több Pingvin Share több példányt futtat, engedélyeznie szükséges a Redis-t a gyorsítótár megosztásához az egyes példányok között.",
+  "admin.config.cache.redis-enabled.description": "A Pingvin Share alapértelmezetten a memóriában gyorsítótárazza az információkat. Ha több Pingvin Share több példányt futtat, engedélyeznie szükséges a Redis-t a gyorsítótár megosztásához az egyes példányok között.",
   "admin.config.cache.redis-url": "Redis URL",
-  "admin.config.cache.redis-url.description":
-    "A gyorsítótárazáshoz használt Redis URL címe.",
+  "admin.config.cache.redis-url.description": "A gyorsítótárazáshoz használt Redis URL címe.",
   "admin.config.cache.button.test-redis": "Redis kapcsolat tesztelése",
-  "admin.config.cache.test-redis.success":
-    "Sikeresen csatlakoztatva a Redis-hez",
-  "admin.config.cache.test-redis.success-disabled":
-    "Sikeresen csatlakoztatva a Redis-hez (a Redis gyorsítótárazás jelenleg le van tiltva).",
-  "admin.config.cache.test-redis.modal.error.title":
-    "Nem sikerült csatlakozni a Redis-hez",
-  "admin.config.cache.test-redis.modal.error.description":
-    "A Redis-hez történő csatlakozás során a következő hiba történt:",
+  "admin.config.cache.test-redis.success": "Sikeresen csatlakoztatva a Redis-hez",
+  "admin.config.cache.test-redis.success-disabled": "Sikeresen csatlakoztatva a Redis-hez (a Redis gyorsítótárazás jelenleg le van tiltva).",
+  "admin.config.cache.test-redis.modal.error.title": "Nem sikerült csatlakozni a Redis-hez",
+  "admin.config.cache.test-redis.modal.error.description": "A Redis-hez történő csatlakozás során a következő hiba történt:",
   "admin.config.cache.test-redis.modal.save.title": "Beállítások mentése",
-  "admin.config.cache.test-redis.modal.save.description":
-    "A folytatáshoz először mentenie kell a konfigurációt. Szeretné menteni a konfigurációt, és tesztelni a Redis kapcsolatot?",
+  "admin.config.cache.test-redis.modal.save.description": "A folytatáshoz először mentenie kell a konfigurációt. Szeretné menteni a konfigurációt, és tesztelni a Redis kapcsolatot?",
   "admin.config.cache.test-redis.modal.save.confirm": "Mentés és teszt",
-  "admin.config.email.send-html-emails":
-    "HTML e-mail kompatibilitás engedélyezése",
-  "admin.config.email.send-html-emails.description":
-    "Ha engedélyezve van, az e-mailek HTML formátumban kerülnek elküldésre. Győződjön meg róla, hogy az e-mail sablonok frissítve vannak a HTML használatára.",
-  "admin.config.share.enable-share-email-recipients":
-    "E-mail címzettek megosztásának engedélyezése",
-  "admin.config.share.enable-share-email-recipients.description":
-    "Meghatározza, hogy engedélyezett legyen-e az e-mailes megosztás a címzettekkel. Ez a funkció csak akkor aktiválható, ha az SMTP be van kapcsolva.",
+  "admin.config.email.send-html-emails": "HTML e-mail kompatibilitás engedélyezése",
+  "admin.config.email.send-html-emails.description": "Ha engedélyezve van, az e-mailek HTML formátumban kerülnek elküldésre. Győződjön meg róla, hogy az e-mail sablonok frissítve vannak a HTML használatára.",
+  "admin.config.share.enable-share-email-recipients": "E-mail címzettek megosztásának engedélyezése",
+  "admin.config.share.enable-share-email-recipients.description": "Meghatározza, hogy engedélyezett legyen-e az e-mailes megosztás a címzettekkel. Ez a funkció csak akkor aktiválható, ha az SMTP be van kapcsolva.",
   "admin.config.email.share-recipients-subject": "Megosztási email tárgya",
-  "admin.config.email.share-recipients-subject.description":
-    "A megosztások címzettjeinek küldött email tárgya.",
+  "admin.config.email.share-recipients-subject.description": "A megosztások címzettjeinek küldött email tárgya.",
   "admin.config.email.share-recipients-message": "Megosztási email szövege",
-  "admin.config.email.share-recipients-message.description":
-    "Az üzenet, amelyet a megosztás címzettjei kapnak meg. Elérhető változók:\n {creator} - A megosztás létrehozójának felhasználóneve\n {creatorEmail} - A megosztás létrehozójának e-mail címe\n {shareUrl} - A megosztás URL-címe\n {desc} - A megosztás leírása\n {expires} - A megosztás lejárati dátuma\n Ezek a változók a tényleges értékkel lesznek helyettesítve.",
+  "admin.config.email.share-recipients-message.description": "Az üzenet, amelyet a megosztás címzettjei kapnak meg. Elérhető változók:\n {creator} - A megosztás létrehozójának felhasználóneve\n {creatorEmail} - A megosztás létrehozójának e-mail címe\n {shareUrl} - A megosztás URL-címe\n {desc} - A megosztás leírása\n {expires} - A megosztás lejárati dátuma\n Ezek a változók a tényleges értékkel lesznek helyettesítve.",
   "admin.config.email.reverse-share-subject": "Fordított megosztás tárgya",
-  "admin.config.email.reverse-share-subject.description":
-    "A kiküldött e-mail tárgya, amikor valaki megosztást hoz létre a fordított megosztási linkkel.",
+  "admin.config.email.reverse-share-subject.description": "A kiküldött e-mail tárgya, amikor valaki megosztást hoz létre a fordított megosztási linkkel.",
   "admin.config.email.reverse-share-message": "Fordított megosztás üzenete",
-  "admin.config.email.reverse-share-message.description":
-    "Az Ön által kiküldött fordított megosztási hivatkozás használatával készített megosztás emailjének szövege. A(z) {shareUrl} helyére a létrehozó neve és a megosztás URL hivatkozása kerül.",
+  "admin.config.email.reverse-share-message.description": "Az Ön által kiküldött fordított megosztási hivatkozás használatával készített megosztás emailjének szövege. A(z) {shareUrl} helyére a létrehozó neve és a megosztás URL hivatkozása kerül.",
   "admin.config.email.reset-password-subject": "Jelszó visszaállítási tárgy",
-  "admin.config.email.reset-password-subject.description":
-    "A felhasználói jelszó visszaállítási kérés alapján küldött e-mail tárgya.",
+  "admin.config.email.reset-password-subject.description": "A felhasználói jelszó visszaállítási kérés alapján küldött e-mail tárgya.",
   "admin.config.email.reset-password-message": "Jelszó visszaállítási üzenet",
-  "admin.config.email.reset-password-message.description":
-    "A felhasználó által kezdeményezett jelszó visszaállításkor küldött email szövege. A(z) {url} helyére a jelszó visszaállítási URL hivatkozás kerül.",
+  "admin.config.email.reset-password-message.description": "A felhasználó által kezdeményezett jelszó visszaállításkor küldött email szövege. A(z) {url} helyére a jelszó visszaállítási URL hivatkozás kerül.",
   "admin.config.email.invite-subject": "Meghívó tárgya",
-  "admin.config.email.invite-subject.description":
-    "A kiküldött e-mail tárgya, amikor egy rendszergazda meghív egy felhasználót.",
+  "admin.config.email.invite-subject.description": "A kiküldött e-mail tárgya, amikor egy rendszergazda meghív egy felhasználót.",
   "admin.config.email.invite-message": "Meghívó szövege",
-  "admin.config.email.invite-message.description":
-    "Üzenet, amely akkor kerül kiküldésre, amikor egy admin meghív egy új felhasználót. A {url} helyére a meghívás URL hivatkozása, a {email} helyére az e-mail cím, a {password} helyére pedig a felhasználó jelszava kerül.",
-  "admin.config.email.share-recipients-reply-to-creator":
-    "Válaszcím (Reply-To) beállítása a létrehozó e-mail címére",
-  "admin.config.email.share-recipients-reply-to-creator.description":
-    "A Reply-To fejléc beállítása a megosztást létrehozó felhasználó e-mail címére.",
-  "admin.config.share.enable-share-download-notifications":
-    "Letöltési értesítések engedélyezése",
-  "admin.config.share.enable-share-download-notifications.description":
-    "Meghatározza, hogy küldjön-e a rendszer e-mailt a megosztás létrehozójának, amikor egy e-mail címzett letölt egy fájlt. Ehhez SMTP és e-mailes címzett-megosztás szükséges.",
-  "admin.config.email.share-download-notification-subject":
-    "Letöltési értesítés tárgya",
-  "admin.config.email.share-download-notification-subject.description":
-    "Az e-mail tárgya, amelyet a megosztás létrehozójának küldünk, amikor egy címzett letöltte a fájlt.",
-  "admin.config.email.share-download-notification-message":
-    "Letöltési értesítés szövegezése",
-  "admin.config.email.share-download-notification-message.description":
-    "Az üzenet, amelyet a megosztás létrehozója fog kapni, amikor a címzett letölt egy fájlt. Elérhető változók:\n{recipientEmail} – a címzett e-mail címe\n{fileName} – a letöltött fájl neve\n{shareUrl} – a megosztás URL-je",
-  "admin.config.security.enable-email-verification":
-    "E-mail cím megerősítésének engedélyezése",
-  "admin.config.security.enable-email-verification.description":
-    "Meghatározza, hogy a felhasználóknak szükséges-e megerősíteniük az e-mail címüket a bejelentkezés előtt. Ez a funkció csak akkor aktiválható, ha az SMTP be van kapcsolva.",
+  "admin.config.email.invite-message.description": "Üzenet, amely akkor kerül kiküldésre, amikor egy admin meghív egy új felhasználót. A {url} helyére a meghívás URL hivatkozása, a {email} helyére az e-mail cím, a {password} helyére pedig a felhasználó jelszava kerül.",
+  "admin.config.email.share-recipients-reply-to-creator": "Válaszcím (Reply-To) beállítása a létrehozó e-mail címére",
+  "admin.config.email.share-recipients-reply-to-creator.description": "A Reply-To fejléc beállítása a megosztást létrehozó felhasználó e-mail címére.",
+  "admin.config.share.enable-share-download-notifications": "Letöltési értesítések engedélyezése",
+  "admin.config.share.enable-share-download-notifications.description": "Meghatározza, hogy küldjön-e a rendszer e-mailt a megosztás létrehozójának, amikor egy e-mail címzett letölt egy fájlt. Ehhez SMTP és e-mailes címzett-megosztás szükséges.",
+  "admin.config.email.share-download-notification-subject": "Letöltési értesítés tárgya",
+  "admin.config.email.share-download-notification-subject.description": "Az e-mail tárgya, amelyet a megosztás létrehozójának küldünk, amikor egy címzett letöltte a fájlt.",
+  "admin.config.email.share-download-notification-message": "Letöltési értesítés szövegezése",
+  "admin.config.email.share-download-notification-message.description": "Az üzenet, amelyet a megosztás létrehozója fog kapni, amikor a címzett letölt egy fájlt. Elérhető változók:\n{recipientEmail} – a címzett e-mail címe\n{fileName} – a letöltött fájl neve\n{shareUrl} – a megosztás URL-je",
+  "admin.config.security.enable-email-verification": "E-mail cím megerősítésének engedélyezése",
+  "admin.config.security.enable-email-verification.description": "Meghatározza, hogy a felhasználóknak szükséges-e megerősíteniük az e-mail címüket a bejelentkezés előtt. Ez a funkció csak akkor aktiválható, ha az SMTP be van kapcsolva.",
   "admin.config.email.verification-subject": "Megerősítő e-mail tárgya",
-  "admin.config.email.verification-subject.description":
-    "A regisztráció során a felhasználónak küldött e-mail tárgysora.",
+  "admin.config.email.verification-subject.description": "A regisztráció során a felhasználónak küldött e-mail tárgysora.",
   "admin.config.email.verification-message": "Megerősítő e-mail szövege",
-  "admin.config.email.verification-message.description":
-    "A regisztráció során a felhasználónak küldött e-mail szövege. A {url} változó helyére a megerősítési hivatkozás kerül.",
+  "admin.config.email.verification-message.description": "A regisztráció során a felhasználónak küldött e-mail szövege. A {url} változó helyére a megerősítési hivatkozás kerül.",
   "admin.config.security.allow-registration": "Regisztráció engedélyezése",
-  "admin.config.security.allow-registration.description":
-    "Regisztráció engedélyezésének ki- és bekapcsolása",
-  "admin.config.security.allow-unauthenticated-shares":
-    "Hitelesítés nélküli megosztások engedélyezése",
-  "admin.config.security.allow-unauthenticated-shares.description":
-    "Hitelesítés nélküli felhasználók létre hozhatnak-e megosztásokat",
+  "admin.config.security.allow-registration.description": "Regisztráció engedélyezésének ki- és bekapcsolása",
+  "admin.config.security.allow-unauthenticated-shares": "Hitelesítés nélküli megosztások engedélyezése",
+  "admin.config.security.allow-unauthenticated-shares.description": "Hitelesítés nélküli felhasználók létre hozhatnak-e megosztásokat",
   "admin.config.share.default-expiration": "Alapértelmezett lejárat",
-  "admin.config.share.default-expiration.description":
-    "Az új megosztás létrehozásakor kiválasztott alapértelmezett lejárati idő.",
+  "admin.config.share.default-expiration.description": "Az új megosztás létrehozásakor kiválasztott alapértelmezett lejárati idő.",
   "admin.config.share.max-expiration": "Max lejárat",
-  "admin.config.share.max-expiration.description":
-    "Megosztás érvényességi idejének felső határa. Állítsa 0-ra a korlátlan érvényességi idő engedélyezéséhez.",
-  "admin.config.share.share-id-length":
-    "Alapértelmezett megosztási azonosító hossz",
-  "admin.config.share.share-id-length.description":
-    "A megosztás generált azonosítójának alapértelmezett hossza. Ezt kerül alkalmazásra a fordított megosztások linkjeinek generálásakor is. A 8 alatti érték nem tekinthető biztonságosnak.",
+  "admin.config.share.max-expiration.description": "Megosztás érvényességi idejének felső határa. Állítsa 0-ra a korlátlan érvényességi idő engedélyezéséhez.",
+  "admin.config.share.share-id-length": "Alapértelmezett megosztási azonosító hossz",
+  "admin.config.share.share-id-length.description": "A megosztás generált azonosítójának alapértelmezett hossza. Ezt kerül alkalmazásra a fordított megosztások linkjeinek generálásakor is. A 8 alatti érték nem tekinthető biztonságosnak.",
   "admin.config.share.max-size": "Max méret",
-  "admin.config.share.max-size.description":
-    "A megosztások megengedett legnagyobb mérete",
+  "admin.config.share.max-size.description": "A megosztások megengedett legnagyobb mérete",
   "admin.config.share.zip-compression-level": "Zip tömörítési szint",
-  "admin.config.share.zip-compression-level.description":
-    "A fájlméret és a tömörítésre fordított idő közötti választás. Az érték 0 - 9 közül választható, 0: nincs tömörítés, 9: legnagyobb mértékű tömörítés. ",
+  "admin.config.share.zip-compression-level.description": "A fájlméret és a tömörítésre fordított idő közötti választás. Az érték 0 - 9 közül választható, 0: nincs tömörítés, 9: legnagyobb mértékű tömörítés. ",
   "admin.config.share.chunk-size": "Darabolási méret",
-  "admin.config.share.chunk-size.description":
-    "Állítsa be a feltöltések blokkméretét úgy, hogy az internetkapcsolatának megfelelően egyensúlyt teremtsen a hatékonyság és a megbízhatóság között. Instabil kapcsolat esetén a kisebb blokkméret javíthatja a siker-arányt, míg stabil kapcsolat esetén a nagyobb blokk méret gyorsabbá teszi a feltöltést.",
-  "admin.config.share.auto-open-share-modal":
-    "Megosztás létrehozása felület automatikus megjelenítése",
-  "admin.config.share.auto-open-share-modal.description":
-    "A mgosztás létrehozása előugró elem automatikusan megjelenik a fájlok kiválasztásakor, ehhez nem szükséges külön kattintani.",
-  "admin.config.security.allow-admin-access-all-shares":
-    "Adminisztrátori hozzáférés engedélyezése az összes megosztáshoz",
-  "admin.config.share.reverse-share-simple-only":
-    "Egyszerű mód kényszerítése fordított megosztásnál",
-  "admin.config.share.reverse-share-simple-only.description":
-    "A fordított megosztások kötelező létrehozása egyszerű módban. Ha le van tiltva, a fordított megosztás létrehozója választhat az egyszerű és a haladó mód között.",
-  "admin.config.security.allow-admin-access-all-shares.description":
-    "Engedélyezi az adminisztrátorok számára az összes megosztott tartalom elérését, még akkor is, ha azok jelszóval védettek, lejártak vagy töröltek.",
-  "admin.config.share.enable-user-recipients":
-    "Megosztás engedélyezése regisztrált felhasználókkal",
-  "admin.config.share.enable-user-recipients.description":
-    "Ha engedélyezve van, a regisztrált felhasználó e-mail címére küldött megosztások automatikusan megjelennek a fiókjában. A felhasználók a megosztáshoz való hozzáférést a megadott címzettekre is korlátozhatják.",
+  "admin.config.share.chunk-size.description": "Állítsa be a feltöltések blokkméretét úgy, hogy az internetkapcsolatának megfelelően egyensúlyt teremtsen a hatékonyság és a megbízhatóság között. Instabil kapcsolat esetén a kisebb blokkméret javíthatja a siker-arányt, míg stabil kapcsolat esetén a nagyobb blokk méret gyorsabbá teszi a feltöltést.",
+  "admin.config.share.auto-open-share-modal": "Megosztás létrehozása felület automatikus megjelenítése",
+  "admin.config.share.auto-open-share-modal.description": "A mgosztás létrehozása előugró elem automatikusan megjelenik a fájlok kiválasztásakor, ehhez nem szükséges külön kattintani.",
+  "admin.config.security.allow-admin-access-all-shares": "Adminisztrátori hozzáférés engedélyezése az összes megosztáshoz",
+  "admin.config.share.reverse-share-simple-only": "Egyszerű mód kényszerítése fordított megosztásnál",
+  "admin.config.share.reverse-share-simple-only.description": "A fordított megosztások kötelező létrehozása egyszerű módban. Ha le van tiltva, a fordított megosztás létrehozója választhat az egyszerű és a haladó mód között.",
+  "admin.config.security.allow-admin-access-all-shares.description": "Engedélyezi az adminisztrátorok számára az összes megosztott tartalom elérését, még akkor is, ha azok jelszóval védettek, lejártak vagy töröltek.",
+  "admin.config.share.enable-user-recipients": "Megosztás engedélyezése regisztrált felhasználókkal",
+  "admin.config.share.enable-user-recipients.description": "Ha engedélyezve van, a regisztrált felhasználó e-mail címére küldött megosztások automatikusan megjelennek a fiókjában. A felhasználók a megosztáshoz való hozzáférést a megadott címzettekre is korlátozhatják.",
   "admin.config.share.file-retention-period": "Fájlmegőrzési időszak",
-  "admin.config.share.file-retention-period.description":
-    "A megosztás lejáratát követően mennyi ideig kerülnek az állományok megőrzésre. Csak akkor értelmezhető, ha az „Adminisztrátori hozzáférés engedélyezése az összes megosztáshoz” is engedélyezve van. Állítsa -1-re a fájlok végleges megőrzéséhez.",
+  "admin.config.share.file-retention-period.description": "A megosztás lejáratát követően mennyi ideig kerülnek az állományok megőrzésre. Csak akkor értelmezhető, ha az „Adminisztrátori hozzáférés engedélyezése az összes megosztáshoz” is engedélyezve van. Állítsa -1-re a fájlok végleges megőrzéséhez.",
   "admin.config.smtp.enabled": "Engedélyezés",
-  "admin.config.smtp.enabled.description":
-    "A(z) SMTP bekapcsolása. Csak akkor engedélyezze, ha már megadta a kiszolgáló, port, email, felhasználónév és jelszó beállításokat az SMTP kiszolgálóhoz.",
+  "admin.config.smtp.enabled.description": "A(z) SMTP bekapcsolása. Csak akkor engedélyezze, ha már megadta a kiszolgáló, port, email, felhasználónév és jelszó beállításokat az SMTP kiszolgálóhoz.",
   "admin.config.smtp.host": "Kiszolgáló",
   "admin.config.smtp.host.description": "Az SMTP szerver kiszolgáló gépe",
   "admin.config.smtp.port": "Port",
   "admin.config.smtp.port.description": "Az SMTP kiszolgáló portja",
   "admin.config.smtp.email": "E-mail",
-  "admin.config.smtp.email.description":
-    "E-mail cím, ahonnan az e-mailek érkeznek",
+  "admin.config.smtp.email.description": "E-mail cím, ahonnan az e-mailek érkeznek",
   "admin.config.smtp.username": "Felhasználónév",
-  "admin.config.smtp.username.description":
-    "Felhasználónév az SMTP kiszolgálón",
+  "admin.config.smtp.username.description": "Felhasználónév az SMTP kiszolgálón",
   "admin.config.smtp.password": "Jelszó",
   "admin.config.smtp.password.description": "Jelszó az SMTP kiszolgálón",
   "admin.config.smtp.button.test": "Teszt email küldése",
   "admin.config.smtp.test-email.success": "Az e-mail sikeresen elküldve",
   "admin.config.smtp.test-email.error.title": "Sikertelen e-mail küldés",
-  "admin.config.smtp.test-email.error.description":
-    "A teszt e-mail küldése közben a következő hiba történt:",
+  "admin.config.smtp.test-email.error.description": "A teszt e-mail küldése közben a következő hiba történt:",
   "admin.config.smtp.test-email.save.title": "Beállítások mentése",
-  "admin.config.smtp.test-email.save.description":
-    "A folytatáshoz először mentenie kell a beállításokat. Szeretné elvégezni a mentést és kiküldeni egy teszt e-mailt?",
+  "admin.config.smtp.test-email.save.description": "A folytatáshoz először mentenie kell a beállításokat. Szeretné elvégezni a mentést és kiküldeni egy teszt e-mailt?",
   "admin.config.smtp.test-email.save.confirm": "Mentés és küldés",
-  "admin.config.smtp.allow-unauthorized-certificates":
-    "A jogosulatlan SMTP kiszolgáló tanúsítványok is megbízhatók",
-  "admin.config.smtp.allow-unauthorized-certificates.description":
-    "Csak akkor engedélyezze ha saját aláírású tanúsítványok elfogadása is szükséges.",
+  "admin.config.smtp.allow-unauthorized-certificates": "A jogosulatlan SMTP kiszolgáló tanúsítványok is megbízhatók",
+  "admin.config.smtp.allow-unauthorized-certificates.description": "Csak akkor engedélyezze ha saját aláírású tanúsítványok elfogadása is szükséges.",
   "admin.config.oauth.allow-registration": "Regisztráció engedélyezése",
-  "admin.config.oauth.allow-registration.description":
-    "A felhasználók közösségi bejelentkezésen át is regisztrálhatnak",
+  "admin.config.oauth.allow-registration.description": "A felhasználók közösségi bejelentkezésen át is regisztrálhatnak",
   "admin.config.oauth.ignore-totp": "TOTP mellőzése",
-  "admin.config.oauth.ignore-totp.description":
-    "TOTP mellőzése a közösségi bejelentkezést használó felhasználónál",
+  "admin.config.oauth.ignore-totp.description": "TOTP mellőzése a közösségi bejelentkezést használó felhasználónál",
   "admin.config.oauth.disable-password": "Jelszavas bejelentkezés letiltása",
-  "admin.config.oauth.disable-password.description":
-    "A jelszavas bejelentkezés be- és kikapcsolása\nA letiltás előtt a kizáródás elkerülésére mindenképpen ellenőrizendő az OAuth szolgáltató megfelelő konfigurációja.",
+  "admin.config.oauth.disable-password.description": "A jelszavas bejelentkezés be- és kikapcsolása\nA letiltás előtt a kizáródás elkerülésére mindenképpen ellenőrizendő az OAuth szolgáltató megfelelő konfigurációja.",
   "admin.config.oauth.github-enabled": "GitHub",
-  "admin.config.oauth.github-enabled.description":
-    "GitHub bejelentkezés engedélyezése",
+  "admin.config.oauth.github-enabled.description": "GitHub bejelentkezés engedélyezése",
   "admin.config.oauth.github-client-id": "GitHub ügyfél ID",
-  "admin.config.oauth.github-client-id.description":
-    "A GitHub OAuth applikáció ügyfél ID azonosítója",
+  "admin.config.oauth.github-client-id.description": "A GitHub OAuth applikáció ügyfél ID azonosítója",
   "admin.config.oauth.github-client-secret": "GitHub ügyfél titok",
-  "admin.config.oauth.github-client-secret.description":
-    "A GitHub OAuth applikáció ügyfél titka",
+  "admin.config.oauth.github-client-secret.description": "A GitHub OAuth applikáció ügyfél titka",
   "admin.config.oauth.google-enabled": "Google",
-  "admin.config.oauth.google-enabled.description":
-    "Google bejelentkezés engedélyezése",
+  "admin.config.oauth.google-enabled.description": "Google bejelentkezés engedélyezése",
   "admin.config.oauth.google-client-id": "Google ügyfél ID azonosító",
-  "admin.config.oauth.google-client-id.description":
-    "A Google OAuth applikáció ügyfél ID azonosítója",
+  "admin.config.oauth.google-client-id.description": "A Google OAuth applikáció ügyfél ID azonosítója",
   "admin.config.oauth.google-client-secret": "Google ügyfél titok",
-  "admin.config.oauth.google-client-secret.description":
-    "A Google OAuth applikáció ügyfél titka",
+  "admin.config.oauth.google-client-secret.description": "A Google OAuth applikáció ügyfél titka",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
-  "admin.config.oauth.microsoft-enabled.description":
-    "Microsoft login engedélyezése",
+  "admin.config.oauth.microsoft-enabled.description": "Microsoft login engedélyezése",
   "admin.config.oauth.microsoft-tenant": "Microsoft bérlő",
-  "admin.config.oauth.microsoft-tenant.description":
-    "A Microsoft OAuth applikáció bérlő ID azonosítója\náltalános (common): személyes Microsoft fiókkal és munkahelyi vagy iskolai fiókkal rendelkező Microsoft Entra ID azonosítókkal egyaránt lehetséges a bejelentkezés. \nszervezetek (organizations): Csak a Microsoft Entra ID munkahelyi vagy iskolai fiókkal rendelkező felhasználók jelentkezhetnek be az alkalmazásba.\nfogyasztók (consumers): Csak személyes Microsoft-fiókkal rendelkező felhasználók jelentkezhetnek be az alkalmazásba.\nA Microsoft Entra bérlő tartományneve vagy a bérlő azonosítója GUID formátumban: Az alkalmazásba csak egy adott Microsoft Entra bérlő felhasználói jelentkezhetnek be (munkahelyi vagy iskolai fiókkal rendelkező könyvtártagok vagy személyes Microsoft-fiókkal rendelkező könyvtárvendégek).",
+  "admin.config.oauth.microsoft-tenant.description": "A Microsoft OAuth applikáció bérlő ID azonosítója\náltalános (common): személyes Microsoft fiókkal és munkahelyi vagy iskolai fiókkal rendelkező Microsoft Entra ID azonosítókkal egyaránt lehetséges a bejelentkezés. \nszervezetek (organizations): Csak a Microsoft Entra ID munkahelyi vagy iskolai fiókkal rendelkező felhasználók jelentkezhetnek be az alkalmazásba.\nfogyasztók (consumers): Csak személyes Microsoft-fiókkal rendelkező felhasználók jelentkezhetnek be az alkalmazásba.\nA Microsoft Entra bérlő tartományneve vagy a bérlő azonosítója GUID formátumban: Az alkalmazásba csak egy adott Microsoft Entra bérlő felhasználói jelentkezhetnek be (munkahelyi vagy iskolai fiókkal rendelkező könyvtártagok vagy személyes Microsoft-fiókkal rendelkező könyvtárvendégek).",
   "admin.config.oauth.microsoft-client-id": "Microsoft ügyfél ID azonosító",
-  "admin.config.oauth.microsoft-client-id.description":
-    "A Microsoft OAuth applikáció ügyfél ID azonosítója",
+  "admin.config.oauth.microsoft-client-id.description": "A Microsoft OAuth applikáció ügyfél ID azonosítója",
   "admin.config.oauth.microsoft-client-secret": "Microsoft ügyfél titok",
-  "admin.config.oauth.microsoft-client-secret.description":
-    "A Microsoft Oauth applikáció ügyfél titka",
+  "admin.config.oauth.microsoft-client-secret.description": "A Microsoft Oauth applikáció ügyfél titka",
   "admin.config.oauth.discord-enabled": "Discord",
-  "admin.config.oauth.discord-enabled.description":
-    "Discord bejelentkezés engedélyezése",
+  "admin.config.oauth.discord-enabled.description": "Discord bejelentkezés engedélyezése",
   "admin.config.oauth.discord-limited-users": "Discord felhasználók szűkítése",
-  "admin.config.oauth.discord-limited-users.description":
-    "Korlátozza a bejelentkezést adott felhasználókra a Discord azonosítójuk alapján. Hagyja üresen a letiltáshoz.",
-  "admin.config.oauth.discord-limited-guild":
-    "Discord limitált kiszolgáló ID azonosítója",
-  "admin.config.oauth.discord-limited-guild.description":
-    "A kiszolgálón engedélyezett bejelentkezett felhasználók száma. Hagyja üresen a kikapcsoláshoz.",
+  "admin.config.oauth.discord-limited-users.description": "Korlátozza a bejelentkezést adott felhasználókra a Discord azonosítójuk alapján. Hagyja üresen a letiltáshoz.",
+  "admin.config.oauth.discord-limited-guild": "Discord limitált kiszolgáló ID azonosítója",
+  "admin.config.oauth.discord-limited-guild.description": "A kiszolgálón engedélyezett bejelentkezett felhasználók száma. Hagyja üresen a kikapcsoláshoz.",
   "admin.config.oauth.discord-client-id": "Discord ügyfél ID azonosító",
-  "admin.config.oauth.discord-client-id.description":
-    "A Discord OAuth applikáció ügyfél ID azonosítója",
+  "admin.config.oauth.discord-client-id.description": "A Discord OAuth applikáció ügyfél ID azonosítója",
   "admin.config.oauth.discord-client-secret": "Discord ügyfél titok",
-  "admin.config.oauth.discord-client-secret.description":
-    "A Discord OAuth applikáció ügyfél titka",
+  "admin.config.oauth.discord-client-secret.description": "A Discord OAuth applikáció ügyfél titka",
   "admin.config.oauth.oidc-enabled": "OpenID Connect",
-  "admin.config.oauth.oidc-enabled.description":
-    "OpenID Connect bejelentkezés engedélyezése",
+  "admin.config.oauth.oidc-enabled.description": "OpenID Connect bejelentkezés engedélyezése",
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect felderítési URL",
-  "admin.config.oauth.oidc-discovery-uri.description":
-    "Az OpenID Connect OAuth applikáció Discovery URI azonosítója",
+  "admin.config.oauth.oidc-discovery-uri.description": "Az OpenID Connect OAuth applikáció Discovery URI azonosítója",
   "admin.config.oauth.oidc-sign-out": "Kijelentkezés az OpenID Connect-ből",
-  "admin.config.oauth.oidc-sign-out.description":
-    "A „Kijelentkezés” gomb kijelentkeztessen-e az OpenID Connect szolgáltatótól",
+  "admin.config.oauth.oidc-sign-out.description": "A „Kijelentkezés” gomb kijelentkeztessen-e az OpenID Connect szolgáltatótól",
   "admin.config.oauth.oidc-scope": "OpenID Connect adatkör",
-  "admin.config.oauth.oidc-scope.description":
-    "Az OpenID Connect szolgáltatótól lekérendő adatkörök.",
-  "admin.config.oauth.oidc-username-claim":
-    "OpenID Connect felhasználónév igény",
-  "admin.config.oauth.oidc-username-claim.description":
-    "Az OpenID Connect ID token felhasználónév igénye. Hagyja üresen ha nincs információja a beállításról.",
-  "admin.config.oauth.oidc-role-path":
-    "Az OpenID Connect token szerepeinek elérési útvonala",
-  "admin.config.oauth.oidc-role-path.description":
-    "Szerepkörökből álló tömbre hivatkozó érvényes JMES-útvonalnak kell lennie. " +
-    "A belépési jogosultságok kezelésére az OpenID Connect szerepkörök csak más azonosító szolgáltatások hiányában és a jelszavas bejelentkezés letiltottsága mellett javasolt. " +
-    "Hagyja üresen, ha nem tudja, mi ez a konfiguráció.",
-  "admin.config.oauth.oidc-role-general-access":
-    "OpenID Connect szerepkör általános hozzáféréshez",
-  "admin.config.oauth.oidc-role-general-access.description":
-    "Általános hozzáféréshez szükséges szerepkör. A felhasználónak rendelkeznie szükséges a megadott szerepkörrel ahhoz, hogy bejelentkezhessen. " +
-    "Hagyja üresen, ha nem tudja, mi ez a konfiguráció.",
-  "admin.config.oauth.oidc-role-admin-access":
-    "OpenID Connect szerepkör admin hozzáféréshez",
-  "admin.config.oauth.oidc-role-admin-access.description":
-    "A rendszergazdai hozzáféréshez szükséges szerepkör. Meg kell lennie a felhasználó szerepkörében ahhoz, hogy hozzáférhessen az adminisztrációs panelhez. " +
-    "Hagyja üresen, ha nem tudja, mi ez a konfiguráció.",
+  "admin.config.oauth.oidc-scope.description": "Az OpenID Connect szolgáltatótól lekérendő adatkörök.",
+  "admin.config.oauth.oidc-username-claim": "OpenID Connect felhasználónév igény",
+  "admin.config.oauth.oidc-username-claim.description": "Az OpenID Connect ID token felhasználónév igénye. Hagyja üresen ha nincs információja a beállításról.",
+  "admin.config.oauth.oidc-role-path": "Az OpenID Connect token szerepeinek elérési útvonala",
+  "admin.config.oauth.oidc-role-path.description": "Szerepkörökből álló tömbre hivatkozó érvényes JMES-útvonalnak kell lennie. " + "A belépési jogosultságok kezelésére az OpenID Connect szerepkörök csak más azonosító szolgáltatások hiányában és a jelszavas bejelentkezés letiltottsága mellett javasolt. " + "Hagyja üresen, ha nem tudja, mi ez a konfiguráció.",
+  "admin.config.oauth.oidc-role-general-access": "OpenID Connect szerepkör általános hozzáféréshez",
+  "admin.config.oauth.oidc-role-general-access.description": "Általános hozzáféréshez szükséges szerepkör. A felhasználónak rendelkeznie szükséges a megadott szerepkörrel ahhoz, hogy bejelentkezhessen. " + "Hagyja üresen, ha nem tudja, mi ez a konfiguráció.",
+  "admin.config.oauth.oidc-role-admin-access": "OpenID Connect szerepkör admin hozzáféréshez",
+  "admin.config.oauth.oidc-role-admin-access.description": "A rendszergazdai hozzáféréshez szükséges szerepkör. Meg kell lennie a felhasználó szerepkörében ahhoz, hogy hozzáférhessen az adminisztrációs panelhez. " + "Hagyja üresen, ha nem tudja, mi ez a konfiguráció.",
   "admin.config.oauth.oidc-client-id": "OpenID Connect ügyfél ID azonosító",
-  "admin.config.oauth.oidc-client-id.description":
-    "Az OpenID Connect OAuth applikáció ügyfél ID azonosítója",
+  "admin.config.oauth.oidc-client-id.description": "Az OpenID Connect OAuth applikáció ügyfél ID azonosítója",
   "admin.config.oauth.oidc-client-secret": "OpenID Connect ügyfél titok",
-  "admin.config.oauth.oidc-client-secret.description":
-    "Az OpenID Connect OAuth applikáció ügyfél titka",
+  "admin.config.oauth.oidc-client-secret.description": "Az OpenID Connect OAuth applikáció ügyfél titka",
   "admin.config.category.ldap": "LAP",
   "admin.config.ldap.enabled": "LDAP engedélyezve",
-  "admin.config.ldap.enabled.description":
-    "LDAP hitelesítés használata a felhasználói beléptetéshez",
+  "admin.config.ldap.enabled.description": "LDAP hitelesítés használata a felhasználói beléptetéshez",
   "admin.config.ldap.url": "Kiszolgáló URL",
   "admin.config.ldap.url.description": "Az LDAP kiszolgáló URL címe",
   "admin.config.ldap.bind-dn": "DN csatolása",
-  "admin.config.ldap.bind-dn.description":
-    "A felhasználókeresés elvégzéséhez használt alapértelmezett felhasználó",
+  "admin.config.ldap.bind-dn.description": "A felhasználókeresés elvégzéséhez használt alapértelmezett felhasználó",
   "admin.config.ldap.bind-password": "Jelszó csatolása",
-  "admin.config.ldap.bind-password.description":
-    "A felhasználókeresés elvégzéséhez használt jelszó",
+  "admin.config.ldap.bind-password.description": "A felhasználókeresés elvégzéséhez használt jelszó",
   "admin.config.ldap.search-base": "Felhasználóbázis",
-  "admin.config.ldap.search-base.description":
-    "A felhasználókeresés végrehajtásának helye",
+  "admin.config.ldap.search-base.description": "A felhasználókeresés végrehajtásának helye",
   "admin.config.ldap.search-query": "Felhasználó lekérdezés",
-  "admin.config.ldap.search-query.description":
-    "A felhasználó lekérdezés kísérli meg az LDAP felhasználó elérését a felhasználóbázisban. %username% helyettesítheti az adott felhasználónevet.",
+  "admin.config.ldap.search-query.description": "A felhasználó lekérdezés kísérli meg az LDAP felhasználó elérését a felhasználóbázisban. %username% helyettesítheti az adott felhasználónevet.",
   "admin.config.ldap.admin-groups": "Admin csoport",
-  "admin.config.ldap.admin-groups.description":
-    "Az adminisztrátori hozzáféréshez szükséges csoport.",
-  "admin.config.ldap.field-name-member-of":
-    "Felhasználói csoportok attribútum neve",
-  "admin.config.ldap.field-name-member-of.description":
-    "Az LDAP attribútum neve, amely a felhasználó csoporttagságait tartalmazza. Ez az attribútum kerül ellenőrzésre az adminisztrátori csoport meghatározásakor.",
+  "admin.config.ldap.admin-groups.description": "Az adminisztrátori hozzáféréshez szükséges csoport.",
+  "admin.config.ldap.field-name-member-of": "Felhasználói csoportok attribútum neve",
+  "admin.config.ldap.field-name-member-of.description": "Az LDAP attribútum neve, amely a felhasználó csoporttagságait tartalmazza. Ez az attribútum kerül ellenőrzésre az adminisztrátori csoport meghatározásakor.",
   "admin.config.ldap.field-name-email": "Felhasználó e-mail attribútum neve",
-  "admin.config.ldap.field-name-email.description":
-    "A felhasználó e-mail címét tartalmazó LDAP attribútum neve.",
+  "admin.config.ldap.field-name-email.description": "A felhasználó e-mail címét tartalmazó LDAP attribútum neve.",
   "admin.config.notify.success": "A konfiguráció sikeresen frissítésre került.",
-  "admin.config.notify.logo-success":
-    "A logó sikeresen frissítve. A weboldalon történő frissítés eltarthat néhány percig.",
+  "admin.config.notify.logo-success": "A logó sikeresen frissítve. A weboldalon történő frissítés eltarthat néhány percig.",
   "admin.config.notify.no-changes": "Nincsenek menthető módosítások.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Engedélyezve",
-  "admin.config.s3.enabled.description":
-    "Meghatározza, hogy a megosztott fájlok tárolására a helyi fájlrendszer helyett S3 tároló kerüljön-e használatra. FIGYELEM: Ha a ClamAV aktív, a fájlok az ellenőrzés idejére átmenetileg letöltésre kerülnek az S3-ból.",
+  "admin.config.s3.enabled.description": "Meghatározza, hogy a megosztott fájlok tárolására a helyi fájlrendszer helyett S3 tároló kerüljön-e használatra. FIGYELEM: Ha a ClamAV aktív, a fájlok az ellenőrzés idejére átmenetileg letöltésre kerülnek az S3-ból.",
   "admin.config.s3.endpoint": "Végpont",
   "admin.config.s3.endpoint.description": "Az S3 bucket URL címe.",
   "admin.config.s3.region": "Régió",
@@ -821,36 +618,25 @@ export default {
   "admin.config.s3.bucket-name": "Bucket neve",
   "admin.config.s3.bucket-name.description": "Az S3 bucket régiója.",
   "admin.config.s3.bucket-path": "Útvonal",
-  "admin.config.s3.bucket-path.description":
-    "Az alapértelmezett útvonal a fájlok S3 bucket-ben történő tárolásához.",
+  "admin.config.s3.bucket-path.description": "Az alapértelmezett útvonal a fájlok S3 bucket-ben történő tárolásához.",
   "admin.config.s3.key": "Hozzáférési kulcs",
-  "admin.config.s3.key.description":
-    "Az S3 tároló eléréséhez szükséges hozzáférési kulcs.",
+  "admin.config.s3.key.description": "Az S3 tároló eléréséhez szükséges hozzáférési kulcs.",
   "admin.config.s3.secret": "Kulcs",
-  "admin.config.s3.secret.description":
-    "Az S3 tároló eléréséhez szükséges titkos kulcs.",
+  "admin.config.s3.secret.description": "Az S3 tároló eléréséhez szükséges titkos kulcs.",
   "admin.config.s3.use-checksum": "Ellenőrzőösszeg használata",
-  "admin.config.s3.use-checksum.description":
-    "Kapcsolja ki azon háttérrendszerek esetében, amelyek nem támogatják az ellenőrzőösszeget (pl. B2).",
-  "admin.config.s3.docs-link":
-    "A CORS-t újra kell konfigurálni a tárolón, a részletekért lásd a {wikiLink} oldalt.",
+  "admin.config.s3.use-checksum.description": "Kapcsolja ki azon háttérrendszerek esetében, amelyek nem támogatják az ellenőrzőösszeget (pl. B2).",
+  "admin.config.s3.docs-link": "A CORS-t újra kell konfigurálni a tárolón, a részletekért lásd a {wikiLink} oldalt.",
   "admin.config.category.legal": "Jogi nyilatkozat",
   "admin.config.legal.enabled": "Jogi nyilatkozat megjelenítése",
-  "admin.config.legal.enabled.description":
-    "Meghatározza, hogy az impresszum és az adatvédelmi tájékoztató hivatkozása megjelenjen-e a láblécben.",
+  "admin.config.legal.enabled.description": "Meghatározza, hogy az impresszum és az adatvédelmi tájékoztató hivatkozása megjelenjen-e a láblécben.",
   "admin.config.legal.imprint-text": "Impresszum szövege",
-  "admin.config.legal.imprint-text.description":
-    "Az impresszumban megjelenítendő szöveg. Markdown formázást támogat. Hagyja üresen, ha külső impresszum oldalra szeretne hivatkozni.",
+  "admin.config.legal.imprint-text.description": "Az impresszumban megjelenítendő szöveg. Markdown formázást támogat. Hagyja üresen, ha külső impresszum oldalra szeretne hivatkozni.",
   "admin.config.legal.imprint-url": "Impresszum URL",
-  "admin.config.legal.imprint-url.description":
-    "Ha már rendelkezik impresszum oldallal, itt megadhatja a hivatkozást a szöveges mező használata helyett.",
+  "admin.config.legal.imprint-url.description": "Ha már rendelkezik impresszum oldallal, itt megadhatja a hivatkozást a szöveges mező használata helyett.",
   "admin.config.legal.privacy-policy-text": "Adatvédelmi irányelv szövege",
-  "admin.config.legal.privacy-policy-text.description":
-    "Az adatvédelmi irányelvben megjelenítendő szöveg. Markdown támogatott. Hagyja üresen, ha külső adatvédelmi irányelvet tartalmazó oldalra szeretne hivatkozni.",
-  "admin.config.legal.privacy-policy-url":
-    "Adatvédelmi irányelv URL hivatkozása",
-  "admin.config.legal.privacy-policy-url.description":
-    "Ha már rendelkezik adatvédelmi irányelvet tartalmazó oldallal, akkor ide linkelheti be a szövegmező használata helyett.",
+  "admin.config.legal.privacy-policy-text.description": "Az adatvédelmi irányelvben megjelenítendő szöveg. Markdown támogatott. Hagyja üresen, ha külső adatvédelmi irányelvet tartalmazó oldalra szeretne hivatkozni.",
+  "admin.config.legal.privacy-policy-url": "Adatvédelmi irányelv URL hivatkozása",
+  "admin.config.legal.privacy-policy-url.description": "Ha már rendelkezik adatvédelmi irányelvet tartalmazó oldallal, akkor ide linkelheti be a szövegmező használata helyett.",
   // 404
   "404.description": "Hoppá - ez az oldal nem létezik.",
   "404.button.home": "Vissza a Kezdőlapra",
@@ -859,26 +645,18 @@ export default {
   "error.description": "Hoppá!",
   "error.button.back": "Vissza",
   "error.msg.default": "Hiba történt.",
-  "error.msg.access_denied":
-    "Megszakította a hitelesítési folyamatot, kérem próbálja újra.",
-  "error.msg.expired_token":
-    "A hitelesítési folyamat túl sokáig tartott, kérem próbálja újra.",
+  "error.msg.access_denied": "Megszakította a hitelesítési folyamatot, kérem próbálja újra.",
+  "error.msg.expired_token": "A hitelesítési folyamat túl sokáig tartott, kérem próbálja újra.",
   "error.msg.invalid_token": "Belső hiba",
   "error.msg.no_user": "A(z) {0} fiókhoz kapcsolt felhasználó nem létezik.",
   "error.msg.no_email": "Nem nyerhető ki a(z) {0} fiók emailcíme.",
-  "error.msg.already_linked":
-    "Ez a(z) {0} fiók már kapcsolódik egy másik fiókhoz.",
-  "error.msg.not_linked":
-    "Ez a(z) {0} fiók még nincs összekapcsolva egyetlen fiókkal sem.",
-  "error.msg.email_already_exists":
-    "Már létezik fiók ezzel az e-mail címmel. Kérjük, jelentkezzen be a jelszavával, és manuálisan kapcsolja össze a(z) {0} fiókját a Fiókom oldalon.",
-  "error.msg.email_not_verified":
-    "Az Ön e-mail címe ezen a(z) {0} fiókon nincs ellenőrizve. Kérjük, a bejelentkezés előtt igazolja e-mail címét a hitelesítésszolgáltatójánál.",
-  "error.msg.unverified_account":
-    "Ezt a(z) {0} fiókot még nem igazolták vissza, kérem próbálja újra a megerősítés után.",
+  "error.msg.already_linked": "Ez a(z) {0} fiók már kapcsolódik egy másik fiókhoz.",
+  "error.msg.not_linked": "Ez a(z) {0} fiók még nincs összekapcsolva egyetlen fiókkal sem.",
+  "error.msg.email_already_exists": "Már létezik fiók ezzel az e-mail címmel. Kérjük, jelentkezzen be a jelszavával, és manuálisan kapcsolja össze a(z) {0} fiókját a Fiókom oldalon.",
+  "error.msg.email_not_verified": "Az Ön e-mail címe ezen a(z) {0} fiókon nincs ellenőrizve. Kérjük, a bejelentkezés előtt igazolja e-mail címét a hitelesítésszolgáltatójánál.",
+  "error.msg.unverified_account": "Ezt a(z) {0} fiókot még nem igazolták vissza, kérem próbálja újra a megerősítés után.",
   "error.msg.user_not_allowed": "Nem jelentkezhet be.",
-  "error.msg.cannot_get_user_info":
-    "Nem sikerült lekérni a felhasználói adatokat erről a(z) {0} fiókról.",
+  "error.msg.cannot_get_user_info": "Nem sikerült lekérni a felhasználói adatokat erről a(z) {0} fiókról.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
@@ -923,20 +701,14 @@ export default {
   "common.error.exact-length": "Pontosan {length} karakter szükséges",
   "common.error.invalid-number": "Számot kell megadnia",
   "common.error.field-required": "Ez egy kötelező mező",
-  "common.error.password.lowercase":
-    "A jelszónak tartalmaznia kell legalább egy kisbetűt",
-  "common.error.password.uppercase":
-    "A jelszónak tartalmaznia kell legalább egy nagybetűt",
-  "common.error.password.number":
-    "A jelszónak tartalmaznia kell legalább egy számot",
-  "common.error.password.special":
-    "A jelszónak tartalmaznia kell legalább egy különleges karaktert",
+  "common.error.password.lowercase": "A jelszónak tartalmaznia kell legalább egy kisbetűt",
+  "common.error.password.uppercase": "A jelszónak tartalmaznia kell legalább egy nagybetűt",
+  "common.error.password.number": "A jelszónak tartalmaznia kell legalább egy számot",
+  "common.error.password.special": "A jelszónak tartalmaznia kell legalább egy különleges karaktert",
   "admin.notice.modal.headerTag": "ADMINISZTRÁTORI INTÉZKEDÉS SZÜKSÉGES",
-  "admin.notice.modal.defaultCheckboxLabel":
-    "Megerősítem, hogy elolvastam ezt az értesítést, és megértettem a lényegi változtatásokat.",
+  "admin.notice.modal.defaultCheckboxLabel": "Megerősítem, hogy elolvastam ezt az értesítést, és megértettem a lényegi változtatásokat.",
   "admin.notice.modal.button.acknowledge": "Tudomásul veszem és bezárom",
   "admin.notice.modal.button.acknowledging": "Feldolgozás...",
   "admin.notice.modal.docsLink": "Dokumentáció megtekintése",
-  "admin.notice.modal.globalNoticeFooter":
-    "Megjegyzés: A tudomásulvételt követően ez az értesítés minden adminisztrátor számára véglegesen elrejtésre kerül az összes eszközön.",
+  "admin.notice.modal.globalNoticeFooter": "Megjegyzés: A tudomásulvételt követően ez az értesítés minden adminisztrátor számára véglegesen elrejtésre kerül az összes eszközön.",
 };

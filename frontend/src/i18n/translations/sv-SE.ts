@@ -14,16 +14,13 @@ export default {
 
   // /
   "home.title": "En <h>egen</h> fildelningsplattform.",
-  "home.description":
-    "Vill du verkligen lägga dina personliga filer hos en tredje part som WeTransfer?",
+  "home.description": "Vill du verkligen lägga dina personliga filer hos en tredje part som WeTransfer?",
   "home.bullet.a.name": "Lokalt installerad",
   "home.bullet.a.description": "Hosta Pingvin Share på din egen maskin.",
   "home.bullet.b.name": "Sekretess",
-  "home.bullet.b.description":
-    "Dina filer är dina och kommer aldrig att nås av tredje part.",
+  "home.bullet.b.description": "Dina filer är dina och kommer aldrig att nås av tredje part.",
   "home.bullet.c.name": "Ingen irriterande filstorleksbegränsning",
-  "home.bullet.c.description":
-    "Ladda upp filer så stora du vill. Endast hårddisken kommer vara din begränsning.",
+  "home.bullet.c.description": "Ladda upp filer så stora du vill. Endast hårddisken kommer vara din begränsning.",
   "home.button.start": "Kom igång",
   "home.button.source": "Källkod",
   // END /
@@ -33,14 +30,12 @@ export default {
   "signin.description": "Har du inget konto än?",
   "signin.button.signup": "Skapa konto",
   "signin.input.email-or-username": "E-post eller användarnamn",
-  "signin.input.email-or-username.placeholder":
-    "Din e-postadress eller ditt användarnamn",
+  "signin.input.email-or-username.placeholder": "Din e-postadress eller ditt användarnamn",
   "signin.input.password": "Lösenord",
   "signin.input.password.placeholder": "Lösenord",
   "signin.button.submit": "Logga in",
   "signIn.notify.totp-required.title": "Tvåfaktorsautentisering krävs",
-  "signIn.notify.totp-required.description":
-    "Vänligen ange din tvåfaktorsautentiseringskod",
+  "signIn.notify.totp-required.description": "Vänligen ange din tvåfaktorsautentiseringskod",
   "signIn.oauth.or": "ELLER",
   "signIn.oauth.signInWith": "Logga in med",
   "signIn.oauth.github": "GitHub",
@@ -65,10 +60,8 @@ export default {
   "verify.error": "Verifieringslänken är ogiltig eller har löpt ut.",
   "verify.button.signin": "Gå till Logga in",
   "verify.info.title": "Kontoverifiering",
-  "verify.info.description":
-    "E-postverifiering är aktiverad. Vi har skickat en verifieringslänk till din e-postadress. Klicka på länken för att aktivera ditt konto.",
-  "verify.info.note":
-    "Om du inte får e-postmeddelandet inom några minuter, kontrollera din skräppostmapp.",
+  "verify.info.description": "E-postverifiering är aktiverad. Vi har skickat en verifieringslänk till din e-postadress. Klicka på länken för att aktivera ditt konto.",
+  "verify.info.note": "Om du inte får e-postmeddelandet inom några minuter, kontrollera din skräppostmapp.",
   "verify.info.resend.button": "Skicka verifieringsmeddelande igen",
   "verify.info.resend.success": "Verifieringsmeddelandet har skickats igen.",
   "verify.info.resend.error": "Kunde inte skicka verifieringsmeddelandet igen.",
@@ -81,10 +74,8 @@ export default {
 
   // /auth/reset-password
   "resetPassword.title": "Glömt ditt lösenord?",
-  "resetPassword.description":
-    "Ange din e-postadress för att återställa ditt lösenord.",
-  "resetPassword.notify.success":
-    "Ett meddelande med en länk för att återställa ditt lösenord har skickats om den angivna e-postadressen finns registrerad.",
+  "resetPassword.description": "Ange din e-postadress för att återställa ditt lösenord.",
+  "resetPassword.notify.success": "Ett meddelande med en länk för att återställa ditt lösenord har skickats om den angivna e-postadressen finns registrerad.",
   "resetPassword.button.back": "Tillbaka till inloggningssidan",
   "resetPassword.text.resetPassword": "Återställ lösenord",
   "resetPassword.text.enterNewPassword": "Ange ditt nya lösenord",
@@ -99,8 +90,7 @@ export default {
   "account.card.password.title": "Lösenord",
   "account.card.password.old": "Gammalt lösenord",
   "account.card.password.new": "Nytt lösenord",
-  "account.card.password.noPasswordSet":
-    "Du har inget lösenord. För att logga in med din e-postadress och lösenord måste du skapa ett lösenord.",
+  "account.card.password.noPasswordSet": "Du har inget lösenord. För att logga in med din e-postadress och lösenord måste du skapa ett lösenord.",
   "account.notify.password.success": "Lösenordet har ändrats",
   "account.card.oauth.title": "Inloggning via sociala nätverk",
   "account.card.oauth.github": "GitHub",
@@ -112,14 +102,11 @@ export default {
   "account.card.oauth.unlink": "Avlänka",
   "account.card.oauth.unlinked": "Avlänkad",
   "account.modal.unlink.title": "Avlänka konto",
-  "account.modal.unlink.description":
-    "Om du kopplar bort dina sociala konton kan det leda till att du förlorar ditt konto om du inte kommer ihåg dina inloggningsuppgifter",
+  "account.modal.unlink.description": "Om du kopplar bort dina sociala konton kan det leda till att du förlorar ditt konto om du inte kommer ihåg dina inloggningsuppgifter",
   "account.notify.oauth.unlinked.success": "Avlänkning utförd",
   "account.card.security.title": "Säkerhet",
-  "account.card.security.totp.enable.description":
-    "Ange ditt nuvarande lösenord för att aktivera TOTP",
-  "account.card.security.totp.disable.description":
-    "Ange ditt lösenord för att inaktivera TOTP",
+  "account.card.security.totp.enable.description": "Ange ditt nuvarande lösenord för att aktivera TOTP",
+  "account.card.security.totp.disable.description": "Ange ditt lösenord för att inaktivera TOTP",
   "account.card.security.totp.button.start": "Starta",
   "account.modal.totp.title": "Aktivera TOTP",
   "account.modal.totp.step1": "Steg 1: Lägg till din autentiserare",
@@ -132,8 +119,7 @@ export default {
   "account.notify.totp.disable": "TOTP har inaktiverats",
   "account.notify.totp.enable": "TOTP aktiverat",
   "account.card.language.title": "Språk",
-  "account.card.language.description":
-    "Projektet är översatt av gemenskapen. Vissa översättningar kan vara ofullständiga.",
+  "account.card.language.description": "Projektet är översatt av gemenskapen. Vissa översättningar kan vara ofullständiga.",
   "account.card.color.title": "Färgschema",
   // ThemeSwitcher.tsx
   "account.theme.dark": "Mörk",
@@ -141,8 +127,7 @@ export default {
   "account.theme.system": "System",
   "account.button.delete": "Ta bort konto",
   "account.modal.delete.title": "Ta bort konto",
-  "account.modal.delete.description":
-    "Vill du verkligen ta bort ditt konto inklusive alla dina aktiva delningar?",
+  "account.modal.delete.description": "Vill du verkligen ta bort ditt konto inklusive alla dina aktiva delningar?",
   // END /account
 
   // /account/shares
@@ -161,34 +146,29 @@ export default {
   "account.shares.table.size": "Storlek",
   "account.shares.table.password-protected": "Lösenordsskyddad",
   "account.shares.table.recipients": "Mottagare",
-  "account.shares.table.restricted-to-recipients":
-    "Endast begränsad till mottagare",
+  "account.shares.table.restricted-to-recipients": "Endast begränsad till mottagare",
   "account.shares.table.shared-with-recipients": "Delad med mottagare",
   "account.shares.table.visitor-count": "{count} av {max}",
   "account.shares.table.expiry-never": "Aldrig",
   "account.shares.modal.share-informations": "Information om delning",
   "account.shares.modal.share-link": "Delningslänk",
-  "account.shares.modal.edit.password.keep":
-    "Lämna tomt för att behålla det nuvarande lösenordet",
+  "account.shares.modal.edit.password.keep": "Lämna tomt för att behålla det nuvarande lösenordet",
   "account.shares.modal.edit.password.remove": "Ta bort lösenordsskyddet",
   "account.shares.modal.delete.title": "Ta bort delning: {share}",
-  "account.shares.modal.delete.description":
-    "Vill du verkligen ta bort denna delning?",
+  "account.shares.modal.delete.description": "Vill du verkligen ta bort denna delning?",
   // END /account/shares
 
   // /account/received
   "account.received-shares.title": "Mottagna delningar",
   "account.received-shares.title.empty": "Inga mottagna delningar ännu",
-  "account.received-shares.description.empty":
-    "Delningar som skickas till din e-postadress visas här.",
+  "account.received-shares.description.empty": "Delningar som skickas till din e-postadress visas här.",
   "account.received-shares.table.from": "Från",
   "account.received-shares.button.open": "Öppna",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Omvända delningar",
-  "account.reverseShares.description":
-    "En omvänd delning gör att du kan generera en unik URL som tillåter externa användare att skapa en delning.",
+  "account.reverseShares.description": "En omvänd delning gör att du kan generera en unik URL som tillåter externa användare att skapa en delning.",
   "account.reverseShares.title.empty": "Här var det tomt 👀",
   "account.reverseShares.description.empty": "Du har inga omvända delningar.",
   // showCreateReverseShareModal.tsx
@@ -208,21 +188,15 @@ export default {
   "account.reverseShares.modal.expiration.year-plural": "År",
   "account.reverseShares.modal.max-size.label": "Max storlek på delning",
   "account.reverseShares.modal.send-email": "Skicka e-postaviseringar",
-  "account.reverseShares.modal.send-email.description":
-    "Skicka ett e-postavisering när en delning skapas med denna länk för omvänd delning.",
+  "account.reverseShares.modal.send-email.description": "Skicka ett e-postavisering när en delning skapas med denna länk för omvänd delning.",
   "account.reverseShares.modal.simplified": "Enkelt läge",
-  "account.reverseShares.modal.simplified.description":
-    "Gör det enkelt för den som laddar upp filen att dela den med dig. De kommer bara att kunna anpassa namn och beskrivning av delningen.",
+  "account.reverseShares.modal.simplified.description": "Gör det enkelt för den som laddar upp filen att dela den med dig. De kommer bara att kunna anpassa namn och beskrivning av delningen.",
   "account.reverseShares.modal.public-access": "Allmän åtkomst",
-  "account.reverseShares.modal.public-access.description":
-    "Gör delningar skapade med denna länk för omvänd delning publik. Om inaktiverad, kommer endast du och delningsskaparen att ha tillgång till den.",
+  "account.reverseShares.modal.public-access.description": "Gör delningar skapade med denna länk för omvänd delning publik. Om inaktiverad, kommer endast du och delningsskaparen att ha tillgång till den.",
   "account.reverseShares.modal.max-use.label": "Maxanvändningar",
-  "account.reverseShares.modal.max-use.description":
-    "Den maximala mängden gånger denna URL kan användas för att skapa en delning.",
-  "account.reverseShare.never-expires":
-    "Denna omvända delning kommer aldrig att förfalla.",
-  "account.reverseShare.expires-on":
-    "Denna sammanlagda delning löper ut på {expiration}.",
+  "account.reverseShares.modal.max-use.description": "Den maximala mängden gånger denna URL kan användas för att skapa en delning.",
+  "account.reverseShare.never-expires": "Denna omvända delning kommer aldrig att förfalla.",
+  "account.reverseShare.expires-on": "Denna sammanlagda delning löper ut på {expiration}.",
   "account.reverseShares.table.no-shares": "Inga delningar har skapats ännu",
   "account.reverseShares.table.count.singular": "delning",
   "account.reverseShares.table.count.plural": "delningar",
@@ -232,8 +206,7 @@ export default {
   "account.reverseShares.table.expires": "Förfaller den",
   "account.reverseShares.modal.reverse-share-link": "Omvänd delningslänk",
   "account.reverseShares.modal.delete.title": "Ta bort omvänd delning",
-  "account.reverseShares.modal.delete.description":
-    "Vill du verkligen ta bort denna omvänd delning? Om du gör det, kommer de tillhörande delningarna också att raderas.",
+  "account.reverseShares.modal.delete.description": "Vill du verkligen ta bort denna omvänd delning? Om du gör det, kommer de tillhörande delningarna också att raderas.",
   // END /account/reverseShares
 
   // /admin
@@ -254,39 +227,29 @@ export default {
   "admin.users.edit.update.title": "Redigera användare: {username}",
   "admin.users.edit.update.admin-privileges": "Administratörsbehörigheter",
   "admin.users.edit.update.email-verified": "E-post verifierad",
-  "admin.users.edit.update.custom-share-size-limit":
-    "Anpassad gräns för delningsstorlek",
-  "admin.users.edit.update.custom-share-size-limit.description":
-    "Åsidosätt den globala uppladdningsgränsen för denna användare",
+  "admin.users.edit.update.custom-share-size-limit": "Anpassad gräns för delningsstorlek",
+  "admin.users.edit.update.custom-share-size-limit.description": "Åsidosätt den globala uppladdningsgränsen för denna användare",
   "admin.users.edit.update.custom-storage-quota-limit": "Anpassad lagringskvot",
-  "admin.users.edit.update.custom-storage-quota-limit.description":
-    "Begränsa användarens totala lagringsanvändning över aktiva delningar",
+  "admin.users.edit.update.custom-storage-quota-limit.description": "Begränsa användarens totala lagringsanvändning över aktiva delningar",
   "admin.users.edit.update.change-password.title": "Ändra lösenord",
   "admin.users.edit.update.change-password.field": "Nytt lösenord",
   "admin.users.edit.update.change-password.button": "Spara nytt lösenord",
   "admin.users.edit.update.notify.password.success": "Lösenordet har ändrats",
   "admin.users.edit.delete.title": "Ta bort användare: {username} ?",
-  "admin.users.edit.delete.description":
-    "Vill du verkligen ta bort denna användare och alla deras delningar?",
+  "admin.users.edit.delete.description": "Vill du verkligen ta bort denna användare och alla deras delningar?",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Skapa användare",
   "admin.users.modal.create.username": "Användarnamn",
   "admin.users.modal.create.email": "E-post",
   "admin.users.modal.create.password": "Lösenord",
   "admin.users.modal.create.manual-password": "Sätt lösenord manuellt",
-  "admin.users.modal.create.manual-password.description":
-    "Om den inte är markerad kommer användaren att få ett e-postmeddelande med en länk för att ange lösenordet.",
-  "admin.users.modal.create.custom-share-size-limit":
-    "Anpassad gräns för delningsstorlek",
-  "admin.users.modal.create.custom-share-size-limit.description":
-    "Åsidosätt den globala uppladdningsgränsen för denna användare",
-  "admin.users.modal.create.custom-storage-quota-limit":
-    "Anpassad lagringskvot",
-  "admin.users.modal.create.custom-storage-quota-limit.description":
-    "Begränsa användarens totala lagringsanvändning över aktiva delningar",
+  "admin.users.modal.create.manual-password.description": "Om den inte är markerad kommer användaren att få ett e-postmeddelande med en länk för att ange lösenordet.",
+  "admin.users.modal.create.custom-share-size-limit": "Anpassad gräns för delningsstorlek",
+  "admin.users.modal.create.custom-share-size-limit.description": "Åsidosätt den globala uppladdningsgränsen för denna användare",
+  "admin.users.modal.create.custom-storage-quota-limit": "Anpassad lagringskvot",
+  "admin.users.modal.create.custom-storage-quota-limit.description": "Begränsa användarens totala lagringsanvändning över aktiva delningar",
   "admin.users.modal.create.admin": "Administratörsbehörigheter",
-  "admin.users.modal.create.admin.description":
-    "Om detta markeras kommer användaren att kunna komma åt administratörspanelen.",
+  "admin.users.modal.create.admin.description": "Om detta markeras kommer användaren att kunna komma åt administratörspanelen.",
   // END /admin/users
 
   // /admin/shares
@@ -298,28 +261,21 @@ export default {
   "admin.shares.table.expires": "Förfaller",
   "admin.shares.table.deletes": "Raderar den",
   "admin.shares.edit.delete.title": "Ta bort delning: {id}",
-  "admin.shares.edit.delete.description":
-    "Vill du verkligen ta bort denna delning?",
+  "admin.shares.edit.delete.description": "Vill du verkligen ta bort denna delning?",
   // END /admin/shares
 
   // /upload
   "upload.title": "Ladda upp",
-  "upload.notify.confirm-leave":
-    "Är du säker på att du vill lämna denna sida? Din uppladdning kommer att avbrytas.",
-  "upload.notify.generic-error":
-    "Ett fel uppstod när din delning skulle slutföras.",
-  "upload.notify.count-failed":
-    "{count} filer kunde inte laddas upp. Försöker igen.",
+  "upload.notify.confirm-leave": "Är du säker på att du vill lämna denna sida? Din uppladdning kommer att avbrytas.",
+  "upload.notify.generic-error": "Ett fel uppstod när din delning skulle slutföras.",
+  "upload.notify.count-failed": "{count} filer kunde inte laddas upp. Försöker igen.",
   "upload.notify.duplicate-skipped": "Hoppade över dubblettfil: {name}",
   "upload.reverse-share.error.invalid.title": "Ogiltig länk för omvänd delning",
-  "upload.reverse-share.error.invalid.description":
-    "Denna omvänd delning har gått ut eller är ogiltig.",
+  "upload.reverse-share.error.invalid.description": "Denna omvänd delning har gått ut eller är ogiltig.",
   // Dropzone.tsx
   "upload.dropzone.title": "Ladda upp filer",
-  "upload.dropzone.description":
-    "Dra och släpp filer eller mappar här för att starta din delning eller tryck 'Ctrl+V' för att ladda upp textinnehåll från urklipp. Vi accepterar endast filer upp till totalt {maxSize}.",
-  "upload.dropzone.notify.file-too-big":
-    "Dina filer överskrider den maximala storleken på {maxSize}.",
+  "upload.dropzone.description": "Dra och släpp filer eller mappar här för att starta din delning eller tryck 'Ctrl+V' för att ladda upp textinnehåll från urklipp. Vi accepterar endast filer upp till totalt {maxSize}.",
+  "upload.dropzone.notify.file-too-big": "Dina filer överskrider den maximala storleken på {maxSize}.",
   "upload.button.folder": "Ladda upp mapp",
   "upload.button.folder.append": "Lägg till mapp",
   "upload.button.add": "Lägg till för uppladdning",
@@ -330,20 +286,15 @@ export default {
   "upload.filelist.remaining": "{time} återstår",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Skapa delning",
-  "upload.modal.link.error.invalid":
-    "Kan endast innehålla bokstäver, siffror, understreck och bindestreck",
+  "upload.modal.link.error.invalid": "Kan endast innehålla bokstäver, siffror, understreck och bindestreck",
   "upload.modal.link.error.taken": "Denna länk används redan",
-  "upload.modal.link.error.s3-session-not-found":
-    "S3-uppladdningssession hittades inte",
-  "upload.modal.link.error.s3-etag-missing":
-    "ETag-header saknas i S3-svaret. Se till att CORS exponerar ETag-headern.",
+  "upload.modal.link.error.s3-session-not-found": "S3-uppladdningssession hittades inte",
+  "upload.modal.link.error.s3-etag-missing": "ETag-header saknas i S3-svaret. Se till att CORS exponerar ETag-headern.",
   "upload.modal.not-signed-in": "Du är inte inloggad",
-  "upload.modal.not-signed-in-description":
-    "Du kommer inte att kunna ta bort din delning manuellt och visa antalet besökare.",
+  "upload.modal.not-signed-in-description": "Du kommer inte att kunna ta bort din delning manuellt och visa antalet besökare.",
   "upload.modal.expires.never": "aldrig",
   "upload.modal.expires.never-long": "Permanent delning",
-  "upload.modal.expires.error.too-long":
-    "Förfallodatum överskrider maximalt av {max}.",
+  "upload.modal.expires.error.too-long": "Förfallodatum överskrider maximalt av {max}.",
   "upload.modal.link.label": "Länk",
   "upload.modal.expires.label": "Förfaller",
   "upload.modal.expires.minute-singular": "Minut",
@@ -360,76 +311,59 @@ export default {
   "upload.modal.expires.year-plural": "År",
   "upload.modal.accordion.name-and-description.title": "Namn och beskrivning",
   "upload.modal.accordion.name-and-description.name.placeholder": "Namn",
-  "upload.modal.accordion.name-and-description.description.placeholder":
-    "Anteckning till mottagare av denna delning",
+  "upload.modal.accordion.name-and-description.description.placeholder": "Anteckning till mottagare av denna delning",
   "upload.modal.accordion.email.title": "E-postmottagare",
   "upload.modal.accordion.email.placeholder": "Ange e-postmottagare",
   "upload.modal.accordion.email.invalid-email": "Ogiltig e-postadress",
-  "upload.modal.accordion.email.restrict-to-recipients":
-    "Begränsa åtkomst till endast dessa mottagare (de måste logga in för att komma åt den)",
+  "upload.modal.accordion.email.restrict-to-recipients": "Begränsa åtkomst till endast dessa mottagare (de måste logga in för att komma åt den)",
   "upload.modal.accordion.security.title": "Säkerhetsalternativ",
   "upload.modal.accordion.security.password.label": "Lösenordsskydd",
   "upload.modal.accordion.security.password.placeholder": "Inget lösenord",
   "upload.modal.accordion.security.max-views.label": "Max antal visningar",
   "upload.modal.accordion.security.max-views.placeholder": "Ingen gräns",
   // showCompletedUploadModal.tsx
-  "upload.modal.completed.never-expires":
-    "Denna delning kommer aldrig att upphöra.",
-  "upload.modal.completed.expires-on":
-    "Denna delning upphör att gälla {expiration}.",
+  "upload.modal.completed.never-expires": "Denna delning kommer aldrig att upphöra.",
+  "upload.modal.completed.expires-on": "Denna delning upphör att gälla {expiration}.",
   "upload.modal.completed.share-ready": "Delning redo",
-  "upload.modal.completed.notified-reverse-share-creator":
-    "Vi har meddelat skaparen av omvänd delning. Du kan också manuellt dela denna länk med dem på andra sätt.",
+  "upload.modal.completed.notified-reverse-share-creator": "Vi har meddelat skaparen av omvänd delning. Du kan också manuellt dela denna länk med dem på andra sätt.",
   // END /upload
 
   // /share/[id]
   "share.title": "Delning {shareId}",
   "share.description": "Titta vad jag har delat med dig!",
-  "share.fileCount":
-    "{count, plural, =1 {# fil} other {# filer}} · {size} (zip-filen kan vara mindre på grund av komprimering)",
+  "share.fileCount": "{count, plural, =1 {# fil} other {# filer}} · {size} (zip-filen kan vara mindre på grund av komprimering)",
   "share.copy-text-contents": "Kopiera filinnehåll till urklipp",
   "share.error.visitor-limit-exceeded.title": "Besökargränsen överskriden",
-  "share.error.visitor-limit-exceeded.description":
-    "Gränsen för antalet besökare för denna delning har överskridits.",
+  "share.error.visitor-limit-exceeded.description": "Gränsen för antalet besökare för denna delning har överskridits.",
   "share.error.removed.title": "Delning borttagen",
   "share.error.not-found.title": "Delningen hittades inte",
-  "share.error.not-found.description":
-    "Delningen du letar efter existerar inte.",
+  "share.error.not-found.description": "Delningen du letar efter existerar inte.",
   "share.error.access-denied.title": "Privat delning",
-  "share.error.access-denied.description":
-    "Det aktuella kontot har inte behörighet att komma åt denna delning",
+  "share.error.access-denied.description": "Det aktuella kontot har inte behörighet att komma åt denna delning",
   "share.error.restricted.title": "Begränsad delning",
-  "share.error.restricted.description":
-    "Denna delning är begränsad till specifika mottagare. Logga in för att komma åt den.",
+  "share.error.restricted.description": "Denna delning är begränsad till specifika mottagare. Logga in för att komma åt den.",
   "share.error.restricted.button": "Logga in",
   "share.modal.password.title": "Lösenord krävs",
-  "share.modal.password.description":
-    "Ange lösenordet för att komma åt denna delning.",
+  "share.modal.password.description": "Ange lösenordet för att komma åt denna delning.",
   "share.modal.password": "Lösenord",
   "share.modal.error.invalid-password": "Ogiltigt lösenord",
   "share.button.download-all": "Ladda ner allt",
-  "share.notify.download-all-preparing":
-    "Delningen förbereds. Försök igen om några minuter.",
+  "share.notify.download-all-preparing": "Delningen förbereds. Försök igen om några minuter.",
   "share.notify.copied-contents": "Filinnehåll kopierat till urklipp",
-  "share.notify.copy-too-big-error":
-    "Filen är för stor för att kopieras till urklipp",
-  "share.notify.copy-not-supported-error":
-    "Kopiering till urklipp kräver en HTTPS-anslutning",
+  "share.notify.copy-too-big-error": "Filen är för stor för att kopieras till urklipp",
+  "share.notify.copy-not-supported-error": "Kopiering till urklipp kräver en HTTPS-anslutning",
   "share.modal.file-link": "Fillänk",
   "share.table.name": "Namn",
   "share.table.size": "Storlek",
   "share.modal.file-preview.original_file": "Visa originalfil",
-  "share.modal.file-preview.error.not-supported.title":
-    "Förhandsgranskning stöds ej",
-  "share.modal.file-preview.error.not-supported.description":
-    "Förhandsvisningar stöds inte för denna typ av filer. Ladda ner filen för att se den.",
+  "share.modal.file-preview.error.not-supported.title": "Förhandsgranskning stöds ej",
+  "share.modal.file-preview.error.not-supported.description": "Förhandsvisningar stöds inte för denna typ av filer. Ladda ner filen för att se den.",
   // END /share/[id]
 
   // /share/[id]/edit
   "share.edit.title": "Redigera {shareId}",
   "share.edit.append-upload": "Lägg till fil",
-  "share.edit.notify.generic-error":
-    "Ett fel uppstod när din delning skulle slutföras.",
+  "share.edit.notify.generic-error": "Ett fel uppstod när din delning skulle slutföras.",
   "share.edit.notify.save-success": "Delningen har uppdaterats",
   // END /share/[id]/edit
 
@@ -443,8 +377,7 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "Konfigurationsfil finns",
-  "admin.config.config-file-warning.description":
-    "Eftersom du har en konfigurerad Pingvin Share med en konfigurationsfil kan du inte ändra konfigurationen genom UI.",
+  "admin.config.config-file-warning.description": "Eftersom du har en konfigurerad Pingvin Share med en konfigurationsfil kan du inte ändra konfigurationen genom UI.",
   "admin.config.title": "Konfiguration",
   "admin.config.category.general": "Allmänt",
   "admin.config.category.appearance": "Utseende",
@@ -457,206 +390,133 @@ export default {
   "admin.config.general.app-name": "Appnamn",
   "admin.config.general.app-name.description": "Namn på applikationen",
   "admin.config.general.default-language": "Standardspråk",
-  "admin.config.general.default-language.description":
-    "Detta gäller alla användare, varje användare kan fortfarande anpassa sitt språk i sin profil.",
+  "admin.config.general.default-language.description": "Detta gäller alla användare, varje användare kan fortfarande anpassa sitt språk i sin profil.",
   "admin.config.appearance.theme-primary-color": "Temats primärfärg",
-  "admin.config.appearance.theme-primary-color.description":
-    "Primärfärg för knappar, länkar och accenter. Välj anpassad för att använda en färgöverskrivning.",
+  "admin.config.appearance.theme-primary-color.description": "Primärfärg för knappar, länkar och accenter. Välj anpassad för att använda en färgöverskrivning.",
   "admin.config.appearance.theme-primary-color-override": "Anpassad primärfärg",
-  "admin.config.appearance.theme-primary-color-override.description":
-    "Hex-färgöverskrivning som används när temats primärfärg är satt till anpassad.",
+  "admin.config.appearance.theme-primary-color-override.description": "Hex-färgöverskrivning som används när temats primärfärg är satt till anpassad.",
   "admin.config.appearance.theme-font-preset": "Förinställt typsnitt",
-  "admin.config.appearance.theme-font-preset.description":
-    "Typsnittsförinställning som laddas vid build. Välj system eller ett av de inkluderade Google Fonts.",
+  "admin.config.appearance.theme-font-preset.description": "Typsnittsförinställning som laddas vid build. Välj system eller ett av de inkluderade Google Fonts.",
   "admin.config.appearance.theme-color-scheme": "Standard färgschema (gäster)",
-  "admin.config.appearance.theme-color-scheme.description":
-    "Standardläge för ljust/mörkt för icke-inloggade användare. Inloggade användare använder sina egna kontoinställningar.",
+  "admin.config.appearance.theme-color-scheme.description": "Standardläge för ljust/mörkt för icke-inloggade användare. Inloggade användare använder sina egna kontoinställningar.",
   "admin.config.appearance.theme-radius": "Temats hörnradie",
-  "admin.config.appearance.theme-radius.description":
-    "Standardradie för Mantine-komponenter.",
+  "admin.config.appearance.theme-radius.description": "Standardradie för Mantine-komponenter.",
   "admin.config.appearance.custom-css": "Anpassad CSS",
-  "admin.config.appearance.custom-css.description":
-    "Global CSS som tillämpas på frontend. Använd försiktigt; ogiltig CSS kan påverka gränssnittet.",
-  "admin.config.appearance.upload-progress-style":
-    "Stil för uppladdningsförlopp",
-  "admin.config.appearance.upload-progress-style.description":
-    "Välj hur uppladdningsförloppet ska visas i fillistan.",
+  "admin.config.appearance.custom-css.description": "Global CSS som tillämpas på frontend. Använd försiktigt; ogiltig CSS kan påverka gränssnittet.",
+  "admin.config.appearance.upload-progress-style": "Stil för uppladdningsförlopp",
+  "admin.config.appearance.upload-progress-style.description": "Välj hur uppladdningsförloppet ska visas i fillistan.",
   "admin.config.appearance.upload-progress-style.circle": "Cirkelindikator",
-  "admin.config.appearance.upload-progress-style.circle-percentage":
-    "Cirkel med procent",
-  "admin.config.appearance.upload-progress-style.percentage-time":
-    "Procent och återstående tid",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Cirkel med procent",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Procent och återstående tid",
   "admin.config.general.app-url": "Appens URL",
-  "admin.config.general.app-url.description":
-    "På vilken URL Pingvin Share finns",
+  "admin.config.general.app-url.description": "På vilken URL Pingvin Share finns",
   "admin.config.security.secure-cookies": "Skydda kakor",
-  "admin.config.security.secure-cookies.description":
-    "Om du vill ställa in den säkra flaggan på kakor. Om aktiverad, kommer webbplatsen inte att fungera när den används via HTTP.",
+  "admin.config.security.secure-cookies.description": "Om du vill ställa in den säkra flaggan på kakor. Om aktiverad, kommer webbplatsen inte att fungera när den används via HTTP.",
   "admin.config.general.show-home-page": "Visa startsidan",
-  "admin.config.general.show-home-page.description":
-    "Om du vill visa startsidan",
+  "admin.config.general.show-home-page.description": "Om du vill visa startsidan",
   "admin.config.security.session-duration": "Sessionsvaraktighet",
-  "admin.config.security.session-duration.description":
-    "Tid efter vilken en användare måste logga in igen (standard: 3 månader).",
+  "admin.config.security.session-duration.description": "Tid efter vilken en användare måste logga in igen (standard: 3 månader).",
   "admin.config.appearance.logo": "Logotyp",
-  "admin.config.appearance.logo.description":
-    "Ändra din logotyp genom att ladda upp en ny bild. Bilden måste vara en PNG och bör ha formatet 1:1.",
+  "admin.config.appearance.logo.description": "Ändra din logotyp genom att ladda upp en ny bild. Bilden måste vara en PNG och bör ha formatet 1:1.",
   "admin.config.appearance.logo-dark": "Mörkt läge-logotyp",
-  "admin.config.appearance.logo-dark.description":
-    "Ladda upp en separat logotyp för mörkt läge. Bilden måste vara en PNG och ha formatet 1:1.",
+  "admin.config.appearance.logo-dark.description": "Ladda upp en separat logotyp för mörkt läge. Bilden måste vara en PNG och ha formatet 1:1.",
   "admin.config.appearance.logo.placeholder": "Välj bild",
   "admin.config.security.custom-password-policy": "Anpassad lösenordspolicy",
-  "admin.config.security.custom-password-policy.description":
-    "Om anpassning av lösenordspolicyn ska aktiveras. Om inaktiverad används standardpolicyn på minst 8 tecken.",
+  "admin.config.security.custom-password-policy.description": "Om anpassning av lösenordspolicyn ska aktiveras. Om inaktiverad används standardpolicyn på minst 8 tecken.",
   "admin.config.security.min-length": "Minsta längd",
-  "admin.config.security.min-length.description":
-    "Minsta antal tecken som krävs för ett lösenord.",
+  "admin.config.security.min-length.description": "Minsta antal tecken som krävs för ett lösenord.",
   "admin.config.security.require-uppercase": "Kräv stor bokstav",
-  "admin.config.security.require-uppercase.description":
-    "Om minst en stor bokstav krävs i lösenordet.",
+  "admin.config.security.require-uppercase.description": "Om minst en stor bokstav krävs i lösenordet.",
   "admin.config.security.require-lowercase": "Kräv liten bokstav",
-  "admin.config.security.require-lowercase.description":
-    "Om minst en liten bokstav krävs i lösenordet.",
+  "admin.config.security.require-lowercase.description": "Om minst en liten bokstav krävs i lösenordet.",
   "admin.config.security.require-number": "Kräv siffra",
-  "admin.config.security.require-number.description":
-    "Om minst en siffra krävs i lösenordet.",
+  "admin.config.security.require-number.description": "Om minst en siffra krävs i lösenordet.",
   "admin.config.security.require-special-character": "Kräv specialtecken",
-  "admin.config.security.require-special-character.description":
-    "Om minst ett specialtecken krävs i lösenordet.",
+  "admin.config.security.require-special-character.description": "Om minst ett specialtecken krävs i lösenordet.",
   "admin.config.cache.ttl": "TTL",
-  "admin.config.cache.ttl.description":
-    "Tid i sekunder för att hålla information i cachen.",
+  "admin.config.cache.ttl.description": "Tid i sekunder för att hålla information i cachen.",
   "admin.config.cache.max-items": "Maximalt antal objekt",
   "admin.config.cache.max-items.description": "Maximalt antal objekt i cachen.",
   "admin.config.cache.redis-enabled": "Redis aktiverat",
-  "admin.config.cache.redis-enabled.description":
-    "Normalt sett cachar Pingvin Share information i minnet. Om du kör flera instanser av Pingvin Share måste du aktivera Redis-cachning för att dela cachen mellan instanserna.",
+  "admin.config.cache.redis-enabled.description": "Normalt sett cachar Pingvin Share information i minnet. Om du kör flera instanser av Pingvin Share måste du aktivera Redis-cachning för att dela cachen mellan instanserna.",
   "admin.config.cache.redis-url": "Redis URL",
-  "admin.config.cache.redis-url.description":
-    "Url för att ansluta till Redis-instansen som används för caching.",
+  "admin.config.cache.redis-url.description": "Url för att ansluta till Redis-instansen som används för caching.",
   "admin.config.cache.button.test-redis": "Testa Redis-anslutningen",
   "admin.config.cache.test-redis.success": "Ansluten till Redis framgångsrikt",
-  "admin.config.cache.test-redis.success-disabled":
-    "Ansluten till Redis lyckades (Redis-cachning är för närvarande inaktiverad).",
-  "admin.config.cache.test-redis.modal.error.title":
-    "Misslyckades med att ansluta till Redis",
-  "admin.config.cache.test-redis.modal.error.description":
-    "När du ansluter till Redis, inträffade följande fel:",
+  "admin.config.cache.test-redis.success-disabled": "Ansluten till Redis lyckades (Redis-cachning är för närvarande inaktiverad).",
+  "admin.config.cache.test-redis.modal.error.title": "Misslyckades med att ansluta till Redis",
+  "admin.config.cache.test-redis.modal.error.description": "När du ansluter till Redis, inträffade följande fel:",
   "admin.config.cache.test-redis.modal.save.title": "Spara Konfiguration",
-  "admin.config.cache.test-redis.modal.save.description":
-    "För att fortsätta måste du först spara konfigurationen. Vill du spara konfigurationen och testa Redis-anslutningen?",
+  "admin.config.cache.test-redis.modal.save.description": "För att fortsätta måste du först spara konfigurationen. Vill du spara konfigurationen och testa Redis-anslutningen?",
   "admin.config.cache.test-redis.modal.save.confirm": "Spara och testa",
-  "admin.config.email.send-html-emails":
-    "Aktivera kompatibilitet för HTML-e-post",
-  "admin.config.email.send-html-emails.description":
-    "Om aktiverat skickas e-postmeddelanden i HTML-format. Se till att e-postmallarna är uppdaterade för att använda HTML.",
-  "admin.config.share.enable-share-email-recipients":
-    "Aktivera delning av e-postmottagare",
-  "admin.config.share.enable-share-email-recipients.description":
-    "Om e-postdelning med mottagare ska tillåtas. Detta kan endast aktiveras om SMTP är aktiverat.",
+  "admin.config.email.send-html-emails": "Aktivera kompatibilitet för HTML-e-post",
+  "admin.config.email.send-html-emails.description": "Om aktiverat skickas e-postmeddelanden i HTML-format. Se till att e-postmallarna är uppdaterade för att använda HTML.",
+  "admin.config.share.enable-share-email-recipients": "Aktivera delning av e-postmottagare",
+  "admin.config.share.enable-share-email-recipients.description": "Om e-postdelning med mottagare ska tillåtas. Detta kan endast aktiveras om SMTP är aktiverat.",
   "admin.config.email.share-recipients-subject": "Delning ämne",
-  "admin.config.email.share-recipients-subject.description":
-    "Ämne för e-postmeddelandet som skickas till delningsmottagarna.",
+  "admin.config.email.share-recipients-subject.description": "Ämne för e-postmeddelandet som skickas till delningsmottagarna.",
   "admin.config.email.share-recipients-message": "Delning meddelande",
-  "admin.config.email.share-recipients-message.description":
-    "Meddelande som skickas till delningens mottagare. Tillgängliga variabler:\n {creator} - Användarnamnet för skaparen av delningen\n {creatorEmail} - E-postadressen för skaparen av delningen\n {shareUrl} - URL för delningen\n {desc} - Beskrivningen av delningen\n {expires} - Förfallodatumet för delningen\n Variablerna kommer att ersättas med det faktiska värdet.",
+  "admin.config.email.share-recipients-message.description": "Meddelande som skickas till delningens mottagare. Tillgängliga variabler:\n {creator} - Användarnamnet för skaparen av delningen\n {creatorEmail} - E-postadressen för skaparen av delningen\n {shareUrl} - URL för delningen\n {desc} - Beskrivningen av delningen\n {expires} - Förfallodatumet för delningen\n Variablerna kommer att ersättas med det faktiska värdet.",
   "admin.config.email.reverse-share-subject": "Omvänd delning ämne",
-  "admin.config.email.reverse-share-subject.description":
-    "Ämne för det skickade e-postmeddelandet när någon skapade en delning med din omvända delningslänk.",
+  "admin.config.email.reverse-share-subject.description": "Ämne för det skickade e-postmeddelandet när någon skapade en delning med din omvända delningslänk.",
   "admin.config.email.reverse-share-message": "Omvänd delning meddelande",
-  "admin.config.email.reverse-share-message.description":
-    "Meddelande som skickas när någon skapade en delning med din länk för omvänd delning. {shareUrl} kommer att ersättas med skaparens namn och delningens URL.",
+  "admin.config.email.reverse-share-message.description": "Meddelande som skickas när någon skapade en delning med din länk för omvänd delning. {shareUrl} kommer att ersättas med skaparens namn och delningens URL.",
   "admin.config.email.reset-password-subject": "Återställ lösenord ämne",
-  "admin.config.email.reset-password-subject.description":
-    "Ämne för det skickade e-postmeddelandet när en användare begär en återställning av lösenordet.",
+  "admin.config.email.reset-password-subject.description": "Ämne för det skickade e-postmeddelandet när en användare begär en återställning av lösenordet.",
   "admin.config.email.reset-password-message": "Återställ lösenord meddelande",
-  "admin.config.email.reset-password-message.description":
-    "Meddelande som skickas när en användare begär en lösenordsåterställning. {url} kommer att ersättas med länken för lösenordsåterställningen.",
+  "admin.config.email.reset-password-message.description": "Meddelande som skickas när en användare begär en lösenordsåterställning. {url} kommer att ersättas med länken för lösenordsåterställningen.",
   "admin.config.email.invite-subject": "Inbjudan ämne",
-  "admin.config.email.invite-subject.description":
-    "Ämne för det skickade e-postmeddelandet när en administratör bjuder in en användare.",
+  "admin.config.email.invite-subject.description": "Ämne för det skickade e-postmeddelandet när en administratör bjuder in en användare.",
   "admin.config.email.invite-message": "Inbjudningsmeddelanden",
-  "admin.config.email.invite-message.description":
-    "Meddelande som skickas när en administratör bjuder in en användare. {url} kommer att ersättas med inbjudningsadressen, {email} med e-postadressen och {password} med användarens lösenord.",
-  "admin.config.email.share-recipients-reply-to-creator":
-    "Sätt Reply-To till skaparens e-postadress",
-  "admin.config.email.share-recipients-reply-to-creator.description":
-    "Om Reply-To-headern ska sättas till e-postadressen för användaren som skapade delningen.",
-  "admin.config.share.enable-share-download-notifications":
-    "Aktivera nedladdningsaviseringar",
-  "admin.config.share.enable-share-download-notifications.description":
-    "Om ett e-postmeddelande ska skickas till delningens skapare när en e-postmottagare laddar ner en fil. Detta kräver SMTP och e-postmottagardelning.",
-  "admin.config.email.share-download-notification-subject":
-    "Ämne för nedladdningsavisering",
-  "admin.config.email.share-download-notification-subject.description":
-    "Ämne för e-postmeddelandet som skickas till delningens skapare när en mottagare laddar ner en fil.",
-  "admin.config.email.share-download-notification-message":
-    "Meddelande för nedladdningsavisering",
-  "admin.config.email.share-download-notification-message.description":
-    "Meddelande som skickas till delningens skapare när en mottagare laddar ner en fil. Tillgängliga variabler:\n {recipientEmail} - Mottagarens e-postadress\n {fileName} - Det nedladdade filnamnet\n {shareUrl} - Delningens URL",
-  "admin.config.security.enable-email-verification":
-    "Aktivera e-postverifiering",
-  "admin.config.security.enable-email-verification.description":
-    "Om användare måste verifiera sin e-postadress innan de kan logga in. Detta kan endast aktiveras om SMTP är aktiverat.",
+  "admin.config.email.invite-message.description": "Meddelande som skickas när en administratör bjuder in en användare. {url} kommer att ersättas med inbjudningsadressen, {email} med e-postadressen och {password} med användarens lösenord.",
+  "admin.config.email.share-recipients-reply-to-creator": "Sätt Reply-To till skaparens e-postadress",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Om Reply-To-headern ska sättas till e-postadressen för användaren som skapade delningen.",
+  "admin.config.share.enable-share-download-notifications": "Aktivera nedladdningsaviseringar",
+  "admin.config.share.enable-share-download-notifications.description": "Om ett e-postmeddelande ska skickas till delningens skapare när en e-postmottagare laddar ner en fil. Detta kräver SMTP och e-postmottagardelning.",
+  "admin.config.email.share-download-notification-subject": "Ämne för nedladdningsavisering",
+  "admin.config.email.share-download-notification-subject.description": "Ämne för e-postmeddelandet som skickas till delningens skapare när en mottagare laddar ner en fil.",
+  "admin.config.email.share-download-notification-message": "Meddelande för nedladdningsavisering",
+  "admin.config.email.share-download-notification-message.description": "Meddelande som skickas till delningens skapare när en mottagare laddar ner en fil. Tillgängliga variabler:\n {recipientEmail} - Mottagarens e-postadress\n {fileName} - Det nedladdade filnamnet\n {shareUrl} - Delningens URL",
+  "admin.config.security.enable-email-verification": "Aktivera e-postverifiering",
+  "admin.config.security.enable-email-verification.description": "Om användare måste verifiera sin e-postadress innan de kan logga in. Detta kan endast aktiveras om SMTP är aktiverat.",
   "admin.config.email.verification-subject": "Verifieringsämne",
-  "admin.config.email.verification-subject.description":
-    "Ämne för e-postmeddelandet som skickas till användaren när de registrerar sig.",
+  "admin.config.email.verification-subject.description": "Ämne för e-postmeddelandet som skickas till användaren när de registrerar sig.",
   "admin.config.email.verification-message": "Verifieringsmeddelande",
-  "admin.config.email.verification-message.description":
-    "Meddelande som skickas till användaren när de registrerar sig. {url} ersätts med verifierings-URL:en.",
+  "admin.config.email.verification-message.description": "Meddelande som skickas till användaren när de registrerar sig. {url} ersätts med verifierings-URL:en.",
   "admin.config.security.allow-registration": "Tillåt registrering",
-  "admin.config.security.allow-registration.description":
-    "Om registrering är tillåten",
-  "admin.config.security.allow-unauthenticated-shares":
-    "Tillåt oautentiserade delningar",
-  "admin.config.security.allow-unauthenticated-shares.description":
-    "Om oautentiserade användare kan skapa delningar",
+  "admin.config.security.allow-registration.description": "Om registrering är tillåten",
+  "admin.config.security.allow-unauthenticated-shares": "Tillåt oautentiserade delningar",
+  "admin.config.security.allow-unauthenticated-shares.description": "Om oautentiserade användare kan skapa delningar",
   "admin.config.share.default-expiration": "Standardutgångstid",
-  "admin.config.share.default-expiration.description":
-    "Standardutgångstiden som väljs när en ny delning skapas.",
+  "admin.config.share.default-expiration.description": "Standardutgångstiden som väljs när en ny delning skapas.",
   "admin.config.share.max-expiration": "Max utgångsdatum",
-  "admin.config.share.max-expiration.description":
-    "Max längd innan en delning förfaller. Sätt till 0 för att tillåta obegränsad förfallotid.",
+  "admin.config.share.max-expiration.description": "Max längd innan en delning förfaller. Sätt till 0 för att tillåta obegränsad förfallotid.",
   "admin.config.share.share-id-length": "Standardlängd på delnings-ID",
-  "admin.config.share.share-id-length.description":
-    "Standardlängd för genererat ID för en delning. Detta värde används också för att generera länkar för omvända delningar. Ett värde under 8 anses inte vara säkert.",
+  "admin.config.share.share-id-length.description": "Standardlängd för genererat ID för en delning. Detta värde används också för att generera länkar för omvända delningar. Ett värde under 8 anses inte vara säkert.",
   "admin.config.share.max-size": "Max storlek",
   "admin.config.share.max-size.description": "Maximal storlek för delning",
   "admin.config.share.zip-compression-level": "Komprimeringsnivå för zip",
-  "admin.config.share.zip-compression-level.description":
-    "Justera nivån för att balansera mellan filstorlek och komprimeringshastighet. Giltiga värden varierar från 0 till 9, med 0 som ingen komprimering och 9 som maximal komprimering. ",
+  "admin.config.share.zip-compression-level.description": "Justera nivån för att balansera mellan filstorlek och komprimeringshastighet. Giltiga värden varierar från 0 till 9, med 0 som ingen komprimering och 9 som maximal komprimering. ",
   "admin.config.share.chunk-size": "Bitstorleken",
-  "admin.config.share.chunk-size.description":
-    "Justera bitstorleken för dina uppladdningar för att balansera effektivitet och tillförlitlighet enligt din internetanslutning. Mindre bitar kan öka framgångsgraden för instabila anslutningar, medan större bitar snabbar upp uppladdningar för stabila anslutningar.",
-  "admin.config.share.auto-open-share-modal":
-    "Öppna automatiskt skapa delningsmodal",
-  "admin.config.share.auto-open-share-modal.description":
-    "Modalen för att skapa delning visas automatiskt när en användare väljer filer, vilket tar bort behovet av att manuellt klicka på knappen.",
-  "admin.config.security.allow-admin-access-all-shares":
-    "Tillåt administratörsåtkomst till alla delningar",
-  "admin.config.share.reverse-share-simple-only":
-    "Tvinga enkelt läge för omvänd delning",
-  "admin.config.share.reverse-share-simple-only.description":
-    "Tvinga omvända delningar att skapas i enkelt läge. Om inaktiverat kan skaparen av den omvända delningen välja mellan enkelt och avancerat läge.",
-  "admin.config.security.allow-admin-access-all-shares.description":
-    "Tillåt administratörer att komma åt alla delningar, även om de är lösenordsskyddade, har löpt ut eller är borttagna.",
-  "admin.config.share.enable-user-recipients":
-    "Aktivera delning med registrerade användare",
-  "admin.config.share.enable-user-recipients.description":
-    "När aktiverat kommer delningar som skickas till en registrerad användares e-postadress automatiskt att visas på deras konto. Användare kan också begränsa delningsåtkomst till endast namngivna mottagare.",
+  "admin.config.share.chunk-size.description": "Justera bitstorleken för dina uppladdningar för att balansera effektivitet och tillförlitlighet enligt din internetanslutning. Mindre bitar kan öka framgångsgraden för instabila anslutningar, medan större bitar snabbar upp uppladdningar för stabila anslutningar.",
+  "admin.config.share.auto-open-share-modal": "Öppna automatiskt skapa delningsmodal",
+  "admin.config.share.auto-open-share-modal.description": "Modalen för att skapa delning visas automatiskt när en användare väljer filer, vilket tar bort behovet av att manuellt klicka på knappen.",
+  "admin.config.security.allow-admin-access-all-shares": "Tillåt administratörsåtkomst till alla delningar",
+  "admin.config.share.reverse-share-simple-only": "Tvinga enkelt läge för omvänd delning",
+  "admin.config.share.reverse-share-simple-only.description": "Tvinga omvända delningar att skapas i enkelt läge. Om inaktiverat kan skaparen av den omvända delningen välja mellan enkelt och avancerat läge.",
+  "admin.config.security.allow-admin-access-all-shares.description": "Tillåt administratörer att komma åt alla delningar, även om de är lösenordsskyddade, har löpt ut eller är borttagna.",
+  "admin.config.share.enable-user-recipients": "Aktivera delning med registrerade användare",
+  "admin.config.share.enable-user-recipients.description": "När aktiverat kommer delningar som skickas till en registrerad användares e-postadress automatiskt att visas på deras konto. Användare kan också begränsa delningsåtkomst till endast namngivna mottagare.",
   "admin.config.share.file-retention-period": "Fillagringsperiod",
-  "admin.config.share.file-retention-period.description":
-    "Hur länge filer sparas efter att en delning löper ut eller raderas. Endast användbart om 'Tillåt administratörsåtkomst till alla delningar' också är aktiverat. Sätt till -1 för att behålla filer för alltid.",
+  "admin.config.share.file-retention-period.description": "Hur länge filer sparas efter att en delning löper ut eller raderas. Endast användbart om 'Tillåt administratörsåtkomst till alla delningar' också är aktiverat. Sätt till -1 för att behålla filer för alltid.",
   "admin.config.smtp.enabled": "Aktivera",
-  "admin.config.smtp.enabled.description":
-    "Om SMTP skall vara aktiverat. Ange endast detta som sant om du angav adress, port, e-post, användare och lösenord för din SMTP-server.",
+  "admin.config.smtp.enabled.description": "Om SMTP skall vara aktiverat. Ange endast detta som sant om du angav adress, port, e-post, användare och lösenord för din SMTP-server.",
   "admin.config.smtp.host": "Adress",
   "admin.config.smtp.host.description": "Adress för SMTP-servern",
   "admin.config.smtp.port": "Port",
   "admin.config.smtp.port.description": "Port för SMTP-servern",
   "admin.config.smtp.email": "E-post",
-  "admin.config.smtp.email.description":
-    "E-postadress som e-postmeddelanden skickas från",
+  "admin.config.smtp.email.description": "E-postadress som e-postmeddelanden skickas från",
   "admin.config.smtp.username": "Användarnamn",
   "admin.config.smtp.username.description": "Användarnamn för SMTP-servern",
   "admin.config.smtp.password": "Lösenord",
@@ -664,141 +524,93 @@ export default {
   "admin.config.smtp.button.test": "Skicka testmeddelande",
   "admin.config.smtp.test-email.success": "E-postmeddelandet skickades",
   "admin.config.smtp.test-email.error.title": "Kunde inte skicka e-post",
-  "admin.config.smtp.test-email.error.description":
-    "Följande fel inträffade när testmeddelandet skickades:",
+  "admin.config.smtp.test-email.error.description": "Följande fel inträffade när testmeddelandet skickades:",
   "admin.config.smtp.test-email.save.title": "Spara konfiguration",
-  "admin.config.smtp.test-email.save.description":
-    "För att fortsätta måste du spara konfigurationen först. Vill du spara konfigurationen och skicka testmeddelandet?",
+  "admin.config.smtp.test-email.save.description": "För att fortsätta måste du spara konfigurationen först. Vill du spara konfigurationen och skicka testmeddelandet?",
   "admin.config.smtp.test-email.save.confirm": "Spara och skicka",
-  "admin.config.smtp.allow-unauthorized-certificates":
-    "Lita på obehöriga SMTP-servercertifikat",
-  "admin.config.smtp.allow-unauthorized-certificates.description":
-    "Sätt endast detta till sant om du behöver lita på självsignerade certifikat.",
+  "admin.config.smtp.allow-unauthorized-certificates": "Lita på obehöriga SMTP-servercertifikat",
+  "admin.config.smtp.allow-unauthorized-certificates.description": "Sätt endast detta till sant om du behöver lita på självsignerade certifikat.",
   "admin.config.oauth.allow-registration": "Tillåt registrering",
-  "admin.config.oauth.allow-registration.description":
-    "Tillåt användare att registrera sig via social inloggning",
+  "admin.config.oauth.allow-registration.description": "Tillåt användare att registrera sig via social inloggning",
   "admin.config.oauth.ignore-totp": "Ignorera TOTP",
-  "admin.config.oauth.ignore-totp.description":
-    "Om du vill ignorera TOTP när användaren använder social inloggning",
+  "admin.config.oauth.ignore-totp.description": "Om du vill ignorera TOTP när användaren använder social inloggning",
   "admin.config.oauth.disable-password": "Inaktivera lösenordsinloggning",
-  "admin.config.oauth.disable-password.description":
-    "Om du vill inaktivera lösenordsinloggning\nSe till att en OAuth leverantör är korrekt konfigurerad innan du aktiverar denna konfiguration för att undvika att bli låst.",
+  "admin.config.oauth.disable-password.description": "Om du vill inaktivera lösenordsinloggning\nSe till att en OAuth leverantör är korrekt konfigurerad innan du aktiverar denna konfiguration för att undvika att bli låst.",
   "admin.config.oauth.github-enabled": "GitHub",
-  "admin.config.oauth.github-enabled.description":
-    "Om GitHub-inloggning är aktiverad",
+  "admin.config.oauth.github-enabled.description": "Om GitHub-inloggning är aktiverad",
   "admin.config.oauth.github-client-id": "GitHub Client ID",
-  "admin.config.oauth.github-client-id.description":
-    "Client-ID för GitHub OAuth appen",
+  "admin.config.oauth.github-client-id.description": "Client-ID för GitHub OAuth appen",
   "admin.config.oauth.github-client-secret": "GitHub Client secret",
-  "admin.config.oauth.github-client-secret.description":
-    "Client secret för GitHub OAuth appen",
+  "admin.config.oauth.github-client-secret.description": "Client secret för GitHub OAuth appen",
   "admin.config.oauth.google-enabled": "Google",
-  "admin.config.oauth.google-enabled.description":
-    "Om Google-inloggning är aktiverad",
+  "admin.config.oauth.google-enabled.description": "Om Google-inloggning är aktiverad",
   "admin.config.oauth.google-client-id": "Google Client ID",
-  "admin.config.oauth.google-client-id.description":
-    "Client-ID för Google OAuth appen",
+  "admin.config.oauth.google-client-id.description": "Client-ID för Google OAuth appen",
   "admin.config.oauth.google-client-secret": "Google Client secret",
-  "admin.config.oauth.google-client-secret.description":
-    "Client secret för Google OAuth appen",
+  "admin.config.oauth.google-client-secret.description": "Client secret för Google OAuth appen",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
-  "admin.config.oauth.microsoft-enabled.description":
-    "Om Microsoftinloggning skall vara aktiverat",
+  "admin.config.oauth.microsoft-enabled.description": "Om Microsoftinloggning skall vara aktiverat",
   "admin.config.oauth.microsoft-tenant": "Microsoft Tenant",
-  "admin.config.oauth.microsoft-tenant.description":
-    "Tenant-ID för Microsoft OAuth app\ngemensamt: Användare med både ett personligt Microsoft-konto och ett arbets- eller skolkonto från Microsoft Entra ID kan logga in på programmet.\norganisationer: Endast användare med arbets- eller skolkonton från Microsoft Entra ID kan logga in på programmet.\nkonsumenter: Endast användare med ett personligt Microsoft-konto kan logga in på programmet.\ndomännamn för Microsoft Entra tenant eller tenant ID i GUID-format: Endast användare från en specifik Microsoft Entra tenant (katalogmedlemmar med ett arbets- eller skolkonto eller kataloggäster med ett personligt Microsoft-konto) kan logga in på ansökan.",
+  "admin.config.oauth.microsoft-tenant.description": "Tenant-ID för Microsoft OAuth app\ngemensamt: Användare med både ett personligt Microsoft-konto och ett arbets- eller skolkonto från Microsoft Entra ID kan logga in på programmet.\norganisationer: Endast användare med arbets- eller skolkonton från Microsoft Entra ID kan logga in på programmet.\nkonsumenter: Endast användare med ett personligt Microsoft-konto kan logga in på programmet.\ndomännamn för Microsoft Entra tenant eller tenant ID i GUID-format: Endast användare från en specifik Microsoft Entra tenant (katalogmedlemmar med ett arbets- eller skolkonto eller kataloggäster med ett personligt Microsoft-konto) kan logga in på ansökan.",
   "admin.config.oauth.microsoft-client-id": "Microsoft Client ID",
-  "admin.config.oauth.microsoft-client-id.description":
-    "Client ID för Microsoft OAuth",
+  "admin.config.oauth.microsoft-client-id.description": "Client ID för Microsoft OAuth",
   "admin.config.oauth.microsoft-client-secret": "Microsoft Client secret",
-  "admin.config.oauth.microsoft-client-secret.description":
-    "Client secret för Microsoft OAuth",
+  "admin.config.oauth.microsoft-client-secret.description": "Client secret för Microsoft OAuth",
   "admin.config.oauth.discord-enabled": "Discord",
-  "admin.config.oauth.discord-enabled.description":
-    "Om inloggning via Discord är aktiverat",
+  "admin.config.oauth.discord-enabled.description": "Om inloggning via Discord är aktiverat",
   "admin.config.oauth.discord-limited-users": "Discord begränsade användare",
-  "admin.config.oauth.discord-limited-users.description":
-    "Begränsa inloggning till specifika användare genom deras Discord-ID. Lämna det tomt för att inaktivera.",
+  "admin.config.oauth.discord-limited-users.description": "Begränsa inloggning till specifika användare genom deras Discord-ID. Lämna det tomt för att inaktivera.",
   "admin.config.oauth.discord-limited-guild": "Discord begränsa till server ID",
-  "admin.config.oauth.discord-limited-guild.description":
-    "Begränsa inloggning till användare på en specifik server. Lämna tomt för att inaktivera.",
+  "admin.config.oauth.discord-limited-guild.description": "Begränsa inloggning till användare på en specifik server. Lämna tomt för att inaktivera.",
   "admin.config.oauth.discord-client-id": "Discord Client ID",
-  "admin.config.oauth.discord-client-id.description":
-    "Client ID för Discord OAuth",
+  "admin.config.oauth.discord-client-id.description": "Client ID för Discord OAuth",
   "admin.config.oauth.discord-client-secret": "Discord Client secret",
-  "admin.config.oauth.discord-client-secret.description":
-    "Client secret för Discord OAuth",
+  "admin.config.oauth.discord-client-secret.description": "Client secret för Discord OAuth",
   "admin.config.oauth.oidc-enabled": "OpenID Connect",
-  "admin.config.oauth.oidc-enabled.description":
-    "Om OpenID-inloggning är aktiverat",
+  "admin.config.oauth.oidc-enabled.description": "Om OpenID-inloggning är aktiverat",
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect Discovery URI",
-  "admin.config.oauth.oidc-discovery-uri.description":
-    "Discovery URI för OpenID Connect OAuth appen",
+  "admin.config.oauth.oidc-discovery-uri.description": "Discovery URI för OpenID Connect OAuth appen",
   "admin.config.oauth.oidc-sign-out": "Logga ut från OpenID Connect",
-  "admin.config.oauth.oidc-sign-out.description":
-    'Om "Logga ut" knappen kommer att logga ut från OpenID Connect leverantör',
+  "admin.config.oauth.oidc-sign-out.description": 'Om "Logga ut" knappen kommer att logga ut från OpenID Connect leverantör',
   "admin.config.oauth.oidc-scope": "OpenID Connect scope",
-  "admin.config.oauth.oidc-scope.description":
-    "Scopes som ska begäras från OpenID Connect-provider.",
+  "admin.config.oauth.oidc-scope.description": "Scopes som ska begäras från OpenID Connect-provider.",
   "admin.config.oauth.oidc-username-claim": "OpenID Connect användarnamn claim",
-  "admin.config.oauth.oidc-username-claim.description":
-    "Användarnamnsanspråk i OpenID Connect ID token. Lämna tomt om du inte vet vad denna konfiguration är.",
-  "admin.config.oauth.oidc-role-path":
-    "Sökväg till roller i OpenID Connect token",
-  "admin.config.oauth.oidc-role-path.description":
-    "Måste vara en giltig JMES-sökväg som refererar till en lista med roller. " +
-    "Hantera åtkomsträttigheter med OpenID Connect-roller rekommenderas endast om ingen annan identitetsleverantör är konfigurerad och lösenord inloggning är inaktiverad. " +
-    "Lämna det tomt om du inte vet vad denna konfiguration är.",
-  "admin.config.oauth.oidc-role-general-access":
-    "OpenID Connect-roll för allmän åtkomst",
-  "admin.config.oauth.oidc-role-general-access.description":
-    "Roll som krävs för allmän åtkomst. Måste finnas i en användares roller för att de ska kunna logga in. " +
-    "Lämna det tomt om du inte vet vad denna konfiguration är.",
-  "admin.config.oauth.oidc-role-admin-access":
-    "OpenID Connect roll för administratörsåtkomst",
-  "admin.config.oauth.oidc-role-admin-access.description":
-    "Roll som krävs för administratörsåtkomst. Måste finnas i en användares roller för att de ska kunna komma ät administratörspanelen. " +
-    "Lämna det tomt om du inte vet vad denna konfiguration är.",
+  "admin.config.oauth.oidc-username-claim.description": "Användarnamnsanspråk i OpenID Connect ID token. Lämna tomt om du inte vet vad denna konfiguration är.",
+  "admin.config.oauth.oidc-role-path": "Sökväg till roller i OpenID Connect token",
+  "admin.config.oauth.oidc-role-path.description": "Måste vara en giltig JMES-sökväg som refererar till en lista med roller. " + "Hantera åtkomsträttigheter med OpenID Connect-roller rekommenderas endast om ingen annan identitetsleverantör är konfigurerad och lösenord inloggning är inaktiverad. " + "Lämna det tomt om du inte vet vad denna konfiguration är.",
+  "admin.config.oauth.oidc-role-general-access": "OpenID Connect-roll för allmän åtkomst",
+  "admin.config.oauth.oidc-role-general-access.description": "Roll som krävs för allmän åtkomst. Måste finnas i en användares roller för att de ska kunna logga in. " + "Lämna det tomt om du inte vet vad denna konfiguration är.",
+  "admin.config.oauth.oidc-role-admin-access": "OpenID Connect roll för administratörsåtkomst",
+  "admin.config.oauth.oidc-role-admin-access.description": "Roll som krävs för administratörsåtkomst. Måste finnas i en användares roller för att de ska kunna komma ät administratörspanelen. " + "Lämna det tomt om du inte vet vad denna konfiguration är.",
   "admin.config.oauth.oidc-client-id": "OpenID Connect Client ID",
   "admin.config.oauth.oidc-client-id.description": "Client ID för OpenID OAuth",
   "admin.config.oauth.oidc-client-secret": "OpenID Connect Client secret",
-  "admin.config.oauth.oidc-client-secret.description":
-    "Client secret för OpenID OAuth",
+  "admin.config.oauth.oidc-client-secret.description": "Client secret för OpenID OAuth",
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "Aktivera LDAP",
-  "admin.config.ldap.enabled.description":
-    "Använd LDAP-autentisering för användarinloggning",
+  "admin.config.ldap.enabled.description": "Använd LDAP-autentisering för användarinloggning",
   "admin.config.ldap.url": "Server-URL",
   "admin.config.ldap.url.description": "URL till LDAP-servern",
   "admin.config.ldap.bind-dn": "Bind DN",
-  "admin.config.ldap.bind-dn.description":
-    "Standardanvändaren som används för att utföra användarens sökning",
+  "admin.config.ldap.bind-dn.description": "Standardanvändaren som används för att utföra användarens sökning",
   "admin.config.ldap.bind-password": "Bind lösenord",
-  "admin.config.ldap.bind-password.description":
-    "Lösenord som används för att utföra användarsökningen",
+  "admin.config.ldap.bind-password.description": "Lösenord som används för att utföra användarsökningen",
   "admin.config.ldap.search-base": "Användarbas",
-  "admin.config.ldap.search-base.description":
-    "Bas plats, där användarsökningen kommer att utföras",
+  "admin.config.ldap.search-base.description": "Bas plats, där användarsökningen kommer att utföras",
   "admin.config.ldap.search-query": "Användar fråga",
-  "admin.config.ldap.search-query.description":
-    "Användarfrågan kommer att användas för att söka i 'Användarbasen' för LDAP-användaren. %username% kan användas som platshållare för användaren angiven indata.",
+  "admin.config.ldap.search-query.description": "Användarfrågan kommer att användas för att söka i 'Användarbasen' för LDAP-användaren. %username% kan användas som platshållare för användaren angiven indata.",
   "admin.config.ldap.admin-groups": "Administratörsgrupp",
-  "admin.config.ldap.admin-groups.description":
-    "Grupp krävs för administrativ åtkomst.",
+  "admin.config.ldap.admin-groups.description": "Grupp krävs för administrativ åtkomst.",
   "admin.config.ldap.field-name-member-of": "Attributnamn för användargrupper",
-  "admin.config.ldap.field-name-member-of.description":
-    "LDAP-attributnamn för grupperna, en användare är medlem av. Detta används när du söker efter administratörsgruppen.",
+  "admin.config.ldap.field-name-member-of.description": "LDAP-attributnamn för grupperna, en användare är medlem av. Detta används när du söker efter administratörsgruppen.",
   "admin.config.ldap.field-name-email": "Attributnamn för e-postadress",
-  "admin.config.ldap.field-name-email.description":
-    "LDAP-attributnamn för e-postadress till en användare.",
+  "admin.config.ldap.field-name-email.description": "LDAP-attributnamn för e-postadress till en användare.",
   "admin.config.notify.success": "Konfigurationen har uppdaterats.",
-  "admin.config.notify.logo-success":
-    "Logotypen har uppdaterats. Det kan ta några minuter att uppdatera på webbplatsen.",
+  "admin.config.notify.logo-success": "Logotypen har uppdaterats. Det kan ta några minuter att uppdatera på webbplatsen.",
   "admin.config.notify.no-changes": "Inga ändringar att spara.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Aktiverad",
-  "admin.config.s3.enabled.description":
-    "Om S3 ska användas för att lagra delade filer istället för det lokala filsystemet. VARNING: Om ClamAV är aktivt kommer filer tillfälligt att laddas ner från S3 för kontroll.",
+  "admin.config.s3.enabled.description": "Om S3 ska användas för att lagra delade filer istället för det lokala filsystemet. VARNING: Om ClamAV är aktivt kommer filer tillfälligt att laddas ner från S3 för kontroll.",
   "admin.config.s3.endpoint": "Endpoint",
   "admin.config.s3.endpoint.description": "Webbadressen till S3 bucket.",
   "admin.config.s3.region": "Region",
@@ -806,35 +618,25 @@ export default {
   "admin.config.s3.bucket-name": "Bucket namn",
   "admin.config.s3.bucket-name.description": "Namnet på S3 bucket.",
   "admin.config.s3.bucket-path": "Sökväg",
-  "admin.config.s3.bucket-path.description":
-    "Standardsökvägen som ska användas för att lagra filerna i S3 bucket.",
+  "admin.config.s3.bucket-path.description": "Standardsökvägen som ska användas för att lagra filerna i S3 bucket.",
   "admin.config.s3.key": "Nyckel",
-  "admin.config.s3.key.description":
-    "Nyckeln som gör att du kan komma åt S3 bucket.",
+  "admin.config.s3.key.description": "Nyckeln som gör att du kan komma åt S3 bucket.",
   "admin.config.s3.secret": "Hemlighet",
-  "admin.config.s3.secret.description":
-    "Hemligheten som gör att du kan komma åt S3 bucket.",
+  "admin.config.s3.secret.description": "Hemligheten som gör att du kan komma åt S3 bucket.",
   "admin.config.s3.use-checksum": "Använd kontrollsumma",
-  "admin.config.s3.use-checksum.description":
-    "Stäng av för backends som inte stöder kontrollsumma (t.ex. B2).",
-  "admin.config.s3.docs-link":
-    "CORS måste omkonfigureras på din bucket, se {wikiLink} för mer information.",
+  "admin.config.s3.use-checksum.description": "Stäng av för backends som inte stöder kontrollsumma (t.ex. B2).",
+  "admin.config.s3.docs-link": "CORS måste omkonfigureras på din bucket, se {wikiLink} för mer information.",
   "admin.config.category.legal": "Juridisk",
   "admin.config.legal.enabled": "Aktivera juridiska meddelanden",
-  "admin.config.legal.enabled.description":
-    "Om en länk till utgivarinformation och integritetspolicy ska visas i sidfoten.",
+  "admin.config.legal.enabled.description": "Om en länk till utgivarinformation och integritetspolicy ska visas i sidfoten.",
   "admin.config.legal.imprint-text": "Utgivarinformationstext",
-  "admin.config.legal.imprint-text.description":
-    "Texten som ska visas i utgivarinformationen. Stödjer Markdown. Lämna tomt för att länka till en extern sida för utgivarinformation.",
+  "admin.config.legal.imprint-text.description": "Texten som ska visas i utgivarinformationen. Stödjer Markdown. Lämna tomt för att länka till en extern sida för utgivarinformation.",
   "admin.config.legal.imprint-url": "Länk till utgivarinformation",
-  "admin.config.legal.imprint-url.description":
-    "Om du redan har en sida för utgivarinformation kan du länka till den här istället för att använda textfältet.",
+  "admin.config.legal.imprint-url.description": "Om du redan har en sida för utgivarinformation kan du länka till den här istället för att använda textfältet.",
   "admin.config.legal.privacy-policy-text": "Integritetspolicytext",
-  "admin.config.legal.privacy-policy-text.description":
-    "Texten som ska visas i integritetspolicy. Stödjer Markdown. Lämna tomt för att länka till en extern sida för integritetspolicy.",
+  "admin.config.legal.privacy-policy-text.description": "Texten som ska visas i integritetspolicy. Stödjer Markdown. Lämna tomt för att länka till en extern sida för integritetspolicy.",
   "admin.config.legal.privacy-policy-url": "Länk till integritetspolicy",
-  "admin.config.legal.privacy-policy-url.description":
-    "Om du redan har en sida för integritetspolicy kan du länka till den här istället för att använda textfältet.",
+  "admin.config.legal.privacy-policy-url.description": "Om du redan har en sida för integritetspolicy kan du länka till den här istället för att använda textfältet.",
   // 404
   "404.description": "Hoppsan den här sidan finns inte.",
   "404.button.home": "Ta mig tillbaka hem",
@@ -844,25 +646,17 @@ export default {
   "error.button.back": "Gå tillbaka",
   "error.msg.default": "Någonting gick fel.",
   "error.msg.access_denied": "Du avbröt autentiseringsprocessen, försök igen.",
-  "error.msg.expired_token":
-    "Autentiseringsprocessen tog för lång tid, försök igen.",
+  "error.msg.expired_token": "Autentiseringsprocessen tog för lång tid, försök igen.",
   "error.msg.invalid_token": "Internt fel",
-  "error.msg.no_user":
-    "Användare som är länkad till detta {0} konto finns inte.",
+  "error.msg.no_user": "Användare som är länkad till detta {0} konto finns inte.",
   "error.msg.no_email": "Kan inte hämta e-postadress från detta {0} konto.",
-  "error.msg.already_linked":
-    "Detta {0} konto är redan länkat till ett annat konto.",
-  "error.msg.not_linked":
-    "Detta {0} konto har ännu inte länkat till något konto.",
-  "error.msg.email_already_exists":
-    "Ett konto med denna e-postadress finns redan. Logga in med ditt lösenord och länka manuellt ditt {0}-konto på sidan Mitt konto.",
-  "error.msg.email_not_verified":
-    "Din e-postadress på detta {0}-konto är inte verifierad. Verifiera din e-postadress hos din identitetsleverantör innan du loggar in.",
-  "error.msg.unverified_account":
-    "Detta {0} -konto är overifierat, försök igen efter verifiering.",
+  "error.msg.already_linked": "Detta {0} konto är redan länkat till ett annat konto.",
+  "error.msg.not_linked": "Detta {0} konto har ännu inte länkat till något konto.",
+  "error.msg.email_already_exists": "Ett konto med denna e-postadress finns redan. Logga in med ditt lösenord och länka manuellt ditt {0}-konto på sidan Mitt konto.",
+  "error.msg.email_not_verified": "Din e-postadress på detta {0}-konto är inte verifierad. Verifiera din e-postadress hos din identitetsleverantör innan du loggar in.",
+  "error.msg.unverified_account": "Detta {0} -konto är overifierat, försök igen efter verifiering.",
   "error.msg.user_not_allowed": "Du är inte tillåten att logga in.",
-  "error.msg.cannot_get_user_info":
-    "Kan inte hämta din användarinformation från detta {0} konto.",
+  "error.msg.cannot_get_user_info": "Kan inte hämta din användarinformation från detta {0} konto.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
@@ -907,19 +701,14 @@ export default {
   "common.error.exact-length": "Måste vara exakt {length} tecken långt",
   "common.error.invalid-number": "Måste vara ett tal",
   "common.error.field-required": "Obligatoriskt fält",
-  "common.error.password.lowercase":
-    "Lösenordet måste innehålla minst en liten bokstav",
-  "common.error.password.uppercase":
-    "Lösenordet måste innehålla minst en stor bokstav",
+  "common.error.password.lowercase": "Lösenordet måste innehålla minst en liten bokstav",
+  "common.error.password.uppercase": "Lösenordet måste innehålla minst en stor bokstav",
   "common.error.password.number": "Lösenordet måste innehålla minst en siffra",
-  "common.error.password.special":
-    "Lösenordet måste innehålla minst ett specialtecken",
+  "common.error.password.special": "Lösenordet måste innehålla minst ett specialtecken",
   "admin.notice.modal.headerTag": "ADMINISTRATIV ÅTGÄRD KRÄVS",
-  "admin.notice.modal.defaultCheckboxLabel":
-    "Jag bekräftar att jag har läst detta meddelande och förstår de genomgripande ändringarna.",
+  "admin.notice.modal.defaultCheckboxLabel": "Jag bekräftar att jag har läst detta meddelande och förstår de genomgripande ändringarna.",
   "admin.notice.modal.button.acknowledge": "Bekräfta och stäng",
   "admin.notice.modal.button.acknowledging": "Bekräftar...",
   "admin.notice.modal.docsLink": "Visa dokumentation",
-  "admin.notice.modal.globalNoticeFooter":
-    "Obs: När det har bekräftats kommer detta meddelande att tas bort permanent för alla administratörer på alla enheter.",
+  "admin.notice.modal.globalNoticeFooter": "Obs: När det har bekräftats kommer detta meddelande att tas bort permanent för alla administratörer på alla enheter.",
 };

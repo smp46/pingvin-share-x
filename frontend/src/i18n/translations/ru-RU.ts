@@ -14,16 +14,13 @@ export default {
 
   // /
   "home.title": "Платформа для обмена файлами с <h>собственного хостинга</h>.",
-  "home.description":
-    "Вы действительно хотите предоставить свои личные файлы в руки третьих лиц, таких как WeTransfer?",
+  "home.description": "Вы действительно хотите предоставить свои личные файлы в руки третьих лиц, таких как WeTransfer?",
   "home.bullet.a.name": "На собственном сервере",
   "home.bullet.a.description": "Pingvin Share работает на вашей машине.",
   "home.bullet.b.name": "Конфиденциальность",
-  "home.bullet.b.description":
-    "Ваши файлы принадлежат защищены от действия третьих лиц.",
+  "home.bullet.b.description": "Ваши файлы принадлежат защищены от действия третьих лиц.",
   "home.bullet.c.name": "Без раздражающего ограничения размера файла",
-  "home.bullet.c.description":
-    "Загружайте файлы любого размера. Ваш жёсткий диск - это ваше ограничение.",
+  "home.bullet.c.description": "Загружайте файлы любого размера. Ваш жёсткий диск - это ваше ограничение.",
   "home.button.start": "Начнем",
   "home.button.source": "Исходный код",
   // END /
@@ -38,8 +35,7 @@ export default {
   "signin.input.password.placeholder": "Ваш пароль",
   "signin.button.submit": "Вход",
   "signIn.notify.totp-required.title": "Требуется двухфакторная аутентификация",
-  "signIn.notify.totp-required.description":
-    "Пожалуйста, введите код 2FA аутентификации",
+  "signIn.notify.totp-required.description": "Пожалуйста, введите код 2FA аутентификации",
   "signIn.oauth.or": "ИЛИ",
   "signIn.oauth.signInWith": "Войдите с помощью",
   "signIn.oauth.github": "GitHub",
@@ -60,20 +56,15 @@ export default {
   "signup.button.submit": "Давайте начнём",
   // /auth/verify
   "verify.title": "Подтвердить аккаунт",
-  "verify.success":
-    "Ваша учетная запись успешно подтверждена! Теперь вы можете войти.",
-  "verify.error":
-    "Эта ссылка для подтверждения недействительна или срок ее действия истек.",
+  "verify.success": "Ваша учетная запись успешно подтверждена! Теперь вы можете войти.",
+  "verify.error": "Эта ссылка для подтверждения недействительна или срок ее действия истек.",
   "verify.button.signin": "Перейти к авторизации",
   "verify.info.title": "Верификация аккаунта",
-  "verify.info.description":
-    "Проверка электронной почты включена. Мы отправили ссылку для подтверждения на ваш адрес электронной почты. Пожалуйста, нажмите на ссылку, чтобы активировать ваш аккаунт.",
-  "verify.info.note":
-    'Если вы не получите письмо в течение нескольких минут, проверьте папку "Спам".',
+  "verify.info.description": "Проверка электронной почты включена. Мы отправили ссылку для подтверждения на ваш адрес электронной почты. Пожалуйста, нажмите на ссылку, чтобы активировать ваш аккаунт.",
+  "verify.info.note": 'Если вы не получите письмо в течение нескольких минут, проверьте папку "Спам".',
   "verify.info.resend.button": "Отправить письмо с подтверждением еще раз",
   "verify.info.resend.success": "Письмо с подтверждением успешно отправлено.",
-  "verify.info.resend.error":
-    "Не удалось повторно отправить письмо с подтверждением.",
+  "verify.info.resend.error": "Не удалось повторно отправить письмо с подтверждением.",
   // END /auth/signup
 
   // /auth/totp
@@ -84,8 +75,7 @@ export default {
   // /auth/reset-password
   "resetPassword.title": "Забыли пароль?",
   "resetPassword.description": "Введите ваш email для восстановления пароля.",
-  "resetPassword.notify.success":
-    "На указанный адрес электронной почты, будет направлено письмо для сброса пароля.",
+  "resetPassword.notify.success": "На указанный адрес электронной почты, будет направлено письмо для сброса пароля.",
   "resetPassword.button.back": "Вернуться на страницу входа",
   "resetPassword.text.resetPassword": "Сбросить пароль",
   "resetPassword.text.enterNewPassword": "Введите новый пароль",
@@ -100,8 +90,7 @@ export default {
   "account.card.password.title": "Пароль",
   "account.card.password.old": "Старый пароль",
   "account.card.password.new": "Новый пароль",
-  "account.card.password.noPasswordSet":
-    "У вас не установлен пароль. Чтобы войти в систему, используя свой адрес электронной почты и пароль, вам необходимо создать пароль.",
+  "account.card.password.noPasswordSet": "У вас не установлен пароль. Чтобы войти в систему, используя свой адрес электронной почты и пароль, вам необходимо создать пароль.",
   "account.notify.password.success": "Пароль успешно изменён",
   "account.card.oauth.title": "Авторизация OAuth",
   "account.card.oauth.github": "GitHub",
@@ -113,14 +102,11 @@ export default {
   "account.card.oauth.unlink": "Отключить",
   "account.card.oauth.unlinked": "Отключен",
   "account.modal.unlink.title": "Отключить связь с учетной записью",
-  "account.modal.unlink.description":
-    "Отключение связи с вашими аккаунтами в социальных сетях может привести к потере вашей учетной записи, если вы не помните свои учетные данные для входа",
+  "account.modal.unlink.description": "Отключение связи с вашими аккаунтами в социальных сетях может привести к потере вашей учетной записи, если вы не помните свои учетные данные для входа",
   "account.notify.oauth.unlinked.success": "Отключение прошло успешно",
   "account.card.security.title": "Безопасность",
-  "account.card.security.totp.enable.description":
-    "Введите ваш текущий пароль для начала включения TOTP",
-  "account.card.security.totp.disable.description":
-    "Введите ваш текущий пароль, чтобы отключить TOTP",
+  "account.card.security.totp.enable.description": "Введите ваш текущий пароль для начала включения TOTP",
+  "account.card.security.totp.disable.description": "Введите ваш текущий пароль, чтобы отключить TOTP",
   "account.card.security.totp.button.start": "Начать",
   "account.modal.totp.title": "Включить TOTP",
   "account.modal.totp.step1": "Шаг 1: Добавьте свой аутентификатор",
@@ -133,8 +119,7 @@ export default {
   "account.notify.totp.disable": "TOTP успешно отключен",
   "account.notify.totp.enable": "TOTP успешно включен",
   "account.card.language.title": "Язык",
-  "account.card.language.description":
-    "Проект переведен сообществом. Некоторые языки могут быть неполными.",
+  "account.card.language.description": "Проект переведен сообществом. Некоторые языки могут быть неполными.",
   "account.card.color.title": "Цветовая схема",
   // ThemeSwitcher.tsx
   "account.theme.dark": "Тёмная",
@@ -142,8 +127,7 @@ export default {
   "account.theme.system": "Системная",
   "account.button.delete": "Удалить аккаунт",
   "account.modal.delete.title": "Удалить аккаунт",
-  "account.modal.delete.description":
-    "Вы действительно хотите удалить свою учетную запись, включая все ваши загрузки?",
+  "account.modal.delete.description": "Вы действительно хотите удалить свою учетную запись, включая все ваши загрузки?",
   // END /account
 
   // /account/shares
@@ -168,30 +152,25 @@ export default {
   "account.shares.table.expiry-never": "Никогда",
   "account.shares.modal.share-informations": "Сведения",
   "account.shares.modal.share-link": "Поделиться ссылкой",
-  "account.shares.modal.edit.password.keep":
-    "Оставьте поле пустым, чтобы сохранить текущий пароль",
+  "account.shares.modal.edit.password.keep": "Оставьте поле пустым, чтобы сохранить текущий пароль",
   "account.shares.modal.edit.password.remove": "Снять защиту пароля",
   "account.shares.modal.delete.title": "Удалить раздачу: {share}",
-  "account.shares.modal.delete.description":
-    "Вы действительно хотите удалить эту загрузку?",
+  "account.shares.modal.delete.description": "Вы действительно хотите удалить эту загрузку?",
   // END /account/shares
 
   // /account/received
   "account.received-shares.title": "Обратные загрузки",
   "account.received-shares.title.empty": "Нет созданных загрузок",
-  "account.received-shares.description.empty":
-    "Здесь появятся материалы, отправленные на ваш email адрес.",
+  "account.received-shares.description.empty": "Здесь появятся материалы, отправленные на ваш email адрес.",
   "account.received-shares.table.from": "От",
   "account.received-shares.button.open": "Открыть",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Обратные загрузки",
-  "account.reverseShares.description":
-    "Обратная загрузка позволяет генерировать уникальный URL, позволяющий внешним пользователям загружать файлы.",
+  "account.reverseShares.description": "Обратная загрузка позволяет генерировать уникальный URL, позволяющий внешним пользователям загружать файлы.",
   "account.reverseShares.title.empty": "Тут пусто 👀",
-  "account.reverseShares.description.empty":
-    "У вас пока нет обратных загрузок.",
+  "account.reverseShares.description.empty": "У вас пока нет обратных загрузок.",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Создать обратную ссылку на файл",
   "account.reverseShares.modal.expiration.label": "Истекает",
@@ -208,23 +187,16 @@ export default {
   "account.reverseShares.modal.expiration.year-singular": "Год",
   "account.reverseShares.modal.expiration.year-plural": "Года (лет)",
   "account.reverseShares.modal.max-size.label": "Макс. размер загрузки",
-  "account.reverseShares.modal.send-email":
-    "Отправлять уведомления по эл. почте",
-  "account.reverseShares.modal.send-email.description":
-    "Отправлять уведомление по электронной почте, когда загрузка создается с помощью этой обратной ссылки.",
+  "account.reverseShares.modal.send-email": "Отправлять уведомления по эл. почте",
+  "account.reverseShares.modal.send-email.description": "Отправлять уведомление по электронной почте, когда загрузка создается с помощью этой обратной ссылки.",
   "account.reverseShares.modal.simplified": "Упрощенный режим",
-  "account.reverseShares.modal.simplified.description":
-    "Получатель приглашения легко сможет загружать файл для того, чтобы поделиться им с Вами. Они смогут только настроить имя и описание доли.",
+  "account.reverseShares.modal.simplified.description": "Получатель приглашения легко сможет загружать файл для того, чтобы поделиться им с Вами. Они смогут только настроить имя и описание доли.",
   "account.reverseShares.modal.public-access": "Публичный доступ",
-  "account.reverseShares.modal.public-access.description":
-    "Сделать файлы общедоступными, созданные с этим обратным общим публичным доступом. Если отключено, только вы и создатель ресурса будут иметь доступ к ним для просмотра.",
+  "account.reverseShares.modal.public-access.description": "Сделать файлы общедоступными, созданные с этим обратным общим публичным доступом. Если отключено, только вы и создатель ресурса будут иметь доступ к ним для просмотра.",
   "account.reverseShares.modal.max-use.label": "Максимум использований",
-  "account.reverseShares.modal.max-use.description":
-    "Максимальное количество раз, когда URL может быть использован для создания загрузки.",
-  "account.reverseShare.never-expires":
-    "Эта обратная загрузка никогда не устареет.",
-  "account.reverseShare.expires-on":
-    "Эта обратная загрузка устареет {expiration}.",
+  "account.reverseShares.modal.max-use.description": "Максимальное количество раз, когда URL может быть использован для создания загрузки.",
+  "account.reverseShare.never-expires": "Эта обратная загрузка никогда не устареет.",
+  "account.reverseShare.expires-on": "Эта обратная загрузка устареет {expiration}.",
   "account.reverseShares.table.no-shares": "Нет созданных загрузок",
   "account.reverseShares.table.count.singular": "загрузка",
   "account.reverseShares.table.count.plural": "загрузки",
@@ -234,8 +206,7 @@ export default {
   "account.reverseShares.table.expires": "Действительно до",
   "account.reverseShares.modal.reverse-share-link": "Ссылка обратной загрузки",
   "account.reverseShares.modal.delete.title": "Удалить обратную загрузку",
-  "account.reverseShares.modal.delete.description":
-    "Вы действительно хотите удалить эту обратную загрузку? Если вы это сделаете, то все связанные обратные загрузки будут также удалены.",
+  "account.reverseShares.modal.delete.description": "Вы действительно хотите удалить эту обратную загрузку? Если вы это сделаете, то все связанные обратные загрузки будут также удалены.",
   // END /account/reverseShares
 
   // /admin
@@ -256,40 +227,29 @@ export default {
   "admin.users.edit.update.title": "Редактировать пользователя: {username}",
   "admin.users.edit.update.admin-privileges": "Права администратора",
   "admin.users.edit.update.email-verified": "Почта подтверждена",
-  "admin.users.edit.update.custom-share-size-limit":
-    "Размер пользовательского ресурса",
-  "admin.users.edit.update.custom-share-size-limit.description":
-    "Переопределить глобальный лимит загрузок для этого пользователя",
-  "admin.users.edit.update.custom-storage-quota-limit":
-    "Пользовательская квота хранения",
-  "admin.users.edit.update.custom-storage-quota-limit.description":
-    "Ограничивает общий объём хранилища пользователя для всех активных раздач",
+  "admin.users.edit.update.custom-share-size-limit": "Размер пользовательского ресурса",
+  "admin.users.edit.update.custom-share-size-limit.description": "Переопределить глобальный лимит загрузок для этого пользователя",
+  "admin.users.edit.update.custom-storage-quota-limit": "Пользовательская квота хранения",
+  "admin.users.edit.update.custom-storage-quota-limit.description": "Ограничивает общий объём хранилища пользователя для всех активных раздач",
   "admin.users.edit.update.change-password.title": "Изменить пароль",
   "admin.users.edit.update.change-password.field": "Новый пароль",
   "admin.users.edit.update.change-password.button": "Сохранить новый пароль",
   "admin.users.edit.update.notify.password.success": "Пароль успешно изменён",
   "admin.users.edit.delete.title": "Удалить пользователя {username} ?",
-  "admin.users.edit.delete.description":
-    "Вы действительно хотите удалить этого пользователя и все его загрузки?",
+  "admin.users.edit.delete.description": "Вы действительно хотите удалить этого пользователя и все его загрузки?",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Создать пользователя",
   "admin.users.modal.create.username": "Логин",
   "admin.users.modal.create.email": "Электронная почта",
   "admin.users.modal.create.password": "Пароль",
   "admin.users.modal.create.manual-password": "Установить пароль вручную",
-  "admin.users.modal.create.manual-password.description":
-    "Если флажок не установлен, пользователь получит письмо со ссылкой для установки пароля.",
-  "admin.users.modal.create.custom-share-size-limit":
-    "Размер пользовательского ресурса",
-  "admin.users.modal.create.custom-share-size-limit.description":
-    "Переопределить глобальный лимит загрузок для этого пользователя",
-  "admin.users.modal.create.custom-storage-quota-limit":
-    "Пользовательская квота хранения",
-  "admin.users.modal.create.custom-storage-quota-limit.description":
-    "Ограничивает общий объём хранилища пользователя для всех активных раздач",
+  "admin.users.modal.create.manual-password.description": "Если флажок не установлен, пользователь получит письмо со ссылкой для установки пароля.",
+  "admin.users.modal.create.custom-share-size-limit": "Размер пользовательского ресурса",
+  "admin.users.modal.create.custom-share-size-limit.description": "Переопределить глобальный лимит загрузок для этого пользователя",
+  "admin.users.modal.create.custom-storage-quota-limit": "Пользовательская квота хранения",
+  "admin.users.modal.create.custom-storage-quota-limit.description": "Ограничивает общий объём хранилища пользователя для всех активных раздач",
   "admin.users.modal.create.admin": "Права администратора",
-  "admin.users.modal.create.admin.description":
-    "Если отмечено, пользователь будет иметь доступ к панели администратора.",
+  "admin.users.modal.create.admin.description": "Если отмечено, пользователь будет иметь доступ к панели администратора.",
   // END /admin/users
 
   // /admin/shares
@@ -301,28 +261,21 @@ export default {
   "admin.shares.table.expires": "Срок действия до",
   "admin.shares.table.deletes": "Удалён",
   "admin.shares.edit.delete.title": "Удалить раздачу: {id}",
-  "admin.shares.edit.delete.description":
-    "Вы действительно хотите удалить эту загрузку?",
+  "admin.shares.edit.delete.description": "Вы действительно хотите удалить эту загрузку?",
   // END /admin/shares
 
   // /upload
   "upload.title": "Загрузить",
-  "upload.notify.confirm-leave":
-    "Вы уверены, что хотите покинуть эту страницу? Загрузка будет отменена.",
-  "upload.notify.generic-error":
-    "Произошла ошибка при завершении вашей загрузки.",
-  "upload.notify.count-failed":
-    "Не удалось загрузить файлы {count}. Повтор попытки.",
+  "upload.notify.confirm-leave": "Вы уверены, что хотите покинуть эту страницу? Загрузка будет отменена.",
+  "upload.notify.generic-error": "Произошла ошибка при завершении вашей загрузки.",
+  "upload.notify.count-failed": "Не удалось загрузить файлы {count}. Повтор попытки.",
   "upload.notify.duplicate-skipped": "Пропущен дубликат файла: {name}",
   "upload.reverse-share.error.invalid.title": "Неверная обратная ссылка",
-  "upload.reverse-share.error.invalid.description":
-    "Эта обратная доля устарела или является недействительной.",
+  "upload.reverse-share.error.invalid.description": "Эта обратная доля устарела или является недействительной.",
   // Dropzone.tsx
   "upload.dropzone.title": "Загрузить файлы",
-  "upload.dropzone.description":
-    "Перетащите сюда файлы или папки, для начала загрузки, или нажмите Ctrl+V, чтобы загрузить текстовое содержимое из буфера обмена. Размер всех файлов не должен превышать {maxSize}.",
-  "upload.dropzone.notify.file-too-big":
-    "Ваши файлы превышают максимальный размер {maxSize}.",
+  "upload.dropzone.description": "Перетащите сюда файлы или папки, для начала загрузки, или нажмите Ctrl+V, чтобы загрузить текстовое содержимое из буфера обмена. Размер всех файлов не должен превышать {maxSize}.",
+  "upload.dropzone.notify.file-too-big": "Ваши файлы превышают максимальный размер {maxSize}.",
   "upload.button.folder": "Загрузка папки",
   "upload.button.folder.append": "Добавить папку",
   "upload.button.add": "Добавить к загрузке",
@@ -333,19 +286,15 @@ export default {
   "upload.filelist.remaining": "{time} осталось",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Загрузить",
-  "upload.modal.link.error.invalid":
-    "Имя пользователя должно состоять только из букв, цифр, подчёркиваний и дефисов",
+  "upload.modal.link.error.invalid": "Имя пользователя должно состоять только из букв, цифр, подчёркиваний и дефисов",
   "upload.modal.link.error.taken": "Эта ссылка уже используется",
   "upload.modal.link.error.s3-session-not-found": "S3 сеанс загрузки не найден",
-  "upload.modal.link.error.s3-etag-missing":
-    "Отсутствует заголовок ETag в ответе S3. Убедитесь, что CORS содержит ETag заголовок.",
+  "upload.modal.link.error.s3-etag-missing": "Отсутствует заголовок ETag в ответе S3. Убедитесь, что CORS содержит ETag заголовок.",
   "upload.modal.not-signed-in": "Вы не авторизованы",
-  "upload.modal.not-signed-in-description":
-    "Вы не сможете удалить свои файлы вручную и просмотреть количество посетителей.",
+  "upload.modal.not-signed-in-description": "Вы не сможете удалить свои файлы вручную и просмотреть количество посетителей.",
   "upload.modal.expires.never": "никогда",
   "upload.modal.expires.never-long": "Постоянный доступ",
-  "upload.modal.expires.error.too-long":
-    "Срок действия превышает максимальный предел {max}.",
+  "upload.modal.expires.error.too-long": "Срок действия превышает максимальный предел {max}.",
   "upload.modal.link.label": "Ссылка",
   "upload.modal.expires.label": "Истекает",
   "upload.modal.expires.minute-singular": "Минута",
@@ -362,14 +311,11 @@ export default {
   "upload.modal.expires.year-plural": "Года (лет)",
   "upload.modal.accordion.name-and-description.title": "Имя и описание",
   "upload.modal.accordion.name-and-description.name.placeholder": "Имя",
-  "upload.modal.accordion.name-and-description.description.placeholder":
-    "Примечание для получателей этой загрузки",
+  "upload.modal.accordion.name-and-description.description.placeholder": "Примечание для получателей этой загрузки",
   "upload.modal.accordion.email.title": "Получатели письма",
   "upload.modal.accordion.email.placeholder": "Получатели e-mail",
-  "upload.modal.accordion.email.invalid-email":
-    "Недопустимый адрес электронной почты",
-  "upload.modal.accordion.email.restrict-to-recipients":
-    "Ограничить доступ только для этих получателей (они должны войти в систему)",
+  "upload.modal.accordion.email.invalid-email": "Недопустимый адрес электронной почты",
+  "upload.modal.accordion.email.restrict-to-recipients": "Ограничить доступ только для этих получателей (они должны войти в систему)",
   "upload.modal.accordion.security.title": "Параметры безопасности",
   "upload.modal.accordion.security.password.label": "Защита паролем",
   "upload.modal.accordion.security.password.placeholder": "Без пароля",
@@ -379,58 +325,45 @@ export default {
   "upload.modal.completed.never-expires": "Эта загрузка никогда не устареет.",
   "upload.modal.completed.expires-on": "Эта загрузка устареет {expiration}.",
   "upload.modal.completed.share-ready": "Готово",
-  "upload.modal.completed.notified-reverse-share-creator":
-    "Мы уведомили создателя обратного ресурса. Вы также можете вручную поделиться этой ссылкой с ними другими средствами.",
+  "upload.modal.completed.notified-reverse-share-creator": "Мы уведомили создателя обратного ресурса. Вы также можете вручную поделиться этой ссылкой с ними другими средствами.",
   // END /upload
 
   // /share/[id]
   "share.title": "Загрузка {shareId}",
   "share.description": "Посмотрите, чем я поделился с вами!",
-  "share.fileCount":
-    "{count, plural, =1 {# файл} one {# файл} few {# файла} many {# файлов} other {# файла}} · {size} (zip-архив может быть меньше за счёт сжатия)",
+  "share.fileCount": "{count, plural, =1 {# файл} one {# файл} few {# файла} many {# файлов} other {# файла}} · {size} (zip-архив может быть меньше за счёт сжатия)",
   "share.copy-text-contents": "Скопировать содержимое файла в буфер обмена",
   "share.error.visitor-limit-exceeded.title": "Превышен лимит посетителей",
-  "share.error.visitor-limit-exceeded.description":
-    "Превышен лимит посетителей.",
+  "share.error.visitor-limit-exceeded.description": "Превышен лимит посетителей.",
   "share.error.removed.title": "Загрузка удалена",
   "share.error.not-found.title": "Загрузка не найдена",
-  "share.error.not-found.description":
-    "Страница, которую вы ищете, не существует.",
+  "share.error.not-found.description": "Страница, которую вы ищете, не существует.",
   "share.error.access-denied.title": "Приватное доступ",
-  "share.error.access-denied.description":
-    "У текущей учетной записи нет разрешения на доступ к этому ресурсу",
+  "share.error.access-denied.description": "У текущей учетной записи нет разрешения на доступ к этому ресурсу",
   "share.error.restricted.title": "Ограниченная загрузка",
-  "share.error.restricted.description":
-    "Эта загрузка ограничена определенными получателями. Пожалуйста, войдите в систему для доступа к ней.",
+  "share.error.restricted.description": "Эта загрузка ограничена определенными получателями. Пожалуйста, войдите в систему для доступа к ней.",
   "share.error.restricted.button": "Авторизация",
   "share.modal.password.title": "Требуется пароль",
-  "share.modal.password.description":
-    "Пожалуйста, введите пароль для доступа к этому ресурсу.",
+  "share.modal.password.description": "Пожалуйста, введите пароль для доступа к этому ресурсу.",
   "share.modal.password": "Пароль",
   "share.modal.error.invalid-password": "Неверный пароль",
   "share.button.download-all": "Скачать все",
-  "share.notify.download-all-preparing":
-    "Загрузка готовится. Повторите попытку через несколько минут.",
+  "share.notify.download-all-preparing": "Загрузка готовится. Повторите попытку через несколько минут.",
   "share.notify.copied-contents": "Содержимое файла скопировано в буфер обмена",
-  "share.notify.copy-too-big-error":
-    "Файл слишком большой, чтобы скопировать его в буфер обмена",
-  "share.notify.copy-not-supported-error":
-    "Для копирования в буфер обмена требуется HTTPS соединение",
+  "share.notify.copy-too-big-error": "Файл слишком большой, чтобы скопировать его в буфер обмена",
+  "share.notify.copy-not-supported-error": "Для копирования в буфер обмена требуется HTTPS соединение",
   "share.modal.file-link": "Ссылка на файл",
   "share.table.name": "Название",
   "share.table.size": "Размер",
   "share.modal.file-preview.original_file": "Просмотреть исходный файл",
-  "share.modal.file-preview.error.not-supported.title":
-    "Предпросмотр не поддерживается",
-  "share.modal.file-preview.error.not-supported.description":
-    "Предпросмотр не поддерживается для этого типа файлов. Пожалуйста, скачайте файл для просмотра.",
+  "share.modal.file-preview.error.not-supported.title": "Предпросмотр не поддерживается",
+  "share.modal.file-preview.error.not-supported.description": "Предпросмотр не поддерживается для этого типа файлов. Пожалуйста, скачайте файл для просмотра.",
   // END /share/[id]
 
   // /share/[id]/edit
   "share.edit.title": "Редактировать {shareId}",
   "share.edit.append-upload": "Добавить файл",
-  "share.edit.notify.generic-error":
-    "Произошла ошибка при завершении вашей загрузки.",
+  "share.edit.notify.generic-error": "Произошла ошибка при завершении вашей загрузки.",
   "share.edit.notify.save-success": "Ссылка на ресурс успешна обновлена",
   // END /share/[id]/edit
 
@@ -444,8 +377,7 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "Файл конфигурации найден",
-  "admin.config.config-file-warning.description":
-    "Поскольку у тебя настроен Pingvin Share с помощью файла конфигурации, ты не можешь изменить настройки через интерфейс.",
+  "admin.config.config-file-warning.description": "Поскольку у тебя настроен Pingvin Share с помощью файла конфигурации, ты не можешь изменить настройки через интерфейс.",
   "admin.config.title": "Конфигурация",
   "admin.config.category.general": "Общее",
   "admin.config.category.appearance": "Внешний вид",
@@ -458,213 +390,133 @@ export default {
   "admin.config.general.app-name": "Название приложения",
   "admin.config.general.app-name.description": "Видимое название приложения",
   "admin.config.general.default-language": "Язык по умолчанию",
-  "admin.config.general.default-language.description":
-    "Это относится ко всем пользователям, каждый пользователь по-прежнему может персонализировать свой язык в своем профиле.",
+  "admin.config.general.default-language.description": "Это относится ко всем пользователям, каждый пользователь по-прежнему может персонализировать свой язык в своем профиле.",
   "admin.config.appearance.theme-primary-color": "Основной цвет темы",
-  "admin.config.appearance.theme-primary-color.description":
-    "Основной цвет для кнопок, ссылок и акцентов. Выберите «пользовательский», чтобы использовать переопределение цвета.",
-  "admin.config.appearance.theme-primary-color-override":
-    "Пользовательский основной цвет",
-  "admin.config.appearance.theme-primary-color-override.description":
-    "Переопределение HEX-цвета, используемое, когда основной цвет темы установлен как пользовательский.",
+  "admin.config.appearance.theme-primary-color.description": "Основной цвет для кнопок, ссылок и акцентов. Выберите «пользовательский», чтобы использовать переопределение цвета.",
+  "admin.config.appearance.theme-primary-color-override": "Пользовательский основной цвет",
+  "admin.config.appearance.theme-primary-color-override.description": "Переопределение HEX-цвета, используемое, когда основной цвет темы установлен как пользовательский.",
   "admin.config.appearance.theme-font-preset": "Набор шрифтов темы",
-  "admin.config.appearance.theme-font-preset.description":
-    "Набор шрифтов, загружаемый при сборке. Выберите системный или один из включённых Google Fonts.",
-  "admin.config.appearance.theme-color-scheme":
-    "Цветовая схема по умолчанию (для гостей)",
-  "admin.config.appearance.theme-color-scheme.description":
-    "Стандартный светлый/темный режим для пользователей, не вошедших в систему. Пользователи используют свои собственные настройки аккаунта.",
+  "admin.config.appearance.theme-font-preset.description": "Набор шрифтов, загружаемый при сборке. Выберите системный или один из включённых Google Fonts.",
+  "admin.config.appearance.theme-color-scheme": "Цветовая схема по умолчанию (для гостей)",
+  "admin.config.appearance.theme-color-scheme.description": "Стандартный светлый/темный режим для пользователей, не вошедших в систему. Пользователи используют свои собственные настройки аккаунта.",
   "admin.config.appearance.theme-radius": "Радиус скругления темы",
-  "admin.config.appearance.theme-radius.description":
-    "Стандартный радиус скругления компонентов Mantine.",
+  "admin.config.appearance.theme-radius.description": "Стандартный радиус скругления компонентов Mantine.",
   "admin.config.appearance.custom-css": "Пользовательский CSS",
-  "admin.config.appearance.custom-css.description":
-    "Глобальный CSS для фронтенда. Используйте осторожно: некорректный CSS может повлиять на интерфейс.",
+  "admin.config.appearance.custom-css.description": "Глобальный CSS для фронтенда. Используйте осторожно: некорректный CSS может повлиять на интерфейс.",
   "admin.config.appearance.upload-progress-style": "Стиль прогресса загрузки",
-  "admin.config.appearance.upload-progress-style.description":
-    "Выберите, как прогресс загрузки отображается в списке файлов.",
+  "admin.config.appearance.upload-progress-style.description": "Выберите, как прогресс загрузки отображается в списке файлов.",
   "admin.config.appearance.upload-progress-style.circle": "Круговой индикатор",
-  "admin.config.appearance.upload-progress-style.circle-percentage":
-    "Круг с процентами",
-  "admin.config.appearance.upload-progress-style.percentage-time":
-    "Процент и оставшееся время",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Круг с процентами",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Процент и оставшееся время",
   "admin.config.general.app-url": "URL-адрес приложения",
-  "admin.config.general.app-url.description":
-    "Адрес на котором доступен Pingvin Share",
+  "admin.config.general.app-url.description": "Адрес на котором доступен Pingvin Share",
   "admin.config.security.secure-cookies": "Безопасные куки",
-  "admin.config.security.secure-cookies.description":
-    "Установите флаг безопасности на cookies. Если включено, сайт не будет работать при доступе по HTTP.",
+  "admin.config.security.secure-cookies.description": "Установите флаг безопасности на cookies. Если включено, сайт не будет работать при доступе по HTTP.",
   "admin.config.general.show-home-page": "Показывать домашнюю страницу",
-  "admin.config.general.show-home-page.description":
-    "Показывать ли домашнюю страницу или нет",
+  "admin.config.general.show-home-page.description": "Показывать ли домашнюю страницу или нет",
   "admin.config.security.session-duration": "Длительность сессии",
-  "admin.config.security.session-duration.description":
-    "Время в часах, после которого пользователь должен снова войти (по умолчанию: 3 месяца).",
+  "admin.config.security.session-duration.description": "Время в часах, после которого пользователь должен снова войти (по умолчанию: 3 месяца).",
   "admin.config.appearance.logo": "Логотип",
-  "admin.config.appearance.logo.description":
-    "Измените свой логотип, загрузив новое изображение. Изображение должно быть PNG и должно иметь формат 1:1.",
+  "admin.config.appearance.logo.description": "Измените свой логотип, загрузив новое изображение. Изображение должно быть PNG и должно иметь формат 1:1.",
   "admin.config.appearance.logo-dark": "Логотип темного режима",
-  "admin.config.appearance.logo-dark.description":
-    "Загрузите отдельный логотип для темного режима. Изображение должно быть PNG и должно иметь формат 1:1.",
+  "admin.config.appearance.logo-dark.description": "Загрузите отдельный логотип для темного режима. Изображение должно быть PNG и должно иметь формат 1:1.",
   "admin.config.appearance.logo.placeholder": "Выберите изображение",
-  "admin.config.security.custom-password-policy":
-    "Пользовательская политика паролей",
-  "admin.config.security.custom-password-policy.description":
-    "Включить ли настройку политики паролей. Если отключено, используется политика по умолчанию: минимум 8 символов.",
+  "admin.config.security.custom-password-policy": "Пользовательская политика паролей",
+  "admin.config.security.custom-password-policy.description": "Включить ли настройку политики паролей. Если отключено, используется политика по умолчанию: минимум 8 символов.",
   "admin.config.security.min-length": "Минимальная длина",
-  "admin.config.security.min-length.description":
-    "Минимальное количество символов, требуемое для пароля.",
+  "admin.config.security.min-length.description": "Минимальное количество символов, требуемое для пароля.",
   "admin.config.security.require-uppercase": "Требовать заглавные буквы",
-  "admin.config.security.require-uppercase.description":
-    "Требовать ли наличие хотя бы одной заглавной буквы в пароле.",
+  "admin.config.security.require-uppercase.description": "Требовать ли наличие хотя бы одной заглавной буквы в пароле.",
   "admin.config.security.require-lowercase": "Требовать строчные буквы",
-  "admin.config.security.require-lowercase.description":
-    "Требовать ли наличие хотя бы одной строчной буквы в пароле.",
+  "admin.config.security.require-lowercase.description": "Требовать ли наличие хотя бы одной строчной буквы в пароле.",
   "admin.config.security.require-number": "Требовать цифру",
-  "admin.config.security.require-number.description":
-    "Требовать ли наличие хотя бы одной цифры в пароле.",
-  "admin.config.security.require-special-character":
-    "Требовать специальный символ",
-  "admin.config.security.require-special-character.description":
-    "Требовать ли наличие хотя бы одного специального символа в пароле.",
+  "admin.config.security.require-number.description": "Требовать ли наличие хотя бы одной цифры в пароле.",
+  "admin.config.security.require-special-character": "Требовать специальный символ",
+  "admin.config.security.require-special-character.description": "Требовать ли наличие хотя бы одного специального символа в пароле.",
   "admin.config.cache.ttl": "TTL",
-  "admin.config.cache.ttl.description":
-    "Время в секундах, в течение которого информация хранится в кэше.",
+  "admin.config.cache.ttl.description": "Время в секундах, в течение которого информация хранится в кэше.",
   "admin.config.cache.max-items": "Максимальное количество элементов",
-  "admin.config.cache.max-items.description":
-    "Максимальное количество элементов в кэше.",
+  "admin.config.cache.max-items.description": "Максимальное количество элементов в кэше.",
   "admin.config.cache.redis-enabled": "Redis включен",
-  "admin.config.cache.redis-enabled.description":
-    "Обычно Pingvin Share кэширует информацию в памяти. Если у тебя запущено несколько экземпляров Pingvin Share, тебе нужно включить кэширование Redis, чтобы кэш использовался совместно всеми экземплярами.",
+  "admin.config.cache.redis-enabled.description": "Обычно Pingvin Share кэширует информацию в памяти. Если у тебя запущено несколько экземпляров Pingvin Share, тебе нужно включить кэширование Redis, чтобы кэш использовался совместно всеми экземплярами.",
   "admin.config.cache.redis-url": "URL Redis",
-  "admin.config.cache.redis-url.description":
-    "URL для подключения к экземпляру Redis, используемому для кэширования.",
+  "admin.config.cache.redis-url.description": "URL для подключения к экземпляру Redis, используемому для кэширования.",
   "admin.config.cache.button.test-redis": "Проверьте соединение с Redis",
-  "admin.config.cache.test-redis.success":
-    "Подключение к Redis выполнено успешно",
-  "admin.config.cache.test-redis.success-disabled":
-    "Подключение к Redis выполнено успешно (кэширование в Redis в данный момент отключено).",
-  "admin.config.cache.test-redis.modal.error.title":
-    "Не удалось подключиться к Redis",
-  "admin.config.cache.test-redis.modal.error.description":
-    "При подключении к Redis произошла следующая ошибка:",
+  "admin.config.cache.test-redis.success": "Подключение к Redis выполнено успешно",
+  "admin.config.cache.test-redis.success-disabled": "Подключение к Redis выполнено успешно (кэширование в Redis в данный момент отключено).",
+  "admin.config.cache.test-redis.modal.error.title": "Не удалось подключиться к Redis",
+  "admin.config.cache.test-redis.modal.error.description": "При подключении к Redis произошла следующая ошибка:",
   "admin.config.cache.test-redis.modal.save.title": "Сохранить конфигурацию",
-  "admin.config.cache.test-redis.modal.save.description":
-    "Чтобы продолжить необходимо сначала сохранить конфигурацию. Вы хотите сохранить конфигурацию и проверить подключение к Redis?",
+  "admin.config.cache.test-redis.modal.save.description": "Чтобы продолжить необходимо сначала сохранить конфигурацию. Вы хотите сохранить конфигурацию и проверить подключение к Redis?",
   "admin.config.cache.test-redis.modal.save.confirm": "Сохранить и проверить",
-  "admin.config.email.send-html-emails":
-    "Включить совместимость HTML электронной почты",
-  "admin.config.email.send-html-emails.description":
-    "Если включено, письма будут отправляться в формате HTML. Убедитесь, что шаблоны электронной почты обновляются, чтобы использовать HTML.",
-  "admin.config.share.enable-share-email-recipients":
-    "Включить отправку email получателю",
-  "admin.config.share.enable-share-email-recipients.description":
-    "Разрешить отправку по электронной почте получателям. Работает только при включённом SMTP.",
+  "admin.config.email.send-html-emails": "Включить совместимость HTML электронной почты",
+  "admin.config.email.send-html-emails.description": "Если включено, письма будут отправляться в формате HTML. Убедитесь, что шаблоны электронной почты обновляются, чтобы использовать HTML.",
+  "admin.config.share.enable-share-email-recipients": "Включить отправку email получателю",
+  "admin.config.share.enable-share-email-recipients.description": "Разрешить отправку по электронной почте получателям. Работает только при включённом SMTP.",
   "admin.config.email.share-recipients-subject": "Заголовок письма (загрузка)",
-  "admin.config.email.share-recipients-subject.description":
-    "Тема письма, которое отправляется получателям акции.",
+  "admin.config.email.share-recipients-subject.description": "Тема письма, которое отправляется получателям акции.",
   "admin.config.email.share-recipients-message": "Сообщение письма загрузки",
-  "admin.config.email.share-recipients-message.description":
-    "Сообщение, которое будет отправлено получателям раздачи. Доступные переменные:\n  {creator} — имя пользователя, создавшего раздачу\n  {creatorEmail} — email пользователя, создавшего раздачу\n  {shareUrl} — ссылка на раздачу (URL)\n  {desc} — описание раздачи\n  {expires} — дата истечения срока действия раздачи\nЭти переменные будут автоматически заменены на их реальные значения.",
-  "admin.config.email.reverse-share-subject":
-    "Заголовок письма (обратная загрузка)",
-  "admin.config.email.reverse-share-subject.description":
-    "Тема письма, которое отправляется, когда кто-то создал загрузку с вашей обратной ссылкой.",
-  "admin.config.email.reverse-share-message":
-    "Сообщение письма обратной загрузки",
-  "admin.config.email.reverse-share-message.description":
-    "Сообщение, которое отправляется, когда кто-то создал загрузку с вашей обратной ссылкой. {shareUrl} будет заменен именем создателя и URL-адресом общего доступа.",
+  "admin.config.email.share-recipients-message.description": "Сообщение, которое будет отправлено получателям раздачи. Доступные переменные:\n  {creator} — имя пользователя, создавшего раздачу\n  {creatorEmail} — email пользователя, создавшего раздачу\n  {shareUrl} — ссылка на раздачу (URL)\n  {desc} — описание раздачи\n  {expires} — дата истечения срока действия раздачи\nЭти переменные будут автоматически заменены на их реальные значения.",
+  "admin.config.email.reverse-share-subject": "Заголовок письма (обратная загрузка)",
+  "admin.config.email.reverse-share-subject.description": "Тема письма, которое отправляется, когда кто-то создал загрузку с вашей обратной ссылкой.",
+  "admin.config.email.reverse-share-message": "Сообщение письма обратной загрузки",
+  "admin.config.email.reverse-share-message.description": "Сообщение, которое отправляется, когда кто-то создал загрузку с вашей обратной ссылкой. {shareUrl} будет заменен именем создателя и URL-адресом общего доступа.",
   "admin.config.email.reset-password-subject": "Тема сброса пароля",
-  "admin.config.email.reset-password-subject.description":
-    "Тема письма, которое отправляется, когда пользователь запрашивает сброс пароля.",
+  "admin.config.email.reset-password-subject.description": "Тема письма, которое отправляется, когда пользователь запрашивает сброс пароля.",
   "admin.config.email.reset-password-message": "Сообщение о сбросе пароля",
-  "admin.config.email.reset-password-message.description":
-    "Сообщение, которое отправляется при запросе сброса пароля. {url} будет заменён ссылкой.",
+  "admin.config.email.reset-password-message.description": "Сообщение, которое отправляется при запросе сброса пароля. {url} будет заменён ссылкой.",
   "admin.config.email.invite-subject": "Тема приглашения",
-  "admin.config.email.invite-subject.description":
-    "Тема письма, которое отправляется, когда администратор приглашает пользователя.",
+  "admin.config.email.invite-subject.description": "Тема письма, которое отправляется, когда администратор приглашает пользователя.",
   "admin.config.email.invite-message": "Сообщение с приглашением",
-  "admin.config.email.invite-message.description":
-    "Сообщение, отправляемое при приглашении пользователя администратором. {url} будет заменён ссылкой приглашения, {email} электронной почтой, а {password} паролем пользователя.",
-  "admin.config.email.share-recipients-reply-to-creator":
-    "Установить Reply-To Email автора",
-  "admin.config.email.share-recipients-reply-to-creator.description":
-    "Должны ли устанавливать заголовок Reply-To адрес электронной почты пользователя, создавшего ресурс.",
-  "admin.config.share.enable-share-download-notifications":
-    "Включить уведомления о загрузке",
-  "admin.config.share.enable-share-download-notifications.description":
-    "Отправлять письмо создателю сообщения, когда получатель электронной почты скачивает файл. Это требует SMTP и email получателя.",
-  "admin.config.email.share-download-notification-subject":
-    "Загрузить тему уведомления",
-  "admin.config.email.share-download-notification-subject.description":
-    "Тема письма, которое отправляется создателю общего доступа, когда получатель загружает файл.",
-  "admin.config.email.share-download-notification-message":
-    "Загрузить сообщение уведомления",
-  "admin.config.email.share-download-notification-message.description":
-    "Сообщение, которое отправляется создателю общего доступа при загрузке получателем файла. Доступные переменные:\n {recipientEmail} - Электронная почта получателя\n {fileName} - Имя загруженного файла\n {shareUrl} - URL общего доступа",
-  "admin.config.security.enable-email-verification":
-    "Включить проверку электронной почты",
-  "admin.config.security.enable-email-verification.description":
-    "Требовать ли пользователей подтверждение их адреса электронной почты перед возможностью входа. Это может быть включено только в случае активации SMTP.",
+  "admin.config.email.invite-message.description": "Сообщение, отправляемое при приглашении пользователя администратором. {url} будет заменён ссылкой приглашения, {email} электронной почтой, а {password} паролем пользователя.",
+  "admin.config.email.share-recipients-reply-to-creator": "Установить Reply-To Email автора",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Должны ли устанавливать заголовок Reply-To адрес электронной почты пользователя, создавшего ресурс.",
+  "admin.config.share.enable-share-download-notifications": "Включить уведомления о загрузке",
+  "admin.config.share.enable-share-download-notifications.description": "Отправлять письмо создателю сообщения, когда получатель электронной почты скачивает файл. Это требует SMTP и email получателя.",
+  "admin.config.email.share-download-notification-subject": "Загрузить тему уведомления",
+  "admin.config.email.share-download-notification-subject.description": "Тема письма, которое отправляется создателю общего доступа, когда получатель загружает файл.",
+  "admin.config.email.share-download-notification-message": "Загрузить сообщение уведомления",
+  "admin.config.email.share-download-notification-message.description": "Сообщение, которое отправляется создателю общего доступа при загрузке получателем файла. Доступные переменные:\n {recipientEmail} - Электронная почта получателя\n {fileName} - Имя загруженного файла\n {shareUrl} - URL общего доступа",
+  "admin.config.security.enable-email-verification": "Включить проверку электронной почты",
+  "admin.config.security.enable-email-verification.description": "Требовать ли пользователей подтверждение их адреса электронной почты перед возможностью входа. Это может быть включено только в случае активации SMTP.",
   "admin.config.email.verification-subject": "Тема подтверждения",
-  "admin.config.email.verification-subject.description":
-    "Тема письма, которое отправляется пользователю при регистрации.",
+  "admin.config.email.verification-subject.description": "Тема письма, которое отправляется пользователю при регистрации.",
   "admin.config.email.verification-message": "Сообщение подтверждения",
-  "admin.config.email.verification-message.description":
-    "Сообщение, которое отправляется пользователю при регистрации. {url} будет заменен на URL-адрес верификации.",
+  "admin.config.email.verification-message.description": "Сообщение, которое отправляется пользователю при регистрации. {url} будет заменен на URL-адрес верификации.",
   "admin.config.security.allow-registration": "Разрешить регистрацию",
-  "admin.config.security.allow-registration.description":
-    "Разрешена ли регистрация",
-  "admin.config.security.allow-unauthenticated-shares":
-    "Разрешить неавторизованные загрузки",
-  "admin.config.security.allow-unauthenticated-shares.description":
-    "Могут ли неавторизованные пользователи создавать загрузки",
+  "admin.config.security.allow-registration.description": "Разрешена ли регистрация",
+  "admin.config.security.allow-unauthenticated-shares": "Разрешить неавторизованные загрузки",
+  "admin.config.security.allow-unauthenticated-shares.description": "Могут ли неавторизованные пользователи создавать загрузки",
   "admin.config.share.default-expiration": "Срок действия по умолчанию",
-  "admin.config.share.default-expiration.description":
-    "Время истечения срока действия по умолчанию при создании нового ресурса.",
+  "admin.config.share.default-expiration.description": "Время истечения срока действия по умолчанию при создании нового ресурса.",
   "admin.config.share.max-expiration": "Максимальная срок действия",
-  "admin.config.share.max-expiration.description":
-    "Максимальный срок действия общего доступа. Установите значение 0, чтобы разрешить неограниченный срок действия.",
+  "admin.config.share.max-expiration.description": "Максимальный срок действия общего доступа. Установите значение 0, чтобы разрешить неограниченный срок действия.",
   "admin.config.share.share-id-length": "Длина идентификатора по умолчанию",
-  "admin.config.share.share-id-length.description":
-    "Длина по умолчанию для сгенерированного ID ресурса. Это значение также используется для генерации ссылок для обратных акций. Значение ниже 8 не считается безопасным.",
+  "admin.config.share.share-id-length.description": "Длина по умолчанию для сгенерированного ID ресурса. Это значение также используется для генерации ссылок для обратных акций. Значение ниже 8 не считается безопасным.",
   "admin.config.share.max-size": "Максимальный размер",
   "admin.config.share.max-size.description": "Максимальный размер файла",
   "admin.config.share.zip-compression-level": "Уровень сжатия Zip",
-  "admin.config.share.zip-compression-level.description":
-    "Регулировка уровня баланса между размером файла и скоростью сжатия. Допустимые значения от 0 до 9, с 0 без сжатия, а 9 - максимальное сжатие. ",
+  "admin.config.share.zip-compression-level.description": "Регулировка уровня баланса между размером файла и скоростью сжатия. Допустимые значения от 0 до 9, с 0 без сжатия, а 9 - максимальное сжатие. ",
   "admin.config.share.chunk-size": "Размер чанка",
-  "admin.config.share.chunk-size.description":
-    "Отрегулируйте размер чанка для ваших загрузок, чтобы сбалансировать эффективность и надежность в соответствии с вашим интернет-соединением. Меньшие чанки могут повысить успешность нестабильных соединений, а большие чанки ускоряют загрузку для стабильных соединений.",
-  "admin.config.share.auto-open-share-modal":
-    "Автоматически открыть общий доступ",
-  "admin.config.share.auto-open-share-modal.description":
-    "Модуль создания общего доступа автоматически появляется, когда пользователь выбирает файлы, устраняя необходимость вручную нажать кнопку.",
-  "admin.config.security.allow-admin-access-all-shares":
-    "Предоставьте администратору доступ ко всем общим папкам",
-  "admin.config.share.reverse-share-simple-only":
-    "Принудительно использовать простой режим общего доступа",
-  "admin.config.share.reverse-share-simple-only.description":
-    "Принудительно создавать обратные доли в простом режиме. Если отключено, создатель обратной доли может выбирать между простым и продвинутым режимом.",
-  "admin.config.security.allow-admin-access-all-shares.description":
-    "Предоставьте администраторам доступ ко всем общим ресурсам, даже если они защищены паролем, срок их действия истек или они удалены.",
-  "admin.config.share.enable-user-recipients":
-    "Разрешить делиться с зарегистрированными пользователями",
-  "admin.config.share.enable-user-recipients.description":
-    "Когда включено, загрузки, отправленные на адрес электронной почты зарегистрированного пользователя, автоматически появятся в их аккаунте. Пользователи также могут ограничить общий доступ только именованным получателям.",
+  "admin.config.share.chunk-size.description": "Отрегулируйте размер чанка для ваших загрузок, чтобы сбалансировать эффективность и надежность в соответствии с вашим интернет-соединением. Меньшие чанки могут повысить успешность нестабильных соединений, а большие чанки ускоряют загрузку для стабильных соединений.",
+  "admin.config.share.auto-open-share-modal": "Автоматически открыть общий доступ",
+  "admin.config.share.auto-open-share-modal.description": "Модуль создания общего доступа автоматически появляется, когда пользователь выбирает файлы, устраняя необходимость вручную нажать кнопку.",
+  "admin.config.security.allow-admin-access-all-shares": "Предоставьте администратору доступ ко всем общим папкам",
+  "admin.config.share.reverse-share-simple-only": "Принудительно использовать простой режим общего доступа",
+  "admin.config.share.reverse-share-simple-only.description": "Принудительно создавать обратные доли в простом режиме. Если отключено, создатель обратной доли может выбирать между простым и продвинутым режимом.",
+  "admin.config.security.allow-admin-access-all-shares.description": "Предоставьте администраторам доступ ко всем общим ресурсам, даже если они защищены паролем, срок их действия истек или они удалены.",
+  "admin.config.share.enable-user-recipients": "Разрешить делиться с зарегистрированными пользователями",
+  "admin.config.share.enable-user-recipients.description": "Когда включено, загрузки, отправленные на адрес электронной почты зарегистрированного пользователя, автоматически появятся в их аккаунте. Пользователи также могут ограничить общий доступ только именованным получателям.",
   "admin.config.share.file-retention-period": "Срок хранения файлов",
-  "admin.config.share.file-retention-period.description":
-    "Как долго файлы хранятся по истечении или удаляются. Полезно только в том случае, если опция «Разрешить администратору доступ ко всем ресурсам» также включена. Установите значение -1 для сохранения файлов навсегда.",
+  "admin.config.share.file-retention-period.description": "Как долго файлы хранятся по истечении или удаляются. Полезно только в том случае, если опция «Разрешить администратору доступ ко всем ресурсам» также включена. Установите значение -1 для сохранения файлов навсегда.",
   "admin.config.smtp.enabled": "Включено",
-  "admin.config.smtp.enabled.description":
-    "Включено ли SMTP. Установите значение true только если вы ввели хост, порт, email, пользователь и пароль вашего SMTP-сервера.",
+  "admin.config.smtp.enabled.description": "Включено ли SMTP. Установите значение true только если вы ввели хост, порт, email, пользователь и пароль вашего SMTP-сервера.",
   "admin.config.smtp.host": "Хост",
   "admin.config.smtp.host.description": "Сервер SMTP сервера",
   "admin.config.smtp.port": "Порт",
   "admin.config.smtp.port.description": "Порт SMTP сервера",
   "admin.config.smtp.email": "Электронная почта",
-  "admin.config.smtp.email.description":
-    "Адрес электронной почты, с которого отправляются письма",
+  "admin.config.smtp.email.description": "Адрес электронной почты, с которого отправляются письма",
   "admin.config.smtp.username": "Логин",
   "admin.config.smtp.username.description": "Имя пользователя SMTP сервера",
   "admin.config.smtp.password": "Пароль",
@@ -672,147 +524,93 @@ export default {
   "admin.config.smtp.button.test": "Отправить тестовое письмо",
   "admin.config.smtp.test-email.success": "Письмо отправлено",
   "admin.config.smtp.test-email.error.title": "Не удалось отправить письмо",
-  "admin.config.smtp.test-email.error.description":
-    "При отправке тестового письма произошла следующая ошибка:",
+  "admin.config.smtp.test-email.error.description": "При отправке тестового письма произошла следующая ошибка:",
   "admin.config.smtp.test-email.save.title": "Сохранить конфигурацию",
-  "admin.config.smtp.test-email.save.description":
-    "Чтобы продолжить необходимо сначала сохранить конфигурацию. Сохранить конфигурацию и отправить тестовое сообщение?",
+  "admin.config.smtp.test-email.save.description": "Чтобы продолжить необходимо сначала сохранить конфигурацию. Сохранить конфигурацию и отправить тестовое сообщение?",
   "admin.config.smtp.test-email.save.confirm": "Сохранить и отправить",
-  "admin.config.smtp.allow-unauthorized-certificates":
-    "Доверять несанкционированным сертификатам SMTP-сервера",
-  "admin.config.smtp.allow-unauthorized-certificates.description":
-    "Установите это значение только в том случае, если вам нужно доверять самоподписанным сертификатам.",
+  "admin.config.smtp.allow-unauthorized-certificates": "Доверять несанкционированным сертификатам SMTP-сервера",
+  "admin.config.smtp.allow-unauthorized-certificates.description": "Установите это значение только в том случае, если вам нужно доверять самоподписанным сертификатам.",
   "admin.config.oauth.allow-registration": "Разрешить регистрацию",
-  "admin.config.oauth.allow-registration.description":
-    "Разрешить пользователям регистрироваться используя учетные записи социальных сетей",
+  "admin.config.oauth.allow-registration.description": "Разрешить пользователям регистрироваться используя учетные записи социальных сетей",
   "admin.config.oauth.ignore-totp": "Игнорировать TOTP",
-  "admin.config.oauth.ignore-totp.description":
-    "Игнорировать TOTP при использовании социальной авторизации",
+  "admin.config.oauth.ignore-totp.description": "Игнорировать TOTP при использовании социальной авторизации",
   "admin.config.oauth.disable-password": "Отключить логин и пароль",
-  "admin.config.oauth.disable-password.description":
-    "Следует ли отключать вход по паролю? \nПеред активацией этой конфигурации убедитесь, что поставщик OAuth настроен должным образом, чтобы избежать блокировки.",
+  "admin.config.oauth.disable-password.description": "Следует ли отключать вход по паролю? \nПеред активацией этой конфигурации убедитесь, что поставщик OAuth настроен должным образом, чтобы избежать блокировки.",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Включен ли логин на GitHub",
   "admin.config.oauth.github-client-id": "ID клиента GitHub",
-  "admin.config.oauth.github-client-id.description":
-    "ID клиента в приложении GitHub OAuth",
+  "admin.config.oauth.github-client-id.description": "ID клиента в приложении GitHub OAuth",
   "admin.config.oauth.github-client-secret": "Секретный ключ клиента GitHub",
-  "admin.config.oauth.github-client-secret.description":
-    "Секретный ключ клиента в приложении GitHub OAuth",
+  "admin.config.oauth.github-client-secret.description": "Секретный ключ клиента в приложении GitHub OAuth",
   "admin.config.oauth.google-enabled": "Google",
-  "admin.config.oauth.google-enabled.description":
-    "Включен ли логин Google на GitHub",
+  "admin.config.oauth.google-enabled.description": "Включен ли логин Google на GitHub",
   "admin.config.oauth.google-client-id": "ID клиента Google",
-  "admin.config.oauth.google-client-id.description":
-    "ID клиента в приложении Google OAuth",
+  "admin.config.oauth.google-client-id.description": "ID клиента в приложении Google OAuth",
   "admin.config.oauth.google-client-secret": "Секретный ключ клиента Google",
-  "admin.config.oauth.google-client-secret.description":
-    "Секретный ключ клиента в приложении Google OAuth",
+  "admin.config.oauth.google-client-secret.description": "Секретный ключ клиента в приложении Google OAuth",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
-  "admin.config.oauth.microsoft-enabled.description":
-    "Включен ли логин Microsoft",
+  "admin.config.oauth.microsoft-enabled.description": "Включен ли логин Microsoft",
   "admin.config.oauth.microsoft-tenant": "Корпоративный аккаунт Microsoft",
-  "admin.config.oauth.microsoft-tenant.description":
-    "Идентификатор арендатора приложения Microsoft OAuth\ncommon: Пользователи с личным аккаунтом Microsoft и рабочим или учебным аккаунтом от Microsoft Entra ID могут войти в приложение. organizations: Только пользователи с рабочим или учебным аккаунтом от Microsoft Entra ID могут войти в приложение.\nconsumers: Только пользователи с личным аккаунтом Microsoft могут войти в приложение.\nимя домена арендатора Microsoft Entra или идентификатор арендатора в формате GUID: Только пользователи из определенного арендатора Microsoft Entra (участники каталога с рабочим или учебным аккаунтом или гости каталога с личным аккаунтом Microsoft) могут войти в приложение.",
+  "admin.config.oauth.microsoft-tenant.description": "Идентификатор арендатора приложения Microsoft OAuth\ncommon: Пользователи с личным аккаунтом Microsoft и рабочим или учебным аккаунтом от Microsoft Entra ID могут войти в приложение. organizations: Только пользователи с рабочим или учебным аккаунтом от Microsoft Entra ID могут войти в приложение.\nconsumers: Только пользователи с личным аккаунтом Microsoft могут войти в приложение.\nимя домена арендатора Microsoft Entra или идентификатор арендатора в формате GUID: Только пользователи из определенного арендатора Microsoft Entra (участники каталога с рабочим или учебным аккаунтом или гости каталога с личным аккаунтом Microsoft) могут войти в приложение.",
   "admin.config.oauth.microsoft-client-id": "Идентификатор клиента Microsoft",
-  "admin.config.oauth.microsoft-client-id.description":
-    "ID клиента в приложении Microsoft OAuth",
-  "admin.config.oauth.microsoft-client-secret":
-    "Секретный ключ клиента Microsoft",
-  "admin.config.oauth.microsoft-client-secret.description":
-    "Секретный ключ клиента в приложении Microsoft OAuth",
+  "admin.config.oauth.microsoft-client-id.description": "ID клиента в приложении Microsoft OAuth",
+  "admin.config.oauth.microsoft-client-secret": "Секретный ключ клиента Microsoft",
+  "admin.config.oauth.microsoft-client-secret.description": "Секретный ключ клиента в приложении Microsoft OAuth",
   "admin.config.oauth.discord-enabled": "Discord",
   "admin.config.oauth.discord-enabled.description": "Включен ли логин Discord",
-  "admin.config.oauth.discord-limited-users":
-    "Разрешённые пользователи Discord",
-  "admin.config.oauth.discord-limited-users.description":
-    "Разрешить вход только определённым пользователям по их Discord ID. Оставьте пустым, чтобы вход был доступен всем.",
-  "admin.config.oauth.discord-limited-guild":
-    "ID ограниченного сервера Discord",
-  "admin.config.oauth.discord-limited-guild.description":
-    "Ограничение входа для пользователей определенного сервера. Оставьте пустым, чтобы отключить.",
+  "admin.config.oauth.discord-limited-users": "Разрешённые пользователи Discord",
+  "admin.config.oauth.discord-limited-users.description": "Разрешить вход только определённым пользователям по их Discord ID. Оставьте пустым, чтобы вход был доступен всем.",
+  "admin.config.oauth.discord-limited-guild": "ID ограниченного сервера Discord",
+  "admin.config.oauth.discord-limited-guild.description": "Ограничение входа для пользователей определенного сервера. Оставьте пустым, чтобы отключить.",
   "admin.config.oauth.discord-client-id": "ID клиента Discord",
-  "admin.config.oauth.discord-client-id.description":
-    "ID клиента в приложении Discord OAuth",
+  "admin.config.oauth.discord-client-id.description": "ID клиента в приложении Discord OAuth",
   "admin.config.oauth.discord-client-secret": "Секретный ключ клиента Discord",
-  "admin.config.oauth.discord-client-secret.description":
-    "Секретный ключ клиента в приложении Discord OAuth",
+  "admin.config.oauth.discord-client-secret.description": "Секретный ключ клиента в приложении Discord OAuth",
   "admin.config.oauth.oidc-enabled": "Подключение OpenID",
-  "admin.config.oauth.oidc-enabled.description":
-    "Включен ли вход через OpenID Connect",
-  "admin.config.oauth.oidc-discovery-uri":
-    "URI для автоматического обнаружения OpenID Connect (Discovery URI)",
-  "admin.config.oauth.oidc-discovery-uri.description":
-    "Адрес конфигурации (Discovery URI) для OAuth-приложения OpenID Connect",
-  "admin.config.oauth.oidc-sign-out":
-    "Выходить из OpenID Connect при выходе из приложения",
-  "admin.config.oauth.oidc-sign-out.description":
-    "Будет ли кнопка «Выход» также завершать сессию у провайдера OpenID Connect (например, в Authentik)",
+  "admin.config.oauth.oidc-enabled.description": "Включен ли вход через OpenID Connect",
+  "admin.config.oauth.oidc-discovery-uri": "URI для автоматического обнаружения OpenID Connect (Discovery URI)",
+  "admin.config.oauth.oidc-discovery-uri.description": "Адрес конфигурации (Discovery URI) для OAuth-приложения OpenID Connect",
+  "admin.config.oauth.oidc-sign-out": "Выходить из OpenID Connect при выходе из приложения",
+  "admin.config.oauth.oidc-sign-out.description": "Будет ли кнопка «Выход» также завершать сессию у провайдера OpenID Connect (например, в Authentik)",
   "admin.config.oauth.oidc-scope": "Области доступа (scopes) OpenID Connect",
-  "admin.config.oauth.oidc-scope.description":
-    "Перечень прав доступа (scopes), которые будут запрашиваться у провайдера OpenID Connect (обычно: openid, email, profile).",
-  "admin.config.oauth.oidc-username-claim":
-    "Поле (claim) для имени пользователя в OpenID Connect",
-  "admin.config.oauth.oidc-username-claim.description":
-    "Идентификатор имени пользователя в токене OpenID Connect. Оставьте это поле пустым, если не знаете, за что отвечает эта настройка.",
+  "admin.config.oauth.oidc-scope.description": "Перечень прав доступа (scopes), которые будут запрашиваться у провайдера OpenID Connect (обычно: openid, email, profile).",
+  "admin.config.oauth.oidc-username-claim": "Поле (claim) для имени пользователя в OpenID Connect",
+  "admin.config.oauth.oidc-username-claim.description": "Идентификатор имени пользователя в токене OpenID Connect. Оставьте это поле пустым, если не знаете, за что отвечает эта настройка.",
   "admin.config.oauth.oidc-role-path": "Путь к ролям в токене OpenID Connect",
-  "admin.config.oauth.oidc-role-path.description":
-    "Должен быть корректным JMES-путём, указывающим на массив ролей. " +
-    "Управление правами доступа через роли OpenID Connect рекомендуется только в том случае, если не настроены другие провайдеры и отключен вход по обычному паролю. " +
-    "Оставьте это поле пустым, если не знаете, за что отвечает эта настройка.",
-  "admin.config.oauth.oidc-role-general-access":
-    "Роль OpenID Connect для общего доступа",
-  "admin.config.oauth.oidc-role-general-access.description":
-    "Роль, необходимая для обычного входа. Пользователь должен обладать этой ролью, чтобы авторизоваться в системе. " +
-    "Оставьте это поле пустым, если не знаете, за что отвечает эта настройка.",
-  "admin.config.oauth.oidc-role-admin-access":
-    "Роль OpenID Connect для доступа к панели администратора",
-  "admin.config.oauth.oidc-role-admin-access.description":
-    "Роль, необходимая для прав администратора. Только пользователи с этой ролью смогут зайти в панель управления. " +
-    "Оставьте это поле пустым, если не знаете, за что отвечает эта настройка.",
+  "admin.config.oauth.oidc-role-path.description": "Должен быть корректным JMES-путём, указывающим на массив ролей. " + "Управление правами доступа через роли OpenID Connect рекомендуется только в том случае, если не настроены другие провайдеры и отключен вход по обычному паролю. " + "Оставьте это поле пустым, если не знаете, за что отвечает эта настройка.",
+  "admin.config.oauth.oidc-role-general-access": "Роль OpenID Connect для общего доступа",
+  "admin.config.oauth.oidc-role-general-access.description": "Роль, необходимая для обычного входа. Пользователь должен обладать этой ролью, чтобы авторизоваться в системе. " + "Оставьте это поле пустым, если не знаете, за что отвечает эта настройка.",
+  "admin.config.oauth.oidc-role-admin-access": "Роль OpenID Connect для доступа к панели администратора",
+  "admin.config.oauth.oidc-role-admin-access.description": "Роль, необходимая для прав администратора. Только пользователи с этой ролью смогут зайти в панель управления. " + "Оставьте это поле пустым, если не знаете, за что отвечает эта настройка.",
   "admin.config.oauth.oidc-client-id": "ID клиента OpenID Connect (Client ID)",
-  "admin.config.oauth.oidc-client-id.description":
-    "ID клиента (Client ID) OAuth-приложения OpenID Connect",
-  "admin.config.oauth.oidc-client-secret":
-    "Секрет клиента OpenID Connect (Client secret)",
-  "admin.config.oauth.oidc-client-secret.description":
-    "Секрет клиента (Client secret) OAuth-приложения OpenID Connect",
+  "admin.config.oauth.oidc-client-id.description": "ID клиента (Client ID) OAuth-приложения OpenID Connect",
+  "admin.config.oauth.oidc-client-secret": "Секрет клиента OpenID Connect (Client secret)",
+  "admin.config.oauth.oidc-client-secret.description": "Секрет клиента (Client secret) OAuth-приложения OpenID Connect",
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "Включить LDAP",
-  "admin.config.ldap.enabled.description":
-    "Использовать аутентификацию LDAP для входа пользователей",
+  "admin.config.ldap.enabled.description": "Использовать аутентификацию LDAP для входа пользователей",
   "admin.config.ldap.url": "URL сервера",
   "admin.config.ldap.url.description": "URL-адрес сервера LDAP",
   "admin.config.ldap.bind-dn": "DN для привязки (Bind DN)",
-  "admin.config.ldap.bind-dn.description":
-    "Имя пользователя по умолчанию (DN), используемое для поиска пользователей",
+  "admin.config.ldap.bind-dn.description": "Имя пользователя по умолчанию (DN), используемое для поиска пользователей",
   "admin.config.ldap.bind-password": "Пароль для привязки (Bind password)",
-  "admin.config.ldap.bind-password.description":
-    "Пароль, используемый для поиска пользователей",
+  "admin.config.ldap.bind-password.description": "Пароль, используемый для поиска пользователей",
   "admin.config.ldap.search-base": "База пользователей (User base)",
-  "admin.config.ldap.search-base.description":
-    "Базовое расположение (DN), в котором будет выполняться поиск пользователей",
+  "admin.config.ldap.search-base.description": "Базовое расположение (DN), в котором будет выполняться поиск пользователей",
   "admin.config.ldap.search-query": "Запрос поиска пользователя (User query)",
-  "admin.config.ldap.search-query.description":
-    "Запрос, который будет использоваться для поиска пользователя в «Базе пользователей». Плейсхолдер %username% будет заменён на имя, введённое пользователем.",
+  "admin.config.ldap.search-query.description": "Запрос, который будет использоваться для поиска пользователя в «Базе пользователей». Плейсхолдер %username% будет заменён на имя, введённое пользователем.",
   "admin.config.ldap.admin-groups": "Группа администраторов (Admin group)",
-  "admin.config.ldap.admin-groups.description":
-    "Группа, необходимая для получения прав администратора.",
+  "admin.config.ldap.admin-groups.description": "Группа, необходимая для получения прав администратора.",
   "admin.config.ldap.field-name-member-of": "Имя атрибута групп пользователя",
-  "admin.config.ldap.field-name-member-of.description":
-    "Имя LDAP-атрибута со списком групп, участником которых является пользователь. Используется для проверки прав администратора.",
-  "admin.config.ldap.field-name-email":
-    "Имя атрибута электронной почты пользователя",
-  "admin.config.ldap.field-name-email.description":
-    "Имя LDAP-атрибута, содержащего адрес электронной почты пользователя.",
+  "admin.config.ldap.field-name-member-of.description": "Имя LDAP-атрибута со списком групп, участником которых является пользователь. Используется для проверки прав администратора.",
+  "admin.config.ldap.field-name-email": "Имя атрибута электронной почты пользователя",
+  "admin.config.ldap.field-name-email.description": "Имя LDAP-атрибута, содержащего адрес электронной почты пользователя.",
   "admin.config.notify.success": "Конфигурация успешно обновлена.",
-  "admin.config.notify.logo-success":
-    "Логотип успешно обновлен. Обновление на сайте может занять несколько минут.",
+  "admin.config.notify.logo-success": "Логотип успешно обновлен. Обновление на сайте может занять несколько минут.",
   "admin.config.notify.no-changes": "Нет изменений для сохранения.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Включено",
-  "admin.config.s3.enabled.description":
-    "Должен ли S3 использоваться для хранения общих файлов вместо локальной файловой системы. ВНИМАНИЕ: Если ClamAV активен, файлы будут временно загружены из S3 для проверки.",
+  "admin.config.s3.enabled.description": "Должен ли S3 использоваться для хранения общих файлов вместо локальной файловой системы. ВНИМАНИЕ: Если ClamAV активен, файлы будут временно загружены из S3 для проверки.",
   "admin.config.s3.endpoint": "Конечная точка (Endpoint)",
   "admin.config.s3.endpoint.description": "URL-адрес корзины (bucket) S3.",
   "admin.config.s3.region": "Регион",
@@ -820,36 +618,25 @@ export default {
   "admin.config.s3.bucket-name": "Имя корзины (Bucket name)",
   "admin.config.s3.bucket-name.description": "Название корзины (bucket) S3.",
   "admin.config.s3.bucket-path": "Путь",
-  "admin.config.s3.bucket-path.description":
-    "Путь по умолчанию, который будет использоваться для хранения файлов в корзине S3.",
+  "admin.config.s3.bucket-path.description": "Путь по умолчанию, который будет использоваться для хранения файлов в корзине S3.",
   "admin.config.s3.key": "Ключ",
-  "admin.config.s3.key.description":
-    "Ключ доступа (Key) для работы с корзиной S3.",
+  "admin.config.s3.key.description": "Ключ доступа (Key) для работы с корзиной S3.",
   "admin.config.s3.secret": "Секрет",
-  "admin.config.s3.secret.description":
-    "Секретный ключ (Secret) для работы с корзиной S3.",
+  "admin.config.s3.secret.description": "Секретный ключ (Secret) для работы с корзиной S3.",
   "admin.config.s3.use-checksum": "Использовать контрольную сумму (Checksum)",
-  "admin.config.s3.use-checksum.description":
-    "Отключите для бэкендов, которые не поддерживают контрольные суммы (например, Backblaze B2).",
-  "admin.config.s3.docs-link":
-    "Необходимо изменить настройки CORS для вашего бакета. Подробности см. в {wikiLink}.",
+  "admin.config.s3.use-checksum.description": "Отключите для бэкендов, которые не поддерживают контрольные суммы (например, Backblaze B2).",
+  "admin.config.s3.docs-link": "Необходимо изменить настройки CORS для вашего бакета. Подробности см. в {wikiLink}.",
   "admin.config.category.legal": "Юридическая информация",
   "admin.config.legal.enabled": "Включить юридические уведомления",
-  "admin.config.legal.enabled.description":
-    "Показывать ли ссылки на «О владельце» и «Политику конфиденциальности» в нижней части страницы (футере).",
+  "admin.config.legal.enabled.description": "Показывать ли ссылки на «О владельце» и «Политику конфиденциальности» в нижней части страницы (футере).",
   "admin.config.legal.imprint-text": "Текст выходных данных.",
-  "admin.config.legal.imprint-text.description":
-    "Текст, который будет отображаться в разделе о владельце. Поддерживает Markdown. Оставьте пустым, чтобы указать ссылку на внешнюю страницу.",
+  "admin.config.legal.imprint-text.description": "Текст, который будет отображаться в разделе о владельце. Поддерживает Markdown. Оставьте пустым, чтобы указать ссылку на внешнюю страницу.",
   "admin.config.legal.imprint-url": "URL-адрес о владельце",
-  "admin.config.legal.imprint-url.description":
-    "Если у вас уже есть страница о владельце, вы можете указать ссылку на неё вместо заполнения текстового поля.",
+  "admin.config.legal.imprint-url.description": "Если у вас уже есть страница о владельце, вы можете указать ссылку на неё вместо заполнения текстового поля.",
   "admin.config.legal.privacy-policy-text": "Текст политики конфиденциальности",
-  "admin.config.legal.privacy-policy-text.description":
-    "Текст, который будет отображаться в разделе политики конфиденциальности. Поддерживает Markdown. Оставьте пустым, чтобы указать ссылку на внешнюю страницу.",
-  "admin.config.legal.privacy-policy-url":
-    "URL-адрес политики конфиденциальности",
-  "admin.config.legal.privacy-policy-url.description":
-    "Если у вас уже есть страница с политикой конфиденциальности, вы можете указать ссылку на неё вместо заполнения текстового поля.",
+  "admin.config.legal.privacy-policy-text.description": "Текст, который будет отображаться в разделе политики конфиденциальности. Поддерживает Markdown. Оставьте пустым, чтобы указать ссылку на внешнюю страницу.",
+  "admin.config.legal.privacy-policy-url": "URL-адрес политики конфиденциальности",
+  "admin.config.legal.privacy-policy-url.description": "Если у вас уже есть страница с политикой конфиденциальности, вы можете указать ссылку на неё вместо заполнения текстового поля.",
   // 404
   "404.description": "Упс, этой страницы не существует.",
   "404.button.home": "Верните меня домой",
@@ -858,28 +645,18 @@ export default {
   "error.description": "Что-то пошло не так!",
   "error.button.back": "Назад",
   "error.msg.default": "Что-то пошло не так.",
-  "error.msg.access_denied":
-    "Вы отменили процесс аутентификации, пожалуйста, попробуйте еще раз.",
-  "error.msg.expired_token":
-    "Процесс аутентификации занял слишком много времени, пожалуйста, попробуйте еще раз.",
+  "error.msg.access_denied": "Вы отменили процесс аутентификации, пожалуйста, попробуйте еще раз.",
+  "error.msg.expired_token": "Процесс аутентификации занял слишком много времени, пожалуйста, попробуйте еще раз.",
   "error.msg.invalid_token": "Внутренняя ошибка",
-  "error.msg.no_user":
-    "Пользователь связанный с учетной записью {0} не существует.",
-  "error.msg.no_email":
-    "Не удается получить адрес электронной почты от учетной записи {0}.",
-  "error.msg.already_linked":
-    "Эта учетная запись {0} уже привязана к другому аккаунту.",
-  "error.msg.not_linked":
-    "Этот аккаунт {0} ещё не привязан ни к одной учётной записи.",
-  "error.msg.email_already_exists":
-    "Учетная запись с таким адресом электронной почты уже существует. Пожалуйста, войдите с вашим паролем и вручную привяжите вашу учетную запись {0} на странице Моя учетная запись.",
-  "error.msg.email_not_verified":
-    "Ваш адрес электронной почты на этой учетной записи {0} не подтвержден. Пожалуйста, подтвердите вашу электронную почту с вашим провайдером идентификации перед входом.",
-  "error.msg.unverified_account":
-    "Эта учетная запись {0} не подтверждена, повторите попытку после подтверждения.",
+  "error.msg.no_user": "Пользователь связанный с учетной записью {0} не существует.",
+  "error.msg.no_email": "Не удается получить адрес электронной почты от учетной записи {0}.",
+  "error.msg.already_linked": "Эта учетная запись {0} уже привязана к другому аккаунту.",
+  "error.msg.not_linked": "Этот аккаунт {0} ещё не привязан ни к одной учётной записи.",
+  "error.msg.email_already_exists": "Учетная запись с таким адресом электронной почты уже существует. Пожалуйста, войдите с вашим паролем и вручную привяжите вашу учетную запись {0} на странице Моя учетная запись.",
+  "error.msg.email_not_verified": "Ваш адрес электронной почты на этой учетной записи {0} не подтвержден. Пожалуйста, подтвердите вашу электронную почту с вашим провайдером идентификации перед входом.",
+  "error.msg.unverified_account": "Эта учетная запись {0} не подтверждена, повторите попытку после подтверждения.",
   "error.msg.user_not_allowed": "У вас нет разрешения на вход.",
-  "error.msg.cannot_get_user_info":
-    "Не удалось получить информацию о пользователе из этого аккаунта {0}.",
+  "error.msg.cannot_get_user_info": "Не удалось получить информацию о пользователе из этого аккаунта {0}.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
@@ -924,19 +701,14 @@ export default {
   "common.error.exact-length": "Должно быть ровно {length} символов",
   "common.error.invalid-number": "Должно быть числом",
   "common.error.field-required": "Поле обязательно для заполнения",
-  "common.error.password.lowercase":
-    "Пароль должен содержать хотя бы одну строчную букву",
-  "common.error.password.uppercase":
-    "Пароль должен содержать хотя бы одну заглавную букву",
+  "common.error.password.lowercase": "Пароль должен содержать хотя бы одну строчную букву",
+  "common.error.password.uppercase": "Пароль должен содержать хотя бы одну заглавную букву",
   "common.error.password.number": "Пароль должен содержать хотя бы одну цифру",
-  "common.error.password.special":
-    "Пароль должен содержать хотя бы один специальный символ",
+  "common.error.password.special": "Пароль должен содержать хотя бы один специальный символ",
   "admin.notice.modal.headerTag": "ТРЕБУЕТСЯ ДЕЙСТВИЕ АДМИНИСТРАТОРА",
-  "admin.notice.modal.defaultCheckboxLabel":
-    "Я подтверждаю, что прочитал(а) это уведомление и понимаю критические изменения.",
+  "admin.notice.modal.defaultCheckboxLabel": "Я подтверждаю, что прочитал(а) это уведомление и понимаю критические изменения.",
   "admin.notice.modal.button.acknowledge": "Подтвердить и закрыть",
   "admin.notice.modal.button.acknowledging": "Подтверждение...",
   "admin.notice.modal.docsLink": "Просмотреть документацию",
-  "admin.notice.modal.globalNoticeFooter":
-    "Примечание: После подтверждения это уведомление будет навсегда скрыто для всех администраторов на всех устройствах.",
+  "admin.notice.modal.globalNoticeFooter": "Примечание: После подтверждения это уведомление будет навсегда скрыто для всех администраторов на всех устройствах.",
 };

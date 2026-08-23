@@ -13,19 +13,14 @@ export default {
   // END navbar
 
   // /
-  "home.title":
-    "<h>Самостоятелно хоствана</h> платформа за споделяне на файлове.",
-  "home.description":
-    "Наистина ли искате да поверите личните си файлове на трети страни като WeTransfer?",
+  "home.title": "<h>Самостоятелно хоствана</h> платформа за споделяне на файлове.",
+  "home.description": "Наистина ли искате да поверите личните си файлове на трети страни като WeTransfer?",
   "home.bullet.a.name": "Самостоятелно хостване",
-  "home.bullet.a.description":
-    "Хоствайте Pingvin Share на вашата собствена машина.",
+  "home.bullet.a.description": "Хоствайте Pingvin Share на вашата собствена машина.",
   "home.bullet.b.name": "Поверителност",
-  "home.bullet.b.description":
-    "Вашите файлове са си ваши и никога няма да бъдат достъпни за трети страни.",
+  "home.bullet.b.description": "Вашите файлове са си ваши и никога няма да бъдат достъпни за трети страни.",
   "home.bullet.c.name": "Без досадно ограничение на размера на файла",
-  "home.bullet.c.description":
-    "Качвайте файлове с размери, каквито пожелаете. Единственото ограничение ще бъде вашият твърд диск.",
+  "home.bullet.c.description": "Качвайте файлове с размери, каквито пожелаете. Единственото ограничение ще бъде вашият твърд диск.",
   "home.button.start": "Започнете сега",
   "home.button.source": "Изходен код",
   // END /
@@ -35,14 +30,12 @@ export default {
   "signin.description": "Все още нямате акаунт?",
   "signin.button.signup": "Регистрация",
   "signin.input.email-or-username": "Имейл или потребителско име",
-  "signin.input.email-or-username.placeholder":
-    "Вашият имейл или потребителско име",
+  "signin.input.email-or-username.placeholder": "Вашият имейл или потребителско име",
   "signin.input.password": "Парола",
   "signin.input.password.placeholder": "Вашата парола",
   "signin.button.submit": "Влизане",
   "signIn.notify.totp-required.title": "Изисква се двуфакторна автентикация",
-  "signIn.notify.totp-required.description":
-    "Моля, въведете вашия код за двуфакторна автентикация",
+  "signIn.notify.totp-required.description": "Моля, въведете вашия код за двуфакторна автентикация",
   "signIn.oauth.or": "ИЛИ",
   "signIn.oauth.signInWith": "Влизане чрез",
   "signIn.oauth.github": "GitHub",
@@ -63,20 +56,15 @@ export default {
   "signup.button.submit": "Да започваме",
   // /auth/verify
   "verify.title": "Потвърждаване на акаунта",
-  "verify.success":
-    "Акаунтът Ви беше потвърден успешно! Сега можете да влезете.",
+  "verify.success": "Акаунтът Ви беше потвърден успешно! Сега можете да влезете.",
   "verify.error": "Линкът за потвърждение е невалиден или е изтекъл.",
   "verify.button.signin": "Отидете към вписване",
   "verify.info.title": "Потвърждаване на акаунта",
-  "verify.info.description":
-    "Потвърждението по имейл е активирано. Изпратихме линк за потвърждение на Вашия имейл адрес. Моля, кликнете върху линка, за да активирате акаунта си.",
-  "verify.info.note":
-    'Ако не получите имейла в рамките на няколко минути, моля, проверете папка "Спам".',
+  "verify.info.description": "Потвърждението по имейл е активирано. Изпратихме линк за потвърждение на Вашия имейл адрес. Моля, кликнете върху линка, за да активирате акаунта си.",
+  "verify.info.note": 'Ако не получите имейла в рамките на няколко минути, моля, проверете папка "Спам".',
   "verify.info.resend.button": "Изпрати имейла за потвърждение отново",
-  "verify.info.resend.success":
-    "Имейлът за потвърждение беше изпратен успешно отново.",
-  "verify.info.resend.error":
-    "Неуспешно повторно изпращане на имейла за потвърждение.",
+  "verify.info.resend.success": "Имейлът за потвърждение беше изпратен успешно отново.",
+  "verify.info.resend.error": "Неуспешно повторно изпращане на имейла за потвърждение.",
   // END /auth/signup
 
   // /auth/totp
@@ -86,10 +74,8 @@ export default {
 
   // /auth/reset-password
   "resetPassword.title": "Забравена парола?",
-  "resetPassword.description":
-    "Въведете вашия имейл, за да нулирате паролата си.",
-  "resetPassword.notify.success":
-    "Ако посоченият имейл съществува, е изпратено съобщение с връзка за нулиране на паролата.",
+  "resetPassword.description": "Въведете вашия имейл, за да нулирате паролата си.",
+  "resetPassword.notify.success": "Ако посоченият имейл съществува, е изпратено съобщение с връзка за нулиране на паролата.",
   "resetPassword.button.back": "Назад към страницата за влизане",
   "resetPassword.text.resetPassword": "Нулиране на парола",
   "resetPassword.text.enterNewPassword": "Въведете новата си парола",
@@ -104,8 +90,7 @@ export default {
   "account.card.password.title": "Парола",
   "account.card.password.old": "Стара парола",
   "account.card.password.new": "Нова парола",
-  "account.card.password.noPasswordSet":
-    "Нямате зададена парола. За да влизате с имейл и парола, трябва да създадете такава.",
+  "account.card.password.noPasswordSet": "Нямате зададена парола. За да влизате с имейл и парола, трябва да създадете такава.",
   "account.notify.password.success": "Паролата е променена успешно",
   "account.card.oauth.title": "Влизане чрез социални мрежи",
   "account.card.oauth.github": "GitHub",
@@ -117,18 +102,14 @@ export default {
   "account.card.oauth.unlink": "Прекратяване на връзката",
   "account.card.oauth.unlinked": "Връзката е прекратена",
   "account.modal.unlink.title": "Прекратяване на връзката с акаунт",
-  "account.modal.unlink.description":
-    "Прекратяването на връзката със социални акаунти може да доведе до загуба на достъп, ако не помните данните си за влизане",
+  "account.modal.unlink.description": "Прекратяването на връзката със социални акаунти може да доведе до загуба на достъп, ако не помните данните си за влизане",
   "account.notify.oauth.unlinked.success": "Връзката е прекратена успешно",
   "account.card.security.title": "Сигурност",
-  "account.card.security.totp.enable.description":
-    "Въведете текущата си парола, за да започнете активирането на TOTP",
-  "account.card.security.totp.disable.description":
-    "Въведете текущата си парола, за да деактивирате TOTP",
+  "account.card.security.totp.enable.description": "Въведете текущата си парола, за да започнете активирането на TOTP",
+  "account.card.security.totp.disable.description": "Въведете текущата си парола, за да деактивирате TOTP",
   "account.card.security.totp.button.start": "Старт",
   "account.modal.totp.title": "Активиране на TOTP",
-  "account.modal.totp.step1":
-    "Стъпка 1: Добавете вашето приложение за автентикация",
+  "account.modal.totp.step1": "Стъпка 1: Добавете вашето приложение за автентикация",
   "account.modal.totp.step2": "Стъпка 2: Валидирайте вашия код",
   "account.modal.totp.enterManually": "Въвеждане ръчно",
   "account.modal.totp.code": "Код",
@@ -138,8 +119,7 @@ export default {
   "account.notify.totp.disable": "TOTP е деактивиран успешно",
   "account.notify.totp.enable": "TOTP е активиран успешно",
   "account.card.language.title": "Език",
-  "account.card.language.description":
-    "Проектът се превежда от общността. Някои езици може да са непълни.",
+  "account.card.language.description": "Проектът се превежда от общността. Някои езици може да са непълни.",
   "account.card.color.title": "Цветова схема",
   // ThemeSwitcher.tsx
   "account.theme.dark": "Тъмна",
@@ -147,8 +127,7 @@ export default {
   "account.theme.system": "Системна",
   "account.button.delete": "Изтриване на акаунт",
   "account.modal.delete.title": "Изтриване на акаунт",
-  "account.modal.delete.description":
-    "Наистина ли искате да изтриете акаунта си, включително всички ваши активни споделяния?",
+  "account.modal.delete.description": "Наистина ли искате да изтриете акаунта си, включително всички ваши активни споделяния?",
   // END /account
 
   // /account/shares
@@ -167,38 +146,31 @@ export default {
   "account.shares.table.size": "Размер",
   "account.shares.table.password-protected": "Защитено с парола",
   "account.shares.table.recipients": "Получатели",
-  "account.shares.table.restricted-to-recipients":
-    "Ограничено само за получатели",
+  "account.shares.table.restricted-to-recipients": "Ограничено само за получатели",
   "account.shares.table.shared-with-recipients": "Споделено с получатели",
   "account.shares.table.visitor-count": "{count} от {max}",
   "account.shares.table.expiry-never": "Никога",
   "account.shares.modal.share-informations": "Информация за споделянето",
   "account.shares.modal.share-link": "Връзка за споделяне",
-  "account.shares.modal.edit.password.keep":
-    "Оставете празно, за да запазите текущата парола",
-  "account.shares.modal.edit.password.remove":
-    "Премахване на защитата с парола",
+  "account.shares.modal.edit.password.keep": "Оставете празно, за да запазите текущата парола",
+  "account.shares.modal.edit.password.remove": "Премахване на защитата с парола",
   "account.shares.modal.delete.title": "Изтриване на споделяне: {share}",
-  "account.shares.modal.delete.description":
-    "Наистина ли искате да изтриете това споделяне?",
+  "account.shares.modal.delete.description": "Наистина ли искате да изтриете това споделяне?",
   // END /account/shares
 
   // /account/received
   "account.received-shares.title": "Получени споделяния",
   "account.received-shares.title.empty": "Все още няма създадени споделяния",
-  "account.received-shares.description.empty":
-    "Споделянията, изпратени до Вашия имейл адрес, ще се появят тук.",
+  "account.received-shares.description.empty": "Споделянията, изпратени до Вашия имейл адрес, ще се появят тук.",
   "account.received-shares.table.from": "От",
   "account.received-shares.button.open": "Отвори",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Реверсивни споделяния",
-  "account.reverseShares.description":
-    "Реверсивното споделяне ви позволява да генерирате уникален URL адрес, чрез който външни потребители могат да създават споделяне.",
+  "account.reverseShares.description": "Реверсивното споделяне ви позволява да генерирате уникален URL адрес, чрез който външни потребители могат да създават споделяне.",
   "account.reverseShares.title.empty": "Тук е празно 👀",
-  "account.reverseShares.description.empty":
-    "Нямате никакви реверсивни споделяния.",
+  "account.reverseShares.description.empty": "Нямате никакви реверсивни споделяния.",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Създаване на реверсивно споделяне",
   "account.reverseShares.modal.expiration.label": "Изтичане",
@@ -214,24 +186,17 @@ export default {
   "account.reverseShares.modal.expiration.month-plural": "Месеца",
   "account.reverseShares.modal.expiration.year-singular": "Година",
   "account.reverseShares.modal.expiration.year-plural": "Години",
-  "account.reverseShares.modal.max-size.label":
-    "Максимален размер на споделянето",
+  "account.reverseShares.modal.max-size.label": "Максимален размер на споделянето",
   "account.reverseShares.modal.send-email": "Изпращане на имейл известия",
-  "account.reverseShares.modal.send-email.description":
-    "Изпраща ви имейл известие, когато се създаде споделяне чрез тази реверсивна връзка.",
+  "account.reverseShares.modal.send-email.description": "Изпраща ви имейл известие, когато се създаде споделяне чрез тази реверсивна връзка.",
   "account.reverseShares.modal.simplified": "Опростен режим",
-  "account.reverseShares.modal.simplified.description":
-    "Улеснете човека, качващ файла. Той ще може да персонализира само името и описанието на споделянето.",
+  "account.reverseShares.modal.simplified.description": "Улеснете човека, качващ файла. Той ще може да персонализира само името и описанието на споделянето.",
   "account.reverseShares.modal.public-access": "Публичен достъп",
-  "account.reverseShares.modal.public-access.description":
-    "Направете споделянията, създадени с тази реверсивна връзка, публични. Ако е деактивирано, само вие и създателят на споделянето ще имате достъп до него.",
+  "account.reverseShares.modal.public-access.description": "Направете споделянията, създадени с тази реверсивна връзка, публични. Ако е деактивирано, само вие и създателят на споделянето ще имате достъп до него.",
   "account.reverseShares.modal.max-use.label": "Максимум използвания",
-  "account.reverseShares.modal.max-use.description":
-    "Максималният брой пъти, в които този URL адрес може да бъде използван за създаване на споделяне.",
-  "account.reverseShare.never-expires":
-    "Това реверсивно споделяне никога няма да изтече.",
-  "account.reverseShare.expires-on":
-    "Това реверсивно споделяне ще изтече на {expiration}.",
+  "account.reverseShares.modal.max-use.description": "Максималният брой пъти, в които този URL адрес може да бъде използван за създаване на споделяне.",
+  "account.reverseShare.never-expires": "Това реверсивно споделяне никога няма да изтече.",
+  "account.reverseShare.expires-on": "Това реверсивно споделяне ще изтече на {expiration}.",
   "account.reverseShares.table.no-shares": "Все още няма създадени споделяния",
   "account.reverseShares.table.count.singular": "споделяне",
   "account.reverseShares.table.count.plural": "споделяния",
@@ -239,12 +204,9 @@ export default {
   "account.reverseShares.table.remaining": "Оставащи използвания",
   "account.reverseShares.table.max-size": "Максимален размер",
   "account.reverseShares.table.expires": "Изтича на",
-  "account.reverseShares.modal.reverse-share-link":
-    "Реверсивна връзка за споделяне",
-  "account.reverseShares.modal.delete.title":
-    "Изтриване на реверсивно споделяне",
-  "account.reverseShares.modal.delete.description":
-    "Наистина ли искате да изтриете това реверсивно споделяне? Ако го направите, свързаните с него споделяния също ще бъдат изтрити.",
+  "account.reverseShares.modal.reverse-share-link": "Реверсивна връзка за споделяне",
+  "account.reverseShares.modal.delete.title": "Изтриване на реверсивно споделяне",
+  "account.reverseShares.modal.delete.description": "Наистина ли искате да изтриете това реверсивно споделяне? Ако го направите, свързаните с него споделяния също ще бъдат изтрити.",
   // END /account/reverseShares
 
   // /admin
@@ -265,42 +227,29 @@ export default {
   "admin.users.edit.update.title": "Редактиране на потребител: {username}",
   "admin.users.edit.update.admin-privileges": "Администраторски права",
   "admin.users.edit.update.email-verified": "Имейлът е потвърден",
-  "admin.users.edit.update.custom-share-size-limit":
-    "Персонализиран лимит за размер на споделянето",
-  "admin.users.edit.update.custom-share-size-limit.description":
-    "Пренебрегване на глобалния лимит за качване за този потребител",
-  "admin.users.edit.update.custom-storage-quota-limit":
-    "Персонализирана квота за съхранение",
-  "admin.users.edit.update.custom-storage-quota-limit.description":
-    "Ограничаване на общото използвано пространство от потребителя във всички активни споделяния",
+  "admin.users.edit.update.custom-share-size-limit": "Персонализиран лимит за размер на споделянето",
+  "admin.users.edit.update.custom-share-size-limit.description": "Пренебрегване на глобалния лимит за качване за този потребител",
+  "admin.users.edit.update.custom-storage-quota-limit": "Персонализирана квота за съхранение",
+  "admin.users.edit.update.custom-storage-quota-limit.description": "Ограничаване на общото използвано пространство от потребителя във всички активни споделяния",
   "admin.users.edit.update.change-password.title": "Промяна на парола",
   "admin.users.edit.update.change-password.field": "Нова парола",
-  "admin.users.edit.update.change-password.button":
-    "Запазване на новата парола",
-  "admin.users.edit.update.notify.password.success":
-    "Паролата е променена успешно",
+  "admin.users.edit.update.change-password.button": "Запазване на новата парола",
+  "admin.users.edit.update.notify.password.success": "Паролата е променена успешно",
   "admin.users.edit.delete.title": "Изтриване на потребител: {username} ?",
-  "admin.users.edit.delete.description":
-    "Наистина ли искате да изтриете този потребител и всички негови споделяния?",
+  "admin.users.edit.delete.description": "Наистина ли искате да изтриете този потребител и всички негови споделяния?",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Създаване на потребител",
   "admin.users.modal.create.username": "Потребителско име",
   "admin.users.modal.create.email": "Имейл",
   "admin.users.modal.create.password": "Парола",
   "admin.users.modal.create.manual-password": "Ръчно задаване на парола",
-  "admin.users.modal.create.manual-password.description":
-    "Ако не е избрано, потребителят ще получи имейл с връзка за задаване на парола.",
-  "admin.users.modal.create.custom-share-size-limit":
-    "Персонализиран лимит за размер на споделянето",
-  "admin.users.modal.create.custom-share-size-limit.description":
-    "Пренебрегване на глобалния лимит за качване за този потребител",
-  "admin.users.modal.create.custom-storage-quota-limit":
-    "Персонализирана квота за съхранение",
-  "admin.users.modal.create.custom-storage-quota-limit.description":
-    "Ограничаване на общото използвано пространство от потребителя във всички активни споделяния",
+  "admin.users.modal.create.manual-password.description": "Ако не е избрано, потребителят ще получи имейл с връзка за задаване на парола.",
+  "admin.users.modal.create.custom-share-size-limit": "Персонализиран лимит за размер на споделянето",
+  "admin.users.modal.create.custom-share-size-limit.description": "Пренебрегване на глобалния лимит за качване за този потребител",
+  "admin.users.modal.create.custom-storage-quota-limit": "Персонализирана квота за съхранение",
+  "admin.users.modal.create.custom-storage-quota-limit.description": "Ограничаване на общото използвано пространство от потребителя във всички активни споделяния",
   "admin.users.modal.create.admin": "Администраторски права",
-  "admin.users.modal.create.admin.description":
-    "Ако е избрано, потребителят ще има достъп до административния панел.",
+  "admin.users.modal.create.admin.description": "Ако е избрано, потребителят ще има достъп до административния панел.",
   // END /admin/users
 
   // /admin/shares
@@ -312,29 +261,21 @@ export default {
   "admin.shares.table.expires": "Изтича на",
   "admin.shares.table.deletes": "Изтрива се на",
   "admin.shares.edit.delete.title": "Изтриване на споделяне: {id}",
-  "admin.shares.edit.delete.description":
-    "Наистина ли искате да изтриете това споделяне?",
+  "admin.shares.edit.delete.description": "Наистина ли искате да изтриете това споделяне?",
   // END /admin/shares
 
   // /upload
   "upload.title": "Качване",
-  "upload.notify.confirm-leave":
-    "Сигурни ли сте, че искате да напуснете тази страница? Вашето качване ще бъде отменено.",
-  "upload.notify.generic-error":
-    "Възникна грешка при завършване на споделянето.",
-  "upload.notify.count-failed":
-    "Качването на {count} файла не бе успешно. Опитване отново.",
+  "upload.notify.confirm-leave": "Сигурни ли сте, че искате да напуснете тази страница? Вашето качване ще бъде отменено.",
+  "upload.notify.generic-error": "Възникна грешка при завършване на споделянето.",
+  "upload.notify.count-failed": "Качването на {count} файла не бе успешно. Опитване отново.",
   "upload.notify.duplicate-skipped": "Пропуснат е дублиран файл: {name}",
-  "upload.reverse-share.error.invalid.title":
-    "Невалидна реверсивна връзка за споделяне",
-  "upload.reverse-share.error.invalid.description":
-    "Тази връзка няма оставащи използвания или е невалидна.",
+  "upload.reverse-share.error.invalid.title": "Невалидна реверсивна връзка за споделяне",
+  "upload.reverse-share.error.invalid.description": "Тази връзка няма оставащи използвания или е невалидна.",
   // Dropzone.tsx
   "upload.dropzone.title": "Качване на файлове",
-  "upload.dropzone.description":
-    "Плъзнете и пуснете файлове или папки тук, за да започнете споделянето, или натиснете „Ctrl+V“, за да качите текстово съдържание от клипборда. Общият размер на файловете не може да надвишава {maxSize}.",
-  "upload.dropzone.notify.file-too-big":
-    "Вашите файлове надвишават максималния размер за споделяне от {maxSize}.",
+  "upload.dropzone.description": "Плъзнете и пуснете файлове или папки тук, за да започнете споделянето, или натиснете „Ctrl+V“, за да качите текстово съдържание от клипборда. Общият размер на файловете не може да надвишава {maxSize}.",
+  "upload.dropzone.notify.file-too-big": "Вашите файлове надвишават максималния размер за споделяне от {maxSize}.",
   "upload.button.folder": "Качване на папка",
   "upload.button.folder.append": "Добавяне на папка",
   "upload.button.add": "Добавяне към качването",
@@ -345,20 +286,15 @@ export default {
   "upload.filelist.remaining": "Оставащо време: {time}",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Създаване на споделяне",
-  "upload.modal.link.error.invalid":
-    "Може да съдържа само букви, цифри, долни черти и тирета",
+  "upload.modal.link.error.invalid": "Може да съдържа само букви, цифри, долни черти и тирета",
   "upload.modal.link.error.taken": "Тази връзка вече се използва",
-  "upload.modal.link.error.s3-session-not-found":
-    "Сесията за качване в S3 не е намерена",
-  "upload.modal.link.error.s3-etag-missing":
-    "Липсва ETag заглавка в отговора на S3. Уверете се, че CORS експонира ETag заглавката.",
+  "upload.modal.link.error.s3-session-not-found": "Сесията за качване в S3 не е намерена",
+  "upload.modal.link.error.s3-etag-missing": "Липсва ETag заглавка в отговора на S3. Уверете се, че CORS експонира ETag заглавката.",
   "upload.modal.not-signed-in": "Не сте влезли в акаунта си",
-  "upload.modal.not-signed-in-description":
-    "Няма да можете да изтриете споделянето си ръчно, нито да виждате броя на посетителите.",
+  "upload.modal.not-signed-in-description": "Няма да можете да изтриете споделянето си ръчно, нито да виждате броя на посетителите.",
   "upload.modal.expires.never": "никога",
   "upload.modal.expires.never-long": "Постоянно споделяне",
-  "upload.modal.expires.error.too-long":
-    "Датата на изтичане надвишава максимума от {max}.",
+  "upload.modal.expires.error.too-long": "Датата на изтичане надвишава максимума от {max}.",
   "upload.modal.link.label": "Връзка",
   "upload.modal.expires.label": "Изтичане",
   "upload.modal.expires.minute-singular": "Минута",
@@ -375,78 +311,59 @@ export default {
   "upload.modal.expires.year-plural": "Години",
   "upload.modal.accordion.name-and-description.title": "Име и описание",
   "upload.modal.accordion.name-and-description.name.placeholder": "Име",
-  "upload.modal.accordion.name-and-description.description.placeholder":
-    "Бележка за получателите на това споделяне",
+  "upload.modal.accordion.name-and-description.description.placeholder": "Бележка за получателите на това споделяне",
   "upload.modal.accordion.email.title": "Получатели по имейл",
   "upload.modal.accordion.email.placeholder": "Въведете имейл адреси",
   "upload.modal.accordion.email.invalid-email": "Невалиден имейл адрес",
-  "upload.modal.accordion.email.restrict-to-recipients":
-    "Ограничаване на достъпа само до тези получатели (трябва да влязат в профила си, за да достъпят съдържанието)",
+  "upload.modal.accordion.email.restrict-to-recipients": "Ограничаване на достъпа само до тези получатели (трябва да влязат в профила си, за да достъпят съдържанието)",
   "upload.modal.accordion.security.title": "Опции за сигурност",
   "upload.modal.accordion.security.password.label": "Защита с парола",
   "upload.modal.accordion.security.password.placeholder": "Без парола",
   "upload.modal.accordion.security.max-views.label": "Максимум прегледи",
   "upload.modal.accordion.security.max-views.placeholder": "Без ограничение",
   // showCompletedUploadModal.tsx
-  "upload.modal.completed.never-expires":
-    "Това споделяне никога няма да изтече.",
-  "upload.modal.completed.expires-on":
-    "Това споделяне ще изтече на {expiration}.",
+  "upload.modal.completed.never-expires": "Това споделяне никога няма да изтече.",
+  "upload.modal.completed.expires-on": "Това споделяне ще изтече на {expiration}.",
   "upload.modal.completed.share-ready": "Споделянето е готово",
-  "upload.modal.completed.notified-reverse-share-creator":
-    "Уведомихме създателя на реверсивното споделяне. Можете също така ръчно да споделите тази връзка с него.",
+  "upload.modal.completed.notified-reverse-share-creator": "Уведомихме създателя на реверсивното споделяне. Можете също така ръчно да споделите тази връзка с него.",
   // END /upload
 
   // /share/[id]
   "share.title": "Споделяне {shareId}",
   "share.description": "Вижте какво споделих с вас!",
-  "share.fileCount":
-    "{count, plural, =1 {# файл} other {# файла}} · {size} (zip файлът може да бъде по-малък поради компресия)",
+  "share.fileCount": "{count, plural, =1 {# файл} other {# файла}} · {size} (zip файлът може да бъде по-малък поради компресия)",
   "share.copy-text-contents": "Копиране на съдържанието на файла в клипборда",
-  "share.error.visitor-limit-exceeded.title":
-    "Лимитът на посетители е надвишен",
-  "share.error.visitor-limit-exceeded.description":
-    "Лимитът на посетители за това споделяне е надвишен.",
+  "share.error.visitor-limit-exceeded.title": "Лимитът на посетители е надвишен",
+  "share.error.visitor-limit-exceeded.description": "Лимитът на посетители за това споделяне е надвишен.",
   "share.error.removed.title": "Споделянето е премахнато",
   "share.error.not-found.title": "Споделянето не е намерено",
-  "share.error.not-found.description":
-    "Споделянето, което търсите, не съществува.",
+  "share.error.not-found.description": "Споделянето, което търсите, не съществува.",
   "share.error.access-denied.title": "Частно споделяне",
-  "share.error.access-denied.description":
-    "Текущият акаунт няма разрешение за достъп до това споделяне",
+  "share.error.access-denied.description": "Текущият акаунт няма разрешение за достъп до това споделяне",
   "share.error.restricted.title": "Ограничено споделяне",
-  "share.error.restricted.description":
-    "Това споделяне е ограничено до конкретни получатели. Моля, влезте в профила си, за да получите достъп.",
+  "share.error.restricted.description": "Това споделяне е ограничено до конкретни получатели. Моля, влезте в профила си, за да получите достъп.",
   "share.error.restricted.button": "Вход",
   "share.modal.password.title": "Изисква се парола",
-  "share.modal.password.description":
-    "Моля, въведете паролата за достъп до това споделяне.",
+  "share.modal.password.description": "Моля, въведете паролата за достъп до това споделяне.",
   "share.modal.password": "Парола",
   "share.modal.error.invalid-password": "Невалидна парола",
   "share.button.download-all": "Изтегляне на всички",
-  "share.notify.download-all-preparing":
-    "Споделянето се подготвя. Моля, опитайте отново след няколко минути.",
-  "share.notify.copied-contents":
-    "Съдържанието на файла е копирано в клипборда",
-  "share.notify.copy-too-big-error":
-    "Файлът е твърде голям за копиране в клипборда",
-  "share.notify.copy-not-supported-error":
-    "Копирането в клипборда изисква HTTPS връзка",
+  "share.notify.download-all-preparing": "Споделянето се подготвя. Моля, опитайте отново след няколко минути.",
+  "share.notify.copied-contents": "Съдържанието на файла е копирано в клипборда",
+  "share.notify.copy-too-big-error": "Файлът е твърде голям за копиране в клипборда",
+  "share.notify.copy-not-supported-error": "Копирането в клипборда изисква HTTPS връзка",
   "share.modal.file-link": "Връзка към файла",
   "share.table.name": "Име",
   "share.table.size": "Размер",
   "share.modal.file-preview.original_file": "Преглед на оригиналния файл",
-  "share.modal.file-preview.error.not-supported.title":
-    "Прегледът не се поддържа",
-  "share.modal.file-preview.error.not-supported.description":
-    "Прегледът не се поддържа за този тип файлове. Моля, изтеглете файла, за да го разгледате.",
+  "share.modal.file-preview.error.not-supported.title": "Прегледът не се поддържа",
+  "share.modal.file-preview.error.not-supported.description": "Прегледът не се поддържа за този тип файлове. Моля, изтеглете файла, за да го разгледате.",
   // END /share/[id]
 
   // /share/[id]/edit
   "share.edit.title": "Редактиране {shareId}",
   "share.edit.append-upload": "Добавяне на файл",
-  "share.edit.notify.generic-error":
-    "Възникна грешка при завършване на споделянето.",
+  "share.edit.notify.generic-error": "Възникна грешка при завършване на споделянето.",
   "share.edit.notify.save-success": "Споделянето е актуализирано успешно",
   // END /share/[id]/edit
 
@@ -460,8 +377,7 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "Наличен е конфигурационен файл",
-  "admin.config.config-file-warning.description":
-    "Тъй като имате конфигуриран Pingvin Share с конфигурационен файл, не можете да променяте конфигурацията през интерфейса.",
+  "admin.config.config-file-warning.description": "Тъй като имате конфигуриран Pingvin Share с конфигурационен файл, не можете да променяте конфигурацията през интерфейса.",
   "admin.config.title": "Конфигурация",
   "admin.config.category.general": "Общи",
   "admin.config.category.appearance": "Външен вид",
@@ -474,217 +390,133 @@ export default {
   "admin.config.general.app-name": "Име на приложението",
   "admin.config.general.app-name.description": "Име на приложението",
   "admin.config.general.default-language": "Език по подразбиране",
-  "admin.config.general.default-language.description":
-    "Това се прилага за всички потребители, но всеки потребител може да персонализира езика в профила си.",
+  "admin.config.general.default-language.description": "Това се прилага за всички потребители, но всеки потребител може да персонализира езика в профила си.",
   "admin.config.appearance.theme-primary-color": "Основен цвят на темата",
-  "admin.config.appearance.theme-primary-color.description":
-    "Основен цвят за бутони, връзки и акценти. Изберете 'custom', за да използвате цвят по избор.",
-  "admin.config.appearance.theme-primary-color-override":
-    "Персонализиран основен цвят",
-  "admin.config.appearance.theme-primary-color-override.description":
-    "Hex код на цвета, когато основният цвят е зададен на 'custom'.",
+  "admin.config.appearance.theme-primary-color.description": "Основен цвят за бутони, връзки и акценти. Изберете 'custom', за да използвате цвят по избор.",
+  "admin.config.appearance.theme-primary-color-override": "Персонализиран основен цвят",
+  "admin.config.appearance.theme-primary-color-override.description": "Hex код на цвета, когато основният цвят е зададен на 'custom'.",
   "admin.config.appearance.theme-font-preset": "Шрифт на темата",
-  "admin.config.appearance.theme-font-preset.description":
-    "Готови настройки за шрифтове. Изберете системния шрифт или някой от вградените Google Fonts.",
-  "admin.config.appearance.theme-color-scheme":
-    "Цветова схема по подразбиране (гости)",
-  "admin.config.appearance.theme-color-scheme.description":
-    "Светъл/Тъмен режим по подразбиране за нерегистрирани потребители.",
+  "admin.config.appearance.theme-font-preset.description": "Готови настройки за шрифтове. Изберете системния шрифт или някой от вградените Google Fonts.",
+  "admin.config.appearance.theme-color-scheme": "Цветова схема по подразбиране (гости)",
+  "admin.config.appearance.theme-color-scheme.description": "Светъл/Тъмен режим по подразбиране за нерегистрирани потребители.",
   "admin.config.appearance.theme-radius": "Закръгляне на ъглите",
-  "admin.config.appearance.theme-radius.description":
-    "Закръгляне на ъглите по подразбиране за компонентите.",
+  "admin.config.appearance.theme-radius.description": "Закръгляне на ъглите по подразбиране за компонентите.",
   "admin.config.appearance.custom-css": "Персонализиран CSS",
-  "admin.config.appearance.custom-css.description":
-    "Глобален CSS код. Използвайте внимателно, тъй като невалиден CSS може да развали интерфейса.",
-  "admin.config.appearance.upload-progress-style":
-    "Стил на показване на напредъка при качване",
-  "admin.config.appearance.upload-progress-style.description":
-    "Изберете как да се показва напредъкът при качване в списъка с файлове.",
+  "admin.config.appearance.custom-css.description": "Глобален CSS код. Използвайте внимателно, тъй като невалиден CSS може да развали интерфейса.",
+  "admin.config.appearance.upload-progress-style": "Стил на показване на напредъка при качване",
+  "admin.config.appearance.upload-progress-style.description": "Изберете как да се показва напредъкът при качване в списъка с файлове.",
   "admin.config.appearance.upload-progress-style.circle": "Кръгов индикатор",
-  "admin.config.appearance.upload-progress-style.circle-percentage":
-    "Кръг с процент",
-  "admin.config.appearance.upload-progress-style.percentage-time":
-    "Процент и оставащо време",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Кръг с процент",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Процент и оставащо време",
   "admin.config.general.app-url": "URL адрес на приложението",
-  "admin.config.general.app-url.description":
-    "URL адресът, на който е достъпен Pingvin Share",
+  "admin.config.general.app-url.description": "URL адресът, на който е достъпен Pingvin Share",
   "admin.config.security.secure-cookies": "Защитени бисквитки (Secure cookies)",
-  "admin.config.security.secure-cookies.description":
-    "Дали да се задава флагът 'secure' на бисквитките. Ако е активно, сайтът няма да работи през HTTP.",
+  "admin.config.security.secure-cookies.description": "Дали да се задава флагът 'secure' на бисквитките. Ако е активно, сайтът няма да работи през HTTP.",
   "admin.config.general.show-home-page": "Показване на началната страница",
-  "admin.config.general.show-home-page.description":
-    "Дали да се показва началната страница",
+  "admin.config.general.show-home-page.description": "Дали да се показва началната страница",
   "admin.config.security.session-duration": "Продължителност на сесията",
-  "admin.config.security.session-duration.description":
-    "Време, след което потребителят трябва да влезе отново (по подразбиране: 3 месеца).",
+  "admin.config.security.session-duration.description": "Време, след което потребителят трябва да влезе отново (по подразбиране: 3 месеца).",
   "admin.config.appearance.logo": "Лого",
-  "admin.config.appearance.logo.description":
-    "Променете логото си, като качете ново изображение. Изображението трябва да е PNG и да е в съотношение 1:1.",
+  "admin.config.appearance.logo.description": "Променете логото си, като качете ново изображение. Изображението трябва да е PNG и да е в съотношение 1:1.",
   "admin.config.appearance.logo-dark": "Лого за тъмен режим",
-  "admin.config.appearance.logo-dark.description":
-    "Качете отделно лого за тъмния режим. Изображението трябва да е PNG и да е в съотношение 1:1.",
+  "admin.config.appearance.logo-dark.description": "Качете отделно лого за тъмния режим. Изображението трябва да е PNG и да е в съотношение 1:1.",
   "admin.config.appearance.logo.placeholder": "Изберете изображение",
-  "admin.config.security.custom-password-policy":
-    "Персонализирана политика за пароли",
-  "admin.config.security.custom-password-policy.description":
-    "Дали да се разреши персонализиране на политиката за пароли. Ако е деактивирано, се използва политиката за пароли по подразбиране с минимум 8 знака.",
+  "admin.config.security.custom-password-policy": "Персонализирана политика за пароли",
+  "admin.config.security.custom-password-policy.description": "Дали да се разреши персонализиране на политиката за пароли. Ако е деактивирано, се използва политиката за пароли по подразбиране с минимум 8 знака.",
   "admin.config.security.min-length": "Минимална дължина",
-  "admin.config.security.min-length.description":
-    "Минимален брой знаци, изисквани за парола.",
+  "admin.config.security.min-length.description": "Минимален брой знаци, изисквани за парола.",
   "admin.config.security.require-uppercase": "Изискване на главна буква",
-  "admin.config.security.require-uppercase.description":
-    "Дали да се изисква поне една главна буква в паролата.",
+  "admin.config.security.require-uppercase.description": "Дали да се изисква поне една главна буква в паролата.",
   "admin.config.security.require-lowercase": "Изискване на малка буква",
-  "admin.config.security.require-lowercase.description":
-    "Дали да се изисква поне една малка буква в паролата.",
+  "admin.config.security.require-lowercase.description": "Дали да се изисква поне една малка буква в паролата.",
   "admin.config.security.require-number": "Изискване на цифра",
-  "admin.config.security.require-number.description":
-    "Дали да се изисква поне една цифра в паролата.",
-  "admin.config.security.require-special-character":
-    "Изискване на специален знак",
-  "admin.config.security.require-special-character.description":
-    "Дали да се изисква поне един специален знак в паролата.",
+  "admin.config.security.require-number.description": "Дали да се изисква поне една цифра в паролата.",
+  "admin.config.security.require-special-character": "Изискване на специален знак",
+  "admin.config.security.require-special-character.description": "Дали да се изисква поне един специален знак в паролата.",
   "admin.config.cache.ttl": "TTL",
-  "admin.config.cache.ttl.description":
-    "Време в секунди за съхранение на информация в кеша.",
+  "admin.config.cache.ttl.description": "Време в секунди за съхранение на информация в кеша.",
   "admin.config.cache.max-items": "Максимум елементи",
-  "admin.config.cache.max-items.description":
-    "Максимален брой елементи в кеша.",
+  "admin.config.cache.max-items.description": "Максимален брой елементи в кеша.",
   "admin.config.cache.redis-enabled": "Redis активиран",
-  "admin.config.cache.redis-enabled.description":
-    "Обикновено Pingvin Share кешира информацията в паметта. Ако използвате няколко инстанции на Pingvin Share, трябва да активирате Redis за споделяне на кеша.",
+  "admin.config.cache.redis-enabled.description": "Обикновено Pingvin Share кешира информацията в паметта. Ако използвате няколко инстанции на Pingvin Share, трябва да активирате Redis за споделяне на кеша.",
   "admin.config.cache.redis-url": "URL адрес на Redis",
-  "admin.config.cache.redis-url.description":
-    "URL адрес за връзка с Redis инстанцията.",
+  "admin.config.cache.redis-url.description": "URL адрес за връзка с Redis инстанцията.",
   "admin.config.cache.button.test-redis": "Тестване на връзката с Redis",
   "admin.config.cache.test-redis.success": "Връзката с Redis е успешна",
-  "admin.config.cache.test-redis.success-disabled":
-    "Връзката с Redis е успешна (кеширането с Redis в момента е деактивирано).",
-  "admin.config.cache.test-redis.modal.error.title":
-    "Грешка при връзка с Redis",
-  "admin.config.cache.test-redis.modal.error.description":
-    "При свързване с Redis възникна следната грешка:",
-  "admin.config.cache.test-redis.modal.save.title":
-    "Запазване на конфигурацията",
-  "admin.config.cache.test-redis.modal.save.description":
-    "За да продължите, първо трябва да запазите конфигурацията. Искате ли да я запазите и да тествате връзката с Redis?",
+  "admin.config.cache.test-redis.success-disabled": "Връзката с Redis е успешна (кеширането с Redis в момента е деактивирано).",
+  "admin.config.cache.test-redis.modal.error.title": "Грешка при връзка с Redis",
+  "admin.config.cache.test-redis.modal.error.description": "При свързване с Redis възникна следната грешка:",
+  "admin.config.cache.test-redis.modal.save.title": "Запазване на конфигурацията",
+  "admin.config.cache.test-redis.modal.save.description": "За да продължите, първо трябва да запазите конфигурацията. Искате ли да я запазите и да тествате връзката с Redis?",
   "admin.config.cache.test-redis.modal.save.confirm": "Запазване и тестване",
-  "admin.config.email.send-html-emails":
-    "Активиране на съвместимост с HTML имейли",
-  "admin.config.email.send-html-emails.description":
-    "Ако е активирано, имейлите ще се изпращат в HTML формат. Уверете се, че шаблоните за имейли са актуализирани за използване на HTML.",
-  "admin.config.share.enable-share-email-recipients":
-    "Разрешаване на споделяне с имейл получатели",
-  "admin.config.share.enable-share-email-recipients.description":
-    "Дали да се разреши споделяне чрез имейл с получатели. Може да се активира само ако е настроен SMTP.",
+  "admin.config.email.send-html-emails": "Активиране на съвместимост с HTML имейли",
+  "admin.config.email.send-html-emails.description": "Ако е активирано, имейлите ще се изпращат в HTML формат. Уверете се, че шаблоните за имейли са актуализирани за използване на HTML.",
+  "admin.config.share.enable-share-email-recipients": "Разрешаване на споделяне с имейл получатели",
+  "admin.config.share.enable-share-email-recipients.description": "Дали да се разреши споделяне чрез имейл с получатели. Може да се активира само ако е настроен SMTP.",
   "admin.config.email.share-recipients-subject": "Тема на имейла за получатели",
-  "admin.config.email.share-recipients-subject.description":
-    "Тема на имейла, който се изпраща на получателите.",
-  "admin.config.email.share-recipients-message":
-    "Съобщение на имейла за получатели",
-  "admin.config.email.share-recipients-message.description":
-    "Съобщение, което се изпраща на получателите. Налични променливи:\n {creator} - Потребителско име на създателя\n {creatorEmail} - Имейл на създателя\n {shareUrl} - URL на споделянето\n {desc} - Описание на споделянето\n {expires} - Дата на изтичане\n Тези променливи ще бъдат заменени с реалните стойности.",
+  "admin.config.email.share-recipients-subject.description": "Тема на имейла, който се изпраща на получателите.",
+  "admin.config.email.share-recipients-message": "Съобщение на имейла за получатели",
+  "admin.config.email.share-recipients-message.description": "Съобщение, което се изпраща на получателите. Налични променливи:\n {creator} - Потребителско име на създателя\n {creatorEmail} - Имейл на създателя\n {shareUrl} - URL на споделянето\n {desc} - Описание на споделянето\n {expires} - Дата на изтичане\n Тези променливи ще бъдат заменени с реалните стойности.",
   "admin.config.email.reverse-share-subject": "Тема при реверсивно споделяне",
-  "admin.config.email.reverse-share-subject.description":
-    "Тема на имейла, когато някой създаде споделяне през вашата реверсивна връзка.",
-  "admin.config.email.reverse-share-message":
-    "Съобщение при реверсивно споделяне",
-  "admin.config.email.reverse-share-message.description":
-    "Съобщение, което се изпраща при създадено реверсивно споделяне. {shareUrl} ще бъде заменено с името на създателя и URL адреса.",
+  "admin.config.email.reverse-share-subject.description": "Тема на имейла, когато някой създаде споделяне през вашата реверсивна връзка.",
+  "admin.config.email.reverse-share-message": "Съобщение при реверсивно споделяне",
+  "admin.config.email.reverse-share-message.description": "Съобщение, което се изпраща при създадено реверсивно споделяне. {shareUrl} ще бъде заменено с името на създателя и URL адреса.",
   "admin.config.email.reset-password-subject": "Тема за нулиране на парола",
-  "admin.config.email.reset-password-subject.description":
-    "Тема на имейла, когато потребител поиска нулиране на паролата.",
-  "admin.config.email.reset-password-message":
-    "Съобщение за нулиране на парола",
-  "admin.config.email.reset-password-message.description":
-    "Съобщение, изпращано при нулиране на парола. {url} ще бъде заменено с адреса за нулиране.",
+  "admin.config.email.reset-password-subject.description": "Тема на имейла, когато потребител поиска нулиране на паролата.",
+  "admin.config.email.reset-password-message": "Съобщение за нулиране на парола",
+  "admin.config.email.reset-password-message.description": "Съобщение, изпращано при нулиране на парола. {url} ще бъде заменено с адреса за нулиране.",
   "admin.config.email.invite-subject": "Тема на поканата",
-  "admin.config.email.invite-subject.description":
-    "Тема на имейла при покана на нов потребител.",
+  "admin.config.email.invite-subject.description": "Тема на имейла при покана на нов потребител.",
   "admin.config.email.invite-message": "Съобщение на поканата",
-  "admin.config.email.invite-message.description":
-    "Съобщение при покана на нов потребител. {url} се заменя с адреса на поканата, {email} с имейла и {password} с паролата.",
-  "admin.config.email.share-recipients-reply-to-creator":
-    "Задаване на имейла на създателя като адрес за отговор",
-  "admin.config.email.share-recipients-reply-to-creator.description":
-    "Определя дали в полето „Отговор до“ да се задава имейл адресът на потребителя, създал споделянето.",
-  "admin.config.share.enable-share-download-notifications":
-    "Активиране на известия при изтегляне",
-  "admin.config.share.enable-share-download-notifications.description":
-    "Дали да се изпраща имейл до създателя, когато получател изтегли файл. Изисква SMTP и активирано споделяне с получатели.",
-  "admin.config.email.share-download-notification-subject":
-    "Тема на известието за изтегляне",
-  "admin.config.email.share-download-notification-subject.description":
-    "Тема на имейла, изпращан на създателя при изтегляне на файл.",
-  "admin.config.email.share-download-notification-message":
-    "Съобщение на известието за изтегляне",
-  "admin.config.email.share-download-notification-message.description":
-    "Съобщение на създателя при изтегляне на файл. Променливи:\n {recipientEmail} - Имейл на получателя\n {fileName} - Име на изтегления файл\n {shareUrl} - URL на споделянето",
-  "admin.config.security.enable-email-verification":
-    "Активиране на потвърждение по имейл",
-  "admin.config.security.enable-email-verification.description":
-    "Дали да се изисква от потребителите да потвърдят имейл адреса си, преди да могат да влязат. Това може да бъде активирано само ако SMTP е активиран.",
+  "admin.config.email.invite-message.description": "Съобщение при покана на нов потребител. {url} се заменя с адреса на поканата, {email} с имейла и {password} с паролата.",
+  "admin.config.email.share-recipients-reply-to-creator": "Задаване на имейла на създателя като адрес за отговор",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Определя дали в полето „Отговор до“ да се задава имейл адресът на потребителя, създал споделянето.",
+  "admin.config.share.enable-share-download-notifications": "Активиране на известия при изтегляне",
+  "admin.config.share.enable-share-download-notifications.description": "Дали да се изпраща имейл до създателя, когато получател изтегли файл. Изисква SMTP и активирано споделяне с получатели.",
+  "admin.config.email.share-download-notification-subject": "Тема на известието за изтегляне",
+  "admin.config.email.share-download-notification-subject.description": "Тема на имейла, изпращан на създателя при изтегляне на файл.",
+  "admin.config.email.share-download-notification-message": "Съобщение на известието за изтегляне",
+  "admin.config.email.share-download-notification-message.description": "Съобщение на създателя при изтегляне на файл. Променливи:\n {recipientEmail} - Имейл на получателя\n {fileName} - Име на изтегления файл\n {shareUrl} - URL на споделянето",
+  "admin.config.security.enable-email-verification": "Активиране на потвърждение по имейл",
+  "admin.config.security.enable-email-verification.description": "Дали да се изисква от потребителите да потвърдят имейл адреса си, преди да могат да влязат. Това може да бъде активирано само ако SMTP е активиран.",
   "admin.config.email.verification-subject": "Тема за потвърждение",
-  "admin.config.email.verification-subject.description":
-    "Тема на имейла, който се изпраща до потребителя при регистрация.",
+  "admin.config.email.verification-subject.description": "Тема на имейла, който се изпраща до потребителя при регистрация.",
   "admin.config.email.verification-message": "Съобщение за потвърждение",
-  "admin.config.email.verification-message.description":
-    "Съобщение, което се изпраща до потребителя при регистрация. {url} ще бъде заменено с адреса за потвърждение.",
+  "admin.config.email.verification-message.description": "Съобщение, което се изпраща до потребителя при регистрация. {url} ще бъде заменено с адреса за потвърждение.",
   "admin.config.security.allow-registration": "Разрешаване на регистрация",
-  "admin.config.security.allow-registration.description":
-    "Дали е разрешена регистрацията на нови потребители",
-  "admin.config.security.allow-unauthenticated-shares":
-    "Разрешаване на неавтентикирани споделяния",
-  "admin.config.security.allow-unauthenticated-shares.description":
-    "Дали потребители без акаунт могат да създават споделяния",
+  "admin.config.security.allow-registration.description": "Дали е разрешена регистрацията на нови потребители",
+  "admin.config.security.allow-unauthenticated-shares": "Разрешаване на неавтентикирани споделяния",
+  "admin.config.security.allow-unauthenticated-shares.description": "Дали потребители без акаунт могат да създават споделяния",
   "admin.config.share.default-expiration": "Изтичане по подразбиране",
-  "admin.config.share.default-expiration.description":
-    "Времето на изтичане по подразбиране при създаване на ново споделяне.",
+  "admin.config.share.default-expiration.description": "Времето на изтичане по подразбиране при създаване на ново споделяне.",
   "admin.config.share.max-expiration": "Максимално изтичане",
-  "admin.config.share.max-expiration.description":
-    "Максимален срок на изтичане. Задайте 0 за неограничен срок.",
+  "admin.config.share.max-expiration.description": "Максимален срок на изтичане. Задайте 0 за неограничен срок.",
   "admin.config.share.share-id-length": "Дължина на ID на споделянето",
-  "admin.config.share.share-id-length.description":
-    "Дължина на генерираното ID. Използва се и за реверсивни споделяния. Стойност под 8 не се счита за сигурна.",
+  "admin.config.share.share-id-length.description": "Дължина на генерираното ID. Използва се и за реверсивни споделяния. Стойност под 8 не се счита за сигурна.",
   "admin.config.share.max-size": "Максимален размер",
-  "admin.config.share.max-size.description":
-    "Максимален общ размер на споделянето",
+  "admin.config.share.max-size.description": "Максимален общ размер на споделянето",
   "admin.config.share.zip-compression-level": "Ниво на ZIP компресия",
-  "admin.config.share.zip-compression-level.description":
-    "Баланс между размер на файла и скорост на компресия. Стойности от 0 до 9 (0 - без компресия, 9 - максимална).",
+  "admin.config.share.zip-compression-level.description": "Баланс между размер на файла и скорост на компресия. Стойности от 0 до 9 (0 - без компресия, 9 - максимална).",
   "admin.config.share.chunk-size": "Размер на частите (Chunk size)",
-  "admin.config.share.chunk-size.description":
-    "Настройте размера на частите при качване за баланс между ефективност и стабилност на връзката.",
-  "admin.config.share.auto-open-share-modal":
-    "Автоматично отваряне на прозореца за споделяне",
-  "admin.config.share.auto-open-share-modal.description":
-    "Прозорецът се появява автоматично след избор на файлове.",
-  "admin.config.security.allow-admin-access-all-shares":
-    "Администраторски достъп до всички споделяния",
-  "admin.config.share.reverse-share-simple-only":
-    "Принудителен опростен режим за обратно споделяне",
-  "admin.config.share.reverse-share-simple-only.description":
-    "Принудително създаване на обратните споделяния в опростен режим. Ако е деактивирано, създателят на обратното споделяне може да избира между опростен и разширен режим.",
-  "admin.config.security.allow-admin-access-all-shares.description":
-    "Позволява на администраторите достъп до всички споделяния, дори и защитените, изтеклите или изтритите.",
-  "admin.config.share.enable-user-recipients":
-    "Разрешаване на споделяне с регистрирани потребители",
-  "admin.config.share.enable-user-recipients.description":
-    "Когато е активирано, споделянията, изпратени до имейл адреса на регистриран потребител, автоматично ще се показват в неговия профил. Потребителите могат също да ограничат достъпа до споделянето само до конкретно посочени получатели.",
-  "admin.config.share.file-retention-period":
-    "Период на запазване на файловете",
-  "admin.config.share.file-retention-period.description":
-    "Колко дълго да се пазят файловете след изтичане или изтриване на споделянето. Полезно е само ако е активирано и „Разрешаване на администраторски достъп до всички споделяния“. Задайте -1, за да се пазят файловете завинаги.",
+  "admin.config.share.chunk-size.description": "Настройте размера на частите при качване за баланс между ефективност и стабилност на връзката.",
+  "admin.config.share.auto-open-share-modal": "Автоматично отваряне на прозореца за споделяне",
+  "admin.config.share.auto-open-share-modal.description": "Прозорецът се появява автоматично след избор на файлове.",
+  "admin.config.security.allow-admin-access-all-shares": "Администраторски достъп до всички споделяния",
+  "admin.config.share.reverse-share-simple-only": "Принудителен опростен режим за обратно споделяне",
+  "admin.config.share.reverse-share-simple-only.description": "Принудително създаване на обратните споделяния в опростен режим. Ако е деактивирано, създателят на обратното споделяне може да избира между опростен и разширен режим.",
+  "admin.config.security.allow-admin-access-all-shares.description": "Позволява на администраторите достъп до всички споделяния, дори и защитените, изтеклите или изтритите.",
+  "admin.config.share.enable-user-recipients": "Разрешаване на споделяне с регистрирани потребители",
+  "admin.config.share.enable-user-recipients.description": "Когато е активирано, споделянията, изпратени до имейл адреса на регистриран потребител, автоматично ще се показват в неговия профил. Потребителите могат също да ограничат достъпа до споделянето само до конкретно посочени получатели.",
+  "admin.config.share.file-retention-period": "Период на запазване на файловете",
+  "admin.config.share.file-retention-period.description": "Колко дълго да се пазят файловете след изтичане или изтриване на споделянето. Полезно е само ако е активирано и „Разрешаване на администраторски достъп до всички споделяния“. Задайте -1, за да се пазят файловете завинаги.",
   "admin.config.smtp.enabled": "Активиране",
-  "admin.config.smtp.enabled.description":
-    "Дали SMTP е активиран. Активирайте само ако сте въвели хост, порт, имейл, потребител и парола.",
+  "admin.config.smtp.enabled.description": "Дали SMTP е активиран. Активирайте само ако сте въвели хост, порт, имейл, потребител и парола.",
   "admin.config.smtp.host": "Хост",
   "admin.config.smtp.host.description": "Хост на SMTP сървъра",
   "admin.config.smtp.port": "Порт",
   "admin.config.smtp.port.description": "Порт на SMTP сървъра",
   "admin.config.smtp.email": "Имейл",
-  "admin.config.smtp.email.description":
-    "Имейл адрес, от който ще се изпращаат съобщенията",
+  "admin.config.smtp.email.description": "Имейл адрес, от който ще се изпращаат съобщенията",
   "admin.config.smtp.username": "Потребителско име",
   "admin.config.smtp.username.description": "Потребителско име за SMTP сървъра",
   "admin.config.smtp.password": "Парола",
@@ -692,174 +524,119 @@ export default {
   "admin.config.smtp.button.test": "Изпращане на тестов имейл",
   "admin.config.smtp.test-email.success": "Имейлът е изпратен успешно",
   "admin.config.smtp.test-email.error.title": "Грешка при изпращане на имейл",
-  "admin.config.smtp.test-email.error.description":
-    "При изпращане на тестовия имейл възникна следната грешка:",
+  "admin.config.smtp.test-email.error.description": "При изпращане на тестовия имейл възникна следната грешка:",
   "admin.config.smtp.test-email.save.title": "Запазване на конфигурацията",
-  "admin.config.smtp.test-email.save.description":
-    "Първо трябва да запазите конфигурацията. Желаете ли да запазите настройките и да изпратите тестовия имейл?",
+  "admin.config.smtp.test-email.save.description": "Първо трябва да запазите конфигурацията. Желаете ли да запазите настройките и да изпратите тестовия имейл?",
   "admin.config.smtp.test-email.save.confirm": "Запазване и изпращане",
-  "admin.config.smtp.allow-unauthorized-certificates":
-    "Доверие на неавторизирани SMTP сертификати",
-  "admin.config.smtp.allow-unauthorized-certificates.description":
-    "Активирайте само ако трябва да се доверите на самоподписани сертификати.",
+  "admin.config.smtp.allow-unauthorized-certificates": "Доверие на неавторизирани SMTP сертификати",
+  "admin.config.smtp.allow-unauthorized-certificates.description": "Активирайте само ако трябва да се доверите на самоподписани сертификати.",
   "admin.config.oauth.allow-registration": "Разрешаване на регистрация",
-  "admin.config.oauth.allow-registration.description":
-    "Разрешаване на потребителите да се регистрират чрез социални мрежи",
+  "admin.config.oauth.allow-registration.description": "Разрешаване на потребителите да се регистрират чрез социални мрежи",
   "admin.config.oauth.ignore-totp": "Игнориране на TOTP",
-  "admin.config.oauth.ignore-totp.description":
-    "Дали да се игнорира TOTP при влизане чрез социална мрежа",
+  "admin.config.oauth.ignore-totp.description": "Дали да се игнорира TOTP при влизане чрез социална мрежа",
   "admin.config.oauth.disable-password": "Деактивиране на влизането с парола",
-  "admin.config.oauth.disable-password.description":
-    "Дали да се спре влизането с парола. Уверете се, че OAuth е настроен правилно, за да не загубите достъп.",
+  "admin.config.oauth.disable-password.description": "Дали да се спре влизането с парола. Уверете се, че OAuth е настроен правилно, за да не загубите достъп.",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Влизане чрез GitHub",
   "admin.config.oauth.github-client-id": "GitHub Client ID",
-  "admin.config.oauth.github-client-id.description":
-    "Client ID за GitHub приложението",
+  "admin.config.oauth.github-client-id.description": "Client ID за GitHub приложението",
   "admin.config.oauth.github-client-secret": "GitHub Client secret",
-  "admin.config.oauth.github-client-secret.description":
-    "Client secret за GitHub приложението",
+  "admin.config.oauth.github-client-secret.description": "Client secret за GitHub приложението",
   "admin.config.oauth.google-enabled": "Google",
   "admin.config.oauth.google-enabled.description": "Влизане чрез Google",
   "admin.config.oauth.google-client-id": "Google клиент ID",
-  "admin.config.oauth.google-client-id.description":
-    "Client ID за Google приложението",
+  "admin.config.oauth.google-client-id.description": "Client ID за Google приложението",
   "admin.config.oauth.google-client-secret": "Google Client secret",
-  "admin.config.oauth.google-client-secret.description":
-    "Client secret за Google приложението",
+  "admin.config.oauth.google-client-secret.description": "Client secret за Google приложението",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
   "admin.config.oauth.microsoft-enabled.description": "Влизане чрез Microsoft",
   "admin.config.oauth.microsoft-tenant": "Microsoft Tenant",
-  "admin.config.oauth.microsoft-tenant.description":
-    "Tenant ID за Microsoft приложението",
+  "admin.config.oauth.microsoft-tenant.description": "Tenant ID за Microsoft приложението",
   "admin.config.oauth.microsoft-client-id": "Microsoft Client ID",
-  "admin.config.oauth.microsoft-client-id.description":
-    "Client ID за Microsoft приложението",
+  "admin.config.oauth.microsoft-client-id.description": "Client ID за Microsoft приложението",
   "admin.config.oauth.microsoft-client-secret": "Microsoft Client secret",
-  "admin.config.oauth.microsoft-client-secret.description":
-    "Client secret за Microsoft приложението",
+  "admin.config.oauth.microsoft-client-secret.description": "Client secret за Microsoft приложението",
   "admin.config.oauth.discord-enabled": "Discord",
   "admin.config.oauth.discord-enabled.description": "Влизане чрез Discord",
-  "admin.config.oauth.discord-limited-users":
-    "Ограничаване на Discord потребители",
-  "admin.config.oauth.discord-limited-users.description":
-    "Позволява влизане само за конкретни Discord ID адреси. Оставете празно за всички.",
+  "admin.config.oauth.discord-limited-users": "Ограничаване на Discord потребители",
+  "admin.config.oauth.discord-limited-users.description": "Позволява влизане само за конкретни Discord ID адреси. Оставете празно за всички.",
   "admin.config.oauth.discord-limited-guild": "Discord сървър ID",
-  "admin.config.oauth.discord-limited-guild.description":
-    "Позволява влизане само за членове на конкретен сървър.",
+  "admin.config.oauth.discord-limited-guild.description": "Позволява влизане само за членове на конкретен сървър.",
   "admin.config.oauth.discord-client-id": "Discord Client-ID",
-  "admin.config.oauth.discord-client-id.description":
-    "Client ID за Discord приложението",
+  "admin.config.oauth.discord-client-id.description": "Client ID за Discord приложението",
   "admin.config.oauth.discord-client-secret": "Discord Client-Secret",
-  "admin.config.oauth.discord-client-secret.description":
-    "Client secret за Discord приложението",
+  "admin.config.oauth.discord-client-secret.description": "Client secret за Discord приложението",
   "admin.config.oauth.oidc-enabled": "OpenID Connect",
   "admin.config.oauth.oidc-enabled.description": "Влизане чрез OpenID Connect",
   "admin.config.oauth.oidc-discovery-uri": "URI за откриване на OpenID Connect",
-  "admin.config.oauth.oidc-discovery-uri.description":
-    "Discovery URI за OpenID Connect",
+  "admin.config.oauth.oidc-discovery-uri.description": "Discovery URI за OpenID Connect",
   "admin.config.oauth.oidc-sign-out": "Излизане от OpenID Connect",
-  "admin.config.oauth.oidc-sign-out.description":
-    "Дали бутонът 'Излизане' ще излиза и от OpenID Connect доставчика",
+  "admin.config.oauth.oidc-sign-out.description": "Дали бутонът 'Излизане' ще излиза и от OpenID Connect доставчика",
   "admin.config.oauth.oidc-scope": "OpenID Connect обхват (scope)",
-  "admin.config.oauth.oidc-scope.description":
-    "Обхвати, които се изискват от OpenID Connect доставчика.",
-  "admin.config.oauth.oidc-username-claim":
-    "Заявка за потребителско име в OpenID Connect",
-  "admin.config.oauth.oidc-username-claim.description":
-    "Claim за потребителското име в ID токена. Оставете празно, ако не сте сигурни.",
+  "admin.config.oauth.oidc-scope.description": "Обхвати, които се изискват от OpenID Connect доставчика.",
+  "admin.config.oauth.oidc-username-claim": "Заявка за потребителско име в OpenID Connect",
+  "admin.config.oauth.oidc-username-claim.description": "Claim за потребителското име в ID токена. Оставете празно, ако не сте сигурни.",
   "admin.config.oauth.oidc-role-path": "Път към ролите в OpenID Connect токена",
-  "admin.config.oauth.oidc-role-path.description":
-    "Трябва да е валиден JMES път, препращащ към масив от роли. " +
-    "Управлението на правата за достъп чрез роли на OpenID Connect се препоръчва само ако не е конфигуриран друг доставчик на самоличност и влизането с парола е деактивирано. " +
-    "Оставете го празно, ако не знаете каква е тази конфигурация.",
+  "admin.config.oauth.oidc-role-path.description": "Трябва да е валиден JMES път, препращащ към масив от роли. " + "Управлението на правата за достъп чрез роли на OpenID Connect се препоръчва само ако не е конфигуриран друг доставчик на самоличност и влизането с парола е деактивирано. " + "Оставете го празно, ако не знаете каква е тази конфигурация.",
   "admin.config.oauth.oidc-role-general-access": "OIDC роля за общ достъп",
-  "admin.config.oauth.oidc-role-general-access.description":
-    "За общ достъп е необходима роля. Потребителят трябва да е част от ролите на потребителя, за да може да влезе. " +
-    "Оставете го празно, ако не знаете каква е тази конфигурация.",
-  "admin.config.oauth.oidc-role-admin-access":
-    "OIDC роля за административен достъп",
-  "admin.config.oauth.oidc-role-admin-access.description":
-    "За администраторски достъп е необходима роля. Потребителят трябва да е част от ролите на потребителя, за да има достъп до администраторския панел. " +
-    "Оставете го празно, ако не знаете каква е тази конфигурация.",
-  "admin.config.oauth.oidc-client-id":
-    "Идентификатор на клиент на OpenID Connect",
-  "admin.config.oauth.oidc-client-id.description":
-    "Client ID за OpenID Connect приложението",
+  "admin.config.oauth.oidc-role-general-access.description": "За общ достъп е необходима роля. Потребителят трябва да е част от ролите на потребителя, за да може да влезе. " + "Оставете го празно, ако не знаете каква е тази конфигурация.",
+  "admin.config.oauth.oidc-role-admin-access": "OIDC роля за административен достъп",
+  "admin.config.oauth.oidc-role-admin-access.description": "За администраторски достъп е необходима роля. Потребителят трябва да е част от ролите на потребителя, за да има достъп до администраторския панел. " + "Оставете го празно, ако не знаете каква е тази конфигурация.",
+  "admin.config.oauth.oidc-client-id": "Идентификатор на клиент на OpenID Connect",
+  "admin.config.oauth.oidc-client-id.description": "Client ID за OpenID Connect приложението",
   "admin.config.oauth.oidc-client-secret": "OpenID Connect Client secret",
-  "admin.config.oauth.oidc-client-secret.description":
-    "Client secret за OpenID Connect приложението",
+  "admin.config.oauth.oidc-client-secret.description": "Client secret за OpenID Connect приложението",
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "Активиране на LDAP",
-  "admin.config.ldap.enabled.description":
-    "Използване на LDAP автентикация за влизане",
+  "admin.config.ldap.enabled.description": "Използване на LDAP автентикация за влизане",
   "admin.config.ldap.url": "URL на сървъра",
   "admin.config.ldap.url.description": "URL адрес на LDAP сървъра",
   "admin.config.ldap.bind-dn": "Име (DN) за свръзка",
-  "admin.config.ldap.bind-dn.description":
-    "Потребител по подразбиране за търсене в LDAP",
+  "admin.config.ldap.bind-dn.description": "Потребител по подразбиране за търсене в LDAP",
   "admin.config.ldap.bind-password": "Bind парола",
-  "admin.config.ldap.bind-password.description":
-    "Парола за Bind DN потребителя",
+  "admin.config.ldap.bind-password.description": "Парола за Bind DN потребителя",
   "admin.config.ldap.search-base": "Потребителска база",
-  "admin.config.ldap.search-base.description":
-    "Мястото, където ще се търсят потребителите",
+  "admin.config.ldap.search-base.description": "Мястото, където ще се търсят потребителите",
   "admin.config.ldap.search-query": "Потребителско запитване",
-  "admin.config.ldap.search-query.description":
-    "Заявката за търсене на потребител. %username% се заменя с въведеното от потребителя име.",
+  "admin.config.ldap.search-query.description": "Заявката за търсене на потребител. %username% се заменя с въведеното от потребителя име.",
   "admin.config.ldap.admin-groups": "Админ група",
-  "admin.config.ldap.admin-groups.description":
-    "Група, даваща административен достъп.",
+  "admin.config.ldap.admin-groups.description": "Група, даваща административен достъп.",
   "admin.config.ldap.field-name-member-of": "Атрибут за групите на потребителя",
-  "admin.config.ldap.field-name-member-of.description":
-    "Име на атрибута в LDAP, съдържащ групите, в които потребителят членува.",
+  "admin.config.ldap.field-name-member-of.description": "Име на атрибута в LDAP, съдържащ групите, в които потребителят членува.",
   "admin.config.ldap.field-name-email": "Атрибут за имейл на потребителя",
-  "admin.config.ldap.field-name-email.description":
-    "Име на атрибута в LDAP за имейл адреса.",
+  "admin.config.ldap.field-name-email.description": "Име на атрибута в LDAP за имейл адреса.",
   "admin.config.notify.success": "Конфигурацията е актуализирана успешно.",
-  "admin.config.notify.logo-success":
-    "Логото е актуализирано успешно. Може да отнеме няколко минути, за да се покаже в сайта.",
+  "admin.config.notify.logo-success": "Логото е актуализирано успешно. Може да отнеме няколко минути, за да се покаже в сайта.",
   "admin.config.notify.no-changes": "Няма промени за запазване.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Активирано",
-  "admin.config.s3.enabled.description":
-    "Използване на S3 за съхранение на файлове вместо локалната система. ВНИМАНИЕ: Ако ClamAV е активен, файловете ще се изтеглят временно за проверка.",
+  "admin.config.s3.enabled.description": "Използване на S3 за съхранение на файлове вместо локалната система. ВНИМАНИЕ: Ако ClamAV е активен, файловете ще се изтеглят временно за проверка.",
   "admin.config.s3.endpoint": "Крайна точка",
-  "admin.config.s3.endpoint.description":
-    "URL адресът на S3 контейнера (bucket).",
+  "admin.config.s3.endpoint.description": "URL адресът на S3 контейнера (bucket).",
   "admin.config.s3.region": "Регион",
   "admin.config.s3.region.description": "Регионът на S3 контейнера.",
   "admin.config.s3.bucket-name": "Име на контейнера (Bucket name)",
   "admin.config.s3.bucket-name.description": "Името на S3 контейнера.",
   "admin.config.s3.bucket-path": "Път",
-  "admin.config.s3.bucket-path.description":
-    "Пътят по подразбиране за съхранение на файлове в S3.",
+  "admin.config.s3.bucket-path.description": "Пътят по подразбиране за съхранение на файлове в S3.",
   "admin.config.s3.key": "Ключ (Key)",
   "admin.config.s3.key.description": "Ключ за достъп до S3.",
   "admin.config.s3.secret": "Тайна (Secret)",
   "admin.config.s3.secret.description": "Тайна за достъп до S3.",
   "admin.config.s3.use-checksum": "Използване на контролна сума (checksum)",
-  "admin.config.s3.use-checksum.description":
-    "Изключете за услуги, които не поддържат контролни суми (например B2).",
-  "admin.config.s3.docs-link":
-    "CORS трябва да бъде преконфигуриран във вашия бакет, вижте {wikiLink} за подробности.",
+  "admin.config.s3.use-checksum.description": "Изключете за услуги, които не поддържат контролни суми (например B2).",
+  "admin.config.s3.docs-link": "CORS трябва да бъде преконфигуриран във вашия бакет, вижте {wikiLink} за подробности.",
   "admin.config.category.legal": "Правна информация",
   "admin.config.legal.enabled": "Активиране на правни известия",
-  "admin.config.legal.enabled.description":
-    "Показване на връзки към правната информация и политиката за поверителност в долната част на сайта.",
+  "admin.config.legal.enabled.description": "Показване на връзки към правната информация и политиката за поверителност в долната част на сайта.",
   "admin.config.legal.imprint-text": "Текст за 'Imprint'",
-  "admin.config.legal.imprint-text.description":
-    "Текстът, който да се показва. Поддържа Markdown. Оставете празно за външна връзка.",
+  "admin.config.legal.imprint-text.description": "Текстът, който да се показва. Поддържа Markdown. Оставете празно за външна връзка.",
   "admin.config.legal.imprint-url": "URL адрес за 'Imprint'",
-  "admin.config.legal.imprint-url.description":
-    "Ако вече имате такава страница, можете да сложите връзка към нея тук.",
-  "admin.config.legal.privacy-policy-text":
-    "Текст на политиката за поверителност",
-  "admin.config.legal.privacy-policy-text.description":
-    "Текстът на политиката за поверителност. Поддържа Markdown.",
+  "admin.config.legal.imprint-url.description": "Ако вече имате такава страница, можете да сложите връзка към нея тук.",
+  "admin.config.legal.privacy-policy-text": "Текст на политиката за поверителност",
+  "admin.config.legal.privacy-policy-text.description": "Текстът на политиката за поверителност. Поддържа Markdown.",
   "admin.config.legal.privacy-policy-url": "URL на политиката за поверителност",
-  "admin.config.legal.privacy-policy-url.description":
-    "Връзка към външна политика за поверителност.",
+  "admin.config.legal.privacy-policy-url.description": "Връзка към външна политика за поверителност.",
   // 404
   "404.description": "Опа, тази страница не съществува.",
   "404.button.home": "Върни ме в началото",
@@ -868,26 +645,18 @@ export default {
   "error.description": "Опа!",
   "error.button.back": "Назад",
   "error.msg.default": "Нещо се обърка.",
-  "error.msg.access_denied":
-    "Вие отменихте процеса на автентикация, моля, опитайте отново.",
-  "error.msg.expired_token":
-    "Процесът на автентикация отне твърде много време, моля, опитайте отново.",
+  "error.msg.access_denied": "Вие отменихте процеса на автентикация, моля, опитайте отново.",
+  "error.msg.expired_token": "Процесът на автентикация отне твърде много време, моля, опитайте отново.",
   "error.msg.invalid_token": "Вътрешна грешка",
-  "error.msg.no_user":
-    "Потребителят, свързан с този {0} акаунт, не съществува.",
+  "error.msg.no_user": "Потребителят, свързан с този {0} акаунт, не съществува.",
   "error.msg.no_email": "Не може да се получи имейл адрес от този {0} акаунт.",
   "error.msg.already_linked": "Този {0} акаунт вече е свързан с друг акаунт.",
-  "error.msg.not_linked":
-    "Този {0} акаунт все още не е свързан с никой акаунт.",
-  "error.msg.email_already_exists":
-    "Вече съществува акаунт с този имейл адрес. Моля, влезте с паролата си и ръчно свържете своя {0} акаунт в страницата „Моят акаунт“.",
-  "error.msg.email_not_verified":
-    "Имейл адресът ви в този {0} акаунт не е потвърден. Моля, потвърдете имейла си при вашия доставчик на идентичност, преди да влезете.",
-  "error.msg.unverified_account":
-    "Този {0} акаунт не е потвърден, опитайте отново след потвърждение.",
+  "error.msg.not_linked": "Този {0} акаунт все още не е свързан с никой акаунт.",
+  "error.msg.email_already_exists": "Вече съществува акаунт с този имейл адрес. Моля, влезте с паролата си и ръчно свържете своя {0} акаунт в страницата „Моят акаунт“.",
+  "error.msg.email_not_verified": "Имейл адресът ви в този {0} акаунт не е потвърден. Моля, потвърдете имейла си при вашия доставчик на идентичност, преди да влезете.",
+  "error.msg.unverified_account": "Този {0} акаунт не е потвърден, опитайте отново след потвърждение.",
   "error.msg.user_not_allowed": "Нямате разрешение за влизане.",
-  "error.msg.cannot_get_user_info":
-    "Не може да се получи информация за потребителя от този {0} акаунт.",
+  "error.msg.cannot_get_user_info": "Не може да се получи информация за потребителя от този {0} акаунт.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
@@ -932,19 +701,14 @@ export default {
   "common.error.exact-length": "Трябва да е точно {length} знака",
   "common.error.invalid-number": "Трябва да е число",
   "common.error.field-required": "Това поле е задължително",
-  "common.error.password.lowercase":
-    "Паролата трябва да съдържа поне една малка буква",
-  "common.error.password.uppercase":
-    "Паролата трябва да съдържа поне една главна буква",
+  "common.error.password.lowercase": "Паролата трябва да съдържа поне една малка буква",
+  "common.error.password.uppercase": "Паролата трябва да съдържа поне една главна буква",
   "common.error.password.number": "Паролата трябва да съдържа поне една цифра",
-  "common.error.password.special":
-    "Паролата трябва да съдържа поне един специален знак",
+  "common.error.password.special": "Паролата трябва да съдържа поне един специален знак",
   "admin.notice.modal.headerTag": "ИЗИСКВА СЕ АДМИНИСТРАТИВНО ДЕЙСТВИЕ",
-  "admin.notice.modal.defaultCheckboxLabel":
-    "Потвърждавам, че прочетох това известие и разбирам съществените промени.",
+  "admin.notice.modal.defaultCheckboxLabel": "Потвърждавам, че прочетох това известие и разбирам съществените промени.",
   "admin.notice.modal.button.acknowledge": "Потвърди и затвори",
   "admin.notice.modal.button.acknowledging": "Потвърждаване...",
   "admin.notice.modal.docsLink": "Преглед на документацията",
-  "admin.notice.modal.globalNoticeFooter":
-    "Забележка: След като бъде потвърдено, това известие ще бъде премахнато завинаги за всички администратори на всички устройства.",
+  "admin.notice.modal.globalNoticeFooter": "Забележка: След като бъде потвърдено, това известие ще бъде премахнато завинаги за всички администратори на всички устройства.",
 };

@@ -13,19 +13,14 @@ export default {
   // END navbar
 
   // /
-  "home.title":
-    "Μια πλατφόρμα κοινής χρήσης αρχείων <h>σε ιδιωτική εγκατάσταση</h>.",
-  "home.description":
-    "Θέλετε πραγματικά να δώσετε τα προσωπικά σας αρχεία στο χέρι τρίτων όπως WeTransfer;",
+  "home.title": "Μια πλατφόρμα κοινής χρήσης αρχείων <h>σε ιδιωτική εγκατάσταση</h>.",
+  "home.description": "Θέλετε πραγματικά να δώσετε τα προσωπικά σας αρχεία στο χέρι τρίτων όπως WeTransfer;",
   "home.bullet.a.name": "Ιδιωτική εγκατάσταση",
-  "home.bullet.a.description":
-    "Φιλοξενήστε το Pingvin Share στο δικό σας μηχάνημα.",
+  "home.bullet.a.description": "Φιλοξενήστε το Pingvin Share στο δικό σας μηχάνημα.",
   "home.bullet.b.name": "Απόρρητο",
-  "home.bullet.b.description":
-    "Τα αρχεία σας ανήκουν σε εσάς και δεν θα είναι ποτέ προσβάσιμα από τρίτους.",
+  "home.bullet.b.description": "Τα αρχεία σας ανήκουν σε εσάς και δεν θα είναι ποτέ προσβάσιμα από τρίτους.",
   "home.bullet.c.name": "Χωρίς όριο μεγέθους αρχείου",
-  "home.bullet.c.description":
-    "Μεταφορτώστε αρχεία όσο μεγάλα θέλετε. Μόνο ο σκληρός σας δίσκος θα είναι το όριό σας.",
+  "home.bullet.c.description": "Μεταφορτώστε αρχεία όσο μεγάλα θέλετε. Μόνο ο σκληρός σας δίσκος θα είναι το όριό σας.",
   "home.button.start": "Ας αρχίσουμε",
   "home.button.source": "Πηγαίος κώδικας",
   // END /
@@ -39,10 +34,8 @@ export default {
   "signin.input.password": "Κωδικόs πρόσβασης",
   "signin.input.password.placeholder": "Ο κωδικός πρόσβασής σας",
   "signin.button.submit": "Είσοδος",
-  "signIn.notify.totp-required.title":
-    "Απαιτείται έλεγχος ταυτότητας δύο παραγόντων.",
-  "signIn.notify.totp-required.description":
-    "Παρακαλώ εισάγετε τον κωδικό 2FA.",
+  "signIn.notify.totp-required.title": "Απαιτείται έλεγχος ταυτότητας δύο παραγόντων.",
+  "signIn.notify.totp-required.description": "Παρακαλώ εισάγετε τον κωδικό 2FA.",
   "signIn.oauth.or": "Ή",
   "signIn.oauth.signInWith": "Σύνδεση με",
   "signIn.oauth.github": "GitHub",
@@ -63,18 +56,14 @@ export default {
   "signup.button.submit": "Ας ξεκινήσουμε",
   // /auth/verify
   "verify.title": "Επαλήθευση λογαριασμού",
-  "verify.success":
-    "Ο λογαριασμός σας επαληθεύτηκε με επιτυχία! Μπορείτε τώρα να συνδεθείτε.",
+  "verify.success": "Ο λογαριασμός σας επαληθεύτηκε με επιτυχία! Μπορείτε τώρα να συνδεθείτε.",
   "verify.error": "Ο σύνδεσμος επαλήθευσης δεν είναι έγκυρος ή έχει λήξει.",
   "verify.button.signin": "Μετάβαση στην Είσοδο",
   "verify.info.title": "Επαλήθευση λογαριασμού",
-  "verify.info.description":
-    "Η επαλήθευση μέσω email είναι ενεργοποιημένη. Έχουμε στείλει έναν σύνδεσμο επαλήθευσης στη διεύθυνση email σας. Κάντε κλικ στον σύνδεσμο για να ενεργοποιήσετε τον λογαριασμό σας.",
-  "verify.info.note":
-    "Εάν δεν λάβετε το email μέσα σε λίγα λεπτά, ελέγξτε τον φάκελο ανεπιθύμητων μηνυμάτων (spam).",
+  "verify.info.description": "Η επαλήθευση μέσω email είναι ενεργοποιημένη. Έχουμε στείλει έναν σύνδεσμο επαλήθευσης στη διεύθυνση email σας. Κάντε κλικ στον σύνδεσμο για να ενεργοποιήσετε τον λογαριασμό σας.",
+  "verify.info.note": "Εάν δεν λάβετε το email μέσα σε λίγα λεπτά, ελέγξτε τον φάκελο ανεπιθύμητων μηνυμάτων (spam).",
   "verify.info.resend.button": "Επαναποστολή email επαλήθευσης",
-  "verify.info.resend.success":
-    "Το email επαλήθευσης στάλθηκε ξανά με επιτυχία.",
+  "verify.info.resend.success": "Το email επαλήθευσης στάλθηκε ξανά με επιτυχία.",
   "verify.info.resend.error": "Αποτυχία επαναποστολής του email επαλήθευσης.",
   // END /auth/signup
 
@@ -85,16 +74,13 @@ export default {
 
   // /auth/reset-password
   "resetPassword.title": "Ξεχάσατε τον κωδικό σας;",
-  "resetPassword.description":
-    "A message with a link to reset your password has been sent if the email exists.",
-  "resetPassword.notify.success":
-    "Έχει σταλεί ένα μήνυμα με σύνδεσμο για την επαναφορά του κωδικού πρόσβασής σας, εάν το δηλωμένο email υπάρχει.",
+  "resetPassword.description": "A message with a link to reset your password has been sent if the email exists.",
+  "resetPassword.notify.success": "Έχει σταλεί ένα μήνυμα με σύνδεσμο για την επαναφορά του κωδικού πρόσβασής σας, εάν το δηλωμένο email υπάρχει.",
   "resetPassword.button.back": "Πίσω στη σελίδα εισόδου",
   "resetPassword.text.resetPassword": "Επαναφορά κωδικού πρόσβασης",
   "resetPassword.text.enterNewPassword": "Εισάγετε το νέο σας κωδικό",
   "resetPassword.input.password": "Νέος κωδικός",
-  "resetPassword.notify.passwordReset":
-    "Ο κωδικός πρόσβασής σας επαναφέρθηκε με επιτυχία.",
+  "resetPassword.notify.passwordReset": "Ο κωδικός πρόσβασής σας επαναφέρθηκε με επιτυχία.",
   // /account
   "account.title": "Ο λογαριασμός μου",
   "account.card.info.title": "Πληροφορίες λογαριασμού",
@@ -104,8 +90,7 @@ export default {
   "account.card.password.title": "Κωδικόs πρόσβασης",
   "account.card.password.old": "Παλιός κωδικός",
   "account.card.password.new": "Νέος κωδικός",
-  "account.card.password.noPasswordSet":
-    "Δεν έχετε ορίσει κωδικό πρόσβασης. Για να συνδεθείτε χρησιμοποιώντας το email και τον κωδικό πρόσβασής σας, πρέπει να δημιουργήσετε έναν κωδικό πρόσβασης.",
+  "account.card.password.noPasswordSet": "Δεν έχετε ορίσει κωδικό πρόσβασης. Για να συνδεθείτε χρησιμοποιώντας το email και τον κωδικό πρόσβασής σας, πρέπει να δημιουργήσετε έναν κωδικό πρόσβασης.",
   "account.notify.password.success": "Ο κωδικός πρόσβασης άλλαξε επιτυχώς",
   "account.card.oauth.title": "Σύνδεση με λογαριασμό μέσων κοινωνικού δικτύου",
   "account.card.oauth.github": "GitHub",
@@ -117,14 +102,11 @@ export default {
   "account.card.oauth.unlink": "Αποσύνδεση",
   "account.card.oauth.unlinked": "Αποσυνδεδεμένο",
   "account.modal.unlink.title": "Αποσύνδεση Λογαριασμού",
-  "account.modal.unlink.description":
-    "Η αποσύνδεση των λογαριασμών κοινωνικών δικτύων μπορεί να έχει ως αποτέλεσμα την απώλεια πρόσβασης στον λογαριασμό σας εάν δεν θυμάστε τα στοιχεία σύνδεσής σας",
+  "account.modal.unlink.description": "Η αποσύνδεση των λογαριασμών κοινωνικών δικτύων μπορεί να έχει ως αποτέλεσμα την απώλεια πρόσβασης στον λογαριασμό σας εάν δεν θυμάστε τα στοιχεία σύνδεσής σας",
   "account.notify.oauth.unlinked.success": "Επιτυχής αποσύνδεση",
   "account.card.security.title": "Ασφάλεια",
-  "account.card.security.totp.enable.description":
-    "Εισάγετε τον τρέχοντα κωδικό σας για να ξεκινήσετε την ενεργοποίηση του TOTP",
-  "account.card.security.totp.disable.description":
-    "Εισάγετε τον τρέχοντα κωδικό πρόσβασης για να απενεργοποιήσετε το TOTP",
+  "account.card.security.totp.enable.description": "Εισάγετε τον τρέχοντα κωδικό σας για να ξεκινήσετε την ενεργοποίηση του TOTP",
+  "account.card.security.totp.disable.description": "Εισάγετε τον τρέχοντα κωδικό πρόσβασης για να απενεργοποιήσετε το TOTP",
   "account.card.security.totp.button.start": "Έναρξη",
   "account.modal.totp.title": "Ενεργοποίηση TOTP",
   "account.modal.totp.step1": "Βήμα 1: Προσθέστε τον έλεγχο ταυτότητας",
@@ -137,8 +119,7 @@ export default {
   "account.notify.totp.disable": "Το TOTP απενεργοποιήθηκε επιτυχώς",
   "account.notify.totp.enable": "Το TOTP ενεργοποιήθηκε επιτυχώς",
   "account.card.language.title": "Γλώσσα",
-  "account.card.language.description":
-    "Η μετάφραση της εφαρμογής γίνεται από την εθελοντές της κοινότητας. Μερικές γλώσσες μπορεί να είναι ελλιπείς.",
+  "account.card.language.description": "Η μετάφραση της εφαρμογής γίνεται από την εθελοντές της κοινότητας. Μερικές γλώσσες μπορεί να είναι ελλιπείς.",
   "account.card.color.title": "Συνδυασμός χρωμάτων",
   // ThemeSwitcher.tsx
   "account.theme.dark": "Σκοτεινό",
@@ -146,8 +127,7 @@ export default {
   "account.theme.system": "Σύστημα",
   "account.button.delete": "Διαγραφή Λογαριασμού",
   "account.modal.delete.title": "Διαγραφή Λογαριασμού",
-  "account.modal.delete.description":
-    "Θέλετε πραγματικά να διαγράψετε το λογαριασμό σας, συμπεριλαμβανομένων όλων των ενεργών μετοχών σας?",
+  "account.modal.delete.description": "Θέλετε πραγματικά να διαγράψετε το λογαριασμό σας, συμπεριλαμβανομένων όλων των ενεργών μετοχών σας?",
   // END /account
 
   // /account/shares
@@ -164,41 +144,33 @@ export default {
   "account.shares.table.expiresAt": "Λήγει στις",
   "account.shares.table.createdAt": "Δημιουργήθηκε στις",
   "account.shares.table.size": "Μέγεθος",
-  "account.shares.table.password-protected":
-    "Προστατεύεται με κωδικό πρόσβασης",
+  "account.shares.table.password-protected": "Προστατεύεται με κωδικό πρόσβασης",
   "account.shares.table.recipients": "Παραλήπτες",
-  "account.shares.table.restricted-to-recipients":
-    "Περιορισμένο μόνο σε παραλήπτες",
+  "account.shares.table.restricted-to-recipients": "Περιορισμένο μόνο σε παραλήπτες",
   "account.shares.table.shared-with-recipients": "Κοινοποιήθηκε με παραλήπτες",
   "account.shares.table.visitor-count": "{count} από {max}",
   "account.shares.table.expiry-never": "Ποτέ",
   "account.shares.modal.share-informations": "Πληροφορίες διαμοιρασμού",
   "account.shares.modal.share-link": "Κοινοποίηση συνδέσμου",
-  "account.shares.modal.edit.password.keep":
-    "Αφήστε κενό για να διατηρήσετε τον τρέχοντα κωδικό πρόσβασης",
-  "account.shares.modal.edit.password.remove":
-    "Κατάργηση προστασίας με κωδικό πρόσβασης",
+  "account.shares.modal.edit.password.keep": "Αφήστε κενό για να διατηρήσετε τον τρέχοντα κωδικό πρόσβασης",
+  "account.shares.modal.edit.password.remove": "Κατάργηση προστασίας με κωδικό πρόσβασης",
   "account.shares.modal.delete.title": "Διαγραφή κοινοποίησης: {share}",
-  "account.shares.modal.delete.description":
-    "Θέλετε πραγματικά να διαγράψετε αυτό το διαμοιρασμό;",
+  "account.shares.modal.delete.description": "Θέλετε πραγματικά να διαγράψετε αυτό το διαμοιρασμό;",
   // END /account/shares
 
   // /account/received
   "account.received-shares.title": "Ληφθείσες κοινοποιήσεις",
   "account.received-shares.title.empty": "Δεν έχουν ληφθεί κοινοποιήσεις ακόμα",
-  "account.received-shares.description.empty":
-    "Οι κοινοποιήσεις που αποστέλλονται στη διεύθυνση email σας θα εμφανίζονται εδώ.",
+  "account.received-shares.description.empty": "Οι κοινοποιήσεις που αποστέλλονται στη διεύθυνση email σας θα εμφανίζονται εδώ.",
   "account.received-shares.table.from": "Από",
   "account.received-shares.button.open": "Άνοιγμα",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Αντίστροφες κοινοποιήσεις",
-  "account.reverseShares.description":
-    "Μια αντίστροφη κοινοποίηση σάς επιτρέπει να δημιουργήσετε μια μοναδική διεύθυνση URL που επιτρέπει σε εξωτερικούς χρήστες να δημιουργήσουν μια κοινή χρήση.",
+  "account.reverseShares.description": "Μια αντίστροφη κοινοποίηση σάς επιτρέπει να δημιουργήσετε μια μοναδική διεύθυνση URL που επιτρέπει σε εξωτερικούς χρήστες να δημιουργήσουν μια κοινή χρήση.",
   "account.reverseShares.title.empty": "Είναι κενό εδώ 👀",
-  "account.reverseShares.description.empty":
-    "Δεν έχετε καμία αντίστροφη μετοχή.",
+  "account.reverseShares.description.empty": "Δεν έχετε καμία αντίστροφη μετοχή.",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Δημιουργία αντίστροφης κοινοποίησης",
   "account.reverseShares.modal.expiration.label": "Λήξη",
@@ -216,35 +188,25 @@ export default {
   "account.reverseShares.modal.expiration.year-plural": "Έτη",
   "account.reverseShares.modal.max-size.label": "Μέγιστο μέγεθος κοινοποίησης",
   "account.reverseShares.modal.send-email": "Αποστολή ειδοποιήσεων μέσω email",
-  "account.reverseShares.modal.send-email.description":
-    "Σας στέλνει μια ειδοποίηση μέσω email όταν δημιουργείται μια κοινοποίηση με αυτόν τον αντίστροφο σύνδεσμο κοινής χρήσης.",
+  "account.reverseShares.modal.send-email.description": "Σας στέλνει μια ειδοποίηση μέσω email όταν δημιουργείται μια κοινοποίηση με αυτόν τον αντίστροφο σύνδεσμο κοινής χρήσης.",
   "account.reverseShares.modal.simplified": "Απλή λειτουργία",
-  "account.reverseShares.modal.simplified.description":
-    "Κάντε το εύκολο για το άτομο που μεταφορτώνει το αρχείο να το μοιραστεί μαζί σας. Θα μπορεί να προσαρμόσει μόνο το όνομα και την περιγραφή της κοινοποίησης.",
+  "account.reverseShares.modal.simplified.description": "Κάντε το εύκολο για το άτομο που μεταφορτώνει το αρχείο να το μοιραστεί μαζί σας. Θα μπορεί να προσαρμόσει μόνο το όνομα και την περιγραφή της κοινοποίησης.",
   "account.reverseShares.modal.public-access": "Δημόσια πρόσβαση",
-  "account.reverseShares.modal.public-access.description":
-    "Κάντε δημόσιες τις κοινοποιήσεις που δημιουργούνται με αυτόν τον αντίστροφο σύνδεσμο κοινής χρήσης. Εάν απενεργοποιηθεί, μόνο εσείς και ο δημιουργός της κοινοποίησης θα έχετε πρόσβαση για προβολή.",
+  "account.reverseShares.modal.public-access.description": "Κάντε δημόσιες τις κοινοποιήσεις που δημιουργούνται με αυτόν τον αντίστροφο σύνδεσμο κοινής χρήσης. Εάν απενεργοποιηθεί, μόνο εσείς και ο δημιουργός της κοινοποίησης θα έχετε πρόσβαση για προβολή.",
   "account.reverseShares.modal.max-use.label": "Μέγιστες χρήσεις",
-  "account.reverseShares.modal.max-use.description":
-    "Ο μέγιστος αριθμός που μπορεί να χρησιμοποιηθεί αυτό το URL για τη δημιουργία ενός διαμοιρασμού.",
-  "account.reverseShare.never-expires":
-    "Αυτός ο αντίστροφος διαμοιρασμός δε λήγει.",
-  "account.reverseShare.expires-on":
-    "Αυτός ο αντίστροφος διαμοιρασμός θα λήξει {expiration}.",
-  "account.reverseShares.table.no-shares":
-    "Δε δημιουργήθηκαν κοινοποιήσεις ακόμα",
+  "account.reverseShares.modal.max-use.description": "Ο μέγιστος αριθμός που μπορεί να χρησιμοποιηθεί αυτό το URL για τη δημιουργία ενός διαμοιρασμού.",
+  "account.reverseShare.never-expires": "Αυτός ο αντίστροφος διαμοιρασμός δε λήγει.",
+  "account.reverseShare.expires-on": "Αυτός ο αντίστροφος διαμοιρασμός θα λήξει {expiration}.",
+  "account.reverseShares.table.no-shares": "Δε δημιουργήθηκαν κοινοποιήσεις ακόμα",
   "account.reverseShares.table.count.singular": "διαμοιρασμός",
   "account.reverseShares.table.count.plural": "διαμοιρασμοί",
   "account.reverseShares.table.shares": "Διαμοιρασμοί",
   "account.reverseShares.table.remaining": "Υπόλοιπες χρήσεις",
   "account.reverseShares.table.max-size": "Μέγιστο μέγεθος κοινοποίησης",
   "account.reverseShares.table.expires": "Λήγει στις",
-  "account.reverseShares.modal.reverse-share-link":
-    "Αντίστροφος σύνδεσμος κοινής χρήσης",
-  "account.reverseShares.modal.delete.title":
-    "Διαγραφή αντίστροφης κοινοποίησης",
-  "account.reverseShares.modal.delete.description":
-    "Θέλετε πραγματικά να διαγράψετε αυτή την αντίστροφη κοινοποίηση; Εάν το κάνετε, οι συνδεδεμένες κοινοποιήσεις θα διαγραφούν επίσης.",
+  "account.reverseShares.modal.reverse-share-link": "Αντίστροφος σύνδεσμος κοινής χρήσης",
+  "account.reverseShares.modal.delete.title": "Διαγραφή αντίστροφης κοινοποίησης",
+  "account.reverseShares.modal.delete.description": "Θέλετε πραγματικά να διαγράψετε αυτή την αντίστροφη κοινοποίηση; Εάν το κάνετε, οι συνδεδεμένες κοινοποιήσεις θα διαγραφούν επίσης.",
   // END /account/reverseShares
 
   // /admin
@@ -265,43 +227,29 @@ export default {
   "admin.users.edit.update.title": "Επεξεργασία χρήστη: {username}",
   "admin.users.edit.update.admin-privileges": "Δικαιώματα διαχειριστή",
   "admin.users.edit.update.email-verified": "Το email επαληθεύτηκε",
-  "admin.users.edit.update.custom-share-size-limit":
-    "Προσαρμοσμένο όριο μεγέθους κοινοποίησης",
-  "admin.users.edit.update.custom-share-size-limit.description":
-    "Παράκαμψη του καθολικού ορίου μεταφόρτωσης για αυτόν τον χρήστη",
-  "admin.users.edit.update.custom-storage-quota-limit":
-    "Προσαρμοσμένο όριο αποθηκευτικού χώρου",
-  "admin.users.edit.update.custom-storage-quota-limit.description":
-    "Περιορισμός της συνολικής χρήσης αποθηκευτικού χώρου του χρήστη σε όλες τις ενεργές κοινοποιήσεις",
+  "admin.users.edit.update.custom-share-size-limit": "Προσαρμοσμένο όριο μεγέθους κοινοποίησης",
+  "admin.users.edit.update.custom-share-size-limit.description": "Παράκαμψη του καθολικού ορίου μεταφόρτωσης για αυτόν τον χρήστη",
+  "admin.users.edit.update.custom-storage-quota-limit": "Προσαρμοσμένο όριο αποθηκευτικού χώρου",
+  "admin.users.edit.update.custom-storage-quota-limit.description": "Περιορισμός της συνολικής χρήσης αποθηκευτικού χώρου του χρήστη σε όλες τις ενεργές κοινοποιήσεις",
   "admin.users.edit.update.change-password.title": "Αλλαγή κωδικού πρόσβασής",
   "admin.users.edit.update.change-password.field": "Νέος κωδικός πρόσβασης",
-  "admin.users.edit.update.change-password.button":
-    "Αποθήκευση νέου κωδικού πρόσβασης",
-  "admin.users.edit.update.notify.password.success":
-    "Ο κωδικός πρόσβασης άλλαξε επιτυχώς",
+  "admin.users.edit.update.change-password.button": "Αποθήκευση νέου κωδικού πρόσβασης",
+  "admin.users.edit.update.notify.password.success": "Ο κωδικός πρόσβασης άλλαξε επιτυχώς",
   "admin.users.edit.delete.title": "Διαγραφή χρήστη: {username} ;",
-  "admin.users.edit.delete.description":
-    "Θέλετε πραγματικά να διαγράψετε αυτόν τον χρήστη και όλες τις κοινοποιήσεις του;",
+  "admin.users.edit.delete.description": "Θέλετε πραγματικά να διαγράψετε αυτόν τον χρήστη και όλες τις κοινοποιήσεις του;",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Δημιουργία χρήστη",
   "admin.users.modal.create.username": "Όνομα χρήστη",
   "admin.users.modal.create.email": "E-mail",
   "admin.users.modal.create.password": "Κωδικός πρόσβασης",
-  "admin.users.modal.create.manual-password":
-    "Χειροκίνητος ορισμός κωδικού πρόσβασης",
-  "admin.users.modal.create.manual-password.description":
-    "Εάν δεν είναι επιλεγμένο, ο χρήστης θα λάβει ένα email με ένα σύνδεσμο για να ορίσει τον κωδικό πρόσβασής του.",
-  "admin.users.modal.create.custom-share-size-limit":
-    "Προσαρμοσμένο όριο μεγέθους κοινοποίησης",
-  "admin.users.modal.create.custom-share-size-limit.description":
-    "Παράκαμψη του καθολικού ορίου μεταφόρτωσης για αυτόν τον χρήστη",
-  "admin.users.modal.create.custom-storage-quota-limit":
-    "Προσαρμοσμένο όριο αποθηκευτικού χώρου",
-  "admin.users.modal.create.custom-storage-quota-limit.description":
-    "Περιορισμός της συνολικής χρήσης αποθηκευτικού χώρου του χρήστη σε όλες τις ενεργές κοινοποιήσεις",
+  "admin.users.modal.create.manual-password": "Χειροκίνητος ορισμός κωδικού πρόσβασης",
+  "admin.users.modal.create.manual-password.description": "Εάν δεν είναι επιλεγμένο, ο χρήστης θα λάβει ένα email με ένα σύνδεσμο για να ορίσει τον κωδικό πρόσβασής του.",
+  "admin.users.modal.create.custom-share-size-limit": "Προσαρμοσμένο όριο μεγέθους κοινοποίησης",
+  "admin.users.modal.create.custom-share-size-limit.description": "Παράκαμψη του καθολικού ορίου μεταφόρτωσης για αυτόν τον χρήστη",
+  "admin.users.modal.create.custom-storage-quota-limit": "Προσαρμοσμένο όριο αποθηκευτικού χώρου",
+  "admin.users.modal.create.custom-storage-quota-limit.description": "Περιορισμός της συνολικής χρήσης αποθηκευτικού χώρου του χρήστη σε όλες τις ενεργές κοινοποιήσεις",
   "admin.users.modal.create.admin": "Δικαιώματα διαχειριστή",
-  "admin.users.modal.create.admin.description":
-    "Αν ενεργοποιηθεί, ο χρήστης θα μπορεί να έχει πρόσβαση στον πίνακα διαχείρισης.",
+  "admin.users.modal.create.admin.description": "Αν ενεργοποιηθεί, ο χρήστης θα μπορεί να έχει πρόσβαση στον πίνακα διαχείρισης.",
   // END /admin/users
 
   // /admin/shares
@@ -313,29 +261,21 @@ export default {
   "admin.shares.table.expires": "Λήγει στις",
   "admin.shares.table.deletes": "Διαγράφεται στις",
   "admin.shares.edit.delete.title": "Διαγραφή κοινοποίησης: {id}",
-  "admin.shares.edit.delete.description":
-    "Θέλετε πραγματικά να διαγράψετε αυτή τη κοινοποίηση;",
+  "admin.shares.edit.delete.description": "Θέλετε πραγματικά να διαγράψετε αυτή τη κοινοποίηση;",
   // END /admin/shares
 
   // /upload
   "upload.title": "Μεταφόρτωση",
-  "upload.notify.confirm-leave":
-    "Είστε βέβαιοι ότι θέλετε να εγκαταλείψετε αυτή τη σελίδα; Η μεταφόρτωσή σας θα ακυρωθεί.",
-  "upload.notify.generic-error":
-    "Παρουσιάστηκε σφάλμα κατά την ολοκλήρωση της κοινής χρήσης σας.",
-  "upload.notify.count-failed":
-    "Τα αρχεία {count} απέτυχαν να μεταφορτώσουν. Δοκιμάστε ξανά.",
+  "upload.notify.confirm-leave": "Είστε βέβαιοι ότι θέλετε να εγκαταλείψετε αυτή τη σελίδα; Η μεταφόρτωσή σας θα ακυρωθεί.",
+  "upload.notify.generic-error": "Παρουσιάστηκε σφάλμα κατά την ολοκλήρωση της κοινής χρήσης σας.",
+  "upload.notify.count-failed": "Τα αρχεία {count} απέτυχαν να μεταφορτώσουν. Δοκιμάστε ξανά.",
   "upload.notify.duplicate-skipped": "Παράλειψη διπλότυπου αρχείου: {name}",
-  "upload.reverse-share.error.invalid.title":
-    "Μη έγκυρος αντίστροφος σύνδεσμος κοινής χρήσης",
-  "upload.reverse-share.error.invalid.description":
-    "This reverse share has expired or is invalid.",
+  "upload.reverse-share.error.invalid.title": "Μη έγκυρος αντίστροφος σύνδεσμος κοινής χρήσης",
+  "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
   // Dropzone.tsx
   "upload.dropzone.title": "Μεταφόρτωση αρχείων",
-  "upload.dropzone.description":
-    "Σύρετε και αφήστε αρχεία ή φακέλους εδώ για να ξεκινήσετε την κοινοποίησή σας ή πατήστε 'Ctrl+V' για να ανεβάσετε περιεχόμενο κειμένου από το πρόχειρο. Δεχόμαστε μόνο αρχεία έως συνολικά {maxSize}.",
-  "upload.dropzone.notify.file-too-big":
-    "Τα αρχεία σας υπερβαίνουν το μέγιστο μέγεθος κοινής χρήσης του {maxSize}.",
+  "upload.dropzone.description": "Σύρετε και αφήστε αρχεία ή φακέλους εδώ για να ξεκινήσετε την κοινοποίησή σας ή πατήστε 'Ctrl+V' για να ανεβάσετε περιεχόμενο κειμένου από το πρόχειρο. Δεχόμαστε μόνο αρχεία έως συνολικά {maxSize}.",
+  "upload.dropzone.notify.file-too-big": "Τα αρχεία σας υπερβαίνουν το μέγιστο μέγεθος κοινής χρήσης του {maxSize}.",
   "upload.button.folder": "Μεταφόρτωση φακέλου",
   "upload.button.folder.append": "Προσάρτηση φακέλου",
   "upload.button.add": "Προσθήκη στη μεταφόρτωση",
@@ -346,20 +286,15 @@ export default {
   "upload.filelist.remaining": "{time} απομένουν",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Δημιουργία Κοινοποίησης",
-  "upload.modal.link.error.invalid":
-    "Μπορεί να περιέχει μόνο γράμματα, αριθμούς, κάτω παύλες και παύλες",
+  "upload.modal.link.error.invalid": "Μπορεί να περιέχει μόνο γράμματα, αριθμούς, κάτω παύλες και παύλες",
   "upload.modal.link.error.taken": "Αυτός ο σύνδεσμος χρησιμοποιείται ήδη",
-  "upload.modal.link.error.s3-session-not-found":
-    "Δεν βρέθηκε η περίοδος λειτουργίας μεταφόρτωσης S3",
-  "upload.modal.link.error.s3-etag-missing":
-    "Λείπει η κεφαλίδα ETag στην απόκριση S3. Βεβαιωθείτε ότι το CORS εκθέτει την κεφαλίδα ETag.",
+  "upload.modal.link.error.s3-session-not-found": "Δεν βρέθηκε η περίοδος λειτουργίας μεταφόρτωσης S3",
+  "upload.modal.link.error.s3-etag-missing": "Λείπει η κεφαλίδα ETag στην απόκριση S3. Βεβαιωθείτε ότι το CORS εκθέτει την κεφαλίδα ETag.",
   "upload.modal.not-signed-in": "Δεν είστε συνδεδεμένος/η",
-  "upload.modal.not-signed-in-description":
-    "Δεν θα μπορείτε να διαγράψετε την κοινή χρήση σας χειροκίνητα και να δείτε την αρίθμηση επισκεπτών.",
+  "upload.modal.not-signed-in-description": "Δεν θα μπορείτε να διαγράψετε την κοινή χρήση σας χειροκίνητα και να δείτε την αρίθμηση επισκεπτών.",
   "upload.modal.expires.never": "ποτέ",
   "upload.modal.expires.never-long": "Μόνιμη κοινοποίηση",
-  "upload.modal.expires.error.too-long":
-    "Η ημερομηνία λήξης υπερβαίνει το μέγιστο όριο των {max}.",
+  "upload.modal.expires.error.too-long": "Η ημερομηνία λήξης υπερβαίνει το μέγιστο όριο των {max}.",
   "upload.modal.link.label": "Σύνδεσμος",
   "upload.modal.expires.label": "Λήξη",
   "upload.modal.expires.minute-singular": "Λεπτό",
@@ -376,77 +311,59 @@ export default {
   "upload.modal.expires.year-plural": "Έτη",
   "upload.modal.accordion.name-and-description.title": "Όνομα και περιγραφή",
   "upload.modal.accordion.name-and-description.name.placeholder": "Όνομα",
-  "upload.modal.accordion.name-and-description.description.placeholder":
-    "Σημείωση για τους παραλήπτες αυτής της κοινοποίησης",
+  "upload.modal.accordion.name-and-description.description.placeholder": "Σημείωση για τους παραλήπτες αυτής της κοινοποίησης",
   "upload.modal.accordion.email.title": "Αποδέκτες email",
   "upload.modal.accordion.email.placeholder": "Εισάγετε αποδέκτες email",
   "upload.modal.accordion.email.invalid-email": "Μη έγκυρη διεύθυνση e-mail",
-  "upload.modal.accordion.email.restrict-to-recipients":
-    "Περιορισμός πρόσβασης μόνο σε αυτούς τους παραλήπτες (πρέπει να συνδεθούν για πρόσβαση)",
+  "upload.modal.accordion.email.restrict-to-recipients": "Περιορισμός πρόσβασης μόνο σε αυτούς τους παραλήπτες (πρέπει να συνδεθούν για πρόσβαση)",
   "upload.modal.accordion.security.title": "Επιλογές ασφαλείας",
-  "upload.modal.accordion.security.password.label":
-    "Προστασία με κωδικό πρόσβασης",
+  "upload.modal.accordion.security.password.label": "Προστασία με κωδικό πρόσβασης",
   "upload.modal.accordion.security.password.placeholder": "Χωρίς Κωδικό",
-  "upload.modal.accordion.security.max-views.label":
-    "Μέγιστος αριθμός εμφανίσεων",
+  "upload.modal.accordion.security.max-views.label": "Μέγιστος αριθμός εμφανίσεων",
   "upload.modal.accordion.security.max-views.placeholder": "Χωρίς όριο",
   // showCompletedUploadModal.tsx
   "upload.modal.completed.never-expires": "Αυτός ο διαμοιρασμός δεν λήγει.",
-  "upload.modal.completed.expires-on":
-    "Αυτός ο διαμοιρασμός θα λήξει {expiration}.",
+  "upload.modal.completed.expires-on": "Αυτός ο διαμοιρασμός θα λήξει {expiration}.",
   "upload.modal.completed.share-ready": "Κοινοποίηση έτοιμου",
-  "upload.modal.completed.notified-reverse-share-creator":
-    "Έχουμε ειδοποιήσει τον δημιουργό της αντίστροφης κοινής χρήσης. Μπορείτε επίσης να μοιραστείτε χειροκίνητα αυτόν τον σύνδεσμο μαζί τους μέσω άλλων μέσων.",
+  "upload.modal.completed.notified-reverse-share-creator": "Έχουμε ειδοποιήσει τον δημιουργό της αντίστροφης κοινής χρήσης. Μπορείτε επίσης να μοιραστείτε χειροκίνητα αυτόν τον σύνδεσμο μαζί τους μέσω άλλων μέσων.",
   // END /upload
 
   // /share/[id]
   "share.title": "Διαμοιρασμός {shareId}",
   "share.description": "Σας προωθώ αρχεία προς κοινοποίηση.",
-  "share.fileCount":
-    "{count, plural, =1 {# αρχείο} other {# αρχεία}} · {size} (το αρχείο zip ενδέχεται να είναι μικρότερο λόγω συμπίεσης)",
+  "share.fileCount": "{count, plural, =1 {# αρχείο} other {# αρχεία}} · {size} (το αρχείο zip ενδέχεται να είναι μικρότερο λόγω συμπίεσης)",
   "share.copy-text-contents": "Αντιγραφή περιεχομένων αρχείου στο πρόχειρο",
   "share.error.visitor-limit-exceeded.title": "Υπέρβαση ορίου επισκέπτη",
-  "share.error.visitor-limit-exceeded.description":
-    "Ξεπεράστηκε το όριο επισκεπτών σε αυτή την κοινοποίηση.",
+  "share.error.visitor-limit-exceeded.description": "Ξεπεράστηκε το όριο επισκεπτών σε αυτή την κοινοποίηση.",
   "share.error.removed.title": "Κοινοποίηση αφαιρέθηκε",
   "share.error.not-found.title": "Η κοινοποίηση δε βρέθηκε",
   "share.error.not-found.description": "Η κοινοποίηση που ψάχνετε δεν υπάρχει.",
   "share.error.access-denied.title": "Ιδιωτική κοινοποίηση",
-  "share.error.access-denied.description":
-    "Ο τρέχων λογαριασμός δεν έχει δικαίωμα πρόσβασης σε αυτήν την κοινοποίηση",
+  "share.error.access-denied.description": "Ο τρέχων λογαριασμός δεν έχει δικαίωμα πρόσβασης σε αυτήν την κοινοποίηση",
   "share.error.restricted.title": "Περιορισμένη κοινοποίηση",
-  "share.error.restricted.description":
-    "Αυτή η κοινοποίηση είναι περιορισμένη σε συγκεκριμένους παραλήπτες. Παρακαλώ συνδεθείτε για να αποκτήσετε πρόσβαση.",
+  "share.error.restricted.description": "Αυτή η κοινοποίηση είναι περιορισμένη σε συγκεκριμένους παραλήπτες. Παρακαλώ συνδεθείτε για να αποκτήσετε πρόσβαση.",
   "share.error.restricted.button": "Είσοδος",
   "share.modal.password.title": "Απαιτείται κωδικός",
-  "share.modal.password.description":
-    "Παρακαλώ εισάγετε τον κωδικό πρόσβασης για πρόσβαση σε αυτήν την κοινοποίηση.",
+  "share.modal.password.description": "Παρακαλώ εισάγετε τον κωδικό πρόσβασης για πρόσβαση σε αυτήν την κοινοποίηση.",
   "share.modal.password": "Κωδικός πρόσβασης",
   "share.modal.error.invalid-password": "Μη έγκυρος κωδικός πρόσβασης",
   "share.button.download-all": "Λήψη όλων",
-  "share.notify.download-all-preparing":
-    "Η κοινοποίηση προετοιμάζεται. Παρακαλώ δοκιμάστε ξανά σε λίγα λεπτά.",
-  "share.notify.copied-contents":
-    "Τα περιεχόμενα του αρχείου αντιγράφηκαν στο πρόχειρο",
-  "share.notify.copy-too-big-error":
-    "Το αρχείο είναι πολύ μεγάλο για αντιγραφή στο πρόχειρο",
-  "share.notify.copy-not-supported-error":
-    "Η αντιγραφή στο πρόχειρο απαιτεί σύνδεση HTTPS",
+  "share.notify.download-all-preparing": "Η κοινοποίηση προετοιμάζεται. Παρακαλώ δοκιμάστε ξανά σε λίγα λεπτά.",
+  "share.notify.copied-contents": "Τα περιεχόμενα του αρχείου αντιγράφηκαν στο πρόχειρο",
+  "share.notify.copy-too-big-error": "Το αρχείο είναι πολύ μεγάλο για αντιγραφή στο πρόχειρο",
+  "share.notify.copy-not-supported-error": "Η αντιγραφή στο πρόχειρο απαιτεί σύνδεση HTTPS",
   "share.modal.file-link": "Σύνδεσμος αρχείου",
   "share.table.name": "Όνομα",
   "share.table.size": "Μέγεθος",
   "share.modal.file-preview.original_file": "Προβολή αρχικού αρχείου",
-  "share.modal.file-preview.error.not-supported.title":
-    "Η προεπισκόπηση δεν υποστηρίζεται",
-  "share.modal.file-preview.error.not-supported.description":
-    "Οι προεπισκοπήσεις δεν υποστηρίζονται για αυτόν τον τύπο αρχείων. Κάντε λήψη του αρχείου για να το προβάλετε.",
+  "share.modal.file-preview.error.not-supported.title": "Η προεπισκόπηση δεν υποστηρίζεται",
+  "share.modal.file-preview.error.not-supported.description": "Οι προεπισκοπήσεις δεν υποστηρίζονται για αυτόν τον τύπο αρχείων. Κάντε λήψη του αρχείου για να το προβάλετε.",
   // END /share/[id]
 
   // /share/[id]/edit
   "share.edit.title": "Ενημέρωση {shareId}",
   "share.edit.append-upload": "Προσθήκη αρχείου",
-  "share.edit.notify.generic-error":
-    "Παρουσιάστηκε σφάλμα κατά την ολοκλήρωση του διαμοιρασμού.",
+  "share.edit.notify.generic-error": "Παρουσιάστηκε σφάλμα κατά την ολοκλήρωση του διαμοιρασμού.",
   "share.edit.notify.save-success": "Ο διαμοιρασμός ενημερώθηκε επιτυχώς",
   // END /share/[id]/edit
 
@@ -460,8 +377,7 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "Υπάρχει αρχείο ρυθμίσεων",
-  "admin.config.config-file-warning.description":
-    "Καθώς έχετε διαμορφώσει το Pingvin Share με αρχείο ρυθμίσεων, δεν μπορείτε να αλλάξετε τις ρυθμίσεις μέσω του περιβάλλοντος χρήστη.",
+  "admin.config.config-file-warning.description": "Καθώς έχετε διαμορφώσει το Pingvin Share με αρχείο ρυθμίσεων, δεν μπορείτε να αλλάξετε τις ρυθμίσεις μέσω του περιβάλλοντος χρήστη.",
   "admin.config.title": "Διαμόρφωση",
   "admin.config.category.general": "Γενικά",
   "admin.config.category.appearance": "Εμφάνιση",
@@ -470,367 +386,231 @@ export default {
   "admin.config.category.cache": "Προσωρινή μνήμη (Cache)",
   "admin.config.category.email": "E-mail",
   "admin.config.category.smtp": "SMTP",
-  "admin.config.category.oauth":
-    "Σύνδεση με λογαριασμό μέσων κοινωνικού δικτύου",
+  "admin.config.category.oauth": "Σύνδεση με λογαριασμό μέσων κοινωνικού δικτύου",
   "admin.config.general.app-name": "Όνομα εφαρμογής",
   "admin.config.general.app-name.description": "Ονομασία της εφαρμογής",
   "admin.config.general.default-language": "Προεπιλεγμένη γλώσσα",
-  "admin.config.general.default-language.description":
-    "Αυτό ισχύει για όλους τους χρήστες, κάθε χρήστης μπορεί ακόμα να εξατομικεύσει τη γλώσσα του στο προφίλ του.",
+  "admin.config.general.default-language.description": "Αυτό ισχύει για όλους τους χρήστες, κάθε χρήστης μπορεί ακόμα να εξατομικεύσει τη γλώσσα του στο προφίλ του.",
   "admin.config.appearance.theme-primary-color": "Κύριο χρώμα θέματος",
-  "admin.config.appearance.theme-primary-color.description":
-    "Κύριο χρώμα για κουμπιά, συνδέσμους και τόνους. Επιλέξτε προσαρμοσμένο για παράκαμψη χρώματος.",
-  "admin.config.appearance.theme-primary-color-override":
-    "Προσαρμοσμένο κύριο χρώμα",
-  "admin.config.appearance.theme-primary-color-override.description":
-    "Παράκαμψη χρώματος HEX όταν το κύριο χρώμα θέματος είναι προσαρμοσμένο.",
+  "admin.config.appearance.theme-primary-color.description": "Κύριο χρώμα για κουμπιά, συνδέσμους και τόνους. Επιλέξτε προσαρμοσμένο για παράκαμψη χρώματος.",
+  "admin.config.appearance.theme-primary-color-override": "Προσαρμοσμένο κύριο χρώμα",
+  "admin.config.appearance.theme-primary-color-override.description": "Παράκαμψη χρώματος HEX όταν το κύριο χρώμα θέματος είναι προσαρμοσμένο.",
   "admin.config.appearance.theme-font-preset": "Προεπιλογή γραμματοσειράς",
-  "admin.config.appearance.theme-font-preset.description":
-    "Προεπιλογή γραμματοσειράς που φορτώνεται στο build. Επιλέξτε σύστημα ή μία από τις ενσωματωμένες Google Fonts.",
-  "admin.config.appearance.theme-color-scheme":
-    "Προεπιλεγμένος συνδυασμός χρωμάτων (επισκέπτες)",
-  "admin.config.appearance.theme-color-scheme.description":
-    "Προεπιλεγμένη φωτεινή/σκοτεινή λειτουργία για μη συνδεδεμένους χρήστες. Οι συνδεδεμένοι χρήστες χρησιμοποιούν την προτίμηση του λογαριασμού τους.",
+  "admin.config.appearance.theme-font-preset.description": "Προεπιλογή γραμματοσειράς που φορτώνεται στο build. Επιλέξτε σύστημα ή μία από τις ενσωματωμένες Google Fonts.",
+  "admin.config.appearance.theme-color-scheme": "Προεπιλεγμένος συνδυασμός χρωμάτων (επισκέπτες)",
+  "admin.config.appearance.theme-color-scheme.description": "Προεπιλεγμένη φωτεινή/σκοτεινή λειτουργία για μη συνδεδεμένους χρήστες. Οι συνδεδεμένοι χρήστες χρησιμοποιούν την προτίμηση του λογαριασμού τους.",
   "admin.config.appearance.theme-radius": "Ακτίνα γωνιών θέματος",
-  "admin.config.appearance.theme-radius.description":
-    "Προεπιλεγμένη ακτίνα γωνιών που χρησιμοποιούν τα στοιχεία Mantine.",
+  "admin.config.appearance.theme-radius.description": "Προεπιλεγμένη ακτίνα γωνιών που χρησιμοποιούν τα στοιχεία Mantine.",
   "admin.config.appearance.custom-css": "Προσαρμοσμένο CSS",
-  "admin.config.appearance.custom-css.description":
-    "Καθολικό CSS στο frontend. Χρησιμοποιήστε με προσοχή· μη έγκυρο CSS μπορεί να επηρεάσει το περιβάλλον.",
+  "admin.config.appearance.custom-css.description": "Καθολικό CSS στο frontend. Χρησιμοποιήστε με προσοχή· μη έγκυρο CSS μπορεί να επηρεάσει το περιβάλλον.",
   "admin.config.appearance.upload-progress-style": "Στυλ προόδου μεταφόρτωσης",
-  "admin.config.appearance.upload-progress-style.description":
-    "Επιλέξτε πώς θα εμφανίζεται η πρόοδος μεταφόρτωσης στη λίστα αρχείων.",
+  "admin.config.appearance.upload-progress-style.description": "Επιλέξτε πώς θα εμφανίζεται η πρόοδος μεταφόρτωσης στη λίστα αρχείων.",
   "admin.config.appearance.upload-progress-style.circle": "Κυκλικός δείκτης",
-  "admin.config.appearance.upload-progress-style.circle-percentage":
-    "Κύκλος με ποσοστό",
-  "admin.config.appearance.upload-progress-style.percentage-time":
-    "Ποσοστό και χρόνος που απομένει",
+  "admin.config.appearance.upload-progress-style.circle-percentage": "Κύκλος με ποσοστό",
+  "admin.config.appearance.upload-progress-style.percentage-time": "Ποσοστό και χρόνος που απομένει",
   "admin.config.general.app-url": "URL Εφαρμογής",
-  "admin.config.general.app-url.description":
-    "Η διεύθυνση URL όπου το Pingvin Share είναι διαθέσιμο",
+  "admin.config.general.app-url.description": "Η διεύθυνση URL όπου το Pingvin Share είναι διαθέσιμο",
   "admin.config.security.secure-cookies": "Ασφαλή cookies",
-  "admin.config.security.secure-cookies.description":
-    "Εάν θα οριστεί η σημαία ασφαλείας (secure) στα cookies. Εάν ενεργοποιηθεί, ο ιστότοπος δεν θα λειτουργεί όταν η πρόσβαση γίνεται μέσω HTTP.",
+  "admin.config.security.secure-cookies.description": "Εάν θα οριστεί η σημαία ασφαλείας (secure) στα cookies. Εάν ενεργοποιηθεί, ο ιστότοπος δεν θα λειτουργεί όταν η πρόσβαση γίνεται μέσω HTTP.",
   "admin.config.general.show-home-page": "Εμφάνιση αρχικής σελίδας",
-  "admin.config.general.show-home-page.description":
-    "Εάν θα εμφανίζεται η αρχική σελίδα",
+  "admin.config.general.show-home-page.description": "Εάν θα εμφανίζεται η αρχική σελίδα",
   "admin.config.security.session-duration": "Διάρκεια συνεδρίας",
-  "admin.config.security.session-duration.description":
-    "Χρόνος μετά τον οποίο ένας χρήστης πρέπει να συνδεθεί ξανά (προεπιλογή: 3 μήνες).",
+  "admin.config.security.session-duration.description": "Χρόνος μετά τον οποίο ένας χρήστης πρέπει να συνδεθεί ξανά (προεπιλογή: 3 μήνες).",
   "admin.config.appearance.logo": "Λογότυπο",
-  "admin.config.appearance.logo.description":
-    "Αλλάξτε το λογότυπό σας ανεβάζοντας μια νέα εικόνα. Η εικόνα πρέπει να είναι PNG και αναλογία 1:1.",
+  "admin.config.appearance.logo.description": "Αλλάξτε το λογότυπό σας ανεβάζοντας μια νέα εικόνα. Η εικόνα πρέπει να είναι PNG και αναλογία 1:1.",
   "admin.config.appearance.logo-dark": "Λογότυπο σκοτεινής λειτουργίας",
-  "admin.config.appearance.logo-dark.description":
-    "Μεταφορτώστε ένα ξεχωριστό λογότυπο για τη σκοτεινή λειτουργία. Η εικόνα πρέπει να είναι PNG και να έχει αναλογία 1:1.",
+  "admin.config.appearance.logo-dark.description": "Μεταφορτώστε ένα ξεχωριστό λογότυπο για τη σκοτεινή λειτουργία. Η εικόνα πρέπει να είναι PNG και να έχει αναλογία 1:1.",
   "admin.config.appearance.logo.placeholder": "Επιλέξτε εικόνα",
-  "admin.config.security.custom-password-policy":
-    "Προσαρμοσμένη πολιτική κωδικών πρόσβασης",
-  "admin.config.security.custom-password-policy.description":
-    "Εάν θα ενεργοποιηθεί η προσαρμογή της πολιτικής κωδικών πρόσβασης. Εάν απενεργοποιηθεί, χρησιμοποιείται η προεπιλεγμένη πολιτική τουλάχιστον 8 χαρακτήρων.",
+  "admin.config.security.custom-password-policy": "Προσαρμοσμένη πολιτική κωδικών πρόσβασης",
+  "admin.config.security.custom-password-policy.description": "Εάν θα ενεργοποιηθεί η προσαρμογή της πολιτικής κωδικών πρόσβασης. Εάν απενεργοποιηθεί, χρησιμοποιείται η προεπιλεγμένη πολιτική τουλάχιστον 8 χαρακτήρων.",
   "admin.config.security.min-length": "Ελάχιστο μήκος",
-  "admin.config.security.min-length.description":
-    "Ελάχιστος αριθμός χαρακτήρων που απαιτούνται για έναν κωδικό πρόσβασης.",
+  "admin.config.security.min-length.description": "Ελάχιστος αριθμός χαρακτήρων που απαιτούνται για έναν κωδικό πρόσβασης.",
   "admin.config.security.require-uppercase": "Απαίτηση κεφαλαίων γραμμάτων",
-  "admin.config.security.require-uppercase.description":
-    "Εάν θα απαιτείται τουλάχιστον ένα κεφαλαίο γράμμα στον κωδικό πρόσβασης.",
+  "admin.config.security.require-uppercase.description": "Εάν θα απαιτείται τουλάχιστον ένα κεφαλαίο γράμμα στον κωδικό πρόσβασης.",
   "admin.config.security.require-lowercase": "Απαίτηση πεζών γραμμάτων",
-  "admin.config.security.require-lowercase.description":
-    "Εάν θα απαιτείται τουλάχιστον ένα πεζό γράμμα στον κωδικό πρόσβασης.",
+  "admin.config.security.require-lowercase.description": "Εάν θα απαιτείται τουλάχιστον ένα πεζό γράμμα στον κωδικό πρόσβασης.",
   "admin.config.security.require-number": "Απαίτηση αριθμού",
-  "admin.config.security.require-number.description":
-    "Εάν θα απαιτείται τουλάχιστον ένας αριθμός στον κωδικό πρόσβασης.",
-  "admin.config.security.require-special-character":
-    "Απαίτηση ειδικού χαρακτήρα",
-  "admin.config.security.require-special-character.description":
-    "Εάν θα απαιτείται τουλάχιστον ένας ειδικός χαρακτήρας στον κωδικό πρόσβασης.",
+  "admin.config.security.require-number.description": "Εάν θα απαιτείται τουλάχιστον ένας αριθμός στον κωδικό πρόσβασης.",
+  "admin.config.security.require-special-character": "Απαίτηση ειδικού χαρακτήρα",
+  "admin.config.security.require-special-character.description": "Εάν θα απαιτείται τουλάχιστον ένας ειδικός χαρακτήρας στον κωδικό πρόσβασης.",
   "admin.config.cache.ttl": "TTL",
-  "admin.config.cache.ttl.description":
-    "Χρόνος σε δευτερόλεπτα για τη διατήρηση πληροφοριών στην προσωρινή μνήμη.",
+  "admin.config.cache.ttl.description": "Χρόνος σε δευτερόλεπτα για τη διατήρηση πληροφοριών στην προσωρινή μνήμη.",
   "admin.config.cache.max-items": "Μέγιστος αριθμός στοιχείων",
-  "admin.config.cache.max-items.description":
-    "Μέγιστος αριθμός στοιχείων στην προσωρινή μνήμη.",
+  "admin.config.cache.max-items.description": "Μέγιστος αριθμός στοιχείων στην προσωρινή μνήμη.",
   "admin.config.cache.redis-enabled": "Ενεργοποίηση Redis",
-  "admin.config.cache.redis-enabled.description":
-    "Κανονικά το Pingvin Share αποθηκεύει προσωρινά πληροφορίες στη μνήμη. Εάν εκτελείτε πολλαπλές παρουσίες του Pingvin Share, πρέπει να ενεργοποιήσετε την προσωρινή μνήμη Redis για κοινή χρήση της cache μεταξύ των παρουσιών.",
+  "admin.config.cache.redis-enabled.description": "Κανονικά το Pingvin Share αποθηκεύει προσωρινά πληροφορίες στη μνήμη. Εάν εκτελείτε πολλαπλές παρουσίες του Pingvin Share, πρέπει να ενεργοποιήσετε την προσωρινή μνήμη Redis για κοινή χρήση της cache μεταξύ των παρουσιών.",
   "admin.config.cache.redis-url": "Redis URL",
-  "admin.config.cache.redis-url.description":
-    "Url για σύνδεση στην παρουσία Redis που χρησιμοποιείται για προσωρινή αποθήκευση.",
+  "admin.config.cache.redis-url.description": "Url για σύνδεση στην παρουσία Redis που χρησιμοποιείται για προσωρινή αποθήκευση.",
   "admin.config.cache.button.test-redis": "Δοκιμή σύνδεσης Redis",
   "admin.config.cache.test-redis.success": "Επιτυχής σύνδεση στο Redis",
-  "admin.config.cache.test-redis.success-disabled":
-    "Επιτυχής σύνδεση στο Redis (η προσωρινή μνήμη Redis είναι προς το παρόν απενεργοποιημένη).",
-  "admin.config.cache.test-redis.modal.error.title":
-    "Αποτυχία σύνδεσης στο Redis",
-  "admin.config.cache.test-redis.modal.error.description":
-    "Κατά τη σύνδεση στο Redis, παρουσιάστηκε το ακόλουθο σφάλμα:",
+  "admin.config.cache.test-redis.success-disabled": "Επιτυχής σύνδεση στο Redis (η προσωρινή μνήμη Redis είναι προς το παρόν απενεργοποιημένη).",
+  "admin.config.cache.test-redis.modal.error.title": "Αποτυχία σύνδεσης στο Redis",
+  "admin.config.cache.test-redis.modal.error.description": "Κατά τη σύνδεση στο Redis, παρουσιάστηκε το ακόλουθο σφάλμα:",
   "admin.config.cache.test-redis.modal.save.title": "Αποθήκευση διαμόρφωσης",
-  "admin.config.cache.test-redis.modal.save.description":
-    "Για να συνεχίσετε, πρέπει πρώτα να αποθηκεύσετε τις ρυθμίσεις. Θέλετε να αποθηκεύσετε τις ρυθμίσεις και να δοκιμάσετε τη σύνδεση στο Redis;",
+  "admin.config.cache.test-redis.modal.save.description": "Για να συνεχίσετε, πρέπει πρώτα να αποθηκεύσετε τις ρυθμίσεις. Θέλετε να αποθηκεύσετε τις ρυθμίσεις και να δοκιμάσετε τη σύνδεση στο Redis;",
   "admin.config.cache.test-redis.modal.save.confirm": "Αποθήκευση και δοκιμή",
   "admin.config.email.send-html-emails": "Ενεργοποίηση συμβατότητας email HTML",
-  "admin.config.email.send-html-emails.description":
-    "Εάν είναι ενεργοποιημένο, τα μηνύματα email θα αποστέλλονται σε μορφή HTML. Βεβαιωθείτε ότι τα πρότυπα email έχουν ενημερωθεί ώστε να χρησιμοποιούν HTML.",
-  "admin.config.share.enable-share-email-recipients":
-    "Ενεργοποίηση κοινής χρήσης με παραλήπτες email",
-  "admin.config.share.enable-share-email-recipients.description":
-    "Εάν θα επιτρέπεται η κοινή χρήση μέσω email με παραλήπτες. Αυτό μπορεί να ενεργοποιηθεί μόνο εάν είναι ενεργοποιημένο το SMTP.",
+  "admin.config.email.send-html-emails.description": "Εάν είναι ενεργοποιημένο, τα μηνύματα email θα αποστέλλονται σε μορφή HTML. Βεβαιωθείτε ότι τα πρότυπα email έχουν ενημερωθεί ώστε να χρησιμοποιούν HTML.",
+  "admin.config.share.enable-share-email-recipients": "Ενεργοποίηση κοινής χρήσης με παραλήπτες email",
+  "admin.config.share.enable-share-email-recipients.description": "Εάν θα επιτρέπεται η κοινή χρήση μέσω email με παραλήπτες. Αυτό μπορεί να ενεργοποιηθεί μόνο εάν είναι ενεργοποιημένο το SMTP.",
   "admin.config.email.share-recipients-subject": "Θέμα στο email διαμοιρασμού",
-  "admin.config.email.share-recipients-subject.description":
-    "Το θέμα του email διαμοιρασμού που θα φτάσει στον παραλήπτη.",
-  "admin.config.email.share-recipients-message":
-    "Το θέμα του email για τον διαμοιρασμό που θα φτάσει στον παραλήπτη ",
-  "admin.config.email.share-recipients-message.description":
-    "Μήνυμα που αποστέλλεται στους παραλήπτες της κοινοποίησης. Διαθέσιμες μεταβλητές:\n {creator} - Το όνομα χρήστη του δημιουργού της κοινοποίησης\n {creatorEmail} - Το email του δημιουργού της κοινοποίησης\n {shareUrl} - Το URL της κοινοποίησης\n {desc} - Η περιγραφή της κοινοποίησης\n {expires} - Η ημερομηνία λήξης της κοινοποίησης\n Αυτές οι μεταβλητές θα αντικατασταθούν με την πραγματική τιμή.",
-  "admin.config.email.reverse-share-subject":
-    "Θέμα email αντίστροφου διαμοιρασμού",
-  "admin.config.email.reverse-share-subject.description":
-    "Θέμα του απεσταλμένου email όταν κάποιος δημιούργησε μια κοινοποίηση με τον αντίστροφο σύνδεσμο κοινής χρήσης σας.",
-  "admin.config.email.reverse-share-message":
-    "Μήνυμα email αντίστροφου διαμοιρασμού",
-  "admin.config.email.reverse-share-message.description":
-    "Μήνυμα που αποστέλλεται όταν κάποιος δημιουργεί έναν σύνδεσμο αντίστροφου διαμοιρασμού. Το {shareUrl} θα αντικατασταθεί με το όνομα του δημιουργού και τη διεύθυνση URL κοινής χρήσης.",
-  "admin.config.email.reset-password-subject":
-    "Θέμα μηνύματος επαναφοράς κωδικού πρόσβασης",
-  "admin.config.email.reset-password-subject.description":
-    "Θέμα του απεσταλμένου email όταν ένας χρήστης ζητά επαναφορά κωδικού πρόσβασης.",
-  "admin.config.email.reset-password-message":
-    "Κείμενο μηνύματος επαναφοράς κωδικού πρόσβασης",
-  "admin.config.email.reset-password-message.description":
-    "Μήνυμα που αποστέλλεται όταν ένας χρήστης ζητά επαναφορά κωδικού πρόσβασης. Το {url} θα αντικατασταθεί με τη διεύθυνση URL επαναφοράς κωδικού πρόσβασης.",
+  "admin.config.email.share-recipients-subject.description": "Το θέμα του email διαμοιρασμού που θα φτάσει στον παραλήπτη.",
+  "admin.config.email.share-recipients-message": "Το θέμα του email για τον διαμοιρασμό που θα φτάσει στον παραλήπτη ",
+  "admin.config.email.share-recipients-message.description": "Μήνυμα που αποστέλλεται στους παραλήπτες της κοινοποίησης. Διαθέσιμες μεταβλητές:\n {creator} - Το όνομα χρήστη του δημιουργού της κοινοποίησης\n {creatorEmail} - Το email του δημιουργού της κοινοποίησης\n {shareUrl} - Το URL της κοινοποίησης\n {desc} - Η περιγραφή της κοινοποίησης\n {expires} - Η ημερομηνία λήξης της κοινοποίησης\n Αυτές οι μεταβλητές θα αντικατασταθούν με την πραγματική τιμή.",
+  "admin.config.email.reverse-share-subject": "Θέμα email αντίστροφου διαμοιρασμού",
+  "admin.config.email.reverse-share-subject.description": "Θέμα του απεσταλμένου email όταν κάποιος δημιούργησε μια κοινοποίηση με τον αντίστροφο σύνδεσμο κοινής χρήσης σας.",
+  "admin.config.email.reverse-share-message": "Μήνυμα email αντίστροφου διαμοιρασμού",
+  "admin.config.email.reverse-share-message.description": "Μήνυμα που αποστέλλεται όταν κάποιος δημιουργεί έναν σύνδεσμο αντίστροφου διαμοιρασμού. Το {shareUrl} θα αντικατασταθεί με το όνομα του δημιουργού και τη διεύθυνση URL κοινής χρήσης.",
+  "admin.config.email.reset-password-subject": "Θέμα μηνύματος επαναφοράς κωδικού πρόσβασης",
+  "admin.config.email.reset-password-subject.description": "Θέμα του απεσταλμένου email όταν ένας χρήστης ζητά επαναφορά κωδικού πρόσβασης.",
+  "admin.config.email.reset-password-message": "Κείμενο μηνύματος επαναφοράς κωδικού πρόσβασης",
+  "admin.config.email.reset-password-message.description": "Μήνυμα που αποστέλλεται όταν ένας χρήστης ζητά επαναφορά κωδικού πρόσβασης. Το {url} θα αντικατασταθεί με τη διεύθυνση URL επαναφοράς κωδικού πρόσβασης.",
   "admin.config.email.invite-subject": "Θέμα μηνύματος πρόσκλησης",
-  "admin.config.email.invite-subject.description":
-    "Θέμα του απεσταλμένου email όταν ένας διαχειριστής προσκαλεί έναν χρήστη.",
+  "admin.config.email.invite-subject.description": "Θέμα του απεσταλμένου email όταν ένας διαχειριστής προσκαλεί έναν χρήστη.",
   "admin.config.email.invite-message": "Μήνυμα μηνύματος πρόσκλησης",
-  "admin.config.email.invite-message.description":
-    "Μήνυμα που αποστέλλεται όταν ένας διαχειριστής προσκαλεί έναν χρήστη. Το {url} θα αντικατασταθεί με το URL πρόσκλησης, το {email} με το email και το {password} με τον κωδικό πρόσβασης του χρήστη.",
-  "admin.config.email.share-recipients-reply-to-creator":
-    "Ορισμός Reply-To στο email του δημιουργού",
-  "admin.config.email.share-recipients-reply-to-creator.description":
-    "Εάν θα οριστεί η κεφαλίδα Reply-To στη διεύθυνση email του χρήστη που δημιούργησε την κοινοποίηση.",
-  "admin.config.share.enable-share-download-notifications":
-    "Ενεργοποίηση ειδοποιήσεων λήψης",
-  "admin.config.share.enable-share-download-notifications.description":
-    "Εάν θα αποστέλλεται email στον δημιουργό της κοινοποίησης όταν ένας παραλήπτης email κάνει λήψη ενός αρχείου. Αυτό απαιτεί SMTP και κοινή χρήση με παραλήπτες email.",
-  "admin.config.email.share-download-notification-subject":
-    "Θέμα ειδοποίησης λήψης",
-  "admin.config.email.share-download-notification-subject.description":
-    "Θέμα του email που αποστέλλεται στον δημιουργό της κοινοποίησης όταν ένας παραλήπτης κάνει λήψη αρχείου.",
-  "admin.config.email.share-download-notification-message":
-    "Μήνυμα ειδοποίησης λήψης",
-  "admin.config.email.share-download-notification-message.description":
-    "Μήνυμα που αποστέλλεται στον δημιουργό της κοινοποίησης όταν ένας παραλήπτης κάνει λήψη αρχείου. Διαθέσιμες μεταβλητές:\n {recipientEmail} - Το email του παραλήπτη\n {fileName} - Το όνομα του αρχείου που λήφθηκε\n {shareUrl} - Το URL της κοινοποίησης",
-  "admin.config.security.enable-email-verification":
-    "Ενεργοποίηση επαλήθευσης email",
-  "admin.config.security.enable-email-verification.description":
-    "Εάν θα απαιτείται από τους χρήστες να επαληθεύσουν τη διεύθυνση email τους πριν μπορέσουν να συνδεθούν. Αυτό μπορεί να ενεργοποιηθεί μόνο εάν είναι ενεργοποιημένο το SMTP.",
+  "admin.config.email.invite-message.description": "Μήνυμα που αποστέλλεται όταν ένας διαχειριστής προσκαλεί έναν χρήστη. Το {url} θα αντικατασταθεί με το URL πρόσκλησης, το {email} με το email και το {password} με τον κωδικό πρόσβασης του χρήστη.",
+  "admin.config.email.share-recipients-reply-to-creator": "Ορισμός Reply-To στο email του δημιουργού",
+  "admin.config.email.share-recipients-reply-to-creator.description": "Εάν θα οριστεί η κεφαλίδα Reply-To στη διεύθυνση email του χρήστη που δημιούργησε την κοινοποίηση.",
+  "admin.config.share.enable-share-download-notifications": "Ενεργοποίηση ειδοποιήσεων λήψης",
+  "admin.config.share.enable-share-download-notifications.description": "Εάν θα αποστέλλεται email στον δημιουργό της κοινοποίησης όταν ένας παραλήπτης email κάνει λήψη ενός αρχείου. Αυτό απαιτεί SMTP και κοινή χρήση με παραλήπτες email.",
+  "admin.config.email.share-download-notification-subject": "Θέμα ειδοποίησης λήψης",
+  "admin.config.email.share-download-notification-subject.description": "Θέμα του email που αποστέλλεται στον δημιουργό της κοινοποίησης όταν ένας παραλήπτης κάνει λήψη αρχείου.",
+  "admin.config.email.share-download-notification-message": "Μήνυμα ειδοποίησης λήψης",
+  "admin.config.email.share-download-notification-message.description": "Μήνυμα που αποστέλλεται στον δημιουργό της κοινοποίησης όταν ένας παραλήπτης κάνει λήψη αρχείου. Διαθέσιμες μεταβλητές:\n {recipientEmail} - Το email του παραλήπτη\n {fileName} - Το όνομα του αρχείου που λήφθηκε\n {shareUrl} - Το URL της κοινοποίησης",
+  "admin.config.security.enable-email-verification": "Ενεργοποίηση επαλήθευσης email",
+  "admin.config.security.enable-email-verification.description": "Εάν θα απαιτείται από τους χρήστες να επαληθεύσουν τη διεύθυνση email τους πριν μπορέσουν να συνδεθούν. Αυτό μπορεί να ενεργοποιηθεί μόνο εάν είναι ενεργοποιημένο το SMTP.",
   "admin.config.email.verification-subject": "Θέμα επαλήθευσης",
-  "admin.config.email.verification-subject.description":
-    "Θέμα του email που αποστέλλεται στον χρήστη κατά την εγγραφή του.",
+  "admin.config.email.verification-subject.description": "Θέμα του email που αποστέλλεται στον χρήστη κατά την εγγραφή του.",
   "admin.config.email.verification-message": "Μήνυμα επαλήθευσης",
-  "admin.config.email.verification-message.description":
-    "Μήνυμα που αποστέλλεται στον χρήστη κατά την εγγραφή του. Το {url} θα αντικατασταθεί με το URL επαλήθευσης.",
+  "admin.config.email.verification-message.description": "Μήνυμα που αποστέλλεται στον χρήστη κατά την εγγραφή του. Το {url} θα αντικατασταθεί με το URL επαλήθευσης.",
   "admin.config.security.allow-registration": "Να επιτρέπεται η εγγραφή",
-  "admin.config.security.allow-registration.description":
-    "Αν επιτρέπεται η εγγραφή",
-  "admin.config.security.allow-unauthenticated-shares":
-    "Επιτρέψτε κοινές χρήσεις χωρίς έλεγχο ταυτότητας",
-  "admin.config.security.allow-unauthenticated-shares.description":
-    "Εάν οι χρήστες χωρίς έλεγχο ταυτότητας μπορούν να δημιουργήσουν κοινόχρηστα στοιχεία",
+  "admin.config.security.allow-registration.description": "Αν επιτρέπεται η εγγραφή",
+  "admin.config.security.allow-unauthenticated-shares": "Επιτρέψτε κοινές χρήσεις χωρίς έλεγχο ταυτότητας",
+  "admin.config.security.allow-unauthenticated-shares.description": "Εάν οι χρήστες χωρίς έλεγχο ταυτότητας μπορούν να δημιουργήσουν κοινόχρηστα στοιχεία",
   "admin.config.share.default-expiration": "Προεπιλεγμένη λήξη",
-  "admin.config.share.default-expiration.description":
-    "Ο προεπιλεγμένος χρόνος λήξης που έχει επιλεγεί κατά τη δημιουργία νέας κοινοποίησης.",
+  "admin.config.share.default-expiration.description": "Ο προεπιλεγμένος χρόνος λήξης που έχει επιλεγεί κατά τη δημιουργία νέας κοινοποίησης.",
   "admin.config.share.max-expiration": "Μέγιστη λήξη",
-  "admin.config.share.max-expiration.description":
-    "Μέγιστος χρόνος λήξης κοινοποίησης. Ορίστε σε 0 για απεριόριστη διάρκεια.",
-  "admin.config.share.share-id-length":
-    "Προεπιλεγμένο μήκος αναγνωριστικού κοινοποίησης",
-  "admin.config.share.share-id-length.description":
-    "Προεπιλεγμένο μήκος για το παραγόμενο αναγνωριστικό μιας κοινοποίησης. Αυτή η τιμή χρησιμοποιείται επίσης για τη δημιουργία συνδέσμων για αντίστροφες κοινοποιήσεις. Μια τιμή κάτω από 8 δεν θεωρείται ασφαλής.",
+  "admin.config.share.max-expiration.description": "Μέγιστος χρόνος λήξης κοινοποίησης. Ορίστε σε 0 για απεριόριστη διάρκεια.",
+  "admin.config.share.share-id-length": "Προεπιλεγμένο μήκος αναγνωριστικού κοινοποίησης",
+  "admin.config.share.share-id-length.description": "Προεπιλεγμένο μήκος για το παραγόμενο αναγνωριστικό μιας κοινοποίησης. Αυτή η τιμή χρησιμοποιείται επίσης για τη δημιουργία συνδέσμων για αντίστροφες κοινοποιήσεις. Μια τιμή κάτω από 8 δεν θεωρείται ασφαλής.",
   "admin.config.share.max-size": "Μέγιστο μέγεθος",
   "admin.config.share.max-size.description": "Μέγιστο μέγεθος κοινοποίησης",
   "admin.config.share.zip-compression-level": "Βαθμός συμπίεσης ZIP",
-  "admin.config.share.zip-compression-level.description":
-    "Προσαρμόστε το βαθμό συμπίεσης για να εξισορροπηθεί το μέγεθος του αρχείου και η ταχύτητα επεξεργασίας. Έγκυρες τιμές κυμαίνονται από 0 έως 9, με 0 χωρίς συμπίεση και 9 μέγιστη συμπίεση.",
+  "admin.config.share.zip-compression-level.description": "Προσαρμόστε το βαθμό συμπίεσης για να εξισορροπηθεί το μέγεθος του αρχείου και η ταχύτητα επεξεργασίας. Έγκυρες τιμές κυμαίνονται από 0 έως 9, με 0 χωρίς συμπίεση και 9 μέγιστη συμπίεση.",
   "admin.config.share.chunk-size": "Μέγεθος κομματιών",
-  "admin.config.share.chunk-size.description":
-    "Προσαρμόστε το μέγεθος των κομματιών για τις μεταφορτώσεις σας ώστε να εξισορροπήσετε την αποτελεσματικότητα και την αξιοπιστία ανάλογα με τη σύνδεσή σας στο διαδίκτυο. Τα μικρότερα κομμάτια μπορούν να βελτιώσουν τα ποσοστά επιτυχίας για ασταθείς συνδέσεις, ενώ τα μεγαλύτερα κομμάτια κάνουν τις μεταφορτώσεις ταχύτερες για σταθερές συνδέσεις.",
-  "admin.config.share.auto-open-share-modal":
-    "Αυτόματο άνοιγμα παραθύρου δημιουργίας κοινοποίησης",
-  "admin.config.share.auto-open-share-modal.description":
-    "Το παράθυρο διαλόγου δημιουργίας κοινοποίησης εμφανίζεται αυτόματα όταν ένας χρήστης επιλέγει αρχεία, εξαλείφοντας την ανάγκη να κάνει κλικ στο κουμπί χειροκίνητα.",
-  "admin.config.security.allow-admin-access-all-shares":
-    "Να επιτρέπεται η πρόσβαση διαχειριστή σε όλες τις κοινοποιήσεις",
-  "admin.config.share.reverse-share-simple-only":
-    "Επιβολή απλής λειτουργίας για αντίστροφες κοινοποιήσεις",
-  "admin.config.share.reverse-share-simple-only.description":
-    "Επιβάλλει τη δημιουργία αντίστροφων κοινοποιήσεων σε απλή λειτουργία. Εάν απενεργοποιηθεί, ο δημιουργός της αντίστροφης κοινοποίησης μπορεί να επιλέξει μεταξύ απλής και προηγμένης λειτουργίας.",
-  "admin.config.security.allow-admin-access-all-shares.description":
-    "Να επιτρέπεται στους διαχειριστές η πρόσβαση σε όλες τις κοινοποιήσεις, ακόμη και αν προστατεύονται με κωδικό πρόσβασης, έχουν λήξει ή έχουν διαγραφεί.",
-  "admin.config.share.enable-user-recipients":
-    "Ενεργοποίηση κοινής χρήσης με εγγεγραμμένους χρήστες",
-  "admin.config.share.enable-user-recipients.description":
-    "Όταν είναι ενεργοποιημένο, οι κοινοποιήσεις που αποστέλλονται στη διεύθυνση email ενός εγγεγραμμένου χρήστη θα εμφανίζονται αυτόματα στον λογαριασμό του. Οι χρήστες μπορούν επίσης να περιορίσουν την πρόσβαση σε κοινοποιήσεις μόνο σε κατονομαζόμενους παραλήπτες.",
+  "admin.config.share.chunk-size.description": "Προσαρμόστε το μέγεθος των κομματιών για τις μεταφορτώσεις σας ώστε να εξισορροπήσετε την αποτελεσματικότητα και την αξιοπιστία ανάλογα με τη σύνδεσή σας στο διαδίκτυο. Τα μικρότερα κομμάτια μπορούν να βελτιώσουν τα ποσοστά επιτυχίας για ασταθείς συνδέσεις, ενώ τα μεγαλύτερα κομμάτια κάνουν τις μεταφορτώσεις ταχύτερες για σταθερές συνδέσεις.",
+  "admin.config.share.auto-open-share-modal": "Αυτόματο άνοιγμα παραθύρου δημιουργίας κοινοποίησης",
+  "admin.config.share.auto-open-share-modal.description": "Το παράθυρο διαλόγου δημιουργίας κοινοποίησης εμφανίζεται αυτόματα όταν ένας χρήστης επιλέγει αρχεία, εξαλείφοντας την ανάγκη να κάνει κλικ στο κουμπί χειροκίνητα.",
+  "admin.config.security.allow-admin-access-all-shares": "Να επιτρέπεται η πρόσβαση διαχειριστή σε όλες τις κοινοποιήσεις",
+  "admin.config.share.reverse-share-simple-only": "Επιβολή απλής λειτουργίας για αντίστροφες κοινοποιήσεις",
+  "admin.config.share.reverse-share-simple-only.description": "Επιβάλλει τη δημιουργία αντίστροφων κοινοποιήσεων σε απλή λειτουργία. Εάν απενεργοποιηθεί, ο δημιουργός της αντίστροφης κοινοποίησης μπορεί να επιλέξει μεταξύ απλής και προηγμένης λειτουργίας.",
+  "admin.config.security.allow-admin-access-all-shares.description": "Να επιτρέπεται στους διαχειριστές η πρόσβαση σε όλες τις κοινοποιήσεις, ακόμη και αν προστατεύονται με κωδικό πρόσβασης, έχουν λήξει ή έχουν διαγραφεί.",
+  "admin.config.share.enable-user-recipients": "Ενεργοποίηση κοινής χρήσης με εγγεγραμμένους χρήστες",
+  "admin.config.share.enable-user-recipients.description": "Όταν είναι ενεργοποιημένο, οι κοινοποιήσεις που αποστέλλονται στη διεύθυνση email ενός εγγεγραμμένου χρήστη θα εμφανίζονται αυτόματα στον λογαριασμό του. Οι χρήστες μπορούν επίσης να περιορίσουν την πρόσβαση σε κοινοποιήσεις μόνο σε κατονομαζόμενους παραλήπτες.",
   "admin.config.share.file-retention-period": "Περίοδος διατήρησης αρχείων",
-  "admin.config.share.file-retention-period.description":
-    "Πόσο καιρό διατηρούνται τα αρχεία μετά τη λήξη ή τη διαγραφή μιας κοινοποίησης. Χρήσιμο μόνο εάν είναι ενεργοποιημένη και η επιλογή 'Να επιτρέπεται η πρόσβαση διαχειριστή σε όλες τις κοινοποιήσεις'. Ορίστε σε -1 για να διατηρούνται τα αρχεία για πάντα.",
+  "admin.config.share.file-retention-period.description": "Πόσο καιρό διατηρούνται τα αρχεία μετά τη λήξη ή τη διαγραφή μιας κοινοποίησης. Χρήσιμο μόνο εάν είναι ενεργοποιημένη και η επιλογή 'Να επιτρέπεται η πρόσβαση διαχειριστή σε όλες τις κοινοποιήσεις'. Ορίστε σε -1 για να διατηρούνται τα αρχεία για πάντα.",
   "admin.config.smtp.enabled": "Ενεργοποίηση",
-  "admin.config.smtp.enabled.description":
-    "Εάν η λειτουργία SMTP είναι ενεργοποιημένη. Ενεργοποιήστε τη μόνον όταν ορίσετε σωστά τις παραμέτρους που ακολουθούν.",
+  "admin.config.smtp.enabled.description": "Εάν η λειτουργία SMTP είναι ενεργοποιημένη. Ενεργοποιήστε τη μόνον όταν ορίσετε σωστά τις παραμέτρους που ακολουθούν.",
   "admin.config.smtp.host": "Εξυπηρετητής",
   "admin.config.smtp.host.description": "SMTP εξυπηρετητής",
   "admin.config.smtp.port": "Θύρα",
   "admin.config.smtp.port.description": "SMTP θύρα",
   "admin.config.smtp.email": "E-mail",
-  "admin.config.smtp.email.description":
-    "Διεύθυνση email από την οποία αποστέλλονται τα email",
+  "admin.config.smtp.email.description": "Διεύθυνση email από την οποία αποστέλλονται τα email",
   "admin.config.smtp.username": "Όνομα χρήστη",
-  "admin.config.smtp.username.description":
-    "Όνομα χρήστη στον SMTP εξυπηρετητή",
+  "admin.config.smtp.username.description": "Όνομα χρήστη στον SMTP εξυπηρετητή",
   "admin.config.smtp.password": "Κωδικός πρόσβασης",
-  "admin.config.smtp.password.description":
-    "Κωδικός πρόσβασης στον εξυπηρετητή SMTP",
+  "admin.config.smtp.password.description": "Κωδικός πρόσβασης στον εξυπηρετητή SMTP",
   "admin.config.smtp.button.test": "Αποστολή δοκιμαστικού email",
   "admin.config.smtp.test-email.success": "Το email στάλθηκε με επιτυχία",
   "admin.config.smtp.test-email.error.title": "Αποτυχία αποστολής email",
-  "admin.config.smtp.test-email.error.description":
-    "Κατά την αποστολή του δοκιμαστικού email, παρουσιάστηκε το ακόλουθο σφάλμα:",
+  "admin.config.smtp.test-email.error.description": "Κατά την αποστολή του δοκιμαστικού email, παρουσιάστηκε το ακόλουθο σφάλμα:",
   "admin.config.smtp.test-email.save.title": "Αποθήκευση ρυθμίσεων",
-  "admin.config.smtp.test-email.save.description":
-    "Για να συνεχίσετε, πρέπει πρώτα να αποθηκεύσετε τις ρυθμίσεις. Θέλετε να αποθηκεύσετε τις ρυθμίσεις και να στείλετε το δοκιμαστικό email;",
+  "admin.config.smtp.test-email.save.description": "Για να συνεχίσετε, πρέπει πρώτα να αποθηκεύσετε τις ρυθμίσεις. Θέλετε να αποθηκεύσετε τις ρυθμίσεις και να στείλετε το δοκιμαστικό email;",
   "admin.config.smtp.test-email.save.confirm": "Αποθήκευση και αποστολή",
-  "admin.config.smtp.allow-unauthorized-certificates":
-    "Εμπιστοσύνη σε μη εξουσιοδοτημένα πιστοποιητικά διακομιστή SMTP",
-  "admin.config.smtp.allow-unauthorized-certificates.description":
-    "Ορίστε το σε true μόνο εάν πρέπει να εμπιστευτείτε αυτο-υπογεγραμμένα πιστοποιητικά.",
+  "admin.config.smtp.allow-unauthorized-certificates": "Εμπιστοσύνη σε μη εξουσιοδοτημένα πιστοποιητικά διακομιστή SMTP",
+  "admin.config.smtp.allow-unauthorized-certificates.description": "Ορίστε το σε true μόνο εάν πρέπει να εμπιστευτείτε αυτο-υπογεγραμμένα πιστοποιητικά.",
   "admin.config.oauth.allow-registration": "Να επιτρέπεται η εγγραφή",
-  "admin.config.oauth.allow-registration.description":
-    "Επιτρέψτε στους χρήστες να εγγραφούν μέσω λογαριασμών κοινωνικής δικτύωσης",
+  "admin.config.oauth.allow-registration.description": "Επιτρέψτε στους χρήστες να εγγραφούν μέσω λογαριασμών κοινωνικής δικτύωσης",
   "admin.config.oauth.ignore-totp": "Παράβλεψη TOTP",
-  "admin.config.oauth.ignore-totp.description":
-    "Αν θα αγνοηθεί το TOTP όταν ο χρήστης χρησιμοποιεί την κοινωνική σύνδεση",
-  "admin.config.oauth.disable-password":
-    "Απενεργοποίηση σύνδεσης με κωδικό πρόσβασης",
-  "admin.config.oauth.disable-password.description":
-    "Εάν θα απενεργοποιηθεί η σύνδεση με κωδικό πρόσβασης\nΒεβαιωθείτε ότι ένας πάροχος OAuth έχει διαμορφωθεί σωστά πριν ενεργοποιήσετε αυτήν τη διαμόρφωση για να αποφύγετε τον αποκλεισμό σας.",
+  "admin.config.oauth.ignore-totp.description": "Αν θα αγνοηθεί το TOTP όταν ο χρήστης χρησιμοποιεί την κοινωνική σύνδεση",
+  "admin.config.oauth.disable-password": "Απενεργοποίηση σύνδεσης με κωδικό πρόσβασης",
+  "admin.config.oauth.disable-password.description": "Εάν θα απενεργοποιηθεί η σύνδεση με κωδικό πρόσβασης\nΒεβαιωθείτε ότι ένας πάροχος OAuth έχει διαμορφωθεί σωστά πριν ενεργοποιήσετε αυτήν τη διαμόρφωση για να αποφύγετε τον αποκλεισμό σας.",
   "admin.config.oauth.github-enabled": "GitHub",
-  "admin.config.oauth.github-enabled.description":
-    "Αν είναι ενεργοποιημένη η σύνδεση GitHub",
+  "admin.config.oauth.github-enabled.description": "Αν είναι ενεργοποιημένη η σύνδεση GitHub",
   "admin.config.oauth.github-client-id": "GitHub Client ID",
-  "admin.config.oauth.github-client-id.description":
-    "Αναγνωριστικό πελάτη της εφαρμογής GitHub OAuth",
+  "admin.config.oauth.github-client-id.description": "Αναγνωριστικό πελάτη της εφαρμογής GitHub OAuth",
   "admin.config.oauth.github-client-secret": "GitHub Client secret",
-  "admin.config.oauth.github-client-secret.description":
-    "Client secret της εφαρμογής OAuth του GitHub",
+  "admin.config.oauth.github-client-secret.description": "Client secret της εφαρμογής OAuth του GitHub",
   "admin.config.oauth.google-enabled": "Google",
-  "admin.config.oauth.google-enabled.description":
-    "Αν θα είναι ενεργοποιημένη η σύνδεση Google",
+  "admin.config.oauth.google-enabled.description": "Αν θα είναι ενεργοποιημένη η σύνδεση Google",
   "admin.config.oauth.google-client-id": "Αναγνωριστικό Πελάτη Google",
-  "admin.config.oauth.google-client-id.description":
-    "Αναγνωριστικό πελάτη της εφαρμογής Google OAuth",
+  "admin.config.oauth.google-client-id.description": "Αναγνωριστικό πελάτη της εφαρμογής Google OAuth",
   "admin.config.oauth.google-client-secret": "Google κωδικός",
-  "admin.config.oauth.google-client-secret.description":
-    "Κωδικός της εφαρμογής Google OAuth",
+  "admin.config.oauth.google-client-secret.description": "Κωδικός της εφαρμογής Google OAuth",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
-  "admin.config.oauth.microsoft-enabled.description":
-    "Αν είναι ενεργοποιημένη η σύνδεση της Microsoft",
+  "admin.config.oauth.microsoft-enabled.description": "Αν είναι ενεργοποιημένη η σύνδεση της Microsoft",
   "admin.config.oauth.microsoft-tenant": "Αναγνωριστικό Microsoft",
-  "admin.config.oauth.microsoft-tenant.description":
-    "Αναγνωριστικό για την εφαρμογή Microsoft OAuth\nΚοινή: Οι χρήστες με προσωπικό λογαριασμό Microsoft και λογαριασμό εργασίας ή σχολείου από το Microsoft Entra ID μπορούν να συνδεθούν στην εφαρμογή.\nΟργανισμοί: Μόνο χρήστες με λογαριασμούς εργασίας ή σχολείου από το Microsoft Entra ID μπορούν να συνδεθούν στην εφαρμογή.\nΚαταναλωτές: Μόνο οι χρήστες με προσωπικό λογαριασμό Microsoft μπορούν να συνδεθούν στην εφαρμογή.\nΜε όνομα τομέα του μισθωτή Microsoft Entra ή το αναγνωριστικό μισθωτή σε μορφή GUID: Μόνο χρήστες από έναν συγκεκριμένο μισθωτή της Microsoft Entra (μέλη καταλόγου με λογαριασμό εργασίας ή σχολείου ή επισκέπτες καταλόγου με προσωπικό λογαριασμό Microsoft) μπορούν να συνδεθούν στην εφαρμογή.",
+  "admin.config.oauth.microsoft-tenant.description": "Αναγνωριστικό για την εφαρμογή Microsoft OAuth\nΚοινή: Οι χρήστες με προσωπικό λογαριασμό Microsoft και λογαριασμό εργασίας ή σχολείου από το Microsoft Entra ID μπορούν να συνδεθούν στην εφαρμογή.\nΟργανισμοί: Μόνο χρήστες με λογαριασμούς εργασίας ή σχολείου από το Microsoft Entra ID μπορούν να συνδεθούν στην εφαρμογή.\nΚαταναλωτές: Μόνο οι χρήστες με προσωπικό λογαριασμό Microsoft μπορούν να συνδεθούν στην εφαρμογή.\nΜε όνομα τομέα του μισθωτή Microsoft Entra ή το αναγνωριστικό μισθωτή σε μορφή GUID: Μόνο χρήστες από έναν συγκεκριμένο μισθωτή της Microsoft Entra (μέλη καταλόγου με λογαριασμό εργασίας ή σχολείου ή επισκέπτες καταλόγου με προσωπικό λογαριασμό Microsoft) μπορούν να συνδεθούν στην εφαρμογή.",
   "admin.config.oauth.microsoft-client-id": "Αναγνωριστικό πελάτη Microsoft",
-  "admin.config.oauth.microsoft-client-id.description":
-    "Αναγνωριστικό πελάτη της εφαρμογής Microsoft OAuth",
+  "admin.config.oauth.microsoft-client-id.description": "Αναγνωριστικό πελάτη της εφαρμογής Microsoft OAuth",
   "admin.config.oauth.microsoft-client-secret": "Μυστικό πελάτη Microsoft",
-  "admin.config.oauth.microsoft-client-secret.description":
-    "Μυστικό πελάτη της εφαρμογής Microsoft OAuth",
+  "admin.config.oauth.microsoft-client-secret.description": "Μυστικό πελάτη της εφαρμογής Microsoft OAuth",
   "admin.config.oauth.discord-enabled": "Discord",
-  "admin.config.oauth.discord-enabled.description":
-    "Αν είναι ενεργοποιημένη η σύνδεση στο Discord",
+  "admin.config.oauth.discord-enabled.description": "Αν είναι ενεργοποιημένη η σύνδεση στο Discord",
   "admin.config.oauth.discord-limited-users": "Περιορισμένοι χρήστες Discord",
-  "admin.config.oauth.discord-limited-users.description":
-    "Περιορισμός σύνδεσης σε συγκεκριμένους χρήστες βάσει του Discord ID τους. Αφήστε το κενό για απενεργοποίηση.",
-  "admin.config.oauth.discord-limited-guild":
-    "Αναγνωριστικό διακομιστή περιορισμένης ισχύος Discord",
-  "admin.config.oauth.discord-limited-guild.description":
-    "Περιορισμός σύνδεσης σε χρήστες σε ένα συγκεκριμένο διακομιστή. Αφήστε κενό για να απενεργοποιήσετε.",
+  "admin.config.oauth.discord-limited-users.description": "Περιορισμός σύνδεσης σε συγκεκριμένους χρήστες βάσει του Discord ID τους. Αφήστε το κενό για απενεργοποίηση.",
+  "admin.config.oauth.discord-limited-guild": "Αναγνωριστικό διακομιστή περιορισμένης ισχύος Discord",
+  "admin.config.oauth.discord-limited-guild.description": "Περιορισμός σύνδεσης σε χρήστες σε ένα συγκεκριμένο διακομιστή. Αφήστε κενό για να απενεργοποιήσετε.",
   "admin.config.oauth.discord-client-id": "Αναγνωριστικό Πελάτη Discord",
-  "admin.config.oauth.discord-client-id.description":
-    "Αναγνωριστικό πελάτη της εφαρμογής Discord OAuth",
+  "admin.config.oauth.discord-client-id.description": "Αναγνωριστικό πελάτη της εφαρμογής Discord OAuth",
   "admin.config.oauth.discord-client-secret": "Μυστικό πελάτη Discord",
-  "admin.config.oauth.discord-client-secret.description":
-    "Μυστικό πελάτη της εφαρμογής Discord OAuth",
+  "admin.config.oauth.discord-client-secret.description": "Μυστικό πελάτη της εφαρμογής Discord OAuth",
   "admin.config.oauth.oidc-enabled": "Σύνδεση OpenID",
-  "admin.config.oauth.oidc-enabled.description":
-    "Αν είναι ενεργοποιημένη η σύνδεση OpenID",
+  "admin.config.oauth.oidc-enabled.description": "Αν είναι ενεργοποιημένη η σύνδεση OpenID",
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect Discovery URI",
-  "admin.config.oauth.oidc-discovery-uri.description":
-    "Discovery URI της εφαρμογής OpenID Connect OAuth",
+  "admin.config.oauth.oidc-discovery-uri.description": "Discovery URI της εφαρμογής OpenID Connect OAuth",
   "admin.config.oauth.oidc-sign-out": "Αποσύνδεση από το OpenID Connect",
-  "admin.config.oauth.oidc-sign-out.description":
-    "Εάν το κουμπί «Αποσύνδεση» θα αποσυνδέει τον χρήστη από τον πάροχο OpenID Connect",
+  "admin.config.oauth.oidc-sign-out.description": "Εάν το κουμπί «Αποσύνδεση» θα αποσυνδέει τον χρήστη από τον πάροχο OpenID Connect",
   "admin.config.oauth.oidc-scope": "OpenID Connect scope",
-  "admin.config.oauth.oidc-scope.description":
-    "Scopes που θα ζητηθούν από τον πάροχο OpenID Connect.",
+  "admin.config.oauth.oidc-scope.description": "Scopes που θα ζητηθούν από τον πάροχο OpenID Connect.",
   "admin.config.oauth.oidc-username-claim": "OpenID Connect username claim",
-  "admin.config.oauth.oidc-username-claim.description":
-    "Username claim in OpenID Connect ID token. Αφήστε κενό αν δε γνωρίζετε για αυτή τη ρύθμιση",
-  "admin.config.oauth.oidc-role-path":
-    "Διαδρομή για ρόλους στο token του OpenID Connect",
-  "admin.config.oauth.oidc-role-path.description":
-    "Πρέπει να είναι μια έγκυρη διαδρομή JMES που αναφέρεται σε έναν πίνακα ρόλων. Η διαχείριση δικαιωμάτων πρόσβασης με χρήση ρόλων OpenID Connect συνιστάται μόνο εάν δεν έχει διαμορφωθεί άλλος πάροχος ταυτότητας και η σύνδεση με κωδικό πρόσβασης είναι απενεργοποιημένη. Αφήστε το κενό εάν δεν γνωρίζετε τι είναι αυτή η ρύθμιση." +
-    "Managing access rights using OpenID Connect roles is only recommended if no other identity provider is configured and password login is disabled. " +
-    "Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-general-access":
-    "Ρόλος OpenID Connect για γενική πρόσβαση",
-  "admin.config.oauth.oidc-role-general-access.description":
-    "Ρόλος που απαιτείται για γενική πρόσβαση. Πρέπει να υπάρχει στους ρόλους ενός χρήστη για να μπορεί να συνδεθεί. Αφήστε το κενό εάν δεν γνωρίζετε τι είναι αυτή η ρύθμιση." +
-    "Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-admin-access":
-    "Ρόλος OpenID Connect για πρόσβαση διαχειριστή",
-  "admin.config.oauth.oidc-role-admin-access.description":
-    "Ρόλος που απαιτείται για διαχειριστική πρόσβαση. Πρέπει να υπάρχει στους ρόλους ενός χρήστη για να έχει πρόσβαση στον πίνακα διαχείρισης. Αφήστε το κενό εάν δεν γνωρίζετε τι είναι αυτή η ρύθμιση." +
-    "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-username-claim.description": "Username claim in OpenID Connect ID token. Αφήστε κενό αν δε γνωρίζετε για αυτή τη ρύθμιση",
+  "admin.config.oauth.oidc-role-path": "Διαδρομή για ρόλους στο token του OpenID Connect",
+  "admin.config.oauth.oidc-role-path.description": "Πρέπει να είναι μια έγκυρη διαδρομή JMES που αναφέρεται σε έναν πίνακα ρόλων. Η διαχείριση δικαιωμάτων πρόσβασης με χρήση ρόλων OpenID Connect συνιστάται μόνο εάν δεν έχει διαμορφωθεί άλλος πάροχος ταυτότητας και η σύνδεση με κωδικό πρόσβασης είναι απενεργοποιημένη. Αφήστε το κενό εάν δεν γνωρίζετε τι είναι αυτή η ρύθμιση." + "Managing access rights using OpenID Connect roles is only recommended if no other identity provider is configured and password login is disabled. " + "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-general-access": "Ρόλος OpenID Connect για γενική πρόσβαση",
+  "admin.config.oauth.oidc-role-general-access.description": "Ρόλος που απαιτείται για γενική πρόσβαση. Πρέπει να υπάρχει στους ρόλους ενός χρήστη για να μπορεί να συνδεθεί. Αφήστε το κενό εάν δεν γνωρίζετε τι είναι αυτή η ρύθμιση." + "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-admin-access": "Ρόλος OpenID Connect για πρόσβαση διαχειριστή",
+  "admin.config.oauth.oidc-role-admin-access.description": "Ρόλος που απαιτείται για διαχειριστική πρόσβαση. Πρέπει να υπάρχει στους ρόλους ενός χρήστη για να έχει πρόσβαση στον πίνακα διαχείρισης. Αφήστε το κενό εάν δεν γνωρίζετε τι είναι αυτή η ρύθμιση." + "Leave it blank if you don't know what this config is.",
   "admin.config.oauth.oidc-client-id": "OpenID Connect Client ID",
-  "admin.config.oauth.oidc-client-id.description":
-    "Client ID της εφαρμογής OpenID Connect OAuth",
+  "admin.config.oauth.oidc-client-id.description": "Client ID της εφαρμογής OpenID Connect OAuth",
   "admin.config.oauth.oidc-client-secret": "OpenID Connect Client secret",
-  "admin.config.oauth.oidc-client-secret.description":
-    "Client secret της εφαρμογής OpenID Connect OAuth",
+  "admin.config.oauth.oidc-client-secret.description": "Client secret της εφαρμογής OpenID Connect OAuth",
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "Ενεργοποίηση LDAP",
-  "admin.config.ldap.enabled.description":
-    "Χρήση ελέγχου ταυτότητας LDAP για τη σύνδεση χρηστών",
+  "admin.config.ldap.enabled.description": "Χρήση ελέγχου ταυτότητας LDAP για τη σύνδεση χρηστών",
   "admin.config.ldap.url": "Server URL",
   "admin.config.ldap.url.description": "URL του διακομιστή LDAP",
   "admin.config.ldap.bind-dn": "Bind DN",
-  "admin.config.ldap.bind-dn.description":
-    "Προεπιλεγμένος χρήστης που χρησιμοποιείται για την εκτέλεση της αναζήτησης χρηστών",
+  "admin.config.ldap.bind-dn.description": "Προεπιλεγμένος χρήστης που χρησιμοποιείται για την εκτέλεση της αναζήτησης χρηστών",
   "admin.config.ldap.bind-password": "Bind password",
-  "admin.config.ldap.bind-password.description":
-    "Κωδικός πρόσβασης που χρησιμοποιείται για την εκτέλεση της αναζήτησης χρηστών",
+  "admin.config.ldap.bind-password.description": "Κωδικός πρόσβασης που χρησιμοποιείται για την εκτέλεση της αναζήτησης χρηστών",
   "admin.config.ldap.search-base": "User base",
-  "admin.config.ldap.search-base.description":
-    "Τοποθεσία βάσης, όπου θα εκτελεστεί η αναζήτηση χρηστών",
+  "admin.config.ldap.search-base.description": "Τοποθεσία βάσης, όπου θα εκτελεστεί η αναζήτηση χρηστών",
   "admin.config.ldap.search-query": "User query",
-  "admin.config.ldap.search-query.description":
-    "Το ερώτημα χρήστη θα χρησιμοποιηθεί για την αναζήτηση του χρήστη LDAP στο 'User base'. Το %username% μπορεί να χρησιμοποιηθεί ως σύμβολο κράτησης θέσης για την είσοδο του χρήστη.",
+  "admin.config.ldap.search-query.description": "Το ερώτημα χρήστη θα χρησιμοποιηθεί για την αναζήτηση του χρήστη LDAP στο 'User base'. Το %username% μπορεί να χρησιμοποιηθεί ως σύμβολο κράτησης θέσης για την είσοδο του χρήστη.",
   "admin.config.ldap.admin-groups": "Admin group",
-  "admin.config.ldap.admin-groups.description":
-    "Ομάδα που απαιτείται για διαχειριστική πρόσβαση.",
+  "admin.config.ldap.admin-groups.description": "Ομάδα που απαιτείται για διαχειριστική πρόσβαση.",
   "admin.config.ldap.field-name-member-of": "User groups attribute name",
-  "admin.config.ldap.field-name-member-of.description":
-    "Όνομα χαρακτηριστικού LDAP για τις ομάδες στις οποίες είναι μέλος ένας χρήστης. Αυτό χρησιμοποιείται κατά τον έλεγχο για την ομάδα διαχειριστών.",
+  "admin.config.ldap.field-name-member-of.description": "Όνομα χαρακτηριστικού LDAP για τις ομάδες στις οποίες είναι μέλος ένας χρήστης. Αυτό χρησιμοποιείται κατά τον έλεγχο για την ομάδα διαχειριστών.",
   "admin.config.ldap.field-name-email": "User email attribute name",
-  "admin.config.ldap.field-name-email.description":
-    "Όνομα χαρακτηριστικού LDAP για το email ενός χρήστη.",
+  "admin.config.ldap.field-name-email.description": "Όνομα χαρακτηριστικού LDAP για το email ενός χρήστη.",
   "admin.config.notify.success": "Οι ρυθμίσεις ενημερώθηκαν με επιτυχία.",
-  "admin.config.notify.logo-success":
-    "Το λογότυπο ενημερώθηκε με επιτυχία. Ενδέχεται να χρειαστούν λίγα λεπτά για να ενημερωθεί στον ιστότοπο.",
+  "admin.config.notify.logo-success": "Το λογότυπο ενημερώθηκε με επιτυχία. Ενδέχεται να χρειαστούν λίγα λεπτά για να ενημερωθεί στον ιστότοπο.",
   "admin.config.notify.no-changes": "Δεν υπάρχουν αλλαγές προς αποθήκευση.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Ενεργοποιημένο",
-  "admin.config.s3.enabled.description":
-    "Εάν το S3 θα πρέπει να χρησιμοποιείται για την αποθήκευση των κοινόχρηστων αρχείων αντί για το τοπικό σύστημα αρχείων. ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Εάν το ClamAV είναι ενεργό, τα αρχεία θα λαμβάνονται προσωρινά από το S3 για έλεγχο.",
+  "admin.config.s3.enabled.description": "Εάν το S3 θα πρέπει να χρησιμοποιείται για την αποθήκευση των κοινόχρηστων αρχείων αντί για το τοπικό σύστημα αρχείων. ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Εάν το ClamAV είναι ενεργό, τα αρχεία θα λαμβάνονται προσωρινά από το S3 για έλεγχο.",
   "admin.config.s3.endpoint": "Endpoint",
   "admin.config.s3.endpoint.description": "Το URL του S3 bucket.",
   "admin.config.s3.region": "Περιοχή",
@@ -838,35 +618,25 @@ export default {
   "admin.config.s3.bucket-name": "Όνομα bucket",
   "admin.config.s3.bucket-name.description": "Το όνομα του S3 bucket.",
   "admin.config.s3.bucket-path": "Διαδρομή",
-  "admin.config.s3.bucket-path.description":
-    "Η προεπιλεγμένη διαδρομή που πρέπει να χρησιμοποιείται για την αποθήκευση των αρχείων στο S3 bucket.",
+  "admin.config.s3.bucket-path.description": "Η προεπιλεγμένη διαδρομή που πρέπει να χρησιμοποιείται για την αποθήκευση των αρχείων στο S3 bucket.",
   "admin.config.s3.key": "Key",
-  "admin.config.s3.key.description":
-    "Το κλειδί που σας επιτρέπει την πρόσβαση στο S3 bucket.",
+  "admin.config.s3.key.description": "Το κλειδί που σας επιτρέπει την πρόσβαση στο S3 bucket.",
   "admin.config.s3.secret": "Secret",
-  "admin.config.s3.secret.description":
-    "Το μυστικό που σας επιτρέπει την πρόσβαση στο S3 bucket.",
+  "admin.config.s3.secret.description": "Το μυστικό που σας επιτρέπει την πρόσβαση στο S3 bucket.",
   "admin.config.s3.use-checksum": "Χρήση checksum",
-  "admin.config.s3.use-checksum.description":
-    "Απενεργοποιήστε για backends που δεν υποστηρίζουν checksum (π.χ. B2).",
-  "admin.config.s3.docs-link":
-    "Το CORS πρέπει να αναδιαμορφωθεί στο bucket σας, ανατρέξτε στο {wikiLink} για λεπτομέρειες.",
+  "admin.config.s3.use-checksum.description": "Απενεργοποιήστε για backends που δεν υποστηρίζουν checksum (π.χ. B2).",
+  "admin.config.s3.docs-link": "Το CORS πρέπει να αναδιαμορφωθεί στο bucket σας, ανατρέξτε στο {wikiLink} για λεπτομέρειες.",
   "admin.config.category.legal": "Νομικά",
   "admin.config.legal.enabled": "Ενεργοποίηση νομικών ειδοποιήσεων",
-  "admin.config.legal.enabled.description":
-    "Εάν θα εμφανίζεται σύνδεσμος για τα νομικά στοιχεία (imprint) και την πολιτική απορρήτου στο υποσέλιδο.",
+  "admin.config.legal.enabled.description": "Εάν θα εμφανίζεται σύνδεσμος για τα νομικά στοιχεία (imprint) και την πολιτική απορρήτου στο υποσέλιδο.",
   "admin.config.legal.imprint-text": "Κείμενο νομικών στοιχείων (Imprint)",
-  "admin.config.legal.imprint-text.description":
-    "Το κείμενο που πρέπει να εμφανίζεται στα νομικά στοιχεία. Υποστηρίζει Markdown. Αφήστε το κενό για σύνδεση σε μια εξωτερική σελίδα νομικών στοιχείων.",
+  "admin.config.legal.imprint-text.description": "Το κείμενο που πρέπει να εμφανίζεται στα νομικά στοιχεία. Υποστηρίζει Markdown. Αφήστε το κενό για σύνδεση σε μια εξωτερική σελίδα νομικών στοιχείων.",
   "admin.config.legal.imprint-url": "URL νομικών στοιχείων (Imprint)",
-  "admin.config.legal.imprint-url.description":
-    "Εάν έχετε ήδη σελίδα νομικών στοιχείων, μπορείτε να τη συνδέσετε εδώ αντί να χρησιμοποιήσετε το πεδίο κειμένου.",
+  "admin.config.legal.imprint-url.description": "Εάν έχετε ήδη σελίδα νομικών στοιχείων, μπορείτε να τη συνδέσετε εδώ αντί να χρησιμοποιήσετε το πεδίο κειμένου.",
   "admin.config.legal.privacy-policy-text": "Κείμενο πολιτικής απορρήτου",
-  "admin.config.legal.privacy-policy-text.description":
-    "Το κείμενο που πρέπει να εμφανίζεται στην πολιτική απορρήτου. Υποστηρίζει Markdown. Αφήστε το κενό για σύνδεση σε μια εξωτερική σελίδα πολιτικής απορρήτου.",
+  "admin.config.legal.privacy-policy-text.description": "Το κείμενο που πρέπει να εμφανίζεται στην πολιτική απορρήτου. Υποστηρίζει Markdown. Αφήστε το κενό για σύνδεση σε μια εξωτερική σελίδα πολιτικής απορρήτου.",
   "admin.config.legal.privacy-policy-url": "URL πολιτικής απορρήτου",
-  "admin.config.legal.privacy-policy-url.description":
-    "Εάν έχετε ήδη σελίδα πολιτικής απορρήτου, μπορείτε να τη συνδέσετε εδώ αντί να χρησιμοποιήσετε το πεδίο κειμένου.",
+  "admin.config.legal.privacy-policy-url.description": "Εάν έχετε ήδη σελίδα πολιτικής απορρήτου, μπορείτε να τη συνδέσετε εδώ αντί να χρησιμοποιήσετε το πεδίο κειμένου.",
   // 404
   "404.description": "Ουπς. Αυτή η σελίδα δεν υπάρχει.",
   "404.button.home": "Πήγαινέ με πίσω",
@@ -875,28 +645,18 @@ export default {
   "error.description": "Ωχ!",
   "error.button.back": "Πάμε πίσω",
   "error.msg.default": "Κάτι πήγε στραβά.",
-  "error.msg.access_denied":
-    "Ακυρώσατε τη διαδικασία ελέγχου ταυτότητας, παρακαλώ προσπαθήστε ξανά.",
-  "error.msg.expired_token":
-    "Η διαδικασία ελέγχου ταυτότητας διήρκεσε πολύ, παρακαλώ προσπαθήστε ξανά.",
+  "error.msg.access_denied": "Ακυρώσατε τη διαδικασία ελέγχου ταυτότητας, παρακαλώ προσπαθήστε ξανά.",
+  "error.msg.expired_token": "Η διαδικασία ελέγχου ταυτότητας διήρκεσε πολύ, παρακαλώ προσπαθήστε ξανά.",
   "error.msg.invalid_token": "Εσωτερικό σφάλμα",
-  "error.msg.no_user":
-    "Ο χρήστης που συνδέεται με αυτόν τον λογαριασμό {0} δεν υπάρχει.",
-  "error.msg.no_email":
-    "Δεν είναι δυνατή η λήψη διεύθυνσης ηλεκτρονικού ταχυδρομείου για αυτόν τον λογαριασμό {0}.",
-  "error.msg.already_linked":
-    "Αυτός ο λογαριασμός {0} είναι ήδη συνδεδεμένος με άλλο λογαριασμό.",
-  "error.msg.not_linked":
-    "Αυτός ο λογαριασμός {0} δεν έχει συνδεθεί ακόμη με κανέναν λογαριασμό.",
-  "error.msg.email_already_exists":
-    "Υπάρχει ήδη ένας λογαριασμός με αυτή τη διεύθυνση email. Παρακαλώ συνδεθείτε με τον κωδικό πρόσβασής σας και συνδέστε χειροκίνητα τον λογαριασμό σας {0} στη σελίδα Ο λογαριασμός μου.",
-  "error.msg.email_not_verified":
-    "Η διεύθυνση email σας σε αυτόν τον λογαριασμό {0} δεν έχει επαληθευτεί. Παρακαλώ επαληθεύστε το email σας με τον πάροχο ταυτότητάς σας πριν συνδεθείτε.",
-  "error.msg.unverified_account":
-    "Αυτός ο λογαριασμός {0} δεν έχει επαληθευτεί, παρακαλώ προσπαθήστε ξανά μετά την επαλήθευση.",
+  "error.msg.no_user": "Ο χρήστης που συνδέεται με αυτόν τον λογαριασμό {0} δεν υπάρχει.",
+  "error.msg.no_email": "Δεν είναι δυνατή η λήψη διεύθυνσης ηλεκτρονικού ταχυδρομείου για αυτόν τον λογαριασμό {0}.",
+  "error.msg.already_linked": "Αυτός ο λογαριασμός {0} είναι ήδη συνδεδεμένος με άλλο λογαριασμό.",
+  "error.msg.not_linked": "Αυτός ο λογαριασμός {0} δεν έχει συνδεθεί ακόμη με κανέναν λογαριασμό.",
+  "error.msg.email_already_exists": "Υπάρχει ήδη ένας λογαριασμός με αυτή τη διεύθυνση email. Παρακαλώ συνδεθείτε με τον κωδικό πρόσβασής σας και συνδέστε χειροκίνητα τον λογαριασμό σας {0} στη σελίδα Ο λογαριασμός μου.",
+  "error.msg.email_not_verified": "Η διεύθυνση email σας σε αυτόν τον λογαριασμό {0} δεν έχει επαληθευτεί. Παρακαλώ επαληθεύστε το email σας με τον πάροχο ταυτότητάς σας πριν συνδεθείτε.",
+  "error.msg.unverified_account": "Αυτός ο λογαριασμός {0} δεν έχει επαληθευτεί, παρακαλώ προσπαθήστε ξανά μετά την επαλήθευση.",
   "error.msg.user_not_allowed": "Δεν σας επιτρέπεται η σύνδεση.",
-  "error.msg.cannot_get_user_info":
-    "Δεν είναι δυνατή η λήψη των πληροφοριών χρήστη από αυτόν τον λογαριασμό {0}.",
+  "error.msg.cannot_get_user_info": "Δεν είναι δυνατή η λήψη των πληροφοριών χρήστη από αυτόν τον λογαριασμό {0}.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
@@ -934,30 +694,21 @@ export default {
   "common.error": "Σφάλμα",
   "common.error.unknown": "Προέκυψε άγνωστο σφάλμα",
   "common.error.invalid-email": "Μη έγκυρη διεύθυνση e-mail",
-  "common.error.too-short":
-    "Πρέπει να αποτελείται τουλάχιστον {length} χαρακτήρες",
-  "common.error.too-long":
-    "Πρέπει να αποτελείται το πολύ από {length} χαρακτήρες",
+  "common.error.too-short": "Πρέπει να αποτελείται τουλάχιστον {length} χαρακτήρες",
+  "common.error.too-long": "Πρέπει να αποτελείται το πολύ από {length} χαρακτήρες",
   "common.error.number-too-small": "Πρέπει να είναι τουλάχιστον {min}",
   "common.error.number-too-large": "Πρέπει να είναι το πολύ {max}",
-  "common.error.exact-length":
-    "Πρέπει να αποτελείται ακριβώς από {length} χαρακτήρες",
+  "common.error.exact-length": "Πρέπει να αποτελείται ακριβώς από {length} χαρακτήρες",
   "common.error.invalid-number": "Πρέπει να είναι αριθμός",
   "common.error.field-required": "Αυτό το πεδίο είναι υποχρεωτικό",
-  "common.error.password.lowercase":
-    "Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον ένα πεζό γράμμα",
-  "common.error.password.uppercase":
-    "Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον ένα κεφαλαίο γράμμα",
-  "common.error.password.number":
-    "Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον έναν αριθμό",
-  "common.error.password.special":
-    "Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον έναν ειδικό χαρακτήρα",
+  "common.error.password.lowercase": "Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον ένα πεζό γράμμα",
+  "common.error.password.uppercase": "Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον ένα κεφαλαίο γράμμα",
+  "common.error.password.number": "Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον έναν αριθμό",
+  "common.error.password.special": "Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον έναν ειδικό χαρακτήρα",
   "admin.notice.modal.headerTag": "ΑΠΑΙΤΕΙΤΑΙ ΔΙΑΧΕΙΡΙΣΤΙΚΗ ΕΝΕΡΓΕΙΑ",
-  "admin.notice.modal.defaultCheckboxLabel":
-    "Επιβεβαιώνω ότι έχω διαβάσει αυτή την ειδοποίηση και κατανοώ τις ριζικές αλλαγές.",
+  "admin.notice.modal.defaultCheckboxLabel": "Επιβεβαιώνω ότι έχω διαβάσει αυτή την ειδοποίηση και κατανοώ τις ριζικές αλλαγές.",
   "admin.notice.modal.button.acknowledge": "Επιβεβαίωση & Απόρριψη",
   "admin.notice.modal.button.acknowledging": "Επιβεβαίωση...",
   "admin.notice.modal.docsLink": "Προβολή τεκμηρίωσης",
-  "admin.notice.modal.globalNoticeFooter":
-    "Σημείωση: Μόλις επιβεβαιωθεί, αυτή η ειδοποίηση θα απορριφθεί οριστικά για όλους τους διαχειριστές σε όλες τις συσκευές.",
+  "admin.notice.modal.globalNoticeFooter": "Σημείωση: Μόλις επιβεβαιωθεί, αυτή η ειδοποίηση θα απορριφθεί οριστικά για όλους τους διαχειριστές σε όλες τις συσκευές.",
 };
