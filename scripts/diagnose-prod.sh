@@ -48,44 +48,46 @@ console.log(\"  resolves to  :\", p.isAbsolute(f)?f:p.resolve(process.cwd(),\"pr
 "'
 
 echo
-echo "== row counts =="
-if command -v sqlite3 >/dev/null 2>&1; then
-  # every read below passes -readonly on purpose: this runs against a live
-  # instance and must never take a write lock or touch a page
-  DB="$DATA/pingvin-share.db"
-  for t in Share File User Config ShareAccessLog _prisma_migrations; do
-    printf "  %-20s %s\n" "$t" "$(sqlite3 -readonly "$DB" "SELECT COUNT(*) FROM \"$t\";" 2>/dev/null || echo "?")"
-  done
-  echo "  integrity: $(sqlite3 -readonly "$DB" 'PRAGMA integrity_check;' 2>/dev/null | head -1)"
-  echo
-  echo "== newest and oldest share =="
-  sqlite3 -readonly -header "$DB" "SELECT id, datetime(createdAt/1000,'unixepoch') AS created FROM Share ORDER BY createdAt LIMIT 3;" 2>/dev/null
-  sqlite3 -readonly -header "$DB" "SELECT id, datetime(createdAt/1000,'unixepoch') AS created FROM Share ORDER BY createdAt DESC LIMIT 3;" 2>/dev/null
-else
-  echo "  sqlite3 not installed on the host, skipping"
-fi
+echo "== database contents =="
+# queried from inside the container: the host often has no sqlite3, and the
+# database lives on a volume whose host path we would have to guess. node:sqlite
+# ships with the runtime and is opened read only here.
+$RUN exec "$CT" node -e '
+const { DatabaseSync } = require("node:sqlite");
+const db = new DatabaseSync("/opt/app/backend/data/pingvin-share.db", { readOnly: true });
+const one = (sql) => { try { return Object.values(db.prepare(sql).get())[0]; } catch (e) { return "?"; } };
+const all = (sql) => { try { return db.prepare(sql).all(); } catch (e) { return []; } };
+
+for (const t of ["Share","File","User","Config","ShareAccessLog","_prisma_migrations"]) {
+  console.log("  " + t.padEnd(20) + one(`SELECT COUNT(*) FROM "${t}"`));
+}
+console.log("  integrity            " + one("PRAGMA integrity_check"));
+
+const span = all("SELECT MIN(createdAt) a, MAX(createdAt) b FROM Share")[0];
+if (span && span.a) {
+  const d = (v) => new Date(Number(v)).toISOString().slice(0,16).replace("T"," ");
+  console.log("  oldest share         " + d(span.a));
+  console.log("  newest share         " + d(span.b));
+}
+
+console.log("");
+console.log("== migrations, newest first ==");
+for (const r of all("SELECT migration_name FROM _prisma_migrations ORDER BY finished_at DESC LIMIT 10"))
+  console.log("  " + r.migration_name);
+
+console.log("");
+console.log("== config sanity ==");
+const watch = ["allowAdminAccessAllShares","fileRetentionPeriod","maxExpiration","allowRegistration"];
+for (const r of all("SELECT category, name, value FROM Config").filter(r => watch.includes(r.name)))
+  console.log("  " + r.category + "." + r.name + " = " + (r.value === null ? "<default>" : r.value));
+console.log("  categories: " + all("SELECT DISTINCT category FROM Config ORDER BY category").map(r=>r.category).join(", "));
+db.close();
+' 2>&1
 
 echo
-echo "== share directories on disk vs rows in the database =="
-echo "  directories: $(ls -1 "$DATA/uploads/shares" 2>/dev/null | wc -l)"
-if command -v sqlite3 >/dev/null 2>&1; then
-  echo "  rows       : $(sqlite3 -readonly "$DATA/pingvin-share.db" 'SELECT COUNT(*) FROM Share;' 2>/dev/null)"
-fi
+echo "== share directories inside the container =="
+$RUN exec "$CT" sh -c 'ls -1 /opt/app/backend/data/uploads/shares 2>/dev/null | wc -l | sed "s/^/  directories: /"'
 
-echo
-echo "== migrations applied =="
-if command -v sqlite3 >/dev/null 2>&1; then
-  sqlite3 -readonly "$DATA/pingvin-share.db" "SELECT migration_name FROM _prisma_migrations ORDER BY finished_at DESC LIMIT 12;" 2>/dev/null | sed 's/^/  /'
-fi
-
-echo
-echo "== config sanity =="
-if command -v sqlite3 >/dev/null 2>&1; then
-  sqlite3 -readonly "$DATA/pingvin-share.db" "SELECT '  '||category||'.'||name||' = '||COALESCE(value,'<default>') FROM Config WHERE name IN ('allowAdminAccessAllShares','fileRetentionPeriod','maxExpiration','allowRegistration');" 2>/dev/null
-  echo "  categories: $(sqlite3 -readonly "$DATA/pingvin-share.db" 'SELECT group_concat(DISTINCT category) FROM Config;' 2>/dev/null)"
-fi
-
-echo
 echo "== anything in the log about deleting =="
 $RUN logs "$CT" 2>&1 \
   | grep -vE "RouterExplorer|RoutesResolver|InstanceLoader" \
