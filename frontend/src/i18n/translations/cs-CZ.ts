@@ -571,7 +571,7 @@ export default {
   "admin.config.oauth.oidc-discovery-uri": "Adresa OpenID Connect Discovery",
   "admin.config.oauth.oidc-discovery-uri.description": "Discovery URL OpenID Connect OAuth aplikace",
   "admin.config.oauth.oidc-sign-out": "Odhlásit se z OpenID Connect",
-  "admin.config.oauth.oidc-sign-out.description": 'Zda tlačítko "Odhlásit" odhlásí od poskytovatele OpenID Connect',
+  "admin.config.oauth.oidc-sign-out.description": "Zda tlačítko \"Odhlásit\" odhlásí od poskytovatele OpenID Connect",
   "admin.config.oauth.oidc-scope": "OpenID Connect informace",
   "admin.config.oauth.oidc-scope.description": "Informace, které by měly být požadovány od poskytovatele OpenID Connect.",
   "admin.config.oauth.oidc-username-claim": "OpenID Connect požadavek uživatele",
@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Potvrdit a skrýt",
   "admin.notice.modal.button.acknowledging": "Potvrzování...",
   "admin.notice.modal.docsLink": "Zobrazit dokumentaci",
-  "admin.notice.modal.globalNoticeFooter": "Poznámka: Po potvrzení bude toto upozornění trvale skryto všem administrátorům na všech zařízeních.",
+  "admin.notice.modal.globalNoticeFooter": "Poznámka: Po potvrzení bude toto upozornění trvale skryto všem administrátorům na všech zařízeních."
 };
