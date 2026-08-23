@@ -598,7 +598,7 @@ export default {
   "admin.config.ldap.search-base": "Benutzerbasis",
   "admin.config.ldap.search-base.description": "Basisstandort, an dem die Benutzersuche durchgeführt wird",
   "admin.config.ldap.search-query": "Benutzerabfrage",
-  "admin.config.ldap.search-query.description": 'Die Benutzer Abfrage wird in der "Benutzerdatenbank" gesucht für den LDAP Benutzer. %username% kann als Platzhalter für den Benutzer eingegeben werden.',
+  "admin.config.ldap.search-query.description": "Die Benutzer Abfrage wird in der \"Benutzerdatenbank\" gesucht für den LDAP Benutzer. %username% kann als Platzhalter für den Benutzer eingegeben werden.",
   "admin.config.ldap.admin-groups": "Admin-Gruppe",
   "admin.config.ldap.admin-groups.description": "Gruppe benötigt für den Administrationszugang.",
   "admin.config.ldap.field-name-member-of": "Benutzergruppen-Attributname",
@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Bestätigen & Schließen",
   "admin.notice.modal.button.acknowledging": "Wird bestätigt...",
   "admin.notice.modal.docsLink": "Dokumentation anzeigen",
-  "admin.notice.modal.globalNoticeFooter": "Hinweis: Nach der Bestätigung wird dieser Hinweis für alle Administratoren auf allen Geräten dauerhaft ausgeblendet.",
+  "admin.notice.modal.globalNoticeFooter": "Hinweis: Nach der Bestätigung wird dieser Hinweis für alle Administratoren auf allen Geräten dauerhaft ausgeblendet."
 };
