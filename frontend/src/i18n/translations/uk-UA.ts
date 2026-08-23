@@ -331,7 +331,7 @@ export default {
   // /share/[id]
   "share.title": "Завантаження {shareId}",
   "share.description": "Подивіться, чим я поділився з вами!",
-  "share.fileCount": "{count, plural, one {# файл} few {# файли} many {# файлів} other {# файлів}} · {size} (ZIP-архів може бути меншим через стиснення)",
+  "share.fileCount": "{count, plural, =1 {# file} other {# files}} · {size} (zip file may be smaller due to compression)",
   "share.copy-text-contents": "Скопіювати вміст файлу в буфер обміну",
   "share.error.visitor-limit-exceeded.title": "Перевищено ліміт відвідувачів",
   "share.error.visitor-limit-exceeded.description": "Перевищено ліміт відвідувачів.",
@@ -571,7 +571,7 @@ export default {
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect Discovery URI",
   "admin.config.oauth.oidc-discovery-uri.description": "URI Discovery URI додатка OpenID Connect OAuth",
   "admin.config.oauth.oidc-sign-out": "Вийти з OpenID Connect",
-  "admin.config.oauth.oidc-sign-out.description": 'Чи буде кнопка "Вийти" виводити користувача з постачальника OpenID Connect',
+  "admin.config.oauth.oidc-sign-out.description": "Чи буде кнопка \"Вийти\" виводити користувача з постачальника OpenID Connect",
   "admin.config.oauth.oidc-scope": "Область OpenID Connect",
   "admin.config.oauth.oidc-scope.description": "Області (scopes), які слід запитати у постачальника OpenID Connect.",
   "admin.config.oauth.oidc-username-claim": "Заява на ім'я користувача OpenID Connect",
@@ -598,7 +598,7 @@ export default {
   "admin.config.ldap.search-base": "База користувачів",
   "admin.config.ldap.search-base.description": "Базове розташування, де буде виконано пошук користувача",
   "admin.config.ldap.search-query": "Запит користувача",
-  "admin.config.ldap.search-query.description": 'Запит користувача буде використовуватися для пошуку користувача LDAP в "Базі користувачів". %username% можна використовувати як заповнювач для введених користувачем даних.',
+  "admin.config.ldap.search-query.description": "Запит користувача буде використовуватися для пошуку користувача LDAP в \"Базі користувачів\". %username% можна використовувати як заповнювач для введених користувачем даних.",
   "admin.config.ldap.admin-groups": "Адмін-група",
   "admin.config.ldap.admin-groups.description": "Група, необхідна для адміністративного доступу.",
   "admin.config.ldap.field-name-member-of": "Назва атрибута груп користувачів",
@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Підтвердити та закрити",
   "admin.notice.modal.button.acknowledging": "Підтвердження...",
   "admin.notice.modal.docsLink": "Переглянути документацію",
-  "admin.notice.modal.globalNoticeFooter": "Примітка: Після підтвердження це сповіщення буде назавжди приховано для всіх адміністраторів на всіх пристроях.",
+  "admin.notice.modal.globalNoticeFooter": "Примітка: Після підтвердження це сповіщення буде назавжди приховано для всіх адміністраторів на всіх пристроях."
 };
