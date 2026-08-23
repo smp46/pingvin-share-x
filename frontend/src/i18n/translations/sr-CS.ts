@@ -529,7 +529,7 @@ export default {
   "admin.config.smtp.test-email.save.description": "Da biste nastavili, prvo morate sačuvati konfiguraciju. Želite li da sačuvate konfiguraciju i pošaljete test imejl?",
   "admin.config.smtp.test-email.save.confirm": "Sačuvaj i pošalji",
   "admin.config.smtp.allow-unauthorized-certificates": "Verovanje neautorizovanim SMTP serverskim sertifikatima",
-  "admin.config.smtp.allow-unauthorized-certificates.description": 'Ovo postavite na "istina" samo ako je potrebno verovati samo-potpisanim sertifikatima.',
+  "admin.config.smtp.allow-unauthorized-certificates.description": "Ovo postavite na \"istina\" samo ako je potrebno verovati samo-potpisanim sertifikatima.",
   "admin.config.oauth.allow-registration": "Dozvoli registraciju",
   "admin.config.oauth.allow-registration.description": "Dozvolite korisnicima da se registruju putem društvene prijave",
   "admin.config.oauth.ignore-totp": "Zanemari TOTP",
@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Potvrdi i zatvori",
   "admin.notice.modal.button.acknowledging": "Potvrđivanje...",
   "admin.notice.modal.docsLink": "Prikaži dokumentaciju",
-  "admin.notice.modal.globalNoticeFooter": "Napomena: Nakon što se potvrdi, ovo obaveštenje će biti trajno uklonjeno za sve administratore na svim uređajima.",
+  "admin.notice.modal.globalNoticeFooter": "Napomena: Nakon što se potvrdi, ovo obaveštenje će biti trajno uklonjeno za sve administratore na svim uređajima."
 };
