@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Xác nhận & Đóng",
   "admin.notice.modal.button.acknowledging": "Đang xác nhận...",
   "admin.notice.modal.docsLink": "Xem tài liệu hướng dẫn",
-  "admin.notice.modal.globalNoticeFooter": "Lưu ý: Sau khi xác nhận, thông báo này sẽ bị ẩn vĩnh viễn đối với tất cả quản trị viên trên mọi thiết bị.",
+  "admin.notice.modal.globalNoticeFooter": "Lưu ý: Sau khi xác nhận, thông báo này sẽ bị ẩn vĩnh viễn đối với tất cả quản trị viên trên mọi thiết bị."
 };
