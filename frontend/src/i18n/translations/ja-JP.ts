@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "確認して閉じる",
   "admin.notice.modal.button.acknowledging": "確認中...",
   "admin.notice.modal.docsLink": "ドキュメントを表示",
-  "admin.notice.modal.globalNoticeFooter": "注: 一度確認すると、この通知はすべてのデバイスのすべての管理者に対して永久に非表示になります。",
+  "admin.notice.modal.globalNoticeFooter": "注: 一度確認すると、この通知はすべてのデバイスのすべての管理者に対して永久に非表示になります。"
 };
