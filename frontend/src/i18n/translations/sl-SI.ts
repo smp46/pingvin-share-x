@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Potrdi in zapri",
   "admin.notice.modal.button.acknowledging": "Potrjevanje...",
   "admin.notice.modal.docsLink": "Ogled dokumentacije",
-  "admin.notice.modal.globalNoticeFooter": "Opomba: Ko je obvestilo potrjeno, bo trajno odstranjeno za vse administratorje na vseh napravah.",
+  "admin.notice.modal.globalNoticeFooter": "Opomba: Ko je obvestilo potrjeno, bo trajno odstranjeno za vse administratorje na vseh napravah."
 };
