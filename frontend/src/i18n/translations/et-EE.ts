@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Kinnita ja sulge",
   "admin.notice.modal.button.acknowledging": "Kinnitamine...",
   "admin.notice.modal.docsLink": "Vaata dokumentatsiooni",
-  "admin.notice.modal.globalNoticeFooter": "Märkus: Pärast kinnitamist eemaldatakse see teavitus jäädavalt kõigi administraatorite jaoks kõigis seadmetes.",
+  "admin.notice.modal.globalNoticeFooter": "Märkus: Pärast kinnitamist eemaldatakse see teavitus jäädavalt kõigi administraatorite jaoks kõigis seadmetes."
 };
