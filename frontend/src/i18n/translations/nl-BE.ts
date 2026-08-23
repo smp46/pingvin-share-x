@@ -571,7 +571,7 @@ export default {
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect Discovery-URI",
   "admin.config.oauth.oidc-discovery-uri.description": "Discovery URI van de OpenID Connect OAuth app",
   "admin.config.oauth.oidc-sign-out": "Uitloggen van OpenID Connect",
-  "admin.config.oauth.oidc-sign-out.description": 'Of de knop "Uitloggen" daadwerkelijk uitlogt bij de OpenID Connect-provider',
+  "admin.config.oauth.oidc-sign-out.description": "Of de knop \"Uitloggen\" daadwerkelijk uitlogt bij de OpenID Connect-provider",
   "admin.config.oauth.oidc-scope": "OpenID Connect-scope",
   "admin.config.oauth.oidc-scope.description": "Scopes die moeten worden aangevraagd bij de OpenID Connect-provider.",
   "admin.config.oauth.oidc-username-claim": "OpenID Connect gebruikersnaam claim",
@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Bevestigen en sluiten",
   "admin.notice.modal.button.acknowledging": "Bevestigen...",
   "admin.notice.modal.docsLink": "Documentatie bekijken",
-  "admin.notice.modal.globalNoticeFooter": "Opmerking: Zodra dit is bevestigd, wordt deze melding permanent verborgen voor alle beheerders op alle apparaten.",
+  "admin.notice.modal.globalNoticeFooter": "Opmerking: Zodra dit is bevestigd, wordt deze melding permanent verborgen voor alle beheerders op alle apparaten."
 };
