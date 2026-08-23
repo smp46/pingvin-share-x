@@ -331,7 +331,7 @@ export default {
   // /share/[id]
   "share.title": "Dijeljenje {shareId}",
   "share.description": "Pogledajte što sam podijelio s vama!",
-  "share.fileCount": "{count, plural, one {# datoteka} few {# datoteke} other {# datoteka}} · {size} (zip datoteka može biti manja zbog sažimanja)",
+  "share.fileCount": "{count, plural, =1 {# file} other {# files}} · {size} (zip file may be smaller due to compression)",
   "share.copy-text-contents": "Kopiraj sadržaj datoteke u međuspremnik",
   "share.error.visitor-limit-exceeded.title": "Prekoračeno ograničenje posjetitelja",
   "share.error.visitor-limit-exceeded.description": "Ograničenje broja posjetitelja za ovo dijeljenje je premašeno.",
@@ -529,7 +529,7 @@ export default {
   "admin.config.smtp.test-email.save.description": "Za nastavak morate prvo spremiti konfiguraciju. Želite li spremiti konfiguraciju i poslati testni email?",
   "admin.config.smtp.test-email.save.confirm": "Spremi i pošalji",
   "admin.config.smtp.allow-unauthorized-certificates": "Dopuštanje neautoriziranih SMTP certifikata",
-  "admin.config.smtp.allow-unauthorized-certificates.description": 'Postavite ovo na "točno" samo ako je potrebno vjerovati samo-potpisanim certifikatima.',
+  "admin.config.smtp.allow-unauthorized-certificates.description": "Postavite ovo na \"točno\" samo ako je potrebno vjerovati samo-potpisanim certifikatima.",
   "admin.config.oauth.allow-registration": "Dozvoli registraciju",
   "admin.config.oauth.allow-registration.description": "Dozvolite korisnicima da se registriraju putem društvene prijave",
   "admin.config.oauth.ignore-totp": "Zanemari TOTP",
@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Potvrdi i zatvori",
   "admin.notice.modal.button.acknowledging": "Potvrđivanje...",
   "admin.notice.modal.docsLink": "Prikaži dokumentaciju",
-  "admin.notice.modal.globalNoticeFooter": "Napomena: Nakon što se potvrdi, ova će obavijest biti trajno uklonjena za sve administratore na svim uređajima.",
+  "admin.notice.modal.globalNoticeFooter": "Napomena: Nakon što se potvrdi, ova će obavijest biti trajno uklonjena za sve administratore na svim uređajima."
 };
