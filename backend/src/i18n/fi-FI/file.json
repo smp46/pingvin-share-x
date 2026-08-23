@@ -14,5 +14,5 @@
   "s3SessionNotFound": "Moniosaisen latauksen istuntoa ei löytynyt.",
   "s3UploadFailed": "Moniosainen lataus epäonnistui. Lataus on keskeytetty.",
   "s3SizeError": "Tiedoston kokoa ei voitu hakea",
-  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
+  "s3NotSupported": "Esiallekirjoitetut toiminnot ovat tuettuja vain S3-tallennustilalle."
 }

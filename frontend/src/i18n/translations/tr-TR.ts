@@ -6,21 +6,25 @@ export default {
   "navbar.signup": "Kayıt Ol",
   "navbar.links.shares": "Paylaşımlarım",
   "navbar.links.reverse": "Karşı Paylaşımlar",
-  "navbar.links.received": "Received shares",
+  "navbar.links.received": "Alınan paylaşımlar",
   "navbar.avatar.account": "Hesabım",
   "navbar.avatar.admin": "Yönetim",
   "navbar.avatar.signout": "Çıkış Yap",
   // END navbar
 
   // /
-  "home.title": "Kendi sunucunuzda <h>barındırabileceğiniz</h> bir dosya paylaşım platformu.",
-  "home.description": "Kişisel dosyalarınızı gerçekten WeTransfer gibi üçüncü taraf hizmetlere emanet etmek istiyor musunuz?",
+  "home.title":
+    "Kendi sunucunuzda <h>barındırabileceğiniz</h> bir dosya paylaşım platformu.",
+  "home.description":
+    "Kişisel dosyalarınızı gerçekten WeTransfer gibi üçüncü taraf hizmetlere emanet etmek istiyor musunuz?",
   "home.bullet.a.name": "Kendi Sunucunda Barındır",
   "home.bullet.a.description": "Pingvin Share'i kendi sunucunuzda barındırın.",
   "home.bullet.b.name": "Gizlilik",
-  "home.bullet.b.description": "Dosyalarınız size aittir ve asla üçüncü taraflarca erişilemez.",
+  "home.bullet.b.description":
+    "Dosyalarınız size aittir ve asla üçüncü taraflarca erişilemez.",
   "home.bullet.c.name": "Can Sıkıcı Dosya Boyutu Limiti Yok",
-  "home.bullet.c.description": "İstediğiniz kadar büyük dosyalar yükleyin. Tek limitiniz sabit diskiniz olacak.",
+  "home.bullet.c.description":
+    "İstediğiniz kadar büyük dosyalar yükleyin. Tek limitiniz sabit diskiniz olacak.",
   "home.button.start": "Hemen Başlayın",
   "home.button.source": "Kaynak Kodu",
   // END /
@@ -30,12 +34,14 @@ export default {
   "signin.description": "Henüz bir hesabınız yok mu?",
   "signin.button.signup": "Kayıt Ol",
   "signin.input.email-or-username": "E-posta veya kullanıcı adı",
-  "signin.input.email-or-username.placeholder": "E-postanız veya kullanıcı adınız",
+  "signin.input.email-or-username.placeholder":
+    "E-postanız veya kullanıcı adınız",
   "signin.input.password": "Şifre",
   "signin.input.password.placeholder": "Şifreniz",
   "signin.button.submit": "Giriş Yap",
   "signIn.notify.totp-required.title": "İki faktörlü kimlik doğrulama gerekli",
-  "signIn.notify.totp-required.description": "Lütfen iki faktörlü kimlik doğrulama kodunuzu girin",
+  "signIn.notify.totp-required.description":
+    "Lütfen iki faktörlü kimlik doğrulama kodunuzu girin",
   "signIn.oauth.or": "VEYA",
   "signIn.oauth.signInWith": "Şununla giriş yap",
   "signIn.oauth.github": "GitHub",
@@ -55,16 +61,20 @@ export default {
   "signup.input.email.placeholder": "E-postanız",
   "signup.button.submit": "Hadi başlayalım",
   // /auth/verify
-  "verify.title": "Verify Account",
-  "verify.success": "Your account has been successfully verified! You can now sign in.",
-  "verify.error": "The verification link is invalid or has expired.",
-  "verify.button.signin": "Go to Sign In",
-  "verify.info.title": "Account Verification",
-  "verify.info.description": "Email verification is enabled. We've sent a verification link to your email address. Please click the link to activate your account.",
-  "verify.info.note": "If you don't receive the email within a few minutes, please check your spam folder.",
-  "verify.info.resend.button": "Resend verification email",
-  "verify.info.resend.success": "Verification email resent successfully.",
-  "verify.info.resend.error": "Failed to resend verification email.",
+  "verify.title": "Hesabı Doğrula",
+  "verify.success":
+    "Hesabınız başarıyla doğrulandı! Artık giriş yapabilirsiniz.",
+  "verify.error": "Doğrulama bağlantısı geçersiz veya süresi dolmuş.",
+  "verify.button.signin": "Giriş Yap'a Git",
+  "verify.info.title": "Hesap Doğrulama",
+  "verify.info.description":
+    "E-posta doğrulaması etkinleştirildi. E-posta adresinize bir doğrulama bağlantısı gönderdik. Hesabınızı etkinleştirmek için lütfen bağlantıya tıklayın.",
+  "verify.info.note":
+    "Birkaç dakika içinde e-postayı almazsanız, lütfen spam klasörünüzü kontrol edin.",
+  "verify.info.resend.button": "Doğrulama e-postasını tekrar gönder",
+  "verify.info.resend.success":
+    "Doğrulama e-postası başarıyla tekrar gönderildi.",
+  "verify.info.resend.error": "Doğrulama e-postası tekrar gönderilemedi.",
   // END /auth/signup
 
   // /auth/totp
@@ -75,7 +85,8 @@ export default {
   // /auth/reset-password
   "resetPassword.title": "Şifrenizi mi unuttunuz?",
   "resetPassword.description": "Şifrenizi sıfırlamak için e-postanızı girin.",
-  "resetPassword.notify.success": "Girilen e-posta adresi mevcutsa, şifrenizi sıfırlamanız için bir bağlantı içeren bir mesaj gönderilmiştir.",
+  "resetPassword.notify.success":
+    "Girilen e-posta adresi mevcutsa, şifrenizi sıfırlamanız için bir bağlantı içeren bir mesaj gönderilmiştir.",
   "resetPassword.button.back": "Giriş yapma sayfasına geri dön",
   "resetPassword.text.resetPassword": "Şifreyi sıfırla",
   "resetPassword.text.enterNewPassword": "Yeni şifrenizi girin",
@@ -90,7 +101,8 @@ export default {
   "account.card.password.title": "Şifre",
   "account.card.password.old": "Eski şifre",
   "account.card.password.new": "Yeni şifre",
-  "account.card.password.noPasswordSet": "Henüz bir şifre belirlemediniz. E-posta ve şifrenizle giriş yapabilmek için bir şifre oluşturmanız gerekmektedir.",
+  "account.card.password.noPasswordSet":
+    "Henüz bir şifre belirlemediniz. E-posta ve şifrenizle giriş yapabilmek için bir şifre oluşturmanız gerekmektedir.",
   "account.notify.password.success": "Şifre başarıyla değiştirildi",
   "account.card.oauth.title": "Sosyal medya ile giriş",
   "account.card.oauth.github": "GitHub",
@@ -102,11 +114,14 @@ export default {
   "account.card.oauth.unlink": "Bağlantıyı kaldır",
   "account.card.oauth.unlinked": "Bağlantı kaldırıldı",
   "account.modal.unlink.title": "Hesap bağlantısını kaldır",
-  "account.modal.unlink.description": "Sosyal medya hesaplarınızın bağlantısını kaldırmak, giriş bilgilerinizi hatırlamıyorsanız hesabınıza erişiminizi kaybetmenize neden olabilir.",
+  "account.modal.unlink.description":
+    "Sosyal medya hesaplarınızın bağlantısını kaldırmak, giriş bilgilerinizi hatırlamıyorsanız hesabınıza erişiminizi kaybetmenize neden olabilir.",
   "account.notify.oauth.unlinked.success": "Bağlantı başarıyla kaldırıldı",
   "account.card.security.title": "Güvenlik",
-  "account.card.security.totp.enable.description": "TOTP'yi etkinleştirmeye başlamak için mevcut şifrenizi girin.",
-  "account.card.security.totp.disable.description": "TOTP'yi devre dışı bırakmak için mevcut şifrenizi girin.",
+  "account.card.security.totp.enable.description":
+    "TOTP'yi etkinleştirmeye başlamak için mevcut şifrenizi girin.",
+  "account.card.security.totp.disable.description":
+    "TOTP'yi devre dışı bırakmak için mevcut şifrenizi girin.",
   "account.card.security.totp.button.start": "Başlat",
   "account.modal.totp.title": "TOTP'yi etkinleştir",
   "account.modal.totp.step1": "Adım 1: Kimlik doğrulayıcınızı ekleyin",
@@ -114,12 +129,13 @@ export default {
   "account.modal.totp.enterManually": "Manuel olarak gir",
   "account.modal.totp.code": "Kod",
   "common.button.clickToCopy": "Kopyalamak için tıkla",
-  "common.button.showQRCode": "Show QR code",
+  "common.button.showQRCode": "QR kodunu göster",
   "account.modal.totp.verify": "Doğrula",
   "account.notify.totp.disable": "TOTP başarıyla devre dışı bırakıldı",
   "account.notify.totp.enable": "TOTP başarıyla etkinleştirildi",
   "account.card.language.title": "Dil",
-  "account.card.language.description": "Proje topluluk tarafından çevrilmektedir. Bazı diller eksik olabilir.",
+  "account.card.language.description":
+    "Proje topluluk tarafından çevrilmektedir. Bazı diller eksik olabilir.",
   "account.card.color.title": "Renk şeması",
   // ThemeSwitcher.tsx
   "account.theme.dark": "Karanlık",
@@ -127,7 +143,8 @@ export default {
   "account.theme.system": "Sistem",
   "account.button.delete": "Hesabı Sil",
   "account.modal.delete.title": "Hesabı Sil",
-  "account.modal.delete.description": "Tüm aktif paylaşımlarınızla birlikte hesabınızı gerçekten silmek istiyor musunuz?",
+  "account.modal.delete.description":
+    "Tüm aktif paylaşımlarınızla birlikte hesabınızı gerçekten silmek istiyor musunuz?",
   // END /account
 
   // /account/shares
@@ -136,8 +153,8 @@ export default {
   "account.shares.description.empty": "Henüz hiç paylaşımınız yok.",
   "account.shares.button.create": "Bir tane oluştur",
   "account.shares.info.title": "Paylaşım bilgileri",
-  "account.shares.button.edit": "Add/Remove Files",
-  "account.shares.table.id": "ID",
+  "account.shares.button.edit": "Dosya Ekle/Kaldır",
+  "account.shares.table.id": "Kimlik",
   "account.shares.table.name": "İsim",
   "account.shares.table.description": "Açıklama",
   "account.shares.table.visitors": "Ziyaretçi Sayısı",
@@ -145,32 +162,38 @@ export default {
   "account.shares.table.createdAt": "Oluşturulma Tarihi",
   "account.shares.table.size": "Boyut",
   "account.shares.table.password-protected": "Şifre korumalı",
-  "account.shares.table.recipients": "Recipients",
-  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
-  "account.shares.table.shared-with-recipients": "Shared with recipients",
+  "account.shares.table.recipients": "Alıcılar",
+  "account.shares.table.restricted-to-recipients":
+    "Yalnızca alıcılarla sınırlandırılmış",
+  "account.shares.table.shared-with-recipients": "Alıcılarla paylaşıldı",
   "account.shares.table.visitor-count": "{max} üzerinden {count}",
   "account.shares.table.expiry-never": "Asla",
   "account.shares.modal.share-informations": "Paylaşım bilgileri",
   "account.shares.modal.share-link": "Paylaşım bağlantısı",
-  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
-  "account.shares.modal.edit.password.remove": "Remove password protection",
+  "account.shares.modal.edit.password.keep":
+    "Mevcut şifreyi korumak için boş bırakın",
+  "account.shares.modal.edit.password.remove": "Şifre korumasını kaldır",
   "account.shares.modal.delete.title": "Paylaşımı sil: {share}",
-  "account.shares.modal.delete.description": "Bu paylaşımı gerçekten silmek istiyor musunuz?",
+  "account.shares.modal.delete.description":
+    "Bu paylaşımı gerçekten silmek istiyor musunuz?",
   // END /account/shares
 
   // /account/received
-  "account.received-shares.title": "Received shares",
-  "account.received-shares.title.empty": "No shares received yet",
-  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
-  "account.received-shares.table.from": "From",
-  "account.received-shares.button.open": "Open",
+  "account.received-shares.title": "Alınan paylaşımlar",
+  "account.received-shares.title.empty": "Henüz alınan paylaşım yok",
+  "account.received-shares.description.empty":
+    "E-posta adresinize gönderilen paylaşımlar burada görünecektir.",
+  "account.received-shares.table.from": "Kimden",
+  "account.received-shares.button.open": "Aç",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Karşı Paylaşımlar",
-  "account.reverseShares.description": "Bir karşı paylaşım, dış kullanıcıların bir paylaşım oluşturmasına olanak tanıyan benzersiz bir URL oluşturmanızı sağlar.",
+  "account.reverseShares.description":
+    "Bir karşı paylaşım, dış kullanıcıların bir paylaşım oluşturmasına olanak tanıyan benzersiz bir URL oluşturmanızı sağlar.",
   "account.reverseShares.title.empty": "Buralar boş 👀",
-  "account.reverseShares.description.empty": "Henüz hiç karşı paylaşımınız yok.",
+  "account.reverseShares.description.empty":
+    "Henüz hiç karşı paylaşımınız yok.",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Karşı Paylaşım Oluştur",
   "account.reverseShares.modal.expiration.label": "Geçerlilik Süresi",
@@ -188,15 +211,21 @@ export default {
   "account.reverseShares.modal.expiration.year-plural": "Yıl",
   "account.reverseShares.modal.max-size.label": "Maksimum paylaşım boyutu",
   "account.reverseShares.modal.send-email": "E-posta bildirimleri gönder",
-  "account.reverseShares.modal.send-email.description": "Bu karşı paylaşım bağlantısıyla bir paylaşım oluşturulduğunda size bir e-posta bildirimi gönderir.",
+  "account.reverseShares.modal.send-email.description":
+    "Bu karşı paylaşım bağlantısıyla bir paylaşım oluşturulduğunda size bir e-posta bildirimi gönderir.",
   "account.reverseShares.modal.simplified": "Basit mod",
-  "account.reverseShares.modal.simplified.description": "Dosyayı yükleyen kişinin sizinle paylaşmasını kolaylaştırın. Sadece paylaşımın adını ve açıklamasını özelleştirebileceklerdir.",
+  "account.reverseShares.modal.simplified.description":
+    "Dosyayı yükleyen kişinin sizinle paylaşmasını kolaylaştırın. Sadece paylaşımın adını ve açıklamasını özelleştirebileceklerdir.",
   "account.reverseShares.modal.public-access": "Herkese açık erişim",
-  "account.reverseShares.modal.public-access.description": "Bu karşı paylaşım bağlantısıyla oluşturulan paylaşımları herkese açık yapın. Devre dışı bırakılırsa, yalnızca siz ve paylaşımı oluşturan kişi görüntüleyebilir.",
+  "account.reverseShares.modal.public-access.description":
+    "Bu karşı paylaşım bağlantısıyla oluşturulan paylaşımları herkese açık yapın. Devre dışı bırakılırsa, yalnızca siz ve paylaşımı oluşturan kişi görüntüleyebilir.",
   "account.reverseShares.modal.max-use.label": "Maksimum kullanım sayısı",
-  "account.reverseShares.modal.max-use.description": "Bu URL'nin bir paylaşım oluşturmak için kullanılabileceği maksimum sayı.",
-  "account.reverseShare.never-expires": "Bu karşı paylaşımın süresi asla dolmayacak.",
-  "account.reverseShare.expires-on": "Bu karşı paylaşımın süresi {expiration} tarihinde dolacak.",
+  "account.reverseShares.modal.max-use.description":
+    "Bu URL'nin bir paylaşım oluşturmak için kullanılabileceği maksimum sayı.",
+  "account.reverseShare.never-expires":
+    "Bu karşı paylaşımın süresi asla dolmayacak.",
+  "account.reverseShare.expires-on":
+    "Bu karşı paylaşımın süresi {expiration} tarihinde dolacak.",
   "account.reverseShares.table.no-shares": "Henüz paylaşım oluşturulmadı",
   "account.reverseShares.table.count.singular": "paylaşım",
   "account.reverseShares.table.count.plural": "paylaşım",
@@ -206,7 +235,8 @@ export default {
   "account.reverseShares.table.expires": "Bitiş tarihi",
   "account.reverseShares.modal.reverse-share-link": "Karşı paylaşım bağlantısı",
   "account.reverseShares.modal.delete.title": "Karşı paylaşımı sil",
-  "account.reverseShares.modal.delete.description": "Bu karşı paylaşımı gerçekten silmek istiyor musunuz? Eğer silerseniz, ilişkili paylaşımlar da silinecektir.",
+  "account.reverseShares.modal.delete.description":
+    "Bu karşı paylaşımı gerçekten silmek istiyor musunuz? Eğer silerseniz, ilişkili paylaşımlar da silinecektir.",
   // END /account/reverseShares
 
   // /admin
@@ -222,79 +252,100 @@ export default {
   "admin.users.table.username": "Kullanıcı adı",
   "admin.users.table.email": "E-posta",
   "admin.users.table.admin": "Yönetici",
-  "admin.users.table.storageQuota": "Storage quota",
-  "admin.users.table.maxShareSize": "Max share size",
+  "admin.users.table.storageQuota": "Depolama kotası",
+  "admin.users.table.maxShareSize": "Maksimum paylaşım boyutu",
   "admin.users.edit.update.title": "Kullanıcıyı düzenle: {username}",
   "admin.users.edit.update.admin-privileges": "Yönetici yetkileri",
-  "admin.users.edit.update.email-verified": "Email verified",
-  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
-  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
-  "admin.users.edit.update.custom-storage-quota-limit": "Custom storage quota",
-  "admin.users.edit.update.custom-storage-quota-limit.description": "Limit the user's total storage usage across active shares",
+  "admin.users.edit.update.email-verified": "E-posta doğrulandı",
+  "admin.users.edit.update.custom-share-size-limit":
+    "Özel paylaşım boyutu sınırı",
+  "admin.users.edit.update.custom-share-size-limit.description":
+    "Bu kullanıcı için genel yükleme sınırını geçersiz kılın",
+  "admin.users.edit.update.custom-storage-quota-limit": "Özel depolama kotası",
+  "admin.users.edit.update.custom-storage-quota-limit.description":
+    "Kullanıcının aktif paylaşımlardaki toplam depolama kullanımını sınırlayın",
   "admin.users.edit.update.change-password.title": "Şifre değiştir",
   "admin.users.edit.update.change-password.field": "Yeni şifre",
   "admin.users.edit.update.change-password.button": "Yeni şifreyi kaydet",
-  "admin.users.edit.update.notify.password.success": "Şifre başarıyla değiştirildi",
+  "admin.users.edit.update.notify.password.success":
+    "Şifre başarıyla değiştirildi",
   "admin.users.edit.delete.title": "Kullanıcıyı sil: {username} ?",
-  "admin.users.edit.delete.description": "Bu kullanıcıyı ve tüm paylaşımlarını gerçekten silmek istiyor musunuz?",
+  "admin.users.edit.delete.description":
+    "Bu kullanıcıyı ve tüm paylaşımlarını gerçekten silmek istiyor musunuz?",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Kullanıcı Oluştur",
   "admin.users.modal.create.username": "Kullanıcı adı",
   "admin.users.modal.create.email": "E-posta",
   "admin.users.modal.create.password": "Şifre",
   "admin.users.modal.create.manual-password": "Şifreyi manuel olarak ayarla",
-  "admin.users.modal.create.manual-password.description": "İşaretlenmezse, kullanıcı şifresini ayarlaması için bir bağlantı içeren bir e-posta alacaktır.",
-  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
-  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
-  "admin.users.modal.create.custom-storage-quota-limit": "Custom storage quota",
-  "admin.users.modal.create.custom-storage-quota-limit.description": "Limit the user's total storage usage across active shares",
+  "admin.users.modal.create.manual-password.description":
+    "İşaretlenmezse, kullanıcı şifresini ayarlaması için bir bağlantı içeren bir e-posta alacaktır.",
+  "admin.users.modal.create.custom-share-size-limit":
+    "Özel paylaşım boyutu sınırı",
+  "admin.users.modal.create.custom-share-size-limit.description":
+    "Bu kullanıcı için genel yükleme sınırını geçersiz kılın",
+  "admin.users.modal.create.custom-storage-quota-limit": "Özel depolama kotası",
+  "admin.users.modal.create.custom-storage-quota-limit.description":
+    "Kullanıcının aktif paylaşımlardaki toplam depolama kullanımını sınırlayın",
   "admin.users.modal.create.admin": "Yönetici yetkileri",
-  "admin.users.modal.create.admin.description": "İşaretlenirse, kullanıcı yönetim paneline erişebilecektir.",
+  "admin.users.modal.create.admin.description":
+    "İşaretlenirse, kullanıcı yönetim paneline erişebilecektir.",
   // END /admin/users
 
   // /admin/shares
   "admin.shares.title": "Paylaşım Yönetimi",
-  "admin.shares.diskUsage": "Disk Usage",
+  "admin.shares.diskUsage": "Disk Kullanımı",
   "admin.shares.table.id": "Paylaşım ID",
   "admin.shares.table.username": "Oluşturan",
   "admin.shares.table.visitors": "Ziyaretçi Sayısı",
   "admin.shares.table.expires": "Bitiş Tarihi",
-  "admin.shares.table.deletes": "Deletes on",
+  "admin.shares.table.deletes": "Silinme tarihi",
   "admin.shares.edit.delete.title": "Paylaşımı sil: {id}",
-  "admin.shares.edit.delete.description": "Bu paylaşımı gerçekten silmek istiyor musunuz?",
+  "admin.shares.edit.delete.description":
+    "Bu paylaşımı gerçekten silmek istiyor musunuz?",
   // END /admin/shares
 
   // /upload
   "upload.title": "Yükle",
-  "upload.notify.confirm-leave": "Bu sayfadan ayrılmak istediğinizden emin misiniz? Yüklemeniz iptal edilecek.",
+  "upload.notify.confirm-leave":
+    "Bu sayfadan ayrılmak istediğinizden emin misiniz? Yüklemeniz iptal edilecek.",
   "upload.notify.generic-error": "Paylaşımınız tamamlanırken bir hata oluştu.",
   "upload.notify.count-failed": "{count} dosya yüklenemedi. Tekrar deneniyor.",
-  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
-  "upload.reverse-share.error.invalid.title": "Geçersiz karşı paylaşım bağlantısı",
-  "upload.reverse-share.error.invalid.description": "Bu karşı paylaşımın süresi dolmuş veya geçersiz.",
+  "upload.notify.duplicate-skipped": "Yinelenen dosya atlandı: {name}",
+  "upload.reverse-share.error.invalid.title":
+    "Geçersiz karşı paylaşım bağlantısı",
+  "upload.reverse-share.error.invalid.description":
+    "Bu karşı paylaşımın süresi dolmuş veya geçersiz.",
   // Dropzone.tsx
   "upload.dropzone.title": "Dosyaları Yükle",
-  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
-  "upload.dropzone.notify.file-too-big": "Dosyalarınız maksimum paylaşım boyutu olan {maxSize} değerini aşıyor.",
-  "upload.button.folder": "Upload folder",
-  "upload.button.folder.append": "Append folder",
-  "upload.button.add": "Add to upload",
+  "upload.dropzone.description":
+    "Paylaşımınızı başlatmak için dosyaları veya klasörleri buraya sürükleyip bırakın veya panodan metin içeriği yüklemek için 'Ctrl+V' tuşlarına basın. Yalnızca toplam {maxSize} boyutuna kadar olan dosyaları kabul ediyoruz.",
+  "upload.dropzone.notify.file-too-big":
+    "Dosyalarınız maksimum paylaşım boyutu olan {maxSize} değerini aşıyor.",
+  "upload.button.folder": "Klasör yükle",
+  "upload.button.folder.append": "Klasör ekle",
+  "upload.button.add": "Yüklemeye ekle",
   // FileList.tsx
   "upload.filelist.name": "İsim",
   "upload.filelist.size": "Boyut",
-  "upload.filelist.estimating": "Estimating...",
-  "upload.filelist.remaining": "{time} remaining",
+  "upload.filelist.estimating": "Hesaplanıyor...",
+  "upload.filelist.remaining": "Kalan süre: {time}",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Paylaşım Oluştur",
-  "upload.modal.link.error.invalid": "Sadece harf, rakam, alt çizgi ve tire içerebilir",
+  "upload.modal.link.error.invalid":
+    "Sadece harf, rakam, alt çizgi ve tire içerebilir",
   "upload.modal.link.error.taken": "Bu bağlantı zaten kullanılıyor",
-  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
-  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
+  "upload.modal.link.error.s3-session-not-found":
+    "S3 yükleme oturumu bulunamadı",
+  "upload.modal.link.error.s3-etag-missing":
+    "S3 yanıtında ETag başlığı eksik. CORS'un ETag başlığını sunduğundan emin olun.",
   "upload.modal.not-signed-in": "Giriş yapmadınız",
-  "upload.modal.not-signed-in-description": "Paylaşımınızı manuel olarak silemez ve ziyaretçi sayısını göremezsiniz.",
+  "upload.modal.not-signed-in-description":
+    "Paylaşımınızı manuel olarak silemez ve ziyaretçi sayısını göremezsiniz.",
   "upload.modal.expires.never": "asla",
   "upload.modal.expires.never-long": "Kalıcı paylaşım",
-  "upload.modal.expires.error.too-long": "Geçerlilik süresi maksimum {max} değerini aşıyor.",
+  "upload.modal.expires.error.too-long":
+    "Geçerlilik süresi maksimum {max} değerini aşıyor.",
   "upload.modal.link.label": "Bağlantı",
   "upload.modal.expires.label": "Geçerlilik Süresi",
   "upload.modal.expires.minute-singular": "Dakika",
@@ -311,59 +362,76 @@ export default {
   "upload.modal.expires.year-plural": "Yıl",
   "upload.modal.accordion.name-and-description.title": "İsim ve açıklama",
   "upload.modal.accordion.name-and-description.name.placeholder": "İsim",
-  "upload.modal.accordion.name-and-description.description.placeholder": "Bu paylaşımın alıcıları için not",
+  "upload.modal.accordion.name-and-description.description.placeholder":
+    "Bu paylaşımın alıcıları için not",
   "upload.modal.accordion.email.title": "E-posta alıcıları",
   "upload.modal.accordion.email.placeholder": "E-posta alıcılarını girin",
   "upload.modal.accordion.email.invalid-email": "Geçersiz e-posta adresi",
-  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Erişimi yalnızca bu alıcılarla sınırlandırın (erişmek için oturum açmaları gerekir)",
   "upload.modal.accordion.security.title": "Güvenlik seçenekleri",
   "upload.modal.accordion.security.password.label": "Şifre koruması",
   "upload.modal.accordion.security.password.placeholder": "Şifre yok",
-  "upload.modal.accordion.security.max-views.label": "Maksimum görüntüleme sayısı",
+  "upload.modal.accordion.security.max-views.label":
+    "Maksimum görüntüleme sayısı",
   "upload.modal.accordion.security.max-views.placeholder": "Limit yok",
   // showCompletedUploadModal.tsx
-  "upload.modal.completed.never-expires": "Bu paylaşımın süresi asla dolmayacak.",
-  "upload.modal.completed.expires-on": "Bu paylaşımın süresi {expiration} tarihinde dolacak.",
+  "upload.modal.completed.never-expires":
+    "Bu paylaşımın süresi asla dolmayacak.",
+  "upload.modal.completed.expires-on":
+    "Bu paylaşımın süresi {expiration} tarihinde dolacak.",
   "upload.modal.completed.share-ready": "Paylaşım hazır",
-  "upload.modal.completed.notified-reverse-share-creator": "Karşı paylaşımı oluşturan kişiyi bilgilendirdik. Bu bağlantıyı onlarla başka yollarla da manuel olarak paylaşabilirsiniz.",
+  "upload.modal.completed.notified-reverse-share-creator":
+    "Karşı paylaşımı oluşturan kişiyi bilgilendirdik. Bu bağlantıyı onlarla başka yollarla da manuel olarak paylaşabilirsiniz.",
   // END /upload
 
   // /share/[id]
   "share.title": "Paylaşım {shareId}",
   "share.description": "Bak sana ne paylaştım!",
-  "share.fileCount": "{count, plural, =1 {# dosya} other {# dosya}} · {size} (zip dosyası sıkıştırma nedeniyle daha küçük olabilir)",
-  "share.copy-text-contents": "Copy file contents to clipboard",
+  "share.fileCount":
+    "{count, plural, =1 {# dosya} other {# dosya}} · {size} (zip dosyası sıkıştırma nedeniyle daha küçük olabilir)",
+  "share.copy-text-contents": "Dosya içeriğini panoya kopyala",
   "share.error.visitor-limit-exceeded.title": "Ziyaretçi limiti aşıldı",
-  "share.error.visitor-limit-exceeded.description": "Bu paylaşımın ziyaretçi limiti aşıldı.",
+  "share.error.visitor-limit-exceeded.description":
+    "Bu paylaşımın ziyaretçi limiti aşıldı.",
   "share.error.removed.title": "Paylaşım kaldırıldı",
   "share.error.not-found.title": "Paylaşım bulunamadı",
   "share.error.not-found.description": "Aradığınız paylaşım mevcut değil.",
   "share.error.access-denied.title": "Özel paylaşım",
-  "share.error.access-denied.description": "Mevcut hesabın bu paylaşıma erişim izni yok.",
-  "share.error.restricted.title": "Restricted share",
-  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
-  "share.error.restricted.button": "Log in",
+  "share.error.access-denied.description":
+    "Mevcut hesabın bu paylaşıma erişim izni yok.",
+  "share.error.restricted.title": "Kısıtlanmış paylaşım",
+  "share.error.restricted.description":
+    "Bu paylaşım belirli alıcılarla sınırlandırılmıştır. Erişmek için lütfen giriş yapın.",
+  "share.error.restricted.button": "Giriş yap",
   "share.modal.password.title": "Şifre gerekli",
-  "share.modal.password.description": "Bu paylaşıma erişmek için lütfen şifreyi girin.",
+  "share.modal.password.description":
+    "Bu paylaşıma erişmek için lütfen şifreyi girin.",
   "share.modal.password": "Şifre",
   "share.modal.error.invalid-password": "Geçersiz şifre",
   "share.button.download-all": "Tümünü indir",
-  "share.notify.download-all-preparing": "Paylaşım hazırlanıyor. Lütfen birkaç dakika içinde tekrar deneyin.",
-  "share.notify.copied-contents": "File contents copied to clipboard",
-  "share.notify.copy-too-big-error": "File is too big to copy to clipboard",
-  "share.notify.copy-not-supported-error": "Copying to clipboard requires a HTTPS connection",
+  "share.notify.download-all-preparing":
+    "Paylaşım hazırlanıyor. Lütfen birkaç dakika içinde tekrar deneyin.",
+  "share.notify.copied-contents": "Dosya içeriği panoya kopyalandı",
+  "share.notify.copy-too-big-error":
+    "Dosya panoya kopyalanamayacak kadar büyük",
+  "share.notify.copy-not-supported-error":
+    "Panoya kopyalama için bir HTTPS bağlantısı gerekir",
   "share.modal.file-link": "Dosya bağlantısı",
   "share.table.name": "İsim",
   "share.table.size": "Boyut",
-  "share.modal.file-preview.original_file": "View original file",
-  "share.modal.file-preview.error.not-supported.title": "Önizleme desteklenmiyor",
-  "share.modal.file-preview.error.not-supported.description": "Bu dosya türü için önizleme desteklenmemektedir. Görüntülemek için lütfen dosyayı indirin.",
+  "share.modal.file-preview.original_file": "Orijinal dosyayı görüntüle",
+  "share.modal.file-preview.error.not-supported.title":
+    "Önizleme desteklenmiyor",
+  "share.modal.file-preview.error.not-supported.description":
+    "Bu dosya türü için önizleme desteklenmemektedir. Görüntülemek için lütfen dosyayı indirin.",
   // END /share/[id]
 
   // /share/[id]/edit
   "share.edit.title": "Düzenle {shareId}",
   "share.edit.append-upload": "Dosya ekle",
-  "share.edit.notify.generic-error": "Paylaşımınız tamamlanırken bir hata oluştu.",
+  "share.edit.notify.generic-error":
+    "Paylaşımınız tamamlanırken bir hata oluştu.",
   "share.edit.notify.save-success": "Paylaşım başarıyla güncellendi",
   // END /share/[id]/edit
 
@@ -377,11 +445,12 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "Yapılandırma dosyası mevcut",
-  "admin.config.config-file-warning.description": "Pingvin Share'i bir yapılandırma dosyası ile kurduğunuz için, yapılandırmayı arayüz üzerinden değiştiremezsiniz.",
+  "admin.config.config-file-warning.description":
+    "Pingvin Share'i bir yapılandırma dosyası ile kurduğunuz için, yapılandırmayı arayüz üzerinden değiştiremezsiniz.",
   "admin.config.title": "Yapılandırma",
   "admin.config.category.general": "Genel",
   "admin.config.category.appearance": "Görünüm",
-  "admin.config.category.security": "Security & Access",
+  "admin.config.category.security": "Güvenlik ve Erişim",
   "admin.config.category.share": "Paylaşım",
   "admin.config.category.cache": "Önbellek",
   "admin.config.category.email": "E-posta",
@@ -389,228 +458,353 @@ export default {
   "admin.config.category.oauth": "Sosyal Medya ile Giriş",
   "admin.config.general.app-name": "Uygulama adı",
   "admin.config.general.app-name.description": "Uygulamanın adı",
-  "admin.config.general.default-language": "Default Language",
-  "admin.config.general.default-language.description": "This applies to all users, each user can still personalise their language in their profile.",
+  "admin.config.general.default-language": "Varsayılan Dil",
+  "admin.config.general.default-language.description":
+    "Bu tüm kullanıcılar için geçerlidir, her kullanıcı profilinde kendi dilini kişiselleştirebilir.",
   "admin.config.appearance.theme-primary-color": "Tema birincil rengi",
-  "admin.config.appearance.theme-primary-color.description": "Düğmeler, bağlantılar ve vurgu renkleri için birincil renk. Renk geçersiz kılma kullanmak için özel seçin.",
+  "admin.config.appearance.theme-primary-color.description":
+    "Düğmeler, bağlantılar ve vurgu renkleri için birincil renk. Renk geçersiz kılma kullanmak için özel seçin.",
   "admin.config.appearance.theme-primary-color-override": "Özel birincil renk",
-  "admin.config.appearance.theme-primary-color-override.description": "Tema birincil rengi özel olarak ayarlandığında kullanılan HEX renk geçersiz kılması.",
+  "admin.config.appearance.theme-primary-color-override.description":
+    "Tema birincil rengi özel olarak ayarlandığında kullanılan HEX renk geçersiz kılması.",
   "admin.config.appearance.theme-font-preset": "Yazı tipi ön ayarı",
-  "admin.config.appearance.theme-font-preset.description": "Build sırasında yüklenen yazı tipi ön ayarı. Sistem veya dahil edilen Google Fonts'tan birini seçin.",
-  "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
-  "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
+  "admin.config.appearance.theme-font-preset.description":
+    "Build sırasında yüklenen yazı tipi ön ayarı. Sistem veya dahil edilen Google Fonts'tan birini seçin.",
+  "admin.config.appearance.theme-color-scheme":
+    "Varsayılan renk teması (misafirler)",
+  "admin.config.appearance.theme-color-scheme.description":
+    "Giriş yapmamış kullanıcılar için varsayılan açık/koyu tema. Giriş yapan kullanıcılar kendi hesap tercihlerini kullanır.",
   "admin.config.appearance.theme-radius": "Tema köşe yarıçapı",
-  "admin.config.appearance.theme-radius.description": "Mantine bileşenleri tarafından kullanılan varsayılan köşe yarıçapı.",
+  "admin.config.appearance.theme-radius.description":
+    "Mantine bileşenleri tarafından kullanılan varsayılan köşe yarıçapı.",
   "admin.config.appearance.custom-css": "Özel CSS",
-  "admin.config.appearance.custom-css.description": "Frontend'e uygulanan global CSS. Dikkatli kullanın; geçersiz CSS arayüzü etkileyebilir.",
-  "admin.config.appearance.upload-progress-style": "Upload progress style",
-  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
-  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
-  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
-  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
+  "admin.config.appearance.custom-css.description":
+    "Frontend'e uygulanan global CSS. Dikkatli kullanın; geçersiz CSS arayüzü etkileyebilir.",
+  "admin.config.appearance.upload-progress-style": "Yükleme ilerleme stili",
+  "admin.config.appearance.upload-progress-style.description":
+    "Yükleme ilerlemesinin dosya listesinde nasıl görüntüleneceğini seçin.",
+  "admin.config.appearance.upload-progress-style.circle": "Dairesel gösterge",
+  "admin.config.appearance.upload-progress-style.circle-percentage":
+    "Yüzdeli daire",
+  "admin.config.appearance.upload-progress-style.percentage-time":
+    "Yüzde ve kalan süre",
   "admin.config.general.app-url": "Uygulama URL'si",
-  "admin.config.general.app-url.description": "Pingvin Share'in erişilebilir olduğu URL",
+  "admin.config.general.app-url.description":
+    "Pingvin Share'in erişilebilir olduğu URL",
   "admin.config.security.secure-cookies": "Güvenli çerezler",
-  "admin.config.security.secure-cookies.description": "Çerezlerde güvenli bayrağının ayarlanıp ayarlanmayacağı. Etkinleştirilirse, site HTTP üzerinden erişildiğinde çalışmaz.",
+  "admin.config.security.secure-cookies.description":
+    "Çerezlerde güvenli bayrağının ayarlanıp ayarlanmayacağı. Etkinleştirilirse, site HTTP üzerinden erişildiğinde çalışmaz.",
   "admin.config.general.show-home-page": "Anasayfayı göster",
-  "admin.config.general.show-home-page.description": "Anasayfanın gösterilip gösterilmeyeceği",
+  "admin.config.general.show-home-page.description":
+    "Anasayfanın gösterilip gösterilmeyeceği",
   "admin.config.security.session-duration": "Oturum Süresi",
-  "admin.config.security.session-duration.description": "Bir kullanıcının tekrar giriş yapması gereken süre (varsayılan: 3 ay).",
+  "admin.config.security.session-duration.description":
+    "Bir kullanıcının tekrar giriş yapması gereken süre (varsayılan: 3 ay).",
   "admin.config.appearance.logo": "Logo",
-  "admin.config.appearance.logo.description": "Yeni bir resim yükleyerek logonuzu değiştirin. Resim PNG formatında ve 1:1 oranında olmalıdır.",
-  "admin.config.appearance.logo-dark": "Dark mode logo",
-  "admin.config.appearance.logo-dark.description": "Upload a separate logo for dark mode. The image must be a PNG and should have the format 1:1.",
+  "admin.config.appearance.logo.description":
+    "Yeni bir resim yükleyerek logonuzu değiştirin. Resim PNG formatında ve 1:1 oranında olmalıdır.",
+  "admin.config.appearance.logo-dark": "Karanlık mod logosu",
+  "admin.config.appearance.logo-dark.description":
+    "Karanlık mod için ayrı bir logo yükleyin. Görsel PNG olmalı ve 1:1 oranında olmalıdır.",
   "admin.config.appearance.logo.placeholder": "Resim seç",
-  "admin.config.security.custom-password-policy": "Custom password policy",
-  "admin.config.security.custom-password-policy.description": "Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.",
-  "admin.config.security.min-length": "Minimum length",
-  "admin.config.security.min-length.description": "Minimum number of characters required for a password.",
-  "admin.config.security.require-uppercase": "Require uppercase",
-  "admin.config.security.require-uppercase.description": "Whether to require at least one uppercase letter in the password.",
-  "admin.config.security.require-lowercase": "Require lowercase",
-  "admin.config.security.require-lowercase.description": "Whether to require at least one lowercase letter in the password.",
-  "admin.config.security.require-number": "Require number",
-  "admin.config.security.require-number.description": "Whether to require at least one number in the password.",
-  "admin.config.security.require-special-character": "Require special character",
-  "admin.config.security.require-special-character.description": "Whether to require at least one special character in the password.",
+  "admin.config.security.custom-password-policy": "Özel şifre politikası",
+  "admin.config.security.custom-password-policy.description":
+    "Şifre politikasının özelleştirilmesini etkinleştirip etkinleştirmemek. Devre dışı bırakılırsa, varsayılan 8 karakterlik minimum şifre politikası kullanılır.",
+  "admin.config.security.min-length": "Minimum uzunluk",
+  "admin.config.security.min-length.description":
+    "Bir şifre için gereken minimum karakter sayısı.",
+  "admin.config.security.require-uppercase": "Büyük harf zorunlu",
+  "admin.config.security.require-uppercase.description":
+    "Şifrede en az bir büyük harf bulunmasını zorunlu kılın.",
+  "admin.config.security.require-lowercase": "Küçük harf zorunlu",
+  "admin.config.security.require-lowercase.description":
+    "Şifrede en az bir küçük harf bulunmasını zorunlu kılın.",
+  "admin.config.security.require-number": "Rakam zorunlu",
+  "admin.config.security.require-number.description":
+    "Şifrede en az bir rakam bulunmasını zorunlu kılın.",
+  "admin.config.security.require-special-character": "Özel karakter zorunlu",
+  "admin.config.security.require-special-character.description":
+    "Şifrede en az bir özel karakter bulunmasını zorunlu kılın.",
   "admin.config.cache.ttl": "TTL (Yaşam Süresi)",
-  "admin.config.cache.ttl.description": "Bilgilerin önbellekte tutulacağı saniye cinsinden süre.",
+  "admin.config.cache.ttl.description":
+    "Bilgilerin önbellekte tutulacağı saniye cinsinden süre.",
   "admin.config.cache.max-items": "Maksimum öğe sayısı",
-  "admin.config.cache.max-items.description": "Önbellekteki maksimum öğe sayısı.",
+  "admin.config.cache.max-items.description":
+    "Önbellekteki maksimum öğe sayısı.",
   "admin.config.cache.redis-enabled": "Redis etkin",
-  "admin.config.cache.redis-enabled.description": "Normalde Pingvin Share bilgileri bellekte önbellekler. Birden fazla Pingvin Share örneği çalıştırıyorsanız, örnekler arasında önbelleği paylaşmak için Redis önbelleklemesini etkinleştirmeniz gerekir.",
+  "admin.config.cache.redis-enabled.description":
+    "Normalde Pingvin Share bilgileri bellekte önbellekler. Birden fazla Pingvin Share örneği çalıştırıyorsanız, örnekler arasında önbelleği paylaşmak için Redis önbelleklemesini etkinleştirmeniz gerekir.",
   "admin.config.cache.redis-url": "Redis URL'si",
-  "admin.config.cache.redis-url.description": "Önbellekleme için kullanılan Redis örneğine bağlanmak için URL.",
-  "admin.config.cache.button.test-redis": "Test Redis connection",
-  "admin.config.cache.test-redis.success": "Connected to Redis successfully",
-  "admin.config.cache.test-redis.success-disabled": "Connected to Redis successfully (Redis caching is currently disabled).",
-  "admin.config.cache.test-redis.modal.error.title": "Failed to connect to Redis",
-  "admin.config.cache.test-redis.modal.error.description": "While connecting to Redis, the following error occurred:",
-  "admin.config.cache.test-redis.modal.save.title": "Save configuration",
-  "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
-  "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
-  "admin.config.email.send-html-emails": "Enable HTML email compatibility",
-  "admin.config.email.send-html-emails.description": "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
-  "admin.config.share.enable-share-email-recipients": "E-posta alıcılarıyla paylaşımı etkinleştir",
-  "admin.config.share.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
-  "admin.config.email.share-recipients-subject": "Paylaşım alıcıları e-posta konusu",
-  "admin.config.email.share-recipients-subject.description": "Paylaşım alıcılarına gönderilen e-postanın konusu.",
-  "admin.config.email.share-recipients-message": "Paylaşım alıcıları e-posta mesajı",
-  "admin.config.email.share-recipients-message.description": "Paylaşım alıcılarına gönderilen mesaj. Mevcut değişkenler:\n {creator} - Paylaşımı oluşturanın kullanıcı adı\n {creatorEmail} - Paylaşımı oluşturanın e-postası\n {shareUrl} - Paylaşımın URL'si\n {desc} - Paylaşımın açıklaması\n {expires} - Paylaşımın son kullanma tarihi\n Bu değişkenler gerçek değerle değiştirilecektir.",
+  "admin.config.cache.redis-url.description":
+    "Önbellekleme için kullanılan Redis örneğine bağlanmak için URL.",
+  "admin.config.cache.button.test-redis": "Redis bağlantısını test et",
+  "admin.config.cache.test-redis.success": "Redis'e başarıyla bağlanıldı",
+  "admin.config.cache.test-redis.success-disabled":
+    "Redis'e başarıyla bağlanıldı (Redis önbellekleme şu anda devre dışı).",
+  "admin.config.cache.test-redis.modal.error.title": "Redis'e bağlanılamadı",
+  "admin.config.cache.test-redis.modal.error.description":
+    "Redis'e bağlanırken aşağıdaki hata oluştu:",
+  "admin.config.cache.test-redis.modal.save.title": "Yapılandırmayı kaydet",
+  "admin.config.cache.test-redis.modal.save.description":
+    "Devam etmek için önce yapılandırmayı kaydetmeniz gerekir. Yapılandırmayı kaydedip Redis bağlantısını test etmek istiyor musunuz?",
+  "admin.config.cache.test-redis.modal.save.confirm": "Kaydet ve test et",
+  "admin.config.email.send-html-emails":
+    "HTML e-posta uyumluluğunu etkinleştir",
+  "admin.config.email.send-html-emails.description":
+    "Etkinleştirilirse, e-postalar HTML formatında gönderilecektir. E-posta şablonlarının HTML kullanacak şekilde güncellendiğinden emin olun.",
+  "admin.config.share.enable-share-email-recipients":
+    "E-posta alıcılarıyla paylaşımı etkinleştir",
+  "admin.config.share.enable-share-email-recipients.description":
+    "Alıcılarla e-posta paylaşımına izin verilip verilmeyeceği. Bu yalnızca SMTP etkinse etkinleştirilebilir.",
+  "admin.config.email.share-recipients-subject":
+    "Paylaşım alıcıları e-posta konusu",
+  "admin.config.email.share-recipients-subject.description":
+    "Paylaşım alıcılarına gönderilen e-postanın konusu.",
+  "admin.config.email.share-recipients-message":
+    "Paylaşım alıcıları e-posta mesajı",
+  "admin.config.email.share-recipients-message.description":
+    "Paylaşım alıcılarına gönderilen mesaj. Mevcut değişkenler:\n {creator} - Paylaşımı oluşturanın kullanıcı adı\n {creatorEmail} - Paylaşımı oluşturanın e-postası\n {shareUrl} - Paylaşımın URL'si\n {desc} - Paylaşımın açıklaması\n {expires} - Paylaşımın son kullanma tarihi\n Bu değişkenler gerçek değerle değiştirilecektir.",
   "admin.config.email.reverse-share-subject": "Karşı paylaşım e-posta konusu",
-  "admin.config.email.reverse-share-subject.description": "Birisi karşı paylaşım bağlantınızla bir paylaşım oluşturduğunda gönderilen e-postanın konusu.",
+  "admin.config.email.reverse-share-subject.description":
+    "Birisi karşı paylaşım bağlantınızla bir paylaşım oluşturduğunda gönderilen e-postanın konusu.",
   "admin.config.email.reverse-share-message": "Karşı paylaşım e-posta mesajı",
-  "admin.config.email.reverse-share-message.description": "Birisi karşı paylaşım bağlantınızla bir paylaşım oluşturduğunda gönderilen mesaj. {shareUrl}, oluşturanın adı ve paylaşım URL'si ile değiştirilecektir.",
+  "admin.config.email.reverse-share-message.description":
+    "Birisi karşı paylaşım bağlantınızla bir paylaşım oluşturduğunda gönderilen mesaj. {shareUrl}, oluşturanın adı ve paylaşım URL'si ile değiştirilecektir.",
   "admin.config.email.reset-password-subject": "Şifre sıfırlama e-posta konusu",
-  "admin.config.email.reset-password-subject.description": "Bir kullanıcı şifre sıfırlama talebinde bulunduğunda gönderilen e-postanın konusu.",
+  "admin.config.email.reset-password-subject.description":
+    "Bir kullanıcı şifre sıfırlama talebinde bulunduğunda gönderilen e-postanın konusu.",
   "admin.config.email.reset-password-message": "Şifre sıfırlama e-posta mesajı",
-  "admin.config.email.reset-password-message.description": "Bir kullanıcı şifre sıfırlama talebinde bulunduğunda gönderilen mesaj. {url}, şifre sıfırlama URL'si ile değiştirilecektir.",
+  "admin.config.email.reset-password-message.description":
+    "Bir kullanıcı şifre sıfırlama talebinde bulunduğunda gönderilen mesaj. {url}, şifre sıfırlama URL'si ile değiştirilecektir.",
   "admin.config.email.invite-subject": "Davetiye e-posta konusu",
-  "admin.config.email.invite-subject.description": "Bir yönetici bir kullanıcıyı davet ettiğinde gönderilen e-postanın konusu.",
+  "admin.config.email.invite-subject.description":
+    "Bir yönetici bir kullanıcıyı davet ettiğinde gönderilen e-postanın konusu.",
   "admin.config.email.invite-message": "Davetiye e-posta mesajı",
-  "admin.config.email.invite-message.description": "Bir yönetici bir kullanıcıyı davet ettiğinde gönderilen mesaj. {url} davet URL'si, {email} e-posta ve {password} kullanıcının şifresi ile değiştirilecektir.",
-  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
-  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
-  "admin.config.share.enable-share-download-notifications": "Enable download notifications",
-  "admin.config.share.enable-share-download-notifications.description": "Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.",
-  "admin.config.email.share-download-notification-subject": "Download notification subject",
-  "admin.config.email.share-download-notification-subject.description": "Subject of the email which gets sent to the share creator when a recipient downloads a file.",
-  "admin.config.email.share-download-notification-message": "Download notification message",
-  "admin.config.email.share-download-notification-message.description": "Message which gets sent to the share creator when a recipient downloads a file. Available variables:\n {recipientEmail} - The email of the recipient\n {fileName} - The downloaded file name\n {shareUrl} - The URL of the share",
-  "admin.config.security.enable-email-verification": "Enable email verification",
-  "admin.config.security.enable-email-verification.description": "Whether to require users to verify their email address before being able to sign in. This can only be enabled if SMTP is activated.",
-  "admin.config.email.verification-subject": "Verification subject",
-  "admin.config.email.verification-subject.description": "Subject of the email which gets sent to the user when they sign up.",
-  "admin.config.email.verification-message": "Verification message",
-  "admin.config.email.verification-message.description": "Message which gets sent to the user when they sign up. {url} will be replaced with the verification URL.",
+  "admin.config.email.invite-message.description":
+    "Bir yönetici bir kullanıcıyı davet ettiğinde gönderilen mesaj. {url} davet URL'si, {email} e-posta ve {password} kullanıcının şifresi ile değiştirilecektir.",
+  "admin.config.email.share-recipients-reply-to-creator":
+    "Reply-To'yu oluşturanın e-postasına ayarla",
+  "admin.config.email.share-recipients-reply-to-creator.description":
+    "Reply-To başlığının paylaşımı oluşturan kullanıcının e-posta adresine ayarlanıp ayarlanmayacağı.",
+  "admin.config.share.enable-share-download-notifications":
+    "İndirme bildirimlerini etkinleştir",
+  "admin.config.share.enable-share-download-notifications.description":
+    "Bir e-posta alıcısı dosya indirdiğinde paylaşımı oluşturana bir e-posta gönderilip gönderilmeyeceği. Bu, SMTP ve e-posta alıcısı paylaşımını gerektirir.",
+  "admin.config.email.share-download-notification-subject":
+    "İndirme bildirimi konusu",
+  "admin.config.email.share-download-notification-subject.description":
+    "Bir alıcı dosya indirdiğinde paylaşımı oluşturana gönderilen e-postanın konusu.",
+  "admin.config.email.share-download-notification-message":
+    "İndirme bildirimi mesajı",
+  "admin.config.email.share-download-notification-message.description":
+    "Bir alıcı dosya indirdiğinde paylaşımı oluşturana gönderilen mesaj. Kullanılabilir değişkenler:\n {recipientEmail} - Alıcının e-postası\n {fileName} - İndirilen dosya adı\n {shareUrl} - Paylaşımın URL'si",
+  "admin.config.security.enable-email-verification":
+    "E-posta doğrulamasını etkinleştir",
+  "admin.config.security.enable-email-verification.description":
+    "Kullanıcıların giriş yapabilmeden önce e-posta adreslerini doğrulamalarının gerekip gerekmediği. Bu yalnızca SMTP etkinse etkinleştirilebilir.",
+  "admin.config.email.verification-subject": "Doğrulama konusu",
+  "admin.config.email.verification-subject.description":
+    "Kullanıcı kaydolduğunda gönderilen e-postanın konusu.",
+  "admin.config.email.verification-message": "Doğrulama mesajı",
+  "admin.config.email.verification-message.description":
+    "Kullanıcı kaydolduğunda gönderilen mesaj. {url}, doğrulama URL'si ile değiştirilecektir.",
   "admin.config.security.allow-registration": "Kayıt olmaya izin ver",
-  "admin.config.security.allow-registration.description": "Kayıt olmaya izin verilip verilmeyeceği",
-  "admin.config.security.allow-unauthenticated-shares": "Kimliği doğrulanmamış paylaşımlara izin ver",
-  "admin.config.security.allow-unauthenticated-shares.description": "Kimliği doğrulanmamış kullanıcıların paylaşım oluşturup oluşturamayacağı",
-  "admin.config.share.default-expiration": "Default expiration",
-  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
+  "admin.config.security.allow-registration.description":
+    "Kayıt olmaya izin verilip verilmeyeceği",
+  "admin.config.security.allow-unauthenticated-shares":
+    "Kimliği doğrulanmamış paylaşımlara izin ver",
+  "admin.config.security.allow-unauthenticated-shares.description":
+    "Kimliği doğrulanmamış kullanıcıların paylaşım oluşturup oluşturamayacağı",
+  "admin.config.share.default-expiration": "Varsayılan süre bitimi",
+  "admin.config.share.default-expiration.description":
+    "Yeni bir paylaşım oluştururken seçilen varsayılan son kullanma süresi.",
   "admin.config.share.max-expiration": "Maksimum geçerlilik süresi",
-  "admin.config.share.max-expiration.description": "Maksimum paylaşım geçerlilik süresi. Sınırsız geçerlilik süresine izin vermek için 0 olarak ayarlayın.",
+  "admin.config.share.max-expiration.description":
+    "Maksimum paylaşım geçerlilik süresi. Sınırsız geçerlilik süresine izin vermek için 0 olarak ayarlayın.",
   "admin.config.share.share-id-length": "Varsayılan paylaşım ID uzunluğu",
-  "admin.config.share.share-id-length.description": "Bir paylaşımın oluşturulan ID'si için varsayılan uzunluk. Bu değer aynı zamanda karşı paylaşımlar için bağlantı oluşturmak için de kullanılır. 8'in altındaki bir değer güvenli kabul edilmez.",
+  "admin.config.share.share-id-length.description":
+    "Bir paylaşımın oluşturulan ID'si için varsayılan uzunluk. Bu değer aynı zamanda karşı paylaşımlar için bağlantı oluşturmak için de kullanılır. 8'in altındaki bir değer güvenli kabul edilmez.",
   "admin.config.share.max-size": "Maksimum boyut",
   "admin.config.share.max-size.description": "Maksimum paylaşım boyutu",
   "admin.config.share.zip-compression-level": "Zip sıkıştırma seviyesi",
-  "admin.config.share.zip-compression-level.description": "Dosya boyutu ve sıkıştırma hızı arasında denge kurmak için seviyeyi ayarlayın. Geçerli değerler 0 ile 9 arasındadır; 0 sıkıştırma yok, 9 ise maksimum sıkıştırma anlamına gelir.",
+  "admin.config.share.zip-compression-level.description":
+    "Dosya boyutu ve sıkıştırma hızı arasında denge kurmak için seviyeyi ayarlayın. Geçerli değerler 0 ile 9 arasındadır; 0 sıkıştırma yok, 9 ise maksimum sıkıştırma anlamına gelir.",
   "admin.config.share.chunk-size": "Parça boyutu",
-  "admin.config.share.chunk-size.description": "İnternet bağlantınıza göre verimlilik ve güvenilirlik arasında denge kurmak için yüklemeleriniz için parça boyutunu ayarlayın. Daha küçük parçalar, kararsız bağlantılarda başarı oranlarını artırabilirken, daha büyük parçalar kararlı bağlantılarda yüklemeleri hızlandırır.",
-  "admin.config.share.auto-open-share-modal": "Paylaşım oluşturma penceresini otomatik aç",
-  "admin.config.share.auto-open-share-modal.description": "Bir kullanıcı dosya seçtiğinde paylaşım oluşturma penceresi otomatik olarak açılır, böylece düğmeye manuel olarak tıklama ihtiyacı ortadan kalkar.",
-  "admin.config.security.allow-admin-access-all-shares": "Allow admin access to all shares",
-  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
-  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
-  "admin.config.security.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
-  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
-  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
-  "admin.config.share.file-retention-period": "File retention period",
-  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
+  "admin.config.share.chunk-size.description":
+    "İnternet bağlantınıza göre verimlilik ve güvenilirlik arasında denge kurmak için yüklemeleriniz için parça boyutunu ayarlayın. Daha küçük parçalar, kararsız bağlantılarda başarı oranlarını artırabilirken, daha büyük parçalar kararlı bağlantılarda yüklemeleri hızlandırır.",
+  "admin.config.share.auto-open-share-modal":
+    "Paylaşım oluşturma penceresini otomatik aç",
+  "admin.config.share.auto-open-share-modal.description":
+    "Bir kullanıcı dosya seçtiğinde paylaşım oluşturma penceresi otomatik olarak açılır, böylece düğmeye manuel olarak tıklama ihtiyacı ortadan kalkar.",
+  "admin.config.security.allow-admin-access-all-shares":
+    "Yöneticilerin tüm paylaşımlara erişmesine izin ver",
+  "admin.config.share.reverse-share-simple-only":
+    "Karşı paylaşım basit modunu zorunlu kıl",
+  "admin.config.share.reverse-share-simple-only.description":
+    "Karşı paylaşımların basit modda oluşturulmasını zorunlu kılın. Devre dışı bırakılırsa, karşı paylaşımı oluşturan kişi basit ve gelişmiş mod arasında seçim yapabilir.",
+  "admin.config.security.allow-admin-access-all-shares.description":
+    "Yöneticilerin şifre korumalı, süresi dolmuş veya silinmiş olsalar bile tüm paylaşımlara erişmesine izin verin.",
+  "admin.config.share.enable-user-recipients":
+    "Kayıtlı kullanıcılarla paylaşımı etkinleştir",
+  "admin.config.share.enable-user-recipients.description":
+    "Etkinleştirildiğinde, kayıtlı bir kullanıcının e-posta adresine gönderilen paylaşımlar otomatik olarak hesaplarında görünecektir. Kullanıcılar ayrıca paylaşım erişimini yalnızca belirtilen alıcılarla kısıtlayabilir.",
+  "admin.config.share.file-retention-period": "Dosya saklama süresi",
+  "admin.config.share.file-retention-period.description":
+    "Bir paylaşımın süresi dolduktan veya silindikten sonra dosyaların ne kadar süre saklanacağı. Yalnızca 'Yöneticilerin tüm paylaşımlara erişmesine izin ver' etkinse yararlıdır. Dosyaları sonsuza kadar saklamak için -1 olarak ayarlayın.",
   "admin.config.smtp.enabled": "Etkinleştir",
-  "admin.config.smtp.enabled.description": "SMTP'nin etkin olup olmadığı. Yalnızca SMTP sunucunuzun ana bilgisayarını, bağlantı noktasını, e-postasını, kullanıcısını ve şifresini girdiyseniz bunu true olarak ayarlayın.",
+  "admin.config.smtp.enabled.description":
+    "SMTP'nin etkin olup olmadığı. Yalnızca SMTP sunucunuzun ana bilgisayarını, bağlantı noktasını, e-postasını, kullanıcısını ve şifresini girdiyseniz bunu true olarak ayarlayın.",
   "admin.config.smtp.host": "Sunucu",
   "admin.config.smtp.host.description": "SMTP sunucusunun adresi",
-  "admin.config.smtp.port": "Port",
+  "admin.config.smtp.port": "Bağlantı Noktası",
   "admin.config.smtp.port.description": "SMTP sunucusunun portu",
   "admin.config.smtp.email": "E-posta",
-  "admin.config.smtp.email.description": "E-postaların gönderileceği e-posta adresi",
+  "admin.config.smtp.email.description":
+    "E-postaların gönderileceği e-posta adresi",
   "admin.config.smtp.username": "Kullanıcı adı",
   "admin.config.smtp.username.description": "SMTP sunucusunun kullanıcı adı",
   "admin.config.smtp.password": "Şifre",
   "admin.config.smtp.password.description": "SMTP sunucusunun şifresi",
   "admin.config.smtp.button.test": "Test e-postası gönder",
-  "admin.config.smtp.test-email.success": "Email sent successfully",
-  "admin.config.smtp.test-email.error.title": "Failed to send email",
-  "admin.config.smtp.test-email.error.description": "While sending the test email, the following error occurred:",
-  "admin.config.smtp.test-email.save.title": "Save configuration",
-  "admin.config.smtp.test-email.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and send the test email?",
-  "admin.config.smtp.test-email.save.confirm": "Save and send",
-  "admin.config.smtp.allow-unauthorized-certificates": "Yetkisiz SMTP sunucu sertifikalarına güven",
-  "admin.config.smtp.allow-unauthorized-certificates.description": "Yalnızca kendinden imzalı sertifikalara güvenmeniz gerekiyorsa bunu true olarak ayarlayın.",
+  "admin.config.smtp.test-email.success": "E-posta başarıyla gönderildi",
+  "admin.config.smtp.test-email.error.title": "E-posta gönderilemedi",
+  "admin.config.smtp.test-email.error.description":
+    "Test e-postası gönderilirken aşağıdaki hata oluştu:",
+  "admin.config.smtp.test-email.save.title": "Yapılandırmayı kaydet",
+  "admin.config.smtp.test-email.save.description":
+    "Devam etmek için önce yapılandırmayı kaydetmeniz gerekir. Yapılandırmayı kaydedip test e-postasını göndermek istiyor musunuz?",
+  "admin.config.smtp.test-email.save.confirm": "Kaydet ve gönder",
+  "admin.config.smtp.allow-unauthorized-certificates":
+    "Yetkisiz SMTP sunucu sertifikalarına güven",
+  "admin.config.smtp.allow-unauthorized-certificates.description":
+    "Yalnızca kendinden imzalı sertifikalara güvenmeniz gerekiyorsa bunu true olarak ayarlayın.",
   "admin.config.oauth.allow-registration": "Kayıt olmaya izin ver",
-  "admin.config.oauth.allow-registration.description": "Kullanıcıların sosyal medya ile giriş yaparak kayıt olmalarına izin ver",
+  "admin.config.oauth.allow-registration.description":
+    "Kullanıcıların sosyal medya ile giriş yaparak kayıt olmalarına izin ver",
   "admin.config.oauth.ignore-totp": "TOTP'yi yoksay",
-  "admin.config.oauth.ignore-totp.description": "Kullanıcı sosyal medya ile giriş yaptığında TOTP'yi yoksayıp yoksaymayacağı",
+  "admin.config.oauth.ignore-totp.description":
+    "Kullanıcı sosyal medya ile giriş yaptığında TOTP'yi yoksayıp yoksaymayacağı",
   "admin.config.oauth.disable-password": "Şifre ile girişi devre dışı bırak",
-  "admin.config.oauth.disable-password.description": "Şifre ile girişi devre dışı bırakıp bırakmayacağı.\nHesabınıza erişimi kaybetmemek için bu yapılandırmayı etkinleştirmeden önce bir OAuth sağlayıcısının doğru şekilde yapılandırıldığından emin olun.",
+  "admin.config.oauth.disable-password.description":
+    "Şifre ile girişi devre dışı bırakıp bırakmayacağı.\nHesabınıza erişimi kaybetmemek için bu yapılandırmayı etkinleştirmeden önce bir OAuth sağlayıcısının doğru şekilde yapılandırıldığından emin olun.",
   "admin.config.oauth.github-enabled": "GitHub",
-  "admin.config.oauth.github-enabled.description": "GitHub ile girişin etkin olup olmadığı",
+  "admin.config.oauth.github-enabled.description":
+    "GitHub ile girişin etkin olup olmadığı",
   "admin.config.oauth.github-client-id": "GitHub İstemci ID",
-  "admin.config.oauth.github-client-id.description": "GitHub OAuth uygulamasının İstemci ID'si",
+  "admin.config.oauth.github-client-id.description":
+    "GitHub OAuth uygulamasının İstemci ID'si",
   "admin.config.oauth.github-client-secret": "GitHub İstemci Sırrı",
-  "admin.config.oauth.github-client-secret.description": "GitHub OAuth uygulamasının İstemci Sırrı",
+  "admin.config.oauth.github-client-secret.description":
+    "GitHub OAuth uygulamasının İstemci Sırrı",
   "admin.config.oauth.google-enabled": "Google",
-  "admin.config.oauth.google-enabled.description": "Google ile girişin etkin olup olmadığı",
+  "admin.config.oauth.google-enabled.description":
+    "Google ile girişin etkin olup olmadığı",
   "admin.config.oauth.google-client-id": "Google İstemci ID",
-  "admin.config.oauth.google-client-id.description": "Google OAuth uygulamasının İstemci ID'si",
+  "admin.config.oauth.google-client-id.description":
+    "Google OAuth uygulamasının İstemci ID'si",
   "admin.config.oauth.google-client-secret": "Google İstemci Sırrı",
-  "admin.config.oauth.google-client-secret.description": "Google OAuth uygulamasının İstemci Sırrı",
+  "admin.config.oauth.google-client-secret.description":
+    "Google OAuth uygulamasının İstemci Sırrı",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
-  "admin.config.oauth.microsoft-enabled.description": "Microsoft ile girişin etkin olup olmadığı",
+  "admin.config.oauth.microsoft-enabled.description":
+    "Microsoft ile girişin etkin olup olmadığı",
   "admin.config.oauth.microsoft-tenant": "Microsoft Kiracı ID",
-  "admin.config.oauth.microsoft-tenant.description": "Microsoft OAuth uygulamasının Kiracı ID'si\ncommon: Hem kişisel Microsoft hesabı hem de Microsoft Entra ID'den iş veya okul hesabı olan kullanıcılar uygulamaya giriş yapabilir. organizations: Yalnızca Microsoft Entra ID'den iş veya okul hesabı olan kullanıcılar uygulamaya giriş yapabilir.\nconsumers: Yalnızca kişisel Microsoft hesabı olan kullanıcılar uygulamaya giriş yapabilir.\nMicrosoft Entra kiracısının alan adı veya GUID formatındaki kiracı ID'si: Yalnızca belirli bir Microsoft Entra kiracısından kullanıcılar (iş veya okul hesabına sahip dizin üyeleri veya kişisel Microsoft hesabına sahip dizin misafirleri) uygulamaya giriş yapabilir.",
+  "admin.config.oauth.microsoft-tenant.description":
+    "Microsoft OAuth uygulamasının Kiracı ID'si\ncommon: Hem kişisel Microsoft hesabı hem de Microsoft Entra ID'den iş veya okul hesabı olan kullanıcılar uygulamaya giriş yapabilir. organizations: Yalnızca Microsoft Entra ID'den iş veya okul hesabı olan kullanıcılar uygulamaya giriş yapabilir.\nconsumers: Yalnızca kişisel Microsoft hesabı olan kullanıcılar uygulamaya giriş yapabilir.\nMicrosoft Entra kiracısının alan adı veya GUID formatındaki kiracı ID'si: Yalnızca belirli bir Microsoft Entra kiracısından kullanıcılar (iş veya okul hesabına sahip dizin üyeleri veya kişisel Microsoft hesabına sahip dizin misafirleri) uygulamaya giriş yapabilir.",
   "admin.config.oauth.microsoft-client-id": "Microsoft İstemci ID",
-  "admin.config.oauth.microsoft-client-id.description": "Microsoft OAuth uygulamasının İstemci ID'si",
+  "admin.config.oauth.microsoft-client-id.description":
+    "Microsoft OAuth uygulamasının İstemci ID'si",
   "admin.config.oauth.microsoft-client-secret": "Microsoft İstemci Sırrı",
-  "admin.config.oauth.microsoft-client-secret.description": "Microsoft OAuth uygulamasının İstemci Sırrı",
+  "admin.config.oauth.microsoft-client-secret.description":
+    "Microsoft OAuth uygulamasının İstemci Sırrı",
   "admin.config.oauth.discord-enabled": "Discord",
-  "admin.config.oauth.discord-enabled.description": "Discord ile girişin etkin olup olmadığı",
+  "admin.config.oauth.discord-enabled.description":
+    "Discord ile girişin etkin olup olmadığı",
   "admin.config.oauth.discord-limited-users": "Discord sınırlı kullanıcılar",
-  "admin.config.oauth.discord-limited-users.description": "Giriş yapmayı Discord ID'lerine göre belirli kullanıcılarla sınırlayın. Devre dışı bırakmak için boş bırakın.",
+  "admin.config.oauth.discord-limited-users.description":
+    "Giriş yapmayı Discord ID'lerine göre belirli kullanıcılarla sınırlayın. Devre dışı bırakmak için boş bırakın.",
   "admin.config.oauth.discord-limited-guild": "Discord sınırlı sunucu ID'si",
-  "admin.config.oauth.discord-limited-guild.description": "Giriş yapmayı belirli bir sunucudaki kullanıcılarla sınırlayın. Devre dışı bırakmak için boş bırakın.",
+  "admin.config.oauth.discord-limited-guild.description":
+    "Giriş yapmayı belirli bir sunucudaki kullanıcılarla sınırlayın. Devre dışı bırakmak için boş bırakın.",
   "admin.config.oauth.discord-client-id": "Discord İstemci ID",
-  "admin.config.oauth.discord-client-id.description": "Discord OAuth uygulamasının İstemci ID'si",
+  "admin.config.oauth.discord-client-id.description":
+    "Discord OAuth uygulamasının İstemci ID'si",
   "admin.config.oauth.discord-client-secret": "Discord İstemci Sırrı",
-  "admin.config.oauth.discord-client-secret.description": "Discord OAuth uygulamasının İstemci Sırrı",
+  "admin.config.oauth.discord-client-secret.description":
+    "Discord OAuth uygulamasının İstemci Sırrı",
   "admin.config.oauth.oidc-enabled": "OpenID Connect",
-  "admin.config.oauth.oidc-enabled.description": "OpenID Connect ile girişin etkin olup olmadığı",
+  "admin.config.oauth.oidc-enabled.description":
+    "OpenID Connect ile girişin etkin olup olmadığı",
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect Keşif URI'si",
-  "admin.config.oauth.oidc-discovery-uri.description": "OpenID Connect OAuth uygulamasının Keşif URI'si",
+  "admin.config.oauth.oidc-discovery-uri.description":
+    "OpenID Connect OAuth uygulamasının Keşif URI'si",
   "admin.config.oauth.oidc-sign-out": "OpenID Connect'ten çıkış yap",
-  "admin.config.oauth.oidc-sign-out.description": "“Çıkış Yap” düğmesinin OpenID Connect sağlayıcısından da çıkış yapıp yapmayacağı",
+  "admin.config.oauth.oidc-sign-out.description":
+    "“Çıkış Yap” düğmesinin OpenID Connect sağlayıcısından da çıkış yapıp yapmayacağı",
   "admin.config.oauth.oidc-scope": "OpenID Connect kapsamı",
-  "admin.config.oauth.oidc-scope.description": "OpenID Connect sağlayıcısından istenmesi gereken kapsamlar.",
-  "admin.config.oauth.oidc-username-claim": "OpenID Connect kullanıcı adı talebi",
-  "admin.config.oauth.oidc-username-claim.description": "OpenID Connect ID jetonundaki kullanıcı adı talebi. Bu yapılandırmanın ne olduğunu bilmiyorsanız boş bırakın.",
-  "admin.config.oauth.oidc-role-path": "OpenID Connect jetonundaki rollerin yolu",
-  "admin.config.oauth.oidc-role-path.description": "Bir rol dizisine başvuran geçerli bir JMES yolu olmalıdır. " + "OpenID Connect rollerini kullanarak erişim haklarını yönetmek, yalnızca başka bir kimlik sağlayıcısı yapılandırılmamışsa ve şifre ile giriş devre dışı bırakılmışsa önerilir. " + "Bu yapılandırmanın ne olduğunu bilmiyorsanız boş bırakın.",
-  "admin.config.oauth.oidc-role-general-access": "Genel erişim için OpenID Connect rolü",
-  "admin.config.oauth.oidc-role-general-access.description": "Genel erişim için gereken rol. Bir kullanıcının giriş yapabilmesi için rollerinde bulunmalıdır. " + "Bu yapılandırmanın ne olduğunu bilmiyorsanız boş bırakın.",
-  "admin.config.oauth.oidc-role-admin-access": "Yönetici erişimi için OpenID Connect rolü",
-  "admin.config.oauth.oidc-role-admin-access.description": "Yönetici erişimi için gereken rol. Bir kullanıcının yönetici paneline erişebilmesi için rollerinde bulunmalıdır. " + "Bu yapılandırmanın ne olduğunu bilmiyorsanız boş bırakın.",
+  "admin.config.oauth.oidc-scope.description":
+    "OpenID Connect sağlayıcısından istenmesi gereken kapsamlar.",
+  "admin.config.oauth.oidc-username-claim":
+    "OpenID Connect kullanıcı adı talebi",
+  "admin.config.oauth.oidc-username-claim.description":
+    "OpenID Connect ID jetonundaki kullanıcı adı talebi. Bu yapılandırmanın ne olduğunu bilmiyorsanız boş bırakın.",
+  "admin.config.oauth.oidc-role-path":
+    "OpenID Connect jetonundaki rollerin yolu",
+  "admin.config.oauth.oidc-role-path.description":
+    "Bir rol dizisine başvuran geçerli bir JMES yolu olmalıdır. " +
+    "OpenID Connect rollerini kullanarak erişim haklarını yönetmek, yalnızca başka bir kimlik sağlayıcısı yapılandırılmamışsa ve şifre ile giriş devre dışı bırakılmışsa önerilir. " +
+    "Bu yapılandırmanın ne olduğunu bilmiyorsanız boş bırakın.",
+  "admin.config.oauth.oidc-role-general-access":
+    "Genel erişim için OpenID Connect rolü",
+  "admin.config.oauth.oidc-role-general-access.description":
+    "Genel erişim için gereken rol. Bir kullanıcının giriş yapabilmesi için rollerinde bulunmalıdır. " +
+    "Bu yapılandırmanın ne olduğunu bilmiyorsanız boş bırakın.",
+  "admin.config.oauth.oidc-role-admin-access":
+    "Yönetici erişimi için OpenID Connect rolü",
+  "admin.config.oauth.oidc-role-admin-access.description":
+    "Yönetici erişimi için gereken rol. Bir kullanıcının yönetici paneline erişebilmesi için rollerinde bulunmalıdır. " +
+    "Bu yapılandırmanın ne olduğunu bilmiyorsanız boş bırakın.",
   "admin.config.oauth.oidc-client-id": "OpenID Connect İstemci ID",
-  "admin.config.oauth.oidc-client-id.description": "OpenID Connect OAuth uygulamasının İstemci ID'si",
+  "admin.config.oauth.oidc-client-id.description":
+    "OpenID Connect OAuth uygulamasının İstemci ID'si",
   "admin.config.oauth.oidc-client-secret": "OpenID Connect İstemci Sırrı",
-  "admin.config.oauth.oidc-client-secret.description": "OpenID Connect OAuth uygulamasının İstemci Sırrı",
+  "admin.config.oauth.oidc-client-secret.description":
+    "OpenID Connect OAuth uygulamasının İstemci Sırrı",
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "LDAP'ı Etkinleştir",
-  "admin.config.ldap.enabled.description": "Kullanıcı girişi için LDAP kimlik doğrulamasını kullan",
+  "admin.config.ldap.enabled.description":
+    "Kullanıcı girişi için LDAP kimlik doğrulamasını kullan",
   "admin.config.ldap.url": "Sunucu URL'si",
   "admin.config.ldap.url.description": "LDAP sunucusunun URL'si",
   "admin.config.ldap.bind-dn": "Bind DN",
-  "admin.config.ldap.bind-dn.description": "Kullanıcı aramasını gerçekleştirmek için kullanılan varsayılan kullanıcı",
+  "admin.config.ldap.bind-dn.description":
+    "Kullanıcı aramasını gerçekleştirmek için kullanılan varsayılan kullanıcı",
   "admin.config.ldap.bind-password": "Bind şifresi",
-  "admin.config.ldap.bind-password.description": "Kullanıcı aramasını gerçekleştirmek için kullanılan şifre",
+  "admin.config.ldap.bind-password.description":
+    "Kullanıcı aramasını gerçekleştirmek için kullanılan şifre",
   "admin.config.ldap.search-base": "Kullanıcı tabanı",
-  "admin.config.ldap.search-base.description": "Kullanıcı aramasının yapılacağı temel konum",
+  "admin.config.ldap.search-base.description":
+    "Kullanıcı aramasının yapılacağı temel konum",
   "admin.config.ldap.search-query": "Kullanıcı sorgusu",
-  "admin.config.ldap.search-query.description": "Kullanıcı sorgusu, 'Kullanıcı tabanı'nda LDAP kullanıcısını aramak için kullanılacaktır. %username%, kullanıcının girdiği değer için yer tutucu olarak kullanılabilir.",
+  "admin.config.ldap.search-query.description":
+    "Kullanıcı sorgusu, 'Kullanıcı tabanı'nda LDAP kullanıcısını aramak için kullanılacaktır. %username%, kullanıcının girdiği değer için yer tutucu olarak kullanılabilir.",
   "admin.config.ldap.admin-groups": "Yönetici grubu",
-  "admin.config.ldap.admin-groups.description": "Yönetici erişimi için gereken grup.",
+  "admin.config.ldap.admin-groups.description":
+    "Yönetici erişimi için gereken grup.",
   "admin.config.ldap.field-name-member-of": "Kullanıcı grupları öznitelik adı",
-  "admin.config.ldap.field-name-member-of.description": "Bir kullanıcının üye olduğu gruplar için LDAP öznitelik adı. Bu, yönetici grubunu kontrol ederken kullanılır.",
+  "admin.config.ldap.field-name-member-of.description":
+    "Bir kullanıcının üye olduğu gruplar için LDAP öznitelik adı. Bu, yönetici grubunu kontrol ederken kullanılır.",
   "admin.config.ldap.field-name-email": "Kullanıcı e-posta öznitelik adı",
-  "admin.config.ldap.field-name-email.description": "Bir kullanıcının e-postası için LDAP öznitelik adı.",
+  "admin.config.ldap.field-name-email.description":
+    "Bir kullanıcının e-postası için LDAP öznitelik adı.",
   "admin.config.notify.success": "Yapılandırma başarıyla güncellendi.",
-  "admin.config.notify.logo-success": "Logo başarıyla güncellendi. Web sitesinde güncellenmesi birkaç dakika sürebilir.",
+  "admin.config.notify.logo-success":
+    "Logo başarıyla güncellendi. Web sitesinde güncellenmesi birkaç dakika sürebilir.",
   "admin.config.notify.no-changes": "Kaydedilecek değişiklik yok.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Etkin",
-  "admin.config.s3.enabled.description": "Whether S3 should be used to store the shared files instead of the local file system. WARNING: If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
+  "admin.config.s3.enabled.description":
+    "Paylaşılan dosyaları yerel dosya sistemi yerine S3'te saklayıp saklamamak. UYARI: ClamAV etkinse, kontrol edilmek üzere dosyalar geçici olarak S3'ten indirilecektir.",
   "admin.config.s3.endpoint": "Uç Nokta (Endpoint)",
   "admin.config.s3.endpoint.description": "S3 bucket'ının URL'si.",
   "admin.config.s3.region": "Bölge (Region)",
@@ -618,25 +812,35 @@ export default {
   "admin.config.s3.bucket-name": "Bucket Adı",
   "admin.config.s3.bucket-name.description": "S3 bucket'ının adı.",
   "admin.config.s3.bucket-path": "Yol (Path)",
-  "admin.config.s3.bucket-path.description": "Dosyaları S3 bucket'ında depolamak için kullanılacak varsayılan yol.",
+  "admin.config.s3.bucket-path.description":
+    "Dosyaları S3 bucket'ında depolamak için kullanılacak varsayılan yol.",
   "admin.config.s3.key": "Anahtar (Key)",
-  "admin.config.s3.key.description": "S3 bucket'ına erişmenizi sağlayan anahtar.",
+  "admin.config.s3.key.description":
+    "S3 bucket'ına erişmenizi sağlayan anahtar.",
   "admin.config.s3.secret": "Sır (Secret)",
-  "admin.config.s3.secret.description": "S3 bucket'ına erişmenizi sağlayan sır.",
+  "admin.config.s3.secret.description":
+    "S3 bucket'ına erişmenizi sağlayan sır.",
   "admin.config.s3.use-checksum": "Sağlama toplamı (checksum) kullan",
-  "admin.config.s3.use-checksum.description": "Sağlama toplamını desteklemeyen (ör. B2) arka uçlar için kapatın.",
-  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
+  "admin.config.s3.use-checksum.description":
+    "Sağlama toplamını desteklemeyen (ör. B2) arka uçlar için kapatın.",
+  "admin.config.s3.docs-link":
+    "Bucket'ınızda CORS yeniden yapılandırılmalıdır, ayrıntılar için {wikiLink} bağlantısına bakın.",
   "admin.config.category.legal": "Yasal",
   "admin.config.legal.enabled": "Yasal bildirimleri etkinleştir",
-  "admin.config.legal.enabled.description": "Altbilgide künye ve gizlilik politikası bağlantısı gösterilip gösterilmeyeceği.",
+  "admin.config.legal.enabled.description":
+    "Altbilgide künye ve gizlilik politikası bağlantısı gösterilip gösterilmeyeceği.",
   "admin.config.legal.imprint-text": "Künye metni",
-  "admin.config.legal.imprint-text.description": "Künyede gösterilmesi gereken metin. Markdown destekler. Harici bir künye sayfasına bağlantı vermek için boş bırakın.",
+  "admin.config.legal.imprint-text.description":
+    "Künyede gösterilmesi gereken metin. Markdown destekler. Harici bir künye sayfasına bağlantı vermek için boş bırakın.",
   "admin.config.legal.imprint-url": "Künye URL'si",
-  "admin.config.legal.imprint-url.description": "Zaten bir künye sayfanız varsa, metin alanı yerine buraya bağlantı verebilirsiniz.",
+  "admin.config.legal.imprint-url.description":
+    "Zaten bir künye sayfanız varsa, metin alanı yerine buraya bağlantı verebilirsiniz.",
   "admin.config.legal.privacy-policy-text": "Gizlilik politikası metni",
-  "admin.config.legal.privacy-policy-text.description": "Gizlilik politikasında gösterilmesi gereken metin. Markdown destekler. Harici bir gizlilik politikası sayfasına bağlantı vermek için boş bırakın.",
+  "admin.config.legal.privacy-policy-text.description":
+    "Gizlilik politikasında gösterilmesi gereken metin. Markdown destekler. Harici bir gizlilik politikası sayfasına bağlantı vermek için boş bırakın.",
   "admin.config.legal.privacy-policy-url": "Gizlilik politikası URL'si",
-  "admin.config.legal.privacy-policy-url.description": "Zaten bir gizlilik politikası sayfanız varsa, metin alanı yerine buraya bağlantı verebilirsiniz.",
+  "admin.config.legal.privacy-policy-url.description":
+    "Zaten bir gizlilik politikası sayfanız varsa, metin alanı yerine buraya bağlantı verebilirsiniz.",
   // 404
   "404.description": "Hay aksi, bu sayfa mevcut değil.",
   "404.button.home": "Beni anasayfaya götür",
@@ -645,18 +849,24 @@ export default {
   "error.description": "Hay aksi!",
   "error.button.back": "Geri dön",
   "error.msg.default": "Bir şeyler ters gitti.",
-  "error.msg.access_denied": "Kimlik doğrulama işlemini iptal ettiniz, lütfen tekrar deneyin.",
-  "error.msg.expired_token": "Kimlik doğrulama işlemi çok uzun sürdü, lütfen tekrar deneyin.",
+  "error.msg.access_denied":
+    "Kimlik doğrulama işlemini iptal ettiniz, lütfen tekrar deneyin.",
+  "error.msg.expired_token":
+    "Kimlik doğrulama işlemi çok uzun sürdü, lütfen tekrar deneyin.",
   "error.msg.invalid_token": "İç Hata",
   "error.msg.no_user": "Bu {0} hesabına bağlı kullanıcı mevcut değil.",
   "error.msg.no_email": "Bu {0} hesabından e-posta adresi alınamıyor.",
   "error.msg.already_linked": "Bu {0} hesabı zaten başka bir hesaba bağlı.",
   "error.msg.not_linked": "Bu {0} hesabı henüz hiçbir hesaba bağlanmamış.",
-  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
-  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
-  "error.msg.unverified_account": "Bu {0} hesabı doğrulanmamış, lütfen doğruladıktan sonra tekrar deneyin.",
+  "error.msg.email_already_exists":
+    "Bu e-posta adresine sahip bir hesap zaten var. Lütfen şifrenizle giriş yapın ve Hesabım sayfasından {0} hesabınızı manuel olarak bağlayın.",
+  "error.msg.email_not_verified":
+    "Bu {0} hesabındaki e-posta adresiniz doğrulanmadı. Lütfen giriş yapmadan önce kimlik sağlayıcınızda e-postanızı doğrulayın.",
+  "error.msg.unverified_account":
+    "Bu {0} hesabı doğrulanmamış, lütfen doğruladıktan sonra tekrar deneyin.",
   "error.msg.user_not_allowed": "Giriş yapmanıza izin verilmiyor.",
-  "error.msg.cannot_get_user_info": "Bu {0} hesabından kullanıcı bilgileriniz alınamıyor.",
+  "error.msg.cannot_get_user_info":
+    "Bu {0} hesabından kullanıcı bilgileriniz alınamıyor.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
@@ -701,14 +911,16 @@ export default {
   "common.error.exact-length": "Tam olarak {length} karakter olmalıdır",
   "common.error.invalid-number": "Bir sayı olmalıdır",
   "common.error.field-required": "Bu alan gereklidir",
-  "common.error.password.lowercase": "Password must contain at least one lowercase letter",
-  "common.error.password.uppercase": "Password must contain at least one uppercase letter",
-  "common.error.password.number": "Password must contain at least one number",
-  "common.error.password.special": "Password must contain at least one special character",
+  "common.error.password.lowercase": "Şifre en az bir küçük harf içermelidir",
+  "common.error.password.uppercase": "Şifre en az bir büyük harf içermelidir",
+  "common.error.password.number": "Şifre en az bir rakam içermelidir",
+  "common.error.password.special": "Şifre en az bir özel karakter içermelidir",
   "admin.notice.modal.headerTag": "YÖNETİCİ EYLEMİ GEREKLİ",
-  "admin.notice.modal.defaultCheckboxLabel": "Bu bildirimi okuduğumu ve köklü değişiklikleri anladığımı onaylıyorum.",
+  "admin.notice.modal.defaultCheckboxLabel":
+    "Bu bildirimi okuduğumu ve köklü değişiklikleri anladığımı onaylıyorum.",
   "admin.notice.modal.button.acknowledge": "Onayla ve Kapat",
   "admin.notice.modal.button.acknowledging": "Onaylanıyor...",
   "admin.notice.modal.docsLink": "Dokümantasyonu Görüntüle",
-  "admin.notice.modal.globalNoticeFooter": "Not: Onaylandıktan sonra bu bildirim, tüm cihazlardaki tüm yöneticiler için kalıcı olarak kapatılacaktır."
+  "admin.notice.modal.globalNoticeFooter":
+    "Not: Onaylandıktan sonra bu bildirim, tüm cihazlardaki tüm yöneticiler için kalıcı olarak kapatılacaktır.",
 };

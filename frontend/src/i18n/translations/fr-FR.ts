@@ -14,13 +14,17 @@ export default {
 
   // /
   "home.title": "Une plateforme de partage de fichiers <h>autohébergée</h>.",
-  "home.description": "Voulez-vous vraiment remettre vos fichiers personnels dans les mains de tiers comme WeTransfer ?",
+  "home.description":
+    "Voulez-vous vraiment remettre vos fichiers personnels dans les mains de tiers comme WeTransfer ?",
   "home.bullet.a.name": "Auto-hébergé",
-  "home.bullet.a.description": "Hébergez Pingvin Share sur votre propre machine.",
+  "home.bullet.a.description":
+    "Hébergez Pingvin Share sur votre propre machine.",
   "home.bullet.b.name": "Confidentialité",
-  "home.bullet.b.description": "Vos fichiers sont les vôtres et ne seront jamais consultés par des tiers.",
+  "home.bullet.b.description":
+    "Vos fichiers sont les vôtres et ne seront jamais consultés par des tiers.",
   "home.bullet.c.name": "Aucune rébarbative limite de taille",
-  "home.bullet.c.description": "Téléchargez des fichiers aussi volumineux que vous le souhaitez. Votre disque dur est votre limite.",
+  "home.bullet.c.description":
+    "Téléchargez des fichiers aussi volumineux que vous le souhaitez. Votre disque dur est votre limite.",
   "home.button.start": "Commencer",
   "home.button.source": "Code source",
   // END /
@@ -30,12 +34,15 @@ export default {
   "signin.description": "Vous n'avez pas encore de compte ?",
   "signin.button.signup": "S’inscrire",
   "signin.input.email-or-username": "Courriel ou nom d'utilisateur",
-  "signin.input.email-or-username.placeholder": "Votre courriel ou nom d'utilisateur",
+  "signin.input.email-or-username.placeholder":
+    "Votre courriel ou nom d'utilisateur",
   "signin.input.password": "Mot de passe",
   "signin.input.password.placeholder": "Votre mot de passe",
   "signin.button.submit": "Se connecter",
-  "signIn.notify.totp-required.title": "Une authentification à deux facteurs est requise",
-  "signIn.notify.totp-required.description": "Veuillez entrer votre code d'authentification à deux facteurs",
+  "signIn.notify.totp-required.title":
+    "Une authentification à deux facteurs est requise",
+  "signIn.notify.totp-required.description":
+    "Veuillez entrer votre code d'authentification à deux facteurs",
   "signIn.oauth.or": "OU",
   "signIn.oauth.signInWith": "Se connecter avec",
   "signIn.oauth.github": "GitHub",
@@ -56,12 +63,15 @@ export default {
   "signup.button.submit": "Commençons",
   // /auth/verify
   "verify.title": "Vérifier le compte",
-  "verify.success": "Votre compte a été vérifié avec succès ! Vous pouvez désormais vous connecter.",
+  "verify.success":
+    "Votre compte a été vérifié avec succès ! Vous pouvez désormais vous connecter.",
   "verify.error": "Le lien de vérification est invalide ou a expiré.",
   "verify.button.signin": "Aller à la connexion",
   "verify.info.title": "Vérification du compte",
-  "verify.info.description": "L'email de vérification est activé. Nous avons envoyé un lien de vérification à votre adresse email. Veuillez cliquer sur le lien pour activer votre compte.",
-  "verify.info.note": "Si vous ne recevez pas l'e-mail d’ici quelques minutes, vérifiez votre dossier de spam.",
+  "verify.info.description":
+    "L'email de vérification est activé. Nous avons envoyé un lien de vérification à votre adresse email. Veuillez cliquer sur le lien pour activer votre compte.",
+  "verify.info.note":
+    "Si vous ne recevez pas l'e-mail d’ici quelques minutes, vérifiez votre dossier de spam.",
   "verify.info.resend.button": "Renvoyer l'email de vérification",
   "verify.info.resend.success": "Email de vérification renvoyé avec succès.",
   "verify.info.resend.error": "Échec du renvoi de l'email de vérification.",
@@ -74,13 +84,16 @@ export default {
 
   // /auth/reset-password
   "resetPassword.title": "Mot de passe oublié ?",
-  "resetPassword.description": "Saisissez votre courriel pour réinitialiser votre mot de passe.",
-  "resetPassword.notify.success": "Un message avec un lien pour réinitialiser votre mot de passe a été envoyé si le courriel fourni existe.",
+  "resetPassword.description":
+    "Saisissez votre courriel pour réinitialiser votre mot de passe.",
+  "resetPassword.notify.success":
+    "Un message avec un lien pour réinitialiser votre mot de passe a été envoyé si le courriel fourni existe.",
   "resetPassword.button.back": "Retour à la page de connexion",
   "resetPassword.text.resetPassword": "Réinitialiser le mot de passe",
   "resetPassword.text.enterNewPassword": "Saisissez votre nouveau mot de passe",
   "resetPassword.input.password": "Nouveau mot de passe",
-  "resetPassword.notify.passwordReset": "Votre mot de passe a été réinitialisé avec succès.",
+  "resetPassword.notify.passwordReset":
+    "Votre mot de passe a été réinitialisé avec succès.",
   // /account
   "account.title": "Mon compte",
   "account.card.info.title": "Détails du compte",
@@ -90,8 +103,10 @@ export default {
   "account.card.password.title": "Mot de passe",
   "account.card.password.old": "Ancien mot de passe",
   "account.card.password.new": "Nouveau mot de passe",
-  "account.card.password.noPasswordSet": "Vous n’avez pas de mot de passe défini. Si vous voulez vous connecter avec un courriel et un mot de passe, vous devez définir un mot de passe.",
-  "account.notify.password.success": "Le mot de passe a été modifié avec succès",
+  "account.card.password.noPasswordSet":
+    "Vous n’avez pas de mot de passe défini. Si vous voulez vous connecter avec un courriel et un mot de passe, vous devez définir un mot de passe.",
+  "account.notify.password.success":
+    "Le mot de passe a été modifié avec succès",
   "account.card.oauth.title": "Identifiant social",
   "account.card.oauth.github": "GitHub",
   "account.card.oauth.google": "Google",
@@ -102,11 +117,14 @@ export default {
   "account.card.oauth.unlink": "Dissocier",
   "account.card.oauth.unlinked": "Dissocié",
   "account.modal.unlink.title": "Dissocier le compte",
-  "account.modal.unlink.description": "Délier vos réseaux sociaux peut vous faire perdre votre compte si vous ne vous souvenez pas de vos identifiants de connexion",
+  "account.modal.unlink.description":
+    "Délier vos réseaux sociaux peut vous faire perdre votre compte si vous ne vous souvenez pas de vos identifiants de connexion",
   "account.notify.oauth.unlinked.success": "Dissocié avec succès",
   "account.card.security.title": "Sécurité",
-  "account.card.security.totp.enable.description": "Entrez votre mot de passe actuel pour activer TOTP",
-  "account.card.security.totp.disable.description": "Entrez votre mot de passe actuel pour désactiver TOTP",
+  "account.card.security.totp.enable.description":
+    "Entrez votre mot de passe actuel pour activer TOTP",
+  "account.card.security.totp.disable.description":
+    "Entrez votre mot de passe actuel pour désactiver TOTP",
   "account.card.security.totp.button.start": "Démarrer",
   "account.modal.totp.title": "Activer la double authentification",
   "account.modal.totp.step1": "Étape 1 : Ajouter votre authentification",
@@ -116,10 +134,12 @@ export default {
   "common.button.clickToCopy": "Cliquez pour copier",
   "common.button.showQRCode": "Afficher le QR Code",
   "account.modal.totp.verify": "Vérifier",
-  "account.notify.totp.disable": "Double authentification (TOTP) désactivé avec succès",
+  "account.notify.totp.disable":
+    "Double authentification (TOTP) désactivé avec succès",
   "account.notify.totp.enable": "TOTP activé avec succès",
   "account.card.language.title": "Langue",
-  "account.card.language.description": "Le projet est traduit par la communauté. Certaines traductions peuvent être incomplètes.",
+  "account.card.language.description":
+    "Le projet est traduit par la communauté. Certaines traductions peuvent être incomplètes.",
   "account.card.color.title": "Thème de couleurs",
   // ThemeSwitcher.tsx
   "account.theme.dark": "Sombre",
@@ -127,7 +147,8 @@ export default {
   "account.theme.system": "Système",
   "account.button.delete": "Supprimer le compte",
   "account.modal.delete.title": "Supprimer le compte",
-  "account.modal.delete.description": "Voulez-vous vraiment supprimer votre compte, y compris tous vos partages actifs ?",
+  "account.modal.delete.description":
+    "Voulez-vous vraiment supprimer votre compte, y compris tous vos partages actifs ?",
   // END /account
 
   // /account/shares
@@ -137,7 +158,7 @@ export default {
   "account.shares.button.create": "Créez-en un",
   "account.shares.info.title": "Détails du partage",
   "account.shares.button.edit": "Ajouter/Supprimer des fichiers",
-  "account.shares.table.id": "ID",
+  "account.shares.table.id": "Identifiant",
   "account.shares.table.name": "Nom",
   "account.shares.table.description": "Description",
   "account.shares.table.visitors": "Visiteurs",
@@ -146,31 +167,39 @@ export default {
   "account.shares.table.size": "Taille",
   "account.shares.table.password-protected": "Protégé par un mot de passe",
   "account.shares.table.recipients": "Destinataires",
-  "account.shares.table.restricted-to-recipients": "Restreint aux destinataires uniquement",
-  "account.shares.table.shared-with-recipients": "Partagé avec les destinataires",
+  "account.shares.table.restricted-to-recipients":
+    "Restreint aux destinataires uniquement",
+  "account.shares.table.shared-with-recipients":
+    "Partagé avec les destinataires",
   "account.shares.table.visitor-count": "{count} sur {max}",
   "account.shares.table.expiry-never": "Jamais",
   "account.shares.modal.share-informations": "Détails du partage",
   "account.shares.modal.share-link": "Lien de partage",
-  "account.shares.modal.edit.password.keep": "Laissez le champ vide pour conserver le mot de passe actuel",
-  "account.shares.modal.edit.password.remove": "Supprimer la protection par mot de passe",
+  "account.shares.modal.edit.password.keep":
+    "Laissez le champ vide pour conserver le mot de passe actuel",
+  "account.shares.modal.edit.password.remove":
+    "Supprimer la protection par mot de passe",
   "account.shares.modal.delete.title": "Supprimer le partage : {share}",
-  "account.shares.modal.delete.description": "Voulez-vous vraiment supprimer ce partage ?",
+  "account.shares.modal.delete.description":
+    "Voulez-vous vraiment supprimer ce partage ?",
   // END /account/shares
 
   // /account/received
   "account.received-shares.title": "Partages reçus",
   "account.received-shares.title.empty": "Aucun partage reçu pour l'instant",
-  "account.received-shares.description.empty": "Les partages envoyés à votre adresse email apparaîtront ici.",
+  "account.received-shares.description.empty":
+    "Les partages envoyés à votre adresse email apparaîtront ici.",
   "account.received-shares.table.from": "De",
   "account.received-shares.button.open": "Ouvert",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Partages inversés",
-  "account.reverseShares.description": "Un partage inversé vous permet de générer une URL unique qui permet à des utilisateurs externes de créer un partage.",
+  "account.reverseShares.description":
+    "Un partage inversé vous permet de générer une URL unique qui permet à des utilisateurs externes de créer un partage.",
   "account.reverseShares.title.empty": "C’est plutôt vide 👀",
-  "account.reverseShares.description.empty": "Vous n’avez aucun partage inversé.",
+  "account.reverseShares.description.empty":
+    "Vous n’avez aucun partage inversé.",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Créer un partage inversé",
   "account.reverseShares.modal.expiration.label": "Expiration",
@@ -187,16 +216,22 @@ export default {
   "account.reverseShares.modal.expiration.year-singular": "An",
   "account.reverseShares.modal.expiration.year-plural": "Ans",
   "account.reverseShares.modal.max-size.label": "Taille maximale du partage",
-  "account.reverseShares.modal.send-email": "Envoyer des notifications par courriel",
-  "account.reverseShares.modal.send-email.description": "Vous envoi une notification par courriel lorsqu'un partage est créé avec ce lien de partage inversé.",
+  "account.reverseShares.modal.send-email":
+    "Envoyer des notifications par courriel",
+  "account.reverseShares.modal.send-email.description":
+    "Vous envoi une notification par courriel lorsqu'un partage est créé avec ce lien de partage inversé.",
   "account.reverseShares.modal.simplified": "Mode simple",
-  "account.reverseShares.modal.simplified.description": "Simplifiez la tâche à la personne qui vous partage un fichier. Ils ne pourront que personnaliser le nom et la description du partage.",
+  "account.reverseShares.modal.simplified.description":
+    "Simplifiez la tâche à la personne qui vous partage un fichier. Ils ne pourront que personnaliser le nom et la description du partage.",
   "account.reverseShares.modal.public-access": "Accès public",
-  "account.reverseShares.modal.public-access.description": "Rendre les partages créés avec ce partage inversé public. Si désactivé, seul vous et le créateur du partage pourrez le voir.",
+  "account.reverseShares.modal.public-access.description":
+    "Rendre les partages créés avec ce partage inversé public. Si désactivé, seul vous et le créateur du partage pourrez le voir.",
   "account.reverseShares.modal.max-use.label": "Nombre d'utilisations max",
-  "account.reverseShares.modal.max-use.description": "Le nombre maximal de fois que cette URL peut être utilisée pour créer un partage.",
+  "account.reverseShares.modal.max-use.description":
+    "Le nombre maximal de fois que cette URL peut être utilisée pour créer un partage.",
   "account.reverseShare.never-expires": "Ce partage inversé n'expirera jamais.",
-  "account.reverseShare.expires-on": "Ce partage inversé expirera le {expiration}.",
+  "account.reverseShare.expires-on":
+    "Ce partage inversé expirera le {expiration}.",
   "account.reverseShares.table.no-shares": "Aucun partage créé pour le moment",
   "account.reverseShares.table.count.singular": "partage",
   "account.reverseShares.table.count.plural": "partages",
@@ -206,7 +241,8 @@ export default {
   "account.reverseShares.table.expires": "Expire le",
   "account.reverseShares.modal.reverse-share-link": "Lien du partage inversé",
   "account.reverseShares.modal.delete.title": "Supprimer le partage inversé",
-  "account.reverseShares.modal.delete.description": "Voulez-vous vraiment supprimer ce partage inversé ? Si vous le faites, les partages qu’il contient seront également supprimés.",
+  "account.reverseShares.modal.delete.description":
+    "Voulez-vous vraiment supprimer ce partage inversé ? Si vous le faites, les partages qu’il contient seront également supprimés.",
   // END /account/reverseShares
 
   // /admin
@@ -221,35 +257,49 @@ export default {
   "admin.users.title": "Gestion des utilisateurs",
   "admin.users.table.username": "Surnom",
   "admin.users.table.email": "Courriel",
-  "admin.users.table.admin": "Admin",
-  "admin.users.table.storageQuota": "Storage quota",
-  "admin.users.table.maxShareSize": "Max share size",
+  "admin.users.table.admin": "Administrateur",
+  "admin.users.table.storageQuota": "Quota de stockage",
+  "admin.users.table.maxShareSize": "Taille maximale de partage",
   "admin.users.edit.update.title": "Modifier l'utilisateur : {username}",
   "admin.users.edit.update.admin-privileges": "Privilèges d’admin",
   "admin.users.edit.update.email-verified": "Email vérifié",
-  "admin.users.edit.update.custom-share-size-limit": "Personnaliser la limite de taille de partage",
-  "admin.users.edit.update.custom-share-size-limit.description": "Remplacer la limite globale de téléversement pour cet utilisateur",
-  "admin.users.edit.update.custom-storage-quota-limit": "Custom storage quota",
-  "admin.users.edit.update.custom-storage-quota-limit.description": "Limit the user's total storage usage across active shares",
+  "admin.users.edit.update.custom-share-size-limit":
+    "Personnaliser la limite de taille de partage",
+  "admin.users.edit.update.custom-share-size-limit.description":
+    "Remplacer la limite globale de téléversement pour cet utilisateur",
+  "admin.users.edit.update.custom-storage-quota-limit":
+    "Quota de stockage personnalisé",
+  "admin.users.edit.update.custom-storage-quota-limit.description":
+    "Limiter l'utilisation totale du stockage de l'utilisateur sur tous ses partages actifs",
   "admin.users.edit.update.change-password.title": "Changer le mot de passe",
   "admin.users.edit.update.change-password.field": "Nouveau mot de passe",
-  "admin.users.edit.update.change-password.button": "Enregistrer le nouveau mot de passe",
-  "admin.users.edit.update.notify.password.success": "Le mot de passe a été modifié",
+  "admin.users.edit.update.change-password.button":
+    "Enregistrer le nouveau mot de passe",
+  "admin.users.edit.update.notify.password.success":
+    "Le mot de passe a été modifié",
   "admin.users.edit.delete.title": "Supprimer l'utilisateur : {username} ?",
-  "admin.users.edit.delete.description": "Souhaitez-vous vraiment supprimer cet utilisateur et tous ses partages ?",
+  "admin.users.edit.delete.description":
+    "Souhaitez-vous vraiment supprimer cet utilisateur et tous ses partages ?",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Créer un utilisateur",
   "admin.users.modal.create.username": "Surnom",
   "admin.users.modal.create.email": "Courriel",
   "admin.users.modal.create.password": "Mot de passe",
-  "admin.users.modal.create.manual-password": "Définir le mot de passe manuellement",
-  "admin.users.modal.create.manual-password.description": "S’il n'est pas coché, l’utilisateur recevra un email avec un lien pour définir son mot de passe.",
-  "admin.users.modal.create.custom-share-size-limit": "Personnaliser la limite de taille de partage",
-  "admin.users.modal.create.custom-share-size-limit.description": "Remplacer la limite globale de téléversement pour cet utilisateur",
-  "admin.users.modal.create.custom-storage-quota-limit": "Custom storage quota",
-  "admin.users.modal.create.custom-storage-quota-limit.description": "Limit the user's total storage usage across active shares",
+  "admin.users.modal.create.manual-password":
+    "Définir le mot de passe manuellement",
+  "admin.users.modal.create.manual-password.description":
+    "S’il n'est pas coché, l’utilisateur recevra un email avec un lien pour définir son mot de passe.",
+  "admin.users.modal.create.custom-share-size-limit":
+    "Personnaliser la limite de taille de partage",
+  "admin.users.modal.create.custom-share-size-limit.description":
+    "Remplacer la limite globale de téléversement pour cet utilisateur",
+  "admin.users.modal.create.custom-storage-quota-limit":
+    "Quota de stockage personnalisé",
+  "admin.users.modal.create.custom-storage-quota-limit.description":
+    "Limiter l'utilisation totale du stockage de l'utilisateur sur tous ses partages actifs",
   "admin.users.modal.create.admin": "Privilèges d’admin",
-  "admin.users.modal.create.admin.description": "Si coché, l’utilisateur pourra accéder au panneau d'administration.",
+  "admin.users.modal.create.admin.description":
+    "Si coché, l’utilisateur pourra accéder au panneau d'administration.",
   // END /admin/users
 
   // /admin/shares
@@ -261,21 +311,29 @@ export default {
   "admin.shares.table.expires": "Expire le",
   "admin.shares.table.deletes": "Sera supprimé le",
   "admin.shares.edit.delete.title": "Supprimer le partage : {id}",
-  "admin.shares.edit.delete.description": "Voulez-vous vraiment supprimer ce partage ?",
+  "admin.shares.edit.delete.description":
+    "Voulez-vous vraiment supprimer ce partage ?",
   // END /admin/shares
 
   // /upload
   "upload.title": "Envoyer",
-  "upload.notify.confirm-leave": "Êtes-vous sûr de vouloir quitter cette page ? Votre envoi sera annulé.",
-  "upload.notify.generic-error": "Une erreur est survenue durant le traitement de votre partage.",
-  "upload.notify.count-failed": "{count} fichier(s) n’a(ont) pas pu être envoyé(s). Veuillez réessayer.",
+  "upload.notify.confirm-leave":
+    "Êtes-vous sûr de vouloir quitter cette page ? Votre envoi sera annulé.",
+  "upload.notify.generic-error":
+    "Une erreur est survenue durant le traitement de votre partage.",
+  "upload.notify.count-failed":
+    "{count} fichier(s) n’a(ont) pas pu être envoyé(s). Veuillez réessayer.",
   "upload.notify.duplicate-skipped": "Fichier dupliqué ignoré : {name}",
-  "upload.reverse-share.error.invalid.title": "Lien de partage inversé invalide",
-  "upload.reverse-share.error.invalid.description": "Ce partage inversé a expiré ou n'est pas valide.",
+  "upload.reverse-share.error.invalid.title":
+    "Lien de partage inversé invalide",
+  "upload.reverse-share.error.invalid.description":
+    "Ce partage inversé a expiré ou n'est pas valide.",
   // Dropzone.tsx
   "upload.dropzone.title": "Téléverser des fichiers",
-  "upload.dropzone.description": "Glissez-déposez vos fichiers ou dossiers ici pour commencer le partage ou utilisez « Ctrl+V » pour importer du texte depuis le presse-papiers. Nous acceptons un maximum de {maxSize} fichiers au total.",
-  "upload.dropzone.notify.file-too-big": "Vos fichiers dépassent la taille maximale de {maxSize}.",
+  "upload.dropzone.description":
+    "Glissez-déposez vos fichiers ou dossiers ici pour commencer le partage ou utilisez « Ctrl+V » pour importer du texte depuis le presse-papiers. Nous acceptons un maximum de {maxSize} fichiers au total.",
+  "upload.dropzone.notify.file-too-big":
+    "Vos fichiers dépassent la taille maximale de {maxSize}.",
   "upload.button.folder": "Importer un dossier",
   "upload.button.folder.append": "Ajouter un dossier",
   "upload.button.add": "Ajouter au téléversement",
@@ -286,15 +344,20 @@ export default {
   "upload.filelist.remaining": "{time} restant",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Créer un partage",
-  "upload.modal.link.error.invalid": "Ne peut contenir que des lettres, des chiffres, des tirets bas et des traits d'union",
+  "upload.modal.link.error.invalid":
+    "Ne peut contenir que des lettres, des chiffres, des tirets bas et des traits d'union",
   "upload.modal.link.error.taken": "Ce lien est déjà utilisé",
-  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
-  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
+  "upload.modal.link.error.s3-session-not-found":
+    "Session de téléversement S3 introuvable",
+  "upload.modal.link.error.s3-etag-missing":
+    "En-tête ETag manquant dans la réponse S3. Assurez-vous que CORS expose l'en-tête ETag.",
   "upload.modal.not-signed-in": "Vous n'êtes pas connecté",
-  "upload.modal.not-signed-in-description": "Vous ne pourrez pas supprimer votre partage manuellement et afficher le nombre de visiteurs.",
+  "upload.modal.not-signed-in-description":
+    "Vous ne pourrez pas supprimer votre partage manuellement et afficher le nombre de visiteurs.",
   "upload.modal.expires.never": "jamais",
   "upload.modal.expires.never-long": "Partage permanent",
-  "upload.modal.expires.error.too-long": "La date d'expiration dépasse le maximum de {max}.",
+  "upload.modal.expires.error.too-long":
+    "La date d'expiration dépasse le maximum de {max}.",
   "upload.modal.link.label": "Lien",
   "upload.modal.expires.label": "Expiration",
   "upload.modal.expires.minute-singular": "Minute",
@@ -311,13 +374,17 @@ export default {
   "upload.modal.expires.year-plural": "Ans",
   "upload.modal.accordion.name-and-description.title": "Nom et description",
   "upload.modal.accordion.name-and-description.name.placeholder": "Nom",
-  "upload.modal.accordion.name-and-description.description.placeholder": "Note pour les destinataires de ce partage",
+  "upload.modal.accordion.name-and-description.description.placeholder":
+    "Note pour les destinataires de ce partage",
   "upload.modal.accordion.email.title": "Adresse courriel des destinataires",
-  "upload.modal.accordion.email.placeholder": "Saisir les destinataires de ce partage",
+  "upload.modal.accordion.email.placeholder":
+    "Saisir les destinataires de ce partage",
   "upload.modal.accordion.email.invalid-email": "Courriel invalide",
-  "upload.modal.accordion.email.restrict-to-recipients": "Restreindre l'accès à ces destinataires uniquement (ils doivent se connecter pour y accéder)",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Restreindre l'accès à ces destinataires uniquement (ils doivent se connecter pour y accéder)",
   "upload.modal.accordion.security.title": "Options de sécurité",
-  "upload.modal.accordion.security.password.label": "Protection par mot de passe",
+  "upload.modal.accordion.security.password.label":
+    "Protection par mot de passe",
   "upload.modal.accordion.security.password.placeholder": "Aucun mot de passe",
   "upload.modal.accordion.security.max-views.label": "Nombre de vues maximum",
   "upload.modal.accordion.security.max-views.placeholder": "Aucune limite",
@@ -325,45 +392,59 @@ export default {
   "upload.modal.completed.never-expires": "Ce partage n’expirera jamais.",
   "upload.modal.completed.expires-on": "Ce partage expirera le {expiration}.",
   "upload.modal.completed.share-ready": "Partage prêt",
-  "upload.modal.completed.notified-reverse-share-creator": "Nous avons notifié le créateur du partage inverse. Vous pouvez également partager manuellement ce lien avec eux par d'autres moyens.",
+  "upload.modal.completed.notified-reverse-share-creator":
+    "Nous avons notifié le créateur du partage inverse. Vous pouvez également partager manuellement ce lien avec eux par d'autres moyens.",
   // END /upload
 
   // /share/[id]
   "share.title": "Partage {shareId}",
   "share.description": "Regardez ce que j’ai partagé !",
-  "share.fileCount": "{count, plural, =1 {# fichier} other {# fichiers}} · {size} (le fichier compressé peut être plus petit)",
-  "share.copy-text-contents": "Copier le contenu du fichier dans le presse-papiers",
+  "share.fileCount":
+    "{count, plural, =1 {# fichier} other {# fichiers}} · {size} (le fichier compressé peut être plus petit)",
+  "share.copy-text-contents":
+    "Copier le contenu du fichier dans le presse-papiers",
   "share.error.visitor-limit-exceeded.title": "Limite de visiteurs dépassée",
-  "share.error.visitor-limit-exceeded.description": "La limite de visiteurs de ce partage a été dépassée.",
+  "share.error.visitor-limit-exceeded.description":
+    "La limite de visiteurs de ce partage a été dépassée.",
   "share.error.removed.title": "Partage supprimé",
   "share.error.not-found.title": "Partage introuvable",
-  "share.error.not-found.description": "Le partage que vous cherchez n’existe pas.",
+  "share.error.not-found.description":
+    "Le partage que vous cherchez n’existe pas.",
   "share.error.access-denied.title": "Partage privé",
-  "share.error.access-denied.description": "Le compte actuel n'a pas la permission d'accéder à ce partage",
+  "share.error.access-denied.description":
+    "Le compte actuel n'a pas la permission d'accéder à ce partage",
   "share.error.restricted.title": "Partagé restreint",
-  "share.error.restricted.description": "Ce partage est restreint à certains destinataires. Veuillez vous connecter pour y accéder.",
+  "share.error.restricted.description":
+    "Ce partage est restreint à certains destinataires. Veuillez vous connecter pour y accéder.",
   "share.error.restricted.button": "Connexion",
   "share.modal.password.title": "Mot de passe requis",
-  "share.modal.password.description": "Veuillez entrer le mot de passe pour accéder à ce partage.",
+  "share.modal.password.description":
+    "Veuillez entrer le mot de passe pour accéder à ce partage.",
   "share.modal.password": "Mot de passe",
   "share.modal.error.invalid-password": "Mot de passe incorrect",
   "share.button.download-all": "Télécharger tout",
-  "share.notify.download-all-preparing": "Le partage est en préparation. Réessayez dans quelques minutes.",
-  "share.notify.copied-contents": "Contenu du fichier copié dans le presse-papiers",
-  "share.notify.copy-too-big-error": "Le fichier est trop volumineux pour être copié dans le presse-papiers",
-  "share.notify.copy-not-supported-error": "La copie dans le presse-papiers nécessite une connexion HTTPS",
+  "share.notify.download-all-preparing":
+    "Le partage est en préparation. Réessayez dans quelques minutes.",
+  "share.notify.copied-contents":
+    "Contenu du fichier copié dans le presse-papiers",
+  "share.notify.copy-too-big-error":
+    "Le fichier est trop volumineux pour être copié dans le presse-papiers",
+  "share.notify.copy-not-supported-error":
+    "La copie dans le presse-papiers nécessite une connexion HTTPS",
   "share.modal.file-link": "Lien du fichier",
   "share.table.name": "Nom",
   "share.table.size": "Taille",
-  "share.modal.file-preview.original_file": "View original file",
+  "share.modal.file-preview.original_file": "Voir le fichier original",
   "share.modal.file-preview.error.not-supported.title": "Aperçu non supporté",
-  "share.modal.file-preview.error.not-supported.description": "Les aperçus ne sont pas pris en charge pour ce type de fichiers. Veuillez télécharger le fichier pour le voir.",
+  "share.modal.file-preview.error.not-supported.description":
+    "Les aperçus ne sont pas pris en charge pour ce type de fichiers. Veuillez télécharger le fichier pour le voir.",
   // END /share/[id]
 
   // /share/[id]/edit
   "share.edit.title": "Modifier {shareId}",
   "share.edit.append-upload": "Ajouter un fichier",
-  "share.edit.notify.generic-error": "Une erreur est survenue durant le traitement de votre partage.",
+  "share.edit.notify.generic-error":
+    "Une erreur est survenue durant le traitement de votre partage.",
   "share.edit.notify.save-success": "Partage mis à jour avec succès",
   // END /share/[id]/edit
 
@@ -377,11 +458,12 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "Fichier de configuration présent",
-  "admin.config.config-file-warning.description": "Puisque vous avez configuré Pingvin Share avec un fichier de configuration, vous ne pouvez pas modifier la configuration via l'interface utilisateur.",
+  "admin.config.config-file-warning.description":
+    "Puisque vous avez configuré Pingvin Share avec un fichier de configuration, vous ne pouvez pas modifier la configuration via l'interface utilisateur.",
   "admin.config.title": "Paramètres",
   "admin.config.category.general": "Général",
   "admin.config.category.appearance": "Apparence",
-  "admin.config.category.security": "Security & Access",
+  "admin.config.category.security": "Sécurité & Accès",
   "admin.config.category.share": "Partage",
   "admin.config.category.cache": "Cache",
   "admin.config.category.email": "Courriel",
@@ -390,133 +472,216 @@ export default {
   "admin.config.general.app-name": "Nom de l’appli",
   "admin.config.general.app-name.description": "Le nom de l’application",
   "admin.config.general.default-language": "Langue par défaut",
-  "admin.config.general.default-language.description": "Ceci s'applique à tous les utilisateurs, chaque utilisateur peut toujours personnaliser sa langue dans son profil.",
+  "admin.config.general.default-language.description":
+    "Ceci s'applique à tous les utilisateurs, chaque utilisateur peut toujours personnaliser sa langue dans son profil.",
   "admin.config.appearance.theme-primary-color": "Couleur principale du thème",
-  "admin.config.appearance.theme-primary-color.description": "Couleur principale pour les boutons, liens et accents. Choisissez personnalisé pour utiliser une couleur de remplacement.",
-  "admin.config.appearance.theme-primary-color-override": "Couleur principale personnalisée",
-  "admin.config.appearance.theme-primary-color-override.description": "Couleur hex de remplacement lorsque la couleur principale est définie sur personnalisé.",
+  "admin.config.appearance.theme-primary-color.description":
+    "Couleur principale pour les boutons, liens et accents. Choisissez personnalisé pour utiliser une couleur de remplacement.",
+  "admin.config.appearance.theme-primary-color-override":
+    "Couleur principale personnalisée",
+  "admin.config.appearance.theme-primary-color-override.description":
+    "Couleur hex de remplacement lorsque la couleur principale est définie sur personnalisé.",
   "admin.config.appearance.theme-font-preset": "Préréglage de police",
-  "admin.config.appearance.theme-font-preset.description": "Préréglage de police chargé à la compilation. Choisissez système ou une police Google incluse.",
-  "admin.config.appearance.theme-color-scheme": "Schéma de couleurs par défaut (invités)",
-  "admin.config.appearance.theme-color-scheme.description": "Mode clair/sombre par défaut pour les utilisateurs non connectés. Les utilisateurs connectés utilisent les préférences de leur compte.",
+  "admin.config.appearance.theme-font-preset.description":
+    "Préréglage de police chargé à la compilation. Choisissez système ou une police Google incluse.",
+  "admin.config.appearance.theme-color-scheme":
+    "Schéma de couleurs par défaut (invités)",
+  "admin.config.appearance.theme-color-scheme.description":
+    "Mode clair/sombre par défaut pour les utilisateurs non connectés. Les utilisateurs connectés utilisent les préférences de leur compte.",
   "admin.config.appearance.theme-radius": "Rayon des bordures du thème",
-  "admin.config.appearance.theme-radius.description": "Rayon de bordure par défaut des composants Mantine.",
+  "admin.config.appearance.theme-radius.description":
+    "Rayon de bordure par défaut des composants Mantine.",
   "admin.config.appearance.custom-css": "CSS personnalisé",
-  "admin.config.appearance.custom-css.description": "CSS global appliqué au frontend. À utiliser avec précaution: un CSS invalide peut affecter l'interface.",
-  "admin.config.appearance.upload-progress-style": "Style de progression du téléversement",
-  "admin.config.appearance.upload-progress-style.description": "Choisir comment la progression du téléversement est affichée dans la liste de fichiers.",
-  "admin.config.appearance.upload-progress-style.circle": "Indicateur circulaire",
-  "admin.config.appearance.upload-progress-style.circle-percentage": "Cercle avec des pourcentages",
-  "admin.config.appearance.upload-progress-style.percentage-time": "Pourcentage et temps restant",
+  "admin.config.appearance.custom-css.description":
+    "CSS global appliqué au frontend. À utiliser avec précaution: un CSS invalide peut affecter l'interface.",
+  "admin.config.appearance.upload-progress-style":
+    "Style de progression du téléversement",
+  "admin.config.appearance.upload-progress-style.description":
+    "Choisir comment la progression du téléversement est affichée dans la liste de fichiers.",
+  "admin.config.appearance.upload-progress-style.circle":
+    "Indicateur circulaire",
+  "admin.config.appearance.upload-progress-style.circle-percentage":
+    "Cercle avec des pourcentages",
+  "admin.config.appearance.upload-progress-style.percentage-time":
+    "Pourcentage et temps restant",
   "admin.config.general.app-url": "URL de l’appli",
-  "admin.config.general.app-url.description": "Depuis quel URL le partage Pingvin est disponible",
+  "admin.config.general.app-url.description":
+    "Depuis quel URL le partage Pingvin est disponible",
   "admin.config.security.secure-cookies": "Cookies sécurisés",
-  "admin.config.security.secure-cookies.description": "Définir ou non le marquage sécurisé sur les cookies. Si activé, le site ne fonctionnera pas lorsqu'il est accédé via HTTP.",
+  "admin.config.security.secure-cookies.description":
+    "Définir ou non le marquage sécurisé sur les cookies. Si activé, le site ne fonctionnera pas lorsqu'il est accédé via HTTP.",
   "admin.config.general.show-home-page": "Afficher la page d’accueil",
-  "admin.config.general.show-home-page.description": "Afficher ou non la page d’accueil",
+  "admin.config.general.show-home-page.description":
+    "Afficher ou non la page d’accueil",
   "admin.config.security.session-duration": "Durée de la session",
-  "admin.config.security.session-duration.description": "Temps après lequel un utilisateur doit se reconnecter (par défaut : 3 mois).",
+  "admin.config.security.session-duration.description":
+    "Temps après lequel un utilisateur doit se reconnecter (par défaut : 3 mois).",
   "admin.config.appearance.logo": "Logo",
-  "admin.config.appearance.logo.description": "Changez de logo en envoyant une nouvelle image. L’image doit être au format PNG et doit avoir un ratio 1:1.",
+  "admin.config.appearance.logo.description":
+    "Changez de logo en envoyant une nouvelle image. L’image doit être au format PNG et doit avoir un ratio 1:1.",
   "admin.config.appearance.logo-dark": "Logo du mode sombre",
-  "admin.config.appearance.logo-dark.description": "Veuillez téléverser un logo distinct pour le mode sombre. L'image doit être au format PNG et avoir les proportions 1:1.",
+  "admin.config.appearance.logo-dark.description":
+    "Veuillez téléverser un logo distinct pour le mode sombre. L'image doit être au format PNG et avoir les proportions 1:1.",
   "admin.config.appearance.logo.placeholder": "Sélectionner une image",
-  "admin.config.security.custom-password-policy": "Custom password policy",
-  "admin.config.security.custom-password-policy.description": "Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.",
-  "admin.config.security.min-length": "Minimum length",
-  "admin.config.security.min-length.description": "Minimum number of characters required for a password.",
-  "admin.config.security.require-uppercase": "Require uppercase",
-  "admin.config.security.require-uppercase.description": "Whether to require at least one uppercase letter in the password.",
-  "admin.config.security.require-lowercase": "Require lowercase",
-  "admin.config.security.require-lowercase.description": "Whether to require at least one lowercase letter in the password.",
-  "admin.config.security.require-number": "Require number",
-  "admin.config.security.require-number.description": "Whether to require at least one number in the password.",
-  "admin.config.security.require-special-character": "Require special character",
-  "admin.config.security.require-special-character.description": "Whether to require at least one special character in the password.",
+  "admin.config.security.custom-password-policy":
+    "Politique de mot de passe personnalisée",
+  "admin.config.security.custom-password-policy.description":
+    "Activer ou non la personnalisation de la politique de mot de passe. Si désactivé, la politique par défaut d'un minimum de 8 caractères est utilisée.",
+  "admin.config.security.min-length": "Longueur minimale",
+  "admin.config.security.min-length.description":
+    "Nombre minimum de caractères requis pour un mot de passe.",
+  "admin.config.security.require-uppercase": "Exiger des majuscules",
+  "admin.config.security.require-uppercase.description":
+    "Exiger ou non au moins une lettre majuscule dans le mot de passe.",
+  "admin.config.security.require-lowercase": "Exiger des minuscules",
+  "admin.config.security.require-lowercase.description":
+    "Exiger ou non au moins une lettre minuscule dans le mot de passe.",
+  "admin.config.security.require-number": "Exiger des chiffres",
+  "admin.config.security.require-number.description":
+    "Exiger ou non au moins un chiffre dans le mot de passe.",
+  "admin.config.security.require-special-character":
+    "Exiger des caractères spéciaux",
+  "admin.config.security.require-special-character.description":
+    "Exiger ou non au moins un caractère spécial dans le mot de passe.",
   "admin.config.cache.ttl": "DDV",
-  "admin.config.cache.ttl.description": "Durée de vie des informations conservées en cache.",
+  "admin.config.cache.ttl.description":
+    "Durée de vie des informations conservées en cache.",
   "admin.config.cache.max-items": "Maximum d'éléments",
-  "admin.config.cache.max-items.description": "Nombre maximum d'éléments conservés en cache.",
+  "admin.config.cache.max-items.description":
+    "Nombre maximum d'éléments conservés en cache.",
   "admin.config.cache.redis-enabled": "Redis activé",
-  "admin.config.cache.redis-enabled.description": "Usuellement, Pingvin Share conserve les informations en mémoire vive. Si vous exécutez plusieurs instances de Pingvin Share, vous devez activer la mise en cache Redis pour partager le cache entre ces instances.",
+  "admin.config.cache.redis-enabled.description":
+    "Usuellement, Pingvin Share conserve les informations en mémoire vive. Si vous exécutez plusieurs instances de Pingvin Share, vous devez activer la mise en cache Redis pour partager le cache entre ces instances.",
   "admin.config.cache.redis-url": "URL de Redis",
-  "admin.config.cache.redis-url.description": "URL de connexion à l’instance de Redis pour servir de cache.",
+  "admin.config.cache.redis-url.description":
+    "URL de connexion à l’instance de Redis pour servir de cache.",
   "admin.config.cache.button.test-redis": "Tester la connexion Redis",
   "admin.config.cache.test-redis.success": "Connexion à Redis réussie",
-  "admin.config.cache.test-redis.success-disabled": "Connexion à Redis réussie (la mise en cache Redis est actuellement désactivée).",
-  "admin.config.cache.test-redis.modal.error.title": "Échec de la connexion à Redis",
-  "admin.config.cache.test-redis.modal.error.description": "Lors de la connexion à Redis, l'erreur suivante s'est produite :",
-  "admin.config.cache.test-redis.modal.save.title": "Enregistrer la configuration",
-  "admin.config.cache.test-redis.modal.save.description": "Pour continuer, vous devez d'abord enregistrer la configuration. Voulez-vous enregistrer la configuration et tester la connexion Redis ?",
+  "admin.config.cache.test-redis.success-disabled":
+    "Connexion à Redis réussie (la mise en cache Redis est actuellement désactivée).",
+  "admin.config.cache.test-redis.modal.error.title":
+    "Échec de la connexion à Redis",
+  "admin.config.cache.test-redis.modal.error.description":
+    "Lors de la connexion à Redis, l'erreur suivante s'est produite :",
+  "admin.config.cache.test-redis.modal.save.title":
+    "Enregistrer la configuration",
+  "admin.config.cache.test-redis.modal.save.description":
+    "Pour continuer, vous devez d'abord enregistrer la configuration. Voulez-vous enregistrer la configuration et tester la connexion Redis ?",
   "admin.config.cache.test-redis.modal.save.confirm": "Sauvegarder et tester",
-  "admin.config.email.send-html-emails": "Activer la compatibilité des emails HTML",
-  "admin.config.email.send-html-emails.description": "Si activé, les emails seront envoyés au format HTML. Assurez-vous que les templates d'email sont mis à jour pour utiliser l'HTML.",
-  "admin.config.share.enable-share-email-recipients": "Activer le partage par courriel",
-  "admin.config.share.enable-share-email-recipients.description": "Autoriser ou non le partage d'e-mails avec les destinataires. Cette option n'est disponible que si le protocole SMTP est activé.",
+  "admin.config.email.send-html-emails":
+    "Activer la compatibilité des emails HTML",
+  "admin.config.email.send-html-emails.description":
+    "Si activé, les emails seront envoyés au format HTML. Assurez-vous que les templates d'email sont mis à jour pour utiliser l'HTML.",
+  "admin.config.share.enable-share-email-recipients":
+    "Activer le partage par courriel",
+  "admin.config.share.enable-share-email-recipients.description":
+    "Autoriser ou non le partage d'e-mails avec les destinataires. Cette option n'est disponible que si le protocole SMTP est activé.",
   "admin.config.email.share-recipients-subject": "Sujet d’un partage",
-  "admin.config.email.share-recipients-subject.description": "Intitulé du courriel envoyé aux destinataires d’un partage.",
+  "admin.config.email.share-recipients-subject.description":
+    "Intitulé du courriel envoyé aux destinataires d’un partage.",
   "admin.config.email.share-recipients-message": "Message d’un partage",
-  "admin.config.email.share-recipients-message.description": "Contenu du courriel qui est envoyé aux destinataires du partage. Variables possibles :\n {creator} - Le nom d'utilisateur du créateur du partage\n {creatorEmail} - L'adresse mail du créateur du partage\n {shareUrl} - L'URL du partage\n {desc} - La description du partage\n {expires} - La date d'expiration du partage.\n Ces variables seront remplacées par leur valeur effective.",
+  "admin.config.email.share-recipients-message.description":
+    "Contenu du courriel qui est envoyé aux destinataires du partage. Variables possibles :\n {creator} - Le nom d'utilisateur du créateur du partage\n {creatorEmail} - L'adresse mail du créateur du partage\n {shareUrl} - L'URL du partage\n {desc} - La description du partage\n {expires} - La date d'expiration du partage.\n Ces variables seront remplacées par leur valeur effective.",
   "admin.config.email.reverse-share-subject": "Sujet d’un partage inversé",
-  "admin.config.email.reverse-share-subject.description": "Intitulé du courriel envoyé lorsque quelqu’un a partagé des fichiers depuis votre partage inversé.",
+  "admin.config.email.reverse-share-subject.description":
+    "Intitulé du courriel envoyé lorsque quelqu’un a partagé des fichiers depuis votre partage inversé.",
   "admin.config.email.reverse-share-message": "Message d’un partage inversé",
-  "admin.config.email.reverse-share-message.description": "Contenu du courriel envoyé lorsque quelqu’un partage des fichiers depuis votre partage inversé. {shareUrl} sera remplacé par le nom du créateur et l’URL de partage.",
-  "admin.config.email.reset-password-subject": "Sujet d’une réinitialisation du mot de passe",
-  "admin.config.email.reset-password-subject.description": "Intitulé du courriel envoyé lorsqu’un utilisateur demande une réinitialisation de son mot de passe.",
-  "admin.config.email.reset-password-message": "Message de réinitialisation du mot de passe",
-  "admin.config.email.reset-password-message.description": "Contenu du courriel envoyé lorsqu’un utilisateur demande à réinitialiser son mot de passe. {url} sera remplacé par l’URL de réinitialisation du mot de passe.",
+  "admin.config.email.reverse-share-message.description":
+    "Contenu du courriel envoyé lorsque quelqu’un partage des fichiers depuis votre partage inversé. {shareUrl} sera remplacé par le nom du créateur et l’URL de partage.",
+  "admin.config.email.reset-password-subject":
+    "Sujet d’une réinitialisation du mot de passe",
+  "admin.config.email.reset-password-subject.description":
+    "Intitulé du courriel envoyé lorsqu’un utilisateur demande une réinitialisation de son mot de passe.",
+  "admin.config.email.reset-password-message":
+    "Message de réinitialisation du mot de passe",
+  "admin.config.email.reset-password-message.description":
+    "Contenu du courriel envoyé lorsqu’un utilisateur demande à réinitialiser son mot de passe. {url} sera remplacé par l’URL de réinitialisation du mot de passe.",
   "admin.config.email.invite-subject": "Sujet d’une invitation",
-  "admin.config.email.invite-subject.description": "Intitulé du courriel envoyé lorsqu’un administrateur invite un utilisateur.",
+  "admin.config.email.invite-subject.description":
+    "Intitulé du courriel envoyé lorsqu’un administrateur invite un utilisateur.",
   "admin.config.email.invite-message": "Message d’une invitation",
-  "admin.config.email.invite-message.description": "Message qui est envoyé lorsqu'un administrateur invite un utilisateur. {url} sera remplacé avec l'URL d'invitation, {email} avec le courriel et {password} avec le mot de passe de l'utilisateur.",
-  "admin.config.email.share-recipients-reply-to-creator": "Utiliser l'email du créateur comme adresse de réponse",
-  "admin.config.email.share-recipients-reply-to-creator.description": "S'il faut ou non définir l'adresse de réponse à l'adresse e-mail de l'utilisateur qui a créé le partage.",
-  "admin.config.share.enable-share-download-notifications": "Activer les notifications de téléchargement",
-  "admin.config.share.enable-share-download-notifications.description": "S'il faut envoyer un e-mail au créateur du partage lorsqu'un destinataire télécharge un fichier. Cela nécessite un protocole SMTP et le partage par e-mail.",
-  "admin.config.email.share-download-notification-subject": "Sujet de notification de téléchargement",
-  "admin.config.email.share-download-notification-subject.description": "Objet de l'e-mail envoyé au créateur du partage lorsqu'un destinataire télécharge un fichier.",
-  "admin.config.email.share-download-notification-message": "Message de notification de téléchargement",
-  "admin.config.email.share-download-notification-message.description": "Message envoyé au créateur du partage lorsqu'un destinataire télécharge un fichier. Variables disponibles :\n {recipientEmail} - Adresse e-mail du destinataire\n {fileName} - Nom du fichier téléchargé\n {shareUrl} - URL du partage",
-  "admin.config.security.enable-email-verification": "Activer l'email de vérification",
-  "admin.config.security.enable-email-verification.description": "S'il faut ou non exiger que les utilisateurs vérifient leur adresse email avant de pouvoir se connecter. Ceci ne peut être activé que si SMTP est activé.",
+  "admin.config.email.invite-message.description":
+    "Message qui est envoyé lorsqu'un administrateur invite un utilisateur. {url} sera remplacé avec l'URL d'invitation, {email} avec le courriel et {password} avec le mot de passe de l'utilisateur.",
+  "admin.config.email.share-recipients-reply-to-creator":
+    "Utiliser l'email du créateur comme adresse de réponse",
+  "admin.config.email.share-recipients-reply-to-creator.description":
+    "S'il faut ou non définir l'adresse de réponse à l'adresse e-mail de l'utilisateur qui a créé le partage.",
+  "admin.config.share.enable-share-download-notifications":
+    "Activer les notifications de téléchargement",
+  "admin.config.share.enable-share-download-notifications.description":
+    "S'il faut envoyer un e-mail au créateur du partage lorsqu'un destinataire télécharge un fichier. Cela nécessite un protocole SMTP et le partage par e-mail.",
+  "admin.config.email.share-download-notification-subject":
+    "Sujet de notification de téléchargement",
+  "admin.config.email.share-download-notification-subject.description":
+    "Objet de l'e-mail envoyé au créateur du partage lorsqu'un destinataire télécharge un fichier.",
+  "admin.config.email.share-download-notification-message":
+    "Message de notification de téléchargement",
+  "admin.config.email.share-download-notification-message.description":
+    "Message envoyé au créateur du partage lorsqu'un destinataire télécharge un fichier. Variables disponibles :\n {recipientEmail} - Adresse e-mail du destinataire\n {fileName} - Nom du fichier téléchargé\n {shareUrl} - URL du partage",
+  "admin.config.security.enable-email-verification":
+    "Activer l'email de vérification",
+  "admin.config.security.enable-email-verification.description":
+    "S'il faut ou non exiger que les utilisateurs vérifient leur adresse email avant de pouvoir se connecter. Ceci ne peut être activé que si SMTP est activé.",
   "admin.config.email.verification-subject": "Sujet de vérification",
-  "admin.config.email.verification-subject.description": "Sujet des emails envoyé aux utilisateurs lors de leur inscription.",
+  "admin.config.email.verification-subject.description":
+    "Sujet des emails envoyé aux utilisateurs lors de leur inscription.",
   "admin.config.email.verification-message": "Message de vérification",
-  "admin.config.email.verification-message.description": "Message qui sera envoyé aux utilisateurs lors de leur inscription. {url} sera remplacé avec l'URL de vérification.",
+  "admin.config.email.verification-message.description":
+    "Message qui sera envoyé aux utilisateurs lors de leur inscription. {url} sera remplacé avec l'URL de vérification.",
   "admin.config.security.allow-registration": "Autoriser les inscriptions",
-  "admin.config.security.allow-registration.description": "Permet aux visiteurs de créer un compte",
-  "admin.config.security.allow-unauthenticated-shares": "Autoriser les partages anonymes",
-  "admin.config.security.allow-unauthenticated-shares.description": "Permet aux visiteurs de créer des partages",
+  "admin.config.security.allow-registration.description":
+    "Permet aux visiteurs de créer un compte",
+  "admin.config.security.allow-unauthenticated-shares":
+    "Autoriser les partages anonymes",
+  "admin.config.security.allow-unauthenticated-shares.description":
+    "Permet aux visiteurs de créer des partages",
   "admin.config.share.default-expiration": "Expiration par défaut",
-  "admin.config.share.default-expiration.description": "Durée d'expiration par défaut sélectionnée lors de la création d'une nouvelle action.",
+  "admin.config.share.default-expiration.description":
+    "Durée d'expiration par défaut sélectionnée lors de la création d'une nouvelle action.",
   "admin.config.share.max-expiration": "Échéance",
-  "admin.config.share.max-expiration.description": "Expiration du partage en heures. Réglez sur 0 pour qu'il n'expire jamais.",
+  "admin.config.share.max-expiration.description":
+    "Expiration du partage en heures. Réglez sur 0 pour qu'il n'expire jamais.",
   "admin.config.share.share-id-length": "Taille de l'identifiant généré",
-  "admin.config.share.share-id-length.description": "Taille par défaut de l'identifiant généré pour un partage. Cette valeur est aussi utilisée pour générer les liens des partages inverses. Une valeur inférieure à 8 n'est pas considérée sûre.",
+  "admin.config.share.share-id-length.description":
+    "Taille par défaut de l'identifiant généré pour un partage. Cette valeur est aussi utilisée pour générer les liens des partages inverses. Une valeur inférieure à 8 n'est pas considérée sûre.",
   "admin.config.share.max-size": "Taille max",
   "admin.config.share.max-size.description": "Taille maximale du partage",
   "admin.config.share.zip-compression-level": "Niveau de compression",
-  "admin.config.share.zip-compression-level.description": "Ajustez le niveau pour trouver l'équilibre entre la taille du fichier et la vitesse de compression. Les valeurs valides vont de 0 à 9, 0 étant sans compression et 9 étant la compression maximale. ",
+  "admin.config.share.zip-compression-level.description":
+    "Ajustez le niveau pour trouver l'équilibre entre la taille du fichier et la vitesse de compression. Les valeurs valides vont de 0 à 9, 0 étant sans compression et 9 étant la compression maximale. ",
   "admin.config.share.chunk-size": "Taille des tronçons",
-  "admin.config.share.chunk-size.description": "Ajustez la taille des tronçons pour que vos téléchargements équilibrent efficacité et fiabilité en fonction de votre connexion Internet. Les petits tronçons peuvent améliorer les taux de succès sur les connexions instables, tandis que les tronçons plus importants accélèrent les téléchargements sur les connexions stables.",
-  "admin.config.share.auto-open-share-modal": "Ouvrir automatiquement la modale de partage",
-  "admin.config.share.auto-open-share-modal.description": "La modale de création de partage apparaît automatiquement lorsqu’un utilisateur sélectionne des fichiers, ce qui élimine le besoin de cliquer manuellement sur le bouton.",
-  "admin.config.security.allow-admin-access-all-shares": "Autoriser l'accès admin à tous les partages",
-  "admin.config.share.reverse-share-simple-only": "Forcer le mode simple de partage inversé",
-  "admin.config.share.reverse-share-simple-only.description": "Forcer la création des partages inversés en mode simple. Si désactivé, le créateur du partage inversé peut choisir entre les modes simple et avancé.",
-  "admin.config.security.allow-admin-access-all-shares.description": "Autoriser les administrateurs à accéder à tous les partages, même s'ils sont protégés par un mot de passe, expirés ou supprimés.",
-  "admin.config.share.enable-user-recipients": "Activer le partage avec les utilisateurs enregistrés",
-  "admin.config.share.enable-user-recipients.description": "Lorsqu'il est activé, les partages envoyés à l'adresse e-mail d'un utilisateur enregistré apparaîtront automatiquement dans son compte. Les utilisateurs peuvent également restreindre l'accès au partage aux destinataires nommés uniquement.",
-  "admin.config.share.file-retention-period": "Période de conservation des fichiers",
-  "admin.config.share.file-retention-period.description": "Durée de conservation des fichiers après l'expiration ou la suppression d'un partage. Utile uniquement si l'option « Autoriser l'accès administrateur à tous les partages » est également activée. Définir à -1 pour garder les fichiers pour toujours.",
+  "admin.config.share.chunk-size.description":
+    "Ajustez la taille des tronçons pour que vos téléchargements équilibrent efficacité et fiabilité en fonction de votre connexion Internet. Les petits tronçons peuvent améliorer les taux de succès sur les connexions instables, tandis que les tronçons plus importants accélèrent les téléchargements sur les connexions stables.",
+  "admin.config.share.auto-open-share-modal":
+    "Ouvrir automatiquement la modale de partage",
+  "admin.config.share.auto-open-share-modal.description":
+    "La modale de création de partage apparaît automatiquement lorsqu’un utilisateur sélectionne des fichiers, ce qui élimine le besoin de cliquer manuellement sur le bouton.",
+  "admin.config.security.allow-admin-access-all-shares":
+    "Autoriser l'accès admin à tous les partages",
+  "admin.config.share.reverse-share-simple-only":
+    "Forcer le mode simple de partage inversé",
+  "admin.config.share.reverse-share-simple-only.description":
+    "Forcer la création des partages inversés en mode simple. Si désactivé, le créateur du partage inversé peut choisir entre les modes simple et avancé.",
+  "admin.config.security.allow-admin-access-all-shares.description":
+    "Autoriser les administrateurs à accéder à tous les partages, même s'ils sont protégés par un mot de passe, expirés ou supprimés.",
+  "admin.config.share.enable-user-recipients":
+    "Activer le partage avec les utilisateurs enregistrés",
+  "admin.config.share.enable-user-recipients.description":
+    "Lorsqu'il est activé, les partages envoyés à l'adresse e-mail d'un utilisateur enregistré apparaîtront automatiquement dans son compte. Les utilisateurs peuvent également restreindre l'accès au partage aux destinataires nommés uniquement.",
+  "admin.config.share.file-retention-period":
+    "Période de conservation des fichiers",
+  "admin.config.share.file-retention-period.description":
+    "Durée de conservation des fichiers après l'expiration ou la suppression d'un partage. Utile uniquement si l'option « Autoriser l'accès administrateur à tous les partages » est également activée. Définir à -1 pour garder les fichiers pour toujours.",
   "admin.config.smtp.enabled": "Activer",
-  "admin.config.smtp.enabled.description": "Active SMTP. Activez ceci uniquement si vous avez saisi l’hôte, le port, le courriel, l’utilisateur et son mot de passe, de votre serveur SMTP.",
+  "admin.config.smtp.enabled.description":
+    "Active SMTP. Activez ceci uniquement si vous avez saisi l’hôte, le port, le courriel, l’utilisateur et son mot de passe, de votre serveur SMTP.",
   "admin.config.smtp.host": "Hôte",
   "admin.config.smtp.host.description": "Nom du serveur SMTP",
   "admin.config.smtp.port": "Port",
   "admin.config.smtp.port.description": "Port du serveur SMTP",
   "admin.config.smtp.email": "Courriel",
-  "admin.config.smtp.email.description": "Adresse email à partir de laquelle les courriels sont envoyés",
+  "admin.config.smtp.email.description":
+    "Adresse email à partir de laquelle les courriels sont envoyés",
   "admin.config.smtp.username": "Nom d’utilisateur",
   "admin.config.smtp.username.description": "Nom d’utilisateur du serveur SMTP",
   "admin.config.smtp.password": "Mot de passe",
@@ -524,93 +689,148 @@ export default {
   "admin.config.smtp.button.test": "Envoyer un courriel de test",
   "admin.config.smtp.test-email.success": "E-mail envoyé avec succès",
   "admin.config.smtp.test-email.error.title": "Échec de l'envoi de l'email",
-  "admin.config.smtp.test-email.error.description": "Lors de l'envoi de l'e-mail de test, l'erreur suivante s'est produite :",
+  "admin.config.smtp.test-email.error.description":
+    "Lors de l'envoi de l'e-mail de test, l'erreur suivante s'est produite :",
   "admin.config.smtp.test-email.save.title": "Enregistrer la configuration",
-  "admin.config.smtp.test-email.save.description": "Pour continuer, vous devez d'abord enregistrer la configuration. Voulez-vous enregistrer la configuration et envoyer l'e-mail de test ?",
+  "admin.config.smtp.test-email.save.description":
+    "Pour continuer, vous devez d'abord enregistrer la configuration. Voulez-vous enregistrer la configuration et envoyer l'e-mail de test ?",
   "admin.config.smtp.test-email.save.confirm": "Enregistrer et envoyer",
-  "admin.config.smtp.allow-unauthorized-certificates": "Faire confiance aux certificats de serveurs SMTP non autorisés",
-  "admin.config.smtp.allow-unauthorized-certificates.description": "Ne permettez ceci que si vous avez besoin de faire confiance aux certificats autosignés.",
+  "admin.config.smtp.allow-unauthorized-certificates":
+    "Faire confiance aux certificats de serveurs SMTP non autorisés",
+  "admin.config.smtp.allow-unauthorized-certificates.description":
+    "Ne permettez ceci que si vous avez besoin de faire confiance aux certificats autosignés.",
   "admin.config.oauth.allow-registration": "Autoriser l’inscription",
-  "admin.config.oauth.allow-registration.description": "Permettre aux utilisateurs de s’inscrire via leur identifiant social",
+  "admin.config.oauth.allow-registration.description":
+    "Permettre aux utilisateurs de s’inscrire via leur identifiant social",
   "admin.config.oauth.ignore-totp": "Ignorer double authentification TOTP",
-  "admin.config.oauth.ignore-totp.description": "Ignorer la double-authentification (TOTP) lorsque l’utilisateur utilise un identifiant social",
-  "admin.config.oauth.disable-password": "Désactiver la connexion par mot de passe",
-  "admin.config.oauth.disable-password.description": "Désactive la connexion par mot de passe\nAssurez-vous qu’un fournisseur OAuth soit correctement configuré avant d’activer cette configuration pour éviter d'être enfermé.",
+  "admin.config.oauth.ignore-totp.description":
+    "Ignorer la double-authentification (TOTP) lorsque l’utilisateur utilise un identifiant social",
+  "admin.config.oauth.disable-password":
+    "Désactiver la connexion par mot de passe",
+  "admin.config.oauth.disable-password.description":
+    "Désactive la connexion par mot de passe\nAssurez-vous qu’un fournisseur OAuth soit correctement configuré avant d’activer cette configuration pour éviter d'être enfermé.",
   "admin.config.oauth.github-enabled": "GitHub",
-  "admin.config.oauth.github-enabled.description": "Permettre la connexion via GitHub.",
+  "admin.config.oauth.github-enabled.description":
+    "Permettre la connexion via GitHub.",
   "admin.config.oauth.github-client-id": "ID client de GitHub",
-  "admin.config.oauth.github-client-id.description": "L’ID du client de l’application OAuth GitHub",
+  "admin.config.oauth.github-client-id.description":
+    "L’ID du client de l’application OAuth GitHub",
   "admin.config.oauth.github-client-secret": "Secret du client GitHub",
-  "admin.config.oauth.github-client-secret.description": "Le secret du client de l’application OAuth GitHub",
+  "admin.config.oauth.github-client-secret.description":
+    "Le secret du client de l’application OAuth GitHub",
   "admin.config.oauth.google-enabled": "Google",
-  "admin.config.oauth.google-enabled.description": "Permettre la connexion via Google.",
+  "admin.config.oauth.google-enabled.description":
+    "Permettre la connexion via Google.",
   "admin.config.oauth.google-client-id": "ID du client Google",
-  "admin.config.oauth.google-client-id.description": "L’ID du client de l’application OAuth Google",
+  "admin.config.oauth.google-client-id.description":
+    "L’ID du client de l’application OAuth Google",
   "admin.config.oauth.google-client-secret": "Secret client de Google",
-  "admin.config.oauth.google-client-secret.description": "Le secret du client de l’application OAuth Google",
+  "admin.config.oauth.google-client-secret.description":
+    "Le secret du client de l’application OAuth Google",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
-  "admin.config.oauth.microsoft-enabled.description": "Permettre la connexion via Microsoft.",
+  "admin.config.oauth.microsoft-enabled.description":
+    "Permettre la connexion via Microsoft.",
   "admin.config.oauth.microsoft-tenant": "Locataire Microsoft",
-  "admin.config.oauth.microsoft-tenant.description": "ID locataire de l'application OAuth Microsoft\nCommun : les utilisateurs ayant au choix un compte personnel ou d’entreprise issue de Microsoft Entra.\nOrganisations : limité aux utilisateurs ayant un compte d’entreprise ou d’université issue de Microsoft Entra.\nPersonnel : limité aux utilisateurs ayant un compte personnel\nDomanial : limité aux utilisateurs d'un domaine Microsoft Entra spécifié ou d’un ID locataire (au format GUID), qu’ils soient membres d’un registre d’entreprise ou d’université ou bien enregistrés en tant qu’invités avec un compte personnel.",
+  "admin.config.oauth.microsoft-tenant.description":
+    "ID locataire de l'application OAuth Microsoft\nCommun : les utilisateurs ayant au choix un compte personnel ou d’entreprise issue de Microsoft Entra.\nOrganisations : limité aux utilisateurs ayant un compte d’entreprise ou d’université issue de Microsoft Entra.\nPersonnel : limité aux utilisateurs ayant un compte personnel\nDomanial : limité aux utilisateurs d'un domaine Microsoft Entra spécifié ou d’un ID locataire (au format GUID), qu’ils soient membres d’un registre d’entreprise ou d’université ou bien enregistrés en tant qu’invités avec un compte personnel.",
   "admin.config.oauth.microsoft-client-id": "ID du client Microsoft",
-  "admin.config.oauth.microsoft-client-id.description": "L’ID du client de l’application Microsoft OAuth",
+  "admin.config.oauth.microsoft-client-id.description":
+    "L’ID du client de l’application Microsoft OAuth",
   "admin.config.oauth.microsoft-client-secret": "Secret du client Microsoft",
-  "admin.config.oauth.microsoft-client-secret.description": "Le secret du client de l’application Microsoft OAuth",
+  "admin.config.oauth.microsoft-client-secret.description":
+    "Le secret du client de l’application Microsoft OAuth",
   "admin.config.oauth.discord-enabled": "Discord",
-  "admin.config.oauth.discord-enabled.description": "Permettre la connexion via Discord",
-  "admin.config.oauth.discord-limited-users": "Utilisateurs limités sur Discord",
-  "admin.config.oauth.discord-limited-users.description": "Limiter la connexion à des utilisateurs spécifiques par leur identifiant Discord. Laissez vide pour désactiver.",
+  "admin.config.oauth.discord-enabled.description":
+    "Permettre la connexion via Discord",
+  "admin.config.oauth.discord-limited-users":
+    "Utilisateurs limités sur Discord",
+  "admin.config.oauth.discord-limited-users.description":
+    "Limiter la connexion à des utilisateurs spécifiques par leur identifiant Discord. Laissez vide pour désactiver.",
   "admin.config.oauth.discord-limited-guild": "ID de serveur restreint Discord",
-  "admin.config.oauth.discord-limited-guild.description": "Limiter la connexion aux utilisateurs sur un serveur spécifique. Laissez vide pour désactiver.",
+  "admin.config.oauth.discord-limited-guild.description":
+    "Limiter la connexion aux utilisateurs sur un serveur spécifique. Laissez vide pour désactiver.",
   "admin.config.oauth.discord-client-id": "ID du client Discord",
-  "admin.config.oauth.discord-client-id.description": "L’ID du client de l’application OAuth Discord",
+  "admin.config.oauth.discord-client-id.description":
+    "L’ID du client de l’application OAuth Discord",
   "admin.config.oauth.discord-client-secret": "Secret du client Discord",
-  "admin.config.oauth.discord-client-secret.description": "Le secret du client de l’application OAuth Discord",
+  "admin.config.oauth.discord-client-secret.description":
+    "Le secret du client de l’application OAuth Discord",
   "admin.config.oauth.oidc-enabled": "Connexion OpenID",
-  "admin.config.oauth.oidc-enabled.description": "Permettre la connexion via OpenID",
+  "admin.config.oauth.oidc-enabled.description":
+    "Permettre la connexion via OpenID",
   "admin.config.oauth.oidc-discovery-uri": "URI de découverte OpenID",
-  "admin.config.oauth.oidc-discovery-uri.description": "L’URI de découverte de la connexion à l'application OpenID OAuth",
-  "admin.config.oauth.oidc-sign-out": "Déconnexion du fournisseur OpenID Connect",
-  "admin.config.oauth.oidc-sign-out.description": "Si activé, le bouton \"Déconnexion\" vous déconnectera également du fournisseur d'identité OpenID Connect",
+  "admin.config.oauth.oidc-discovery-uri.description":
+    "L’URI de découverte de la connexion à l'application OpenID OAuth",
+  "admin.config.oauth.oidc-sign-out":
+    "Déconnexion du fournisseur OpenID Connect",
+  "admin.config.oauth.oidc-sign-out.description":
+    'Si activé, le bouton "Déconnexion" vous déconnectera également du fournisseur d\'identité OpenID Connect',
   "admin.config.oauth.oidc-scope": "Paramètres de connexion OpenID",
-  "admin.config.oauth.oidc-scope.description": "Paramètres fournis par votre fournisseur OpenID.",
-  "admin.config.oauth.oidc-username-claim": "Revendication du nom d’utilisateur OpenID",
-  "admin.config.oauth.oidc-username-claim.description": "Le champ contenant la revendication du nom d’utilisateur dans le jeton OpenID Connect. Laissez vide si vous ne savez pas quoi indiquer.",
-  "admin.config.oauth.oidc-role-path": "Chemin vers les rôles dans le jeton OpenID Connect",
-  "admin.config.oauth.oidc-role-path.description": "Doit être un chemin JMES valide référençant un tableau de rôles. " + "La gestion des droits d'accès en utilisant les rôles OpenID Connect n'est recommandée que si aucun autre fournisseur d'identité n'est configuré et que la connexion par mot de passe est désactivée. " + "Laissez vide si vous ne savez pas ce qu'est cette configuration.",
-  "admin.config.oauth.oidc-role-general-access": "Rôle OpenID Connect pour un accès général",
-  "admin.config.oauth.oidc-role-general-access.description": "Rôle requis pour un accès général. Doit être présent dans les rôles d'un utilisateur pour qu'il se connecte. " + "Laissez vide si vous ne savez pas ce qu'est cette configuration.",
-  "admin.config.oauth.oidc-role-admin-access": "Rôle OpenID Connect pour l'accès admin",
-  "admin.config.oauth.oidc-role-admin-access.description": "Rôle requis pour l'accès administratif. Doit être présent dans les rôles d'un utilisateur pour accéder au panneau d'administration. " + "Laissez vide si vous ne savez pas ce qu'est cette configuration.",
+  "admin.config.oauth.oidc-scope.description":
+    "Paramètres fournis par votre fournisseur OpenID.",
+  "admin.config.oauth.oidc-username-claim":
+    "Revendication du nom d’utilisateur OpenID",
+  "admin.config.oauth.oidc-username-claim.description":
+    "Le champ contenant la revendication du nom d’utilisateur dans le jeton OpenID Connect. Laissez vide si vous ne savez pas quoi indiquer.",
+  "admin.config.oauth.oidc-role-path":
+    "Chemin vers les rôles dans le jeton OpenID Connect",
+  "admin.config.oauth.oidc-role-path.description":
+    "Doit être un chemin JMES valide référençant un tableau de rôles. " +
+    "La gestion des droits d'accès en utilisant les rôles OpenID Connect n'est recommandée que si aucun autre fournisseur d'identité n'est configuré et que la connexion par mot de passe est désactivée. " +
+    "Laissez vide si vous ne savez pas ce qu'est cette configuration.",
+  "admin.config.oauth.oidc-role-general-access":
+    "Rôle OpenID Connect pour un accès général",
+  "admin.config.oauth.oidc-role-general-access.description":
+    "Rôle requis pour un accès général. Doit être présent dans les rôles d'un utilisateur pour qu'il se connecte. " +
+    "Laissez vide si vous ne savez pas ce qu'est cette configuration.",
+  "admin.config.oauth.oidc-role-admin-access":
+    "Rôle OpenID Connect pour l'accès admin",
+  "admin.config.oauth.oidc-role-admin-access.description":
+    "Rôle requis pour l'accès administratif. Doit être présent dans les rôles d'un utilisateur pour accéder au panneau d'administration. " +
+    "Laissez vide si vous ne savez pas ce qu'est cette configuration.",
   "admin.config.oauth.oidc-client-id": "ID du client OpenID",
-  "admin.config.oauth.oidc-client-id.description": "L’ID du client de l’application OAuth OpenID Connect",
+  "admin.config.oauth.oidc-client-id.description":
+    "L’ID du client de l’application OAuth OpenID Connect",
   "admin.config.oauth.oidc-client-secret": "Secret du client OpenID",
-  "admin.config.oauth.oidc-client-secret.description": "Le secret du client de l’application OAuth OpenID Connect",
+  "admin.config.oauth.oidc-client-secret.description":
+    "Le secret du client de l’application OAuth OpenID Connect",
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "Activer LDAP",
-  "admin.config.ldap.enabled.description": "Utiliser l'authentification LDAP pour la connexion de l'utilisateur",
+  "admin.config.ldap.enabled.description":
+    "Utiliser l'authentification LDAP pour la connexion de l'utilisateur",
   "admin.config.ldap.url": "URL du serveur",
   "admin.config.ldap.url.description": "URL du serveur LDAP",
   "admin.config.ldap.bind-dn": "DN de liaison",
-  "admin.config.ldap.bind-dn.description": "Utilisateur par défaut utilisé pour effectuer la recherche de l'utilisateur",
+  "admin.config.ldap.bind-dn.description":
+    "Utilisateur par défaut utilisé pour effectuer la recherche de l'utilisateur",
   "admin.config.ldap.bind-password": "Mot de passe de liaison",
-  "admin.config.ldap.bind-password.description": "Mot de passe utilisé pour effectuer la recherche de l'utilisateur",
+  "admin.config.ldap.bind-password.description":
+    "Mot de passe utilisé pour effectuer la recherche de l'utilisateur",
   "admin.config.ldap.search-base": "Base d'utilisateurs",
-  "admin.config.ldap.search-base.description": "Emplacement de base, où la recherche de l'utilisateur sera effectuée",
+  "admin.config.ldap.search-base.description":
+    "Emplacement de base, où la recherche de l'utilisateur sera effectuée",
   "admin.config.ldap.search-query": "Requête utilisateur",
-  "admin.config.ldap.search-query.description": "La requête utilisateur sera utilisée pour rechercher dans la ‘base d'utilisateurs’ de l'utilisateur LDAP. %username% peut être utilisé comme espace réservé pour les entrées données par l'utilisateur.",
+  "admin.config.ldap.search-query.description":
+    "La requête utilisateur sera utilisée pour rechercher dans la ‘base d'utilisateurs’ de l'utilisateur LDAP. %username% peut être utilisé comme espace réservé pour les entrées données par l'utilisateur.",
   "admin.config.ldap.admin-groups": "Groupe administrateur",
-  "admin.config.ldap.admin-groups.description": "Un groupe est nécessaire pour un accès administratif.",
-  "admin.config.ldap.field-name-member-of": "Nom de l'attribut des groupes d'utilisateurs",
-  "admin.config.ldap.field-name-member-of.description": "Nom d'attribut LDAP pour les groupes dont un utilisateur est membre. Il est utilisé lors de la vérification du groupe d'administrateurs.",
-  "admin.config.ldap.field-name-email": "Nom d'attribut de l'e-mail de l'utilisateur",
-  "admin.config.ldap.field-name-email.description": "Nom d'attribut LDAP pour l'e-mail d'un utilisateur.",
+  "admin.config.ldap.admin-groups.description":
+    "Un groupe est nécessaire pour un accès administratif.",
+  "admin.config.ldap.field-name-member-of":
+    "Nom de l'attribut des groupes d'utilisateurs",
+  "admin.config.ldap.field-name-member-of.description":
+    "Nom d'attribut LDAP pour les groupes dont un utilisateur est membre. Il est utilisé lors de la vérification du groupe d'administrateurs.",
+  "admin.config.ldap.field-name-email":
+    "Nom d'attribut de l'e-mail de l'utilisateur",
+  "admin.config.ldap.field-name-email.description":
+    "Nom d'attribut LDAP pour l'e-mail d'un utilisateur.",
   "admin.config.notify.success": "Configuration mise à jour avec succès.",
-  "admin.config.notify.logo-success": "Logo mis à jour avec succès. La mise à jour sur le site peut prendre quelques minutes.",
+  "admin.config.notify.logo-success":
+    "Logo mis à jour avec succès. La mise à jour sur le site peut prendre quelques minutes.",
   "admin.config.notify.no-changes": "Aucune modification à enregistrer.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Activé",
-  "admin.config.s3.enabled.description": "Indique si S3 doit être utilisé pour stocker les fichiers partagés plutôt que le système de fichiers local. ATTENTION : Si ClamAV est activé, les fichiers seront temporairement téléchargés depuis S3 pour être vérifiés.",
+  "admin.config.s3.enabled.description":
+    "Indique si S3 doit être utilisé pour stocker les fichiers partagés plutôt que le système de fichiers local. ATTENTION : Si ClamAV est activé, les fichiers seront temporairement téléchargés depuis S3 pour être vérifiés.",
   "admin.config.s3.endpoint": "Point de terminaison",
   "admin.config.s3.endpoint.description": "L'URL du bucket S3.",
   "admin.config.s3.region": "Région",
@@ -618,25 +838,37 @@ export default {
   "admin.config.s3.bucket-name": "Nom du bucket",
   "admin.config.s3.bucket-name.description": "Le nom du bucket S3.",
   "admin.config.s3.bucket-path": "Chemin",
-  "admin.config.s3.bucket-path.description": "Le chemin par défaut qui doit être utilisé pour stocker les fichiers dans le bucket S3.",
+  "admin.config.s3.bucket-path.description":
+    "Le chemin par défaut qui doit être utilisé pour stocker les fichiers dans le bucket S3.",
   "admin.config.s3.key": "Clé",
-  "admin.config.s3.key.description": "La clé qui vous permet d'accéder au bucket S3.",
+  "admin.config.s3.key.description":
+    "La clé qui vous permet d'accéder au bucket S3.",
   "admin.config.s3.secret": "Secret",
-  "admin.config.s3.secret.description": "Le secret qui vous permet d'accéder au bucket S3.",
+  "admin.config.s3.secret.description":
+    "Le secret qui vous permet d'accéder au bucket S3.",
   "admin.config.s3.use-checksum": "Utiliser la somme de contrôle",
-  "admin.config.s3.use-checksum.description": "Désactivez cette option pour les backends qui ne prennent pas en charge la somme de contrôle (ex. B2).",
-  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
+  "admin.config.s3.use-checksum.description":
+    "Désactivez cette option pour les backends qui ne prennent pas en charge la somme de contrôle (ex. B2).",
+  "admin.config.s3.docs-link":
+    "CORS doit être reconfiguré sur votre compartiment (bucket), consultez le {wikiLink} pour plus de détails.",
   "admin.config.category.legal": "Juridique",
   "admin.config.legal.enabled": "Activer les mentions légales",
-  "admin.config.legal.enabled.description": "Afficher/Masquer dans le pied de page un lien vers les mentions légales et la politique de confidentialité.",
+  "admin.config.legal.enabled.description":
+    "Afficher/Masquer dans le pied de page un lien vers les mentions légales et la politique de confidentialité.",
   "admin.config.legal.imprint-text": "Texte des mentions légales",
-  "admin.config.legal.imprint-text.description": "Le texte qui doit être affiché dans les mentions légales. Supporte le Markdown. Laissez vide pour mettre un lien vers une page de mentions légales externe.",
+  "admin.config.legal.imprint-text.description":
+    "Le texte qui doit être affiché dans les mentions légales. Supporte le Markdown. Laissez vide pour mettre un lien vers une page de mentions légales externe.",
   "admin.config.legal.imprint-url": "URL des mentions légales",
-  "admin.config.legal.imprint-url.description": "Si vous avez déjà une page de mentions légales, vous pouvez indiquer son URL ici au lieu d'utiliser le champ de texte.",
-  "admin.config.legal.privacy-policy-text": "Texte de la politique de confidentialité",
-  "admin.config.legal.privacy-policy-text.description": "Le texte qui doit être affiché dans la politique de confidentialité. Supporte le Markdown. Laissez vide pour mettre un lien vers une page de politique de confidentialité externe.",
-  "admin.config.legal.privacy-policy-url": "URL de la politique de confidentialité",
-  "admin.config.legal.privacy-policy-url.description": "Si vous avez déjà une page de politique de confidentialité, vous pouvez indiquer son URL ici au lieu d'utiliser le champ de texte.",
+  "admin.config.legal.imprint-url.description":
+    "Si vous avez déjà une page de mentions légales, vous pouvez indiquer son URL ici au lieu d'utiliser le champ de texte.",
+  "admin.config.legal.privacy-policy-text":
+    "Texte de la politique de confidentialité",
+  "admin.config.legal.privacy-policy-text.description":
+    "Le texte qui doit être affiché dans la politique de confidentialité. Supporte le Markdown. Laissez vide pour mettre un lien vers une page de politique de confidentialité externe.",
+  "admin.config.legal.privacy-policy-url":
+    "URL de la politique de confidentialité",
+  "admin.config.legal.privacy-policy-url.description":
+    "Si vous avez déjà une page de politique de confidentialité, vous pouvez indiquer son URL ici au lieu d'utiliser le champ de texte.",
   // 404
   "404.description": "Désolé, mais cette page n’existe pas.",
   "404.button.home": "Retour à l’accueil",
@@ -645,18 +877,25 @@ export default {
   "error.description": "Oups !",
   "error.button.back": "Retour",
   "error.msg.default": "Quelque chose a mal tourné.",
-  "error.msg.access_denied": "Vous avez annulé le processus d’authentification, veuillez réessayer.",
-  "error.msg.expired_token": "Le processus d’authentification a pris trop de temps, veuillez réessayer.",
+  "error.msg.access_denied":
+    "Vous avez annulé le processus d’authentification, veuillez réessayer.",
+  "error.msg.expired_token":
+    "Le processus d’authentification a pris trop de temps, veuillez réessayer.",
   "error.msg.invalid_token": "Erreur Interne",
   "error.msg.no_user": "L’utilisateur associé au compte {0} n’existe pas.",
   "error.msg.no_email": "Impossible d’obtenir le courriel du compte {0}.",
-  "error.msg.already_linked": "Le compte {0} est déjà associé à un autre compte.",
+  "error.msg.already_linked":
+    "Le compte {0} est déjà associé à un autre compte.",
   "error.msg.not_linked": "Le compte {0} n’est pas encore associé à compte.",
-  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
-  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
-  "error.msg.unverified_account": "Le compte {0} n'est pas vérifié, veuillez réessayer après vérification.",
+  "error.msg.email_already_exists":
+    "Un compte avec cette adresse email existe déjà. Veuillez vous connecter avec votre mot de passe et associer manuellement votre compte {0} sur la page Mon compte.",
+  "error.msg.email_not_verified":
+    "Votre adresse email sur ce compte {0} n'est pas vérifiée. Veuillez vérifier votre email auprès de votre fournisseur d'identité avant de vous connecter.",
+  "error.msg.unverified_account":
+    "Le compte {0} n'est pas vérifié, veuillez réessayer après vérification.",
   "error.msg.user_not_allowed": "Vous n’êtes pas autorisé à vous authentifier.",
-  "error.msg.cannot_get_user_info": "Impossible d’obtenir vos informations utilisateur à partir du compte {0}.",
+  "error.msg.cannot_get_user_info":
+    "Impossible d’obtenir vos informations utilisateur à partir du compte {0}.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
@@ -701,14 +940,20 @@ export default {
   "common.error.exact-length": "Doit comporter exactement {length} caractères",
   "common.error.invalid-number": "Doit être un nombre",
   "common.error.field-required": "Ce champ est obligatoire",
-  "common.error.password.lowercase": "Password must contain at least one lowercase letter",
-  "common.error.password.uppercase": "Password must contain at least one uppercase letter",
-  "common.error.password.number": "Password must contain at least one number",
-  "common.error.password.special": "Password must contain at least one special character",
+  "common.error.password.lowercase":
+    "Le mot de passe doit contenir au moins une lettre minuscule",
+  "common.error.password.uppercase":
+    "Le mot de passe doit contenir au moins une lettre majuscule",
+  "common.error.password.number":
+    "Le mot de passe doit contenir au moins un chiffre",
+  "common.error.password.special":
+    "Le mot de passe doit contenir au moins un caractère spécial",
   "admin.notice.modal.headerTag": "ACTION ADMINISTRATIVE REQUISE",
-  "admin.notice.modal.defaultCheckboxLabel": "Je confirme avoir lu cet avertissement et comprendre les changements majeurs.",
+  "admin.notice.modal.defaultCheckboxLabel":
+    "Je confirme avoir lu cet avertissement et comprendre les changements majeurs.",
   "admin.notice.modal.button.acknowledge": "Confirmer et ignorer",
   "admin.notice.modal.button.acknowledging": "Confirmation...",
   "admin.notice.modal.docsLink": "Voir la documentation",
-  "admin.notice.modal.globalNoticeFooter": "Remarque : Une fois confirmé, cet avertissement sera définitivement masqué pour tous les administrateurs sur tous les appareils."
+  "admin.notice.modal.globalNoticeFooter":
+    "Remarque : Une fois confirmé, cet avertissement sera définitivement masqué pour tous les administrateurs sur tous les appareils.",
 };

@@ -14,5 +14,5 @@
   "s3SessionNotFound": "A többrészes feltöltési munkamenet nem található.",
   "s3UploadFailed": "A többrészes feltöltés nem sikerült. A feltöltés megszakadt.",
   "s3SizeError": "Nem sikerült lekérni a fájlméretet",
-  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
+  "s3NotSupported": "Az előre aláírt műveletek csak az S3 tárolóknál támogatottak."
 }

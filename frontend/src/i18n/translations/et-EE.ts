@@ -6,7 +6,7 @@ export default {
   "navbar.signup": "Registreeru",
   "navbar.links.shares": "Minu jagamised",
   "navbar.links.reverse": "Pööratud jagamised",
-  "navbar.links.received": "Received shares",
+  "navbar.links.received": "Saadud jagamised",
   "navbar.avatar.account": "Minu konto",
   "navbar.avatar.admin": "Administreerimine",
   "navbar.avatar.signout": "Logi välja",
@@ -14,13 +14,16 @@ export default {
 
   // /
   "home.title": "<h>Isehostitav</h> failijagamisplatvorm.",
-  "home.description": "Kas tõesti soovid anda oma isiklikud failid kolmandate osapoolte nagu WeTransfer kätte?",
+  "home.description":
+    "Kas tõesti soovid anda oma isiklikud failid kolmandate osapoolte nagu WeTransfer kätte?",
   "home.bullet.a.name": "Isehostitav",
   "home.bullet.a.description": "Hosti Pingvin Share oma seadmes.",
   "home.bullet.b.name": "Privaatsus",
-  "home.bullet.b.description": "Sinu failid on sinu omad ja neile ei pääse ligi kolmandad osapooled.",
+  "home.bullet.b.description":
+    "Sinu failid on sinu omad ja neile ei pääse ligi kolmandad osapooled.",
   "home.bullet.c.name": "Ei mingeid tüütuid failisuuruse piiranguid",
-  "home.bullet.c.description": "Laadi üles suuri faile ilma piiranguteta. Ainuke piirang on sinu kõvaketta maht.",
+  "home.bullet.c.description":
+    "Laadi üles suuri faile ilma piiranguteta. Ainuke piirang on sinu kõvaketta maht.",
   "home.button.start": "Alusta",
   "home.button.source": "Lähtekood",
   // END /
@@ -35,7 +38,8 @@ export default {
   "signin.input.password.placeholder": "Sinu parool",
   "signin.button.submit": "Logi sisse",
   "signIn.notify.totp-required.title": "Kahefaktoriline autentimine nõutud",
-  "signIn.notify.totp-required.description": "Palun sisesta oma kahefaktorilise autentimise kood",
+  "signIn.notify.totp-required.description":
+    "Palun sisesta oma kahefaktorilise autentimise kood",
   "signIn.oauth.or": "VÕI",
   "signIn.oauth.signInWith": "Logi sisse kasutades",
   "signIn.oauth.github": "GitHub",
@@ -55,16 +59,18 @@ export default {
   "signup.input.email.placeholder": "Sinu e-post",
   "signup.button.submit": "Alustame",
   // /auth/verify
-  "verify.title": "Verify Account",
-  "verify.success": "Your account has been successfully verified! You can now sign in.",
-  "verify.error": "The verification link is invalid or has expired.",
-  "verify.button.signin": "Go to Sign In",
-  "verify.info.title": "Account Verification",
-  "verify.info.description": "Email verification is enabled. We've sent a verification link to your email address. Please click the link to activate your account.",
-  "verify.info.note": "If you don't receive the email within a few minutes, please check your spam folder.",
-  "verify.info.resend.button": "Resend verification email",
-  "verify.info.resend.success": "Verification email resent successfully.",
-  "verify.info.resend.error": "Failed to resend verification email.",
+  "verify.title": "Konto kinnitamine",
+  "verify.success": "Sinu konto on edukalt kinnitatud! Saad nüüd sisse logida.",
+  "verify.error": "Kinnitamislink on kehtetu või aegunud.",
+  "verify.button.signin": "Mine sisselogimisele",
+  "verify.info.title": "Konto kinnitamine",
+  "verify.info.description":
+    "E-posti kinnitamine on sisse lülitatud. Saatsime sinu e-posti aadressile kinnituslingi. Palun klõpsa lingil oma konto aktiveerimiseks.",
+  "verify.info.note":
+    "Kui sa ei saa e-kirja mõne minuti jooksul, kontrolli palun oma rämpsposti kausta.",
+  "verify.info.resend.button": "Saada kinnituskiri uuesti",
+  "verify.info.resend.success": "Kinnituskiri on edukalt uuesti saadetud.",
+  "verify.info.resend.error": "Kinnituskirja uuesti saatmine ebaõnnestus.",
   // END /auth/signup
 
   // /auth/totp
@@ -74,8 +80,10 @@ export default {
 
   // /auth/reset-password
   "resetPassword.title": "Unustasid oma parooli?",
-  "resetPassword.description": "Parooli lähtestamiseks sisesta enda e-posti aadress.",
-  "resetPassword.notify.success": "Kui antud e-post on registreeritud, saadetakse e-mailiga link parooli lähtestamiseks.",
+  "resetPassword.description":
+    "Parooli lähtestamiseks sisesta enda e-posti aadress.",
+  "resetPassword.notify.success":
+    "Kui antud e-post on registreeritud, saadetakse e-mailiga link parooli lähtestamiseks.",
   "resetPassword.button.back": "Tagasi sisselogimislehele",
   "resetPassword.text.resetPassword": "Lähtesta parool",
   "resetPassword.text.enterNewPassword": "Sisesta uus parool",
@@ -90,7 +98,8 @@ export default {
   "account.card.password.title": "Parool",
   "account.card.password.old": "Vana parool",
   "account.card.password.new": "Uus parool",
-  "account.card.password.noPasswordSet": "Sul pole parooli seatud. E-posti ja parooliga sisselogimiseks pead looma parooli.",
+  "account.card.password.noPasswordSet":
+    "Sul pole parooli seatud. E-posti ja parooliga sisselogimiseks pead looma parooli.",
   "account.notify.password.success": "Parool edukalt muudetud",
   "account.card.oauth.title": "Sisselogimine sotsiaalmeediatega",
   "account.card.oauth.github": "GitHub",
@@ -102,11 +111,14 @@ export default {
   "account.card.oauth.unlink": "Eemalda ühendus",
   "account.card.oauth.unlinked": "Ühendus eemaldatud",
   "account.modal.unlink.title": "Eemalda konto seos",
-  "account.modal.unlink.description": "Sotsiaalmeedia kontode lahtiühendamine võib põhjustada konto kaotamist kui sa ei mäleta oma sisselogimisandmeid",
+  "account.modal.unlink.description":
+    "Sotsiaalmeedia kontode lahtiühendamine võib põhjustada konto kaotamist kui sa ei mäleta oma sisselogimisandmeid",
   "account.notify.oauth.unlinked.success": "Ühendus eemaldatud edukalt",
   "account.card.security.title": "Turvalisus",
-  "account.card.security.totp.enable.description": "Sisesta oma praegune parool, et alustada TOTP sisselülitamist",
-  "account.card.security.totp.disable.description": "Sisesta oma praegune parool, et välja lülitada TOTP",
+  "account.card.security.totp.enable.description":
+    "Sisesta oma praegune parool, et alustada TOTP sisselülitamist",
+  "account.card.security.totp.disable.description":
+    "Sisesta oma praegune parool, et välja lülitada TOTP",
   "account.card.security.totp.button.start": "Alusta",
   "account.modal.totp.title": "Lülita sisse TOTP",
   "account.modal.totp.step1": "1. samm: Lisa oma autentikaator",
@@ -114,12 +126,13 @@ export default {
   "account.modal.totp.enterManually": "Sisesta käsitsi",
   "account.modal.totp.code": "Kood",
   "common.button.clickToCopy": "Klõpsa, et kopeerida",
-  "common.button.showQRCode": "Show QR code",
+  "common.button.showQRCode": "Näita QR-koodi",
   "account.modal.totp.verify": "Kinnita",
   "account.notify.totp.disable": "TOTP edukalt välja lülitatud",
   "account.notify.totp.enable": "TOTP edukalt sisse lülitatud",
   "account.card.language.title": "Keel",
-  "account.card.language.description": "Projekti tõlkis kogukond. Mõned keeleversioonid võivad olla mittetäielikud.",
+  "account.card.language.description":
+    "Projekti tõlkis kogukond. Mõned keeleversioonid võivad olla mittetäielikud.",
   "account.card.color.title": "Värviskeem",
   // ThemeSwitcher.tsx
   "account.theme.dark": "Tume",
@@ -127,7 +140,8 @@ export default {
   "account.theme.system": "Süsteemi",
   "account.button.delete": "Kustuta konto",
   "account.modal.delete.title": "Kustuta konto",
-  "account.modal.delete.description": "Kas tahad tõesti kustutada enda konto koos kõikide jagatud failidega?",
+  "account.modal.delete.description":
+    "Kas tahad tõesti kustutada enda konto koos kõikide jagatud failidega?",
   // END /account
 
   // /account/shares
@@ -136,7 +150,7 @@ export default {
   "account.shares.description.empty": "Sul pole ühtegi jagamist.",
   "account.shares.button.create": "Loo üks",
   "account.shares.info.title": "Jagamise andmed",
-  "account.shares.button.edit": "Add/Remove Files",
+  "account.shares.button.edit": "Lisa/eemalda faile",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Nimi",
   "account.shares.table.description": "Kirjeldus",
@@ -145,30 +159,34 @@ export default {
   "account.shares.table.createdAt": "Loodud",
   "account.shares.table.size": "Suurus",
   "account.shares.table.password-protected": "Parooliga kaitstud",
-  "account.shares.table.recipients": "Recipients",
-  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
-  "account.shares.table.shared-with-recipients": "Shared with recipients",
+  "account.shares.table.recipients": "Saajad",
+  "account.shares.table.restricted-to-recipients": "Piiratud ainult saajatele",
+  "account.shares.table.shared-with-recipients": "Jagatud saajatega",
   "account.shares.table.visitor-count": "{count} / {max}",
   "account.shares.table.expiry-never": "Mitte kunagi",
   "account.shares.modal.share-informations": "Jagamise andmed",
   "account.shares.modal.share-link": "Jagamise link",
-  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
-  "account.shares.modal.edit.password.remove": "Remove password protection",
+  "account.shares.modal.edit.password.keep":
+    "Jäta tühjaks praeguse parooli säilitamiseks",
+  "account.shares.modal.edit.password.remove": "Eemalda paroolikaitse",
   "account.shares.modal.delete.title": "Kustuta jagamine: {share}",
-  "account.shares.modal.delete.description": "Kas soovid tõesti seda jagamist kustutada?",
+  "account.shares.modal.delete.description":
+    "Kas soovid tõesti seda jagamist kustutada?",
   // END /account/shares
 
   // /account/received
-  "account.received-shares.title": "Received shares",
-  "account.received-shares.title.empty": "No shares received yet",
-  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
-  "account.received-shares.table.from": "From",
-  "account.received-shares.button.open": "Open",
+  "account.received-shares.title": "Saadud jagamised",
+  "account.received-shares.title.empty": "Saadud jagamisi pole veel",
+  "account.received-shares.description.empty":
+    "Sinu e-posti aadressile saadetud jagamised ilmuvad siia.",
+  "account.received-shares.table.from": "Saatja",
+  "account.received-shares.button.open": "Ava",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Tagasijagamine",
-  "account.reverseShares.description": "Tagasijagamine võimaldab sul genereerida unikaalse URL-i, mille kaudu väliskasutajad saavad luua jagamise.",
+  "account.reverseShares.description":
+    "Tagasijagamine võimaldab sul genereerida unikaalse URL-i, mille kaudu väliskasutajad saavad luua jagamise.",
   "account.reverseShares.title.empty": "Siin on tühjus 👀",
   "account.reverseShares.description.empty": "Sul pole ühtegi tagasijagamist.",
   // showCreateReverseShareModal.tsx
@@ -188,13 +206,17 @@ export default {
   "account.reverseShares.modal.expiration.year-plural": "Aastat",
   "account.reverseShares.modal.max-size.label": "Jagamise maksimaalne suurus",
   "account.reverseShares.modal.send-email": "Saada e-posti teavitusi",
-  "account.reverseShares.modal.send-email.description": "Sulle saadetakse e-posti teavitus kui selle tagasijagamise lingiga luuakse jagamine.",
+  "account.reverseShares.modal.send-email.description":
+    "Sulle saadetakse e-posti teavitus kui selle tagasijagamise lingiga luuakse jagamine.",
   "account.reverseShares.modal.simplified": "Lihtrežiim",
-  "account.reverseShares.modal.simplified.description": "Muuda faili üleslaadija jaoks lihtsaks faili sinuga jagamine. Nad saavad muuta ainult jagamise nime ja kirjeldust.",
+  "account.reverseShares.modal.simplified.description":
+    "Muuda faili üleslaadija jaoks lihtsaks faili sinuga jagamine. Nad saavad muuta ainult jagamise nime ja kirjeldust.",
   "account.reverseShares.modal.public-access": "Avalik juurdepääs",
-  "account.reverseShares.modal.public-access.description": "Tee selle tagasijagamise lingi abil loodud jagamised avalikuks. Kui see on keelatud, saavad neid vaadata ainult sina ja jagamise looja.",
+  "account.reverseShares.modal.public-access.description":
+    "Tee selle tagasijagamise lingi abil loodud jagamised avalikuks. Kui see on keelatud, saavad neid vaadata ainult sina ja jagamise looja.",
   "account.reverseShares.modal.max-use.label": "Maksimaalne kasutuskordade arv",
-  "account.reverseShares.modal.max-use.description": "Maksimaalne arv kordi, mil seda URL-i saab kasutada jagamise loomiseks.",
+  "account.reverseShares.modal.max-use.description":
+    "Maksimaalne arv kordi, mil seda URL-i saab kasutada jagamise loomiseks.",
   "account.reverseShare.never-expires": "See tagasijagamine ei aegu kunagi.",
   "account.reverseShare.expires-on": "See tagasijagamine aegub {expiration}.",
   "account.reverseShares.table.no-shares": "Ühtegi jagamist pole veel loodud",
@@ -206,7 +228,8 @@ export default {
   "account.reverseShares.table.expires": "Aegub",
   "account.reverseShares.modal.reverse-share-link": "Tagasijagamise link",
   "account.reverseShares.modal.delete.title": "Kustuta tagasijagamine",
-  "account.reverseShares.modal.delete.description": "Kas soovid tõesti seda tagasijagamist kustutada? Kui jah, siis kustutatakse ka sellega seotud jagamised.",
+  "account.reverseShares.modal.delete.description":
+    "Kas soovid tõesti seda tagasijagamist kustutada? Kui jah, siis kustutatakse ka sellega seotud jagamised.",
   // END /account/reverseShares
 
   // /admin
@@ -221,80 +244,102 @@ export default {
   "admin.users.title": "Kasutajate haldamine",
   "admin.users.table.username": "Kasutajanimi",
   "admin.users.table.email": "E-post",
-  "admin.users.table.admin": "Admin",
-  "admin.users.table.storageQuota": "Storage quota",
-  "admin.users.table.maxShareSize": "Max share size",
+  "admin.users.table.admin": "Administraator",
+  "admin.users.table.storageQuota": "Salvestusruumi kvoot",
+  "admin.users.table.maxShareSize": "Maksimaalne jagamise suurus",
   "admin.users.edit.update.title": "Muuda kasutajat: {username}",
   "admin.users.edit.update.admin-privileges": "Administraatori õigused",
-  "admin.users.edit.update.email-verified": "Email verified",
-  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
-  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
-  "admin.users.edit.update.custom-storage-quota-limit": "Custom storage quota",
-  "admin.users.edit.update.custom-storage-quota-limit.description": "Limit the user's total storage usage across active shares",
+  "admin.users.edit.update.email-verified": "E-post kinnitatud",
+  "admin.users.edit.update.custom-share-size-limit":
+    "Kohandatud jagamise suuruse limiit",
+  "admin.users.edit.update.custom-share-size-limit.description":
+    "Alista globaalne üleslaadimise limiit selle kasutaja jaoks",
+  "admin.users.edit.update.custom-storage-quota-limit":
+    "Kohandatud salvestusruumi kvoot",
+  "admin.users.edit.update.custom-storage-quota-limit.description":
+    "Piira kasutaja kogu salvestusruumi kasutust aktiivsete jagamiste lõikes",
   "admin.users.edit.update.change-password.title": "Muuda parooli",
   "admin.users.edit.update.change-password.field": "Uus parool",
   "admin.users.edit.update.change-password.button": "Salvesta uus parool",
   "admin.users.edit.update.notify.password.success": "Parool edukalt muudetud",
   "admin.users.edit.delete.title": "Kustuta kasutaja: {username}?",
-  "admin.users.edit.delete.description": "Kas soovid tõesti kustutada selle kasutaja ja kõik tema jagamised?",
+  "admin.users.edit.delete.description":
+    "Kas soovid tõesti kustutada selle kasutaja ja kõik tema jagamised?",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Loo kasutaja",
   "admin.users.modal.create.username": "Kasutajanimi",
   "admin.users.modal.create.email": "E-post",
   "admin.users.modal.create.password": "Parool",
   "admin.users.modal.create.manual-password": "Sea parool käsitsi",
-  "admin.users.modal.create.manual-password.description": "Kui see ei ole märgitud, saab kasutaja e-kirja lingiga mille kaudu oma parooli seada.",
-  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
-  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
-  "admin.users.modal.create.custom-storage-quota-limit": "Custom storage quota",
-  "admin.users.modal.create.custom-storage-quota-limit.description": "Limit the user's total storage usage across active shares",
+  "admin.users.modal.create.manual-password.description":
+    "Kui see ei ole märgitud, saab kasutaja e-kirja lingiga mille kaudu oma parooli seada.",
+  "admin.users.modal.create.custom-share-size-limit":
+    "Kohandatud jagamise suuruse limiit",
+  "admin.users.modal.create.custom-share-size-limit.description":
+    "Alista globaalne üleslaadimise limiit selle kasutaja jaoks",
+  "admin.users.modal.create.custom-storage-quota-limit":
+    "Kohandatud salvestusruumi kvoot",
+  "admin.users.modal.create.custom-storage-quota-limit.description":
+    "Piira kasutaja kogu salvestusruumi kasutust aktiivsete jagamiste lõikes",
   "admin.users.modal.create.admin": "Administraatori õigused",
-  "admin.users.modal.create.admin.description": "Kui see on märgitud, saab kasutaja pääseda administraatori paneelile.",
+  "admin.users.modal.create.admin.description":
+    "Kui see on märgitud, saab kasutaja pääseda administraatori paneelile.",
   // END /admin/users
 
   // /admin/shares
   "admin.shares.title": "Jagamiste haldus",
-  "admin.shares.diskUsage": "Disk Usage",
+  "admin.shares.diskUsage": "Kettakasutus",
   "admin.shares.table.id": "Jagamise ID",
   "admin.shares.table.username": "Looja",
   "admin.shares.table.visitors": "Külastajad",
   "admin.shares.table.expires": "Aegub",
-  "admin.shares.table.deletes": "Deletes on",
+  "admin.shares.table.deletes": "Kustub",
   "admin.shares.edit.delete.title": "Kustuta jagamine: {id}",
-  "admin.shares.edit.delete.description": "Kas soovid tõesti seda jagamist kustutada?",
+  "admin.shares.edit.delete.description":
+    "Kas soovid tõesti seda jagamist kustutada?",
   // END /admin/shares
 
   // /upload
   "upload.title": "Laadi üles",
-  "upload.notify.confirm-leave": "Kas oled kindel, et soovid sellelt lehelt lahkuda? Sinu üleslaadimine tühistatakse.",
+  "upload.notify.confirm-leave":
+    "Kas oled kindel, et soovid sellelt lehelt lahkuda? Sinu üleslaadimine tühistatakse.",
   "upload.notify.generic-error": "Jagamise lõpetamisel tekkis viga.",
-  "upload.notify.count-failed": "{count} faili ei õnnestunud üles laadida. Proovime uuesti.",
-  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
+  "upload.notify.count-failed":
+    "{count} faili ei õnnestunud üles laadida. Proovime uuesti.",
+  "upload.notify.duplicate-skipped": "Vahele jäetud duplikaatfail: {name}",
   "upload.reverse-share.error.invalid.title": "Vigane tagasijagamise link",
-  "upload.reverse-share.error.invalid.description": "See tagasijagamine on aegunud või vigane.",
+  "upload.reverse-share.error.invalid.description":
+    "See tagasijagamine on aegunud või vigane.",
   // Dropzone.tsx
   "upload.dropzone.title": "Laadi üles failid",
-  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
-  "upload.dropzone.notify.file-too-big": "Sinu failid ületavad lubatud suuruse {maxSize}.",
-  "upload.button.folder": "Upload folder",
-  "upload.button.folder.append": "Append folder",
-  "upload.button.add": "Add to upload",
+  "upload.dropzone.description":
+    "Lohista failid või kaustad siia jagamise alustamiseks või kasuta lõikelaualt tekstisisu üleslaadimiseks klahvikombinatsiooni 'Ctrl+V'. Me aktsepteerime faile kogumahus kuni {maxSize}.",
+  "upload.dropzone.notify.file-too-big":
+    "Sinu failid ületavad lubatud suuruse {maxSize}.",
+  "upload.button.folder": "Laadi üles kaust",
+  "upload.button.folder.append": "Lisa kaust",
+  "upload.button.add": "Lisa üleslaadimisele",
   // FileList.tsx
   "upload.filelist.name": "Nimi",
   "upload.filelist.size": "Suurus",
-  "upload.filelist.estimating": "Estimating...",
-  "upload.filelist.remaining": "{time} remaining",
+  "upload.filelist.estimating": "Arvutamine...",
+  "upload.filelist.remaining": "{time} jäänud",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Loo jagamine",
-  "upload.modal.link.error.invalid": "Võib sisaldada ainult tähti, numbreid, alakriipse ja kriipse",
+  "upload.modal.link.error.invalid":
+    "Võib sisaldada ainult tähti, numbreid, alakriipse ja kriipse",
   "upload.modal.link.error.taken": "See link on juba kasutusel",
-  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
-  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
+  "upload.modal.link.error.s3-session-not-found":
+    "S3 üleslaadimise seanssi ei leitud",
+  "upload.modal.link.error.s3-etag-missing":
+    "S3 vastuses puudub ETag päis. Veendu, et CORS teeb ETag päise kättesaadavaks.",
   "upload.modal.not-signed-in": "Sa ei ole sisse logitud",
-  "upload.modal.not-signed-in-description": "Sa ei saa oma jagamist käsitsi kustutada ega külastajate arvu vaadata.",
+  "upload.modal.not-signed-in-description":
+    "Sa ei saa oma jagamist käsitsi kustutada ega külastajate arvu vaadata.",
   "upload.modal.expires.never": "mitte kunagi",
   "upload.modal.expires.never-long": "Püsiv jagamine",
-  "upload.modal.expires.error.too-long": "Aegumiskuupäev ületab lubatud maksimaalset {max}.",
+  "upload.modal.expires.error.too-long":
+    "Aegumiskuupäev ületab lubatud maksimaalset {max}.",
   "upload.modal.link.label": "Ühenda",
   "upload.modal.expires.label": "Aegumisaeg",
   "upload.modal.expires.minute-singular": "Minut",
@@ -311,53 +356,66 @@ export default {
   "upload.modal.expires.year-plural": "Aastat",
   "upload.modal.accordion.name-and-description.title": "Nimi ja kirjeldus",
   "upload.modal.accordion.name-and-description.name.placeholder": "Nimi",
-  "upload.modal.accordion.name-and-description.description.placeholder": "Märkus selle jagamise saajatele",
+  "upload.modal.accordion.name-and-description.description.placeholder":
+    "Märkus selle jagamise saajatele",
   "upload.modal.accordion.email.title": "E-kirja saajad",
   "upload.modal.accordion.email.placeholder": "Sisesta e-posti aadressid",
   "upload.modal.accordion.email.invalid-email": "Vigane e-posti aadress",
-  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Piira juurdepääs ainult neile saajatele (nad peavad ligipääsuks sisse logima)",
   "upload.modal.accordion.security.title": "Turvavalikud",
   "upload.modal.accordion.security.password.label": "Paroolikaitse",
   "upload.modal.accordion.security.password.placeholder": "Parool puudub",
-  "upload.modal.accordion.security.max-views.label": "Maksimaalne vaatamiste arv",
+  "upload.modal.accordion.security.max-views.label":
+    "Maksimaalne vaatamiste arv",
   "upload.modal.accordion.security.max-views.placeholder": "Piiramatu",
   // showCompletedUploadModal.tsx
   "upload.modal.completed.never-expires": "See jagamine ei aegu mitte kunagi.",
   "upload.modal.completed.expires-on": "See jagamine aegub {expiration}.",
   "upload.modal.completed.share-ready": "Jagamine valmis",
-  "upload.modal.completed.notified-reverse-share-creator": "Oleme teavitanud tagasijagamise loojat. Saad samuti seda linki nendega käsitsi teiste vahenditega jagada.",
+  "upload.modal.completed.notified-reverse-share-creator":
+    "Oleme teavitanud tagasijagamise loojat. Saad samuti seda linki nendega käsitsi teiste vahenditega jagada.",
   // END /upload
 
   // /share/[id]
   "share.title": "Jagamine {shareId}",
   "share.description": "Vaata, mida ma sinuga jagasin!",
-  "share.fileCount": "{count, plural, =1 {# file} other {# files}} · {size} (zip file may be smaller due to compression)",
-  "share.copy-text-contents": "Copy file contents to clipboard",
+  "share.fileCount":
+    "{count, plural, =1 {# fail} other {# faili}} · {size} (zip-fail võib pakkimise tõttu olla väiksem)",
+  "share.copy-text-contents": "Kopeeri faili sisu lõikelauale",
   "share.error.visitor-limit-exceeded.title": "Külastajate limiit ületatud",
-  "share.error.visitor-limit-exceeded.description": "Selle jagamise külastajate limiit on ületatud.",
+  "share.error.visitor-limit-exceeded.description":
+    "Selle jagamise külastajate limiit on ületatud.",
   "share.error.removed.title": "Jagamine eemaldatud",
   "share.error.not-found.title": "Jagamist ei leitud",
   "share.error.not-found.description": "Otsitavat jagamist ei eksisteeri.",
   "share.error.access-denied.title": "Privaatne jagamine",
-  "share.error.access-denied.description": "Praegusel kontol puudub luba sellele jagamisele juurde pääseda",
-  "share.error.restricted.title": "Restricted share",
-  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
-  "share.error.restricted.button": "Log in",
+  "share.error.access-denied.description":
+    "Praegusel kontol puudub luba sellele jagamisele juurde pääseda",
+  "share.error.restricted.title": "Piiratud jagamine",
+  "share.error.restricted.description":
+    "See jagamine on piiratud konkreetsetele saajatele. Palun logi sisse, et sellele ligi pääseda.",
+  "share.error.restricted.button": "Logi sisse",
   "share.modal.password.title": "Parool vajalik",
-  "share.modal.password.description": "Palun sisesta parool, et sellele jagamisele juurde pääseda.",
+  "share.modal.password.description":
+    "Palun sisesta parool, et sellele jagamisele juurde pääseda.",
   "share.modal.password": "Parool",
   "share.modal.error.invalid-password": "Vigane parool",
   "share.button.download-all": "Laadi kõik alla",
-  "share.notify.download-all-preparing": "Jagamist valmistatakse ette. Palun proovi mõne minuti pärast uuesti.",
-  "share.notify.copied-contents": "File contents copied to clipboard",
-  "share.notify.copy-too-big-error": "File is too big to copy to clipboard",
-  "share.notify.copy-not-supported-error": "Copying to clipboard requires a HTTPS connection",
+  "share.notify.download-all-preparing":
+    "Jagamist valmistatakse ette. Palun proovi mõne minuti pärast uuesti.",
+  "share.notify.copied-contents": "Faili sisu kopeeritud lõikelauale",
+  "share.notify.copy-too-big-error":
+    "Fail on lõikelauale kopeerimiseks liiga suur",
+  "share.notify.copy-not-supported-error":
+    "Lõikelauale kopeerimine nõuab HTTPS-ühendust",
   "share.modal.file-link": "Faili link",
   "share.table.name": "Nimi",
   "share.table.size": "Suurus",
-  "share.modal.file-preview.original_file": "View original file",
+  "share.modal.file-preview.original_file": "Vaata algset faili",
   "share.modal.file-preview.error.not-supported.title": "Eelvaadet ei toetata",
-  "share.modal.file-preview.error.not-supported.description": "Selle failitüübi eelvaateid ei toetata. Faili vaatamiseks laadi see alla.",
+  "share.modal.file-preview.error.not-supported.description":
+    "Selle failitüübi eelvaateid ei toetata. Faili vaatamiseks laadi see alla.",
   // END /share/[id]
 
   // /share/[id]/edit
@@ -377,240 +435,361 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "Konfiguratsioonifail olemas",
-  "admin.config.config-file-warning.description": "Kuna teil on konfigureeritud Pingvin Share konfiguratsioonifailiga, ei saa te muuta konfiguratsiooni kasutajaliidest kasutades.",
+  "admin.config.config-file-warning.description":
+    "Kuna teil on konfigureeritud Pingvin Share konfiguratsioonifailiga, ei saa te muuta konfiguratsiooni kasutajaliidest kasutades.",
   "admin.config.title": "Seaded",
   "admin.config.category.general": "Üldine",
   "admin.config.category.appearance": "Välimus",
-  "admin.config.category.security": "Security & Access",
+  "admin.config.category.security": "Turvalisus ja juurdepääs",
   "admin.config.category.share": "Jagamine",
-  "admin.config.category.cache": "Cache",
+  "admin.config.category.cache": "Vahemälu",
   "admin.config.category.email": "E-post",
   "admin.config.category.smtp": "SMTP",
   "admin.config.category.oauth": "Sotsiaalmeediaga sisselogimine",
   "admin.config.general.app-name": "Rakenduse nimi",
   "admin.config.general.app-name.description": "Rakenduse nimi",
-  "admin.config.general.default-language": "Default Language",
-  "admin.config.general.default-language.description": "This applies to all users, each user can still personalise their language in their profile.",
+  "admin.config.general.default-language": "Vaikimisi keel",
+  "admin.config.general.default-language.description":
+    "See kehtib kõigile kasutajatele, iga kasutaja saab siiski oma profiilis keelt kohandada.",
   "admin.config.appearance.theme-primary-color": "Teema põhivärv",
-  "admin.config.appearance.theme-primary-color.description": "Põhivärv nuppudele, linkidele ja rõhutustele. Vali kohandatud, et kasutada värvi ülekirjutust.",
+  "admin.config.appearance.theme-primary-color.description":
+    "Põhivärv nuppudele, linkidele ja rõhutustele. Vali kohandatud, et kasutada värvi ülekirjutust.",
   "admin.config.appearance.theme-primary-color-override": "Kohandatud põhivärv",
-  "admin.config.appearance.theme-primary-color-override.description": "Hex-värvi ülekirjutus, mida kasutatakse kui teema põhivärv on seatud kohandatuks.",
+  "admin.config.appearance.theme-primary-color-override.description":
+    "Hex-värvi ülekirjutus, mida kasutatakse kui teema põhivärv on seatud kohandatuks.",
   "admin.config.appearance.theme-font-preset": "Fondi eelseadistus",
-  "admin.config.appearance.theme-font-preset.description": "Buildi ajal laaditav fondi eelseadistus. Vali süsteemne või üks kaasasolevatest Google Fonts fontidest.",
-  "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
-  "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
+  "admin.config.appearance.theme-font-preset.description":
+    "Buildi ajal laaditav fondi eelseadistus. Vali süsteemne või üks kaasasolevatest Google Fonts fontidest.",
+  "admin.config.appearance.theme-color-scheme":
+    "Vaikimisi värviskeem (külalised)",
+  "admin.config.appearance.theme-color-scheme.description":
+    "Vaikimisi hele/tume režiim sisselogimata kasutajatele. Sisselogitud kasutajad kasutavad oma konto eelistust.",
   "admin.config.appearance.theme-radius": "Teema nurga raadius",
-  "admin.config.appearance.theme-radius.description": "Mantine komponentide vaikimisi nurga raadius.",
+  "admin.config.appearance.theme-radius.description":
+    "Mantine komponentide vaikimisi nurga raadius.",
   "admin.config.appearance.custom-css": "Kohandatud CSS",
-  "admin.config.appearance.custom-css.description": "Frontendile rakendatav globaalne CSS. Kasuta ettevaatlikult; vigane CSS võib mõjutada liidest.",
-  "admin.config.appearance.upload-progress-style": "Upload progress style",
-  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
-  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
-  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
-  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
+  "admin.config.appearance.custom-css.description":
+    "Frontendile rakendatav globaalne CSS. Kasuta ettevaatlikult; vigane CSS võib mõjutada liidest.",
+  "admin.config.appearance.upload-progress-style":
+    "Üleslaadimise edenemise stiil",
+  "admin.config.appearance.upload-progress-style.description":
+    "Vali, kuidas faililoendis kuvatakse üleslaadimise edenemist.",
+  "admin.config.appearance.upload-progress-style.circle": "Ringindikaator",
+  "admin.config.appearance.upload-progress-style.circle-percentage":
+    "Ring protsendiga",
+  "admin.config.appearance.upload-progress-style.percentage-time":
+    "Protsent ja järelejäänud aeg",
   "admin.config.general.app-url": "Rakenduse URL",
-  "admin.config.general.app-url.description": "URL, mille kaudu Pingvin Share on kättesaadav",
+  "admin.config.general.app-url.description":
+    "URL, mille kaudu Pingvin Share on kättesaadav",
   "admin.config.security.secure-cookies": "Turvalised küpsised",
-  "admin.config.security.secure-cookies.description": "Kas küpsistele seata turvalisuse lipp. Kui see on lubatud, ei tööta teenus HTTP kaudu.",
+  "admin.config.security.secure-cookies.description":
+    "Kas küpsistele seata turvalisuse lipp. Kui see on lubatud, ei tööta teenus HTTP kaudu.",
   "admin.config.general.show-home-page": "Kuva avaleht",
   "admin.config.general.show-home-page.description": "Kas kuvada avalehte",
   "admin.config.security.session-duration": "Seansi kestus",
-  "admin.config.security.session-duration.description": "Aeg, mille pärast kasutaja peab uuesti sisse logima (vaikeväärtus: 3 kuud).",
+  "admin.config.security.session-duration.description":
+    "Aeg, mille pärast kasutaja peab uuesti sisse logima (vaikeväärtus: 3 kuud).",
   "admin.config.appearance.logo": "Logo",
-  "admin.config.appearance.logo.description": "Muuda oma logo laadides üles uus pilt. Pildi formaat peab olema PNG ja kuju 1:1.",
-  "admin.config.appearance.logo-dark": "Dark mode logo",
-  "admin.config.appearance.logo-dark.description": "Upload a separate logo for dark mode. The image must be a PNG and should have the format 1:1.",
+  "admin.config.appearance.logo.description":
+    "Muuda oma logo laadides üles uus pilt. Pildi formaat peab olema PNG ja kuju 1:1.",
+  "admin.config.appearance.logo-dark": "Tumeda režiimi logo",
+  "admin.config.appearance.logo-dark.description":
+    "Laadi üles eraldi logo tumeda režiimi jaoks. Pilt peab olema PNG-vormingus ja kuvasuhtega 1:1.",
   "admin.config.appearance.logo.placeholder": "Vali pilt",
-  "admin.config.security.custom-password-policy": "Custom password policy",
-  "admin.config.security.custom-password-policy.description": "Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.",
-  "admin.config.security.min-length": "Minimum length",
-  "admin.config.security.min-length.description": "Minimum number of characters required for a password.",
-  "admin.config.security.require-uppercase": "Require uppercase",
-  "admin.config.security.require-uppercase.description": "Whether to require at least one uppercase letter in the password.",
-  "admin.config.security.require-lowercase": "Require lowercase",
-  "admin.config.security.require-lowercase.description": "Whether to require at least one lowercase letter in the password.",
-  "admin.config.security.require-number": "Require number",
-  "admin.config.security.require-number.description": "Whether to require at least one number in the password.",
-  "admin.config.security.require-special-character": "Require special character",
-  "admin.config.security.require-special-character.description": "Whether to require at least one special character in the password.",
+  "admin.config.security.custom-password-policy": "Kohandatud paroolireeglid",
+  "admin.config.security.custom-password-policy.description":
+    "Kas lubada paroolireeglite kohandamine. Kui keelatud, kasutatakse vaikimisi vähemalt 8 tähemärgi nõuet.",
+  "admin.config.security.min-length": "Minimaalne pikkus",
+  "admin.config.security.min-length.description":
+    "Parooli minimaalne nõutav tähemärkide arv.",
+  "admin.config.security.require-uppercase": "Nõua suurtähte",
+  "admin.config.security.require-uppercase.description":
+    "Kas paroolis on nõutav vähemalt üks suurtäht.",
+  "admin.config.security.require-lowercase": "Nõua väiketähte",
+  "admin.config.security.require-lowercase.description":
+    "Kas paroolis on nõutav vähemalt üks väiketäht.",
+  "admin.config.security.require-number": "Nõua numbrit",
+  "admin.config.security.require-number.description":
+    "Kas paroolis on nõutav vähemalt üks number.",
+  "admin.config.security.require-special-character": "Nõua erimärki",
+  "admin.config.security.require-special-character.description":
+    "Kas paroolis on nõutav vähemalt üks erimärk.",
   "admin.config.cache.ttl": "TTL",
-  "admin.config.cache.ttl.description": "Time in second to keep information inside the cache.",
-  "admin.config.cache.max-items": "Maximum items",
-  "admin.config.cache.max-items.description": "Maximum number of items inside the cache.",
-  "admin.config.cache.redis-enabled": "Redis enabled",
-  "admin.config.cache.redis-enabled.description": "Normally Pingvin Share caches information in memory. If you run multiple instances of Pingvin Share, you need to enable Redis caching to share the cache between the instances.",
+  "admin.config.cache.ttl.description":
+    "Aeg sekundites info vahemälus hoidmiseks.",
+  "admin.config.cache.max-items": "Maksimaalselt kirjeid",
+  "admin.config.cache.max-items.description":
+    "Maksimaalne kirjete arv vahemälus.",
+  "admin.config.cache.redis-enabled": "Redis lubatud",
+  "admin.config.cache.redis-enabled.description":
+    "Tavaliselt hoiab Pingvin Share infot muutmälu vahemälus. Kui käitad mitut Pingvin Share eksemplari, pead eksemplaride vahel vahemälu jagamiseks lubama Redis vahemälu.",
   "admin.config.cache.redis-url": "Redis URL",
-  "admin.config.cache.redis-url.description": "Url to connect to the Redis instance used for caching.",
-  "admin.config.cache.button.test-redis": "Test Redis connection",
-  "admin.config.cache.test-redis.success": "Connected to Redis successfully",
-  "admin.config.cache.test-redis.success-disabled": "Connected to Redis successfully (Redis caching is currently disabled).",
-  "admin.config.cache.test-redis.modal.error.title": "Failed to connect to Redis",
-  "admin.config.cache.test-redis.modal.error.description": "While connecting to Redis, the following error occurred:",
-  "admin.config.cache.test-redis.modal.save.title": "Save configuration",
-  "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
-  "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
-  "admin.config.email.send-html-emails": "Enable HTML email compatibility",
-  "admin.config.email.send-html-emails.description": "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
-  "admin.config.share.enable-share-email-recipients": "Luba e-posti teavitused jagamise saajatele",
-  "admin.config.share.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
+  "admin.config.cache.redis-url.description":
+    "URL vahemäluks kasutatava Redis eksemplariga ühenduse loomiseks.",
+  "admin.config.cache.button.test-redis": "Testi Redis ühendust",
+  "admin.config.cache.test-redis.success": "Ühendus Redisega edukalt loodud",
+  "admin.config.cache.test-redis.success-disabled":
+    "Ühendus Redisega edukalt loodud (Redis vahemälu on hetkel keelatud).",
+  "admin.config.cache.test-redis.modal.error.title":
+    "Redisega ühenduse loomine ebaõnnestus",
+  "admin.config.cache.test-redis.modal.error.description":
+    "Redisega ühendamisel tekkis järgmine viga:",
+  "admin.config.cache.test-redis.modal.save.title": "Salvesta konfiguratsioon",
+  "admin.config.cache.test-redis.modal.save.description":
+    "Jätkamiseks pead esmalt konfiguratsiooni salvestama. Kas soovid konfiguratsiooni salvestada ja testida Redis ühendust?",
+  "admin.config.cache.test-redis.modal.save.confirm": "Salvesta ja testi",
+  "admin.config.email.send-html-emails": "Luba HTML-e-kirjade ühilduvus",
+  "admin.config.email.send-html-emails.description":
+    "Kui lubatud, saadetakse e-kirjad HTML-vormingus. Veendu, et e-kirjade mallid on uuendatud kasutama HTML-i.",
+  "admin.config.share.enable-share-email-recipients":
+    "Luba e-posti teavitused jagamise saajatele",
+  "admin.config.share.enable-share-email-recipients.description":
+    "Kas lubada jagamine e-posti saajatega. Seda saab lubada ainult siis, kui SMTP on aktiveeritud.",
   "admin.config.email.share-recipients-subject": "Jagamise saajate pealkiri",
-  "admin.config.email.share-recipients-subject.description": "Pealkiri mis saadetakse jagamise saajatele.",
+  "admin.config.email.share-recipients-subject.description":
+    "Pealkiri mis saadetakse jagamise saajatele.",
   "admin.config.email.share-recipients-message": "Jagamise saajate sõnum",
-  "admin.config.email.share-recipients-message.description": "Sõnum, mis saadetakse jagamise saajatele. Kasutatavad muutujad:\n {creator} - jagamise looja kasutajanimi\n {creatorEmail} - jagamise looja e-post\n {shareUrl} - jagamise URL\n {desc} - jagamise kirjeldus\n {expires} - jagamise aegumiskuupäev\n Need muutujad asendatakse vastavate väärtustega.",
+  "admin.config.email.share-recipients-message.description":
+    "Sõnum, mis saadetakse jagamise saajatele. Kasutatavad muutujad:\n {creator} - jagamise looja kasutajanimi\n {creatorEmail} - jagamise looja e-post\n {shareUrl} - jagamise URL\n {desc} - jagamise kirjeldus\n {expires} - jagamise aegumiskuupäev\n Need muutujad asendatakse vastavate väärtustega.",
   "admin.config.email.reverse-share-subject": "Tagasijagamise Pealkiri",
-  "admin.config.email.reverse-share-subject.description": "Pealkiri mis saadetakse kui keegi loob jagamise sinu tagasijagamise lingiga.",
+  "admin.config.email.reverse-share-subject.description":
+    "Pealkiri mis saadetakse kui keegi loob jagamise sinu tagasijagamise lingiga.",
   "admin.config.email.reverse-share-message": "Tagasijagamise sõnum",
-  "admin.config.email.reverse-share-message.description": "Sõnum mis saadetakse kui keegi loob jagamise sinu tagasijagamise lingiga. {shareUrl} asendatakse looja nime ja jagamise URL-iga.",
+  "admin.config.email.reverse-share-message.description":
+    "Sõnum mis saadetakse kui keegi loob jagamise sinu tagasijagamise lingiga. {shareUrl} asendatakse looja nime ja jagamise URL-iga.",
   "admin.config.email.reset-password-subject": "Parooli lähtestamise Pealkiri",
-  "admin.config.email.reset-password-subject.description": "Pealkiri mis saadetakse kui kasutaja taotleb parooli lähtestamist.",
+  "admin.config.email.reset-password-subject.description":
+    "Pealkiri mis saadetakse kui kasutaja taotleb parooli lähtestamist.",
   "admin.config.email.reset-password-message": "Parooli lähtestamise sõnum",
-  "admin.config.email.reset-password-message.description": "Sõnum mis saadetakse kui kasutaja taotleb parooli lähtestamist. {url} asendatakse parooli lähtestamise URL-iga.",
+  "admin.config.email.reset-password-message.description":
+    "Sõnum mis saadetakse kui kasutaja taotleb parooli lähtestamist. {url} asendatakse parooli lähtestamise URL-iga.",
   "admin.config.email.invite-subject": "Kutse pealkiri",
-  "admin.config.email.invite-subject.description": "Pealkiri mis saadetakse kui administraator kutsub kasutajat.",
+  "admin.config.email.invite-subject.description":
+    "Pealkiri mis saadetakse kui administraator kutsub kasutajat.",
   "admin.config.email.invite-message": "Kutse sõnum",
-  "admin.config.email.invite-message.description": "Sõnum mis saadetakse kui administraator kutsub kasutajat. {url} asendatakse kutse URL-iga, {email} e-posti aadressiga ja {password} kasutaja parooliga.",
-  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
-  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
-  "admin.config.share.enable-share-download-notifications": "Enable download notifications",
-  "admin.config.share.enable-share-download-notifications.description": "Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.",
-  "admin.config.email.share-download-notification-subject": "Download notification subject",
-  "admin.config.email.share-download-notification-subject.description": "Subject of the email which gets sent to the share creator when a recipient downloads a file.",
-  "admin.config.email.share-download-notification-message": "Download notification message",
-  "admin.config.email.share-download-notification-message.description": "Message which gets sent to the share creator when a recipient downloads a file. Available variables:\n {recipientEmail} - The email of the recipient\n {fileName} - The downloaded file name\n {shareUrl} - The URL of the share",
-  "admin.config.security.enable-email-verification": "Enable email verification",
-  "admin.config.security.enable-email-verification.description": "Whether to require users to verify their email address before being able to sign in. This can only be enabled if SMTP is activated.",
-  "admin.config.email.verification-subject": "Verification subject",
-  "admin.config.email.verification-subject.description": "Subject of the email which gets sent to the user when they sign up.",
-  "admin.config.email.verification-message": "Verification message",
-  "admin.config.email.verification-message.description": "Message which gets sent to the user when they sign up. {url} will be replaced with the verification URL.",
+  "admin.config.email.invite-message.description":
+    "Sõnum mis saadetakse kui administraator kutsub kasutajat. {url} asendatakse kutse URL-iga, {email} e-posti aadressiga ja {password} kasutaja parooliga.",
+  "admin.config.email.share-recipients-reply-to-creator":
+    "Määra Reply-To looja e-postiks",
+  "admin.config.email.share-recipients-reply-to-creator.description":
+    "Kas määrata Reply-To päis jagamise loonud kasutaja e-posti aadressiks.",
+  "admin.config.share.enable-share-download-notifications":
+    "Luba allalaadimise teavitused",
+  "admin.config.share.enable-share-download-notifications.description":
+    "Kas saata jagamise loojale e-kiri, kui e-posti saaja laadib faili alla. See nõuab SMTP-d ja e-posti saajatega jagamist.",
+  "admin.config.email.share-download-notification-subject":
+    "Allalaadimise teavituse teema",
+  "admin.config.email.share-download-notification-subject.description":
+    "E-kirja teema, mis saadetakse jagamise loojale, kui saaja faili alla laadib.",
+  "admin.config.email.share-download-notification-message":
+    "Allalaadimise teavituse sõnum",
+  "admin.config.email.share-download-notification-message.description":
+    "Sõnum, mis saadetakse jagamise loojale, kui saaja faili alla laadib. Saadaval muutujad:\n {recipientEmail} - Saaja e-post\n {fileName} - Allalaaditud faili nimi\n {shareUrl} - Jagamise URL",
+  "admin.config.security.enable-email-verification": "Luba e-posti kinnitamine",
+  "admin.config.security.enable-email-verification.description":
+    "Kas nõuda kasutajatelt enne sisselogimist oma e-posti aadressi kinnitamist. Seda saab lubada ainult siis, kui SMTP on aktiveeritud.",
+  "admin.config.email.verification-subject": "Kinnituse teema",
+  "admin.config.email.verification-subject.description":
+    "E-kirja teema, mis saadetakse kasutajale registreerumisel.",
+  "admin.config.email.verification-message": "Kinnitussõnum",
+  "admin.config.email.verification-message.description":
+    "Sõnum, mis saadetakse kasutajale registreerumisel. {url} asendatakse kinnitamise URL-iga.",
   "admin.config.security.allow-registration": "Luba registreerimine",
-  "admin.config.security.allow-registration.description": "Kas registreerimine on lubatud",
-  "admin.config.security.allow-unauthenticated-shares": "Luba autentimata jagamised",
-  "admin.config.security.allow-unauthenticated-shares.description": "Kas autentimata kasutajad saavad jagamisi luua",
-  "admin.config.share.default-expiration": "Default expiration",
-  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
+  "admin.config.security.allow-registration.description":
+    "Kas registreerimine on lubatud",
+  "admin.config.security.allow-unauthenticated-shares":
+    "Luba autentimata jagamised",
+  "admin.config.security.allow-unauthenticated-shares.description":
+    "Kas autentimata kasutajad saavad jagamisi luua",
+  "admin.config.share.default-expiration": "Vaikimisi aegumine",
+  "admin.config.share.default-expiration.description":
+    "Vaikimisi valitud aegumisaeg uue jagamise loomisel.",
   "admin.config.share.max-expiration": "Maksimaalne aegumisaeg",
-  "admin.config.share.max-expiration.description": "Maksimaalne jagamise aegumisaeg. Määra 0, et lubada piiramatu aegumisaeg.",
+  "admin.config.share.max-expiration.description":
+    "Maksimaalne jagamise aegumisaeg. Määra 0, et lubada piiramatu aegumisaeg.",
   "admin.config.share.share-id-length": "Vaikimisi jagamise ID pikkus",
-  "admin.config.share.share-id-length.description": "Vaikimisi pikkus jagamise genereeritud ID jaoks. Seda väärtust kasutatakse ka tagasijagamise linkide loomiseks. Väärtust alla 8 ei peeta turvaliseks.",
+  "admin.config.share.share-id-length.description":
+    "Vaikimisi pikkus jagamise genereeritud ID jaoks. Seda väärtust kasutatakse ka tagasijagamise linkide loomiseks. Väärtust alla 8 ei peeta turvaliseks.",
   "admin.config.share.max-size": "Maksimaalne suurus",
   "admin.config.share.max-size.description": "Maksimaalne jagamise suurus",
   "admin.config.share.zip-compression-level": "Zip tihendustase",
-  "admin.config.share.zip-compression-level.description": "Reguleeri tihendustaset, et leida tasakaal faili suuruse ja tihendamise kiiruse vahel. Kehtivad väärtused jäävad vahemikku 0 kuni 9, kus 0 tähendab mitte tihendamist ja 9 maksimaalset tihendamist. ",
+  "admin.config.share.zip-compression-level.description":
+    "Reguleeri tihendustaset, et leida tasakaal faili suuruse ja tihendamise kiiruse vahel. Kehtivad väärtused jäävad vahemikku 0 kuni 9, kus 0 tähendab mitte tihendamist ja 9 maksimaalset tihendamist. ",
   "admin.config.share.chunk-size": "Andmeploki suurus",
-  "admin.config.share.chunk-size.description": "Reguleeri üleslaadimiseks kasutatavate andmeplokkide suurust, et saavutada efektiivsus ja töökindlus vastavalt sinu internetiühendusele. Väiksemad plokid võivad ebastabiilsete ühenduste korral parandada üleslaadimise edukust, samas kui suuremad plokid muudavad üleslaadimise kiiremaks stabiilsete ühenduste korral.",
-  "admin.config.share.auto-open-share-modal": "Ava jagamise loomise aken automaatselt",
-  "admin.config.share.auto-open-share-modal.description": "Jagamise loomise aken avaneb automaatselt kui kasutaja valib failid nii, et ei pea nuppu käsitsi klõpsama.",
-  "admin.config.security.allow-admin-access-all-shares": "Allow admin access to all shares",
-  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
-  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
-  "admin.config.security.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
-  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
-  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
-  "admin.config.share.file-retention-period": "File retention period",
-  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
+  "admin.config.share.chunk-size.description":
+    "Reguleeri üleslaadimiseks kasutatavate andmeplokkide suurust, et saavutada efektiivsus ja töökindlus vastavalt sinu internetiühendusele. Väiksemad plokid võivad ebastabiilsete ühenduste korral parandada üleslaadimise edukust, samas kui suuremad plokid muudavad üleslaadimise kiiremaks stabiilsete ühenduste korral.",
+  "admin.config.share.auto-open-share-modal":
+    "Ava jagamise loomise aken automaatselt",
+  "admin.config.share.auto-open-share-modal.description":
+    "Jagamise loomise aken avaneb automaatselt kui kasutaja valib failid nii, et ei pea nuppu käsitsi klõpsama.",
+  "admin.config.security.allow-admin-access-all-shares":
+    "Luba administraatori juurdepääs kõigile jagamistele",
+  "admin.config.share.reverse-share-simple-only":
+    "Nõua pööratud jagamise lihtrežiimi",
+  "admin.config.share.reverse-share-simple-only.description":
+    "Nõua pööratud jagamiste loomist lihtrežiimis. Kui keelatud, saab pööratud jagamise looja valida liht- ja täiustatud režiimi vahel.",
+  "admin.config.security.allow-admin-access-all-shares.description":
+    "Luba administraatoritel pääseda ligi kõigile jagamistele, isegi kui need on parooliga kaitstud, aegunud või kustutatud.",
+  "admin.config.share.enable-user-recipients":
+    "Luba jagamine registreeritud kasutajatega",
+  "admin.config.share.enable-user-recipients.description":
+    "Kui lubatud, ilmuvad registreeritud kasutaja e-posti aadressile saadetud jagamised automaatselt tema kontole. Kasutajad saavad piirata jagamise juurdepääsu ka ainult nimetatud saajatele.",
+  "admin.config.share.file-retention-period": "Failide säilitusperiood",
+  "admin.config.share.file-retention-period.description":
+    "Kui kaua faile säilitatakse pärast jagamise aegumist või kustutamist. Kasulik ainult siis, kui 'Luba administraatori juurdepääs kõigile jagamistele' on samuti lubatud. Määra -1 failide igaveseks säilitamiseks.",
   "admin.config.smtp.enabled": "Luba",
-  "admin.config.smtp.enabled.description": "Kas SMTP on lubatud. Sea see tõeks ainult siis, kui oled sisestanud oma SMTP serveri hosti, pordi, e-posti, kasutajanime ja parooli.",
+  "admin.config.smtp.enabled.description":
+    "Kas SMTP on lubatud. Sea see tõeks ainult siis, kui oled sisestanud oma SMTP serveri hosti, pordi, e-posti, kasutajanime ja parooli.",
   "admin.config.smtp.host": "Host",
   "admin.config.smtp.host.description": "SMTP serveri host",
   "admin.config.smtp.port": "Port",
   "admin.config.smtp.port.description": "SMTP serveri port",
   "admin.config.smtp.email": "E-post",
-  "admin.config.smtp.email.description": "E-posti aadress, millelt e-kirjad saadetakse",
+  "admin.config.smtp.email.description":
+    "E-posti aadress, millelt e-kirjad saadetakse",
   "admin.config.smtp.username": "Kasutajanimi",
   "admin.config.smtp.username.description": "SMTP serveri kasutajanimi",
   "admin.config.smtp.password": "Parool",
   "admin.config.smtp.password.description": "SMTP serveri parool",
   "admin.config.smtp.button.test": "Saada test e-kiri",
-  "admin.config.smtp.test-email.success": "Email sent successfully",
-  "admin.config.smtp.test-email.error.title": "Failed to send email",
-  "admin.config.smtp.test-email.error.description": "While sending the test email, the following error occurred:",
-  "admin.config.smtp.test-email.save.title": "Save configuration",
-  "admin.config.smtp.test-email.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and send the test email?",
-  "admin.config.smtp.test-email.save.confirm": "Save and send",
-  "admin.config.smtp.allow-unauthorized-certificates": "Usalda volitamata SMTP serveri sertifikaate",
-  "admin.config.smtp.allow-unauthorized-certificates.description": "Sea see tõeks ainult siis, kui pead usaldama iseallkirjastatud sertifikaate.",
+  "admin.config.smtp.test-email.success": "E-kiri edukalt saadetud",
+  "admin.config.smtp.test-email.error.title": "E-kirja saatmine ebaõnnestus",
+  "admin.config.smtp.test-email.error.description":
+    "Test-e-kirja saatmisel tekkis järgmine viga:",
+  "admin.config.smtp.test-email.save.title": "Salvesta konfiguratsioon",
+  "admin.config.smtp.test-email.save.description":
+    "Jätkamiseks pead esmalt konfiguratsiooni salvestama. Kas soovid konfiguratsiooni salvestada ja saata test-e-kirja?",
+  "admin.config.smtp.test-email.save.confirm": "Salvesta ja saada",
+  "admin.config.smtp.allow-unauthorized-certificates":
+    "Usalda volitamata SMTP serveri sertifikaate",
+  "admin.config.smtp.allow-unauthorized-certificates.description":
+    "Sea see tõeks ainult siis, kui pead usaldama iseallkirjastatud sertifikaate.",
   "admin.config.oauth.allow-registration": "Luba registreerimine",
-  "admin.config.oauth.allow-registration.description": "Luba kasutajatel registreerida sotsiaalmeedia sisselogimise kaudu",
+  "admin.config.oauth.allow-registration.description":
+    "Luba kasutajatel registreerida sotsiaalmeedia sisselogimise kaudu",
   "admin.config.oauth.ignore-totp": "Ignoreeri TOTP-i",
-  "admin.config.oauth.ignore-totp.description": "Kas ignoreerida TOTP-i kui kasutaja kasutab sotsiaalset sisselogimist.",
+  "admin.config.oauth.ignore-totp.description":
+    "Kas ignoreerida TOTP-i kui kasutaja kasutab sotsiaalset sisselogimist.",
   "admin.config.oauth.disable-password": "Keela parooliga sisselogimine",
-  "admin.config.oauth.disable-password.description": "Kas keelata parooliga sisselogimine\nVeendu, et OAuth pakkuja on korralikult seadistatud enne selle aktiveerimist, et vältida juurdepääsu lukustamist.",
+  "admin.config.oauth.disable-password.description":
+    "Kas keelata parooliga sisselogimine\nVeendu, et OAuth pakkuja on korralikult seadistatud enne selle aktiveerimist, et vältida juurdepääsu lukustamist.",
   "admin.config.oauth.github-enabled": "GitHub",
-  "admin.config.oauth.github-enabled.description": "Kas GitHub sisselogimine on lubatud",
+  "admin.config.oauth.github-enabled.description":
+    "Kas GitHub sisselogimine on lubatud",
   "admin.config.oauth.github-client-id": "GitHub kliendi ID",
-  "admin.config.oauth.github-client-id.description": "GitHub OAuth rakenduse kliendi ID",
+  "admin.config.oauth.github-client-id.description":
+    "GitHub OAuth rakenduse kliendi ID",
   "admin.config.oauth.github-client-secret": "GitHub kliendi saladus",
-  "admin.config.oauth.github-client-secret.description": "GitHub OAuth rakenduse kliendi saladus",
+  "admin.config.oauth.github-client-secret.description":
+    "GitHub OAuth rakenduse kliendi saladus",
   "admin.config.oauth.google-enabled": "Google",
-  "admin.config.oauth.google-enabled.description": "Kas Google sisselogimine on lubatud",
+  "admin.config.oauth.google-enabled.description":
+    "Kas Google sisselogimine on lubatud",
   "admin.config.oauth.google-client-id": "Google kliendi ID",
-  "admin.config.oauth.google-client-id.description": "Google OAuth rakenduse kliendi ID",
+  "admin.config.oauth.google-client-id.description":
+    "Google OAuth rakenduse kliendi ID",
   "admin.config.oauth.google-client-secret": "Google kliendi saladus",
-  "admin.config.oauth.google-client-secret.description": "Google OAuth rakenduse kliendi saladus",
+  "admin.config.oauth.google-client-secret.description":
+    "Google OAuth rakenduse kliendi saladus",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
-  "admin.config.oauth.microsoft-enabled.description": "Kas Microsofti sisselogimine on lubatud",
+  "admin.config.oauth.microsoft-enabled.description":
+    "Kas Microsofti sisselogimine on lubatud",
   "admin.config.oauth.microsoft-tenant": "Microsofti tenant",
-  "admin.config.oauth.microsoft-tenant.description": "Microsoft OAuth rakenduse tenant ID\ncommon: Kasutajad, kellel on nii isiklik Microsofti konto kui ka töö- või koolikonto Microsoft Entra ID-s, saavad rakendusse sisse logida. organizations: Ainult töö- või koolikontoga kasutajad saavad sisse logida.\nconsumers: Ainult isikliku Microsofti kontoga kasutajad saavad sisse logida.\nMicrosoft Entra tenanti domeeninimi või GUID formaadis tenant ID: Ainult teatud tenanti kasutajad saavad sisse logida.",
+  "admin.config.oauth.microsoft-tenant.description":
+    "Microsoft OAuth rakenduse tenant ID\ncommon: Kasutajad, kellel on nii isiklik Microsofti konto kui ka töö- või koolikonto Microsoft Entra ID-s, saavad rakendusse sisse logida. organizations: Ainult töö- või koolikontoga kasutajad saavad sisse logida.\nconsumers: Ainult isikliku Microsofti kontoga kasutajad saavad sisse logida.\nMicrosoft Entra tenanti domeeninimi või GUID formaadis tenant ID: Ainult teatud tenanti kasutajad saavad sisse logida.",
   "admin.config.oauth.microsoft-client-id": "Microsoft kliendi ID",
-  "admin.config.oauth.microsoft-client-id.description": "Microsoft OAuth rakenduse kliendi ID",
+  "admin.config.oauth.microsoft-client-id.description":
+    "Microsoft OAuth rakenduse kliendi ID",
   "admin.config.oauth.microsoft-client-secret": "Microsoft kliendi saladus",
-  "admin.config.oauth.microsoft-client-secret.description": "Microsoft OAuth rakenduse kliendi saladus",
+  "admin.config.oauth.microsoft-client-secret.description":
+    "Microsoft OAuth rakenduse kliendi saladus",
   "admin.config.oauth.discord-enabled": "Discord",
-  "admin.config.oauth.discord-enabled.description": "Kas Discord sisselogimine on lubatud",
+  "admin.config.oauth.discord-enabled.description":
+    "Kas Discord sisselogimine on lubatud",
   "admin.config.oauth.discord-limited-users": "Piiratud Discord kasutajad",
-  "admin.config.oauth.discord-limited-users.description": "Piira sisselogimist ainult teatud kasutajatele nende Discord ID alusel. Jäta tühjaks, et keelata.",
+  "admin.config.oauth.discord-limited-users.description":
+    "Piira sisselogimist ainult teatud kasutajatele nende Discord ID alusel. Jäta tühjaks, et keelata.",
   "admin.config.oauth.discord-limited-guild": "Piiratud Discord serveri ID",
-  "admin.config.oauth.discord-limited-guild.description": "Piira sisselogimist ainult teatud serveri kasutajatele. Jäta tühjaks, et keelata.",
+  "admin.config.oauth.discord-limited-guild.description":
+    "Piira sisselogimist ainult teatud serveri kasutajatele. Jäta tühjaks, et keelata.",
   "admin.config.oauth.discord-client-id": "Discord kliendi ID",
-  "admin.config.oauth.discord-client-id.description": "Discord OAuth rakenduse kliendi ID",
+  "admin.config.oauth.discord-client-id.description":
+    "Discord OAuth rakenduse kliendi ID",
   "admin.config.oauth.discord-client-secret": "Discord kliendi saladus",
-  "admin.config.oauth.discord-client-secret.description": "Discord OAuth rakenduse kliendi saladus",
+  "admin.config.oauth.discord-client-secret.description":
+    "Discord OAuth rakenduse kliendi saladus",
   "admin.config.oauth.oidc-enabled": "OpenID Connect",
-  "admin.config.oauth.oidc-enabled.description": "Kas OpenID Connect sisselogimine on lubatud",
+  "admin.config.oauth.oidc-enabled.description":
+    "Kas OpenID Connect sisselogimine on lubatud",
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect avastamis-URI",
-  "admin.config.oauth.oidc-discovery-uri.description": "OpenID Connect OAuth rakenduse avastamis-URI",
+  "admin.config.oauth.oidc-discovery-uri.description":
+    "OpenID Connect OAuth rakenduse avastamis-URI",
   "admin.config.oauth.oidc-sign-out": "Logi välja OpenID Connectist",
-  "admin.config.oauth.oidc-sign-out.description": "Kas 'Logi välja' nupp logib välja OpenID Connect pakkujast",
+  "admin.config.oauth.oidc-sign-out.description":
+    "Kas 'Logi välja' nupp logib välja OpenID Connect pakkujast",
   "admin.config.oauth.oidc-scope": "OpenID Connect ulatus",
-  "admin.config.oauth.oidc-scope.description": "Ulatus, mida tuleks OpenID Connect pakkujalt küsida.",
+  "admin.config.oauth.oidc-scope.description":
+    "Ulatus, mida tuleks OpenID Connect pakkujalt küsida.",
   "admin.config.oauth.oidc-username-claim": "OpenID Connect kasutajanime väide",
-  "admin.config.oauth.oidc-username-claim.description": "Kasutajanime väide OpenID Connect ID tokenis. Jäta tühjaks kui sa ei tea mis seade see on.",
+  "admin.config.oauth.oidc-username-claim.description":
+    "Kasutajanime väide OpenID Connect ID tokenis. Jäta tühjaks kui sa ei tea mis seade see on.",
   "admin.config.oauth.oidc-role-path": "Tee rollideni OpenID Connect tokenis",
-  "admin.config.oauth.oidc-role-path.description": "Peab olema kehtiv JMES tee, mis viitab rollide massiivile." + "Juurdepääsuõiguste haldamine OpenID Connecti rollide abil on soovitatav ainult siis, kui ühtegi muud identiteedipakkujat pole konfigureeritud ja parooliga sisselogimine on keelatud." + "Jäta see tühjaks kui sa ei tea mis seade see on.",
-  "admin.config.oauth.oidc-role-general-access": "OpenID Connect roll üldiseks juurdepääsuks",
-  "admin.config.oauth.oidc-role-general-access.description": "Üldiseks juurdepääsuks nõutav roll. Kasutajal peab see roll olema, et ta saaks sisse logida." + "Jäta see tühjaks kui sa ei tea mis seade see on.",
-  "admin.config.oauth.oidc-role-admin-access": "OpenID Connect roll admin juurdepääsuks",
-  "admin.config.oauth.oidc-role-admin-access.description": "Üldiseks juurdepääsuks vajalik roll. Kasutaja peab selle rolli omama, et sisse logida. " + "Jäta see tühjaks kui sa ei tea mis seade see on",
+  "admin.config.oauth.oidc-role-path.description":
+    "Peab olema kehtiv JMES tee, mis viitab rollide massiivile." +
+    "Juurdepääsuõiguste haldamine OpenID Connecti rollide abil on soovitatav ainult siis, kui ühtegi muud identiteedipakkujat pole konfigureeritud ja parooliga sisselogimine on keelatud." +
+    "Jäta see tühjaks kui sa ei tea mis seade see on.",
+  "admin.config.oauth.oidc-role-general-access":
+    "OpenID Connect roll üldiseks juurdepääsuks",
+  "admin.config.oauth.oidc-role-general-access.description":
+    "Üldiseks juurdepääsuks nõutav roll. Kasutajal peab see roll olema, et ta saaks sisse logida." +
+    "Jäta see tühjaks kui sa ei tea mis seade see on.",
+  "admin.config.oauth.oidc-role-admin-access":
+    "OpenID Connect roll admin juurdepääsuks",
+  "admin.config.oauth.oidc-role-admin-access.description":
+    "Üldiseks juurdepääsuks vajalik roll. Kasutaja peab selle rolli omama, et sisse logida. " +
+    "Jäta see tühjaks kui sa ei tea mis seade see on",
   "admin.config.oauth.oidc-client-id": "OpenID Connect kliendi ID",
-  "admin.config.oauth.oidc-client-id.description": "OpenID Connect OAuth rakenduse kliendi ID",
+  "admin.config.oauth.oidc-client-id.description":
+    "OpenID Connect OAuth rakenduse kliendi ID",
   "admin.config.oauth.oidc-client-secret": "OpenID Connect kliendi saladus",
-  "admin.config.oauth.oidc-client-secret.description": "OpenID Connect OAuth rakenduse kliendi saladus",
+  "admin.config.oauth.oidc-client-secret.description":
+    "OpenID Connect OAuth rakenduse kliendi saladus",
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "Luba LDAP",
-  "admin.config.ldap.enabled.description": "Kasutaja sisselogimiseks kasutada LDAP autentimist",
+  "admin.config.ldap.enabled.description":
+    "Kasutaja sisselogimiseks kasutada LDAP autentimist",
   "admin.config.ldap.url": "Serveri URL",
   "admin.config.ldap.url.description": "LDAP serveri URL",
   "admin.config.ldap.bind-dn": "Bind DN",
-  "admin.config.ldap.bind-dn.description": "Vaikimisi kasutaja, mida kasutatakse kasutajate otsimiseks",
+  "admin.config.ldap.bind-dn.description":
+    "Vaikimisi kasutaja, mida kasutatakse kasutajate otsimiseks",
   "admin.config.ldap.bind-password": "Bind parool",
-  "admin.config.ldap.bind-password.description": "Parool, mida kasutatakse kasutajate otsimiseks",
+  "admin.config.ldap.bind-password.description":
+    "Parool, mida kasutatakse kasutajate otsimiseks",
   "admin.config.ldap.search-base": "Kasutajate alus",
-  "admin.config.ldap.search-base.description": "Põhikoht, kus kasutajaid otsitakse",
+  "admin.config.ldap.search-base.description":
+    "Põhikoht, kus kasutajaid otsitakse",
   "admin.config.ldap.search-query": "Kasutaja päring",
-  "admin.config.ldap.search-query.description": "Kasutaja päring, mida kasutatakse LDAP kasutaja otsimiseks 'Kasutajate alus' alt. %username% saab kasutada kasutaja sisestuse kohatäitjana.",
+  "admin.config.ldap.search-query.description":
+    "Kasutaja päring, mida kasutatakse LDAP kasutaja otsimiseks 'Kasutajate alus' alt. %username% saab kasutada kasutaja sisestuse kohatäitjana.",
   "admin.config.ldap.admin-groups": "Admin grupp",
-  "admin.config.ldap.admin-groups.description": "Grupp, mis on vajalik admin juurdepääsuks.",
+  "admin.config.ldap.admin-groups.description":
+    "Grupp, mis on vajalik admin juurdepääsuks.",
   "admin.config.ldap.field-name-member-of": "Kasutaja gruppide atribuut",
-  "admin.config.ldap.field-name-member-of.description": "LDAP atribuut, mis näitab, millesse gruppi kasutaja kuulub. Seda kasutatakse admin grupi kontrollimisel.",
+  "admin.config.ldap.field-name-member-of.description":
+    "LDAP atribuut, mis näitab, millesse gruppi kasutaja kuulub. Seda kasutatakse admin grupi kontrollimisel.",
   "admin.config.ldap.field-name-email": "Kasutaja e-posti atribuut",
-  "admin.config.ldap.field-name-email.description": "LDAP atribuut kasutaja e-posti aadressi jaoks.",
+  "admin.config.ldap.field-name-email.description":
+    "LDAP atribuut kasutaja e-posti aadressi jaoks.",
   "admin.config.notify.success": "Seaded edukalt uuendatud.",
-  "admin.config.notify.logo-success": "Logo edukalt uuendatud. Veebilehe värskendamiseks võib kuluda paar minutit.",
+  "admin.config.notify.logo-success":
+    "Logo edukalt uuendatud. Veebilehe värskendamiseks võib kuluda paar minutit.",
   "admin.config.notify.no-changes": "Pole muudatusi mida salvestada.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Lubatud",
-  "admin.config.s3.enabled.description": "Whether S3 should be used to store the shared files instead of the local file system. WARNING: If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
+  "admin.config.s3.enabled.description":
+    "Kas jagatud failide salvestamiseks tuleks kohaliku failisüsteemi asemel kasutada S3-e. HOIATUS: Kui ClamAV on aktiivne, laaditakse failid kontrollimiseks ajutiselt S3-st alla.",
   "admin.config.s3.endpoint": "Endpoint",
   "admin.config.s3.endpoint.description": "S3 ämbri URL.",
   "admin.config.s3.region": "Regioon",
@@ -618,25 +797,33 @@ export default {
   "admin.config.s3.bucket-name": "Ämbri nimi",
   "admin.config.s3.bucket-name.description": "S3 ämbri nimi.",
   "admin.config.s3.bucket-path": "S3 ämbri tee",
-  "admin.config.s3.bucket-path.description": "Vaikimisi tee, mida kasutatakse failide salvestamiseks S3 ämbris.",
+  "admin.config.s3.bucket-path.description":
+    "Vaikimisi tee, mida kasutatakse failide salvestamiseks S3 ämbris.",
   "admin.config.s3.key": "Võti",
   "admin.config.s3.key.description": "S3 ämbri võti.",
   "admin.config.s3.secret": "Saladus",
   "admin.config.s3.secret.description": "S3 ämbri saladus.",
   "admin.config.s3.use-checksum": "Kasuta kontrollsummat",
-  "admin.config.s3.use-checksum.description": "Lülita välja, kui tagaliides ei toeta kontrollsummasid (nt B2).",
-  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
+  "admin.config.s3.use-checksum.description":
+    "Lülita välja, kui tagaliides ei toeta kontrollsummasid (nt B2).",
+  "admin.config.s3.docs-link":
+    "CORS peab olema sinu salvestuskogumis (bucket) ümber seadistatud, vaata üksikasju: {wikiLink}.",
   "admin.config.category.legal": "Juriidiline",
   "admin.config.legal.enabled": "Luba juriidilised teated",
-  "admin.config.legal.enabled.description": "Kas kuvada linki kontaktandmetele ja privaatsuspoliitikale jaluses.",
+  "admin.config.legal.enabled.description":
+    "Kas kuvada linki kontaktandmetele ja privaatsuspoliitikale jaluses.",
   "admin.config.legal.imprint-text": "Kontaktandmete tekst",
-  "admin.config.legal.imprint-text.description": "Tekst, mis kuvatakse kontaktandmetel. Toetab Markdowni. Jäta tühjaks, et lingida välisele kontaktandmete lehele.",
+  "admin.config.legal.imprint-text.description":
+    "Tekst, mis kuvatakse kontaktandmetel. Toetab Markdowni. Jäta tühjaks, et lingida välisele kontaktandmete lehele.",
   "admin.config.legal.imprint-url": "Kontaktandmete URL",
-  "admin.config.legal.imprint-url.description": "Kui sul on juba kontaktandmete leht saad selle siia linkida selle asemel, et kasutada tekstivälja.",
+  "admin.config.legal.imprint-url.description":
+    "Kui sul on juba kontaktandmete leht saad selle siia linkida selle asemel, et kasutada tekstivälja.",
   "admin.config.legal.privacy-policy-text": "Privaatsuspoliitika tekst",
-  "admin.config.legal.privacy-policy-text.description": "Tekst mis kuvatakse privaatsuspoliitikas. Toetab Markdowni. Jäta tühjaks, et lingida välisele privaatsuspoliitika lehele.",
+  "admin.config.legal.privacy-policy-text.description":
+    "Tekst mis kuvatakse privaatsuspoliitikas. Toetab Markdowni. Jäta tühjaks, et lingida välisele privaatsuspoliitika lehele.",
   "admin.config.legal.privacy-policy-url": "Privaatsuspoliitika URL",
-  "admin.config.legal.privacy-policy-url.description": "Kui sul on juba privaatsuspoliitika leht saad selle siia linkida selle asemel, et kasutada tekstivälja.",
+  "admin.config.legal.privacy-policy-url.description":
+    "Kui sul on juba privaatsuspoliitika leht saad selle siia linkida selle asemel, et kasutada tekstivälja.",
   // 404
   "404.description": "Ups, seda lehte ei eksisteeri.",
   "404.button.home": "Viia mind tagasi avalehele",
@@ -645,18 +832,25 @@ export default {
   "error.description": "Ups!",
   "error.button.back": "Mine tagasi",
   "error.msg.default": "Midagi läks valesti.",
-  "error.msg.access_denied": "Sa tühistasid autentimisprotsessi, palun proovi uuesti.",
-  "error.msg.expired_token": "Autentimisprotsess kestis liiga kaua, palun proovi uuesti.",
+  "error.msg.access_denied":
+    "Sa tühistasid autentimisprotsessi, palun proovi uuesti.",
+  "error.msg.expired_token":
+    "Autentimisprotsess kestis liiga kaua, palun proovi uuesti.",
   "error.msg.invalid_token": "Sisemine viga",
-  "error.msg.no_user": "Kasutajat, kes on seotud selle {0} kontoga ei eksisteeri.",
+  "error.msg.no_user":
+    "Kasutajat, kes on seotud selle {0} kontoga ei eksisteeri.",
   "error.msg.no_email": "Ei saa sellest {0} kontost e-posti aadressi hankida.",
   "error.msg.already_linked": "See {0} konto on juba seotud teise kontoga.",
   "error.msg.not_linked": "See {0} konto pole veel ühegi kontoga seotud.",
-  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
-  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
-  "error.msg.unverified_account": "See {0} konto on kinnitamata, palun proovi pärast kinnitamist uuesti.",
+  "error.msg.email_already_exists":
+    "Selle e-posti aadressiga konto on juba olemas. Palun logi sisse oma parooliga ja seo oma {0} konto käsitsi lehel Minu konto.",
+  "error.msg.email_not_verified":
+    "Sinu e-posti aadress sellel {0} kontol ei ole kinnitatud. Palun kinnita oma e-post oma identiteedipakkujas enne sisselogimist.",
+  "error.msg.unverified_account":
+    "See {0} konto on kinnitamata, palun proovi pärast kinnitamist uuesti.",
   "error.msg.user_not_allowed": "Sul ei ole luba sisse logida.",
-  "error.msg.cannot_get_user_info": "Ei õnnestunud saada sinu kasutaja andmeid sellest {0} kontost.",
+  "error.msg.cannot_get_user_info":
+    "Ei õnnestunud saada sinu kasutaja andmeid sellest {0} kontost.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
@@ -701,14 +895,19 @@ export default {
   "common.error.exact-length": "Peab olema täpselt {length} tähemärki",
   "common.error.invalid-number": "Peab olema number",
   "common.error.field-required": "See väli on kohustuslik",
-  "common.error.password.lowercase": "Password must contain at least one lowercase letter",
-  "common.error.password.uppercase": "Password must contain at least one uppercase letter",
-  "common.error.password.number": "Password must contain at least one number",
-  "common.error.password.special": "Password must contain at least one special character",
+  "common.error.password.lowercase":
+    "Parool peab sisaldama vähemalt ühte väiketähte",
+  "common.error.password.uppercase":
+    "Parool peab sisaldama vähemalt ühte suurtähte",
+  "common.error.password.number": "Parool peab sisaldama vähemalt ühte numbrit",
+  "common.error.password.special":
+    "Parool peab sisaldama vähemalt ühte erimärki",
   "admin.notice.modal.headerTag": "NÕUTAV ADMINISTRATIIVNE TEGEVUS",
-  "admin.notice.modal.defaultCheckboxLabel": "Kinnitan, et olen seda teavitust lugenud ja mõistan katkestavaid muudatusi.",
+  "admin.notice.modal.defaultCheckboxLabel":
+    "Kinnitan, et olen seda teavitust lugenud ja mõistan katkestavaid muudatusi.",
   "admin.notice.modal.button.acknowledge": "Kinnita ja sulge",
   "admin.notice.modal.button.acknowledging": "Kinnitamine...",
   "admin.notice.modal.docsLink": "Vaata dokumentatsiooni",
-  "admin.notice.modal.globalNoticeFooter": "Märkus: Pärast kinnitamist eemaldatakse see teavitus jäädavalt kõigi administraatorite jaoks kõigis seadmetes."
+  "admin.notice.modal.globalNoticeFooter":
+    "Märkus: Pärast kinnitamist eemaldatakse see teavitus jäädavalt kõigi administraatorite jaoks kõigis seadmetes.",
 };

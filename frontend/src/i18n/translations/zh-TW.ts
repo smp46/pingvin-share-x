@@ -6,7 +6,7 @@ export default {
   "navbar.signup": "註冊",
   "navbar.links.shares": "我的分享",
   "navbar.links.reverse": "回傳分享",
-  "navbar.links.received": "Received shares",
+  "navbar.links.received": "收到的分享",
   "navbar.avatar.account": "帳號設定",
   "navbar.avatar.admin": "管理",
   "navbar.avatar.signout": "登出",
@@ -20,7 +20,8 @@ export default {
   "home.bullet.b.name": "完全隱私",
   "home.bullet.b.description": "您的檔案永遠不會被第三方存取",
   "home.bullet.c.name": "完全無限",
-  "home.bullet.c.description": "想上傳多大都可以，更需要擔心的是您的存儲空間容量",
+  "home.bullet.c.description":
+    "想上傳多大都可以，更需要擔心的是您的存儲空間容量",
   "home.button.start": "開始使用",
   "home.button.source": "原始碼",
   // END /
@@ -60,8 +61,10 @@ export default {
   "verify.error": "驗證連結無效或已過期。",
   "verify.button.signin": "前往登入",
   "verify.info.title": "帳號驗證",
-  "verify.info.description": "已啟用電子郵件驗證。我們已向您的電子郵件地址寄送驗證連結。請點擊該連結以啟用您的帳號。",
-  "verify.info.note": "如果幾分鐘內沒有收到電子郵件，請檢查您的垃圾郵件資料夾。",
+  "verify.info.description":
+    "已啟用電子郵件驗證。我們已向您的電子郵件地址寄送驗證連結。請點擊該連結以啟用您的帳號。",
+  "verify.info.note":
+    "如果幾分鐘內沒有收到電子郵件，請檢查您的垃圾郵件資料夾。",
   "verify.info.resend.button": "重新寄送驗證郵件",
   "verify.info.resend.success": "驗證郵件已成功重新寄送。",
   "verify.info.resend.error": "重新寄送驗證郵件失敗。",
@@ -90,7 +93,8 @@ export default {
   "account.card.password.title": "密碼",
   "account.card.password.old": "舊密碼",
   "account.card.password.new": "新密碼",
-  "account.card.password.noPasswordSet": "並未設定密碼，若希望使用E-mail與密碼進行登入則必須要設定密碼。",
+  "account.card.password.noPasswordSet":
+    "並未設定密碼，若希望使用E-mail與密碼進行登入則必須要設定密碼。",
   "account.notify.password.success": "密碼更改成功！",
   "account.card.oauth.title": "第三方登入",
   "account.card.oauth.github": "GitHub",
@@ -102,11 +106,13 @@ export default {
   "account.card.oauth.unlink": "取消綁定",
   "account.card.oauth.unlinked": "已取消綁定",
   "account.modal.unlink.title": "取消綁定第三方登入",
-  "account.modal.unlink.description": "若不記得使用者名稱與密碼，取消綁定第三方登入可能會使您無法登入",
+  "account.modal.unlink.description":
+    "若不記得使用者名稱與密碼，取消綁定第三方登入可能會使您無法登入",
   "account.notify.oauth.unlinked.success": "已完成取消綁定",
   "account.card.security.title": "安控",
   "account.card.security.totp.enable.description": "請輸入當前密碼開啟兩步驗證",
-  "account.card.security.totp.disable.description": "請輸入當前密碼關閉兩步驗證",
+  "account.card.security.totp.disable.description":
+    "請輸入當前密碼關閉兩步驗證",
   "account.card.security.totp.button.start": "開啟",
   "account.modal.totp.title": "開啟兩步驗證",
   "account.modal.totp.step1": "第一步：添加驗證應用程式 Authenticator",
@@ -119,7 +125,8 @@ export default {
   "account.notify.totp.disable": "成功關閉兩步驗證！",
   "account.notify.totp.enable": "成功開啟兩步驗證！",
   "account.card.language.title": "語言",
-  "account.card.language.description": "此專案由社群進行翻譯，部分語言可能尚未完成翻譯。",
+  "account.card.language.description":
+    "此專案由社群進行翻譯，部分語言可能尚未完成翻譯。",
   "account.card.color.title": "顏色外觀",
   // ThemeSwitcher.tsx
   "account.theme.dark": "深色模式",
@@ -127,7 +134,8 @@ export default {
   "account.theme.system": "比照系統",
   "account.button.delete": "刪除帳號",
   "account.modal.delete.title": "刪除帳號",
-  "account.modal.delete.description": "您真的想刪除您的帳號，並刪除所有的分享嗎？",
+  "account.modal.delete.description":
+    "您真的想刪除您的帳號，並刪除所有的分享嗎？",
   // END /account
 
   // /account/shares
@@ -145,9 +153,9 @@ export default {
   "account.shares.table.createdAt": "創建於",
   "account.shares.table.size": "檔案大小",
   "account.shares.table.password-protected": "密碼保護",
-  "account.shares.table.recipients": "Recipients",
-  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
-  "account.shares.table.shared-with-recipients": "Shared with recipients",
+  "account.shares.table.recipients": "收件者",
+  "account.shares.table.restricted-to-recipients": "僅限收件者存取",
+  "account.shares.table.shared-with-recipients": "已與收件者分享",
   "account.shares.table.visitor-count": "{count} / {max}",
   "account.shares.table.expiry-never": "永不",
   "account.shares.modal.share-informations": "分享資訊",
@@ -159,16 +167,18 @@ export default {
   // END /account/shares
 
   // /account/received
-  "account.received-shares.title": "Received shares",
-  "account.received-shares.title.empty": "No shares received yet",
-  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
-  "account.received-shares.table.from": "From",
-  "account.received-shares.button.open": "Open",
+  "account.received-shares.title": "收到的分享",
+  "account.received-shares.title.empty": "尚未收到任何分享",
+  "account.received-shares.description.empty":
+    "發送到您電子郵件地址的分享將顯示在此處。",
+  "account.received-shares.table.from": "寄件者",
+  "account.received-shares.button.open": "開啟",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "回傳分享",
-  "account.reverseShares.description": "回傳分享允許您建立一個特定的上傳畫面，以便外部使用者與您分享檔案。",
+  "account.reverseShares.description":
+    "回傳分享允許您建立一個特定的上傳畫面，以便外部使用者與您分享檔案。",
   "account.reverseShares.title.empty": "這裡空空如也 👀",
   "account.reverseShares.description.empty": "您沒有建立任何回傳分享。",
   // showCreateReverseShareModal.tsx
@@ -188,13 +198,17 @@ export default {
   "account.reverseShares.modal.expiration.year-plural": "年",
   "account.reverseShares.modal.max-size.label": "上傳大小上限",
   "account.reverseShares.modal.send-email": "發送電子郵件通知",
-  "account.reverseShares.modal.send-email.description": "當這個回傳分享連結被用於分享時，發送 Email 提醒。",
+  "account.reverseShares.modal.send-email.description":
+    "當這個回傳分享連結被用於分享時，發送 Email 提醒。",
   "account.reverseShares.modal.simplified": "簡單模式",
-  "account.reverseShares.modal.simplified.description": "讓人們輕鬆地上傳檔案給您。他們將只能自定義檔案名稱與描述。",
+  "account.reverseShares.modal.simplified.description":
+    "讓人們輕鬆地上傳檔案給您。他們將只能自定義檔案名稱與描述。",
   "account.reverseShares.modal.public-access": "公開存取",
-  "account.reverseShares.modal.public-access.description": "公開此檔案請求。若停用此設定將只有您與上傳者可以存取檔案。",
+  "account.reverseShares.modal.public-access.description":
+    "公開此檔案請求。若停用此設定將只有您與上傳者可以存取檔案。",
   "account.reverseShares.modal.max-use.label": "最大使用次數",
-  "account.reverseShares.modal.max-use.description": "這個回傳分享連結可被用於建立分享的最大使用次數。",
+  "account.reverseShares.modal.max-use.description":
+    "這個回傳分享連結可被用於建立分享的最大使用次數。",
   "account.reverseShare.never-expires": "這個回傳分享永不過期。",
   "account.reverseShare.expires-on": "這個回傳分享將於 {expiration} 過期。",
   "account.reverseShares.table.no-shares": "當前沒有建立任何分享",
@@ -206,7 +220,8 @@ export default {
   "account.reverseShares.table.expires": "過期時間",
   "account.reverseShares.modal.reverse-share-link": "回傳分享連結",
   "account.reverseShares.modal.delete.title": "刪除回傳分享連結",
-  "account.reverseShares.modal.delete.description": "您真的想刪除此回傳分享連結嗎？聯結下所有關聯的檔案都將被刪除。",
+  "account.reverseShares.modal.delete.description":
+    "您真的想刪除此回傳分享連結嗎？聯結下所有關聯的檔案都將被刪除。",
   // END /account/reverseShares
 
   // /admin
@@ -222,34 +237,41 @@ export default {
   "admin.users.table.username": "使用者名稱",
   "admin.users.table.email": "發送郵箱",
   "admin.users.table.admin": "管理員",
-  "admin.users.table.storageQuota": "Storage quota",
-  "admin.users.table.maxShareSize": "Max share size",
+  "admin.users.table.storageQuota": "儲存空間配額",
+  "admin.users.table.maxShareSize": "最大分享大小",
   "admin.users.edit.update.title": "編輯使用者： {username}",
   "admin.users.edit.update.admin-privileges": "管理員",
   "admin.users.edit.update.email-verified": "Email 已驗證",
   "admin.users.edit.update.custom-share-size-limit": "自訂分享檔案大小上限",
-  "admin.users.edit.update.custom-share-size-limit.description": "為此使用者覆寫全域上傳限制",
-  "admin.users.edit.update.custom-storage-quota-limit": "Custom storage quota",
-  "admin.users.edit.update.custom-storage-quota-limit.description": "Limit the user's total storage usage across active shares",
+  "admin.users.edit.update.custom-share-size-limit.description":
+    "為此使用者覆寫全域上傳限制",
+  "admin.users.edit.update.custom-storage-quota-limit": "自訂儲存空間配額",
+  "admin.users.edit.update.custom-storage-quota-limit.description":
+    "限制該使用者在所有有效分享中的總儲存空間使用量",
   "admin.users.edit.update.change-password.title": "更改密碼",
   "admin.users.edit.update.change-password.field": "新密碼",
   "admin.users.edit.update.change-password.button": "保存新密碼",
   "admin.users.edit.update.notify.password.success": "密碼更新成功！",
   "admin.users.edit.delete.title": "刪除使用者 {username} ?",
-  "admin.users.edit.delete.description": "您真的想刪除這個帳號，並刪除該使用者所有的檔案嗎？",
+  "admin.users.edit.delete.description":
+    "您真的想刪除這個帳號，並刪除該使用者所有的檔案嗎？",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "建立使用者",
   "admin.users.modal.create.username": "使用者名稱",
   "admin.users.modal.create.email": "發送郵箱",
   "admin.users.modal.create.password": "密碼",
   "admin.users.modal.create.manual-password": "手動設置密碼",
-  "admin.users.modal.create.manual-password.description": "如果不勾選，使用者將會收到一封Email來設置他們的密碼",
+  "admin.users.modal.create.manual-password.description":
+    "如果不勾選，使用者將會收到一封Email來設置他們的密碼",
   "admin.users.modal.create.custom-share-size-limit": "自訂分享大小限制",
-  "admin.users.modal.create.custom-share-size-limit.description": "為此使用者覆寫全域上傳限制",
-  "admin.users.modal.create.custom-storage-quota-limit": "Custom storage quota",
-  "admin.users.modal.create.custom-storage-quota-limit.description": "Limit the user's total storage usage across active shares",
+  "admin.users.modal.create.custom-share-size-limit.description":
+    "為此使用者覆寫全域上傳限制",
+  "admin.users.modal.create.custom-storage-quota-limit": "自訂儲存空間配額",
+  "admin.users.modal.create.custom-storage-quota-limit.description":
+    "限制該使用者在所有有效分享中的總儲存空間使用量",
   "admin.users.modal.create.admin": "管理員",
-  "admin.users.modal.create.admin.description": "如果勾選，使用者將能查看管理員面板",
+  "admin.users.modal.create.admin.description":
+    "如果勾選，使用者將能查看管理員面板",
   // END /admin/users
 
   // /admin/shares
@@ -271,10 +293,12 @@ export default {
   "upload.notify.count-failed": "{count} 檔案上傳失敗，請重試",
   "upload.notify.duplicate-skipped": "已略過重複檔案：{name}",
   "upload.reverse-share.error.invalid.title": "無效的回傳分享連結",
-  "upload.reverse-share.error.invalid.description": "此回傳分享連結已過期/失效。",
+  "upload.reverse-share.error.invalid.description":
+    "此回傳分享連結已過期/失效。",
   // Dropzone.tsx
   "upload.dropzone.title": "上傳檔案",
-  "upload.dropzone.description": "將檔案或資料夾拖曳到這裡即可開始分享，或按下 Ctrl+V 貼上剪貼簿中的文字內容。檔案總大小上限為 {maxSize}。",
+  "upload.dropzone.description":
+    "將檔案或資料夾拖曳到這裡即可開始分享，或按下 Ctrl+V 貼上剪貼簿中的文字內容。檔案總大小上限為 {maxSize}。",
   "upload.dropzone.notify.file-too-big": "您的檔案超過了最大上傳限制 {maxSize}",
   "upload.button.folder": "上傳資料夾",
   "upload.button.folder.append": "追加資料夾",
@@ -282,16 +306,18 @@ export default {
   // FileList.tsx
   "upload.filelist.name": "檔案名稱",
   "upload.filelist.size": "檔案大小",
-  "upload.filelist.estimating": "Estimating...",
-  "upload.filelist.remaining": "{time} remaining",
+  "upload.filelist.estimating": "估算中...",
+  "upload.filelist.remaining": "剩餘 {time}",
   // showCreateUploadModal.tsx
   "upload.modal.title": "建立分享",
   "upload.modal.link.error.invalid": "只能包括字母，數字，下劃線(_)，和橫線(-)",
   "upload.modal.link.error.taken": "這個分享代號已經存在了",
-  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
-  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
+  "upload.modal.link.error.s3-session-not-found": "找不到 S3 上傳階段",
+  "upload.modal.link.error.s3-etag-missing":
+    "S3 回應中缺少 ETag 標頭。請確認 CORS 已公開 ETag 標頭。",
   "upload.modal.not-signed-in": "當前沒有登入",
-  "upload.modal.not-signed-in-description": "您將不能刪除您的分享或查看查看次數",
+  "upload.modal.not-signed-in-description":
+    "您將不能刪除您的分享或查看查看次數",
   "upload.modal.expires.never": "永不",
   "upload.modal.expires.never-long": "永久分享",
   "upload.modal.expires.error.too-long": "過期時間最大限制為 {max}",
@@ -311,11 +337,13 @@ export default {
   "upload.modal.expires.year-plural": "年",
   "upload.modal.accordion.name-and-description.title": "名稱與說明",
   "upload.modal.accordion.name-and-description.name.placeholder": "檔案名稱",
-  "upload.modal.accordion.name-and-description.description.placeholder": "檔案備註",
+  "upload.modal.accordion.name-and-description.description.placeholder":
+    "檔案備註",
   "upload.modal.accordion.email.title": "Email提醒",
   "upload.modal.accordion.email.placeholder": "收件人Email地址",
   "upload.modal.accordion.email.invalid-email": "Email地址不可用",
-  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "僅限這些收件者存取（必須登入才能存取）",
   "upload.modal.accordion.security.title": "安全性選項",
   "upload.modal.accordion.security.password.label": "密碼保護",
   "upload.modal.accordion.security.password.placeholder": "無密碼",
@@ -325,13 +353,15 @@ export default {
   "upload.modal.completed.never-expires": "這個分享永不過期",
   "upload.modal.completed.expires-on": "這個分享將於 {expiration} 過期。",
   "upload.modal.completed.share-ready": "分享建立完畢",
-  "upload.modal.completed.notified-reverse-share-creator": "我們已經通知回傳分享連結的擁有者，你也可以手動分享此連結給他們。",
+  "upload.modal.completed.notified-reverse-share-creator":
+    "我們已經通知回傳分享連結的擁有者，你也可以手動分享此連結給他們。",
   // END /upload
 
   // /share/[id]
   "share.title": "分享 {shareId}",
   "share.description": "瞧瞧我給您分享了些什麽！",
-  "share.fileCount": "{count, plural, =1 {# 個檔案} other {# 個檔案}} · {size} (壓縮檔可能比原檔小)",
+  "share.fileCount":
+    "{count, plural, =1 {# 個檔案} other {# 個檔案}} · {size} (壓縮檔可能比原檔小)",
   "share.copy-text-contents": "將檔案內容複製到剪貼簿",
   "share.error.visitor-limit-exceeded.title": "查看次數達到上限",
   "share.error.visitor-limit-exceeded.description": "查看次數達到上限",
@@ -340,9 +370,10 @@ export default {
   "share.error.not-found.description": "分享檔案遺失了",
   "share.error.access-denied.title": "私人分享",
   "share.error.access-denied.description": "您沒有權限存取此檔案",
-  "share.error.restricted.title": "Restricted share",
-  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
-  "share.error.restricted.button": "Log in",
+  "share.error.restricted.title": "受限制的分享",
+  "share.error.restricted.description":
+    "此分享僅限特定收件者存取。請登入以存取。",
+  "share.error.restricted.button": "登入",
   "share.modal.password.title": "需要密碼",
   "share.modal.password.description": "請輸入密碼取得此分享。",
   "share.modal.password": "密碼",
@@ -355,9 +386,10 @@ export default {
   "share.modal.file-link": "檔案連結",
   "share.table.name": "檔案名稱",
   "share.table.size": "檔案大小",
-  "share.modal.file-preview.original_file": "View original file",
+  "share.modal.file-preview.original_file": "檢視原始檔案",
   "share.modal.file-preview.error.not-supported.title": "該檔案類型不支持預覽",
-  "share.modal.file-preview.error.not-supported.description": "該檔案類型不支援預覽，請下載後再瀏覽。",
+  "share.modal.file-preview.error.not-supported.description":
+    "該檔案類型不支援預覽，請下載後再瀏覽。",
   // END /share/[id]
 
   // /share/[id]/edit
@@ -377,11 +409,12 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "已偵測到設定檔",
-  "admin.config.config-file-warning.description": "由於您已使用設定檔配置 Pingvin Share，因此無法透過介面變更設定。",
+  "admin.config.config-file-warning.description":
+    "由於您已使用設定檔配置 Pingvin Share，因此無法透過介面變更設定。",
   "admin.config.title": "配置管理",
   "admin.config.category.general": "通用",
   "admin.config.category.appearance": "外觀",
-  "admin.config.category.security": "Security & Access",
+  "admin.config.category.security": "安全與存取",
   "admin.config.category.share": "分享",
   "admin.config.category.cache": "快取",
   "admin.config.category.email": "發送郵箱",
@@ -390,127 +423,185 @@ export default {
   "admin.config.general.app-name": "App 名稱",
   "admin.config.general.app-name.description": "這個 App 的名稱",
   "admin.config.general.default-language": "預設語言",
-  "admin.config.general.default-language.description": "此設定適用於所有使用者，但每位使用者仍可在個人資料中自訂語言。",
+  "admin.config.general.default-language.description":
+    "此設定適用於所有使用者，但每位使用者仍可在個人資料中自訂語言。",
   "admin.config.appearance.theme-primary-color": "主題主色",
-  "admin.config.appearance.theme-primary-color.description": "用於按鈕、連結與重點元素的主色。選擇「自訂」可使用顏色覆寫。",
+  "admin.config.appearance.theme-primary-color.description":
+    "用於按鈕、連結與重點元素的主色。選擇「自訂」可使用顏色覆寫。",
   "admin.config.appearance.theme-primary-color-override": "自訂主色",
-  "admin.config.appearance.theme-primary-color-override.description": "當主題主色設為「自訂」時使用的十六進位覆寫色。",
+  "admin.config.appearance.theme-primary-color-override.description":
+    "當主題主色設為「自訂」時使用的十六進位覆寫色。",
   "admin.config.appearance.theme-font-preset": "字型預設",
-  "admin.config.appearance.theme-font-preset.description": "在建置時載入的字型預設。可選系統預設或內建 Google Fonts。",
+  "admin.config.appearance.theme-font-preset.description":
+    "在建置時載入的字型預設。可選系統預設或內建 Google Fonts。",
   "admin.config.appearance.theme-color-scheme": "預設配色方案（訪客）",
-  "admin.config.appearance.theme-color-scheme.description": "非登入使用者的預設淺色/深色模式。已登入使用者將使用其帳號偏好設定。",
+  "admin.config.appearance.theme-color-scheme.description":
+    "非登入使用者的預設淺色/深色模式。已登入使用者將使用其帳號偏好設定。",
   "admin.config.appearance.theme-radius": "主題圓角",
-  "admin.config.appearance.theme-radius.description": "Mantine 元件使用的預設圓角半徑。",
+  "admin.config.appearance.theme-radius.description":
+    "Mantine 元件使用的預設圓角半徑。",
   "admin.config.appearance.custom-css": "自訂 CSS",
-  "admin.config.appearance.custom-css.description": "套用到前端的全域 CSS。請謹慎使用，無效 CSS 可能影響介面。",
-  "admin.config.appearance.upload-progress-style": "Upload progress style",
-  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
-  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
-  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
-  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
+  "admin.config.appearance.custom-css.description":
+    "套用到前端的全域 CSS。請謹慎使用，無效 CSS 可能影響介面。",
+  "admin.config.appearance.upload-progress-style": "上傳進度樣式",
+  "admin.config.appearance.upload-progress-style.description":
+    "選擇檔案列表中上傳進度的顯示方式。",
+  "admin.config.appearance.upload-progress-style.circle": "圓形指示器",
+  "admin.config.appearance.upload-progress-style.circle-percentage":
+    "含百分比的圓形",
+  "admin.config.appearance.upload-progress-style.percentage-time":
+    "百分比與剩餘時間",
   "admin.config.general.app-url": "App 網址",
   "admin.config.general.app-url.description": "Pingvin Share 的 URL",
   "admin.config.security.secure-cookies": "安全 cookies",
-  "admin.config.security.secure-cookies.description": "是否要在cookies中設定安全標籤。若啟用，這個網站將無法透過HTTP瀏覽。",
+  "admin.config.security.secure-cookies.description":
+    "是否要在cookies中設定安全標籤。若啟用，這個網站將無法透過HTTP瀏覽。",
   "admin.config.general.show-home-page": "顯示首頁",
   "admin.config.general.show-home-page.description": "是否顯示首頁",
   "admin.config.security.session-duration": "工作階段持續時間",
-  "admin.config.security.session-duration.description": "使用者多久後須重登入(預設：3個月)。",
+  "admin.config.security.session-duration.description":
+    "使用者多久後須重登入(預設：3個月)。",
   "admin.config.appearance.logo": "Logo",
-  "admin.config.appearance.logo.description": "上傳個性化 Logo，圖片必須是長寬比 1:1 的 PNG 格式",
+  "admin.config.appearance.logo.description":
+    "上傳個性化 Logo，圖片必須是長寬比 1:1 的 PNG 格式",
   "admin.config.appearance.logo-dark": "深色模式 Logo",
-  "admin.config.appearance.logo-dark.description": "請為深色模式上傳獨立的 Logo。圖片必須為 PNG 格式，且比例需為 1:1。",
+  "admin.config.appearance.logo-dark.description":
+    "請為深色模式上傳獨立的 Logo。圖片必須為 PNG 格式，且比例需為 1:1。",
   "admin.config.appearance.logo.placeholder": "選擇圖片",
-  "admin.config.security.custom-password-policy": "Custom password policy",
-  "admin.config.security.custom-password-policy.description": "Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.",
-  "admin.config.security.min-length": "Minimum length",
-  "admin.config.security.min-length.description": "Minimum number of characters required for a password.",
-  "admin.config.security.require-uppercase": "Require uppercase",
-  "admin.config.security.require-uppercase.description": "Whether to require at least one uppercase letter in the password.",
-  "admin.config.security.require-lowercase": "Require lowercase",
-  "admin.config.security.require-lowercase.description": "Whether to require at least one lowercase letter in the password.",
-  "admin.config.security.require-number": "Require number",
-  "admin.config.security.require-number.description": "Whether to require at least one number in the password.",
-  "admin.config.security.require-special-character": "Require special character",
-  "admin.config.security.require-special-character.description": "Whether to require at least one special character in the password.",
+  "admin.config.security.custom-password-policy": "自訂密碼原則",
+  "admin.config.security.custom-password-policy.description":
+    "是否啟用自訂密碼原則。若停用，將使用預設的至少 8 個字元的密碼原則。",
+  "admin.config.security.min-length": "最小長度",
+  "admin.config.security.min-length.description": "密碼所需的最少字元數。",
+  "admin.config.security.require-uppercase": "需要大寫字母",
+  "admin.config.security.require-uppercase.description":
+    "密碼中是否需要至少包含一個大寫字母。",
+  "admin.config.security.require-lowercase": "需要小寫字母",
+  "admin.config.security.require-lowercase.description":
+    "密碼中是否需要至少包含一個小寫字母。",
+  "admin.config.security.require-number": "需要數字",
+  "admin.config.security.require-number.description":
+    "密碼中是否需要至少包含一個數字。",
+  "admin.config.security.require-special-character": "需要特殊字元",
+  "admin.config.security.require-special-character.description":
+    "密碼中是否需要至少包含一個特殊字元。",
   "admin.config.cache.ttl": "TTL",
-  "admin.config.cache.ttl.description": "在快取中保留資訊的時間（以秒為單位）。",
+  "admin.config.cache.ttl.description":
+    "在快取中保留資訊的時間（以秒為單位）。",
   "admin.config.cache.max-items": "最大項目數",
   "admin.config.cache.max-items.description": "快取中的最大項目數。",
   "admin.config.cache.redis-enabled": "已啟用 Redis",
-  "admin.config.cache.redis-enabled.description": "預設情況下，Pingvin Share 會將資訊快取於記憶體中。若您執行多個 Pingvin Share 執行個體，則需要啟用 Redis 快取，讓各個執行個體共用快取資料。",
+  "admin.config.cache.redis-enabled.description":
+    "預設情況下，Pingvin Share 會將資訊快取於記憶體中。若您執行多個 Pingvin Share 執行個體，則需要啟用 Redis 快取，讓各個執行個體共用快取資料。",
   "admin.config.cache.redis-url": "Redis URL",
   "admin.config.cache.redis-url.description": "用於快取的 Redis 連線 URL。",
   "admin.config.cache.button.test-redis": "測試 Redis 連線",
   "admin.config.cache.test-redis.success": "已成功連線至 Redis",
-  "admin.config.cache.test-redis.success-disabled": "已成功連線至 Redis（目前未啟用 Redis 快取）。",
+  "admin.config.cache.test-redis.success-disabled":
+    "已成功連線至 Redis（目前未啟用 Redis 快取）。",
   "admin.config.cache.test-redis.modal.error.title": "無法連線至 Redis",
-  "admin.config.cache.test-redis.modal.error.description": "連線 Redis 時發生以下錯誤：",
+  "admin.config.cache.test-redis.modal.error.description":
+    "連線 Redis 時發生以下錯誤：",
   "admin.config.cache.test-redis.modal.save.title": "儲存設定",
-  "admin.config.cache.test-redis.modal.save.description": "若要繼續，請先儲存設定。是否要儲存設定並測試 Redis 連線？",
+  "admin.config.cache.test-redis.modal.save.description":
+    "若要繼續，請先儲存設定。是否要儲存設定並測試 Redis 連線？",
   "admin.config.cache.test-redis.modal.save.confirm": "儲存並測試",
   "admin.config.email.send-html-emails": "啟用 HTML Email 相容性",
-  "admin.config.email.send-html-emails.description": "啟用後，Email 將以 HTML 格式寄送。請確保 Email 範本已更新為 HTML 格式。",
+  "admin.config.email.send-html-emails.description":
+    "啟用後，Email 將以 HTML 格式寄送。請確保 Email 範本已更新為 HTML 格式。",
   "admin.config.share.enable-share-email-recipients": "啟用電子郵件收件者分享",
-  "admin.config.share.enable-share-email-recipients.description": "是否允許與收件者透過電子郵件分享。僅在啟用 SMTP 後才能開啟此功能。",
+  "admin.config.share.enable-share-email-recipients.description":
+    "是否允許與收件者透過電子郵件分享。僅在啟用 SMTP 後才能開啟此功能。",
   "admin.config.email.share-recipients-subject": "分享 Email 通知主旨",
-  "admin.config.email.share-recipients-subject.description": "發送分享 Email 通知的主旨。",
+  "admin.config.email.share-recipients-subject.description":
+    "發送分享 Email 通知的主旨。",
   "admin.config.email.share-recipients-message": "分享Email通知內容",
-  "admin.config.email.share-recipients-message.description": "發送到接收者的分享Email通知具體內容。可使用的參數有：\n {creator} - 分享建立者\n {creatorEmail} - 分享建立者的電子郵件\n {shareUrl} - 分享連結\n {desc} - 分享描述\n {expires} - 分享過期時間\n 這些參數會被實際的值所替代",
+  "admin.config.email.share-recipients-message.description":
+    "發送到接收者的分享Email通知具體內容。可使用的參數有：\n {creator} - 分享建立者\n {creatorEmail} - 分享建立者的電子郵件\n {shareUrl} - 分享連結\n {desc} - 分享描述\n {expires} - 分享過期時間\n 這些參數會被實際的值所替代",
   "admin.config.email.reverse-share-subject": "回傳分享 Email 通知主旨",
-  "admin.config.email.reverse-share-subject.description": "當有人透過您的回傳分享連結建立分享時所寄送的 Email 通知的主旨。",
+  "admin.config.email.reverse-share-subject.description":
+    "當有人透過您的回傳分享連結建立分享時所寄送的 Email 通知的主旨。",
   "admin.config.email.reverse-share-message": "檔案請求Email通知內容",
-  "admin.config.email.reverse-share-message.description": "當有人透過您的回傳分享連結建立分享時所寄送電子郵件的主旨。{shareUrl} 會被替換為建立者名稱與分享連結。",
+  "admin.config.email.reverse-share-message.description":
+    "當有人透過您的回傳分享連結建立分享時所寄送電子郵件的主旨。{shareUrl} 會被替換為建立者名稱與分享連結。",
   "admin.config.email.reset-password-subject": "重置密碼 Email 通知主旨",
-  "admin.config.email.reset-password-subject.description": "使用者請求重設密碼時寄送的 Email 通知的主旨。",
+  "admin.config.email.reset-password-subject.description":
+    "使用者請求重設密碼時寄送的 Email 通知的主旨。",
   "admin.config.email.reset-password-message": "重置密碼Email通知內容",
-  "admin.config.email.reset-password-message.description": "當使用者發動重置密碼時，重置密碼通知內容。{url} 會被重置密碼聯結代替",
+  "admin.config.email.reset-password-message.description":
+    "當使用者發動重置密碼時，重置密碼通知內容。{url} 會被重置密碼聯結代替",
   "admin.config.email.invite-subject": "邀請 Email 通知主旨",
-  "admin.config.email.invite-subject.description": "管理員邀請使用者時寄送的 Email 通知的主旨。",
+  "admin.config.email.invite-subject.description":
+    "管理員邀請使用者時寄送的 Email 通知的主旨。",
   "admin.config.email.invite-message": "邀請Email通知內容",
-  "admin.config.email.invite-message.description": "當管理員邀請使用者時，發送的邀請通知內容。{url} 會被邀請連結代替，{email} 會被Email代替，{password} 會被密碼代替",
-  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
-  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
+  "admin.config.email.invite-message.description":
+    "當管理員邀請使用者時，發送的邀請通知內容。{url} 會被邀請連結代替，{email} 會被Email代替，{password} 會被密碼代替",
+  "admin.config.email.share-recipients-reply-to-creator":
+    "將 Reply-To 設為建立者的電子郵件",
+  "admin.config.email.share-recipients-reply-to-creator.description":
+    "是否將 Reply-To 標頭設為建立該分享之使用者的電子郵件地址。",
   "admin.config.share.enable-share-download-notifications": "啟用下載通知",
-  "admin.config.share.enable-share-download-notifications.description": "當電子郵件收件者下載檔案時，是否寄送通知給分享建立者。此功能需要啟用 SMTP 與電子郵件收件者分享。",
-  "admin.config.email.share-download-notification-subject": "下载 Email 通知主旨",
-  "admin.config.email.share-download-notification-subject.description": "當收件者下載檔案時，寄送給分享建立者的 Email 通知主旨。",
+  "admin.config.share.enable-share-download-notifications.description":
+    "當電子郵件收件者下載檔案時，是否寄送通知給分享建立者。此功能需要啟用 SMTP 與電子郵件收件者分享。",
+  "admin.config.email.share-download-notification-subject":
+    "下载 Email 通知主旨",
+  "admin.config.email.share-download-notification-subject.description":
+    "當收件者下載檔案時，寄送給分享建立者的 Email 通知主旨。",
   "admin.config.email.share-download-notification-message": "下載通知訊息",
-  "admin.config.email.share-download-notification-message.description": "當收件者下載檔案時，發送給分享建立者的通知訊息。可用變數：\n {recipientEmail} - 收件者的電子郵件\n {fileName} - 已下載的檔案名稱\n {shareUrl} - 分享連結",
+  "admin.config.email.share-download-notification-message.description":
+    "當收件者下載檔案時，發送給分享建立者的通知訊息。可用變數：\n {recipientEmail} - 收件者的電子郵件\n {fileName} - 已下載的檔案名稱\n {shareUrl} - 分享連結",
   "admin.config.security.enable-email-verification": "啟用 Email 驗證",
-  "admin.config.security.enable-email-verification.description": "是否要求使用者在登入前先驗證電子郵件地址。僅在啟用 SMTP 後才能開啟此功能。",
+  "admin.config.security.enable-email-verification.description":
+    "是否要求使用者在登入前先驗證電子郵件地址。僅在啟用 SMTP 後才能開啟此功能。",
   "admin.config.email.verification-subject": "驗證 Email 通知主旨",
-  "admin.config.email.verification-subject.description": "使用者註冊時寄送給使用者的 Email 主旨。",
+  "admin.config.email.verification-subject.description":
+    "使用者註冊時寄送給使用者的 Email 主旨。",
   "admin.config.email.verification-message": "驗證訊息",
-  "admin.config.email.verification-message.description": "使用者註冊時寄送給使用者的訊息。{url} 會被替換為驗證連結。",
+  "admin.config.email.verification-message.description":
+    "使用者註冊時寄送給使用者的訊息。{url} 會被替換為驗證連結。",
   "admin.config.security.allow-registration": "允許註冊",
   "admin.config.security.allow-registration.description": "是否允許註冊",
-  "admin.config.security.allow-unauthenticated-shares": "是否允許未登入進行分享",
-  "admin.config.security.allow-unauthenticated-shares.description": "是否允許未登入的使用者建立分享",
+  "admin.config.security.allow-unauthenticated-shares":
+    "是否允許未登入進行分享",
+  "admin.config.security.allow-unauthenticated-shares.description":
+    "是否允許未登入的使用者建立分享",
   "admin.config.share.default-expiration": "預設過期時間",
-  "admin.config.share.default-expiration.description": "建立新分享时默认选择的过期时间。",
+  "admin.config.share.default-expiration.description":
+    "建立新分享时默认选择的过期时间。",
   "admin.config.share.max-expiration": "最大過期時間",
-  "admin.config.share.max-expiration.description": "最長分享期限，若設定為0則為永不過期。",
+  "admin.config.share.max-expiration.description":
+    "最長分享期限，若設定為0則為永不過期。",
   "admin.config.share.share-id-length": "預設分享ID長度",
-  "admin.config.share.share-id-length.description": "產生分享 ID 的預設長度。此值也用於回傳分享連結的生成。低於 8 的數值不被視為安全。",
+  "admin.config.share.share-id-length.description":
+    "產生分享 ID 的預設長度。此值也用於回傳分享連結的生成。低於 8 的數值不被視為安全。",
   "admin.config.share.max-size": "最大檔案上限",
   "admin.config.share.max-size.description": "最大檔案上限",
   "admin.config.share.zip-compression-level": "Zip 壓縮等級",
-  "admin.config.share.zip-compression-level.description": "調整壓縮等級以平衡檔案大小和壓縮速度。 有效值範圍從 0 到 9，其中 0 表示無壓縮，9 表示最大壓縮。 ",
+  "admin.config.share.zip-compression-level.description":
+    "調整壓縮等級以平衡檔案大小和壓縮速度。 有效值範圍從 0 到 9，其中 0 表示無壓縮，9 表示最大壓縮。 ",
   "admin.config.share.chunk-size": "分塊大小",
-  "admin.config.share.chunk-size.description": "調整分塊大小 以平衡上傳的效率與可靠度。更小的分塊大小在不穩定的網路環境中可以提升成功率，更大的分塊大小可以在穩定的網路環境中提高上傳速度。",
+  "admin.config.share.chunk-size.description":
+    "調整分塊大小 以平衡上傳的效率與可靠度。更小的分塊大小在不穩定的網路環境中可以提升成功率，更大的分塊大小可以在穩定的網路環境中提高上傳速度。",
   "admin.config.share.auto-open-share-modal": "自動開啟分享設定",
-  "admin.config.share.auto-open-share-modal.description": "分享設定會在使用者選擇檔案後自動開啟而無須手動點擊。",
-  "admin.config.security.allow-admin-access-all-shares": "允許管理員存取所有分享",
-  "admin.config.share.reverse-share-simple-only": "強制將回傳分享建立為簡易模式",
-  "admin.config.share.reverse-share-simple-only.description": "強制將回傳分享建立為簡易模式。如果停用此功能，回傳分享的建立者可選擇簡易模式或進階模式。",
-  "admin.config.security.allow-admin-access-all-shares.description": "允許管理員存取所有分享，即使該分享已設定密碼、已過期或已刪除。",
-  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
-  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
+  "admin.config.share.auto-open-share-modal.description":
+    "分享設定會在使用者選擇檔案後自動開啟而無須手動點擊。",
+  "admin.config.security.allow-admin-access-all-shares":
+    "允許管理員存取所有分享",
+  "admin.config.share.reverse-share-simple-only":
+    "強制將回傳分享建立為簡易模式",
+  "admin.config.share.reverse-share-simple-only.description":
+    "強制將回傳分享建立為簡易模式。如果停用此功能，回傳分享的建立者可選擇簡易模式或進階模式。",
+  "admin.config.security.allow-admin-access-all-shares.description":
+    "允許管理員存取所有分享，即使該分享已設定密碼、已過期或已刪除。",
+  "admin.config.share.enable-user-recipients": "啟用與已註冊使用者分享",
+  "admin.config.share.enable-user-recipients.description":
+    "啟用後，發送至已註冊使用者電子郵件地址的分享將自動顯示在其帳號中。使用者亦可將分享存取權限限制為僅限指定的收件者。",
   "admin.config.share.file-retention-period": "檔案保留期限",
-  "admin.config.share.file-retention-period.description": "分享過期或刪除後，檔案保留的時間。僅在同時啟用「允許管理員存取所有分享」時有效。設為 -1 表示永久保留檔案。",
+  "admin.config.share.file-retention-period.description":
+    "分享過期或刪除後，檔案保留的時間。僅在同時啟用「允許管理員存取所有分享」時有效。設為 -1 表示永久保留檔案。",
   "admin.config.smtp.enabled": "啟用",
-  "admin.config.smtp.enabled.description": "是否開啟 SMTP，需輸入Host、Port、發送郵箱、使用者名稱和密碼後才有作用",
+  "admin.config.smtp.enabled.description":
+    "是否開啟 SMTP，需輸入Host、Port、發送郵箱、使用者名稱和密碼後才有作用",
   "admin.config.smtp.host": "主機",
   "admin.config.smtp.host.description": "SMTP 主機地址",
   "admin.config.smtp.port": "通訊埠",
@@ -524,68 +615,98 @@ export default {
   "admin.config.smtp.button.test": "發送測試Email",
   "admin.config.smtp.test-email.success": "Email 已成功寄送",
   "admin.config.smtp.test-email.error.title": "Email 寄送失敗",
-  "admin.config.smtp.test-email.error.description": "寄送測試 Email 時發生以下錯誤：",
+  "admin.config.smtp.test-email.error.description":
+    "寄送測試 Email 時發生以下錯誤：",
   "admin.config.smtp.test-email.save.title": "儲存設定",
-  "admin.config.smtp.test-email.save.description": "若要繼續，請先儲存設定。是否要儲存設定並寄送測試郵件？",
+  "admin.config.smtp.test-email.save.description":
+    "若要繼續，請先儲存設定。是否要儲存設定並寄送測試郵件？",
   "admin.config.smtp.test-email.save.confirm": "儲存並寄送",
-  "admin.config.smtp.allow-unauthorized-certificates": "信任未經認證的 SMTP 伺服器證書",
-  "admin.config.smtp.allow-unauthorized-certificates.description": "僅在你信任此自簽章證書時啟用此設定",
+  "admin.config.smtp.allow-unauthorized-certificates":
+    "信任未經認證的 SMTP 伺服器證書",
+  "admin.config.smtp.allow-unauthorized-certificates.description":
+    "僅在你信任此自簽章證書時啟用此設定",
   "admin.config.oauth.allow-registration": "允許註冊",
-  "admin.config.oauth.allow-registration.description": "允許使用者以第三方登入註冊",
+  "admin.config.oauth.allow-registration.description":
+    "允許使用者以第三方登入註冊",
   "admin.config.oauth.ignore-totp": "略過 TOTP",
-  "admin.config.oauth.ignore-totp.description": "當使用者使用第三方登入時，略過 TOTP 驗證",
+  "admin.config.oauth.ignore-totp.description":
+    "當使用者使用第三方登入時，略過 TOTP 驗證",
   "admin.config.oauth.disable-password": "停用密碼登入",
-  "admin.config.oauth.disable-password.description": "當你停用密碼登入時，確保你有啟用任意 OAuth 服務以避免無法存取",
+  "admin.config.oauth.disable-password.description":
+    "當你停用密碼登入時，確保你有啟用任意 OAuth 服務以避免無法存取",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "啟用 Github 登入",
   "admin.config.oauth.github-client-id": "Github 的客戶端 ID",
   "admin.config.oauth.github-client-id.description": "GitHub OAuth 的客戶端 ID",
   "admin.config.oauth.github-client-secret": "Github 客戶端密鑰",
-  "admin.config.oauth.github-client-secret.description": "GitHub OAuth 的客戶端密鑰",
+  "admin.config.oauth.github-client-secret.description":
+    "GitHub OAuth 的客戶端密鑰",
   "admin.config.oauth.google-enabled": "Google",
   "admin.config.oauth.google-enabled.description": "啟用 Google 登入",
   "admin.config.oauth.google-client-id": "Google 的客戶端 ID",
   "admin.config.oauth.google-client-id.description": "Google OAuth 的客戶端 ID",
   "admin.config.oauth.google-client-secret": "Google 的客戶端密鑰",
-  "admin.config.oauth.google-client-secret.description": "Google OAuth 的客戶端密鑰",
+  "admin.config.oauth.google-client-secret.description":
+    "Google OAuth 的客戶端密鑰",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
   "admin.config.oauth.microsoft-enabled.description": "啟用 Microsoft 登入",
-  "admin.config.oauth.microsoft-tenant": "Microsoft Tenant",
-  "admin.config.oauth.microsoft-tenant.description": "Microsoft OAuth 的 Tenant ID\ncommon: 擁有 Microsoft Entra ID 的個人 Microsoft 帳號和工作或學校帳號的使用者可以登入該應用程式。\norganizations: 擁有 Microsoft Entra ID 的工作或學校帳號的使用者才能登入應用程式。\nconsumers: 只有擁有個人 Microsoft 帳號的使用者才能登入該應用程式。\ndomain name of the Microsoft Entra tenant or the tenant ID in GUID format: 只有來自特定 Microsoft Entra 租戶的使用者（具有工作或學校帳號的目錄成員或具有個人 Microsoft 帳號的目錄成員）才能登入應用程式。",
+  "admin.config.oauth.microsoft-tenant": "Microsoft 租用戶（Tenant）",
+  "admin.config.oauth.microsoft-tenant.description":
+    "Microsoft OAuth 的 Tenant ID\ncommon: 擁有 Microsoft Entra ID 的個人 Microsoft 帳號和工作或學校帳號的使用者可以登入該應用程式。\norganizations: 擁有 Microsoft Entra ID 的工作或學校帳號的使用者才能登入應用程式。\nconsumers: 只有擁有個人 Microsoft 帳號的使用者才能登入該應用程式。\ndomain name of the Microsoft Entra tenant or the tenant ID in GUID format: 只有來自特定 Microsoft Entra 租戶的使用者（具有工作或學校帳號的目錄成員或具有個人 Microsoft 帳號的目錄成員）才能登入應用程式。",
   "admin.config.oauth.microsoft-client-id": "Microsoft 的客戶端 ID",
-  "admin.config.oauth.microsoft-client-id.description": "Microsoft OAuth 的客戶端 ID",
+  "admin.config.oauth.microsoft-client-id.description":
+    "Microsoft OAuth 的客戶端 ID",
   "admin.config.oauth.microsoft-client-secret": "Microsoft 的客戶端密鑰",
-  "admin.config.oauth.microsoft-client-secret.description": "Microsoft OAuth 的客戶端密鑰",
+  "admin.config.oauth.microsoft-client-secret.description":
+    "Microsoft OAuth 的客戶端密鑰",
   "admin.config.oauth.discord-enabled": "Discord",
   "admin.config.oauth.discord-enabled.description": "啟用 Discord 登入",
   "admin.config.oauth.discord-limited-users": "僅限指定 Discord 使用者",
-  "admin.config.oauth.discord-limited-users.description": "僅限指定 ID 的 Discord 使用者登入，留空來禁用。",
+  "admin.config.oauth.discord-limited-users.description":
+    "僅限指定 ID 的 Discord 使用者登入，留空來禁用。",
   "admin.config.oauth.discord-limited-guild": "僅限指定 Discord 伺服器",
-  "admin.config.oauth.discord-limited-guild.description": "僅限指定 Id 的 Discord 伺服器內的使用者可以登入，留空來禁用。",
+  "admin.config.oauth.discord-limited-guild.description":
+    "僅限指定 Id 的 Discord 伺服器內的使用者可以登入，留空來禁用。",
   "admin.config.oauth.discord-client-id": "Discord Client ID",
-  "admin.config.oauth.discord-client-id.description": "Discord OAuth 的 Client ID",
+  "admin.config.oauth.discord-client-id.description":
+    "Discord OAuth 的 Client ID",
   "admin.config.oauth.discord-client-secret": "Discord Client 密鑰",
-  "admin.config.oauth.discord-client-secret.description": "Discord OAuth 的客戶端密鑰",
+  "admin.config.oauth.discord-client-secret.description":
+    "Discord OAuth 的客戶端密鑰",
   "admin.config.oauth.oidc-enabled": "OpenID Connect",
   "admin.config.oauth.oidc-enabled.description": "是否啟用 OpenID Connect 登入",
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect 探索 URI",
-  "admin.config.oauth.oidc-discovery-uri.description": "OpenID Connect OAuth 應用程式的探索 URI",
+  "admin.config.oauth.oidc-discovery-uri.description":
+    "OpenID Connect OAuth 應用程式的探索 URI",
   "admin.config.oauth.oidc-sign-out": "從 OpenID Connect 登出",
-  "admin.config.oauth.oidc-sign-out.description": "「登出」按鈕是否同時從 OpenID Connect 提供者登出",
+  "admin.config.oauth.oidc-sign-out.description":
+    "「登出」按鈕是否同時從 OpenID Connect 提供者登出",
   "admin.config.oauth.oidc-scope": "OpenID Connect 權限範圍（scope）",
-  "admin.config.oauth.oidc-scope.description": "向 OpenID Connect 提供者請求的權限範圍（Scopes）。",
-  "admin.config.oauth.oidc-username-claim": "OpenID Connect 使用者名稱（username）宣告欄位",
-  "admin.config.oauth.oidc-username-claim.description": "OpenID Connect ID Token 中的使用者名稱（Username）宣告欄位。若不清楚此設定，請留空。",
+  "admin.config.oauth.oidc-scope.description":
+    "向 OpenID Connect 提供者請求的權限範圍（Scopes）。",
+  "admin.config.oauth.oidc-username-claim":
+    "OpenID Connect 使用者名稱（username）宣告欄位",
+  "admin.config.oauth.oidc-username-claim.description":
+    "OpenID Connect ID Token 中的使用者名稱（Username）宣告欄位。若不清楚此設定，請留空。",
   "admin.config.oauth.oidc-role-path": "OpenID Connect Token 中角色的路徑",
-  "admin.config.oauth.oidc-role-path.description": "必須是有效的 JMES 路徑，且需指向角色陣列。 " + "僅在未設定其他身分識別提供者且已停用密碼登入時，才建議使用 OpenID Connect 角色來管理存取權限。 " + "若不知道此配置是什麼請留空。",
+  "admin.config.oauth.oidc-role-path.description":
+    "必須是有效的 JMES 路徑，且需指向角色陣列。 " +
+    "僅在未設定其他身分識別提供者且已停用密碼登入時，才建議使用 OpenID Connect 角色來管理存取權限。 " +
+    "若不知道此配置是什麼請留空。",
   "admin.config.oauth.oidc-role-general-access": "OpenID Connect 一般存取角色",
-  "admin.config.oauth.oidc-role-general-access.description": "一般存取所需的角色。使用者的角色中必須包含此角色，才能登入。 " + "若不知道此配置是什麼請留空。",
+  "admin.config.oauth.oidc-role-general-access.description":
+    "一般存取所需的角色。使用者的角色中必須包含此角色，才能登入。 " +
+    "若不知道此配置是什麼請留空。",
   "admin.config.oauth.oidc-role-admin-access": "OpenID Connect 管理員存取角色",
-  "admin.config.oauth.oidc-role-admin-access.description": "管理介面存取所需的角色。使用者的角色中必須包含此角色，才能進入管理後台。 " + "若不知道此配置是什麼請留空。",
+  "admin.config.oauth.oidc-role-admin-access.description":
+    "管理介面存取所需的角色。使用者的角色中必須包含此角色，才能進入管理後台。 " +
+    "若不知道此配置是什麼請留空。",
   "admin.config.oauth.oidc-client-id": "OpenID Connect 用戶端 ID",
-  "admin.config.oauth.oidc-client-id.description": "OpenID Connect OAuth 應用程式的用戶端 ID",
+  "admin.config.oauth.oidc-client-id.description":
+    "OpenID Connect OAuth 應用程式的用戶端 ID",
   "admin.config.oauth.oidc-client-secret": "OpenID Connect 的用戶端密鑰",
-  "admin.config.oauth.oidc-client-secret.description": "OpenID Connect OAuth 應用程式的用戶端密鑰",
+  "admin.config.oauth.oidc-client-secret.description":
+    "OpenID Connect OAuth 應用程式的用戶端密鑰",
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "啟用 LDAP",
   "admin.config.ldap.enabled.description": "使用 LDAP 進行使用者登入",
@@ -598,19 +719,24 @@ export default {
   "admin.config.ldap.search-base": "使用者基底",
   "admin.config.ldap.search-base.description": "使用者搜尋的基底位置",
   "admin.config.ldap.search-query": "使用者查詢",
-  "admin.config.ldap.search-query.description": "此使用者查詢將用於在 LDAP 使用者基底中搜尋使用者。可使用 %username% 作為使用者輸入的替代變數。",
+  "admin.config.ldap.search-query.description":
+    "此使用者查詢將用於在 LDAP 使用者基底中搜尋使用者。可使用 %username% 作為使用者輸入的替代變數。",
   "admin.config.ldap.admin-groups": "管理員群組",
   "admin.config.ldap.admin-groups.description": "管理介面存取所需的群組。",
   "admin.config.ldap.field-name-member-of": "使用者群組屬性名稱",
-  "admin.config.ldap.field-name-member-of.description": "用於儲存使用者所屬群組的 LDAP 屬性名稱。此設定會在檢查管理員群組時使用。",
+  "admin.config.ldap.field-name-member-of.description":
+    "用於儲存使用者所屬群組的 LDAP 屬性名稱。此設定會在檢查管理員群組時使用。",
   "admin.config.ldap.field-name-email": "使用者 Email 屬性名稱",
-  "admin.config.ldap.field-name-email.description": "使用者 Email 的 LDAP 屬性名稱。",
+  "admin.config.ldap.field-name-email.description":
+    "使用者 Email 的 LDAP 屬性名稱。",
   "admin.config.notify.success": "設定已成功更新。",
-  "admin.config.notify.logo-success": "Logo 已成功更新。網站可能需要幾分鐘才會顯示最新內容。",
+  "admin.config.notify.logo-success":
+    "Logo 已成功更新。網站可能需要幾分鐘才會顯示最新內容。",
   "admin.config.notify.no-changes": "沒有可儲存的變更。",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "啟用",
-  "admin.config.s3.enabled.description": "是否使用 S3 來儲存分享的檔案，而非本機檔案系統。警告：若啟用 ClamAV，檔案將會暫時從 S3 下載以進行掃描檢查。",
+  "admin.config.s3.enabled.description":
+    "是否使用 S3 來儲存分享的檔案，而非本機檔案系統。警告：若啟用 ClamAV，檔案將會暫時從 S3 下載以進行掃描檢查。",
   "admin.config.s3.endpoint": "端點",
   "admin.config.s3.endpoint.description": "S3 bucket 的 URL。",
   "admin.config.s3.region": "區域",
@@ -618,25 +744,33 @@ export default {
   "admin.config.s3.bucket-name": "Bucket 名字",
   "admin.config.s3.bucket-name.description": "S3 bucket 的名字。",
   "admin.config.s3.bucket-path": "路徑",
-  "admin.config.s3.bucket-path.description": "用於在 S3 儲存桶中儲存檔案的預設路徑。",
+  "admin.config.s3.bucket-path.description":
+    "用於在 S3 儲存桶中儲存檔案的預設路徑。",
   "admin.config.s3.key": "金鑰",
   "admin.config.s3.key.description": "用於存取 S3 儲存桶的金鑰。",
   "admin.config.s3.secret": "密鑰",
   "admin.config.s3.secret.description": "用於存取 S3 儲存桶的密鑰。",
   "admin.config.s3.use-checksum": "使用校驗碼",
-  "admin.config.s3.use-checksum.description": "請在不支援校驗碼（checksum）的後端中關閉此功能（例如 B2）。",
-  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
+  "admin.config.s3.use-checksum.description":
+    "請在不支援校驗碼（checksum）的後端中關閉此功能（例如 B2）。",
+  "admin.config.s3.docs-link":
+    "必須在您的儲存貯體（Bucket）上重新設定 CORS，詳情請參閱 {wikiLink}。",
   "admin.config.category.legal": "法律",
   "admin.config.legal.enabled": "啟用法律提醒",
-  "admin.config.legal.enabled.description": "是否在 footer 顯示版權宣告及隱私權政策。",
+  "admin.config.legal.enabled.description":
+    "是否在 footer 顯示版權宣告及隱私權政策。",
   "admin.config.legal.imprint-text": "版權宣告",
-  "admin.config.legal.imprint-text.description": "文字將顯示在版權宣告中。支持Markdown。空白以使用外部連結。",
+  "admin.config.legal.imprint-text.description":
+    "文字將顯示在版權宣告中。支持Markdown。空白以使用外部連結。",
   "admin.config.legal.imprint-url": "版權宣告 URL",
-  "admin.config.legal.imprint-url.description": "在此輸入 URL 以使用外部版權宣告頁。",
+  "admin.config.legal.imprint-url.description":
+    "在此輸入 URL 以使用外部版權宣告頁。",
   "admin.config.legal.privacy-policy-text": "隱私權政策文字",
-  "admin.config.legal.privacy-policy-text.description": "文字將顯示在隱私權政策中。支持Markdown。空白以使用外部連結。",
+  "admin.config.legal.privacy-policy-text.description":
+    "文字將顯示在隱私權政策中。支持Markdown。空白以使用外部連結。",
   "admin.config.legal.privacy-policy-url": "隱私權政策 URL",
-  "admin.config.legal.privacy-policy-url.description": "在此輸入 URL 以使用外部隱私權政策頁。",
+  "admin.config.legal.privacy-policy-url.description":
+    "在此輸入 URL 以使用外部隱私權政策頁。",
   // 404
   "404.description": "查無此頁",
   "404.button.home": "返回主頁",
@@ -652,8 +786,10 @@ export default {
   "error.msg.no_email": "無法從此帳號 {0} 取得Email地址。",
   "error.msg.already_linked": "此帳號 {0} 已與另一個帳號關聯。",
   "error.msg.not_linked": "此帳號 {0} 尚未關聯到任何帳號。",
-  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
-  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
+  "error.msg.email_already_exists":
+    "使用此電子郵件地址的帳號已存在。請使用密碼登入，並在「帳號設定」頁面中手動連結您的 {0} 帳號。",
+  "error.msg.email_not_verified":
+    "您在此 {0} 帳號上的電子郵件地址尚未驗證。請在登入前先向您的識別提供者驗證電子郵件。",
   "error.msg.unverified_account": "此帳號 {0} 並未驗證，請驗證後再嘗試。",
   "error.msg.user_not_allowed": "您不被允許登入。",
   "error.msg.cannot_get_user_info": "無法從此帳號 {0} 取得使用者資料。",
@@ -701,14 +837,16 @@ export default {
   "common.error.exact-length": "必須為 {length} 個字元",
   "common.error.invalid-number": "必須為數字",
   "common.error.field-required": "必填",
-  "common.error.password.lowercase": "Password must contain at least one lowercase letter",
-  "common.error.password.uppercase": "Password must contain at least one uppercase letter",
-  "common.error.password.number": "Password must contain at least one number",
-  "common.error.password.special": "Password must contain at least one special character",
+  "common.error.password.lowercase": "密碼必須包含至少一個小寫字母",
+  "common.error.password.uppercase": "密碼必須包含至少一個大寫字母",
+  "common.error.password.number": "密碼必須包含至少一個數字",
+  "common.error.password.special": "密碼必須包含至少一個特殊字元",
   "admin.notice.modal.headerTag": "需要管理員操作",
-  "admin.notice.modal.defaultCheckboxLabel": "我確認已閱讀此通知並理解重大變更。",
+  "admin.notice.modal.defaultCheckboxLabel":
+    "我確認已閱讀此通知並理解重大變更。",
   "admin.notice.modal.button.acknowledge": "確認並關閉",
   "admin.notice.modal.button.acknowledging": "正在確認...",
   "admin.notice.modal.docsLink": "檢視文件",
-  "admin.notice.modal.globalNoticeFooter": "注意：一旦確認，此通知將在所有裝置上對所有管理員永久關閉。"
+  "admin.notice.modal.globalNoticeFooter":
+    "注意：一旦確認，此通知將在所有裝置上對所有管理員永久關閉。",
 };

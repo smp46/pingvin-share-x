@@ -14,5 +14,5 @@
   "s3SessionNotFound": "ไม่พบเซสชันการอัปโหลดแบบหลายส่วน",
   "s3UploadFailed": "การอัปโหลดแบบหลายส่วนล้มเหลว การอัปโหลดถูกยกเลิก",
   "s3SizeError": "ไม่สามารถดึงขนาดไฟล์ได้",
-  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
+  "s3NotSupported": "การดำเนินการที่ลงนามล่วงหน้า (Pre-signed operations) รองรับเฉพาะพื้นที่จัดเก็บ S3 เท่านั้น"
 }

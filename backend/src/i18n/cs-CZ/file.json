@@ -14,5 +14,5 @@
   "s3SessionNotFound": "Relace nahrávání nebyla nalezena.",
   "s3UploadFailed": "Nahrávání se nezdařilo. Nahrávání bylo přerušeno.",
   "s3SizeError": "Nepodařilo se získat velikost souboru",
-  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
+  "s3NotSupported": "Předem podepsané operace jsou podporovány pouze pro úložiště S3."
 }

@@ -14,13 +14,16 @@ export default {
 
   // /
   "home.title": "Een <h>zelfgehost</h> platform voor het delen van bestanden.",
-  "home.description": "Wil je echt je persoonlijke bestanden geven aan derden zoals WeTransfer?",
+  "home.description":
+    "Wil je echt je persoonlijke bestanden geven aan derden zoals WeTransfer?",
   "home.bullet.a.name": "Zelfgehost",
   "home.bullet.a.description": "Host Pingvin Share op uw eigen machine.",
   "home.bullet.b.name": "Privacy",
-  "home.bullet.b.description": "Je bestanden zijn van jou en zullen nooit toegankelijk zijn voor derden.",
+  "home.bullet.b.description":
+    "Je bestanden zijn van jou en zullen nooit toegankelijk zijn voor derden.",
   "home.bullet.c.name": "Geen vervelende limiet voor bestandsgrootte",
-  "home.bullet.c.description": "Upload bestanden zo groot als je wilt. Je harde schijf is de enige limiet.",
+  "home.bullet.c.description":
+    "Upload bestanden zo groot als je wilt. Je harde schijf is de enige limiet.",
   "home.button.start": "Aan de slag",
   "home.button.source": "Broncode",
   // END /
@@ -30,12 +33,14 @@ export default {
   "signin.description": "Heeft u nog geen account?",
   "signin.button.signup": "Registreren",
   "signin.input.email-or-username": "E-mailadres of gebruikersnaam",
-  "signin.input.email-or-username.placeholder": "Uw e-mailadres of gebruikersnaam",
+  "signin.input.email-or-username.placeholder":
+    "Uw e-mailadres of gebruikersnaam",
   "signin.input.password": "Wachtwoord",
   "signin.input.password.placeholder": "Uw wachtwoord",
   "signin.button.submit": "Aanmelden",
   "signIn.notify.totp-required.title": "Tweestapsverificatie vereist",
-  "signIn.notify.totp-required.description": "Voer uw tweestapsverificatiecode in",
+  "signIn.notify.totp-required.description":
+    "Voer uw tweestapsverificatiecode in",
   "signIn.oauth.or": "OF",
   "signIn.oauth.signInWith": "Registreer met",
   "signIn.oauth.github": "GitHub",
@@ -56,15 +61,19 @@ export default {
   "signup.button.submit": "Laten we beginnen",
   // /auth/verify
   "verify.title": "Verifieer account",
-  "verify.success": "Je account is met succes geverifieerd! Je kunt nu inloggen.",
+  "verify.success":
+    "Je account is met succes geverifieerd! Je kunt nu inloggen.",
   "verify.error": "De verificatielink is ongeldig of verlopen.",
   "verify.button.signin": "Ga naar inloggen",
   "verify.info.title": "Accountverificatie",
-  "verify.info.description": "E-mail verificatie is ingeschakeld. We hebben een verificatielink naar je e-mailadres gestuurd. Klik op de link om je account te activeren.",
-  "verify.info.note": "Als je de e-mail niet binnen enkele minuten ontvangt, kijk dan in je spammap.",
+  "verify.info.description":
+    "E-mail verificatie is ingeschakeld. We hebben een verificatielink naar je e-mailadres gestuurd. Klik op de link om je account te activeren.",
+  "verify.info.note":
+    "Als je de e-mail niet binnen enkele minuten ontvangt, kijk dan in je spammap.",
   "verify.info.resend.button": "Verificatiemail opnieuw verzenden",
   "verify.info.resend.success": "E-mail met succes opnieuw verstuurd.",
-  "verify.info.resend.error": "Fout bij het opnieuw verzenden van verificatie-e-mail.",
+  "verify.info.resend.error":
+    "Fout bij het opnieuw verzenden van verificatie-e-mail.",
   // END /auth/signup
 
   // /auth/totp
@@ -74,8 +83,10 @@ export default {
 
   // /auth/reset-password
   "resetPassword.title": "Wachtwoord vergeten?",
-  "resetPassword.description": "Voer uw e-mailadres in om uw wachtwoord opnieuw in te stellen.",
-  "resetPassword.notify.success": "Er is een bericht verzonden met een link om je wachtwoord opnieuw in te stellen, als het opgegeven e-mailadres bestaat.",
+  "resetPassword.description":
+    "Voer uw e-mailadres in om uw wachtwoord opnieuw in te stellen.",
+  "resetPassword.notify.success":
+    "Er is een bericht verzonden met een link om je wachtwoord opnieuw in te stellen, als het opgegeven e-mailadres bestaat.",
   "resetPassword.button.back": "Terug naar login pagina",
   "resetPassword.text.resetPassword": "Wachtwoord opnieuw instellen",
   "resetPassword.text.enterNewPassword": "Voer uw nieuwe wachtwoord in",
@@ -90,7 +101,8 @@ export default {
   "account.card.password.title": "Wachtwoord",
   "account.card.password.old": "Oude wachtwoord",
   "account.card.password.new": "Nieuw wachtwoord",
-  "account.card.password.noPasswordSet": "Er is geen wachtwoord ingesteld. Om in te loggen met je e-mailadres en wachtwoord, moet je een wachtwoord aanmaken.",
+  "account.card.password.noPasswordSet":
+    "Er is geen wachtwoord ingesteld. Om in te loggen met je e-mailadres en wachtwoord, moet je een wachtwoord aanmaken.",
   "account.notify.password.success": "Wachtwoord succesvol gewijzigd",
   "account.card.oauth.title": "Social login",
   "account.card.oauth.github": "GitHub",
@@ -102,11 +114,14 @@ export default {
   "account.card.oauth.unlink": "Ontkoppel",
   "account.card.oauth.unlinked": "Niet-gekoppeld",
   "account.modal.unlink.title": "Ontkoppel account",
-  "account.modal.unlink.description": "Het ontkoppelen van sociale accounts kan leiden tot verlies van je account als je de inloggegevens bent vergeten",
+  "account.modal.unlink.description":
+    "Het ontkoppelen van sociale accounts kan leiden tot verlies van je account als je de inloggegevens bent vergeten",
   "account.notify.oauth.unlinked.success": "Ontkoppelen succesvol",
   "account.card.security.title": "Beveiliging",
-  "account.card.security.totp.enable.description": "Voer uw huidige wachtwoord in om TOTP in te schakelen",
-  "account.card.security.totp.disable.description": "Voer uw huidige wachtwoord in om TOTP uit te schakelen",
+  "account.card.security.totp.enable.description":
+    "Voer uw huidige wachtwoord in om TOTP in te schakelen",
+  "account.card.security.totp.disable.description":
+    "Voer uw huidige wachtwoord in om TOTP uit te schakelen",
   "account.card.security.totp.button.start": "Start",
   "account.modal.totp.title": "TOTP inschakelen",
   "account.modal.totp.step1": "Stap 1: Voeg uw authenticator toe",
@@ -119,7 +134,8 @@ export default {
   "account.notify.totp.disable": "TOTP succesvol uitgeschakeld",
   "account.notify.totp.enable": "TOTP succesvol ingeschakeld",
   "account.card.language.title": "Taal",
-  "account.card.language.description": "Het project is vertaald door de community. Sommige talen zijn mogelijk onvolledig.",
+  "account.card.language.description":
+    "Het project is vertaald door de community. Sommige talen zijn mogelijk onvolledig.",
   "account.card.color.title": "Kleurenschema",
   // ThemeSwitcher.tsx
   "account.theme.dark": "Donker",
@@ -127,7 +143,8 @@ export default {
   "account.theme.system": "Systeem",
   "account.button.delete": "Account verwijderen",
   "account.modal.delete.title": "Account verwijderen",
-  "account.modal.delete.description": "Weet u zeker dat u uw account met al uw gedeelde bestanden wilt verwijderen?",
+  "account.modal.delete.description":
+    "Weet u zeker dat u uw account met al uw gedeelde bestanden wilt verwijderen?",
   // END /account
 
   // /account/shares
@@ -146,31 +163,38 @@ export default {
   "account.shares.table.size": "Grootte",
   "account.shares.table.password-protected": "Wachtwoordbeveiligd",
   "account.shares.table.recipients": "Ontvangers",
-  "account.shares.table.restricted-to-recipients": "Alleen toegankelijk voor ontvangers",
+  "account.shares.table.restricted-to-recipients":
+    "Alleen toegankelijk voor ontvangers",
   "account.shares.table.shared-with-recipients": "Gedeeld met ontvangers",
   "account.shares.table.visitor-count": "{count} van {max}",
   "account.shares.table.expiry-never": "Nooit",
   "account.shares.modal.share-informations": "Gegevens delen",
   "account.shares.modal.share-link": "Deel link",
-  "account.shares.modal.edit.password.keep": "Laat dit veld leeg om het huidige wachtwoord te behouden",
-  "account.shares.modal.edit.password.remove": "Verwijder wachtwoordbeveiliging",
+  "account.shares.modal.edit.password.keep":
+    "Laat dit veld leeg om het huidige wachtwoord te behouden",
+  "account.shares.modal.edit.password.remove":
+    "Verwijder wachtwoordbeveiliging",
   "account.shares.modal.delete.title": "Share verwijderd: {share}",
-  "account.shares.modal.delete.description": "Weet u zeker dat u deze share wilt verwijderen?",
+  "account.shares.modal.delete.description":
+    "Weet u zeker dat u deze share wilt verwijderen?",
   // END /account/shares
 
   // /account/received
   "account.received-shares.title": "Ontvangen shares",
   "account.received-shares.title.empty": "Nog geen shares ontvangen",
-  "account.received-shares.description.empty": "Shares die naar je e-mailadres worden verzonden, verschijnen hier.",
+  "account.received-shares.description.empty":
+    "Shares die naar je e-mailadres worden verzonden, verschijnen hier.",
   "account.received-shares.table.from": "Van",
   "account.received-shares.button.open": "Openen",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Omgekeerde share",
-  "account.reverseShares.description": "Met een omgekeerde share kan een externe gebruiker via unieke genereerde URL bestanden uploaden.",
+  "account.reverseShares.description":
+    "Met een omgekeerde share kan een externe gebruiker via unieke genereerde URL bestanden uploaden.",
   "account.reverseShares.title.empty": "Het is hier leeg 👀",
-  "account.reverseShares.description.empty": "U hebt nog geen omgekeerde shares. Maak er een aan.",
+  "account.reverseShares.description.empty":
+    "U hebt nog geen omgekeerde shares. Maak er een aan.",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Creeër een omgekeerde share",
   "account.reverseShares.modal.expiration.label": "Vervaldatum",
@@ -188,16 +212,23 @@ export default {
   "account.reverseShares.modal.expiration.year-plural": "Jaren",
   "account.reverseShares.modal.max-size.label": "Maximale share-grootte",
   "account.reverseShares.modal.send-email": "Stuur e-mail notificaties",
-  "account.reverseShares.modal.send-email.description": "Stuurt een e-mail notificatie wanneer er bestanden zijn gedeeld via deze omgekeerde share link.",
+  "account.reverseShares.modal.send-email.description":
+    "Stuurt een e-mail notificatie wanneer er bestanden zijn gedeeld via deze omgekeerde share link.",
   "account.reverseShares.modal.simplified": "Simpele modus",
-  "account.reverseShares.modal.simplified.description": "Maak het makkelijk voor de persoon die het bestand uploadt om het met u te delen. Ze kunnen alleen de naam en beschrijving van de share aanpassen.",
+  "account.reverseShares.modal.simplified.description":
+    "Maak het makkelijk voor de persoon die het bestand uploadt om het met u te delen. Ze kunnen alleen de naam en beschrijving van de share aanpassen.",
   "account.reverseShares.modal.public-access": "Openbare toegang",
-  "account.reverseShares.modal.public-access.description": "Maak de shares gemaakt met deze omgekeerde deel link openbaar. Als uitgeschakeld, kunnen alleen jij en de share maker toegang hebben om het te zien.",
+  "account.reverseShares.modal.public-access.description":
+    "Maak de shares gemaakt met deze omgekeerde deel link openbaar. Als uitgeschakeld, kunnen alleen jij en de share maker toegang hebben om het te zien.",
   "account.reverseShares.modal.max-use.label": "Maximaal gebruikte keren",
-  "account.reverseShares.modal.max-use.description": "Maximale keren dat deze URL gebruikt kan worden om een share aan te maken.",
-  "account.reverseShare.never-expires": "Deze omgekeerde share zal nooit verlopen.",
-  "account.reverseShare.expires-on": "Dit omgekeerde share verloopt op {expiration}.",
-  "account.reverseShares.table.no-shares": "Nog geen omgekeerde share aangemaakt",
+  "account.reverseShares.modal.max-use.description":
+    "Maximale keren dat deze URL gebruikt kan worden om een share aan te maken.",
+  "account.reverseShare.never-expires":
+    "Deze omgekeerde share zal nooit verlopen.",
+  "account.reverseShare.expires-on":
+    "Dit omgekeerde share verloopt op {expiration}.",
+  "account.reverseShares.table.no-shares":
+    "Nog geen omgekeerde share aangemaakt",
   "account.reverseShares.table.count.singular": "deel",
   "account.reverseShares.table.count.plural": "delen",
   "account.reverseShares.table.shares": "Delen",
@@ -206,7 +237,8 @@ export default {
   "account.reverseShares.table.expires": "Verloopt op",
   "account.reverseShares.modal.reverse-share-link": "Omgekeerde share link",
   "account.reverseShares.modal.delete.title": "Omgekeerde share verwijderen",
-  "account.reverseShares.modal.delete.description": "Weet u zeker dat u deze omgekeerde share wilt verwijderen? Als u dit doet, worden de bijbehorende bestanden ook verwijderd.",
+  "account.reverseShares.modal.delete.description":
+    "Weet u zeker dat u deze omgekeerde share wilt verwijderen? Als u dit doet, worden de bijbehorende bestanden ook verwijderd.",
   // END /account/reverseShares
 
   // /admin
@@ -227,29 +259,41 @@ export default {
   "admin.users.edit.update.title": "Gebruiker bewerken: {username}",
   "admin.users.edit.update.admin-privileges": "Beheerdersrechten",
   "admin.users.edit.update.email-verified": "E-mailadres geverifieerd",
-  "admin.users.edit.update.custom-share-size-limit": "Aangepaste maximale sharegrootte",
-  "admin.users.edit.update.custom-share-size-limit.description": "De algemene uploadlimiet voor deze gebruiker overschrijven",
-  "admin.users.edit.update.custom-storage-quota-limit": "Aangepaste opslaglimiet",
-  "admin.users.edit.update.custom-storage-quota-limit.description": "Het totale opslaggebruik van deze gebruiker voor actieve shares beperken",
+  "admin.users.edit.update.custom-share-size-limit":
+    "Aangepaste maximale sharegrootte",
+  "admin.users.edit.update.custom-share-size-limit.description":
+    "De algemene uploadlimiet voor deze gebruiker overschrijven",
+  "admin.users.edit.update.custom-storage-quota-limit":
+    "Aangepaste opslaglimiet",
+  "admin.users.edit.update.custom-storage-quota-limit.description":
+    "Het totale opslaggebruik van deze gebruiker voor actieve shares beperken",
   "admin.users.edit.update.change-password.title": "Wachtwoord wijzigen",
   "admin.users.edit.update.change-password.field": "Nieuw wachtwoord",
   "admin.users.edit.update.change-password.button": "Nieuw wachtwoord opslaan",
-  "admin.users.edit.update.notify.password.success": "Wachtwoord succesvol gewijzigd",
+  "admin.users.edit.update.notify.password.success":
+    "Wachtwoord succesvol gewijzigd",
   "admin.users.edit.delete.title": "Gebruiker verwijderen: {username}?",
-  "admin.users.edit.delete.description": "Wilt u echt deze gebruiker en al zijn shares verwijderen?",
+  "admin.users.edit.delete.description":
+    "Wilt u echt deze gebruiker en al zijn shares verwijderen?",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Gebruiker aanmaken",
   "admin.users.modal.create.username": "Gebruikersnaam",
   "admin.users.modal.create.email": "E-mailadres",
   "admin.users.modal.create.password": "Wachtwoord",
   "admin.users.modal.create.manual-password": "Wachtwoord handmatig instellen",
-  "admin.users.modal.create.manual-password.description": "Indien niet aangevinkt, ontvangt de gebruiker een e-mail met een link om zijn wachtwoord in te stellen.",
-  "admin.users.modal.create.custom-share-size-limit": "Aangepaste maximale sharegrootte",
-  "admin.users.modal.create.custom-share-size-limit.description": "De algemene uploadlimiet voor deze gebruiker overschrijven",
-  "admin.users.modal.create.custom-storage-quota-limit": "Aangepaste opslaglimiet",
-  "admin.users.modal.create.custom-storage-quota-limit.description": "Het totale opslaggebruik van deze gebruiker voor actieve shares beperken",
+  "admin.users.modal.create.manual-password.description":
+    "Indien niet aangevinkt, ontvangt de gebruiker een e-mail met een link om zijn wachtwoord in te stellen.",
+  "admin.users.modal.create.custom-share-size-limit":
+    "Aangepaste maximale sharegrootte",
+  "admin.users.modal.create.custom-share-size-limit.description":
+    "De algemene uploadlimiet voor deze gebruiker overschrijven",
+  "admin.users.modal.create.custom-storage-quota-limit":
+    "Aangepaste opslaglimiet",
+  "admin.users.modal.create.custom-storage-quota-limit.description":
+    "Het totale opslaggebruik van deze gebruiker voor actieve shares beperken",
   "admin.users.modal.create.admin": "Beheerdersrechten",
-  "admin.users.modal.create.admin.description": "Indien aangevinkt, heeft de gebruiker toegang tot de beheeromgeving.",
+  "admin.users.modal.create.admin.description":
+    "Indien aangevinkt, heeft de gebruiker toegang tot de beheeromgeving.",
   // END /admin/users
 
   // /admin/shares
@@ -261,21 +305,28 @@ export default {
   "admin.shares.table.expires": "Verloopt op",
   "admin.shares.table.deletes": "Verwijdert op",
   "admin.shares.edit.delete.title": "Share verwijderd: {id}",
-  "admin.shares.edit.delete.description": "Weet u zeker dat u deze share wilt verwijderen?",
+  "admin.shares.edit.delete.description":
+    "Weet u zeker dat u deze share wilt verwijderen?",
   // END /admin/shares
 
   // /upload
   "upload.title": "Uploaden",
-  "upload.notify.confirm-leave": "Weet je zeker dat je deze pagina wilt verlaten? Je upload wordt geannuleerd.",
-  "upload.notify.generic-error": "Er is een fout opgetreden tijdens het voltooien van uw share.",
-  "upload.notify.count-failed": "{count} bestanden konden niet worden geüpload. Probeer het nogmaals.",
+  "upload.notify.confirm-leave":
+    "Weet je zeker dat je deze pagina wilt verlaten? Je upload wordt geannuleerd.",
+  "upload.notify.generic-error":
+    "Er is een fout opgetreden tijdens het voltooien van uw share.",
+  "upload.notify.count-failed":
+    "{count} bestanden konden niet worden geüpload. Probeer het nogmaals.",
   "upload.notify.duplicate-skipped": "Dubbel bestand overgeslagen: {name}",
   "upload.reverse-share.error.invalid.title": "Ongeldige omgekeerde deel link",
-  "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
+  "upload.reverse-share.error.invalid.description":
+    "This reverse share has expired or is invalid.",
   // Dropzone.tsx
   "upload.dropzone.title": "Bestanden uploaden",
-  "upload.dropzone.description": "Sleep bestanden of mappen hierheen om je share te starten, of gebruik Ctrl+V om tekst vanaf het klembord te uploaden. De totale bestandsgrootte mag niet groter zijn dan {maxSize}.",
-  "upload.dropzone.notify.file-too-big": "Uw bestanden overschrijden de maximale share-grootte van {maxSize}.",
+  "upload.dropzone.description":
+    "Sleep bestanden of mappen hierheen om je share te starten, of gebruik Ctrl+V om tekst vanaf het klembord te uploaden. De totale bestandsgrootte mag niet groter zijn dan {maxSize}.",
+  "upload.dropzone.notify.file-too-big":
+    "Uw bestanden overschrijden de maximale share-grootte van {maxSize}.",
   "upload.button.folder": "Map uploaden",
   "upload.button.folder.append": "Map toevoegen",
   "upload.button.add": "Aan upload toevoegen",
@@ -286,15 +337,20 @@ export default {
   "upload.filelist.remaining": "Nog {time}",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Share aanmaken",
-  "upload.modal.link.error.invalid": "Het mag alleen letters, cijfers, onderstrepingstekens en koppeltekens bevatten",
+  "upload.modal.link.error.invalid":
+    "Het mag alleen letters, cijfers, onderstrepingstekens en koppeltekens bevatten",
   "upload.modal.link.error.taken": "Deze link is al in gebruik",
-  "upload.modal.link.error.s3-session-not-found": "S3-uploadsessie niet gevonden",
-  "upload.modal.link.error.s3-etag-missing": "De ETag-header ontbreekt in het S3-antwoord. Zorg dat CORS de ETag-header beschikbaar stelt.",
+  "upload.modal.link.error.s3-session-not-found":
+    "S3-uploadsessie niet gevonden",
+  "upload.modal.link.error.s3-etag-missing":
+    "De ETag-header ontbreekt in het S3-antwoord. Zorg dat CORS de ETag-header beschikbaar stelt.",
   "upload.modal.not-signed-in": "U bent niet aangemeld",
-  "upload.modal.not-signed-in-description": "Het is niet mogelijk uw gedeelde bestanden handmatig te verwijderen en het aantal bezoekers te bekijken.",
+  "upload.modal.not-signed-in-description":
+    "Het is niet mogelijk uw gedeelde bestanden handmatig te verwijderen en het aantal bezoekers te bekijken.",
   "upload.modal.expires.never": "nooit",
   "upload.modal.expires.never-long": "Permanent delen",
-  "upload.modal.expires.error.too-long": "De vervaldatum overschrijdt het maximum van {max}.",
+  "upload.modal.expires.error.too-long":
+    "De vervaldatum overschrijdt het maximum van {max}.",
   "upload.modal.link.label": "Koppeling",
   "upload.modal.expires.label": "Vervaldatum",
   "upload.modal.expires.minute-singular": "Minuut",
@@ -311,59 +367,76 @@ export default {
   "upload.modal.expires.year-plural": "Jaren",
   "upload.modal.accordion.name-and-description.title": "Naam en beschrijving",
   "upload.modal.accordion.name-and-description.name.placeholder": "Naam",
-  "upload.modal.accordion.name-and-description.description.placeholder": "Opmerking voor de ontvangers van deze share",
+  "upload.modal.accordion.name-and-description.description.placeholder":
+    "Opmerking voor de ontvangers van deze share",
   "upload.modal.accordion.email.title": "E-mail van de ontvangers",
   "upload.modal.accordion.email.placeholder": "Voer e-mail ontvangers in",
   "upload.modal.accordion.email.invalid-email": "Ongeldig e-mailadres",
-  "upload.modal.accordion.email.restrict-to-recipients": "Toegang beperken tot deze ontvangers (ze moeten zich aanmelden om toegang te krijgen)",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Toegang beperken tot deze ontvangers (ze moeten zich aanmelden om toegang te krijgen)",
   "upload.modal.accordion.security.title": "Beveiligingsopties",
   "upload.modal.accordion.security.password.label": "Wachtwoordbeveiling",
   "upload.modal.accordion.security.password.placeholder": "Geen wachtwoord",
   "upload.modal.accordion.security.max-views.label": "Maximum aantal weergaven",
   "upload.modal.accordion.security.max-views.placeholder": "Onbeperkt",
   // showCompletedUploadModal.tsx
-  "upload.modal.completed.never-expires": "Deze omgekeerde share zal nooit verlopen.",
-  "upload.modal.completed.expires-on": "Deze omgekeerde share verloopt op {expiration}.",
+  "upload.modal.completed.never-expires":
+    "Deze omgekeerde share zal nooit verlopen.",
+  "upload.modal.completed.expires-on":
+    "Deze omgekeerde share verloopt op {expiration}.",
   "upload.modal.completed.share-ready": "Share is gereed",
-  "upload.modal.completed.notified-reverse-share-creator": "We hebben de maker van de reverse share op de hoogte gesteld. U kunt deze link ook handmatig met hen delen via andere middelen.",
+  "upload.modal.completed.notified-reverse-share-creator":
+    "We hebben de maker van de reverse share op de hoogte gesteld. U kunt deze link ook handmatig met hen delen via andere middelen.",
   // END /upload
 
   // /share/[id]
   "share.title": "Deel {shareId}",
   "share.description": "Kijk eens wat ik met je heb gedeeld!",
-  "share.fileCount": "{count, plural, one {}=1 {# bestand} other {# bestanden}} · {size} (zipbestand kan kleiner zijn vanwege compressie)",
+  "share.fileCount":
+    "{count, plural, one {}=1 {# bestand} other {# bestanden}} · {size} (zipbestand kan kleiner zijn vanwege compressie)",
   "share.copy-text-contents": "Kopieer bestandsinhoud naar klembord",
   "share.error.visitor-limit-exceeded.title": "Bezoekerslimiet overschreden",
-  "share.error.visitor-limit-exceeded.description": "De bezoekerslimiet van deze share is overschreden.",
+  "share.error.visitor-limit-exceeded.description":
+    "De bezoekerslimiet van deze share is overschreden.",
   "share.error.removed.title": "Share was verwijderd",
   "share.error.not-found.title": "Share niet gevonden",
-  "share.error.not-found.description": "De share die u zoekt kan niet gevonden worden.",
+  "share.error.not-found.description":
+    "De share die u zoekt kan niet gevonden worden.",
   "share.error.access-denied.title": "Privé deel",
-  "share.error.access-denied.description": "Dit account heeft geen toestemming om toegang te krijgen tot deze share",
+  "share.error.access-denied.description":
+    "Dit account heeft geen toestemming om toegang te krijgen tot deze share",
   "share.error.restricted.title": "Beperkte share",
-  "share.error.restricted.description": "Deze share is beperkt tot specifieke ontvangers. Meld je aan om toegang te krijgen.",
+  "share.error.restricted.description":
+    "Deze share is beperkt tot specifieke ontvangers. Meld je aan om toegang te krijgen.",
   "share.error.restricted.button": "Aanmelden",
   "share.modal.password.title": "Wachtwoord vereist",
-  "share.modal.password.description": "Voer het wachtwoord in om toegang te krijgen tot deze share.",
+  "share.modal.password.description":
+    "Voer het wachtwoord in om toegang te krijgen tot deze share.",
   "share.modal.password": "Wachtwoord",
   "share.modal.error.invalid-password": "Ongeldig wachtwoord",
   "share.button.download-all": "Alles downloaden",
-  "share.notify.download-all-preparing": "De share wordt voorbereid. Probeer het over enkele minuten opnieuw.",
+  "share.notify.download-all-preparing":
+    "De share wordt voorbereid. Probeer het over enkele minuten opnieuw.",
   "share.notify.copied-contents": "Bestandsinhoud naar klembord gekopieerd",
-  "share.notify.copy-too-big-error": "Het bestand is te groot om naar het klembord te kopiëren",
-  "share.notify.copy-not-supported-error": "Om naar het klembord te kopiëren is een HTTPS-verbinding vereist",
+  "share.notify.copy-too-big-error":
+    "Het bestand is te groot om naar het klembord te kopiëren",
+  "share.notify.copy-not-supported-error":
+    "Om naar het klembord te kopiëren is een HTTPS-verbinding vereist",
   "share.modal.file-link": "Link naar bestand",
   "share.table.name": "Naam",
   "share.table.size": "Grootte",
-  "share.modal.file-preview.original_file": "View original file",
-  "share.modal.file-preview.error.not-supported.title": "Voorbeeld niet ondersteund",
-  "share.modal.file-preview.error.not-supported.description": "Voorbeelden van dit type bestand worden niet ondersteund. Download het bestand om het te bekijken.",
+  "share.modal.file-preview.original_file": "Origineel bestand bekijken",
+  "share.modal.file-preview.error.not-supported.title":
+    "Voorbeeld niet ondersteund",
+  "share.modal.file-preview.error.not-supported.description":
+    "Voorbeelden van dit type bestand worden niet ondersteund. Download het bestand om het te bekijken.",
   // END /share/[id]
 
   // /share/[id]/edit
   "share.edit.title": "{shareId} bewerken",
   "share.edit.append-upload": "Bestand toevoegen",
-  "share.edit.notify.generic-error": "Er is een fout opgetreden tijdens het voltooien van uw share.",
+  "share.edit.notify.generic-error":
+    "Er is een fout opgetreden tijdens het voltooien van uw share.",
   "share.edit.notify.save-success": "Share is succesvol bijgewerkt",
   // END /share/[id]/edit
 
@@ -377,11 +450,12 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "Configuratiebestand aanwezig",
-  "admin.config.config-file-warning.description": "Aangezien je een geconfigureerde Pingvin-share hebt met een configuratiebestand, kun je de configuratie niet via de gebruikersinterface wijzigen.",
+  "admin.config.config-file-warning.description":
+    "Aangezien je een geconfigureerde Pingvin-share hebt met een configuratiebestand, kun je de configuratie niet via de gebruikersinterface wijzigen.",
   "admin.config.title": "Configuratie",
   "admin.config.category.general": "Algemeen",
   "admin.config.category.appearance": "Uiterlijk",
-  "admin.config.category.security": "Security & Access",
+  "admin.config.category.security": "Beveiliging en toegang",
   "admin.config.category.share": "Delen",
   "admin.config.category.cache": "Cache",
   "admin.config.category.email": "E-mail",
@@ -390,253 +464,393 @@ export default {
   "admin.config.general.app-name": "App-naam",
   "admin.config.general.app-name.description": "Naam van de applicatie",
   "admin.config.general.default-language": "Standaard taal",
-  "admin.config.general.default-language.description": "Dit geldt voor alle gebruikers. Elke gebruiker kan de taal nog steeds in het profiel aanpassen.",
+  "admin.config.general.default-language.description":
+    "Dit geldt voor alle gebruikers. Elke gebruiker kan de taal nog steeds in het profiel aanpassen.",
   "admin.config.appearance.theme-primary-color": "Thema primaire kleur",
-  "admin.config.appearance.theme-primary-color.description": "Primaire kleur voor knoppen, links en accenten. Kies aangepast om een kleurkiezer-override te gebruiken.",
-  "admin.config.appearance.theme-primary-color-override": "Aangepaste primaire kleur",
-  "admin.config.appearance.theme-primary-color-override.description": "Hex-kleur override die wordt gebruikt wanneer de primaire themakleur op aangepast staat.",
+  "admin.config.appearance.theme-primary-color.description":
+    "Primaire kleur voor knoppen, links en accenten. Kies aangepast om een kleurkiezer-override te gebruiken.",
+  "admin.config.appearance.theme-primary-color-override":
+    "Aangepaste primaire kleur",
+  "admin.config.appearance.theme-primary-color-override.description":
+    "Hex-kleur override die wordt gebruikt wanneer de primaire themakleur op aangepast staat.",
   "admin.config.appearance.theme-font-preset": "Thema lettertype-preset",
-  "admin.config.appearance.theme-font-preset.description": "Lettertype-preset dat tijdens build wordt geladen. Kies systeemstandaard of een van de meegeleverde Google Fonts.",
-  "admin.config.appearance.theme-color-scheme": "Standaard kleurenschema (gasten)",
-  "admin.config.appearance.theme-color-scheme.description": "Standaard licht/donker-modus voor niet-ingelogde gebruikers. Ingelogde gebruikers gebruiken hun eigen accountvoorkeur.",
+  "admin.config.appearance.theme-font-preset.description":
+    "Lettertype-preset dat tijdens build wordt geladen. Kies systeemstandaard of een van de meegeleverde Google Fonts.",
+  "admin.config.appearance.theme-color-scheme":
+    "Standaard kleurenschema (gasten)",
+  "admin.config.appearance.theme-color-scheme.description":
+    "Standaard licht/donker-modus voor niet-ingelogde gebruikers. Ingelogde gebruikers gebruiken hun eigen accountvoorkeur.",
   "admin.config.appearance.theme-radius": "Thema afronding",
-  "admin.config.appearance.theme-radius.description": "Standaard afronding voor Mantine-componenten.",
+  "admin.config.appearance.theme-radius.description":
+    "Standaard afronding voor Mantine-componenten.",
   "admin.config.appearance.custom-css": "Aangepaste CSS",
-  "admin.config.appearance.custom-css.description": "Globale CSS die wordt toegepast op de frontend. Gebruik dit voorzichtig, want ongeldige CSS kan de interface beïnvloeden.",
+  "admin.config.appearance.custom-css.description":
+    "Globale CSS die wordt toegepast op de frontend. Gebruik dit voorzichtig, want ongeldige CSS kan de interface beïnvloeden.",
   "admin.config.appearance.upload-progress-style": "Stijl van uploadvoortgang",
-  "admin.config.appearance.upload-progress-style.description": "Kies hoe de uploadvoortgang in de bestandenlijst wordt weergegeven.",
+  "admin.config.appearance.upload-progress-style.description":
+    "Kies hoe de uploadvoortgang in de bestandenlijst wordt weergegeven.",
   "admin.config.appearance.upload-progress-style.circle": "Cirkelindicator",
-  "admin.config.appearance.upload-progress-style.circle-percentage": "Cirkel met percentage",
-  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage en resterende tijd",
+  "admin.config.appearance.upload-progress-style.circle-percentage":
+    "Cirkel met percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time":
+    "Percentage en resterende tijd",
   "admin.config.general.app-url": "App-URL",
-  "admin.config.general.app-url.description": "De URL waar Pingvin Share bereikbaar is",
+  "admin.config.general.app-url.description":
+    "De URL waar Pingvin Share bereikbaar is",
   "admin.config.security.secure-cookies": "Beveiligde cookies",
-  "admin.config.security.secure-cookies.description": "Of de beveiligingsvlag voor cookies moet worden ingesteld. Indien ingeschakeld, werkt de site niet wanneer deze via HTTP wordt bezocht.",
+  "admin.config.security.secure-cookies.description":
+    "Of de beveiligingsvlag voor cookies moet worden ingesteld. Indien ingeschakeld, werkt de site niet wanneer deze via HTTP wordt bezocht.",
   "admin.config.general.show-home-page": "Toon startpagina",
-  "admin.config.general.show-home-page.description": "Toon of verberg de home pagina",
+  "admin.config.general.show-home-page.description":
+    "Toon of verberg de home pagina",
   "admin.config.security.session-duration": "Sessieduur",
-  "admin.config.security.session-duration.description": "De tijd waarna een gebruiker opnieuw moet inloggen (standaard: 3 maanden).",
+  "admin.config.security.session-duration.description":
+    "De tijd waarna een gebruiker opnieuw moet inloggen (standaard: 3 maanden).",
   "admin.config.appearance.logo": "Logo",
-  "admin.config.appearance.logo.description": "Verander uw logo door een nieuwe afbeelding te uploaden. De afbeelding moet PNG zijn en het formaat moet 1:1 hebben.",
+  "admin.config.appearance.logo.description":
+    "Verander uw logo door een nieuwe afbeelding te uploaden. De afbeelding moet PNG zijn en het formaat moet 1:1 hebben.",
   "admin.config.appearance.logo-dark": "Donkere modus logo",
-  "admin.config.appearance.logo-dark.description": "Upload een apart logo voor donkere modus. De afbeelding moet een PNG zijn en bij voorkeur een 1:1 formaat hebben.",
+  "admin.config.appearance.logo-dark.description":
+    "Upload een apart logo voor donkere modus. De afbeelding moet een PNG zijn en bij voorkeur een 1:1 formaat hebben.",
   "admin.config.appearance.logo.placeholder": "Afbeelding kiezen",
-  "admin.config.security.custom-password-policy": "Custom password policy",
-  "admin.config.security.custom-password-policy.description": "Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.",
-  "admin.config.security.min-length": "Minimum length",
-  "admin.config.security.min-length.description": "Minimum number of characters required for a password.",
-  "admin.config.security.require-uppercase": "Require uppercase",
-  "admin.config.security.require-uppercase.description": "Whether to require at least one uppercase letter in the password.",
-  "admin.config.security.require-lowercase": "Require lowercase",
-  "admin.config.security.require-lowercase.description": "Whether to require at least one lowercase letter in the password.",
-  "admin.config.security.require-number": "Require number",
-  "admin.config.security.require-number.description": "Whether to require at least one number in the password.",
-  "admin.config.security.require-special-character": "Require special character",
-  "admin.config.security.require-special-character.description": "Whether to require at least one special character in the password.",
+  "admin.config.security.custom-password-policy": "Aangepast wachtwoordbeleid",
+  "admin.config.security.custom-password-policy.description":
+    "Of aanpassing van het wachtwoordbeleid moet worden ingeschakeld. Indien uitgeschakeld, wordt het standaard wachtwoordbeleid van minimaal 8 tekens gebruikt.",
+  "admin.config.security.min-length": "Minimale lengte",
+  "admin.config.security.min-length.description":
+    "Minimum aantal tekens vereist voor een wachtwoord.",
+  "admin.config.security.require-uppercase": "Hoofdletter vereist",
+  "admin.config.security.require-uppercase.description":
+    "Of er minimaal één hoofdletter in het wachtwoord moet staan.",
+  "admin.config.security.require-lowercase": "Kleine letter vereist",
+  "admin.config.security.require-lowercase.description":
+    "Of er minimaal één kleine letter in het wachtwoord moet staan.",
+  "admin.config.security.require-number": "Cijfer vereist",
+  "admin.config.security.require-number.description":
+    "Of er minimaal één cijfer in het wachtwoord moet staan.",
+  "admin.config.security.require-special-character": "Speciaal teken vereist",
+  "admin.config.security.require-special-character.description":
+    "Of er minimaal één speciaal teken in het wachtwoord moet staan.",
   "admin.config.cache.ttl": "TTL",
-  "admin.config.cache.ttl.description": "Tijd in seconden dat informatie in de cache wordt bewaard.",
+  "admin.config.cache.ttl.description":
+    "Tijd in seconden dat informatie in de cache wordt bewaard.",
   "admin.config.cache.max-items": "Maximum aantal items",
-  "admin.config.cache.max-items.description": "Maximaal aantal items in de cache.",
+  "admin.config.cache.max-items.description":
+    "Maximaal aantal items in de cache.",
   "admin.config.cache.redis-enabled": "Redis ingeschakeld",
-  "admin.config.cache.redis-enabled.description": "Normaal gesproken slaat Pingvin Share informatie op in het geheugen. Als u meerdere instanties van Pingvin Share gebruikt, moet u Redis-caching inschakelen om de cache tussen de instanties te delen.",
+  "admin.config.cache.redis-enabled.description":
+    "Normaal gesproken slaat Pingvin Share informatie op in het geheugen. Als u meerdere instanties van Pingvin Share gebruikt, moet u Redis-caching inschakelen om de cache tussen de instanties te delen.",
   "admin.config.cache.redis-url": "Redis URL",
-  "admin.config.cache.redis-url.description": "Url om verbinding te maken met de Redis-instantie die voor caching wordt gebruikt.",
+  "admin.config.cache.redis-url.description":
+    "Url om verbinding te maken met de Redis-instantie die voor caching wordt gebruikt.",
   "admin.config.cache.button.test-redis": "Test de Redis-verbinding",
   "admin.config.cache.test-redis.success": "Succesvol verbonden met Redis",
-  "admin.config.cache.test-redis.success-disabled": "Succesvol verbonden met Redis (Redis caching is momenteel uitgeschakeld).",
-  "admin.config.cache.test-redis.modal.error.title": "Verbinding met Redis mislukt",
-  "admin.config.cache.test-redis.modal.error.description": "Tijdens het verbinden met Redis is de volgende fout opgetreden:",
+  "admin.config.cache.test-redis.success-disabled":
+    "Succesvol verbonden met Redis (Redis caching is momenteel uitgeschakeld).",
+  "admin.config.cache.test-redis.modal.error.title":
+    "Verbinding met Redis mislukt",
+  "admin.config.cache.test-redis.modal.error.description":
+    "Tijdens het verbinden met Redis is de volgende fout opgetreden:",
   "admin.config.cache.test-redis.modal.save.title": "Configuratie opslaan",
-  "admin.config.cache.test-redis.modal.save.description": "Om verder te gaan, moet u eerst de configuratie opslaan. Wilt u de configuratie opslaan en de Redis-verbinding testen?",
+  "admin.config.cache.test-redis.modal.save.description":
+    "Om verder te gaan, moet u eerst de configuratie opslaan. Wilt u de configuratie opslaan en de Redis-verbinding testen?",
   "admin.config.cache.test-redis.modal.save.confirm": "Opslaan en testen",
-  "admin.config.email.send-html-emails": "Compatibiliteit met HTML-e-mail inschakelen",
-  "admin.config.email.send-html-emails.description": "Als deze optie is ingeschakeld, worden e-mails in HTML-indeling verzonden. Zorg dat de e-mailsjablonen HTML gebruiken.",
-  "admin.config.share.enable-share-email-recipients": "E-mail delen met ontvangers inschakelen",
-  "admin.config.share.enable-share-email-recipients.description": "Of het delen van e-mails met ontvangers is toegestaan. Dit kan alleen worden ingeschakeld als SMTP is geactiveerd.",
-  "admin.config.email.share-recipients-subject": "Onderwerp van ontvangers' share",
-  "admin.config.email.share-recipients-subject.description": "Het onderwerp van de e-mail die wordt verzonden naar de share-ontvangers.",
-  "admin.config.email.share-recipients-message": "Bericht voor ontvangers van de share",
-  "admin.config.email.share-recipients-message.description": "Bericht dat naar de ontvangers van de gedeelde link wordt verzonden. Beschikbare variabelen:\n {creator} - De gebruikersnaam van de maker van de gedeelde link\n {creatorEmail} - Het e-mailadres van de maker van de gedeelde link\n {shareUrl} - De URL van de gedeelde link\n {desc} - De beschrijving van de gedeelde link\n {expires} - De vervaldatum van de gedeelde link\n Deze variabelen worden vervangen door de werkelijke waarde.",
-  "admin.config.email.reverse-share-subject": "Omgekeerde share email onderwerp",
-  "admin.config.email.reverse-share-subject.description": "Onderwerp van de e-mail die werd verzonden toen iemand een bericht aanmaakte met je link voor omgekeerd delen.",
+  "admin.config.email.send-html-emails":
+    "Compatibiliteit met HTML-e-mail inschakelen",
+  "admin.config.email.send-html-emails.description":
+    "Als deze optie is ingeschakeld, worden e-mails in HTML-indeling verzonden. Zorg dat de e-mailsjablonen HTML gebruiken.",
+  "admin.config.share.enable-share-email-recipients":
+    "E-mail delen met ontvangers inschakelen",
+  "admin.config.share.enable-share-email-recipients.description":
+    "Of het delen van e-mails met ontvangers is toegestaan. Dit kan alleen worden ingeschakeld als SMTP is geactiveerd.",
+  "admin.config.email.share-recipients-subject":
+    "Onderwerp van ontvangers' share",
+  "admin.config.email.share-recipients-subject.description":
+    "Het onderwerp van de e-mail die wordt verzonden naar de share-ontvangers.",
+  "admin.config.email.share-recipients-message":
+    "Bericht voor ontvangers van de share",
+  "admin.config.email.share-recipients-message.description":
+    "Bericht dat naar de ontvangers van de gedeelde link wordt verzonden. Beschikbare variabelen:\n {creator} - De gebruikersnaam van de maker van de gedeelde link\n {creatorEmail} - Het e-mailadres van de maker van de gedeelde link\n {shareUrl} - De URL van de gedeelde link\n {desc} - De beschrijving van de gedeelde link\n {expires} - De vervaldatum van de gedeelde link\n Deze variabelen worden vervangen door de werkelijke waarde.",
+  "admin.config.email.reverse-share-subject":
+    "Omgekeerde share email onderwerp",
+  "admin.config.email.reverse-share-subject.description":
+    "Onderwerp van de e-mail die werd verzonden toen iemand een bericht aanmaakte met je link voor omgekeerd delen.",
   "admin.config.email.reverse-share-message": "Omgekeerde share-bericht",
-  "admin.config.email.reverse-share-message.description": "Het bericht dat wordt verzonden wanneer iemand een share heeft aangemaakt via de omgekeerde share-link. {shareUrl} zal worden vervangen door de naam van de maker en de URL van de share.",
-  "admin.config.email.reset-password-subject": "E-mailonderwerp voor wachtwoordherstel",
-  "admin.config.email.reset-password-subject.description": "Het onderwerp van de e-mail die wordt verzonden wanneer een gebruiker een wachtwoordreset aanvraagt.",
+  "admin.config.email.reverse-share-message.description":
+    "Het bericht dat wordt verzonden wanneer iemand een share heeft aangemaakt via de omgekeerde share-link. {shareUrl} zal worden vervangen door de naam van de maker en de URL van de share.",
+  "admin.config.email.reset-password-subject":
+    "E-mailonderwerp voor wachtwoordherstel",
+  "admin.config.email.reset-password-subject.description":
+    "Het onderwerp van de e-mail die wordt verzonden wanneer een gebruiker een wachtwoordreset aanvraagt.",
   "admin.config.email.reset-password-message": "Bericht voor wachtwoordherstel",
-  "admin.config.email.reset-password-message.description": "Bericht dat wordt verzonden wanneer een gebruiker een wachtwoordherstel aanvraagt. {url} zal worden vervangen door de wachtwoordherstel-URL.",
+  "admin.config.email.reset-password-message.description":
+    "Bericht dat wordt verzonden wanneer een gebruiker een wachtwoordherstel aanvraagt. {url} zal worden vervangen door de wachtwoordherstel-URL.",
   "admin.config.email.invite-subject": "Onderwerp voor uitnodiging",
-  "admin.config.email.invite-subject.description": "Het onderwerp van de e-mail die wordt verzonden wanneer een beheerder een gebruiker uitnodigt.",
+  "admin.config.email.invite-subject.description":
+    "Het onderwerp van de e-mail die wordt verzonden wanneer een beheerder een gebruiker uitnodigt.",
   "admin.config.email.invite-message": "Bericht voor uitnodiging",
-  "admin.config.email.invite-message.description": "Dit bericht wordt verzonden wanneer een beheerder een gebruiker uitnodigt. {url} wordt vervangen door de uitnodigings-URL, {email} door het e-mailadres en {password} door het wachtwoord van de gebruiker.",
-  "admin.config.email.share-recipients-reply-to-creator": "Reply-To instellen op het e-mailadres van de maker",
-  "admin.config.email.share-recipients-reply-to-creator.description": "Of de Reply-To-header wordt ingesteld op het e-mailadres van de gebruiker die de share heeft gemaakt.",
-  "admin.config.share.enable-share-download-notifications": "Downloadmeldingen inschakelen",
-  "admin.config.share.enable-share-download-notifications.description": "Of de maker van de share een e-mail ontvangt wanneer een ontvanger een bestand downloadt. Hiervoor moeten SMTP en delen met e-mailontvangers zijn ingeschakeld.",
-  "admin.config.email.share-download-notification-subject": "Onderwerp van downloadmelding",
-  "admin.config.email.share-download-notification-subject.description": "Het onderwerp van de e-mail die naar de maker van de share wordt verzonden wanneer een ontvanger een bestand downloadt.",
-  "admin.config.email.share-download-notification-message": "Bericht voor downloadmelding",
-  "admin.config.email.share-download-notification-message.description": "Het bericht dat naar de maker van de share wordt verzonden wanneer een ontvanger een bestand downloadt. Beschikbare variabelen:\n {recipientEmail} - Het e-mailadres van de ontvanger\n {fileName} - De naam van het gedownloade bestand\n {shareUrl} - De URL van de share",
-  "admin.config.security.enable-email-verification": "Schakel e-mailverificatie in",
-  "admin.config.security.enable-email-verification.description": "Of gebruikers hun e-mailadres moeten verifiëren voordat ze zich kunnen aanmelden. Dit kan alleen worden ingeschakeld als SMTP actief is.",
+  "admin.config.email.invite-message.description":
+    "Dit bericht wordt verzonden wanneer een beheerder een gebruiker uitnodigt. {url} wordt vervangen door de uitnodigings-URL, {email} door het e-mailadres en {password} door het wachtwoord van de gebruiker.",
+  "admin.config.email.share-recipients-reply-to-creator":
+    "Reply-To instellen op het e-mailadres van de maker",
+  "admin.config.email.share-recipients-reply-to-creator.description":
+    "Of de Reply-To-header wordt ingesteld op het e-mailadres van de gebruiker die de share heeft gemaakt.",
+  "admin.config.share.enable-share-download-notifications":
+    "Downloadmeldingen inschakelen",
+  "admin.config.share.enable-share-download-notifications.description":
+    "Of de maker van de share een e-mail ontvangt wanneer een ontvanger een bestand downloadt. Hiervoor moeten SMTP en delen met e-mailontvangers zijn ingeschakeld.",
+  "admin.config.email.share-download-notification-subject":
+    "Onderwerp van downloadmelding",
+  "admin.config.email.share-download-notification-subject.description":
+    "Het onderwerp van de e-mail die naar de maker van de share wordt verzonden wanneer een ontvanger een bestand downloadt.",
+  "admin.config.email.share-download-notification-message":
+    "Bericht voor downloadmelding",
+  "admin.config.email.share-download-notification-message.description":
+    "Het bericht dat naar de maker van de share wordt verzonden wanneer een ontvanger een bestand downloadt. Beschikbare variabelen:\n {recipientEmail} - Het e-mailadres van de ontvanger\n {fileName} - De naam van het gedownloade bestand\n {shareUrl} - De URL van de share",
+  "admin.config.security.enable-email-verification":
+    "Schakel e-mailverificatie in",
+  "admin.config.security.enable-email-verification.description":
+    "Of gebruikers hun e-mailadres moeten verifiëren voordat ze zich kunnen aanmelden. Dit kan alleen worden ingeschakeld als SMTP actief is.",
   "admin.config.email.verification-subject": "Onderwerp van verificatie-e-mail",
-  "admin.config.email.verification-subject.description": "Het onderwerp van de e-mail die bij registratie naar de gebruiker wordt verzonden.",
+  "admin.config.email.verification-subject.description":
+    "Het onderwerp van de e-mail die bij registratie naar de gebruiker wordt verzonden.",
   "admin.config.email.verification-message": "Bericht in verificatie-e-mail",
-  "admin.config.email.verification-message.description": "Het bericht dat bij registratie naar de gebruiker wordt verzonden. {url} wordt vervangen door de verificatie-URL.",
+  "admin.config.email.verification-message.description":
+    "Het bericht dat bij registratie naar de gebruiker wordt verzonden. {url} wordt vervangen door de verificatie-URL.",
   "admin.config.security.allow-registration": "Sta registratie toe",
-  "admin.config.security.allow-registration.description": "Of registratie is toegestaan",
-  "admin.config.security.allow-unauthenticated-shares": "Ongeverifieerde shares toestaan",
-  "admin.config.security.allow-unauthenticated-shares.description": "Sta niet-geverifieerde gebruikers toe shares te kunnen aanmaken",
+  "admin.config.security.allow-registration.description":
+    "Of registratie is toegestaan",
+  "admin.config.security.allow-unauthenticated-shares":
+    "Ongeverifieerde shares toestaan",
+  "admin.config.security.allow-unauthenticated-shares.description":
+    "Sta niet-geverifieerde gebruikers toe shares te kunnen aanmaken",
   "admin.config.share.default-expiration": "Standaard vervaldatum",
-  "admin.config.share.default-expiration.description": "De standaard vervalperiode die is geselecteerd bij het aanmaken van een nieuw aandeel.",
+  "admin.config.share.default-expiration.description":
+    "De standaard vervalperiode die is geselecteerd bij het aanmaken van een nieuw aandeel.",
   "admin.config.share.max-expiration": "Max. vervaldatum",
-  "admin.config.share.max-expiration.description": "Maximale share vervaldatum. Stel in op 0 om onbeperkte vervaldatum toe te staan.",
+  "admin.config.share.max-expiration.description":
+    "Maximale share vervaldatum. Stel in op 0 om onbeperkte vervaldatum toe te staan.",
   "admin.config.share.share-id-length": "Standaard lengte van de share-ID",
-  "admin.config.share.share-id-length.description": "Standaardlengte voor de gegenereerde ID van een share. Deze waarde wordt ook gebruikt om links te genereren voor reverse shares. Een waarde lager dan 8 wordt niet als veilig beschouwd.",
+  "admin.config.share.share-id-length.description":
+    "Standaardlengte voor de gegenereerde ID van een share. Deze waarde wordt ook gebruikt om links te genereren voor reverse shares. Een waarde lager dan 8 wordt niet als veilig beschouwd.",
   "admin.config.share.max-size": "Max. grootte",
   "admin.config.share.max-size.description": "Maximale share grootte",
   "admin.config.share.zip-compression-level": "Zip compressie niveau",
-  "admin.config.share.zip-compression-level.description": "Pas het niveau aan voor evenwicht tussen bestandsgrootte en compressie snelheid. Geldige waarden variëren van 0 tot 9, waarbij 0 geen compressie is en 9 de maximale compressie is. ",
+  "admin.config.share.zip-compression-level.description":
+    "Pas het niveau aan voor evenwicht tussen bestandsgrootte en compressie snelheid. Geldige waarden variëren van 0 tot 9, waarbij 0 geen compressie is en 9 de maximale compressie is. ",
   "admin.config.share.chunk-size": "Chunkgrootte",
-  "admin.config.share.chunk-size.description": "Pas de chunkgrootte voor uw uploads aan om efficiëntie en betrouwbaarheid in evenwicht te brengen op basis van uw internetverbinding. Kleinere chunks kunnen de slagingspercentages voor onstabiele verbindingen verbeteren, terwijl grotere chunks uploads voor stabiele verbindingen versnellen.",
-  "admin.config.share.auto-open-share-modal": "Automatisch openen, delen aanmaken modal",
-  "admin.config.share.auto-open-share-modal.description": "Het venster voor het aanmaken van gedeelde bestanden verschijnt automatisch wanneer een gebruiker bestanden selecteert, waardoor het niet meer nodig is om handmatig op de knop te klikken.",
-  "admin.config.security.allow-admin-access-all-shares": "Geef beheerders toegang tot alle gedeelde mappen",
-  "admin.config.share.reverse-share-simple-only": "Eenvoudige modus voor omgekeerde shares afdwingen",
-  "admin.config.share.reverse-share-simple-only.description": "Omgekeerde shares altijd in de eenvoudige modus laten maken. Als deze optie is uitgeschakeld, kan de maker van de omgekeerde share kiezen tussen de eenvoudige en geavanceerde modus.",
-  "admin.config.security.allow-admin-access-all-shares.description": "Sta beheerders toe om toegang te krijgen tot alle gedeelde mappen, zelfs als deze met een wachtwoord zijn beveiligd, verlopen zijn of verwijderd zijn.",
-  "admin.config.share.enable-user-recipients": "Delen met geregistreerde gebruikers inschakelen",
-  "admin.config.share.enable-user-recipients.description": "Als deze optie is ingeschakeld, verschijnen shares die naar het e-mailadres van een geregistreerde gebruiker worden verzonden automatisch in diens account. Gebruikers kunnen de toegang tot een share ook beperken tot specifieke ontvangers.",
+  "admin.config.share.chunk-size.description":
+    "Pas de chunkgrootte voor uw uploads aan om efficiëntie en betrouwbaarheid in evenwicht te brengen op basis van uw internetverbinding. Kleinere chunks kunnen de slagingspercentages voor onstabiele verbindingen verbeteren, terwijl grotere chunks uploads voor stabiele verbindingen versnellen.",
+  "admin.config.share.auto-open-share-modal":
+    "Automatisch openen, delen aanmaken modal",
+  "admin.config.share.auto-open-share-modal.description":
+    "Het venster voor het aanmaken van gedeelde bestanden verschijnt automatisch wanneer een gebruiker bestanden selecteert, waardoor het niet meer nodig is om handmatig op de knop te klikken.",
+  "admin.config.security.allow-admin-access-all-shares":
+    "Geef beheerders toegang tot alle gedeelde mappen",
+  "admin.config.share.reverse-share-simple-only":
+    "Eenvoudige modus voor omgekeerde shares afdwingen",
+  "admin.config.share.reverse-share-simple-only.description":
+    "Omgekeerde shares altijd in de eenvoudige modus laten maken. Als deze optie is uitgeschakeld, kan de maker van de omgekeerde share kiezen tussen de eenvoudige en geavanceerde modus.",
+  "admin.config.security.allow-admin-access-all-shares.description":
+    "Sta beheerders toe om toegang te krijgen tot alle gedeelde mappen, zelfs als deze met een wachtwoord zijn beveiligd, verlopen zijn of verwijderd zijn.",
+  "admin.config.share.enable-user-recipients":
+    "Delen met geregistreerde gebruikers inschakelen",
+  "admin.config.share.enable-user-recipients.description":
+    "Als deze optie is ingeschakeld, verschijnen shares die naar het e-mailadres van een geregistreerde gebruiker worden verzonden automatisch in diens account. Gebruikers kunnen de toegang tot een share ook beperken tot specifieke ontvangers.",
   "admin.config.share.file-retention-period": "Bewaartermijn van bestanden",
-  "admin.config.share.file-retention-period.description": "Hoelang bestanden worden bewaard nadat een share verloopt of wordt verwijderd. Dit is alleen nuttig als 'Beheerders toegang geven tot alle shares' ook is ingeschakeld. Stel dit in op -1 om bestanden onbeperkt te bewaren.",
+  "admin.config.share.file-retention-period.description":
+    "Hoelang bestanden worden bewaard nadat een share verloopt of wordt verwijderd. Dit is alleen nuttig als 'Beheerders toegang geven tot alle shares' ook is ingeschakeld. Stel dit in op -1 om bestanden onbeperkt te bewaren.",
   "admin.config.smtp.enabled": "Inschakelen",
-  "admin.config.smtp.enabled.description": "Of SMTP is ingeschakeld. Stel dit alleen in op true als u de host hebt ingevoerd, poort, e-mail, gebruiker en wachtwoord van uw SMTP-server.",
+  "admin.config.smtp.enabled.description":
+    "Of SMTP is ingeschakeld. Stel dit alleen in op true als u de host hebt ingevoerd, poort, e-mail, gebruiker en wachtwoord van uw SMTP-server.",
   "admin.config.smtp.host": "Hostnaam",
   "admin.config.smtp.host.description": "Host van de SMTP-server",
   "admin.config.smtp.port": "Poort",
   "admin.config.smtp.port.description": "Poort van de SMTP-server",
   "admin.config.smtp.email": "E-mail",
-  "admin.config.smtp.email.description": "E-mailadres van waaruit de e-mails worden verzonden",
+  "admin.config.smtp.email.description":
+    "E-mailadres van waaruit de e-mails worden verzonden",
   "admin.config.smtp.username": "Gebruikersnaam",
   "admin.config.smtp.username.description": "Gebruikersnaam van de SMTP-server",
   "admin.config.smtp.password": "Wachtwoord",
   "admin.config.smtp.password.description": "Wachtwoord van de SMTP-server",
   "admin.config.smtp.button.test": "Teste-mail verzenden",
   "admin.config.smtp.test-email.success": "E-mail succesvol verzonden",
-  "admin.config.smtp.test-email.error.title": "Fout bij het verzenden van e-mail",
-  "admin.config.smtp.test-email.error.description": "Bij het verzenden van de teste-mail is de volgende fout opgetreden:",
+  "admin.config.smtp.test-email.error.title":
+    "Fout bij het verzenden van e-mail",
+  "admin.config.smtp.test-email.error.description":
+    "Bij het verzenden van de teste-mail is de volgende fout opgetreden:",
   "admin.config.smtp.test-email.save.title": "Configuratie opslaan",
-  "admin.config.smtp.test-email.save.description": "Je moet de configuratie eerst opslaan om door te gaan. Wil je de configuratie opslaan en de teste-mail verzenden?",
+  "admin.config.smtp.test-email.save.description":
+    "Je moet de configuratie eerst opslaan om door te gaan. Wil je de configuratie opslaan en de teste-mail verzenden?",
   "admin.config.smtp.test-email.save.confirm": "Opslaan en verzenden",
-  "admin.config.smtp.allow-unauthorized-certificates": "Vertrouw ongeautoriseerde SMTP-servercertificaten",
-  "admin.config.smtp.allow-unauthorized-certificates.description": "Zet dit alleen aan als je de self signed certificates vertrouwt.",
+  "admin.config.smtp.allow-unauthorized-certificates":
+    "Vertrouw ongeautoriseerde SMTP-servercertificaten",
+  "admin.config.smtp.allow-unauthorized-certificates.description":
+    "Zet dit alleen aan als je de self signed certificates vertrouwt.",
   "admin.config.oauth.allow-registration": "Sta registratie toe",
-  "admin.config.oauth.allow-registration.description": "Gebruikers toestaan zich te registreren via sociale login",
+  "admin.config.oauth.allow-registration.description":
+    "Gebruikers toestaan zich te registreren via sociale login",
   "admin.config.oauth.ignore-totp": "TOTP negeren",
-  "admin.config.oauth.ignore-totp.description": "TOTP negeren wanneer gebruiker sociale login gebruikt",
+  "admin.config.oauth.ignore-totp.description":
+    "TOTP negeren wanneer gebruiker sociale login gebruikt",
   "admin.config.oauth.disable-password": "Zet password login uit",
-  "admin.config.oauth.disable-password.description": "Of password login moet worden uitgeschakeld\nZorg ervoor dat een OAuth-provider correct is geconfigureerd voordat u deze configuratie activeert om te voorkomen dat u wordt buitengesloten.",
+  "admin.config.oauth.disable-password.description":
+    "Of password login moet worden uitgeschakeld\nZorg ervoor dat een OAuth-provider correct is geconfigureerd voordat u deze configuratie activeert om te voorkomen dat u wordt buitengesloten.",
   "admin.config.oauth.github-enabled": "GitHub",
-  "admin.config.oauth.github-enabled.description": "Ofdat GitHub login is ingeschakeld",
-  "admin.config.oauth.github-client-id": "GitHub Client ID",
-  "admin.config.oauth.github-client-id.description": "Client-ID van de GitHub OAuth app",
-  "admin.config.oauth.github-client-secret": "GitHub Client secret",
-  "admin.config.oauth.github-client-secret.description": "Client secret van de GitHub OAuth app",
+  "admin.config.oauth.github-enabled.description":
+    "Ofdat GitHub login is ingeschakeld",
+  "admin.config.oauth.github-client-id": "GitHub Client-ID",
+  "admin.config.oauth.github-client-id.description":
+    "Client-ID van de GitHub OAuth app",
+  "admin.config.oauth.github-client-secret": "GitHub Client-secret",
+  "admin.config.oauth.github-client-secret.description":
+    "Client secret van de GitHub OAuth app",
   "admin.config.oauth.google-enabled": "Google",
-  "admin.config.oauth.google-enabled.description": "Ofdat GitHub login is ingeschakeld",
+  "admin.config.oauth.google-enabled.description":
+    "Ofdat GitHub login is ingeschakeld",
   "admin.config.oauth.google-client-id": "Google Client-ID",
-  "admin.config.oauth.google-client-id.description": "Client-ID van de Google OAuth app",
-  "admin.config.oauth.google-client-secret": "Google Client secret",
-  "admin.config.oauth.google-client-secret.description": "Client secret van de Google OAuth app",
+  "admin.config.oauth.google-client-id.description":
+    "Client-ID van de Google OAuth app",
+  "admin.config.oauth.google-client-secret": "Google Client-secret",
+  "admin.config.oauth.google-client-secret.description":
+    "Client secret van de Google OAuth app",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
-  "admin.config.oauth.microsoft-enabled.description": "Ofdat Microsoft login is ingeschakeld",
+  "admin.config.oauth.microsoft-enabled.description":
+    "Ofdat Microsoft login is ingeschakeld",
   "admin.config.oauth.microsoft-tenant": "Microsoft Tenant",
-  "admin.config.oauth.microsoft-tenant.description": "Tenant ID van de Microsoft OAuth app\ncommon: Gebruikers met zowel een persoonlijk Microsoft-account als een werk- of schoolaccount van Microsoft Entra ID kunnen zich aanmelden bij de applicatie. organisaties: alleen gebruikers met werk of schoolaccounts van Microsoft Entra ID kunnen zich aanmelden bij de applicatie.\nconsumenten: Alleen gebruikers met een persoonlijk Microsoft-account kunnen zich aanmelden bij de applicatie.\ndomeinnaam van de Microsoft Entra tenant of de tenant ID in GUID formaat: alleen gebruikers van een specifieke Microsoft Entra tenant (directory leden met een werk- of schoolaccount of map gasten met een persoonlijk Microsoft-account) kunnen zich aanmelden bij de toepassing.",
-  "admin.config.oauth.microsoft-client-id": "Microsoft Client ID",
-  "admin.config.oauth.microsoft-client-id.description": "Client-ID van de Microsoft OAuth app",
+  "admin.config.oauth.microsoft-tenant.description":
+    "Tenant ID van de Microsoft OAuth app\ncommon: Gebruikers met zowel een persoonlijk Microsoft-account als een werk- of schoolaccount van Microsoft Entra ID kunnen zich aanmelden bij de applicatie. organisaties: alleen gebruikers met werk of schoolaccounts van Microsoft Entra ID kunnen zich aanmelden bij de applicatie.\nconsumenten: Alleen gebruikers met een persoonlijk Microsoft-account kunnen zich aanmelden bij de applicatie.\ndomeinnaam van de Microsoft Entra tenant of de tenant ID in GUID formaat: alleen gebruikers van een specifieke Microsoft Entra tenant (directory leden met een werk- of schoolaccount of map gasten met een persoonlijk Microsoft-account) kunnen zich aanmelden bij de toepassing.",
+  "admin.config.oauth.microsoft-client-id": "Microsoft Client-ID",
+  "admin.config.oauth.microsoft-client-id.description":
+    "Client-ID van de Microsoft OAuth app",
   "admin.config.oauth.microsoft-client-secret": "Microsoft Client-secret",
-  "admin.config.oauth.microsoft-client-secret.description": "Client-secret van de Microsoft OAuth app",
+  "admin.config.oauth.microsoft-client-secret.description":
+    "Client-secret van de Microsoft OAuth app",
   "admin.config.oauth.discord-enabled": "Discord",
-  "admin.config.oauth.discord-enabled.description": "Ofdat discord login is ingeschakeld",
+  "admin.config.oauth.discord-enabled.description":
+    "Ofdat discord login is ingeschakeld",
   "admin.config.oauth.discord-limited-users": "Discord gelimiteerde gebruikers",
-  "admin.config.oauth.discord-limited-users.description": "Beperk het inloggen tot specifieke gebruikers met hun Discord ID. Laat het leeg om uit te schakelen.",
+  "admin.config.oauth.discord-limited-users.description":
+    "Beperk het inloggen tot specifieke gebruikers met hun Discord ID. Laat het leeg om uit te schakelen.",
   "admin.config.oauth.discord-limited-guild": "Discord beperkte server ID",
-  "admin.config.oauth.discord-limited-guild.description": "Beperk het inloggen tot gebruikers in een specifieke server. Laat leeg om uit te schakelen.",
-  "admin.config.oauth.discord-client-id": "Discord Client ID",
-  "admin.config.oauth.discord-client-id.description": "Client-ID van de discord OAuth app",
-  "admin.config.oauth.discord-client-secret": "Discord Client secret",
-  "admin.config.oauth.discord-client-secret.description": "Client-secret van de discord OAuth app",
+  "admin.config.oauth.discord-limited-guild.description":
+    "Beperk het inloggen tot gebruikers in een specifieke server. Laat leeg om uit te schakelen.",
+  "admin.config.oauth.discord-client-id": "Discord Client-ID",
+  "admin.config.oauth.discord-client-id.description":
+    "Client-ID van de discord OAuth app",
+  "admin.config.oauth.discord-client-secret": "Discord Client-secret",
+  "admin.config.oauth.discord-client-secret.description":
+    "Client-secret van de discord OAuth app",
   "admin.config.oauth.oidc-enabled": "OpenID Connect",
-  "admin.config.oauth.oidc-enabled.description": "Ofdat OpenID Connect login is ingeschakeld",
-  "admin.config.oauth.oidc-discovery-uri": "OpenID Connect Discovery URI",
-  "admin.config.oauth.oidc-discovery-uri.description": "Discovery URI van de OpenID Connect OAuth app",
+  "admin.config.oauth.oidc-enabled.description":
+    "Ofdat OpenID Connect login is ingeschakeld",
+  "admin.config.oauth.oidc-discovery-uri": "OpenID Connect Discovery-URI",
+  "admin.config.oauth.oidc-discovery-uri.description":
+    "Discovery URI van de OpenID Connect OAuth app",
   "admin.config.oauth.oidc-sign-out": "Uitloggen van OpenID Connect",
-  "admin.config.oauth.oidc-sign-out.description": "Of de knop \"Uitloggen\" daadwerkelijk uitlogt bij de OpenID Connect-provider",
-  "admin.config.oauth.oidc-scope": "OpenID Connect scope",
-  "admin.config.oauth.oidc-scope.description": "Scopes die moeten worden aangevraagd bij de OpenID Connect-provider.",
-  "admin.config.oauth.oidc-username-claim": "OpenID Connect gebruikersnaam claim",
-  "admin.config.oauth.oidc-username-claim.description": "Gebruikersnaam claim in OpenID Connect-ID-token. Laat het leeg als u niet weet wat deze configuratie is.",
-  "admin.config.oauth.oidc-role-path": "Pad naar rollen in OpenID Connect-token",
-  "admin.config.oauth.oidc-role-path.description": "Moet een geldig JMES-pad zijn dat verwijst naar een reeks rollen. " + "Het beheren van toegangsrechten met behulp van OpenID Connect-rollen wordt alleen aanbevolen als er geen andere identiteitsprovider is geconfigureerd en wachtwoordaanmelding is uitgeschakeld. " + "Laat dit leeg als u niet weet wat deze configuratie is.",
-  "admin.config.oauth.oidc-role-general-access": "OpenID Connect role voor algemene toegang",
-  "admin.config.oauth.oidc-role-general-access.description": "Rol vereist voor algemene toegang. Moet aanwezig zijn in de rollen van een gebruiker om in te loggen. " + "Laat het leeg als u niet weet wat deze configuratie is.",
-  "admin.config.oauth.oidc-role-admin-access": "OpenID Connect role voor admin toegang",
-  "admin.config.oauth.oidc-role-admin-access.description": "Rol vereist voor administratieve toegang. Moet aanwezig zijn in de rollen van een gebruiker om toegang te krijgen tot het admin-paneel. " + "Laat dit leeg als u niet weet wat deze configuratie is.",
+  "admin.config.oauth.oidc-sign-out.description":
+    'Of de knop "Uitloggen" daadwerkelijk uitlogt bij de OpenID Connect-provider',
+  "admin.config.oauth.oidc-scope": "OpenID Connect-scope",
+  "admin.config.oauth.oidc-scope.description":
+    "Scopes die moeten worden aangevraagd bij de OpenID Connect-provider.",
+  "admin.config.oauth.oidc-username-claim":
+    "OpenID Connect gebruikersnaam claim",
+  "admin.config.oauth.oidc-username-claim.description":
+    "Gebruikersnaam claim in OpenID Connect-ID-token. Laat het leeg als u niet weet wat deze configuratie is.",
+  "admin.config.oauth.oidc-role-path":
+    "Pad naar rollen in OpenID Connect-token",
+  "admin.config.oauth.oidc-role-path.description":
+    "Moet een geldig JMES-pad zijn dat verwijst naar een reeks rollen. " +
+    "Het beheren van toegangsrechten met behulp van OpenID Connect-rollen wordt alleen aanbevolen als er geen andere identiteitsprovider is geconfigureerd en wachtwoordaanmelding is uitgeschakeld. " +
+    "Laat dit leeg als u niet weet wat deze configuratie is.",
+  "admin.config.oauth.oidc-role-general-access":
+    "OpenID Connect role voor algemene toegang",
+  "admin.config.oauth.oidc-role-general-access.description":
+    "Rol vereist voor algemene toegang. Moet aanwezig zijn in de rollen van een gebruiker om in te loggen. " +
+    "Laat het leeg als u niet weet wat deze configuratie is.",
+  "admin.config.oauth.oidc-role-admin-access":
+    "OpenID Connect role voor admin toegang",
+  "admin.config.oauth.oidc-role-admin-access.description":
+    "Rol vereist voor administratieve toegang. Moet aanwezig zijn in de rollen van een gebruiker om toegang te krijgen tot het admin-paneel. " +
+    "Laat dit leeg als u niet weet wat deze configuratie is.",
   "admin.config.oauth.oidc-client-id": "Client-ID OpenID Connect",
-  "admin.config.oauth.oidc-client-id.description": "Client-ID van de OpenID Connect OAuth app",
+  "admin.config.oauth.oidc-client-id.description":
+    "Client-ID van de OpenID Connect OAuth app",
   "admin.config.oauth.oidc-client-secret": "OpenID Connect client secret",
-  "admin.config.oauth.oidc-client-secret.description": "Client secret van de OpenID Connect OAuth app",
+  "admin.config.oauth.oidc-client-secret.description":
+    "Client secret van de OpenID Connect OAuth app",
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "LDAP inschakelen",
-  "admin.config.ldap.enabled.description": "Gebruik LDAP authentication voor gebruiker login",
-  "admin.config.ldap.url": "Server URL",
+  "admin.config.ldap.enabled.description":
+    "Gebruik LDAP authentication voor gebruiker login",
+  "admin.config.ldap.url": "Server-URL",
   "admin.config.ldap.url.description": "URL van de LDAP server",
-  "admin.config.ldap.bind-dn": "Bind DN",
-  "admin.config.ldap.bind-dn.description": "Standaardgebruiker die wordt gebruikt om de gebruikerszoekopdracht uit te voeren",
+  "admin.config.ldap.bind-dn": "Bind-DN",
+  "admin.config.ldap.bind-dn.description":
+    "Standaardgebruiker die wordt gebruikt om de gebruikerszoekopdracht uit te voeren",
   "admin.config.ldap.bind-password": "Bind wachtwoord",
-  "admin.config.ldap.bind-password.description": "Wachtwoord gebruikt om de gebruiker te zoeken",
+  "admin.config.ldap.bind-password.description":
+    "Wachtwoord gebruikt om de gebruiker te zoeken",
   "admin.config.ldap.search-base": "Gebruiker basis",
-  "admin.config.ldap.search-base.description": "Basislocatie, waar de gebruiker zal zoeken worden uitgevoerd",
+  "admin.config.ldap.search-base.description":
+    "Basislocatie, waar de gebruiker zal zoeken worden uitgevoerd",
   "admin.config.ldap.search-query": "Gebruikers query",
-  "admin.config.ldap.search-query.description": "De gebruikersquery wordt gebruikt om in de 'Gebruikers basis' naar de LDAP-gebruiker te zoeken. %username% kan worden gebruikt als placeholder voor de ingevoerde gebruiker.",
+  "admin.config.ldap.search-query.description":
+    "De gebruikersquery wordt gebruikt om in de 'Gebruikers basis' naar de LDAP-gebruiker te zoeken. %username% kan worden gebruikt als placeholder voor de ingevoerde gebruiker.",
   "admin.config.ldap.admin-groups": "Admin groep",
-  "admin.config.ldap.admin-groups.description": "Groep vereist voor administratieve toegang.",
+  "admin.config.ldap.admin-groups.description":
+    "Groep vereist voor administratieve toegang.",
   "admin.config.ldap.field-name-member-of": "Attribuutnaam gebruikersgroepen",
-  "admin.config.ldap.field-name-member-of.description": "De LDAP-attribuutnaam voor de groepen waarvan een gebruiker lid is. Deze wordt gebruikt bij het controleren van de beheerdersgroep.",
+  "admin.config.ldap.field-name-member-of.description":
+    "De LDAP-attribuutnaam voor de groepen waarvan een gebruiker lid is. Deze wordt gebruikt bij het controleren van de beheerdersgroep.",
   "admin.config.ldap.field-name-email": "Naam e-mail attribuut gebruiker",
-  "admin.config.ldap.field-name-email.description": "LDAP attribuutnaam voor de e-mail van een gebruiker.",
+  "admin.config.ldap.field-name-email.description":
+    "LDAP attribuutnaam voor de e-mail van een gebruiker.",
   "admin.config.notify.success": "Configuratie succesvol bijgewerkt.",
-  "admin.config.notify.logo-success": "Het logo is succesvol bijgewerkt. Het kan een paar minuten duren voordat het logo ook op de website is weergegeven.",
+  "admin.config.notify.logo-success":
+    "Het logo is succesvol bijgewerkt. Het kan een paar minuten duren voordat het logo ook op de website is weergegeven.",
   "admin.config.notify.no-changes": "Geen wijzigingen om op te slaan.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Ingeschakeld",
-  "admin.config.s3.enabled.description": "Of S3 gebruikt moet worden om de gedeelde bestanden op te slaan in plaats van het lokale bestandssysteem. WAARSCHUWING: Als ClamAV actief is, worden bestanden tijdelijk van S3 gedownload om gecontroleerd te worden.",
-  "admin.config.s3.endpoint": "Endpoint",
+  "admin.config.s3.enabled.description":
+    "Of S3 gebruikt moet worden om de gedeelde bestanden op te slaan in plaats van het lokale bestandssysteem. WAARSCHUWING: Als ClamAV actief is, worden bestanden tijdelijk van S3 gedownload om gecontroleerd te worden.",
+  "admin.config.s3.endpoint": "Eindpunt",
   "admin.config.s3.endpoint.description": "De URL van de S3-bucket.",
   "admin.config.s3.region": "Regio",
   "admin.config.s3.region.description": "De regio van de S3-bucket.",
   "admin.config.s3.bucket-name": "Bucketnaam",
   "admin.config.s3.bucket-name.description": "De naam van de S3 bucket.",
   "admin.config.s3.bucket-path": "Pad",
-  "admin.config.s3.bucket-path.description": "Het standaardpad dat gebruikt moet worden om de bestanden in de S3-bucket op te slaan.",
+  "admin.config.s3.bucket-path.description":
+    "Het standaardpad dat gebruikt moet worden om de bestanden in de S3-bucket op te slaan.",
   "admin.config.s3.key": "Sleutel",
-  "admin.config.s3.key.description": "De sleutel waarmee je toegang krijgt tot de S3-bucket.",
+  "admin.config.s3.key.description":
+    "De sleutel waarmee je toegang krijgt tot de S3-bucket.",
   "admin.config.s3.secret": "Geheim",
-  "admin.config.s3.secret.description": "Het geheim waarmee je toegang krijgt tot de S3-bucket.",
+  "admin.config.s3.secret.description":
+    "Het geheim waarmee je toegang krijgt tot de S3-bucket.",
   "admin.config.s3.use-checksum": "Gebruik checksum",
-  "admin.config.s3.use-checksum.description": "Schakel deze functie uit voor backends die geen checksum ondersteunen (bijv. B2).",
-  "admin.config.s3.docs-link": "CORS moet opnieuw worden geconfigureerd voor je bucket. Raadpleeg de {wikiLink} voor meer informatie.",
+  "admin.config.s3.use-checksum.description":
+    "Schakel deze functie uit voor backends die geen checksum ondersteunen (bijv. B2).",
+  "admin.config.s3.docs-link":
+    "CORS moet opnieuw worden geconfigureerd voor je bucket. Raadpleeg de {wikiLink} voor meer informatie.",
   "admin.config.category.legal": "Juridisch",
   "admin.config.legal.enabled": "Juridische kennisgevingen inschakelen",
-  "admin.config.legal.enabled.description": "Toon of verberg een link naar het impressum- en privacybeleid in de voettekst.",
+  "admin.config.legal.enabled.description":
+    "Toon of verberg een link naar het impressum- en privacybeleid in de voettekst.",
   "admin.config.legal.imprint-text": "Impressumtekst",
-  "admin.config.legal.imprint-text.description": "De tekst die in het impressum moet worden weergegeven. Ondersteunt Markdown. Laat dit veld leeg om naar een externe impressumpagina te linken.",
+  "admin.config.legal.imprint-text.description":
+    "De tekst die in het impressum moet worden weergegeven. Ondersteunt Markdown. Laat dit veld leeg om naar een externe impressumpagina te linken.",
   "admin.config.legal.imprint-url": "Impressum-URL",
-  "admin.config.legal.imprint-url.description": "Als u al een impressumpagina heeft, kunt u hier een link plaatsen in plaats van het tekstveld te gebruiken.",
+  "admin.config.legal.imprint-url.description":
+    "Als u al een impressumpagina heeft, kunt u hier een link plaatsen in plaats van het tekstveld te gebruiken.",
   "admin.config.legal.privacy-policy-text": "Tekst privacybeleid",
-  "admin.config.legal.privacy-policy-text.description": "De tekst die in het privacybeleid moet worden weergegeven. Ondersteunt Markdown. Laat dit veld leeg om naar een externe pagina met het privacybeleid te linken.",
+  "admin.config.legal.privacy-policy-text.description":
+    "De tekst die in het privacybeleid moet worden weergegeven. Ondersteunt Markdown. Laat dit veld leeg om naar een externe pagina met het privacybeleid te linken.",
   "admin.config.legal.privacy-policy-url": "URL privacybeleid",
-  "admin.config.legal.privacy-policy-url.description": "Als u al een pagina met een privacybeleid heeft, kunt u hier een link plaatsen in plaats van het tekstveld te gebruiken.",
+  "admin.config.legal.privacy-policy-url.description":
+    "Als u al een pagina met een privacybeleid heeft, kunt u hier een link plaatsen in plaats van het tekstveld te gebruiken.",
   // 404
   "404.description": "Oeps, deze pagina bestaat niet.",
   "404.button.home": "Breng me terug naar huis",
@@ -645,18 +859,26 @@ export default {
   "error.description": "Oeps!",
   "error.button.back": "Terug",
   "error.msg.default": "Er ging iets mis.",
-  "error.msg.access_denied": "U heeft het verificatieproces geannuleerd, probeer het opnieuw.",
-  "error.msg.expired_token": "Het verificatieproces duurde te lang. Probeer het opnieuw.",
+  "error.msg.access_denied":
+    "U heeft het verificatieproces geannuleerd, probeer het opnieuw.",
+  "error.msg.expired_token":
+    "Het verificatieproces duurde te lang. Probeer het opnieuw.",
   "error.msg.invalid_token": "Interne fout",
   "error.msg.no_user": "De gekoppelde gebruiker aan {0} account bestaat niet.",
   "error.msg.no_email": "Kan geen e-mailadres ophalen van dit {0} account.",
-  "error.msg.already_linked": "Dit {0} account is al gekoppeld aan een ander account.",
-  "error.msg.not_linked": "Dit {0} account is nog niet aan een account gekoppeld.",
-  "error.msg.email_already_exists": "Er bestaat al een account met dit e-mailadres. Meld je aan met je wachtwoord en koppel je {0}-account handmatig op de pagina Mijn account.",
-  "error.msg.email_not_verified": "Het e-mailadres van dit {0}-account is niet geverifieerd. Verifieer je e-mailadres bij je identiteitsprovider voordat je je aanmeldt.",
-  "error.msg.unverified_account": "Dit {0} account is nog niet geverifieerd, probeer het opnieuw na de verificatie.",
+  "error.msg.already_linked":
+    "Dit {0} account is al gekoppeld aan een ander account.",
+  "error.msg.not_linked":
+    "Dit {0} account is nog niet aan een account gekoppeld.",
+  "error.msg.email_already_exists":
+    "Er bestaat al een account met dit e-mailadres. Meld je aan met je wachtwoord en koppel je {0}-account handmatig op de pagina Mijn account.",
+  "error.msg.email_not_verified":
+    "Het e-mailadres van dit {0}-account is niet geverifieerd. Verifieer je e-mailadres bij je identiteitsprovider voordat je je aanmeldt.",
+  "error.msg.unverified_account":
+    "Dit {0} account is nog niet geverifieerd, probeer het opnieuw na de verificatie.",
   "error.msg.user_not_allowed": "U heeft geen toestemming om in te loggen.",
-  "error.msg.cannot_get_user_info": "Kan uw gebruikersgegevens van dit {0} account niet ophalen.",
+  "error.msg.cannot_get_user_info":
+    "Kan uw gebruikersgegevens van dit {0} account niet ophalen.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
@@ -701,14 +923,20 @@ export default {
   "common.error.exact-length": "Moet precies {length} tekens bevatten",
   "common.error.invalid-number": "Moet een getal zijn",
   "common.error.field-required": "Dit veld is verplicht",
-  "common.error.password.lowercase": "Password must contain at least one lowercase letter",
-  "common.error.password.uppercase": "Password must contain at least one uppercase letter",
-  "common.error.password.number": "Password must contain at least one number",
-  "common.error.password.special": "Password must contain at least one special character",
+  "common.error.password.lowercase":
+    "Wachtwoord moet minstens één kleine letter bevatten",
+  "common.error.password.uppercase":
+    "Wachtwoord moet minstens één hoofdletter bevatten",
+  "common.error.password.number":
+    "Wachtwoord moet minstens één cijfer bevatten",
+  "common.error.password.special":
+    "Wachtwoord moet minstens één speciaal teken bevatten",
   "admin.notice.modal.headerTag": "ADMINISTRATIEVE ACTIE VEREIST",
-  "admin.notice.modal.defaultCheckboxLabel": "Ik bevestig dat ik deze melding heb gelezen en de ingrijpende wijzigingen begrijp.",
+  "admin.notice.modal.defaultCheckboxLabel":
+    "Ik bevestig dat ik deze melding heb gelezen en de ingrijpende wijzigingen begrijp.",
   "admin.notice.modal.button.acknowledge": "Bevestigen en sluiten",
   "admin.notice.modal.button.acknowledging": "Bevestigen...",
   "admin.notice.modal.docsLink": "Documentatie bekijken",
-  "admin.notice.modal.globalNoticeFooter": "Opmerking: Zodra dit is bevestigd, wordt deze melding permanent verborgen voor alle beheerders op alle apparaten."
+  "admin.notice.modal.globalNoticeFooter":
+    "Opmerking: Zodra dit is bevestigd, wordt deze melding permanent verborgen voor alle beheerders op alle apparaten.",
 };

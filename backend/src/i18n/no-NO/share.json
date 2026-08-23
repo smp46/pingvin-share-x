@@ -9,11 +9,11 @@
   "anonymousNoUpdate": "Anonyme delinger kan ikke oppdateres",
   "invalidExpiration": "Ugyldig utløpsdato",
   "maxExpirationExceeded": "Utløpsdatoen overskrider maksimal utløpsdato",
-  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
-  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
+  "storageQuotaExceeded": "Brukerens lagringskvote er overskredet med {exceededSize}",
+  "reverseShareQuotaExceeded": "Lagringskvoten til eieren av den omvendte delingen er overskredet med {exceededSize}",
   "wrongPassword": "Feil passord",
   "tokenRequired": "Delingstoken kreves",
   "privateShare": "Kun oppretteren av den omvendte delingen har tilgang til denne delingen",
   "maxViewsExceeded": "Maksimalt antall visninger er overskredet",
-  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
+  "restrictedToRecipients": "Denne delingen er begrenset til bestemte mottakere. Vennligst logg inn for å få tilgang."
 }

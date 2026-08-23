@@ -9,11 +9,11 @@
   "anonymousNoUpdate": "Anonyme Freigaben können nicht aktualisiert werden",
   "invalidExpiration": "Ungültiges Ablaufdatum",
   "maxExpirationExceeded": "Ablaufdatum überschreitet das maximale Ablaufdatum",
-  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
-  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
+  "storageQuotaExceeded": "Speicherkontingent des Benutzers um {exceededSize} überschritten",
+  "reverseShareQuotaExceeded": "Das Speicherkontingent des Besitzers der Datei-Anfrage wurde um {exceededSize} überschritten",
   "wrongPassword": "Falsches Passwort",
   "tokenRequired": "Freigabe-Token erforderlich",
   "privateShare": "Nur der Ersteller der Reverse-Freigabe kann auf diese Freigabe zugreifen",
   "maxViewsExceeded": "Maximale Anzahl an Aufrufen überschritten",
-  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
+  "restrictedToRecipients": "Diese Freigabe ist auf bestimmte Empfänger beschränkt. Bitte melde dich an, um darauf zuzugreifen."
 }

@@ -6,7 +6,7 @@ export default {
   "navbar.signup": "Đăng ký",
   "navbar.links.shares": "Chia sẻ của tôi",
   "navbar.links.reverse": "Chia sẻ ngược",
-  "navbar.links.received": "Received shares",
+  "navbar.links.received": "Chia sẻ đã nhận",
   "navbar.avatar.account": "Tài khoản",
   "navbar.avatar.admin": "Quản trị viên",
   "navbar.avatar.signout": "Đăng xuất",
@@ -14,13 +14,17 @@ export default {
 
   // /
   "home.title": "Một nền tảng <h>seft-hosted</h> chi sẻ tệp tin.",
-  "home.description": "Do you really want to give your personal files in the hand of third parties like WeTransfer?",
-  "home.bullet.a.name": "Self-Hosted",
-  "home.bullet.a.description": "Host Pingvin Share on your own machine.",
+  "home.description":
+    "Bạn có thực sự muốn giao các tệp cá nhân của mình vào tay bên thứ ba như WeTransfer không?",
+  "home.bullet.a.name": "Tự lưu trữ",
+  "home.bullet.a.description":
+    "Tự lưu trữ Pingvin Share trên máy chủ của riêng bạn.",
   "home.bullet.b.name": "Quyền riêng tư",
-  "home.bullet.b.description": "Your files are yours and will never be accessed by third parties.",
+  "home.bullet.b.description":
+    "Tệp của bạn là của bạn và sẽ không bao giờ bị bên thứ ba truy cập.",
   "home.bullet.c.name": "Không có giới hạn dung lượng tệp",
-  "home.bullet.c.description": "Upload files as big as you want. Only your hard drive will be your limit.",
+  "home.bullet.c.description":
+    "Tải lên các tệp có dung lượng bao nhiêu tùy thích. Dung lượng ổ cứng là giới hạn duy nhất của bạn.",
   "home.button.start": "Bắt đầu",
   "home.button.source": "Mã nguồn",
   // END /
@@ -34,8 +38,9 @@ export default {
   "signin.input.password": "Mật khẩu",
   "signin.input.password.placeholder": "Mật khẩu",
   "signin.button.submit": "Đăng nhập",
-  "signIn.notify.totp-required.title": "Two-factor authentication required",
-  "signIn.notify.totp-required.description": "Please enter your two-factor authentication code",
+  "signIn.notify.totp-required.title": "Yêu cầu xác thực hai yếu tố",
+  "signIn.notify.totp-required.description":
+    "Vui lòng nhập mã xác thực hai yếu tố của bạn",
   "signIn.oauth.or": "HOẶC",
   "signIn.oauth.signInWith": "Đăng nhập bằng",
   "signIn.oauth.github": "GitHub",
@@ -53,34 +58,39 @@ export default {
   "signup.input.username.placeholder": "Tên đăng nhập",
   "signup.input.email": "Email",
   "signup.input.email.placeholder": "Email",
-  "signup.button.submit": "Let's get started",
+  "signup.button.submit": "Bắt đầu ngay",
   // /auth/verify
-  "verify.title": "Verify Account",
-  "verify.success": "Your account has been successfully verified! You can now sign in.",
-  "verify.error": "The verification link is invalid or has expired.",
-  "verify.button.signin": "Go to Sign In",
-  "verify.info.title": "Account Verification",
-  "verify.info.description": "Email verification is enabled. We've sent a verification link to your email address. Please click the link to activate your account.",
-  "verify.info.note": "If you don't receive the email within a few minutes, please check your spam folder.",
-  "verify.info.resend.button": "Resend verification email",
-  "verify.info.resend.success": "Verification email resent successfully.",
-  "verify.info.resend.error": "Failed to resend verification email.",
+  "verify.title": "Xác minh tài khoản",
+  "verify.success":
+    "Tài khoản của bạn đã được xác minh thành công! Bây giờ bạn có thể đăng nhập.",
+  "verify.error": "Liên kết xác minh không hợp lệ hoặc đã hết hạn.",
+  "verify.button.signin": "Đi đến Đăng nhập",
+  "verify.info.title": "Xác minh tài khoản",
+  "verify.info.description":
+    "Tính năng xác minh email đã được bật. Chúng tôi đã gửi một liên kết xác minh đến địa chỉ email của bạn. Vui lòng nhấp vào liên kết để kích hoạt tài khoản.",
+  "verify.info.note":
+    "Nếu bạn không nhận được email trong vài phút, vui lòng kiểm tra thư mục thư rác.",
+  "verify.info.resend.button": "Gửi lại email xác minh",
+  "verify.info.resend.success": "Đã gửi lại email xác minh thành công.",
+  "verify.info.resend.error": "Không thể gửi lại email xác minh.",
   // END /auth/signup
 
   // /auth/totp
-  "totp.title": "TOTP Authentication",
+  "totp.title": "Xác thực TOTP",
   "totp.button.signIn": "Đăng nhập",
   // END /auth/totp
 
   // /auth/reset-password
   "resetPassword.title": "Quên mật khẩu?",
   "resetPassword.description": "Nhập email để khôi phục mật khẩu.",
-  "resetPassword.notify.success": "A message with a link to reset your password has been sent if the provided email exists.",
+  "resetPassword.notify.success":
+    "Một tin nhắn kèm liên kết đặt lại mật khẩu đã được gửi nếu email được cung cấp tồn tại.",
   "resetPassword.button.back": "Quay lại trang đăng nhập",
   "resetPassword.text.resetPassword": "Đặt lại mật khẩu",
   "resetPassword.text.enterNewPassword": "Mật khẩu mới",
   "resetPassword.input.password": "Mật khẩu mới",
-  "resetPassword.notify.passwordReset": "Your password has been successfully reset.",
+  "resetPassword.notify.passwordReset":
+    "Mật khẩu của bạn đã được đặt lại thành công.",
   // /account
   "account.title": "Tài khoản",
   "account.card.info.title": "Thông tin tài khoản",
@@ -90,7 +100,8 @@ export default {
   "account.card.password.title": "Mật khẩu",
   "account.card.password.old": "Mật khẩu cũ",
   "account.card.password.new": "Mật khẩu mới",
-  "account.card.password.noPasswordSet": "You do not have a password set. To sign in using your email and password, you need to create a password.",
+  "account.card.password.noPasswordSet":
+    "Bạn chưa thiết lập mật khẩu. Để đăng nhập bằng email và mật khẩu, bạn cần tạo mật khẩu.",
   "account.notify.password.success": "Thay đổi mật khẩu thành công",
   "account.card.oauth.title": "Đăng nhập bằng mạng xã hội",
   "account.card.oauth.github": "GitHub",
@@ -102,73 +113,83 @@ export default {
   "account.card.oauth.unlink": "Hủy liên kết",
   "account.card.oauth.unlinked": "Đã hủy liên kết",
   "account.modal.unlink.title": "Huỷ liên kết tài khoản",
-  "account.modal.unlink.description": "Unlinking your social accounts may cause you to lose your account if you don't remember your login credentials",
+  "account.modal.unlink.description":
+    "Hủy liên kết tài khoản mạng xã hội có thể khiến bạn mất tài khoản nếu không nhớ thông tin đăng nhập",
   "account.notify.oauth.unlinked.success": "Hủy liên kết thành công",
   "account.card.security.title": "Bảo mật",
-  "account.card.security.totp.enable.description": "Enter your current password to start enabling TOTP",
-  "account.card.security.totp.disable.description": "Enter your current password to disable TOTP",
+  "account.card.security.totp.enable.description":
+    "Nhập mật khẩu hiện tại của bạn để bắt đầu bật TOTP",
+  "account.card.security.totp.disable.description":
+    "Nhập mật khẩu hiện tại của bạn để tắt TOTP",
   "account.card.security.totp.button.start": "Bắt đầu",
   "account.modal.totp.title": "Bật TOTP",
-  "account.modal.totp.step1": "Step 1: Add your authenticator",
-  "account.modal.totp.step2": "Step 2: Validate your code",
+  "account.modal.totp.step1": "Bước 1: Thêm trình xác thực của bạn",
+  "account.modal.totp.step2": "Bước 2: Xác thực mã của bạn",
   "account.modal.totp.enterManually": "Nhập thủ công",
   "account.modal.totp.code": "Mã",
   "common.button.clickToCopy": "Nhấn để sao chép",
-  "common.button.showQRCode": "Show QR code",
+  "common.button.showQRCode": "Hiển thị mã QR",
   "account.modal.totp.verify": "Xác thực",
   "account.notify.totp.disable": "Tắt TOTP thành công",
   "account.notify.totp.enable": "Bật TOTP thành công",
   "account.card.language.title": "Ngôn ngữ",
-  "account.card.language.description": "Dự án này được dịch bởi cộng đồng. 1 vài ngôn ngữ có thể chưa được hoàn thiện.",
-  "account.card.color.title": "Color scheme",
+  "account.card.language.description":
+    "Dự án này được dịch bởi cộng đồng. 1 vài ngôn ngữ có thể chưa được hoàn thiện.",
+  "account.card.color.title": "Bảng màu",
   // ThemeSwitcher.tsx
   "account.theme.dark": "Tối",
   "account.theme.light": "Sáng",
   "account.theme.system": "Theo hệ thống",
   "account.button.delete": "Xóa tài khoản",
   "account.modal.delete.title": "Xóa tài khoản",
-  "account.modal.delete.description": "Do you really want to delete your account including all your active shares?",
+  "account.modal.delete.description":
+    "Bạn có thực sự muốn xóa tài khoản của mình bao gồm tất cả các lượt chia sẻ đang hoạt động không?",
   // END /account
 
   // /account/shares
   "account.shares.title": "Chia sẻ của tôi",
   "account.shares.title.empty": "Chỗ này đang trống 👀",
-  "account.shares.description.empty": "You don't have any shares.",
-  "account.shares.button.create": "Create one",
-  "account.shares.info.title": "Share informations",
-  "account.shares.button.edit": "Add/Remove Files",
+  "account.shares.description.empty": "Bạn chưa có lượt chia sẻ nào.",
+  "account.shares.button.create": "Tạo một mục",
+  "account.shares.info.title": "Thông tin chia sẻ",
+  "account.shares.button.edit": "Thêm/Xóa tệp",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Tên",
   "account.shares.table.description": "Mô tả",
   "account.shares.table.visitors": "Lượng truy cập",
-  "account.shares.table.expiresAt": "Expires on",
-  "account.shares.table.createdAt": "Created on",
+  "account.shares.table.expiresAt": "Hết hạn vào",
+  "account.shares.table.createdAt": "Được tạo vào",
   "account.shares.table.size": "Dung lượng",
-  "account.shares.table.password-protected": "Password protected",
-  "account.shares.table.recipients": "Recipients",
-  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
-  "account.shares.table.shared-with-recipients": "Shared with recipients",
-  "account.shares.table.visitor-count": "{count} of {max}",
-  "account.shares.table.expiry-never": "Never",
-  "account.shares.modal.share-informations": "Share informations",
+  "account.shares.table.password-protected": "Được bảo vệ bằng mật khẩu",
+  "account.shares.table.recipients": "Người nhận",
+  "account.shares.table.restricted-to-recipients":
+    "Chỉ giới hạn cho người nhận",
+  "account.shares.table.shared-with-recipients": "Đã chia sẻ với người nhận",
+  "account.shares.table.visitor-count": "{count} trên {max}",
+  "account.shares.table.expiry-never": "Không bao giờ",
+  "account.shares.modal.share-informations": "Thông tin chia sẻ",
   "account.shares.modal.share-link": "Chia sẻ liên kết",
-  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
-  "account.shares.modal.edit.password.remove": "Remove password protection",
-  "account.shares.modal.delete.title": "Delete share: {share}",
-  "account.shares.modal.delete.description": "Do you really want to delete this share?",
+  "account.shares.modal.edit.password.keep":
+    "Để trống để giữ mật khẩu hiện tại",
+  "account.shares.modal.edit.password.remove": "Xóa bảo vệ bằng mật khẩu",
+  "account.shares.modal.delete.title": "Xóa chia sẻ: {share}",
+  "account.shares.modal.delete.description":
+    "Bạn có thực sự muốn xóa lượt chia sẻ này không?",
   // END /account/shares
 
   // /account/received
-  "account.received-shares.title": "Received shares",
-  "account.received-shares.title.empty": "No shares received yet",
-  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
-  "account.received-shares.table.from": "From",
-  "account.received-shares.button.open": "Open",
+  "account.received-shares.title": "Chia sẻ đã nhận",
+  "account.received-shares.title.empty": "Chưa nhận được lượt chia sẻ nào",
+  "account.received-shares.description.empty":
+    "Các lượt chia sẻ được gửi đến địa chỉ email của bạn sẽ xuất hiện ở đây.",
+  "account.received-shares.table.from": "Từ",
+  "account.received-shares.button.open": "Mở",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Chia sẻ ngược",
-  "account.reverseShares.description": "Chia sẻ ngược cho phép bạn tạo một liên kết duy nhất để người ngoài có thể tải tệp lên cho bạn.",
+  "account.reverseShares.description":
+    "Chia sẻ ngược cho phép bạn tạo một liên kết duy nhất để người ngoài có thể tải tệp lên cho bạn.",
   "account.reverseShares.title.empty": "Chỗ này đang trống 👀",
   "account.reverseShares.description.empty": "Bạn chưa có chia sẻ ngược nào.",
   // showCreateReverseShareModal.tsx
@@ -188,113 +209,144 @@ export default {
   "account.reverseShares.modal.expiration.year-plural": "Năm",
   "account.reverseShares.modal.max-size.label": "Kích thước chia sẻ tối đa",
   "account.reverseShares.modal.send-email": "Gửi thông báo qua email",
-  "account.reverseShares.modal.send-email.description": "Gửi thông báo qua email cho bạn khi có chia sẻ được tạo bằng liên kết chia sẻ ngược này.",
+  "account.reverseShares.modal.send-email.description":
+    "Gửi thông báo qua email cho bạn khi có chia sẻ được tạo bằng liên kết chia sẻ ngược này.",
   "account.reverseShares.modal.simplified": "Chế độ đơn giản",
-  "account.reverseShares.modal.simplified.description": "Giúp người gửi tệp dễ dàng chia sẻ với bạn.\nHọ chỉ có thể chỉnh sửa tên và mô tả của lượt chia sẻ.",
+  "account.reverseShares.modal.simplified.description":
+    "Giúp người gửi tệp dễ dàng chia sẻ với bạn.\nHọ chỉ có thể chỉnh sửa tên và mô tả của lượt chia sẻ.",
   "account.reverseShares.modal.public-access": "Truy cập công khai",
-  "account.reverseShares.modal.public-access.description": "Cho phép bất kỳ ai cũng có thể xem các tệp được gửi qua liên kết chia sẻ ngược này. Nếu tắt, chỉ bạn với người gửi mới có thể xem được.",
-  "account.reverseShares.modal.max-use.label": "Max uses",
-  "account.reverseShares.modal.max-use.description": "The maximum amount of times this URL can be used to create a share.",
-  "account.reverseShare.never-expires": "This reverse share will never expire.",
-  "account.reverseShare.expires-on": "This reverse share will expire on {expiration}.",
+  "account.reverseShares.modal.public-access.description":
+    "Cho phép bất kỳ ai cũng có thể xem các tệp được gửi qua liên kết chia sẻ ngược này. Nếu tắt, chỉ bạn với người gửi mới có thể xem được.",
+  "account.reverseShares.modal.max-use.label": "Số lần sử dụng tối đa",
+  "account.reverseShares.modal.max-use.description":
+    "Số lần tối đa URL này có thể được sử dụng để tạo một lượt chia sẻ.",
+  "account.reverseShare.never-expires":
+    "Liên kết chia sẻ ngược này sẽ không bao giờ hết hạn.",
+  "account.reverseShare.expires-on":
+    "Liên kết chia sẻ ngược này sẽ hết hạn vào {expiration}.",
   "account.reverseShares.table.no-shares": "Chưa tạo chia sẻ nào",
-  "account.reverseShares.table.count.singular": "share",
+  "account.reverseShares.table.count.singular": "lượt chia sẻ",
   "account.reverseShares.table.count.plural": "chia sẻ",
   "account.reverseShares.table.shares": "Chia sẻ",
-  "account.reverseShares.table.remaining": "Remaining uses",
+  "account.reverseShares.table.remaining": "Số lần sử dụng còn lại",
   "account.reverseShares.table.max-size": "Kích thước chia sẻ tối đa",
   "account.reverseShares.table.expires": "Hết hạn vào",
-  "account.reverseShares.modal.reverse-share-link": "Reverse share link",
-  "account.reverseShares.modal.delete.title": "Delete reverse share",
-  "account.reverseShares.modal.delete.description": "Do you really want to delete this reverse share? If you do, the associated shares will be deleted as well.",
+  "account.reverseShares.modal.reverse-share-link": "Liên kết chia sẻ ngược",
+  "account.reverseShares.modal.delete.title": "Xóa chia sẻ ngược",
+  "account.reverseShares.modal.delete.description":
+    "Bạn có thực sự muốn xóa lượt chia sẻ ngược này không? Nếu bạn xóa, các lượt chia sẻ liên quan cũng sẽ bị xóa.",
   // END /account/reverseShares
 
   // /admin
   "admin.title": "Quản trị viên",
-  "admin.button.users": "User management",
-  "admin.button.shares": "Share management",
-  "admin.button.config": "Configuration",
+  "admin.button.users": "Quản lý người dùng",
+  "admin.button.shares": "Quản lý chia sẻ",
+  "admin.button.config": "Cấu hình",
   "admin.version": "Phiên bản",
   // END /admin
 
   // /admin/users
-  "admin.users.title": "User management",
+  "admin.users.title": "Quản lý người dùng",
   "admin.users.table.username": "Tên đăng nhập",
   "admin.users.table.email": "Email",
-  "admin.users.table.admin": "Admin",
-  "admin.users.table.storageQuota": "Storage quota",
-  "admin.users.table.maxShareSize": "Max share size",
-  "admin.users.edit.update.title": "Edit user: {username}",
-  "admin.users.edit.update.admin-privileges": "Admin privileges",
-  "admin.users.edit.update.email-verified": "Email verified",
-  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
-  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
-  "admin.users.edit.update.custom-storage-quota-limit": "Custom storage quota",
-  "admin.users.edit.update.custom-storage-quota-limit.description": "Limit the user's total storage usage across active shares",
+  "admin.users.table.admin": "Quản trị viên",
+  "admin.users.table.storageQuota": "Hạn mức lưu trữ",
+  "admin.users.table.maxShareSize": "Dung lượng chia sẻ tối đa",
+  "admin.users.edit.update.title": "Chỉnh sửa người dùng: {username}",
+  "admin.users.edit.update.admin-privileges": "Quyền quản trị viên",
+  "admin.users.edit.update.email-verified": "Email đã xác minh",
+  "admin.users.edit.update.custom-share-size-limit":
+    "Hạn mức kích thước chia sẻ tùy chỉnh",
+  "admin.users.edit.update.custom-share-size-limit.description":
+    "Ghi đè giới hạn tải lên chung cho người dùng này",
+  "admin.users.edit.update.custom-storage-quota-limit":
+    "Hạn mức lưu trữ tùy chỉnh",
+  "admin.users.edit.update.custom-storage-quota-limit.description":
+    "Giới hạn tổng dung lượng lưu trữ của người dùng trên tất cả các lượt chia sẻ đang hoạt động",
   "admin.users.edit.update.change-password.title": "Đổi mật khẩu",
   "admin.users.edit.update.change-password.field": "Mật khẩu mới",
   "admin.users.edit.update.change-password.button": "Đổi mật khẩu",
-  "admin.users.edit.update.notify.password.success": "Thay đổi mật khẩu thành công",
-  "admin.users.edit.delete.title": "Delete user: {username} ?",
-  "admin.users.edit.delete.description": "Do you really want to delete this user and all their shares?",
+  "admin.users.edit.update.notify.password.success":
+    "Thay đổi mật khẩu thành công",
+  "admin.users.edit.delete.title": "Xóa người dùng: {username} ?",
+  "admin.users.edit.delete.description":
+    "Bạn có thực sự muốn xóa người dùng này và tất cả các lượt chia sẻ của họ không?",
   // showCreateUserModal.tsx
-  "admin.users.modal.create.title": "Create user",
+  "admin.users.modal.create.title": "Tạo người dùng",
   "admin.users.modal.create.username": "Tên đăng nhập",
   "admin.users.modal.create.email": "Email",
   "admin.users.modal.create.password": "Mật khẩu",
-  "admin.users.modal.create.manual-password": "Set password manually",
-  "admin.users.modal.create.manual-password.description": "If not checked, the user will receive an email with a link to set their password.",
-  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
-  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
-  "admin.users.modal.create.custom-storage-quota-limit": "Custom storage quota",
-  "admin.users.modal.create.custom-storage-quota-limit.description": "Limit the user's total storage usage across active shares",
-  "admin.users.modal.create.admin": "Admin privileges",
-  "admin.users.modal.create.admin.description": "If checked, the user will be able to access the admin panel.",
+  "admin.users.modal.create.manual-password": "Đặt mật khẩu thủ công",
+  "admin.users.modal.create.manual-password.description":
+    "Nếu không chọn, người dùng sẽ nhận được email kèm liên kết để đặt mật khẩu của họ.",
+  "admin.users.modal.create.custom-share-size-limit":
+    "Hạn mức kích thước chia sẻ tùy chỉnh",
+  "admin.users.modal.create.custom-share-size-limit.description":
+    "Ghi đè giới hạn tải lên chung cho người dùng này",
+  "admin.users.modal.create.custom-storage-quota-limit":
+    "Hạn mức lưu trữ tùy chỉnh",
+  "admin.users.modal.create.custom-storage-quota-limit.description":
+    "Giới hạn tổng dung lượng lưu trữ của người dùng trên tất cả các lượt chia sẻ đang hoạt động",
+  "admin.users.modal.create.admin": "Quyền quản trị viên",
+  "admin.users.modal.create.admin.description":
+    "Nếu được chọn, người dùng sẽ có thể truy cập bảng quản trị.",
   // END /admin/users
 
   // /admin/shares
-  "admin.shares.title": "Share management",
-  "admin.shares.diskUsage": "Disk Usage",
-  "admin.shares.table.id": "Share ID",
+  "admin.shares.title": "Quản lý chia sẻ",
+  "admin.shares.diskUsage": "Dung lượng đĩa đã dùng",
+  "admin.shares.table.id": "ID chia sẻ",
   "admin.shares.table.username": "Người tạo",
   "admin.shares.table.visitors": "Lượng truy cập",
-  "admin.shares.table.expires": "Expires on",
-  "admin.shares.table.deletes": "Deletes on",
-  "admin.shares.edit.delete.title": "Delete share: {id}",
-  "admin.shares.edit.delete.description": "Do you really want to delete this share?",
+  "admin.shares.table.expires": "Hết hạn vào",
+  "admin.shares.table.deletes": "Xóa vào",
+  "admin.shares.edit.delete.title": "Xóa chia sẻ: {id}",
+  "admin.shares.edit.delete.description":
+    "Bạn có thực sự muốn xóa lượt chia sẻ này không?",
   // END /admin/shares
 
   // /upload
   "upload.title": "Tải lên",
-  "upload.notify.confirm-leave": "Are you sure you want to leave this page? Your upload will be canceled.",
-  "upload.notify.generic-error": "An error occurred while finishing your share.",
-  "upload.notify.count-failed": "{count} files failed to upload. Trying again.",
-  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
-  "upload.reverse-share.error.invalid.title": "Invalid reverse share link",
-  "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
+  "upload.notify.confirm-leave":
+    "Bạn có chắc chắn muốn rời khỏi trang này không? Quá trình tải lên của bạn sẽ bị hủy.",
+  "upload.notify.generic-error":
+    "Đã xảy ra lỗi trong khi hoàn tất lượt chia sẻ của bạn.",
+  "upload.notify.count-failed": "{count} tệp tải lên thất bại. Đang thử lại.",
+  "upload.notify.duplicate-skipped": "Đã bỏ qua tệp trùng lặp: {name}",
+  "upload.reverse-share.error.invalid.title":
+    "Liên kết chia sẻ ngược không hợp lệ",
+  "upload.reverse-share.error.invalid.description":
+    "This reverse share has expired or is invalid.",
   // Dropzone.tsx
-  "upload.dropzone.title": "Upload files",
-  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
-  "upload.dropzone.notify.file-too-big": "Your files exceed the maximum share size of {maxSize}.",
-  "upload.button.folder": "Upload folder",
-  "upload.button.folder.append": "Append folder",
-  "upload.button.add": "Add to upload",
+  "upload.dropzone.title": "Tải lên tệp",
+  "upload.dropzone.description":
+    "Kéo và thả tệp hoặc thư mục vào đây để bắt đầu chia sẻ hoặc 'Ctrl+V' để tải lên nội dung văn bản từ khay nhớ tạm. Chúng tôi chỉ chấp nhận tổng dung lượng tệp tối đa là {maxSize}.",
+  "upload.dropzone.notify.file-too-big":
+    "Các tệp của bạn vượt quá dung lượng chia sẻ tối đa {maxSize}.",
+  "upload.button.folder": "Tải lên thư mục",
+  "upload.button.folder.append": "Thêm thư mục",
+  "upload.button.add": "Thêm vào tải lên",
   // FileList.tsx
   "upload.filelist.name": "Tên",
   "upload.filelist.size": "Kích thước",
-  "upload.filelist.estimating": "Estimating...",
-  "upload.filelist.remaining": "{time} remaining",
+  "upload.filelist.estimating": "Đang ước tính...",
+  "upload.filelist.remaining": "Còn lại {time}",
   // showCreateUploadModal.tsx
-  "upload.modal.title": "Create Share",
-  "upload.modal.link.error.invalid": "Chỉ được phép sử dụng chữ, số, dấu gạch dưới và dấu gạch ngang",
+  "upload.modal.title": "Tạo chia sẻ",
+  "upload.modal.link.error.invalid":
+    "Chỉ được phép sử dụng chữ, số, dấu gạch dưới và dấu gạch ngang",
   "upload.modal.link.error.taken": "Liên kết đã được sử dụng",
-  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
-  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
+  "upload.modal.link.error.s3-session-not-found":
+    "Không tìm thấy phiên tải lên S3",
+  "upload.modal.link.error.s3-etag-missing":
+    "Thiếu tiêu đề ETag trong phản hồi từ S3. Hãy đảm bảo CORS hiển thị tiêu đề ETag.",
   "upload.modal.not-signed-in": "Bạn chưa đăng nhập",
-  "upload.modal.not-signed-in-description": "You will be unable to delete your share manually and view the visitor count.",
-  "upload.modal.expires.never": "never",
-  "upload.modal.expires.never-long": "Permanent share",
-  "upload.modal.expires.error.too-long": "Expiration date exceeds the maximum of {max}.",
+  "upload.modal.not-signed-in-description":
+    "Bạn sẽ không thể xóa chia sẻ của mình theo cách thủ công và xem số lượng khách truy cập.",
+  "upload.modal.expires.never": "không bao giờ",
+  "upload.modal.expires.never-long": "Chia sẻ vĩnh viễn",
+  "upload.modal.expires.error.too-long":
+    "Ngày hết hạn vượt quá mức tối đa {max}.",
   "upload.modal.link.label": "Liên kết",
   "upload.modal.expires.label": "Thời hạn",
   "upload.modal.expires.minute-singular": "Phút",
@@ -311,352 +363,510 @@ export default {
   "upload.modal.expires.year-plural": "Năm",
   "upload.modal.accordion.name-and-description.title": "Tên và miêu tả",
   "upload.modal.accordion.name-and-description.name.placeholder": "Tên",
-  "upload.modal.accordion.name-and-description.description.placeholder": "Note for the recipients of this share",
-  "upload.modal.accordion.email.title": "Email recipients",
-  "upload.modal.accordion.email.placeholder": "Enter email recipients",
+  "upload.modal.accordion.name-and-description.description.placeholder":
+    "Ghi chú cho những người nhận chia sẻ này",
+  "upload.modal.accordion.email.title": "Người nhận email",
+  "upload.modal.accordion.email.placeholder": "Nhập người nhận email",
   "upload.modal.accordion.email.invalid-email": "Địa chỉ email không hợp lệ",
-  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Chỉ giới hạn quyền truy cập cho những người nhận này (họ phải đăng nhập để truy cập)",
   "upload.modal.accordion.security.title": "Tùy chọn bảo mật",
   "upload.modal.accordion.security.password.label": "Bảo vệ bằng mật khẩu",
   "upload.modal.accordion.security.password.placeholder": "Không có mật khẩu",
   "upload.modal.accordion.security.max-views.label": "Lượt xem tối đa",
   "upload.modal.accordion.security.max-views.placeholder": "Không giới hạn",
   // showCompletedUploadModal.tsx
-  "upload.modal.completed.never-expires": "This share will never expire.",
-  "upload.modal.completed.expires-on": "This share will expire on {expiration}.",
-  "upload.modal.completed.share-ready": "Share ready",
-  "upload.modal.completed.notified-reverse-share-creator": "We have notified the creator of the reverse share. You can also manually share this link with them through other means.",
+  "upload.modal.completed.never-expires":
+    "Chia sẻ này sẽ không bao giờ hết hạn.",
+  "upload.modal.completed.expires-on":
+    "Chia sẻ này sẽ hết hạn vào {expiration}.",
+  "upload.modal.completed.share-ready": "Chia sẻ đã sẵn sàng",
+  "upload.modal.completed.notified-reverse-share-creator":
+    "Chúng tôi đã thông báo cho người tạo chia sẻ ngược. Bạn cũng có thể chia sẻ liên kết này với họ qua các phương thức khác.",
   // END /upload
 
   // /share/[id]
-  "share.title": "Share {shareId}",
-  "share.description": "Look what I've shared with you!",
-  "share.fileCount": "{count, plural, =1 {# file} other {# files}} · {size} (zip file may be smaller due to compression)",
-  "share.copy-text-contents": "Copy file contents to clipboard",
-  "share.error.visitor-limit-exceeded.title": "Visitor limit exceeded",
-  "share.error.visitor-limit-exceeded.description": "The visitor limit from this share has been exceeded.",
-  "share.error.removed.title": "Share removed",
-  "share.error.not-found.title": "Share not found",
-  "share.error.not-found.description": "The share you're looking for doesn't exist.",
-  "share.error.access-denied.title": "Private share",
-  "share.error.access-denied.description": "The current account does not have permission to access this share",
-  "share.error.restricted.title": "Restricted share",
-  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
-  "share.error.restricted.button": "Log in",
+  "share.title": "Chia sẻ {shareId}",
+  "share.description": "Hãy xem những gì tôi đã chia sẻ với bạn!",
+  "share.fileCount":
+    "{count, plural, =1 {# tệp} other {# tệp}} · {size} (tệp zip có thể nhỏ hơn do nén)",
+  "share.copy-text-contents": "Sao chép nội dung tệp vào khay nhớ tạm",
+  "share.error.visitor-limit-exceeded.title":
+    "Đã vượt quá giới hạn khách truy cập",
+  "share.error.visitor-limit-exceeded.description":
+    "Đã vượt quá giới hạn lượt truy cập của chia sẻ này.",
+  "share.error.removed.title": "Chia sẻ đã bị xóa",
+  "share.error.not-found.title": "Không tìm thấy chia sẻ",
+  "share.error.not-found.description":
+    "Chia sẻ bạn đang tìm kiếm không tồn tại.",
+  "share.error.access-denied.title": "Chia sẻ riêng tư",
+  "share.error.access-denied.description":
+    "Tài khoản hiện tại không có quyền truy cập vào chia sẻ này",
+  "share.error.restricted.title": "Chia sẻ bị hạn chế",
+  "share.error.restricted.description":
+    "Chia sẻ này được giới hạn cho những người nhận cụ thể. Vui lòng đăng nhập để truy cập.",
+  "share.error.restricted.button": "Đăng nhập",
   "share.modal.password.title": "Cần mật khẩu để mở khoá",
-  "share.modal.password.description": "Please enter the password to access this share.",
+  "share.modal.password.description":
+    "Vui lòng nhập mật khẩu để truy cập vào chia sẻ này.",
   "share.modal.password": "Mật khẩu",
   "share.modal.error.invalid-password": "Mật khẩu không hợp lệ",
   "share.button.download-all": "Tải xuống tất cả",
-  "share.notify.download-all-preparing": "The share is being prepared. Please try again in a few minutes.",
-  "share.notify.copied-contents": "File contents copied to clipboard",
-  "share.notify.copy-too-big-error": "File is too big to copy to clipboard",
-  "share.notify.copy-not-supported-error": "Copying to clipboard requires a HTTPS connection",
-  "share.modal.file-link": "File link",
+  "share.notify.download-all-preparing":
+    "Chia sẻ đang được chuẩn bị. Vui lòng thử lại sau vài phút.",
+  "share.notify.copied-contents":
+    "Nội dung tệp đã được sao chép vào khay nhớ tạm",
+  "share.notify.copy-too-big-error": "Tệp quá lớn để sao chép vào khay nhớ tạm",
+  "share.notify.copy-not-supported-error":
+    "Việc sao chép vào khay nhớ tạm yêu cầu kết nối HTTPS",
+  "share.modal.file-link": "Liên kết tệp",
   "share.table.name": "Tên",
   "share.table.size": "Kích thước",
-  "share.modal.file-preview.original_file": "View original file",
-  "share.modal.file-preview.error.not-supported.title": "Xem trước không được hỗ trợ",
-  "share.modal.file-preview.error.not-supported.description": "Previews are not supported for this type of files. Please download the file to view it.",
+  "share.modal.file-preview.original_file": "Xem tệp gốc",
+  "share.modal.file-preview.error.not-supported.title":
+    "Xem trước không được hỗ trợ",
+  "share.modal.file-preview.error.not-supported.description":
+    "Bản xem trước không được hỗ trợ cho loại tệp này. Vui lòng tải tệp xuống để xem.",
   // END /share/[id]
 
   // /share/[id]/edit
-  "share.edit.title": "Edit {shareId}",
-  "share.edit.append-upload": "Append file",
-  "share.edit.notify.generic-error": "An error occurred while finishing your share.",
-  "share.edit.notify.save-success": "Share updated successfully",
+  "share.edit.title": "Chỉnh sửa {shareId}",
+  "share.edit.append-upload": "Thêm tệp",
+  "share.edit.notify.generic-error":
+    "Đã xảy ra lỗi khi hoàn tất chia sẻ của bạn.",
+  "share.edit.notify.save-success": "Cập nhật chia sẻ thành công",
   // END /share/[id]/edit
 
   // /imprint
-  "imprint.title": "Imprint",
+  "imprint.title": "Thông tin pháp lý",
   // END /imprint
 
   // /privacy
-  "privacy.title": "Privacy Policy",
+  "privacy.title": "Chính sách bảo mật",
   // END /privacy
 
   // /admin/config
-  "admin.config.config-file-warning.title": "Configuration file present",
-  "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
-  "admin.config.title": "Configuration",
+  "admin.config.config-file-warning.title": "Có tệp cấu hình",
+  "admin.config.config-file-warning.description":
+    "Do bạn đang cấu hình Pingvin Share bằng tệp cấu hình, bạn không thể thay đổi cấu hình qua giao diện người dùng.",
+  "admin.config.title": "Cấu hình",
   "admin.config.category.general": "Tổng quan",
   "admin.config.category.appearance": "Giao diện",
-  "admin.config.category.security": "Security & Access",
-  "admin.config.category.share": "Share",
-  "admin.config.category.cache": "Cache",
+  "admin.config.category.security": "Bảo mật & Truy cập",
+  "admin.config.category.share": "Chia sẻ",
+  "admin.config.category.cache": "Bộ nhớ đệm",
   "admin.config.category.email": "Email",
   "admin.config.category.smtp": "SMTP",
-  "admin.config.category.oauth": "Social Login",
-  "admin.config.general.app-name": "App name",
-  "admin.config.general.app-name.description": "Name of the application",
-  "admin.config.general.default-language": "Default Language",
-  "admin.config.general.default-language.description": "This applies to all users, each user can still personalise their language in their profile.",
+  "admin.config.category.oauth": "Đăng nhập mạng xã hội",
+  "admin.config.general.app-name": "Tên ứng dụng",
+  "admin.config.general.app-name.description": "Tên của ứng dụng",
+  "admin.config.general.default-language": "Ngôn ngữ mặc định",
+  "admin.config.general.default-language.description":
+    "Cài đặt này áp dụng cho tất cả người dùng, mỗi người dùng vẫn có thể cá nhân hóa ngôn ngữ trong hồ sơ của họ.",
   "admin.config.appearance.theme-primary-color": "Màu chính của giao diện",
-  "admin.config.appearance.theme-primary-color.description": "Màu chính dùng cho nút, liên kết và điểm nhấn. Chọn tùy chỉnh để dùng màu ghi đè.",
+  "admin.config.appearance.theme-primary-color.description":
+    "Màu chính dùng cho nút, liên kết và điểm nhấn. Chọn tùy chỉnh để dùng màu ghi đè.",
   "admin.config.appearance.theme-primary-color-override": "Màu chính tùy chỉnh",
-  "admin.config.appearance.theme-primary-color-override.description": "Màu HEX ghi đè khi màu chính của giao diện được đặt là tùy chỉnh.",
+  "admin.config.appearance.theme-primary-color-override.description":
+    "Màu HEX ghi đè khi màu chính của giao diện được đặt là tùy chỉnh.",
   "admin.config.appearance.theme-font-preset": "Mẫu phông chữ",
-  "admin.config.appearance.theme-font-preset.description": "Mẫu phông chữ được tải lúc build. Chọn mặc định hệ thống hoặc một trong các Google Fonts đi kèm.",
-  "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
-  "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
+  "admin.config.appearance.theme-font-preset.description":
+    "Mẫu phông chữ được tải lúc build. Chọn mặc định hệ thống hoặc một trong các Google Fonts đi kèm.",
+  "admin.config.appearance.theme-color-scheme": "Bảng màu mặc định (khách)",
+  "admin.config.appearance.theme-color-scheme.description":
+    "Chế độ sáng/tối mặc định cho người dùng chưa đăng nhập. Người dùng đã đăng nhập sẽ sử dụng tùy chọn tài khoản của riêng họ.",
   "admin.config.appearance.theme-radius": "Bo góc giao diện",
-  "admin.config.appearance.theme-radius.description": "Bán kính bo góc mặc định dùng bởi các thành phần Mantine.",
+  "admin.config.appearance.theme-radius.description":
+    "Bán kính bo góc mặc định dùng bởi các thành phần Mantine.",
   "admin.config.appearance.custom-css": "CSS tùy chỉnh",
-  "admin.config.appearance.custom-css.description": "CSS toàn cục áp dụng cho frontend. Hãy dùng cẩn thận vì CSS không hợp lệ có thể ảnh hưởng giao diện.",
-  "admin.config.appearance.upload-progress-style": "Upload progress style",
-  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
-  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
-  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
-  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
+  "admin.config.appearance.custom-css.description":
+    "CSS toàn cục áp dụng cho frontend. Hãy dùng cẩn thận vì CSS không hợp lệ có thể ảnh hưởng giao diện.",
+  "admin.config.appearance.upload-progress-style": "Kiểu tiến trình tải lên",
+  "admin.config.appearance.upload-progress-style.description":
+    "Chọn cách hiển thị tiến trình tải lên trong danh sách tệp.",
+  "admin.config.appearance.upload-progress-style.circle": "Chỉ báo hình tròn",
+  "admin.config.appearance.upload-progress-style.circle-percentage":
+    "Hình tròn có phần trăm",
+  "admin.config.appearance.upload-progress-style.percentage-time":
+    "Phần trăm và thời gian còn lại",
   "admin.config.general.app-url": "URL ứng dụng",
-  "admin.config.general.app-url.description": "On which URL Pingvin Share is available",
-  "admin.config.security.secure-cookies": "Secure cookies",
-  "admin.config.security.secure-cookies.description": "Whether to set the secure flag on cookies. If enabled, the site will not function when accessed over HTTP.",
-  "admin.config.general.show-home-page": "Show home page",
-  "admin.config.general.show-home-page.description": "Whether to show the home page",
-  "admin.config.security.session-duration": "Session Duration",
-  "admin.config.security.session-duration.description": "Time after which a user must log in again (default: 3 months).",
+  "admin.config.general.app-url.description":
+    "URL mà Pingvin Share có thể truy cập",
+  "admin.config.security.secure-cookies": "Cookie bảo mật",
+  "admin.config.security.secure-cookies.description":
+    "Có đặt cờ bảo mật (secure) trên cookie hay không. Nếu bật, trang web sẽ không hoạt động khi truy cập qua HTTP.",
+  "admin.config.general.show-home-page": "Hiển thị trang chủ",
+  "admin.config.general.show-home-page.description":
+    "Có hiển thị trang chủ hay không",
+  "admin.config.security.session-duration": "Thời lượng phiên",
+  "admin.config.security.session-duration.description":
+    "Thời gian sau đó người dùng phải đăng nhập lại (mặc định: 3 tháng).",
   "admin.config.appearance.logo": "Logo",
-  "admin.config.appearance.logo.description": "Change your logo by uploading a new image. The image must be a PNG and should have the format 1:1.",
-  "admin.config.appearance.logo-dark": "Dark mode logo",
-  "admin.config.appearance.logo-dark.description": "Upload a separate logo for dark mode. The image must be a PNG and should have the format 1:1.",
+  "admin.config.appearance.logo.description":
+    "Thay đổi logo của bạn bằng cách tải lên hình ảnh mới. Hình ảnh phải là định dạng PNG và có tỷ lệ 1:1.",
+  "admin.config.appearance.logo-dark": "Logo chế độ tối",
+  "admin.config.appearance.logo-dark.description":
+    "Tải lên logo riêng cho chế độ tối. Hình ảnh phải là định dạng PNG và có tỷ lệ 1:1.",
   "admin.config.appearance.logo.placeholder": "Chọn ảnh",
-  "admin.config.security.custom-password-policy": "Custom password policy",
-  "admin.config.security.custom-password-policy.description": "Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.",
-  "admin.config.security.min-length": "Minimum length",
-  "admin.config.security.min-length.description": "Minimum number of characters required for a password.",
-  "admin.config.security.require-uppercase": "Require uppercase",
-  "admin.config.security.require-uppercase.description": "Whether to require at least one uppercase letter in the password.",
-  "admin.config.security.require-lowercase": "Require lowercase",
-  "admin.config.security.require-lowercase.description": "Whether to require at least one lowercase letter in the password.",
-  "admin.config.security.require-number": "Require number",
-  "admin.config.security.require-number.description": "Whether to require at least one number in the password.",
-  "admin.config.security.require-special-character": "Require special character",
-  "admin.config.security.require-special-character.description": "Whether to require at least one special character in the password.",
+  "admin.config.security.custom-password-policy":
+    "Chính sách mật khẩu tùy chỉnh",
+  "admin.config.security.custom-password-policy.description":
+    "Có bật tùy chỉnh chính sách mật khẩu hay không. Nếu tắt, chính sách mật khẩu mặc định tối thiểu 8 ký tự sẽ được sử dụng.",
+  "admin.config.security.min-length": "Độ dài tối thiểu",
+  "admin.config.security.min-length.description":
+    "Số lượng ký tự tối thiểu cần thiết cho mật khẩu.",
+  "admin.config.security.require-uppercase": "Yêu cầu chữ hoa",
+  "admin.config.security.require-uppercase.description":
+    "Có yêu cầu ít nhất một chữ cái viết hoa trong mật khẩu hay không.",
+  "admin.config.security.require-lowercase": "Yêu cầu chữ thường",
+  "admin.config.security.require-lowercase.description":
+    "Có yêu cầu ít nhất một chữ cái viết thường trong mật khẩu hay không.",
+  "admin.config.security.require-number": "Yêu cầu chữ số",
+  "admin.config.security.require-number.description":
+    "Có yêu cầu ít nhất một chữ số trong mật khẩu hay không.",
+  "admin.config.security.require-special-character": "Yêu cầu ký tự đặc biệt",
+  "admin.config.security.require-special-character.description":
+    "Có yêu cầu ít nhất một ký tự đặc biệt trong mật khẩu hay không.",
   "admin.config.cache.ttl": "TTL",
-  "admin.config.cache.ttl.description": "Time in second to keep information inside the cache.",
-  "admin.config.cache.max-items": "Maximum items",
-  "admin.config.cache.max-items.description": "Maximum number of items inside the cache.",
-  "admin.config.cache.redis-enabled": "Redis enabled",
-  "admin.config.cache.redis-enabled.description": "Normally Pingvin Share caches information in memory. If you run multiple instances of Pingvin Share, you need to enable Redis caching to share the cache between the instances.",
-  "admin.config.cache.redis-url": "Redis URL",
-  "admin.config.cache.redis-url.description": "Url to connect to the Redis instance used for caching.",
-  "admin.config.cache.button.test-redis": "Test Redis connection",
-  "admin.config.cache.test-redis.success": "Connected to Redis successfully",
-  "admin.config.cache.test-redis.success-disabled": "Connected to Redis successfully (Redis caching is currently disabled).",
-  "admin.config.cache.test-redis.modal.error.title": "Failed to connect to Redis",
-  "admin.config.cache.test-redis.modal.error.description": "While connecting to Redis, the following error occurred:",
-  "admin.config.cache.test-redis.modal.save.title": "Save configuration",
-  "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
-  "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
-  "admin.config.email.send-html-emails": "Enable HTML email compatibility",
-  "admin.config.email.send-html-emails.description": "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
-  "admin.config.share.enable-share-email-recipients": "Enable email recipient sharing",
-  "admin.config.share.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
-  "admin.config.email.share-recipients-subject": "Share recipients subject",
-  "admin.config.email.share-recipients-subject.description": "Subject of the email which gets sent to the share recipients.",
-  "admin.config.email.share-recipients-message": "Share recipients message",
-  "admin.config.email.share-recipients-message.description": "Message which gets sent to the share recipients. Available variables:\n {creator} - The username of the creator of the share\n {creatorEmail} - The email of the creator of the share\n {shareUrl} - The URL of the share\n {desc} - The description of the share\n {expires} - The expiration date of the share\n These variables will be replaced with the actual value.",
-  "admin.config.email.reverse-share-subject": "Reverse share subject",
-  "admin.config.email.reverse-share-subject.description": "Subject of the sent email when someone created a share with your reverse share link.",
-  "admin.config.email.reverse-share-message": "Reverse share message",
-  "admin.config.email.reverse-share-message.description": "Message which gets sent when someone created a share with your reverse share link. {shareUrl} will be replaced with the creator's name and the share URL.",
-  "admin.config.email.reset-password-subject": "Reset password subject",
-  "admin.config.email.reset-password-subject.description": "Subject of the sent email when a user requests a password reset.",
-  "admin.config.email.reset-password-message": "Reset password message",
-  "admin.config.email.reset-password-message.description": "Message which gets sent when a user requests a password reset. {url} will be replaced with the reset password URL.",
-  "admin.config.email.invite-subject": "Invite subject",
-  "admin.config.email.invite-subject.description": "Subject of the sent email when an admin invites a user.",
-  "admin.config.email.invite-message": "Invite message",
-  "admin.config.email.invite-message.description": "Message which gets sent when an admin invites a user. {url} will be replaced with the invite URL, {email} with the email and {password} with the users password.",
-  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
-  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
-  "admin.config.share.enable-share-download-notifications": "Enable download notifications",
-  "admin.config.share.enable-share-download-notifications.description": "Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.",
-  "admin.config.email.share-download-notification-subject": "Download notification subject",
-  "admin.config.email.share-download-notification-subject.description": "Subject of the email which gets sent to the share creator when a recipient downloads a file.",
-  "admin.config.email.share-download-notification-message": "Download notification message",
-  "admin.config.email.share-download-notification-message.description": "Message which gets sent to the share creator when a recipient downloads a file. Available variables:\n {recipientEmail} - The email of the recipient\n {fileName} - The downloaded file name\n {shareUrl} - The URL of the share",
-  "admin.config.security.enable-email-verification": "Enable email verification",
-  "admin.config.security.enable-email-verification.description": "Whether to require users to verify their email address before being able to sign in. This can only be enabled if SMTP is activated.",
-  "admin.config.email.verification-subject": "Verification subject",
-  "admin.config.email.verification-subject.description": "Subject of the email which gets sent to the user when they sign up.",
-  "admin.config.email.verification-message": "Verification message",
-  "admin.config.email.verification-message.description": "Message which gets sent to the user when they sign up. {url} will be replaced with the verification URL.",
+  "admin.config.cache.ttl.description":
+    "Thời gian tính bằng giây để giữ thông tin trong bộ nhớ đệm.",
+  "admin.config.cache.max-items": "Số lượng mục tối đa",
+  "admin.config.cache.max-items.description":
+    "Số lượng mục tối đa trong bộ nhớ đệm.",
+  "admin.config.cache.redis-enabled": "Đã bật Redis",
+  "admin.config.cache.redis-enabled.description":
+    "Thông thường Pingvin Share lưu thông tin vào bộ nhớ đệm trong RAM. Nếu bạn chạy nhiều phiên bản Pingvin Share, bạn cần bật bộ nhớ đệm Redis để chia sẻ bộ nhớ đệm giữa các phiên bản.",
+  "admin.config.cache.redis-url": "URL Redis",
+  "admin.config.cache.redis-url.description":
+    "URL để kết nối với phiên bản Redis được sử dụng làm bộ nhớ đệm.",
+  "admin.config.cache.button.test-redis": "Kiểm tra kết nối Redis",
+  "admin.config.cache.test-redis.success": "Đã kết nối với Redis thành công",
+  "admin.config.cache.test-redis.success-disabled":
+    "Đã kết nối với Redis thành công (bộ nhớ đệm Redis hiện đang tắt).",
+  "admin.config.cache.test-redis.modal.error.title":
+    "Kết nối với Redis thất bại",
+  "admin.config.cache.test-redis.modal.error.description":
+    "Trong khi kết nối với Redis, đã xảy ra lỗi sau:",
+  "admin.config.cache.test-redis.modal.save.title": "Lưu cấu hình",
+  "admin.config.cache.test-redis.modal.save.description":
+    "Để tiếp tục, trước tiên bạn cần lưu cấu hình. Bạn có muốn lưu cấu hình và kiểm tra kết nối Redis không?",
+  "admin.config.cache.test-redis.modal.save.confirm": "Lưu và kiểm tra",
+  "admin.config.email.send-html-emails": "Bật tương thích email HTML",
+  "admin.config.email.send-html-emails.description":
+    "Nếu bật, email sẽ được gửi ở định dạng HTML. Đảm bảo các mẫu email được cập nhật để sử dụng HTML.",
+  "admin.config.share.enable-share-email-recipients":
+    "Bật chia sẻ với người nhận qua email",
+  "admin.config.share.enable-share-email-recipients.description":
+    "Có cho phép chia sẻ qua email với người nhận hay không. Tính năng này chỉ có thể được bật nếu SMTP đã được kích hoạt.",
+  "admin.config.email.share-recipients-subject":
+    "Chủ đề email gửi người nhận chia sẻ",
+  "admin.config.email.share-recipients-subject.description":
+    "Chủ đề của email được gửi đến những người nhận chia sẻ.",
+  "admin.config.email.share-recipients-message":
+    "Nội dung email gửi người nhận chia sẻ",
+  "admin.config.email.share-recipients-message.description":
+    "Nội dung được gửi đến những người nhận chia sẻ. Các biến khả dụng:\n {creator} - Tên đăng nhập của người tạo chia sẻ\n {creatorEmail} - Email của người tạo chia sẻ\n {shareUrl} - URL của lượt chia sẻ\n {desc} - Mô tả của lượt chia sẻ\n {expires} - Ngày hết hạn của lượt chia sẻ\n Các biến này sẽ được thay thế bằng giá trị thực tế.",
+  "admin.config.email.reverse-share-subject": "Chủ đề email chia sẻ ngược",
+  "admin.config.email.reverse-share-subject.description":
+    "Chủ đề của email được gửi khi ai đó tạo chia sẻ bằng liên kết chia sẻ ngược của bạn.",
+  "admin.config.email.reverse-share-message": "Nội dung email chia sẻ ngược",
+  "admin.config.email.reverse-share-message.description":
+    "Nội dung được gửi khi ai đó tạo chia sẻ bằng liên kết chia sẻ ngược của bạn. {shareUrl} sẽ được thay thế bằng tên của người tạo và URL chia sẻ.",
+  "admin.config.email.reset-password-subject": "Chủ đề email đặt lại mật khẩu",
+  "admin.config.email.reset-password-subject.description":
+    "Chủ đề của email được gửi khi người dùng yêu cầu đặt lại mật khẩu.",
+  "admin.config.email.reset-password-message":
+    "Nội dung email đặt lại mật khẩu",
+  "admin.config.email.reset-password-message.description":
+    "Nội dung được gửi khi người dùng yêu cầu đặt lại mật khẩu. {url} sẽ được thay thế bằng URL đặt lại mật khẩu.",
+  "admin.config.email.invite-subject": "Chủ đề email mời",
+  "admin.config.email.invite-subject.description":
+    "Chủ đề của email được gửi khi quản trị viên mời người dùng.",
+  "admin.config.email.invite-message": "Nội dung email mời",
+  "admin.config.email.invite-message.description":
+    "Nội dung được gửi khi quản trị viên mời người dùng. {url} sẽ được thay thế bằng URL mời, {email} bằng email của người dùng và {password} bằng mật khẩu của người dùng.",
+  "admin.config.email.share-recipients-reply-to-creator":
+    "Đặt Reply-To thành email của người tạo",
+  "admin.config.email.share-recipients-reply-to-creator.description":
+    "Có đặt tiêu đề Reply-To thành địa chỉ email của người dùng đã tạo chia sẻ hay không.",
+  "admin.config.share.enable-share-download-notifications":
+    "Bật thông báo tải xuống",
+  "admin.config.share.enable-share-download-notifications.description":
+    "Có gửi email cho người tạo chia sẻ khi người nhận qua email tải xuống tệp hay không. Yêu cầu bật SMTP và chia sẻ người nhận qua email.",
+  "admin.config.email.share-download-notification-subject":
+    "Chủ đề thông báo tải xuống",
+  "admin.config.email.share-download-notification-subject.description":
+    "Chủ đề của email được gửi đến người tạo chia sẻ khi người nhận tải xuống tệp.",
+  "admin.config.email.share-download-notification-message":
+    "Nội dung thông báo tải xuống",
+  "admin.config.email.share-download-notification-message.description":
+    "Nội dung được gửi đến người tạo chia sẻ khi người nhận tải xuống tệp. Các biến khả dụng:\n {recipientEmail} - Email của người nhận\n {fileName} - Tên tệp đã tải xuống\n {shareUrl} - URL của lượt chia sẻ",
+  "admin.config.security.enable-email-verification": "Bật xác minh email",
+  "admin.config.security.enable-email-verification.description":
+    "Có yêu cầu người dùng xác minh địa chỉ email của họ trước khi có thể đăng nhập hay không. Tính năng này chỉ có thể được bật nếu SMTP đã được kích hoạt.",
+  "admin.config.email.verification-subject": "Chủ đề xác minh",
+  "admin.config.email.verification-subject.description":
+    "Chủ đề của email được gửi cho người dùng khi họ đăng ký.",
+  "admin.config.email.verification-message": "Nội dung xác minh",
+  "admin.config.email.verification-message.description":
+    "Nội dung được gửi cho người dùng khi họ đăng ký. {url} sẽ được thay thế bằng URL xác minh.",
   "admin.config.security.allow-registration": "Cho phép đăng ký",
-  "admin.config.security.allow-registration.description": "Whether registration is allowed",
-  "admin.config.security.allow-unauthenticated-shares": "Allow unauthenticated shares",
-  "admin.config.security.allow-unauthenticated-shares.description": "Whether unauthenticated users can create shares",
-  "admin.config.share.default-expiration": "Default expiration",
-  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
-  "admin.config.share.max-expiration": "Max expiration",
-  "admin.config.share.max-expiration.description": "Maximum share expiration. Set to 0 to allow unlimited expiration.",
-  "admin.config.share.share-id-length": "Default share ID length",
-  "admin.config.share.share-id-length.description": "Default length for the generated ID of a share. This value is also used to generate links for reverse shares. A value below 8 is not considered secure.",
+  "admin.config.security.allow-registration.description":
+    "Có cho phép đăng ký hay không",
+  "admin.config.security.allow-unauthenticated-shares":
+    "Cho phép chia sẻ không cần xác thực",
+  "admin.config.security.allow-unauthenticated-shares.description":
+    "Có cho phép người dùng chưa xác thực tạo chia sẻ hay không",
+  "admin.config.share.default-expiration": "Hạn hết hạn mặc định",
+  "admin.config.share.default-expiration.description":
+    "Thời gian hết hạn mặc định được chọn khi tạo chia sẻ mới.",
+  "admin.config.share.max-expiration": "Hạn hết hạn tối đa",
+  "admin.config.share.max-expiration.description":
+    "Thời gian hết hạn chia sẻ tối đa. Đặt thành 0 để cho phép thời hạn không giới hạn.",
+  "admin.config.share.share-id-length": "Độ dài ID chia sẻ mặc định",
+  "admin.config.share.share-id-length.description":
+    "Độ dài mặc định cho ID được tạo của một chia sẻ. Giá trị này cũng được sử dụng để tạo liên kết cho chia sẻ ngược. Giá trị dưới 8 được coi là không an toàn.",
   "admin.config.share.max-size": "Kích thước tối đa",
   "admin.config.share.max-size.description": "Kích thước tối đa",
   "admin.config.share.zip-compression-level": "Cấp độ nén Zip",
-  "admin.config.share.zip-compression-level.description": "Adjust the level to balance between file size and compression speed. Valid values range from 0 to 9, with 0 being no compression and 9 being maximum compression. ",
+  "admin.config.share.zip-compression-level.description":
+    "Điều chỉnh mức độ để cân bằng giữa kích thước tệp và tốc độ nén. Các giá trị hợp lệ từ 0 đến 9, trong đó 0 là không nén và 9 là nén tối đa. ",
   "admin.config.share.chunk-size": "Kích cỡ mảnh",
-  "admin.config.share.chunk-size.description": "Adjust the chunk size for your uploads to balance efficiency and reliability according to your internet connection. Smaller chunks can enhance success rates for unstable connections, while larger chunks make uploads faster for stable connections.",
-  "admin.config.share.auto-open-share-modal": "Auto open create share modal",
-  "admin.config.share.auto-open-share-modal.description": "The share creation modal automatically appears when a user selects files, eliminating the need to manually click the button.",
-  "admin.config.security.allow-admin-access-all-shares": "Allow admin access to all shares",
-  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
-  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
-  "admin.config.security.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
-  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
-  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
-  "admin.config.share.file-retention-period": "File retention period",
-  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
-  "admin.config.smtp.enabled": "Enable",
-  "admin.config.smtp.enabled.description": "Whether SMTP is enabled. Only set this to true if you entered the host, port, email, user and password of your SMTP server.",
+  "admin.config.share.chunk-size.description":
+    "Điều chỉnh kích thước phân đoạn cho các lần tải lên của bạn để cân bằng giữa hiệu quả và độ tin cậy theo kết nối internet. Các phân đoạn nhỏ hơn có thể nâng cao tỷ lệ thành công đối với các kết nối không ổn định, trong khi các phân đoạn lớn hơn giúp tải lên nhanh hơn đối với các kết nối ổn định.",
+  "admin.config.share.auto-open-share-modal": "Tự động mở cửa sổ tạo chia sẻ",
+  "admin.config.share.auto-open-share-modal.description":
+    "Cửa sổ tạo chia sẻ sẽ tự động xuất hiện khi người dùng chọn tệp, loại bỏ nhu cầu nhấp vào nút theo cách thủ công.",
+  "admin.config.security.allow-admin-access-all-shares":
+    "Cho phép quản trị viên truy cập tất cả các lượt chia sẻ",
+  "admin.config.share.reverse-share-simple-only":
+    "Bắt buộc chế độ đơn giản cho chia sẻ ngược",
+  "admin.config.share.reverse-share-simple-only.description":
+    "Bắt buộc chia sẻ ngược được tạo ở chế độ đơn giản. Nếu tắt, người tạo chia sẻ ngược có thể chọn giữa chế độ đơn giản và nâng cao.",
+  "admin.config.security.allow-admin-access-all-shares.description":
+    "Cho phép quản trị viên truy cập tất cả các lượt chia sẻ, ngay cả khi chúng được bảo vệ bằng mật khẩu, đã hết hạn hoặc bị xóa.",
+  "admin.config.share.enable-user-recipients":
+    "Bật chia sẻ với người dùng đã đăng ký",
+  "admin.config.share.enable-user-recipients.description":
+    "Khi được bật, các lượt chia sẻ được gửi đến địa chỉ email của người dùng đã đăng ký sẽ tự động xuất hiện trong tài khoản của họ. Người dùng cũng có thể hạn chế quyền truy cập chia sẻ chỉ dành cho những người nhận được chỉ định.",
+  "admin.config.share.file-retention-period": "Thời gian lưu giữ tệp",
+  "admin.config.share.file-retention-period.description":
+    "Thời gian các tệp được giữ lại sau khi chia sẻ hết hạn hoặc bị xóa. Chỉ hữu ích nếu 'Cho phép quản trị viên truy cập tất cả các lượt chia sẻ' cũng được bật. Đặt thành -1 để giữ tệp mãi mãi.",
+  "admin.config.smtp.enabled": "Bật",
+  "admin.config.smtp.enabled.description":
+    "Có bật SMTP hay không. Chỉ đặt giá trị này thành true nếu bạn đã nhập máy chủ, cổng, email, người dùng và mật khẩu của máy chủ SMTP.",
   "admin.config.smtp.host": "Máy chủ",
-  "admin.config.smtp.host.description": "Host of the SMTP server",
+  "admin.config.smtp.host.description": "Máy chủ của máy chủ SMTP",
   "admin.config.smtp.port": "Cổng",
-  "admin.config.smtp.port.description": "Port of the SMTP server",
+  "admin.config.smtp.port.description": "Cổng của máy chủ SMTP",
   "admin.config.smtp.email": "Email",
-  "admin.config.smtp.email.description": "Email address from which the emails get sent",
+  "admin.config.smtp.email.description": "Địa chỉ email gửi thư đi",
   "admin.config.smtp.username": "Tên đăng nhập",
-  "admin.config.smtp.username.description": "Username of the SMTP server",
+  "admin.config.smtp.username.description": "Tên đăng nhập của máy chủ SMTP",
   "admin.config.smtp.password": "Mật khẩu",
-  "admin.config.smtp.password.description": "Password of the SMTP server",
+  "admin.config.smtp.password.description": "Mật khẩu của máy chủ SMTP",
   "admin.config.smtp.button.test": "Gửi email kiểm tra",
-  "admin.config.smtp.test-email.success": "Email sent successfully",
-  "admin.config.smtp.test-email.error.title": "Failed to send email",
-  "admin.config.smtp.test-email.error.description": "While sending the test email, the following error occurred:",
-  "admin.config.smtp.test-email.save.title": "Save configuration",
-  "admin.config.smtp.test-email.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and send the test email?",
-  "admin.config.smtp.test-email.save.confirm": "Save and send",
-  "admin.config.smtp.allow-unauthorized-certificates": "Trust unauthorized SMTP server certificates",
-  "admin.config.smtp.allow-unauthorized-certificates.description": "Only set this to true if you need to trust self signed certificates.",
+  "admin.config.smtp.test-email.success": "Đã gửi email thành công",
+  "admin.config.smtp.test-email.error.title": "Gửi email thất bại",
+  "admin.config.smtp.test-email.error.description":
+    "Trong khi gửi email thử nghiệm, đã xảy ra lỗi sau:",
+  "admin.config.smtp.test-email.save.title": "Lưu cấu hình",
+  "admin.config.smtp.test-email.save.description":
+    "Để tiếp tục, trước tiên bạn cần lưu cấu hình. Bạn có muốn lưu cấu hình và gửi email thử nghiệm không?",
+  "admin.config.smtp.test-email.save.confirm": "Lưu và gửi",
+  "admin.config.smtp.allow-unauthorized-certificates":
+    "Tin cậy chứng chỉ máy chủ SMTP trái phép",
+  "admin.config.smtp.allow-unauthorized-certificates.description":
+    "Chỉ đặt giá trị này thành true nếu bạn cần tin cậy các chứng chỉ tự ký.",
   "admin.config.oauth.allow-registration": "Cho phép đăng ký",
-  "admin.config.oauth.allow-registration.description": "Allow users to register via social login",
-  "admin.config.oauth.ignore-totp": "Ignore TOTP",
-  "admin.config.oauth.ignore-totp.description": "Whether to ignore TOTP when user using social login",
-  "admin.config.oauth.disable-password": "Disable password login",
-  "admin.config.oauth.disable-password.description": "Whether to disable password login\nMake sure that an OAuth provider is properly configured before activating this configuration to avoid being locked out.",
+  "admin.config.oauth.allow-registration.description":
+    "Cho phép người dùng đăng ký thông qua đăng nhập mạng xã hội",
+  "admin.config.oauth.ignore-totp": "Bỏ qua TOTP",
+  "admin.config.oauth.ignore-totp.description":
+    "Có bỏ qua TOTP khi người dùng đăng nhập bằng mạng xã hội hay không",
+  "admin.config.oauth.disable-password": "Tắt đăng nhập bằng mật khẩu",
+  "admin.config.oauth.disable-password.description":
+    "Có tắt tính năng đăng nhập bằng mật khẩu hay không\nHãy chắc chắn rằng nhà cung cấp OAuth đã được cấu hình đúng cách trước khi kích hoạt cấu hình này để tránh bị khóa tài khoản.",
   "admin.config.oauth.github-enabled": "GitHub",
-  "admin.config.oauth.github-enabled.description": "Whether GitHub login is enabled",
+  "admin.config.oauth.github-enabled.description":
+    "Có bật đăng nhập bằng GitHub hay không",
   "admin.config.oauth.github-client-id": "GitHub Client ID",
-  "admin.config.oauth.github-client-id.description": "Client ID of the GitHub OAuth app",
+  "admin.config.oauth.github-client-id.description":
+    "Client ID của ứng dụng OAuth GitHub",
   "admin.config.oauth.github-client-secret": "GitHub Client secret",
-  "admin.config.oauth.github-client-secret.description": "Client secret of the GitHub OAuth app",
+  "admin.config.oauth.github-client-secret.description":
+    "Client secret của ứng dụng OAuth GitHub",
   "admin.config.oauth.google-enabled": "Google",
-  "admin.config.oauth.google-enabled.description": "Whether Google login is enabled",
+  "admin.config.oauth.google-enabled.description":
+    "Có bật đăng nhập bằng Google hay không",
   "admin.config.oauth.google-client-id": "Google Client ID",
-  "admin.config.oauth.google-client-id.description": "Client ID of the Google OAuth app",
+  "admin.config.oauth.google-client-id.description":
+    "Client ID của ứng dụng OAuth Google",
   "admin.config.oauth.google-client-secret": "Google Client Secret",
-  "admin.config.oauth.google-client-secret.description": "Client secret of the Google OAuth app",
+  "admin.config.oauth.google-client-secret.description":
+    "Client secret của ứng dụng OAuth Google",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
-  "admin.config.oauth.microsoft-enabled.description": "Whether Microsoft login is enabled",
+  "admin.config.oauth.microsoft-enabled.description":
+    "Có bật đăng nhập bằng Microsoft hay không",
   "admin.config.oauth.microsoft-tenant": "Microsoft Tenant",
-  "admin.config.oauth.microsoft-tenant.description": "Tenant ID of the Microsoft OAuth app\ncommon: Users with both a personal Microsoft account and a work or school account from Microsoft Entra ID can sign in to the application. organizations: Only users with work or school accounts from Microsoft Entra ID can sign in to the application.\nconsumers: Only users with a personal Microsoft account can sign in to the application.\ndomain name of the Microsoft Entra tenant or the tenant ID in GUID format: Only users from a specific Microsoft Entra tenant (directory members with a work or school account or directory guests with a personal Microsoft account) can sign in to the application.",
+  "admin.config.oauth.microsoft-tenant.description":
+    "ID Tenant của ứng dụng OAuth Microsoft\ncommon: Người dùng có cả tài khoản Microsoft cá nhân và tài khoản cơ quan hoặc trường học từ Microsoft Entra ID đều có thể đăng nhập vào ứng dụng.\norganizations: Chỉ người dùng có tài khoản cơ quan hoặc trường học từ Microsoft Entra ID mới có thể đăng nhập vào ứng dụng.\nconsumers: Chỉ người dùng có tài khoản Microsoft cá nhân mới có thể đăng nhập vào ứng dụng.\nTên miền đối tượng thuê Microsoft Entra hoặc ID đối tượng thuê định dạng GUID: Chỉ người dùng trong đối tượng thuê Microsoft Entra cụ thể mới có thể đăng nhập vào ứng dụng (bao gồm các thành viên thư mục có tài khoản cơ quan hoặc trường học và khách thư mục có tài khoản Microsoft cá nhân).",
   "admin.config.oauth.microsoft-client-id": "Microsoft Client ID",
-  "admin.config.oauth.microsoft-client-id.description": "Client ID of the Microsoft OAuth app",
+  "admin.config.oauth.microsoft-client-id.description":
+    "Client ID của ứng dụng OAuth Microsoft",
   "admin.config.oauth.microsoft-client-secret": "Microsoft Client secret",
-  "admin.config.oauth.microsoft-client-secret.description": "Client secret of the Microsoft OAuth app",
+  "admin.config.oauth.microsoft-client-secret.description":
+    "Client secret của ứng dụng OAuth Microsoft",
   "admin.config.oauth.discord-enabled": "Discord",
-  "admin.config.oauth.discord-enabled.description": "Whether Discord login is enabled",
-  "admin.config.oauth.discord-limited-users": "Discord limited users",
-  "admin.config.oauth.discord-limited-users.description": "Limit signing in to specific users by their Discord ID. Leave it blank to disable.",
-  "admin.config.oauth.discord-limited-guild": "Discord limited server ID",
-  "admin.config.oauth.discord-limited-guild.description": "Limit signing in to users in a specific server. Leave it blank to disable.",
+  "admin.config.oauth.discord-enabled.description":
+    "Có bật đăng nhập bằng Discord hay không",
+  "admin.config.oauth.discord-limited-users": "Người dùng Discord bị giới hạn",
+  "admin.config.oauth.discord-limited-users.description":
+    "Chỉ giới hạn đăng nhập cho các ID người dùng Discord cụ thể. Để trống để tắt.",
+  "admin.config.oauth.discord-limited-guild": "ID máy chủ Discord bị giới hạn",
+  "admin.config.oauth.discord-limited-guild.description":
+    "Giới hạn đăng nhập cho người dùng trong một máy chủ cụ thể. Để trống để tắt.",
   "admin.config.oauth.discord-client-id": "Discord Client ID",
-  "admin.config.oauth.discord-client-id.description": "Client ID of the Discord OAuth app",
+  "admin.config.oauth.discord-client-id.description":
+    "Client ID của ứng dụng OAuth Discord",
   "admin.config.oauth.discord-client-secret": "Discord Client secret",
-  "admin.config.oauth.discord-client-secret.description": "Client secret of the Discord OAuth app",
+  "admin.config.oauth.discord-client-secret.description":
+    "Client secret của ứng dụng OAuth Discord",
   "admin.config.oauth.oidc-enabled": "OpenID Connect",
-  "admin.config.oauth.oidc-enabled.description": "Whether OpenID Connect login is enabled",
+  "admin.config.oauth.oidc-enabled.description":
+    "Có bật đăng nhập bằng OpenID Connect hay không",
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect Discovery URI",
-  "admin.config.oauth.oidc-discovery-uri.description": "Discovery URI of the OpenID Connect OAuth app",
-  "admin.config.oauth.oidc-sign-out": "Sign out from OpenID Connect",
-  "admin.config.oauth.oidc-sign-out.description": "Whether the “Sign out” button will sign out from the OpenID Connect provider",
+  "admin.config.oauth.oidc-discovery-uri.description":
+    "Discovery URI của ứng dụng OAuth OpenID Connect",
+  "admin.config.oauth.oidc-sign-out": "Đăng xuất khỏi OpenID Connect",
+  "admin.config.oauth.oidc-sign-out.description":
+    "Nút “Đăng xuất” có đăng xuất khỏi nhà cung cấp OpenID Connect hay không",
   "admin.config.oauth.oidc-scope": "OpenID Connect scope",
-  "admin.config.oauth.oidc-scope.description": "Scopes which should be requested from the OpenID Connect provider.",
+  "admin.config.oauth.oidc-scope.description":
+    "Các phạm vi (scope) cần yêu cầu từ nhà cung cấp OpenID Connect.",
   "admin.config.oauth.oidc-username-claim": "OpenID Connect username claim",
-  "admin.config.oauth.oidc-username-claim.description": "Username claim in OpenID Connect ID token. Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-path": "Path to roles in OpenID Connect token",
-  "admin.config.oauth.oidc-role-path.description": "Must be a valid JMES path referencing an array of roles. " + "Managing access rights using OpenID Connect roles is only recommended if no other identity provider is configured and password login is disabled. " + "Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-general-access": "OpenID Connect role for general access",
-  "admin.config.oauth.oidc-role-general-access.description": "Role required for general access. Must be present in a user’s roles for them to log in. " + "Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-admin-access": "OpenID Connect role for admin access",
-  "admin.config.oauth.oidc-role-admin-access.description": "Role required for administrative access. Must be present in a user’s roles for them to access the admin panel. " + "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-username-claim.description":
+    "Username claim trong token ID OpenID Connect. Để trống nếu bạn không biết cấu hình này là gì.",
+  "admin.config.oauth.oidc-role-path":
+    "Đường dẫn đến các vai trò trong token OpenID Connect",
+  "admin.config.oauth.oidc-role-path.description":
+    "Phải là đường dẫn JMESPath hợp lệ tham chiếu đến một mảng các vai trò. Quản lý quyền truy cập bằng các vai trò OpenID Connect chỉ được khuyến nghị nếu không có nhà cung cấp danh tính nào khác được định cấu hình và đăng nhập bằng mật khẩu bị tắt. Để trống nếu bạn không biết cấu hình này là gì." +
+    "Managing access rights using OpenID Connect roles is only recommended if no other identity provider is configured and password login is disabled. " +
+    "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-general-access":
+    "Vai trò OpenID Connect cho quyền truy cập chung",
+  "admin.config.oauth.oidc-role-general-access.description":
+    "Vai trò cần thiết cho quyền truy cập chung. Phải có trong các vai trò của người dùng để họ có thể đăng nhập. Để trống nếu bạn không biết cấu hình này là gì." +
+    "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-admin-access":
+    "Vai trò OpenID Connect cho quyền truy cập quản trị",
+  "admin.config.oauth.oidc-role-admin-access.description":
+    "Vai trò cần thiết cho quyền truy cập quản trị. Phải có trong các vai trò của người dùng để họ có thể truy cập bảng quản trị. Để trống nếu bạn không biết cấu hình này là gì." +
+    "Leave it blank if you don't know what this config is.",
   "admin.config.oauth.oidc-client-id": "OpenID Connect Client ID",
-  "admin.config.oauth.oidc-client-id.description": "Client ID of the OpenID Connect OAuth app",
+  "admin.config.oauth.oidc-client-id.description":
+    "Client ID của ứng dụng OAuth OpenID Connect",
   "admin.config.oauth.oidc-client-secret": "OpenID Connect Client secret",
-  "admin.config.oauth.oidc-client-secret.description": "Client secret of the OpenID Connect OAuth app",
+  "admin.config.oauth.oidc-client-secret.description":
+    "Client secret của ứng dụng OAuth OpenID Connect",
   "admin.config.category.ldap": "LDAP",
-  "admin.config.ldap.enabled": "Enable LDAP",
-  "admin.config.ldap.enabled.description": "Use LDAP authentication for user login",
-  "admin.config.ldap.url": "Server URL",
+  "admin.config.ldap.enabled": "Bật LDAP",
+  "admin.config.ldap.enabled.description":
+    "Sử dụng xác thực LDAP để đăng nhập người dùng",
+  "admin.config.ldap.url": "URL máy chủ",
   "admin.config.ldap.url.description": "Địa chỉ máy chủ LDAP",
   "admin.config.ldap.bind-dn": "Bind DN",
-  "admin.config.ldap.bind-dn.description": "Default user used to perform the user search",
-  "admin.config.ldap.bind-password": "Bind password",
-  "admin.config.ldap.bind-password.description": "Password used to perform the user search",
+  "admin.config.ldap.bind-dn.description":
+    "Người dùng mặc định được sử dụng để thực hiện tìm kiếm người dùng",
+  "admin.config.ldap.bind-password": "Mật khẩu Bind",
+  "admin.config.ldap.bind-password.description":
+    "Mật khẩu được sử dụng để thực hiện tìm kiếm người dùng",
   "admin.config.ldap.search-base": "User base",
-  "admin.config.ldap.search-base.description": "Base location, where the user search will be performed",
+  "admin.config.ldap.search-base.description":
+    "Vị trí cơ sở nơi tìm kiếm người dùng sẽ được thực hiện",
   "admin.config.ldap.search-query": "User query",
-  "admin.config.ldap.search-query.description": "The user query will be used to search the 'User base' for the LDAP user. %username% can be used as the placeholder for the user given input.",
-  "admin.config.ldap.admin-groups": "Admin group",
-  "admin.config.ldap.admin-groups.description": "Group required for administrative access.",
-  "admin.config.ldap.field-name-member-of": "User groups attribute name",
-  "admin.config.ldap.field-name-member-of.description": "LDAP attribute name for the groups, an user is a member of. This is used when checking for the admin group.",
-  "admin.config.ldap.field-name-email": "User email attribute name",
-  "admin.config.ldap.field-name-email.description": "LDAP attribute name for the email of an user.",
-  "admin.config.notify.success": "Configuration updated successfully.",
-  "admin.config.notify.logo-success": "Logo updated successfully. It may take a few minutes to update on the website.",
-  "admin.config.notify.no-changes": "No changes to save.",
+  "admin.config.ldap.search-query.description":
+    "Truy vấn người dùng sẽ được sử dụng để tìm kiếm 'User base' cho người dùng LDAP. %username% có thể được sử dụng làm trình giữ chỗ cho dữ liệu người dùng nhập vào.",
+  "admin.config.ldap.admin-groups": "Nhóm quản trị",
+  "admin.config.ldap.admin-groups.description":
+    "Nhóm cần thiết cho quyền truy cập quản trị.",
+  "admin.config.ldap.field-name-member-of": "Tên thuộc tính nhóm người dùng",
+  "admin.config.ldap.field-name-member-of.description":
+    "Tên thuộc tính LDAP cho các nhóm mà người dùng là thành viên. Thuộc tính này được sử dụng khi kiểm tra nhóm quản trị.",
+  "admin.config.ldap.field-name-email": "Tên thuộc tính email người dùng",
+  "admin.config.ldap.field-name-email.description":
+    "Tên thuộc tính LDAP cho email của người dùng.",
+  "admin.config.notify.success": "Cấu hình đã được cập nhật thành công.",
+  "admin.config.notify.logo-success":
+    "Logo đã được cập nhật thành công. Có thể mất vài phút để cập nhật trên trang web.",
+  "admin.config.notify.no-changes": "Không có thay đổi nào để lưu.",
   "admin.config.category.s3": "S3",
-  "admin.config.s3.enabled": "Enabled",
-  "admin.config.s3.enabled.description": "Whether S3 should be used to store the shared files instead of the local file system. WARNING: If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
+  "admin.config.s3.enabled": "Đã bật",
+  "admin.config.s3.enabled.description":
+    "Có nên sử dụng S3 để lưu trữ các tệp được chia sẻ thay vì hệ thống tệp cục bộ hay không. CẢNH BÁO: Nếu ClamAV đang hoạt động, các tệp sẽ được tải tạm thời từ S3 xuống để kiểm tra.",
   "admin.config.s3.endpoint": "Endpoint",
-  "admin.config.s3.endpoint.description": "The URL of the S3 bucket.",
-  "admin.config.s3.region": "Region",
-  "admin.config.s3.region.description": "The region of the S3 bucket.",
-  "admin.config.s3.bucket-name": "Bucket name",
-  "admin.config.s3.bucket-name.description": "The name of the S3 bucket.",
-  "admin.config.s3.bucket-path": "Path",
-  "admin.config.s3.bucket-path.description": "The default path which should be used to store the files in the S3 bucket.",
+  "admin.config.s3.endpoint.description": "URL của bộ chứa (bucket) S3.",
+  "admin.config.s3.region": "Khu vực",
+  "admin.config.s3.region.description": "Khu vực của bộ chứa S3.",
+  "admin.config.s3.bucket-name": "Tên bộ chứa",
+  "admin.config.s3.bucket-name.description": "Tên của bộ chứa S3.",
+  "admin.config.s3.bucket-path": "Đường dẫn",
+  "admin.config.s3.bucket-path.description":
+    "Đường dẫn mặc định được sử dụng để lưu trữ các tệp trong bộ chứa S3.",
   "admin.config.s3.key": "Key",
-  "admin.config.s3.key.description": "The key which allows you to access the S3 bucket.",
+  "admin.config.s3.key.description": "Khóa cho phép bạn truy cập bộ chứa S3.",
   "admin.config.s3.secret": "Secret",
-  "admin.config.s3.secret.description": "The secret which allows you to access the S3 bucket.",
-  "admin.config.s3.use-checksum": "Use checksum",
-  "admin.config.s3.use-checksum.description": "Turn off for backends that do not support checksum (e.g. B2).",
-  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
-  "admin.config.category.legal": "Legal",
-  "admin.config.legal.enabled": "Enable legal notices",
-  "admin.config.legal.enabled.description": "Whether to show a link to imprint and privacy policy in the footer.",
-  "admin.config.legal.imprint-text": "Imprint text",
-  "admin.config.legal.imprint-text.description": "The text which should be shown in the imprint. Supports Markdown. Leave blank to link to an external imprint page.",
-  "admin.config.legal.imprint-url": "Imprint URL",
-  "admin.config.legal.imprint-url.description": "If you already have an imprint page you can link it here instead of using the text field.",
-  "admin.config.legal.privacy-policy-text": "Privacy policy text",
-  "admin.config.legal.privacy-policy-text.description": "The text which should be shown in the privacy policy. Supports Markdown. Leave blank to link to an external privacy policy page.",
-  "admin.config.legal.privacy-policy-url": "Privacy policy URL",
-  "admin.config.legal.privacy-policy-url.description": "If you already have a privacy policy page you can link it here instead of using the text field.",
+  "admin.config.s3.secret.description":
+    "Khóa bí mật cho phép bạn truy cập bộ chứa S3.",
+  "admin.config.s3.use-checksum": "Sử dụng checksum",
+  "admin.config.s3.use-checksum.description":
+    "Tắt đối với các backend không hỗ trợ checksum (ví dụ: B2).",
+  "admin.config.s3.docs-link":
+    "CORS phải được cấu hình lại trên bộ chứa của bạn, xem {wikiLink} để biết chi tiết.",
+  "admin.config.category.legal": "Pháp lý",
+  "admin.config.legal.enabled": "Bật thông báo pháp lý",
+  "admin.config.legal.enabled.description":
+    "Có hiển thị liên kết đến thông tin pháp lý và chính sách bảo mật ở chân trang hay không.",
+  "admin.config.legal.imprint-text": "Nội dung thông tin pháp lý",
+  "admin.config.legal.imprint-text.description":
+    "Văn bản sẽ hiển thị trong phần thông tin pháp lý. Hỗ trợ Markdown. Để trống để liên kết đến một trang thông tin pháp lý bên ngoài.",
+  "admin.config.legal.imprint-url": "URL thông tin pháp lý",
+  "admin.config.legal.imprint-url.description":
+    "Nếu bạn đã có một trang thông tin pháp lý, bạn có thể liên kết trang đó ở đây thay vì sử dụng trường văn bản.",
+  "admin.config.legal.privacy-policy-text": "Nội dung chính sách bảo mật",
+  "admin.config.legal.privacy-policy-text.description":
+    "Văn bản sẽ hiển thị trong chính sách bảo mật. Hỗ trợ Markdown. Để trống để liên kết đến một trang chính sách bảo mật bên ngoài.",
+  "admin.config.legal.privacy-policy-url": "URL chính sách bảo mật",
+  "admin.config.legal.privacy-policy-url.description":
+    "Nếu bạn đã có một trang chính sách bảo mật, bạn có thể liên kết trang đó ở đây thay vì sử dụng trường văn bản.",
   // 404
-  "404.description": "Oops this page doesn't exist.",
+  "404.description": "Rất tiếc, trang này không tồn tại.",
   "404.button.home": "Về trang chủ",
   // error
   "error.title": "Lỗi",
-  "error.description": "Oops!",
+  "error.description": "Rất tiếc!",
   "error.button.back": "Quay lại",
   "error.msg.default": "Đã xảy ra lỗi.",
-  "error.msg.access_denied": "You canceled the authentication process, please try again.",
-  "error.msg.expired_token": "The authentication process took too long, please try again.",
+  "error.msg.access_denied": "Bạn đã hủy quá trình xác thực, vui lòng thử lại.",
+  "error.msg.expired_token":
+    "Quá trình xác thực mất quá nhiều thời gian, vui lòng thử lại.",
   "error.msg.invalid_token": "Lỗi nội bộ",
-  "error.msg.no_user": "User linked to this {0} account doesn't exist.",
-  "error.msg.no_email": "Can't get email address from this {0} account.",
-  "error.msg.already_linked": "This {0} account is already linked to another account.",
-  "error.msg.not_linked": "This {0} account hasn't been linked to any account yet.",
-  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
-  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
-  "error.msg.unverified_account": "This {0} account is unverified, please try again after verification.",
-  "error.msg.user_not_allowed": "You are not allowed to sign in.",
-  "error.msg.cannot_get_user_info": "Cannot get your user info from this {0} account.",
+  "error.msg.no_user":
+    "Người dùng được liên kết với tài khoản {0} này không tồn tại.",
+  "error.msg.no_email": "Không thể lấy địa chỉ email từ tài khoản {0} này.",
+  "error.msg.already_linked":
+    "Tài khoản {0} này đã được liên kết với một tài khoản khác.",
+  "error.msg.not_linked":
+    "Tài khoản {0} này chưa được liên kết với bất kỳ tài khoản nào.",
+  "error.msg.email_already_exists":
+    "Một tài khoản với địa chỉ email này đã tồn tại. Vui lòng đăng nhập bằng mật khẩu của bạn và liên kết thủ công tài khoản {0} trong trang Tài khoản của tôi.",
+  "error.msg.email_not_verified":
+    "Địa chỉ email của bạn trên tài khoản {0} này chưa được xác minh. Vui lòng xác minh email với nhà cung cấp danh tính của bạn trước khi đăng nhập.",
+  "error.msg.unverified_account":
+    "Tài khoản {0} này chưa được xác minh, vui lòng thử lại sau khi xác minh.",
+  "error.msg.user_not_allowed": "Bạn không được phép đăng nhập.",
+  "error.msg.cannot_get_user_info":
+    "Không thể lấy thông tin người dùng của bạn từ tài khoản {0} này.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
@@ -674,41 +884,46 @@ export default {
   "common.button.shares": "Chia sẻ",
   "common.button.save": "Lưu",
   "common.button.create": "Tạo",
-  "common.button.submit": "Submit",
+  "common.button.submit": "Gửi",
   "common.button.delete": "Xóa",
   "common.button.cancel": "Hủy",
   "common.button.confirm": "Xác nhận",
-  "common.button.disable": "Disable",
-  "common.button.share": "Share",
-  "common.button.generate": "Generate",
-  "common.button.done": "Done",
+  "common.button.disable": "Tắt",
+  "common.button.share": "Chia sẻ",
+  "common.button.generate": "Tạo",
+  "common.button.done": "Xong",
   "common.text.link": "Liên kết",
-  "common.text.navigate-to-link": "Visit link",
+  "common.text.navigate-to-link": "Truy cập liên kết",
   "common.text.or": "hoặc",
-  "common.text.redirecting": "Redirecting...",
+  "common.text.redirecting": "Đang chuyển hướng...",
   "common.button.go-back": "Quay lại",
   "common.button.go-home": "Về trang chủ",
   "common.notify.copied": "Đã sao chép liên kết vào bộ nhớ",
   "common.notify.copied-link": "Đã sao chép liên kết vào bộ nhớ",
   "common.success": "Thành công",
   "common.error": "Lỗi",
-  "common.error.unknown": "An unknown error occurred",
+  "common.error.unknown": "Đã xảy ra lỗi không xác định",
   "common.error.invalid-email": "Địa chỉ email không hợp lệ",
-  "common.error.too-short": "Must be at least {length} characters",
-  "common.error.too-long": "Must be at most {length} characters",
-  "common.error.number-too-small": "Must be at least {min}",
-  "common.error.number-too-large": "Must be at most {max}",
+  "common.error.too-short": "Phải có ít nhất {length} ký tự",
+  "common.error.too-long": "Chỉ được tối đa {length} ký tự",
+  "common.error.number-too-small": "Phải có giá trị tối thiểu là {min}",
+  "common.error.number-too-large": "Chỉ được tối đa {max}",
   "common.error.exact-length": "Bằng {length} kí tự",
   "common.error.invalid-number": "Phải là số",
   "common.error.field-required": "Trường bắt buộc",
-  "common.error.password.lowercase": "Password must contain at least one lowercase letter",
-  "common.error.password.uppercase": "Password must contain at least one uppercase letter",
-  "common.error.password.number": "Password must contain at least one number",
-  "common.error.password.special": "Password must contain at least one special character",
+  "common.error.password.lowercase":
+    "Mật khẩu phải chứa ít nhất một chữ cái thường",
+  "common.error.password.uppercase":
+    "Mật khẩu phải chứa ít nhất một chữ cái viết hoa",
+  "common.error.password.number": "Mật khẩu phải chứa ít nhất một chữ số",
+  "common.error.password.special":
+    "Mật khẩu phải chứa ít nhất một ký tự đặc biệt",
   "admin.notice.modal.headerTag": "YÊU CẦU THAO TÁC QUẢN TRỊ",
-  "admin.notice.modal.defaultCheckboxLabel": "Tôi xác nhận đã đọc thông báo này và hiểu các thay đổi quan trọng.",
+  "admin.notice.modal.defaultCheckboxLabel":
+    "Tôi xác nhận đã đọc thông báo này và hiểu các thay đổi quan trọng.",
   "admin.notice.modal.button.acknowledge": "Xác nhận & Đóng",
   "admin.notice.modal.button.acknowledging": "Đang xác nhận...",
   "admin.notice.modal.docsLink": "Xem tài liệu hướng dẫn",
-  "admin.notice.modal.globalNoticeFooter": "Lưu ý: Sau khi xác nhận, thông báo này sẽ bị ẩn vĩnh viễn đối với tất cả quản trị viên trên mọi thiết bị."
+  "admin.notice.modal.globalNoticeFooter":
+    "Lưu ý: Sau khi xác nhận, thông báo này sẽ bị ẩn vĩnh viễn đối với tất cả quản trị viên trên mọi thiết bị.",
 };

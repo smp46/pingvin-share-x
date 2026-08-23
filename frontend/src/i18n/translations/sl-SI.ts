@@ -6,7 +6,7 @@ export default {
   "navbar.signup": "Registrirajte se",
   "navbar.links.shares": "Moja deljenja",
   "navbar.links.reverse": "Deljenja v obratni smeri",
-  "navbar.links.received": "Received shares",
+  "navbar.links.received": "Prejeta deljenja",
   "navbar.avatar.account": "Moj račun",
   "navbar.avatar.admin": "Administracija",
   "navbar.avatar.signout": "Odjava",
@@ -14,13 +14,16 @@ export default {
 
   // /
   "home.title": "Platforma za deljenje datotek z <h>lastnim gostovanjem</h>.",
-  "home.description": "Ali res želite predati svoje osebne datoteke v roke tretjih oseb, kot je WeTransfer?",
+  "home.description":
+    "Ali res želite predati svoje osebne datoteke v roke tretjih oseb, kot je WeTransfer?",
   "home.bullet.a.name": "Lastno-Gostovanje",
   "home.bullet.a.description": "Gostuj Pingvin Share na svoji lastni napravi.",
   "home.bullet.b.name": "Zasebnost",
-  "home.bullet.b.description": "Your files are yours and will never be accessed by third parties.",
+  "home.bullet.b.description":
+    "Vaše datoteke so vaše in do njih tretje osebe nikoli ne bodo imele dostopa.",
   "home.bullet.c.name": "Brez nadležnih omejitev velikosti datoteke",
-  "home.bullet.c.description": "Upload files as big as you want. Only your hard drive will be your limit.",
+  "home.bullet.c.description":
+    "Naložite poljubno velike datoteke. Edina omejitev je vaš trdi disk.",
   "home.button.start": "Začnite zdaj",
   "home.button.source": "Izvorna koda",
   // END /
@@ -30,14 +33,17 @@ export default {
   "signin.description": "Še nimate računa?",
   "signin.button.signup": "Registrirajte se",
   "signin.input.email-or-username": "E-pošta ali uporabniško ime",
-  "signin.input.email-or-username.placeholder": "Vaša e-pošta ali uporabniško ime",
+  "signin.input.email-or-username.placeholder":
+    "Vaša e-pošta ali uporabniško ime",
   "signin.input.password": "Geslo",
   "signin.input.password.placeholder": "Vaše geslo",
   "signin.button.submit": "Prijava",
-  "signIn.notify.totp-required.title": "Zahtevana je dvofaktorska avtentikacija",
-  "signIn.notify.totp-required.description": "Prosim vnesite vašo kodo dvofaktorske avtentikacije",
+  "signIn.notify.totp-required.title":
+    "Zahtevana je dvofaktorska avtentikacija",
+  "signIn.notify.totp-required.description":
+    "Prosim vnesite vašo kodo dvofaktorske avtentikacije",
   "signIn.oauth.or": "ALI",
-  "signIn.oauth.signInWith": "Sign in with",
+  "signIn.oauth.signInWith": "Prijava z",
   "signIn.oauth.github": "GitHub",
   "signIn.oauth.google": "Google",
   "signIn.oauth.microsoft": "Microsoft",
@@ -55,16 +61,22 @@ export default {
   "signup.input.email.placeholder": "Vaš e-poštni naslov",
   "signup.button.submit": "Pa začnimo",
   // /auth/verify
-  "verify.title": "Verify Account",
-  "verify.success": "Your account has been successfully verified! You can now sign in.",
-  "verify.error": "The verification link is invalid or has expired.",
-  "verify.button.signin": "Go to Sign In",
-  "verify.info.title": "Account Verification",
-  "verify.info.description": "Email verification is enabled. We've sent a verification link to your email address. Please click the link to activate your account.",
-  "verify.info.note": "If you don't receive the email within a few minutes, please check your spam folder.",
-  "verify.info.resend.button": "Resend verification email",
-  "verify.info.resend.success": "Verification email resent successfully.",
-  "verify.info.resend.error": "Failed to resend verification email.",
+  "verify.title": "Preverjanje računa",
+  "verify.success":
+    "Vaš račun je bil uspešno preverjen! Zdaj se lahko prijavite.",
+  "verify.error": "Povezava za preverjanje je neveljavna ali pa je potekla.",
+  "verify.button.signin": "Pojdi na prijavo",
+  "verify.info.title": "Preverjanje računa",
+  "verify.info.description":
+    "Preverjanje e-pošte je omogočeno. Na vaš e-poštni naslov smo poslali povezavo za preverjanje. Kliknite na povezavo, da aktivirate svoj račun.",
+  "verify.info.note":
+    "Če e-poštnega sporočila ne prejmete v nekaj minutah, preverite mapo z vsiljeno pošto.",
+  "verify.info.resend.button":
+    "Ponovno pošlji e-poštno sporočilo za preverjanje",
+  "verify.info.resend.success":
+    "E-poštno sporočilo za preverjanje je bilo uspešno ponovno poslano.",
+  "verify.info.resend.error":
+    "Ponovno pošiljanje e-poštnega sporočila za preverjanje ni uspelo.",
   // END /auth/signup
 
   // /auth/totp
@@ -74,13 +86,16 @@ export default {
 
   // /auth/reset-password
   "resetPassword.title": "Ste pozabili svoje geslo?",
-  "resetPassword.description": "Vnesite svoj e-poštni naslov za ponastavitev gesla.",
-  "resetPassword.notify.success": "A message with a link to reset your password has been sent if the provided email exists.",
+  "resetPassword.description":
+    "Vnesite svoj e-poštni naslov za ponastavitev gesla.",
+  "resetPassword.notify.success":
+    "Sporočilo s povezavo za ponastavitev gesla je bilo poslano, če navedeni e-poštni naslov obstaja.",
   "resetPassword.button.back": "Nazaj na stran za prijavo",
   "resetPassword.text.resetPassword": "Ponastavi geslo",
   "resetPassword.text.enterNewPassword": "Vnesite novo geslo",
   "resetPassword.input.password": "Novo geslo",
-  "resetPassword.notify.passwordReset": "Your password has been successfully reset.",
+  "resetPassword.notify.passwordReset":
+    "Vaše geslo je bilo uspešno ponastavljeno.",
   // /account
   "account.title": "Moj račun",
   "account.card.info.title": "Informacije o računu",
@@ -90,7 +105,8 @@ export default {
   "account.card.password.title": "Geslo",
   "account.card.password.old": "Staro geslo",
   "account.card.password.new": "Novo geslo",
-  "account.card.password.noPasswordSet": "You do not have a password set. To sign in using your email and password, you need to create a password.",
+  "account.card.password.noPasswordSet":
+    "Nimate nastavljenega gesla. Za prijavo z e-pošto in geslom morate ustvariti geslo.",
   "account.notify.password.success": "Geslo je bilo uspešno posodobljeno",
   "account.card.oauth.title": "Prijava z računi družbenih omrežij",
   "account.card.oauth.github": "GitHub",
@@ -102,11 +118,15 @@ export default {
   "account.card.oauth.unlink": "Odstrani povezavo",
   "account.card.oauth.unlinked": "Povezava je odstranjena",
   "account.modal.unlink.title": "Odstrani povezavo z računom",
-  "account.modal.unlink.description": "Unlinking your social accounts may cause you to lose your account if you don't remember your login credentials",
-  "account.notify.oauth.unlinked.success": "Povezava je bila uspešno odstranjena",
+  "account.modal.unlink.description":
+    "Prekinitev povezave z družbenimi računi lahko povzroči izgubo dostopa do vašega računa, če se ne spomnite prijavnih podatkov",
+  "account.notify.oauth.unlinked.success":
+    "Povezava je bila uspešno odstranjena",
   "account.card.security.title": "Varnost",
-  "account.card.security.totp.enable.description": "Vnesite vašo trenutno geslo, da omogočite TOTP",
-  "account.card.security.totp.disable.description": "Vnesite vašo trenutno geslo, da onemogočite TOTP",
+  "account.card.security.totp.enable.description":
+    "Vnesite vašo trenutno geslo, da omogočite TOTP",
+  "account.card.security.totp.disable.description":
+    "Vnesite vašo trenutno geslo, da onemogočite TOTP",
   "account.card.security.totp.button.start": "Začni",
   "account.modal.totp.title": "Omogoči TOTP",
   "account.modal.totp.step1": "1. Korak: Dodajte avtentikator",
@@ -114,12 +134,13 @@ export default {
   "account.modal.totp.enterManually": "Vnesite ročno",
   "account.modal.totp.code": "Koda",
   "common.button.clickToCopy": "Kliknite za kopiranje",
-  "common.button.showQRCode": "Show QR code",
+  "common.button.showQRCode": "Prikaži kodo QR",
   "account.modal.totp.verify": "Preveri",
   "account.notify.totp.disable": "TOTP je uspešno onemogočen",
   "account.notify.totp.enable": "TOTP je uspešno omogočen",
   "account.card.language.title": "Jezik",
-  "account.card.language.description": "Projekt je preveden s pomočjo skupnosti. Nekateri jeziki morda niso popolno prevedeni.",
+  "account.card.language.description":
+    "Projekt je preveden s pomočjo skupnosti. Nekateri jeziki morda niso popolno prevedeni.",
   "account.card.color.title": "Barvna shema",
   // ThemeSwitcher.tsx
   "account.theme.dark": "Temna",
@@ -127,7 +148,8 @@ export default {
   "account.theme.system": "Sistemska",
   "account.button.delete": "Izbrišite račun",
   "account.modal.delete.title": "Izbrišite račun",
-  "account.modal.delete.description": "Ali res želite izbrisati vaš račun vključno z vsemi vašimi deljenji?",
+  "account.modal.delete.description":
+    "Ali res želite izbrisati vaš račun vključno z vsemi vašimi deljenji?",
   // END /account
 
   // /account/shares
@@ -136,41 +158,46 @@ export default {
   "account.shares.description.empty": "Nimate nobenih deljenj.",
   "account.shares.button.create": "Ustvarite ga",
   "account.shares.info.title": "Delite informacije",
-  "account.shares.button.edit": "Add/Remove Files",
+  "account.shares.button.edit": "Dodaj/odstrani datoteke",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Ime",
   "account.shares.table.description": "Opis",
   "account.shares.table.visitors": "Obiskovalci",
-  "account.shares.table.expiresAt": "Expires on",
-  "account.shares.table.createdAt": "Created on",
+  "account.shares.table.expiresAt": "Poteče dne",
+  "account.shares.table.createdAt": "Ustvarjeno dne",
   "account.shares.table.size": "Velikost",
-  "account.shares.table.password-protected": "Password protected",
-  "account.shares.table.recipients": "Recipients",
-  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
-  "account.shares.table.shared-with-recipients": "Shared with recipients",
-  "account.shares.table.visitor-count": "{count} of {max}",
-  "account.shares.table.expiry-never": "Never",
+  "account.shares.table.password-protected": "Zaščiteno z geslom",
+  "account.shares.table.recipients": "Prejemniki",
+  "account.shares.table.restricted-to-recipients": "Omejeno samo na prejemnike",
+  "account.shares.table.shared-with-recipients": "Deljeno s prejemniki",
+  "account.shares.table.visitor-count": "{count} od {max}",
+  "account.shares.table.expiry-never": "Nikoli",
   "account.shares.modal.share-informations": "Delite informacije",
   "account.shares.modal.share-link": "Delite povezavo",
-  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
-  "account.shares.modal.edit.password.remove": "Remove password protection",
-  "account.shares.modal.delete.title": "Delete share: {share}",
-  "account.shares.modal.delete.description": "Ali res želite izbrisati to delitev?",
+  "account.shares.modal.edit.password.keep":
+    "Pustite prazno, da ohranite trenutno geslo",
+  "account.shares.modal.edit.password.remove": "Odstrani zaščito z geslom",
+  "account.shares.modal.delete.title": "Izbriši deljenje: {share}",
+  "account.shares.modal.delete.description":
+    "Ali res želite izbrisati to delitev?",
   // END /account/shares
 
   // /account/received
-  "account.received-shares.title": "Received shares",
-  "account.received-shares.title.empty": "No shares received yet",
-  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
-  "account.received-shares.table.from": "From",
-  "account.received-shares.button.open": "Open",
+  "account.received-shares.title": "Prejeta deljenja",
+  "account.received-shares.title.empty": "Ni še prejetih deljenj",
+  "account.received-shares.description.empty":
+    "Tukaj se bodo prikazala deljenja, poslana na vaš e-poštni naslov.",
+  "account.received-shares.table.from": "Od",
+  "account.received-shares.button.open": "Odpri",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Delitev v obratni smeri",
-  "account.reverseShares.description": "Delitev v obratni smeri vam omogoča, da generirate unikaten URL, ki omogoča zunanjim uporabnikom ustvariti delitev.",
+  "account.reverseShares.description":
+    "Delitev v obratni smeri vam omogoča, da generirate unikaten URL, ki omogoča zunanjim uporabnikom ustvariti delitev.",
   "account.reverseShares.title.empty": "Prazno je 👀",
-  "account.reverseShares.description.empty": "Nimate nobenih delitev v obratni smeri.",
+  "account.reverseShares.description.empty":
+    "Nimate nobenih delitev v obratni smeri.",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Ustvari delitev v obratni smeri",
   "account.reverseShares.modal.expiration.label": "Zapadlost",
@@ -187,16 +214,22 @@ export default {
   "account.reverseShares.modal.expiration.year-singular": "Leto",
   "account.reverseShares.modal.expiration.year-plural": "Leta",
   "account.reverseShares.modal.max-size.label": "Največja velikost delitve",
-  "account.reverseShares.modal.send-email": "Send email notifications",
-  "account.reverseShares.modal.send-email.description": "Sends you an email notification when a share is created with this reverse share link.",
-  "account.reverseShares.modal.simplified": "Simple mode",
-  "account.reverseShares.modal.simplified.description": "Make it easy for the person uploading the file to share it with you. They will only be able to customize the name and description of the share.",
-  "account.reverseShares.modal.public-access": "Public access",
-  "account.reverseShares.modal.public-access.description": "Make the shares created with this reverse share public. If disabled, only you and the share creator will have access to view it.",
+  "account.reverseShares.modal.send-email": "Pošlji e-poštna obvestila",
+  "account.reverseShares.modal.send-email.description":
+    "Pošlje vam e-poštno obvestilo, ko je ustvarjeno deljenje s to povezavo za obratno deljenje.",
+  "account.reverseShares.modal.simplified": "Preprost način",
+  "account.reverseShares.modal.simplified.description":
+    "Olajšajte osebi, ki nalaga datoteko, deljenje z vami. Prilagodijo lahko le ime in opis deljenja.",
+  "account.reverseShares.modal.public-access": "Javni dostop",
+  "account.reverseShares.modal.public-access.description":
+    "Naredi deljenja, ustvarjena s tem obratnim deljenjem, javna. Če je onemogočeno, bosta imela dostop za ogled samo vi in ustvarjalec deljenja.",
   "account.reverseShares.modal.max-use.label": "Največ uporab",
-  "account.reverseShares.modal.max-use.description": "Največje število uporab URL-ja za ustvarjanje delitve.",
-  "account.reverseShare.never-expires": "Ta povezava delitve v obratni smeri ne bo nikoli potekla.",
-  "account.reverseShare.expires-on": "Ta delitev v obratni smeri bo potekla {expiration}.",
+  "account.reverseShares.modal.max-use.description":
+    "Največje število uporab URL-ja za ustvarjanje delitve.",
+  "account.reverseShare.never-expires":
+    "Ta povezava delitve v obratni smeri ne bo nikoli potekla.",
+  "account.reverseShare.expires-on":
+    "Ta delitev v obratni smeri bo potekla {expiration}.",
   "account.reverseShares.table.no-shares": "Nimate še ustvarjenih delitev",
   "account.reverseShares.table.count.singular": "delitev",
   "account.reverseShares.table.count.plural": "delitve",
@@ -204,15 +237,17 @@ export default {
   "account.reverseShares.table.remaining": "Preostale uporabe",
   "account.reverseShares.table.max-size": "Največja velikost delitve",
   "account.reverseShares.table.expires": "Poteče dne",
-  "account.reverseShares.modal.reverse-share-link": "Povezava delitve v obratni smeri",
+  "account.reverseShares.modal.reverse-share-link":
+    "Povezava delitve v obratni smeri",
   "account.reverseShares.modal.delete.title": "Izbriši delitev v obratni smeri",
-  "account.reverseShares.modal.delete.description": "Ali res želite izbrisati to delitev v obratni smeri? Če boste izbrisali, bodo izbrisane tudi povezane delitve.",
+  "account.reverseShares.modal.delete.description":
+    "Ali res želite izbrisati to delitev v obratni smeri? Če boste izbrisali, bodo izbrisane tudi povezane delitve.",
   // END /account/reverseShares
 
   // /admin
   "admin.title": "Administracija",
   "admin.button.users": "Upravljanje uporabnikov",
-  "admin.button.shares": "Share management",
+  "admin.button.shares": "Upravljanje deljenj",
   "admin.button.config": "Nastavitve",
   "admin.version": "Različica",
   // END /admin
@@ -222,79 +257,104 @@ export default {
   "admin.users.table.username": "Uporabniško ime",
   "admin.users.table.email": "E-pošta",
   "admin.users.table.admin": "Administrator",
-  "admin.users.table.storageQuota": "Storage quota",
-  "admin.users.table.maxShareSize": "Max share size",
-  "admin.users.edit.update.title": "Edit user: {username}",
+  "admin.users.table.storageQuota": "Prostorska kvota",
+  "admin.users.table.maxShareSize": "Maksimalna velikost deljenja",
+  "admin.users.edit.update.title": "Uredi uporabnika: {username}",
   "admin.users.edit.update.admin-privileges": "Administratorski privilegiji",
-  "admin.users.edit.update.email-verified": "Email verified",
-  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
-  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
-  "admin.users.edit.update.custom-storage-quota-limit": "Custom storage quota",
-  "admin.users.edit.update.custom-storage-quota-limit.description": "Limit the user's total storage usage across active shares",
+  "admin.users.edit.update.email-verified": "E-pošta preverjena",
+  "admin.users.edit.update.custom-share-size-limit":
+    "Omejitev velikosti deljenja po meri",
+  "admin.users.edit.update.custom-share-size-limit.description":
+    "Preglasi globalno omejitev nalaganja za tega uporabnika",
+  "admin.users.edit.update.custom-storage-quota-limit":
+    "Prostorska kvota po meri",
+  "admin.users.edit.update.custom-storage-quota-limit.description":
+    "Omejite skupno porabo prostora za uporabnika v aktivnih deljenjih",
   "admin.users.edit.update.change-password.title": "Spremenite geslo",
   "admin.users.edit.update.change-password.field": "Novo geslo",
   "admin.users.edit.update.change-password.button": "Shranite novo geslo",
-  "admin.users.edit.update.notify.password.success": "Geslo je bilo uspešno posodobljeno",
-  "admin.users.edit.delete.title": "Delete user: {username} ?",
-  "admin.users.edit.delete.description": "Do you really want to delete this user and all their shares?",
+  "admin.users.edit.update.notify.password.success":
+    "Geslo je bilo uspešno posodobljeno",
+  "admin.users.edit.delete.title": "Izbriši uporabnika: {username} ?",
+  "admin.users.edit.delete.description":
+    "Ali res želite izbrisati tega uporabnika in vsa njegova deljenja?",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Ustvarite uporabnika",
   "admin.users.modal.create.username": "Uporabniško ime",
   "admin.users.modal.create.email": "E-pošta",
   "admin.users.modal.create.password": "Geslo",
   "admin.users.modal.create.manual-password": "Ročno nastavite geslo",
-  "admin.users.modal.create.manual-password.description": "Če je omogočeno, bo uporabnik prejel e-poštno sporočilo s povezavo do nastavitve gesla.",
-  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
-  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
-  "admin.users.modal.create.custom-storage-quota-limit": "Custom storage quota",
-  "admin.users.modal.create.custom-storage-quota-limit.description": "Limit the user's total storage usage across active shares",
+  "admin.users.modal.create.manual-password.description":
+    "Če je omogočeno, bo uporabnik prejel e-poštno sporočilo s povezavo do nastavitve gesla.",
+  "admin.users.modal.create.custom-share-size-limit":
+    "Omejitev velikosti deljenja po meri",
+  "admin.users.modal.create.custom-share-size-limit.description":
+    "Preglasi globalno omejitev nalaganja za tega uporabnika",
+  "admin.users.modal.create.custom-storage-quota-limit":
+    "Prostorska kvota po meri",
+  "admin.users.modal.create.custom-storage-quota-limit.description":
+    "Omejite skupno porabo prostora za uporabnika v aktivnih deljenjih",
   "admin.users.modal.create.admin": "Administratorski privilegiji",
-  "admin.users.modal.create.admin.description": "Če je omogočeno, bo lahko porabnik dostopal do administratorskega vmesnika.",
+  "admin.users.modal.create.admin.description":
+    "Če je omogočeno, bo lahko porabnik dostopal do administratorskega vmesnika.",
   // END /admin/users
 
   // /admin/shares
-  "admin.shares.title": "Share management",
-  "admin.shares.diskUsage": "Disk Usage",
-  "admin.shares.table.id": "Share ID",
-  "admin.shares.table.username": "Creator",
+  "admin.shares.title": "Upravljanje deljenj",
+  "admin.shares.diskUsage": "Poraba diska",
+  "admin.shares.table.id": "ID deljenja",
+  "admin.shares.table.username": "Ustvarjalec",
   "admin.shares.table.visitors": "Obiskovalci",
-  "admin.shares.table.expires": "Expires on",
-  "admin.shares.table.deletes": "Deletes on",
-  "admin.shares.edit.delete.title": "Delete share: {id}",
-  "admin.shares.edit.delete.description": "Ali res želite izbrisati to delitev?",
+  "admin.shares.table.expires": "Poteče dne",
+  "admin.shares.table.deletes": "Izbrisano dne",
+  "admin.shares.edit.delete.title": "Izbriši deljenje: {id}",
+  "admin.shares.edit.delete.description":
+    "Ali res želite izbrisati to delitev?",
   // END /admin/shares
 
   // /upload
   "upload.title": "Naložite",
-  "upload.notify.confirm-leave": "Are you sure you want to leave this page? Your upload will be canceled.",
-  "upload.notify.generic-error": "Prišlo je do napake pri ustvarjanju vašega deljenja.",
-  "upload.notify.count-failed": "Prišlo je do napake pri nalaganju toliko datotek: {count}. Poskušamo ponovno.",
-  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
-  "upload.reverse-share.error.invalid.title": "Invalid reverse share link",
-  "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
+  "upload.notify.confirm-leave":
+    "Ali ste prepričani, da želite zapustiti to stran? Vaše nalaganje bo preklicano.",
+  "upload.notify.generic-error":
+    "Prišlo je do napake pri ustvarjanju vašega deljenja.",
+  "upload.notify.count-failed":
+    "Prišlo je do napake pri nalaganju toliko datotek: {count}. Poskušamo ponovno.",
+  "upload.notify.duplicate-skipped": "Preskočena podvojena datoteka: {name}",
+  "upload.reverse-share.error.invalid.title":
+    "Neveljavna povezava za obratno deljenje",
+  "upload.reverse-share.error.invalid.description":
+    "This reverse share has expired or is invalid.",
   // Dropzone.tsx
   "upload.dropzone.title": "Naloži datoteke",
-  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
-  "upload.dropzone.notify.file-too-big": "Vaše datoteke presegajo največjo dovoljeno velikost {maxSize}.",
-  "upload.button.folder": "Upload folder",
-  "upload.button.folder.append": "Append folder",
-  "upload.button.add": "Add to upload",
+  "upload.dropzone.description":
+    "Povlecite in spustite datoteke ali mape sem, da začnete deljenje, ali pritisnite 'Ctrl+V' za nalaganje besedilne vsebine iz odložišča. Sprejemamo le datoteke do skupno {maxSize}.",
+  "upload.dropzone.notify.file-too-big":
+    "Vaše datoteke presegajo največjo dovoljeno velikost {maxSize}.",
+  "upload.button.folder": "Naloži mapo",
+  "upload.button.folder.append": "Dodaj mapo",
+  "upload.button.add": "Dodaj k nalaganju",
   // FileList.tsx
   "upload.filelist.name": "Ime",
   "upload.filelist.size": "Velikost",
-  "upload.filelist.estimating": "Estimating...",
-  "upload.filelist.remaining": "{time} remaining",
+  "upload.filelist.estimating": "Ocenjevanje...",
+  "upload.filelist.remaining": "Preostalo: {time}",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Ustvarite delitev",
-  "upload.modal.link.error.invalid": "Lahko vsebuje samo črke, številke, podčrtaje in pomišljaje",
+  "upload.modal.link.error.invalid":
+    "Lahko vsebuje samo črke, številke, podčrtaje in pomišljaje",
   "upload.modal.link.error.taken": "Ta povezava je že v uporabi",
-  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
-  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
+  "upload.modal.link.error.s3-session-not-found":
+    "S3 seja nalaganja ni bila najdena",
+  "upload.modal.link.error.s3-etag-missing":
+    "Manjka glava ETag v odgovoru S3. Prepričajte se, da CORS izpostavlja glavo ETag.",
   "upload.modal.not-signed-in": "Niste prijavljeni",
-  "upload.modal.not-signed-in-description": "Ne boste mogli izbrisati vaših delitev in pregledati števila obiskovalcev.",
+  "upload.modal.not-signed-in-description":
+    "Ne boste mogli izbrisati vaših delitev in pregledati števila obiskovalcev.",
   "upload.modal.expires.never": "nikoli",
-  "upload.modal.expires.never-long": "Permanent share",
-  "upload.modal.expires.error.too-long": "Expiration date exceeds the maximum of {max}.",
+  "upload.modal.expires.never-long": "Trajno deljenje",
+  "upload.modal.expires.error.too-long":
+    "Datum poteka presega največjo dovoljeno vrednost {max}.",
   "upload.modal.link.label": "Povezava",
   "upload.modal.expires.label": "Zapadlost",
   "upload.modal.expires.minute-singular": "Minuta",
@@ -309,13 +369,15 @@ export default {
   "upload.modal.expires.month-plural": "Meseci",
   "upload.modal.expires.year-singular": "Leto",
   "upload.modal.expires.year-plural": "Leta",
-  "upload.modal.accordion.name-and-description.title": "Name and description",
+  "upload.modal.accordion.name-and-description.title": "Ime in opis",
   "upload.modal.accordion.name-and-description.name.placeholder": "Ime",
-  "upload.modal.accordion.name-and-description.description.placeholder": "Note for the recipients of this share",
+  "upload.modal.accordion.name-and-description.description.placeholder":
+    "Opomba za prejemnike tega deljenja",
   "upload.modal.accordion.email.title": "Prejemnik e-pošte",
   "upload.modal.accordion.email.placeholder": "Vnesite prejemnika e-pošte",
   "upload.modal.accordion.email.invalid-email": "Neveljaven e-poštni naslov",
-  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Omeji dostop samo na te prejemnike (za dostop se morajo prijaviti)",
   "upload.modal.accordion.security.title": "Varnostne možnosti",
   "upload.modal.accordion.security.password.label": "Zaščita z geslom",
   "upload.modal.accordion.security.password.placeholder": "Brez gesla",
@@ -325,318 +387,465 @@ export default {
   "upload.modal.completed.never-expires": "Ta delitev ne bo nikoli potekla.",
   "upload.modal.completed.expires-on": "Ta delitev bo potekla {expiration}.",
   "upload.modal.completed.share-ready": "Delitev je pripravljena",
-  "upload.modal.completed.notified-reverse-share-creator": "We have notified the creator of the reverse share. You can also manually share this link with them through other means.",
+  "upload.modal.completed.notified-reverse-share-creator":
+    "Obvestili smo ustvarjalca obratnega deljenja. To povezavo lahko z njim delite tudi ročno na drug način.",
   // END /upload
 
   // /share/[id]
   "share.title": "Deli {shareId}",
   "share.description": "Poglej kaj sem delil s taboj!",
-  "share.fileCount": "{count, plural, =1 {# file} other {# files}} · {size} (zip file may be smaller due to compression)",
-  "share.copy-text-contents": "Copy file contents to clipboard",
+  "share.fileCount":
+    "{count, plural, =1 {# file} other {# files}} · {size} (zip datoteka je lahko manjša zaradi stiskanja)",
+  "share.copy-text-contents": "Kopiraj vsebino datoteke v odložišče",
   "share.error.visitor-limit-exceeded.title": "Število ogledov je prekoračena",
-  "share.error.visitor-limit-exceeded.description": "Število ogledov za to delitev je bila prekoračena.",
+  "share.error.visitor-limit-exceeded.description":
+    "Število ogledov za to delitev je bila prekoračena.",
   "share.error.removed.title": "Delitev je odstranjena",
   "share.error.not-found.title": "Delitve ni mogoče najti",
   "share.error.not-found.description": "Delitev, ki jo iščete ne obstaja.",
-  "share.error.access-denied.title": "Private share",
-  "share.error.access-denied.description": "The current account does not have permission to access this share",
-  "share.error.restricted.title": "Restricted share",
-  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
-  "share.error.restricted.button": "Log in",
+  "share.error.access-denied.title": "Zasebno deljenje",
+  "share.error.access-denied.description":
+    "Trenutni račun nima dovoljenja za dostop do tega deljenja",
+  "share.error.restricted.title": "Omejeno deljenje",
+  "share.error.restricted.description":
+    "To deljenje je omejeno na določene prejemnike. Za dostop se prijavite.",
+  "share.error.restricted.button": "Prijava",
   "share.modal.password.title": "Zahtevano geslo",
-  "share.modal.password.description": "Please enter the password to access this share.",
+  "share.modal.password.description":
+    "Vnesite geslo za dostop do tega deljenja.",
   "share.modal.password": "Geslo",
   "share.modal.error.invalid-password": "Napačno geslo",
   "share.button.download-all": "Prenesi vse",
-  "share.notify.download-all-preparing": "The share is being prepared. Please try again in a few minutes.",
-  "share.notify.copied-contents": "File contents copied to clipboard",
-  "share.notify.copy-too-big-error": "File is too big to copy to clipboard",
-  "share.notify.copy-not-supported-error": "Copying to clipboard requires a HTTPS connection",
+  "share.notify.download-all-preparing":
+    "Deljenje se pripravlja. Poskusite znova čez nekaj minut.",
+  "share.notify.copied-contents": "Vsebina datoteke je kopirana v odložišče",
+  "share.notify.copy-too-big-error":
+    "Datoteka je prevelika za kopiranje v odložišče",
+  "share.notify.copy-not-supported-error":
+    "Kopiranje v odložišče zahteva povezavo HTTPS",
   "share.modal.file-link": "Povezava do datoteke",
   "share.table.name": "Ime",
   "share.table.size": "Velikost",
-  "share.modal.file-preview.original_file": "View original file",
+  "share.modal.file-preview.original_file": "Ogled izvirne datoteke",
   "share.modal.file-preview.error.not-supported.title": "Predogled ni mogoč",
-  "share.modal.file-preview.error.not-supported.description": "Previews are not supported for this type of files. Please download the file to view it.",
+  "share.modal.file-preview.error.not-supported.description":
+    "Predogledi niso podprti za to vrsto datotek. Prenesite datoteko, da si jo ogledate.",
   // END /share/[id]
 
   // /share/[id]/edit
   "share.edit.title": "Uredite {shareId}",
   "share.edit.append-upload": "Dodaj datoteko",
-  "share.edit.notify.generic-error": "Prišlo je do napake pri ustvarjanju vaše delitve.",
+  "share.edit.notify.generic-error":
+    "Prišlo je do napake pri ustvarjanju vaše delitve.",
   "share.edit.notify.save-success": "Delitev je bila uspešno posodbljena",
   // END /share/[id]/edit
 
   // /imprint
-  "imprint.title": "Imprint",
+  "imprint.title": "Pravno obvestilo",
   // END /imprint
 
   // /privacy
-  "privacy.title": "Privacy Policy",
+  "privacy.title": "Pravilnik o zasebnosti",
   // END /privacy
 
   // /admin/config
-  "admin.config.config-file-warning.title": "Configuration file present",
-  "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
+  "admin.config.config-file-warning.title":
+    "Prisotna je konfiguracijska datoteka",
+  "admin.config.config-file-warning.description":
+    "Ker imate konfiguriran Pingvin Share s konfiguracijsko datoteko, konfiguracije ne morete spreminjati prek uporabniškega vmesnika.",
   "admin.config.title": "Nastavitve",
   "admin.config.category.general": "Splošno",
   "admin.config.category.appearance": "Videz",
-  "admin.config.category.security": "Security & Access",
+  "admin.config.category.security": "Varnost in dostop",
   "admin.config.category.share": "Delitev",
-  "admin.config.category.cache": "Cache",
+  "admin.config.category.cache": "Predpomnilnik",
   "admin.config.category.email": "E-pošta",
   "admin.config.category.smtp": "SMTP",
   "admin.config.category.oauth": "Prijava z računi družbenih omrežij",
   "admin.config.general.app-name": "Ime aplikacije",
   "admin.config.general.app-name.description": "Ime vaše aplikacije",
-  "admin.config.general.default-language": "Default Language",
-  "admin.config.general.default-language.description": "This applies to all users, each user can still personalise their language in their profile.",
+  "admin.config.general.default-language": "Privzeti jezik",
+  "admin.config.general.default-language.description":
+    "To velja za vse uporabnike, vsak uporabnik pa lahko še vedno prilagodi svoj jezik v svojem profilu.",
   "admin.config.appearance.theme-primary-color": "Primarna barva teme",
-  "admin.config.appearance.theme-primary-color.description": "Primarna barva za gumbe, povezave in poudarke. Izberite po meri za preglasitev barve.",
-  "admin.config.appearance.theme-primary-color-override": "Primarna barva po meri",
-  "admin.config.appearance.theme-primary-color-override.description": "Hex preglasitev barve, ko je primarna barva teme nastavljena na po meri.",
+  "admin.config.appearance.theme-primary-color.description":
+    "Primarna barva za gumbe, povezave in poudarke. Izberite po meri za preglasitev barve.",
+  "admin.config.appearance.theme-primary-color-override":
+    "Primarna barva po meri",
+  "admin.config.appearance.theme-primary-color-override.description":
+    "Hex preglasitev barve, ko je primarna barva teme nastavljena na po meri.",
   "admin.config.appearance.theme-font-preset": "Prednastavitev pisave",
-  "admin.config.appearance.theme-font-preset.description": "Prednastavitev pisave, naložena ob gradnji. Izberite sistemsko ali eno od priloženih Google Fonts.",
-  "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
-  "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
+  "admin.config.appearance.theme-font-preset.description":
+    "Prednastavitev pisave, naložena ob gradnji. Izberite sistemsko ali eno od priloženih Google Fonts.",
+  "admin.config.appearance.theme-color-scheme": "Privzeta barvna shema (gosti)",
+  "admin.config.appearance.theme-color-scheme.description":
+    "Privzeti svetli/temni način za neprijavljene uporabnike. Prijavljeni uporabniki uporabljajo lastne nastavitve računa.",
   "admin.config.appearance.theme-radius": "Polmer robov teme",
-  "admin.config.appearance.theme-radius.description": "Privzeti polmer robov, ki ga uporabljajo komponente Mantine.",
+  "admin.config.appearance.theme-radius.description":
+    "Privzeti polmer robov, ki ga uporabljajo komponente Mantine.",
   "admin.config.appearance.custom-css": "CSS po meri",
-  "admin.config.appearance.custom-css.description": "Globalni CSS za frontend. Uporabljajte previdno; neveljaven CSS lahko vpliva na vmesnik.",
-  "admin.config.appearance.upload-progress-style": "Upload progress style",
-  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
-  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
-  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
-  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
+  "admin.config.appearance.custom-css.description":
+    "Globalni CSS za frontend. Uporabljajte previdno; neveljaven CSS lahko vpliva na vmesnik.",
+  "admin.config.appearance.upload-progress-style": "Slog napredka nalaganja",
+  "admin.config.appearance.upload-progress-style.description":
+    "Izberite, kako se prikazuje napredek nalaganja na seznamu datotek.",
+  "admin.config.appearance.upload-progress-style.circle": "Krožni indikator",
+  "admin.config.appearance.upload-progress-style.circle-percentage":
+    "Krog s odstotkom",
+  "admin.config.appearance.upload-progress-style.percentage-time":
+    "Odstotek in preostali čas",
   "admin.config.general.app-url": "URL aplikacije",
-  "admin.config.general.app-url.description": "Na katerem URL-ju je dostopen Pingvin Share",
-  "admin.config.security.secure-cookies": "Secure cookies",
-  "admin.config.security.secure-cookies.description": "Whether to set the secure flag on cookies. If enabled, the site will not function when accessed over HTTP.",
+  "admin.config.general.app-url.description":
+    "Na katerem URL-ju je dostopen Pingvin Share",
+  "admin.config.security.secure-cookies": "Varni piškotki",
+  "admin.config.security.secure-cookies.description":
+    "Ali naj se na piškotkih nastavi oznaka 'secure'. Če je omogočeno, spletno mesto ne bo delovalo pri dostopu prek protokola HTTP.",
   "admin.config.general.show-home-page": "Prikaži domačo stran",
-  "admin.config.general.show-home-page.description": "Ali prikazati domačo stran",
-  "admin.config.security.session-duration": "Session Duration",
-  "admin.config.security.session-duration.description": "Time after which a user must log in again (default: 3 months).",
+  "admin.config.general.show-home-page.description":
+    "Ali prikazati domačo stran",
+  "admin.config.security.session-duration": "Trajanje seje",
+  "admin.config.security.session-duration.description":
+    "Čas, po katerem se mora uporabnik znova prijaviti (privzeto: 3 mesece).",
   "admin.config.appearance.logo": "Logotip",
-  "admin.config.appearance.logo.description": "Naložite novo sliko, da spremenite logotip. Datoteka mora biti tipa PNG in imeti razmerje 1:1.",
-  "admin.config.appearance.logo-dark": "Dark mode logo",
-  "admin.config.appearance.logo-dark.description": "Upload a separate logo for dark mode. The image must be a PNG and should have the format 1:1.",
+  "admin.config.appearance.logo.description":
+    "Naložite novo sliko, da spremenite logotip. Datoteka mora biti tipa PNG in imeti razmerje 1:1.",
+  "admin.config.appearance.logo-dark": "Logotip za temni način",
+  "admin.config.appearance.logo-dark.description":
+    "Naložite ločen logotip za temni način. Slika mora biti PNG v razmerju 1:1.",
   "admin.config.appearance.logo.placeholder": "Izberite sliko",
-  "admin.config.security.custom-password-policy": "Custom password policy",
-  "admin.config.security.custom-password-policy.description": "Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.",
-  "admin.config.security.min-length": "Minimum length",
-  "admin.config.security.min-length.description": "Minimum number of characters required for a password.",
-  "admin.config.security.require-uppercase": "Require uppercase",
-  "admin.config.security.require-uppercase.description": "Whether to require at least one uppercase letter in the password.",
-  "admin.config.security.require-lowercase": "Require lowercase",
-  "admin.config.security.require-lowercase.description": "Whether to require at least one lowercase letter in the password.",
-  "admin.config.security.require-number": "Require number",
-  "admin.config.security.require-number.description": "Whether to require at least one number in the password.",
-  "admin.config.security.require-special-character": "Require special character",
-  "admin.config.security.require-special-character.description": "Whether to require at least one special character in the password.",
+  "admin.config.security.custom-password-policy": "Politika gesel po meri",
+  "admin.config.security.custom-password-policy.description":
+    "Ali naj bo omogočeno prilagajanje politike gesel. Če je onemogočeno, se uporablja privzeta politika gesel z najmanj 8 znaki.",
+  "admin.config.security.min-length": "Najmanjša dolžina",
+  "admin.config.security.min-length.description":
+    "Najmanjše število znakov, zahtevanih za geslo.",
+  "admin.config.security.require-uppercase": "Zahtevaj velike črke",
+  "admin.config.security.require-uppercase.description":
+    "Ali naj geslo zahteva vsaj eno veliko črko.",
+  "admin.config.security.require-lowercase": "Zahtevaj male črke",
+  "admin.config.security.require-lowercase.description":
+    "Ali naj geslo zahteva vsaj eno malo črko.",
+  "admin.config.security.require-number": "Zahtevaj številko",
+  "admin.config.security.require-number.description":
+    "Ali naj geslo zahteva vsaj eno številko.",
+  "admin.config.security.require-special-character": "Zahtevaj poseben znak",
+  "admin.config.security.require-special-character.description":
+    "Ali naj geslo zahteva vsaj en poseben znak.",
   "admin.config.cache.ttl": "TTL",
-  "admin.config.cache.ttl.description": "Time in second to keep information inside the cache.",
-  "admin.config.cache.max-items": "Maximum items",
-  "admin.config.cache.max-items.description": "Maximum number of items inside the cache.",
-  "admin.config.cache.redis-enabled": "Redis enabled",
-  "admin.config.cache.redis-enabled.description": "Normally Pingvin Share caches information in memory. If you run multiple instances of Pingvin Share, you need to enable Redis caching to share the cache between the instances.",
+  "admin.config.cache.ttl.description":
+    "Čas v sekundah za hranjenje informacij v predpomnilniku.",
+  "admin.config.cache.max-items": "Največje število elementov",
+  "admin.config.cache.max-items.description":
+    "Največje število elementov v predpomnilniku.",
+  "admin.config.cache.redis-enabled": "Redis omogočen",
+  "admin.config.cache.redis-enabled.description":
+    "Običajno Pingvin Share hrani informacije v pomnilniku. Če izvajate več primerkov Pingvin Share, morate omogočiti predpomnjenje Redis za skupno rabo predpomnilnika med njimi.",
   "admin.config.cache.redis-url": "Redis URL",
-  "admin.config.cache.redis-url.description": "Url to connect to the Redis instance used for caching.",
-  "admin.config.cache.button.test-redis": "Test Redis connection",
-  "admin.config.cache.test-redis.success": "Connected to Redis successfully",
-  "admin.config.cache.test-redis.success-disabled": "Connected to Redis successfully (Redis caching is currently disabled).",
-  "admin.config.cache.test-redis.modal.error.title": "Failed to connect to Redis",
-  "admin.config.cache.test-redis.modal.error.description": "While connecting to Redis, the following error occurred:",
-  "admin.config.cache.test-redis.modal.save.title": "Save configuration",
-  "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
-  "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
-  "admin.config.email.send-html-emails": "Enable HTML email compatibility",
-  "admin.config.email.send-html-emails.description": "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
-  "admin.config.share.enable-share-email-recipients": "Enable email recipient sharing",
-  "admin.config.share.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
+  "admin.config.cache.redis-url.description":
+    "URL za povezavo s primerkom Redis, ki se uporablja za predpomnjenje.",
+  "admin.config.cache.button.test-redis": "Preizkusi povezavo z Redisom",
+  "admin.config.cache.test-redis.success": "Povezava z Redisom je bila uspešna",
+  "admin.config.cache.test-redis.success-disabled":
+    "Povezava z Redisom je bila uspešna (predpomnjenje Redis je trenutno onemogočeno).",
+  "admin.config.cache.test-redis.modal.error.title":
+    "Povezava z Redisom ni uspela",
+  "admin.config.cache.test-redis.modal.error.description":
+    "Pri povezovanju z Redisom je prišlo do naslednje napake:",
+  "admin.config.cache.test-redis.modal.save.title": "Shrani konfiguracijo",
+  "admin.config.cache.test-redis.modal.save.description":
+    "Za nadaljevanje morate najprej shraniti konfiguracijo. Ali želite shraniti konfiguracijo in preizkusiti povezavo z Redisom?",
+  "admin.config.cache.test-redis.modal.save.confirm": "Shrani in preizkusi",
+  "admin.config.email.send-html-emails":
+    "Omogoči združljivost s sporočili HTML",
+  "admin.config.email.send-html-emails.description":
+    "Če je omogočeno, bodo e-poštna sporočila poslana v obliki HTML. Prepričajte se, da so e-poštne predloge posodobljene za uporabo HTML.",
+  "admin.config.share.enable-share-email-recipients":
+    "Omogoči deljenje s prejemniki prek e-pošte",
+  "admin.config.share.enable-share-email-recipients.description":
+    "Ali naj bo dovoljeno deljenje po e-pošti s prejemniki. To je mogoče omogočiti le, če je SMTP aktiviran.",
   "admin.config.email.share-recipients-subject": "Zadeva poslane delitve",
-  "admin.config.email.share-recipients-subject.description": "Zadeva e-poštnega sporočila, ki bo poslan prejemnikom delitve.",
+  "admin.config.email.share-recipients-subject.description":
+    "Zadeva e-poštnega sporočila, ki bo poslan prejemnikom delitve.",
   "admin.config.email.share-recipients-message": "Vsebina poslane delitve",
-  "admin.config.email.share-recipients-message.description": "Message which gets sent to the share recipients. Available variables:\n {creator} - The username of the creator of the share\n {creatorEmail} - The email of the creator of the share\n {shareUrl} - The URL of the share\n {desc} - The description of the share\n {expires} - The expiration date of the share\n These variables will be replaced with the actual value.",
+  "admin.config.email.share-recipients-message.description":
+    "Sporočilo, ki se pošlje prejemnikom deljenja. Razpoložljive spremenljivke:\n {creator} - Uporabniško ime ustvarjalca deljenja\n {creatorEmail} - E-pošta ustvarjalca deljenja\n {shareUrl} - URL deljenja\n {desc} - Opis deljenja\n {expires} - Datum poteka deljenja\n Te spremenljivke bodo zamenjane z dejansko vrednostjo.",
   "admin.config.email.reverse-share-subject": "Zadeva delitve v obratni smeri",
-  "admin.config.email.reverse-share-subject.description": "Subject of the sent email when someone created a share with your reverse share link.",
+  "admin.config.email.reverse-share-subject.description":
+    "Zadeva poslanega e-poštnega sporočila, ko nekdo ustvari deljenje z vašo povezavo za obratno deljenje.",
   "admin.config.email.reverse-share-message": "Vsebina delitve v obratni smeri",
-  "admin.config.email.reverse-share-message.description": "Vsebina e-poštnega sporočila, ki bo poslan, ko nekdo ustvari delitev v obratni smeri. {shareUrl} bo zamenjan z uporabniškim imenom ustvarjalca in URL-jom delitve.",
+  "admin.config.email.reverse-share-message.description":
+    "Vsebina e-poštnega sporočila, ki bo poslan, ko nekdo ustvari delitev v obratni smeri. {shareUrl} bo zamenjan z uporabniškim imenom ustvarjalca in URL-jom delitve.",
   "admin.config.email.reset-password-subject": "Zadeva ponastavitve gesla",
-  "admin.config.email.reset-password-subject.description": "Subject of the sent email when a user requests a password reset.",
+  "admin.config.email.reset-password-subject.description":
+    "Zadeva poslanega e-poštnega sporočila, ko uporabnik zahteva ponastavitev gesla.",
   "admin.config.email.reset-password-message": "Vsebina za ponastavitev gesla",
-  "admin.config.email.reset-password-message.description": "Vsebina e-poštnega sporočila, ki bo poslan, ko uporabnik zahteva ponastavitev gesla. {url} bo zamenjan z URL-jem za ponastavitev gesla.",
+  "admin.config.email.reset-password-message.description":
+    "Vsebina e-poštnega sporočila, ki bo poslan, ko uporabnik zahteva ponastavitev gesla. {url} bo zamenjan z URL-jem za ponastavitev gesla.",
   "admin.config.email.invite-subject": "Zadeva povabila",
-  "admin.config.email.invite-subject.description": "Subject of the sent email when an admin invites a user.",
+  "admin.config.email.invite-subject.description":
+    "Zadeva poslanega e-poštnega sporočila, ko skrbnik povabi uporabnika.",
   "admin.config.email.invite-message": "Vsebina povabila",
-  "admin.config.email.invite-message.description": "Message which gets sent when an admin invites a user. {url} will be replaced with the invite URL, {email} with the email and {password} with the users password.",
-  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
-  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
-  "admin.config.share.enable-share-download-notifications": "Enable download notifications",
-  "admin.config.share.enable-share-download-notifications.description": "Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.",
-  "admin.config.email.share-download-notification-subject": "Download notification subject",
-  "admin.config.email.share-download-notification-subject.description": "Subject of the email which gets sent to the share creator when a recipient downloads a file.",
-  "admin.config.email.share-download-notification-message": "Download notification message",
-  "admin.config.email.share-download-notification-message.description": "Message which gets sent to the share creator when a recipient downloads a file. Available variables:\n {recipientEmail} - The email of the recipient\n {fileName} - The downloaded file name\n {shareUrl} - The URL of the share",
-  "admin.config.security.enable-email-verification": "Enable email verification",
-  "admin.config.security.enable-email-verification.description": "Whether to require users to verify their email address before being able to sign in. This can only be enabled if SMTP is activated.",
-  "admin.config.email.verification-subject": "Verification subject",
-  "admin.config.email.verification-subject.description": "Subject of the email which gets sent to the user when they sign up.",
-  "admin.config.email.verification-message": "Verification message",
-  "admin.config.email.verification-message.description": "Message which gets sent to the user when they sign up. {url} will be replaced with the verification URL.",
+  "admin.config.email.invite-message.description":
+    "Sporočilo, ki se pošlje, ko skrbnik povabi uporabnika. {url} bo zamenjan z URL-jem povabila, {email} z e-poštnim naslovom in {password} z geslom uporabnika.",
+  "admin.config.email.share-recipients-reply-to-creator":
+    "Nastavi Reply-To na e-pošto ustvarjalca",
+  "admin.config.email.share-recipients-reply-to-creator.description":
+    "Ali naj se glava Reply-To nastavi na e-poštni naslov uporabnika, ki je ustvaril deljenje.",
+  "admin.config.share.enable-share-download-notifications":
+    "Omogoči obvestila o prenosu",
+  "admin.config.share.enable-share-download-notifications.description":
+    "Ali naj se ustvarjalcu deljenja pošlje e-poštno sporočilo, ko prejemnik prenese datoteko. To zahteva SMTP in deljenje s prejemniki prek e-pošte.",
+  "admin.config.email.share-download-notification-subject":
+    "Zadeva obvestila o prenosu",
+  "admin.config.email.share-download-notification-subject.description":
+    "Zadeva e-poštnega sporočila, ki se pošlje ustvarjalcu deljenja, ko prejemnik prenese datoteko.",
+  "admin.config.email.share-download-notification-message":
+    "Sporočilo obvestila o prenosu",
+  "admin.config.email.share-download-notification-message.description":
+    "Sporočilo, ki se pošlje ustvarjalcu deljenja, ko prejemnik prenese datoteko. Razpoložljive spremenljivke:\n {recipientEmail} - E-poštni naslov prejemnika\n {fileName} - Ime prenesene datoteke\n {shareUrl} - URL deljenja",
+  "admin.config.security.enable-email-verification":
+    "Omogoči preverjanje e-pošte",
+  "admin.config.security.enable-email-verification.description":
+    "Ali naj se od uporabnikov zahteva preverjanje e-poštnega naslova pred prijavo. To je mogoče omogočiti le, če je aktiviran SMTP.",
+  "admin.config.email.verification-subject": "Zadeva preverjanja",
+  "admin.config.email.verification-subject.description":
+    "Zadeva e-poštnega sporočila, ki se pošlje uporabniku ob registraciji.",
+  "admin.config.email.verification-message": "Sporočilo o preverjanju",
+  "admin.config.email.verification-message.description":
+    "Sporočilo, ki se pošlje uporabniku ob registraciji. {url} bo zamenjan z URL-jem za preverjanje.",
   "admin.config.security.allow-registration": "Dovoli registracijo",
-  "admin.config.security.allow-registration.description": "Če je registracija dovoljena",
-  "admin.config.security.allow-unauthenticated-shares": "Dovoli delitve s strani neprijavljenih uporabnikov",
-  "admin.config.security.allow-unauthenticated-shares.description": "Če lahko neprijavljeni uporabniki ustvarijo delitve",
-  "admin.config.share.default-expiration": "Default expiration",
-  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
+  "admin.config.security.allow-registration.description":
+    "Če je registracija dovoljena",
+  "admin.config.security.allow-unauthenticated-shares":
+    "Dovoli delitve s strani neprijavljenih uporabnikov",
+  "admin.config.security.allow-unauthenticated-shares.description":
+    "Če lahko neprijavljeni uporabniki ustvarijo delitve",
+  "admin.config.share.default-expiration": "Privzeti potek",
+  "admin.config.share.default-expiration.description":
+    "Privzeti čas poteka, izbran pri ustvarjanju novega deljenja.",
   "admin.config.share.max-expiration": "Najvišja zapadlost",
-  "admin.config.share.max-expiration.description": "Maximum share expiration. Set to 0 to allow unlimited expiration.",
-  "admin.config.share.share-id-length": "Default share ID length",
-  "admin.config.share.share-id-length.description": "Default length for the generated ID of a share. This value is also used to generate links for reverse shares. A value below 8 is not considered secure.",
+  "admin.config.share.max-expiration.description":
+    "Najdaljši čas poteka deljenja. Nastavite na 0, da omogočite neomejen čas poteka.",
+  "admin.config.share.share-id-length": "Privzeta dolžina ID-ja deljenja",
+  "admin.config.share.share-id-length.description":
+    "Privzeta dolžina ustvarjenega ID-ja deljenja. Ta vrednost se uporablja tudi za ustvarjanje povezav za obratna deljenja. Vrednost pod 8 ne velja za varno.",
   "admin.config.share.max-size": "Največja velikost",
   "admin.config.share.max-size.description": "Največja velikost delitve",
   "admin.config.share.zip-compression-level": "Nivo Zip stiskanja",
-  "admin.config.share.zip-compression-level.description": "Nivo stiskanja, ki uravnoveša med velikostjo datoteke in hitrostjo stiskanja. Veljavne vrednosti so med 0 in 9, kjer 0 pomeni brez kompresije in 9 pomeni največjo kompresijo. ",
+  "admin.config.share.zip-compression-level.description":
+    "Nivo stiskanja, ki uravnoveša med velikostjo datoteke in hitrostjo stiskanja. Veljavne vrednosti so med 0 in 9, kjer 0 pomeni brez kompresije in 9 pomeni največjo kompresijo. ",
   "admin.config.share.chunk-size": "Velikost delcev",
-  "admin.config.share.chunk-size.description": "Adjust the chunk size for your uploads to balance efficiency and reliability according to your internet connection. Smaller chunks can enhance success rates for unstable connections, while larger chunks make uploads faster for stable connections.",
-  "admin.config.share.auto-open-share-modal": "Auto open create share modal",
-  "admin.config.share.auto-open-share-modal.description": "The share creation modal automatically appears when a user selects files, eliminating the need to manually click the button.",
-  "admin.config.security.allow-admin-access-all-shares": "Allow admin access to all shares",
-  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
-  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
-  "admin.config.security.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
-  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
-  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
-  "admin.config.share.file-retention-period": "File retention period",
-  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
-  "admin.config.smtp.enabled": "Enable",
-  "admin.config.smtp.enabled.description": "Če je SMTP omogočen. Omogočite samo, če ste vnesli strežnik, vrata, e-pošto, uporabniško ime in geslo vašega SMTP strežnika.",
+  "admin.config.share.chunk-size.description":
+    "Prilagodite velikost kosov za nalaganje, da uravnotežite učinkovitost in zanesljivost glede na vašo internetno povezavo. Manjši kosi lahko izboljšajo stopnjo uspešnosti pri nestabilnih povezavah, medtem ko večji kosi pospešijo nalaganje pri stabilnih povezavah.",
+  "admin.config.share.auto-open-share-modal":
+    "Samodejno odpri pogovorno okno za ustvarjanje deljenja",
+  "admin.config.share.auto-open-share-modal.description":
+    "Pogovorno okno za ustvarjanje deljenja se samodejno prikaže, ko uporabnik izbere datoteke, s čimer ni treba ročno klikniti gumba.",
+  "admin.config.security.allow-admin-access-all-shares":
+    "Dovoli skrbniški dostop do vseh deljenj",
+  "admin.config.share.reverse-share-simple-only":
+    "Vsili preprost način za obratno deljenje",
+  "admin.config.share.reverse-share-simple-only.description":
+    "Vsili ustvarjanje obratnih deljenj v preprostem načinu. Če je onemogočeno, lahko ustvarjalec obratnega deljenja izbira med preprostim in naprednim načinom.",
+  "admin.config.security.allow-admin-access-all-shares.description":
+    "Dovoli skrbnikom dostop do vseh deljenj, tudi če so zaščitena z geslom, pretekla ali izbrisana.",
+  "admin.config.share.enable-user-recipients":
+    "Omogoči deljenje z registriranimi uporabniki",
+  "admin.config.share.enable-user-recipients.description":
+    "Ko je omogočeno, se bodo deljenja, poslana na e-poštni naslov registriranega uporabnika, samodejno prikazala v njegovem računu. Uporabniki lahko tudi omejijo dostop do deljenja le na navedene prejemnike.",
+  "admin.config.share.file-retention-period": "Obdobje hrambe datotek",
+  "admin.config.share.file-retention-period.description":
+    "Koliko časa se datoteke hranijo po poteku ali izbrisu deljenja. Uporabno le, če je omogočena tudi možnost 'Dovoli skrbniški dostop do vseh deljenj'. Nastavite na -1, da datoteke ohranite za vedno.",
+  "admin.config.smtp.enabled": "Omogoči",
+  "admin.config.smtp.enabled.description":
+    "Če je SMTP omogočen. Omogočite samo, če ste vnesli strežnik, vrata, e-pošto, uporabniško ime in geslo vašega SMTP strežnika.",
   "admin.config.smtp.host": "Gostitelj",
   "admin.config.smtp.host.description": "Gostitelj SMTP strežnika",
   "admin.config.smtp.port": "Vrata",
   "admin.config.smtp.port.description": "Vrata SMTP strežnika",
   "admin.config.smtp.email": "E-pošta",
-  "admin.config.smtp.email.description": "Email address from which the emails get sent",
+  "admin.config.smtp.email.description":
+    "E-poštni naslov, s katerega se pošiljajo e-poštna sporočila",
   "admin.config.smtp.username": "Uporabniško ime",
   "admin.config.smtp.username.description": "Uporabniško ime SMTP strežnika",
   "admin.config.smtp.password": "Geslo",
   "admin.config.smtp.password.description": "Geslo SMTP strežnika",
   "admin.config.smtp.button.test": "Pošlji testno sporočilo",
-  "admin.config.smtp.test-email.success": "Email sent successfully",
-  "admin.config.smtp.test-email.error.title": "Failed to send email",
-  "admin.config.smtp.test-email.error.description": "While sending the test email, the following error occurred:",
-  "admin.config.smtp.test-email.save.title": "Save configuration",
-  "admin.config.smtp.test-email.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and send the test email?",
-  "admin.config.smtp.test-email.save.confirm": "Save and send",
-  "admin.config.smtp.allow-unauthorized-certificates": "Trust unauthorized SMTP server certificates",
-  "admin.config.smtp.allow-unauthorized-certificates.description": "Only set this to true if you need to trust self signed certificates.",
+  "admin.config.smtp.test-email.success":
+    "E-poštno sporočilo je bilo uspešno poslano",
+  "admin.config.smtp.test-email.error.title": "Pošiljanje e-pošte ni uspelo",
+  "admin.config.smtp.test-email.error.description":
+    "Pri pošiljanju preizkusnega e-poštnega sporočila je prišlo do naslednje napake:",
+  "admin.config.smtp.test-email.save.title": "Shrani konfiguracijo",
+  "admin.config.smtp.test-email.save.description":
+    "Za nadaljevanje morate najprej shraniti konfiguracijo. Ali želite shraniti konfiguracijo in poslati preizkusno e-pošto?",
+  "admin.config.smtp.test-email.save.confirm": "Shrani in pošlji",
+  "admin.config.smtp.allow-unauthorized-certificates":
+    "Zaupaj nepooblaščenim potrdilom strežnika SMTP",
+  "admin.config.smtp.allow-unauthorized-certificates.description":
+    "Nastavite na 'true' samo, če morate zaupati samopodpisanim potrdilom.",
   "admin.config.oauth.allow-registration": "Dovoli registracijo",
-  "admin.config.oauth.allow-registration.description": "Dovoli registracijo uporabnika prek družbenih omrežij",
+  "admin.config.oauth.allow-registration.description":
+    "Dovoli registracijo uporabnika prek družbenih omrežij",
   "admin.config.oauth.ignore-totp": "Ignoriraj TOTP",
-  "admin.config.oauth.ignore-totp.description": "Če ignorirati TOTP, ko se uporabnik registrira prek družbenih omrežij",
-  "admin.config.oauth.disable-password": "Disable password login",
-  "admin.config.oauth.disable-password.description": "Whether to disable password login\nMake sure that an OAuth provider is properly configured before activating this configuration to avoid being locked out.",
+  "admin.config.oauth.ignore-totp.description":
+    "Če ignorirati TOTP, ko se uporabnik registrira prek družbenih omrežij",
+  "admin.config.oauth.disable-password": "Onemogoči prijavo z geslom",
+  "admin.config.oauth.disable-password.description":
+    "Ali naj se onemogoči prijava z geslom\nPred aktiviranjem te konfiguracije se prepričajte, da je ponudnik OAuth pravilno konfiguriran, da se izognete zaklepu dostopa.",
   "admin.config.oauth.github-enabled": "GitHub",
-  "admin.config.oauth.github-enabled.description": "Če je dovoljena prijava z GitHub računom",
+  "admin.config.oauth.github-enabled.description":
+    "Če je dovoljena prijava z GitHub računom",
   "admin.config.oauth.github-client-id": "GitHub ID klienta",
-  "admin.config.oauth.github-client-id.description": "ID klienta GitHub OAuth aplikacije",
+  "admin.config.oauth.github-client-id.description":
+    "ID klienta GitHub OAuth aplikacije",
   "admin.config.oauth.github-client-secret": "GitHub skrivnost klienta",
-  "admin.config.oauth.github-client-secret.description": "Skrivnost klienta GitHub OAuth aplikacije",
+  "admin.config.oauth.github-client-secret.description":
+    "Skrivnost klienta GitHub OAuth aplikacije",
   "admin.config.oauth.google-enabled": "Google",
-  "admin.config.oauth.google-enabled.description": "Če je dovoljena prijava z Google računom",
+  "admin.config.oauth.google-enabled.description":
+    "Če je dovoljena prijava z Google računom",
   "admin.config.oauth.google-client-id": "Google ID klienta",
-  "admin.config.oauth.google-client-id.description": "ID Klienta Google OAuth aplikacije",
+  "admin.config.oauth.google-client-id.description":
+    "ID Klienta Google OAuth aplikacije",
   "admin.config.oauth.google-client-secret": "Skrivnost Google klienta",
-  "admin.config.oauth.google-client-secret.description": "Skrivnost klienta Google OAuth aplikacije",
+  "admin.config.oauth.google-client-secret.description":
+    "Skrivnost klienta Google OAuth aplikacije",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
-  "admin.config.oauth.microsoft-enabled.description": "Če je dovoljena prijava z Microsoft računom",
+  "admin.config.oauth.microsoft-enabled.description":
+    "Če je dovoljena prijava z Microsoft računom",
   "admin.config.oauth.microsoft-tenant": "Microsoft najemnik",
-  "admin.config.oauth.microsoft-tenant.description": "ID identitete Microsoft OAuth aplikacije\nobičajno: V aplikacijo se lahko prijavijo uporabniki osebnega Microsoft računa in službenega ali šolskega računa z Microsoft Entra ID.\norganizacije: V aplikacijo se lahko prijavijo samo uporabniki službenega ali šolskega računa z Microsoft Entra ID.\nuporabniki: V aplikacijo se lahko prijavijo samo uporabniki osebnega Microsoft računa.\ndomensko ime Microsoft Entra identitete ali ID identitete v formatu GUID: V aplikacijo se lahko prijavijo samo uporabniki specifične Microsoft Entra identitete (člani imenika s službenim ali šolskim računom ali gosti imenika z osebnim Microsoft računom).",
+  "admin.config.oauth.microsoft-tenant.description":
+    "ID identitete Microsoft OAuth aplikacije\nobičajno: V aplikacijo se lahko prijavijo uporabniki osebnega Microsoft računa in službenega ali šolskega računa z Microsoft Entra ID.\norganizacije: V aplikacijo se lahko prijavijo samo uporabniki službenega ali šolskega računa z Microsoft Entra ID.\nuporabniki: V aplikacijo se lahko prijavijo samo uporabniki osebnega Microsoft računa.\ndomensko ime Microsoft Entra identitete ali ID identitete v formatu GUID: V aplikacijo se lahko prijavijo samo uporabniki specifične Microsoft Entra identitete (člani imenika s službenim ali šolskim računom ali gosti imenika z osebnim Microsoft računom).",
   "admin.config.oauth.microsoft-client-id": "Microsoft ID klienta",
-  "admin.config.oauth.microsoft-client-id.description": "ID Klienta Microsoft OAuth aplikacije",
+  "admin.config.oauth.microsoft-client-id.description":
+    "ID Klienta Microsoft OAuth aplikacije",
   "admin.config.oauth.microsoft-client-secret": "Skrivnost Microsoft klienta",
-  "admin.config.oauth.microsoft-client-secret.description": "Skrivnost klienta Microsoft OAuth aplikacije",
+  "admin.config.oauth.microsoft-client-secret.description":
+    "Skrivnost klienta Microsoft OAuth aplikacije",
   "admin.config.oauth.discord-enabled": "Discord",
-  "admin.config.oauth.discord-enabled.description": "Če je dovoljena prijava z Discord računom",
-  "admin.config.oauth.discord-limited-users": "Discord limited users",
-  "admin.config.oauth.discord-limited-users.description": "Limit signing in to specific users by their Discord ID. Leave it blank to disable.",
+  "admin.config.oauth.discord-enabled.description":
+    "Če je dovoljena prijava z Discord računom",
+  "admin.config.oauth.discord-limited-users": "Omejeni uporabniki Discord",
+  "admin.config.oauth.discord-limited-users.description":
+    "Omejite prijavo na določene uporabnike z njihovim ID-jem Discord. Pustite prazno, da onemogočite.",
   "admin.config.oauth.discord-limited-guild": "ID omejenega Discord strežnika",
-  "admin.config.oauth.discord-limited-guild.description": "Omogoči omejitev prijave uporabnika v specifičen strežnik. Pustite prazno, da onemogočite.",
+  "admin.config.oauth.discord-limited-guild.description":
+    "Omogoči omejitev prijave uporabnika v specifičen strežnik. Pustite prazno, da onemogočite.",
   "admin.config.oauth.discord-client-id": "Discord ID klienta",
-  "admin.config.oauth.discord-client-id.description": "ID klienta Discord OAuth aplikacije",
+  "admin.config.oauth.discord-client-id.description":
+    "ID klienta Discord OAuth aplikacije",
   "admin.config.oauth.discord-client-secret": "Discord skrivnost klienta",
-  "admin.config.oauth.discord-client-secret.description": "Skrivnost klienta Discord OAuth aplikacije",
+  "admin.config.oauth.discord-client-secret.description":
+    "Skrivnost klienta Discord OAuth aplikacije",
   "admin.config.oauth.oidc-enabled": "OpenID Connect",
-  "admin.config.oauth.oidc-enabled.description": "Če je dovoljena prijava z OpenID Connect",
+  "admin.config.oauth.oidc-enabled.description":
+    "Če je dovoljena prijava z OpenID Connect",
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect URI za odkrivanje",
-  "admin.config.oauth.oidc-discovery-uri.description": "URI za odkrivanje OpenID Connect OAuth aplikacije",
-  "admin.config.oauth.oidc-sign-out": "Sign out from OpenID Connect",
-  "admin.config.oauth.oidc-sign-out.description": "Whether the “Sign out” button will sign out from the OpenID Connect provider",
-  "admin.config.oauth.oidc-scope": "OpenID Connect scope",
-  "admin.config.oauth.oidc-scope.description": "Scopes which should be requested from the OpenID Connect provider.",
-  "admin.config.oauth.oidc-username-claim": "OpenID Connect zahteva za uporabniško ime",
-  "admin.config.oauth.oidc-username-claim.description": "Zahteva za uporabniško ime za OpenID Connect ID žetona. Pustite prazno, če ne poznate te nastavitve.",
-  "admin.config.oauth.oidc-role-path": "Path to roles in OpenID Connect token",
-  "admin.config.oauth.oidc-role-path.description": "Must be a valid JMES path referencing an array of roles. " + "Managing access rights using OpenID Connect roles is only recommended if no other identity provider is configured and password login is disabled. " + "Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-general-access": "OpenID Connect role for general access",
-  "admin.config.oauth.oidc-role-general-access.description": "Role required for general access. Must be present in a user’s roles for them to log in. " + "Leave it blank if you don't know what this config is.",
-  "admin.config.oauth.oidc-role-admin-access": "OpenID Connect role for admin access",
-  "admin.config.oauth.oidc-role-admin-access.description": "Role required for administrative access. Must be present in a user’s roles for them to access the admin panel. " + "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-discovery-uri.description":
+    "URI za odkrivanje OpenID Connect OAuth aplikacije",
+  "admin.config.oauth.oidc-sign-out": "Odjava iz OpenID Connect",
+  "admin.config.oauth.oidc-sign-out.description":
+    "Ali gumb »Odjava« odjavi tudi iz ponudnika OpenID Connect",
+  "admin.config.oauth.oidc-scope": "OpenID Connect obseg (scope)",
+  "admin.config.oauth.oidc-scope.description":
+    "Obsegi (scopes), ki jih je treba zahtevati od ponudnika OpenID Connect.",
+  "admin.config.oauth.oidc-username-claim":
+    "OpenID Connect zahteva za uporabniško ime",
+  "admin.config.oauth.oidc-username-claim.description":
+    "Zahteva za uporabniško ime za OpenID Connect ID žetona. Pustite prazno, če ne poznate te nastavitve.",
+  "admin.config.oauth.oidc-role-path": "Pot do vlog v žetonu OpenID Connect",
+  "admin.config.oauth.oidc-role-path.description":
+    "Mora biti veljavna pot JMES, ki se nanaša na polje vlog. Upravljanje pravic dostopa z vlogami OpenID Connect je priporočljivo le, če ni konfiguriran noben drug ponudnik identitete in je prijava z geslom onemogočena. Pustite prazno, če ne veste, kaj je ta konfiguracija." +
+    "Managing access rights using OpenID Connect roles is only recommended if no other identity provider is configured and password login is disabled. " +
+    "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-general-access":
+    "Vloga OpenID Connect za splošni dostop",
+  "admin.config.oauth.oidc-role-general-access.description":
+    "Vloga, potrebna za splošni dostop. Mora biti prisotna v vlogah uporabnika, da se lahko prijavi. Pustite prazno, če ne veste, kaj je ta konfiguracija." +
+    "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-admin-access":
+    "Vloga OpenID Connect za skrbniški dostop",
+  "admin.config.oauth.oidc-role-admin-access.description":
+    "Vloga, potrebna za skrbniški dostop. Mora biti prisotna v vlogah uporabnika, da lahko dostopa do skrbniške plošče. Pustite prazno, če ne veste, kaj je ta konfiguracija." +
+    "Leave it blank if you don't know what this config is.",
   "admin.config.oauth.oidc-client-id": "OpenID Connect ID klienta",
-  "admin.config.oauth.oidc-client-id.description": "ID Klienta OpenID Connect OAuth aplikacije",
+  "admin.config.oauth.oidc-client-id.description":
+    "ID Klienta OpenID Connect OAuth aplikacije",
   "admin.config.oauth.oidc-client-secret": "OpenID Connect skrivnost klienta",
-  "admin.config.oauth.oidc-client-secret.description": "Skrivnost klienta OpenID Connect OAuth aplikacije",
+  "admin.config.oauth.oidc-client-secret.description":
+    "Skrivnost klienta OpenID Connect OAuth aplikacije",
   "admin.config.category.ldap": "LDAP",
-  "admin.config.ldap.enabled": "Enable LDAP",
-  "admin.config.ldap.enabled.description": "Use LDAP authentication for user login",
-  "admin.config.ldap.url": "Server URL",
-  "admin.config.ldap.url.description": "URL of the LDAP server",
+  "admin.config.ldap.enabled": "Omogoči LDAP",
+  "admin.config.ldap.enabled.description":
+    "Uporabi avtentikacijo LDAP za prijavo uporabnikov",
+  "admin.config.ldap.url": "URL strežnika",
+  "admin.config.ldap.url.description": "URL strežnika LDAP",
   "admin.config.ldap.bind-dn": "Bind DN",
-  "admin.config.ldap.bind-dn.description": "Default user used to perform the user search",
-  "admin.config.ldap.bind-password": "Bind password",
-  "admin.config.ldap.bind-password.description": "Password used to perform the user search",
-  "admin.config.ldap.search-base": "User base",
-  "admin.config.ldap.search-base.description": "Base location, where the user search will be performed",
-  "admin.config.ldap.search-query": "User query",
-  "admin.config.ldap.search-query.description": "The user query will be used to search the 'User base' for the LDAP user. %username% can be used as the placeholder for the user given input.",
-  "admin.config.ldap.admin-groups": "Admin group",
-  "admin.config.ldap.admin-groups.description": "Group required for administrative access.",
-  "admin.config.ldap.field-name-member-of": "User groups attribute name",
-  "admin.config.ldap.field-name-member-of.description": "LDAP attribute name for the groups, an user is a member of. This is used when checking for the admin group.",
-  "admin.config.ldap.field-name-email": "User email attribute name",
-  "admin.config.ldap.field-name-email.description": "LDAP attribute name for the email of an user.",
-  "admin.config.notify.success": "Configuration updated successfully.",
-  "admin.config.notify.logo-success": "Logo updated successfully. It may take a few minutes to update on the website.",
-  "admin.config.notify.no-changes": "No changes to save.",
+  "admin.config.ldap.bind-dn.description":
+    "Privzeti uporabnik za izvajanje iskanja uporabnikov",
+  "admin.config.ldap.bind-password": "Bind geslo",
+  "admin.config.ldap.bind-password.description":
+    "Geslo za izvajanje iskanja uporabnikov",
+  "admin.config.ldap.search-base": "Uporabniška osnova",
+  "admin.config.ldap.search-base.description":
+    "Osnovna lokacija, kjer se bo izvajalo iskanje uporabnikov",
+  "admin.config.ldap.search-query": "Poizvedba za uporabnika",
+  "admin.config.ldap.search-query.description":
+    "Poizvedba, ki bo uporabljena za iskanje uporabnika LDAP v 'Uporabniški osnovi'. %username% se lahko uporabi kot vsebnik za uporabnikov vnos.",
+  "admin.config.ldap.admin-groups": "Skrbniška skupina",
+  "admin.config.ldap.admin-groups.description":
+    "Skupina, potrebna za skrbniški dostop.",
+  "admin.config.ldap.field-name-member-of": "Ime atributa uporabniških skupin",
+  "admin.config.ldap.field-name-member-of.description":
+    "Ime atributa LDAP za skupine, katerih član je uporabnik. Uporablja se pri preverjanju skrbniške skupine.",
+  "admin.config.ldap.field-name-email": "Ime atributa za e-pošto uporabnika",
+  "admin.config.ldap.field-name-email.description":
+    "Ime atributa LDAP za e-poštni naslov uporabnika.",
+  "admin.config.notify.success": "Konfiguracija je bila uspešno posodobljena.",
+  "admin.config.notify.logo-success":
+    "Logotip je bil uspešno posodobljen. Posodobitev na spletnem mestu lahko traja nekaj minut.",
+  "admin.config.notify.no-changes": "Ni sprememb za shranjevanje.",
   "admin.config.category.s3": "S3",
-  "admin.config.s3.enabled": "Enabled",
-  "admin.config.s3.enabled.description": "Whether S3 should be used to store the shared files instead of the local file system. WARNING: If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
+  "admin.config.s3.enabled": "Omogočeno",
+  "admin.config.s3.enabled.description":
+    "Ali naj se S3 uporablja za shranjevanje deljenih datotek namesto lokalnega datotečnega sistema. OPOZORILO: Če je ClamAV aktiven, se bodo datoteke za preverjanje začasno prenesle iz S3.",
   "admin.config.s3.endpoint": "Endpoint",
-  "admin.config.s3.endpoint.description": "The URL of the S3 bucket.",
-  "admin.config.s3.region": "Region",
-  "admin.config.s3.region.description": "The region of the S3 bucket.",
-  "admin.config.s3.bucket-name": "Bucket name",
-  "admin.config.s3.bucket-name.description": "The name of the S3 bucket.",
-  "admin.config.s3.bucket-path": "Path",
-  "admin.config.s3.bucket-path.description": "The default path which should be used to store the files in the S3 bucket.",
-  "admin.config.s3.key": "Key",
-  "admin.config.s3.key.description": "The key which allows you to access the S3 bucket.",
+  "admin.config.s3.endpoint.description": "URL vedra S3.",
+  "admin.config.s3.region": "Regija",
+  "admin.config.s3.region.description": "Regija vedra S3.",
+  "admin.config.s3.bucket-name": "Ime vedra",
+  "admin.config.s3.bucket-name.description": "Ime vedra S3.",
+  "admin.config.s3.bucket-path": "Pot",
+  "admin.config.s3.bucket-path.description":
+    "Privzeta pot, ki naj se uporabi za shranjevanje datotek v vedru S3.",
+  "admin.config.s3.key": "Ključ",
+  "admin.config.s3.key.description":
+    "Ključ, ki vam omogoča dostop do vedra S3.",
   "admin.config.s3.secret": "Secret",
-  "admin.config.s3.secret.description": "The secret which allows you to access the S3 bucket.",
-  "admin.config.s3.use-checksum": "Use checksum",
-  "admin.config.s3.use-checksum.description": "Turn off for backends that do not support checksum (e.g. B2).",
-  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
-  "admin.config.category.legal": "Legal",
-  "admin.config.legal.enabled": "Enable legal notices",
-  "admin.config.legal.enabled.description": "Whether to show a link to imprint and privacy policy in the footer.",
-  "admin.config.legal.imprint-text": "Imprint text",
-  "admin.config.legal.imprint-text.description": "The text which should be shown in the imprint. Supports Markdown. Leave blank to link to an external imprint page.",
-  "admin.config.legal.imprint-url": "Imprint URL",
-  "admin.config.legal.imprint-url.description": "If you already have an imprint page you can link it here instead of using the text field.",
-  "admin.config.legal.privacy-policy-text": "Privacy policy text",
-  "admin.config.legal.privacy-policy-text.description": "The text which should be shown in the privacy policy. Supports Markdown. Leave blank to link to an external privacy policy page.",
-  "admin.config.legal.privacy-policy-url": "Privacy policy URL",
-  "admin.config.legal.privacy-policy-url.description": "If you already have a privacy policy page you can link it here instead of using the text field.",
+  "admin.config.s3.secret.description":
+    "Skrivni ključ, ki vam omogoča dostop do vedra S3.",
+  "admin.config.s3.use-checksum": "Uporabi kontrolno vsoto",
+  "admin.config.s3.use-checksum.description":
+    "Izklopite za zaledja, ki ne podpirajo kontrolnih vsot (npr. B2).",
+  "admin.config.s3.docs-link":
+    "CORS mora biti ponovno konfiguriran na vašem bucket-u, za podrobnosti glejte {wikiLink}.",
+  "admin.config.category.legal": "Pravno",
+  "admin.config.legal.enabled": "Omogoči pravna obvestila",
+  "admin.config.legal.enabled.description":
+    "Ali naj se v nogi prikaže povezava do pravnega obvestila in pravilnika o zasebnosti.",
+  "admin.config.legal.imprint-text": "Besedilo pravnega obvestila",
+  "admin.config.legal.imprint-text.description":
+    "Besedilo, ki naj bo prikazano v pravnem obvestilu. Podpira Markdown. Pustite prazno za povezavo do zunanje strani s pravnim obvestilom.",
+  "admin.config.legal.imprint-url": "URL pravnega obvestila",
+  "admin.config.legal.imprint-url.description":
+    "Če že imate stran s pravnim obvestilom, jo lahko povežete tukaj, namesto da uporabite besedilno polje.",
+  "admin.config.legal.privacy-policy-text": "Besedilo pravilnika o zasebnosti",
+  "admin.config.legal.privacy-policy-text.description":
+    "Besedilo, ki naj bo prikazano v pravilniku o zasebnosti. Podpira Markdown. Pustite prazno za povezavo do zunanje strani s pravilnikom o zasebnosti.",
+  "admin.config.legal.privacy-policy-url": "URL pravilnika o zasebnosti",
+  "admin.config.legal.privacy-policy-url.description":
+    "Če že imate stran s pravilnikom o zasebnosti, jo lahko povežete tukaj, namesto da uporabite besedilno polje.",
   // 404
   "404.description": "Ups! Ta stran ne obstaja.",
   "404.button.home": "Pelji me domov",
@@ -645,25 +854,31 @@ export default {
   "error.description": "Ups!",
   "error.button.back": "Nazaj",
   "error.msg.default": "Prišlo je do napake.",
-  "error.msg.access_denied": "Prekinili ste proces prijave, prosimo poskusite ponovno.",
-  "error.msg.expired_token": "Proces prijave je trajal predolgo, prosimo poskusite ponovno.",
+  "error.msg.access_denied":
+    "Prekinili ste proces prijave, prosimo poskusite ponovno.",
+  "error.msg.expired_token":
+    "Proces prijave je trajal predolgo, prosimo poskusite ponovno.",
   "error.msg.invalid_token": "Interna napaka",
   "error.msg.no_user": "Uporabnik povezan na račun {0} ne obstaja.",
   "error.msg.no_email": "Ne najdemo e-poštnega naslova za račun {0}.",
   "error.msg.already_linked": "Račun {0} je že povezan na drug račun.",
-  "error.msg.not_linked": "This {0} account hasn't been linked to any account yet.",
-  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
-  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
-  "error.msg.unverified_account": "Račun {0} je nepreverjen, prosimo poskusite ponovno po preverjanju.",
+  "error.msg.not_linked": "Ta račun {0} še ni bil povezan z nobenim računom.",
+  "error.msg.email_already_exists":
+    "Račun s tem e-poštnim naslovom že obstaja. Prijavite se s svojim geslom in ročno povežite svoj račun {0} na strani Moj račun.",
+  "error.msg.email_not_verified":
+    "Vaš e-poštni naslov na tem računu {0} ni preverjen. Pred prijavo preverite svoj e-poštni naslov pri ponudniku identitete.",
+  "error.msg.unverified_account":
+    "Račun {0} je nepreverjen, prosimo poskusite ponovno po preverjanju.",
   "error.msg.user_not_allowed": "Nimate dovoljenja za prijavo.",
-  "error.msg.cannot_get_user_info": "Cannot get your user info from this {0} account.",
+  "error.msg.cannot_get_user_info":
+    "Iz tega računa {0} ni mogoče pridobiti vaših uporabniških podatkov.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
   "error.param.provider_discord": "Discord",
   "error.param.provider_oidc": "OpenID Connect",
   // Common translations
-  "common.button.info": "Info",
+  "common.button.info": "Informacije",
   "common.button.undo": "Razveljavi",
   "common.button.download": "Prenesi",
   "common.button.copy": "Kopiraj",
@@ -683,9 +898,9 @@ export default {
   "common.button.generate": "Generiraj",
   "common.button.done": "Končano",
   "common.text.link": "Poveži",
-  "common.text.navigate-to-link": "Visit link",
+  "common.text.navigate-to-link": "Odpri povezavo",
   "common.text.or": "ali",
-  "common.text.redirecting": "Redirecting...",
+  "common.text.redirecting": "Preusmerjanje...",
   "common.button.go-back": "Nazaj",
   "common.button.go-home": "Pojdi domov",
   "common.notify.copied": "Povezava je bila kopirana v odložišče",
@@ -696,19 +911,22 @@ export default {
   "common.error.invalid-email": "Neveljaven e-poštni naslov",
   "common.error.too-short": "Vsebovati mora vsaj {length} znakov",
   "common.error.too-long": "Vsebuje lahko največ {length} znakov",
-  "common.error.number-too-small": "Must be at least {min}",
-  "common.error.number-too-large": "Must be at most {max}",
+  "common.error.number-too-small": "Mora biti vsaj {min}",
+  "common.error.number-too-large": "Mora biti največ {max}",
   "common.error.exact-length": "Dolžina mora biti točno {length} znakov",
   "common.error.invalid-number": "Mora biti številka",
   "common.error.field-required": "To polje je obvezno",
-  "common.error.password.lowercase": "Password must contain at least one lowercase letter",
-  "common.error.password.uppercase": "Password must contain at least one uppercase letter",
-  "common.error.password.number": "Password must contain at least one number",
-  "common.error.password.special": "Password must contain at least one special character",
+  "common.error.password.lowercase": "Geslo mora vsebovati vsaj eno malo črko",
+  "common.error.password.uppercase":
+    "Geslo mora vsebovati vsaj eno veliko črko",
+  "common.error.password.number": "Geslo mora vsebovati vsaj eno številko",
+  "common.error.password.special": "Geslo mora vsebovati vsaj en poseben znak",
   "admin.notice.modal.headerTag": "ZAHTEVANO JE ADMINISTRATIVNO DEJANJE",
-  "admin.notice.modal.defaultCheckboxLabel": "Potrjujem, da sem prebral/a to obvestilo in razumem bistvene spremembe.",
+  "admin.notice.modal.defaultCheckboxLabel":
+    "Potrjujem, da sem prebral/a to obvestilo in razumem bistvene spremembe.",
   "admin.notice.modal.button.acknowledge": "Potrdi in zapri",
   "admin.notice.modal.button.acknowledging": "Potrjevanje...",
   "admin.notice.modal.docsLink": "Ogled dokumentacije",
-  "admin.notice.modal.globalNoticeFooter": "Opomba: Ko je obvestilo potrjeno, bo trajno odstranjeno za vse administratorje na vseh napravah."
+  "admin.notice.modal.globalNoticeFooter":
+    "Opomba: Ko je obvestilo potrjeno, bo trajno odstranjeno za vse administratorje na vseh napravah.",
 };

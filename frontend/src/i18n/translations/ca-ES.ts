@@ -6,21 +6,26 @@ export default {
   "navbar.signup": "Registrar-se",
   "navbar.links.shares": "Les meves comparticions",
   "navbar.links.reverse": "Comparticions inverses",
-  "navbar.links.received": "Received shares",
+  "navbar.links.received": "Comparticions rebudes",
   "navbar.avatar.account": "El meu compte",
   "navbar.avatar.admin": "Administració",
   "navbar.avatar.signout": "Tancar sessió",
   // END navbar
 
   // /
-  "home.title": "Una plataforma de compartició de fitxers <h>autohostejada</h>.",
-  "home.description": "Realment voleu deixar els vostres fitxers personals en mans de tercers com WeTransfer?",
+  "home.title":
+    "Una plataforma de compartició de fitxers <h>autohostejada</h>.",
+  "home.description":
+    "Realment voleu deixar els vostres fitxers personals en mans de tercers com WeTransfer?",
   "home.bullet.a.name": "Autohostejat",
-  "home.bullet.a.description": "Hostegeu Pingvin Share a la vostra pròpia màquina.",
+  "home.bullet.a.description":
+    "Hostegeu Pingvin Share a la vostra pròpia màquina.",
   "home.bullet.b.name": "Privadesa",
-  "home.bullet.b.description": "Els vostres fitxers són vostres i mai no hi accediran tercers.",
+  "home.bullet.b.description":
+    "Els vostres fitxers són vostres i mai no hi accediran tercers.",
   "home.bullet.c.name": "Sense límits de mida molestos",
-  "home.bullet.c.description": "Pugeu fitxers tan grans com vulgueu. El vostre disc dur serà l'únic límit.",
+  "home.bullet.c.description":
+    "Pugeu fitxers tan grans com vulgueu. El vostre disc dur serà l'únic límit.",
   "home.button.start": "Comença",
   "home.button.source": "Codi font",
   // END /
@@ -30,12 +35,14 @@ export default {
   "signin.description": "Encara no teniu compte?",
   "signin.button.signup": "Registrar-se",
   "signin.input.email-or-username": "Correu electrònic o nom d'usuari",
-  "signin.input.email-or-username.placeholder": "El vostre correu electrònic o nom d'usuari",
+  "signin.input.email-or-username.placeholder":
+    "El vostre correu electrònic o nom d'usuari",
   "signin.input.password": "Contrasenya",
   "signin.input.password.placeholder": "La vostra contrasenya",
   "signin.button.submit": "Iniciar sessió",
   "signIn.notify.totp-required.title": "Cal autenticació de dos factors",
-  "signIn.notify.totp-required.description": "Introduïu el vostre codi d'autenticació de dos factors",
+  "signIn.notify.totp-required.description":
+    "Introduïu el vostre codi d'autenticació de dos factors",
   "signIn.oauth.or": "O",
   "signIn.oauth.signInWith": "Inicia sessió amb",
   "signIn.oauth.github": "GitHub",
@@ -55,16 +62,21 @@ export default {
   "signup.input.email.placeholder": "El vostre correu electrònic",
   "signup.button.submit": "Som-hi",
   // /auth/verify
-  "verify.title": "Verify Account",
-  "verify.success": "Your account has been successfully verified! You can now sign in.",
-  "verify.error": "The verification link is invalid or has expired.",
-  "verify.button.signin": "Go to Sign In",
-  "verify.info.title": "Account Verification",
-  "verify.info.description": "Email verification is enabled. We've sent a verification link to your email address. Please click the link to activate your account.",
-  "verify.info.note": "If you don't receive the email within a few minutes, please check your spam folder.",
-  "verify.info.resend.button": "Resend verification email",
-  "verify.info.resend.success": "Verification email resent successfully.",
-  "verify.info.resend.error": "Failed to resend verification email.",
+  "verify.title": "Verificar el compte",
+  "verify.success":
+    "El vostre compte s'ha verificat correctament! Ara podeu iniciar sessió.",
+  "verify.error": "L'enllaç de verificació no és vàlid o ha caducat.",
+  "verify.button.signin": "Ves a iniciar sessió",
+  "verify.info.title": "Verificació del compte",
+  "verify.info.description":
+    "La verificació per correu electrònic està activada. Hem enviat un enllaç de verificació a la vostra adreça de correu electrònic. Feu clic a l'enllaç per activar el vostre compte.",
+  "verify.info.note":
+    "Si no rebeu el correu electrònic en uns minuts, comproveu la carpeta de correu brossa.",
+  "verify.info.resend.button": "Torna a enviar el correu de verificació",
+  "verify.info.resend.success":
+    "El correu de verificació s'ha tornat a enviar correctament.",
+  "verify.info.resend.error":
+    "No s'ha pogut tornar a enviar el correu electrònic de verificació.",
   // END /auth/signup
 
   // /auth/totp
@@ -74,13 +86,16 @@ export default {
 
   // /auth/reset-password
   "resetPassword.title": "Heu oblidat la contrasenya?",
-  "resetPassword.description": "Introduïu el vostre correu electrònic per restablir la contrasenya.",
-  "resetPassword.notify.success": "S'ha enviat un missatge amb un enllaç per restablir la contrasenya si el correu electrònic proporcionat existeix.",
+  "resetPassword.description":
+    "Introduïu el vostre correu electrònic per restablir la contrasenya.",
+  "resetPassword.notify.success":
+    "S'ha enviat un missatge amb un enllaç per restablir la contrasenya si el correu electrònic proporcionat existeix.",
   "resetPassword.button.back": "Tornar a la pàgina d'inici de sessió",
   "resetPassword.text.resetPassword": "Restablir contrasenya",
   "resetPassword.text.enterNewPassword": "Introduïu la vostra nova contrasenya",
   "resetPassword.input.password": "Nova contrasenya",
-  "resetPassword.notify.passwordReset": "La vostra contrasenya s'ha restablit correctament.",
+  "resetPassword.notify.passwordReset":
+    "La vostra contrasenya s'ha restablit correctament.",
   // /account
   "account.title": "El meu compte",
   "account.card.info.title": "Informació del compte",
@@ -90,7 +105,8 @@ export default {
   "account.card.password.title": "Contrasenya",
   "account.card.password.old": "Contrasenya antiga",
   "account.card.password.new": "Nova contrasenya",
-  "account.card.password.noPasswordSet": "No teniu cap contrasenya configurada. Per iniciar la sessió amb el vostre correu i contrasenya, heu de crear-ne una.",
+  "account.card.password.noPasswordSet":
+    "No teniu cap contrasenya configurada. Per iniciar la sessió amb el vostre correu i contrasenya, heu de crear-ne una.",
   "account.notify.password.success": "Contrasenya canviada correctament",
   "account.card.oauth.title": "Inici de sessió social",
   "account.card.oauth.github": "GitHub",
@@ -102,11 +118,14 @@ export default {
   "account.card.oauth.unlink": "Desvincular",
   "account.card.oauth.unlinked": "Desvinculat",
   "account.modal.unlink.title": "Desvincular compte",
-  "account.modal.unlink.description": "Desvincular els vostres comptes socials pot fer que perdeu el vostre compte si no recordeu les vostres credencials d'accés",
+  "account.modal.unlink.description":
+    "Desvincular els vostres comptes socials pot fer que perdeu el vostre compte si no recordeu les vostres credencials d'accés",
   "account.notify.oauth.unlinked.success": "Desvinculat correctament",
   "account.card.security.title": "Seguretat",
-  "account.card.security.totp.enable.description": "Introduïu la vostra contrasenya actual per començar a activar el TOTP",
-  "account.card.security.totp.disable.description": "Introduïu la vostra contrasenya actual per desactivar el TOTP",
+  "account.card.security.totp.enable.description":
+    "Introduïu la vostra contrasenya actual per començar a activar el TOTP",
+  "account.card.security.totp.disable.description":
+    "Introduïu la vostra contrasenya actual per desactivar el TOTP",
   "account.card.security.totp.button.start": "Comença",
   "account.modal.totp.title": "Activar TOTP",
   "account.modal.totp.step1": "Pas 1: Afegiu el vostre autenticador",
@@ -119,7 +138,8 @@ export default {
   "account.notify.totp.disable": "TOTP desactivat correctament",
   "account.notify.totp.enable": "TOTP activat correctament",
   "account.card.language.title": "Idioma",
-  "account.card.language.description": "El projecte està traduït per la comunitat. Alguns idiomes poden estar incomplets.",
+  "account.card.language.description":
+    "El projecte està traduït per la comunitat. Alguns idiomes poden estar incomplets.",
   "account.card.color.title": "Esquema de colors",
   // ThemeSwitcher.tsx
   "account.theme.dark": "Fosc",
@@ -127,7 +147,8 @@ export default {
   "account.theme.system": "Sistema",
   "account.button.delete": "Suprimir compte",
   "account.modal.delete.title": "Suprimir compte",
-  "account.modal.delete.description": "Realment voleu suprimir el vostre compte incloent totes les vostres comparticions actives?",
+  "account.modal.delete.description":
+    "Realment voleu suprimir el vostre compte incloent totes les vostres comparticions actives?",
   // END /account
 
   // /account/shares
@@ -145,32 +166,40 @@ export default {
   "account.shares.table.createdAt": "Creat el",
   "account.shares.table.size": "Mida",
   "account.shares.table.password-protected": "Protegit amb contrasenya",
-  "account.shares.table.recipients": "Recipients",
-  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
-  "account.shares.table.shared-with-recipients": "Shared with recipients",
+  "account.shares.table.recipients": "Destinataris",
+  "account.shares.table.restricted-to-recipients":
+    "Restringit només als destinataris",
+  "account.shares.table.shared-with-recipients":
+    "Compartit amb els destinataris",
   "account.shares.table.visitor-count": "{count} de {max}",
   "account.shares.table.expiry-never": "Mai",
   "account.shares.modal.share-informations": "Informació de la compartició",
   "account.shares.modal.share-link": "Enllaç de compartició",
-  "account.shares.modal.edit.password.keep": "Deixeu-ho en blanc per mantenir la contrasenya actual",
-  "account.shares.modal.edit.password.remove": "Eliminar la protecció amb contrasenya",
+  "account.shares.modal.edit.password.keep":
+    "Deixeu-ho en blanc per mantenir la contrasenya actual",
+  "account.shares.modal.edit.password.remove":
+    "Eliminar la protecció amb contrasenya",
   "account.shares.modal.delete.title": "Suprimir compartició: {share}",
-  "account.shares.modal.delete.description": "Realment voleu suprimir aquesta compartició?",
+  "account.shares.modal.delete.description":
+    "Realment voleu suprimir aquesta compartició?",
   // END /account/shares
 
   // /account/received
-  "account.received-shares.title": "Received shares",
-  "account.received-shares.title.empty": "No shares received yet",
-  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
-  "account.received-shares.table.from": "From",
-  "account.received-shares.button.open": "Open",
+  "account.received-shares.title": "Comparticions rebudes",
+  "account.received-shares.title.empty": "Encara no s'ha rebut cap compartició",
+  "account.received-shares.description.empty":
+    "Les comparticions enviades a la vostra adreça de correu electrònic apareixeran aquí.",
+  "account.received-shares.table.from": "De",
+  "account.received-shares.button.open": "Obre",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Comparticions inverses",
-  "account.reverseShares.description": "Una compartició inversa us permet generar una URL única que permet als usuaris externs crear una compartició.",
+  "account.reverseShares.description":
+    "Una compartició inversa us permet generar una URL única que permet als usuaris externs crear una compartició.",
   "account.reverseShares.title.empty": "Això està buit 👀",
-  "account.reverseShares.description.empty": "No teniu cap compartició inversa.",
+  "account.reverseShares.description.empty":
+    "No teniu cap compartició inversa.",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Crear compartició inversa",
   "account.reverseShares.modal.expiration.label": "Caducitat",
@@ -188,25 +217,34 @@ export default {
   "account.reverseShares.modal.expiration.year-plural": "Anys",
   "account.reverseShares.modal.max-size.label": "Mida màxima de la compartició",
   "account.reverseShares.modal.send-email": "Enviar notificacions per correu",
-  "account.reverseShares.modal.send-email.description": "Us envia una notificació per correu quan es crea una compartició amb aquest enllaç de compartició inversa.",
+  "account.reverseShares.modal.send-email.description":
+    "Us envia una notificació per correu quan es crea una compartició amb aquest enllaç de compartició inversa.",
   "account.reverseShares.modal.simplified": "Mode simple",
-  "account.reverseShares.modal.simplified.description": "Faciliteu la compartició a la persona que puja el fitxer. Només podran personalitzar el nom i la descripció de la compartició.",
+  "account.reverseShares.modal.simplified.description":
+    "Faciliteu la compartició a la persona que puja el fitxer. Només podran personalitzar el nom i la descripció de la compartició.",
   "account.reverseShares.modal.public-access": "Accés públic",
-  "account.reverseShares.modal.public-access.description": "Feu públiques les comparticions creades amb aquesta compartició inversa. Si està desactivat, només vosaltres i el creador de la compartició hi tindreu accés.",
+  "account.reverseShares.modal.public-access.description":
+    "Feu públiques les comparticions creades amb aquesta compartició inversa. Si està desactivat, només vosaltres i el creador de la compartició hi tindreu accés.",
   "account.reverseShares.modal.max-use.label": "Usos màxims",
-  "account.reverseShares.modal.max-use.description": "La quantitat màxima de vegades que es pot utilitzar aquesta URL per crear una compartició.",
-  "account.reverseShare.never-expires": "Aquesta compartició inversa no caducarà mai.",
-  "account.reverseShare.expires-on": "Aquesta compartició inversa caducarà el {expiration}.",
-  "account.reverseShares.table.no-shares": "Encara no s'ha creat cap compartició",
+  "account.reverseShares.modal.max-use.description":
+    "La quantitat màxima de vegades que es pot utilitzar aquesta URL per crear una compartició.",
+  "account.reverseShare.never-expires":
+    "Aquesta compartició inversa no caducarà mai.",
+  "account.reverseShare.expires-on":
+    "Aquesta compartició inversa caducarà el {expiration}.",
+  "account.reverseShares.table.no-shares":
+    "Encara no s'ha creat cap compartició",
   "account.reverseShares.table.count.singular": "compartició",
   "account.reverseShares.table.count.plural": "comparticions",
   "account.reverseShares.table.shares": "Comparticions",
   "account.reverseShares.table.remaining": "Usos restants",
   "account.reverseShares.table.max-size": "Mida màxima de la compartició",
   "account.reverseShares.table.expires": "Caduca el",
-  "account.reverseShares.modal.reverse-share-link": "Enllaç de compartició inversa",
+  "account.reverseShares.modal.reverse-share-link":
+    "Enllaç de compartició inversa",
   "account.reverseShares.modal.delete.title": "Suprimir compartició inversa",
-  "account.reverseShares.modal.delete.description": "Realment voleu suprimir aquesta compartició inversa? Si ho feu, les comparticions associades també se suprimiran.",
+  "account.reverseShares.modal.delete.description":
+    "Realment voleu suprimir aquesta compartició inversa? Si ho feu, les comparticions associades també se suprimiran.",
   // END /account/reverseShares
 
   // /admin
@@ -221,35 +259,48 @@ export default {
   "admin.users.title": "Gestió d'usuaris",
   "admin.users.table.username": "Nom d'usuari",
   "admin.users.table.email": "Correu electrònic",
-  "admin.users.table.admin": "Admin",
-  "admin.users.table.storageQuota": "Storage quota",
-  "admin.users.table.maxShareSize": "Max share size",
+  "admin.users.table.admin": "Administrador",
+  "admin.users.table.storageQuota": "Quota d'emmagatzematge",
+  "admin.users.table.maxShareSize": "Mida màxima de compartició",
   "admin.users.edit.update.title": "Editar usuari: {username}",
   "admin.users.edit.update.admin-privileges": "Privilegis d'administrador",
-  "admin.users.edit.update.email-verified": "Email verified",
-  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
-  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
-  "admin.users.edit.update.custom-storage-quota-limit": "Custom storage quota",
-  "admin.users.edit.update.custom-storage-quota-limit.description": "Limit the user's total storage usage across active shares",
+  "admin.users.edit.update.email-verified": "Correu electrònic verificat",
+  "admin.users.edit.update.custom-share-size-limit":
+    "Límit de mida de compartició personalitzat",
+  "admin.users.edit.update.custom-share-size-limit.description":
+    "Substitueix el límit de pujada global per a aquest usuari",
+  "admin.users.edit.update.custom-storage-quota-limit":
+    "Quota d'emmagatzematge personalitzada",
+  "admin.users.edit.update.custom-storage-quota-limit.description":
+    "Limita l'ús total d'emmagatzematge de l'usuari en totes les comparticions actives",
   "admin.users.edit.update.change-password.title": "Canviar contrasenya",
   "admin.users.edit.update.change-password.field": "Nova contrasenya",
   "admin.users.edit.update.change-password.button": "Desar la nova contrasenya",
-  "admin.users.edit.update.notify.password.success": "Contrasenya canviada correctament",
+  "admin.users.edit.update.notify.password.success":
+    "Contrasenya canviada correctament",
   "admin.users.edit.delete.title": "Suprimir usuari: {username} ?",
-  "admin.users.edit.delete.description": "Realment voleu suprimir aquest usuari i totes les seves comparticions?",
+  "admin.users.edit.delete.description":
+    "Realment voleu suprimir aquest usuari i totes les seves comparticions?",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Crear usuari",
   "admin.users.modal.create.username": "Nom d'usuari",
   "admin.users.modal.create.email": "Correu electrònic",
   "admin.users.modal.create.password": "Contrasenya",
-  "admin.users.modal.create.manual-password": "Configurar contrasenya manualment",
-  "admin.users.modal.create.manual-password.description": "Si no està marcat, l'usuari rebrà un correu amb un enllaç per configurar la seva contrasenya.",
-  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
-  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
-  "admin.users.modal.create.custom-storage-quota-limit": "Custom storage quota",
-  "admin.users.modal.create.custom-storage-quota-limit.description": "Limit the user's total storage usage across active shares",
+  "admin.users.modal.create.manual-password":
+    "Configurar contrasenya manualment",
+  "admin.users.modal.create.manual-password.description":
+    "Si no està marcat, l'usuari rebrà un correu amb un enllaç per configurar la seva contrasenya.",
+  "admin.users.modal.create.custom-share-size-limit":
+    "Límit de mida de compartició personalitzat",
+  "admin.users.modal.create.custom-share-size-limit.description":
+    "Substitueix el límit de pujada global per a aquest usuari",
+  "admin.users.modal.create.custom-storage-quota-limit":
+    "Quota d'emmagatzematge personalitzada",
+  "admin.users.modal.create.custom-storage-quota-limit.description":
+    "Limita l'ús total d'emmagatzematge de l'usuari en totes les comparticions actives",
   "admin.users.modal.create.admin": "Privilegis d'administrador",
-  "admin.users.modal.create.admin.description": "Si està marcat, l'usuari podrà accedir al panell d'administració.",
+  "admin.users.modal.create.admin.description":
+    "Si està marcat, l'usuari podrà accedir al panell d'administració.",
   // END /admin/users
 
   // /admin/shares
@@ -261,40 +312,53 @@ export default {
   "admin.shares.table.expires": "Caduca el",
   "admin.shares.table.deletes": "S'elimina el",
   "admin.shares.edit.delete.title": "Suprimir compartició: {id}",
-  "admin.shares.edit.delete.description": "Realment voleu suprimir aquesta compartició?",
+  "admin.shares.edit.delete.description":
+    "Realment voleu suprimir aquesta compartició?",
   // END /admin/shares
 
   // /upload
   "upload.title": "Pujar",
-  "upload.notify.confirm-leave": "Esteu segur que voleu sortir d'aquesta pàgina? La pujada se suprimirà.",
-  "upload.notify.generic-error": "S'ha produït un error en finalitzar la compartició.",
-  "upload.notify.count-failed": "{count} fitxers han fallat en pujar. S'està reintentant.",
-  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
-  "upload.reverse-share.error.invalid.title": "Enllaç de compartició inversa no vàlid",
-  "upload.reverse-share.error.invalid.description": "Aquest enllaç no té usos restants o no és vàlid.",
+  "upload.notify.confirm-leave":
+    "Esteu segur que voleu sortir d'aquesta pàgina? La pujada se suprimirà.",
+  "upload.notify.generic-error":
+    "S'ha produït un error en finalitzar la compartició.",
+  "upload.notify.count-failed":
+    "{count} fitxers han fallat en pujar. S'està reintentant.",
+  "upload.notify.duplicate-skipped": "S'ha omès el fitxer duplicat: {name}",
+  "upload.reverse-share.error.invalid.title":
+    "Enllaç de compartició inversa no vàlid",
+  "upload.reverse-share.error.invalid.description":
+    "Aquest enllaç no té usos restants o no és vàlid.",
   // Dropzone.tsx
   "upload.dropzone.title": "Pujar fitxers",
-  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
-  "upload.dropzone.notify.file-too-big": "Els vostres fitxers superen la mida màxima de compartició de {maxSize}.",
-  "upload.button.folder": "Upload folder",
-  "upload.button.folder.append": "Append folder",
-  "upload.button.add": "Add to upload",
+  "upload.dropzone.description":
+    "Arrossegueu i deixeu anar fitxers o carpetes aquí per començar a compartir o feu 'Ctrl+V' per penjar el contingut de text del porta-retalls. Només acceptem fitxers fins a {maxSize} en total.",
+  "upload.dropzone.notify.file-too-big":
+    "Els vostres fitxers superen la mida màxima de compartició de {maxSize}.",
+  "upload.button.folder": "Pujar carpeta",
+  "upload.button.folder.append": "Afegeix una carpeta",
+  "upload.button.add": "Afegeix a la pujada",
   // FileList.tsx
   "upload.filelist.name": "Nom",
   "upload.filelist.size": "Mida",
-  "upload.filelist.estimating": "Estimating...",
-  "upload.filelist.remaining": "{time} remaining",
+  "upload.filelist.estimating": "S'està calculant...",
+  "upload.filelist.remaining": "{time} restants",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Crear compartició",
-  "upload.modal.link.error.invalid": "Només pot contenir lletres, números, guions baixos i guions",
+  "upload.modal.link.error.invalid":
+    "Només pot contenir lletres, números, guions baixos i guions",
   "upload.modal.link.error.taken": "Aquest enllaç ja s'està utilitzant",
-  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
-  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
+  "upload.modal.link.error.s3-session-not-found":
+    "No s'ha trobat la sessió de pujada a S3",
+  "upload.modal.link.error.s3-etag-missing":
+    "Falta la capçalera ETag a la resposta de S3. Assegureu-vos que CORS exposa la capçalera ETag.",
   "upload.modal.not-signed-in": "No heu iniciat sessió",
-  "upload.modal.not-signed-in-description": "No podreu suprimir la compartició manualment ni veure el recompte de visitants.",
+  "upload.modal.not-signed-in-description":
+    "No podreu suprimir la compartició manualment ni veure el recompte de visitants.",
   "upload.modal.expires.never": "mai",
   "upload.modal.expires.never-long": "Compartició permanent",
-  "upload.modal.expires.error.too-long": "La data de caducitat supera el màxim de {max}.",
+  "upload.modal.expires.error.too-long":
+    "La data de caducitat supera el màxim de {max}.",
   "upload.modal.link.label": "Enllaç",
   "upload.modal.expires.label": "Caducitat",
   "upload.modal.expires.minute-singular": "Minut",
@@ -311,59 +375,77 @@ export default {
   "upload.modal.expires.year-plural": "Anys",
   "upload.modal.accordion.name-and-description.title": "Nom i descripció",
   "upload.modal.accordion.name-and-description.name.placeholder": "Nom",
-  "upload.modal.accordion.name-and-description.description.placeholder": "Nota per als destinataris d'aquesta compartició",
+  "upload.modal.accordion.name-and-description.description.placeholder":
+    "Nota per als destinataris d'aquesta compartició",
   "upload.modal.accordion.email.title": "Destinataris per correu",
   "upload.modal.accordion.email.placeholder": "Introduïu els destinataris",
   "upload.modal.accordion.email.invalid-email": "Adreça de correu no vàlida",
-  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Restringeix l'accés només a aquests destinataris (han d'iniciar sessió per accedir-hi)",
   "upload.modal.accordion.security.title": "Opcions de seguretat",
   "upload.modal.accordion.security.password.label": "Protecció amb contrasenya",
   "upload.modal.accordion.security.password.placeholder": "Sense contrasenya",
   "upload.modal.accordion.security.max-views.label": "Visualitzacions màximes",
   "upload.modal.accordion.security.max-views.placeholder": "Sense límit",
   // showCompletedUploadModal.tsx
-  "upload.modal.completed.never-expires": "Aquesta compartició no caducarà mai.",
-  "upload.modal.completed.expires-on": "Aquesta compartició caducarà el {expiration}.",
+  "upload.modal.completed.never-expires":
+    "Aquesta compartició no caducarà mai.",
+  "upload.modal.completed.expires-on":
+    "Aquesta compartició caducarà el {expiration}.",
   "upload.modal.completed.share-ready": "Compartició llesta",
-  "upload.modal.completed.notified-reverse-share-creator": "Hem notificat al creador de la compartició inversa. També podeu compartir manualment aquest enllaç amb ell per altres mitjans.",
+  "upload.modal.completed.notified-reverse-share-creator":
+    "Hem notificat al creador de la compartició inversa. També podeu compartir manualment aquest enllaç amb ell per altres mitjans.",
   // END /upload
 
   // /share/[id]
   "share.title": "Compartició {shareId}",
   "share.description": "Mira què he compartit amb tu!",
-  "share.fileCount": "{count, plural, =1 {# fitxer} other {# fitxers}} · {size} (el fitxer zip pot ser més petit a causa de la compressió)",
+  "share.fileCount":
+    "{count, plural, =1 {# fitxer} other {# fitxers}} · {size} (el fitxer zip pot ser més petit a causa de la compressió)",
   "share.copy-text-contents": "Copiar el contingut del fitxer al porta-retalls",
   "share.error.visitor-limit-exceeded.title": "Límit de visitants superat",
-  "share.error.visitor-limit-exceeded.description": "S'ha superat el límit de visitants d'aquesta compartició.",
+  "share.error.visitor-limit-exceeded.description":
+    "S'ha superat el límit de visitants d'aquesta compartició.",
   "share.error.removed.title": "Compartició eliminada",
   "share.error.not-found.title": "No s'ha trobat la compartició",
-  "share.error.not-found.description": "La compartició que busqueu no existeix.",
+  "share.error.not-found.description":
+    "La compartició que busqueu no existeix.",
   "share.error.access-denied.title": "Compartició privada",
-  "share.error.access-denied.description": "El compte actual no té permís per accedir a aquesta compartició",
-  "share.error.restricted.title": "Restricted share",
-  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
-  "share.error.restricted.button": "Log in",
+  "share.error.access-denied.description":
+    "El compte actual no té permís per accedir a aquesta compartició",
+  "share.error.restricted.title": "Compartició restringida",
+  "share.error.restricted.description":
+    "Aquesta compartició està restringida a destinataris específics. Inicieu sessió per accedir-hi.",
+  "share.error.restricted.button": "Iniciar sessió",
   "share.modal.password.title": "Cal contrasenya",
-  "share.modal.password.description": "Introduïu la contrasenya per accedir a aquesta compartició.",
+  "share.modal.password.description":
+    "Introduïu la contrasenya per accedir a aquesta compartició.",
   "share.modal.password": "Contrasenya",
   "share.modal.error.invalid-password": "Contrasenya no vàlida",
   "share.button.download-all": "Descarregar-ho tot",
-  "share.notify.download-all-preparing": "S'està preparant la compartició. Torneu-ho a provar d'aquí a uns minuts.",
-  "share.notify.copied-contents": "Contingut del fitxer copiat al porta-retalls",
-  "share.notify.copy-too-big-error": "el fitxer és massa gran per copiar-lo al porta-retalls",
-  "share.notify.copy-not-supported-error": "Copiar al porta-retalls requereix una connexió HTTPS",
+  "share.notify.download-all-preparing":
+    "S'està preparant la compartició. Torneu-ho a provar d'aquí a uns minuts.",
+  "share.notify.copied-contents":
+    "Contingut del fitxer copiat al porta-retalls",
+  "share.notify.copy-too-big-error":
+    "el fitxer és massa gran per copiar-lo al porta-retalls",
+  "share.notify.copy-not-supported-error":
+    "Copiar al porta-retalls requereix una connexió HTTPS",
   "share.modal.file-link": "Enllaç del fitxer",
   "share.table.name": "Nom",
   "share.table.size": "Mida",
-  "share.modal.file-preview.original_file": "View original file",
-  "share.modal.file-preview.error.not-supported.title": "Vista prèvia no compatible",
-  "share.modal.file-preview.error.not-supported.description": "Les vistes prèvies no són compatibles amb aquest tipus de fitxers. Descarregueu el fitxer per veure'l.",
+  "share.modal.file-preview.original_file": "Mostra el fitxer original",
+  "share.modal.file-preview.error.not-supported.title":
+    "Vista prèvia no compatible",
+  "share.modal.file-preview.error.not-supported.description":
+    "Les vistes prèvies no són compatibles amb aquest tipus de fitxers. Descarregueu el fitxer per veure'l.",
   // END /share/[id]
 
   // /share/[id]/edit
   "share.edit.title": "Editar {shareId}",
   "share.edit.append-upload": "Afegir fitxer",
-  "share.edit.notify.generic-error": "S'ha produït un error en finalitzar la compartició.",
+  "share.edit.notify.generic-error":
+    "S'ha produït un error en finalitzar la compartició.",
   "share.edit.notify.save-success": "Compartició actualitzada correctament",
   // END /share/[id]/edit
 
@@ -377,11 +459,12 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "Fitxer de configuració present",
-  "admin.config.config-file-warning.description": "Com que teniu un Pingvin Share configurat amb un fitxer de configuració, no podeu canviar la configuració mitjançant la interfície d'usuari.",
+  "admin.config.config-file-warning.description":
+    "Com que teniu un Pingvin Share configurat amb un fitxer de configuració, no podeu canviar la configuració mitjançant la interfície d'usuari.",
   "admin.config.title": "Configuració",
   "admin.config.category.general": "General",
   "admin.config.category.appearance": "Aparença",
-  "admin.config.category.security": "Security & Access",
+  "admin.config.category.security": "Seguretat i accés",
   "admin.config.category.share": "Compartir",
   "admin.config.category.cache": "Caché",
   "admin.config.category.email": "Correu electrònic",
@@ -390,133 +473,218 @@ export default {
   "admin.config.general.app-name": "Nom de l'aplicació",
   "admin.config.general.app-name.description": "Nom de l'aplicació",
   "admin.config.general.default-language": "Idioma predeterminat",
-  "admin.config.general.default-language.description": "Això s'aplica a tots els usuaris, cada usuari encara pot personalitzar el seu idioma al seu perfil.",
+  "admin.config.general.default-language.description":
+    "Això s'aplica a tots els usuaris, cada usuari encara pot personalitzar el seu idioma al seu perfil.",
   "admin.config.appearance.theme-primary-color": "Color primari del tema",
-  "admin.config.appearance.theme-primary-color.description": "Color primari utilitzat per a botons, enllaços i accents. Trieu personalitzat per utilitzar un selector de color.",
-  "admin.config.appearance.theme-primary-color-override": "Color primari personalitzat",
-  "admin.config.appearance.theme-primary-color-override.description": "Color hexadecimal utilitzat quan el color primari del tema està configurat com a personalitzat.",
-  "admin.config.appearance.theme-font-preset": "Preconfiguració de font del tema",
-  "admin.config.appearance.theme-font-preset.description": "Preconfiguració de font carregada en el moment de la compilació. Trieu la predeterminada del sistema o una de les Google Fonts incloses.",
-  "admin.config.appearance.theme-color-scheme": "Esquema de colors predeterminat (convidats)",
-  "admin.config.appearance.theme-color-scheme.description": "Mode clar/fosc predeterminat per als usuaris que no han iniciat sessió. Els usuaris registrats utilitzen la seva pròpia preferència de compte.",
+  "admin.config.appearance.theme-primary-color.description":
+    "Color primari utilitzat per a botons, enllaços i accents. Trieu personalitzat per utilitzar un selector de color.",
+  "admin.config.appearance.theme-primary-color-override":
+    "Color primari personalitzat",
+  "admin.config.appearance.theme-primary-color-override.description":
+    "Color hexadecimal utilitzat quan el color primari del tema està configurat com a personalitzat.",
+  "admin.config.appearance.theme-font-preset":
+    "Preconfiguració de font del tema",
+  "admin.config.appearance.theme-font-preset.description":
+    "Preconfiguració de font carregada en el moment de la compilació. Trieu la predeterminada del sistema o una de les Google Fonts incloses.",
+  "admin.config.appearance.theme-color-scheme":
+    "Esquema de colors predeterminat (convidats)",
+  "admin.config.appearance.theme-color-scheme.description":
+    "Mode clar/fosc predeterminat per als usuaris que no han iniciat sessió. Els usuaris registrats utilitzen la seva pròpia preferència de compte.",
   "admin.config.appearance.theme-radius": "Radi de la vora del tema",
-  "admin.config.appearance.theme-radius.description": "Radi de la vora predeterminat utilitzat pels components de Mantine.",
+  "admin.config.appearance.theme-radius.description":
+    "Radi de la vora predeterminat utilitzat pels components de Mantine.",
   "admin.config.appearance.custom-css": "CSS personalitzat",
-  "admin.config.appearance.custom-css.description": "CSS global aplicat al frontend. Utilitzeu-lo amb cura, ja que un CSS no vàlid pot afectar la interfície d'usuari.",
-  "admin.config.appearance.upload-progress-style": "Upload progress style",
-  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
-  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
-  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
-  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
+  "admin.config.appearance.custom-css.description":
+    "CSS global aplicat al frontend. Utilitzeu-lo amb cura, ja que un CSS no vàlid pot afectar la interfície d'usuari.",
+  "admin.config.appearance.upload-progress-style": "Estil de progrés de pujada",
+  "admin.config.appearance.upload-progress-style.description":
+    "Trieu com es mostra el progrés de la pujada a la llista de fitxers.",
+  "admin.config.appearance.upload-progress-style.circle": "Indicador circular",
+  "admin.config.appearance.upload-progress-style.circle-percentage":
+    "Cercle amb percentatge",
+  "admin.config.appearance.upload-progress-style.percentage-time":
+    "Percentatge i temps restant",
   "admin.config.general.app-url": "URL de l'aplicació",
-  "admin.config.general.app-url.description": "En quina URL està disponible Pingvin Share",
+  "admin.config.general.app-url.description":
+    "En quina URL està disponible Pingvin Share",
   "admin.config.security.secure-cookies": "Galetes segures",
-  "admin.config.security.secure-cookies.description": "Si s'ha de configurar l'atribut secure a les galetes. Si està activat, el lloc no funcionarà si s'hi accedeix mitjançant HTTP.",
+  "admin.config.security.secure-cookies.description":
+    "Si s'ha de configurar l'atribut secure a les galetes. Si està activat, el lloc no funcionarà si s'hi accedeix mitjançant HTTP.",
   "admin.config.general.show-home-page": "Mostra la pàgina d'inici",
-  "admin.config.general.show-home-page.description": "Si s'ha de mostrar la pàgina d'inici",
+  "admin.config.general.show-home-page.description":
+    "Si s'ha de mostrar la pàgina d'inici",
   "admin.config.security.session-duration": "Durada de la sessió",
-  "admin.config.security.session-duration.description": "Temps després del qual un usuari ha de tornar a iniciar sessió (per defecte: 3 mesos).",
+  "admin.config.security.session-duration.description":
+    "Temps després del qual un usuari ha de tornar a iniciar sessió (per defecte: 3 mesos).",
   "admin.config.appearance.logo": "Logotip",
-  "admin.config.appearance.logo.description": "Canvieu el vostre logotip pujant una nova imatge. La imatge ha de ser un PNG i ha de tenir el format 1:1.",
+  "admin.config.appearance.logo.description":
+    "Canvieu el vostre logotip pujant una nova imatge. La imatge ha de ser un PNG i ha de tenir el format 1:1.",
   "admin.config.appearance.logo-dark": "Logotip del mode fosc",
-  "admin.config.appearance.logo-dark.description": "Pugeu un logotip independent per al mode fosc. La imatge ha de ser un PNG i ha de tenir el format 1:1.",
+  "admin.config.appearance.logo-dark.description":
+    "Pugeu un logotip independent per al mode fosc. La imatge ha de ser un PNG i ha de tenir el format 1:1.",
   "admin.config.appearance.logo.placeholder": "Trieu una imatge",
-  "admin.config.security.custom-password-policy": "Custom password policy",
-  "admin.config.security.custom-password-policy.description": "Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.",
-  "admin.config.security.min-length": "Minimum length",
-  "admin.config.security.min-length.description": "Minimum number of characters required for a password.",
-  "admin.config.security.require-uppercase": "Require uppercase",
-  "admin.config.security.require-uppercase.description": "Whether to require at least one uppercase letter in the password.",
-  "admin.config.security.require-lowercase": "Require lowercase",
-  "admin.config.security.require-lowercase.description": "Whether to require at least one lowercase letter in the password.",
-  "admin.config.security.require-number": "Require number",
-  "admin.config.security.require-number.description": "Whether to require at least one number in the password.",
-  "admin.config.security.require-special-character": "Require special character",
-  "admin.config.security.require-special-character.description": "Whether to require at least one special character in the password.",
+  "admin.config.security.custom-password-policy":
+    "Política de contrasenyes personalitzada",
+  "admin.config.security.custom-password-policy.description":
+    "Si s'ha d'habilitar la personalització de la política de contrasenyes. Si està desactivat, s'utilitza la política per defecte d'un mínim de 8 caràcters.",
+  "admin.config.security.min-length": "Longitud mínima",
+  "admin.config.security.min-length.description":
+    "Nombre mínim de caràcters necessaris per a una contrasenya.",
+  "admin.config.security.require-uppercase": "Requereix majúscules",
+  "admin.config.security.require-uppercase.description":
+    "Si cal requerir almenys una lletra majúscula a la contrasenya.",
+  "admin.config.security.require-lowercase": "Requereix minúscules",
+  "admin.config.security.require-lowercase.description":
+    "Si cal requerir almenys una lletra minúscula a la contrasenya.",
+  "admin.config.security.require-number": "Requereix números",
+  "admin.config.security.require-number.description":
+    "Si cal requerir almenys un número a la contrasenya.",
+  "admin.config.security.require-special-character":
+    "Requereix caràcters especials",
+  "admin.config.security.require-special-character.description":
+    "Si cal requerir almenys un caràcter especial a la contrasenya.",
   "admin.config.cache.ttl": "TTL",
-  "admin.config.cache.ttl.description": "Temps en segons per mantenir la informació a la memòria cau.",
+  "admin.config.cache.ttl.description":
+    "Temps en segons per mantenir la informació a la memòria cau.",
   "admin.config.cache.max-items": "Màxim d'elements",
-  "admin.config.cache.max-items.description": "Nombre màxim d'elements a la memòria cau.",
+  "admin.config.cache.max-items.description":
+    "Nombre màxim d'elements a la memòria cau.",
   "admin.config.cache.redis-enabled": "Redis activat",
-  "admin.config.cache.redis-enabled.description": "Normalment, Pingvin Share emmagatzema la informació a la memòria. Si executeu diverses instàncies de Pingvin Share, heu d'activar la memòria cau de Redis per compartir-la entre instàncies.",
+  "admin.config.cache.redis-enabled.description":
+    "Normalment, Pingvin Share emmagatzema la informació a la memòria. Si executeu diverses instàncies de Pingvin Share, heu d'activar la memòria cau de Redis per compartir-la entre instàncies.",
   "admin.config.cache.redis-url": "URL de Redis",
-  "admin.config.cache.redis-url.description": "URL per connectar-se a la instància de Redis utilitzada per a la memòria cau.",
+  "admin.config.cache.redis-url.description":
+    "URL per connectar-se a la instància de Redis utilitzada per a la memòria cau.",
   "admin.config.cache.button.test-redis": "Provar la connexió a Redis",
   "admin.config.cache.test-redis.success": "Connectat a Redis correctament",
-  "admin.config.cache.test-redis.success-disabled": "Connectat a Redis correctament (la memòria cau de Redis està actualment desactivada).",
-  "admin.config.cache.test-redis.modal.error.title": "Error en connectar-se a Redis",
-  "admin.config.cache.test-redis.modal.error.description": "Mentre es connectava a Redis, s'ha produït l'error següent:",
+  "admin.config.cache.test-redis.success-disabled":
+    "Connectat a Redis correctament (la memòria cau de Redis està actualment desactivada).",
+  "admin.config.cache.test-redis.modal.error.title":
+    "Error en connectar-se a Redis",
+  "admin.config.cache.test-redis.modal.error.description":
+    "Mentre es connectava a Redis, s'ha produït l'error següent:",
   "admin.config.cache.test-redis.modal.save.title": "Desar la configuració",
-  "admin.config.cache.test-redis.modal.save.description": "Per continuar, primer heu de desar la configuració. Voleu desar la configuració i provar la connexió a Redis?",
+  "admin.config.cache.test-redis.modal.save.description":
+    "Per continuar, primer heu de desar la configuració. Voleu desar la configuració i provar la connexió a Redis?",
   "admin.config.cache.test-redis.modal.save.confirm": "Desar i provar",
-  "admin.config.email.send-html-emails": "Enable HTML email compatibility",
-  "admin.config.email.send-html-emails.description": "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
-  "admin.config.share.enable-share-email-recipients": "Activar la compartició de destinataris per correu",
-  "admin.config.share.enable-share-email-recipients.description": "Si s'ha de permetre la compartició per correu amb els destinataris. Això només es pot activar si l'SMTP està activat.",
-  "admin.config.email.share-recipients-subject": "Assumpte dels destinataris de la compartició",
-  "admin.config.email.share-recipients-subject.description": "Assumpte del correu que s'envia als destinataris de la compartició.",
-  "admin.config.email.share-recipients-message": "Missatge dels destinataris de la compartició",
-  "admin.config.email.share-recipients-message.description": "Missatge que s'envia als destinataris de la compartició. Variables disponibles:\n {creator} - El nom d'usuari del creador de la compartició\n {creatorEmail} - El correu del creador de la compartició\n {shareUrl} - La URL de la compartició\n {desc} - La descripció de la compartició\n {expires} - La data de caducitat de la compartició\n Aquestes variables se substituiran pel valor real.",
-  "admin.config.email.reverse-share-subject": "Assumpte de la compartició inversa",
-  "admin.config.email.reverse-share-subject.description": "Assumpte del correu enviat quan algú crea una compartició amb el vostre enllaç de compartició inversa.",
-  "admin.config.email.reverse-share-message": "Missatge de la compartició inversa",
-  "admin.config.email.reverse-share-message.description": "Missatge que s'envia quan algú crea una compartició amb el vostre enllaç de compartició inversa. {shareUrl} se substituirà pel nom del creador i la URL de la compartició.",
-  "admin.config.email.reset-password-subject": "Assumpte del restabliment de la contrasenya",
-  "admin.config.email.reset-password-subject.description": "Assumpte del correu enviat quan un usuari demana restablir la contrasenya.",
-  "admin.config.email.reset-password-message": "Missatge del restabliment de la contrasenya",
-  "admin.config.email.reset-password-message.description": "Missatge que s'envia quan un usuari demana restablir la contrasenya. {url} se substituirà per la URL de restabliment de la contrasenya.",
+  "admin.config.email.send-html-emails":
+    "Habilita la compatibilitat de correu HTML",
+  "admin.config.email.send-html-emails.description":
+    "Si està activat, els correus s'enviaran en format HTML. Assegureu-vos que les plantilles de correu estan actualitzades per utilitzar HTML.",
+  "admin.config.share.enable-share-email-recipients":
+    "Activar la compartició de destinataris per correu",
+  "admin.config.share.enable-share-email-recipients.description":
+    "Si s'ha de permetre la compartició per correu amb els destinataris. Això només es pot activar si l'SMTP està activat.",
+  "admin.config.email.share-recipients-subject":
+    "Assumpte dels destinataris de la compartició",
+  "admin.config.email.share-recipients-subject.description":
+    "Assumpte del correu que s'envia als destinataris de la compartició.",
+  "admin.config.email.share-recipients-message":
+    "Missatge dels destinataris de la compartició",
+  "admin.config.email.share-recipients-message.description":
+    "Missatge que s'envia als destinataris de la compartició. Variables disponibles:\n {creator} - El nom d'usuari del creador de la compartició\n {creatorEmail} - El correu del creador de la compartició\n {shareUrl} - La URL de la compartició\n {desc} - La descripció de la compartició\n {expires} - La data de caducitat de la compartició\n Aquestes variables se substituiran pel valor real.",
+  "admin.config.email.reverse-share-subject":
+    "Assumpte de la compartició inversa",
+  "admin.config.email.reverse-share-subject.description":
+    "Assumpte del correu enviat quan algú crea una compartició amb el vostre enllaç de compartició inversa.",
+  "admin.config.email.reverse-share-message":
+    "Missatge de la compartició inversa",
+  "admin.config.email.reverse-share-message.description":
+    "Missatge que s'envia quan algú crea una compartició amb el vostre enllaç de compartició inversa. {shareUrl} se substituirà pel nom del creador i la URL de la compartició.",
+  "admin.config.email.reset-password-subject":
+    "Assumpte del restabliment de la contrasenya",
+  "admin.config.email.reset-password-subject.description":
+    "Assumpte del correu enviat quan un usuari demana restablir la contrasenya.",
+  "admin.config.email.reset-password-message":
+    "Missatge del restabliment de la contrasenya",
+  "admin.config.email.reset-password-message.description":
+    "Missatge que s'envia quan un usuari demana restablir la contrasenya. {url} se substituirà per la URL de restabliment de la contrasenya.",
   "admin.config.email.invite-subject": "Assumpte de la invitació",
-  "admin.config.email.invite-subject.description": "Assumpte del correu enviat quan un administrador convida un usuari.",
+  "admin.config.email.invite-subject.description":
+    "Assumpte del correu enviat quan un administrador convida un usuari.",
   "admin.config.email.invite-message": "Missatge de la invitació",
-  "admin.config.email.invite-message.description": "Missatge que s'envia quan un administrador convida un usuari. {url} se substituirà per la URL d'invitació, {email} pel correu i {password} per la contrasenya de l'usuari.",
-  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
-  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
-  "admin.config.share.enable-share-download-notifications": "Activar les notificacions de descàrrega",
-  "admin.config.share.enable-share-download-notifications.description": "Si s'ha d'enviar un correu al creador de la compartició quan un destinatari del correu descarrega un fitxer. Això requereix l'SMTP i la compartició de destinataris per correu.",
-  "admin.config.email.share-download-notification-subject": "Assumpte de la notificació de descàrrega",
-  "admin.config.email.share-download-notification-subject.description": "Assumpte del correu que s'envia al creador de la compartició quan un destinatari descarrega un fitxer.",
-  "admin.config.email.share-download-notification-message": "Missatge de la notificació de descàrrega",
-  "admin.config.email.share-download-notification-message.description": "Missatge que s'envia al creador de la compartició quan un destinatari descarrega un fitxer. Variables disponibles:\n {recipientEmail} - El correu del destinatari\n {fileName} - El nom del fitxer descarregat\n {shareUrl} - La URL de la compartició",
-  "admin.config.security.enable-email-verification": "Enable email verification",
-  "admin.config.security.enable-email-verification.description": "Whether to require users to verify their email address before being able to sign in. This can only be enabled if SMTP is activated.",
-  "admin.config.email.verification-subject": "Verification subject",
-  "admin.config.email.verification-subject.description": "Subject of the email which gets sent to the user when they sign up.",
-  "admin.config.email.verification-message": "Verification message",
-  "admin.config.email.verification-message.description": "Message which gets sent to the user when they sign up. {url} will be replaced with the verification URL.",
+  "admin.config.email.invite-message.description":
+    "Missatge que s'envia quan un administrador convida un usuari. {url} se substituirà per la URL d'invitació, {email} pel correu i {password} per la contrasenya de l'usuari.",
+  "admin.config.email.share-recipients-reply-to-creator":
+    "Estableix Respondre a al correu del creador",
+  "admin.config.email.share-recipients-reply-to-creator.description":
+    "Si s'ha d'establir la capçalera Respondre a a l'adreça de correu electrònic de l'usuari que ha creat la compartició.",
+  "admin.config.share.enable-share-download-notifications":
+    "Activar les notificacions de descàrrega",
+  "admin.config.share.enable-share-download-notifications.description":
+    "Si s'ha d'enviar un correu al creador de la compartició quan un destinatari del correu descarrega un fitxer. Això requereix l'SMTP i la compartició de destinataris per correu.",
+  "admin.config.email.share-download-notification-subject":
+    "Assumpte de la notificació de descàrrega",
+  "admin.config.email.share-download-notification-subject.description":
+    "Assumpte del correu que s'envia al creador de la compartició quan un destinatari descarrega un fitxer.",
+  "admin.config.email.share-download-notification-message":
+    "Missatge de la notificació de descàrrega",
+  "admin.config.email.share-download-notification-message.description":
+    "Missatge que s'envia al creador de la compartició quan un destinatari descarrega un fitxer. Variables disponibles:\n {recipientEmail} - El correu del destinatari\n {fileName} - El nom del fitxer descarregat\n {shareUrl} - La URL de la compartició",
+  "admin.config.security.enable-email-verification":
+    "Habilita la verificació per correu electrònic",
+  "admin.config.security.enable-email-verification.description":
+    "Si cal demanar als usuaris que verifiquin la seva adreça de correu electrònic abans de poder iniciar sessió. Només es pot activar si l'SMTP està activat.",
+  "admin.config.email.verification-subject": "Assumpte de verificació",
+  "admin.config.email.verification-subject.description":
+    "Assumpte del correu electrònic que s'envia a l'usuari quan es registra.",
+  "admin.config.email.verification-message": "Missatge de verificació",
+  "admin.config.email.verification-message.description":
+    "Missatge que s'envia a l'usuari quan es registra. {url} se substituirà per l'URL de verificació.",
   "admin.config.security.allow-registration": "Permetre el registre",
-  "admin.config.security.allow-registration.description": "Si es permet el registre",
-  "admin.config.security.allow-unauthenticated-shares": "Permetre comparticions no autenticades",
-  "admin.config.security.allow-unauthenticated-shares.description": "Si els usuaris no autenticats poden crear comparticions",
+  "admin.config.security.allow-registration.description":
+    "Si es permet el registre",
+  "admin.config.security.allow-unauthenticated-shares":
+    "Permetre comparticions no autenticades",
+  "admin.config.security.allow-unauthenticated-shares.description":
+    "Si els usuaris no autenticats poden crear comparticions",
   "admin.config.share.default-expiration": "Caducitat predeterminada",
-  "admin.config.share.default-expiration.description": "El temps de caducitat predeterminat seleccionat en crear una nova compartició.",
+  "admin.config.share.default-expiration.description":
+    "El temps de caducitat predeterminat seleccionat en crear una nova compartició.",
   "admin.config.share.max-expiration": "Caducitat màxima",
-  "admin.config.share.max-expiration.description": "Caducitat màxima de la compartició. Configureu-ho a 0 per permetre una caducitat il·limitada.",
-  "admin.config.share.share-id-length": "Longitud de l'ID de compartició predeterminada",
-  "admin.config.share.share-id-length.description": "Longitud predeterminada per a l'ID generat d'una compartició. Aquest valor també s'utilitza per generar enllaços per a comparticions inverses. Un valor inferior a 8 no es considera segur.",
+  "admin.config.share.max-expiration.description":
+    "Caducitat màxima de la compartició. Configureu-ho a 0 per permetre una caducitat il·limitada.",
+  "admin.config.share.share-id-length":
+    "Longitud de l'ID de compartició predeterminada",
+  "admin.config.share.share-id-length.description":
+    "Longitud predeterminada per a l'ID generat d'una compartició. Aquest valor també s'utilitza per generar enllaços per a comparticions inverses. Un valor inferior a 8 no es considera segur.",
   "admin.config.share.max-size": "Mida màxima",
   "admin.config.share.max-size.description": "Mida màxima de la compartició",
   "admin.config.share.zip-compression-level": "Nivell de compressió Zip",
-  "admin.config.share.zip-compression-level.description": "Ajusteu el nivell per equilibrar la mida del fitxer i la velocitat de compressió. Els valors vàlids van de 0 a 9, on 0 és sense compressió i 9 és la compressió màxima. ",
+  "admin.config.share.zip-compression-level.description":
+    "Ajusteu el nivell per equilibrar la mida del fitxer i la velocitat de compressió. Els valors vàlids van de 0 a 9, on 0 és sense compressió i 9 és la compressió màxima. ",
   "admin.config.share.chunk-size": "Mida del fragment",
-  "admin.config.share.chunk-size.description": "Ajusteu la mida dels fragments de les vostres pujades per equilibrar l'eficiència i la fiabilitat segons la vostra connexió a Internet. Els fragments més petits poden millorar les taxes d'èxit per a connexions inestables, mentre que els fragments més grans fan que les pujades siguin més ràpides per a connexions estables.",
-  "admin.config.share.auto-open-share-modal": "Obrir automàticament el diàleg de creació",
-  "admin.config.share.auto-open-share-modal.description": "El diàleg de creació de compartició apareix automàticament quan un usuari selecciona fitxers, eliminant la necessitat de clicar el botó manualment.",
-  "admin.config.security.allow-admin-access-all-shares": "Permetre l'accés de l'administrador a totes les comparticions",
-  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
-  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
-  "admin.config.security.allow-admin-access-all-shares.description": "Permetre aos administradors accedir a totes les comparticions, fins i tot si estan protegides amb contrasenya, caducades o suprimides.",
-  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
-  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
+  "admin.config.share.chunk-size.description":
+    "Ajusteu la mida dels fragments de les vostres pujades per equilibrar l'eficiència i la fiabilitat segons la vostra connexió a Internet. Els fragments més petits poden millorar les taxes d'èxit per a connexions inestables, mentre que els fragments més grans fan que les pujades siguin més ràpides per a connexions estables.",
+  "admin.config.share.auto-open-share-modal":
+    "Obrir automàticament el diàleg de creació",
+  "admin.config.share.auto-open-share-modal.description":
+    "El diàleg de creació de compartició apareix automàticament quan un usuari selecciona fitxers, eliminant la necessitat de clicar el botó manualment.",
+  "admin.config.security.allow-admin-access-all-shares":
+    "Permetre l'accés de l'administrador a totes les comparticions",
+  "admin.config.share.reverse-share-simple-only":
+    "Força el mode senzill de compartició inversa",
+  "admin.config.share.reverse-share-simple-only.description":
+    "Força que les comparticions inverses es creïn en mode senzill. Si està desactivat, el creador pot triar entre el mode senzill i l'avançat.",
+  "admin.config.security.allow-admin-access-all-shares.description":
+    "Permetre aos administradors accedir a totes les comparticions, fins i tot si estan protegides amb contrasenya, caducades o suprimides.",
+  "admin.config.share.enable-user-recipients":
+    "Habilita compartir amb usuaris registrats",
+  "admin.config.share.enable-user-recipients.description":
+    "Quan està activat, les comparticions enviades a l'adreça de correu electrònic d'un usuari registrat apareixeran automàticament al seu compte. Els usuaris també poden restringir l'accés a la compartició només als destinataris indicats.",
   "admin.config.share.file-retention-period": "Període de retenció de fitxers",
-  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
+  "admin.config.share.file-retention-period.description":
+    "Quant de temps es conserven els fitxers després que una compartició caduqui o s'elimini. Només és útil si 'Permet l'accés d'administrador a totes les comparticions' també està activat. Establiu -1 per conservar els fitxers per sempre.",
   "admin.config.smtp.enabled": "Activar",
-  "admin.config.smtp.enabled.description": "Si l'SMTP està activat. Només configureu-ho com a cert si heu introduït el servidor, el port, el correu, l'usuari i la contrasenya del vostre servidor SMTP.",
+  "admin.config.smtp.enabled.description":
+    "Si l'SMTP està activat. Només configureu-ho com a cert si heu introduït el servidor, el port, el correu, l'usuari i la contrasenya del vostre servidor SMTP.",
   "admin.config.smtp.host": "Servidor",
   "admin.config.smtp.host.description": "Servidor del servidor SMTP",
   "admin.config.smtp.port": "Port",
   "admin.config.smtp.port.description": "Port del servidor SMTP",
   "admin.config.smtp.email": "Correu electrònic",
-  "admin.config.smtp.email.description": "Adreça de correu des d'on s'envien els correus",
+  "admin.config.smtp.email.description":
+    "Adreça de correu des d'on s'envien els correus",
   "admin.config.smtp.username": "Nom d'usuari",
   "admin.config.smtp.username.description": "Nom d'usuari del servidor SMTP",
   "admin.config.smtp.password": "Contrasenya",
@@ -524,119 +692,184 @@ export default {
   "admin.config.smtp.button.test": "Enviar correu de prova",
   "admin.config.smtp.test-email.success": "Correu enviat correctament",
   "admin.config.smtp.test-email.error.title": "Error en enviar el correu",
-  "admin.config.smtp.test-email.error.description": "Mentre s'enviava el correu de prova, s'ha produït l'error següent:",
+  "admin.config.smtp.test-email.error.description":
+    "Mentre s'enviava el correu de prova, s'ha produït l'error següent:",
   "admin.config.smtp.test-email.save.title": "Desar la configuració",
-  "admin.config.smtp.test-email.save.description": "Per continuar, primer heu de desar la configuració. Voleu desar la configuració i enviar el correu de prova?",
+  "admin.config.smtp.test-email.save.description":
+    "Per continuar, primer heu de desar la configuració. Voleu desar la configuració i enviar el correu de prova?",
   "admin.config.smtp.test-email.save.confirm": "Desar i enviar",
-  "admin.config.smtp.allow-unauthorized-certificates": "Confiar en certificats de servidor SMTP no autoritzats",
-  "admin.config.smtp.allow-unauthorized-certificates.description": "Només configureu-ho com a cert si heu de confiar en certificats auto-signats.",
+  "admin.config.smtp.allow-unauthorized-certificates":
+    "Confiar en certificats de servidor SMTP no autoritzats",
+  "admin.config.smtp.allow-unauthorized-certificates.description":
+    "Només configureu-ho com a cert si heu de confiar en certificats auto-signats.",
   "admin.config.oauth.allow-registration": "Permetre el registre",
-  "admin.config.oauth.allow-registration.description": "Permetre que els usuaris es registrin mitjançant l'inici de sessió social",
+  "admin.config.oauth.allow-registration.description":
+    "Permetre que els usuaris es registrin mitjançant l'inici de sessió social",
   "admin.config.oauth.ignore-totp": "Ignorar el TOTP",
-  "admin.config.oauth.ignore-totp.description": "Si s'ha d'ignorar el TOTP quan l'usuari utilitza l'inici de sessió social",
-  "admin.config.oauth.disable-password": "Desactivar l'inici de sessió amb contrasenya",
-  "admin.config.oauth.disable-password.description": "Si s'ha de desactivar l'inici de sessió amb contrasenya\nAssegureu-vos que un proveïdor d'OAuth estigui correctament configurat amb anterioritat per evitar quedar-vos fora.",
+  "admin.config.oauth.ignore-totp.description":
+    "Si s'ha d'ignorar el TOTP quan l'usuari utilitza l'inici de sessió social",
+  "admin.config.oauth.disable-password":
+    "Desactivar l'inici de sessió amb contrasenya",
+  "admin.config.oauth.disable-password.description":
+    "Si s'ha de desactivar l'inici de sessió amb contrasenya\nAssegureu-vos que un proveïdor d'OAuth estigui correctament configurat amb anterioritat per evitar quedar-vos fora.",
   "admin.config.oauth.github-enabled": "GitHub",
-  "admin.config.oauth.github-enabled.description": "Si l'inici de sessió amb GitHub està activat",
+  "admin.config.oauth.github-enabled.description":
+    "Si l'inici de sessió amb GitHub està activat",
   "admin.config.oauth.github-client-id": "ID de client de GitHub",
-  "admin.config.oauth.github-client-id.description": "ID de client de l'aplicació OAuth de GitHub",
+  "admin.config.oauth.github-client-id.description":
+    "ID de client de l'aplicació OAuth de GitHub",
   "admin.config.oauth.github-client-secret": "Secret de client de GitHub",
-  "admin.config.oauth.github-client-secret.description": "Secret de client de l'aplicació OAuth de GitHub",
+  "admin.config.oauth.github-client-secret.description":
+    "Secret de client de l'aplicació OAuth de GitHub",
   "admin.config.oauth.google-enabled": "Google",
-  "admin.config.oauth.google-enabled.description": "Si l'inici de sessió amb Google està activat",
+  "admin.config.oauth.google-enabled.description":
+    "Si l'inici de sessió amb Google està activat",
   "admin.config.oauth.google-client-id": "ID de client de Google",
-  "admin.config.oauth.google-client-id.description": "ID de client de l'aplicació OAuth de Google",
+  "admin.config.oauth.google-client-id.description":
+    "ID de client de l'aplicació OAuth de Google",
   "admin.config.oauth.google-client-secret": "Secret de client de Google",
-  "admin.config.oauth.google-client-secret.description": "Secret de client de l'aplicació OAuth de Google",
+  "admin.config.oauth.google-client-secret.description":
+    "Secret de client de l'aplicació OAuth de Google",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
-  "admin.config.oauth.microsoft-enabled.description": "Si l'inici de sessió amb Microsoft està activat",
+  "admin.config.oauth.microsoft-enabled.description":
+    "Si l'inici de sessió amb Microsoft està activat",
   "admin.config.oauth.microsoft-tenant": "Inquilí de Microsoft",
-  "admin.config.oauth.microsoft-tenant.description": "ID d'inquilí de l'aplicació OAuth de Microsoft\ncommon: els usuaris amb un compte personal de Microsoft i un compte de treball o d'escola de Microsoft Entra ID poden iniciar sessió a l'aplicació. organizations: només els usuaris amb comptes de treball o d'escola de Microsoft Entra ID poden iniciar sessió a l'aplicació.\nconsumers: només els usuaris amb un compte personal de Microsoft poden iniciar sessió a l'aplicació.\nnom de domini de l'inquilí de Microsoft Entra o l'ID d'inquilí en format GUID: només els usuaris d'un inquilí específic de Microsoft Entra (membres del directori amb un compte de treball o d'escola o convidats del directori amb un compte personal de Microsoft) poden iniciar sessió a l'aplicació.",
+  "admin.config.oauth.microsoft-tenant.description":
+    "ID d'inquilí de l'aplicació OAuth de Microsoft\ncommon: els usuaris amb un compte personal de Microsoft i un compte de treball o d'escola de Microsoft Entra ID poden iniciar sessió a l'aplicació. organizations: només els usuaris amb comptes de treball o d'escola de Microsoft Entra ID poden iniciar sessió a l'aplicació.\nconsumers: només els usuaris amb un compte personal de Microsoft poden iniciar sessió a l'aplicació.\nnom de domini de l'inquilí de Microsoft Entra o l'ID d'inquilí en format GUID: només els usuaris d'un inquilí específic de Microsoft Entra (membres del directori amb un compte de treball o d'escola o convidats del directori amb un compte personal de Microsoft) poden iniciar sessió a l'aplicació.",
   "admin.config.oauth.microsoft-client-id": "ID de client de Microsoft",
-  "admin.config.oauth.microsoft-client-id.description": "ID de client de l'aplicació OAuth de Microsoft",
+  "admin.config.oauth.microsoft-client-id.description":
+    "ID de client de l'aplicació OAuth de Microsoft",
   "admin.config.oauth.microsoft-client-secret": "Secret de client de Microsoft",
-  "admin.config.oauth.microsoft-client-secret.description": "Secret de client de l'aplicació OAuth de Microsoft",
+  "admin.config.oauth.microsoft-client-secret.description":
+    "Secret de client de l'aplicació OAuth de Microsoft",
   "admin.config.oauth.discord-enabled": "Discord",
-  "admin.config.oauth.discord-enabled.description": "Si l'inici de sessió amb Discord està activat",
+  "admin.config.oauth.discord-enabled.description":
+    "Si l'inici de sessió amb Discord està activat",
   "admin.config.oauth.discord-limited-users": "Usuaris de Discord limitats",
-  "admin.config.oauth.discord-limited-users.description": "Limitar l'inici de sessió a usuaris específics pel seu ID de Discord. Deixeu-ho en blanc per desactivar-ho.",
-  "admin.config.oauth.discord-limited-guild": "ID del servidor de Discord limitat",
-  "admin.config.oauth.discord-limited-guild.description": "Limitar l'inici de sessió a usuaris d'un servidor específic. Deixeu-ho en blanc per desactivar-ho.",
+  "admin.config.oauth.discord-limited-users.description":
+    "Limitar l'inici de sessió a usuaris específics pel seu ID de Discord. Deixeu-ho en blanc per desactivar-ho.",
+  "admin.config.oauth.discord-limited-guild":
+    "ID del servidor de Discord limitat",
+  "admin.config.oauth.discord-limited-guild.description":
+    "Limitar l'inici de sessió a usuaris d'un servidor específic. Deixeu-ho en blanc per desactivar-ho.",
   "admin.config.oauth.discord-client-id": "ID de client de Discord",
-  "admin.config.oauth.discord-client-id.description": "ID de client de l'aplicació OAuth de Discord",
+  "admin.config.oauth.discord-client-id.description":
+    "ID de client de l'aplicació OAuth de Discord",
   "admin.config.oauth.discord-client-secret": "Secret de client de Discord",
-  "admin.config.oauth.discord-client-secret.description": "Secret de client de l'aplicació OAuth de Discord",
+  "admin.config.oauth.discord-client-secret.description":
+    "Secret de client de l'aplicació OAuth de Discord",
   "admin.config.oauth.oidc-enabled": "OpenID Connect",
-  "admin.config.oauth.oidc-enabled.description": "Si l'inici de sessió amb OpenID Connect està activat",
-  "admin.config.oauth.oidc-discovery-uri": "URI de descobriment d'OpenID Connect",
-  "admin.config.oauth.oidc-discovery-uri.description": "URI de descobriment de l'aplicació OAuth d'OpenID Connect",
+  "admin.config.oauth.oidc-enabled.description":
+    "Si l'inici de sessió amb OpenID Connect està activat",
+  "admin.config.oauth.oidc-discovery-uri":
+    "URI de descobriment d'OpenID Connect",
+  "admin.config.oauth.oidc-discovery-uri.description":
+    "URI de descobriment de l'aplicació OAuth d'OpenID Connect",
   "admin.config.oauth.oidc-sign-out": "Tancar la sessió d'OpenID Connect",
-  "admin.config.oauth.oidc-sign-out.description": "Si el botó “Tancar sessió” també tancarà la sessió del proveïdor d'OpenID Connect",
+  "admin.config.oauth.oidc-sign-out.description":
+    "Si el botó “Tancar sessió” també tancarà la sessió del proveïdor d'OpenID Connect",
   "admin.config.oauth.oidc-scope": "Àmbit d'OpenID Connect",
-  "admin.config.oauth.oidc-scope.description": "Àmbits que s'han de sol·licitar al proveïdor d'OpenID Connect.",
-  "admin.config.oauth.oidc-username-claim": "Reclamació de nom d'usuari d'OpenID Connect",
-  "admin.config.oauth.oidc-username-claim.description": "Reclamació de nom d'usuari al token d'identitat d'OpenID Connect. Deixeu-ho en blanc si no sabeu què és aquesta configuració.",
-  "admin.config.oauth.oidc-role-path": "Camí als rols al token d'OpenID Connect",
-  "admin.config.oauth.oidc-role-path.description": "Ha de ser un camí JMES vàlid que faci referència a una matriu de rols. " + "Gestionar els drets d'accés mitjançant rols d'OpenID Connect només es recomana si no hi ha cap altre proveïdor d'identitat configurat i l'inici de sessió amb contrasenya està desactivat. " + "Deixeu-ho en blanc si no sabeu què és aquesta configuració.",
-  "admin.config.oauth.oidc-role-general-access": "Rol d'OpenID Connect per a l'accés general",
-  "admin.config.oauth.oidc-role-general-access.description": "Rol necessari per a l'accés general. Ha d'estar present als rols de l'usuari perquè pugui iniciar sessió. " + "Deixeu-ho en blanc si no sabeu què és aquesta configuració.",
-  "admin.config.oauth.oidc-role-admin-access": "Rol d'OpenID Connect per a l'accés d'administrador",
-  "admin.config.oauth.oidc-role-admin-access.description": "Rol necessari per a l'accés administratiu. Ha d'estar present als rols de l'usuari perquè pugui accedir al panell d'administració. " + "Deixeu-ho en blanc si no sabeu què és aquesta configuració.",
+  "admin.config.oauth.oidc-scope.description":
+    "Àmbits que s'han de sol·licitar al proveïdor d'OpenID Connect.",
+  "admin.config.oauth.oidc-username-claim":
+    "Reclamació de nom d'usuari d'OpenID Connect",
+  "admin.config.oauth.oidc-username-claim.description":
+    "Reclamació de nom d'usuari al token d'identitat d'OpenID Connect. Deixeu-ho en blanc si no sabeu què és aquesta configuració.",
+  "admin.config.oauth.oidc-role-path":
+    "Camí als rols al token d'OpenID Connect",
+  "admin.config.oauth.oidc-role-path.description":
+    "Ha de ser un camí JMES vàlid que faci referència a una matriu de rols. " +
+    "Gestionar els drets d'accés mitjançant rols d'OpenID Connect només es recomana si no hi ha cap altre proveïdor d'identitat configurat i l'inici de sessió amb contrasenya està desactivat. " +
+    "Deixeu-ho en blanc si no sabeu què és aquesta configuració.",
+  "admin.config.oauth.oidc-role-general-access":
+    "Rol d'OpenID Connect per a l'accés general",
+  "admin.config.oauth.oidc-role-general-access.description":
+    "Rol necessari per a l'accés general. Ha d'estar present als rols de l'usuari perquè pugui iniciar sessió. " +
+    "Deixeu-ho en blanc si no sabeu què és aquesta configuració.",
+  "admin.config.oauth.oidc-role-admin-access":
+    "Rol d'OpenID Connect per a l'accés d'administrador",
+  "admin.config.oauth.oidc-role-admin-access.description":
+    "Rol necessari per a l'accés administratiu. Ha d'estar present als rols de l'usuari perquè pugui accedir al panell d'administració. " +
+    "Deixeu-ho en blanc si no sabeu què és aquesta configuració.",
   "admin.config.oauth.oidc-client-id": "ID de client d'OpenID Connect",
-  "admin.config.oauth.oidc-client-id.description": "ID de client de l'aplicació OAuth d'OpenID Connect",
+  "admin.config.oauth.oidc-client-id.description":
+    "ID de client de l'aplicació OAuth d'OpenID Connect",
   "admin.config.oauth.oidc-client-secret": "Secret de client d'OpenID Connect",
-  "admin.config.oauth.oidc-client-secret.description": "Secret de client de l'aplicació OAuth d'OpenID Connect",
+  "admin.config.oauth.oidc-client-secret.description":
+    "Secret de client de l'aplicació OAuth d'OpenID Connect",
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "Activar LDAP",
-  "admin.config.ldap.enabled.description": "Utilitzar l'autenticació LDAP per a l'inici de sessió dels usuaris",
+  "admin.config.ldap.enabled.description":
+    "Utilitzar l'autenticació LDAP per a l'inici de sessió dels usuaris",
   "admin.config.ldap.url": "URL del servidor",
   "admin.config.ldap.url.description": "URL del servidor LDAP",
   "admin.config.ldap.bind-dn": "DN de vinculació (Bind DN)",
-  "admin.config.ldap.bind-dn.description": "Usuari predeterminat utilitzat per realitzar la cerca d'usuaris",
+  "admin.config.ldap.bind-dn.description":
+    "Usuari predeterminat utilitzat per realitzar la cerca d'usuaris",
   "admin.config.ldap.bind-password": "Contrasenya de vinculació",
-  "admin.config.ldap.bind-password.description": "Contrasenya utilitzada per realitzar la cerca d'usuaris",
+  "admin.config.ldap.bind-password.description":
+    "Contrasenya utilitzada per realitzar la cerca d'usuaris",
   "admin.config.ldap.search-base": "Base d'usuaris",
-  "admin.config.ldap.search-base.description": "Ubicació base on es realitzarà la cerca d'usuaris",
+  "admin.config.ldap.search-base.description":
+    "Ubicació base on es realitzarà la cerca d'usuaris",
   "admin.config.ldap.search-query": "Consulta d'usuari",
-  "admin.config.ldap.search-query.description": "La consulta d'usuari s'utilitzarà per cercar l'usuari LDAP a la 'Base d'usuaris'. Es pot utilitzar %username% com a marcador de posició per a l'entrada de l'usuari.",
+  "admin.config.ldap.search-query.description":
+    "La consulta d'usuari s'utilitzarà per cercar l'usuari LDAP a la 'Base d'usuaris'. Es pot utilitzar %username% com a marcador de posició per a l'entrada de l'usuari.",
   "admin.config.ldap.admin-groups": "Grup d'administradors",
-  "admin.config.ldap.admin-groups.description": "Grup necessari per a l'accés administratiu.",
-  "admin.config.ldap.field-name-member-of": "Nom de l'atribut de grups d'usuari",
-  "admin.config.ldap.field-name-member-of.description": "Nom de l'atribut LDAP per als grups dels quals un usuari és membre. S'utilitza per comprovar el grup d'administradors.",
-  "admin.config.ldap.field-name-email": "Nom de l'atribut de correu de l'usuari",
-  "admin.config.ldap.field-name-email.description": "Nom de l'atribut LDAP per al correu d'un usuari.",
+  "admin.config.ldap.admin-groups.description":
+    "Grup necessari per a l'accés administratiu.",
+  "admin.config.ldap.field-name-member-of":
+    "Nom de l'atribut de grups d'usuari",
+  "admin.config.ldap.field-name-member-of.description":
+    "Nom de l'atribut LDAP per als grups dels quals un usuari és membre. S'utilitza per comprovar el grup d'administradors.",
+  "admin.config.ldap.field-name-email":
+    "Nom de l'atribut de correu de l'usuari",
+  "admin.config.ldap.field-name-email.description":
+    "Nom de l'atribut LDAP per al correu d'un usuari.",
   "admin.config.notify.success": "Configuració actualitzada correctament.",
-  "admin.config.notify.logo-success": "Logotip actualitzat correctament. Pot trigar uns minuts a actualitzar-se al lloc web.",
+  "admin.config.notify.logo-success":
+    "Logotip actualitzat correctament. Pot trigar uns minuts a actualitzar-se al lloc web.",
   "admin.config.notify.no-changes": "No hi ha canvis per desar.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Activat",
-  "admin.config.s3.enabled.description": "Si s'ha d'utilitzar S3 per emmagatzemar els fitxers compartits en lloc del sistema de fitxers local. ADVERTÈNCIA: si el ClamAV està actiu, els fitxers es descarregaran temporalment de l'S3 per ser comprovats.",
-  "admin.config.s3.endpoint": "Endpoint",
+  "admin.config.s3.enabled.description":
+    "Si s'ha d'utilitzar S3 per emmagatzemar els fitxers compartits en lloc del sistema de fitxers local. ADVERTÈNCIA: si el ClamAV està actiu, els fitxers es descarregaran temporalment de l'S3 per ser comprovats.",
+  "admin.config.s3.endpoint": "Punt final",
   "admin.config.s3.endpoint.description": "La URL de l'espai S3 (bucket).",
   "admin.config.s3.region": "Regió",
   "admin.config.s3.region.description": "La regió de l'espai S3.",
   "admin.config.s3.bucket-name": "Nom de l'espai (bucket)",
   "admin.config.s3.bucket-name.description": "El nom de l'espai S3.",
   "admin.config.s3.bucket-path": "Camí",
-  "admin.config.s3.bucket-path.description": "El camí predeterminat que s'ha d'utilitzar per emmagatzemar els fitxers a l'espai S3.",
+  "admin.config.s3.bucket-path.description":
+    "El camí predeterminat que s'ha d'utilitzar per emmagatzemar els fitxers a l'espai S3.",
   "admin.config.s3.key": "Clau (Key)",
-  "admin.config.s3.key.description": "La clau que us permet accedir a l'espai S3.",
+  "admin.config.s3.key.description":
+    "La clau que us permet accedir a l'espai S3.",
   "admin.config.s3.secret": "Secret",
-  "admin.config.s3.secret.description": "El secret que us permet accedir a l'espai S3.",
+  "admin.config.s3.secret.description":
+    "El secret que us permet accedir a l'espai S3.",
   "admin.config.s3.use-checksum": "Utilitzar suma de verificació (checksum)",
-  "admin.config.s3.use-checksum.description": "Desactiveu-ho per a backends que no suporten sumes de verificació (p. ex., B2).",
-  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
+  "admin.config.s3.use-checksum.description":
+    "Desactiveu-ho per a backends que no suporten sumes de verificació (p. ex., B2).",
+  "admin.config.s3.docs-link":
+    "Cal reconfigurar CORS al vostre contenidor (bucket), consulteu {wikiLink} per a més detalls.",
   "admin.config.category.legal": "Legal",
   "admin.config.legal.enabled": "Activar avisos legals",
-  "admin.config.legal.enabled.description": "Si s'ha de mostrar un enllaç a l'avís legal i a la política de privadesa al peu de pàgina.",
+  "admin.config.legal.enabled.description":
+    "Si s'ha de mostrar un enllaç a l'avís legal i a la política de privadesa al peu de pàgina.",
   "admin.config.legal.imprint-text": "Text de l'avís legal",
-  "admin.config.legal.imprint-text.description": "El text que s'ha de mostrar a l'avís legal. Admet Markdown. Deixeu-ho en blanc per enllaçar a una pàgina d'avís legal externa.",
+  "admin.config.legal.imprint-text.description":
+    "El text que s'ha de mostrar a l'avís legal. Admet Markdown. Deixeu-ho en blanc per enllaçar a una pàgina d'avís legal externa.",
   "admin.config.legal.imprint-url": "URL de l'avís legal",
-  "admin.config.legal.imprint-url.description": "Si ja teniu una pàgina d'avís legal, podeu enllaçar-la aquí en lloc d'utilitzar el camp de text.",
+  "admin.config.legal.imprint-url.description":
+    "Si ja teniu una pàgina d'avís legal, podeu enllaçar-la aquí en lloc d'utilitzar el camp de text.",
   "admin.config.legal.privacy-policy-text": "Text de la política de privadesa",
-  "admin.config.legal.privacy-policy-text.description": "El text que s'ha de mostrar a la política de privadesa. Admet Markdown. Deixeu-ho en blanc per enllaçar a una pàgina de política de privadesa externa.",
+  "admin.config.legal.privacy-policy-text.description":
+    "El text que s'ha de mostrar a la política de privadesa. Admet Markdown. Deixeu-ho en blanc per enllaçar a una pàgina de política de privadesa externa.",
   "admin.config.legal.privacy-policy-url": "URL de la política de privadesa",
-  "admin.config.legal.privacy-policy-url.description": "Si ja teniu una pàgina de política de privadesa, podeu enllaçar-la aquí en lloc d'utilitzar el camp de text.",
+  "admin.config.legal.privacy-policy-url.description":
+    "Si ja teniu una pàgina de política de privadesa, podeu enllaçar-la aquí en lloc d'utilitzar el camp de text.",
   // 404
   "404.description": "Sembla que aquesta pàgina no existeix.",
   "404.button.home": "Torna a l'inici",
@@ -645,18 +878,27 @@ export default {
   "error.description": "Vaja!",
   "error.button.back": "Torna enrere",
   "error.msg.default": "S'ha produït un error.",
-  "error.msg.access_denied": "Heu cancel·lat el procés d'autenticació, torneu-ho a provar.",
-  "error.msg.expired_token": "El procés d'autenticació ha trigat massa, torneu-ho a provar.",
+  "error.msg.access_denied":
+    "Heu cancel·lat el procés d'autenticació, torneu-ho a provar.",
+  "error.msg.expired_token":
+    "El procés d'autenticació ha trigat massa, torneu-ho a provar.",
   "error.msg.invalid_token": "Error intern",
   "error.msg.no_user": "L'usuari vinculat a aquest compte de {0} no existeix.",
-  "error.msg.no_email": "No s'ha pogut obtenir l'adreça de correu d'aquest compte de {0}.",
-  "error.msg.already_linked": "Aquest compte de {0} ja està vinculat a un altre compte.",
-  "error.msg.not_linked": "Aquest compte de {0} encara no s'ha vinculat a cap compte.",
-  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
-  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
-  "error.msg.unverified_account": "Aquest compte de {0} no està verificat, torneu-ho a provar després de la verificació.",
+  "error.msg.no_email":
+    "No s'ha pogut obtenir l'adreça de correu d'aquest compte de {0}.",
+  "error.msg.already_linked":
+    "Aquest compte de {0} ja està vinculat a un altre compte.",
+  "error.msg.not_linked":
+    "Aquest compte de {0} encara no s'ha vinculat a cap compte.",
+  "error.msg.email_already_exists":
+    "Ja existeix un compte amb aquesta adreça de correu electrònic. Inicieu sessió amb la vostra contrasenya i enllaceu manualment el vostre compte de {0} a la pàgina El meu compte.",
+  "error.msg.email_not_verified":
+    "La vostra adreça de correu electrònic en aquest compte de {0} no està verificada. Verifiqueu el vostre correu amb el vostre proveïdor d'identitat abans d'iniciar sessió.",
+  "error.msg.unverified_account":
+    "Aquest compte de {0} no està verificat, torneu-ho a provar després de la verificació.",
   "error.msg.user_not_allowed": "No teniu permès iniciar la sessió.",
-  "error.msg.cannot_get_user_info": "No s'ha pogut obtenir la vostra informació d'usuari d'aquest compte de {0}.",
+  "error.msg.cannot_get_user_info":
+    "No s'ha pogut obtenir la vostra informació d'usuari d'aquest compte de {0}.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
@@ -701,14 +943,20 @@ export default {
   "common.error.exact-length": "Ha de tenir exactament {length} caràcters",
   "common.error.invalid-number": "Ha de ser un número",
   "common.error.field-required": "Aquest camp és obligatori",
-  "common.error.password.lowercase": "Password must contain at least one lowercase letter",
-  "common.error.password.uppercase": "Password must contain at least one uppercase letter",
-  "common.error.password.number": "Password must contain at least one number",
-  "common.error.password.special": "Password must contain at least one special character",
+  "common.error.password.lowercase":
+    "La contrasenya ha de contenir almenys una lletra minúscula",
+  "common.error.password.uppercase":
+    "La contrasenya ha de contenir almenys una lletra majúscula",
+  "common.error.password.number":
+    "La contrasenya ha de contenir almenys un número",
+  "common.error.password.special":
+    "La contrasenya ha de contenir almenys un caràcter especial",
   "admin.notice.modal.headerTag": "CAL UNA ACCIÓ ADMINISTRATIVA",
-  "admin.notice.modal.defaultCheckboxLabel": "Confirmo que he llegit aquest avís i entenc els canvis radicals.",
+  "admin.notice.modal.defaultCheckboxLabel":
+    "Confirmo que he llegit aquest avís i entenc els canvis radicals.",
   "admin.notice.modal.button.acknowledge": "Reconèixer i descartar",
   "admin.notice.modal.button.acknowledging": "Reconeixent...",
   "admin.notice.modal.docsLink": "Veure la documentació",
-  "admin.notice.modal.globalNoticeFooter": "Nota: Un cop reconegut, aquest avís es descartarà permanentment per a tots els administradors en tots els dispositius."
+  "admin.notice.modal.globalNoticeFooter":
+    "Nota: Un cop reconegut, aquest avís es descartarà permanentment per a tots els administradors en tots els dispositius.",
 };

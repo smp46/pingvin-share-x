@@ -20,7 +20,8 @@ export default {
   "home.bullet.b.name": "隐私",
   "home.bullet.b.description": "您的文件只属于您，永远无法被第三方访问。",
   "home.bullet.c.name": "完全无限",
-  "home.bullet.c.description": "您想上传多大的文件都可以。硬盘容量是您唯一的限制。",
+  "home.bullet.c.description":
+    "您想上传多大的文件都可以。硬盘容量是您唯一的限制。",
   "home.button.start": "开始使用",
   "home.button.source": "源代码",
   // END /
@@ -60,7 +61,8 @@ export default {
   "verify.error": "验证链接无效或已过期。",
   "verify.button.signin": "前往登录",
   "verify.info.title": "账号验证",
-  "verify.info.description": "邮箱验证已启用。我们已向您的邮箱发送了验证链接，请点击该链接以激活您的账号。",
+  "verify.info.description":
+    "邮箱验证已启用。我们已向您的邮箱发送了验证链接，请点击该链接以激活您的账号。",
   "verify.info.note": "如果几分钟内没有收到邮件，请检查您的垃圾邮件文件夹。",
   "verify.info.resend.button": "重新发送验证邮件",
   "verify.info.resend.success": "验证邮件已成功重新发送。",
@@ -75,7 +77,8 @@ export default {
   // /auth/reset-password
   "resetPassword.title": "忘记密码？",
   "resetPassword.description": "请输入电子邮箱地址来接收重置密码邮件",
-  "resetPassword.notify.success": "系统已向您的邮箱发送一条包含重置密码链接的邮件。（若该电子邮箱存在）",
+  "resetPassword.notify.success":
+    "系统已向您的邮箱发送一条包含重置密码链接的邮件。（若该电子邮箱存在）",
   "resetPassword.button.back": "返回登录页面",
   "resetPassword.text.resetPassword": "重置密码",
   "resetPassword.text.enterNewPassword": "请输入新密码",
@@ -90,7 +93,8 @@ export default {
   "account.card.password.title": "密码",
   "account.card.password.old": "旧密码",
   "account.card.password.new": "新密码",
-  "account.card.password.noPasswordSet": "您还未设置密码。如果您想通过邮箱和密码登录，请先设置密码。",
+  "account.card.password.noPasswordSet":
+    "您还未设置密码。如果您想通过邮箱和密码登录，请先设置密码。",
   "account.notify.password.success": "密码更改成功！",
   "account.card.oauth.title": "社交账号登录",
   "account.card.oauth.github": "GitHub",
@@ -102,11 +106,13 @@ export default {
   "account.card.oauth.unlink": "解除关联",
   "account.card.oauth.unlinked": "已解除关联",
   "account.modal.unlink.title": "解除关联",
-  "account.modal.unlink.description": "解绑社交账号后，如果忘记登录凭据，可能会导致无法找回账号",
+  "account.modal.unlink.description":
+    "解绑社交账号后，如果忘记登录凭据，可能会导致无法找回账号",
   "account.notify.oauth.unlinked.success": "解除关联成功",
   "account.card.security.title": "安全",
   "account.card.security.totp.enable.description": "请输入当前密码开启两步验证",
-  "account.card.security.totp.disable.description": "请输入当前密码关闭两步验证",
+  "account.card.security.totp.disable.description":
+    "请输入当前密码关闭两步验证",
   "account.card.security.totp.button.start": "开启",
   "account.modal.totp.title": "开启两步验证",
   "account.modal.totp.step1": "第一步：添加验证器 Authenticator",
@@ -119,7 +125,8 @@ export default {
   "account.notify.totp.disable": "成功关闭两步验证！",
   "account.notify.totp.enable": "成功开启两步验证！",
   "account.card.language.title": "语言",
-  "account.card.language.description": "本项目由社区志愿者翻译，部分语言可能尚未完成。",
+  "account.card.language.description":
+    "本项目由社区志愿者翻译，部分语言可能尚未完成。",
   "account.card.color.title": "颜色外观",
   // ThemeSwitcher.tsx
   "account.theme.dark": "深色模式",
@@ -127,7 +134,8 @@ export default {
   "account.theme.system": "跟随系统",
   "account.button.delete": "删除账号",
   "account.modal.delete.title": "删除账号",
-  "account.modal.delete.description": "您真的想删除你的账号，并删除所有的分享吗？",
+  "account.modal.delete.description":
+    "您真的想删除你的账号，并删除所有的分享吗？",
   // END /account
 
   // /account/shares
@@ -161,14 +169,16 @@ export default {
   // /account/received
   "account.received-shares.title": "收到的分享",
   "account.received-shares.title.empty": "暂无收到的分享",
-  "account.received-shares.description.empty": "发送到您邮箱的分享将显示在这里。",
+  "account.received-shares.description.empty":
+    "发送到您邮箱的分享将显示在这里。",
   "account.received-shares.table.from": "来自",
   "account.received-shares.button.open": "打开",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "反向分享",
-  "account.reverseShares.description": "反向分享可生成一个专属链接，外部用户可通过该链接向您上传文件。",
+  "account.reverseShares.description":
+    "反向分享可生成一个专属链接，外部用户可通过该链接向您上传文件。",
   "account.reverseShares.title.empty": "这里空空如也 👀",
   "account.reverseShares.description.empty": "暂无反向分享。",
   // showCreateReverseShareModal.tsx
@@ -188,13 +198,17 @@ export default {
   "account.reverseShares.modal.expiration.year-plural": "年",
   "account.reverseShares.modal.max-size.label": "最大文件上限",
   "account.reverseShares.modal.send-email": "发送电子邮件通知",
-  "account.reverseShares.modal.send-email.description": "当有人通过此反向分享链接创建分享时，向您发送邮件通知。",
+  "account.reverseShares.modal.send-email.description":
+    "当有人通过此反向分享链接创建分享时，向您发送邮件通知。",
   "account.reverseShares.modal.simplified": "简易模式",
-  "account.reverseShares.modal.simplified.description": "让上传者更轻松地与您分享文件。他们仅能自定义分享的名称和描述。",
+  "account.reverseShares.modal.simplified.description":
+    "让上传者更轻松地与您分享文件。他们仅能自定义分享的名称和描述。",
   "account.reverseShares.modal.public-access": "公开访问",
-  "account.reverseShares.modal.public-access.description": "通过此反向分享创建的分享将设为公开。关闭后，仅您和分享创建者可以查看。",
+  "account.reverseShares.modal.public-access.description":
+    "通过此反向分享创建的分享将设为公开。关闭后，仅您和分享创建者可以查看。",
   "account.reverseShares.modal.max-use.label": "最大使用次数",
-  "account.reverseShares.modal.max-use.description": "此链接可用于创建分享的最大次数。",
+  "account.reverseShares.modal.max-use.description":
+    "此链接可用于创建分享的最大次数。",
   "account.reverseShare.never-expires": "此反向分享永不过期。",
   "account.reverseShare.expires-on": "此反向分享将于 {expiration} 过期。",
   "account.reverseShares.table.no-shares": "当前没有创建任何分享",
@@ -206,7 +220,8 @@ export default {
   "account.reverseShares.table.expires": "过期时间",
   "account.reverseShares.modal.reverse-share-link": "反向分享链接",
   "account.reverseShares.modal.delete.title": "删除反向分享链接",
-  "account.reverseShares.modal.delete.description": "确定要删除此反向分享吗？删除后，与其关联的分享也将一并删除。",
+  "account.reverseShares.modal.delete.description":
+    "确定要删除此反向分享吗？删除后，与其关联的分享也将一并删除。",
   // END /account/reverseShares
 
   // /admin
@@ -228,9 +243,11 @@ export default {
   "admin.users.edit.update.admin-privileges": "管理员",
   "admin.users.edit.update.email-verified": "邮箱已验证",
   "admin.users.edit.update.custom-share-size-limit": "自定义分享大小限制",
-  "admin.users.edit.update.custom-share-size-limit.description": "为该用户单独设置上传大小限制",
+  "admin.users.edit.update.custom-share-size-limit.description":
+    "为该用户单独设置上传大小限制",
   "admin.users.edit.update.custom-storage-quota-limit": "自定义存储空间配额",
-  "admin.users.edit.update.custom-storage-quota-limit.description": "限制用户在所有有效分享中的总存储空间使用量",
+  "admin.users.edit.update.custom-storage-quota-limit.description":
+    "限制用户在所有有效分享中的总存储空间使用量",
   "admin.users.edit.update.change-password.title": "更改密码",
   "admin.users.edit.update.change-password.field": "新密码",
   "admin.users.edit.update.change-password.button": "保存新密码",
@@ -243,13 +260,17 @@ export default {
   "admin.users.modal.create.email": "电子邮件",
   "admin.users.modal.create.password": "密码",
   "admin.users.modal.create.manual-password": "手动设置密码",
-  "admin.users.modal.create.manual-password.description": "如果不勾选，用户将会收到一封电子邮件来设置他们的密码",
+  "admin.users.modal.create.manual-password.description":
+    "如果不勾选，用户将会收到一封电子邮件来设置他们的密码",
   "admin.users.modal.create.custom-share-size-limit": "自定义分享大小限制",
-  "admin.users.modal.create.custom-share-size-limit.description": "覆盖此用户的全局上传限制",
+  "admin.users.modal.create.custom-share-size-limit.description":
+    "覆盖此用户的全局上传限制",
   "admin.users.modal.create.custom-storage-quota-limit": "自定义存储空间配额",
-  "admin.users.modal.create.custom-storage-quota-limit.description": "限制用户在所有有效分享中的总存储空间使用量",
+  "admin.users.modal.create.custom-storage-quota-limit.description":
+    "限制用户在所有有效分享中的总存储空间使用量",
   "admin.users.modal.create.admin": "管理员",
-  "admin.users.modal.create.admin.description": "勾选后，该用户将可访问管理后台。",
+  "admin.users.modal.create.admin.description":
+    "勾选后，该用户将可访问管理后台。",
   // END /admin/users
 
   // /admin/shares
@@ -271,11 +292,14 @@ export default {
   "upload.notify.count-failed": "{count} 文件上传失败，请重试",
   "upload.notify.duplicate-skipped": "已跳过重复文件：{name}",
   "upload.reverse-share.error.invalid.title": "反向分享链接无效",
-  "upload.reverse-share.error.invalid.description": "此链接已达到使用次数上限或已失效。",
+  "upload.reverse-share.error.invalid.description":
+    "此链接已达到使用次数上限或已失效。",
   // Dropzone.tsx
   "upload.dropzone.title": "上传文件",
-  "upload.dropzone.description": "将文件或文件夹拖放到此处开始创建分享，或按“Ctrl+V”上传剪贴板中的文本内容。文件总大小不能超过 {maxSize}。",
-  "upload.dropzone.notify.file-too-big": "您的文件超过了最大上传限制 {maxSize}。",
+  "upload.dropzone.description":
+    "将文件或文件夹拖放到此处开始创建分享，或按“Ctrl+V”上传剪贴板中的文本内容。文件总大小不能超过 {maxSize}。",
+  "upload.dropzone.notify.file-too-big":
+    "您的文件超过了最大上传限制 {maxSize}。",
   "upload.button.folder": "上传文件夹",
   "upload.button.folder.append": "追加文件夹",
   "upload.button.add": "添加到上传",
@@ -289,9 +313,11 @@ export default {
   "upload.modal.link.error.invalid": "只能包括字母，数字，下划线(_)，和横线(-)",
   "upload.modal.link.error.taken": "此链接已被占用",
   "upload.modal.link.error.s3-session-not-found": "未找到 S3 上传会话",
-  "upload.modal.link.error.s3-etag-missing": "S3 响应中缺少 ETag 标头，请确保 CORS 配置允许访问 ETag 标头。",
+  "upload.modal.link.error.s3-etag-missing":
+    "S3 响应中缺少 ETag 标头，请确保 CORS 配置允许访问 ETag 标头。",
   "upload.modal.not-signed-in": "当前没有登录",
-  "upload.modal.not-signed-in-description": "您将无法手动删除分享，也无法查看访问次数。",
+  "upload.modal.not-signed-in-description":
+    "您将无法手动删除分享，也无法查看访问次数。",
   "upload.modal.expires.never": "永不",
   "upload.modal.expires.never-long": "永久分享",
   "upload.modal.expires.error.too-long": "有效期超过 {max} 的最大值。",
@@ -311,11 +337,13 @@ export default {
   "upload.modal.expires.year-plural": "年",
   "upload.modal.accordion.name-and-description.title": "名称与描述",
   "upload.modal.accordion.name-and-description.name.placeholder": "名称",
-  "upload.modal.accordion.name-and-description.description.placeholder": "写给接收者的备注",
+  "upload.modal.accordion.name-and-description.description.placeholder":
+    "写给接收者的备注",
   "upload.modal.accordion.email.title": "邮件提醒",
   "upload.modal.accordion.email.placeholder": "收件人电子邮件地址",
   "upload.modal.accordion.email.invalid-email": "邮件地址不可用",
-  "upload.modal.accordion.email.restrict-to-recipients": "仅限以下接收者访问（需登录后才能访问）",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "仅限以下接收者访问（需登录后才能访问）",
   "upload.modal.accordion.security.title": "安全选项",
   "upload.modal.accordion.security.password.label": "密码保护",
   "upload.modal.accordion.security.password.placeholder": "无密码",
@@ -325,23 +353,27 @@ export default {
   "upload.modal.completed.never-expires": "此分享永不过期。",
   "upload.modal.completed.expires-on": "此分享将于 {expiration} 过期。",
   "upload.modal.completed.share-ready": "分享已创建",
-  "upload.modal.completed.notified-reverse-share-creator": "我们已通知反向分享创建者。您也可以通过其他方式将此链接发送给对方。",
+  "upload.modal.completed.notified-reverse-share-creator":
+    "我们已通知反向分享创建者。您也可以通过其他方式将此链接发送给对方。",
   // END /upload
 
   // /share/[id]
   "share.title": "分享 {shareId}",
   "share.description": "瞧瞧我给您分享了些什么！",
-  "share.fileCount": "{count, plural, =1 {# 个文件} other {# 个文件}} · {size}（ZIP 文件可能因压缩而更小）",
+  "share.fileCount":
+    "{count, plural, =1 {# 个文件} other {# 个文件}} · {size}（ZIP 文件可能因压缩而更小）",
   "share.copy-text-contents": "复制文件内容到剪贴板",
   "share.error.visitor-limit-exceeded.title": "访问次数达到上限",
-  "share.error.visitor-limit-exceeded.description": "此分享的访问人数已达到上限。",
+  "share.error.visitor-limit-exceeded.description":
+    "此分享的访问人数已达到上限。",
   "share.error.removed.title": "共享已删除",
   "share.error.not-found.title": "共享未找到",
   "share.error.not-found.description": "共享文件走丢了",
   "share.error.access-denied.title": "私有共享",
   "share.error.access-denied.description": "当前账号无权访问此分享",
   "share.error.restricted.title": "受限分享",
-  "share.error.restricted.description": "此分享仅限指定收件人查看，请登录后查看。",
+  "share.error.restricted.description":
+    "此分享仅限指定收件人查看，请登录后查看。",
   "share.error.restricted.button": "登录",
   "share.modal.password.title": "需要密码",
   "share.modal.password.description": "请输入密码以访问此分享。",
@@ -355,9 +387,10 @@ export default {
   "share.modal.file-link": "文件链接",
   "share.table.name": "文件名",
   "share.table.size": "文件大小",
-  "share.modal.file-preview.original_file": "View original file",
+  "share.modal.file-preview.original_file": "查看原文件",
   "share.modal.file-preview.error.not-supported.title": "不支持预览",
-  "share.modal.file-preview.error.not-supported.description": "此类型的文件不支持预览，请下载后查看。",
+  "share.modal.file-preview.error.not-supported.description":
+    "此类型的文件不支持预览，请下载后查看。",
   // END /share/[id]
 
   // /share/[id]/edit
@@ -377,11 +410,12 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "配置文件已存在",
-  "admin.config.config-file-warning.description": "由于当前 Pingvin Share 使用配置文件进行配置，因此无法通过界面修改配置。",
+  "admin.config.config-file-warning.description":
+    "由于当前 Pingvin Share 使用配置文件进行配置，因此无法通过界面修改配置。",
   "admin.config.title": "配置管理",
   "admin.config.category.general": "通用",
   "admin.config.category.appearance": "外观",
-  "admin.config.category.security": "Security & Access",
+  "admin.config.category.security": "安全与访问",
   "admin.config.category.share": "共享",
   "admin.config.category.cache": "缓存",
   "admin.config.category.email": "电子邮件",
@@ -390,127 +424,182 @@ export default {
   "admin.config.general.app-name": "应用名称",
   "admin.config.general.app-name.description": "自定义 App 的名称",
   "admin.config.general.default-language": "默认语言",
-  "admin.config.general.default-language.description": "此设置对所有用户生效，用户仍可在个人设置中自行选择语言。",
+  "admin.config.general.default-language.description":
+    "此设置对所有用户生效，用户仍可在个人设置中自行选择语言。",
   "admin.config.appearance.theme-primary-color": "主题主色",
-  "admin.config.appearance.theme-primary-color.description": "用于按钮、链接和强调元素的主色。选择“自定义”可使用颜色选择器进行设置。",
+  "admin.config.appearance.theme-primary-color.description":
+    "用于按钮、链接和强调元素的主色。选择“自定义”可使用颜色选择器进行设置。",
   "admin.config.appearance.theme-primary-color-override": "自定义主色",
-  "admin.config.appearance.theme-primary-color-override.description": "当主题主色设为“自定义”时，使用此十六进制颜色值。",
+  "admin.config.appearance.theme-primary-color-override.description":
+    "当主题主色设为“自定义”时，使用此十六进制颜色值。",
   "admin.config.appearance.theme-font-preset": "字体预设",
-  "admin.config.appearance.theme-font-preset.description": "构建时预置的字体。可选择系统默认字体或内置的 Google Fonts 字体。",
+  "admin.config.appearance.theme-font-preset.description":
+    "构建时预置的字体。可选择系统默认字体或内置的 Google Fonts 字体。",
   "admin.config.appearance.theme-color-scheme": "默认主题（访客）",
-  "admin.config.appearance.theme-color-scheme.description": "未登录用户默认使用此浅色/深色模式，已登录用户将使用自己账号中的设置。",
+  "admin.config.appearance.theme-color-scheme.description":
+    "未登录用户默认使用此浅色/深色模式，已登录用户将使用自己账号中的设置。",
   "admin.config.appearance.theme-radius": "主题圆角",
-  "admin.config.appearance.theme-radius.description": "Mantine 组件使用的默认圆角半径。",
+  "admin.config.appearance.theme-radius.description":
+    "Mantine 组件使用的默认圆角半径。",
   "admin.config.appearance.custom-css": "自定义 CSS",
-  "admin.config.appearance.custom-css.description": "应用到前端的全局 CSS。请谨慎使用，错误的 CSS 可能影响界面。",
+  "admin.config.appearance.custom-css.description":
+    "应用到前端的全局 CSS。请谨慎使用，错误的 CSS 可能影响界面。",
   "admin.config.appearance.upload-progress-style": "上传进度显示方式",
-  "admin.config.appearance.upload-progress-style.description": "选择在文件列表中显示上传进度的方式。",
+  "admin.config.appearance.upload-progress-style.description":
+    "选择在文件列表中显示上传进度的方式。",
   "admin.config.appearance.upload-progress-style.circle": "圆形指示器",
-  "admin.config.appearance.upload-progress-style.circle-percentage": "圆形 + 百分比",
-  "admin.config.appearance.upload-progress-style.percentage-time": "百分比 + 剩余时间",
+  "admin.config.appearance.upload-progress-style.circle-percentage":
+    "圆形 + 百分比",
+  "admin.config.appearance.upload-progress-style.percentage-time":
+    "百分比 + 剩余时间",
   "admin.config.general.app-url": "应用 URL",
   "admin.config.general.app-url.description": "Pingvin Share 访问地址",
   "admin.config.security.secure-cookies": "安全 Cookie",
-  "admin.config.security.secure-cookies.description": "是否为 Cookie 设置 Secure 标志。启用后，网站将无法通过 HTTP 访问。",
+  "admin.config.security.secure-cookies.description":
+    "是否为 Cookie 设置 Secure 标志。启用后，网站将无法通过 HTTP 访问。",
   "admin.config.general.show-home-page": "显示首页",
   "admin.config.general.show-home-page.description": "是否显示首页",
   "admin.config.security.session-duration": "登录有效期",
-  "admin.config.security.session-duration.description": "用户重新登录前可保持登录状态的时长（默认：3 个月）。",
+  "admin.config.security.session-duration.description":
+    "用户重新登录前可保持登录状态的时长（默认：3 个月）。",
   "admin.config.appearance.logo": "Logo",
-  "admin.config.appearance.logo.description": "上传新图片以更换 Logo。图片必须为 PNG 格式，且宽高比为 1:1。",
+  "admin.config.appearance.logo.description":
+    "上传新图片以更换 Logo。图片必须为 PNG 格式，且宽高比为 1:1。",
   "admin.config.appearance.logo-dark": "深色模式 Logo",
-  "admin.config.appearance.logo-dark.description": "上传用于深色模式的独立 Logo。图片必须为 PNG 格式，且宽高比应为 1:1。",
+  "admin.config.appearance.logo-dark.description":
+    "上传用于深色模式的独立 Logo。图片必须为 PNG 格式，且宽高比应为 1:1。",
   "admin.config.appearance.logo.placeholder": "选择图片",
-  "admin.config.security.custom-password-policy": "Custom password policy",
-  "admin.config.security.custom-password-policy.description": "Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.",
-  "admin.config.security.min-length": "Minimum length",
-  "admin.config.security.min-length.description": "Minimum number of characters required for a password.",
-  "admin.config.security.require-uppercase": "Require uppercase",
-  "admin.config.security.require-uppercase.description": "Whether to require at least one uppercase letter in the password.",
-  "admin.config.security.require-lowercase": "Require lowercase",
-  "admin.config.security.require-lowercase.description": "Whether to require at least one lowercase letter in the password.",
-  "admin.config.security.require-number": "Require number",
-  "admin.config.security.require-number.description": "Whether to require at least one number in the password.",
-  "admin.config.security.require-special-character": "Require special character",
-  "admin.config.security.require-special-character.description": "Whether to require at least one special character in the password.",
+  "admin.config.security.custom-password-policy": "自定义密码策略",
+  "admin.config.security.custom-password-policy.description":
+    "是否启用自定义密码策略。如果禁用，将使用默认的至少 8 个字符的密码策略。",
+  "admin.config.security.min-length": "最小长度",
+  "admin.config.security.min-length.description": "密码所需的最小字符数。",
+  "admin.config.security.require-uppercase": "需要大写字母",
+  "admin.config.security.require-uppercase.description":
+    "密码中是否需要至少包含一个大写字母。",
+  "admin.config.security.require-lowercase": "需要小写字母",
+  "admin.config.security.require-lowercase.description":
+    "密码中是否需要至少包含一个小写字母。",
+  "admin.config.security.require-number": "需要数字",
+  "admin.config.security.require-number.description":
+    "密码中是否需要至少包含一个数字。",
+  "admin.config.security.require-special-character": "需要特殊字符",
+  "admin.config.security.require-special-character.description":
+    "密码中是否需要至少包含一个特殊字符。",
   "admin.config.cache.ttl": "TTL",
   "admin.config.cache.ttl.description": "缓存信息的保留时间（秒）。",
   "admin.config.cache.max-items": "最大项目数量",
   "admin.config.cache.max-items.description": "缓存中的最大项目数量。",
   "admin.config.cache.redis-enabled": "Redis 已启用",
-  "admin.config.cache.redis-enabled.description": "默认情况下，Pingvin Share 会将信息缓存到内存中。如果运行多个 Pingvin Share 实例，则需要启用 Redis 缓存，以便各实例之间共享缓存。",
+  "admin.config.cache.redis-enabled.description":
+    "默认情况下，Pingvin Share 会将信息缓存到内存中。如果运行多个 Pingvin Share 实例，则需要启用 Redis 缓存，以便各实例之间共享缓存。",
   "admin.config.cache.redis-url": "Redis 地址",
   "admin.config.cache.redis-url.description": "用于缓存的 Redis 实例连接 URL。",
   "admin.config.cache.button.test-redis": "测试 Redis 连接",
   "admin.config.cache.test-redis.success": "Redis 连接成功",
-  "admin.config.cache.test-redis.success-disabled": "已成功连接到 Redis（当前已禁用 Redis 缓存）。",
+  "admin.config.cache.test-redis.success-disabled":
+    "已成功连接到 Redis（当前已禁用 Redis 缓存）。",
   "admin.config.cache.test-redis.modal.error.title": "Redis 连接失败",
-  "admin.config.cache.test-redis.modal.error.description": "连接 Redis 时发生以下错误：",
+  "admin.config.cache.test-redis.modal.error.description":
+    "连接 Redis 时发生以下错误：",
   "admin.config.cache.test-redis.modal.save.title": "保存配置",
-  "admin.config.cache.test-redis.modal.save.description": "继续操作前，需要先保存配置。是否立即保存配置并测试 Redis 连接？",
+  "admin.config.cache.test-redis.modal.save.description":
+    "继续操作前，需要先保存配置。是否立即保存配置并测试 Redis 连接？",
   "admin.config.cache.test-redis.modal.save.confirm": "保存并测试",
   "admin.config.email.send-html-emails": "启用 HTML 邮件支持",
-  "admin.config.email.send-html-emails.description": "开启后，将以 HTML 格式发送邮件。请确保邮件模板已更新为 HTML 格式。",
+  "admin.config.email.send-html-emails.description":
+    "开启后，将以 HTML 格式发送邮件。请确保邮件模板已更新为 HTML 格式。",
   "admin.config.share.enable-share-email-recipients": "启用邮件收件人共享",
-  "admin.config.share.enable-share-email-recipients.description": "允许通过电子邮件分享文件。仅在启用 SMTP 后才能开启此功能。",
+  "admin.config.share.enable-share-email-recipients.description":
+    "允许通过电子邮件分享文件。仅在启用 SMTP 后才能开启此功能。",
   "admin.config.email.share-recipients-subject": "共享邮件通知主题",
-  "admin.config.email.share-recipients-subject.description": "发送给分享接收者的邮件主题。",
+  "admin.config.email.share-recipients-subject.description":
+    "发送给分享接收者的邮件主题。",
   "admin.config.email.share-recipients-message": "分享接收者邮件内容",
-  "admin.config.email.share-recipients-message.description": "发送给分享接收者的邮件内容。可用变量：\n {creator} - 分享创建者的用户名\n {creatorEmail} - 分享创建者的邮箱地址\n {shareUrl} - 分享链接\n {desc} - 分享说明\n {expires} - 分享过期时间\n上述变量会被替换为对应的实际值。",
+  "admin.config.email.share-recipients-message.description":
+    "发送给分享接收者的邮件内容。可用变量：\n {creator} - 分享创建者的用户名\n {creatorEmail} - 分享创建者的邮箱地址\n {shareUrl} - 分享链接\n {desc} - 分享说明\n {expires} - 分享过期时间\n上述变量会被替换为对应的实际值。",
   "admin.config.email.reverse-share-subject": "反向分享邮件主题",
-  "admin.config.email.reverse-share-subject.description": "当有人通过反向分享链接提交文件时，发送邮件的主题。",
+  "admin.config.email.reverse-share-subject.description":
+    "当有人通过反向分享链接提交文件时，发送邮件的主题。",
   "admin.config.email.reverse-share-message": "反向分享邮件内容",
-  "admin.config.email.reverse-share-message.description": "当有人通过您的反向分享链接提交文件时，发送的邮件内容。{shareUrl} 将替换为创建者名称和分享链接。",
+  "admin.config.email.reverse-share-message.description":
+    "当有人通过您的反向分享链接提交文件时，发送的邮件内容。{shareUrl} 将替换为创建者名称和分享链接。",
   "admin.config.email.reset-password-subject": "重置密码邮件主题",
-  "admin.config.email.reset-password-subject.description": "用户请求重置密码时发送邮件的主题。",
+  "admin.config.email.reset-password-subject.description":
+    "用户请求重置密码时发送邮件的主题。",
   "admin.config.email.reset-password-message": "重置密码邮件内容",
-  "admin.config.email.reset-password-message.description": "用户请求重置密码时发送的邮件内容。{url} 将替换为密码重置链接。",
+  "admin.config.email.reset-password-message.description":
+    "用户请求重置密码时发送的邮件内容。{url} 将替换为密码重置链接。",
   "admin.config.email.invite-subject": "邀请邮件主题",
-  "admin.config.email.invite-subject.description": "管理员邀请用户时发送邮件的主题。",
+  "admin.config.email.invite-subject.description":
+    "管理员邀请用户时发送邮件的主题。",
   "admin.config.email.invite-message": "邀请邮件内容",
-  "admin.config.email.invite-message.description": "管理员邀请用户时发送的邮件内容。{url} 将替换为邀请链接，{email} 将替换为用户邮箱地址，{password} 将替换为用户密码。",
-  "admin.config.email.share-recipients-reply-to-creator": "将 Reply-To 设置为创建者邮箱",
-  "admin.config.email.share-recipients-reply-to-creator.description": "是否将邮件的 Reply-To 标头设置为分享创建者的邮箱地址。",
+  "admin.config.email.invite-message.description":
+    "管理员邀请用户时发送的邮件内容。{url} 将替换为邀请链接，{email} 将替换为用户邮箱地址，{password} 将替换为用户密码。",
+  "admin.config.email.share-recipients-reply-to-creator":
+    "将 Reply-To 设置为创建者邮箱",
+  "admin.config.email.share-recipients-reply-to-creator.description":
+    "是否将邮件的 Reply-To 标头设置为分享创建者的邮箱地址。",
   "admin.config.share.enable-share-download-notifications": "启用下载通知",
-  "admin.config.share.enable-share-download-notifications.description": "收件人下载文件后，是否通过邮件通知分享创建者。仅在启用 SMTP 和邮件分享功能后才能开启。",
+  "admin.config.share.enable-share-download-notifications.description":
+    "收件人下载文件后，是否通过邮件通知分享创建者。仅在启用 SMTP 和邮件分享功能后才能开启。",
   "admin.config.email.share-download-notification-subject": "下载通知邮件主题",
-  "admin.config.email.share-download-notification-subject.description": "接收者下载文件时，发送给分享创建者的邮件主题。",
+  "admin.config.email.share-download-notification-subject.description":
+    "接收者下载文件时，发送给分享创建者的邮件主题。",
   "admin.config.email.share-download-notification-message": "下载通知邮件内容",
-  "admin.config.email.share-download-notification-message.description": "接收者下载文件时，发送给分享创建者的邮件内容。可用变量：\n {recipientEmail} - 接收者的邮箱地址\n {fileName} - 下载的文件名\n {shareUrl} - 分享链接",
+  "admin.config.email.share-download-notification-message.description":
+    "接收者下载文件时，发送给分享创建者的邮件内容。可用变量：\n {recipientEmail} - 接收者的邮箱地址\n {fileName} - 下载的文件名\n {shareUrl} - 分享链接",
   "admin.config.security.enable-email-verification": "启用邮箱验证",
-  "admin.config.security.enable-email-verification.description": "是否要求用户在登录前先验证邮箱地址。仅在启用 SMTP 后可用。",
+  "admin.config.security.enable-email-verification.description":
+    "是否要求用户在登录前先验证邮箱地址。仅在启用 SMTP 后可用。",
   "admin.config.email.verification-subject": "邮箱验证邮件主题",
-  "admin.config.email.verification-subject.description": "用户注册时发送邮件的主题。",
+  "admin.config.email.verification-subject.description":
+    "用户注册时发送邮件的主题。",
   "admin.config.email.verification-message": "邮箱验证邮件内容",
-  "admin.config.email.verification-message.description": "用户注册时发送的邮件内容。{url} 将替换为邮箱验证链接。",
+  "admin.config.email.verification-message.description":
+    "用户注册时发送的邮件内容。{url} 将替换为邮箱验证链接。",
   "admin.config.security.allow-registration": "允许注册",
   "admin.config.security.allow-registration.description": "是否允许注册",
   "admin.config.security.allow-unauthenticated-shares": "是否允许未验证的共享",
-  "admin.config.security.allow-unauthenticated-shares.description": "是否允许未验证的用户创建共享",
+  "admin.config.security.allow-unauthenticated-shares.description":
+    "是否允许未验证的用户创建共享",
   "admin.config.share.default-expiration": "默认过期时间",
-  "admin.config.share.default-expiration.description": "创建新分享时默认选择的有效期。",
+  "admin.config.share.default-expiration.description":
+    "创建新分享时默认选择的有效期。",
   "admin.config.share.max-expiration": "最长过期时间",
-  "admin.config.share.max-expiration.description": "分享允许设置的最长有效期。设为 0 表示不限制有效期。",
+  "admin.config.share.max-expiration.description":
+    "分享允许设置的最长有效期。设为 0 表示不限制有效期。",
   "admin.config.share.share-id-length": "默认分享 ID 长度",
-  "admin.config.share.share-id-length.description": "生成分享 ID 时使用的默认长度，同时也用于生成反向分享链接。长度小于 8 时安全性较低。",
+  "admin.config.share.share-id-length.description":
+    "生成分享 ID 时使用的默认长度，同时也用于生成反向分享链接。长度小于 8 时安全性较低。",
   "admin.config.share.max-size": "最大大小",
   "admin.config.share.max-size.description": "最大分享大小",
   "admin.config.share.zip-compression-level": "Zip 文件压缩质量",
-  "admin.config.share.zip-compression-level.description": "调整压缩质量来平衡压缩文件的大小和压缩的速度。有效值介于 0 和 9 之间，0 为不压缩，9 为最高质量压缩。 ",
+  "admin.config.share.zip-compression-level.description":
+    "调整压缩质量来平衡压缩文件的大小和压缩的速度。有效值介于 0 和 9 之间，0 为不压缩，9 为最高质量压缩。 ",
   "admin.config.share.chunk-size": "块大小",
-  "admin.config.share.chunk-size.description": "根据网络连接情况调整上传分块大小，以平衡上传效率和稳定性。较小的分块可提高不稳定网络环境下的上传成功率，较大的分块则可在稳定网络环境下提升上传速度。",
+  "admin.config.share.chunk-size.description":
+    "根据网络连接情况调整上传分块大小，以平衡上传效率和稳定性。较小的分块可提高不稳定网络环境下的上传成功率，较大的分块则可在稳定网络环境下提升上传速度。",
   "admin.config.share.auto-open-share-modal": "自动打开“创建分享”窗口",
-  "admin.config.share.auto-open-share-modal.description": "用户选择文件后，将自动打开“创建分享”窗口，无需手动点击按钮。",
-  "admin.config.security.allow-admin-access-all-shares": "允许管理员访问所有分享",
-  "admin.config.share.reverse-share-simple-only": "强制使用简易模式创建反向分享",
-  "admin.config.share.reverse-share-simple-only.description": "强制反向分享以简易模式创建。如果关闭此选项，反向分享创建者可自行选择简易模式或高级模式。",
-  "admin.config.security.allow-admin-access-all-shares.description": "允许管理员访问所有分享，即使分享已设置密码、已过期或已删除。",
+  "admin.config.share.auto-open-share-modal.description":
+    "用户选择文件后，将自动打开“创建分享”窗口，无需手动点击按钮。",
+  "admin.config.security.allow-admin-access-all-shares":
+    "允许管理员访问所有分享",
+  "admin.config.share.reverse-share-simple-only":
+    "强制使用简易模式创建反向分享",
+  "admin.config.share.reverse-share-simple-only.description":
+    "强制反向分享以简易模式创建。如果关闭此选项，反向分享创建者可自行选择简易模式或高级模式。",
+  "admin.config.security.allow-admin-access-all-shares.description":
+    "允许管理员访问所有分享，即使分享已设置密码、已过期或已删除。",
   "admin.config.share.enable-user-recipients": "启用与已注册用户分享",
-  "admin.config.share.enable-user-recipients.description": "启用后，发送到已注册用户邮箱的分享会自动显示在其账号中。用户还可以将分享限制为仅指定接收者可访问。",
+  "admin.config.share.enable-user-recipients.description":
+    "启用后，发送到已注册用户邮箱的分享会自动显示在其账号中。用户还可以将分享限制为仅指定接收者可访问。",
   "admin.config.share.file-retention-period": "文件保留期限",
-  "admin.config.share.file-retention-period.description": "设置分享过期或被删除后文件的保留时长。仅在启用“允许管理员访问所有分享”时生效。设为 -1 表示永久保留文件。",
+  "admin.config.share.file-retention-period.description":
+    "设置分享过期或被删除后文件的保留时长。仅在启用“允许管理员访问所有分享”时生效。设为 -1 表示永久保留文件。",
   "admin.config.smtp.enabled": "启用",
-  "admin.config.smtp.enabled.description": "是否启用 SMTP。仅在已填写 SMTP 服务器的主机、端口、邮箱、用户名和密码时设置为 true。",
+  "admin.config.smtp.enabled.description":
+    "是否启用 SMTP。仅在已填写 SMTP 服务器的主机、端口、邮箱、用户名和密码时设置为 true。",
   "admin.config.smtp.host": "主机名",
   "admin.config.smtp.host.description": "SMTP 主机名",
   "admin.config.smtp.port": "端口",
@@ -524,68 +613,101 @@ export default {
   "admin.config.smtp.button.test": "发送测试邮件",
   "admin.config.smtp.test-email.success": "邮件发送成功",
   "admin.config.smtp.test-email.error.title": "邮件发送失败",
-  "admin.config.smtp.test-email.error.description": "发送测试邮件时发生以下错误：",
+  "admin.config.smtp.test-email.error.description":
+    "发送测试邮件时发生以下错误：",
   "admin.config.smtp.test-email.save.title": "保存配置",
-  "admin.config.smtp.test-email.save.description": "继续操作前，需要先保存配置。是否立即保存配置并发送测试邮件？",
+  "admin.config.smtp.test-email.save.description":
+    "继续操作前，需要先保存配置。是否立即保存配置并发送测试邮件？",
   "admin.config.smtp.test-email.save.confirm": "保存并发送",
-  "admin.config.smtp.allow-unauthorized-certificates": "信任未经授权的 SMTP 服务器证书",
-  "admin.config.smtp.allow-unauthorized-certificates.description": "仅在需要信任自签名证书时将其开启",
+  "admin.config.smtp.allow-unauthorized-certificates":
+    "信任未经授权的 SMTP 服务器证书",
+  "admin.config.smtp.allow-unauthorized-certificates.description":
+    "仅在需要信任自签名证书时将其开启",
   "admin.config.oauth.allow-registration": "允许注册",
-  "admin.config.oauth.allow-registration.description": "允许用户通过登录社交账号来注册",
+  "admin.config.oauth.allow-registration.description":
+    "允许用户通过登录社交账号来注册",
   "admin.config.oauth.ignore-totp": "忽略两步验证",
-  "admin.config.oauth.ignore-totp.description": "用户通过社交账号登录时是否忽略两步验证",
+  "admin.config.oauth.ignore-totp.description":
+    "用户通过社交账号登录时是否忽略两步验证",
   "admin.config.oauth.disable-password": "禁用密码登录",
-  "admin.config.oauth.disable-password.description": "是否禁用密码登录\n确保在激活此配置之前，OAuth 已正确配置，以避免被锁定。",
+  "admin.config.oauth.disable-password.description":
+    "是否禁用密码登录\n确保在激活此配置之前，OAuth 已正确配置，以避免被锁定。",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "是否启用 GitHub 账号登录",
   "admin.config.oauth.github-client-id": "GitHub Client ID",
-  "admin.config.oauth.github-client-id.description": "GitHub OAuth App 的 Client ID",
+  "admin.config.oauth.github-client-id.description":
+    "GitHub OAuth App 的 Client ID",
   "admin.config.oauth.github-client-secret": "GitHub 的 Client secret",
-  "admin.config.oauth.github-client-secret.description": "GitHub OAuth App 的 Client secret",
+  "admin.config.oauth.github-client-secret.description":
+    "GitHub OAuth App 的 Client secret",
   "admin.config.oauth.google-enabled": "谷歌",
   "admin.config.oauth.google-enabled.description": "是否启用谷歌账号登录",
   "admin.config.oauth.google-client-id": "谷歌 Client ID",
-  "admin.config.oauth.google-client-id.description": "Google OAuth App 的 Client ID",
+  "admin.config.oauth.google-client-id.description":
+    "Google OAuth App 的 Client ID",
   "admin.config.oauth.google-client-secret": "谷歌 Client secret",
-  "admin.config.oauth.google-client-secret.description": "Google OAuth App 的 Client secret",
+  "admin.config.oauth.google-client-secret.description":
+    "Google OAuth App 的 Client secret",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
   "admin.config.oauth.microsoft-enabled.description": "是否启用微软账号登录",
   "admin.config.oauth.microsoft-tenant": "Microsoft 租户（Tenant）",
-  "admin.config.oauth.microsoft-tenant.description": "Microsoft OAuth 应用的租户 ID\ncommon：同时拥有个人 Microsoft 账号和 Microsoft Entra ID 工作或学校账号的用户均可登录此应用。\norganizations：仅拥有 Microsoft Entra ID 工作或学校账号的用户可登录此应用。\nconsumers：仅拥有个人 Microsoft 账号的用户可登录此应用。\nMicrosoft Entra 租户的域名或 GUID 格式的租户 ID：仅指定 Microsoft Entra 租户中的用户可登录此应用（包括拥有工作或学校账号的目录成员，以及拥有个人 Microsoft 账号的目录来宾）。",
+  "admin.config.oauth.microsoft-tenant.description":
+    "Microsoft OAuth 应用的租户 ID\ncommon：同时拥有个人 Microsoft 账号和 Microsoft Entra ID 工作或学校账号的用户均可登录此应用。\norganizations：仅拥有 Microsoft Entra ID 工作或学校账号的用户可登录此应用。\nconsumers：仅拥有个人 Microsoft 账号的用户可登录此应用。\nMicrosoft Entra 租户的域名或 GUID 格式的租户 ID：仅指定 Microsoft Entra 租户中的用户可登录此应用（包括拥有工作或学校账号的目录成员，以及拥有个人 Microsoft 账号的目录来宾）。",
   "admin.config.oauth.microsoft-client-id": "Microsoft Client ID",
-  "admin.config.oauth.microsoft-client-id.description": "Microsoft OAuth App 的 Client ID",
+  "admin.config.oauth.microsoft-client-id.description":
+    "Microsoft OAuth App 的 Client ID",
   "admin.config.oauth.microsoft-client-secret": "Microsoft 的 Client secret",
-  "admin.config.oauth.microsoft-client-secret.description": "Microsoft OAuth App 的 Client secret",
+  "admin.config.oauth.microsoft-client-secret.description":
+    "Microsoft OAuth App 的 Client secret",
   "admin.config.oauth.discord-enabled": "Discord",
   "admin.config.oauth.discord-enabled.description": "是否启用 Discord 账号登录",
   "admin.config.oauth.discord-limited-users": "Discord 受限用户",
-  "admin.config.oauth.discord-limited-users.description": "限制仅允许指定 Discord ID 的用户登录。留空则禁用此功能。",
+  "admin.config.oauth.discord-limited-users.description":
+    "限制仅允许指定 Discord ID 的用户登录。留空则禁用此功能。",
   "admin.config.oauth.discord-limited-guild": "Discord 的 limited server ID",
-  "admin.config.oauth.discord-limited-guild.description": "限制仅允许特定服务器内的用户登录。留空则禁用。",
+  "admin.config.oauth.discord-limited-guild.description":
+    "限制仅允许特定服务器内的用户登录。留空则禁用。",
   "admin.config.oauth.discord-client-id": "Discord 的 Client ID",
-  "admin.config.oauth.discord-client-id.description": "Discord OAuth App 的 Client ID",
+  "admin.config.oauth.discord-client-id.description":
+    "Discord OAuth App 的 Client ID",
   "admin.config.oauth.discord-client-secret": "Discord 的 Client secret",
-  "admin.config.oauth.discord-client-secret.description": "Discord OAuth App 的 Client secret",
+  "admin.config.oauth.discord-client-secret.description":
+    "Discord OAuth App 的 Client secret",
   "admin.config.oauth.oidc-enabled": "OpenID Connect",
   "admin.config.oauth.oidc-enabled.description": "是否启用 OpenID Connect 登录",
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect 的 Discovery URI",
-  "admin.config.oauth.oidc-discovery-uri.description": "OpenID Connect OAuth App 的 Discovery URI",
+  "admin.config.oauth.oidc-discovery-uri.description":
+    "OpenID Connect OAuth App 的 Discovery URI",
   "admin.config.oauth.oidc-sign-out": "从 OpenID Connect 注销",
-  "admin.config.oauth.oidc-sign-out.description": "“退出登录”按钮是否同时从 OpenID Connect 提供方登出",
+  "admin.config.oauth.oidc-sign-out.description":
+    "“退出登录”按钮是否同时从 OpenID Connect 提供方登出",
   "admin.config.oauth.oidc-scope": "OpenID Connect scope",
-  "admin.config.oauth.oidc-scope.description": "从 OpenID Connect 提供方请求的权限范围（Scopes）。",
+  "admin.config.oauth.oidc-scope.description":
+    "从 OpenID Connect 提供方请求的权限范围（Scopes）。",
   "admin.config.oauth.oidc-username-claim": "OpenID Connect 用户名请求",
-  "admin.config.oauth.oidc-username-claim.description": "OpenID Connect ID token 中的用户名请求。如果您不知道这项配置是什么，请留空。",
+  "admin.config.oauth.oidc-username-claim.description":
+    "OpenID Connect ID token 中的用户名请求。如果您不知道这项配置是什么，请留空。",
   "admin.config.oauth.oidc-role-path": "在 OpenID Connect 令牌中的角色路径",
-  "admin.config.oauth.oidc-role-path.description": "必须是一个有效的 JMESPath，用于引用角色数组。 " + "只有在没有配置其他身份提供商且密码登录被禁用的情况下，才建议使用 OpenID Connect 角色来管理访问权限。 " + "如果您不知道此配置是什么，请留空。",
-  "admin.config.oauth.oidc-role-general-access": "常规访问的 OpenID Connect 角色",
-  "admin.config.oauth.oidc-role-general-access.description": "一般访问所需的角色。必须在用户角色中显示才能登录。 " + "如果您不知道此配置是什么，请留空。",
-  "admin.config.oauth.oidc-role-admin-access": "管理员访问的 OpenID Connect 角色",
-  "admin.config.oauth.oidc-role-admin-access.description": "管理权限所需的角色。必须在用户角色中显示他们才能访问管理面板。 " + "如果您不知道此配置是什么，请留空。",
+  "admin.config.oauth.oidc-role-path.description":
+    "必须是一个有效的 JMESPath，用于引用角色数组。 " +
+    "只有在没有配置其他身份提供商且密码登录被禁用的情况下，才建议使用 OpenID Connect 角色来管理访问权限。 " +
+    "如果您不知道此配置是什么，请留空。",
+  "admin.config.oauth.oidc-role-general-access":
+    "常规访问的 OpenID Connect 角色",
+  "admin.config.oauth.oidc-role-general-access.description":
+    "一般访问所需的角色。必须在用户角色中显示才能登录。 " +
+    "如果您不知道此配置是什么，请留空。",
+  "admin.config.oauth.oidc-role-admin-access":
+    "管理员访问的 OpenID Connect 角色",
+  "admin.config.oauth.oidc-role-admin-access.description":
+    "管理权限所需的角色。必须在用户角色中显示他们才能访问管理面板。 " +
+    "如果您不知道此配置是什么，请留空。",
   "admin.config.oauth.oidc-client-id": "OpenID Connect 的 Client ID",
-  "admin.config.oauth.oidc-client-id.description": "OpenID Connect OAuth App 的 Client ID",
+  "admin.config.oauth.oidc-client-id.description":
+    "OpenID Connect OAuth App 的 Client ID",
   "admin.config.oauth.oidc-client-secret": "OpenID Connect 的 Client secret",
-  "admin.config.oauth.oidc-client-secret.description": "OpenID Connect OAuth App 的 Client secret",
+  "admin.config.oauth.oidc-client-secret.description":
+    "OpenID Connect OAuth App 的 Client secret",
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "启用 LDAP",
   "admin.config.ldap.enabled.description": "使用 LDAP 身份认证进行用户登录",
@@ -598,19 +720,24 @@ export default {
   "admin.config.ldap.search-base": "用户 Base",
   "admin.config.ldap.search-base.description": "进行用户搜索的基本位置",
   "admin.config.ldap.search-query": "用户查询",
-  "admin.config.ldap.search-query.description": "将用于在 'User base'中搜索 LDAP 用户。%username% 可以作为用户输入的占位符。",
+  "admin.config.ldap.search-query.description":
+    "将用于在 'User base'中搜索 LDAP 用户。%username% 可以作为用户输入的占位符。",
   "admin.config.ldap.admin-groups": "管理员群组",
   "admin.config.ldap.admin-groups.description": "管理员访问所需的组。",
   "admin.config.ldap.field-name-member-of": "用户组属性名称",
-  "admin.config.ldap.field-name-member-of.description": "用于表示用户所属组的 LDAP 属性名称。检查管理员组时会使用此属性。",
+  "admin.config.ldap.field-name-member-of.description":
+    "用于表示用户所属组的 LDAP 属性名称。检查管理员组时会使用此属性。",
   "admin.config.ldap.field-name-email": "用户邮箱属性名称",
-  "admin.config.ldap.field-name-email.description": "用户邮箱对应的 LDAP 属性名称。",
+  "admin.config.ldap.field-name-email.description":
+    "用户邮箱对应的 LDAP 属性名称。",
   "admin.config.notify.success": "配置更新成功。",
-  "admin.config.notify.logo-success": "Logo 更新成功。网站可能需要几分钟后才会显示最新内容。",
+  "admin.config.notify.logo-success":
+    "Logo 更新成功。网站可能需要几分钟后才会显示最新内容。",
   "admin.config.notify.no-changes": "没有要保存的更改。",
   "admin.config.category.s3": "对象存储",
   "admin.config.s3.enabled": "启用",
-  "admin.config.s3.enabled.description": "是否使用 S3 而非本地文件系统存储分享文件。警告：如果启用了 ClamAV，检查文件时会先将文件从 S3 临时下载到本地。",
+  "admin.config.s3.enabled.description":
+    "是否使用 S3 而非本地文件系统存储分享文件。警告：如果启用了 ClamAV，检查文件时会先将文件从 S3 临时下载到本地。",
   "admin.config.s3.endpoint": "服务端点",
   "admin.config.s3.endpoint.description": "S3 存储桶的 URL 地址。",
   "admin.config.s3.region": "区域",
@@ -618,25 +745,33 @@ export default {
   "admin.config.s3.bucket-name": "Bucket名称",
   "admin.config.s3.bucket-name.description": "S3 存储桶的名称。",
   "admin.config.s3.bucket-path": "路径",
-  "admin.config.s3.bucket-path.description": "用于在 S3 桶中存储文件的默认路径。",
+  "admin.config.s3.bucket-path.description":
+    "用于在 S3 桶中存储文件的默认路径。",
   "admin.config.s3.key": "Key",
   "admin.config.s3.key.description": "允许您访问 S3 桶的密钥。",
   "admin.config.s3.secret": "Secret",
   "admin.config.s3.secret.description": "允许您访问 S3 桶的密钥。",
   "admin.config.s3.use-checksum": "启用校验和",
-  "admin.config.s3.use-checksum.description": "对于不支持校验和的存储后端（例如 B2），请关闭此选项。",
-  "admin.config.s3.docs-link": "必须重新配置存储桶的 CORS，请参阅 {wikiLink} 了解详情。",
+  "admin.config.s3.use-checksum.description":
+    "对于不支持校验和的存储后端（例如 B2），请关闭此选项。",
+  "admin.config.s3.docs-link":
+    "必须重新配置存储桶的 CORS，请参阅 {wikiLink} 了解详情。",
   "admin.config.category.legal": "合规",
   "admin.config.legal.enabled": "启用合规提醒",
-  "admin.config.legal.enabled.description": "是否在页脚中显示版权信息和隐私政策。",
+  "admin.config.legal.enabled.description":
+    "是否在页脚中显示版权信息和隐私政策。",
   "admin.config.legal.imprint-text": "版权信息",
-  "admin.config.legal.imprint-text.description": "文本将会显示在版权信息中。支持Markdown。留空以链接到版权信息页面。",
+  "admin.config.legal.imprint-text.description":
+    "文本将会显示在版权信息中。支持Markdown。留空以链接到版权信息页面。",
   "admin.config.legal.imprint-url": "版权信息 URL",
-  "admin.config.legal.imprint-url.description": "如果您已经有一个版权信息页面，您可以在此链接它，而不是使用文本字段。",
+  "admin.config.legal.imprint-url.description":
+    "如果您已经有一个版权信息页面，您可以在此链接它，而不是使用文本字段。",
   "admin.config.legal.privacy-policy-text": "隐私政策文本",
-  "admin.config.legal.privacy-policy-text.description": "隐私政策中显示的内容。支持 Markdown。留空则链接到外部隐私政策页面。",
+  "admin.config.legal.privacy-policy-text.description":
+    "隐私政策中显示的内容。支持 Markdown。留空则链接到外部隐私政策页面。",
   "admin.config.legal.privacy-policy-url": "隐私政策网址",
-  "admin.config.legal.privacy-policy-url.description": "如果您已经有一个隐私政策页面，您可以在此链接它，而不是使用文本字段。",
+  "admin.config.legal.privacy-policy-url.description":
+    "如果您已经有一个隐私政策页面，您可以在此链接它，而不是使用文本字段。",
   // 404
   "404.description": "哎呀，这个页面走丢啦。",
   "404.button.home": "返回主页",
@@ -652,8 +787,10 @@ export default {
   "error.msg.no_email": "无法获取此 {0} 账号的邮箱地址。",
   "error.msg.already_linked": "此 {0} 账号已关联到其他账号。",
   "error.msg.not_linked": "此 {0} 账号尚未关联任何账号。",
-  "error.msg.email_already_exists": "使用此邮箱地址的账号已存在。请使用密码登录，然后在“我的账号”页面手动关联您的 {0} 账号。",
-  "error.msg.email_not_verified": "此 {0} 账号的邮箱地址尚未验证。请先通过身份提供商验证邮箱，然后再登录。",
+  "error.msg.email_already_exists":
+    "使用此邮箱地址的账号已存在。请使用密码登录，然后在“我的账号”页面手动关联您的 {0} 账号。",
+  "error.msg.email_not_verified":
+    "此 {0} 账号的邮箱地址尚未验证。请先通过身份提供商验证邮箱，然后再登录。",
   "error.msg.unverified_account": "此 {0} 账号尚未完成验证，请验证后重试。",
   "error.msg.user_not_allowed": "您无权登录。",
   "error.msg.cannot_get_user_info": "无法获取此 {0} 账号的用户信息。",
@@ -701,14 +838,16 @@ export default {
   "common.error.exact-length": "必须为 {length} 个字符",
   "common.error.invalid-number": "必须为数字",
   "common.error.field-required": "必填项",
-  "common.error.password.lowercase": "Password must contain at least one lowercase letter",
-  "common.error.password.uppercase": "Password must contain at least one uppercase letter",
-  "common.error.password.number": "Password must contain at least one number",
-  "common.error.password.special": "Password must contain at least one special character",
+  "common.error.password.lowercase": "密码必须包含至少一个小写字母",
+  "common.error.password.uppercase": "密码必须包含至少一个大写字母",
+  "common.error.password.number": "密码必须包含至少一个数字",
+  "common.error.password.special": "密码必须包含至少一个特殊字符",
   "admin.notice.modal.headerTag": "需要管理员操作",
-  "admin.notice.modal.defaultCheckboxLabel": "我确认已阅读此通知并理解重大变更。",
+  "admin.notice.modal.defaultCheckboxLabel":
+    "我确认已阅读此通知并理解重大变更。",
   "admin.notice.modal.button.acknowledge": "确认并关闭",
   "admin.notice.modal.button.acknowledging": "正在确认...",
   "admin.notice.modal.docsLink": "查看文档",
-  "admin.notice.modal.globalNoticeFooter": "注意：一旦确认，此通知将在所有设备上对所有管理员永久关闭。"
+  "admin.notice.modal.globalNoticeFooter":
+    "注意：一旦确认，此通知将在所有设备上对所有管理员永久关闭。",
 };

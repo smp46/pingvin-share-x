@@ -9,11 +9,11 @@
   "anonymousNoUpdate": "익명 공유는 업데이트할 수 없습니다",
   "invalidExpiration": "유효하지 않은 만료 날짜입니다",
   "maxExpirationExceeded": "만료 날짜가 최대 만료 날짜를 초과합니다",
-  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
-  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
+  "storageQuotaExceeded": "사용자 저장 공간 할당량이 {exceededSize}만큼 초과되었습니다",
+  "reverseShareQuotaExceeded": "역방향 공유 소유자의 저장 공간 할당량이 {exceededSize}만큼 초과되었습니다",
   "wrongPassword": "잘못된 비밀번호입니다",
   "tokenRequired": "공유 토큰이 필요합니다",
   "privateShare": "리버스 공유 생성자만 이 공유에 접근할 수 있습니다",
   "maxViewsExceeded": "최대 조회수를 초과했습니다",
-  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
+  "restrictedToRecipients": "이 공유는 특정 수신자에게만 제한되어 있습니다. 접근하려면 로그인해주세요."
 }

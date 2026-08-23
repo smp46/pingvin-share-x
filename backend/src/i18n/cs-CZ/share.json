@@ -9,11 +9,11 @@
   "anonymousNoUpdate": "Anonymní sdílení nelze aktualizovat",
   "invalidExpiration": "Neplatné datum vypršení platnosti",
   "maxExpirationExceeded": "Datum vypršení platnosti překračuje maximální datum",
-  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
-  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
+  "storageQuotaExceeded": "Uživatelská kvóta úložiště byla překročena o {exceededSize}",
+  "reverseShareQuotaExceeded": "Kvóta úložiště vlastníka opačného sdílení byla překročena o {exceededSize}",
   "wrongPassword": "Nesprávné heslo",
   "tokenRequired": "Token sdílení je povinný",
   "privateShare": "K tomuto sdílení má přístup pouze tvůrce reverzního sdílení",
   "maxViewsExceeded": "Maximální počet zobrazení byl překročen",
-  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
+  "restrictedToRecipients": "Toto sdílení je omezeno na konkrétní příjemce. Pro přístup se prosím přihlaste."
 }

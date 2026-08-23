@@ -6,7 +6,7 @@ export default {
   "navbar.signup": "Реєстрація",
   "navbar.links.shares": "Мої завантаження",
   "navbar.links.reverse": "Зворотні завантаження",
-  "navbar.links.received": "Received shares",
+  "navbar.links.received": "Отримані завантаження",
   "navbar.avatar.account": "Мій аккаунт",
   "navbar.avatar.admin": "Адміністрування",
   "navbar.avatar.signout": "Вийти",
@@ -14,13 +14,16 @@ export default {
 
   // /
   "home.title": "Платформа для обміну файлами із <h>власного хостингу</h>.",
-  "home.description": "Ви дійсно ви хочете передати свої особисті файли в руки третіх осіб, таких як WeTransfer?",
+  "home.description":
+    "Ви дійсно ви хочете передати свої особисті файли в руки третіх осіб, таких як WeTransfer?",
   "home.bullet.a.name": "На власному сервері",
   "home.bullet.a.description": "Pingvin Share працює на вашій машині.",
   "home.bullet.b.name": "Конфіденційність",
-  "home.bullet.b.description": "Ваші файли є вашими, і вони ніколи не будуть доступні третім особам.",
+  "home.bullet.b.description":
+    "Ваші файли є вашими, і вони ніколи не будуть доступні третім особам.",
   "home.bullet.c.name": "Без дратівливого обмеження розміру файлу",
-  "home.bullet.c.description": "Завантажуйте файли будь-якого розміру. Лише жорсткий диск буде вашим обмеженням.",
+  "home.bullet.c.description":
+    "Завантажуйте файли будь-якого розміру. Лише жорсткий диск буде вашим обмеженням.",
   "home.button.start": "Почнемо",
   "home.button.source": "Вихідний код",
   // END /
@@ -35,7 +38,8 @@ export default {
   "signin.input.password.placeholder": "Ваш пароль",
   "signin.button.submit": "Вхід",
   "signIn.notify.totp-required.title": "Потрібна двофакторна аутентифікація",
-  "signIn.notify.totp-required.description": "Будь ласка, введіть код Вашої 2-х факторної аутентифікації",
+  "signIn.notify.totp-required.description":
+    "Будь ласка, введіть код Вашої 2-х факторної аутентифікації",
   "signIn.oauth.or": "АБО",
   "signIn.oauth.signInWith": "Увійти з",
   "signIn.oauth.github": "GitHub",
@@ -55,16 +59,22 @@ export default {
   "signup.input.email.placeholder": "Адреса ел. пошти",
   "signup.button.submit": "Давайте почнемо",
   // /auth/verify
-  "verify.title": "Verify Account",
-  "verify.success": "Your account has been successfully verified! You can now sign in.",
-  "verify.error": "The verification link is invalid or has expired.",
-  "verify.button.signin": "Go to Sign In",
-  "verify.info.title": "Account Verification",
-  "verify.info.description": "Email verification is enabled. We've sent a verification link to your email address. Please click the link to activate your account.",
-  "verify.info.note": "If you don't receive the email within a few minutes, please check your spam folder.",
-  "verify.info.resend.button": "Resend verification email",
-  "verify.info.resend.success": "Verification email resent successfully.",
-  "verify.info.resend.error": "Failed to resend verification email.",
+  "verify.title": "Підтвердження облікового запису",
+  "verify.success":
+    "Ваш обліковий запис успішно підтверджено! Тепер ви можете увійти.",
+  "verify.error":
+    "Посилання для підтвердження недійсне або термін його дії закінчився.",
+  "verify.button.signin": "Перейти до входу",
+  "verify.info.title": "Підтвердження облікового запису",
+  "verify.info.description":
+    "Увімкнено підтвердження електронної пошти. Ми надіслали посилання для підтвердження на вашу електронну адресу. Будь ласка, перейдіть за посиланням, щоб активувати обліковий запис.",
+  "verify.info.note":
+    "Якщо ви не отримали листа протягом кількох хвилин, будь ласка, перевірте папку зі спамом.",
+  "verify.info.resend.button": "Надіслати листа для підтвердження повторно",
+  "verify.info.resend.success":
+    "Лист для підтвердження успішно надіслано повторно.",
+  "verify.info.resend.error":
+    "Не вдалося повторно надіслати лист для підтвердження.",
   // END /auth/signup
 
   // /auth/totp
@@ -75,7 +85,8 @@ export default {
   // /auth/reset-password
   "resetPassword.title": "Забули пароль?",
   "resetPassword.description": "Введіть ваш email для відновлення пароля.",
-  "resetPassword.notify.success": "Повідомлення з посиланням для скидання пароля було надіслано, якщо вказана електронна пошта існує.",
+  "resetPassword.notify.success":
+    "Повідомлення з посиланням для скидання пароля було надіслано, якщо вказана електронна пошта існує.",
   "resetPassword.button.back": "Повернутися на сторінку входу",
   "resetPassword.text.resetPassword": "Скинути пароль",
   "resetPassword.text.enterNewPassword": "Введіть новий пароль",
@@ -86,11 +97,13 @@ export default {
   "account.card.info.title": "Інформація про акаунт",
   "account.card.info.username": "Логін",
   "account.card.info.email": "Електронна пошта",
-  "account.notify.info.success": "Налаштування облікового запису успішно оновлено",
+  "account.notify.info.success":
+    "Налаштування облікового запису успішно оновлено",
   "account.card.password.title": "Пароль",
   "account.card.password.old": "Старий пароль",
   "account.card.password.new": "Новий пароль",
-  "account.card.password.noPasswordSet": "У вас не встановлено пароль. Щоб увійти за допомогою електронної пошти та пароля, потрібно створити пароль.",
+  "account.card.password.noPasswordSet":
+    "У вас не встановлено пароль. Щоб увійти за допомогою електронної пошти та пароля, потрібно створити пароль.",
   "account.notify.password.success": "Пароль успішно змінено",
   "account.card.oauth.title": "Вхід через соцмережі",
   "account.card.oauth.github": "GitHub",
@@ -102,11 +115,14 @@ export default {
   "account.card.oauth.unlink": "Відключити",
   "account.card.oauth.unlinked": "Відключено",
   "account.modal.unlink.title": "Відключити зв'язок з обліковим записом",
-  "account.modal.unlink.description": "Відв'язка ваших соціальних акаунтів може призвести до втрати доступу до акаунту, якщо ви не пам'ятаєте свої облікові дані для входу",
+  "account.modal.unlink.description":
+    "Відв'язка ваших соціальних акаунтів може призвести до втрати доступу до акаунту, якщо ви не пам'ятаєте свої облікові дані для входу",
   "account.notify.oauth.unlinked.success": "Відключення пройшло успішно",
   "account.card.security.title": "Безпека",
-  "account.card.security.totp.enable.description": "Введіть ваш поточний пароль для початку увімкнення TOTP",
-  "account.card.security.totp.disable.description": "Введіть ваш поточний пароль, щоб відключити TOTP",
+  "account.card.security.totp.enable.description":
+    "Введіть ваш поточний пароль для початку увімкнення TOTP",
+  "account.card.security.totp.disable.description":
+    "Введіть ваш поточний пароль, щоб відключити TOTP",
   "account.card.security.totp.button.start": "Почати",
   "account.modal.totp.title": "Увімкнути TOTP",
   "account.modal.totp.step1": "Крок 1: Додайте свій аутентифікатор",
@@ -114,12 +130,13 @@ export default {
   "account.modal.totp.enterManually": "Ввести вручну",
   "account.modal.totp.code": "Код",
   "common.button.clickToCopy": "Натисніть, щоб скопіювати",
-  "common.button.showQRCode": "Show QR code",
+  "common.button.showQRCode": "Показати QR-код",
   "account.modal.totp.verify": "Підтвердити",
   "account.notify.totp.disable": "TOTP успішно відключено",
   "account.notify.totp.enable": "TOTP успішно увімкнено",
   "account.card.language.title": "Мова",
-  "account.card.language.description": "Проєкт перекладено спільнотою. Деякі мови можуть бути неповними.",
+  "account.card.language.description":
+    "Проєкт перекладено спільнотою. Деякі мови можуть бути неповними.",
   "account.card.color.title": "Колірна схема",
   // ThemeSwitcher.tsx
   "account.theme.dark": "Темна",
@@ -127,7 +144,8 @@ export default {
   "account.theme.system": "Системна",
   "account.button.delete": "Видалити акаунт",
   "account.modal.delete.title": "Видалити акаунт",
-  "account.modal.delete.description": "Ви дійсно хочете видалити свій обліковий запис, включно з усіма вашими завантаженнями?",
+  "account.modal.delete.description":
+    "Ви дійсно хочете видалити свій обліковий запис, включно з усіма вашими завантаженнями?",
   // END /account
 
   // /account/shares
@@ -136,7 +154,7 @@ export default {
   "account.shares.description.empty": "У вас немає завантажень.",
   "account.shares.button.create": "Створити одну",
   "account.shares.info.title": "Відомості",
-  "account.shares.button.edit": "Add/Remove Files",
+  "account.shares.button.edit": "Додати/видалити файли",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Назва",
   "account.shares.table.description": "Опис",
@@ -145,32 +163,37 @@ export default {
   "account.shares.table.createdAt": "Створено",
   "account.shares.table.size": "Розмір",
   "account.shares.table.password-protected": "Захищено паролем",
-  "account.shares.table.recipients": "Recipients",
-  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
-  "account.shares.table.shared-with-recipients": "Shared with recipients",
+  "account.shares.table.recipients": "Одержувачі",
+  "account.shares.table.restricted-to-recipients": "Лише для одержувачів",
+  "account.shares.table.shared-with-recipients": "Надано доступ одержувачам",
   "account.shares.table.visitor-count": "{count} із {max}",
   "account.shares.table.expiry-never": "Ніколи",
   "account.shares.modal.share-informations": "Відомості",
   "account.shares.modal.share-link": "Поділитися посиланням",
-  "account.shares.modal.edit.password.keep": "Leave blank to keep the current password",
-  "account.shares.modal.edit.password.remove": "Remove password protection",
+  "account.shares.modal.edit.password.keep":
+    "Залиште порожнім, щоб зберегти поточний пароль",
+  "account.shares.modal.edit.password.remove": "Видалити захист паролем",
   "account.shares.modal.delete.title": "Видалити завантаження: {share}",
-  "account.shares.modal.delete.description": "Ви дійсно хочете видалити це завантаження?",
+  "account.shares.modal.delete.description":
+    "Ви дійсно хочете видалити це завантаження?",
   // END /account/shares
 
   // /account/received
-  "account.received-shares.title": "Received shares",
-  "account.received-shares.title.empty": "No shares received yet",
-  "account.received-shares.description.empty": "Shares sent to your email address will appear here.",
-  "account.received-shares.table.from": "From",
-  "account.received-shares.button.open": "Open",
+  "account.received-shares.title": "Отримані завантаження",
+  "account.received-shares.title.empty": "Ще немає отриманих завантажень",
+  "account.received-shares.description.empty":
+    "Завантаження, надіслані на вашу електронну адресу, з'являтимуться тут.",
+  "account.received-shares.table.from": "Від",
+  "account.received-shares.button.open": "Відкрити",
   // END /account/received
 
   // /account/reverseShares
   "account.reverseShares.title": "Зворотні завантаження",
-  "account.reverseShares.description": "Зворотне завантаження дає змогу генерувати унікальний URL, що дозволяє зовнішнім користувачам завантажувати файли.",
+  "account.reverseShares.description":
+    "Зворотне завантаження дає змогу генерувати унікальний URL, що дозволяє зовнішнім користувачам завантажувати файли.",
   "account.reverseShares.title.empty": "Тут порожньо 👀",
-  "account.reverseShares.description.empty": "У вас поки що немає зворотних завантажень.",
+  "account.reverseShares.description.empty":
+    "У вас поки що немає зворотних завантажень.",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Створити зворотне посилання на файл",
   "account.reverseShares.modal.expiration.label": "Закінчується",
@@ -188,15 +211,21 @@ export default {
   "account.reverseShares.modal.expiration.year-plural": "Роки (роки)",
   "account.reverseShares.modal.max-size.label": "Макс. розмір завантаження",
   "account.reverseShares.modal.send-email": "Надсилати сповіщення ел. поштою",
-  "account.reverseShares.modal.send-email.description": "Надсилає вам сповіщення на ел. пошту, коли створюється завантаження за цим зворотнім посиланням.",
+  "account.reverseShares.modal.send-email.description":
+    "Надсилає вам сповіщення на ел. пошту, коли створюється завантаження за цим зворотнім посиланням.",
   "account.reverseShares.modal.simplified": "Простий режим",
-  "account.reverseShares.modal.simplified.description": "Полегште людині, яка завантажує файл, поділитися ним з вами. Вони зможуть лише налаштувати назву та опис завантаження.",
+  "account.reverseShares.modal.simplified.description":
+    "Полегште людині, яка завантажує файл, поділитися ним з вами. Вони зможуть лише налаштувати назву та опис завантаження.",
   "account.reverseShares.modal.public-access": "Публічний доступ",
-  "account.reverseShares.modal.public-access.description": "Зробіть процес завантаження файлу легшим для користувача, який буде з вами ділитися. Вони зможуть налаштувати лише назву та опис завантаження.",
+  "account.reverseShares.modal.public-access.description":
+    "Зробіть процес завантаження файлу легшим для користувача, який буде з вами ділитися. Вони зможуть налаштувати лише назву та опис завантаження.",
   "account.reverseShares.modal.max-use.label": "Максимум використань",
-  "account.reverseShares.modal.max-use.description": "Максимальна кількість разів, коли URL може бути використаний для створення завантаження.",
-  "account.reverseShare.never-expires": "Це зворотне завантаження ніколи не застаріє.",
-  "account.reverseShare.expires-on": "Це зворотне завантаження застаріє {expiration}.",
+  "account.reverseShares.modal.max-use.description":
+    "Максимальна кількість разів, коли URL може бути використаний для створення завантаження.",
+  "account.reverseShare.never-expires":
+    "Це зворотне завантаження ніколи не застаріє.",
+  "account.reverseShare.expires-on":
+    "Це зворотне завантаження застаріє {expiration}.",
   "account.reverseShares.table.no-shares": "Немає створених завантажень",
   "account.reverseShares.table.count.singular": "завантаження",
   "account.reverseShares.table.count.plural": "завантаження",
@@ -204,9 +233,11 @@ export default {
   "account.reverseShares.table.remaining": "Залишилося використань",
   "account.reverseShares.table.max-size": "Макс. розмір завантаження",
   "account.reverseShares.table.expires": "Дійсно до",
-  "account.reverseShares.modal.reverse-share-link": "Посилання зворотного завантаження",
+  "account.reverseShares.modal.reverse-share-link":
+    "Посилання зворотного завантаження",
   "account.reverseShares.modal.delete.title": "Видалити зворотне завантаження",
-  "account.reverseShares.modal.delete.description": "Ви дійсно хочете видалити це зворотне завантаження? Якщо ви це зробите, то всі пов'язані зворотні завантаження будуть також видалені.",
+  "account.reverseShares.modal.delete.description":
+    "Ви дійсно хочете видалити це зворотне завантаження? Якщо ви це зробите, то всі пов'язані зворотні завантаження будуть також видалені.",
   // END /account/reverseShares
 
   // /admin
@@ -222,76 +253,97 @@ export default {
   "admin.users.table.username": "Логін",
   "admin.users.table.email": "Електронна пошта",
   "admin.users.table.admin": "Адміністратор",
-  "admin.users.table.storageQuota": "Storage quota",
-  "admin.users.table.maxShareSize": "Max share size",
+  "admin.users.table.storageQuota": "Квота сховища",
+  "admin.users.table.maxShareSize": "Макс. розмір завантаження",
   "admin.users.edit.update.title": "Редагувати користувача: {username}",
   "admin.users.edit.update.admin-privileges": "Права адміністратора",
-  "admin.users.edit.update.email-verified": "Email verified",
-  "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
-  "admin.users.edit.update.custom-share-size-limit.description": "Override the global upload limit for this user",
-  "admin.users.edit.update.custom-storage-quota-limit": "Custom storage quota",
-  "admin.users.edit.update.custom-storage-quota-limit.description": "Limit the user's total storage usage across active shares",
+  "admin.users.edit.update.email-verified": "Електронну пошту підтверджено",
+  "admin.users.edit.update.custom-share-size-limit":
+    "Власне обмеження розміру завантаження",
+  "admin.users.edit.update.custom-share-size-limit.description":
+    "Перевизначити глобальне обмеження на завантаження для цього користувача",
+  "admin.users.edit.update.custom-storage-quota-limit": "Власна квота сховища",
+  "admin.users.edit.update.custom-storage-quota-limit.description":
+    "Обмежити загальний обсяг використання сховища користувачем для активних завантажень",
   "admin.users.edit.update.change-password.title": "Змінити пароль",
   "admin.users.edit.update.change-password.field": "Новий пароль",
   "admin.users.edit.update.change-password.button": "Зберегти новий пароль",
   "admin.users.edit.update.notify.password.success": "Пароль успішно змінено",
   "admin.users.edit.delete.title": "Видалити користувача: {username}?",
-  "admin.users.edit.delete.description": "Ви дійсно хочете видалити цього користувача та всі його поширення?",
+  "admin.users.edit.delete.description":
+    "Ви дійсно хочете видалити цього користувача та всі його поширення?",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Створити користувача",
   "admin.users.modal.create.username": "Логін",
   "admin.users.modal.create.email": "Електронна пошта",
   "admin.users.modal.create.password": "Пароль",
   "admin.users.modal.create.manual-password": "Встановити пароль вручну",
-  "admin.users.modal.create.manual-password.description": "Якщо прапорець не встановлено, користувач отримає лист із посиланням для встановлення пароля.",
-  "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
-  "admin.users.modal.create.custom-share-size-limit.description": "Override the global upload limit for this user",
-  "admin.users.modal.create.custom-storage-quota-limit": "Custom storage quota",
-  "admin.users.modal.create.custom-storage-quota-limit.description": "Limit the user's total storage usage across active shares",
+  "admin.users.modal.create.manual-password.description":
+    "Якщо прапорець не встановлено, користувач отримає лист із посиланням для встановлення пароля.",
+  "admin.users.modal.create.custom-share-size-limit":
+    "Власне обмеження розміру завантаження",
+  "admin.users.modal.create.custom-share-size-limit.description":
+    "Перевизначити глобальне обмеження на завантаження для цього користувача",
+  "admin.users.modal.create.custom-storage-quota-limit": "Власна квота сховища",
+  "admin.users.modal.create.custom-storage-quota-limit.description":
+    "Обмежити загальний обсяг використання сховища користувачем для активних завантажень",
   "admin.users.modal.create.admin": "Права адміністратора",
-  "admin.users.modal.create.admin.description": "Якщо зазначено, користувач матиме доступ до панелі адміністратора.",
+  "admin.users.modal.create.admin.description":
+    "Якщо зазначено, користувач матиме доступ до панелі адміністратора.",
   // END /admin/users
 
   // /admin/shares
   "admin.shares.title": "Керування завантаженнями",
-  "admin.shares.diskUsage": "Disk Usage",
+  "admin.shares.diskUsage": "Використання диска",
   "admin.shares.table.id": "ID Завантаження",
   "admin.shares.table.username": "Автор",
   "admin.shares.table.visitors": "Відвідувачі",
   "admin.shares.table.expires": "Діє до",
-  "admin.shares.table.deletes": "Deletes on",
+  "admin.shares.table.deletes": "Видалиться",
   "admin.shares.edit.delete.title": "Видалити завантаження: {id}",
-  "admin.shares.edit.delete.description": "Ви дійсно хочете видалити це завантаження?",
+  "admin.shares.edit.delete.description":
+    "Ви дійсно хочете видалити це завантаження?",
   // END /admin/shares
 
   // /upload
   "upload.title": "Завантажити",
-  "upload.notify.confirm-leave": "Ви впевнені, що хочете залишити цю сторінку? Ваше завантаження буде скасовано.",
-  "upload.notify.generic-error": "Сталася помилка під час завершення вашого завантаження.",
-  "upload.notify.count-failed": "Не вдалося завантажити файли {count}. Повтор спроби.",
-  "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
-  "upload.reverse-share.error.invalid.title": "Недійсне посилання на завантаження",
-  "upload.reverse-share.error.invalid.description": "Зворотне завантаження вже закінчилося або недійсне.",
+  "upload.notify.confirm-leave":
+    "Ви впевнені, що хочете залишити цю сторінку? Ваше завантаження буде скасовано.",
+  "upload.notify.generic-error":
+    "Сталася помилка під час завершення вашого завантаження.",
+  "upload.notify.count-failed":
+    "Не вдалося завантажити файли {count}. Повтор спроби.",
+  "upload.notify.duplicate-skipped": "Пропущено дублікат файлу: {name}",
+  "upload.reverse-share.error.invalid.title":
+    "Недійсне посилання на завантаження",
+  "upload.reverse-share.error.invalid.description":
+    "Зворотне завантаження вже закінчилося або недійсне.",
   // Dropzone.tsx
   "upload.dropzone.title": "Завантажити файли",
-  "upload.dropzone.description": "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
-  "upload.dropzone.notify.file-too-big": "Ваші файли перевищують максимальний розмір у {maxSize}.",
-  "upload.button.folder": "Upload folder",
-  "upload.button.folder.append": "Append folder",
-  "upload.button.add": "Add to upload",
+  "upload.dropzone.description":
+    "Перетягніть файли або папки сюди, щоб почати ділитися ними, або скористайтеся комбінацією «Ctrl+V» для завантаження тексту з буфера обміну. Загальний розмір файлів не повинен перевищувати {maxSize}.",
+  "upload.dropzone.notify.file-too-big":
+    "Ваші файли перевищують максимальний розмір у {maxSize}.",
+  "upload.button.folder": "Завантажити папку",
+  "upload.button.folder.append": "Додати папку",
+  "upload.button.add": "Додати до завантаження",
   // FileList.tsx
   "upload.filelist.name": "Назва",
   "upload.filelist.size": "Розмір",
-  "upload.filelist.estimating": "Estimating...",
-  "upload.filelist.remaining": "{time} remaining",
+  "upload.filelist.estimating": "Розрахунок...",
+  "upload.filelist.remaining": "Залишилося {time}",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Завантажити",
-  "upload.modal.link.error.invalid": "Ім'я користувача повинно складатися тільки з букв, цифр, підкреслень і дефісів",
+  "upload.modal.link.error.invalid":
+    "Ім'я користувача повинно складатися тільки з букв, цифр, підкреслень і дефісів",
   "upload.modal.link.error.taken": "Це посилання вже використовується",
-  "upload.modal.link.error.s3-session-not-found": "S3 upload session not found",
-  "upload.modal.link.error.s3-etag-missing": "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
+  "upload.modal.link.error.s3-session-not-found":
+    "Сесію завантаження S3 не знайдено",
+  "upload.modal.link.error.s3-etag-missing":
+    "Відсутній заголовок ETag у відповіді S3. Переконайтеся, що CORS надає доступ до заголовка ETag.",
   "upload.modal.not-signed-in": "Ви не авторизовані",
-  "upload.modal.not-signed-in-description": "Ви не зможете видалити свої файли вручну і переглянути кількість відвідувачів.",
+  "upload.modal.not-signed-in-description":
+    "Ви не зможете видалити свої файли вручну і переглянути кількість відвідувачів.",
   "upload.modal.expires.never": "ніколи",
   "upload.modal.expires.never-long": "Постійне завантаження",
   "upload.modal.expires.error.too-long": "Термін дії перевищує ліміт по {max}.",
@@ -311,11 +363,14 @@ export default {
   "upload.modal.expires.year-plural": "Роки (роки)",
   "upload.modal.accordion.name-and-description.title": "Назва та опис",
   "upload.modal.accordion.name-and-description.name.placeholder": "Назва",
-  "upload.modal.accordion.name-and-description.description.placeholder": "Примітка для отримувачів цього завантаження",
+  "upload.modal.accordion.name-and-description.description.placeholder":
+    "Примітка для отримувачів цього завантаження",
   "upload.modal.accordion.email.title": "Одержувачі листа",
   "upload.modal.accordion.email.placeholder": "Одержувачі e-mail",
-  "upload.modal.accordion.email.invalid-email": "Неприпустима адреса електронної пошти",
-  "upload.modal.accordion.email.restrict-to-recipients": "Restrict access to these recipients only (they must sign in to access it)",
+  "upload.modal.accordion.email.invalid-email":
+    "Неприпустима адреса електронної пошти",
+  "upload.modal.accordion.email.restrict-to-recipients":
+    "Обмежити доступ лише для цих одержувачів (вони повинні увійти, щоб отримати доступ)",
   "upload.modal.accordion.security.title": "Параметри безпеки",
   "upload.modal.accordion.security.password.label": "Захист паролем",
   "upload.modal.accordion.security.password.placeholder": "Без пароля",
@@ -325,45 +380,57 @@ export default {
   "upload.modal.completed.never-expires": "Це завантаження ніколи не застаріє.",
   "upload.modal.completed.expires-on": "Це завантаження застаріє {expiration}.",
   "upload.modal.completed.share-ready": "Готово",
-  "upload.modal.completed.notified-reverse-share-creator": "Ми сповістили створювача зворотного завантаження. Ви також можете вручну поділитися цим посиланням з ними іншим способом.",
+  "upload.modal.completed.notified-reverse-share-creator":
+    "Ми сповістили створювача зворотного завантаження. Ви також можете вручну поділитися цим посиланням з ними іншим способом.",
   // END /upload
 
   // /share/[id]
   "share.title": "Завантаження {shareId}",
   "share.description": "Подивіться, чим я поділився з вами!",
-  "share.fileCount": "{count, plural, =1 {# file} other {# files}} · {size} (zip file may be smaller due to compression)",
-  "share.copy-text-contents": "Copy file contents to clipboard",
+  "share.fileCount":
+    "{count, plural, one {# файл} few {# файли} many {# файлів} other {# файлів}} · {size} (ZIP-архів може бути меншим через стиснення)",
+  "share.copy-text-contents": "Скопіювати вміст файлу в буфер обміну",
   "share.error.visitor-limit-exceeded.title": "Перевищено ліміт відвідувачів",
-  "share.error.visitor-limit-exceeded.description": "Перевищено ліміт відвідувачів.",
+  "share.error.visitor-limit-exceeded.description":
+    "Перевищено ліміт відвідувачів.",
   "share.error.removed.title": "Завантаження видалено",
   "share.error.not-found.title": "Завантаження не знайдено",
   "share.error.not-found.description": "Сторінка, яку ви шукаєте, не існує.",
   "share.error.access-denied.title": "Приватне завантаження",
-  "share.error.access-denied.description": "Поточний акаунт не має дозволу на доступ до цього завантаження",
-  "share.error.restricted.title": "Restricted share",
-  "share.error.restricted.description": "This share is restricted to specific recipients. Please log in to access it.",
-  "share.error.restricted.button": "Log in",
+  "share.error.access-denied.description":
+    "Поточний акаунт не має дозволу на доступ до цього завантаження",
+  "share.error.restricted.title": "Обмежений доступ",
+  "share.error.restricted.description":
+    "Ця роздача доступна лише для певних одержувачів. Будь ласка, увійдіть, щоб отримати доступ.",
+  "share.error.restricted.button": "Увійти",
   "share.modal.password.title": "Потрібен пароль",
-  "share.modal.password.description": "Будь ласка, введіть пароль для доступу до цього завантаження.",
+  "share.modal.password.description":
+    "Будь ласка, введіть пароль для доступу до цього завантаження.",
   "share.modal.password": "Пароль",
   "share.modal.error.invalid-password": "Невірний пароль",
   "share.button.download-all": "Завантажити все",
-  "share.notify.download-all-preparing": "Завантаження готується. Будь ласка, спробуйте знову через кілька хвилин.",
-  "share.notify.copied-contents": "File contents copied to clipboard",
-  "share.notify.copy-too-big-error": "File is too big to copy to clipboard",
-  "share.notify.copy-not-supported-error": "Copying to clipboard requires a HTTPS connection",
+  "share.notify.download-all-preparing":
+    "Завантаження готується. Будь ласка, спробуйте знову через кілька хвилин.",
+  "share.notify.copied-contents": "Вміст файлу скопійовано в буфер обміну",
+  "share.notify.copy-too-big-error":
+    "Файл завеликий для копіювання в буфер обміну",
+  "share.notify.copy-not-supported-error":
+    "Копіювання в буфер обміну вимагає з'єднання HTTPS",
   "share.modal.file-link": "Посилання на файл",
   "share.table.name": "Назва",
   "share.table.size": "Розмір",
-  "share.modal.file-preview.original_file": "View original file",
-  "share.modal.file-preview.error.not-supported.title": "Попередній перегляд не підтримується",
-  "share.modal.file-preview.error.not-supported.description": "Попередні перегляди не підтримуються для цього типу файлів. Будь ласка, завантажте файл, щоб переглянути його.",
+  "share.modal.file-preview.original_file": "Переглянути оригінальний файл",
+  "share.modal.file-preview.error.not-supported.title":
+    "Попередній перегляд не підтримується",
+  "share.modal.file-preview.error.not-supported.description":
+    "Попередні перегляди не підтримуються для цього типу файлів. Будь ласка, завантажте файл, щоб переглянути його.",
   // END /share/[id]
 
   // /share/[id]/edit
   "share.edit.title": "Редагувати {shareId}",
   "share.edit.append-upload": "Додати файл",
-  "share.edit.notify.generic-error": "Сталася помилка під час завершення вашого завантаження.",
+  "share.edit.notify.generic-error":
+    "Сталася помилка під час завершення вашого завантаження.",
   "share.edit.notify.save-success": "Посилання на ресурс успішно оновлено",
   // END /share/[id]/edit
 
@@ -377,240 +444,372 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "Файл конфігурації присутній",
-  "admin.config.config-file-warning.description": "Оскільки у вас налаштовано Pingvin Share за допомогою конфігураційного файлу, ви не можете змінювати конфігурацію через інтерфейс користувача.",
+  "admin.config.config-file-warning.description":
+    "Оскільки у вас налаштовано Pingvin Share за допомогою конфігураційного файлу, ви не можете змінювати конфігурацію через інтерфейс користувача.",
   "admin.config.title": "Конфігурація",
   "admin.config.category.general": "Загальне",
   "admin.config.category.appearance": "Зовнішній вигляд",
-  "admin.config.category.security": "Security & Access",
+  "admin.config.category.security": "Безпека та доступ",
   "admin.config.category.share": "Завантаження",
-  "admin.config.category.cache": "Cache",
+  "admin.config.category.cache": "Кеш",
   "admin.config.category.email": "Електронна пошта",
   "admin.config.category.smtp": "SMTP",
   "admin.config.category.oauth": "Вхід через соцмережі",
   "admin.config.general.app-name": "Назва програми",
   "admin.config.general.app-name.description": "Видима назва додатка",
-  "admin.config.general.default-language": "Default Language",
-  "admin.config.general.default-language.description": "This applies to all users, each user can still personalise their language in their profile.",
+  "admin.config.general.default-language": "Мова за замовчуванням",
+  "admin.config.general.default-language.description":
+    "Це налаштування застосовується до всіх користувачів, кожен користувач може налаштувати власну мову в профілі.",
   "admin.config.appearance.theme-primary-color": "Основний колір теми",
-  "admin.config.appearance.theme-primary-color.description": "Основний колір для кнопок, посилань і акцентів. Оберіть «власний», щоб використати перевизначення кольору.",
-  "admin.config.appearance.theme-primary-color-override": "Власний основний колір",
-  "admin.config.appearance.theme-primary-color-override.description": "HEX-перевизначення кольору, що використовується, коли основний колір теми встановлено як власний.",
+  "admin.config.appearance.theme-primary-color.description":
+    "Основний колір для кнопок, посилань і акцентів. Оберіть «власний», щоб використати перевизначення кольору.",
+  "admin.config.appearance.theme-primary-color-override":
+    "Власний основний колір",
+  "admin.config.appearance.theme-primary-color-override.description":
+    "HEX-перевизначення кольору, що використовується, коли основний колір теми встановлено як власний.",
   "admin.config.appearance.theme-font-preset": "Набір шрифтів теми",
-  "admin.config.appearance.theme-font-preset.description": "Набір шрифтів, що завантажується під час збірки. Оберіть системний або один із вбудованих Google Fonts.",
-  "admin.config.appearance.theme-color-scheme": "Default color scheme (guests)",
-  "admin.config.appearance.theme-color-scheme.description": "Default light/dark mode for non-logged-in users. Logged-in users use their own account preference.",
+  "admin.config.appearance.theme-font-preset.description":
+    "Набір шрифтів, що завантажується під час збірки. Оберіть системний або один із вбудованих Google Fonts.",
+  "admin.config.appearance.theme-color-scheme":
+    "Колірна схема за замовчуванням (гості)",
+  "admin.config.appearance.theme-color-scheme.description":
+    "Світлий/темний режим за замовчуванням для неавторизованих користувачів. Авторизовані користувачі використовують власні налаштування акаунта.",
   "admin.config.appearance.theme-radius": "Радіус заокруглення теми",
-  "admin.config.appearance.theme-radius.description": "Стандартний радіус заокруглення компонентів Mantine.",
+  "admin.config.appearance.theme-radius.description":
+    "Стандартний радіус заокруглення компонентів Mantine.",
   "admin.config.appearance.custom-css": "Власний CSS",
-  "admin.config.appearance.custom-css.description": "Глобальний CSS для фронтенду. Використовуйте обережно: некоректний CSS може вплинути на інтерфейс.",
-  "admin.config.appearance.upload-progress-style": "Upload progress style",
-  "admin.config.appearance.upload-progress-style.description": "Choose how upload progress is displayed in the file list.",
-  "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
-  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
-  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
+  "admin.config.appearance.custom-css.description":
+    "Глобальний CSS для фронтенду. Використовуйте обережно: некоректний CSS може вплинути на інтерфейс.",
+  "admin.config.appearance.upload-progress-style":
+    "Стиль відображення прогресу завантаження",
+  "admin.config.appearance.upload-progress-style.description":
+    "Виберіть спосіб відображення прогресу завантаження у списку файлів.",
+  "admin.config.appearance.upload-progress-style.circle": "Круговий індикатор",
+  "admin.config.appearance.upload-progress-style.circle-percentage":
+    "Круговий індикатор із відсотками",
+  "admin.config.appearance.upload-progress-style.percentage-time":
+    "Відсотки та час, що залишився",
   "admin.config.general.app-url": "URL-адреса програми",
-  "admin.config.general.app-url.description": "Адреса, на якій доступний Pingvin Share",
+  "admin.config.general.app-url.description":
+    "Адреса, на якій доступний Pingvin Share",
   "admin.config.security.secure-cookies": "Безпечні cookies",
-  "admin.config.security.secure-cookies.description": "Чи встановлювати прапор безпеки для cookies. Якщо увімкнено, сайт не працюватиме при доступі через HTTP.",
+  "admin.config.security.secure-cookies.description":
+    "Чи встановлювати прапор безпеки для cookies. Якщо увімкнено, сайт не працюватиме при доступі через HTTP.",
   "admin.config.general.show-home-page": "Показувати домашню сторінку",
-  "admin.config.general.show-home-page.description": "Показувати домашню сторінку чи ні",
+  "admin.config.general.show-home-page.description":
+    "Показувати домашню сторінку чи ні",
   "admin.config.security.session-duration": "Тривалість сеансу",
-  "admin.config.security.session-duration.description": "Час, після якого користувач повинен увійти в систему знову (за замовчуванням: 3 місяці).",
+  "admin.config.security.session-duration.description":
+    "Час, після якого користувач повинен увійти в систему знову (за замовчуванням: 3 місяці).",
   "admin.config.appearance.logo": "Логотип",
-  "admin.config.appearance.logo.description": "Змініть свій логотип, завантаживши нове зображення. Зображення має бути PNG і повинно мати формат 1:1.",
-  "admin.config.appearance.logo-dark": "Dark mode logo",
-  "admin.config.appearance.logo-dark.description": "Upload a separate logo for dark mode. The image must be a PNG and should have the format 1:1.",
+  "admin.config.appearance.logo.description":
+    "Змініть свій логотип, завантаживши нове зображення. Зображення має бути PNG і повинно мати формат 1:1.",
+  "admin.config.appearance.logo-dark": "Логотип для темної теми",
+  "admin.config.appearance.logo-dark.description":
+    "Завантажте окремий логотип для темної теми. Зображення має бути у форматі PNG зі співвідношенням сторін 1:1.",
   "admin.config.appearance.logo.placeholder": "Виберіть зображення",
-  "admin.config.security.custom-password-policy": "Custom password policy",
-  "admin.config.security.custom-password-policy.description": "Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.",
-  "admin.config.security.min-length": "Minimum length",
-  "admin.config.security.min-length.description": "Minimum number of characters required for a password.",
-  "admin.config.security.require-uppercase": "Require uppercase",
-  "admin.config.security.require-uppercase.description": "Whether to require at least one uppercase letter in the password.",
-  "admin.config.security.require-lowercase": "Require lowercase",
-  "admin.config.security.require-lowercase.description": "Whether to require at least one lowercase letter in the password.",
-  "admin.config.security.require-number": "Require number",
-  "admin.config.security.require-number.description": "Whether to require at least one number in the password.",
-  "admin.config.security.require-special-character": "Require special character",
-  "admin.config.security.require-special-character.description": "Whether to require at least one special character in the password.",
+  "admin.config.security.custom-password-policy": "Власна політика паролів",
+  "admin.config.security.custom-password-policy.description":
+    "Чи вмикати налаштування власної політики паролів. Якщо вимкнено, використовується стандартна політика з мінімум 8 символів.",
+  "admin.config.security.min-length": "Мінімальна довжина",
+  "admin.config.security.min-length.description":
+    "Мінімальна кількість символів, необхідна для пароля.",
+  "admin.config.security.require-uppercase": "Вимагати великі літери",
+  "admin.config.security.require-uppercase.description":
+    "Чи вимагати принаймні одну велику літеру в паролі.",
+  "admin.config.security.require-lowercase": "Вимагати малі літери",
+  "admin.config.security.require-lowercase.description":
+    "Чи вимагати принаймні одну малу літеру в паролі.",
+  "admin.config.security.require-number": "Вимагати цифри",
+  "admin.config.security.require-number.description":
+    "Чи вимагати принаймні одну цифру в паролі.",
+  "admin.config.security.require-special-character":
+    "Вимагати спеціальні символи",
+  "admin.config.security.require-special-character.description":
+    "Чи вимагати принаймні один спеціальний символ у паролі.",
   "admin.config.cache.ttl": "TTL",
-  "admin.config.cache.ttl.description": "Time in second to keep information inside the cache.",
-  "admin.config.cache.max-items": "Maximum items",
-  "admin.config.cache.max-items.description": "Maximum number of items inside the cache.",
-  "admin.config.cache.redis-enabled": "Redis enabled",
-  "admin.config.cache.redis-enabled.description": "Normally Pingvin Share caches information in memory. If you run multiple instances of Pingvin Share, you need to enable Redis caching to share the cache between the instances.",
-  "admin.config.cache.redis-url": "Redis URL",
-  "admin.config.cache.redis-url.description": "Url to connect to the Redis instance used for caching.",
-  "admin.config.cache.button.test-redis": "Test Redis connection",
-  "admin.config.cache.test-redis.success": "Connected to Redis successfully",
-  "admin.config.cache.test-redis.success-disabled": "Connected to Redis successfully (Redis caching is currently disabled).",
-  "admin.config.cache.test-redis.modal.error.title": "Failed to connect to Redis",
-  "admin.config.cache.test-redis.modal.error.description": "While connecting to Redis, the following error occurred:",
-  "admin.config.cache.test-redis.modal.save.title": "Save configuration",
-  "admin.config.cache.test-redis.modal.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
-  "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
-  "admin.config.email.send-html-emails": "Enable HTML email compatibility",
-  "admin.config.email.send-html-emails.description": "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
-  "admin.config.share.enable-share-email-recipients": "Увімкнути спільний доступ для отримувачів через ел. пошту",
-  "admin.config.share.enable-share-email-recipients.description": "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
-  "admin.config.email.share-recipients-subject": "Заголовок листа (завантаження)",
-  "admin.config.email.share-recipients-subject.description": "Тема листа, який надсилається одержувачам акції.",
-  "admin.config.email.share-recipients-message": "Повідомлення листа завантаження",
-  "admin.config.email.share-recipients-message.description": "Повідомлення, яке надсилається отримувачам спільного доступу. Доступні змінні:\n {creator} - Ім'я користувача, який створив спільний доступ \n {creatorEmail} - Ел. пошта користувача, який створив спільний доступ \n {shareUrl} - URL спільного доступу \n {desc} - Опис спільного доступу \n {expires} - Дата закінчення терміну дії спільного доступу \nЦі змінні будуть замінені на фактичні значення.",
-  "admin.config.email.reverse-share-subject": "Заголовок листа (зворотне завантаження)",
-  "admin.config.email.reverse-share-subject.description": "Тема надісланого електронного листа, коли хтось створює спільний доступ за вашим зворотнім посиланням.",
-  "admin.config.email.reverse-share-message": "Повідомлення листа зворотного завантаження",
-  "admin.config.email.reverse-share-message.description": "Повідомлення, яке надсилається, коли хтось створив завантаження з вашим зворотним посиланням. {shareUrl} буде замінено ім'ям творця та URL-адресою загального доступу.",
+  "admin.config.cache.ttl.description":
+    "Час у секундах для збереження інформації в кеші.",
+  "admin.config.cache.max-items": "Максимальна кількість елементів",
+  "admin.config.cache.max-items.description":
+    "Максимальна кількість елементів у кеші.",
+  "admin.config.cache.redis-enabled": "Увімкнено Redis",
+  "admin.config.cache.redis-enabled.description":
+    "Зазвичай Pingvin Share кешує інформацію в оперативній пам'яті. Якщо ви запускаєте кілька екземплярів Pingvin Share, вам потрібно ввімкнути кешування Redis для спільного використання кешу між екземплярами.",
+  "admin.config.cache.redis-url": "URL-адреса Redis",
+  "admin.config.cache.redis-url.description":
+    "URL-адреса для підключення до екземпляра Redis, що використовується для кешування.",
+  "admin.config.cache.button.test-redis": "Перевірити з'єднання з Redis",
+  "admin.config.cache.test-redis.success": "Успішно підключено до Redis",
+  "admin.config.cache.test-redis.success-disabled":
+    "Успішно підключено до Redis (кешування Redis наразі вимкнено).",
+  "admin.config.cache.test-redis.modal.error.title":
+    "Не вдалося підключитися до Redis",
+  "admin.config.cache.test-redis.modal.error.description":
+    "Під час підключення до Redis сталася така помилка:",
+  "admin.config.cache.test-redis.modal.save.title": "Зберегти конфігурацію",
+  "admin.config.cache.test-redis.modal.save.description":
+    "Щоб продовжити, спочатку потрібно зберегти конфігурацію. Зберегти конфігурацію та протестувати з'єднання з Redis?",
+  "admin.config.cache.test-redis.modal.save.confirm": "Зберегти та перевірити",
+  "admin.config.email.send-html-emails": "Увімкнути сумісність з HTML-листами",
+  "admin.config.email.send-html-emails.description":
+    "Якщо ввімкнено, листи надсилатимуться у форматі HTML. Переконайтеся, що шаблони листів оновлено для використання HTML.",
+  "admin.config.share.enable-share-email-recipients":
+    "Увімкнути спільний доступ для отримувачів через ел. пошту",
+  "admin.config.share.enable-share-email-recipients.description":
+    "Чи дозволити ділитися завантаженнями з одержувачами електронною поштою. Можна ввімкнути лише за умови активації SMTP.",
+  "admin.config.email.share-recipients-subject":
+    "Заголовок листа (завантаження)",
+  "admin.config.email.share-recipients-subject.description":
+    "Тема листа, який надсилається одержувачам акції.",
+  "admin.config.email.share-recipients-message":
+    "Повідомлення листа завантаження",
+  "admin.config.email.share-recipients-message.description":
+    "Повідомлення, яке надсилається отримувачам спільного доступу. Доступні змінні:\n {creator} - Ім'я користувача, який створив спільний доступ \n {creatorEmail} - Ел. пошта користувача, який створив спільний доступ \n {shareUrl} - URL спільного доступу \n {desc} - Опис спільного доступу \n {expires} - Дата закінчення терміну дії спільного доступу \nЦі змінні будуть замінені на фактичні значення.",
+  "admin.config.email.reverse-share-subject":
+    "Заголовок листа (зворотне завантаження)",
+  "admin.config.email.reverse-share-subject.description":
+    "Тема надісланого електронного листа, коли хтось створює спільний доступ за вашим зворотнім посиланням.",
+  "admin.config.email.reverse-share-message":
+    "Повідомлення листа зворотного завантаження",
+  "admin.config.email.reverse-share-message.description":
+    "Повідомлення, яке надсилається, коли хтось створив завантаження з вашим зворотним посиланням. {shareUrl} буде замінено ім'ям творця та URL-адресою загального доступу.",
   "admin.config.email.reset-password-subject": "Тема скидання пароля",
-  "admin.config.email.reset-password-subject.description": "Тема надісланого ел. листа, коли користувач запитує скидання пароля.",
-  "admin.config.email.reset-password-message": "Повідомлення про скидання пароля",
-  "admin.config.email.reset-password-message.description": "Повідомлення, яке надсилається при запиті скидання пароля. {url} буде замінено посиланням.",
+  "admin.config.email.reset-password-subject.description":
+    "Тема надісланого ел. листа, коли користувач запитує скидання пароля.",
+  "admin.config.email.reset-password-message":
+    "Повідомлення про скидання пароля",
+  "admin.config.email.reset-password-message.description":
+    "Повідомлення, яке надсилається при запиті скидання пароля. {url} буде замінено посиланням.",
   "admin.config.email.invite-subject": "Тема запрошення",
-  "admin.config.email.invite-subject.description": "Тема надісланого ел. листа, коли адміністратор запрошує користувача.",
+  "admin.config.email.invite-subject.description":
+    "Тема надісланого ел. листа, коли адміністратор запрошує користувача.",
   "admin.config.email.invite-message": "Повідомлення із запрошенням",
-  "admin.config.email.invite-message.description": "Повідомлення, яке надсилається, коли адміністратор запрошує користувача. {url} буде замінено на URL запрошення, {email} на ел. пошту, а {password} на пароль користувача.",
-  "admin.config.email.share-recipients-reply-to-creator": "Set Reply-To to creator's email",
-  "admin.config.email.share-recipients-reply-to-creator.description": "Whether to set the Reply-To header to the email address of the user who created the share.",
-  "admin.config.share.enable-share-download-notifications": "Enable download notifications",
-  "admin.config.share.enable-share-download-notifications.description": "Whether to send an email to the share creator when an email recipient downloads a file. This requires SMTP and email recipient sharing.",
-  "admin.config.email.share-download-notification-subject": "Download notification subject",
-  "admin.config.email.share-download-notification-subject.description": "Subject of the email which gets sent to the share creator when a recipient downloads a file.",
-  "admin.config.email.share-download-notification-message": "Download notification message",
-  "admin.config.email.share-download-notification-message.description": "Message which gets sent to the share creator when a recipient downloads a file. Available variables:\n {recipientEmail} - The email of the recipient\n {fileName} - The downloaded file name\n {shareUrl} - The URL of the share",
-  "admin.config.security.enable-email-verification": "Enable email verification",
-  "admin.config.security.enable-email-verification.description": "Whether to require users to verify their email address before being able to sign in. This can only be enabled if SMTP is activated.",
-  "admin.config.email.verification-subject": "Verification subject",
-  "admin.config.email.verification-subject.description": "Subject of the email which gets sent to the user when they sign up.",
-  "admin.config.email.verification-message": "Verification message",
-  "admin.config.email.verification-message.description": "Message which gets sent to the user when they sign up. {url} will be replaced with the verification URL.",
+  "admin.config.email.invite-message.description":
+    "Повідомлення, яке надсилається, коли адміністратор запрошує користувача. {url} буде замінено на URL запрошення, {email} на ел. пошту, а {password} на пароль користувача.",
+  "admin.config.email.share-recipients-reply-to-creator":
+    "Встановити Reply-To на адресу творця",
+  "admin.config.email.share-recipients-reply-to-creator.description":
+    "Чи встановлювати заголовок Reply-To на електронну адресу користувача, який створив завантаження.",
+  "admin.config.share.enable-share-download-notifications":
+    "Увімкнути сповіщення про завантаження",
+  "admin.config.share.enable-share-download-notifications.description":
+    "Чи надсилати електронного листа творцю завантаження, коли одержувач завантажує файл. Для цього потрібні SMTP та спільний доступ для одержувачів електронної пошти.",
+  "admin.config.email.share-download-notification-subject":
+    "Тема сповіщення про завантаження",
+  "admin.config.email.share-download-notification-subject.description":
+    "Тема електронного листа, який надсилається творцю завантаження, коли одержувач завантажує файл.",
+  "admin.config.email.share-download-notification-message":
+    "Повідомлення сповіщення про завантаження",
+  "admin.config.email.share-download-notification-message.description":
+    "Повідомлення, яке надсилається творцю завантаження, коли одержувач завантажує файл. Доступні змінні:\n {recipientEmail} - Електронна пошта одержувача\n {fileName} - Ім'я завантаженого файлу\n {shareUrl} - URL-адреса завантаження",
+  "admin.config.security.enable-email-verification":
+    "Увімкнути підтвердження електронної пошти",
+  "admin.config.security.enable-email-verification.description":
+    "Чи вимагати від користувачів підтвердження електронної пошти перед входом. Можна ввімкнути лише якщо активовано SMTP.",
+  "admin.config.email.verification-subject": "Тема листа підтвердження",
+  "admin.config.email.verification-subject.description":
+    "Тема електронного листа, який надсилається користувачеві під час реєстрації.",
+  "admin.config.email.verification-message": "Повідомлення листа підтвердження",
+  "admin.config.email.verification-message.description":
+    "Повідомлення, яке надсилається користувачеві під час реєстрації. {url} буде замінено на URL-адресу підтвердження.",
   "admin.config.security.allow-registration": "Дозволити реєстрацію",
-  "admin.config.security.allow-registration.description": "Чи дозволена реєстрація",
-  "admin.config.security.allow-unauthenticated-shares": "Дозволити неавторизовані завантаження",
-  "admin.config.security.allow-unauthenticated-shares.description": "Чи можуть неавторизовані користувачі створювати завантаження",
-  "admin.config.share.default-expiration": "Default expiration",
-  "admin.config.share.default-expiration.description": "The default expiration time selected when creating a new share.",
+  "admin.config.security.allow-registration.description":
+    "Чи дозволена реєстрація",
+  "admin.config.security.allow-unauthenticated-shares":
+    "Дозволити неавторизовані завантаження",
+  "admin.config.security.allow-unauthenticated-shares.description":
+    "Чи можуть неавторизовані користувачі створювати завантаження",
+  "admin.config.share.default-expiration": "Термін дії за замовчуванням",
+  "admin.config.share.default-expiration.description":
+    "Термін дії за замовчуванням, вибраний під час створення нової роздачі.",
   "admin.config.share.max-expiration": "Максимальний термін дії",
-  "admin.config.share.max-expiration.description": "Максимальний термін дії спільного доступу. Встановіть 0, щоб дозволити необмежений термін дії.",
+  "admin.config.share.max-expiration.description":
+    "Максимальний термін дії спільного доступу. Встановіть 0, щоб дозволити необмежений термін дії.",
   "admin.config.share.share-id-length": "Стандартна довжина ID завантаження",
-  "admin.config.share.share-id-length.description": "Стандартна довжина для згенерованого ID завантаження. Це значення також використовується для створення посилань для зворотних завантажень. Значення менше 8 не вважається безпечним.",
+  "admin.config.share.share-id-length.description":
+    "Стандартна довжина для згенерованого ID завантаження. Це значення також використовується для створення посилань для зворотних завантажень. Значення менше 8 не вважається безпечним.",
   "admin.config.share.max-size": "Максимальний розмір",
   "admin.config.share.max-size.description": "Максимальний розмір файлу",
   "admin.config.share.zip-compression-level": "Рівень стиснення Zip",
-  "admin.config.share.zip-compression-level.description": "Регулювання рівня балансу між розміром файлу і швидкістю стиснення. Допустимі значення від 0 до 9, з 0 без стиснення, а 9 - максимальне стиснення. ",
+  "admin.config.share.zip-compression-level.description":
+    "Регулювання рівня балансу між розміром файлу і швидкістю стиснення. Допустимі значення від 0 до 9, з 0 без стиснення, а 9 - максимальне стиснення. ",
   "admin.config.share.chunk-size": "Розмір блоку",
-  "admin.config.share.chunk-size.description": "Налаштуйте розмір блоку для ваших завантажень, щоб збалансувати ефективність та надійність відповідно до вашого інтернет-з'єднання. Менші частини можуть підвищити ймовірність успішного завантаження для нестабільних з'єднань, тоді як більші частини прискорюють завантаження для стабільних з'єднань.",
-  "admin.config.share.auto-open-share-modal": "Автоматично відкривати модальне вікно для завантаження",
-  "admin.config.share.auto-open-share-modal.description": "Модальне вікно для створення завантаження автоматично з'являється, коли користувач вибирає файли, що усуває необхідність вручну натискати кнопку.",
-  "admin.config.security.allow-admin-access-all-shares": "Allow admin access to all shares",
-  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
-  "admin.config.share.reverse-share-simple-only.description": "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
-  "admin.config.security.allow-admin-access-all-shares.description": "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
-  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
-  "admin.config.share.enable-user-recipients.description": "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
-  "admin.config.share.file-retention-period": "File retention period",
-  "admin.config.share.file-retention-period.description": "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
+  "admin.config.share.chunk-size.description":
+    "Налаштуйте розмір блоку для ваших завантажень, щоб збалансувати ефективність та надійність відповідно до вашого інтернет-з'єднання. Менші частини можуть підвищити ймовірність успішного завантаження для нестабільних з'єднань, тоді як більші частини прискорюють завантаження для стабільних з'єднань.",
+  "admin.config.share.auto-open-share-modal":
+    "Автоматично відкривати модальне вікно для завантаження",
+  "admin.config.share.auto-open-share-modal.description":
+    "Модальне вікно для створення завантаження автоматично з'являється, коли користувач вибирає файли, що усуває необхідність вручну натискати кнопку.",
+  "admin.config.security.allow-admin-access-all-shares":
+    "Дозволити адміністраторам доступ до всіх завантажень",
+  "admin.config.share.reverse-share-simple-only":
+    "Примусовий простий режим для зворотного завантаження",
+  "admin.config.share.reverse-share-simple-only.description":
+    "Примусово створювати зворотні завантаження у простому режимі. Якщо вимкнено, творець зворотного завантаження може вибирати між простим і розширеним режимом.",
+  "admin.config.security.allow-admin-access-all-shares.description":
+    "Дозволити адміністраторам доступ до всіх завантажень, навіть якщо вони захищені паролем, прострочені або видалені.",
+  "admin.config.share.enable-user-recipients":
+    "Увімкнути спільний доступ для зареєстрованих користувачів",
+  "admin.config.share.enable-user-recipients.description":
+    "Якщо ввімкнено, завантаження, надіслані на електронну адресу зареєстрованого користувача, автоматично з'являтимуться в його обліковому записі. Користувачі також можуть обмежити доступ лише вказаними одержувачами.",
+  "admin.config.share.file-retention-period": "Період зберігання файлів",
+  "admin.config.share.file-retention-period.description":
+    "Скільки часу файли зберігаються після того, як термін дії завантаження закінчився або його було видалено. Корисно лише якщо ввімкнено параметр 'Дозволити адміністраторам доступ до всіх завантажень'. Встановіть -1, щоб зберігати файли назавжди.",
   "admin.config.smtp.enabled": "Увімкнути",
-  "admin.config.smtp.enabled.description": "Чи увімкнено SMTP. Встановіть значення true тільки якщо ви ввели хост, порт, email, користувач і пароль вашого SMTP-сервера.",
+  "admin.config.smtp.enabled.description":
+    "Чи увімкнено SMTP. Встановіть значення true тільки якщо ви ввели хост, порт, email, користувач і пароль вашого SMTP-сервера.",
   "admin.config.smtp.host": "Хост",
   "admin.config.smtp.host.description": "Сервер SMTP-сервера",
   "admin.config.smtp.port": "Порт",
   "admin.config.smtp.port.description": "Порт SMTP сервера",
   "admin.config.smtp.email": "Електронна пошта",
-  "admin.config.smtp.email.description": "Адреса ел. пошти, з якої надсилаються листи",
+  "admin.config.smtp.email.description":
+    "Адреса ел. пошти, з якої надсилаються листи",
   "admin.config.smtp.username": "Логін",
   "admin.config.smtp.username.description": "Ім'я користувача SMTP-сервера",
   "admin.config.smtp.password": "Пароль",
   "admin.config.smtp.password.description": "Пароль SMTP-сервера",
   "admin.config.smtp.button.test": "Відправити тестовий лист",
-  "admin.config.smtp.test-email.success": "Email sent successfully",
-  "admin.config.smtp.test-email.error.title": "Failed to send email",
-  "admin.config.smtp.test-email.error.description": "While sending the test email, the following error occurred:",
-  "admin.config.smtp.test-email.save.title": "Save configuration",
-  "admin.config.smtp.test-email.save.description": "To continue you need to save the configuration first. Do you want to save the configuration and send the test email?",
-  "admin.config.smtp.test-email.save.confirm": "Save and send",
-  "admin.config.smtp.allow-unauthorized-certificates": "Довіряти сертифікатам SMTP серверів без авторизації",
-  "admin.config.smtp.allow-unauthorized-certificates.description": "Увімкніть це тільки тоді, якщо потрібно довіряти самопідписаним сертифікатам.",
+  "admin.config.smtp.test-email.success": "Лист успішно надіслано",
+  "admin.config.smtp.test-email.error.title": "Не вдалося надіслати лист",
+  "admin.config.smtp.test-email.error.description":
+    "Під час надсилання тестового листа сталася така помилка:",
+  "admin.config.smtp.test-email.save.title": "Зберегти конфігурацію",
+  "admin.config.smtp.test-email.save.description":
+    "Щоб продовжити, спочатку потрібно зберегти конфігурацію. Зберегти конфігурацію та надіслати тестовий лист?",
+  "admin.config.smtp.test-email.save.confirm": "Зберегти та надіслати",
+  "admin.config.smtp.allow-unauthorized-certificates":
+    "Довіряти сертифікатам SMTP серверів без авторизації",
+  "admin.config.smtp.allow-unauthorized-certificates.description":
+    "Увімкніть це тільки тоді, якщо потрібно довіряти самопідписаним сертифікатам.",
   "admin.config.oauth.allow-registration": "Дозволити реєстрацію",
-  "admin.config.oauth.allow-registration.description": "Дозволити користувачам реєструватися, використовуючи облікові записи соціальних мереж",
+  "admin.config.oauth.allow-registration.description":
+    "Дозволити користувачам реєструватися, використовуючи облікові записи соціальних мереж",
   "admin.config.oauth.ignore-totp": "Ігнорувати TOTP",
-  "admin.config.oauth.ignore-totp.description": "Ігнорувати TOTP при використанні соціальної авторизації",
+  "admin.config.oauth.ignore-totp.description":
+    "Ігнорувати TOTP при використанні соціальної авторизації",
   "admin.config.oauth.disable-password": "Вимкнути вхід за паролем",
-  "admin.config.oauth.disable-password.description": "Чи вимкнути вхід за паролем. \nПереконайтеся, що постачальник OAuth налаштований правильно, перед активацією цієї конфігурації, щоб уникнути блокування доступу.",
+  "admin.config.oauth.disable-password.description":
+    "Чи вимкнути вхід за паролем. \nПереконайтеся, що постачальник OAuth налаштований правильно, перед активацією цієї конфігурації, щоб уникнути блокування доступу.",
   "admin.config.oauth.github-enabled": "GitHub",
-  "admin.config.oauth.github-enabled.description": "Чи ввімкнено логін на GitHub",
+  "admin.config.oauth.github-enabled.description":
+    "Чи ввімкнено логін на GitHub",
   "admin.config.oauth.github-client-id": "ID клієнта GitHub",
-  "admin.config.oauth.github-client-id.description": "ID клієнта в додатку GitHub OAuth",
+  "admin.config.oauth.github-client-id.description":
+    "ID клієнта в додатку GitHub OAuth",
   "admin.config.oauth.github-client-secret": "Секретний ключ клієнта GitHub",
-  "admin.config.oauth.github-client-secret.description": "Секретний ключ клієнта в додатку GitHub OAuth",
+  "admin.config.oauth.github-client-secret.description":
+    "Секретний ключ клієнта в додатку GitHub OAuth",
   "admin.config.oauth.google-enabled": "Google",
-  "admin.config.oauth.google-enabled.description": "Чи увімкнено логін Google на GitHub",
+  "admin.config.oauth.google-enabled.description":
+    "Чи увімкнено логін Google на GitHub",
   "admin.config.oauth.google-client-id": "ID клієнта Google",
-  "admin.config.oauth.google-client-id.description": "ID клієнта в додатку Google OAuth",
+  "admin.config.oauth.google-client-id.description":
+    "ID клієнта в додатку Google OAuth",
   "admin.config.oauth.google-client-secret": "Секретний ключ клієнта Google",
-  "admin.config.oauth.google-client-secret.description": "Секретний ключ клієнта в додатку Google OAuth",
+  "admin.config.oauth.google-client-secret.description":
+    "Секретний ключ клієнта в додатку Google OAuth",
   "admin.config.oauth.microsoft-enabled": "Microsoft",
-  "admin.config.oauth.microsoft-enabled.description": "Чи ввімкнено логін Microsoft",
+  "admin.config.oauth.microsoft-enabled.description":
+    "Чи ввімкнено логін Microsoft",
   "admin.config.oauth.microsoft-tenant": "Корпоративний акаунт Microsoft",
-  "admin.config.oauth.microsoft-tenant.description": "Ідентифікатор орендаря додатка Microsoft OAuth\ncommon: Користувачі з особистим обліковим записом Microsoft і робочим або навчальним обліковим записом від Microsoft Entra ID можуть увійти в додаток. organizations: Тільки користувачі з робочим або навчальним обліковим записом від Microsoft Entra ID можуть увійти в застосунок.\nconsumers: Тільки користувачі з особистим обліковим записом Microsoft можуть увійти в застосунок.ім'я домену орендаря Microsoft Entra або ідентифікатор орендаря у форматі GUID: Тільки користувачі з певного орендаря Microsoft Entra (учасники каталогу з робочим або навчальним обліковим записом або гості каталогу з особистим обліковим записом Microsoft) можуть увійти в застосунок.",
+  "admin.config.oauth.microsoft-tenant.description":
+    "Ідентифікатор орендаря додатка Microsoft OAuth\ncommon: Користувачі з особистим обліковим записом Microsoft і робочим або навчальним обліковим записом від Microsoft Entra ID можуть увійти в додаток. organizations: Тільки користувачі з робочим або навчальним обліковим записом від Microsoft Entra ID можуть увійти в застосунок.\nconsumers: Тільки користувачі з особистим обліковим записом Microsoft можуть увійти в застосунок.ім'я домену орендаря Microsoft Entra або ідентифікатор орендаря у форматі GUID: Тільки користувачі з певного орендаря Microsoft Entra (учасники каталогу з робочим або навчальним обліковим записом або гості каталогу з особистим обліковим записом Microsoft) можуть увійти в застосунок.",
   "admin.config.oauth.microsoft-client-id": "Ідентифікатор клієнта Microsoft",
-  "admin.config.oauth.microsoft-client-id.description": "ID клієнта в додатку Microsoft OAuth",
-  "admin.config.oauth.microsoft-client-secret": "Секретний ключ клієнта Microsoft",
-  "admin.config.oauth.microsoft-client-secret.description": "Секретний ключ клієнта в додатку Microsoft OAuth",
+  "admin.config.oauth.microsoft-client-id.description":
+    "ID клієнта в додатку Microsoft OAuth",
+  "admin.config.oauth.microsoft-client-secret":
+    "Секретний ключ клієнта Microsoft",
+  "admin.config.oauth.microsoft-client-secret.description":
+    "Секретний ключ клієнта в додатку Microsoft OAuth",
   "admin.config.oauth.discord-enabled": "Discord",
-  "admin.config.oauth.discord-enabled.description": "Чи увімкнено логін Discord",
+  "admin.config.oauth.discord-enabled.description":
+    "Чи увімкнено логін Discord",
   "admin.config.oauth.discord-limited-users": "Обмежені користувачі Discord",
-  "admin.config.oauth.discord-limited-users.description": "Обмежити вхід для конкретних користувачів за їх Discord ID. Залиште поле порожнім, щоб вимкнути.",
+  "admin.config.oauth.discord-limited-users.description":
+    "Обмежити вхід для конкретних користувачів за їх Discord ID. Залиште поле порожнім, щоб вимкнути.",
   "admin.config.oauth.discord-limited-guild": "ID обмеженого сервера Discord",
-  "admin.config.oauth.discord-limited-guild.description": "Обмеження входу для користувачів певного сервера. Залиште порожнім, щоб відключити.",
+  "admin.config.oauth.discord-limited-guild.description":
+    "Обмеження входу для користувачів певного сервера. Залиште порожнім, щоб відключити.",
   "admin.config.oauth.discord-client-id": "ID клієнта Discord",
-  "admin.config.oauth.discord-client-id.description": "ID клієнта в додатку Discord OAuth",
+  "admin.config.oauth.discord-client-id.description":
+    "ID клієнта в додатку Discord OAuth",
   "admin.config.oauth.discord-client-secret": "Секретний ключ клієнта Discord",
-  "admin.config.oauth.discord-client-secret.description": "Секретний ключ клієнта в додатку Discord OAuth",
+  "admin.config.oauth.discord-client-secret.description":
+    "Секретний ключ клієнта в додатку Discord OAuth",
   "admin.config.oauth.oidc-enabled": "OpenID підключення",
-  "admin.config.oauth.oidc-enabled.description": "Чи ввімкнено логін OpenID Connect",
+  "admin.config.oauth.oidc-enabled.description":
+    "Чи ввімкнено логін OpenID Connect",
   "admin.config.oauth.oidc-discovery-uri": "OpenID Connect Discovery URI",
-  "admin.config.oauth.oidc-discovery-uri.description": "URI Discovery URI додатка OpenID Connect OAuth",
+  "admin.config.oauth.oidc-discovery-uri.description":
+    "URI Discovery URI додатка OpenID Connect OAuth",
   "admin.config.oauth.oidc-sign-out": "Вийти з OpenID Connect",
-  "admin.config.oauth.oidc-sign-out.description": "Чи буде кнопка \"Вийти\" виводити користувача з постачальника OpenID Connect",
+  "admin.config.oauth.oidc-sign-out.description":
+    'Чи буде кнопка "Вийти" виводити користувача з постачальника OpenID Connect',
   "admin.config.oauth.oidc-scope": "Область OpenID Connect",
-  "admin.config.oauth.oidc-scope.description": "Області (scopes), які слід запитати у постачальника OpenID Connect.",
-  "admin.config.oauth.oidc-username-claim": "Заява на ім'я користувача OpenID Connect",
-  "admin.config.oauth.oidc-username-claim.description": "Заява про ім'я користувача в токені OpenID Connect ID. Залиште порожнім, якщо не знаєте, що це за конфіг.",
+  "admin.config.oauth.oidc-scope.description":
+    "Області (scopes), які слід запитати у постачальника OpenID Connect.",
+  "admin.config.oauth.oidc-username-claim":
+    "Заява на ім'я користувача OpenID Connect",
+  "admin.config.oauth.oidc-username-claim.description":
+    "Заява про ім'я користувача в токені OpenID Connect ID. Залиште порожнім, якщо не знаєте, що це за конфіг.",
   "admin.config.oauth.oidc-role-path": "Шлях до ролей у токені OpenID Connect",
-  "admin.config.oauth.oidc-role-path.description": "Повинен бути дійсним шляхом JMES, який посилається на масив ролей. " + "Управління правами доступу за допомогою ролей OpenID Connect рекомендується лише в тому випадку, якщо не налаштований інший постачальник ідентифікації та вхід за паролем вимкнено. " + "Залиште це поле порожнім, якщо ви не знаєте, для чого призначена ця конфігурація.",
-  "admin.config.oauth.oidc-role-general-access": "Роль OpenID Connect для загального доступу",
-  "admin.config.oauth.oidc-role-general-access.description": "Роль, необхідна для загального доступу. Має бути присутня в ролях користувача, щоб він міг увійти в систему. " + "Залиште це поле порожнім, якщо ви не знаєте, для чого призначена ця конфігурація.",
-  "admin.config.oauth.oidc-role-admin-access": "Роль OpenID Connect для адміністративного доступу",
-  "admin.config.oauth.oidc-role-admin-access.description": "Роль, необхідна для адміністративного доступу. Має бути присутня в ролях користувача, щоб він міг отримати доступ до адміністративної панелі. " + "Залиште це поле порожнім, якщо ви не знаєте, для чого призначена ця конфігурація.",
+  "admin.config.oauth.oidc-role-path.description":
+    "Повинен бути дійсним шляхом JMES, який посилається на масив ролей. " +
+    "Управління правами доступу за допомогою ролей OpenID Connect рекомендується лише в тому випадку, якщо не налаштований інший постачальник ідентифікації та вхід за паролем вимкнено. " +
+    "Залиште це поле порожнім, якщо ви не знаєте, для чого призначена ця конфігурація.",
+  "admin.config.oauth.oidc-role-general-access":
+    "Роль OpenID Connect для загального доступу",
+  "admin.config.oauth.oidc-role-general-access.description":
+    "Роль, необхідна для загального доступу. Має бути присутня в ролях користувача, щоб він міг увійти в систему. " +
+    "Залиште це поле порожнім, якщо ви не знаєте, для чого призначена ця конфігурація.",
+  "admin.config.oauth.oidc-role-admin-access":
+    "Роль OpenID Connect для адміністративного доступу",
+  "admin.config.oauth.oidc-role-admin-access.description":
+    "Роль, необхідна для адміністративного доступу. Має бути присутня в ролях користувача, щоб він міг отримати доступ до адміністративної панелі. " +
+    "Залиште це поле порожнім, якщо ви не знаєте, для чого призначена ця конфігурація.",
   "admin.config.oauth.oidc-client-id": "Client ID для OpenID Connect",
-  "admin.config.oauth.oidc-client-id.description": "Клієнтський ідентифікатор додатка OpenID Connect OAuth",
+  "admin.config.oauth.oidc-client-id.description":
+    "Клієнтський ідентифікатор додатка OpenID Connect OAuth",
   "admin.config.oauth.oidc-client-secret": "Секрет клієнта OpenID Connect",
-  "admin.config.oauth.oidc-client-secret.description": "Клієнтський секрет програми OpenID Connect OAuth",
+  "admin.config.oauth.oidc-client-secret.description":
+    "Клієнтський секрет програми OpenID Connect OAuth",
   "admin.config.category.ldap": "LDAP",
   "admin.config.ldap.enabled": "Увімкнути LDAP",
-  "admin.config.ldap.enabled.description": "Використовувати LDAP автентифікацію для входу користувача",
+  "admin.config.ldap.enabled.description":
+    "Використовувати LDAP автентифікацію для входу користувача",
   "admin.config.ldap.url": "URL сервера",
   "admin.config.ldap.url.description": "URL сервера LDAP",
   "admin.config.ldap.bind-dn": "Прив'язати DN",
-  "admin.config.ldap.bind-dn.description": "Користувач за замовчуванням, який використовується для пошуку користувачів",
+  "admin.config.ldap.bind-dn.description":
+    "Користувач за замовчуванням, який використовується для пошуку користувачів",
   "admin.config.ldap.bind-password": "Прив'язати пароль",
-  "admin.config.ldap.bind-password.description": "Пароль, що використовується для пошуку користувача",
+  "admin.config.ldap.bind-password.description":
+    "Пароль, що використовується для пошуку користувача",
   "admin.config.ldap.search-base": "База користувачів",
-  "admin.config.ldap.search-base.description": "Базове розташування, де буде виконано пошук користувача",
+  "admin.config.ldap.search-base.description":
+    "Базове розташування, де буде виконано пошук користувача",
   "admin.config.ldap.search-query": "Запит користувача",
-  "admin.config.ldap.search-query.description": "Запит користувача буде використовуватися для пошуку користувача LDAP в \"Базі користувачів\". %username% можна використовувати як заповнювач для введених користувачем даних.",
+  "admin.config.ldap.search-query.description":
+    'Запит користувача буде використовуватися для пошуку користувача LDAP в "Базі користувачів". %username% можна використовувати як заповнювач для введених користувачем даних.',
   "admin.config.ldap.admin-groups": "Адмін-група",
-  "admin.config.ldap.admin-groups.description": "Група, необхідна для адміністративного доступу.",
+  "admin.config.ldap.admin-groups.description":
+    "Група, необхідна для адміністративного доступу.",
   "admin.config.ldap.field-name-member-of": "Назва атрибута груп користувачів",
-  "admin.config.ldap.field-name-member-of.description": "Назва атрибута LDAP для груп, до яких належить користувач. Це використовується при перевірці адміністративної групи.",
+  "admin.config.ldap.field-name-member-of.description":
+    "Назва атрибута LDAP для груп, до яких належить користувач. Це використовується при перевірці адміністративної групи.",
   "admin.config.ldap.field-name-email": "Назва атрибута ел. пошти користувача",
-  "admin.config.ldap.field-name-email.description": "Назва атрибута LDAP для ел. пошти користувача.",
+  "admin.config.ldap.field-name-email.description":
+    "Назва атрибута LDAP для ел. пошти користувача.",
   "admin.config.notify.success": "Конфігурацію оновлено успішно.",
-  "admin.config.notify.logo-success": "Логотип успішно оновлено. Це може зайняти кілька хвилин, щоб оновлення відобразилось на вебсайті.",
+  "admin.config.notify.logo-success":
+    "Логотип успішно оновлено. Це може зайняти кілька хвилин, щоб оновлення відобразилось на вебсайті.",
   "admin.config.notify.no-changes": "Змін не потрібно зберігати.",
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Увімкнено",
-  "admin.config.s3.enabled.description": "Whether S3 should be used to store the shared files instead of the local file system. WARNING: If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
+  "admin.config.s3.enabled.description":
+    "Чи слід використовувати S3 для зберігання файлів замість локальної файлової системи. ПОПЕРЕДЖЕННЯ: якщо ClamAV активний, файли будуть тимчасово завантажуватися з S3 для перевірки.",
   "admin.config.s3.endpoint": "Точка підключення",
   "admin.config.s3.endpoint.description": "URL сховища S3.",
   "admin.config.s3.region": "Область",
@@ -618,25 +817,35 @@ export default {
   "admin.config.s3.bucket-name": "Ім'я бакета",
   "admin.config.s3.bucket-name.description": "Назва S3 бакета.",
   "admin.config.s3.bucket-path": "Шлях",
-  "admin.config.s3.bucket-path.description": "Шлях за замовчуванням, який має використовуватися для зберігання файлів у S3 бакеті.",
+  "admin.config.s3.bucket-path.description":
+    "Шлях за замовчуванням, який має використовуватися для зберігання файлів у S3 бакеті.",
   "admin.config.s3.key": "Ключ",
-  "admin.config.s3.key.description": "Ключ, який дозволяє отримати доступ до S3 бакету.",
+  "admin.config.s3.key.description":
+    "Ключ, який дозволяє отримати доступ до S3 бакету.",
   "admin.config.s3.secret": "Секрет",
-  "admin.config.s3.secret.description": "Секрет, який дозволяє отримати доступ до S3 бакету.",
+  "admin.config.s3.secret.description":
+    "Секрет, який дозволяє отримати доступ до S3 бакету.",
   "admin.config.s3.use-checksum": "Використовувати контрольну суму",
-  "admin.config.s3.use-checksum.description": "Вимкніть для непідтримуваних контрольних сум (напр. B2).",
-  "admin.config.s3.docs-link": "CORS must be reconfigured on your bucket, see the {wikiLink} for details.",
+  "admin.config.s3.use-checksum.description":
+    "Вимкніть для непідтримуваних контрольних сум (напр. B2).",
+  "admin.config.s3.docs-link":
+    "CORS необхідно переналаштувати для вашого бакета, подробиці див. у {wikiLink}.",
   "admin.config.category.legal": "Юридична інформація",
   "admin.config.legal.enabled": "Увімкнути правові сповіщення",
-  "admin.config.legal.enabled.description": "Чи відображати посилання на вихідні дані та політику конфіденційності у нижньому колонтитулі.",
+  "admin.config.legal.enabled.description":
+    "Чи відображати посилання на вихідні дані та політику конфіденційності у нижньому колонтитулі.",
   "admin.config.legal.imprint-text": "Текст вихідних даних",
-  "admin.config.legal.imprint-text.description": "Текст, який має відображатися у вихідних даних. Підтримує Markdown. Залиште порожнім, щоб вставити посилання на зовнішню сторінку з вихідними даними.",
+  "admin.config.legal.imprint-text.description":
+    "Текст, який має відображатися у вихідних даних. Підтримує Markdown. Залиште порожнім, щоб вставити посилання на зовнішню сторінку з вихідними даними.",
   "admin.config.legal.imprint-url": "URL вихідних даних",
-  "admin.config.legal.imprint-url.description": "Якщо у вас вже є сторінка з вихідними даними, ви можете вставити посилання на неї тут замість використання текстового поля.",
+  "admin.config.legal.imprint-url.description":
+    "Якщо у вас вже є сторінка з вихідними даними, ви можете вставити посилання на неї тут замість використання текстового поля.",
   "admin.config.legal.privacy-policy-text": "Текст політики конфіденційності",
-  "admin.config.legal.privacy-policy-text.description": "Текст, що має бути показано в політиці конфіденційності. Підтримує Markdown. Залиште порожнім, щоб надати посилання на сторінку зовнішньої політики конфіденційності.",
+  "admin.config.legal.privacy-policy-text.description":
+    "Текст, що має бути показано в політиці конфіденційності. Підтримує Markdown. Залиште порожнім, щоб надати посилання на сторінку зовнішньої політики конфіденційності.",
   "admin.config.legal.privacy-policy-url": "Політика конфіденційності URL",
-  "admin.config.legal.privacy-policy-url.description": "Якщо у вас вже є сторінка політики конфіденційності, то ви можете зв'язати її тут замість використання текстового поля.",
+  "admin.config.legal.privacy-policy-url.description":
+    "Якщо у вас вже є сторінка політики конфіденційності, то ви можете зв'язати її тут замість використання текстового поля.",
   // 404
   "404.description": "Бляха, цієї строрінки не існує.",
   "404.button.home": "Поверни мене додому",
@@ -645,18 +854,27 @@ export default {
   "error.description": "Щось пішло не так!",
   "error.button.back": "Назад",
   "error.msg.default": "Щось пішло не так.",
-  "error.msg.access_denied": "Ви скасували процес аутентифікації, будь ласка, спробуйте ще раз.",
-  "error.msg.expired_token": "Процес аутентифікації зайняв занадто багато часу, будь ласка, спробуйте ще раз.",
+  "error.msg.access_denied":
+    "Ви скасували процес аутентифікації, будь ласка, спробуйте ще раз.",
+  "error.msg.expired_token":
+    "Процес аутентифікації зайняв занадто багато часу, будь ласка, спробуйте ще раз.",
   "error.msg.invalid_token": "Внутрішня помилка",
-  "error.msg.no_user": "Користувач, пов'язаний з обліковим записом {0}, не існує.",
-  "error.msg.no_email": "Не вдається отримати адресу електронної пошти від облікового запису {0}.",
-  "error.msg.already_linked": "Цей обліковий запис {0} уже прив'язано до іншого акаунта.",
+  "error.msg.no_user":
+    "Користувач, пов'язаний з обліковим записом {0}, не існує.",
+  "error.msg.no_email":
+    "Не вдається отримати адресу електронної пошти від облікового запису {0}.",
+  "error.msg.already_linked":
+    "Цей обліковий запис {0} уже прив'язано до іншого акаунта.",
   "error.msg.not_linked": "Цей акаунт {0} ще не пов'язаний з жодним акаунтом.",
-  "error.msg.email_already_exists": "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
-  "error.msg.email_not_verified": "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
-  "error.msg.unverified_account": "Цей обліковий запис {0} не підтверджено, повторіть спробу після підтвердження.",
+  "error.msg.email_already_exists":
+    "Обліковий запис із цією електронною адресою вже існує. Будь ласка, увійдіть за допомогою пароля та вручну прив'яжіть обліковий запис {0} на сторінці «Мій аккаунт».",
+  "error.msg.email_not_verified":
+    "Вашу адресу електронної пошти в цьому обліковому записі {0} не підтверджено. Будь ласка, підтвердьте адресу у свого провайдера ідентифікації перед входом.",
+  "error.msg.unverified_account":
+    "Цей обліковий запис {0} не підтверджено, повторіть спробу після підтвердження.",
   "error.msg.user_not_allowed": "У вас немає дозволу на вхід.",
-  "error.msg.cannot_get_user_info": "Неможливо отримати інформацію про користувача з цього акаунта {0}.",
+  "error.msg.cannot_get_user_info":
+    "Неможливо отримати інформацію про користувача з цього акаунта {0}.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
@@ -701,14 +919,19 @@ export default {
   "common.error.exact-length": "Повинно бути рівно {length} символів",
   "common.error.invalid-number": "Повинно бути числом",
   "common.error.field-required": "Поле обов'язкове для заповнення",
-  "common.error.password.lowercase": "Password must contain at least one lowercase letter",
-  "common.error.password.uppercase": "Password must contain at least one uppercase letter",
-  "common.error.password.number": "Password must contain at least one number",
-  "common.error.password.special": "Password must contain at least one special character",
+  "common.error.password.lowercase":
+    "Пароль повинен містити принаймні одну малу літеру",
+  "common.error.password.uppercase":
+    "Пароль повинен містити принаймні одну велику літеру",
+  "common.error.password.number": "Пароль повинен містити принаймні одну цифру",
+  "common.error.password.special":
+    "Пароль повинен містити принаймні один спеціальний символ",
   "admin.notice.modal.headerTag": "ПОТРІБНА ДІЯ АДМІНІСТРАТОРА",
-  "admin.notice.modal.defaultCheckboxLabel": "Я підтверджую, що прочитав(ла) це сповіщення та розумію критичні зміни.",
+  "admin.notice.modal.defaultCheckboxLabel":
+    "Я підтверджую, що прочитав(ла) це сповіщення та розумію критичні зміни.",
   "admin.notice.modal.button.acknowledge": "Підтвердити та закрити",
   "admin.notice.modal.button.acknowledging": "Підтвердження...",
   "admin.notice.modal.docsLink": "Переглянути документацію",
-  "admin.notice.modal.globalNoticeFooter": "Примітка: Після підтвердження це сповіщення буде назавжди приховано для всіх адміністраторів на всіх пристроях."
+  "admin.notice.modal.globalNoticeFooter":
+    "Примітка: Після підтвердження це сповіщення буде назавжди приховано для всіх адміністраторів на всіх пристроях.",
 };
