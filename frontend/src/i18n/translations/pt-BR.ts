@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Confirmar e dispensar",
   "admin.notice.modal.button.acknowledging": "Confirmando...",
   "admin.notice.modal.docsLink": "Ver documentação",
-  "admin.notice.modal.globalNoticeFooter": "Nota: Uma vez confirmado, este aviso será permanentemente dispensado para todos os administradores em todos os dispositivos.",
+  "admin.notice.modal.globalNoticeFooter": "Nota: Uma vez confirmado, este aviso será permanentemente dispensado para todos os administradores em todos os dispositivos."
 };
