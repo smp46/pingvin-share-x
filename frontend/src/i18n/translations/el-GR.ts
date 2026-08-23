@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Επιβεβαίωση & Απόρριψη",
   "admin.notice.modal.button.acknowledging": "Επιβεβαίωση...",
   "admin.notice.modal.docsLink": "Προβολή τεκμηρίωσης",
-  "admin.notice.modal.globalNoticeFooter": "Σημείωση: Μόλις επιβεβαιωθεί, αυτή η ειδοποίηση θα απορριφθεί οριστικά για όλους τους διαχειριστές σε όλες τις συσκευές.",
+  "admin.notice.modal.globalNoticeFooter": "Σημείωση: Μόλις επιβεβαιωθεί, αυτή η ειδοποίηση θα απορριφθεί οριστικά για όλους τους διαχειριστές σε όλες τις συσκευές."
 };
