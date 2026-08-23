@@ -7,6 +7,11 @@ RUN npm ci
 # Stage 2: Build frontend
 FROM node:24-alpine AS frontend-builder
 WORKDIR /opt/app
+# Which commit this image came from, shown on the admin page. Passed in
+# because .dockerignore keeps .git out of the build context, so the build
+# cannot work it out for itself. Builds that leave it unset are unaffected.
+ARG BUILD_COMMIT=""
+ENV BUILD_COMMIT=$BUILD_COMMIT
 COPY ./frontend .
 COPY --from=frontend-dependencies /opt/app/node_modules ./node_modules
 RUN npm run build
