@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Bekræft og luk",
   "admin.notice.modal.button.acknowledging": "Bekræfter...",
   "admin.notice.modal.docsLink": "Se dokumentation",
-  "admin.notice.modal.globalNoticeFooter": "Bemærk: Når den er bekræftet, vil denne meddelelse blive fjernet permanent for alle administratorer på tværs af alle enheder.",
+  "admin.notice.modal.globalNoticeFooter": "Bemærk: Når den er bekræftet, vil denne meddelelse blive fjernet permanent for alle administratorer på tværs af alle enheder."
 };
