@@ -69,6 +69,7 @@ export default function AppShellDemo() {
   >([]);
   const [optionalConfigVariables, setOptionalConfigVariables] =
     useState<AdminConfig[]>();
+  const [loadFailed, setLoadFailed] = useState(false);
 
   const [logo, setLogo] = useState<File | null>(null);
   const [darkLogo, setDarkLogo] = useState<File | null>(null);
@@ -144,9 +145,20 @@ export default function AppShellDemo() {
   };
 
   useEffect(() => {
-    configService.getByCategory(categoryId).then((configVariables) => {
-      setConfigVariables(configVariables);
-    });
+    setLoadFailed(false);
+
+    // Without this the page has no way out of its loading state: the spinner
+    // shows until configVariables is set, so a failed request leaves it
+    // turning with nothing on screen to say why.
+    configService
+      .getByCategory(categoryId)
+      .then((configVariables) => {
+        setConfigVariables(configVariables);
+      })
+      .catch((error) => {
+        setLoadFailed(true);
+        toast.axiosError(error);
+      });
 
     if (
       categoryId === "email" ||
@@ -193,7 +205,11 @@ export default function AppShellDemo() {
         }
       >
         <Container size="lg">
-          {!configVariables ? (
+          {loadFailed ? (
+            <Alert variant="light" color="red" icon={<TbInfoCircle />}>
+              <FormattedMessage id="error.msg.default" />
+            </Alert>
+          ) : !configVariables ? (
             <CenterLoader />
           ) : (
             <>
