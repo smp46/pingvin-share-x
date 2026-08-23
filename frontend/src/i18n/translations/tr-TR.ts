@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Onayla ve Kapat",
   "admin.notice.modal.button.acknowledging": "Onaylanıyor...",
   "admin.notice.modal.docsLink": "Dokümantasyonu Görüntüle",
-  "admin.notice.modal.globalNoticeFooter": "Not: Onaylandıktan sonra bu bildirim, tüm cihazlardaki tüm yöneticiler için kalıcı olarak kapatılacaktır.",
+  "admin.notice.modal.globalNoticeFooter": "Not: Onaylandıktan sonra bu bildirim, tüm cihazlardaki tüm yöneticiler için kalıcı olarak kapatılacaktır."
 };
