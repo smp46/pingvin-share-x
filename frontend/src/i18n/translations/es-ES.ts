@@ -571,7 +571,7 @@ export default {
   "admin.config.oauth.oidc-discovery-uri": "URI de descubrimiento de OpenID Connect",
   "admin.config.oauth.oidc-discovery-uri.description": "URI de descubrimiento de la aplicación OAuth de OpenID Connect",
   "admin.config.oauth.oidc-sign-out": "Cerrar sesión de OpenID Connect",
-  "admin.config.oauth.oidc-sign-out.description": 'Si el botón "Cerrar sesión" cerrará la sesión del proveedor de OpenID Connect',
+  "admin.config.oauth.oidc-sign-out.description": "Si el botón \"Cerrar sesión\" cerrará la sesión del proveedor de OpenID Connect",
   "admin.config.oauth.oidc-scope": "Ámbito de OpenID Connect",
   "admin.config.oauth.oidc-scope.description": "Ámbitos que se deberían solicitar al proveedor OpenID Connect.",
   "admin.config.oauth.oidc-username-claim": "Reclamo de nombre de usuario de OpenID Connect",
@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Confirmar y descartar",
   "admin.notice.modal.button.acknowledging": "Confirmando...",
   "admin.notice.modal.docsLink": "Ver documentación",
-  "admin.notice.modal.globalNoticeFooter": "Nota: Una vez confirmado, este aviso se descartará permanentemente para todos los administradores en todos los dispositivos.",
+  "admin.notice.modal.globalNoticeFooter": "Nota: Una vez confirmado, este aviso se descartará permanentemente para todos los administradores en todos los dispositivos."
 };
