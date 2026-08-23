@@ -19,6 +19,36 @@ export class JobsService {
     private configServer: ConfigService,
   ) {}
 
+  // Each of the jobs below asks the database which rows are old enough to
+  // remove and then deletes their files, which nothing undoes. A storage
+  // format mismatch once made those filters match rows they should never have
+  // matched, including shares set never to expire, and a minute later the
+  // files were gone. So the answer is checked against the same rule in plain
+  // code before anything is deleted.
+  //
+  // A disagreement means the query is wrong, not the data, so the whole run is
+  // abandoned rather than narrowed down to the rows that do qualify: a filter
+  // that returned rows it should not have cannot be trusted to have returned
+  // all of the ones it should. The error repeats until someone looks, which is
+  // the point.
+  private safeToDelete<T extends { id: string }>(
+    job: string,
+    rows: T[],
+    qualifies: (row: T) => boolean,
+  ): boolean {
+    const unexpected = rows.filter((row) => !qualifies(row));
+    if (unexpected.length === 0) return true;
+
+    this.logger.error(
+      `${job}: refusing to delete ${rows.length} row(s), ${unexpected.length} of them do not qualify ` +
+        `(${unexpected
+          .slice(0, 5)
+          .map((row) => row.id)
+          .join(", ")}). Skipping this run.`,
+    );
+    return false;
+  }
+
   @Cron("* * * * *")
   async deleteExpiredShares() {
     const fileRetentionPeriod = this.configServer.get(
@@ -45,6 +75,21 @@ export class JobsService {
       },
     });
 
+    const neverExpires = moment(0).toDate().getTime();
+    const isExpired = (share: (typeof expiredShares)[number]) => {
+      const expiration = share.expiration?.getTime();
+      return (
+        Number.isFinite(expiration) &&
+        expiration !== neverExpires &&
+        expiration < thresholdDate.getTime() &&
+        share.blockedAt === null
+      );
+    };
+
+    if (!this.safeToDelete("deleteExpiredShares", expiredShares, isExpired)) {
+      return;
+    }
+
     for (const expiredShare of expiredShares) {
       await this.fileService.deleteAllFiles(expiredShare.id);
       await this.prisma.share.delete({
@@ -59,11 +104,30 @@ export class JobsService {
 
   @Cron("0 * * * *")
   async deleteExpiredReverseShares() {
+    const now = new Date();
+
     const expiredReverseShares = await this.prisma.reverseShare.findMany({
       where: {
-        shareExpiration: { lt: new Date() },
+        shareExpiration: { lt: now },
       },
     });
+
+    const hasExpired = (
+      reverseShare: (typeof expiredReverseShares)[number],
+    ) => {
+      const expiration = reverseShare.shareExpiration?.getTime();
+      return Number.isFinite(expiration) && expiration < now.getTime();
+    };
+
+    if (
+      !this.safeToDelete(
+        "deleteExpiredReverseShares",
+        expiredReverseShares,
+        hasExpired,
+      )
+    ) {
+      return;
+    }
 
     for (const expiredReverseShare of expiredReverseShares) {
       await this.reverseShareService.remove(expiredReverseShare.id);
@@ -92,6 +156,21 @@ export class JobsService {
     const unfinishedShares = await this.prisma.share.findMany({
       where: condition,
     });
+
+    const before = (date: Date | null) => {
+      const at = date?.getTime();
+      return Number.isFinite(at) && at < cutoff.getTime();
+    };
+    const isAbandoned = (share: (typeof unfinishedShares)[number]) =>
+      share.uploadLocked === false &&
+      share.blockedAt === null &&
+      (share.updatedAt ? before(share.updatedAt) : before(share.createdAt));
+
+    if (
+      !this.safeToDelete("deleteUnfinishedShares", unfinishedShares, isAbandoned)
+    ) {
+      return;
+    }
 
     const successfullyCleanedIds: string[] = [];
     const chunkSize = 5;

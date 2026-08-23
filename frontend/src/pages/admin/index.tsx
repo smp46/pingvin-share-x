@@ -15,6 +15,7 @@ import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
 import useTranslate from "../../hooks/useTranslate.hook";
 import configService from "../../services/config.service";
+import { shortCommit } from "../../utils/buildCommit";
 
 const useStyles = createStyles((theme) => ({
   item: {
@@ -30,6 +31,8 @@ const useStyles = createStyles((theme) => ({
     },
   },
 }));
+
+const buildCommit = shortCommit(process.env.BUILD_COMMIT);
 
 const Admin = () => {
   const { classes, theme } = useStyles();
@@ -109,6 +112,7 @@ const Admin = () => {
         <Center>
           <Text size="xs" color="dimmed">
             <FormattedMessage id="admin.version" /> {process.env.VERSION}
+            {buildCommit && ` (${buildCommit})`}
           </Text>
         </Center>
       </Stack>
