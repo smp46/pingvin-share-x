@@ -14,5 +14,5 @@
   "s3SessionNotFound": "جلسة التحميل المتعدد الأجزاء غير موجودة.",
   "s3UploadFailed": "فشل التحميل المتعدد الأجزاء. تم إلغاء التحميل.",
   "s3SizeError": "تعذر استرداد حجم الملف",
-  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
+  "s3NotSupported": "العمليات الموقعة مسبقًا مدعومة فقط لتخزين S3."
 }

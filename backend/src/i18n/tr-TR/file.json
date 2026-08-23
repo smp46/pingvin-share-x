@@ -14,5 +14,5 @@
   "s3SessionNotFound": "Çok parçalı yükleme oturumu bulunamadı.",
   "s3UploadFailed": "Çok parçalı yükleme başarısız oldu. Yükleme iptal edildi.",
   "s3SizeError": "Dosya boyutu alınamadı",
-  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
+  "s3NotSupported": "Önceden imzalanmış işlemler yalnızca S3 depolama için desteklenir."
 }

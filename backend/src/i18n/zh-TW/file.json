@@ -14,5 +14,5 @@
   "s3SessionNotFound": "未找到分塊上傳會話。",
   "s3UploadFailed": "分塊上傳失敗。上傳已中止。",
   "s3SizeError": "無法檢索文件大小",
-  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
+  "s3NotSupported": "預先簽署操作僅支援 S3 儲存。"
 }

@@ -9,11 +9,11 @@
   "anonymousNoUpdate": "Anonim paylaşımlar güncellenemez",
   "invalidExpiration": "Geçersiz son kullanma tarihi",
   "maxExpirationExceeded": "Son kullanma tarihi maksimum süreyi aşıyor",
-  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
-  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
+  "storageQuotaExceeded": "Kullanıcı depolama kotası {exceededSize} aşıldı",
+  "reverseShareQuotaExceeded": "Karşı paylaşım sahibinin depolama kotası {exceededSize} aşıldı",
   "wrongPassword": "Yanlış şifre",
   "tokenRequired": "Paylaşım belirteci gerekli",
   "privateShare": "Bu paylaşıma yalnızca ters paylaşım oluşturucusu erişebilir",
   "maxViewsExceeded": "Maksimum görüntüleme sayısı aşıldı",
-  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
+  "restrictedToRecipients": "Bu paylaşım belirli alıcılarla sınırlandırılmıştır. Erişmek için lütfen giriş yapın."
 }

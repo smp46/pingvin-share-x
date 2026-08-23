@@ -9,11 +9,11 @@
   "anonymousNoUpdate": "Anonimna deljenja se ne mogu ažurirati",
   "invalidExpiration": "Nevažeći datum isteka",
   "maxExpirationExceeded": "Datum isteka premašuje maksimalni dozvoljeni datum",
-  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
-  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
+  "storageQuotaExceeded": "Skladišna kvota korisnika je prekoračena za {exceededSize}",
+  "reverseShareQuotaExceeded": "Skladišna kvota vlasnika obrnutog deljenja je prekoračena za {exceededSize}",
   "wrongPassword": "Pogrešna lozinka",
   "tokenRequired": "Token deljenja je obavezan",
   "privateShare": "Samo kreator obrnutog deljenja može pristupiti ovom deljenju",
   "maxViewsExceeded": "Maksimalan broj pregleda je premašen",
-  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
+  "restrictedToRecipients": "Ovo deljenje je ograničeno na određene primaoce. Prijavite se da biste mu pristupili."
 }

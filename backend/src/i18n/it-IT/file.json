@@ -14,5 +14,5 @@
   "s3SessionNotFound": "Sessione di caricamento multipart non trovata.",
   "s3UploadFailed": "Caricamento multipart fallito. Il caricamento è stato interrotto.",
   "s3SizeError": "Impossibile recuperare la dimensione del file",
-  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
+  "s3NotSupported": "Le operazioni pre-firmate sono supportate solo per l'archiviazione S3."
 }

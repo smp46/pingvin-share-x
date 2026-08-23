@@ -9,11 +9,11 @@
   "anonymousNoUpdate": "匿名分享無法更新",
   "invalidExpiration": "過期日期無效",
   "maxExpirationExceeded": "過期日期超過最大過期日期",
-  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
-  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
+  "storageQuotaExceeded": "使用者儲存空間配額已超出 {exceededSize}",
+  "reverseShareQuotaExceeded": "回傳分享擁有者的儲存空間配額已超出 {exceededSize}",
   "wrongPassword": "密碼錯誤",
   "tokenRequired": "需要分享權杖",
   "privateShare": "只有回傳分享建立者才能存取此分享",
   "maxViewsExceeded": "超過最大查看次數",
-  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
+  "restrictedToRecipients": "此分享僅限特定收件者存取。請登入以存取。"
 }

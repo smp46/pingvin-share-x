@@ -1,5 +1,5 @@
 {
   "notFound": "Ters paylaşım belirteci bulunamadı",
   "maxShareSizeExceeded": "Maksimum paylaşım boyutu {maxSize} bayttan büyük olamaz.",
-  "tokenInUse": "Reverse share token already in use"
+  "tokenInUse": "Karşı paylaşım belirteci zaten kullanımda"
 }

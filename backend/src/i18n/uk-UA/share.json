@@ -9,11 +9,11 @@
   "anonymousNoUpdate": "Анонімні поширення не можна оновлювати",
   "invalidExpiration": "Недійсна дата закінчення терміну дії",
   "maxExpirationExceeded": "Дата закінчення терміну дії перевищує максимально допустиму",
-  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
-  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
+  "storageQuotaExceeded": "Квоту сховища користувача перевищено на {exceededSize}",
+  "reverseShareQuotaExceeded": "Квоту сховища власника зворотного завантаження перевищено на {exceededSize}",
   "wrongPassword": "Невірний пароль",
   "tokenRequired": "Потрібен токен поширення",
   "privateShare": "Тільки творець зворотного поширення має доступ до цього поширення",
   "maxViewsExceeded": "Перевищено максимальну кількість переглядів",
-  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
+  "restrictedToRecipients": "Ця роздача доступна лише для певних одержувачів. Будь ласка, увійдіть, щоб отримати доступ."
 }

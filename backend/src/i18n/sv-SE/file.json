@@ -14,5 +14,5 @@
   "s3SessionNotFound": "Session för multipart-uppladdning hittades inte.",
   "s3UploadFailed": "Multipart-uppladdning misslyckades. Uppladdningen har avbrutits.",
   "s3SizeError": "Kunde inte hämta filstorlek",
-  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
+  "s3NotSupported": "Försignerade operationer stöds endast för S3-lagring."
 }

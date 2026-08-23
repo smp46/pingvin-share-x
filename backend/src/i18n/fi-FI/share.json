@@ -9,11 +9,11 @@
   "anonymousNoUpdate": "Anonyymejä jakoja ei voi päivittää",
   "invalidExpiration": "Virheellinen vanhentumispäivä",
   "maxExpirationExceeded": "Vanhentumispäivä ylittää enimmäisvanhentumispäivän",
-  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
-  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
+  "storageQuotaExceeded": "Käyttäjän tallennustilakiintiö on ylittynyt {exceededSize} verran",
+  "reverseShareQuotaExceeded": "Käänteisen jaon omistajan tallennustilakiintiö on ylittynyt {exceededSize} verran",
   "wrongPassword": "Väärä salasana",
   "tokenRequired": "Jaon tunniste vaaditaan",
   "privateShare": "Vain käänteisen jaon luoja voi käyttää tätä jakoa",
   "maxViewsExceeded": "Katselukertojen enimmäismäärä ylittyi",
-  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
+  "restrictedToRecipients": "Tämä jako on rajoitettu tietyille vastaanottajille. Kirjaudu sisään päästäksesi käsiksi siihen."
 }

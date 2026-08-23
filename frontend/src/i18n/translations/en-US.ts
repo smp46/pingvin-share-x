@@ -66,13 +66,15 @@ export default {
 
   // /auth/verify
   "verify.title": "Verify Account",
-  "verify.success": "Your account has been successfully verified! You can now sign in.",
+  "verify.success":
+    "Your account has been successfully verified! You can now sign in.",
   "verify.error": "The verification link is invalid or has expired.",
   "verify.button.signin": "Go to Sign In",
   "verify.info.title": "Account Verification",
   "verify.info.description":
     "Email verification is enabled. We've sent a verification link to your email address. Please click the link to activate your account.",
-  "verify.info.note": "If you don't receive the email within a few minutes, please check your spam folder.",
+  "verify.info.note":
+    "If you don't receive the email within a few minutes, please check your spam folder.",
   "verify.info.resend.button": "Resend verification email",
   "verify.info.resend.success": "Verification email resent successfully.",
   "verify.info.resend.error": "Failed to resend verification email.",
@@ -176,7 +178,8 @@ export default {
   "account.shares.table.size": "Size",
   "account.shares.table.password-protected": "Password protected",
   "account.shares.table.recipients": "Recipients",
-  "account.shares.table.restricted-to-recipients": "Restricted to recipients only",
+  "account.shares.table.restricted-to-recipients":
+    "Restricted to recipients only",
   "account.shares.table.shared-with-recipients": "Shared with recipients",
   "account.shares.table.visitor-count": "{count} of {max}",
   "account.shares.table.expiry-never": "Never",
@@ -286,8 +289,7 @@ export default {
   "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
   "admin.users.edit.update.custom-share-size-limit.description":
     "Override the global upload limit for this user",
-  "admin.users.edit.update.custom-storage-quota-limit":
-    "Custom storage quota",
+  "admin.users.edit.update.custom-storage-quota-limit": "Custom storage quota",
   "admin.users.edit.update.custom-storage-quota-limit.description":
     "Limit the user's total storage usage across active shares",
   "admin.users.edit.update.change-password.title": "Change password",
@@ -311,8 +313,7 @@ export default {
   "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
   "admin.users.modal.create.custom-share-size-limit.description":
     "Override the global upload limit for this user",
-  "admin.users.modal.create.custom-storage-quota-limit":
-    "Custom storage quota",
+  "admin.users.modal.create.custom-storage-quota-limit": "Custom storage quota",
   "admin.users.modal.create.custom-storage-quota-limit.description":
     "Limit the user's total storage usage across active shares",
   "admin.users.modal.create.admin": "Admin privileges",
@@ -528,8 +529,10 @@ export default {
   "admin.config.appearance.upload-progress-style.description":
     "Choose how upload progress is displayed in the file list.",
   "admin.config.appearance.upload-progress-style.circle": "Circle indicator",
-  "admin.config.appearance.upload-progress-style.circle-percentage": "Circle with percentage",
-  "admin.config.appearance.upload-progress-style.percentage-time": "Percentage and time remaining",
+  "admin.config.appearance.upload-progress-style.circle-percentage":
+    "Circle with percentage",
+  "admin.config.appearance.upload-progress-style.percentage-time":
+    "Percentage and time remaining",
   "admin.config.general.app-url": "App URL",
   "admin.config.general.app-url.description":
     "On which URL Pingvin Share is available",
@@ -550,17 +553,24 @@ export default {
     "Upload a separate logo for dark mode. The image must be a PNG and should have the format 1:1.",
   "admin.config.appearance.logo.placeholder": "Pick image",
   "admin.config.security.custom-password-policy": "Custom password policy",
-  "admin.config.security.custom-password-policy.description": "Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.",
+  "admin.config.security.custom-password-policy.description":
+    "Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.",
   "admin.config.security.min-length": "Minimum length",
-  "admin.config.security.min-length.description": "Minimum number of characters required for a password.",
+  "admin.config.security.min-length.description":
+    "Minimum number of characters required for a password.",
   "admin.config.security.require-uppercase": "Require uppercase",
-  "admin.config.security.require-uppercase.description": "Whether to require at least one uppercase letter in the password.",
+  "admin.config.security.require-uppercase.description":
+    "Whether to require at least one uppercase letter in the password.",
   "admin.config.security.require-lowercase": "Require lowercase",
-  "admin.config.security.require-lowercase.description": "Whether to require at least one lowercase letter in the password.",
+  "admin.config.security.require-lowercase.description":
+    "Whether to require at least one lowercase letter in the password.",
   "admin.config.security.require-number": "Require number",
-  "admin.config.security.require-number.description": "Whether to require at least one number in the password.",
-  "admin.config.security.require-special-character": "Require special character",
-  "admin.config.security.require-special-character.description": "Whether to require at least one special character in the password.",
+  "admin.config.security.require-number.description":
+    "Whether to require at least one number in the password.",
+  "admin.config.security.require-special-character":
+    "Require special character",
+  "admin.config.security.require-special-character.description":
+    "Whether to require at least one special character in the password.",
   "admin.config.cache.ttl": "TTL",
   "admin.config.cache.ttl.description":
     "Time in second to keep information inside the cache.",
@@ -586,7 +596,8 @@ export default {
     "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.send-html-emails": "Enable HTML email compatibility",
-  "admin.config.email.send-html-emails.description": "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
+  "admin.config.email.send-html-emails.description":
+    "If enabled, emails will be sent in HTML format. Ensure email templates are updated to use HTML.",
   "admin.config.share.enable-share-email-recipients":
     "Enable email recipient sharing",
   "admin.config.share.enable-share-email-recipients.description":
@@ -631,7 +642,8 @@ export default {
     "Download notification message",
   "admin.config.email.share-download-notification-message.description":
     "Message which gets sent to the share creator when a recipient downloads a file. Available variables:\n {recipientEmail} - The email of the recipient\n {fileName} - The downloaded file name\n {shareUrl} - The URL of the share",
-  "admin.config.security.enable-email-verification": "Enable email verification",
+  "admin.config.security.enable-email-verification":
+    "Enable email verification",
   "admin.config.security.enable-email-verification.description":
     "Whether to require users to verify their email address before being able to sign in. This can only be enabled if SMTP is activated.",
   "admin.config.email.verification-subject": "Verification subject",
@@ -669,12 +681,14 @@ export default {
     "The share creation modal automatically appears when a user selects files, eliminating the need to manually click the button.",
   "admin.config.security.allow-admin-access-all-shares":
     "Allow admin access to all shares",
-  "admin.config.share.reverse-share-simple-only": "Force reverse share simple mode",
+  "admin.config.share.reverse-share-simple-only":
+    "Force reverse share simple mode",
   "admin.config.share.reverse-share-simple-only.description":
     "Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.",
   "admin.config.security.allow-admin-access-all-shares.description":
     "Allow administrators to access all shares, even if they are password protected, expired or deleted.",
-  "admin.config.share.enable-user-recipients": "Enable sharing with registered users",
+  "admin.config.share.enable-user-recipients":
+    "Enable sharing with registered users",
   "admin.config.share.enable-user-recipients.description":
     "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
@@ -945,15 +959,20 @@ export default {
   "common.error.invalid-number": "Must be a number",
   "common.error.field-required": "This field is required",
 
-  "common.error.password.lowercase": "Password must contain at least one lowercase letter",
-  "common.error.password.uppercase": "Password must contain at least one uppercase letter",
+  "common.error.password.lowercase":
+    "Password must contain at least one lowercase letter",
+  "common.error.password.uppercase":
+    "Password must contain at least one uppercase letter",
   "common.error.password.number": "Password must contain at least one number",
-  "common.error.password.special": "Password must contain at least one special character",
+  "common.error.password.special":
+    "Password must contain at least one special character",
 
   "admin.notice.modal.headerTag": "ADMINISTRATIVE ACTION REQUIRED",
-  "admin.notice.modal.defaultCheckboxLabel": "I confirm that I have read this notice and understand the breaking changes.",
+  "admin.notice.modal.defaultCheckboxLabel":
+    "I confirm that I have read this notice and understand the breaking changes.",
   "admin.notice.modal.button.acknowledge": "Acknowledge & Dismiss",
   "admin.notice.modal.button.acknowledging": "Acknowledging...",
   "admin.notice.modal.docsLink": "View Documentation",
-  "admin.notice.modal.globalNoticeFooter": "Note: Once acknowledged, this notice will be permanently dismissed for all administrators across all devices.",
+  "admin.notice.modal.globalNoticeFooter":
+    "Note: Once acknowledged, this notice will be permanently dismissed for all administrators across all devices.",
 };

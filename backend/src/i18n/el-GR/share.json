@@ -9,11 +9,11 @@
   "anonymousNoUpdate": "Οι ανώνυμες κοινές χρήσεις δεν μπορούν να ενημερωθούν",
   "invalidExpiration": "Άκυρη ημερομηνία λήξης",
   "maxExpirationExceeded": "Η ημερομηνία λήξης υπερβαίνει τη μέγιστη ημερομηνία λήξης",
-  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
-  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
+  "storageQuotaExceeded": "Το όριο αποθηκευτικού χώρου του χρήστη ξεπεράστηκε κατά {exceededSize}",
+  "reverseShareQuotaExceeded": "Το όριο αποθηκευτικού χώρου του κατόχου της αντίστροφης κοινοποίησης έχει ξεπεραστεί κατά {exceededSize}",
   "wrongPassword": "Λάθος κωδικός πρόσβασης",
   "tokenRequired": "Απαιτείται διακριτικό κοινής χρήσης",
   "privateShare": "Μόνο ο δημιουργός της αντίστροφης κοινής χρήσης μπορεί να έχει πρόσβαση σε αυτήν την κοινή χρήση",
   "maxViewsExceeded": "Υπέρβαση μέγιστων προβολών",
-  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
+  "restrictedToRecipients": "Αυτή η κοινοποίηση είναι περιορισμένη σε συγκεκριμένους παραλήπτες. Παρακαλώ συνδεθείτε για να αποκτήσετε πρόσβαση."
 }

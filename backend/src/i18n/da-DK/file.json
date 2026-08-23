@@ -14,5 +14,5 @@
   "s3SessionNotFound": "Multipart-upload-session ikke fundet.",
   "s3UploadFailed": "Multipart-upload mislykkedes. Uploaden er blevet afbrudt.",
   "s3SizeError": "Kunne ikke hente filstørrelse",
-  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
+  "s3NotSupported": "Præ-signerede operationer understøttes kun for S3-lagring."
 }

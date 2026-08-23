@@ -9,11 +9,11 @@
   "anonymousNoUpdate": "Анонимни споделяния не могат да бъдат актуализирани",
   "invalidExpiration": "Невалидна дата на изтичане",
   "maxExpirationExceeded": "Датата на изтичане надвишава максималната дата на изтичане",
-  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
-  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
+  "storageQuotaExceeded": "Потребителската квота за съхранение е превишена с {exceededSize}",
+  "reverseShareQuotaExceeded": "Квотата за съхранение на собственика на реверсивното споделяне е превишена с {exceededSize}",
   "wrongPassword": "Грешна парола",
   "tokenRequired": "Изисква се токен за споделяне",
   "privateShare": "Само създателят на обратно споделяне има достъп до това споделяне",
   "maxViewsExceeded": "Максималният брой преглеждания е надвишен",
-  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
+  "restrictedToRecipients": "Това споделяне е ограничено до конкретни получатели. Моля, влезте, за да получите достъп."
 }

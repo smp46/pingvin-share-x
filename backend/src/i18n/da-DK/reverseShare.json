@@ -1,5 +1,5 @@
 {
   "notFound": "Token til omvendt deling blev ikke fundet",
   "maxShareSizeExceeded": "Maksimal delingsstørrelse kan ikke være større end {maxSize} bytes.",
-  "tokenInUse": "Reverse share token already in use"
+  "tokenInUse": "Token til omvendt deling er allerede i brug"
 }

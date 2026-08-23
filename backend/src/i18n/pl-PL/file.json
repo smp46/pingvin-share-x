@@ -14,5 +14,5 @@
   "s3SessionNotFound": "Nie znaleziono sesji przesyłania wieloczęściowego.",
   "s3UploadFailed": "Przesyłanie wieloczęściowe nie powiodło się. Przesyłanie zostało przerwane.",
   "s3SizeError": "Nie można pobrać rozmiaru pliku",
-  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
+  "s3NotSupported": "Wstępnie podpisane operacje są obsługiwane tylko dla pamięci S3."
 }

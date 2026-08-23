@@ -14,5 +14,5 @@
   "s3SessionNotFound": "マルチパートアップロードセッションが見つかりません。",
   "s3UploadFailed": "マルチパートアップロードに失敗しました。アップロードは中止されました。",
   "s3SizeError": "ファイルサイズを取得できませんでした",
-  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
+  "s3NotSupported": "事前署名付き操作は S3 ストレージでのみサポートされています。"
 }

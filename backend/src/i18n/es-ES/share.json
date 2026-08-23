@@ -9,11 +9,11 @@
   "anonymousNoUpdate": "Los compartidos anónimos no se pueden actualizar",
   "invalidExpiration": "Fecha de expiración inválida",
   "maxExpirationExceeded": "La fecha de expiración supera la fecha de expiración máxima",
-  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
-  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
+  "storageQuotaExceeded": "Cuota de almacenamiento de usuario superada por {exceededSize}",
+  "reverseShareQuotaExceeded": "La cuota de almacenamiento del propietario de la compartición inversa ha sido superada por {exceededSize}",
   "wrongPassword": "Contraseña incorrecta",
   "tokenRequired": "Se requiere token de compartido",
   "privateShare": "Solo el creador del compartido inverso puede acceder a este compartido",
   "maxViewsExceeded": "Se ha superado el número máximo de visualizaciones",
-  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
+  "restrictedToRecipients": "Este compartido está restringido a destinatarios específicos. Por favor, inicia sesión para acceder."
 }

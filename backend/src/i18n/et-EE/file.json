@@ -14,5 +14,5 @@
   "s3SessionNotFound": "Multipart upload'i sessiooni ei leitud.",
   "s3UploadFailed": "Multipart upload ebaõnnestus. Üleslaadimine on katkestatud.",
   "s3SizeError": "Faili suurust ei õnnestunud tuvastada",
-  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
+  "s3NotSupported": "Eelallkirjastatud toimingud on toetatud ainult S3 salvestuse puhul."
 }

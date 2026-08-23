@@ -9,11 +9,11 @@
   "anonymousNoUpdate": "لا يمكن تحديث المشاركات المجهولة",
   "invalidExpiration": "تاريخ انتهاء صلاحية غير صالح",
   "maxExpirationExceeded": "تاريخ انتهاء الصلاحية يتجاوز الحد الأقصى لتاريخ انتهاء الصلاحية",
-  "storageQuotaExceeded": "User storage quota exceeded by {exceededSize}",
-  "reverseShareQuotaExceeded": "The reverse share owner's storage quota has been exceeded by {exceededSize}",
+  "storageQuotaExceeded": "تم تجاوز حصة تخزين المستخدم بمقدار {exceededSize}",
+  "reverseShareQuotaExceeded": "تم تجاوز حصة التخزين لمالك المشاركة العكسية بمقدار {exceededSize}",
   "wrongPassword": "كلمة مرور خاطئة",
   "tokenRequired": "رمز المشاركة مطلوب",
   "privateShare": "يمكن لمنشئ المشاركة العكسية فقط الوصول إلى هذه المشاركة",
   "maxViewsExceeded": "تم تجاوز الحد الأقصى للمشاهدات",
-  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
+  "restrictedToRecipients": "هذه المشاركة مقيدة لمستلمين محددين. يرجى تسجيل الدخول للوصول إليها."
 }

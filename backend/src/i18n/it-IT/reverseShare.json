@@ -1,5 +1,5 @@
 {
   "notFound": "Token di condivisione inversa non trovato",
   "maxShareSizeExceeded": "La dimensione massima della condivisione non può essere superiore a {maxSize} byte.",
-  "tokenInUse": "Reverse share token already in use"
+  "tokenInUse": "Token della condivisione inversa già in uso"
 }
