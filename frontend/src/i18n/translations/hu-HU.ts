@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Tudomásul veszem és bezárom",
   "admin.notice.modal.button.acknowledging": "Feldolgozás...",
   "admin.notice.modal.docsLink": "Dokumentáció megtekintése",
-  "admin.notice.modal.globalNoticeFooter": "Megjegyzés: A tudomásulvételt követően ez az értesítés minden adminisztrátor számára véglegesen elrejtésre kerül az összes eszközön.",
+  "admin.notice.modal.globalNoticeFooter": "Megjegyzés: A tudomásulvételt követően ez az értesítés minden adminisztrátor számára véglegesen elrejtésre kerül az összes eszközön."
 };
