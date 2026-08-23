@@ -91,7 +91,7 @@ export default {
   "account.card.password.old": "Oude wachtwoord",
   "account.card.password.new": "Nieuw wachtwoord",
   "account.card.password.noPasswordSet": "Er is geen wachtwoord ingesteld. Om in te loggen met je e-mailadres en wachtwoord, moet je een wachtwoord aanmaken.",
-  "account.notify.password.success": "Wachtwoord succesvol gewijzigd!",
+  "account.notify.password.success": "Wachtwoord succesvol gewijzigd",
   "account.card.oauth.title": "Social login",
   "account.card.oauth.github": "GitHub",
   "account.card.oauth.google": "Google",
