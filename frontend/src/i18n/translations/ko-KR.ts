@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "확인 및 닫기",
   "admin.notice.modal.button.acknowledging": "확인 중...",
   "admin.notice.modal.docsLink": "문서 보기",
-  "admin.notice.modal.globalNoticeFooter": "참고: 일단 확인하면 이 공지 사항은 모든 기기의 모든 관리자에 대해 영구적으로 닫힙니다.",
+  "admin.notice.modal.globalNoticeFooter": "참고: 일단 확인하면 이 공지 사항은 모든 기기의 모든 관리자에 대해 영구적으로 닫힙니다."
 };
