@@ -13,10 +13,10 @@ export default {
   // END navbar
 
   // /
-  "home.title": '<h>"Itse isännöitty"</h> tiedostojen jakamisen alusta.',
+  "home.title": "<h>\"Itse isännöitty\"</h> tiedostojen jakamisen alusta.",
   "home.description": "Haluatko oikeasti jakaa yksityisiä tiedostojasi kolmannen osapuolen yhtiöille niin kuin WeTransfer?",
   "home.bullet.a.name": "Itse-Isännöitty",
-  "home.bullet.a.description": 'Isännöi "Pingvin Share" omalla palvelimellasi.',
+  "home.bullet.a.description": "Isännöi \"Pingvin Share\" omalla palvelimellasi.",
   "home.bullet.b.name": "Yksityisyys",
   "home.bullet.b.description": "Tiedostosi ovat sinun, eivätkä kolmannet osapuolet pääse niihin koskaan käsiksi.",
   "home.bullet.c.name": "Ei ärsyttävää tiedoston kokorajoitusta",
@@ -710,5 +710,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Vahvista ja sulje",
   "admin.notice.modal.button.acknowledging": "Vahvistetaan...",
   "admin.notice.modal.docsLink": "Näytä dokumentaatio",
-  "admin.notice.modal.globalNoticeFooter": "Huomautus: Kun tämä ilmoitus on vahvistettu, se poistetaan pysyvästi kaikilta ylläpitäjiltä kaikilla laitteilla.",
+  "admin.notice.modal.globalNoticeFooter": "Huomautus: Kun tämä ilmoitus on vahvistettu, se poistetaan pysyvästi kaikilta ylläpitäjiltä kaikilla laitteilla."
 };
