@@ -3,17 +3,26 @@ import { useEffect, useState } from "react";
 import CenterLoader from "../core/CenterLoader";
 
 const QRCode = ({ link }: { link: string }) => {
-  const [qrCodeUrl, setQrCodeUrl] = useState<string>();
+  // Keeping the link the code was generated for, rather than the code alone,
+  // is what makes "we do not have one for this link yet" something that can be
+  // worked out while rendering. Clearing it from the effect meant the previous
+  // link's code stayed on screen for a render before the loader replaced it,
+  // and an answer arriving late for a link since navigated away from would
+  // have been shown as if it were the current one.
+  const [generated, setGenerated] = useState<{
+    link: string;
+    url: string;
+  } | null>(null);
 
   useEffect(() => {
-    setQrCodeUrl(undefined);
-
     QRCodeGenerator.toDataURL(link, { margin: 2, width: 400 })
-      .then(setQrCodeUrl)
+      .then((url) => setGenerated({ link, url }))
       .catch((_) => {
         // Ignore errors
       });
   }, [link]);
+
+  const qrCodeUrl = generated?.link === link ? generated.url : undefined;
 
   if (!qrCodeUrl) {
     return (
