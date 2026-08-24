@@ -191,9 +191,23 @@ const ManageShareTable = ({
   const pageShares = visibleShares.slice(0, visibleCount);
   const scrollBoxRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  // Narrowing or reordering the list makes the current page meaningless, so
+  // paging starts over. That is an adjustment to inputs that changed rather
+  // than work to do afterwards, so it happens here and the wrong-sized page
+  // never gets rendered at all.
+  const filterSignature = JSON.stringify([
+    search,
+    quickRange,
+    createdFrom,
+    createdTo,
+    sort,
+  ]);
+  const [lastFilterSignature, setLastFilterSignature] =
+    useState(filterSignature);
+  if (lastFilterSignature !== filterSignature) {
+    setLastFilterSignature(filterSignature);
     setVisibleCount(PAGE_SIZE);
-  }, [search, quickRange, createdFrom, createdTo, sort]);
+  }
 
   const applyQuickRange = (value: string | null) => {
     setQuickRange(value);
