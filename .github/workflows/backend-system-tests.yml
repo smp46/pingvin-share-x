@@ -8,13 +8,18 @@ on:
     tags:
       - "v*"
 
+# Only reads the repository: it checks the code out and runs the suite.
+# Without this the job would get whatever the repository default hands out.
+permissions:
+  contents: read
+
 jobs:
   system-tests:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     container: node:22
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - name: Install Dependencies
         working-directory: ./backend
         run: npm install
