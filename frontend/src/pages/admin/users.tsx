@@ -1,6 +1,6 @@
 import { Button, Group, Space, Text, Title } from "@mantine/core";
 import { useModals } from "@mantine/modals";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { TbPlus } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
@@ -10,31 +10,34 @@ import useConfig from "../../hooks/config.hook";
 import useTranslate from "../../hooks/useTranslate.hook";
 import userService from "../../services/user.service";
 import User from "../../types/user.type";
-import { CustomPasswordPolicy } from "../../types/config.type";
+import { resolvePasswordPolicy } from "../../utils/passwordPolicy.util";
 import toast from "../../utils/toast.util";
 
 const Users = () => {
   const [users, setUsers] = useState<User[]>([]);
-  const [customPasswordPolicy, setCustomPasswordPolicy] =
-    useState<CustomPasswordPolicy>({
-      minLength: 8,
-      requireUppercase: false,
-      requireLowercase: false,
-      requireNumber: false,
-      requireSpecialCharacter: false,
-    });
   const [isLoading, setIsLoading] = useState(true);
 
   const config = useConfig();
+
+  // follows from config, so there is nothing to keep in step
+  const customPasswordPolicy = resolvePasswordPolicy(config.get);
+
   const modals = useModals();
   const t = useTranslate();
 
+  const loadUsers = useCallback(
+    () =>
+      userService.list().then((users) => {
+        setUsers(users);
+        setIsLoading(false);
+      }),
+    [],
+  );
+
+  // shows the skeleton again, for a refresh someone asked for
   const getUsers = () => {
     setIsLoading(true);
-    userService.list().then((users) => {
-      setUsers(users);
-      setIsLoading(false);
-    });
+    return loadUsers();
   };
 
   const deleteUser = (user: User) => {
@@ -61,23 +64,11 @@ const Users = () => {
     });
   };
 
+  // isLoading already starts true, so the first fetch has no skeleton to turn
+  // on and nothing here needs to touch state before the response arrives
   useEffect(() => {
-    getUsers();
-
-    let customPasswordPolicy: CustomPasswordPolicy;
-    if (config.get("security.customPasswordPolicy")) {
-      customPasswordPolicy = {
-        minLength: config.get("security.minLength"),
-        requireUppercase: config.get("security.requireUppercase"),
-        requireLowercase: config.get("security.requireLowercase"),
-        requireNumber: config.get("security.requireNumber"),
-        requireSpecialCharacter: config.get(
-          "security.requireSpecialCharacter",
-        ),
-      };
-      setCustomPasswordPolicy(customPasswordPolicy);
-    }
-  }, []);
+    loadUsers();
+  }, [loadUsers]);
 
   return (
     <>
