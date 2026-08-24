@@ -17,12 +17,19 @@ const Shares = () => {
   const modals = useModals();
   const t = useTranslate();
 
+  const loadShares = useCallback(
+    () =>
+      shareService.list().then((shares) => {
+        setShares(shares);
+        setIsLoading(false);
+      }),
+    [],
+  );
+
+  // shows the skeleton again, for a refresh someone asked for
   const getShares = () => {
     setIsLoading(true);
-    shareService.list().then((shares) => {
-      setShares(shares);
-      setIsLoading(false);
-    });
+    return loadShares();
   };
 
   // refetch without the loading skeleton, used by auto refresh
@@ -95,9 +102,11 @@ const Shares = () => {
     });
   };
 
+  // isLoading already starts true, so the first fetch has no skeleton to turn
+  // on and nothing here needs to touch state before the response arrives
   useEffect(() => {
-    getShares();
-  }, []);
+    loadShares();
+  }, [loadShares]);
 
   return (
     <>
