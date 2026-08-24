@@ -7,6 +7,7 @@ import {
 import { JwtService, JwtSignOptions } from "@nestjs/jwt";
 import { Prisma, Share, User, ShareSecurity } from "@prisma/client";
 import * as archiver from "archiver";
+import { finished as streamFinished } from "stream/promises";
 import * as argon from "argon2";
 import * as crypto from "crypto";
 import * as fs from "fs";
@@ -190,6 +191,13 @@ export class ShareService {
 
     archive.pipe(writeStream);
     await archive.finalize();
+
+    // finalize resolves once the archive has produced its last byte, which is
+    // not the same as that byte having reached the disk. The caller marks the
+    // share ready as soon as this returns, so without waiting for the file
+    // itself to close, a recipient downloading straight away could be handed
+    // a zip that stops in the middle.
+    await streamFinished(writeStream);
   }
 
   async complete(id: string, reverseShareToken?: string) {
