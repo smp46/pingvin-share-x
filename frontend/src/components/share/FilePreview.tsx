@@ -156,9 +156,20 @@ const TextPreview = () => {
 
 const PdfPreview = () => {
   const { shareId, fileId } = React.useContext(FilePreviewContext);
-  if (typeof window !== "undefined") {
+
+  // Handing the tab over to the backend so the browser's own pdf viewer takes
+  // it. That is a side effect, not part of working out what to draw, so it
+  // waits until after the render rather than firing while one is in progress.
+  // A full document navigation is the point here, which is why this is not a
+  // router push: the response is a file stream, not a page.
+  React.useEffect(() => {
+    // Not a next page: the api route streams the file itself, so the browser
+    // has to fetch it as a document. A router push would try to render a page
+    // that does not exist.
+    // eslint-disable-next-line @next/next/no-location-assign-relative-destination
     window.location.href = `/api/shares/${shareId}/files/${fileId}?download=false`;
-  }
+  }, [shareId, fileId]);
+
   return null;
 };
 

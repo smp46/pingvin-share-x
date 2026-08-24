@@ -1,4 +1,5 @@
 import { ColorSchemeProvider, MantineProvider } from "@mantine/core";
+import { ModalsProvider } from "@mantine/modals";
 import { render } from "@testing-library/react";
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
@@ -46,7 +47,7 @@ export const withProviders = (
               refresh: async () => undefined,
             }}
           >
-            {ui}
+            <ModalsProvider>{ui}</ModalsProvider>
           </ConfigContext.Provider>
         </UserContext.Provider>
       </MantineProvider>
