@@ -108,7 +108,6 @@ const ImagePreview = () => {
   const { shareId, fileId, setIsNotSupported } =
     React.useContext(FilePreviewContext);
   return (
-    // eslint-disable-next-line @next/next/no-img-element
     <img
       src={`/api/shares/${shareId}/files/${fileId}?download=false`}
       alt={`${fileId}_preview`}

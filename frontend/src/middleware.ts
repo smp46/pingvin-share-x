@@ -154,7 +154,6 @@ export async function middleware(request: NextRequest) {
 
 // Helper class to check if a route matches a list of routes
 class Routes {
-  // eslint-disable-next-line no-unused-vars
   constructor(public routes: string[]) {}
 
   contains(_route: string) {

@@ -8,10 +8,11 @@ import {
   useMantineColorScheme,
 } from "@mantine/core";
 import { Dropzone as MantineDropzone } from "@mantine/dropzone";
-import React, { ForwardedRef, useEffect, useRef, useState } from "react";
+import React, { ForwardedRef, useRef, useState } from "react";
 import { TbCloudUpload, TbUpload, TbFolder } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import { fromEvent } from "file-selector";
+import { useIsHydrated } from "../../hooks/useIsHydrated.hook";
 import useTranslate from "../../hooks/useTranslate.hook";
 import { FileUpload } from "../../types/File.type";
 import { byteToHumanSizeString } from "../../utils/fileSize.util";
@@ -141,16 +142,14 @@ const Dropzone = ({
   const { classes } = useStyles();
   const openRef = useRef<() => void>();
   const folderInputRef = useRef<HTMLInputElement>(null);
-  const [isMounted, setIsMounted] = useState(false);
+  const isHydrated = useIsHydrated();
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === "dark";
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
+  // the directory picker is a browser capability, so it cannot be decided
+  // until the markup the server produced has been hydrated
   const isFolderUploadSupported =
-    isMounted &&
+    isHydrated &&
     typeof HTMLInputElement !== "undefined" &&
     "webkitdirectory" in HTMLInputElement.prototype;
 
