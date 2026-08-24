@@ -140,11 +140,19 @@ const ErrorTetris = ({ digits = ["4", "0", "4"] }: { digits?: string[] }) => {
       Z: palette.red[shade],
     } as Record<PieceType, string>,
   };
+  // The game loop runs from callbacks that must not be rebuilt on every
+  // render, so it reads these through refs rather than closing over them.
+  // Writing the refs while rendering is what the compiler rules object to,
+  // and it is genuinely unsafe once a render can be thrown away: refresh them
+  // afterwards, which for a theme change means the next piece picks up the
+  // new colours.
   const colorsRef = useRef(colors);
-  colorsRef.current = colors;
-
   const digitsRef = useRef(digits);
-  digitsRef.current = digits;
+
+  useEffect(() => {
+    colorsRef.current = colors;
+    digitsRef.current = digits;
+  });
 
   const makePiece = useCallback((type: PieceType): Piece => {
     const cells = makeCells(type, digitsRef.current);

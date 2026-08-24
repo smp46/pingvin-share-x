@@ -69,7 +69,10 @@ export default function AppShellDemo() {
   >([]);
   const [optionalConfigVariables, setOptionalConfigVariables] =
     useState<AdminConfig[]>();
-  const [loadFailed, setLoadFailed] = useState(false);
+  // which category failed, rather than a bare flag: switching to another one
+  // then answers "did this one fail" on its own, with nothing to reset
+  const [failedCategory, setFailedCategory] = useState<string | null>(null);
+  const loadFailed = failedCategory === categoryId;
 
   const [logo, setLogo] = useState<File | null>(null);
   const [darkLogo, setDarkLogo] = useState<File | null>(null);
@@ -126,18 +129,19 @@ export default function AppShellDemo() {
       configVariable.value = sanitizeUrl(configVariable.value);
     }
 
-    const index = updatedConfigVariables.findIndex(
-      (item) => item.key === configVariable.key,
-    );
+    // Editing the same setting twice used to write into this array in place
+    // and stop there, so react never heard about it and anything that follows
+    // from a pending change stopped following it.
+    setUpdatedConfigVariables((pending) => {
+      const index = pending.findIndex(
+        (item) => item.key === configVariable.key,
+      );
+      if (index === -1) return [...pending, configVariable];
 
-    if (index > -1) {
-      updatedConfigVariables[index] = {
-        ...updatedConfigVariables[index],
-        ...configVariable,
-      };
-    } else {
-      setUpdatedConfigVariables([...updatedConfigVariables, configVariable]);
-    }
+      return pending.map((item, i) =>
+        i === index ? { ...item, ...configVariable } : item,
+      );
+    });
   };
 
   const sanitizeUrl = (url: string): string => {
@@ -145,8 +149,6 @@ export default function AppShellDemo() {
   };
 
   useEffect(() => {
-    setLoadFailed(false);
-
     // Without this the page has no way out of its loading state: the spinner
     // shows until configVariables is set, so a failed request leaves it
     // turning with nothing on screen to say why.
@@ -156,7 +158,7 @@ export default function AppShellDemo() {
         setConfigVariables(configVariables);
       })
       .catch((error) => {
-        setLoadFailed(true);
+        setFailedCategory(categoryId);
         toast.axiosError(error);
       });
 
@@ -225,7 +227,10 @@ export default function AppShellDemo() {
                   const updatedValue = updatedConfigVariables.find(
                     (item) => item.key === key,
                   );
-                  if (updatedValue) return updatedValue.value;
+                  // an edit carries the raw input value, so a switch hands
+                  // back a boolean where the stored setting is the string
+                  // "true". Comparing those without this never matched.
+                  if (updatedValue) return String(updatedValue.value);
 
                   const configVariable = configVariables.find(
                     (item) => item.key === key,
