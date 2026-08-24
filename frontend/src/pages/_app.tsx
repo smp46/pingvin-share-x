@@ -17,7 +17,7 @@ import { GetServerSidePropsContext } from "next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { IntlProvider } from "react-intl";
 import Header from "../components/header/Header";
 import { ConfigContext } from "../hooks/config.hook";
@@ -133,7 +133,13 @@ function App({ Component, pageProps }: AppProps) {
   const [colorScheme, setColorScheme] = useState<ColorScheme>(systemTheme);
 
   const [user, setUser] = useState<CurrentUser | null>(pageProps.user);
-  const [route, setRoute] = useState<string>(pageProps.route);
+
+  // The layout decision below is made against route patterns, and the router
+  // gives that on the server too. It used to come from the request url, which
+  // never matches a pattern with a dynamic segment, so the settings page
+  // rendered with the default layout and then dropped it once an effect
+  // replaced the value on the client.
+  const route = router.pathname;
 
   const [configVariables, setConfigVariables] = useState<Config[]>(
     pageProps.configVariables,
@@ -208,10 +214,6 @@ function App({ Component, pageProps }: AppProps) {
   };
 
   useEffect(() => {
-    setRoute(router.pathname);
-  }, [router.pathname]);
-
-  useEffect(() => {
     const interval = setInterval(
       async () => await authService.refreshAccessToken(),
       2 * 60 * 1000, // 2 minutes
@@ -241,6 +243,18 @@ function App({ Component, pageProps }: AppProps) {
     document.documentElement.lang = current.code;
   }, [pageProps.language, pageProps.isConfigFallback]);
 
+  const toggleColorScheme = (value: ColorScheme) => {
+    setColorScheme(value ?? "light");
+    setCookie("mantine-color-scheme", value ?? "light", {
+      sameSite: "lax",
+    });
+  };
+
+  // Left as an effect on purpose. The answer depends on a preference kept in
+  // local storage, which the server cannot see, so working it out while
+  // rendering would disagree with the markup the server sent. State is also
+  // what a manual switch writes to, so this is a genuine synchronisation with
+  // the browser rather than a value waiting to be derived.
   useEffect(() => {
     const userColorPreference = userPreferences.get("colorScheme");
     const colorScheme = user
@@ -254,22 +268,18 @@ function App({ Component, pageProps }: AppProps) {
     toggleColorScheme(colorScheme);
   }, [adminDefaultColorScheme, systemTheme, user]);
 
-  const toggleColorScheme = (value: ColorScheme) => {
-    setColorScheme(value ?? "light");
-    setCookie("mantine-color-scheme", value ?? "light", {
-      sameSite: "lax",
-    });
-  };
-
-  const language = useRef(pageProps.language);
-  moment.locale(language.current);
+  // held from the first render on purpose: swapping the locale under a mounted
+  // tree is not something the app supports, and the memo below depends on it
+  // staying put
+  const [language] = useState(pageProps.language);
+  moment.locale(language);
 
   // fall back to english for keys that are not translated yet,
   // memoized so the intl provider isn't rebuilt on every render
   const messages = useMemo(
     () => ({
       ...LOCALES.ENGLISH.messages,
-      ...i18nUtil.getLocaleByCode(language.current)?.messages,
+      ...i18nUtil.getLocaleByCode(language)?.messages,
     }),
     [],
   );
@@ -311,7 +321,7 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <IntlProvider
         messages={messages}
-        locale={language.current}
+        locale={language}
         defaultLocale={LOCALES.ENGLISH.code}
       >
         <MantineProvider
@@ -388,12 +398,10 @@ App.getInitialProps = async ({ ctx }: { ctx: GetServerSidePropsContext }) => {
   let pageProps: {
     user?: CurrentUser;
     configVariables?: Config[];
-    route?: string;
     colorScheme: ColorScheme;
     language?: string;
     isConfigFallback?: boolean;
   } = {
-    route: ctx.resolvedUrl,
     colorScheme:
       (getCookie("mantine-color-scheme", ctx) as ColorScheme) ?? "light",
   };
@@ -418,8 +426,6 @@ App.getInitialProps = async ({ ctx }: { ctx: GetServerSidePropsContext }) => {
       pageProps.configVariables = getDefaultConfig();
       pageProps.isConfigFallback = true;
     }
-
-    pageProps.route = ctx.req.url;
 
     const requestLanguage = i18nUtil.getLanguageFromAcceptHeader(
       ctx.req.headers["accept-language"],
