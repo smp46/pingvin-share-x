@@ -145,6 +145,10 @@ const downloadFile = async (
   const recipientQuery = recipientId
     ? `?recipient=${encodeURIComponent(recipientId)}`
     : "";
+  // Not a next page: the api route streams the file itself, so the browser has
+  // to fetch it as a document. A router push would try to render a page that
+  // does not exist.
+  // eslint-disable-next-line @next/next/no-location-assign-relative-destination
   window.location.href = `${window.location.origin}/api/shares/${shareId}/files/${fileId}${recipientQuery}`;
 };
 

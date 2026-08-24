@@ -123,28 +123,27 @@ const FileList = <T extends FileListItem = FileListItem>({
   setFiles: (files: T[]) => void;
 }) => {
   const modals = useModals();
+  // files belongs to whoever rendered this, so build the next list rather than
+  // writing into the one we were handed. Copying it afterwards was hiding the
+  // fact that their state had already changed underneath them.
+  const withDeleted = (index: number, deleted: boolean) =>
+    files.map((file, i) => (i === index ? { ...file, deleted } : file));
+
   const remove = (index: number) => {
     const file = files[index];
 
+    // a file still uploading was never sent, so it just goes
     if ("uploadingProgress" in file) {
-      files.splice(index, 1);
+      setFiles(files.filter((_, i) => i !== index));
     } else {
-      files[index] = { ...file, deleted: true };
+      setFiles(withDeleted(index, true));
     }
-
-    setFiles([...files]);
   };
 
   const restore = (index: number) => {
-    const file = files[index];
+    if ("uploadingProgress" in files[index]) return;
 
-    if ("uploadingProgress" in file) {
-      return;
-    } else {
-      files[index] = { ...file, deleted: false };
-    }
-
-    setFiles([...files]);
+    setFiles(withDeleted(index, false));
   };
 
   const edit = async (index: number) => {
