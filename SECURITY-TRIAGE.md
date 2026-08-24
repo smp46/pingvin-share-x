@@ -35,6 +35,18 @@ corrected is more useful than a tidy list.
 | `js/empty-password-in-configuration-file` | 1 | `config.example.yaml` is a template. The empty SMTP password is the placeholder someone fills in. |
 | `js/http-to-file-access` | 1 | Writing an uploaded chunk to disk, which is what the application is for. The share and file ids are validated as above. |
 
+### Dismissed as intended behaviour
+
+| rule | count | why |
+| --- | --- | --- |
+| `js/user-controlled-bypass` | 1 | `fileSecurity.guard.ts` lets an administrator reach any share when `security.allowAdminAccessAllShares` is on. The value is administrator-set rather than caller-supplied, and the branch still requires `user?.isAdmin`. The jwt strategy loads the user from the database on every request instead of trusting a claim in the token, so an account that loses admin loses this at the same moment. |
+
+### Left open on purpose
+
+| rule | count | why |
+| --- | --- | --- |
+| `js/clear-text-storage-of-sensitive-data` | 1 | The refresh token cookie is `httpOnly` and `sameSite: strict`, but `secure` follows `security.secureCookies`, which defaults to `false`. That default is worth changing per instance rather than in code: flipping it here would break every deployment served over plain HTTP on a LAN, which is a legitimate way to run this. Kept open as a standing reminder that the default is the weaker one. See the note at the end of this file. |
+
 ## Dependency alerts
 
 | package | count | why it is still open |
