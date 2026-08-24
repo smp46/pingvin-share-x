@@ -1,7 +1,7 @@
 import { Button, Group, Text, TextInput } from "@mantine/core";
 import { UseFormReturnType } from "@mantine/form";
-import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
+import { useIsHydrated } from "../../hooks/useIsHydrated.hook";
 import useTranslate from "../../hooks/useTranslate.hook";
 import { generateShareId } from "../../utils/share.util";
 
@@ -26,14 +26,11 @@ const CustomUrlInput = ({
   const fieldValue = form.values[fieldName] || "";
   const hasError = !!form.errors[fieldName];
 
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  // window is only there after hydration, and the server rendered without it
+  const isHydrated = useIsHydrated();
 
   const baseUrl =
-    appUrl !== defaultAppUrl ? appUrl : isMounted ? window.location.origin : "";
+    appUrl !== defaultAppUrl ? appUrl : isHydrated ? window.location.origin : "";
 
   return (
     <>
