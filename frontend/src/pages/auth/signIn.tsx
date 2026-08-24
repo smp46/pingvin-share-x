@@ -6,6 +6,7 @@ import SignInForm from "../../components/auth/SignInForm";
 import Meta from "../../components/Meta";
 import useUser from "../../hooks/user.hook";
 import useTranslate from "../../hooks/useTranslate.hook";
+import { safeRedirectPath } from "../../utils/router.util";
 
 export function getServerSideProps(context: GetServerSidePropsContext) {
   return {
@@ -25,7 +26,7 @@ const SignIn = ({ redirectPath }: { redirectPath?: string }) => {
   useEffect(() => {
     refreshUser().then((user) => {
       if (user) {
-        router.replace(redirectPath ?? "/upload");
+        router.replace(safeRedirectPath(redirectPath ?? "/upload"));
       } else {
         setIsLoading(false);
       }
@@ -37,7 +38,7 @@ const SignIn = ({ redirectPath }: { redirectPath?: string }) => {
   return (
     <>
       <Meta title={t("signin.title")} />
-      <SignInForm redirectPath={redirectPath ?? "/upload"} />
+      <SignInForm redirectPath={safeRedirectPath(redirectPath ?? "/upload")} />
     </>
   );
 };
