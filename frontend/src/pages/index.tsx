@@ -10,7 +10,7 @@ import {
 } from "@mantine/core";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { TbCheck } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import Logo from "../components/Logo";
@@ -75,7 +75,6 @@ export default function Home() {
   const { refreshUser } = useUser();
   const router = useRouter();
   const config = useConfig();
-  const [signupEnabled, setSignupEnabled] = useState(true);
 
   // If user is already authenticated, redirect to the upload page
   useEffect(() => {
@@ -84,15 +83,18 @@ export default function Home() {
         router.replace("/upload");
       }
     });
-
-    // If registration is disabled, get started button should redirect to the sign in page
-    try {
-      const allowRegistration = config.get("security.allowRegistration");
-      setSignupEnabled(allowRegistration !== false);
-    } catch (error) {
-      setSignupEnabled(true);
-    }
   }, [config]);
+
+  // If registration is disabled, get started button should redirect to the
+  // sign in page. This follows from config, so it is worked out while
+  // rendering rather than kept in state an effect has to put back in step.
+  const signupEnabled = (() => {
+    try {
+      return config.get("security.allowRegistration") !== false;
+    } catch {
+      return true;
+    }
+  })();
 
   const getButtonHref = () => {
     return signupEnabled ? "/auth/signUp" : "/auth/signIn";

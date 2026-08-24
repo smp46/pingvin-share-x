@@ -14,7 +14,7 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useState } from "react";
 import { TbChevronLeft } from "react-icons/tb";
 import useConfig from "../../hooks/config.hook";
 import useUser from "../../hooks/user.hook";
@@ -145,14 +145,22 @@ const Header = () => {
   const t = useTranslate();
 
   const [opened, { toggle, close }] = useDisclosure(false);
-  const [currentRoute, setCurrentRoute] = useState("");
   const [mobileMenuView, setMobileMenuView] = useState<MobileMenuView>("root");
 
-  useEffect(() => {
-    setCurrentRoute(router.pathname);
-    close();
+  // The router already knows this, so copying it into state only meant the
+  // first render marked nothing as active until an effect caught up.
+  const currentRoute = router.pathname;
+
+  // The header stays mounted across navigations, so an open mobile menu would
+  // survive one. Putting it back is an adjustment to a value that changed
+  // rather than work to do afterwards, so it happens here instead of in an
+  // effect and the stale menu never reaches the screen.
+  const [routeOnLastRender, setRouteOnLastRender] = useState(router.pathname);
+  if (routeOnLastRender !== router.pathname) {
+    setRouteOnLastRender(router.pathname);
     setMobileMenuView("root");
-  }, [close, router.pathname]);
+    close();
+  }
 
   const authenticatedLinks: NavLink[] = [
     {

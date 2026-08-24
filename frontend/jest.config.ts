@@ -13,6 +13,9 @@ const config = {
   testEnvironment: "jest-environment-jsdom",
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
+    // jsdom picks jose's browser build, which is esm only, and jest does not
+    // transform node_modules. Its own commonjs build is the same library.
+    "^jose$": "<rootDir>/node_modules/jose/dist/node/cjs/index.js",
   },
 };
 
