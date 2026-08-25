@@ -142,19 +142,31 @@ export class ClamScanService {
     // Local Storage Provider
     let files: string[] = [];
     try {
-      files = fs
-        .readdirSync(`${SHARE_DIRECTORY}/${shareId}`)
-        .filter((file) => file != "archive.zip");
+      files = (
+        await fs.promises.readdir(`${SHARE_DIRECTORY}/${shareId}`)
+      ).filter((file) => file != "archive.zip");
     } catch (e) {
+      // Nothing on disk for this share, which is what an empty one looks like
       void e;
       return { infectedFiles: [], scanFailed: false };
     }
 
+    // One query for the whole share rather than one per file, the way the s3
+    // branch above already does it. Only the name is needed, and only so an
+    // infected file can be reported by something a person recognises.
+    const namesById = new Map(
+      (
+        await this.prisma.file.findMany({
+          where: { shareId },
+          select: { id: true, name: true },
+        })
+      ).map((file) => [file.id, file.name]),
+    );
+
     for (const fileId of files) {
       const filePath = `${SHARE_DIRECTORY}/${shareId}/${fileId}`;
-      const fileName =
-        (await this.prisma.file.findUnique({ where: { id: fileId } }))?.name ||
-        fileId;
+      // a file on disk with no row is still scanned, reported by its id
+      const fileName = namesById.get(fileId) || fileId;
 
       try {
         const { isInfected, failed } = await this.scanFile(clamScan, () =>
