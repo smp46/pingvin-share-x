@@ -167,7 +167,11 @@ export class JobsService {
       (share.updatedAt ? before(share.updatedAt) : before(share.createdAt));
 
     if (
-      !this.safeToDelete("deleteUnfinishedShares", unfinishedShares, isAbandoned)
+      !this.safeToDelete(
+        "deleteUnfinishedShares",
+        unfinishedShares,
+        isAbandoned,
+      )
     ) {
       return;
     }
@@ -279,6 +283,25 @@ export class JobsService {
       },
       include: { shares: true },
     });
+
+    const isAbandoned = (user: (typeof unactivatedUsers)[number]) => {
+      const createdAt = user.createdAt?.getTime();
+      return (
+        user.isActivated === false &&
+        Number.isFinite(createdAt) &&
+        createdAt < cutoff.getTime()
+      );
+    };
+
+    if (
+      !this.safeToDelete(
+        "deleteUnactivatedUsers",
+        unactivatedUsers,
+        isAbandoned,
+      )
+    ) {
+      return;
+    }
 
     for (const user of unactivatedUsers) {
       await Promise.all(
