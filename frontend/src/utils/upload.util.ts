@@ -2,26 +2,22 @@ import type { AxiosProgressEvent } from "axios";
 
 const UPLOAD_INACTIVITY_TIMEOUT_MS = 60_000;
 
+export type UploadProgressHandler = (progressEvent: AxiosProgressEvent) => void;
+
 type UploadRequest<T> = (
   signal: AbortSignal,
-  onUploadProgress: (progressEvent: AxiosProgressEvent) => void,
+  onUploadProgress: UploadProgressHandler,
 ) => Promise<T>;
 
 export const withUploadInactivityTimeout = async <T>(
   request: UploadRequest<T>,
-  onUploadProgress?: (progressEvent: AxiosProgressEvent) => void,
+  onUploadProgress?: UploadProgressHandler,
 ): Promise<T> => {
   const controller = new AbortController();
   let inactivityTimeout: ReturnType<typeof setTimeout> | undefined;
 
-  const clearInactivityTimeout = () => {
-    if (inactivityTimeout === undefined) return;
-    clearTimeout(inactivityTimeout);
-    inactivityTimeout = undefined;
-  };
-
   const resetInactivityTimeout = () => {
-    clearInactivityTimeout();
+    clearTimeout(inactivityTimeout);
     inactivityTimeout = setTimeout(
       () => controller.abort(),
       UPLOAD_INACTIVITY_TIMEOUT_MS,
@@ -36,6 +32,6 @@ export const withUploadInactivityTimeout = async <T>(
       onUploadProgress?.(progressEvent);
     });
   } finally {
-    clearInactivityTimeout();
+    clearTimeout(inactivityTimeout);
   }
 };

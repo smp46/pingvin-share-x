@@ -1,6 +1,6 @@
 import { deleteCookie, setCookie } from "cookies-next";
 import mime from "mime-types";
-import axios, { type AxiosProgressEvent } from "axios";
+import axios from "axios";
 import { translateOutsideContext } from "../hooks/useTranslate.hook";
 import { FileUploadResponse } from "../types/File.type";
 import {
@@ -12,7 +12,10 @@ import {
   UpdateShare,
 } from "../types/share.type";
 import { generateUUID } from "../utils/crypto.util";
-import { withUploadInactivityTimeout } from "../utils/upload.util";
+import {
+  type UploadProgressHandler,
+  withUploadInactivityTimeout,
+} from "../utils/upload.util";
 import api from "./api.service";
 
 const isValidId = (id: string) => {
@@ -146,7 +149,7 @@ const uploadFileDirectS3 = async (
   file: { id?: string; name: string },
   chunkIndex: number,
   totalChunks: number,
-  onUploadProgress?: (progressEvent: AxiosProgressEvent) => void,
+  onUploadProgress?: UploadProgressHandler,
 ): Promise<FileUploadResponse> => {
   const fileId = file.id || generateUUID();
   const sessionKey = `${shareId}:${file.name}`;
@@ -243,25 +246,24 @@ const uploadFileProxied = async (
   file: { id?: string; name: string },
   chunkIndex: number,
   totalChunks: number,
-  onUploadProgress?: (progressEvent: AxiosProgressEvent) => void,
+  onUploadProgress?: UploadProgressHandler,
 ): Promise<FileUploadResponse> => {
-  return withUploadInactivityTimeout(
-    async (signal, handleUploadProgress) =>
-      (
-        await api.post(`shares/${shareId}/files`, chunk, {
-          signal,
-          headers: { "Content-Type": "application/octet-stream" },
-          params: {
-            id: file.id,
-            name: file.name,
-            chunkIndex,
-            totalChunks,
-          },
-          onUploadProgress: handleUploadProgress,
-        })
-      ).data,
+  const response = await withUploadInactivityTimeout(
+    (signal, handleUploadProgress) =>
+      api.post(`shares/${shareId}/files`, chunk, {
+        signal,
+        headers: { "Content-Type": "application/octet-stream" },
+        params: {
+          id: file.id,
+          name: file.name,
+          chunkIndex,
+          totalChunks,
+        },
+        onUploadProgress: handleUploadProgress,
+      }),
     onUploadProgress,
   );
+  return response.data;
 };
 
 const uploadFile = async (
@@ -273,7 +275,7 @@ const uploadFile = async (
   },
   chunkIndex: number,
   totalChunks: number,
-  onUploadProgress?: (progressEvent: AxiosProgressEvent) => void,
+  onUploadProgress?: UploadProgressHandler,
 ): Promise<FileUploadResponse> => {
   if (!isValidId(shareId))
     throw new Error(
