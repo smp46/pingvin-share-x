@@ -17,6 +17,7 @@ module.exports = {
     "^src/(.*)$": "<rootDir>/src/$1",
   },
   globalSetup: "<rootDir>/test/prisma/setup.ts",
+  globalTeardown: "<rootDir>/test/prisma/teardown.ts",
   testTimeout: 60_000,
   // one sqlite file, one writer
   maxWorkers: 1,
