@@ -1,3 +1,33 @@
+## [2.0.0-beta.1](https://github.com/smp46/pingvin-share-x/compare/v1.22.1...v2.0.0-beta.1) (2026-08-25)
+
+### Features
+
+* customisable password policy ([#189](https://github.com/smp46/pingvin-share-x/issues/189)) ([a0e803f](https://github.com/smp46/pingvin-share-x/commit/a0e803f68b004ab6793e4348f132c879c8ba42d3))
+* reorganise configuration menu ([#194](https://github.com/smp46/pingvin-share-x/issues/194)) ([e9d2261](https://github.com/smp46/pingvin-share-x/commit/e9d22618c67067306b05bf01e268a4289c6fdfb0))
+
+### Bug Fixes
+
+* **filePreview:** better handle original file link ([#192](https://github.com/smp46/pingvin-share-x/issues/192)) ([85e6bb7](https://github.com/smp46/pingvin-share-x/commit/85e6bb7b1452a182fe6752500f73a99add6cba86))
+* **s3:** pregenerate file id, resolves multi-chunk uploads ([#197](https://github.com/smp46/pingvin-share-x/issues/197)) ([dcb3cfc](https://github.com/smp46/pingvin-share-x/commit/dcb3cfcb03a8c6891e2d6ed688f393a7f8043612))
+
+## 2.0.0-beta.0 (2026-08-18)
+
+### ⚠ BREAKING CHANGES
+
+* **s3:** direct uploads & downloads with presigned urls (#181)
+
+### Features
+
+* **config:** link to cors changes needed on s3 page ([66592ff](https://github.com/smp46/pingvin-share-x/commit/66592ff9aa33589491dc2d85054ff88ee9f561be))
+* **s3:** direct uploads & downloads with presigned urls ([#181](https://github.com/smp46/pingvin-share-x/issues/181)) ([25f0394](https://github.com/smp46/pingvin-share-x/commit/25f039436a683f74e9497e63f58f4bc76b4c6565)), closes [#180](https://github.com/smp46/pingvin-share-x/issues/180)
+* **storage:** add per-user storage quotas ([#133](https://github.com/smp46/pingvin-share-x/issues/133)) ([c847a45](https://github.com/smp46/pingvin-share-x/commit/c847a45b0541b91078283e8b7d9eed13dbb10b38))
+
+### Bug Fixes
+
+* **dropzone:** remove transparency from folder button in dark mode ([#186](https://github.com/smp46/pingvin-share-x/issues/186)) ([8b640b9](https://github.com/smp46/pingvin-share-x/commit/8b640b9bb64f6dccd37af13430db8da7c66e2255))
+
+## 1.22.1-beta.0 (2026-08-08)
+
 ## [2.0.0-beta.0](https://github.com/smp46/pingvin-share-x/compare/v1.22.1...v2.0.0-beta.0) (2026-08-18)
 
 ### ⚠ BREAKING CHANGES
