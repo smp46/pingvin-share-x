@@ -11,6 +11,7 @@ import { EventEmitter } from "events";
 import * as fs from "fs";
 import { PrismaService } from "src/prisma/prisma.service";
 import { stringToTimespan } from "src/utils/date.util";
+import { TIMESPAN_UNITS, isValidTimespan } from "src/utils/timespan.util";
 import { parse as yamlParse } from "yaml";
 import { I18nContext } from "nestjs-i18n";
 import { YamlConfig } from "../../prisma/seed/config.seed";
@@ -230,12 +231,37 @@ export class ConfigService extends EventEmitter {
           "Zip compression level must be between 0 and 9",
         ),
       },
-      // TODO add validation for timespan type
     ];
 
     const validation = validations.find((validation) => validation.key == key);
     if (validation && !validation.condition(value as any)) {
       throw new BadRequestException(validation.message);
+    }
+
+    // A timespan is skipped by the type check above, since it arrives as a
+    // string whatever it is meant to hold, so this is the only place it gets
+    // looked at. Left unchecked, "banana" parses to a threshold of now, which
+    // makes the retention period zero, and a negative one lands in the future
+    // and selects shares that have not expired.
+    const type = this.configVariables.find(
+      (variable) => `${variable.category}.${variable.name}` === key,
+    )?.type;
+
+    // null means "clear this and fall back to the default", which is a
+    // legitimate thing to send and is not a timespan to check
+    if (type === "timespan" && value !== null) {
+      // -1 is how retention is switched off, and the expiry job checks for it
+      const allowDisabled = key === "share.fileRetentionPeriod";
+
+      if (!isValidTimespan(String(value), allowDisabled)) {
+        throw new BadRequestException(
+          this.t(
+            "config.timespanValidation",
+            "Timespan must be a whole number of {units}",
+            { units: TIMESPAN_UNITS.join(", ") },
+          ),
+        );
+      }
     }
   }
 
