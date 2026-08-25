@@ -104,9 +104,14 @@ for (const r of all("SELECT migration_name FROM _prisma_migrations ORDER BY fini
 
 console.log("");
 console.log("== config sanity ==");
-const watch = ["allowAdminAccessAllShares","fileRetentionPeriod","maxExpiration","allowRegistration"];
-for (const r of all("SELECT category, name, value FROM Config").filter(r => watch.includes(r.name)))
-  console.log("  " + r.category + "." + r.name + " = " + (r.value === null ? "<default>" : r.value));
+// secureCookies is here because it is easy to leave at its default, which is
+// the weaker one: without it the refresh token cookie ships with no Secure
+// flag. The rest are the settings whose value changes what the cleanup jobs
+// and the sign up flow do.
+const watch = ["allowAdminAccessAllShares","fileRetentionPeriod","maxExpiration","allowRegistration","secureCookies","sessionDuration"];
+for (const r of all("SELECT category, name, value, defaultValue FROM Config").filter(r => watch.includes(r.name)))
+  console.log("  " + (r.category + "." + r.name).padEnd(38) + (r.value === null ? "<default>" : r.value)
+    + (r.name === "secureCookies" && String(r.value ?? r.defaultValue) !== "true" ? "   <- no Secure flag on cookies" : ""));
 console.log("  categories: " + all("SELECT DISTINCT category FROM Config ORDER BY category").map(r=>r.category).join(", "));
 db.close();
 ' 2>&1
