@@ -13,13 +13,19 @@ const DAY = 86_400_000;
 const build = () => {
   const deletedFiles: string[] = [];
   const deletedShares: string[] = [];
+  const deletedUsers: string[] = [];
   const errors: string[] = [];
 
   const shares: any[] = [];
+  const users: any[] = [];
   const prisma = {
     share: {
       findMany: async () => shares,
       delete: async ({ where }: any) => void deletedShares.push(where.id),
+    },
+    user: {
+      findMany: async () => users,
+      delete: async ({ where }: any) => void deletedUsers.push(where.id),
     },
   };
   const fileService = {
@@ -40,12 +46,21 @@ const build = () => {
     error: (m: string) => void errors.push(m),
   };
 
-  return { service, shares, deletedFiles, deletedShares, errors };
+  return {
+    service,
+    shares,
+    users,
+    deletedFiles,
+    deletedShares,
+    deletedUsers,
+    errors,
+  };
 };
 
 const share = (id: string, expiration: Date | number, extra = {}) => ({
   id,
-  expiration: typeof expiration === "number" ? new Date(expiration) : expiration,
+  expiration:
+    typeof expiration === "number" ? new Date(expiration) : expiration,
   blockedAt: null,
   ...extra,
 });
@@ -126,11 +141,69 @@ describe("deleteExpiredShares", () => {
   it("stays quiet and does nothing when retention is switched off", async () => {
     const { service, shares, deletedShares, errors } = build();
     shares.push(share("whatever", Date.now() - 30 * DAY));
-    (service as any).configServer = { get: () => ({ value: -1, unit: "days" }) };
+    (service as any).configServer = {
+      get: () => ({ value: -1, unit: "days" }),
+    };
 
     await service.deleteExpiredShares();
 
     expect(deletedShares).toEqual([]);
     expect(errors).toEqual([]);
+  });
+});
+
+const HOUR = 3_600_000;
+
+const unactivated = (id: string, createdAt: Date | number, extra = {}) => ({
+  id,
+  isActivated: false,
+  createdAt: typeof createdAt === "number" ? new Date(createdAt) : createdAt,
+  shares: [],
+  ...extra,
+});
+
+// The same backstop as the share jobs, on the one that deletes accounts and
+// everything they uploaded. It was left without one when the others got it.
+describe("deleteUnactivatedUsers", () => {
+  it("deletes an account that was never activated and has gone cold", async () => {
+    const { service, users, deletedUsers } = build();
+    users.push(unactivated("stale", Date.now() - 48 * HOUR));
+
+    await service.deleteUnactivatedUsers();
+
+    expect(deletedUsers).toEqual(["stale"]);
+  });
+
+  it("deletes nothing when the query returns an account inside the window", async () => {
+    const { service, users, deletedUsers, errors } = build();
+    users.push(unactivated("stale", Date.now() - 48 * HOUR));
+    users.push(unactivated("fresh", Date.now() - 1 * HOUR));
+
+    await service.deleteUnactivatedUsers();
+
+    expect(deletedUsers).toEqual([]);
+    expect(errors[0]).toContain("fresh");
+  });
+
+  it("deletes nothing when the query returns an activated account", async () => {
+    const { service, users, deletedUsers, errors } = build();
+    users.push(
+      unactivated("active", Date.now() - 48 * HOUR, { isActivated: true }),
+    );
+
+    await service.deleteUnactivatedUsers();
+
+    expect(deletedUsers).toEqual([]);
+    expect(errors[0]).toContain("active");
+  });
+
+  it("deletes nothing when a created date is not a usable one", async () => {
+    const { service, users, deletedUsers, errors } = build();
+    users.push(unactivated("unreadable", new Date(NaN)));
+
+    await service.deleteUnactivatedUsers();
+
+    expect(deletedUsers).toEqual([]);
+    expect(errors[0]).toContain("unreadable");
   });
 });
