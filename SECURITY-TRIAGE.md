@@ -47,6 +47,18 @@ corrected is more useful than a tidy list.
 | --- | --- | --- |
 | `js/clear-text-storage-of-sensitive-data` | 1 | The refresh token cookie is `httpOnly` and `sameSite: strict`, but `secure` follows `security.secureCookies`, which defaults to `false`. That default is worth changing per instance rather than in code: flipping it here would break every deployment served over plain HTTP on a LAN, which is a legitimate way to run this. Kept open as a standing reminder that the default is the weaker one. See the note at the end of this file. |
 
+## A dismissal is pinned to a line
+
+Dismissing an alert dismisses that instance of it. Editing the code around it
+moves the line, code scanning raises it again as new, and the pull request goes
+red on a finding that was already decided.
+
+That happened to the `js/path-injection` alert in `clamscan.service.ts` the
+first time that function was touched after this file was written. The answer is
+to dismiss it again with the same reasoning, which is cheap because the
+reasoning is written down here rather than being reconstructed each time. It is
+not a sign the decision was wrong.
+
 ## Dependency alerts
 
 | package | count | why it is still open |
