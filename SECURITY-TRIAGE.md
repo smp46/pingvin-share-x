@@ -41,11 +41,33 @@ corrected is more useful than a tidy list.
 | --- | --- | --- |
 | `js/user-controlled-bypass` | 1 | `fileSecurity.guard.ts` lets an administrator reach any share when `security.allowAdminAccessAllShares` is on. The value is administrator-set rather than caller-supplied, and the branch still requires `user?.isAdmin`. The jwt strategy loads the user from the database on every request instead of trusting a claim in the token, so an account that loses admin loses this at the same moment. |
 
-### Left open on purpose
+### Corrected: this was read wrongly the first time
 
-| rule | count | why |
-| --- | --- | --- |
-| `js/clear-text-storage-of-sensitive-data` | 1 | The refresh token cookie is `httpOnly` and `sameSite: strict`, but `secure` follows `security.secureCookies`, which defaults to `false`. That default is worth changing per instance rather than in code: flipping it here would break every deployment served over plain HTTP on a LAN, which is a legitimate way to run this. Kept open as a standing reminder that the default is the weaker one. See the note at the end of this file. |
+`js/clear-text-storage-of-sensitive-data`, one alert, on the `refresh_token`
+cookie in `auth.service.ts`.
+
+It was first recorded here as pointing at `security.secureCookies` defaulting to
+`false`, and left open on that basis. **That is not what the alert says.** The
+message is:
+
+> This stores sensitive data returned by a call to `updatePassword` as clear text.
+
+It is about taint, not about the `Secure` flag. And followed through, it does
+not hold:
+
+- the cookie holds `RefreshToken.token`, which the schema generates as
+  `@unique @default(uuid())`, so the value is made by the database and owes
+  nothing to the password
+- every use of a password in `auth.service.ts` is `argon.hash` or
+  `argon.verify`, and no other path reaches a cookie
+- the taint follows `updatePassword`'s **return value** only because its
+  **parameters** are sensitive, which is an artifact of how the query tracks
+  flow rather than a fact about the data
+
+Dismissed as a false positive.
+
+The `secureCookies` observation is still worth acting on, it just was not this
+alert. It is at the end of this file on its own.
 
 ## A dismissal is pinned to a line
 
@@ -73,3 +95,8 @@ Not an alert, but it came out of the same pass and is worth stating somewhere:
 without the `Secure` flag unless an administrator turns it on. HSTS covers the
 practical case on a site that sets it, but there is no reason to rely on that.
 Turn it on for any instance served over HTTPS.
+
+Not changed in code: flipping the default would break every deployment served
+over plain HTTP on a LAN, which is a legitimate way to run this, and would
+change behaviour for every existing instance that never set the value. It is an
+operator decision, which is why it is written here rather than fixed.
