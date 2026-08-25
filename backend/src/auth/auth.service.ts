@@ -159,7 +159,6 @@ export class AuthService {
   }
 
   async generateToken(user: User, oauth?: { idToken?: string }) {
-    // TODO: Make all old loginTokens invalid when a new one is created
     // Check if the user has TOTP enabled
     if (user.totpVerified && !(oauth && this.config.get("oauth.ignoreTotp"))) {
       const loginToken = await this.createLoginToken(user.id);
@@ -423,6 +422,20 @@ export class AuthService {
   }
 
   async createLoginToken(userId: string) {
+    // Starting a new sign in supersedes any earlier one the same account left
+    // unfinished, so those tokens stop working here rather than lingering for
+    // the rest of their five minutes. It matters because this token travels in
+    // the url, /auth/totp/<token>, which puts it in browser history, referer
+    // headers and every access log along the way. Someone mistyping their
+    // code three times used to leave three of them usable.
+    //
+    // Marked used rather than deleted: that is the state the totp check
+    // already rejects, and the hourly cleanup removes them once they expire.
+    await this.prisma.loginToken.updateMany({
+      where: { userId, used: false },
+      data: { used: true },
+    });
+
     const loginToken = (
       await this.prisma.loginToken.create({
         data: { userId, expiresAt: moment().add(5, "minutes").toDate() },

@@ -37,12 +37,10 @@ beforeAll(async () => {
   await prisma.$connect();
 });
 
+// removing the shared database file is globalTeardown's job, not this
+// spec's: doing it here broke whichever spec jest happened to schedule next
 afterAll(async () => {
   await prisma.$disconnect();
-  for (const suffix of ["", "-journal"]) {
-    const f = `${DB_PATH}${suffix}`;
-    if (fs.existsSync(f)) fs.unlinkSync(f);
-  }
 });
 
 describe("schema built from migrations", () => {
