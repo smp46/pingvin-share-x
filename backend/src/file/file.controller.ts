@@ -12,7 +12,7 @@ import {
   StreamableFile,
   UseGuards,
 } from "@nestjs/common";
-import { SkipThrottle } from "@nestjs/throttler";
+import { SkipThrottle, Throttle } from "@nestjs/throttler";
 import * as contentDisposition from "content-disposition";
 import { Request, Response } from "express";
 import { CreateShareGuard } from "src/share/guard/createShare.guard";
@@ -140,6 +140,12 @@ export class FileController {
     return new StreamableFile(zipStream);
   }
 
+  @Throttle({
+    default: {
+      limit: 1200,
+      ttl: 60 * 1000,
+    },
+  })
   @Get(":fileId")
   @UseGuards(FileSecurityGuard)
   async getFile(
