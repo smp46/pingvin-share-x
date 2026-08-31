@@ -19,6 +19,10 @@ model User {
   ldapDN   String? @unique
   shareSizeLimit String?
   storageQuotaLimit String?
+  allowShare Boolean @default(true)
+  allowCreateReverseShares Boolean @default(true)
+  maxShares Int?
+  maxReverseShares Int?
 
   shares              Share[]
   refreshTokens       RefreshToken[]
