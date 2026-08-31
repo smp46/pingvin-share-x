@@ -155,12 +155,16 @@ export class FileService {
     );
   }
 
-  async get(shareId: string, fileId: string): Promise<File> {
+  async get(
+    shareId: string,
+    fileId: string,
+    range?: { start: number; end?: number } | string,
+  ): Promise<File> {
     const share = await this.prisma.share.findFirst({
       where: { id: shareId },
     });
-    const storageService = this.getStorageService(share.storageProvider);
-    return storageService.get(shareId, fileId);
+    const storageService = this.getStorageService(share?.storageProvider);
+    return storageService.get(shareId, fileId, range);
   }
 
   async remove(shareId: string, fileId: string) {
@@ -279,5 +283,7 @@ export interface File {
     name: string;
     shareId: string;
   };
-  file: Readable;
+  file?: Readable;
+  range?: { start: number; end: number };
+  isRangeNotSatisfiable?: boolean;
 }
