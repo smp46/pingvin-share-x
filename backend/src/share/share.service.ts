@@ -46,6 +46,32 @@ export class ShareService {
       await this.reverseShareService.getByToken(reverseShareToken);
     const quotaOwner = reverseShare ? reverseShare.creator : user;
 
+    if (!reverseShare && user) {
+      if (user.allowShare === false) {
+        throw new ForbiddenException(this.i18n.t("share.notAllowedToShare"));
+      }
+
+      if (user.maxShares != null && user.maxShares > 0) {
+        const activeSharesCount = await this.prisma.share.count({
+          where: {
+            creatorId: user.id,
+            uploadLocked: true,
+            OR: [
+              { expiration: { gt: new Date() } },
+              { expiration: { equals: moment(0).toDate() } },
+            ],
+          },
+        });
+        if (activeSharesCount >= user.maxShares) {
+          throw new BadRequestException(
+            this.i18n.t("share.maxSharesExceeded", {
+              args: { max: user.maxShares },
+            }),
+          );
+        }
+      }
+    }
+
     if (share.size) {
       const systemInfo = await this.systemService.getSystemInfo();
       if (systemInfo && systemInfo.total - systemInfo.used < share.size) {

@@ -14,6 +14,22 @@ export class CreateUserDTO extends UserDTO {
   @IsOptional()
   password: string;
 
+  @Allow()
+  @IsOptional()
+  allowShare: boolean;
+
+  @Allow()
+  @IsOptional()
+  allowCreateReverseShares: boolean;
+
+  @Allow()
+  @IsOptional()
+  maxShares?: number;
+
+  @Allow()
+  @IsOptional()
+  maxReverseShares?: number;
+
   from(partial: Partial<CreateUserDTO>) {
     return plainToClass(CreateUserDTO, partial, {
       excludeExtraneousValues: true,

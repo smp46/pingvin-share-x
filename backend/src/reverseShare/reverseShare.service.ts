@@ -1,4 +1,8 @@
-import { BadRequestException, Injectable } from "@nestjs/common";
+import {
+  BadRequestException,
+  ForbiddenException,
+  Injectable,
+} from "@nestjs/common";
 import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 import * as moment from "moment";
 import { I18nService } from "nestjs-i18n";
@@ -31,6 +35,29 @@ export class ReverseShareService {
     const creator = await this.prisma.user.findUnique({
       where: { id: creatorId },
     });
+    if (!creator) throw new BadRequestException(this.i18n.t("auth.userNotFound"));
+
+    if (creator.allowCreateReverseShares === false) {
+      throw new ForbiddenException(
+        this.i18n.t("reverseShare.notAllowedToCreate"),
+      );
+    }
+
+    if (creator.maxReverseShares != null && creator.maxReverseShares > 0) {
+      const activeReverseSharesCount = await this.prisma.reverseShare.count({
+        where: {
+          creatorId,
+          shareExpiration: { gt: new Date() },
+        },
+      });
+      if (activeReverseSharesCount >= creator.maxReverseShares) {
+        throw new BadRequestException(
+          this.i18n.t("reverseShare.maxReverseSharesExceeded", {
+            args: { max: creator.maxReverseShares },
+          }),
+        );
+      }
+    }
 
     const parsedExpiration = parseRelativeDateToAbsolute(data.shareExpiration);
     const maxExpiration = this.config.get("share.maxExpiration");
