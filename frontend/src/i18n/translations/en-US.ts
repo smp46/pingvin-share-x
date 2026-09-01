@@ -213,6 +213,8 @@ export default {
   "account.reverseShares.title.empty": "It's empty here 👀",
   "account.reverseShares.description.empty":
     "You don't have any reverse shares.",
+  "account.reverseShares.description.not-allowed":
+    "Your account does not have permission to create reverse shares.",
 
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Create reverse share",
@@ -349,6 +351,9 @@ export default {
   "upload.reverse-share.error.invalid.title": "Invalid reverse share link",
   "upload.reverse-share.error.invalid.description":
     "This link has no remaining uses or is invalid.",
+  "upload.error.not-allowed.title": "Share creation not permitted",
+  "upload.error.not-allowed.description":
+    "Your account does not have permission to upload or create shares.",
 
   // Dropzone.tsx
   "upload.dropzone.title": "Upload files",
