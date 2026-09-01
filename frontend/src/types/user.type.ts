@@ -9,6 +9,10 @@ type User = {
   hasPassword: boolean;
   shareSizeLimit?: string;
   storageQuotaLimit?: string;
+  allowShare?: boolean;
+  allowCreateReverseShares?: boolean;
+  maxShares?: number | null;
+  maxReverseShares?: number | null;
 };
 
 export type CreateUser = {
@@ -18,6 +22,10 @@ export type CreateUser = {
   isAdmin?: boolean;
   shareSizeLimit?: string | null;
   storageQuotaLimit?: string | null;
+  allowShare?: boolean;
+  allowCreateReverseShares?: boolean;
+  maxShares?: number | null;
+  maxReverseShares?: number | null;
 };
 
 export type UpdateUser = {
@@ -28,6 +36,10 @@ export type UpdateUser = {
   isActivated?: boolean;
   shareSizeLimit?: string | null;
   storageQuotaLimit?: string | null;
+  allowShare?: boolean;
+  allowCreateReverseShares?: boolean;
+  maxShares?: number | null;
+  maxReverseShares?: number | null;
 };
 
 export type UpdateCurrentUser = {
