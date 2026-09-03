@@ -16,6 +16,7 @@ import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { TbEdit, TbPlusMinus } from "react-icons/tb";
 import Meta from "../../../components/Meta";
+import AnonymousShareWarning from "../../../components/share/AnonymousShareWarning";
 import DownloadAllButton from "../../../components/share/DownloadAllButton";
 import FileList from "../../../components/share/FileList";
 import showEnterPasswordModal from "../../../components/share/showEnterPasswordModal";
@@ -51,6 +52,12 @@ const Share = ({ shareId }: { shareId: string }) => {
   const isOwnerOrAdmin =
     !!user && !!share && (share.creator?.id === user.id || user.isAdmin);
   const recipientId = getQueryString(router.query.recipient);
+
+  const isAnonymousShare = !!share && !share.creator;
+  const showAnonymousWarning =
+    isAnonymousShare &&
+    config.get("share.warnAnonymousShares") &&
+    (!user || config.get("share.warnAnonymousSharesForLoggedInUsers"));
 
   const handleEditClick = async () => {
     try {
@@ -194,6 +201,8 @@ const Share = ({ shareId }: { shareId: string }) => {
         description={t("share.description")}
       />
 
+      {showAnonymousWarning && <AnonymousShareWarning />}
+
       <Group position="apart" mb="lg">
         <Box style={{ maxWidth: "70%" }}>
           <Title order={3}>{share?.name || share?.id}</Title>
@@ -240,7 +249,11 @@ const Share = ({ shareId }: { shareId: string }) => {
             </HoverTip>
           )}
           {share?.files.length > 1 && (
-            <DownloadAllButton shareId={shareId} recipientId={recipientId} />
+            <DownloadAllButton
+              shareId={shareId}
+              recipientId={recipientId}
+              warnAnonymous={showAnonymousWarning}
+            />
           )}
         </Group>
       </Group>
@@ -251,6 +264,7 @@ const Share = ({ shareId }: { shareId: string }) => {
         share={share!}
         isLoading={!share}
         recipientId={recipientId}
+        warnAnonymous={showAnonymousWarning}
       />
     </>
   );

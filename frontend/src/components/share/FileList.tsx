@@ -21,6 +21,7 @@ import { byteToHumanSizeString } from "../../utils/fileSize.util";
 import toast from "../../utils/toast.util";
 import TableSortIcon, { TableSort } from "../core/SortIcon";
 import showFilePreviewModal from "./modals/showFilePreviewModal";
+import showAnonymousDownloadWarningModal from "./showAnonymousDownloadWarningModal";
 import { HoverTip } from "../core/HoverTip";
 import api from "../../services/api.service";
 
@@ -43,12 +44,14 @@ const FileList = ({
   share,
   isLoading,
   recipientId,
+  warnAnonymous,
 }: {
   files?: FileMetaData[];
   setShare: Dispatch<SetStateAction<Share | undefined>>;
   share: Share;
   isLoading: boolean;
   recipientId?: string;
+  warnAnonymous?: boolean;
 }) => {
   const clipboard = useClipboard();
   const config = useConfig();
@@ -197,11 +200,20 @@ const FileList = ({
                           variant="light"
                           size={25}
                           onClick={async () => {
-                            await shareService.downloadFile(
-                              share.id,
-                              file.id,
-                              recipientId,
-                            );
+                            const download = () =>
+                              shareService.downloadFile(
+                                share.id,
+                                file.id,
+                                recipientId,
+                              );
+                            if (warnAnonymous) {
+                              showAnonymousDownloadWarningModal(
+                                modals,
+                                download,
+                              );
+                            } else {
+                              await download();
+                            }
                           }}
                         >
                           <TbDownload />

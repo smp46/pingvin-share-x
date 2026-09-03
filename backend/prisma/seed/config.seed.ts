@@ -157,6 +157,16 @@ export const configVariables = {
       defaultValue: "false",
       secret: false,
     },
+    warnAnonymousShares: {
+      type: "boolean",
+      defaultValue: "true",
+      secret: false,
+    },
+    warnAnonymousSharesForLoggedInUsers: {
+      type: "boolean",
+      defaultValue: "true",
+      secret: false,
+    },
     maxExpiration: {
       type: "timespan",
       defaultValue: "0 days",

@@ -477,6 +477,9 @@ export default {
   "share.fileCount":
     "{count, plural, =1 {# file} other {# files}} · {size} (zip file may be smaller due to compression)",
   "share.copy-text-contents": "Copy file contents to clipboard",
+  "share.anonymous-warning.banner.title": "Anonymous share",
+  "share.anonymous-warning.banner.description":
+    "This share was created without a logged-in account. Anyone could have uploaded these files — treat and open them with the same caution you'd use for files from the open internet.",
   "share.error.visitor-limit-exceeded.title": "Visitor limit exceeded",
   "share.error.visitor-limit-exceeded.description":
     "The visitor limit from this share has been exceeded.",
@@ -497,6 +500,13 @@ export default {
     "Please enter the password to access this share.",
   "share.modal.password": "Password",
   "share.modal.error.invalid-password": "Invalid password",
+
+  "share.modal.anonymous-warning.title": "This share is anonymous",
+  "share.modal.anonymous-warning.description":
+    "This file comes from an anonymous share — anyone could have uploaded it here without identity verification. Treat it with the same caution as files from the open internet: don't use it for financial or accounting purposes, and don't run it as code.",
+  "share.modal.anonymous-warning.button.countdown":
+    "Download in {seconds}s",
+  "share.modal.anonymous-warning.button.ready": "Download",
 
   "share.button.download-all": "Download all",
   "share.notify.download-all-preparing":
@@ -731,6 +741,13 @@ export default {
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description":
     "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
+  "admin.config.share.warn-anonymous-shares": "Warn about anonymous shares",
+  "admin.config.share.warn-anonymous-shares.description":
+    "Show a warning to visitors when a share was created without a logged-in account, and require a short delay before downloading its files.",
+  "admin.config.share.warn-anonymous-shares-for-logged-in-users":
+    "Also warn logged-in users",
+  "admin.config.share.warn-anonymous-shares-for-logged-in-users.description":
+    "Show the anonymous share warning to logged-in users too, not just anonymous visitors. Requires the setting above to be enabled.",
   "admin.config.smtp.enabled": "Enable",
   "admin.config.smtp.enabled.description":
     "Whether SMTP is enabled. Only set this to true if you entered the host, port, email, user and password of your SMTP server.",

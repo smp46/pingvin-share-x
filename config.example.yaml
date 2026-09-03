@@ -59,6 +59,10 @@ share:
   autoOpenShareModal: "false"
   #Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.
   reverseShareSimpleOnly: "false"
+  #Show a warning on shares that were created without a logged-in user, so visitors know the files were not vetted by a known account.
+  warnAnonymousShares: "true"
+  #When the anonymous share warning is enabled, also show it to logged-in visitors instead of only anonymous ones.
+  warnAnonymousSharesForLoggedInUsers: "true"
   #Maximum share expiration. Set to 0 to allow unlimited expiration.
   maxExpiration: 0 days
   #The default expiration time selected when creating a new share.

@@ -76,6 +76,11 @@ const AdminConfigInput = ({
   const shouldShowPrimaryColorOverride =
     getEffectiveConfigValue("appearance.themePrimaryColor") === "custom";
 
+  const isWarnAnonymousLoggedInConfig =
+    configVariable.key === "share.warnAnonymousSharesForLoggedInUsers";
+  const isWarnAnonymousSharesEnabled =
+    getEffectiveConfigValue("share.warnAnonymousShares") === "true";
+
   const form = useForm({
     initialValues: {
       stringValue: configVariable.value ?? configVariable.defaultValue,
@@ -334,8 +339,23 @@ const AdminConfigInput = ({
             />
           </>
         )}
+      {configVariable.type == "boolean" && isWarnAnonymousLoggedInConfig && (
+        <>
+          <Switch
+            disabled={
+              !configVariable.allowEdit || !isWarnAnonymousSharesEnabled
+            }
+            {...form.getInputProps("booleanValue", { type: "checkbox" })}
+            onChange={(e) => onValueChange(configVariable, e.target.checked)}
+          />
+        </>
+      )}
       {configVariable.type == "boolean" &&
-        !(isEmailShareConfig || isEmailVerificationConfig) && (
+        !(
+          isEmailShareConfig ||
+          isEmailVerificationConfig ||
+          isWarnAnonymousLoggedInConfig
+        ) && (
           <>
             <Switch
               disabled={!configVariable.allowEdit}

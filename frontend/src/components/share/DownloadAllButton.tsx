@@ -1,19 +1,24 @@
 import { Button } from "@mantine/core";
+import { useModals } from "@mantine/modals";
 import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import useTranslate from "../../hooks/useTranslate.hook";
 import shareService from "../../services/share.service";
 import toast from "../../utils/toast.util";
+import showAnonymousDownloadWarningModal from "./showAnonymousDownloadWarningModal";
 
 const DownloadAllButton = ({
   shareId,
   recipientId,
+  warnAnonymous,
 }: {
   shareId: string;
   recipientId?: string;
+  warnAnonymous?: boolean;
 }) => {
   const [isZipReady, setIsZipReady] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const modals = useModals();
   const t = useTranslate();
 
   const downloadAll = async () => {
@@ -51,6 +56,8 @@ const DownloadAllButton = ({
       onClick={() => {
         if (!isZipReady) {
           toast.error(t("share.notify.download-all-preparing"));
+        } else if (warnAnonymous) {
+          showAnonymousDownloadWarningModal(modals, downloadAll);
         } else {
           downloadAll();
         }

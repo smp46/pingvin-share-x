@@ -172,6 +172,18 @@ export function getDefaultConfig(): Config[] {
       type: "number",
     },
     {
+      key: "share.warnAnonymousShares",
+      value: "true",
+      defaultValue: "true",
+      type: "boolean",
+    },
+    {
+      key: "share.warnAnonymousSharesForLoggedInUsers",
+      value: "true",
+      defaultValue: "true",
+      type: "boolean",
+    },
+    {
       key: "smtp.enabled",
       value: "false",
       defaultValue: "false",
