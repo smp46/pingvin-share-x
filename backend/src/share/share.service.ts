@@ -228,6 +228,32 @@ export class ShareService {
         this.i18n.t("share.completionRequiresFile"),
       );
 
+    if (!share.reverseShare && share.creator) {
+      if (share.creator.allowShare === false) {
+        throw new ForbiddenException(this.i18n.t("share.notAllowedToShare"));
+      }
+
+      if (share.creator.maxShares != null && share.creator.maxShares > 0) {
+        const activeSharesCount = await this.prisma.share.count({
+          where: {
+            creatorId: share.creator.id,
+            uploadLocked: true,
+            OR: [
+              { expiration: { gt: new Date() } },
+              { expiration: { equals: moment(0).toDate() } },
+            ],
+          },
+        });
+        if (activeSharesCount >= share.creator.maxShares) {
+          throw new BadRequestException(
+            this.i18n.t("share.maxSharesExceeded", {
+              args: { max: share.creator.maxShares },
+            }),
+          );
+        }
+      }
+    }
+
     // Asynchronously create a zip of all files
     if (share.files.length > 1)
       this.createZip(id).then(() =>
