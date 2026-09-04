@@ -1,5 +1,7 @@
 {
   "notFound": "Pöörd-jagamise tokenit ei leitud",
   "maxShareSizeExceeded": "Maksimaalne jagamise suurus ei tohi olla suurem kui {maxSize} baiti.",
-  "tokenInUse": "Pööratud jagamise luba (token) on juba kasutusel"
+  "tokenInUse": "Pööratud jagamise luba (token) on juba kasutusel",
+  "notAllowedToCreate": "You do not have permission to create reverse shares",
+  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
 }
