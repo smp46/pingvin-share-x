@@ -15,5 +15,7 @@
   "tokenRequired": "Απαιτείται διακριτικό κοινής χρήσης",
   "privateShare": "Μόνο ο δημιουργός της αντίστροφης κοινής χρήσης μπορεί να έχει πρόσβαση σε αυτήν την κοινή χρήση",
   "maxViewsExceeded": "Υπέρβαση μέγιστων προβολών",
-  "restrictedToRecipients": "Αυτή η κοινοποίηση είναι περιορισμένη σε συγκεκριμένους παραλήπτες. Παρακαλώ συνδεθείτε για να αποκτήσετε πρόσβαση."
+  "restrictedToRecipients": "Αυτή η κοινοποίηση είναι περιορισμένη σε συγκεκριμένους παραλήπτες. Παρακαλώ συνδεθείτε για να αποκτήσετε πρόσβαση.",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }

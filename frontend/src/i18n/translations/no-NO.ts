@@ -171,6 +171,7 @@ export default {
   "account.reverseShares.description": "En omvendt deling lar deg generere en unik URL som lar eksterne brukere opprette en deling.",
   "account.reverseShares.title.empty": "Det er tomt her 👀",
   "account.reverseShares.description.empty": "Du har ingen omvendte delinger.",
+  "account.reverseShares.description.not-allowed": "Your account does not have permission to create reverse shares.",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Opprett omvendt deling",
   "account.reverseShares.modal.expiration.label": "Utløp",
@@ -224,9 +225,19 @@ export default {
   "admin.users.table.admin": "Administrator",
   "admin.users.table.storageQuota": "Lagringskvote",
   "admin.users.table.maxShareSize": "Maks delingsstørrelse",
+  "admin.users.edit.tabs.general": "General",
+  "admin.users.edit.tabs.permissions": "Permissions",
   "admin.users.edit.update.title": "Rediger bruker: {username}",
   "admin.users.edit.update.admin-privileges": "Administratorrettigheter",
   "admin.users.edit.update.email-verified": "E-post verifisert",
+  "admin.users.edit.permissions.allow-share": "Allow creating shares",
+  "admin.users.edit.permissions.allow-share.description": "Whether this user is allowed to upload and create new shares",
+  "admin.users.edit.permissions.allow-reverse-share": "Allow creating reverse shares",
+  "admin.users.edit.permissions.allow-reverse-share.description": "Whether this user is allowed to generate reverse share links",
+  "admin.users.edit.permissions.custom-max-shares": "Max active shares limit",
+  "admin.users.edit.permissions.custom-max-shares.description": "Limit the maximum number of concurrent active shares this user can have",
+  "admin.users.edit.permissions.custom-max-reverse-shares": "Max active reverse shares limit",
+  "admin.users.edit.permissions.custom-max-reverse-shares.description": "Limit the maximum number of concurrent active reverse shares this user can have",
   "admin.users.edit.update.custom-share-size-limit": "Egendefinert grense for delingsstørrelse",
   "admin.users.edit.update.custom-share-size-limit.description": "Overstyr den globale opplastingsgrensen for denne brukeren",
   "admin.users.edit.update.custom-storage-quota-limit": "Egendefinert lagringskvote",
@@ -272,6 +283,8 @@ export default {
   "upload.notify.duplicate-skipped": "Hoppet over duplisert fil: {name}",
   "upload.reverse-share.error.invalid.title": "Ugyldig omvendt delingslenke",
   "upload.reverse-share.error.invalid.description": "Denne lenken har ingen gjenværende bruksområder eller er ugyldig.",
+  "upload.error.not-allowed.title": "Share creation not permitted",
+  "upload.error.not-allowed.description": "Your account does not have permission to upload or create shares.",
   // Dropzone.tsx
   "upload.dropzone.title": "Last opp filer",
   "upload.dropzone.description": "Dra og slipp filer eller mapper her for å starte delingen, eller trykk «Ctrl+V» for å laste opp tekstinnhold fra utklippstavlen. Vi godtar bare filer opptil {maxSize} totalt.",
@@ -710,5 +723,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Bekreft og lukk",
   "admin.notice.modal.button.acknowledging": "Bekrefter...",
   "admin.notice.modal.docsLink": "Se dokumentasjon",
-  "admin.notice.modal.globalNoticeFooter": "Merk: Når den er bekræftet, vil denne meldingen bli permanent fjernet for alle administratorer på tvers av alle enheter.",
+  "admin.notice.modal.globalNoticeFooter": "Merk: Når den er bekræftet, vil denne meldingen bli permanent fjernet for alle administratorer på tvers av alle enheter."
 };

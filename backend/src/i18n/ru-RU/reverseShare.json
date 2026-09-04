@@ -1,5 +1,7 @@
 {
   "notFound": "Токен обратной раздачи не найден",
   "maxShareSizeExceeded": "Максимальный размер раздачи не может превышать {maxSize} байт.",
-  "tokenInUse": "Токен обратной раздачи уже используется"
+  "tokenInUse": "Токен обратной раздачи уже используется",
+  "notAllowedToCreate": "You do not have permission to create reverse shares",
+  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
 }

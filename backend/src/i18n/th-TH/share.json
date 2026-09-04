@@ -15,5 +15,7 @@
   "tokenRequired": "จำเป็นต้องใช้โทเค็นการแชร์",
   "privateShare": "เฉพาะผู้สร้างการแชร์ย้อนกลับเท่านั้นที่สามารถเข้าถึงการแชร์นี้ได้",
   "maxViewsExceeded": "เกินจำนวนการเข้าชมสูงสุด",
-  "restrictedToRecipients": "การแชร์นี้จำกัดเฉพาะผู้รับที่ระบุ โปรดเข้าสู่ระบบเพื่อเข้าถึง"
+  "restrictedToRecipients": "การแชร์นี้จำกัดเฉพาะผู้รับที่ระบุ โปรดเข้าสู่ระบบเพื่อเข้าถึง",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }

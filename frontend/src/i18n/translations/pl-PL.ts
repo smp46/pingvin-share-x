@@ -171,6 +171,7 @@ export default {
   "account.reverseShares.description": "Udostępnianie odwrotne pozwala na wygenerowanie unikalnego adresu URL, który umożliwia użytkownikom zewnętrznym na tworzenie udostępniania.",
   "account.reverseShares.title.empty": "Tu jest pusto 👀",
   "account.reverseShares.description.empty": "Nie masz żadnych udostępnień odwrotnych.",
+  "account.reverseShares.description.not-allowed": "Your account does not have permission to create reverse shares.",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Utwórz udostępnianie odwrotne",
   "account.reverseShares.modal.expiration.label": "Wygasanie",
@@ -224,9 +225,19 @@ export default {
   "admin.users.table.admin": "Administrator",
   "admin.users.table.storageQuota": "Limit miejsca na dysku",
   "admin.users.table.maxShareSize": "Maksymalny rozmiar udziału",
+  "admin.users.edit.tabs.general": "General",
+  "admin.users.edit.tabs.permissions": "Permissions",
   "admin.users.edit.update.title": "Edytuj użytkownika: {username}",
   "admin.users.edit.update.admin-privileges": "Uprawnienia administratora",
   "admin.users.edit.update.email-verified": "Adres e-mail zweryfikowany",
+  "admin.users.edit.permissions.allow-share": "Allow creating shares",
+  "admin.users.edit.permissions.allow-share.description": "Whether this user is allowed to upload and create new shares",
+  "admin.users.edit.permissions.allow-reverse-share": "Allow creating reverse shares",
+  "admin.users.edit.permissions.allow-reverse-share.description": "Whether this user is allowed to generate reverse share links",
+  "admin.users.edit.permissions.custom-max-shares": "Max active shares limit",
+  "admin.users.edit.permissions.custom-max-shares.description": "Limit the maximum number of concurrent active shares this user can have",
+  "admin.users.edit.permissions.custom-max-reverse-shares": "Max active reverse shares limit",
+  "admin.users.edit.permissions.custom-max-reverse-shares.description": "Limit the maximum number of concurrent active reverse shares this user can have",
   "admin.users.edit.update.custom-share-size-limit": "Niestandardowy limit rozmiaru udziału",
   "admin.users.edit.update.custom-share-size-limit.description": "Zastąp globalny limit przesyłania dla tego użytkownika",
   "admin.users.edit.update.custom-storage-quota-limit": "Niestandardowy limit miejsca na dysku",
@@ -272,6 +283,8 @@ export default {
   "upload.notify.duplicate-skipped": "Pominięto zduplikowany plik: {name}",
   "upload.reverse-share.error.invalid.title": "Nieprawidłowy link do udostępniania odwrotnego",
   "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
+  "upload.error.not-allowed.title": "Share creation not permitted",
+  "upload.error.not-allowed.description": "Your account does not have permission to upload or create shares.",
   // Dropzone.tsx
   "upload.dropzone.title": "Prześlij pliki",
   "upload.dropzone.description": "Przeciągnij i upuść pliki lub foldery tutaj, aby rozpocząć udostępnianie, lub naciśnij 'Ctrl+V', aby przesłać tekst ze schowka. Akceptujemy łącznie pliki o rozmiarze do {maxSize}.",
@@ -710,5 +723,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Potwierdź i odrzuć",
   "admin.notice.modal.button.acknowledging": "Potwierdzanie...",
   "admin.notice.modal.docsLink": "Zobacz dokumentację",
-  "admin.notice.modal.globalNoticeFooter": "Uwaga: Po potwierdzeniu to powiadomienie zostanie trwale usunięte dla wszystkich administratorów na wszystkich urządzeniach.",
+  "admin.notice.modal.globalNoticeFooter": "Uwaga: Po potwierdzeniu to powiadomienie zostanie trwale usunięte dla wszystkich administratorów na wszystkich urządzeniach."
 };

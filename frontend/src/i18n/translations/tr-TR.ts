@@ -171,6 +171,7 @@ export default {
   "account.reverseShares.description": "Bir karşı paylaşım, dış kullanıcıların bir paylaşım oluşturmasına olanak tanıyan benzersiz bir URL oluşturmanızı sağlar.",
   "account.reverseShares.title.empty": "Buralar boş 👀",
   "account.reverseShares.description.empty": "Henüz hiç karşı paylaşımınız yok.",
+  "account.reverseShares.description.not-allowed": "Your account does not have permission to create reverse shares.",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Karşı Paylaşım Oluştur",
   "account.reverseShares.modal.expiration.label": "Geçerlilik Süresi",
@@ -224,9 +225,19 @@ export default {
   "admin.users.table.admin": "Yönetici",
   "admin.users.table.storageQuota": "Depolama kotası",
   "admin.users.table.maxShareSize": "Maksimum paylaşım boyutu",
+  "admin.users.edit.tabs.general": "General",
+  "admin.users.edit.tabs.permissions": "Permissions",
   "admin.users.edit.update.title": "Kullanıcıyı düzenle: {username}",
   "admin.users.edit.update.admin-privileges": "Yönetici yetkileri",
   "admin.users.edit.update.email-verified": "E-posta doğrulandı",
+  "admin.users.edit.permissions.allow-share": "Allow creating shares",
+  "admin.users.edit.permissions.allow-share.description": "Whether this user is allowed to upload and create new shares",
+  "admin.users.edit.permissions.allow-reverse-share": "Allow creating reverse shares",
+  "admin.users.edit.permissions.allow-reverse-share.description": "Whether this user is allowed to generate reverse share links",
+  "admin.users.edit.permissions.custom-max-shares": "Max active shares limit",
+  "admin.users.edit.permissions.custom-max-shares.description": "Limit the maximum number of concurrent active shares this user can have",
+  "admin.users.edit.permissions.custom-max-reverse-shares": "Max active reverse shares limit",
+  "admin.users.edit.permissions.custom-max-reverse-shares.description": "Limit the maximum number of concurrent active reverse shares this user can have",
   "admin.users.edit.update.custom-share-size-limit": "Özel paylaşım boyutu sınırı",
   "admin.users.edit.update.custom-share-size-limit.description": "Bu kullanıcı için genel yükleme sınırını geçersiz kılın",
   "admin.users.edit.update.custom-storage-quota-limit": "Özel depolama kotası",
@@ -272,6 +283,8 @@ export default {
   "upload.notify.duplicate-skipped": "Yinelenen dosya atlandı: {name}",
   "upload.reverse-share.error.invalid.title": "Geçersiz karşı paylaşım bağlantısı",
   "upload.reverse-share.error.invalid.description": "Bu karşı paylaşımın süresi dolmuş veya geçersiz.",
+  "upload.error.not-allowed.title": "Share creation not permitted",
+  "upload.error.not-allowed.description": "Your account does not have permission to upload or create shares.",
   // Dropzone.tsx
   "upload.dropzone.title": "Dosyaları Yükle",
   "upload.dropzone.description": "Paylaşımınızı başlatmak için dosyaları veya klasörleri buraya sürükleyip bırakın veya panodan metin içeriği yüklemek için 'Ctrl+V' tuşlarına basın. Yalnızca toplam {maxSize} boyutuna kadar olan dosyaları kabul ediyoruz.",
@@ -710,5 +723,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Onayla ve Kapat",
   "admin.notice.modal.button.acknowledging": "Onaylanıyor...",
   "admin.notice.modal.docsLink": "Dokümantasyonu Görüntüle",
-  "admin.notice.modal.globalNoticeFooter": "Not: Onaylandıktan sonra bu bildirim, tüm cihazlardaki tüm yöneticiler için kalıcı olarak kapatılacaktır.",
+  "admin.notice.modal.globalNoticeFooter": "Not: Onaylandıktan sonra bu bildirim, tüm cihazlardaki tüm yöneticiler için kalıcı olarak kapatılacaktır."
 };

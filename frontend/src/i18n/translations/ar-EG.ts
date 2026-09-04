@@ -171,6 +171,7 @@ export default {
   "account.reverseShares.description": "تسمح لك المشاركة العكسية بإنشاء رابط فريد يسمح للمستخدمين الخارجيين بإنشاء مشاركة.",
   "account.reverseShares.title.empty": "المكان خالٍ هنا 👀",
   "account.reverseShares.description.empty": "ليس لديك أي مشاركات عكسية.",
+  "account.reverseShares.description.not-allowed": "Your account does not have permission to create reverse shares.",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "إنشاء مشاركة عكسية",
   "account.reverseShares.modal.expiration.label": "انتهاء الصلاحية",
@@ -224,9 +225,19 @@ export default {
   "admin.users.table.admin": "المدير",
   "admin.users.table.storageQuota": "حصة التخزين",
   "admin.users.table.maxShareSize": "أقصى حجم للمشاركة",
+  "admin.users.edit.tabs.general": "General",
+  "admin.users.edit.tabs.permissions": "Permissions",
   "admin.users.edit.update.title": "تعديل المستخدم: {username}",
   "admin.users.edit.update.admin-privileges": "صلاحيات المدير",
   "admin.users.edit.update.email-verified": "تم تأكيد البريد الإلكتروني",
+  "admin.users.edit.permissions.allow-share": "Allow creating shares",
+  "admin.users.edit.permissions.allow-share.description": "Whether this user is allowed to upload and create new shares",
+  "admin.users.edit.permissions.allow-reverse-share": "Allow creating reverse shares",
+  "admin.users.edit.permissions.allow-reverse-share.description": "Whether this user is allowed to generate reverse share links",
+  "admin.users.edit.permissions.custom-max-shares": "Max active shares limit",
+  "admin.users.edit.permissions.custom-max-shares.description": "Limit the maximum number of concurrent active shares this user can have",
+  "admin.users.edit.permissions.custom-max-reverse-shares": "Max active reverse shares limit",
+  "admin.users.edit.permissions.custom-max-reverse-shares.description": "Limit the maximum number of concurrent active reverse shares this user can have",
   "admin.users.edit.update.custom-share-size-limit": "حد حجم مشاركة مخصص",
   "admin.users.edit.update.custom-share-size-limit.description": "تجاوز حد الرفع العام لهذا المستخدم",
   "admin.users.edit.update.custom-storage-quota-limit": "حصة تخزين مخصصة",
@@ -272,6 +283,8 @@ export default {
   "upload.notify.duplicate-skipped": "تم تخطي الملف المكرر: {name}",
   "upload.reverse-share.error.invalid.title": "رابط مشاركة عكسية غير صالح",
   "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
+  "upload.error.not-allowed.title": "Share creation not permitted",
+  "upload.error.not-allowed.description": "Your account does not have permission to upload or create shares.",
   // Dropzone.tsx
   "upload.dropzone.title": "رفع الملفات",
   "upload.dropzone.description": "اسحب وأفلت الملفات أو المجلدات هنا لبدء مشاركتك أو اضغط على 'Ctrl+V' لرفع محتوى نصي من الحافظة. نحن نقبل الملفات حتى {maxSize} إجمالاً فقط.",
@@ -710,5 +723,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "إقرار وتجاهل",
   "admin.notice.modal.button.acknowledging": "جاري الإقرار...",
   "admin.notice.modal.docsLink": "عرض الوثائق",
-  "admin.notice.modal.globalNoticeFooter": "ملاحظة: بمجرد الإقرار، سيتم إغلاق هذا الإشعار نهائيًا لجميع المسؤولين عبر جميع الأجهزة.",
+  "admin.notice.modal.globalNoticeFooter": "ملاحظة: بمجرد الإقرار، سيتم إغلاق هذا الإشعار نهائيًا لجميع المسؤولين عبر جميع الأجهزة."
 };

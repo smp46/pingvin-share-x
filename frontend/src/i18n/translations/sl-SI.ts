@@ -171,6 +171,7 @@ export default {
   "account.reverseShares.description": "Delitev v obratni smeri vam omogoča, da generirate unikaten URL, ki omogoča zunanjim uporabnikom ustvariti delitev.",
   "account.reverseShares.title.empty": "Prazno je 👀",
   "account.reverseShares.description.empty": "Nimate nobenih delitev v obratni smeri.",
+  "account.reverseShares.description.not-allowed": "Your account does not have permission to create reverse shares.",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Ustvari delitev v obratni smeri",
   "account.reverseShares.modal.expiration.label": "Zapadlost",
@@ -224,9 +225,19 @@ export default {
   "admin.users.table.admin": "Administrator",
   "admin.users.table.storageQuota": "Prostorska kvota",
   "admin.users.table.maxShareSize": "Maksimalna velikost deljenja",
+  "admin.users.edit.tabs.general": "General",
+  "admin.users.edit.tabs.permissions": "Permissions",
   "admin.users.edit.update.title": "Uredi uporabnika: {username}",
   "admin.users.edit.update.admin-privileges": "Administratorski privilegiji",
   "admin.users.edit.update.email-verified": "E-pošta preverjena",
+  "admin.users.edit.permissions.allow-share": "Allow creating shares",
+  "admin.users.edit.permissions.allow-share.description": "Whether this user is allowed to upload and create new shares",
+  "admin.users.edit.permissions.allow-reverse-share": "Allow creating reverse shares",
+  "admin.users.edit.permissions.allow-reverse-share.description": "Whether this user is allowed to generate reverse share links",
+  "admin.users.edit.permissions.custom-max-shares": "Max active shares limit",
+  "admin.users.edit.permissions.custom-max-shares.description": "Limit the maximum number of concurrent active shares this user can have",
+  "admin.users.edit.permissions.custom-max-reverse-shares": "Max active reverse shares limit",
+  "admin.users.edit.permissions.custom-max-reverse-shares.description": "Limit the maximum number of concurrent active reverse shares this user can have",
   "admin.users.edit.update.custom-share-size-limit": "Omejitev velikosti deljenja po meri",
   "admin.users.edit.update.custom-share-size-limit.description": "Preglasi globalno omejitev nalaganja za tega uporabnika",
   "admin.users.edit.update.custom-storage-quota-limit": "Prostorska kvota po meri",
@@ -272,6 +283,8 @@ export default {
   "upload.notify.duplicate-skipped": "Preskočena podvojena datoteka: {name}",
   "upload.reverse-share.error.invalid.title": "Neveljavna povezava za obratno deljenje",
   "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
+  "upload.error.not-allowed.title": "Share creation not permitted",
+  "upload.error.not-allowed.description": "Your account does not have permission to upload or create shares.",
   // Dropzone.tsx
   "upload.dropzone.title": "Naloži datoteke",
   "upload.dropzone.description": "Povlecite in spustite datoteke ali mape sem, da začnete deljenje, ali pritisnite 'Ctrl+V' za nalaganje besedilne vsebine iz odložišča. Sprejemamo le datoteke do skupno {maxSize}.",
@@ -710,5 +723,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Potrdi in zapri",
   "admin.notice.modal.button.acknowledging": "Potrjevanje...",
   "admin.notice.modal.docsLink": "Ogled dokumentacije",
-  "admin.notice.modal.globalNoticeFooter": "Opomba: Ko je obvestilo potrjeno, bo trajno odstranjeno za vse administratorje na vseh napravah.",
+  "admin.notice.modal.globalNoticeFooter": "Opomba: Ko je obvestilo potrjeno, bo trajno odstranjeno za vse administratorje na vseh napravah."
 };

@@ -15,5 +15,7 @@
   "tokenRequired": "需要分享權杖",
   "privateShare": "只有回傳分享建立者才能存取此分享",
   "maxViewsExceeded": "超過最大查看次數",
-  "restrictedToRecipients": "此分享僅限特定收件者存取。請登入以存取。"
+  "restrictedToRecipients": "此分享僅限特定收件者存取。請登入以存取。",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }

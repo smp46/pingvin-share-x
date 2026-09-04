@@ -171,6 +171,7 @@ export default {
   "account.reverseShares.description": "Una compartició inversa us permet generar una URL única que permet als usuaris externs crear una compartició.",
   "account.reverseShares.title.empty": "Això està buit 👀",
   "account.reverseShares.description.empty": "No teniu cap compartició inversa.",
+  "account.reverseShares.description.not-allowed": "Your account does not have permission to create reverse shares.",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Crear compartició inversa",
   "account.reverseShares.modal.expiration.label": "Caducitat",
@@ -224,9 +225,19 @@ export default {
   "admin.users.table.admin": "Administrador",
   "admin.users.table.storageQuota": "Quota d'emmagatzematge",
   "admin.users.table.maxShareSize": "Mida màxima de compartició",
+  "admin.users.edit.tabs.general": "General",
+  "admin.users.edit.tabs.permissions": "Permissions",
   "admin.users.edit.update.title": "Editar usuari: {username}",
   "admin.users.edit.update.admin-privileges": "Privilegis d'administrador",
   "admin.users.edit.update.email-verified": "Correu electrònic verificat",
+  "admin.users.edit.permissions.allow-share": "Allow creating shares",
+  "admin.users.edit.permissions.allow-share.description": "Whether this user is allowed to upload and create new shares",
+  "admin.users.edit.permissions.allow-reverse-share": "Allow creating reverse shares",
+  "admin.users.edit.permissions.allow-reverse-share.description": "Whether this user is allowed to generate reverse share links",
+  "admin.users.edit.permissions.custom-max-shares": "Max active shares limit",
+  "admin.users.edit.permissions.custom-max-shares.description": "Limit the maximum number of concurrent active shares this user can have",
+  "admin.users.edit.permissions.custom-max-reverse-shares": "Max active reverse shares limit",
+  "admin.users.edit.permissions.custom-max-reverse-shares.description": "Limit the maximum number of concurrent active reverse shares this user can have",
   "admin.users.edit.update.custom-share-size-limit": "Límit de mida de compartició personalitzat",
   "admin.users.edit.update.custom-share-size-limit.description": "Substitueix el límit de pujada global per a aquest usuari",
   "admin.users.edit.update.custom-storage-quota-limit": "Quota d'emmagatzematge personalitzada",
@@ -272,6 +283,8 @@ export default {
   "upload.notify.duplicate-skipped": "S'ha omès el fitxer duplicat: {name}",
   "upload.reverse-share.error.invalid.title": "Enllaç de compartició inversa no vàlid",
   "upload.reverse-share.error.invalid.description": "Aquest enllaç no té usos restants o no és vàlid.",
+  "upload.error.not-allowed.title": "Share creation not permitted",
+  "upload.error.not-allowed.description": "Your account does not have permission to upload or create shares.",
   // Dropzone.tsx
   "upload.dropzone.title": "Pujar fitxers",
   "upload.dropzone.description": "Arrossegueu i deixeu anar fitxers o carpetes aquí per començar a compartir o feu 'Ctrl+V' per penjar el contingut de text del porta-retalls. Només acceptem fitxers fins a {maxSize} en total.",
@@ -710,5 +723,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "Reconèixer i descartar",
   "admin.notice.modal.button.acknowledging": "Reconeixent...",
   "admin.notice.modal.docsLink": "Veure la documentació",
-  "admin.notice.modal.globalNoticeFooter": "Nota: Un cop reconegut, aquest avís es descartarà permanentment per a tots els administradors en tots els dispositius.",
+  "admin.notice.modal.globalNoticeFooter": "Nota: Un cop reconegut, aquest avís es descartarà permanentment per a tots els administradors en tots els dispositius."
 };

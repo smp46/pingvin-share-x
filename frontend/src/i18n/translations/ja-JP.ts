@@ -171,6 +171,7 @@ export default {
   "account.reverseShares.description": "ファイルリクエストは、外部のユーザーにファイルをアップロードしてもらえるユニークなURLを生成できます。",
   "account.reverseShares.title.empty": "まだ何もありません 👀",
   "account.reverseShares.description.empty": "ファイルリクエストがありません。",
+  "account.reverseShares.description.not-allowed": "Your account does not have permission to create reverse shares.",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "ファイルリクエストを作成",
   "account.reverseShares.modal.expiration.label": "有効期限",
@@ -224,9 +225,19 @@ export default {
   "admin.users.table.admin": "管理画面",
   "admin.users.table.storageQuota": "ストレージクォータ",
   "admin.users.table.maxShareSize": "最大共有サイズ",
+  "admin.users.edit.tabs.general": "General",
+  "admin.users.edit.tabs.permissions": "Permissions",
   "admin.users.edit.update.title": "ユーザーの編集: {username}",
   "admin.users.edit.update.admin-privileges": "管理者権限",
   "admin.users.edit.update.email-verified": "メール確認済み",
+  "admin.users.edit.permissions.allow-share": "Allow creating shares",
+  "admin.users.edit.permissions.allow-share.description": "Whether this user is allowed to upload and create new shares",
+  "admin.users.edit.permissions.allow-reverse-share": "Allow creating reverse shares",
+  "admin.users.edit.permissions.allow-reverse-share.description": "Whether this user is allowed to generate reverse share links",
+  "admin.users.edit.permissions.custom-max-shares": "Max active shares limit",
+  "admin.users.edit.permissions.custom-max-shares.description": "Limit the maximum number of concurrent active shares this user can have",
+  "admin.users.edit.permissions.custom-max-reverse-shares": "Max active reverse shares limit",
+  "admin.users.edit.permissions.custom-max-reverse-shares.description": "Limit the maximum number of concurrent active reverse shares this user can have",
   "admin.users.edit.update.custom-share-size-limit": "カスタム共有サイズ制限",
   "admin.users.edit.update.custom-share-size-limit.description": "このユーザーのグローバルアップロード制限を上書きします",
   "admin.users.edit.update.custom-storage-quota-limit": "カスタムストレージクォータ",
@@ -272,6 +283,8 @@ export default {
   "upload.notify.duplicate-skipped": "重複ファイルをスキップしました: {name}",
   "upload.reverse-share.error.invalid.title": "無効なファイルリクエストリンク",
   "upload.reverse-share.error.invalid.description": "このファイルリクエストは期限が切れているか無効です。",
+  "upload.error.not-allowed.title": "Share creation not permitted",
+  "upload.error.not-allowed.description": "Your account does not have permission to upload or create shares.",
   // Dropzone.tsx
   "upload.dropzone.title": "ファイルをアップロード",
   "upload.dropzone.description": "ファイルやフォルダをここにドラッグ＆ドロップして共有を開始するか、'Ctrl+V' でクリップボードからテキストコンテンツをアップロードします。合計で最大 {maxSize} までのファイルを受け付けます。",
@@ -710,5 +723,5 @@ export default {
   "admin.notice.modal.button.acknowledge": "確認して閉じる",
   "admin.notice.modal.button.acknowledging": "確認中...",
   "admin.notice.modal.docsLink": "ドキュメントを表示",
-  "admin.notice.modal.globalNoticeFooter": "注: 一度確認すると、この通知はすべてのデバイスのすべての管理者に対して永久に非表示になります。",
+  "admin.notice.modal.globalNoticeFooter": "注: 一度確認すると、この通知はすべてのデバイスのすべての管理者に対して永久に非表示になります。"
 };

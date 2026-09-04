@@ -15,5 +15,7 @@
   "tokenRequired": "Yêu cầu token chia sẻ",
   "privateShare": "Chỉ người tạo chia sẻ ngược mới có thể truy cập chia sẻ này",
   "maxViewsExceeded": "Vượt quá số lượt xem tối đa",
-  "restrictedToRecipients": "Chia sẻ này được giới hạn cho những người nhận cụ thể. Vui lòng đăng nhập để truy cập."
+  "restrictedToRecipients": "Chia sẻ này được giới hạn cho những người nhận cụ thể. Vui lòng đăng nhập để truy cập.",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }

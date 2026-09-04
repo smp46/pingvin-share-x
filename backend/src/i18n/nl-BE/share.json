@@ -15,5 +15,7 @@
   "tokenRequired": "Deeltoken vereist",
   "privateShare": "Alleen de maker van het gedeelde item kan toegang krijgen tot dit gedeelde item",
   "maxViewsExceeded": "Maximaal aantal weergaven overschreden",
-  "restrictedToRecipients": "Deze share is alleen toegankelijk voor specifieke ontvangers. Meld je aan om toegang te krijgen."
+  "restrictedToRecipients": "Deze share is alleen toegankelijk voor specifieke ontvangers. Meld je aan om toegang te krijgen.",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }

@@ -1,5 +1,7 @@
 {
   "notFound": "نشانه اشتراک معکوس پیدا نشد",
   "maxShareSizeExceeded": "حداکثر حجم اشتراک نمی‌تواند بیش‌تر از {maxSize} بایت باشد.",
-  "tokenInUse": "توکن اشتراک معکوس در حال حاضر در حال استفاده است"
+  "tokenInUse": "توکن اشتراک معکوس در حال حاضر در حال استفاده است",
+  "notAllowedToCreate": "You do not have permission to create reverse shares",
+  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
 }
