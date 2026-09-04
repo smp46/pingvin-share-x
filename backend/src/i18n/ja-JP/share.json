@@ -15,5 +15,7 @@
   "tokenRequired": "共有トークンが必要です",
   "privateShare": "リバース共有の作成者のみがこの共有にアクセスできます",
   "maxViewsExceeded": "最大閲覧数を超過しました",
-  "restrictedToRecipients": "この共有は特定の受信者に制限されています。アクセスするにはログインしてください。"
+  "restrictedToRecipients": "この共有は特定の受信者に制限されています。アクセスするにはログインしてください。",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }
