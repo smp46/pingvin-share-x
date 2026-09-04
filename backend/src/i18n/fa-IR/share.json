@@ -15,5 +15,7 @@
   "tokenRequired": "نشانه اشتراک لازم است",
   "privateShare": "فقط سازنده اشتراک معکوس می‌تواند به این اشتراک دسترسی داشته باشد",
   "maxViewsExceeded": "حداکثر بازدید مجاز عبور کرده است",
-  "restrictedToRecipients": "این اشتراک محدود به دریافت‌کنندگان خاصی است. لطفاً برای دسترسی به آن وارد شوید."
+  "restrictedToRecipients": "این اشتراک محدود به دریافت‌کنندگان خاصی است. لطفاً برای دسترسی به آن وارد شوید.",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }
