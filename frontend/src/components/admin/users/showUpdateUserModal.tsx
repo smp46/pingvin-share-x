@@ -13,6 +13,7 @@ import { useForm, yupResolver } from "@mantine/form";
 import { ModalsContextProps } from "@mantine/modals/lib/context";
 import { FormattedMessage } from "react-intl";
 import { TbLock, TbUser } from "react-icons/tb";
+import { useState } from "react";
 import * as yup from "yup";
 import useTranslate, {
   translateOutsideContext,
@@ -55,6 +56,7 @@ const Body = ({
   customPasswordPolicy: CustomPasswordPolicy;
 }) => {
   const t = useTranslate();
+  const [activeTab, setActiveTab] = useState<string | null>("general");
 
   const accountForm = useForm({
     initialValues: {
@@ -86,6 +88,7 @@ const Body = ({
           .min(3, t("common.error.too-short", { length: 3 })),
         maxShares: yup
           .number()
+          .transform((value) => value || 0)
           .test(
             "max-shares-positive",
             "Max active shares must be at least 1",
@@ -96,6 +99,7 @@ const Body = ({
           ),
         maxReverseShares: yup
           .number()
+          .transform((value) => value || 0)
           .test(
             "max-reverse-shares-positive",
             "Max active reverse shares must be at least 1",
@@ -184,9 +188,15 @@ const Body = ({
               modals.closeAll();
             })
             .catch(toast.axiosError);
+        }, (errors) => {
+          if (errors.username || errors.email) {
+            setActiveTab("general");
+          } else {
+            setActiveTab("permissions");
+          }
         })}
       >
-        <Tabs defaultValue="general">
+        <Tabs value={activeTab} onTabChange={setActiveTab}>
           <Tabs.List mb="md">
             <Tabs.Tab value="general" icon={<TbUser size={16} />}>
               <FormattedMessage id="admin.users.edit.tabs.general" />
