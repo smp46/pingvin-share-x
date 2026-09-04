@@ -15,5 +15,7 @@
   "tokenRequired": "Share token required",
   "privateShare": "Only reverse share creator can access this share",
   "maxViewsExceeded": "Maximum views exceeded",
-  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it."
+  "restrictedToRecipients": "This share is restricted to specific recipients. Please log in to access it.",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }

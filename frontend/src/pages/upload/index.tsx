@@ -1,9 +1,11 @@
-import { Button, Group } from "@mantine/core";
+import { Button, Center, Group, Space, Stack, Text, Title } from "@mantine/core";
 import { useModals } from "@mantine/modals";
 import { cleanNotifications } from "@mantine/notifications";
 import { AxiosError } from "axios";
 import pLimit from "p-limit";
+import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { TbShieldLock } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
 import Dropzone from "../../components/upload/Dropzone";
@@ -301,6 +303,29 @@ const Upload = ({
         .catch(() => toast.error(t("upload.notify.generic-error")));
     }
   }, [files]);
+
+  if (user && user.allowShare === false && !isReverseShare) {
+    return (
+      <>
+        <Meta title={t("upload.title")} />
+        <Center style={{ height: "70vh" }}>
+          <Stack align="center" spacing={10}>
+            <TbShieldLock size={48} color="gray" />
+            <Title order={3}>
+              <FormattedMessage id="upload.error.not-allowed.title" />
+            </Title>
+            <Text color="dimmed" align="center">
+              <FormattedMessage id="upload.error.not-allowed.description" />
+            </Text>
+            <Space h={5} />
+            <Button component={Link} href="/account/shares" variant="light">
+              <FormattedMessage id="account.shares.title" />
+            </Button>
+          </Stack>
+        </Center>
+      </>
+    );
+  }
 
   return (
     <>

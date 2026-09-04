@@ -213,6 +213,8 @@ export default {
   "account.reverseShares.title.empty": "It's empty here 👀",
   "account.reverseShares.description.empty":
     "You don't have any reverse shares.",
+  "account.reverseShares.description.not-allowed":
+    "Your account does not have permission to create reverse shares.",
 
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Create reverse share",
@@ -283,9 +285,25 @@ export default {
   "admin.users.table.storageQuota": "Storage quota",
   "admin.users.table.maxShareSize": "Max share size",
 
+  "admin.users.edit.tabs.general": "General",
+  "admin.users.edit.tabs.permissions": "Permissions",
   "admin.users.edit.update.title": "Edit user: {username}",
   "admin.users.edit.update.admin-privileges": "Admin privileges",
   "admin.users.edit.update.email-verified": "Email verified",
+  "admin.users.edit.permissions.allow-share": "Allow creating shares",
+  "admin.users.edit.permissions.allow-share.description":
+    "Whether this user is allowed to upload and create new shares",
+  "admin.users.edit.permissions.allow-reverse-share":
+    "Allow creating reverse shares",
+  "admin.users.edit.permissions.allow-reverse-share.description":
+    "Whether this user is allowed to generate reverse share links",
+  "admin.users.edit.permissions.custom-max-shares": "Max active shares limit",
+  "admin.users.edit.permissions.custom-max-shares.description":
+    "Limit the maximum number of concurrent active shares this user can have",
+  "admin.users.edit.permissions.custom-max-reverse-shares":
+    "Max active reverse shares limit",
+  "admin.users.edit.permissions.custom-max-reverse-shares.description":
+    "Limit the maximum number of concurrent active reverse shares this user can have",
   "admin.users.edit.update.custom-share-size-limit": "Custom share size limit",
   "admin.users.edit.update.custom-share-size-limit.description":
     "Override the global upload limit for this user",
@@ -349,6 +367,9 @@ export default {
   "upload.reverse-share.error.invalid.title": "Invalid reverse share link",
   "upload.reverse-share.error.invalid.description":
     "This link has no remaining uses or is invalid.",
+  "upload.error.not-allowed.title": "Share creation not permitted",
+  "upload.error.not-allowed.description":
+    "Your account does not have permission to upload or create shares.",
 
   // Dropzone.tsx
   "upload.dropzone.title": "Upload files",
