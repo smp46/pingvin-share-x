@@ -1,5 +1,7 @@
 {
   "notFound": "Omvendt delingstoken ble ikke funnet",
   "maxShareSizeExceeded": "Maksimal delingsstørrelse kan ikke være større enn {maxSize} byte.",
-  "tokenInUse": "Token for omvendt deling er allerede i bruk"
+  "tokenInUse": "Token for omvendt deling er allerede i bruk",
+  "notAllowedToCreate": "You do not have permission to create reverse shares",
+  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
 }
