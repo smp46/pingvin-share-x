@@ -15,5 +15,7 @@
   "tokenRequired": "Žeton za deljenje je obvezen",
   "privateShare": "Samo ustvarjalec obrnjenega deljenja lahko dostopa do tega deljenja",
   "maxViewsExceeded": "Največje število ogledov je preseženo",
-  "restrictedToRecipients": "To deljenje je omejeno na določene prejemnike. Za dostop se prijavite."
+  "restrictedToRecipients": "To deljenje je omejeno na določene prejemnike. Za dostop se prijavite.",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }
