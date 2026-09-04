@@ -15,5 +15,7 @@
   "tokenRequired": "رمز المشاركة مطلوب",
   "privateShare": "يمكن لمنشئ المشاركة العكسية فقط الوصول إلى هذه المشاركة",
   "maxViewsExceeded": "تم تجاوز الحد الأقصى للمشاهدات",
-  "restrictedToRecipients": "هذه المشاركة مقيدة لمستلمين محددين. يرجى تسجيل الدخول للوصول إليها."
+  "restrictedToRecipients": "هذه المشاركة مقيدة لمستلمين محددين. يرجى تسجيل الدخول للوصول إليها.",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }
