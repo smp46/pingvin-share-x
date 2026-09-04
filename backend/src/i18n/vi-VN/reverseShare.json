@@ -1,5 +1,7 @@
 {
   "notFound": "Không tìm thấy token chia sẻ ngược",
   "maxShareSizeExceeded": "Kích thước chia sẻ tối đa không được lớn hơn {maxSize} byte.",
-  "tokenInUse": "Mã token chia sẻ ngược đã được sử dụng"
+  "tokenInUse": "Mã token chia sẻ ngược đã được sử dụng",
+  "notAllowedToCreate": "You do not have permission to create reverse shares",
+  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
 }
