@@ -1,5 +1,7 @@
 {
   "notFound": "Токенът за обратно споделяне не е намерен",
   "maxShareSizeExceeded": "Максималният размер на споделянето не може да бъде по-голям от {maxSize} байта.",
-  "tokenInUse": "Токенът за реверсивно споделяне вече се използва"
+  "tokenInUse": "Токенът за реверсивно споделяне вече се използва",
+  "notAllowedToCreate": "You do not have permission to create reverse shares",
+  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
 }
