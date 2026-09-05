@@ -979,6 +979,8 @@ export default {
   "common.error.exact-length": "Must be exactly {length} characters",
   "common.error.invalid-number": "Must be a number",
   "common.error.field-required": "This field is required",
+  "common.error.name.invalid-chars":
+    "Must only contain letters, spaces, commas, periods, apostrophes, or hyphens",
 
   "common.error.password.lowercase":
     "Password must contain at least one lowercase letter",
