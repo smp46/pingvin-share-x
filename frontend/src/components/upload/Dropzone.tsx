@@ -144,13 +144,26 @@ const Dropzone = ({
   const { classes } = useStyles();
   const openRef = useRef<() => void>();
   const folderInputRef = useRef<HTMLInputElement>(null);
-  const mediaInputRef = useRef<HTMLInputElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [isMounted, setIsMounted] = useState(false);
+  const [isCoarsePointer, setIsCoarsePointer] = useState(false);
+  const [isMac, setIsMac] = useState(false);
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === "dark";
 
   useEffect(() => {
     setIsMounted(true);
+
+    const pointerQuery = window.matchMedia("(pointer: coarse)");
+    const updatePointerType = () => setIsCoarsePointer(pointerQuery.matches);
+
+    setIsMac(/Macintosh|Mac OS X/.test(navigator.userAgent));
+    updatePointerType();
+    pointerQuery.addEventListener("change", updatePointerType);
+
+    return () => {
+      pointerQuery.removeEventListener("change", updatePointerType);
+    };
   }, []);
 
   const isFolderUploadSupported =
@@ -186,7 +199,7 @@ const Dropzone = ({
     event.target.value = "";
   };
 
-  const handleMediaSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const filesList = event.target.files;
     if (!filesList) return;
 
@@ -198,11 +211,10 @@ const Dropzone = ({
     <div className={classes.wrapper}>
       <input
         type="file"
-        ref={mediaInputRef}
+        ref={fileInputRef}
         style={{ display: "none" }}
-        accept="image/*,video/*"
         multiple
-        onChange={handleMediaSelect}
+        onChange={handleFileSelect}
       />
       <input
         type="file"
@@ -237,24 +249,33 @@ const Dropzone = ({
           </Text>
           <Text align="center" size="sm" mt="xs" color="dimmed">
             <FormattedMessage
-              id="upload.dropzone.description"
-              values={{ maxSize: byteToHumanSizeString(maxShareSize) }}
+              id={
+                isCoarsePointer
+                  ? "upload.dropzone.description.mobile"
+                  : "upload.dropzone.description.desktop"
+              }
+              values={{
+                maxSize: byteToHumanSizeString(maxShareSize),
+                shortcut: isMac ? "⌘+V" : "Ctrl+V",
+              }}
             />
           </Text>
         </div>
       </MantineDropzone>
       <Center>
         <Group className={classes.control} spacing="xs">
-          <Button
-            variant={dark ? "filled" : "light"}
-            size="sm"
-            radius="xl"
-            disabled={isUploading}
-            onClick={() => mediaInputRef.current?.click()}
-          >
-            <TbUpload style={{ marginRight: 6 }} />
-            <FormattedMessage id="upload.button.media" />
-          </Button>
+          {isCoarsePointer && (
+            <Button
+              variant={dark ? "filled" : "light"}
+              size="sm"
+              radius="xl"
+              disabled={isUploading}
+              onClick={() => fileInputRef.current?.click()}
+            >
+              <TbUpload style={{ marginRight: 6 }} />
+              <FormattedMessage id="upload.button.files" />
+            </Button>
+          )}
 
           {isFolderUploadSupported && (
             <Button
@@ -265,13 +286,7 @@ const Dropzone = ({
               onClick={() => folderInputRef.current?.click()}
             >
               <TbFolder style={{ marginRight: 6 }} />
-              <FormattedMessage
-                id={
-                  currentFilesSize > 0
-                    ? "upload.button.folder.append"
-                    : "upload.button.folder"
-                }
-              />
+              <FormattedMessage id="upload.button.folder" />
             </Button>
           )}
         </Group>
