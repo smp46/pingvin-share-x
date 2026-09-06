@@ -38,6 +38,11 @@ const useStyles = createStyles((theme) => ({
   control: {
     position: "absolute",
     bottom: -20,
+    left: "50%",
+    transform: "translateX(-50%)",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    width: "100%",
   },
 }));
 
@@ -139,6 +144,7 @@ const Dropzone = ({
   const { classes } = useStyles();
   const openRef = useRef<() => void>();
   const folderInputRef = useRef<HTMLInputElement>(null);
+  const mediaInputRef = useRef<HTMLInputElement>(null);
   const [isMounted, setIsMounted] = useState(false);
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === "dark";
@@ -152,17 +158,13 @@ const Dropzone = ({
     typeof HTMLInputElement !== "undefined" &&
     "webkitdirectory" in HTMLInputElement.prototype;
 
-  const handleFolderSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const filesList = event.target.files;
-    if (!filesList) return;
-    const filesArray = Array.from(filesList) as FileUpload[];
-
-    const files = filesArray.map((newFile) => {
+  const processSelectedFiles = (files: FileUpload[]) => {
+    const preparedFiles = files.map((newFile) => {
       newFile.uploadingProgress = 0;
       return newFile;
     });
 
-    const fileSizeSum = files.reduce((n, { size }) => n + size, 0);
+    const fileSizeSum = preparedFiles.reduce((n, { size }) => n + size, 0);
 
     if (fileSizeSum + currentFilesSize > maxShareSize) {
       toast.error(
@@ -170,15 +172,38 @@ const Dropzone = ({
           maxSize: byteToHumanSizeString(maxShareSize),
         }),
       );
-    } else {
-      onFilesChanged(files);
+      return;
     }
 
+    onFilesChanged(preparedFiles);
+  };
+
+  const handleFolderSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const filesList = event.target.files;
+    if (!filesList) return;
+
+    processSelectedFiles(Array.from(filesList) as FileUpload[]);
+    event.target.value = "";
+  };
+
+  const handleMediaSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const filesList = event.target.files;
+    if (!filesList) return;
+
+    processSelectedFiles(Array.from(filesList) as FileUpload[]);
     event.target.value = "";
   };
 
   return (
     <div className={classes.wrapper}>
+      <input
+        type="file"
+        ref={mediaInputRef}
+        style={{ display: "none" }}
+        accept="image/*,video/*"
+        multiple
+        onChange={handleMediaSelect}
+      />
       <input
         type="file"
         ref={folderInputRef}
@@ -198,21 +223,7 @@ const Dropzone = ({
         openRef={openRef as ForwardedRef<() => void>}
         getFilesFromEvent={getFilesFromEvent}
         onDrop={(files: FileUpload[]) => {
-          const fileSizeSum = files.reduce((n, { size }) => n + size, 0);
-
-          if (fileSizeSum + currentFilesSize > maxShareSize) {
-            toast.error(
-              t("upload.dropzone.notify.file-too-big", {
-                maxSize: byteToHumanSizeString(maxShareSize),
-              }),
-            );
-          } else {
-            files = files.map((newFile) => {
-              newFile.uploadingProgress = 0;
-              return newFile;
-            });
-            onFilesChanged(files);
-          }
+          processSelectedFiles(files);
         }}
         className={classes.dropzone}
         radius="md"
@@ -233,25 +244,37 @@ const Dropzone = ({
         </div>
       </MantineDropzone>
       <Center>
-        {isFolderUploadSupported && (
+        <Group className={classes.control} spacing="xs">
           <Button
-            className={classes.control}
             variant={dark ? "filled" : "light"}
             size="sm"
             radius="xl"
             disabled={isUploading}
-            onClick={() => folderInputRef.current?.click()}
+            onClick={() => mediaInputRef.current?.click()}
           >
-            <TbFolder style={{ marginRight: 6 }} />
-            <FormattedMessage
-              id={
-                currentFilesSize > 0
-                  ? "upload.button.folder.append"
-                  : "upload.button.folder"
-              }
-            />
+            <TbUpload style={{ marginRight: 6 }} />
+            <FormattedMessage id="upload.button.media" />
           </Button>
-        )}
+
+          {isFolderUploadSupported && (
+            <Button
+              variant={dark ? "filled" : "light"}
+              size="sm"
+              radius="xl"
+              disabled={isUploading}
+              onClick={() => folderInputRef.current?.click()}
+            >
+              <TbFolder style={{ marginRight: 6 }} />
+              <FormattedMessage
+                id={
+                  currentFilesSize > 0
+                    ? "upload.button.folder.append"
+                    : "upload.button.folder"
+                }
+              />
+            </Button>
+          )}
+        </Group>
       </Center>
     </div>
   );
