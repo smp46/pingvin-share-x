@@ -274,10 +274,11 @@ export default {
   "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
   // Dropzone.tsx
   "upload.dropzone.title": "Tải lên tệp",
-  "upload.dropzone.description": "Kéo và thả tệp hoặc thư mục vào đây để bắt đầu chia sẻ hoặc 'Ctrl+V' để tải lên nội dung văn bản từ khay nhớ tạm. Chúng tôi chỉ chấp nhận tổng dung lượng tệp tối đa là {maxSize}.",
+  "upload.dropzone.description.mobile": "Chọn tệp hoặc thư mục để bắt đầu chia sẻ. Tổng dung lượng tải lên tối đa: {maxSize}.",
+  "upload.dropzone.description.desktop": "Kéo và thả tệp hoặc thư mục vào đây, hoặc nhấn {shortcut} để tải văn bản từ khay nhớ tạm lên. Tổng dung lượng tải lên tối đa: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Các tệp của bạn vượt quá dung lượng chia sẻ tối đa {maxSize}.",
-  "upload.button.media": "Ảnh và video",
-  "upload.button.folder": "Tải lên thư mục",
+  "upload.button.files": "Chọn tệp",
+  "upload.button.folder": "Chọn thư mục",
   "upload.button.folder.append": "Thêm thư mục",
   "upload.button.add": "Thêm vào tải lên",
   // FileList.tsx

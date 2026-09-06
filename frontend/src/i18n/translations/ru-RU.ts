@@ -274,10 +274,11 @@ export default {
   "upload.reverse-share.error.invalid.description": "Эта обратная доля устарела или является недействительной.",
   // Dropzone.tsx
   "upload.dropzone.title": "Загрузить файлы",
-  "upload.dropzone.description": "Перетащите сюда файлы или папки, для начала загрузки, или нажмите Ctrl+V, чтобы загрузить текстовое содержимое из буфера обмена. Размер всех файлов не должен превышать {maxSize}.",
+  "upload.dropzone.description.mobile": "Выберите файлы или папки, чтобы начать обмен. Максимальный общий размер загрузки: {maxSize}.",
+  "upload.dropzone.description.desktop": "Перетащите сюда файлы или папки либо нажмите {shortcut}, чтобы загрузить текст из буфера обмена. Максимальный общий размер загрузки: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Ваши файлы превышают максимальный размер {maxSize}.",
-  "upload.button.media": "Фото и видео",
-  "upload.button.folder": "Загрузка папки",
+  "upload.button.files": "Выбрать файлы",
+  "upload.button.folder": "Выбрать папку",
   "upload.button.folder.append": "Добавить папку",
   "upload.button.add": "Добавить к загрузке",
   // FileList.tsx

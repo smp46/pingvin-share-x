@@ -274,10 +274,11 @@ export default {
   "upload.reverse-share.error.invalid.description": "Denna omvänd delning har gått ut eller är ogiltig.",
   // Dropzone.tsx
   "upload.dropzone.title": "Ladda upp filer",
-  "upload.dropzone.description": "Dra och släpp filer eller mappar här för att starta din delning eller tryck 'Ctrl+V' för att ladda upp textinnehåll från urklipp. Vi accepterar endast filer upp till totalt {maxSize}.",
+  "upload.dropzone.description.mobile": "Välj filer eller mappar för att starta din delning. Maximal total uppladdningsstorlek: {maxSize}.",
+  "upload.dropzone.description.desktop": "Dra och släpp filer eller mappar här, eller tryck på {shortcut} för att ladda upp text från urklipp. Maximal total uppladdningsstorlek: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Dina filer överskrider den maximala storleken på {maxSize}.",
-  "upload.button.media": "Bilder och videor",
-  "upload.button.folder": "Ladda upp mapp",
+  "upload.button.files": "Välj filer",
+  "upload.button.folder": "Välj mapp",
   "upload.button.folder.append": "Lägg till mapp",
   "upload.button.add": "Lägg till för uppladdning",
   // FileList.tsx

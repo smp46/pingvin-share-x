@@ -274,10 +274,11 @@ export default {
   "upload.reverse-share.error.invalid.description": "Denne lenken har ingen gjenværende bruksområder eller er ugyldig.",
   // Dropzone.tsx
   "upload.dropzone.title": "Last opp filer",
-  "upload.dropzone.description": "Dra og slipp filer eller mapper her for å starte delingen, eller trykk «Ctrl+V» for å laste opp tekstinnhold fra utklippstavlen. Vi godtar bare filer opptil {maxSize} totalt.",
+  "upload.dropzone.description.mobile": "Velg filer eller mapper for å starte delingen. Maksimal total opplastingsstørrelse: {maxSize}.",
+  "upload.dropzone.description.desktop": "Dra og slipp filer eller mapper her, eller trykk {shortcut} for å laste opp tekst fra utklippstavlen. Maksimal total opplastingsstørrelse: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Filene dine overskrider den maksimale delingsstørrelsen på {maxSize}.",
-  "upload.button.media": "Bilder og videoer",
-  "upload.button.folder": "Last opp mappe",
+  "upload.button.files": "Velg filer",
+  "upload.button.folder": "Velg mappe",
   "upload.button.folder.append": "Legg til mappe",
   "upload.button.add": "Legg til i opplasting",
   // FileList.tsx

@@ -274,10 +274,11 @@ export default {
   "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
   // Dropzone.tsx
   "upload.dropzone.title": "Upload filer",
-  "upload.dropzone.description": "Træk og slip filer eller mapper her for at starte din deling, eller tryk på 'Ctrl+V' for at uploade tekstindhold fra udklipsholderen. Vi accepterer kun filer op til i alt {maxSize}.",
+  "upload.dropzone.description.mobile": "Vælg filer eller mapper for at starte din deling. Maksimal samlet uploadstørrelse: {maxSize}.",
+  "upload.dropzone.description.desktop": "Træk og slip filer eller mapper her, eller tryk på {shortcut} for at uploade tekst fra udklipsholderen. Maksimal samlet uploadstørrelse: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Dine filer overskrider den maksimale delingsstørrelse på {maxSize}.",
-  "upload.button.media": "Billeder og videoer",
-  "upload.button.folder": "Upload mappe",
+  "upload.button.files": "Vælg filer",
+  "upload.button.folder": "Vælg mappe",
   "upload.button.folder.append": "Tilføj mappe",
   "upload.button.add": "Tilføj til upload",
   // FileList.tsx

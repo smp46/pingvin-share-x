@@ -274,10 +274,11 @@ export default {
   "upload.reverse-share.error.invalid.description": "See tagasijagamine on aegunud või vigane.",
   // Dropzone.tsx
   "upload.dropzone.title": "Laadi üles failid",
-  "upload.dropzone.description": "Lohista failid või kaustad siia jagamise alustamiseks või kasuta lõikelaualt tekstisisu üleslaadimiseks klahvikombinatsiooni 'Ctrl+V'. Me aktsepteerime faile kogumahus kuni {maxSize}.",
+  "upload.dropzone.description.mobile": "Vali jagamise alustamiseks failid või kaustad. Maksimaalne üleslaadimise kogumaht: {maxSize}.",
+  "upload.dropzone.description.desktop": "Lohista failid või kaustad siia või vajuta {shortcut}, et laadida lõikelaualt üles teksti. Maksimaalne üleslaadimise kogumaht: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Sinu failid ületavad lubatud suuruse {maxSize}.",
-  "upload.button.media": "Fotod ja videod",
-  "upload.button.folder": "Laadi üles kaust",
+  "upload.button.files": "Vali failid",
+  "upload.button.folder": "Vali kaust",
   "upload.button.folder.append": "Lisa kaust",
   "upload.button.add": "Lisa üleslaadimisele",
   // FileList.tsx

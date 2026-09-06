@@ -274,10 +274,11 @@ export default {
   "upload.reverse-share.error.invalid.description": "Ovo obrnuto dijeljenje je isteklo ili je nevažeće.",
   // Dropzone.tsx
   "upload.dropzone.title": "Pošaljite datoteke",
-  "upload.dropzone.description": "Povucite i ispustite datoteke ili mape ovdje da biste započeli dijeljenje ili 'Ctrl+V' za otpremanje tekstualnog sadržaja iz međuspremnika. Prihvaćamo samo datoteke ukupne veličine do {maxSize}.",
+  "upload.dropzone.description.mobile": "Odaberite datoteke ili mape za početak dijeljenja. Maksimalna ukupna veličina prijenosa: {maxSize}.",
+  "upload.dropzone.description.desktop": "Povucite i ispustite datoteke ili mape ovdje ili pritisnite {shortcut} za prijenos teksta iz međuspremnika. Maksimalna ukupna veličina prijenosa: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Vaše datoteke premašuju maksimalnu veličinu dijeljenja od {maxSize}.",
-  "upload.button.media": "Fotografije i videozapisi",
-  "upload.button.folder": "Otpremi mapu",
+  "upload.button.files": "Odaberi datoteke",
+  "upload.button.folder": "Odaberi mapu",
   "upload.button.folder.append": "Dodaj mapu",
   "upload.button.add": "Dodaj u otpremanje",
   // FileList.tsx

@@ -274,10 +274,11 @@ export default {
   "upload.reverse-share.error.invalid.description": "Este enlace de uso compartido inverso ha caducado o no es válido.",
   // Dropzone.tsx
   "upload.dropzone.title": "Subir archivos",
-  "upload.dropzone.description": "Arrastra y suelta archivos o carpetas aquí para iniciar tu compartido o pulsa 'Ctrl+V' para subir contenido de texto desde el portapapeles. Solo aceptamos archivos de hasta {maxSize} en total.",
+  "upload.dropzone.description.mobile": "Elige archivos o carpetas para iniciar tu compartición. Tamaño total máximo de la carga: {maxSize}.",
+  "upload.dropzone.description.desktop": "Arrastra y suelta archivos o carpetas aquí, o pulsa {shortcut} para subir texto desde el portapapeles. Tamaño total máximo de la carga: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Tus archivos exceden el tamaño máximo de {maxSize}.",
-  "upload.button.media": "Fotos y vídeos",
-  "upload.button.folder": "Subir carpeta",
+  "upload.button.files": "Elegir archivos",
+  "upload.button.folder": "Elegir carpeta",
   "upload.button.folder.append": "Añadir carpeta",
   "upload.button.add": "Añadir a la subida",
   // FileList.tsx

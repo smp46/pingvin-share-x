@@ -274,10 +274,11 @@ export default {
   "upload.reverse-share.error.invalid.description": "Este compartilhamento reverso expirou ou é inválido.",
   // Dropzone.tsx
   "upload.dropzone.title": "Carregar arquivos",
-  "upload.dropzone.description": "Arraste e solte arquivos ou pastas aqui para iniciar seu compartilhamento ou 'Ctrl+V' para carregar conteúdo de texto da área de transferência. Aceitamos apenas arquivos até {maxSize} no total.",
+  "upload.dropzone.description.mobile": "Escolha arquivos ou pastas para iniciar seu compartilhamento. Tamanho máximo total do envio: {maxSize}.",
+  "upload.dropzone.description.desktop": "Arraste e solte arquivos ou pastas aqui, ou pressione {shortcut} para enviar texto da área de transferência. Tamanho máximo total do envio: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Seus arquivos excedem o tamanho máximo do compartilhamento {maxSize}.",
-  "upload.button.media": "Fotos e vídeos",
-  "upload.button.folder": "Carregar pasta",
+  "upload.button.files": "Escolher arquivos",
+  "upload.button.folder": "Escolher pasta",
   "upload.button.folder.append": "Anexar pasta",
   "upload.button.add": "Adicionar ao envio",
   // FileList.tsx

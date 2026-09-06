@@ -274,10 +274,11 @@ export default {
   "upload.reverse-share.error.invalid.description": "Toto opačné sdílení vypršelo nebo je neplatné.",
   // Dropzone.tsx
   "upload.dropzone.title": "Nahrát soubory",
-  "upload.dropzone.description": "Přetáhněte sem soubory nebo složky pro zahájení sdílení nebo stiskněte 'Ctrl+V' pro nahrání textového obsahu ze schránky. Přijímáme pouze soubory do celkové velikosti {maxSize}.",
+  "upload.dropzone.description.mobile": "Vyberte soubory nebo složky a začněte sdílet. Maximální celková velikost nahrávání: {maxSize}.",
+  "upload.dropzone.description.desktop": "Přetáhněte sem soubory nebo složky, nebo stiskněte {shortcut} pro nahrání textu ze schránky. Maximální celková velikost nahrávání: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Vaše soubory přesahují maximální velikost {maxSize}.",
-  "upload.button.media": "Fotky a videa",
-  "upload.button.folder": "Nahrát složku",
+  "upload.button.files": "Vybrat soubory",
+  "upload.button.folder": "Vybrat složku",
   "upload.button.folder.append": "Připojit složku",
   "upload.button.add": "Přidat k nahrání",
   // FileList.tsx

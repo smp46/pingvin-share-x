@@ -274,10 +274,11 @@ export default {
   "upload.reverse-share.error.invalid.description": "このファイルリクエストは期限が切れているか無効です。",
   // Dropzone.tsx
   "upload.dropzone.title": "ファイルをアップロード",
-  "upload.dropzone.description": "ファイルやフォルダをここにドラッグ＆ドロップして共有を開始するか、'Ctrl+V' でクリップボードからテキストコンテンツをアップロードします。合計で最大 {maxSize} までのファイルを受け付けます。",
+  "upload.dropzone.description.mobile": "共有を開始するには、ファイルまたはフォルダを選択してください。アップロードの合計上限: {maxSize}。",
+  "upload.dropzone.description.desktop": "ファイルまたはフォルダをここにドラッグ＆ドロップするか、{shortcut} を押してクリップボードのテキストをアップロードします。アップロードの合計上限: {maxSize}。",
   "upload.dropzone.notify.file-too-big": "アップロードしようとしたファイルは、最大ファイルサイズの{maxSize} を超えています。",
-  "upload.button.media": "写真とビデオ",
-  "upload.button.folder": "フォルダをアップロード",
+  "upload.button.files": "ファイルを選択",
+  "upload.button.folder": "フォルダを選択",
   "upload.button.folder.append": "フォルダを追加",
   "upload.button.add": "アップロードに追加",
   // FileList.tsx
