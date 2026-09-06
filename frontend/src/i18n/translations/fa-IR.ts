@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "بارگذاری فایل‌ها",
   "upload.dropzone.description": "فایل‌ها یا پوشه‌ها را برای شروع اشتراک‌گذاری به اینجا بکشید و رها کنید یا برای بارگذاری محتوای متنی از کلیپ‌بورد از 'Ctrl+V' استفاده کنید. ما فقط فایل‌هایی با مجموع حجم حداکثر {maxSize} را می‌پذیریم.",
   "upload.dropzone.notify.file-too-big": "فایل‌های شما از حداکثر اندازه اشتراک {maxSize} تجاوز می‌کنند.",
+  "upload.button.media": "عکس‌ها و ویدیوها",
   "upload.button.folder": "بارگذاری پوشه",
   "upload.button.folder.append": "افزودن پوشه",
   "upload.button.add": "افزودن به بارگذاری",

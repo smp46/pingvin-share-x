@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "رفع الملفات",
   "upload.dropzone.description": "اسحب وأفلت الملفات أو المجلدات هنا لبدء مشاركتك أو اضغط على 'Ctrl+V' لرفع محتوى نصي من الحافظة. نحن نقبل الملفات حتى {maxSize} إجمالاً فقط.",
   "upload.dropzone.notify.file-too-big": "تتجاوز ملفاتك الحجم الأقصى للمشاركة والذي هو {maxSize}.",
+  "upload.button.media": "صور ومقاطع فيديو",
   "upload.button.folder": "رفع مجلد",
   "upload.button.folder.append": "إلحاق مجلد",
   "upload.button.add": "إضافة إلى الرفع",

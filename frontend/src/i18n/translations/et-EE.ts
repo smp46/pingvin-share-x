@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Laadi üles failid",
   "upload.dropzone.description": "Lohista failid või kaustad siia jagamise alustamiseks või kasuta lõikelaualt tekstisisu üleslaadimiseks klahvikombinatsiooni 'Ctrl+V'. Me aktsepteerime faile kogumahus kuni {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Sinu failid ületavad lubatud suuruse {maxSize}.",
+  "upload.button.media": "Fotod ja videod",
   "upload.button.folder": "Laadi üles kaust",
   "upload.button.folder.append": "Lisa kaust",
   "upload.button.add": "Lisa üleslaadimisele",

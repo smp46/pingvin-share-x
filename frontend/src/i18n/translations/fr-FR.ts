@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Téléverser des fichiers",
   "upload.dropzone.description": "Glissez-déposez vos fichiers ou dossiers ici pour commencer le partage ou utilisez « Ctrl+V » pour importer du texte depuis le presse-papiers. Nous acceptons un maximum de {maxSize} fichiers au total.",
   "upload.dropzone.notify.file-too-big": "Vos fichiers dépassent la taille maximale de {maxSize}.",
+  "upload.button.media": "Photos et vidéos",
   "upload.button.folder": "Importer un dossier",
   "upload.button.folder.append": "Ajouter un dossier",
   "upload.button.add": "Ajouter au téléversement",

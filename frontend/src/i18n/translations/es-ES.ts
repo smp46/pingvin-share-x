@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Subir archivos",
   "upload.dropzone.description": "Arrastra y suelta archivos o carpetas aquí para iniciar tu compartido o pulsa 'Ctrl+V' para subir contenido de texto desde el portapapeles. Solo aceptamos archivos de hasta {maxSize} en total.",
   "upload.dropzone.notify.file-too-big": "Tus archivos exceden el tamaño máximo de {maxSize}.",
+  "upload.button.media": "Fotos y vídeos",
   "upload.button.folder": "Subir carpeta",
   "upload.button.folder.append": "Añadir carpeta",
   "upload.button.add": "Añadir a la subida",

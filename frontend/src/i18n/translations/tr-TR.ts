@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Dosyaları Yükle",
   "upload.dropzone.description": "Paylaşımınızı başlatmak için dosyaları veya klasörleri buraya sürükleyip bırakın veya panodan metin içeriği yüklemek için 'Ctrl+V' tuşlarına basın. Yalnızca toplam {maxSize} boyutuna kadar olan dosyaları kabul ediyoruz.",
   "upload.dropzone.notify.file-too-big": "Dosyalarınız maksimum paylaşım boyutu olan {maxSize} değerini aşıyor.",
+  "upload.button.media": "Fotoğraflar ve videolar",
   "upload.button.folder": "Klasör yükle",
   "upload.button.folder.append": "Klasör ekle",
   "upload.button.add": "Yüklemeye ekle",

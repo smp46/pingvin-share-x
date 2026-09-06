@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "上传文件",
   "upload.dropzone.description": "将文件或文件夹拖放到此处开始创建分享，或按“Ctrl+V”上传剪贴板中的文本内容。文件总大小不能超过 {maxSize}。",
   "upload.dropzone.notify.file-too-big": "您的文件超过了最大上传限制 {maxSize}。",
+  "upload.button.media": "照片和视频",
   "upload.button.folder": "上传文件夹",
   "upload.button.folder.append": "追加文件夹",
   "upload.button.add": "添加到上传",

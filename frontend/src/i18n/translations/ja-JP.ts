@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "ファイルをアップロード",
   "upload.dropzone.description": "ファイルやフォルダをここにドラッグ＆ドロップして共有を開始するか、'Ctrl+V' でクリップボードからテキストコンテンツをアップロードします。合計で最大 {maxSize} までのファイルを受け付けます。",
   "upload.dropzone.notify.file-too-big": "アップロードしようとしたファイルは、最大ファイルサイズの{maxSize} を超えています。",
+  "upload.button.media": "写真とビデオ",
   "upload.button.folder": "フォルダをアップロード",
   "upload.button.folder.append": "フォルダを追加",
   "upload.button.add": "アップロードに追加",

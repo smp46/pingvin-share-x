@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Pujar fitxers",
   "upload.dropzone.description": "Arrossegueu i deixeu anar fitxers o carpetes aquí per començar a compartir o feu 'Ctrl+V' per penjar el contingut de text del porta-retalls. Només acceptem fitxers fins a {maxSize} en total.",
   "upload.dropzone.notify.file-too-big": "Els vostres fitxers superen la mida màxima de compartició de {maxSize}.",
+  "upload.button.media": "Fotos i vídeos",
   "upload.button.folder": "Pujar carpeta",
   "upload.button.folder.append": "Afegeix una carpeta",
   "upload.button.add": "Afegeix a la pujada",

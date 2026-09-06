@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Pošalji datoteke",
   "upload.dropzone.description": "Prevucite i ispustite datoteke ili fascikle ovde da započnete deljenje ili pritisnite 'Ctrl+V' za otpremanje tekstualnog sadržaja iz privremene memorije. Prihvatamo samo datoteke do ukupno {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Vaše datoteke premašuju maksimalnu veličinu deljenja od {maxSize}.",
+  "upload.button.media": "Fotografije i video-zapisi",
   "upload.button.folder": "Otpremi fasciklu",
   "upload.button.folder.append": "Dodaj fasciklu",
   "upload.button.add": "Dodaj u otpremanje",

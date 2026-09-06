@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "อัปโหลดไฟล์",
   "upload.dropzone.description": "ลากและวางไฟล์หรือโฟลเดอร์ที่นี่เพื่อเริ่มการแชร์ของคุณ หรือกด 'Ctrl+V' เพื่ออัปโหลดข้อความจากคลิปบอร์ด เรารองรับไฟล์ขนาดรวมสูงสุดไม่เกิน {maxSize}",
   "upload.dropzone.notify.file-too-big": "ไฟล์ของคุณเกินขนาดสูงสุดของการแชร์ {maxSize}",
+  "upload.button.media": "รูปภาพและวิดีโอ",
   "upload.button.folder": "อัปโหลดโฟลเดอร์",
   "upload.button.folder.append": "เพิ่มโฟลเดอร์",
   "upload.button.add": "เพิ่มในการอัปโหลด",

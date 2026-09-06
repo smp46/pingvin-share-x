@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Пошаљи датотеке",
   "upload.dropzone.description": "Превуците и пустите датотеке или фасцикле овде да бисте започели дељење или притисните 'Ctrl+V' да отпремите текстуални садржај из међумеморије. Прихватамо само датотеке до укупно {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Ваше датотеке премашују максималну величину дељења од {maxSize}.",
+  "upload.button.media": "Фотографије и видео-снимци",
   "upload.button.folder": "Отпреми фасциклу",
   "upload.button.folder.append": "Додај фасциклу",
   "upload.button.add": "Додај за отпремање",

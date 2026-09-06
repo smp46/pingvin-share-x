@@ -377,6 +377,7 @@ export default {
     "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
   "upload.dropzone.notify.file-too-big":
     "Your files exceed the maximum share size of {maxSize}.",
+  "upload.button.media": "Photos & Videos",
   "upload.button.folder": "Upload folder",
   "upload.button.folder.append": "Append folder",
   "upload.button.add": "Add to upload",

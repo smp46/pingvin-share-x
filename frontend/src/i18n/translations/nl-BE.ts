@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Bestanden uploaden",
   "upload.dropzone.description": "Sleep bestanden of mappen hierheen om je share te starten, of gebruik Ctrl+V om tekst vanaf het klembord te uploaden. De totale bestandsgrootte mag niet groter zijn dan {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Uw bestanden overschrijden de maximale share-grootte van {maxSize}.",
+  "upload.button.media": "Foto's en video's",
   "upload.button.folder": "Map uploaden",
   "upload.button.folder.append": "Map toevoegen",
   "upload.button.add": "Aan upload toevoegen",

@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Carica File",
   "upload.dropzone.description": "Trascina qui i file o le cartelle per avviare la condivisione oppure 'Ctrl+V' per caricare contenuti di testo dagli appunti. Accettiamo solo file fino a {maxSize} in totale.",
   "upload.dropzone.notify.file-too-big": "I tuoi file superano la dimensione massima di condivisione di {maxSize}.",
+  "upload.button.media": "Foto e video",
   "upload.button.folder": "Carica cartella",
   "upload.button.folder.append": "Aggiungi cartella",
   "upload.button.add": "Aggiungi al caricamento",

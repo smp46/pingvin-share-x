@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Naloži datoteke",
   "upload.dropzone.description": "Povlecite in spustite datoteke ali mape sem, da začnete deljenje, ali pritisnite 'Ctrl+V' za nalaganje besedilne vsebine iz odložišča. Sprejemamo le datoteke do skupno {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Vaše datoteke presegajo največjo dovoljeno velikost {maxSize}.",
+  "upload.button.media": "Fotografije in videoposnetki",
   "upload.button.folder": "Naloži mapo",
   "upload.button.folder.append": "Dodaj mapo",
   "upload.button.add": "Dodaj k nalaganju",

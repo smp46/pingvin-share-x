@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Pilvetä tiedostoja",
   "upload.dropzone.description": "Vedä ja pudota tiedostoja tai kansioita tähän aloittaaksesi jakamisen tai paina 'Ctrl+V' ladataksesi tekstisisältöä leikepöydältä. Hyväksymme tiedostoja yhteensä enintään {maxSize} asti.",
   "upload.dropzone.notify.file-too-big": "Tiedostojen enimmäiskoko ylittää {maxSize} -arvon enimmäismäärän.",
+  "upload.button.media": "Kuvat ja videot",
   "upload.button.folder": "Lataa kansio",
   "upload.button.folder.append": "Lisää kansio",
   "upload.button.add": "Lisää lataukseen",

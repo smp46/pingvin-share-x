@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Upload filer",
   "upload.dropzone.description": "Træk og slip filer eller mapper her for at starte din deling, eller tryk på 'Ctrl+V' for at uploade tekstindhold fra udklipsholderen. Vi accepterer kun filer op til i alt {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Dine filer overskrider den maksimale delingsstørrelse på {maxSize}.",
+  "upload.button.media": "Billeder og videoer",
   "upload.button.folder": "Upload mappe",
   "upload.button.folder.append": "Tilføj mappe",
   "upload.button.add": "Tilføj til upload",

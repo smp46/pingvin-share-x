@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Carregar arquivos",
   "upload.dropzone.description": "Arraste e solte arquivos ou pastas aqui para iniciar seu compartilhamento ou 'Ctrl+V' para carregar conteúdo de texto da área de transferência. Aceitamos apenas arquivos até {maxSize} no total.",
   "upload.dropzone.notify.file-too-big": "Seus arquivos excedem o tamanho máximo do compartilhamento {maxSize}.",
+  "upload.button.media": "Fotos e vídeos",
   "upload.button.folder": "Carregar pasta",
   "upload.button.folder.append": "Anexar pasta",
   "upload.button.add": "Adicionar ao envio",

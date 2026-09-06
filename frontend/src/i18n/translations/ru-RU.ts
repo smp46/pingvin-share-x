@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Загрузить файлы",
   "upload.dropzone.description": "Перетащите сюда файлы или папки, для начала загрузки, или нажмите Ctrl+V, чтобы загрузить текстовое содержимое из буфера обмена. Размер всех файлов не должен превышать {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Ваши файлы превышают максимальный размер {maxSize}.",
+  "upload.button.media": "Фото и видео",
   "upload.button.folder": "Загрузка папки",
   "upload.button.folder.append": "Добавить папку",
   "upload.button.add": "Добавить к загрузке",

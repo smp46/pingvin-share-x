@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Ladda upp filer",
   "upload.dropzone.description": "Dra och släpp filer eller mappar här för att starta din delning eller tryck 'Ctrl+V' för att ladda upp textinnehåll från urklipp. Vi accepterar endast filer upp till totalt {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Dina filer överskrider den maximala storleken på {maxSize}.",
+  "upload.button.media": "Bilder och videor",
   "upload.button.folder": "Ladda upp mapp",
   "upload.button.folder.append": "Lägg till mapp",
   "upload.button.add": "Lägg till för uppladdning",

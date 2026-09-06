@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Prześlij pliki",
   "upload.dropzone.description": "Przeciągnij i upuść pliki lub foldery tutaj, aby rozpocząć udostępnianie, lub naciśnij 'Ctrl+V', aby przesłać tekst ze schowka. Akceptujemy łącznie pliki o rozmiarze do {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Twoje pliki przekraczają maksymalny rozmiar {maxSize}.",
+  "upload.button.media": "Zdjęcia i filmy",
   "upload.button.folder": "Prześlij folder",
   "upload.button.folder.append": "Dołącz folder",
   "upload.button.add": "Dodaj do przesyłania",

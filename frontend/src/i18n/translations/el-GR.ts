@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Μεταφόρτωση αρχείων",
   "upload.dropzone.description": "Σύρετε και αφήστε αρχεία ή φακέλους εδώ για να ξεκινήσετε την κοινοποίησή σας ή πατήστε 'Ctrl+V' για να ανεβάσετε περιεχόμενο κειμένου από το πρόχειρο. Δεχόμαστε μόνο αρχεία έως συνολικά {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Τα αρχεία σας υπερβαίνουν το μέγιστο μέγεθος κοινής χρήσης του {maxSize}.",
+  "upload.button.media": "Φωτογραφίες και βίντεο",
   "upload.button.folder": "Μεταφόρτωση φακέλου",
   "upload.button.folder.append": "Προσάρτηση φακέλου",
   "upload.button.add": "Προσθήκη στη μεταφόρτωση",

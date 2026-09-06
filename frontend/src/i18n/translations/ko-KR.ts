@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "파일 업로드",
   "upload.dropzone.description": "공유를 시작하려면 파일이나 폴더를 여기로 드래그 앤 드롭하거나 클립보드의 텍스트 내용을 업로드하려면 'Ctrl+V'를 누르세요. 총 {maxSize} 이하의 파일만 허용됩니다.",
   "upload.dropzone.notify.file-too-big": "파일이 {maxSize} 의 최대 공유 크기를 초과합니다.",
+  "upload.button.media": "사진 및 동영상",
   "upload.button.folder": "폴더 업로드",
   "upload.button.folder.append": "폴더 추가",
   "upload.button.add": "업로드에 추가",

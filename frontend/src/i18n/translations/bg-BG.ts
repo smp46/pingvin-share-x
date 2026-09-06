@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Качване на файлове",
   "upload.dropzone.description": "Плъзнете и пуснете файлове или папки тук, за да започнете споделянето, или натиснете „Ctrl+V“, за да качите текстово съдържание от клипборда. Общият размер на файловете не може да надвишава {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Вашите файлове надвишават максималния размер за споделяне от {maxSize}.",
+  "upload.button.media": "Снимки и видеоклипове",
   "upload.button.folder": "Качване на папка",
   "upload.button.folder.append": "Добавяне на папка",
   "upload.button.add": "Добавяне към качването",

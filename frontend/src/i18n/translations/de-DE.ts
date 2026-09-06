@@ -276,6 +276,7 @@ export default {
   "upload.dropzone.title": "Dateien hochladen",
   "upload.dropzone.description": "Ziehe Dateien oder Ordner hierher, um deine Freigabe zu starten, oder drücke 'Strg+V', um Textinhalte aus der Zwischenablage hochzuladen. Wir akzeptieren nur Dateien bis insgesamt {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Ihre Dateien überschreiten die maximale Freigabegröße von {maxSize}.",
+  "upload.button.media": "Fotos & Videos",
   "upload.button.folder": "Ordner hochladen",
   "upload.button.folder.append": "Ordner anhängen",
   "upload.button.add": "Zum Upload hinzufügen",
