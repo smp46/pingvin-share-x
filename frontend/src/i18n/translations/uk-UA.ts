@@ -274,11 +274,9 @@ export default {
   "upload.reverse-share.error.invalid.description": "Зворотне завантаження вже закінчилося або недійсне.",
   // Dropzone.tsx
   "upload.dropzone.title": "Завантажити файли",
-  "upload.dropzone.description.mobile": "Виберіть файли або папки, щоб почати поширення. Максимальний загальний розмір завантаження: {maxSize}.",
-  "upload.dropzone.description.desktop": "Перетягніть сюди файли або папки або натисніть {shortcut}, щоб завантажити текст із буфера обміну. Максимальний загальний розмір завантаження: {maxSize}.",
+  "upload.dropzone.description": "Перетягніть файли або папки сюди, щоб почати ділитися ними, або скористайтеся комбінацією «Ctrl+V» для завантаження тексту з буфера обміну. Загальний розмір файлів не повинен перевищувати {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Ваші файли перевищують максимальний розмір у {maxSize}.",
-  "upload.button.files": "Вибрати файли",
-  "upload.button.folder": "Вибрати папку",
+  "upload.button.folder": "Завантажити папку",
   "upload.button.folder.append": "Додати папку",
   "upload.button.add": "Додати до завантаження",
   // FileList.tsx

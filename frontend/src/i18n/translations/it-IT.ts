@@ -274,11 +274,9 @@ export default {
   "upload.reverse-share.error.invalid.description": "Questa condivisione inversa è scaduta o non è valida.",
   // Dropzone.tsx
   "upload.dropzone.title": "Carica File",
-  "upload.dropzone.description.mobile": "Scegli file o cartelle per iniziare la condivisione. Dimensione totale massima del caricamento: {maxSize}.",
-  "upload.dropzone.description.desktop": "Trascina qui file o cartelle, oppure premi {shortcut} per caricare testo dagli appunti. Dimensione totale massima del caricamento: {maxSize}.",
+  "upload.dropzone.description": "Trascina qui i file o le cartelle per avviare la condivisione oppure 'Ctrl+V' per caricare contenuti di testo dagli appunti. Accettiamo solo file fino a {maxSize} in totale.",
   "upload.dropzone.notify.file-too-big": "I tuoi file superano la dimensione massima di condivisione di {maxSize}.",
-  "upload.button.files": "Scegli file",
-  "upload.button.folder": "Scegli cartella",
+  "upload.button.folder": "Carica cartella",
   "upload.button.folder.append": "Aggiungi cartella",
   "upload.button.add": "Aggiungi al caricamento",
   // FileList.tsx

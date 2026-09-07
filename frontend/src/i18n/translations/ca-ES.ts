@@ -274,11 +274,9 @@ export default {
   "upload.reverse-share.error.invalid.description": "Aquest enllaç no té usos restants o no és vàlid.",
   // Dropzone.tsx
   "upload.dropzone.title": "Pujar fitxers",
-  "upload.dropzone.description.mobile": "Trieu fitxers o carpetes per començar a compartir. Mida total màxima de la pujada: {maxSize}.",
-  "upload.dropzone.description.desktop": "Arrossegueu i deixeu anar fitxers o carpetes aquí, o premeu {shortcut} per pujar text des del porta-retalls. Mida total màxima de la pujada: {maxSize}.",
+  "upload.dropzone.description": "Arrossegueu i deixeu anar fitxers o carpetes aquí per començar a compartir o feu 'Ctrl+V' per penjar el contingut de text del porta-retalls. Només acceptem fitxers fins a {maxSize} en total.",
   "upload.dropzone.notify.file-too-big": "Els vostres fitxers superen la mida màxima de compartició de {maxSize}.",
-  "upload.button.files": "Tria fitxers",
-  "upload.button.folder": "Tria una carpeta",
+  "upload.button.folder": "Pujar carpeta",
   "upload.button.folder.append": "Afegeix una carpeta",
   "upload.button.add": "Afegeix a la pujada",
   // FileList.tsx

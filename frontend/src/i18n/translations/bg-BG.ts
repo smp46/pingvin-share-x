@@ -274,11 +274,9 @@ export default {
   "upload.reverse-share.error.invalid.description": "Тази връзка няма оставащи използвания или е невалидна.",
   // Dropzone.tsx
   "upload.dropzone.title": "Качване на файлове",
-  "upload.dropzone.description.mobile": "Изберете файлове или папки, за да започнете споделянето. Максимален общ размер на качването: {maxSize}.",
-  "upload.dropzone.description.desktop": "Плъзнете и пуснете файлове или папки тук или натиснете {shortcut}, за да качите текст от клипборда. Максимален общ размер на качването: {maxSize}.",
+  "upload.dropzone.description": "Плъзнете и пуснете файлове или папки тук, за да започнете споделянето, или натиснете „Ctrl+V“, за да качите текстово съдържание от клипборда. Общият размер на файловете не може да надвишава {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Вашите файлове надвишават максималния размер за споделяне от {maxSize}.",
-  "upload.button.files": "Изберете файлове",
-  "upload.button.folder": "Изберете папка",
+  "upload.button.folder": "Качване на папка",
   "upload.button.folder.append": "Добавяне на папка",
   "upload.button.add": "Добавяне към качването",
   // FileList.tsx

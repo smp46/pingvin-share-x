@@ -274,11 +274,9 @@ export default {
   "upload.reverse-share.error.invalid.description": "Ovo obrnuto deljenje je isteklo ili je nevažeće.",
   // Dropzone.tsx
   "upload.dropzone.title": "Pošalji datoteke",
-  "upload.dropzone.description.mobile": "Izaberite datoteke ili fascikle da započnete deljenje. Maksimalna ukupna veličina otpremanja: {maxSize}.",
-  "upload.dropzone.description.desktop": "Prevucite i ispustite datoteke ili fascikle ovde ili pritisnite {shortcut} da otpremite tekst iz privremene memorije. Maksimalna ukupna veličina otpremanja: {maxSize}.",
+  "upload.dropzone.description": "Prevucite i ispustite datoteke ili fascikle ovde da započnete deljenje ili pritisnite 'Ctrl+V' za otpremanje tekstualnog sadržaja iz privremene memorije. Prihvatamo samo datoteke do ukupno {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Vaše datoteke premašuju maksimalnu veličinu deljenja od {maxSize}.",
-  "upload.button.files": "Izaberi datoteke",
-  "upload.button.folder": "Izaberi fasciklu",
+  "upload.button.folder": "Otpremi fasciklu",
   "upload.button.folder.append": "Dodaj fasciklu",
   "upload.button.add": "Dodaj u otpremanje",
   // FileList.tsx

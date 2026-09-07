@@ -274,11 +274,9 @@ export default {
   "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
   // Dropzone.tsx
   "upload.dropzone.title": "Μεταφόρτωση αρχείων",
-  "upload.dropzone.description.mobile": "Επιλέξτε αρχεία ή φακέλους για να ξεκινήσετε την κοινοποίησή σας. Μέγιστο συνολικό μέγεθος μεταφόρτωσης: {maxSize}.",
-  "upload.dropzone.description.desktop": "Σύρετε και αφήστε αρχεία ή φακέλους εδώ ή πατήστε {shortcut} για να ανεβάσετε κείμενο από το πρόχειρο. Μέγιστο συνολικό μέγεθος μεταφόρτωσης: {maxSize}.",
+  "upload.dropzone.description": "Σύρετε και αφήστε αρχεία ή φακέλους εδώ για να ξεκινήσετε την κοινοποίησή σας ή πατήστε 'Ctrl+V' για να ανεβάσετε περιεχόμενο κειμένου από το πρόχειρο. Δεχόμαστε μόνο αρχεία έως συνολικά {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Τα αρχεία σας υπερβαίνουν το μέγιστο μέγεθος κοινής χρήσης του {maxSize}.",
-  "upload.button.files": "Επιλογή αρχείων",
-  "upload.button.folder": "Επιλογή φακέλου",
+  "upload.button.folder": "Μεταφόρτωση φακέλου",
   "upload.button.folder.append": "Προσάρτηση φακέλου",
   "upload.button.add": "Προσθήκη στη μεταφόρτωση",
   // FileList.tsx

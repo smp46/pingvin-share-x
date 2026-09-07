@@ -274,11 +274,9 @@ export default {
   "upload.reverse-share.error.invalid.description": "Ce partage inversé a expiré ou n'est pas valide.",
   // Dropzone.tsx
   "upload.dropzone.title": "Téléverser des fichiers",
-  "upload.dropzone.description.mobile": "Choisissez des fichiers ou des dossiers pour commencer votre partage. Taille totale maximale du téléversement : {maxSize}.",
-  "upload.dropzone.description.desktop": "Glissez-déposez des fichiers ou dossiers ici, ou appuyez sur {shortcut} pour téléverser du texte depuis le presse-papiers. Taille totale maximale du téléversement : {maxSize}.",
+  "upload.dropzone.description": "Glissez-déposez vos fichiers ou dossiers ici pour commencer le partage ou utilisez « Ctrl+V » pour importer du texte depuis le presse-papiers. Nous acceptons un maximum de {maxSize} fichiers au total.",
   "upload.dropzone.notify.file-too-big": "Vos fichiers dépassent la taille maximale de {maxSize}.",
-  "upload.button.files": "Choisir des fichiers",
-  "upload.button.folder": "Choisir un dossier",
+  "upload.button.folder": "Importer un dossier",
   "upload.button.folder.append": "Ajouter un dossier",
   "upload.button.add": "Ajouter au téléversement",
   // FileList.tsx

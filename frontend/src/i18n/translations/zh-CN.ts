@@ -274,11 +274,9 @@ export default {
   "upload.reverse-share.error.invalid.description": "此链接已达到使用次数上限或已失效。",
   // Dropzone.tsx
   "upload.dropzone.title": "上传文件",
-  "upload.dropzone.description.mobile": "选择文件或文件夹以开始分享。最大总上传大小：{maxSize}。",
-  "upload.dropzone.description.desktop": "将文件或文件夹拖放到此处，或按 {shortcut} 上传剪贴板中的文本。最大总上传大小：{maxSize}。",
+  "upload.dropzone.description": "将文件或文件夹拖放到此处开始创建分享，或按“Ctrl+V”上传剪贴板中的文本内容。文件总大小不能超过 {maxSize}。",
   "upload.dropzone.notify.file-too-big": "您的文件超过了最大上传限制 {maxSize}。",
-  "upload.button.files": "选择文件",
-  "upload.button.folder": "选择文件夹",
+  "upload.button.folder": "上传文件夹",
   "upload.button.folder.append": "追加文件夹",
   "upload.button.add": "添加到上传",
   // FileList.tsx

@@ -274,11 +274,9 @@ export default {
   "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
   // Dropzone.tsx
   "upload.dropzone.title": "Bestanden uploaden",
-  "upload.dropzone.description.mobile": "Kies bestanden of mappen om je share te starten. Maximale totale uploadgrootte: {maxSize}.",
-  "upload.dropzone.description.desktop": "Sleep bestanden of mappen hierheen, of druk op {shortcut} om tekst vanaf het klembord te uploaden. Maximale totale uploadgrootte: {maxSize}.",
+  "upload.dropzone.description": "Sleep bestanden of mappen hierheen om je share te starten, of gebruik Ctrl+V om tekst vanaf het klembord te uploaden. De totale bestandsgrootte mag niet groter zijn dan {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Uw bestanden overschrijden de maximale share-grootte van {maxSize}.",
-  "upload.button.files": "Bestanden kiezen",
-  "upload.button.folder": "Map kiezen",
+  "upload.button.folder": "Map uploaden",
   "upload.button.folder.append": "Map toevoegen",
   "upload.button.add": "Aan upload toevoegen",
   // FileList.tsx

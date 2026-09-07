@@ -274,11 +274,9 @@ export default {
   "upload.reverse-share.error.invalid.description": "Diese externe Freigabe ist abgelaufen oder ungültig.",
   // Dropzone.tsx
   "upload.dropzone.title": "Dateien hochladen",
-  "upload.dropzone.description.mobile": "Wähle Dateien oder Ordner aus, um deine Freigabe zu starten. Maximale Gesamtgröße des Uploads: {maxSize}.",
-  "upload.dropzone.description.desktop": "Ziehe Dateien oder Ordner hierher oder drücke Strg+V, um Text aus der Zwischenablage hochzuladen. Maximale Gesamtgröße des Uploads: {maxSize}.",
+  "upload.dropzone.description": "Ziehe Dateien oder Ordner hierher, um deine Freigabe zu starten, oder drücke 'Strg+V', um Textinhalte aus der Zwischenablage hochzuladen. Wir akzeptieren nur Dateien bis insgesamt {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Ihre Dateien überschreiten die maximale Freigabegröße von {maxSize}.",
-  "upload.button.files": "Dateien auswählen",
-  "upload.button.folder": "Ordner auswählen",
+  "upload.button.folder": "Ordner hochladen",
   "upload.button.folder.append": "Ordner anhängen",
   "upload.button.add": "Zum Upload hinzufügen",
   // FileList.tsx

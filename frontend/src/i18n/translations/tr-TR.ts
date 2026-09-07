@@ -274,11 +274,9 @@ export default {
   "upload.reverse-share.error.invalid.description": "Bu karşı paylaşımın süresi dolmuş veya geçersiz.",
   // Dropzone.tsx
   "upload.dropzone.title": "Dosyaları Yükle",
-  "upload.dropzone.description.mobile": "Paylaşımınızı başlatmak için dosya veya klasör seçin. Maksimum toplam yükleme boyutu: {maxSize}.",
-  "upload.dropzone.description.desktop": "Dosyaları veya klasörleri buraya sürükleyip bırakın ya da panodan metin yüklemek için {shortcut} tuşlarına basın. Maksimum toplam yükleme boyutu: {maxSize}.",
+  "upload.dropzone.description": "Paylaşımınızı başlatmak için dosyaları veya klasörleri buraya sürükleyip bırakın veya panodan metin içeriği yüklemek için 'Ctrl+V' tuşlarına basın. Yalnızca toplam {maxSize} boyutuna kadar olan dosyaları kabul ediyoruz.",
   "upload.dropzone.notify.file-too-big": "Dosyalarınız maksimum paylaşım boyutu olan {maxSize} değerini aşıyor.",
-  "upload.button.files": "Dosya seç",
-  "upload.button.folder": "Klasör seç",
+  "upload.button.folder": "Klasör yükle",
   "upload.button.folder.append": "Klasör ekle",
   "upload.button.add": "Yüklemeye ekle",
   // FileList.tsx

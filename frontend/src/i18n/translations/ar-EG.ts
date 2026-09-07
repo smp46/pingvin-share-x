@@ -274,11 +274,9 @@ export default {
   "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
   // Dropzone.tsx
   "upload.dropzone.title": "رفع الملفات",
-  "upload.dropzone.description.mobile": "اختر ملفات أو مجلدات لبدء مشاركتك. الحد الأقصى لإجمالي حجم الرفع: {maxSize}.",
-  "upload.dropzone.description.desktop": "اسحب الملفات أو المجلدات وأفلِتها هنا، أو اضغط {shortcut} لرفع نص من الحافظة. الحد الأقصى لإجمالي حجم الرفع: {maxSize}.",
+  "upload.dropzone.description": "اسحب وأفلت الملفات أو المجلدات هنا لبدء مشاركتك أو اضغط على 'Ctrl+V' لرفع محتوى نصي من الحافظة. نحن نقبل الملفات حتى {maxSize} إجمالاً فقط.",
   "upload.dropzone.notify.file-too-big": "تتجاوز ملفاتك الحجم الأقصى للمشاركة والذي هو {maxSize}.",
-  "upload.button.files": "اختر الملفات",
-  "upload.button.folder": "اختر مجلدًا",
+  "upload.button.folder": "رفع مجلد",
   "upload.button.folder.append": "إلحاق مجلد",
   "upload.button.add": "إضافة إلى الرفع",
   // FileList.tsx

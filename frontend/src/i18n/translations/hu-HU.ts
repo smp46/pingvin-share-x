@@ -274,11 +274,9 @@ export default {
   "upload.reverse-share.error.invalid.description": "This reverse share has expired or is invalid.",
   // Dropzone.tsx
   "upload.dropzone.title": "Fájlok feltöltése",
-  "upload.dropzone.description.mobile": "Válasszon fájlokat vagy mappákat a megosztás megkezdéséhez. Maximális teljes feltöltési méret: {maxSize}.",
-  "upload.dropzone.description.desktop": "Húzzon ide fájlokat vagy mappákat, vagy nyomja meg a {shortcut} billentyűkombinációt a vágólapról történő szövegfeltöltéshez. Maximális teljes feltöltési méret: {maxSize}.",
+  "upload.dropzone.description": "Húzza ide a fájlokat vagy mappákat a megosztás megkezdéséhez, vagy használja a 'Ctrl+V' billentyűkombinációt a vágólapon lévő szöveges tartalom feltöltéséhez. Összesen legfeljebb {maxSize} méretű fájlokat fogadunk el.",
   "upload.dropzone.notify.file-too-big": "A fájlok mérete meghaladja a megengedett {maxSize} méretet.",
-  "upload.button.files": "Fájlok kiválasztása",
-  "upload.button.folder": "Mappa kiválasztása",
+  "upload.button.folder": "Mappa feltöltése",
   "upload.button.folder.append": "Mappa hozzáfűzése",
   "upload.button.add": "Hozzáadás a feltöltéshez",
   // FileList.tsx

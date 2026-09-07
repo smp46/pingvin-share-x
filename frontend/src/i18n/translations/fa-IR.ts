@@ -274,11 +274,9 @@ export default {
   "upload.reverse-share.error.invalid.description": "این لینک فاقد استفاده‌های باقی‌مانده است یا نامعتبر است.",
   // Dropzone.tsx
   "upload.dropzone.title": "بارگذاری فایل‌ها",
-  "upload.dropzone.description.mobile": "برای شروع اشتراک‌گذاری، فایل‌ها یا پوشه‌ها را انتخاب کنید. حداکثر حجم کل بارگذاری: {maxSize}.",
-  "upload.dropzone.description.desktop": "فایل‌ها یا پوشه‌ها را اینجا بکشید و رها کنید، یا برای بارگذاری متن از کلیپ‌بورد {shortcut} را فشار دهید. حداکثر حجم کل بارگذاری: {maxSize}.",
+  "upload.dropzone.description": "فایل‌ها یا پوشه‌ها را برای شروع اشتراک‌گذاری به اینجا بکشید و رها کنید یا برای بارگذاری محتوای متنی از کلیپ‌بورد از 'Ctrl+V' استفاده کنید. ما فقط فایل‌هایی با مجموع حجم حداکثر {maxSize} را می‌پذیریم.",
   "upload.dropzone.notify.file-too-big": "فایل‌های شما از حداکثر اندازه اشتراک {maxSize} تجاوز می‌کنند.",
-  "upload.button.files": "انتخاب فایل‌ها",
-  "upload.button.folder": "انتخاب پوشه",
+  "upload.button.folder": "بارگذاری پوشه",
   "upload.button.folder.append": "افزودن پوشه",
   "upload.button.add": "افزودن به بارگذاری",
   // FileList.tsx
