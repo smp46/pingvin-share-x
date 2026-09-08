@@ -55,7 +55,7 @@ const Body = ({
 
   const form = useForm({
     initialValues: {
-      fullName: "",
+      fullname: "",
       username: "",
       email: "",
       password: undefined,
@@ -74,7 +74,7 @@ const Body = ({
     },
     validate: yupResolver(
       yup.object().shape({
-        fullName: yup
+        fullname: yup
           .string()
           .matches(/^[\p{L} ,.'-]+$/u, t("common.error.name.invalid-chars"))
           .required(t("common.error.field-required")),
@@ -153,7 +153,7 @@ const Body = ({
         onSubmit={form.onSubmit(async (values) => {
           userService
             .create({
-              fullName: values.fullName,
+              fullname: values.fullname,
               username: values.username,
               email: values.email,
               password: values.password,
@@ -198,7 +198,7 @@ const Body = ({
             <Stack>
               <TextInput
                 label={t("admin.users.modal.create.fullname")}
-                {...form.getInputProps("fullName")}
+                {...form.getInputProps("fullname")}
               />
               <TextInput
                 label={t("admin.users.modal.create.username")}

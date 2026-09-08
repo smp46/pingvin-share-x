@@ -31,7 +31,7 @@ export class UserDTO {
   @Matches("/^[\p{L} ,.'-]+$/u", undefined, {
     message: i18nValidationMessage("validation.namePattern"),
   })
-  fullName?: string;
+  fullname?: string;
 
   @Expose()
   hasPassword: boolean;

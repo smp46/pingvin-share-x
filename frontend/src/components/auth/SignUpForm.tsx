@@ -40,7 +40,7 @@ const SignUpForm = () => {
   } 
 
   const validationSchema = yup.object().shape({
-    fullName: yup
+    fullname: yup
       .string()
       .matches(/^[\p{L} ,.'-]+$/u, t("common.error.name.invalid-chars"))
       .required(t("common.error.field-required")),
@@ -75,7 +75,7 @@ const SignUpForm = () => {
     initialValues: {
       email: "",
       username: "",
-      fullName: "",
+      fullname: "",
       password: "",
     },
     validate: yupResolver(validationSchema),
@@ -124,7 +124,7 @@ const SignUpForm = () => {
           <TextInput
             label={t("signup.input.fullname")}
             placeholder={t("signup.input.fullname.placeholder")}
-            {...form.getInputProps("fullName")}
+            {...form.getInputProps("fullname")}
           />
           <TextInput
             label={t("signup.input.username")}

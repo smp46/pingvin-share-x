@@ -47,13 +47,13 @@ const Account = () => {
 
   const accountForm = useForm({
     initialValues: {
-      fullName: user?.fullName,
+      fullname: user?.fullname,
       username: user?.username,
       email: user?.email,
     },
     validate: yupResolver(
       yup.object().shape({
-        fullName: yup
+        fullname: yup
           .string()
           .matches(/^[\p{L} ,.'-]+$/u, t("common.error.name.invalid-chars"))
           .required(t("common.error.field-required")),
@@ -166,7 +166,7 @@ const Account = () => {
             <Stack>
               <TextInput
                 label={t("account.card.info.fullname")}
-                {...accountForm.getInputProps("fullName")}
+                {...accountForm.getInputProps("fullname")}
               />
               <TextInput
                 label={t("account.card.info.username")}

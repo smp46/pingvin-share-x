@@ -60,7 +60,7 @@ const Body = ({
 
   const accountForm = useForm({
     initialValues: {
-      fullName: user.fullName,
+      fullname: user.fullname,
       username: user.username,
       email: user.email,
       isAdmin: user.isAdmin,
@@ -83,7 +83,7 @@ const Body = ({
     },
     validate: yupResolver(
       yup.object().shape({
-        fullName: yup
+        fullname: yup
           .string()
           .matches(/^[\p{L} ,.'-]+$/u, t("common.error.name.invalid-chars"))
           .required(t("common.error.field-required")),
@@ -171,7 +171,7 @@ const Body = ({
         onSubmit={accountForm.onSubmit(async (values) => {
           userService
             .update(user.id, {
-              fullName: values.fullName,
+              fullname: values.fullname,
               username: values.username,
               email: values.email,
               isAdmin: values.isAdmin,
@@ -216,7 +216,7 @@ const Body = ({
             <Stack>
               <TextInput
                 label={t("admin.users.table.fullname")}
-                {...accountForm.getInputProps("fullName")}
+                {...accountForm.getInputProps("fullname")}
               />
               <TextInput
                 label={t("admin.users.table.username")}
