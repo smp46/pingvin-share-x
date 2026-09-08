@@ -140,11 +140,15 @@ const Dropzone = ({
   const openRef = useRef<() => void>();
   const folderInputRef = useRef<HTMLInputElement>(null);
   const [isMounted, setIsMounted] = useState(false);
+  const [isCoarsePointer, setIsCoarsePointer] = useState(false);
+  const [isMac, setIsMac] = useState(false);
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === "dark";
 
   useEffect(() => {
     setIsMounted(true);
+    setIsCoarsePointer(window.matchMedia("(pointer: coarse)").matches);
+    setIsMac(/Macintosh|Mac OS X/.test(navigator.userAgent));
   }, []);
 
   const isFolderUploadSupported =
@@ -226,8 +230,15 @@ const Dropzone = ({
           </Text>
           <Text align="center" size="sm" mt="xs" color="dimmed">
             <FormattedMessage
-              id="upload.dropzone.description"
-              values={{ maxSize: byteToHumanSizeString(maxShareSize) }}
+              id={
+                isCoarsePointer
+                  ? "upload.dropzone.description.mobile"
+                  : "upload.dropzone.description.desktop"
+              }
+              values={{
+                maxSize: byteToHumanSizeString(maxShareSize),
+                shortcut: isMac ? "⌘+V" : "Ctrl+V",
+              }}
             />
           </Text>
         </div>

@@ -373,12 +373,14 @@ export default {
 
   // Dropzone.tsx
   "upload.dropzone.title": "Upload files",
-  "upload.dropzone.description":
-    "Drag'n'drop files or folders here to start your share or 'Ctrl+V' to upload text content from the clipboard. We only accept files up to {maxSize} in total.",
+  "upload.dropzone.description.mobile":
+    "Tap here to select individual files, photos, or videos. To upload a complete folder, use Upload Folder below. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop":
+    "Click here or drag and drop individual files, photos, or videos. Use Upload Folder below to upload a complete folder, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big":
     "Your files exceed the maximum share size of {maxSize}.",
-  "upload.button.folder": "Upload folder",
-  "upload.button.folder.append": "Append folder",
+  "upload.button.folder": "Upload Folder",
+  "upload.button.folder.append": "Append Folder",
   "upload.button.add": "Add to upload",
 
   // FileList.tsx
