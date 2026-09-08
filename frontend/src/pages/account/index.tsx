@@ -47,11 +47,16 @@ const Account = () => {
 
   const accountForm = useForm({
     initialValues: {
+      fullName: user?.fullName,
       username: user?.username,
       email: user?.email,
     },
     validate: yupResolver(
       yup.object().shape({
+        fullName: yup
+          .string()
+          .matches(/^[\p{L} ,.'-]+$/u, t("common.error.name.invalid-chars"))
+          .required(t("common.error.field-required")),
         email: yup.string().email(t("common.error.invalid-email")),
         username: yup
           .string()
@@ -159,6 +164,10 @@ const Account = () => {
             )}
           >
             <Stack>
+              <TextInput
+                label={t("account.card.info.fullname")}
+                {...accountForm.getInputProps("fullName")}
+              />
               <TextInput
                 label={t("account.card.info.username")}
                 disabled={user?.isLdap}

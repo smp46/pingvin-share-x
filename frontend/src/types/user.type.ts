@@ -1,5 +1,6 @@
 type User = {
   id: string;
+  fullName: string;
   username: string;
   email: string;
   isAdmin: boolean;
@@ -16,6 +17,7 @@ type User = {
 };
 
 export type CreateUser = {
+  fullName: string;
   username: string;
   email: string;
   password?: string;
@@ -29,6 +31,7 @@ export type CreateUser = {
 };
 
 export type UpdateUser = {
+  fullName?: string;
   username?: string;
   email?: string;
   password?: string;
@@ -43,6 +46,7 @@ export type UpdateUser = {
 };
 
 export type UpdateCurrentUser = {
+  fullName?: string;
   username?: string;
   email?: string;
 };
