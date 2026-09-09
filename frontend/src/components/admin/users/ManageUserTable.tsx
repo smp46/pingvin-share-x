@@ -63,7 +63,7 @@ const ManageUserTable = ({
         </thead>
         <tbody>
           {isLoading
-            ? getSkeletonRows(showStorageQuota, showMaxShareSize)
+            ? getSkeletonRows(showFullName, showStorageQuota, showMaxShareSize)
             : users.map((user) => (
                 <tr key={user.id}>
                   {showFullName && <td>{user.fullname || "-"}</td>}
@@ -133,11 +133,17 @@ const ManageUserTable = ({
 };
 
 const getSkeletonRows = (
+  showFullName: boolean,
   showStorageQuota: boolean,
   showMaxShareSize: boolean,
 ) =>
   [...Array(10)].map((v, i) => (
     <tr key={i}>
+      {showFullName && (
+        <td>
+          <Skeleton key={i} height={20} />
+        </td>
+      )}
       <td>
         <Skeleton key={i} height={20} />
       </td>
