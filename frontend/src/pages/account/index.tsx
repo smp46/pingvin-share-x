@@ -156,6 +156,7 @@ const Account = () => {
             onSubmit={accountForm.onSubmit((values) =>
               userService
                 .updateCurrentUser({
+                  fullname: values.fullname,
                   username: values.username,
                   email: values.email,
                 })
