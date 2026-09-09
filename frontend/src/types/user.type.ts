@@ -17,7 +17,7 @@ type User = {
 };
 
 export type CreateUser = {
-  fullname: string;
+  fullname?: string;
   username: string;
   email: string;
   password?: string;

@@ -60,7 +60,7 @@ const Body = ({
 
   const accountForm = useForm({
     initialValues: {
-      fullname: user.fullname,
+      fullname: user.fullname ? user.fullname : "",
       username: user.username,
       email: user.email,
       isAdmin: user.isAdmin,
@@ -85,8 +85,7 @@ const Body = ({
       yup.object().shape({
         fullname: yup
           .string()
-          .matches(/^[\p{L} ,.'-]+$/u, t("common.error.name.invalid-chars"))
-          .required(t("common.error.field-required")),
+          .matches(/^[\p{L} ,.'-]*$/u, t("common.error.name.invalid-chars")),
         email: yup.string().email(t("common.error.invalid-email")),
         username: yup
           .string()

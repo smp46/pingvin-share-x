@@ -42,8 +42,7 @@ const SignUpForm = () => {
   const validationSchema = yup.object().shape({
     fullname: yup
       .string()
-      .matches(/^[\p{L} ,.'-]+$/u, t("common.error.name.invalid-chars"))
-      .required(t("common.error.field-required")),
+      .matches(/^[\p{L} ,.'-]*$/u, t("common.error.name.invalid-chars")),
     email: yup.string().email(t("common.error.invalid-email")).required(),
     username: yup
       .string()
