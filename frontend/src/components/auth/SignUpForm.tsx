@@ -81,9 +81,9 @@ const SignUpForm = () => {
     validate: yupResolver(validationSchema),
   });
 
-  const signUp = async (email: string, username: string, password: string) => {
+  const signUp = async (fullname: string, email: string, username: string, password: string) => {
     await authService
-      .signUp(email.trim(), username.trim(), password.trim())
+      .signUp(fullname, email.trim(), username.trim(), password.trim())
       .then(async (response) => {
         if (response.data.verificationRequired) {
           router.replace({
@@ -118,7 +118,7 @@ const SignUpForm = () => {
       <Paper withBorder shadow="md" p={30} mt={30} radius="md">
         <form
           onSubmit={form.onSubmit((values) =>
-            signUp(values.email, values.username, values.password),
+            signUp(values.fullname ,values.email, values.username, values.password),
           )}
         >
           <TextInput
