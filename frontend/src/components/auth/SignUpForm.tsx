@@ -128,6 +128,7 @@ const SignUpForm = () => {
           <TextInput
             label={t("signup.input.username")}
             placeholder={t("signup.input.username.placeholder")}
+            mt="md"
             {...form.getInputProps("username")}
           />
           <TextInput
