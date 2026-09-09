@@ -25,6 +25,7 @@ const ManageUserTable = ({
   const modals = useModals();
   const t = useTranslate();
 
+  const showFullName = users.some((user) => !!user.fullname);
   const showStorageQuota = users.some((user) => !!user.storageQuotaLimit);
   const showMaxShareSize = users.some((user) => !!user.shareSizeLimit);
 
@@ -33,6 +34,11 @@ const ManageUserTable = ({
       <Table verticalSpacing="sm">
         <thead>
           <tr>
+            {showFullName && (
+              <th>
+                <FormattedMessage id="admin.users.table.fullname" />
+              </th>
+            )}
             <th>
               <FormattedMessage id="admin.users.table.username" />
             </th>
@@ -60,6 +66,7 @@ const ManageUserTable = ({
             ? getSkeletonRows(showStorageQuota, showMaxShareSize)
             : users.map((user) => (
                 <tr key={user.id}>
+                  {showFullName && <td>{user.fullname || "-"}</td>}
                   <td>
                     {user.username}{" "}
                     {user.isLdap ? (
@@ -93,7 +100,12 @@ const ManageUserTable = ({
                             color="blue"
                             size={25}
                             onClick={() =>
-                              showUpdateUserModal(modals, user, getUsers, customPasswordPolicy)
+                              showUpdateUserModal(
+                                modals,
+                                user,
+                                getUsers,
+                                customPasswordPolicy,
+                              )
                             }
                           >
                             <TbEdit />
