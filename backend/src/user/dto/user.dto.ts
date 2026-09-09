@@ -28,7 +28,7 @@ export class UserDTO {
 
   @Expose()
   @IsOptional()
-  @Matches("/^[\p{L} ,.'-]+$/u", undefined, {
+  @Matches(/^[\p{L} ,.'-]+$/u, {
     message: i18nValidationMessage("validation.namePattern"),
   })
   fullname?: string;
