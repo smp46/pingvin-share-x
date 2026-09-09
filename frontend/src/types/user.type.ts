@@ -1,6 +1,6 @@
 type User = {
   id: string;
-  fullname: string;
+  fullname?: string;
   username: string;
   email: string;
   isAdmin: boolean;
