@@ -1,2 +1,2 @@
 -- AlterTable
-ALTER TABLE "User" ADD COLUMN "fullname" TEXT;
+ALTER TABLE "User" ADD COLUMN "fullname" TEXT DEFAULT "";
