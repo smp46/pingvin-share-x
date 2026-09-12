@@ -75,6 +75,7 @@ export class AuthService {
           await this.emailService.sendVerificationEmail(
             user.email,
             user.activationToken,
+            user.fullname || user.username
           );
           return { verificationRequired: true };
         }
@@ -213,7 +214,7 @@ export class AuthService {
         },
       });
 
-      await this.emailService.sendResetPasswordEmail(user.email, token);
+      await this.emailService.sendResetPasswordEmail(user.email, token, user.fullname || user.username);
     });
   }
 
@@ -290,6 +291,7 @@ export class AuthService {
       await this.emailService.sendVerificationEmail(
         user.email,
         activationToken,
+        user.fullname || user.username
       );
     });
   }

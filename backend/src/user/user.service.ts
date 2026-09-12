@@ -59,7 +59,7 @@ export class UserSevice {
         });
 
         if (randomPassword) {
-          await this.emailService.sendInviteEmail(dto.email, randomPassword);
+          await this.emailService.sendInviteEmail(dto.email, randomPassword, user.fullname || user.username);
         }
 
         return user;
