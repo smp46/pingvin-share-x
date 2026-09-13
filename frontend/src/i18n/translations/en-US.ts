@@ -18,7 +18,7 @@ export default {
   "home.title": "A <h>self-hosted</h> file sharing platform.",
 
   "home.description":
-    "Do you really want to give your personal files in the hand of third parties like WeTransfer?",
+    "Do you really want to put your personal files in the hands of third parties like WeTransfer?",
   "home.bullet.a.name": "Self-Hosted",
   "home.bullet.a.description": "Host Pingvin Share on your own machine.",
   "home.bullet.b.name": "Privacy",
@@ -26,7 +26,7 @@ export default {
     "Your files are yours and will never be accessed by third parties.",
   "home.bullet.c.name": "No annoying file size limit",
   "home.bullet.c.description":
-    "Upload files as big as you want. Only your hard drive will be your limit.",
+    "Upload files as large as you want. Your available storage is the only limit.",
 
   "home.button.start": "Get started",
   "home.button.source": "Source code",
@@ -67,12 +67,12 @@ export default {
   // /auth/verify
   "verify.title": "Verify Account",
   "verify.success":
-    "Your account has been successfully verified! You can now sign in.",
+    "Your account has been verified. You can now sign in.",
   "verify.error": "The verification link is invalid or has expired.",
   "verify.button.signin": "Go to Sign In",
   "verify.info.title": "Account Verification",
   "verify.info.description":
-    "Email verification is enabled. We've sent a verification link to your email address. Please click the link to activate your account.",
+    "We sent a verification link to your email address. Open it to activate your account.",
   "verify.info.note":
     "If you don't receive the email within a few minutes, please check your spam folder.",
   "verify.info.resend.button": "Resend verification email",
@@ -91,7 +91,7 @@ export default {
   "resetPassword.title": "Forgot your password?",
   "resetPassword.description": "Enter your email to reset your password.",
   "resetPassword.notify.success":
-    "A message with a link to reset your password has been sent if the provided email exists.",
+    "If the email address exists, a password reset link has been sent.",
   "resetPassword.button.back": "Back to sign in page",
   "resetPassword.text.resetPassword": "Reset password",
   "resetPassword.text.enterNewPassword": "Enter your new password",
@@ -111,7 +111,7 @@ export default {
   "account.card.password.old": "Old password",
   "account.card.password.new": "New password",
   "account.card.password.noPasswordSet":
-    "You do not have a password set. To sign in using your email and password, you need to create a password.",
+    "You do not have a password set. Create one to sign in with your email and password.",
   "account.notify.password.success": "Password changed successfully",
 
   "account.card.oauth.title": "Social login",
@@ -125,12 +125,12 @@ export default {
   "account.card.oauth.unlinked": "Unlinked",
   "account.modal.unlink.title": "Unlink account",
   "account.modal.unlink.description":
-    "Unlinking your social accounts may cause you to lose your account if you don't remember your login credentials",
+    "Unlinking your social accounts may prevent access if you do not remember your login credentials.",
   "account.notify.oauth.unlinked.success": "Unlinked successfully",
 
   "account.card.security.title": "Security",
   "account.card.security.totp.enable.description":
-    "Enter your current password to start enabling TOTP",
+    "Enter your current password to enable TOTP.",
   "account.card.security.totp.disable.description":
     "Enter your current password to disable TOTP",
   "account.card.security.totp.button.start": "Start",
@@ -167,7 +167,7 @@ export default {
   "account.shares.description.empty": "You don't have any shares.",
   "account.shares.button.create": "Create one",
 
-  "account.shares.info.title": "Share informations",
+  "account.shares.info.title": "Share information",
   "account.shares.button.edit": "Add/Remove Files",
   "account.shares.table.id": "ID",
   "account.shares.table.name": "Name",
@@ -184,7 +184,7 @@ export default {
   "account.shares.table.visitor-count": "{count} of {max}",
   "account.shares.table.expiry-never": "Never",
 
-  "account.shares.modal.share-informations": "Share informations",
+  "account.shares.modal.share-informations": "Share information",
   "account.shares.modal.share-link": "Share link",
   "account.shares.modal.edit.password.keep":
     "Leave blank to keep the current password",
@@ -208,7 +208,7 @@ export default {
   // /account/reverseShares
   "account.reverseShares.title": "Reverse shares",
   "account.reverseShares.description":
-    "A reverse share allows you to generate a unique URL that allows external users to create a share.",
+    "A reverse share generates a unique URL that external users can use to create a share.",
 
   "account.reverseShares.title.empty": "It's empty here 👀",
   "account.reverseShares.description.empty":
@@ -240,15 +240,15 @@ export default {
 
   "account.reverseShares.modal.simplified": "Simple mode",
   "account.reverseShares.modal.simplified.description":
-    "Make it easy for the person uploading the file to share it with you. They will only be able to customize the name and description of the share.",
+    "Simplify uploads for the person sharing files with you. They can only customize the share name and description.",
 
   "account.reverseShares.modal.public-access": "Public access",
   "account.reverseShares.modal.public-access.description":
-    "Make the shares created with this reverse share public. If disabled, only you and the share creator will have access to view it.",
+    "Make shares created with this reverse share public. If disabled, only you and the share creator can view them.",
 
   "account.reverseShares.modal.max-use.label": "Max uses",
   "account.reverseShares.modal.max-use.description":
-    "The maximum amount of times this URL can be used to create a share.",
+    "The maximum number of times this URL can be used.",
   "account.reverseShare.never-expires": "This reverse share will never expire.",
   "account.reverseShare.expires-on":
     "This reverse share will expire on {expiration}.",
@@ -265,7 +265,7 @@ export default {
 
   "account.reverseShares.modal.delete.title": "Delete reverse share",
   "account.reverseShares.modal.delete.description":
-    "Do you really want to delete this reverse share? If you do, the associated shares will be deleted as well.",
+    "Do you really want to delete this reverse share and all associated shares?",
 
   // END /account/reverseShares
 
@@ -316,7 +316,7 @@ export default {
   "admin.users.edit.update.notify.password.success":
     "Password changed successfully",
 
-  "admin.users.edit.delete.title": "Delete user: {username} ?",
+  "admin.users.edit.delete.title": "Delete user: {username}?",
   "admin.users.edit.delete.description":
     "Do you really want to delete this user and all their shares?",
 
@@ -327,7 +327,7 @@ export default {
   "admin.users.modal.create.password": "Password",
   "admin.users.modal.create.manual-password": "Set password manually",
   "admin.users.modal.create.manual-password.description":
-    "If not checked, the user will receive an email with a link to set their password.",
+    "If disabled, the user will receive an email with a link to set their password.",
   "admin.users.modal.create.custom-share-size-limit": "Custom share size limit",
   "admin.users.modal.create.custom-share-size-limit.description":
     "Override the global upload limit for this user",
@@ -397,7 +397,7 @@ export default {
     "Missing ETag header in S3 response. Ensure CORS exposes the ETag header.",
   "upload.modal.not-signed-in": "You're not signed in",
   "upload.modal.not-signed-in-description":
-    "You will be unable to delete your share manually and view the visitor count.",
+    "You will not be able to delete your share or view its visitor count.",
 
   "upload.modal.expires.never": "never",
   "upload.modal.expires.never-long": "Permanent share",
@@ -442,26 +442,26 @@ export default {
     "This share will expire on {expiration}.",
   "upload.modal.completed.share-ready": "Share ready",
   "upload.modal.completed.notified-reverse-share-creator":
-    "We have notified the creator of the reverse share. You can also manually share this link with them through other means.",
+    "We notified the reverse share creator. You can also share this link with them manually.",
 
   // END /upload
 
   // /share/[id]
   "share.title": "Share {shareId}",
-  "share.description": "Look what I've shared with you!",
+  "share.description": "Take a look at what I’ve shared with you!",
   "share.fileCount":
     "{count, plural, =1 {# file} other {# files}} · {size} (zip file may be smaller due to compression)",
   "share.copy-text-contents": "Copy file contents to clipboard",
   "share.error.visitor-limit-exceeded.title": "Visitor limit exceeded",
   "share.error.visitor-limit-exceeded.description":
-    "The visitor limit from this share has been exceeded.",
+    "The visitor limit for this share has been exceeded.",
   "share.error.removed.title": "Share removed",
   "share.error.not-found.title": "Share not found",
   "share.error.not-found.description":
     "The share you're looking for doesn't exist.",
   "share.error.access-denied.title": "Private share",
   "share.error.access-denied.description":
-    "The current account does not have permission to access this share",
+    "Your account does not have permission to access this share.",
   "share.error.restricted.title": "Restricted share",
   "share.error.restricted.description":
     "This share is restricted to specific recipients. Please log in to access it.",
@@ -489,7 +489,7 @@ export default {
   "share.modal.file-preview.original_file": "View original file",
   "share.modal.file-preview.error.not-supported.title": "Preview not supported",
   "share.modal.file-preview.error.not-supported.description":
-    "Previews are not supported for this type of files. Please download the file to view it.",
+    "Previews are not supported for this file type. Download the file to view it.",
 
   // END /share/[id]
 
@@ -512,7 +512,7 @@ export default {
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description":
-    "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
+    "As you have configured Pingvin Share X with a configuration file, these settings cannot be changed through the UI.",
   "admin.config.title": "Configuration",
   "admin.config.category.general": "General",
   "admin.config.category.appearance": "Appearance",
@@ -526,7 +526,7 @@ export default {
   "admin.config.general.app-name.description": "Name of the application",
   "admin.config.general.default-language": "Default Language",
   "admin.config.general.default-language.description":
-    "This applies to all users, each user can still personalise their language in their profile.",
+    "This applies to all users. Each user can still choose a language in their profile.",
   "admin.config.appearance.theme-primary-color": "Theme primary color",
   "admin.config.appearance.theme-primary-color.description":
     "Primary color used for buttons, links, and accents. Choose custom to use a color picker override.",
@@ -556,7 +556,7 @@ export default {
     "Percentage and time remaining",
   "admin.config.general.app-url": "App URL",
   "admin.config.general.app-url.description":
-    "On which URL Pingvin Share is available",
+    "URL where Pingvin Share X is available.",
   "admin.config.security.secure-cookies": "Secure cookies",
   "admin.config.security.secure-cookies.description":
     "Whether to set the secure flag on cookies. If enabled, the site will not function when accessed over HTTP.",
@@ -565,17 +565,17 @@ export default {
     "Whether to show the home page",
   "admin.config.security.session-duration": "Session Duration",
   "admin.config.security.session-duration.description":
-    "Time after which a user must log in again (default: 3 months).",
+    "Time before a user must sign in again (default: 3 months).",
   "admin.config.appearance.logo": "Logo",
   "admin.config.appearance.logo.description":
-    "Change your logo by uploading a new image. The image must be a PNG and should have the format 1:1.",
+    "Change your logo by uploading a new image. It must be a PNG with a 1:1 aspect ratio.",
   "admin.config.appearance.logo-dark": "Dark mode logo",
   "admin.config.appearance.logo-dark.description":
-    "Upload a separate logo for dark mode. The image must be a PNG and should have the format 1:1.",
+    "Upload a separate logo for dark mode. It must be a PNG with a 1:1 aspect ratio.",
   "admin.config.appearance.logo.placeholder": "Pick image",
   "admin.config.security.custom-password-policy": "Custom password policy",
   "admin.config.security.custom-password-policy.description":
-    "Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.",
+    "Whether to enable a custom password policy. If disabled, the default minimum length is 8 characters.",
   "admin.config.security.min-length": "Minimum length",
   "admin.config.security.min-length.description":
     "Minimum number of characters required for a password.",
@@ -594,16 +594,16 @@ export default {
     "Whether to require at least one special character in the password.",
   "admin.config.cache.ttl": "TTL",
   "admin.config.cache.ttl.description":
-    "Time in second to keep information inside the cache.",
+    "Time, in seconds, to keep data in the cache.",
   "admin.config.cache.max-items": "Maximum items",
   "admin.config.cache.max-items.description":
     "Maximum number of items inside the cache.",
   "admin.config.cache.redis-enabled": "Redis enabled",
   "admin.config.cache.redis-enabled.description":
-    "Normally Pingvin Share caches information in memory. If you run multiple instances of Pingvin Share, you need to enable Redis caching to share the cache between the instances.",
+    "Pingvin Share X caches data in memory by default. Enable Redis to share the cache across multiple instances.",
   "admin.config.cache.redis-url": "Redis URL",
   "admin.config.cache.redis-url.description":
-    "Url to connect to the Redis instance used for caching.",
+    "URL of the Redis instance used for caching.",
   "admin.config.cache.button.test-redis": "Test Redis connection",
   "admin.config.cache.test-redis.success": "Connected to Redis successfully",
   "admin.config.cache.test-redis.success-disabled":
@@ -625,28 +625,28 @@ export default {
     "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Share recipients subject",
   "admin.config.email.share-recipients-subject.description":
-    "Subject of the email which gets sent to the share recipients.",
+    "Subject of the email sent to share recipients.",
   "admin.config.email.share-recipients-message": "Share recipients message",
   "admin.config.email.share-recipients-message.description":
     "Message which gets sent to the share recipients. Available variables:\n {creator} - The username of the creator of the share\n {creatorEmail} - The email of the creator of the share\n {shareUrl} - The URL of the share\n {desc} - The description of the share\n {expires} - The expiration date of the share\n These variables will be replaced with the actual value.",
   "admin.config.email.reverse-share-subject": "Reverse share subject",
   "admin.config.email.reverse-share-subject.description":
-    "Subject of the sent email when someone created a share with your reverse share link.",
+    "Subject of the email sent when someone creates a share using your reverse share link.",
   "admin.config.email.reverse-share-message": "Reverse share message",
   "admin.config.email.reverse-share-message.description":
-    "Message which gets sent when someone created a share with your reverse share link. {shareUrl} will be replaced with the creator's name and the share URL.",
+    "Message sent when someone creates a share using your reverse share link. {shareUrl} will be replaced with the creator's name and the share URL.",
   "admin.config.email.reset-password-subject": "Reset password subject",
   "admin.config.email.reset-password-subject.description":
-    "Subject of the sent email when a user requests a password reset.",
+    "Subject of the email sent for password reset requests.",
   "admin.config.email.reset-password-message": "Reset password message",
   "admin.config.email.reset-password-message.description":
-    "Message which gets sent when a user requests a password reset. {url} will be replaced with the reset password URL.",
+    "Message sent for password reset requests. {url} will be replaced with the reset password URL.",
   "admin.config.email.invite-subject": "Invite subject",
   "admin.config.email.invite-subject.description":
-    "Subject of the sent email when an admin invites a user.",
+    "Subject of the email sent when an admin invites a user.",
   "admin.config.email.invite-message": "Invite message",
   "admin.config.email.invite-message.description":
-    "Message which gets sent when an admin invites a user. {url} will be replaced with the invite URL, {email} with the email and {password} with the users password.",
+    "Message sent when an admin invites a user. {url}, {email}, and {password} are replaced with the invitation details.",
   "admin.config.email.share-recipients-reply-to-creator":
     "Set Reply-To to creator's email",
   "admin.config.email.share-recipients-reply-to-creator.description":
@@ -662,17 +662,17 @@ export default {
   "admin.config.email.share-download-notification-message":
     "Download notification message",
   "admin.config.email.share-download-notification-message.description":
-    "Message which gets sent to the share creator when a recipient downloads a file. Available variables:\n {recipientEmail} - The email of the recipient\n {fileName} - The downloaded file name\n {shareUrl} - The URL of the share",
+    "Mes to the share creator when a recipient downloads a file. Available variables:\n {recipientEmail} - The email of the recipient\n {fileName} - The downloaded file name\n {shareUrl} - The URL of the share",
   "admin.config.security.enable-email-verification":
     "Enable email verification",
   "admin.config.security.enable-email-verification.description":
-    "Whether to require users to verify their email address before being able to sign in. This can only be enabled if SMTP is activated.",
+    "Whether to require users to verify their email address before signing in. This can only be enabled if SMTP is activated.",
   "admin.config.email.verification-subject": "Verification subject",
   "admin.config.email.verification-subject.description":
-    "Subject of the email which gets sent to the user when they sign up.",
+    "Subject of the email sent when a user signs up.",
   "admin.config.email.verification-message": "Verification message",
   "admin.config.email.verification-message.description":
-    "Message which gets sent to the user when they sign up. {url} will be replaced with the verification URL.",
+    "Message sent when a user signs up. {url} will be replaced with the verification URL.",
   "admin.config.security.allow-registration": "Allow registration",
   "admin.config.security.allow-registration.description":
     "Whether registration is allowed",
@@ -693,13 +693,13 @@ export default {
   "admin.config.share.max-size.description": "Maximum share size",
   "admin.config.share.zip-compression-level": "Zip compression level",
   "admin.config.share.zip-compression-level.description":
-    "Adjust the level to balance between file size and compression speed. Valid values range from 0 to 9, with 0 being no compression and 9 being maximum compression. ",
+    "Adjust the level to balance file size and compression speed. Valid values range from 0 to 9, with 0 being no compression and 9 being maximum compression. ",
   "admin.config.share.chunk-size": "Chunk size",
   "admin.config.share.chunk-size.description":
     "Adjust the chunk size for your uploads to balance efficiency and reliability according to your internet connection. Smaller chunks can enhance success rates for unstable connections, while larger chunks make uploads faster for stable connections.",
-  "admin.config.share.auto-open-share-modal": "Auto open create share modal",
+  "admin.config.share.auto-open-share-modal": "Automatically open share modal",
   "admin.config.share.auto-open-share-modal.description":
-    "The share creation modal automatically appears when a user selects files, eliminating the need to manually click the button.",
+    "Automatically open the share creation modal when files are selected.",
   "admin.config.security.allow-admin-access-all-shares":
     "Allow admin access to all shares",
   "admin.config.share.reverse-share-simple-only":
@@ -714,7 +714,7 @@ export default {
     "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description":
-    "How long files are kept after a share expires or gets deleted. Only useful if the 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
+    "How long files are kept after a share expires or is deleted. Only useful if 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Enable",
   "admin.config.smtp.enabled.description":
     "Whether SMTP is enabled. Only set this to true if you entered the host, port, email, user and password of your SMTP server.",
@@ -724,7 +724,7 @@ export default {
   "admin.config.smtp.port.description": "Port of the SMTP server",
   "admin.config.smtp.email": "Email",
   "admin.config.smtp.email.description":
-    "Email address from which the emails get sent",
+    "Email address used to send messages.",
   "admin.config.smtp.username": "Username",
   "admin.config.smtp.username.description": "Username of the SMTP server",
   "admin.config.smtp.password": "Password",
@@ -741,16 +741,16 @@ export default {
   "admin.config.smtp.allow-unauthorized-certificates":
     "Trust unauthorized SMTP server certificates",
   "admin.config.smtp.allow-unauthorized-certificates.description":
-    "Only set this to true if you need to trust self signed certificates.",
+    "Enable only if you need to trust self-signed certificates.",
   "admin.config.oauth.allow-registration": "Allow registration",
   "admin.config.oauth.allow-registration.description":
     "Allow users to register via social login",
   "admin.config.oauth.ignore-totp": "Ignore TOTP",
   "admin.config.oauth.ignore-totp.description":
-    "Whether to ignore TOTP when user using social login",
+    "Whether to bypass TOTP when a user signs in with social login.",
   "admin.config.oauth.disable-password": "Disable password login",
   "admin.config.oauth.disable-password.description":
-    "Whether to disable password login\nMake sure that an OAuth provider is properly configured before activating this configuration to avoid being locked out.",
+    "Whether to disable password login.\nMake sure an OAuth provider is configured correctly before enabling this option to avoid being locked out.",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description":
     "Whether GitHub login is enabled",
@@ -846,19 +846,19 @@ export default {
     "Password used to perform the user search",
   "admin.config.ldap.search-base": "User base",
   "admin.config.ldap.search-base.description":
-    "Base location, where the user search will be performed",
+    "Base location where user searches are performed.",
   "admin.config.ldap.search-query": "User query",
   "admin.config.ldap.search-query.description":
-    "The user query will be used to search the 'User base' for the LDAP user. %username% can be used as the placeholder for the user given input.",
+    "Query used to search the User base. Use %username% as the username placeholder.",
   "admin.config.ldap.admin-groups": "Admin group",
   "admin.config.ldap.admin-groups.description":
     "Group required for administrative access.",
   "admin.config.ldap.field-name-member-of": "User groups attribute name",
   "admin.config.ldap.field-name-member-of.description":
-    "LDAP attribute name for the groups, an user is a member of. This is used when checking for the admin group.",
+    "LDAP attribute containing the groups a user belongs to. This is used when checking for the admin group.",
   "admin.config.ldap.field-name-email": "User email attribute name",
   "admin.config.ldap.field-name-email.description":
-    "LDAP attribute name for the email of an user.",
+    "LDAP attribute containing the user’s email address.",
   "admin.config.notify.success": "Configuration updated successfully.",
   "admin.config.notify.logo-success":
     "Logo updated successfully. It may take a few minutes to update on the website.",
@@ -866,7 +866,7 @@ export default {
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Enabled",
   "admin.config.s3.enabled.description":
-    "Whether S3 should be used to store the shared files instead of the local file system. WARNING: If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
+    "Store shared files in S3 instead of the local file system. If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
   "admin.config.s3.endpoint": "Endpoint",
   "admin.config.s3.endpoint.description": "The URL of the S3 bucket.",
   "admin.config.s3.region": "Region",
@@ -875,7 +875,7 @@ export default {
   "admin.config.s3.bucket-name.description": "The name of the S3 bucket.",
   "admin.config.s3.bucket-path": "Path",
   "admin.config.s3.bucket-path.description":
-    "The default path which should be used to store the files in the S3 bucket.",
+    "Default path used to store files in the S3 bucket.",
   "admin.config.s3.key": "Key",
   "admin.config.s3.key.description":
     "The key which allows you to access the S3 bucket.",
@@ -890,22 +890,22 @@ export default {
   "admin.config.category.legal": "Legal",
   "admin.config.legal.enabled": "Enable legal notices",
   "admin.config.legal.enabled.description":
-    "Whether to show a link to imprint and privacy policy in the footer.",
+    "Whether to show links to the imprint and privacy policy in the footer.",
   "admin.config.legal.imprint-text": "Imprint text",
   "admin.config.legal.imprint-text.description":
     "The text which should be shown in the imprint. Supports Markdown. Leave blank to link to an external imprint page.",
   "admin.config.legal.imprint-url": "Imprint URL",
   "admin.config.legal.imprint-url.description":
-    "If you already have an imprint page you can link it here instead of using the text field.",
+    "Link to an existing imprint page instead of using the text field.",
   "admin.config.legal.privacy-policy-text": "Privacy policy text",
   "admin.config.legal.privacy-policy-text.description":
     "The text which should be shown in the privacy policy. Supports Markdown. Leave blank to link to an external privacy policy page.",
   "admin.config.legal.privacy-policy-url": "Privacy policy URL",
   "admin.config.legal.privacy-policy-url.description":
-    "If you already have a privacy policy page you can link it here instead of using the text field.",
+    "Link to an existing privacy policy instead of using the text field.",
 
   // 404
-  "404.description": "Oops this page doesn't exist.",
+  "404.description": "Oops, this page doesn’t exist.",
   "404.button.home": "Bring me back home",
 
   // error
@@ -914,7 +914,7 @@ export default {
   "error.button.back": "Go back",
   "error.msg.default": "Something went wrong.",
   "error.msg.access_denied":
-    "You canceled the authentication process, please try again.",
+    "You canceled the authentication process. Please try again.",
   "error.msg.expired_token":
     "The authentication process took too long, please try again.",
   "error.msg.invalid_token": "Internal Error",
@@ -925,11 +925,11 @@ export default {
   "error.msg.not_linked":
     "This {0} account hasn't been linked to any account yet.",
   "error.msg.email_already_exists":
-    "An account with this email address already exists. Please sign in with your password and manually link your {0} account in your My Account page.",
+    "An account with this email address already exists. Please sign in with your password and manually link your {0} account from the My Account page.",
   "error.msg.email_not_verified":
     "Your email address on this {0} account is not verified. Please verify your email with your identity provider before signing in.",
   "error.msg.unverified_account":
-    "This {0} account is unverified, please try again after verification.",
+    "This {0} account is not verified. Please try again after verification.",
   "error.msg.user_not_allowed": "You are not allowed to sign in.",
   "error.msg.cannot_get_user_info":
     "Cannot get your user info from this {0} account.",
