@@ -265,7 +265,7 @@ export default {
 
   "account.reverseShares.modal.delete.title": "Delete reverse share",
   "account.reverseShares.modal.delete.description":
-    "Delete this reverse share and all associated shares?",
+    "Do you really want to delete this reverse share and all associated shares?",
 
   // END /account/reverseShares
 
@@ -366,7 +366,7 @@ export default {
   "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
   "upload.reverse-share.error.invalid.title": "Invalid reverse share link",
   "upload.reverse-share.error.invalid.description":
-    "This link is invalid or has no remaining uses.",
+    "This link has no remaining uses or is invalid.",
   "upload.error.not-allowed.title": "Share creation not permitted",
   "upload.error.not-allowed.description":
     "Your account does not have permission to upload or create shares.",
@@ -480,7 +480,7 @@ export default {
   "share.notify.copied-contents": "File contents copied to clipboard",
   "share.notify.copy-too-big-error": "File is too big to copy to clipboard",
   "share.notify.copy-not-supported-error":
-    "Copying to the clipboard requires an HTTPS connection.",
+    "Copying to clipboard requires a HTTPS connection",
 
   "share.modal.file-link": "File link",
   "share.table.name": "Name",
@@ -512,7 +512,7 @@ export default {
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description":
-    "Pingvin Share is configured using a file, so these settings cannot be changed in the UI.",
+    "As you have configured Pingvin Share X with a configuration file, these settings cannot be changed through the UI.",
   "admin.config.title": "Configuration",
   "admin.config.category.general": "General",
   "admin.config.category.appearance": "Appearance",
@@ -556,7 +556,7 @@ export default {
     "Percentage and time remaining",
   "admin.config.general.app-url": "App URL",
   "admin.config.general.app-url.description":
-    "URL where Pingvin Share is available.",
+    "URL where Pingvin Share X is available.",
   "admin.config.security.secure-cookies": "Secure cookies",
   "admin.config.security.secure-cookies.description":
     "Whether to set the secure flag on cookies. If enabled, the site will not function when accessed over HTTP.",
@@ -568,14 +568,14 @@ export default {
     "Time before a user must sign in again (default: 3 months).",
   "admin.config.appearance.logo": "Logo",
   "admin.config.appearance.logo.description":
-    "Upload a PNG logo with a 1:1 aspect ratio.",
+    "Change your logo by uploading a new image. It must be a PNG with a 1:1 aspect ratio.",
   "admin.config.appearance.logo-dark": "Dark mode logo",
   "admin.config.appearance.logo-dark.description":
-    "Upload a separate PNG logo for dark mode with a 1:1 aspect ratio.",
+    "Upload a separate logo for dark mode. It must be a PNG with a 1:1 aspect ratio.",
   "admin.config.appearance.logo.placeholder": "Pick image",
   "admin.config.security.custom-password-policy": "Custom password policy",
   "admin.config.security.custom-password-policy.description":
-    "Enable a custom password policy. If disabled, the default minimum length is 8 characters.",
+    "Whether to enable a custom password policy. If disabled, the default minimum length is 8 characters.",
   "admin.config.security.min-length": "Minimum length",
   "admin.config.security.min-length.description":
     "Minimum number of characters required for a password.",
@@ -600,7 +600,7 @@ export default {
     "Maximum number of items inside the cache.",
   "admin.config.cache.redis-enabled": "Redis enabled",
   "admin.config.cache.redis-enabled.description":
-    "Pingvin Share caches data in memory by default. Enable Redis to share the cache across multiple instances.",
+    "Pingvin Share X caches data in memory by default. Enable Redis to share the cache across multiple instances.",
   "admin.config.cache.redis-url": "Redis URL",
   "admin.config.cache.redis-url.description":
     "URL of the Redis instance used for caching.",
@@ -614,7 +614,7 @@ export default {
     "While connecting to Redis, the following error occurred:",
   "admin.config.cache.test-redis.modal.save.title": "Save configuration",
   "admin.config.cache.test-redis.modal.save.description":
-    "Save the configuration before testing the Redis connection?",
+    "To continue you need to save the configuration first. Do you want to save the configuration and test the Redis connection?",
   "admin.config.cache.test-redis.modal.save.confirm": "Save and test",
   "admin.config.email.send-html-emails": "Enable HTML email compatibility",
   "admin.config.email.send-html-emails.description":
@@ -643,10 +643,10 @@ export default {
     "Message sent for password reset requests. {url} will be replaced with the reset password URL.",
   "admin.config.email.invite-subject": "Invite subject",
   "admin.config.email.invite-subject.description":
-    "Subject of the email sent when an administrator invites a user.",
+    "Subject of the email sent when an admin invites a user.",
   "admin.config.email.invite-message": "Invite message",
   "admin.config.email.invite-message.description":
-    "Message sent when an administrator invites a user. {url}, {email}, and {password} are replaced with the invitation details.",
+    "Message sent when an admin invites a user. {url}, {email}, and {password} are replaced with the invitation details.",
   "admin.config.email.share-recipients-reply-to-creator":
     "Set Reply-To to creator's email",
   "admin.config.email.share-recipients-reply-to-creator.description":
@@ -658,15 +658,15 @@ export default {
   "admin.config.email.share-download-notification-subject":
     "Download notification subject",
   "admin.config.email.share-download-notification-subject.description":
-    "Subject of the email sent when a recipient downloads a file.",
+    "Subject of the email which gets sent to the share creator when a recipient downloads a file.",
   "admin.config.email.share-download-notification-message":
     "Download notification message",
   "admin.config.email.share-download-notification-message.description":
-    "Message sent when a recipient downloads a file. Available variables:\n {recipientEmail} - The email of the recipient\n {fileName} - The downloaded file name\n {shareUrl} - The URL of the share",
+    "Mes to the share creator when a recipient downloads a file. Available variables:\n {recipientEmail} - The email of the recipient\n {fileName} - The downloaded file name\n {shareUrl} - The URL of the share",
   "admin.config.security.enable-email-verification":
     "Enable email verification",
   "admin.config.security.enable-email-verification.description":
-    "Require users to verify their email address before signing in. This can only be enabled if SMTP is activated.",
+    "Whether to require users to verify their email address before signing in. This can only be enabled if SMTP is activated.",
   "admin.config.email.verification-subject": "Verification subject",
   "admin.config.email.verification-subject.description":
     "Subject of the email sent when a user signs up.",
@@ -714,10 +714,10 @@ export default {
     "When enabled, shares sent to a registered user's email address will automatically appear in their account. Users can also restrict share access to named recipients only.",
   "admin.config.share.file-retention-period": "File retention period",
   "admin.config.share.file-retention-period.description":
-    "How long files are kept after a share expires or is deleted. Requires 'Allow admin access to all shares'. Set to -1 to keep files forever.",
+    "How long files are kept after a share expires or is deleted. Only useful if 'Allow admin access to all shares' is also enabled. Set to -1 to keep files forever.",
   "admin.config.smtp.enabled": "Enable",
   "admin.config.smtp.enabled.description":
-    "Enable SMTP only after entering the host, port, email address, username, and password.",
+    "Whether SMTP is enabled. Only set this to true if you entered the host, port, email, user and password of your SMTP server.",
   "admin.config.smtp.host": "Host",
   "admin.config.smtp.host.description": "Host of the SMTP server",
   "admin.config.smtp.port": "Port",
@@ -747,10 +747,10 @@ export default {
     "Allow users to register via social login",
   "admin.config.oauth.ignore-totp": "Ignore TOTP",
   "admin.config.oauth.ignore-totp.description":
-    "Bypass TOTP when a user signs in with social login.",
+    "Whether to bypass TOTP when a user signs in with social login.",
   "admin.config.oauth.disable-password": "Disable password login",
   "admin.config.oauth.disable-password.description":
-    "Disable password login.\nMake sure an OAuth provider is configured correctly before enabling this option to avoid being locked out.",
+    "Whether to disable password login.\nMake sure an OAuth provider is configured correctly before enabling this option to avoid being locked out.",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description":
     "Whether GitHub login is enabled",
@@ -866,7 +866,7 @@ export default {
   "admin.config.category.s3": "S3",
   "admin.config.s3.enabled": "Enabled",
   "admin.config.s3.enabled.description":
-    "Store shared files in S3 instead of the local file system. WARNING: If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
+    "Store shared files in S3 instead of the local file system. If ClamAV is active, files will be temporarily downloaded from S3 to be checked.",
   "admin.config.s3.endpoint": "Endpoint",
   "admin.config.s3.endpoint.description": "The URL of the S3 bucket.",
   "admin.config.s3.region": "Region",
@@ -890,7 +890,7 @@ export default {
   "admin.config.category.legal": "Legal",
   "admin.config.legal.enabled": "Enable legal notices",
   "admin.config.legal.enabled.description":
-    "Show links to the imprint and privacy policy in the footer.",
+    "Whether to show links to the imprint and privacy policy in the footer.",
   "admin.config.legal.imprint-text": "Imprint text",
   "admin.config.legal.imprint-text.description":
     "The text which should be shown in the imprint. Supports Markdown. Leave blank to link to an external imprint page.",
