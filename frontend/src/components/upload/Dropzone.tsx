@@ -39,6 +39,20 @@ const useStyles = createStyles((theme) => ({
     position: "absolute",
     bottom: -20,
   },
+
+  mobileDescription: {
+    display: "none",
+    "@media (pointer: coarse)": {
+      display: "inline",
+    },
+  },
+
+  desktopDescription: {
+    display: "inline",
+    "@media (pointer: coarse)": {
+      display: "none",
+    },
+  },
 }));
 
 const traverseDirectory = async (entry: any, path = ""): Promise<File[]> => {
@@ -140,14 +154,12 @@ const Dropzone = ({
   const openRef = useRef<() => void>();
   const folderInputRef = useRef<HTMLInputElement>(null);
   const [isMounted, setIsMounted] = useState(false);
-  const [isCoarsePointer, setIsCoarsePointer] = useState(false);
   const [isMac, setIsMac] = useState(false);
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === "dark";
 
   useEffect(() => {
     setIsMounted(true);
-    setIsCoarsePointer(window.matchMedia("(pointer: coarse)").matches);
     setIsMac(/Macintosh|Mac OS X/.test(navigator.userAgent));
   }, []);
 
@@ -229,17 +241,31 @@ const Dropzone = ({
             {title || <FormattedMessage id="upload.dropzone.title" />}
           </Text>
           <Text align="center" size="sm" mt="xs" color="dimmed">
-            <FormattedMessage
-              id={
-                isCoarsePointer
-                  ? "upload.dropzone.description.mobile"
-                  : "upload.dropzone.description.desktop"
-              }
-              values={{
-                maxSize: byteToHumanSizeString(maxShareSize),
-                shortcut: isMac ? "⌘+V" : "Ctrl+V",
-              }}
-            />
+            <span className={classes.mobileDescription}>
+              <FormattedMessage
+                id={
+                  isMounted && !isFolderUploadSupported
+                    ? "upload.dropzone.description.mobile.no-folder"
+                    : "upload.dropzone.description.mobile"
+                }
+                values={{
+                  maxSize: byteToHumanSizeString(maxShareSize),
+                }}
+              />
+            </span>
+            <span className={classes.desktopDescription}>
+              <FormattedMessage
+                id={
+                  isMounted && !isFolderUploadSupported
+                    ? "upload.dropzone.description.desktop.no-folder"
+                    : "upload.dropzone.description.desktop"
+                }
+                values={{
+                  maxSize: byteToHumanSizeString(maxShareSize),
+                  shortcut: isMac ? "⌘+V" : "Ctrl+V",
+                }}
+              />
+            </span>
           </Text>
         </div>
       </MantineDropzone>
