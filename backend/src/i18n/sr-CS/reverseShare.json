@@ -1,5 +1,7 @@
 {
   "notFound": "Token za obrnuto deljenje nije pronađen",
   "maxShareSizeExceeded": "Maksimalna veličina deljenja ne može biti veća od {maxSize} bajtova.",
-  "tokenInUse": "Token za obrnuto deljenje je već u upotrebi"
+  "tokenInUse": "Token za obrnuto deljenje je već u upotrebi",
+  "notAllowedToCreate": "You do not have permission to create reverse shares",
+  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
 }

@@ -15,5 +15,7 @@
   "tokenRequired": "Token di condivisione richiesto",
   "privateShare": "Solo il creatore della condivisione inversa può accedere a questa condivisione",
   "maxViewsExceeded": "Numero massimo di visualizzazioni superato",
-  "restrictedToRecipients": "Questa condivisione è riservata a destinatari specifici. Effettua l'accesso per visualizzarla."
+  "restrictedToRecipients": "Questa condivisione è riservata a destinatari specifici. Effettua l'accesso per visualizzarla.",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }

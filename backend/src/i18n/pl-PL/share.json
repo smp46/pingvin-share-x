@@ -15,5 +15,7 @@
   "tokenRequired": "Token udostępnienia jest wymagany",
   "privateShare": "Tylko twórca odwrotnego udostępnienia ma dostęp do tego udostępnienia",
   "maxViewsExceeded": "Przekroczono maksymalną liczbę wyświetleń",
-  "restrictedToRecipients": "Ten udział jest ograniczony do określonych odbiorców. Zaloguj się, aby uzyskać dostęp."
+  "restrictedToRecipients": "Ten udział jest ograniczony do określonych odbiorców. Zaloguj się, aby uzyskać dostęp.",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }

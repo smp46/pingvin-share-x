@@ -15,5 +15,7 @@
   "tokenRequired": "Jagamise token on kohustuslik",
   "privateShare": "Sellele jagamisele pääseb ligi ainult pöörd-jagamise looja",
   "maxViewsExceeded": "Maksimaalne vaatamiste arv on täis",
-  "restrictedToRecipients": "See jagamine on piiratud konkreetsetele saajatele. Palun logi sisse, et sellele ligi pääseda."
+  "restrictedToRecipients": "See jagamine on piiratud konkreetsetele saajatele. Palun logi sisse, et sellele ligi pääseda.",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }

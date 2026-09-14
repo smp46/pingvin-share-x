@@ -15,5 +15,7 @@
   "tokenRequired": "Token sdílení je povinný",
   "privateShare": "K tomuto sdílení má přístup pouze tvůrce reverzního sdílení",
   "maxViewsExceeded": "Maximální počet zobrazení byl překročen",
-  "restrictedToRecipients": "Toto sdílení je omezeno na konkrétní příjemce. Pro přístup se prosím přihlaste."
+  "restrictedToRecipients": "Toto sdílení je omezeno na konkrétní příjemce. Pro přístup se prosím přihlaste.",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }

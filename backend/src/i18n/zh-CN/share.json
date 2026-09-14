@@ -15,5 +15,7 @@
   "tokenRequired": "需要分享令牌",
   "privateShare": "只有反向分享创建者可以访问此分享",
   "maxViewsExceeded": "超过最大查看次数",
-  "restrictedToRecipients": "此分享仅限指定收件人查看，请登录后查看。"
+  "restrictedToRecipients": "此分享仅限指定收件人查看，请登录后查看。",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }
