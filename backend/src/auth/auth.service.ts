@@ -221,7 +221,12 @@ export class AuthService {
       throw new ForbiddenException(this.i18n.t("auth.passwordSignInDisabled"));
 
     const user = await this.prisma.user.findFirst({
-      where: { resetPasswordToken: { token } },
+      where: {
+        resetPasswordToken: {
+          token,
+          expiresAt: { gt: new Date() },
+        },
+      },
     });
 
     if (!user)

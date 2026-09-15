@@ -59,7 +59,7 @@ export class ShareOwnerGuard extends JwtGuard {
     if (this.allowAdmin && user?.isAdmin) return true;
 
     // If it's a anonymous share, allow access
-    if (!share.creatorId) return true;
+    if (this.allowAnonymous && !share.creatorId) return true;
 
     // If not signed in, deny access
     if (!user) return false;
@@ -68,6 +68,10 @@ export class ShareOwnerGuard extends JwtGuard {
   }
 
   protected get allowAdmin(): boolean {
+    return true;
+  }
+
+  protected get allowAnonymous(): boolean {
     return true;
   }
 }
