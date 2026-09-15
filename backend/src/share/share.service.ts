@@ -2,7 +2,9 @@ import {
   BadRequestException,
   ForbiddenException,
   Injectable,
+  Logger,
   NotFoundException,
+  OnModuleInit,
 } from "@nestjs/common";
 import { JwtService, JwtSignOptions } from "@nestjs/jwt";
 import { Prisma, Share, User, ShareSecurity } from "@prisma/client";
@@ -22,12 +24,15 @@ import { SystemService } from "src/system/system.service";
 import { parseRelativeDateToAbsolute } from "src/utils/date.util";
 import { byteToHumanSizeString } from "src/utils/fileSize.util";
 import { getUserActiveStorageUsage } from "src/utils/storageQuota.util";
+import { pipeline } from "stream/promises";
 import { SHARE_DIRECTORY } from "../constants";
 import { CreateShareDTO } from "./dto/createShare.dto";
 import { UpdateShareDTO } from "./dto/updateShare.dto";
 
 @Injectable()
-export class ShareService {
+export class ShareService implements OnModuleInit {
+  private readonly logger = new Logger(ShareService.name);
+
   constructor(
     private prisma: PrismaService,
     private configService: ConfigService,
@@ -40,6 +45,17 @@ export class ShareService {
     private systemService: SystemService,
     private readonly i18n: I18nService,
   ) {}
+
+  async onModuleInit() {
+    const shares = await this.prisma.share.findMany({
+      where: { uploadLocked: true, isZipReady: false, removedReason: null },
+      select: { id: true, _count: { select: { files: true } } },
+    });
+
+    for (const share of shares) {
+      if (share._count.files > 1) void this.createZip(share.id);
+    }
+  }
 
   async create(share: CreateShareDTO, user?: User, reverseShareToken?: string) {
     const reverseShare =
@@ -189,24 +205,34 @@ export class ShareService {
   }
 
   async createZip(shareId: string) {
-    if (this.config.get("s3.enabled")) return;
+    try {
+      if (!this.config.get("s3.enabled")) {
+        const path = `${SHARE_DIRECTORY}/${shareId}`;
 
-    const path = `${SHARE_DIRECTORY}/${shareId}`;
+        const files = await this.prisma.file.findMany({ where: { shareId } });
+        const archive = archiver("zip", {
+          zlib: { level: this.config.get("share.zipCompressionLevel") },
+        });
 
-    const files = await this.prisma.file.findMany({ where: { shareId } });
-    const archive = archiver("zip", {
-      zlib: { level: this.config.get("share.zipCompressionLevel") },
-    });
-    const writeStream = fs.createWriteStream(`${path}/archive.zip`);
+        for (const file of files) {
+          archive.file(`${path}/${file.id}`, { name: file.name });
+        }
 
-    for (const file of files) {
-      archive.append(fs.createReadStream(`${path}/${file.id}`), {
-        name: file.name,
+        await Promise.all([
+          pipeline(archive, fs.createWriteStream(`${path}/archive.zip`)),
+          archive.finalize(),
+        ]);
+      }
+
+      await this.prisma.share.update({
+        where: { id: shareId },
+        data: { isZipReady: true },
       });
+    } catch (err) {
+      this.logger.error(
+        `Failed to create zip for share ${shareId}: ${err.message}`,
+      );
     }
-
-    archive.pipe(writeStream);
-    await archive.finalize();
   }
 
   async complete(id: string, reverseShareToken?: string) {
@@ -255,10 +281,7 @@ export class ShareService {
     }
 
     // Asynchronously create a zip of all files
-    if (share.files.length > 1)
-      this.createZip(id).then(() =>
-        this.prisma.share.update({ where: { id }, data: { isZipReady: true } }),
-      );
+    if (share.files.length > 1) void this.createZip(id);
 
     // Send email for each recipient
     for (const recipient of share.recipients) {
