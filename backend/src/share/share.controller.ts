@@ -2,7 +2,6 @@ import {
   Body,
   Controller,
   Delete,
-  ForbiddenException,
   Get,
   HttpCode,
   Param,
@@ -24,6 +23,7 @@ import { ConfigService } from "src/config/config.service";
 import { AdminShareDTO } from "./dto/adminShare.dto";
 import { CreateShareDTO } from "./dto/createShare.dto";
 import { MyShareDTO } from "./dto/myShare.dto";
+import { ReceivedShareDTO } from "./dto/receivedShare.dto";
 import { ShareDTO } from "./dto/share.dto";
 import { ShareMetaDataDTO } from "./dto/shareMetaData.dto";
 import { SharePasswordDto } from "./dto/sharePassword.dto";
@@ -32,6 +32,8 @@ import { GetShare } from "./decorator/getShare.decorator";
 import { CreateShareGuard } from "./guard/createShare.guard";
 import { ShareOwnerGuard } from "./guard/shareOwner.guard";
 import { StrictShareOwnerGuard } from "./guard/strictShareOwner.guard";
+import { RegisteredShareOwnerGuard } from "./guard/registeredShareOwner.guard";
+import { ReceivedSharesGuard } from "./guard/receivedShares.guard";
 import { ShareSecurityGuard } from "./guard/shareSecurity.guard";
 import { ShareTokenSecurity } from "./guard/shareTokenSecurity.guard";
 import { IdValidation } from "./guard/shareIdValidation.guard";
@@ -60,11 +62,11 @@ export class ShareController {
   }
 
   @Get("received")
-  @UseGuards(JwtGuard)
+  @UseGuards(ReceivedSharesGuard)
   async getReceivedShares(@GetUser() user: User) {
-    if (!this.config.get("share.enableUserRecipients"))
-      throw new ForbiddenException("User recipients are not enabled");
-    return this.shareService.getReceivedShares(user.id);
+    return new ReceivedShareDTO().fromList(
+      await this.shareService.getReceivedShares(user.id),
+    );
   }
 
   @Get(":id")
@@ -74,7 +76,7 @@ export class ShareController {
   }
 
   @Get(":id/from-owner")
-  @UseGuards(IdValidation, StrictShareOwnerGuard)
+  @UseGuards(IdValidation, RegisteredShareOwnerGuard)
   async getFromOwner(@Param("id") id: string) {
     return new ShareDTO().from(await this.shareService.get(id));
   }
