@@ -1,3 +1,9 @@
+## [1.22.3](https://github.com/smp46/pingvin-share-x/compare/v1.22.2...v1.22.3) (2026-09-15)
+
+### Bug Fixes
+
+* **receivedShares:** add missing DTO ([e2aca73](https://github.com/smp46/pingvin-share-x/commit/e2aca7307d60b34158c1a5fb9813201cc10dae36))
+
 ## [1.22.2](https://github.com/smp46/pingvin-share-x/compare/v1.22.1...v1.22.2) (2026-09-12)
 
 ## [1.22.1](https://github.com/smp46/pingvin-share-x/compare/v1.22.0...v1.22.1) (2026-08-08)
