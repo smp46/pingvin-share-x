@@ -58,6 +58,7 @@ export class AuthService {
       return await this.prisma.$transaction(async (tx) => {
         const user = await tx.user.create({
           data: {
+            fullname: dto.fullname,
             email,
             username: dto.username,
             password: hash,
@@ -74,6 +75,7 @@ export class AuthService {
           await this.emailService.sendVerificationEmail(
             user.email,
             user.activationToken,
+            user.fullname || user.username
           );
           return { verificationRequired: true };
         }
@@ -212,7 +214,7 @@ export class AuthService {
         },
       });
 
-      await this.emailService.sendResetPasswordEmail(user.email, token);
+      await this.emailService.sendResetPasswordEmail(user.email, token, user.fullname || user.username);
     });
   }
 
@@ -294,6 +296,7 @@ export class AuthService {
       await this.emailService.sendVerificationEmail(
         user.email,
         activationToken,
+        user.fullname || user.username
       );
     });
   }

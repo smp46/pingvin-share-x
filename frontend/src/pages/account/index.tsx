@@ -47,11 +47,15 @@ const Account = () => {
 
   const accountForm = useForm({
     initialValues: {
+      fullname: user?.fullname,
       username: user?.username,
       email: user?.email,
     },
     validate: yupResolver(
       yup.object().shape({
+        fullname: yup
+          .string()
+          .matches(/^[\p{L} ,.'-]*$/u, t("common.error.name.invalid-chars")),
         email: yup.string().email(t("common.error.invalid-email")),
         username: yup
           .string()
@@ -151,6 +155,7 @@ const Account = () => {
             onSubmit={accountForm.onSubmit((values) =>
               userService
                 .updateCurrentUser({
+                  fullname: values.fullname,
                   username: values.username,
                   email: values.email,
                 })
@@ -159,6 +164,10 @@ const Account = () => {
             )}
           >
             <Stack>
+              <TextInput
+                label={t("account.card.info.fullname")}
+                {...accountForm.getInputProps("fullname")}
+              />
               <TextInput
                 label={t("account.card.info.username")}
                 disabled={user?.isLdap}

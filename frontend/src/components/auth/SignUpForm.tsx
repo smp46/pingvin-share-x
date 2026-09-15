@@ -40,6 +40,9 @@ const SignUpForm = () => {
   } 
 
   const validationSchema = yup.object().shape({
+    fullname: yup
+      .string()
+      .matches(/^[\p{L} ,.'-]*$/u, t("common.error.name.invalid-chars")),
     email: yup.string().email(t("common.error.invalid-email")).required(),
     username: yup
       .string()
@@ -48,10 +51,22 @@ const SignUpForm = () => {
     password: yup
       .string()
       .min(minLength, t("common.error.too-short", { length: minLength }))
-      .matches(requireLowercase ? /[a-z]/ : /.*/, t("common.error.password.lowercase"))
-      .matches(requireUppercase ? /[A-Z]/ : /.*/, t("common.error.password.uppercase"))
-      .matches(requireNumber ? /[0-9]/ : /.*/, t("common.error.password.number"))
-      .matches(requireSpecialCharacter ? /[^a-zA-Z0-9]/ : /.*/, t("common.error.password.special"))
+      .matches(
+        requireLowercase ? /[a-z]/ : /.*/,
+        t("common.error.password.lowercase"),
+      )
+      .matches(
+        requireUppercase ? /[A-Z]/ : /.*/,
+        t("common.error.password.uppercase"),
+      )
+      .matches(
+        requireNumber ? /[0-9]/ : /.*/,
+        t("common.error.password.number"),
+      )
+      .matches(
+        requireSpecialCharacter ? /[^a-zA-Z0-9]/ : /.*/,
+        t("common.error.password.special"),
+      )
       .required(t("common.error.field-required")),
   });
 
@@ -59,14 +74,15 @@ const SignUpForm = () => {
     initialValues: {
       email: "",
       username: "",
+      fullname: "",
       password: "",
     },
     validate: yupResolver(validationSchema),
   });
 
-  const signUp = async (email: string, username: string, password: string) => {
+  const signUp = async (fullname: string, email: string, username: string, password: string) => {
     await authService
-      .signUp(email.trim(), username.trim(), password.trim())
+      .signUp(fullname, email.trim(), username.trim(), password.trim())
       .then(async (response) => {
         if (response.data.verificationRequired) {
           router.replace({
@@ -101,12 +117,18 @@ const SignUpForm = () => {
       <Paper withBorder shadow="md" p={30} mt={30} radius="md">
         <form
           onSubmit={form.onSubmit((values) =>
-            signUp(values.email, values.username, values.password),
+            signUp(values.fullname ,values.email, values.username, values.password),
           )}
         >
           <TextInput
+            label={t("signup.input.fullname")}
+            placeholder={t("signup.input.fullname.placeholder")}
+            {...form.getInputProps("fullname")}
+          />
+          <TextInput
             label={t("signup.input.username")}
             placeholder={t("signup.input.username.placeholder")}
+            mt="md"
             {...form.getInputProps("username")}
           />
           <TextInput

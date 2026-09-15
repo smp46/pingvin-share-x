@@ -58,6 +58,8 @@ export default {
   "signup.title": "Create an account",
   "signup.description": "Already have an account?",
   "signup.button.signin": "Sign in",
+  "signup.input.fullname": "Full name",
+  "signup.input.fullname.placeholder": "Your full name",
   "signup.input.username": "Username",
   "signup.input.username.placeholder": "Your username",
   "signup.input.email": "Email",
@@ -103,6 +105,7 @@ export default {
   "account.title": "My account",
 
   "account.card.info.title": "Account info",
+  "account.card.info.fullname": "Full name",
   "account.card.info.username": "Username",
   "account.card.info.email": "Email",
   "account.notify.info.success": "Account updated successfully",
@@ -279,6 +282,7 @@ export default {
 
   // /admin/users
   "admin.users.title": "User management",
+  "admin.users.table.fullname": "Full name",
   "admin.users.table.username": "Username",
   "admin.users.table.email": "Email",
   "admin.users.table.admin": "Admin",
@@ -322,6 +326,7 @@ export default {
 
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Create user",
+  "admin.users.modal.create.fullname": "Full name",
   "admin.users.modal.create.username": "Username",
   "admin.users.modal.create.email": "Email",
   "admin.users.modal.create.password": "Password",
@@ -979,6 +984,8 @@ export default {
   "common.error.exact-length": "Must be exactly {length} characters",
   "common.error.invalid-number": "Must be a number",
   "common.error.field-required": "This field is required",
+  "common.error.name.invalid-chars":
+    "Must only contain letters, spaces, commas, periods, apostrophes, or hyphens",
 
   "common.error.password.lowercase":
     "Password must contain at least one lowercase letter",
