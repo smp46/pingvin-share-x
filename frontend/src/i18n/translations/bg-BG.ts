@@ -171,7 +171,7 @@ export default {
   "account.reverseShares.description": "A reverse share generates a unique URL that external users can use to create a share.",
   "account.reverseShares.title.empty": "Тук е празно 👀",
   "account.reverseShares.description.empty": "Нямате никакви реверсивни споделяния.",
-  "account.reverseShares.description.not-allowed": "Your account does not have permission to create reverse shares.",
+  "account.reverseShares.description.not-allowed": "",
   // showCreateReverseShareModal.tsx
   "account.reverseShares.modal.title": "Създаване на реверсивно споделяне",
   "account.reverseShares.modal.expiration.label": "Изтичане",
