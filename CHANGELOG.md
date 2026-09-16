@@ -1,3 +1,10 @@
+## [1.22.3](https://github.com/smp46/pingvin-share-x/compare/v1.22.2...v1.22.3) (2026-09-16)
+
+### Bug Fixes
+
+* missing guard ([8f3f1a1](https://github.com/smp46/pingvin-share-x/commit/8f3f1a1bdd5600b2350791731d88ff993a761ff0))
+* **receivedShares:** add missing DTO ([3cbd0bd](https://github.com/smp46/pingvin-share-x/commit/3cbd0bd47c535094f0b4783169c0b565ce8aff7f))
+
 ## [1.22.2](https://github.com/smp46/pingvin-share-x/compare/v1.22.1...v1.22.2) (2026-09-12)
 
 ## [1.22.1](https://github.com/smp46/pingvin-share-x/compare/v1.22.0...v1.22.1) (2026-08-08)
