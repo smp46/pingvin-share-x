@@ -117,7 +117,7 @@ export class FileController {
 
   @Delete(":fileId")
   @SkipThrottle()
-  @UseGuards(StrictShareOwnerGuard)
+  @UseGuards(IdValidation, CreateShareGuard, StrictShareOwnerGuard)
   async remove(
     @Param("fileId") fileId: string,
     @Param("shareId") shareId: string,
