@@ -630,28 +630,28 @@ export default {
     "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Share recipients subject",
   "admin.config.email.share-recipients-subject.description":
-    "Subject of the email which gets sent to the share recipients.",
+    "Subject of the email which gets sent to the share recipients. Available variables:\n {creator} - The full name or username of the creator\n {shareUrl} - The URL of the share",
   "admin.config.email.share-recipients-message": "Share recipients message",
   "admin.config.email.share-recipients-message.description":
-    "Message which gets sent to the share recipients. Available variables:\n {creator} - The username of the creator of the share\n {creatorEmail} - The email of the creator of the share\n {shareUrl} - The URL of the share\n {desc} - The description of the share\n {expires} - The expiration date of the share\n These variables will be replaced with the actual value.",
+    "Message which gets sent to the share recipients. Available variables:\n {creator} - The full name or username of the creator of the share\n {creatorEmail} - The email of the creator of the share\n {shareUrl} - The URL of the share\n {desc} - The description of the share\n {expires} - The expiration date of the share\n {name} - The name of the recipient (if registered)\n These variables will be replaced with the actual value.",
   "admin.config.email.reverse-share-subject": "Reverse share subject",
   "admin.config.email.reverse-share-subject.description":
     "Subject of the sent email when someone created a share with your reverse share link.",
   "admin.config.email.reverse-share-message": "Reverse share message",
   "admin.config.email.reverse-share-message.description":
-    "Message which gets sent when someone created a share with your reverse share link. {shareUrl} will be replaced with the creator's name and the share URL.",
+    "Message which gets sent when someone created a share with your reverse share link. Available variables:\n {name} - The full name or username of the reverse share creator\n {shareUrl} - The URL of the share",
   "admin.config.email.reset-password-subject": "Reset password subject",
   "admin.config.email.reset-password-subject.description":
     "Subject of the sent email when a user requests a password reset.",
   "admin.config.email.reset-password-message": "Reset password message",
   "admin.config.email.reset-password-message.description":
-    "Message which gets sent when a user requests a password reset. {url} will be replaced with the reset password URL.",
+    "Message which gets sent when a user requests a password reset. Available variables:\n {name} - The full name or username of the user\n {url} - The reset password URL",
   "admin.config.email.invite-subject": "Invite subject",
   "admin.config.email.invite-subject.description":
     "Subject of the sent email when an admin invites a user.",
   "admin.config.email.invite-message": "Invite message",
   "admin.config.email.invite-message.description":
-    "Message which gets sent when an admin invites a user. {url} will be replaced with the invite URL, {email} with the email and {password} with the users password.",
+    "Message which gets sent when an admin invites a user. Available variables:\n {name} - The full name or username of the invited user\n {url} - The invite URL\n {email} - The email address\n {password} - The user's temporary password",
   "admin.config.email.share-recipients-reply-to-creator":
     "Set Reply-To to creator's email",
   "admin.config.email.share-recipients-reply-to-creator.description":
@@ -663,11 +663,11 @@ export default {
   "admin.config.email.share-download-notification-subject":
     "Download notification subject",
   "admin.config.email.share-download-notification-subject.description":
-    "Subject of the email which gets sent to the share creator when a recipient downloads a file.",
+    "Subject of the email which gets sent to the share creator when a recipient downloads a file. Available variables:\n {fileName} - The downloaded file name\n {recipient} - The name or email of the recipient\n {creator} - The creator's name\n {shareUrl} - The URL of the share",
   "admin.config.email.share-download-notification-message":
     "Download notification message",
   "admin.config.email.share-download-notification-message.description":
-    "Message which gets sent to the share creator when a recipient downloads a file. Available variables:\n {recipientEmail} - The email of the recipient\n {fileName} - The downloaded file name\n {shareUrl} - The URL of the share",
+    "Message which gets sent to the share creator when a recipient downloads a file. Available variables:\n {recipient} - The name and email of the recipient\n {recipientEmail} - The email of the recipient\n {fileName} - The downloaded file name\n {creator} - The creator's name\n {shareUrl} - The URL of the share",
   "admin.config.security.enable-email-verification":
     "Enable email verification",
   "admin.config.security.enable-email-verification.description":
@@ -677,7 +677,7 @@ export default {
     "Subject of the email which gets sent to the user when they sign up.",
   "admin.config.email.verification-message": "Verification message",
   "admin.config.email.verification-message.description":
-    "Message which gets sent to the user when they sign up. {url} will be replaced with the verification URL.",
+    "Message which gets sent to the user when they sign up. Available variables:\n {name} - The full name or username of the user\n {url} - The verification URL",
   "admin.config.security.allow-registration": "Allow registration",
   "admin.config.security.allow-registration.description":
     "Whether registration is allowed",
