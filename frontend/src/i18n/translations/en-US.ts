@@ -864,6 +864,9 @@ export default {
   "admin.config.ldap.field-name-email": "User email attribute name",
   "admin.config.ldap.field-name-email.description":
     "LDAP attribute name for the email of an user.",
+  "admin.config.ldap.field-name-display-name": "User full name attribute name",
+  "admin.config.ldap.field-name-display-name.description":
+    "LDAP attribute name for the full name of an user.",
   "admin.config.notify.success": "Configuration updated successfully.",
   "admin.config.notify.logo-success":
     "Logo updated successfully. It may take a few minutes to update on the website.",

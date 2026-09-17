@@ -347,6 +347,10 @@ export const configVariables = {
       type: "string",
       defaultValue: "userPrincipalName",
     },
+    fieldNameDisplayName: {
+      type: "string",
+      defaultValue: "displayName",
+    },
   },
   oauth: {
     allowRegistration: {

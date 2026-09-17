@@ -145,6 +145,7 @@ export class UserSevice {
   ) {
     const fieldNameMemberOf = this.configService.get("ldap.fieldNameMemberOf");
     const fieldNameEmail = this.configService.get("ldap.fieldNameEmail");
+    const fieldNameDisplayName = this.configService.get("ldap.fieldNameDisplayName");
 
     let isAdmin = false;
     if (fieldNameMemberOf in ldapEntry) {
@@ -173,6 +174,17 @@ export class UserSevice {
       );
     }
 
+    let userDisplayName : string | null = null;
+    if (fieldNameDisplayName in ldapEntry) {
+      const value = Array.isArray(ldapEntry[fieldNameDisplayName])
+        ? ldapEntry[fieldNameDisplayName][0]
+        : ldapEntry[fieldNameDisplayName];
+      if (value && value.toString().match(/^[\p{L} ,.'-]*$/u)) {
+        userDisplayName= value.toString();
+      }
+    }
+
+
     if (providedCredentials.email) {
       /* if LDAP does not provides an users email address, take the user provided email address instead */
       userEmail = providedCredentials.email;
@@ -185,6 +197,7 @@ export class UserSevice {
     try {
       const user = await this.prisma.user.upsert({
         create: {
+          fullname: userDisplayName ?? null,
           username: providedCredentials.username ?? placeholderUsername,
           email: userEmail ?? placeholderEMail,
           password: await argon.hash(crypto.randomUUID()),
