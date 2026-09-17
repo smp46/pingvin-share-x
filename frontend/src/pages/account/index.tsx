@@ -47,7 +47,7 @@ const Account = () => {
 
   const accountForm = useForm({
     initialValues: {
-      fullname: user?.fullname,
+      fullname: user?.fullname ?? "",
       username: user?.username,
       email: user?.email,
     },

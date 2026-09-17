@@ -54,6 +54,7 @@ export class UserSevice {
         const user = await tx.user.create({
           data: {
             ...dto,
+            fullname: dto.fullname?.trim() || null,
             password: hash,
           },
         });
@@ -88,10 +89,15 @@ export class UserSevice {
       }
 
       const hash = user.password && (await argon.hash(user.password));
+      const { fullname, ...rest } = user;
 
       return await this.prisma.user.update({
         where: { id },
-        data: { ...user, password: hash },
+        data: {
+          ...rest,
+          ...(fullname !== undefined && { fullname: fullname?.trim() || null }),
+          password: hash,
+        },
       });
     } catch (e) {
       if (e instanceof PrismaClientKnownRequestError) {
