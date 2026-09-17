@@ -260,12 +260,19 @@ export class ShareService {
         this.prisma.share.update({ where: { id }, data: { isZipReady: true } }),
       );
 
+    const recipientEmails = share.recipients.map((r) => r.email);
+    const matchedUsers =
+      recipientEmails.length > 0
+        ? await this.prisma.user.findMany({
+            where: { email: { in: recipientEmails } },
+            select: { id: true, email: true, fullname: true, username: true },
+          })
+        : [];
+    const userByEmail = new Map(matchedUsers.map((u) => [u.email, u]));
+
     // Send email for each recipient
     for (const recipient of share.recipients) {
-      const userDetails = await this.prisma.user.findUnique({
-        where: { email: recipient.email },
-        select: { fullname: true, username: true },
-      });
+      const userDetails = userByEmail.get(recipient.email);
 
       await this.emailService.sendMailToShareRecipients(
         recipient.email,
@@ -280,21 +287,14 @@ export class ShareService {
 
     // Auto-link email recipients who are registered users so the share appears in their dashboard
     if (this.configService.get("share.enableUserRecipients")) {
-      const emails = share.recipients.map((r) => r.email);
-      if (emails.length > 0) {
-        const matchedUsers = await this.prisma.user.findMany({
-          where: { email: { in: emails } },
-          select: { id: true },
+      for (const matchedUser of matchedUsers) {
+        await this.prisma.shareUserRecipient.upsert({
+          where: {
+            userId_shareId: { userId: matchedUser.id, shareId: share.id },
+          },
+          create: { userId: matchedUser.id, shareId: share.id },
+          update: {},
         });
-        for (const matchedUser of matchedUsers) {
-          await this.prisma.shareUserRecipient.upsert({
-            where: {
-              userId_shareId: { userId: matchedUser.id, shareId: share.id },
-            },
-            create: { userId: matchedUser.id, shareId: share.id },
-            update: {},
-          });
-        }
       }
     }
 
