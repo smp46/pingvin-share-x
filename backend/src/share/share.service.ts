@@ -262,6 +262,11 @@ export class ShareService {
 
     // Send email for each recipient
     for (const recipient of share.recipients) {
+      const userDetails = await this.prisma.user.findUnique({
+        where: { email: recipient.email },
+        select: { fullname: true, username: true },
+      });
+
       await this.emailService.sendMailToShareRecipients(
         recipient.email,
         recipient.id,
@@ -269,6 +274,7 @@ export class ShareService {
         share.creator || share.reverseShare?.creator,
         share.description,
         share.expiration,
+        userDetails?.fullname || userDetails?.username,
       );
     }
 
