@@ -8,6 +8,8 @@ general:
   appUrl: http://localhost:3000
   #Whether to show the home page
   showHomePage: "true"
+  #Whether to show sign in/up buttons in share/upload page. This does not restricts user from visiting the pages manually.
+  showAuthButtons: "true"
   #This applies to all users, each user can still personalise their language in their profile.
   defaultLanguage: en-US
 security:
