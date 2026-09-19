@@ -287,7 +287,10 @@ export default {
   "upload.error.not-allowed.description": "Your account does not have permission to upload or create shares.",
   // Dropzone.tsx
   "upload.dropzone.title": "Dosyaları Yükle",
-  "upload.dropzone.description": "Paylaşımınızı başlatmak için dosyaları veya klasörleri buraya sürükleyip bırakın veya panodan metin içeriği yüklemek için 'Ctrl+V' tuşlarına basın. Yalnızca toplam {maxSize} boyutuna kadar olan dosyaları kabul ediyoruz.",
+  "upload.dropzone.description.mobile": "Tap here to select individual files, photos, or videos. To upload a folder, use the button below. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.mobile.no-folder": "Tap here to select individual files, photos, or videos. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Dosyalarınız maksimum paylaşım boyutu olan {maxSize} değerini aşıyor.",
   "upload.button.folder": "Klasör yükle",
   "upload.button.folder.append": "Klasör ekle",
