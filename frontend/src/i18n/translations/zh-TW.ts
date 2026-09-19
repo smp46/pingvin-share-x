@@ -287,7 +287,10 @@ export default {
   "upload.error.not-allowed.description": "Your account does not have permission to upload or create shares.",
   // Dropzone.tsx
   "upload.dropzone.title": "上傳檔案",
-  "upload.dropzone.description": "將檔案或資料夾拖曳到這裡即可開始分享，或按下 Ctrl+V 貼上剪貼簿中的文字內容。檔案總大小上限為 {maxSize}。",
+  "upload.dropzone.description.mobile": "Tap here to select individual files, photos, or videos. To upload a folder, use the button below. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.mobile.no-folder": "Tap here to select individual files, photos, or videos. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "您的檔案超過了最大上傳限制 {maxSize}",
   "upload.button.folder": "上傳資料夾",
   "upload.button.folder.append": "追加資料夾",
