@@ -149,6 +149,7 @@ const Header = () => {
     "/share/[shareId]",
   ].includes(router.pathname);
   const showAuthButtons = config.get("general.showAuthButtons");
+  const shouldHideAuthButtons = !showAuthButtons && isShareOrUploadPage;
 
   const [opened, { toggle, close }] = useDisclosure(false);
   const [currentRoute, setCurrentRoute] = useState("");
@@ -179,7 +180,7 @@ const Header = () => {
 
   let unauthenticatedLinks: NavLink[] = [];
 
-  if (showAuthButtons || !isShareOrUploadPage) {
+  if (!shouldHideAuthButtons) {
     unauthenticatedLinks.push({
       link: "/auth/signIn",
       label: t("navbar.signin"),
@@ -201,7 +202,7 @@ const Header = () => {
 
   if (
     config.get("security.allowRegistration") &&
-    (showAuthButtons || !isShareOrUploadPage)
+    (!shouldHideAuthButtons)
   ) {
     unauthenticatedLinks.push({
       link: "/auth/signUp",
