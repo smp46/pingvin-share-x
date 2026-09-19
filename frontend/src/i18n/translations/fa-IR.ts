@@ -287,7 +287,10 @@ export default {
   "upload.error.not-allowed.description": "Your account does not have permission to upload or create shares.",
   // Dropzone.tsx
   "upload.dropzone.title": "بارگذاری فایل‌ها",
-  "upload.dropzone.description": "فایل‌ها یا پوشه‌ها را برای شروع اشتراک‌گذاری به اینجا بکشید و رها کنید یا برای بارگذاری محتوای متنی از کلیپ‌بورد از 'Ctrl+V' استفاده کنید. ما فقط فایل‌هایی با مجموع حجم حداکثر {maxSize} را می‌پذیریم.",
+  "upload.dropzone.description.mobile": "Tap here to select individual files, photos, or videos. To upload a folder, use the button below. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.mobile.no-folder": "Tap here to select individual files, photos, or videos. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "فایل‌های شما از حداکثر اندازه اشتراک {maxSize} تجاوز می‌کنند.",
   "upload.button.folder": "بارگذاری پوشه",
   "upload.button.folder.append": "افزودن پوشه",
