@@ -103,7 +103,7 @@ export class EmailService {
       this.config.get("email.shareRecipientsReplyToCreator") &&
       creator?.email
     ) {
-      const creatorName = creator.fullname || creator.username;
+      const creatorName = creator.displayName || creator.username;
       replyTo = creatorName
         ? { name: creatorName, address: creator.email }
         : creator.email;
@@ -111,7 +111,7 @@ export class EmailService {
 
     const vars = {
       creator:
-        creator?.fullname ||
+        creator?.displayName ||
         creator?.username ||
         this.i18n.t("email.shareRecipientsCreatorFallback"),
       creatorEmail: creator?.email ?? "",
@@ -214,7 +214,7 @@ export class EmailService {
       url: resetPasswordUrl,
       name: recipientName ?? "",
       username: recipientName ?? "",
-      fullname: recipientName ?? "",
+      displayName: recipientName ?? "",
       email: recipientEmail,
     };
 
@@ -239,7 +239,7 @@ export class EmailService {
       email: recipientEmail,
       name: recipientName ?? "",
       username: recipientName ?? "",
-      fullname: recipientName ?? "",
+      displayName: recipientName ?? "",
     };
 
     await this.sendMail(
@@ -263,20 +263,14 @@ export class EmailService {
       url: verificationUrl,
       name: recipientName ?? "",
       username: recipientName ?? "",
-      fullname: recipientName ?? "",
+      displayName: recipientName ?? "",
       email: recipientEmail,
     };
 
     await this.sendMail(
       recipientEmail,
-      this.formatTemplate(
-        this.config.get("email.verificationSubject"),
-        vars,
-      ),
-      this.formatTemplate(
-        this.config.get("email.verificationMessage"),
-        vars,
-      ),
+      this.formatTemplate(this.config.get("email.verificationSubject"), vars),
+      this.formatTemplate(this.config.get("email.verificationMessage"), vars),
       undefined,
       recipientName,
     );

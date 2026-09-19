@@ -25,7 +25,7 @@ const ManageUserTable = ({
   const modals = useModals();
   const t = useTranslate();
 
-  const showFullName = users.some((user) => !!user.fullname);
+  const showDisplayName = users.some((user) => !!user.displayName);
   const showStorageQuota = users.some((user) => !!user.storageQuotaLimit);
   const showMaxShareSize = users.some((user) => !!user.shareSizeLimit);
 
@@ -34,9 +34,9 @@ const ManageUserTable = ({
       <Table verticalSpacing="sm">
         <thead>
           <tr>
-            {showFullName && (
+            {showDisplayName && (
               <th>
-                <FormattedMessage id="admin.users.table.fullname" />
+                <FormattedMessage id="admin.users.table.displayName" />
               </th>
             )}
             <th>
@@ -63,10 +63,14 @@ const ManageUserTable = ({
         </thead>
         <tbody>
           {isLoading
-            ? getSkeletonRows(showFullName, showStorageQuota, showMaxShareSize)
+            ? getSkeletonRows(
+                showDisplayName,
+                showStorageQuota,
+                showMaxShareSize,
+              )
             : users.map((user) => (
                 <tr key={user.id}>
-                  {showFullName && <td>{user.fullname || "-"}</td>}
+                  {showDisplayName && <td>{user.displayName || "-"}</td>}
                   <td>
                     {user.username}{" "}
                     {user.isLdap ? (
@@ -133,13 +137,13 @@ const ManageUserTable = ({
 };
 
 const getSkeletonRows = (
-  showFullName: boolean,
+  showDisplayName: boolean,
   showStorageQuota: boolean,
   showMaxShareSize: boolean,
 ) =>
   [...Array(10)].map((v, i) => (
     <tr key={i}>
-      {showFullName && (
+      {showDisplayName && (
         <td>
           <Skeleton key={i} height={20} />
         </td>

@@ -265,7 +265,12 @@ export class ShareService {
       recipientEmails.length > 0
         ? await this.prisma.user.findMany({
             where: { email: { in: recipientEmails } },
-            select: { id: true, email: true, fullname: true, username: true },
+            select: {
+              id: true,
+              email: true,
+              displayName: true,
+              username: true,
+            },
           })
         : [];
     const userByEmail = new Map(matchedUsers.map((u) => [u.email, u]));
@@ -281,7 +286,7 @@ export class ShareService {
         share.creator || share.reverseShare?.creator,
         share.description,
         share.expiration,
-        userDetails?.fullname || userDetails?.username,
+        userDetails?.displayName || userDetails?.username,
       );
     }
 
@@ -307,7 +312,8 @@ export class ShareService {
       await this.emailService.sendMailToReverseShareCreator(
         share.reverseShare.creator.email,
         share.id,
-        share.reverseShare.creator.fullname || share.reverseShare.creator.username,
+        share.reverseShare.creator.displayName ||
+          share.reverseShare.creator.username,
       );
     }
 

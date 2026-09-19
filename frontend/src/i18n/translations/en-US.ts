@@ -58,8 +58,8 @@ export default {
   "signup.title": "Create an account",
   "signup.description": "Already have an account?",
   "signup.button.signin": "Sign in",
-  "signup.input.fullname": "Full name",
-  "signup.input.fullname.placeholder": "Your full name",
+  "signup.input.displayName": "Display name",
+  "signup.input.displayName.placeholder": "Your display name",
   "signup.input.username": "Username",
   "signup.input.username.placeholder": "Your username",
   "signup.input.email": "Email",
@@ -105,7 +105,7 @@ export default {
   "account.title": "My account",
 
   "account.card.info.title": "Account info",
-  "account.card.info.fullname": "Full name",
+  "account.card.info.displayName": "Display name",
   "account.card.info.username": "Username",
   "account.card.info.email": "Email",
   "account.notify.info.success": "Account updated successfully",
@@ -282,7 +282,7 @@ export default {
 
   // /admin/users
   "admin.users.title": "User management",
-  "admin.users.table.fullname": "Full name",
+  "admin.users.table.displayName": "Display name",
   "admin.users.table.username": "Username",
   "admin.users.table.email": "Email",
   "admin.users.table.admin": "Admin",
@@ -326,7 +326,7 @@ export default {
 
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Create user",
-  "admin.users.modal.create.fullname": "Full name",
+  "admin.users.modal.create.displayName": "Display name",
   "admin.users.modal.create.username": "Username",
   "admin.users.modal.create.email": "Email",
   "admin.users.modal.create.password": "Password",
@@ -630,28 +630,28 @@ export default {
     "Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.",
   "admin.config.email.share-recipients-subject": "Share recipients subject",
   "admin.config.email.share-recipients-subject.description":
-    "Subject of the email which gets sent to the share recipients. Available variables:\n {creator} - The full name or username of the creator\n {shareUrl} - The URL of the share",
+    "Subject of the email which gets sent to the share recipients. Available variables:\n {creator} - The display name or username of the creator\n {shareUrl} - The URL of the share",
   "admin.config.email.share-recipients-message": "Share recipients message",
   "admin.config.email.share-recipients-message.description":
-    "Message which gets sent to the share recipients. Available variables:\n {creator} - The full name or username of the creator of the share\n {creatorEmail} - The email of the creator of the share\n {shareUrl} - The URL of the share\n {desc} - The description of the share\n {expires} - The expiration date of the share\n {name} - The name of the recipient (if registered)\n These variables will be replaced with the actual value.",
+    "Message which gets sent to the share recipients. Available variables:\n {creator} - The display name or username of the creator of the share\n {creatorEmail} - The email of the creator of the share\n {shareUrl} - The URL of the share\n {desc} - The description of the share\n {expires} - The expiration date of the share\n {name} - The name of the recipient (if registered)\n These variables will be replaced with the actual value.",
   "admin.config.email.reverse-share-subject": "Reverse share subject",
   "admin.config.email.reverse-share-subject.description":
     "Subject of the sent email when someone created a share with your reverse share link.",
   "admin.config.email.reverse-share-message": "Reverse share message",
   "admin.config.email.reverse-share-message.description":
-    "Message which gets sent when someone created a share with your reverse share link. Available variables:\n {name} - The full name or username of the reverse share creator\n {shareUrl} - The URL of the share",
+    "Message which gets sent when someone created a share with your reverse share link. Available variables:\n {name} - The display name or username of the reverse share creator\n {shareUrl} - The URL of the share",
   "admin.config.email.reset-password-subject": "Reset password subject",
   "admin.config.email.reset-password-subject.description":
     "Subject of the sent email when a user requests a password reset.",
   "admin.config.email.reset-password-message": "Reset password message",
   "admin.config.email.reset-password-message.description":
-    "Message which gets sent when a user requests a password reset. Available variables:\n {name} - The full name or username of the user\n {url} - The reset password URL",
+    "Message which gets sent when a user requests a password reset. Available variables:\n {name} - The display name or username of the user\n {url} - The reset password URL",
   "admin.config.email.invite-subject": "Invite subject",
   "admin.config.email.invite-subject.description":
     "Subject of the sent email when an admin invites a user.",
   "admin.config.email.invite-message": "Invite message",
   "admin.config.email.invite-message.description":
-    "Message which gets sent when an admin invites a user. Available variables:\n {name} - The full name or username of the invited user\n {url} - The invite URL\n {email} - The email address\n {password} - The user's temporary password",
+    "Message which gets sent when an admin invites a user. Available variables:\n {name} - The display name or username of the invited user\n {url} - The invite URL\n {email} - The email address\n {password} - The user's temporary password",
   "admin.config.email.share-recipients-reply-to-creator":
     "Set Reply-To to creator's email",
   "admin.config.email.share-recipients-reply-to-creator.description":
@@ -677,7 +677,7 @@ export default {
     "Subject of the email which gets sent to the user when they sign up.",
   "admin.config.email.verification-message": "Verification message",
   "admin.config.email.verification-message.description":
-    "Message which gets sent to the user when they sign up. Available variables:\n {name} - The full name or username of the user\n {url} - The verification URL",
+    "Message which gets sent to the user when they sign up. Available variables:\n {name} - The display name or username of the user\n {url} - The verification URL",
   "admin.config.security.allow-registration": "Allow registration",
   "admin.config.security.allow-registration.description":
     "Whether registration is allowed",
@@ -864,9 +864,9 @@ export default {
   "admin.config.ldap.field-name-email": "User email attribute name",
   "admin.config.ldap.field-name-email.description":
     "LDAP attribute name for the email of an user.",
-  "admin.config.ldap.field-name-display-name": "User full name attribute name",
+  "admin.config.ldap.field-name-display-name": "User display name attribute name",
   "admin.config.ldap.field-name-display-name.description":
-    "LDAP attribute name for the full name of an user.",
+    "LDAP attribute name for the display name of an user.",
   "admin.config.notify.success": "Configuration updated successfully.",
   "admin.config.notify.logo-success":
     "Logo updated successfully. It may take a few minutes to update on the website.",

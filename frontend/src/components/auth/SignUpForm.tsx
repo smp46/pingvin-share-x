@@ -37,10 +37,10 @@ const SignUpForm = () => {
     requireUppercase = config.get("security.requireUppercase");
     requireNumber = config.get("security.requireNumber");
     requireSpecialCharacter = config.get("security.requireSpecialCharacter");
-  } 
+  }
 
   const validationSchema = yup.object().shape({
-    fullname: yup
+    displayName: yup
       .string()
       .matches(/^[\p{L} ,.'-]*$/u, t("common.error.name.invalid-chars")),
     email: yup.string().email(t("common.error.invalid-email")).required(),
@@ -74,15 +74,20 @@ const SignUpForm = () => {
     initialValues: {
       email: "",
       username: "",
-      fullname: "",
+      displayName: "",
       password: "",
     },
     validate: yupResolver(validationSchema),
   });
 
-  const signUp = async (fullname: string, email: string, username: string, password: string) => {
+  const signUp = async (
+    displayName: string,
+    email: string,
+    username: string,
+    password: string,
+  ) => {
     await authService
-      .signUp(fullname, email.trim(), username.trim(), password.trim())
+      .signUp(displayName, email.trim(), username.trim(), password.trim())
       .then(async (response) => {
         if (response.data.verificationRequired) {
           router.replace({
@@ -117,13 +122,18 @@ const SignUpForm = () => {
       <Paper withBorder shadow="md" p={30} mt={30} radius="md">
         <form
           onSubmit={form.onSubmit((values) =>
-            signUp(values.fullname ,values.email, values.username, values.password),
+            signUp(
+              values.displayName,
+              values.email,
+              values.username,
+              values.password,
+            ),
           )}
         >
           <TextInput
-            label={t("signup.input.fullname")}
-            placeholder={t("signup.input.fullname.placeholder")}
-            {...form.getInputProps("fullname")}
+            label={t("signup.input.displayName")}
+            placeholder={t("signup.input.displayName.placeholder")}
+            {...form.getInputProps("displayName")}
           />
           <TextInput
             label={t("signup.input.username")}

@@ -4,6 +4,6 @@ import { UserDTO } from "./user.dto";
 export class PublicUserDTO extends PickType(UserDTO, [
   "id",
   "username",
-  "fullname",
+  "displayName",
   "shareSizeLimit",
 ] as const) {}

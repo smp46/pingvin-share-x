@@ -60,7 +60,7 @@ const Body = ({
 
   const accountForm = useForm({
     initialValues: {
-      fullname: user.fullname ? user.fullname : "",
+      displayName: user.displayName ? user.displayName : "",
       username: user.username,
       email: user.email,
       isAdmin: user.isAdmin,
@@ -83,7 +83,7 @@ const Body = ({
     },
     validate: yupResolver(
       yup.object().shape({
-        fullname: yup
+        displayName: yup
           .string()
           .matches(/^[\p{L} ,.'-]*$/u, t("common.error.name.invalid-chars")),
         email: yup.string().email(t("common.error.invalid-email")),
@@ -167,39 +167,42 @@ const Body = ({
     <Stack>
       <form
         id="accountForm"
-        onSubmit={accountForm.onSubmit(async (values) => {
-          userService
-            .update(user.id, {
-              fullname: values.fullname,
-              username: values.username,
-              email: values.email,
-              isAdmin: values.isAdmin,
-              isActivated: values.isActivated,
-              allowShare: values.allowShare,
-              allowCreateReverseShares: values.allowCreateReverseShares,
-              maxShares: values.hasCustomMaxShares ? values.maxShares : null,
-              maxReverseShares: values.hasCustomMaxReverseShares
-                ? values.maxReverseShares
-                : null,
-              shareSizeLimit: values.hasCustomShareSizeLimit
-                ? values.shareSizeLimit.toString()
-                : null,
-              storageQuotaLimit: values.hasCustomStorageQuotaLimit
-                ? values.storageQuotaLimit.toString()
-                : null,
-            })
-            .then(() => {
-              getUsers();
-              modals.closeAll();
-            })
-            .catch(toast.axiosError);
-        }, (errors) => {
-          if (errors.username || errors.email) {
-            setActiveTab("general");
-          } else {
-            setActiveTab("permissions");
-          }
-        })}
+        onSubmit={accountForm.onSubmit(
+          async (values) => {
+            userService
+              .update(user.id, {
+                displayName: values.displayName,
+                username: values.username,
+                email: values.email,
+                isAdmin: values.isAdmin,
+                isActivated: values.isActivated,
+                allowShare: values.allowShare,
+                allowCreateReverseShares: values.allowCreateReverseShares,
+                maxShares: values.hasCustomMaxShares ? values.maxShares : null,
+                maxReverseShares: values.hasCustomMaxReverseShares
+                  ? values.maxReverseShares
+                  : null,
+                shareSizeLimit: values.hasCustomShareSizeLimit
+                  ? values.shareSizeLimit.toString()
+                  : null,
+                storageQuotaLimit: values.hasCustomStorageQuotaLimit
+                  ? values.storageQuotaLimit.toString()
+                  : null,
+              })
+              .then(() => {
+                getUsers();
+                modals.closeAll();
+              })
+              .catch(toast.axiosError);
+          },
+          (errors) => {
+            if (errors.username || errors.email) {
+              setActiveTab("general");
+            } else {
+              setActiveTab("permissions");
+            }
+          },
+        )}
       >
         <Tabs value={activeTab} onTabChange={setActiveTab}>
           <Tabs.List mb="md">
@@ -214,8 +217,8 @@ const Body = ({
           <Tabs.Panel value="general">
             <Stack>
               <TextInput
-                label={t("admin.users.table.fullname")}
-                {...accountForm.getInputProps("fullname")}
+                label={t("admin.users.table.displayName")}
+                {...accountForm.getInputProps("displayName")}
               />
               <TextInput
                 label={t("admin.users.table.username")}

@@ -215,7 +215,9 @@ export class FileService {
         where: { id: shareId },
         select: {
           id: true,
-          creator: { select: { email: true, username: true, fullname: true } },
+          creator: {
+            select: { email: true, username: true, displayName: true },
+          },
           recipients: {
             where: { id: recipientId },
             select: { email: true },
@@ -228,7 +230,7 @@ export class FileService {
 
       const recipientUser = await this.prisma.user.findUnique({
         where: { email: recipient.email },
-        select: { fullname: true, username: true },
+        select: { displayName: true, username: true },
       });
 
       await this.cache.set(
@@ -242,8 +244,8 @@ export class FileService {
         share.id,
         fileName,
         recipient.email,
-        share.creator?.fullname || share.creator?.username,
-        recipientUser?.fullname || recipientUser?.username
+        share.creator?.displayName || share.creator?.username,
+        recipientUser?.displayName || recipientUser?.username,
       );
     } catch (e) {
       this.logger.error(

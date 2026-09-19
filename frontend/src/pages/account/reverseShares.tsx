@@ -102,7 +102,12 @@ const MyShares = () => {
             <Title order={3}>
               <FormattedMessage id="account.reverseShares.title.empty" />
             </Title>
-            <Text color={user?.allowCreateReverseShares === false ? "dimmed" : undefined} align="center">
+            <Text
+              color={
+                user?.allowCreateReverseShares === false ? "dimmed" : undefined
+              }
+              align="center"
+            >
               <FormattedMessage
                 id={
                   user?.allowCreateReverseShares === false

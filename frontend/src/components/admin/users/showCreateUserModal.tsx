@@ -55,7 +55,7 @@ const Body = ({
 
   const form = useForm({
     initialValues: {
-      fullname: "",
+      displayName: "",
       username: "",
       email: "",
       password: undefined,
@@ -74,7 +74,7 @@ const Body = ({
     },
     validate: yupResolver(
       yup.object().shape({
-        fullname: yup
+        displayName: yup
           .string()
           .matches(/^[\p{L} ,.'-]*$/u, t("common.error.name.invalid-chars")),
         email: yup.string().email(t("common.error.invalid-email")),
@@ -149,39 +149,42 @@ const Body = ({
     <Stack>
       <form
         id="createUserForm"
-        onSubmit={form.onSubmit(async (values) => {
-          userService
-            .create({
-              fullname: values.fullname,
-              username: values.username,
-              email: values.email,
-              password: values.password,
-              isAdmin: values.isAdmin,
-              allowShare: values.allowShare,
-              allowCreateReverseShares: values.allowCreateReverseShares,
-              maxShares: values.hasCustomMaxShares ? values.maxShares : null,
-              maxReverseShares: values.hasCustomMaxReverseShares
-                ? values.maxReverseShares
-                : null,
-              shareSizeLimit: values.hasCustomShareSizeLimit
-                ? values.shareSizeLimit.toString()
-                : null,
-              storageQuotaLimit: values.hasCustomStorageQuotaLimit
-                ? values.storageQuotaLimit.toString()
-                : null,
-            })
-            .then(() => {
-              getUsers();
-              modals.closeAll();
-            })
-            .catch(toast.axiosError);
-        }, (errors) => {
-          if (errors.username || errors.email || errors.password) {
-            setActiveTab("general");
-          } else {
-            setActiveTab("permissions");
-          }
-        })}
+        onSubmit={form.onSubmit(
+          async (values) => {
+            userService
+              .create({
+                displayName: values.displayName,
+                username: values.username,
+                email: values.email,
+                password: values.password,
+                isAdmin: values.isAdmin,
+                allowShare: values.allowShare,
+                allowCreateReverseShares: values.allowCreateReverseShares,
+                maxShares: values.hasCustomMaxShares ? values.maxShares : null,
+                maxReverseShares: values.hasCustomMaxReverseShares
+                  ? values.maxReverseShares
+                  : null,
+                shareSizeLimit: values.hasCustomShareSizeLimit
+                  ? values.shareSizeLimit.toString()
+                  : null,
+                storageQuotaLimit: values.hasCustomStorageQuotaLimit
+                  ? values.storageQuotaLimit.toString()
+                  : null,
+              })
+              .then(() => {
+                getUsers();
+                modals.closeAll();
+              })
+              .catch(toast.axiosError);
+          },
+          (errors) => {
+            if (errors.username || errors.email || errors.password) {
+              setActiveTab("general");
+            } else {
+              setActiveTab("permissions");
+            }
+          },
+        )}
       >
         <Tabs value={activeTab} onTabChange={setActiveTab}>
           <Tabs.List mb="md">
@@ -196,8 +199,8 @@ const Body = ({
           <Tabs.Panel value="general">
             <Stack>
               <TextInput
-                label={t("admin.users.modal.create.fullname")}
-                {...form.getInputProps("fullname")}
+                label={t("admin.users.modal.create.displayName")}
+                {...form.getInputProps("displayName")}
               />
               <TextInput
                 label={t("admin.users.modal.create.username")}
