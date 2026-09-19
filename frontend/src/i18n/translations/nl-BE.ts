@@ -287,7 +287,10 @@ export default {
   "upload.error.not-allowed.description": "Your account does not have permission to upload or create shares.",
   // Dropzone.tsx
   "upload.dropzone.title": "Bestanden uploaden",
-  "upload.dropzone.description": "Sleep bestanden of mappen hierheen om je share te starten, of gebruik Ctrl+V om tekst vanaf het klembord te uploaden. De totale bestandsgrootte mag niet groter zijn dan {maxSize}.",
+  "upload.dropzone.description.mobile": "Tap here to select individual files, photos, or videos. To upload a folder, use the button below. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.mobile.no-folder": "Tap here to select individual files, photos, or videos. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Uw bestanden overschrijden de maximale share-grootte van {maxSize}.",
   "upload.button.folder": "Map uploaden",
   "upload.button.folder.append": "Map toevoegen",
