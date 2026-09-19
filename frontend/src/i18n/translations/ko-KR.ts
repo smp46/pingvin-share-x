@@ -287,7 +287,10 @@ export default {
   "upload.error.not-allowed.description": "Your account does not have permission to upload or create shares.",
   // Dropzone.tsx
   "upload.dropzone.title": "파일 업로드",
-  "upload.dropzone.description": "공유를 시작하려면 파일이나 폴더를 여기로 드래그 앤 드롭하거나 클립보드의 텍스트 내용을 업로드하려면 'Ctrl+V'를 누르세요. 총 {maxSize} 이하의 파일만 허용됩니다.",
+  "upload.dropzone.description.mobile": "Tap here to select individual files, photos, or videos. To upload a folder, use the button below. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.mobile.no-folder": "Tap here to select individual files, photos, or videos. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "파일이 {maxSize} 의 최대 공유 크기를 초과합니다.",
   "upload.button.folder": "폴더 업로드",
   "upload.button.folder.append": "폴더 추가",
