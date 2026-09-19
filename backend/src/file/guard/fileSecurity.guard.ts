@@ -50,6 +50,7 @@ export class FileSecurityGuard extends ShareSecurityGuard {
       where: { id: shareId },
       include: {
         security: true,
+        reverseShare: true,
         userRecipients: { select: { userId: true } },
         recipients: { select: { email: true } },
       },
@@ -57,10 +58,10 @@ export class FileSecurityGuard extends ShareSecurityGuard {
 
     // If there is no share token the user requests a file directly
     if (!shareToken) {
+      const user = await this.authenticateUser(context);
+
       // If admin access is enabled and user is admin, allow access
       if (this._config.get("security.allowAdminAccessAllShares")) {
-        await super.canActivate(context);
-        const user = request.user as User | undefined;
         if (user?.isAdmin) {
           return true;
         }
@@ -74,8 +75,20 @@ export class FileSecurityGuard extends ShareSecurityGuard {
         throw new NotFoundException(this._i18n.t("file.notFound"));
       }
 
+      // Only the creator and reverse share creator can access the reverse share
+      // if it's not public
+      if (
+        share.reverseShare &&
+        !share.reverseShare.publicAccess &&
+        share.creatorId !== user?.id &&
+        share.reverseShare.creatorId !== user?.id
+      )
+        throw new ForbiddenException(
+          this._i18n.t("share.privateShare"),
+          "private_share",
+        );
+
       if (share.security?.restrictToRecipients) {
-        const user = await this.authenticateUser(context);
         const isCreator = user && share.creatorId === user.id;
         const isRecipient = await this.isRecipient(share, user);
 

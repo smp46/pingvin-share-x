@@ -536,12 +536,18 @@ export class ShareService {
   async getReceivedShares(userId: string) {
     return this.prisma.shareUserRecipient.findMany({
       where: { userId },
-      include: {
+      select: {
+        id: true,
         share: {
-          include: {
-            creator: true,
-            files: true,
-            security: true,
+          select: {
+            id: true,
+            name: true,
+            expiration: true,
+            creator: {
+              select: {
+                username: true,
+              },
+            },
           },
         },
       },
