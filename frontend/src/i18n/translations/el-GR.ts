@@ -287,7 +287,10 @@ export default {
   "upload.error.not-allowed.description": "Your account does not have permission to upload or create shares.",
   // Dropzone.tsx
   "upload.dropzone.title": "Μεταφόρτωση αρχείων",
-  "upload.dropzone.description": "Σύρετε και αφήστε αρχεία ή φακέλους εδώ για να ξεκινήσετε την κοινοποίησή σας ή πατήστε 'Ctrl+V' για να ανεβάσετε περιεχόμενο κειμένου από το πρόχειρο. Δεχόμαστε μόνο αρχεία έως συνολικά {maxSize}.",
+  "upload.dropzone.description.mobile": "Tap here to select individual files, photos, or videos. To upload a folder, use the button below. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.mobile.no-folder": "Tap here to select individual files, photos, or videos. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Τα αρχεία σας υπερβαίνουν το μέγιστο μέγεθος κοινής χρήσης του {maxSize}.",
   "upload.button.folder": "Μεταφόρτωση φακέλου",
   "upload.button.folder.append": "Προσάρτηση φακέλου",
