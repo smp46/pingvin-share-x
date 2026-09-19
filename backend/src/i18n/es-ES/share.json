@@ -15,5 +15,7 @@
   "tokenRequired": "Se requiere token de compartido",
   "privateShare": "Solo el creador del compartido inverso puede acceder a este compartido",
   "maxViewsExceeded": "Se ha superado el número máximo de visualizaciones",
-  "restrictedToRecipients": "Este compartido está restringido a destinatarios específicos. Por favor, inicia sesión para acceder."
+  "restrictedToRecipients": "Este compartido está restringido a destinatarios específicos. Por favor, inicia sesión para acceder.",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }

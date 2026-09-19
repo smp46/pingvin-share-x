@@ -15,5 +15,7 @@
   "tokenRequired": "Delingstoken kreves",
   "privateShare": "Kun oppretteren av den omvendte delingen har tilgang til denne delingen",
   "maxViewsExceeded": "Maksimalt antall visninger er overskredet",
-  "restrictedToRecipients": "Denne delingen er begrenset til bestemte mottakere. Vennligst logg inn for å få tilgang."
+  "restrictedToRecipients": "Denne delingen er begrenset til bestemte mottakere. Vennligst logg inn for å få tilgang.",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }

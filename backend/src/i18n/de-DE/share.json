@@ -15,5 +15,7 @@
   "tokenRequired": "Freigabe-Token erforderlich",
   "privateShare": "Nur der Ersteller der Reverse-Freigabe kann auf diese Freigabe zugreifen",
   "maxViewsExceeded": "Maximale Anzahl an Aufrufen überschritten",
-  "restrictedToRecipients": "Diese Freigabe ist auf bestimmte Empfänger beschränkt. Bitte melde dich an, um darauf zuzugreifen."
+  "restrictedToRecipients": "Diese Freigabe ist auf bestimmte Empfänger beschränkt. Bitte melde dich an, um darauf zuzugreifen.",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }

@@ -15,5 +15,7 @@
   "tokenRequired": "Potreban je token za dijeljenje",
   "privateShare": "Samo kreator obrnutog dijeljenja može pristupiti ovom dijeljenju",
   "maxViewsExceeded": "Premašen maksimalan broj pregleda",
-  "restrictedToRecipients": "Ovo dijeljenje je ograničeno na određene primatelje. Molimo prijavite se za pristup."
+  "restrictedToRecipients": "Ovo dijeljenje je ograničeno na određene primatelje. Molimo prijavite se za pristup.",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }

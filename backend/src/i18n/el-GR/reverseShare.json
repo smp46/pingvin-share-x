@@ -1,5 +1,7 @@
 {
   "notFound": "Το διακριτικό αντίστροφης κοινής χρήσης δεν βρέθηκε",
   "maxShareSizeExceeded": "Το μέγιστο μέγεθος κοινής χρήσης δεν μπορεί να είναι μεγαλύτερο από {maxSize} bytes.",
-  "tokenInUse": "Το διακριτικό αντίστροφης κοινοποίησης χρησιμοποιείται ήδη"
+  "tokenInUse": "Το διακριτικό αντίστροφης κοινοποίησης χρησιμοποιείται ήδη",
+  "notAllowedToCreate": "You do not have permission to create reverse shares",
+  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
 }
