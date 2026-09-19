@@ -287,7 +287,10 @@ export default {
   "upload.error.not-allowed.description": "Your account does not have permission to upload or create shares.",
   // Dropzone.tsx
   "upload.dropzone.title": "Last opp filer",
-  "upload.dropzone.description": "Dra og slipp filer eller mapper her for å starte delingen, eller trykk «Ctrl+V» for å laste opp tekstinnhold fra utklippstavlen. Vi godtar bare filer opptil {maxSize} totalt.",
+  "upload.dropzone.description.mobile": "Tap here to select individual files, photos, or videos. To upload a folder, use the button below. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.mobile.no-folder": "Tap here to select individual files, photos, or videos. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Filene dine overskrider den maksimale delingsstørrelsen på {maxSize}.",
   "upload.button.folder": "Last opp mappe",
   "upload.button.folder.append": "Legg til mappe",
