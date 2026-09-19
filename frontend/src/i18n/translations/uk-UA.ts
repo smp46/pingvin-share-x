@@ -287,7 +287,10 @@ export default {
   "upload.error.not-allowed.description": "Your account does not have permission to upload or create shares.",
   // Dropzone.tsx
   "upload.dropzone.title": "Завантажити файли",
-  "upload.dropzone.description": "Перетягніть файли або папки сюди, щоб почати ділитися ними, або скористайтеся комбінацією «Ctrl+V» для завантаження тексту з буфера обміну. Загальний розмір файлів не повинен перевищувати {maxSize}.",
+  "upload.dropzone.description.mobile": "Tap here to select individual files, photos, or videos. To upload a folder, use the button below. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.mobile.no-folder": "Tap here to select individual files, photos, or videos. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Ваші файли перевищують максимальний розмір у {maxSize}.",
   "upload.button.folder": "Завантажити папку",
   "upload.button.folder.append": "Додати папку",
