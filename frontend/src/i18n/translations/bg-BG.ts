@@ -287,7 +287,10 @@ export default {
   "upload.error.not-allowed.description": "Вашият акаунт няма разрешение да качва файлове или да създава споделяния.",
   // Dropzone.tsx
   "upload.dropzone.title": "Качване на файлове",
-  "upload.dropzone.description": "Плъзнете и пуснете файлове или папки тук, за да започнете споделянето, или натиснете „Ctrl+V“, за да качите текстово съдържание от клипборда. Общият размер на файловете не може да надвишава {maxSize}.",
+  "upload.dropzone.description.mobile": "Tap here to select individual files, photos, or videos. To upload a folder, use the button below. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.mobile.no-folder": "Tap here to select individual files, photos, or videos. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Вашите файлове надвишават максималния размер за споделяне от {maxSize}.",
   "upload.button.folder": "Качване на папка",
   "upload.button.folder.append": "Добавяне на папка",
