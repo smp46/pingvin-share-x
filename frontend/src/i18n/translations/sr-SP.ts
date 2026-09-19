@@ -287,7 +287,10 @@ export default {
   "upload.error.not-allowed.description": "Your account does not have permission to upload or create shares.",
   // Dropzone.tsx
   "upload.dropzone.title": "Пошаљи датотеке",
-  "upload.dropzone.description": "Превуците и пустите датотеке или фасцикле овде да бисте започели дељење или притисните 'Ctrl+V' да отпремите текстуални садржај из међумеморије. Прихватамо само датотеке до укупно {maxSize}.",
+  "upload.dropzone.description.mobile": "Tap here to select individual files, photos, or videos. To upload a folder, use the button below. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.mobile.no-folder": "Tap here to select individual files, photos, or videos. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Ваше датотеке премашују максималну величину дељења од {maxSize}.",
   "upload.button.folder": "Отпреми фасциклу",
   "upload.button.folder.append": "Додај фасциклу",
