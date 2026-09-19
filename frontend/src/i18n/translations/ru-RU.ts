@@ -287,7 +287,10 @@ export default {
   "upload.error.not-allowed.description": "У вашей учётной записи нет прав на загрузку файлов или создание раздач.",
   // Dropzone.tsx
   "upload.dropzone.title": "Загрузить файлы",
-  "upload.dropzone.description": "Перетащите сюда файлы или папки, для начала загрузки, или нажмите Ctrl+V, чтобы загрузить текстовое содержимое из буфера обмена. Размер всех файлов не должен превышать {maxSize}.",
+  "upload.dropzone.description.mobile": "Tap here to select individual files, photos, or videos. To upload a folder, use the button below. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.mobile.no-folder": "Tap here to select individual files, photos, or videos. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Ваши файлы превышают максимальный размер {maxSize}.",
   "upload.button.folder": "Загрузка папки",
   "upload.button.folder.append": "Добавить папку",
