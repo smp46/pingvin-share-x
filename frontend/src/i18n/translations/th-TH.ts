@@ -405,6 +405,8 @@ export default {
   "admin.config.category.oauth": "เข้าสู่ระบบด้วยบัญชีโซเชียล",
   "admin.config.general.app-name": "ชื่อแอพ",
   "admin.config.general.app-name.description": "ชื่อแอพพลิเคชัน",
+  "admin.config.general.show-auth-buttons": "Show auth buttons",
+  "admin.config.general.show-auth-buttons.description": "Whether to show sign-in and sign-up buttons on share and upload pages.",
   "admin.config.general.default-language": "ภาษาเริ่มต้น",
   "admin.config.general.default-language.description": "This applies to all users. Each user can still choose a language in their profile.",
   "admin.config.appearance.theme-primary-color": "สีหลักของธีม",
