@@ -405,6 +405,8 @@ export default {
   "admin.config.category.oauth": "Közösségi bejelentkezés",
   "admin.config.general.app-name": "Alkalmazás neve",
   "admin.config.general.app-name.description": "Az alkalmazás neve",
+  "admin.config.general.show-auth-buttons": "Show auth buttons",
+  "admin.config.general.show-auth-buttons.description": "Whether to show sign-in and sign-up buttons on share and upload pages.",
   "admin.config.general.default-language": "Alapértelmezett nyelv",
   "admin.config.general.default-language.description": "This applies to all users. Each user can still choose a language in their profile.",
   "admin.config.appearance.theme-primary-color": "Téma elsődleges színe",
