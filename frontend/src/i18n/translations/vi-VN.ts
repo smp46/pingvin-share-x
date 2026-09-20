@@ -405,6 +405,8 @@ export default {
   "admin.config.category.oauth": "Đăng nhập mạng xã hội",
   "admin.config.general.app-name": "Tên ứng dụng",
   "admin.config.general.app-name.description": "Tên của ứng dụng",
+  "admin.config.general.show-auth-buttons": "Show auth buttons",
+  "admin.config.general.show-auth-buttons.description": "Whether to show sign-in and sign-up buttons on share and upload pages.",
   "admin.config.general.default-language": "Ngôn ngữ mặc định",
   "admin.config.general.default-language.description": "This applies to all users. Each user can still choose a language in their profile.",
   "admin.config.appearance.theme-primary-color": "Màu chính của giao diện",
