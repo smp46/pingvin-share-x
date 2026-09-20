@@ -405,6 +405,8 @@ export default {
   "admin.config.category.oauth": "Авторизация через социальные сети",
   "admin.config.general.app-name": "Название приложения",
   "admin.config.general.app-name.description": "Видимое название приложения",
+  "admin.config.general.show-auth-buttons": "Show auth buttons",
+  "admin.config.general.show-auth-buttons.description": "Whether to show sign-in and sign-up buttons on share and upload pages.",
   "admin.config.general.default-language": "Язык по умолчанию",
   "admin.config.general.default-language.description": "Применяется ко всем пользователям. При этом каждый может выбрать свой язык в профиле.",
   "admin.config.appearance.theme-primary-color": "Основной цвет темы",
