@@ -405,6 +405,8 @@ export default {
   "admin.config.category.oauth": "Влизане чрез социални мрежи",
   "admin.config.general.app-name": "Име на приложението",
   "admin.config.general.app-name.description": "Име на приложението",
+  "admin.config.general.show-auth-buttons": "Show auth buttons",
+  "admin.config.general.show-auth-buttons.description": "Whether to show sign-in and sign-up buttons on share and upload pages.",
   "admin.config.general.default-language": "Език по подразбиране",
   "admin.config.general.default-language.description": "Това се отнася за всички потребители. Всеки потребител все още може да избере език в профила си.",
   "admin.config.appearance.theme-primary-color": "Основен цвят на темата",
