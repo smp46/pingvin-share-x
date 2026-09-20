@@ -405,6 +405,8 @@ export default {
   "admin.config.category.oauth": "소셜 로그인",
   "admin.config.general.app-name": "앱 이름",
   "admin.config.general.app-name.description": "이 앱의 이름",
+  "admin.config.general.show-auth-buttons": "Show auth buttons",
+  "admin.config.general.show-auth-buttons.description": "Whether to show sign-in and sign-up buttons on share and upload pages.",
   "admin.config.general.default-language": "기본 언어",
   "admin.config.general.default-language.description": "This applies to all users. Each user can still choose a language in their profile.",
   "admin.config.appearance.theme-primary-color": "테마 기본 색상",
