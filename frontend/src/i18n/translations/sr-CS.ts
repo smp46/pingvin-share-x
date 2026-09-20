@@ -405,6 +405,8 @@ export default {
   "admin.config.category.oauth": "Social login",
   "admin.config.general.app-name": "Naziv aplikacije",
   "admin.config.general.app-name.description": "Naziv aplikacije",
+  "admin.config.general.show-auth-buttons": "Show auth buttons",
+  "admin.config.general.show-auth-buttons.description": "Whether to show sign-in and sign-up buttons on share and upload pages.",
   "admin.config.general.default-language": "Podrazumevani jezik",
   "admin.config.general.default-language.description": "This applies to all users. Each user can still choose a language in their profile.",
   "admin.config.appearance.theme-primary-color": "Primarna boja teme",
