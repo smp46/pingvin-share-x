@@ -405,6 +405,8 @@ export default {
   "admin.config.category.oauth": "Друштвена пријава",
   "admin.config.general.app-name": "Назив апликације",
   "admin.config.general.app-name.description": "Назив апликације",
+  "admin.config.general.show-auth-buttons": "Show auth buttons",
+  "admin.config.general.show-auth-buttons.description": "Whether to show sign-in and sign-up buttons on share and upload pages.",
   "admin.config.general.default-language": "Подразумевани језик",
   "admin.config.general.default-language.description": "This applies to all users. Each user can still choose a language in their profile.",
   "admin.config.appearance.theme-primary-color": "Примарна боја теме",
