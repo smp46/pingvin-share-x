@@ -25,6 +25,11 @@ export const configVariables = {
       defaultValue: "true",
       secret: false,
     },
+    showAuthButtons: {
+      type: "boolean",
+      defaultValue: "true",
+      secret: false,
+    },
     defaultLanguage: {
       type: "string",
       defaultValue: "en-US",
