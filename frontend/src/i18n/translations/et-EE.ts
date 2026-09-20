@@ -405,6 +405,8 @@ export default {
   "admin.config.category.oauth": "Sotsiaalmeediaga sisselogimine",
   "admin.config.general.app-name": "Rakenduse nimi",
   "admin.config.general.app-name.description": "Rakenduse nimi",
+  "admin.config.general.show-auth-buttons": "Show auth buttons",
+  "admin.config.general.show-auth-buttons.description": "Whether to show sign-in and sign-up buttons on share and upload pages.",
   "admin.config.general.default-language": "Vaikimisi keel",
   "admin.config.general.default-language.description": "This applies to all users. Each user can still choose a language in their profile.",
   "admin.config.appearance.theme-primary-color": "Teema põhivärv",
