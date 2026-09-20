@@ -405,6 +405,8 @@ export default {
   "admin.config.category.oauth": "社交账号登录",
   "admin.config.general.app-name": "应用名称",
   "admin.config.general.app-name.description": "自定义 App 的名称",
+  "admin.config.general.show-auth-buttons": "Show auth buttons",
+  "admin.config.general.show-auth-buttons.description": "Whether to show sign-in and sign-up buttons on share and upload pages.",
   "admin.config.general.default-language": "默认语言",
   "admin.config.general.default-language.description": "This applies to all users. Each user can still choose a language in their profile.",
   "admin.config.appearance.theme-primary-color": "主题主色",
