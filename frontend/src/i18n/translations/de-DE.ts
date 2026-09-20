@@ -405,6 +405,8 @@ export default {
   "admin.config.category.oauth": "Anmeldung über soziale Netzwerke",
   "admin.config.general.app-name": "App-Name",
   "admin.config.general.app-name.description": "Name der Applikation",
+  "admin.config.general.show-auth-buttons": "Show auth buttons",
+  "admin.config.general.show-auth-buttons.description": "Whether to show sign-in and sign-up buttons on share and upload pages.",
   "admin.config.general.default-language": "Standardsprache",
   "admin.config.general.default-language.description": "This applies to all users. Each user can still choose a language in their profile.",
   "admin.config.appearance.theme-primary-color": "Primärfarbe des Themes",
