@@ -14,7 +14,7 @@ export default {
 
   // /
   "home.title": "Una plataforma de compartició de fitxers <h>autohostejada</h>.",
-  "home.description": "Do you really want to put your personal files in the hands of third parties like WeTransfer?",
+  "home.description": "Realment voleu posar els vostres fitxers en mans de tercers com WeTransfer?",
   "home.bullet.a.name": "Autohostejat",
   "home.bullet.a.description": "Hostegeu Pingvin Share a la vostra pròpia màquina.",
   "home.bullet.b.name": "Privadesa",
@@ -287,7 +287,7 @@ export default {
   "upload.error.not-allowed.description": "Your account does not have permission to upload or create shares.",
   // Dropzone.tsx
   "upload.dropzone.title": "Pujar fitxers",
-  "upload.dropzone.description.mobile": "Tap here to select individual files, photos, or videos. To upload a folder, use the button below. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.mobile": "Cliqueu aquí per seleccionar fitxers, fotografies o vídeos individualment. Per pujar una carpeta, useu el botó de sota. Mida total màxima de pujada: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "Tap here to select individual files, photos, or videos. Maximum total upload size: {maxSize}.",
   "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
