@@ -1,5 +1,7 @@
 {
   "notFound": "未找到回傳分享權杖",
   "maxShareSizeExceeded": "最大分享大小不能大於 {maxSize} 位元組。",
-  "tokenInUse": "回傳分享權杖已在使用中"
+  "tokenInUse": "回傳分享權杖已在使用中",
+  "notAllowedToCreate": "You do not have permission to create reverse shares",
+  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
 }

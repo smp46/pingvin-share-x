@@ -15,5 +15,7 @@
   "tokenRequired": "Cal el token de compartició",
   "privateShare": "Només el creador de la compartició inversa pot accedir a aquesta compartició",
   "maxViewsExceeded": "S'ha superat el nombre màxim de visualitzacions",
-  "restrictedToRecipients": "Aquesta compartició està restringida a destinataris específics. Inicieu sessió per accedir-hi."
+  "restrictedToRecipients": "Aquesta compartició està restringida a destinataris específics. Inicieu sessió per accedir-hi.",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }

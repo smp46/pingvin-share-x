@@ -1,5 +1,7 @@
 {
   "notFound": "Käänteisen jaon tunnistetta ei löytynyt",
   "maxShareSizeExceeded": "Jaon enimmäiskoko ei voi olla suurempi kuin {maxSize} tavua.",
-  "tokenInUse": "Käänteisen jaon tunniste (token) on jo käytössä"
+  "tokenInUse": "Käänteisen jaon tunniste (token) on jo käytössä",
+  "notAllowedToCreate": "You do not have permission to create reverse shares",
+  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
 }

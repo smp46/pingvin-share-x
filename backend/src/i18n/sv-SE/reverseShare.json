@@ -1,5 +1,7 @@
 {
   "notFound": "Token för omvänd delning hittades inte",
   "maxShareSizeExceeded": "Maximal delningsstorlek kan inte vara större än {maxSize} byte.",
-  "tokenInUse": "Token för omvänd delning används redan"
+  "tokenInUse": "Token för omvänd delning används redan",
+  "notAllowedToCreate": "You do not have permission to create reverse shares",
+  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
 }

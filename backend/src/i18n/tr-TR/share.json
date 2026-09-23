@@ -15,5 +15,7 @@
   "tokenRequired": "Paylaşım belirteci gerekli",
   "privateShare": "Bu paylaşıma yalnızca ters paylaşım oluşturucusu erişebilir",
   "maxViewsExceeded": "Maksimum görüntüleme sayısı aşıldı",
-  "restrictedToRecipients": "Bu paylaşım belirli alıcılarla sınırlandırılmıştır. Erişmek için lütfen giriş yapın."
+  "restrictedToRecipients": "Bu paylaşım belirli alıcılarla sınırlandırılmıştır. Erişmek için lütfen giriş yapın.",
+  "notAllowedToShare": "You do not have permission to create shares",
+  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
 }
