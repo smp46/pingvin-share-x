@@ -149,6 +149,10 @@ const CreateUploadModalBody = ({
       .number()
       .transform((value) => value || undefined)
       .min(1),
+    description: yup
+      .string()
+      .optional()
+      .max(512, t("common.error.too-long", { length: 512 })),
   });
 
   const defaultTimespan = options.defaultExpiration
