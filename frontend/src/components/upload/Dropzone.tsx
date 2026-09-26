@@ -4,12 +4,17 @@ import {
   createStyles,
   Group,
   Text,
-  Menu,
   useMantineColorScheme,
 } from "@mantine/core";
 import { Dropzone as MantineDropzone } from "@mantine/dropzone";
-import React, { ForwardedRef, useEffect, useRef, useState } from "react";
-import { TbCloudUpload, TbUpload, TbFolder } from "react-icons/tb";
+import React, {
+  ForwardedRef,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+import { TbCloudUpload, TbFolder } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import { fromEvent } from "file-selector";
 import useTranslate from "../../hooks/useTranslate.hook";
@@ -106,8 +111,8 @@ const getFilesFromEvent = async (event: any): Promise<any[]> => {
     return await Promise.all(filePromises);
   }
 
-  if (event?.dataTransfer) {
-    const items = event.dataTransfer.items;
+  if (event?.dataTransfer || event?.clipboardData) {
+    const items = event.dataTransfer?.items || event.clipboardData?.items;
     if (!items) return [];
 
     const filePromises: Promise<File[]>[] = [];
@@ -163,10 +168,39 @@ const Dropzone = ({
     setIsMac(/Macintosh|Mac OS X/.test(navigator.userAgent));
   }, []);
 
+  const validateFilesAndSet = useCallback(
+    (files: FileUpload[]) => {
+      const fileSizeSum = files.reduce((n, { size }) => n + size, 0);
+
+      if (fileSizeSum + currentFilesSize > maxShareSize) {
+        toast.error(
+          t("upload.dropzone.notify.file-too-big", {
+            maxSize: byteToHumanSizeString(maxShareSize),
+          }),
+        );
+      } else {
+        onFilesChanged(files);
+      }
+    },
+    [currentFilesSize, maxShareSize],
+  );
+
   const isFolderUploadSupported =
     isMounted &&
     typeof HTMLInputElement !== "undefined" &&
     "webkitdirectory" in HTMLInputElement.prototype;
+
+  const handleClipboardEvent = async (event: ClipboardEvent) => {
+    const files = (await getFilesFromEvent(event)) as FileUpload[];
+    if (!files || !files.length) return;
+
+    const filesToUpload = files.map((e) => {
+      e.uploadingProgress = 0;
+      return e;
+    });
+
+    validateFilesAndSet(filesToUpload);
+  };
 
   const handleFolderSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const filesList = event.target.files;
@@ -178,20 +212,16 @@ const Dropzone = ({
       return newFile;
     });
 
-    const fileSizeSum = files.reduce((n, { size }) => n + size, 0);
-
-    if (fileSizeSum + currentFilesSize > maxShareSize) {
-      toast.error(
-        t("upload.dropzone.notify.file-too-big", {
-          maxSize: byteToHumanSizeString(maxShareSize),
-        }),
-      );
-    } else {
-      onFilesChanged(files);
-    }
-
+    validateFilesAndSet(files);
     event.target.value = "";
   };
+
+  useEffect(() => {
+    document.addEventListener("paste", handleClipboardEvent);
+    return () => {
+      document.removeEventListener("paste", handleClipboardEvent);
+    };
+  }, []);
 
   return (
     <div className={classes.wrapper}>
