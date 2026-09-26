@@ -38,20 +38,35 @@ export class EmailService {
     });
   }
 
+  private getFromAddress(): string | { name: string; address: string } {
+    const appName = this.config.get("general.appName")?.trim();
+    const address = this.config.get("smtp.email");
+    return appName ? { name: appName, address } : address;
+  }
+
+  private formatTemplate(
+    template: string,
+    vars: Record<string, string | undefined>,
+  ): string {
+    return template
+      .replaceAll("\\n", "\n")
+      .replace(/\{([a-zA-Z0-9_-]+)\}/g, (match, key) => vars[key] ?? match);
+  }
+
   private async sendMail(
     email: string,
     subject: string,
     text: string,
-    replyTo?: string,
+    replyTo?: string | { name: string; address: string },
+    recipientName?: string,
   ) {
     const isHtml = this.config.get("email.sendHtmlEmails");
+    const recipient = recipientName?.trim();
 
     await this.getTransporter()
       .sendMail({
-        from: `"${this.config.get("general.appName")}" <${this.config.get(
-          "smtp.email",
-        )}>`,
-        to: email,
+        from: this.getFromAddress(),
+        to: recipient ? { name: recipient, address: email } : email,
         subject: subject,
         [isHtml ? "html" : "text"]: text,
         ...(replyTo && { replyTo }),
@@ -69,6 +84,7 @@ export class EmailService {
     creator?: User,
     description?: string,
     expiration?: Date,
+    recipientName?: string,
   ) {
     if (!this.config.get("share.enableShareEmailRecipients"))
       throw new InternalServerErrorException(
@@ -81,38 +97,48 @@ export class EmailService {
     const lang = this.config.get("general.defaultLanguage");
     const locale = this.i18n.translate("email.locale", { lang });
 
-    let replyTo: string | undefined = undefined;
+    let replyTo: string | { name: string; address: string } | undefined =
+      undefined;
     if (
       this.config.get("email.shareRecipientsReplyToCreator") &&
       creator?.email
     ) {
-      replyTo = `"${creator.username}" <${creator.email}>`;
+      const creatorName = creator.displayName || creator.username;
+      replyTo = creatorName
+        ? { name: creatorName, address: creator.email }
+        : creator.email;
     }
+
+    const vars = {
+      creator:
+        creator?.displayName ||
+        creator?.username ||
+        this.i18n.t("email.shareRecipientsCreatorFallback"),
+      creatorEmail: creator?.email ?? "",
+      shareUrl,
+      desc: description ?? this.i18n.t("email.shareRecipientsDescFallback"),
+      expires:
+        moment(expiration).unix() != 0
+          ? moment(expiration).locale(locale).fromNow()
+          : this.i18n.t("email.shareRecipientsExpiresNeverFallback"),
+      name: recipientName ?? "",
+      recipient: recipientName ?? "",
+      recipientEmail,
+      email: recipientEmail,
+    };
 
     await this.sendMail(
       recipientEmail,
-      this.config.get("email.shareRecipientsSubject"),
-      this.config
-        .get("email.shareRecipientsMessage")
-        .replaceAll("\\n", "\n")
-        .replaceAll(
-          "{creator}",
-          creator?.username ??
-            this.i18n.t("email.shareRecipientsCreatorFallback"),
-        )
-        .replaceAll("{creatorEmail}", creator?.email ?? "")
-        .replaceAll("{shareUrl}", shareUrl)
-        .replaceAll(
-          "{desc}",
-          description ?? this.i18n.t("email.shareRecipientsDescFallback"),
-        )
-        .replaceAll(
-          "{expires}",
-          moment(expiration).unix() != 0
-            ? moment(expiration).locale(locale).fromNow()
-            : this.i18n.t("email.shareRecipientsExpiresNeverFallback"),
-        ),
+      this.formatTemplate(
+        this.config.get("email.shareRecipientsSubject"),
+        vars,
+      ),
+      this.formatTemplate(
+        this.config.get("email.shareRecipientsMessage"),
+        vars,
+      ),
       replyTo,
+      recipientName,
     );
   }
 
@@ -121,75 +147,132 @@ export class EmailService {
     shareId: string,
     fileName: string,
     recipientEmail: string,
+    creatorName?: string,
+    recipientName?: string,
   ) {
     const shareUrl = `${this.config.get("general.appUrl")}/s/${shareId}`;
+    const downloader = recipientName
+      ? `${recipientName} (${recipientEmail})`
+      : recipientEmail;
+
+    const vars = {
+      recipient: downloader,
+      recipientEmail,
+      fileName,
+      shareUrl,
+      creator: creatorName ?? "",
+      name: creatorName ?? "",
+    };
 
     await this.sendMail(
       creatorEmail,
-      this.config.get("email.shareDownloadNotificationSubject"),
-      this.config
-        .get("email.shareDownloadNotificationMessage")
-        .replaceAll("\\n", "\n")
-        .replaceAll("{recipientEmail}", recipientEmail)
-        .replaceAll("{fileName}", fileName)
-        .replaceAll("{shareUrl}", shareUrl),
+      this.formatTemplate(
+        this.config.get("email.shareDownloadNotificationSubject"),
+        vars,
+      ),
+      this.formatTemplate(
+        this.config.get("email.shareDownloadNotificationMessage"),
+        vars,
+      ),
+      undefined,
+      creatorName,
     );
   }
 
-  async sendMailToReverseShareCreator(recipientEmail: string, shareId: string) {
+  async sendMailToReverseShareCreator(
+    recipientEmail: string,
+    shareId: string,
+    recipientName?: string,
+  ) {
     const shareUrl = `${this.config.get("general.appUrl")}/s/${shareId}`;
+    const vars = {
+      shareUrl,
+      name: recipientName ?? "",
+      creator: recipientName ?? "",
+      recipient: recipientName ?? "",
+      email: recipientEmail,
+    };
 
     await this.sendMail(
       recipientEmail,
-      this.config.get("email.reverseShareSubject"),
-      this.config
-        .get("email.reverseShareMessage")
-        .replaceAll("\\n", "\n")
-        .replaceAll("{shareUrl}", shareUrl),
+      this.formatTemplate(this.config.get("email.reverseShareSubject"), vars),
+      this.formatTemplate(this.config.get("email.reverseShareMessage"), vars),
+      undefined,
+      recipientName,
     );
   }
 
-  async sendResetPasswordEmail(recipientEmail: string, token: string) {
+  async sendResetPasswordEmail(
+    recipientEmail: string,
+    token: string,
+    recipientName?: string,
+  ) {
     const resetPasswordUrl = `${this.config.get(
       "general.appUrl",
     )}/auth/resetPassword/${token}`;
+    const vars = {
+      url: resetPasswordUrl,
+      name: recipientName ?? "",
+      username: recipientName ?? "",
+      displayName: recipientName ?? "",
+      email: recipientEmail,
+    };
 
     await this.sendMail(
       recipientEmail,
-      this.config.get("email.resetPasswordSubject"),
-      this.config
-        .get("email.resetPasswordMessage")
-        .replaceAll("\\n", "\n")
-        .replaceAll("{url}", resetPasswordUrl),
+      this.formatTemplate(this.config.get("email.resetPasswordSubject"), vars),
+      this.formatTemplate(this.config.get("email.resetPasswordMessage"), vars),
+      undefined,
+      recipientName,
     );
   }
 
-  async sendInviteEmail(recipientEmail: string, password: string) {
+  async sendInviteEmail(
+    recipientEmail: string,
+    password: string,
+    recipientName?: string,
+  ) {
     const loginUrl = `${this.config.get("general.appUrl")}/auth/signIn`;
+    const vars = {
+      url: loginUrl,
+      password,
+      email: recipientEmail,
+      name: recipientName ?? "",
+      username: recipientName ?? "",
+      displayName: recipientName ?? "",
+    };
 
     await this.sendMail(
       recipientEmail,
-      this.config.get("email.inviteSubject"),
-      this.config
-        .get("email.inviteMessage")
-        .replaceAll("{url}", loginUrl)
-        .replaceAll("{password}", password)
-        .replaceAll("{email}", recipientEmail),
+      this.formatTemplate(this.config.get("email.inviteSubject"), vars),
+      this.formatTemplate(this.config.get("email.inviteMessage"), vars),
+      undefined,
+      recipientName,
     );
   }
 
-  async sendVerificationEmail(recipientEmail: string, token: string) {
+  async sendVerificationEmail(
+    recipientEmail: string,
+    token: string,
+    recipientName?: string,
+  ) {
     const verificationUrl = `${this.config.get(
       "general.appUrl",
     )}/auth/verify/${token}`;
+    const vars = {
+      url: verificationUrl,
+      name: recipientName ?? "",
+      username: recipientName ?? "",
+      displayName: recipientName ?? "",
+      email: recipientEmail,
+    };
 
     await this.sendMail(
       recipientEmail,
-      this.config.get("email.verificationSubject"),
-      this.config
-        .get("email.verificationMessage")
-        .replaceAll("\\n", "\n")
-        .replaceAll("{url}", verificationUrl),
+      this.formatTemplate(this.config.get("email.verificationSubject"), vars),
+      this.formatTemplate(this.config.get("email.verificationMessage"), vars),
+      undefined,
+      recipientName,
     );
   }
 
@@ -198,9 +281,7 @@ export class EmailService {
     const text = this.i18n.t("email.testText");
     await this.getTransporter()
       .sendMail({
-        from: `"${this.config.get("general.appName")}" <${this.config.get(
-          "smtp.email",
-        )}>`,
+        from: this.getFromAddress(),
         to: recipientEmail,
         subject,
         text,

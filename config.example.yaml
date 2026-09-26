@@ -115,18 +115,18 @@ email:
     Shared securely with Pingvin Share 🐧
   #Subject of the sent email when someone created a share with your reverse share link.
   reverseShareSubject: Reverse share link used
-  #Message which gets sent when someone created a share with your reverse share link. {shareUrl} will be replaced with the creator's name and the share URL.
+  #Message which gets sent when someone created a share with your reverse share link. {name} will be replaced with the creator's name and {shareUrl} with the share URL.
   reverseShareMessage: |-
-    Hey!
+    Hey {name}!
 
     A share was just created with your reverse share link: {shareUrl}
 
     Shared securely with Pingvin Share 🐧
   #Subject of the sent email when a user requests a password reset.
   resetPasswordSubject: Pingvin Share password reset
-  #Message which gets sent when a user requests a password reset. {url} will be replaced with the reset password URL.
+  #Message which gets sent when a user requests a password reset. {name} will be replaced with the user's name and {url} with the reset password URL.
   resetPasswordMessage: >-
-    Hey!
+    Hey {name}!
 
 
     You requested a password reset. Click this link to reset your password:
@@ -138,9 +138,9 @@ email:
     Pingvin Share 🐧
   #Subject of the sent email when an admin invites a user.
   inviteSubject: Pingvin Share invite
-  #Message which gets sent when an admin invites a user. {url} will be replaced with the invite URL, {email} with the email and {password} with the users password.
+  #Message which gets sent when an admin invites a user. {name} will be replaced with the user's name, {url} with the invite URL, {email} with the email and {password} with the users password.
   inviteMessage: >-
-    Hey!
+    Hey {name}!
 
 
     You were invited to Pingvin Share. Click this link to accept the invite:
@@ -158,16 +158,16 @@ email:
   # {fileName} - The downloaded file name
   # {shareUrl} - The URL of the share
   shareDownloadNotificationMessage: |-
-    Hey!
+    Hey {creator}!
 
-    {recipientEmail} downloaded {fileName} from your share: {shareUrl}
+    {recipient} downloaded {fileName} from your share: {shareUrl}
 
     Pingvin Share 🐧
   #Subject of the email which gets sent to the user when they sign up.
   verificationSubject: Verify your Pingvin Share account
-  #Message which gets sent to the user when they sign up. {url} will be replaced with the verification URL.
+  #Message which gets sent to the user when they sign up. {name} will be replaced with the user's name and {url} with the verification URL.
   verificationMessage: >-
-    Hey!
+    Hey {name}!
 
 
     You just signed up for Pingvin Share. Click this link to verify your
