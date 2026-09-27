@@ -1,4 +1,5 @@
 {
   "usernamePattern": "Uporabniško ime lahko vsebuje le črke, številke, pike in podčrtaje",
-  "idPattern": "ID lahko vsebuje le črke, številke, podčrtaje in vezaje"
+  "idPattern": "ID lahko vsebuje le črke, številke, podčrtaje in vezaje",
+  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
 }
