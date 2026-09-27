@@ -942,7 +942,7 @@ export default {
   "error.msg.cannot_get_user_info":
     "Cannot get your user info from this {0} account.",
   "error.msg.oidc_configuration_error":
-    "Could not retrieve OpenID Connect configuration from your identity provider. Please check the Discovery URI in the admin settings.",
+    "Could not retrieve OpenID Connect configuration from your identity provider.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
