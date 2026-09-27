@@ -1,4 +1,5 @@
 {
   "usernamePattern": "يمكن أن يحتوي اسم المستخدم فقط على أحرف وأرقام ونقاط وشرطات سفلية",
-  "idPattern": "يمكن أن يحتوي المعرف فقط على أحرف وأرقام وشرطات سفلية وشرطات"
+  "idPattern": "يمكن أن يحتوي المعرف فقط على أحرف وأرقام وشرطات سفلية وشرطات",
+  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
 }
