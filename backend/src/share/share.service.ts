@@ -31,6 +31,7 @@ import { UpdateShareDTO } from "./dto/updateShare.dto";
 @Injectable()
 export class ShareService {
   private readonly logger = new Logger(ShareService.name);
+  private readonly activeZipBuilds = new Set<string>();
   constructor(
     private prisma: PrismaService,
     private configService: ConfigService,
@@ -192,6 +193,12 @@ export class ShareService {
   }
 
   async createZip(shareId: string) {
+    if (this.activeZipBuilds.has(shareId)) return;
+    this.activeZipBuilds.add(shareId);
+
+    const sharePath = `${SHARE_DIRECTORY}/${shareId}`;
+    const zipPath = `${sharePath}/archive.zip`;
+
     if (this.config.get("s3.enabled")) {
       await this.prisma.share
         .update({
@@ -204,11 +211,9 @@ export class ShareService {
             error,
           );
         });
+      this.activeZipBuilds.delete(shareId);
       return;
     }
-
-    const sharePath = `${SHARE_DIRECTORY}/${shareId}`;
-    const zipPath = `${sharePath}/archive.zip`;
 
     try {
       const files = await this.prisma.file.findMany({ where: { shareId } });
@@ -235,6 +240,8 @@ export class ShareService {
     } catch (error) {
       this.logger.error(`Failed to create zip for share ${shareId}`, error);
       await fs.promises.rm(zipPath, { force: true }).catch(() => {});
+    } finally {
+      this.activeZipBuilds.delete(shareId);
     }
   }
 
@@ -417,10 +424,23 @@ export class ShareService {
   async getMetaData(id: string) {
     const share = await this.prisma.share.findUnique({
       where: { id },
+      include: {
+        _count: {
+          select: { files: true },
+        },
+      },
     });
 
     if (!share || !share.uploadLocked)
       throw new NotFoundException(this.i18n.t("share.notFound"));
+
+    if (
+      !share.isZipReady &&
+      share._count.files > 1 &&
+      !this.activeZipBuilds.has(id)
+    ) {
+      void this.createZip(id);
+    }
 
     return share;
   }
