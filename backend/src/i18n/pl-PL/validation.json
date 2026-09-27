@@ -1,4 +1,5 @@
 {
   "usernamePattern": "Nazwa użytkownika może zawierać tylko litery, cyfry, kropki i podkreślenia",
-  "idPattern": "ID może zawierać tylko litery, cyfry, podkreślenia i myślniki"
+  "idPattern": "ID może zawierać tylko litery, cyfry, podkreślenia i myślniki",
+  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
 }
