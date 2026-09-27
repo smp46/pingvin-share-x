@@ -193,10 +193,17 @@ export class ShareService {
 
   async createZip(shareId: string) {
     if (this.config.get("s3.enabled")) {
-      await this.prisma.share.update({
-        where: { id: shareId },
-        data: { isZipReady: true },
-      });
+      await this.prisma.share
+        .update({
+          where: { id: shareId },
+          data: { isZipReady: true },
+        })
+        .catch((error) => {
+          this.logger.error(
+            `Failed to update isZipReady for S3 share ${shareId}`,
+            error,
+          );
+        });
       return;
     }
 
