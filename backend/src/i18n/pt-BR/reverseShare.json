@@ -2,6 +2,6 @@
   "notFound": "Token de compartilhamento reverso não encontrado",
   "maxShareSizeExceeded": "O tamanho máximo do compartilhamento não pode ser maior que {maxSize} bytes.",
   "tokenInUse": "Token de compartilhamento reverso já em uso",
-  "notAllowedToCreate": "You do not have permission to create reverse shares",
-  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
+  "notAllowedToCreate": "Você não tem permissão para criar compartilhamentos reversos",
+  "maxReverseSharesExceeded": "Limite máximo de compartilhamentos reversos ativos ({max}) atingido"
 }
