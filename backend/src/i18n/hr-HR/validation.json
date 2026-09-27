@@ -1,4 +1,5 @@
 {
   "usernamePattern": "Korisničko ime može sadržavati samo slova, brojeve, točke i podvlake",
-  "idPattern": "ID može sadržavati samo slova, brojeve, podvlake i crtice"
+  "idPattern": "ID može sadržavati samo slova, brojeve, podvlake i crtice",
+  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
 }
