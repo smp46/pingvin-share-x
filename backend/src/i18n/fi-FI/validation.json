@@ -1,4 +1,5 @@
 {
   "usernamePattern": "Käyttäjänimi voi sisältää vain kirjaimia, numeroita, pisteitä ja alaviivoja",
-  "idPattern": "ID voi sisältää vain kirjaimia, numeroita, alaviivoja ja yhdysmerkkejä"
+  "idPattern": "ID voi sisältää vain kirjaimia, numeroita, alaviivoja ja yhdysmerkkejä",
+  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
 }
