@@ -196,7 +196,17 @@ export class ShareService {
     if (this.activeZipBuilds.has(shareId)) return;
     this.activeZipBuilds.add(shareId);
 
-    const sharePath = `${SHARE_DIRECTORY}/${shareId}`;
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+      select: { id: true },
+    });
+
+    if (!share) {
+      this.activeZipBuilds.delete(shareId);
+      return;
+    }
+
+    const sharePath = `${SHARE_DIRECTORY}/${share.id}`;
     const zipPath = `${sharePath}/archive.zip`;
 
     if (this.config.get("s3.enabled")) {
