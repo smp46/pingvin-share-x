@@ -1,4 +1,12 @@
-import { Button, Center, Group, Space, Stack, Text, Title } from "@mantine/core";
+import {
+  Button,
+  Center,
+  Group,
+  Space,
+  Stack,
+  Text,
+  Title,
+} from "@mantine/core";
 import { useModals } from "@mantine/modals";
 import { cleanNotifications } from "@mantine/notifications";
 import { AxiosError } from "axios";

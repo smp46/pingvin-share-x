@@ -235,7 +235,7 @@ export const configVariables = {
     reverseShareMessage: {
       type: "text",
       defaultValue:
-        "Hey!\n\nA share was just created with your reverse share link: {shareUrl}\n\nShared securely with Pingvin Share 🐧",
+        "Hey {name}!\n\nA share was just created with your reverse share link: {shareUrl}\n\nShared securely with Pingvin Share 🐧",
     },
     resetPasswordSubject: {
       type: "string",
@@ -244,7 +244,7 @@ export const configVariables = {
     resetPasswordMessage: {
       type: "text",
       defaultValue:
-        "Hey!\n\nYou requested a password reset. Click this link to reset your password: {url}\nThe link expires in an hour.\n\nPingvin Share 🐧",
+        "Hey {name}!\n\nYou requested a password reset. Click this link to reset your password: {url}\nThe link expires in an hour.\n\nPingvin Share 🐧",
     },
     inviteSubject: {
       type: "string",
@@ -253,7 +253,7 @@ export const configVariables = {
     inviteMessage: {
       type: "text",
       defaultValue:
-        'Hey!\n\nYou were invited to Pingvin Share. Click this link to accept the invite: {url}\n\nYou can use the email "{email}" and the password "{password}" to sign in.\n\nPingvin Share 🐧',
+        'Hey {name}!\n\nYou were invited to Pingvin Share. Click this link to accept the invite: {url}\n\nYou can use the email "{email}" and the password "{password}" to sign in.\n\nPingvin Share 🐧',
     },
     shareDownloadNotificationSubject: {
       type: "string",
@@ -271,7 +271,7 @@ export const configVariables = {
     verificationMessage: {
       type: "text",
       defaultValue:
-        "Hey!\n\nYou just signed up for Pingvin Share. Click this link to verify your account: {url}\n\nThe link expires in 24 hours.\n\nPingvin Share 🐧",
+        "Hey {name}!\n\nYou just signed up for Pingvin Share. Click this link to verify your account: {url}\n\nThe link expires in 24 hours.\n\nPingvin Share 🐧",
     },
   },
   smtp: {
@@ -351,6 +351,10 @@ export const configVariables = {
     fieldNameEmail: {
       type: "string",
       defaultValue: "userPrincipalName",
+    },
+    fieldNameDisplayName: {
+      type: "string",
+      defaultValue: "displayName",
     },
   },
   oauth: {

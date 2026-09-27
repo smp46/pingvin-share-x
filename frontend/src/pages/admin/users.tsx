@@ -71,9 +71,7 @@ const Users = () => {
         requireUppercase: config.get("security.requireUppercase"),
         requireLowercase: config.get("security.requireLowercase"),
         requireNumber: config.get("security.requireNumber"),
-        requireSpecialCharacter: config.get(
-          "security.requireSpecialCharacter",
-        ),
+        requireSpecialCharacter: config.get("security.requireSpecialCharacter"),
       };
       setCustomPasswordPolicy(customPasswordPolicy);
     }
@@ -88,7 +86,12 @@ const Users = () => {
         </Title>
         <Button
           onClick={() =>
-            showCreateUserModal(modals, config.get("smtp.enabled"), getUsers, customPasswordPolicy)
+            showCreateUserModal(
+              modals,
+              config.get("smtp.enabled"),
+              getUsers,
+              customPasswordPolicy,
+            )
           }
           leftIcon={<TbPlus size={20} />}
         >

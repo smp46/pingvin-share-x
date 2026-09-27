@@ -35,7 +35,8 @@ export class ReverseShareService {
     const creator = await this.prisma.user.findUnique({
       where: { id: creatorId },
     });
-    if (!creator) throw new BadRequestException(this.i18n.t("auth.userNotFound"));
+    if (!creator)
+      throw new BadRequestException(this.i18n.t("auth.userNotFound"));
 
     if (creator.allowCreateReverseShares === false) {
       throw new ForbiddenException(

@@ -25,6 +25,7 @@ const ManageUserTable = ({
   const modals = useModals();
   const t = useTranslate();
 
+  const showDisplayName = users.some((user) => !!user.displayName);
   const showStorageQuota = users.some((user) => !!user.storageQuotaLimit);
   const showMaxShareSize = users.some((user) => !!user.shareSizeLimit);
 
@@ -33,6 +34,11 @@ const ManageUserTable = ({
       <Table verticalSpacing="sm">
         <thead>
           <tr>
+            {showDisplayName && (
+              <th>
+                <FormattedMessage id="admin.users.table.displayName" />
+              </th>
+            )}
             <th>
               <FormattedMessage id="admin.users.table.username" />
             </th>
@@ -57,9 +63,14 @@ const ManageUserTable = ({
         </thead>
         <tbody>
           {isLoading
-            ? getSkeletonRows(showStorageQuota, showMaxShareSize)
+            ? getSkeletonRows(
+                showDisplayName,
+                showStorageQuota,
+                showMaxShareSize,
+              )
             : users.map((user) => (
                 <tr key={user.id}>
+                  {showDisplayName && <td>{user.displayName || "-"}</td>}
                   <td>
                     {user.username}{" "}
                     {user.isLdap ? (
@@ -93,7 +104,12 @@ const ManageUserTable = ({
                             color="blue"
                             size={25}
                             onClick={() =>
-                              showUpdateUserModal(modals, user, getUsers, customPasswordPolicy)
+                              showUpdateUserModal(
+                                modals,
+                                user,
+                                getUsers,
+                                customPasswordPolicy,
+                              )
                             }
                           >
                             <TbEdit />
@@ -121,11 +137,17 @@ const ManageUserTable = ({
 };
 
 const getSkeletonRows = (
+  showDisplayName: boolean,
   showStorageQuota: boolean,
   showMaxShareSize: boolean,
 ) =>
   [...Array(10)].map((v, i) => (
     <tr key={i}>
+      {showDisplayName && (
+        <td>
+          <Skeleton key={i} height={20} />
+        </td>
+      )}
       <td>
         <Skeleton key={i} height={20} />
       </td>

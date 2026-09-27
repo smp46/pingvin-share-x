@@ -27,6 +27,13 @@ export class UserDTO {
   email: string;
 
   @Expose()
+  @IsOptional()
+  @Matches(/^[\p{L} ,.'-]*$/u, {
+    message: i18nValidationMessage("validation.namePattern"),
+  })
+  displayName?: string;
+
+  @Expose()
   hasPassword: boolean;
 
   @MinLength(8)
