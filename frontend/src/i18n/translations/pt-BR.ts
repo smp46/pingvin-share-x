@@ -14,13 +14,13 @@ export default {
 
   // /
   "home.title": "Uma plataforma de compartilhamento de arquivos <h>auto-hospedada</h>.",
-  "home.description": "Do you really want to put your personal files in the hands of third parties like WeTransfer?",
+  "home.description": "Deseja realmente dar os seus arquivos pessoais na mão de terceiros como o WeTransfer?",
   "home.bullet.a.name": "Auto-Hospedado",
   "home.bullet.a.description": "Hospede o Pingvin Share em sua própria máquina.",
   "home.bullet.b.name": "Privacidade",
   "home.bullet.b.description": "Seus arquivos são seus e nunca serão acessados por terceiros.",
   "home.bullet.c.name": "Sem limite de tamanho de arquivo irritante",
-  "home.bullet.c.description": "Upload files as large as you want. Your available storage is the only limit.",
+  "home.bullet.c.description": "Carregue arquivos tão grandes quanto quiser. Seu armazenamento disponível é o único limite.",
   "home.button.start": "Começar",
   "home.button.source": "Código-fonte",
   // END /
@@ -56,11 +56,11 @@ export default {
   "signup.button.submit": "Vamos começar",
   // /auth/verify
   "verify.title": "Verificar conta",
-  "verify.success": "Your account has been verified. You can now sign in.",
+  "verify.success": "Sua conta foi verificada com sucesso! Agora você pode iniciar sessão.",
   "verify.error": "O link de verificação é inválido ou expirou.",
   "verify.button.signin": "Ir para Iniciar sessão",
   "verify.info.title": "Verificação de conta",
-  "verify.info.description": "We sent a verification link to your email address. Open it to activate your account.",
+  "verify.info.description": "Enviamos um link de verificação para seu endereço de email. Abra-o para ativar sua conta.",
   "verify.info.note": "Se você não receber o e-mail em alguns minutos, verifique sua pasta de spam.",
   "verify.info.resend.button": "Reenviar e-mail de verificação",
   "verify.info.resend.success": "E-mail de verificação reenviado com sucesso.",
@@ -75,7 +75,7 @@ export default {
   // /auth/reset-password
   "resetPassword.title": "Esqueceu a sua senha?",
   "resetPassword.description": "Insira o seu e-mail para redefinir a sua senha.",
-  "resetPassword.notify.success": "If the email address exists, a password reset link has been sent.",
+  "resetPassword.notify.success": "Se o endereço de email existir, um link de redefinição de senha foi enviado.",
   "resetPassword.button.back": "Voltar para a página inicial",
   "resetPassword.text.resetPassword": "Redefinir senha",
   "resetPassword.text.enterNewPassword": "Digite uma nova senha",
