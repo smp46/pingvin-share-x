@@ -15,7 +15,7 @@ The website is now listening on `http://localhost:3000`, have fun with Pingvin S
 
 1. In the **Stacks** menu, click the **Add stack** button
 2. Give you stack a name (ex. pingvinsharex)
-3. In the web editor, paste the content of the [docker-compose](https://github.com/smp46/pingvin-share-x/blob/main/docker-compose.yml) file.
+3. In the web editor, paste the content of the [docker-compose](https://github.com/smp46/pingvin-share-x/blob/v1.22.3/docker-compose.yml) file.
 4. Edit the external port and the environment variables (optional).
 5. Click on **Deploy the stack**.
 

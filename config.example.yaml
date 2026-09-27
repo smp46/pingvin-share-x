@@ -1,4 +1,5 @@
-#This configuration is pre-filled with the default values.
+#This configuration is pre-filled with the default values FOR THE LATEST (beta included) RELEASE.
+#If you aren't running the latest beta release, you should find the correct config for your version via the project's docs.
 #You can remove keys you don't want to set. If a key is missing, the value set in the UI will be used; if that is also unset, the default value applies.
 
 general:
