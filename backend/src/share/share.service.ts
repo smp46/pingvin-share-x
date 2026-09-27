@@ -2,6 +2,7 @@ import {
   BadRequestException,
   ForbiddenException,
   Injectable,
+  Logger,
   NotFoundException,
 } from "@nestjs/common";
 import { JwtService, JwtSignOptions } from "@nestjs/jwt";
@@ -11,6 +12,7 @@ import * as argon from "argon2";
 import * as crypto from "crypto";
 import * as fs from "fs";
 import * as moment from "moment";
+import { pipeline } from "stream/promises";
 import { I18nService } from "nestjs-i18n";
 import { ClamScanService } from "src/clamscan/clamscan.service";
 import { ConfigService } from "src/config/config.service";
@@ -28,6 +30,7 @@ import { UpdateShareDTO } from "./dto/updateShare.dto";
 
 @Injectable()
 export class ShareService {
+  private readonly logger = new Logger(ShareService.name);
   constructor(
     private prisma: PrismaService,
     private configService: ConfigService,
@@ -189,24 +192,43 @@ export class ShareService {
   }
 
   async createZip(shareId: string) {
-    if (this.config.get("s3.enabled")) return;
-
-    const path = `${SHARE_DIRECTORY}/${shareId}`;
-
-    const files = await this.prisma.file.findMany({ where: { shareId } });
-    const archive = archiver("zip", {
-      zlib: { level: this.config.get("share.zipCompressionLevel") },
-    });
-    const writeStream = fs.createWriteStream(`${path}/archive.zip`);
-
-    for (const file of files) {
-      archive.append(fs.createReadStream(`${path}/${file.id}`), {
-        name: file.name,
+    if (this.config.get("s3.enabled")) {
+      await this.prisma.share.update({
+        where: { id: shareId },
+        data: { isZipReady: true },
       });
+      return;
     }
 
-    archive.pipe(writeStream);
-    await archive.finalize();
+    const sharePath = `${SHARE_DIRECTORY}/${shareId}`;
+    const zipPath = `${sharePath}/archive.zip`;
+
+    try {
+      const files = await this.prisma.file.findMany({ where: { shareId } });
+      const archive = archiver("zip", {
+        zlib: { level: this.config.get("share.zipCompressionLevel") },
+      });
+
+      archive.on("warning", (err) => archive.destroy(err));
+
+      const writeStream = fs.createWriteStream(zipPath);
+
+      for (const file of files) {
+        archive.file(`${sharePath}/${file.id}`, {
+          name: file.name,
+        });
+      }
+
+      await Promise.all([pipeline(archive, writeStream), archive.finalize()]);
+
+      await this.prisma.share.update({
+        where: { id: shareId },
+        data: { isZipReady: true },
+      });
+    } catch (error) {
+      this.logger.error(`Failed to create zip for share ${shareId}`, error);
+      await fs.promises.rm(zipPath, { force: true }).catch(() => {});
+    }
   }
 
   async complete(id: string, reverseShareToken?: string) {
@@ -254,11 +276,8 @@ export class ShareService {
       }
     }
 
-    // Asynchronously create a zip of all files
-    if (share.files.length > 1)
-      this.createZip(id).then(() =>
-        this.prisma.share.update({ where: { id }, data: { isZipReady: true } }),
-      );
+    // Create a zip of all files
+    if (share.files.length > 1) void this.createZip(id);
 
     // Send email for each recipient
     for (const recipient of share.recipients) {
