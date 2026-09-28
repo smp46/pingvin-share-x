@@ -7,7 +7,7 @@ const withPWA = require("next-pwa")({
   reloadOnOnline: false,
   runtimeCaching: [
     {
-      urlPattern: /^https?.*/,
+      urlPattern: /^(?!.*\/api(\/|$)).*/,
       handler: "NetworkOnly",
     },
   ],
