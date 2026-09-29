@@ -29,10 +29,13 @@ export class OidcProvider extends GenericOidcProvider {
     if (!rawUri) return "";
     const cleaned = rawUri.replace(/\/+$/, "");
     if (
-      cleaned.includes("/.well-known/openid-configuration") ||
+      cleaned.endsWith("/openid-configuration") ||
       cleaned.includes("/.well-known/oauth-authorization-server")
     ) {
       return cleaned;
+    }
+    if (cleaned.endsWith("/.well-known") || cleaned.includes("/.well-known/")) {
+      return `${cleaned}/openid-configuration`;
     }
     return `${cleaned}/.well-known/openid-configuration`;
   }
