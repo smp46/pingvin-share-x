@@ -682,6 +682,7 @@ export default {
   "error.msg.unverified_account": "This {0} account is not verified. Please try again after verification.",
   "error.msg.user_not_allowed": "Nem jelentkezhet be.",
   "error.msg.cannot_get_user_info": "Nem sikerült lekérni a felhasználói adatokat erről a(z) {0} fiókról.",
+  "error.msg.oidc_configuration_error": "Could not retrieve OpenID Connect configuration from your identity provider.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
