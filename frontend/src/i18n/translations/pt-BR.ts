@@ -682,6 +682,7 @@ export default {
   "error.msg.unverified_account": "Esta conta {0} não foi verificada, tente novamente após a verificação.",
   "error.msg.user_not_allowed": "Você não tem permissão para acessar.",
   "error.msg.cannot_get_user_info": "Não é possível obter suas informações de usuário desta conta {0}.",
+  "error.msg.oidc_configuration_error": "Could not retrieve OpenID Connect configuration from your identity provider.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
