@@ -7,6 +7,7 @@
   "user_not_allowed": "로그인이 허용되지 않습니다",
   "invalid_token": "유효하지 않은 토큰입니다",
   "cannot_get_user_info": "사용자 정보를 가져올 수 없습니다",
+  "oidc_configuration_error": "Could not retrieve OpenID Connect configuration from identity provider",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",
