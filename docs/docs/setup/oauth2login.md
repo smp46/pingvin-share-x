@@ -42,6 +42,8 @@ Redirect URL: `https://<your-domain>/api/oauth/callback/discord`
 
 Generic OpenID Connect provider is also supported, we have tested it on Keycloak, Authentik, Casdoor and [Pocket ID](https://github.com/stonith404/pocket-id).
 
+Discovery URI: You can provide either the Issuer URL (e.g. `https://auth.example.com` or `https://keycloak.example.com/realms/my-realm`), the full discovery endpoint (e.g. `https://auth.example.com/.well-known/openid-configuration`), or an application-specific discovery endpoint (e.g. `https://auth.example.com/.well-known/<app_name>/openid-configuration`).
+
 Redirect URI: `https://<your-domain>/api/oauth/callback/oidc`
 
 Post Logout Redirect URI: `https://<your-domain>`

@@ -58,7 +58,11 @@ export class ConfigService extends EventEmitter {
           const category = this.yamlConfig[configVariable.category];
           if (!category) continue;
           configVariable.value = category[configVariable.name];
-          this.emit("update", configVariable.name, configVariable.value);
+          this.emit(
+            "update",
+            `${configVariable.category}.${configVariable.name}`,
+            configVariable.value,
+          );
         }
       }
     } catch (e) {

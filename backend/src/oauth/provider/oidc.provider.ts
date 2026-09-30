@@ -25,7 +25,19 @@ export class OidcProvider extends GenericOidcProvider {
   }
 
   protected getDiscoveryUri(): string {
-    return this.config.get("oauth.oidc-discoveryUri");
+    const rawUri = (this.config.get("oauth.oidc-discoveryUri") || "").trim();
+    if (!rawUri) return "";
+    const cleaned = rawUri.replace(/\/+$/, "");
+    if (
+      cleaned.endsWith("/openid-configuration") ||
+      cleaned.includes("/.well-known/oauth-authorization-server")
+    ) {
+      return cleaned;
+    }
+    if (cleaned.endsWith("/.well-known") || cleaned.includes("/.well-known/")) {
+      return `${cleaned}/openid-configuration`;
+    }
+    return `${cleaned}/.well-known/openid-configuration`;
   }
 
   getUserInfo(
