@@ -7,6 +7,7 @@
   "user_not_allowed": "サインインを許可されていません",
   "invalid_token": "トークンが無効です",
   "cannot_get_user_info": "ユーザー情報を取得できませんでした",
+  "oidc_configuration_error": "Could not retrieve OpenID Connect configuration from identity provider",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",
