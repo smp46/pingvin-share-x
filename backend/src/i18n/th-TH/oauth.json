@@ -7,6 +7,7 @@
   "user_not_allowed": "คุณไม่ได้รับอนุญาตให้เข้าสู่ระบบ",
   "invalid_token": "โทเค็นไม่ถูกต้อง",
   "cannot_get_user_info": "ไม่สามารถรับข้อมูลผู้ใช้ได้",
+  "oidc_configuration_error": "Could not retrieve OpenID Connect configuration from identity provider",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",
