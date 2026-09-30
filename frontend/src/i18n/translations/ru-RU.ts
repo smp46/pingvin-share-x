@@ -682,6 +682,7 @@ export default {
   "error.msg.unverified_account": "Этот аккаунт {0} не подтверждён. Пожалуйста, повторите попытку после подтверждения.",
   "error.msg.user_not_allowed": "У вас нет разрешения на вход.",
   "error.msg.cannot_get_user_info": "Не удалось получить информацию о пользователе из этого аккаунта {0}.",
+  "error.msg.oidc_configuration_error": "Could not retrieve OpenID Connect configuration from your identity provider.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
