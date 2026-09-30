@@ -682,6 +682,7 @@ export default {
   "error.msg.unverified_account": "This {0} account is not verified. Please try again after verification.",
   "error.msg.user_not_allowed": "Du är inte tillåten att logga in.",
   "error.msg.cannot_get_user_info": "Kan inte hämta din användarinformation från detta {0} konto.",
+  "error.msg.oidc_configuration_error": "Could not retrieve OpenID Connect configuration from your identity provider.",
   "error.param.provider_github": "GitHub",
   "error.param.provider_google": "Google",
   "error.param.provider_microsoft": "Microsoft",
