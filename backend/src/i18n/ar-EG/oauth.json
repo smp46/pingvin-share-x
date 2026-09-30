@@ -7,6 +7,7 @@
   "user_not_allowed": "غير مسموح لك بتسجيل الدخول",
   "invalid_token": "رمز غير صالح",
   "cannot_get_user_info": "تعذر الحصول على معلومات المستخدم",
+  "oidc_configuration_error": "Could not retrieve OpenID Connect configuration from identity provider",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",
