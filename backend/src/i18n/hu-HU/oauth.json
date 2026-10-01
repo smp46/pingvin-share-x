@@ -7,7 +7,7 @@
   "user_not_allowed": "Nincs engedélye a bejelentkezésre",
   "invalid_token": "Érvénytelen token",
   "cannot_get_user_info": "Nem sikerült lekérni a felhasználói információkat",
-  "oidc_configuration_error": "Could not retrieve OpenID Connect configuration from identity provider",
+  "oidc_configuration_error": "Nem sikerült lekérni az OpenID Connect konfigurációt a hitelesítésszolgáltatótól",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",
