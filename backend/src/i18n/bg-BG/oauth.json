@@ -7,7 +7,7 @@
   "user_not_allowed": "Нямате разрешение да влизате",
   "invalid_token": "Невалиден токен",
   "cannot_get_user_info": "Не можа да се извлече информация за потребителя",
-  "oidc_configuration_error": "Неуспешно извличане на конфигурацията на OpenID Connect от доставчика на идентичност",
+  "oidc_configuration_error": "Не можа да се извлече конфигурацията на OpenID Connect от доставчика на идентичност",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",
