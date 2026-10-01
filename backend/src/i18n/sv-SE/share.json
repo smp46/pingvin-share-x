@@ -16,6 +16,6 @@
   "privateShare": "Endast skaparen av den omvända delningen har tillgång till denna delning",
   "maxViewsExceeded": "Maximalt antal visningar överskridet",
   "restrictedToRecipients": "Denna delning är begränsad till specifika mottagare. Logga in för att komma åt den.",
-  "notAllowedToShare": "You do not have permission to create shares",
-  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
+  "notAllowedToShare": "Du har inte behörighet att skapa delningar",
+  "maxSharesExceeded": "Maxgränsen för aktiva delningar ({max}) har nåtts"
 }
