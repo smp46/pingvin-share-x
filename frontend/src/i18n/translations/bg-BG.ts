@@ -49,8 +49,8 @@ export default {
   "signup.title": "Създаване на акаунт",
   "signup.description": "Вече имате акаунт?",
   "signup.button.signin": "Влизане",
-  "signup.input.displayName": "Display name",
-  "signup.input.displayName.placeholder": "Your display name",
+  "signup.input.displayName": "Показвано име",
+  "signup.input.displayName.placeholder": "Вашето показвано име",
   "signup.input.username": "Потребителско име",
   "signup.input.username.placeholder": "Вашето потребителско име",
   "signup.input.email": "Имейл",
@@ -86,7 +86,7 @@ export default {
   // /account
   "account.title": "Моят акаунт",
   "account.card.info.title": "Информация за акаунта",
-  "account.card.info.displayName": "Display name",
+  "account.card.info.displayName": "Показвано име",
   "account.card.info.username": "Потребителско име",
   "account.card.info.email": "Имейл",
   "account.notify.info.success": "Акаунтът е актуализиран успешно",
@@ -210,7 +210,7 @@ export default {
   "account.reverseShares.table.expires": "Изтича на",
   "account.reverseShares.modal.reverse-share-link": "Реверсивна връзка за споделяне",
   "account.reverseShares.modal.delete.title": "Изтриване на реверсивно споделяне",
-  "account.reverseShares.modal.delete.description": "Do you really want to delete this reverse share and all associated shares?",
+  "account.reverseShares.modal.delete.description": "Наистина ли искате да изтриете това обратно споделяне и всички свързани с него споделяния?",
   // END /account/reverseShares
 
   // /admin
@@ -223,7 +223,7 @@ export default {
 
   // /admin/users
   "admin.users.title": "Управление на потребители",
-  "admin.users.table.displayName": "Display name",
+  "admin.users.table.displayName": "Показвано име",
   "admin.users.table.username": "Потребителско име",
   "admin.users.table.email": "Имейл",
   "admin.users.table.admin": "Админ",
@@ -254,7 +254,7 @@ export default {
   "admin.users.edit.delete.description": "Наистина ли искате да изтриете този потребител и всички негови споделяния?",
   // showCreateUserModal.tsx
   "admin.users.modal.create.title": "Създаване на потребител",
-  "admin.users.modal.create.displayName": "Display name",
+  "admin.users.modal.create.displayName": "Показвано име",
   "admin.users.modal.create.username": "Потребителско име",
   "admin.users.modal.create.email": "Имейл",
   "admin.users.modal.create.password": "Парола",
@@ -292,10 +292,10 @@ export default {
   "upload.error.not-allowed.description": "Вашият акаунт няма разрешение да качва файлове или да създава споделяния.",
   // Dropzone.tsx
   "upload.dropzone.title": "Качване на файлове",
-  "upload.dropzone.description.mobile": "Tap here to select individual files, photos, or videos. To upload a folder, use the button below. Maximum total upload size: {maxSize}.",
-  "upload.dropzone.description.mobile.no-folder": "Tap here to select individual files, photos, or videos. Maximum total upload size: {maxSize}.",
-  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload text from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.mobile": "Докоснете тук, за да изберете отделни файлове, снимки или видеоклипове. За да качите папка, използвайте бутона по-долу. Максимален общ размер за качване: {maxSize}.",
+  "upload.dropzone.description.mobile.no-folder": "Докоснете тук, за да изберете отделни файлове, снимки или видеоклипове. Максимален общ размер за качване: {maxSize}.",
+  "upload.dropzone.description.desktop": "Щракнете тук или плъзнете и пуснете отделни файлове, снимки или видеоклипове. Използвайте бутона по-долу, за да качите папка, или натиснете {shortcut}, за да качите текст от клипборда. Максимален общ размер за качване: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Щракнете тук или плъзнете и пуснете отделни файлове, снимки или видеоклипове, или натиснете {shortcut}, за да качите текст от клипборда. Максимален общ размер за качване: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Вашите файлове надвишават максималния размер за споделяне от {maxSize}.",
   "upload.button.folder": "Качване на папка",
   "upload.button.folder.append": "Добавяне на папка",
@@ -346,7 +346,7 @@ export default {
   "upload.modal.completed.never-expires": "Това споделяне никога няма да изтече.",
   "upload.modal.completed.expires-on": "Това споделяне ще изтече на {expiration}.",
   "upload.modal.completed.share-ready": "Споделянето е готово",
-  "upload.modal.completed.notified-reverse-share-creator": "We notified the reverse share creator. You can also share this link with them manually.",
+  "upload.modal.completed.notified-reverse-share-creator": "Уведомихме създателя на обратното споделяне. Можете също да споделите тази връзка с него ръчно.",
   // END /upload
 
   // /share/[id]
@@ -410,7 +410,7 @@ export default {
   "admin.config.category.oauth": "Влизане чрез социални мрежи",
   "admin.config.general.app-name": "Име на приложението",
   "admin.config.general.app-name.description": "Име на приложението",
-  "admin.config.general.show-auth-buttons": "Show auth buttons",
+  "admin.config.general.show-auth-buttons": "Показване на бутоните за удостоверяване",
   "admin.config.general.show-auth-buttons.description": "Whether to show sign-in and sign-up buttons on share and upload pages.",
   "admin.config.general.default-language": "Език по подразбиране",
   "admin.config.general.default-language.description": "Това се отнася за всички потребители. Всеки потребител все още може да избере език в профила си.",
