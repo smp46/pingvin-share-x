@@ -7,7 +7,7 @@
   "user_not_allowed": "Teil pole lubatud sisse logida",
   "invalid_token": "Vigane token",
   "cannot_get_user_info": "Kasutajaandmete hankimine ebaõnnestus",
-  "oidc_configuration_error": "Could not retrieve OpenID Connect configuration from identity provider",
+  "oidc_configuration_error": "OpenID Connecti konfiguratsiooni hankimine identiteedipakkujalt ebaõnnestus",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",
