@@ -7,7 +7,7 @@
   "user_not_allowed": "Você não tem permissão para fazer login",
   "invalid_token": "Token inválido",
   "cannot_get_user_info": "Não foi possível obter informações do usuário",
-  "oidc_configuration_error": "Could not retrieve OpenID Connect configuration from identity provider",
+  "oidc_configuration_error": "Não foi possível obter a configuração do OpenID Connect do provedor de identidade",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",
