@@ -16,6 +16,6 @@
   "privateShare": "Tylko twórca odwrotnego udostępnienia ma dostęp do tego udostępnienia",
   "maxViewsExceeded": "Przekroczono maksymalną liczbę wyświetleń",
   "restrictedToRecipients": "Ten udział jest ograniczony do określonych odbiorców. Zaloguj się, aby uzyskać dostęp.",
-  "notAllowedToShare": "You do not have permission to create shares",
-  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
+  "notAllowedToShare": "Nie masz uprawnień do tworzenia udziałów",
+  "maxSharesExceeded": "Osiągnięto maksymalny limit aktywnych udziałów ({max})"
 }
