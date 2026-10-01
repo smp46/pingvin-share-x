@@ -16,6 +16,6 @@
   "privateShare": "Bu paylaşıma yalnızca ters paylaşım oluşturucusu erişebilir",
   "maxViewsExceeded": "Maksimum görüntüleme sayısı aşıldı",
   "restrictedToRecipients": "Bu paylaşım belirli alıcılarla sınırlandırılmıştır. Erişmek için lütfen giriş yapın.",
-  "notAllowedToShare": "You do not have permission to create shares",
-  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
+  "notAllowedToShare": "Paylaşım oluşturma izniniz yok",
+  "maxSharesExceeded": "Maksimum aktif paylaşım sınırına ({max}) ulaşıldı"
 }
