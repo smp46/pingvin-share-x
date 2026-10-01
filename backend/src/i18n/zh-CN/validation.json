@@ -1,5 +1,5 @@
 {
   "usernamePattern": "用户名只能包含字母、数字、点和下划线",
   "idPattern": "ID 只能包含字母、数字、下划线和连字符",
-  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
+  "namePattern": "名称只能包含字母、空格、逗号、句点、撇号或连字符"
 }
