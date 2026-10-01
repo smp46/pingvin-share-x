@@ -1,5 +1,5 @@
 {
   "usernamePattern": "Uživatelské jméno může obsahovat pouze písmena, čísla, tečky a podtržítka",
   "idPattern": "ID může obsahovat pouze písmena, čísla, podtržítka a pomlčky",
-  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
+  "namePattern": "Jméno může obsahovat pouze písmena, mezery, čárky, tečky, apostrofy nebo pomlčky"
 }
