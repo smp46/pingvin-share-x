@@ -6,7 +6,7 @@
   "notEnoughSpace": "伺服器空間不足",
   "unexpectedChunk": "收到意外的分塊",
   "maxSizeExceeded": "超過最大分享限制",
-  "storageQuotaExceeded": "使用者儲存空間配額已超出 {exceededSize}",
+  "storageQuotaExceeded": "您的儲存空間配額已超出 {exceededSize}",
   "reverseShareQuotaExceeded": "回傳分享擁有者的儲存空間配額已超出 {exceededSize}",
   "zipError": "創建 ZIP 文件時出錯",
   "s3DeleteError": "無法從 S3 刪除文件",
