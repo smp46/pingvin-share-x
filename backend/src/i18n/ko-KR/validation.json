@@ -1,5 +1,5 @@
 {
   "usernamePattern": "사용자 이름은 영문, 숫자, 마침표, 밑줄만 포함할 수 있습니다",
   "idPattern": "ID는 영문, 숫자, 밑줄, 하이픈만 포함할 수 있습니다",
-  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
+  "namePattern": "이름은 문자, 공백, 쉼표, 마침표, 아포스트로피, 하이픈만 포함할 수 있습니다"
 }
