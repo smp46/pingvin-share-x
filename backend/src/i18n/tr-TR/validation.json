@@ -1,5 +1,5 @@
 {
   "usernamePattern": "Kullanıcı adı yalnızca harf, rakam, nokta ve alt çizgi içerebilir",
   "idPattern": "ID yalnızca harf, rakam, alt çizgi ve tire içerebilir",
-  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
+  "namePattern": "İsim yalnızca harf, boşluk, virgül, nokta, kesme işareti veya tire içerebilir"
 }
