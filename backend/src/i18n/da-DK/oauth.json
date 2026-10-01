@@ -7,7 +7,7 @@
   "user_not_allowed": "Du har ikke tilladelse til at logge ind",
   "invalid_token": "Ugyldig token",
   "cannot_get_user_info": "Kunne ikke hente brugeroplysninger",
-  "oidc_configuration_error": "Could not retrieve OpenID Connect configuration from identity provider",
+  "oidc_configuration_error": "Kunne ikke hente OpenID Connect-konfiguration fra identitetsudbyderen",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",
