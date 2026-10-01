@@ -1,5 +1,5 @@
 {
   "usernamePattern": "O nome de usuário pode conter apenas letras, números, pontos e sublinhados",
   "idPattern": "O ID pode conter apenas letras, números, sublinhados e hífens",
-  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
+  "namePattern": "O nome pode conter apenas letras, espaços, vírgulas, pontos, apóstrofos ou hífens"
 }
