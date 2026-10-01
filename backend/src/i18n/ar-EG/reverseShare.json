@@ -2,6 +2,6 @@
   "notFound": "رمز المشاركة العكسية غير موجود",
   "maxShareSizeExceeded": "لا يمكن أن يكون الحد الأقصى لحجم المشاركة أكبر من {maxSize} بايت.",
   "tokenInUse": "رمز المشاركة العكسية قيد الاستخدام بالفعل",
-  "notAllowedToCreate": "You do not have permission to create reverse shares",
-  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
+  "notAllowedToCreate": "ليس لديك الإذن لإنشاء مشاركات عكسية",
+  "maxReverseSharesExceeded": "تم الوصول إلى الحد الأقصى للمشاركات العكسية النشطة ({max})"
 }
