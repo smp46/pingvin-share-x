@@ -7,7 +7,7 @@
   "user_not_allowed": "U bent niet gemachtigd om in te loggen",
   "invalid_token": "Ongeldig token",
   "cannot_get_user_info": "Kon gebruikersinformatie niet ophalen",
-  "oidc_configuration_error": "Could not retrieve OpenID Connect configuration from identity provider",
+  "oidc_configuration_error": "Kon OpenID Connect-configuratie niet ophalen van de identiteitsprovider",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",
