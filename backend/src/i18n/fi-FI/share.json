@@ -16,6 +16,6 @@
   "privateShare": "Vain käänteisen jaon luoja voi käyttää tätä jakoa",
   "maxViewsExceeded": "Katselukertojen enimmäismäärä ylittyi",
   "restrictedToRecipients": "Tämä jako on rajoitettu tietyille vastaanottajille. Kirjaudu sisään päästäksesi käsiksi siihen.",
-  "notAllowedToShare": "You do not have permission to create shares",
-  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
+  "notAllowedToShare": "Sinulla ei ole oikeutta luoda jakoja",
+  "maxSharesExceeded": "Aktiivisten jakojen enimmäismäärä ({max}) on saavutettu"
 }
