@@ -220,9 +220,13 @@ export class S3FileService {
     fileId: string,
     range?: { start: number; end?: number } | string,
   ): Promise<File> {
-    const fileName = (
-      await this.prisma.file.findUnique({ where: { id: fileId } })
-    ).name;
+    const file = await this.prisma.file.findFirst({
+      where: { id: fileId, shareId },
+    });
+
+    if (!file) throw new NotFoundException(this.i18n.t("file.notFound"));
+
+    const fileName = file.name;
 
     let rangeString: string | undefined;
     if (typeof range === "string") {
@@ -257,8 +261,8 @@ export class S3FileService {
   }
 
   async remove(shareId: string, fileId: string) {
-    const fileMetaData = await this.prisma.file.findUnique({
-      where: { id: fileId },
+    const fileMetaData = await this.prisma.file.findFirst({
+      where: { id: fileId, shareId },
     });
 
     if (!fileMetaData)
