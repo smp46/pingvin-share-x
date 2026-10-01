@@ -1,5 +1,5 @@
 {
   "usernamePattern": "Имя пользователя может содержать только буквы, цифры, точки и символы подчеркивания",
   "idPattern": "ID может содержать только буквы, цифры, символы подчеркивания и дефисы",
-  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
+  "namePattern": "Имя может содержать только буквы, пробелы, запятые, точки, апострофы или дефисы"
 }
