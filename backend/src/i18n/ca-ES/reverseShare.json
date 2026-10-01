@@ -2,6 +2,6 @@
   "notFound": "No s'ha trobat el token de compartició inversa",
   "maxShareSizeExceeded": "La mida màxima de compartició no pot ser superior a {maxSize} bytes.",
   "tokenInUse": "El testimoni de compartició inversa ja està en ús",
-  "notAllowedToCreate": "You do not have permission to create reverse shares",
-  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
+  "notAllowedToCreate": "No teniu permís per crear comparticions inverses",
+  "maxReverseSharesExceeded": "S'ha assolit el límit màxim de comparticions inverses actives ({max})"
 }
