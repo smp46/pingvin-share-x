@@ -1,5 +1,5 @@
 {
   "usernamePattern": "Корисничко име може садржати само слова, бројеве, тачке и доње црте",
   "idPattern": "ID може садржати само слова, бројеве, доње црте и цртице",
-  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
+  "namePattern": "Име може садржати само слова, размаке, зарезе, тачке, апострофе или цртице"
 }
