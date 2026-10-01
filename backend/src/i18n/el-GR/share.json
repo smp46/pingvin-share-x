@@ -16,6 +16,6 @@
   "privateShare": "Μόνο ο δημιουργός της αντίστροφης κοινής χρήσης μπορεί να έχει πρόσβαση σε αυτήν την κοινή χρήση",
   "maxViewsExceeded": "Υπέρβαση μέγιστων προβολών",
   "restrictedToRecipients": "Αυτή η κοινοποίηση είναι περιορισμένη σε συγκεκριμένους παραλήπτες. Παρακαλώ συνδεθείτε για να αποκτήσετε πρόσβαση.",
-  "notAllowedToShare": "You do not have permission to create shares",
-  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
+  "notAllowedToShare": "Δεν έχετε δικαίωμα δημιουργίας κοινοποιήσεων",
+  "maxSharesExceeded": "Επιτεύχθηκε το μέγιστο όριο ενεργών κοινοποιήσεων ({max})"
 }
