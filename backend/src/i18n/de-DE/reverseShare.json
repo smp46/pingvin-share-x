@@ -2,6 +2,6 @@
   "notFound": "Reverse-Share-Token nicht gefunden",
   "maxShareSizeExceeded": "Die maximale Freigabegröße darf nicht größer als {maxSize} Bytes sein.",
   "tokenInUse": "Token für Datei-Anfrage wird bereits verwendet",
-  "notAllowedToCreate": "You do not have permission to create reverse shares",
-  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
+  "notAllowedToCreate": "Du hast keine Berechtigung, Datei-Anfragen zu erstellen",
+  "maxReverseSharesExceeded": "Maximale Anzahl aktiver Datei-Anfragen ({max}) erreicht"
 }
