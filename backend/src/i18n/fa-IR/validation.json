@@ -1,5 +1,5 @@
 {
   "usernamePattern": "نام کاربری فقط می‌تواند شامل حروف، اعداد، نقطه و زیرخط باشد",
   "idPattern": "شناسه فقط می‌تواند شامل حروف، اعداد، زیرخط و خط تیره باشد",
-  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
+  "namePattern": "نام فقط می‌تواند شامل حروف، فاصله، ویرگول، نقطه، آپاستروف یا خط تیره باشد"
 }
