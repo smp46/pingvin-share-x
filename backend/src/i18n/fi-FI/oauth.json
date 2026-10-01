@@ -7,7 +7,7 @@
   "user_not_allowed": "Sinulla ei ole oikeutta kirjautua sisään",
   "invalid_token": "Virheellinen tunniste",
   "cannot_get_user_info": "Käyttäjätietoja ei voitu hakea",
-  "oidc_configuration_error": "Could not retrieve OpenID Connect configuration from identity provider",
+  "oidc_configuration_error": "OpenID Connect -määrityksiä ei voitu noutaa identiteettipalveluntarjoajalta",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",
