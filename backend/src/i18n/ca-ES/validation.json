@@ -1,5 +1,5 @@
 {
   "usernamePattern": "El nom d'usuari només pot contenir lletres, números, punts i guions baixos",
   "idPattern": "L'ID només pot contenir lletres, números, guions baixos i guions",
-  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
+  "namePattern": "El nom només pot contenir lletres, espais, comes, punts, apòstrofs o guions"
 }
