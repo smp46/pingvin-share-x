@@ -1,5 +1,5 @@
 {
   "usernamePattern": "Потребителското име може да съдържа само букви, цифри, точки и долни черти",
   "idPattern": "Идентификаторът може да съдържа само букви, цифри, долни черти и тирета",
-  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
+  "namePattern": "Името може да съдържа само букви, интервали, запетаи, точки, апострофи или тирета"
 }
