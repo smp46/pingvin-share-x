@@ -1,5 +1,5 @@
 {
   "usernamePattern": "Kasutajanimi võib sisaldada ainult tähti, numbreid, punkte ja alakriipse",
   "idPattern": "ID võib sisaldada ainult tähti, numbreid, alakriipse ja sidekriipse",
-  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
+  "namePattern": "Nimi võib sisaldada ainult tähti, tühikuid, komasid, punkte, ülakomasid või sidekriipse"
 }
