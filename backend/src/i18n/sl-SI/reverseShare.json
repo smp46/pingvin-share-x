@@ -2,6 +2,6 @@
   "notFound": "Žeton za obrnjeno deljenje ni bil najden",
   "maxShareSizeExceeded": "Največja velikost deljenja ne more biti večja od {maxSize} bajtov.",
   "tokenInUse": "Žeton za obratno deljenje je že v uporabi",
-  "notAllowedToCreate": "You do not have permission to create reverse shares",
-  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
+  "notAllowedToCreate": "Nimate dovoljenja za ustvarjanje delitev v obratni smeri",
+  "maxReverseSharesExceeded": "Dosežena je največja omejitev aktivnih delitev v obratni smeri ({max})"
 }
