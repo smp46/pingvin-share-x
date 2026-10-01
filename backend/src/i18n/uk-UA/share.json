@@ -16,6 +16,6 @@
   "privateShare": "Тільки творець зворотного поширення має доступ до цього поширення",
   "maxViewsExceeded": "Перевищено максимальну кількість переглядів",
   "restrictedToRecipients": "Ця роздача доступна лише для певних одержувачів. Будь ласка, увійдіть, щоб отримати доступ.",
-  "notAllowedToShare": "You do not have permission to create shares",
-  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
+  "notAllowedToShare": "У вас немає дозволу на створення завантажень",
+  "maxSharesExceeded": "Досягнуто максимального ліміту активних завантажень ({max})"
 }
