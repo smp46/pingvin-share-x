@@ -2,6 +2,6 @@
   "notFound": "Token odwrotnego udostępnienia nie został znaleziony",
   "maxShareSizeExceeded": "Maksymalny rozmiar udostępnienia nie może być większy niż {maxSize} bajtów.",
   "tokenInUse": "Token udziału odwrotnego jest już w użyciu",
-  "notAllowedToCreate": "You do not have permission to create reverse shares",
-  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
+  "notAllowedToCreate": "Nie masz uprawnień do tworzenia udziałów odwrotnych",
+  "maxReverseSharesExceeded": "Osiągnięto maksymalny limit aktywnych udziałów odwrotnych ({max})"
 }
