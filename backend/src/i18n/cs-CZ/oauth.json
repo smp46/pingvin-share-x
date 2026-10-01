@@ -7,7 +7,7 @@
   "user_not_allowed": "Nemáte oprávnění se přihlásit",
   "invalid_token": "Neplatný token",
   "cannot_get_user_info": "Nepodařilo se získat informace o uživateli",
-  "oidc_configuration_error": "Could not retrieve OpenID Connect configuration from identity provider",
+  "oidc_configuration_error": "Nepodařilo se získat konfiguraci OpenID Connect od poskytovatele identity",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",
