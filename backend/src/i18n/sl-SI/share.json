@@ -16,6 +16,6 @@
   "privateShare": "Samo ustvarjalec obrnjenega deljenja lahko dostopa do tega deljenja",
   "maxViewsExceeded": "Največje število ogledov je preseženo",
   "restrictedToRecipients": "To deljenje je omejeno na določene prejemnike. Za dostop se prijavite.",
-  "notAllowedToShare": "You do not have permission to create shares",
-  "maxSharesExceeded": "Maximum active shares limit ({max}) reached"
+  "notAllowedToShare": "Nimate dovoljenja za ustvarjanje deljenj",
+  "maxSharesExceeded": "Dosežena je največja omejitev aktivnih deljenj ({max})"
 }
