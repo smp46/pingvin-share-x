@@ -1,5 +1,5 @@
 {
   "usernamePattern": "ユーザー名は英数字、ドット、アンダースコアのみ使用できます",
   "idPattern": "IDは英数字、アンダースコア、ハイフンのみ使用できます",
-  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
+  "namePattern": "名前は文字、スペース、カンマ、ピリオド、アポストロフィ、ハイフンのみ使用できます"
 }
