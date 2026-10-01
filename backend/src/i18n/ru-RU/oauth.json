@@ -7,6 +7,7 @@
   "user_not_allowed": "Вам не разрешено входить в систему",
   "invalid_token": "Недействительный токен",
   "cannot_get_user_info": "Не удалось получить информацию о пользователе",
+  "oidc_configuration_error": "Не удалось получить конфигурацию OpenID Connect от провайдера идентификации",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",

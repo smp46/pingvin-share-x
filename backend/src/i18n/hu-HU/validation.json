@@ -1,4 +1,5 @@
 {
   "usernamePattern": "A felhasználónév csak betűket, számokat, pontokat és aláhúzásjeleket tartalmazhat",
-  "idPattern": "Az azonosító csak betűket, számokat, aláhúzásjeleket és kötőjeleket tartalmazhat"
+  "idPattern": "Az azonosító csak betűket, számokat, aláhúzásjeleket és kötőjeleket tartalmazhat",
+  "namePattern": "A név csak betűket, szóközöket, vesszőket, pontokat, aposztrófokat vagy kötőjeleket tartalmazhat"
 }

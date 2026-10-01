@@ -1,5 +1,7 @@
 {
   "notFound": "Ters paylaşım belirteci bulunamadı",
   "maxShareSizeExceeded": "Maksimum paylaşım boyutu {maxSize} bayttan büyük olamaz.",
-  "tokenInUse": "Karşı paylaşım belirteci zaten kullanımda"
+  "tokenInUse": "Karşı paylaşım belirteci zaten kullanımda",
+  "notAllowedToCreate": "Karşı paylaşım oluşturma izniniz yok",
+  "maxReverseSharesExceeded": "Maksimum aktif karşı paylaşım sınırına ({max}) ulaşıldı"
 }

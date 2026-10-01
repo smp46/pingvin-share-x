@@ -7,6 +7,7 @@
   "user_not_allowed": "شما اجازه ورود ندارید",
   "invalid_token": "نشانه نامعتبر است",
   "cannot_get_user_info": "امکان دریافت اطلاعات کاربر وجود نداشت",
+  "oidc_configuration_error": "امکان دریافت پیکربندی OpenID Connect از ارائه‌دهنده هویت وجود نداشت",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",

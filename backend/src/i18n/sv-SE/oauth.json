@@ -7,6 +7,7 @@
   "user_not_allowed": "Du har inte tillåtelse att logga in",
   "invalid_token": "Ogiltig token",
   "cannot_get_user_info": "Kunde inte hämta användarinformation",
+  "oidc_configuration_error": "Kunde inte hämta OpenID Connect-konfiguration från identitetsleverantören",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",

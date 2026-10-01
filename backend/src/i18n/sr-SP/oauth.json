@@ -7,6 +7,7 @@
   "user_not_allowed": "Није вам дозвољена пријава",
   "invalid_token": "Неважећи токен",
   "cannot_get_user_info": "Није могуће добити информације о кориснику",
+  "oidc_configuration_error": "Није могуће преузети OpenID Connect конфигурацију од провајдера идентитета",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",
