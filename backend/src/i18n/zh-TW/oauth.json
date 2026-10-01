@@ -7,7 +7,7 @@
   "user_not_allowed": "您不被允許登錄",
   "invalid_token": "無效的權杖",
   "cannot_get_user_info": "無法獲取用戶資訊",
-  "oidc_configuration_error": "Could not retrieve OpenID Connect configuration from identity provider",
+  "oidc_configuration_error": "無法從身分識別提供者取得 OpenID Connect 設定",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",
