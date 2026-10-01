@@ -2,6 +2,6 @@
   "notFound": "未找到反向分享令牌",
   "maxShareSizeExceeded": "分享大小上限不能超过 {maxSize} 字节。",
   "tokenInUse": "文件收集令牌已被占用",
-  "notAllowedToCreate": "You do not have permission to create reverse shares",
-  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
+  "notAllowedToCreate": "您没有创建反向分享的权限",
+  "maxReverseSharesExceeded": "已达到最大活跃反向分享数限制 ({max})"
 }
