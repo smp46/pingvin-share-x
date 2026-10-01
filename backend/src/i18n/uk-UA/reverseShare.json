@@ -2,6 +2,6 @@
   "notFound": "Токен зворотного поширення не знайдено",
   "maxShareSizeExceeded": "Максимальний розмір поширення не може бути більшим за {maxSize} байт.",
   "tokenInUse": "Токен зворотного завантаження вже використовується",
-  "notAllowedToCreate": "You do not have permission to create reverse shares",
-  "maxReverseSharesExceeded": "Maximum active reverse shares limit ({max}) reached"
+  "notAllowedToCreate": "У вас немає дозволу на створення зворотних завантажень",
+  "maxReverseSharesExceeded": "Досягнуто максимального ліміту активних зворотних завантажень ({max})"
 }
