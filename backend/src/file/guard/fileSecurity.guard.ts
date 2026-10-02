@@ -60,7 +60,7 @@ export class FileSecurityGuard extends ShareSecurityGuard {
       const user = await this.authenticateUser(context);
 
       // If admin access is enabled and user is admin, allow access
-      if (this._config.get("security.allowAdminAccessAllShares")) {
+      if (this._config.get("share.allowAdminAccessAllShares")) {
         if (user?.isAdmin) {
           return true;
         }
