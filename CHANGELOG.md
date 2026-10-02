@@ -1,3 +1,10 @@
+## [1.22.4](https://github.com/smp46/pingvin-share-x/compare/v1.22.3...v1.22.4) (2026-10-02)
+
+### Bug Fixes
+
+* **backend:** check fileid & shareid before file removal ([f23b3d1](https://github.com/smp46/pingvin-share-x/commit/f23b3d1ed6001861cb5aed5a22918d6789e6daa6))
+* **file_security:** restore correct config string ([7b7b107](https://github.com/smp46/pingvin-share-x/commit/7b7b1072e657fa16c9e252616806fcce0d8bb40c))
+
 ## [1.22.3](https://github.com/smp46/pingvin-share-x/compare/v1.22.2...v1.22.3) (2026-09-16)
 
 ### Bug Fixes
