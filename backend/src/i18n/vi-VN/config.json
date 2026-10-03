@@ -8,5 +8,6 @@
   "editNotAllowed": "Bạn chỉ được phép cập nhật các biến cấu hình thông qua tệp config.yaml",
   "invalidType": "Biến cấu hình phải có kiểu {type}",
   "shareIdLengthValidation": "Độ dài ID chia sẻ phải từ 2 đến 50",
-  "zipCompressionLevelValidation": "Mức nén Zip phải từ 0 đến 9"
+  "zipCompressionLevelValidation": "Mức nén Zip phải từ 0 đến 9",
+  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
 }
