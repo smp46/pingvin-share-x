@@ -44,7 +44,6 @@ export class AuthService {
     isAdmin?: boolean,
     skipVerification?: boolean,
   ) {
-    const isFirstUser = (await this.prisma.user.count()) == 0;
     const enableEmailVerification = this.config.get(
       "security.enableEmailVerification",
     );
@@ -52,17 +51,21 @@ export class AuthService {
 
     const hash = dto.password ? await argon.hash(dto.password) : null;
     try {
-      const needsVerification =
-        !isFirstUser && !skipVerification && enableEmailVerification;
-
       return await this.prisma.$transaction(async (tx) => {
+      const adminExists =
+        (await tx.user.count({ where: { isAdmin: true } })) > 0;
+      const shouldBeAdmin =
+        isAdmin ?? (!adminExists && (await tx.user.count()) === 0);
+      const needsVerification =
+        !shouldBeAdmin && !skipVerification && enableEmailVerification;
+
         const user = await tx.user.create({
           data: {
             displayName: dto.displayName?.trim() || null,
             email,
             username: dto.username,
             password: hash,
-            isAdmin: isAdmin ?? isFirstUser,
+            isAdmin: shouldBeAdmin,
             isActivated: !needsVerification,
             activationToken: needsVerification ? crypto.randomUUID() : null,
             activationTokenExpiresAt: needsVerification
