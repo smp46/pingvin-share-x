@@ -8,5 +8,6 @@
   "editNotAllowed": "Конфигурационе варијабле можете ажурирати само путем config.yaml датотеке",
   "invalidType": "Конфигурациона варијабла мора бити типа {type}",
   "shareIdLengthValidation": "Дужина ID-а дељења мора бити између 2 и 50",
-  "zipCompressionLevelValidation": "Ниво ZIP компресије мора бити између 0 и 9"
+  "zipCompressionLevelValidation": "Ниво ZIP компресије мора бити између 0 и 9",
+  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
 }
