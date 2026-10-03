@@ -8,5 +8,6 @@
   "editNotAllowed": "Zmienne konfiguracyjne można aktualizować tylko za pomocą pliku config.yaml",
   "invalidType": "Zmienna konfiguracyjna musi być typu {type}",
   "shareIdLengthValidation": "Długość ID udostępnienia musi wynosić od 2 do 50 znaków",
-  "zipCompressionLevelValidation": "Poziom kompresji ZIP musi wynosić od 0 do 9"
+  "zipCompressionLevelValidation": "Poziom kompresji ZIP musi wynosić od 0 do 9",
+  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
 }
