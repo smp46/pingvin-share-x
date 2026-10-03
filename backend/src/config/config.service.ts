@@ -97,7 +97,14 @@ export class ConfigService extends EventEmitter {
             if (legacyVal !== undefined) {
               val = legacyVal;
               this.logger.warn(
-                `Config variable '${legacy.category}.${legacy.name}' is deprecated. Please move it to '${configVariable.category}.${configVariable.name}' in your config.yaml`,
+                this.t(
+                  "config.deprecatedVariable",
+                  "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml",
+                  {
+                    legacyKey: `${legacy.category}.${legacy.name}`,
+                    modernKey: `${configVariable.category}.${configVariable.name}`,
+                  },
+                ),
               );
             }
           }
