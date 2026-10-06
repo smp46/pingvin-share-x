@@ -288,6 +288,20 @@ export class ConfigService extends EventEmitter {
           "Zip compression level must be between 0 and 9",
         ),
       },
+      {
+        key: "oauth.allowedHosts",
+        condition: (value: string) => {
+          if (!value) return true;
+          return value.split(",").every((h) => {
+            const trimmed = h.trim();
+            return !trimmed.includes("://") && !trimmed.includes("/");
+          });
+        },
+        message: this.t(
+          "config.oauthAllowedHostsValidation",
+          "Allowed hosts must be a comma-separated list of hostnames without protocol or paths (e.g. share.internal.example.com)",
+        ),
+      },
       // TODO add validation for timespan type
     ];
 

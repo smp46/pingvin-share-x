@@ -764,6 +764,9 @@ export default {
   "admin.config.oauth.disable-password": "Disable password login",
   "admin.config.oauth.disable-password.description":
     "Whether to disable password login.\nMake sure an OAuth provider is configured correctly before enabling this option to avoid being locked out.",
+  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
+  "admin.config.oauth.allowed-hosts.description":
+    "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description":
     "Whether GitHub login is enabled",
