@@ -221,7 +221,7 @@ oauth:
   #Whether to disable password login
   #Make sure that an OAuth provider is properly configured before activating this configuration to avoid being locked out.
   disablePassword: "false"
-  # Additional allowed hostnames for OAuth redirects (comma-separated list, e.g. share.internal.example.com)
+  #Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).
   allowedHosts: ""
   #Whether GitHub login is enabled
   github-enabled: "false"
