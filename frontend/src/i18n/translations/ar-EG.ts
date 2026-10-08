@@ -12,6 +12,10 @@ export default {
   "navbar.avatar.signout": "تسجيل الخروج",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "منصة لمشاركة الملفات <h>باستضافة ذاتية</h>.",
   "home.description": "أحقًا تريد تسليم ملفاتك الشخصية لطرف ثالث مثل WeTransfer؟",
