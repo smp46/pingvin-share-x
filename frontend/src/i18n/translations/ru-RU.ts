@@ -12,6 +12,10 @@ export default {
   "navbar.avatar.signout": "Выйти",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "Платформа для обмена файлами с <h>собственного хостинга</h>.",
   "home.description": "Вы действительно хотите предоставить свои личные файлы в руки третьих лиц, таких как WeTransfer?",
