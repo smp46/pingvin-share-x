@@ -12,6 +12,10 @@ export default {
   "navbar.avatar.signout": "Afmelden",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "Een <h>zelfgehost</h> platform voor het delen van bestanden.",
   "home.description": "Wil je echt je persoonlijke bestanden geven aan derden zoals WeTransfer?",
