@@ -12,6 +12,10 @@ export default {
   "navbar.avatar.signout": "Logi välja",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "<h>Isehostitav</h> failijagamisplatvorm.",
   "home.description": "Kas tõesti soovid anda oma isiklikud failid kolmandate osapoolte nagu WeTransfer kätte?",
