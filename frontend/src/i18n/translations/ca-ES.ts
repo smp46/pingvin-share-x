@@ -12,6 +12,10 @@ export default {
   "navbar.avatar.signout": "Tancar sessió",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "Una plataforma de compartició de fitxers <h>autohostejada</h>.",
   "home.description": "Realment voleu deixar els vostres fitxers personals en mans de tercers com WeTransfer?",
