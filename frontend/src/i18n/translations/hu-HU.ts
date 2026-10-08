@@ -12,6 +12,10 @@ export default {
   "navbar.avatar.signout": "Kijelentkezés",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "<h>Saját üzemeltetésű</h> fájl megosztó platform.",
   "home.description": "Valóban hozzáférhetővé akarja tenni fájljait a WeTransfer és más hasonló harmadik felek számára?",
