@@ -12,6 +12,10 @@ export default {
   "navbar.avatar.signout": "Kirjaudu ulos",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "<h>\"Itse isännöitty\"</h> tiedostojen jakamisen alusta.",
   "home.description": "Haluatko oikeasti jakaa yksityisiä tiedostojasi kolmannen osapuolen yhtiöille niin kuin WeTransfer?",
