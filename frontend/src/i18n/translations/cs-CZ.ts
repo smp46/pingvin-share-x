@@ -12,6 +12,10 @@ export default {
   "navbar.avatar.signout": "Odhlásit se",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "<h>Samostatně hostovaná</h> platforma pro sdílení souborů.",
   "home.description": "Opravdu chcete dát své osobní soubory do rukou třetích stran, jako je WeTransfer?",
