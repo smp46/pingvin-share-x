@@ -14,6 +14,10 @@ export default {
   "navbar.avatar.signout": "Sign out",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "A <h>self-hosted</h> file sharing platform.",
 
