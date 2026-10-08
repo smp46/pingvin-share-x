@@ -12,6 +12,10 @@ export default {
   "navbar.avatar.signout": "خروج",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "یک پلتفرم اشتراک‌گذاری فایل <h>خودمیزبان</h>.",
   "home.description": "آیا واقعاً می‌خواهید فایل‌های شخصی‌تان را در دست اشخاص ثالثی مثل WeTransfer قرار دهید؟",
