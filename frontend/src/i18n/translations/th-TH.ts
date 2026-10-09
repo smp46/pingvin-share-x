@@ -12,6 +12,10 @@ export default {
   "navbar.avatar.signout": "ออกจากระบบ",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "แพลตฟอร์มสำหรับแชร์ไฟล์ที่คุณสามารถ<h>โฮสต์ด้วยตนเอง</h>",
   "home.description": "คุณอยากให้บริษัทภายนอกเช่น WeTransfer เข้าถึงไฟล์ส่วนตัวของคุณหรือเปล่า?",

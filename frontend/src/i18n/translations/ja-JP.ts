@@ -12,6 +12,10 @@ export default {
   "navbar.avatar.signout": "ログアウト",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "<h>セルフホスト</h>のファイル共有プラットフォーム。",
   "home.description": "WeTransferのようなサードパーティーサービスに自分のファイルを渡したいですか？",

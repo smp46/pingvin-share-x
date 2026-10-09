@@ -9,5 +9,5 @@
   "invalidType": "Переменная конфигурации должна иметь тип {type}",
   "shareIdLengthValidation": "Длина ID раздачи должна быть от 2 до 50 символов",
   "zipCompressionLevelValidation": "Уровень сжатия Zip должен быть от 0 до 9",
-  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
+  "deprecatedVariable": "Переменная конфигурации '{legacyKey}' устарела. Пожалуйста, используйте вместо неё '{modernKey}' в вашем config.yaml"
 }
