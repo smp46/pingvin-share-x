@@ -1,5 +1,5 @@
 {
-  "usernamePattern": "Username can only contain letters, numbers, dots and underscores",
-  "idPattern": "ID can only contain letters, numbers, underscores and hyphens",
-  "namePattern": "Name can only contain letters, spaces, commas, periods, apostrophes, or hyphens"
+  "usernamePattern": "Brukernavn kan bare inneholde bokstaver, tall, punktum og understreker",
+  "idPattern": "ID kan bare inneholde bokstaver, tall, understreker og bindestreker",
+  "namePattern": "Navn kan bare inneholde bokstaver, mellomrom, komma, punktum, apostrofer eller bindestreker"
 }
