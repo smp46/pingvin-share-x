@@ -23,7 +23,7 @@ import slovenian from "./translations/sl-SI";
 import serbianLatin from "./translations/sr-CS";
 import serbianCyrillic from "./translations/sr-SP";
 import swedish from "./translations/sv-SE";
-import norwegian from "./translations/no-NO";
+import norwegianBokmal from "./translations/nb-NO";
 import thai from "./translations/th-TH";
 import turkish from "./translations/tr-TR";
 import ukrainian from "./translations/uk-UA";
@@ -130,10 +130,10 @@ export const LOCALES: Record<string, Locale> = {
     code: "sv-SE",
     messages: swedish,
   },
-  NORWEGIAN: {
-    name: "Norsk",
-    code: "no-NO",
-    messages: norwegian,
+  NORWEGIAN_BOKMAL: {
+    name: "Norsk bokmål",
+    code: "nb-NO",
+    messages: norwegianBokmal,
   },
   ITALIAN: {
     name: "Italiano",
