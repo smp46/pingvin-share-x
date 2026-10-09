@@ -32,7 +32,9 @@ import { useRouter } from "next/router";
 import {
   getNormalizedFileName,
   filterDuplicateFiles,
+  getFilesFromEvent,
 } from "../../utils/file.util";
+import { byteToHumanSizeString } from "../../utils/fileSize.util";
 
 const promiseLimit = pLimit(3);
 let errorToastShown = false;
@@ -55,6 +57,9 @@ const Upload = ({
   const config = useConfig();
   const [files, setFiles] = useState<FileUpload[]>([]);
   const [isUploading, setisUploading] = useState(false);
+
+  const filesRef = useRef<FileUpload[]>([]);
+  const currentFilesSizeRef = useRef(0);
 
   useConfirmLeave({
     message: t("upload.notify.confirm-leave"),
@@ -212,7 +217,15 @@ const Upload = ({
   };
 
   useEffect(() => {
-    const handlePaste = (e: ClipboardEvent) => {
+    filesRef.current = files;
+    currentFilesSizeRef.current = files.reduce(
+      (previous, file) => previous + file.size,
+      0,
+    );
+  }, [files]);
+
+  useEffect(() => {
+    const handlePaste = async (e: ClipboardEvent) => {
       if (modals.modals.length > 0) {
         return;
       }
@@ -222,6 +235,9 @@ const Upload = ({
       if (!clipboardData) {
         return;
       }
+
+      const clipboardItems = clipboardData.items;
+      let filesToUpload: FileUpload[] = [];
 
       if (clipboardData?.getData("text/plain")) {
         const pastedText = clipboardData.getData("text/plain");
@@ -241,23 +257,46 @@ const Upload = ({
         });
         const fileUpload = file as FileUpload;
         fileUpload.uploadingProgress = 0;
+        filesToUpload.push(fileUpload);
+      } else if (clipboardItems.length) {
+        const pastedFiles = (await getFilesFromEvent(e)) as FileUpload[];
+        if (!pastedFiles.length) return;
 
-        const filtered = filterDuplicateFiles(
-          [fileUpload],
-          files,
-          (normalizedName) =>
-            toast.error(
-              t("upload.notify.duplicate-skipped", { name: normalizedName }),
-            ),
+        filesToUpload = pastedFiles.map((e) => {
+          e.uploadingProgress = 0;
+          return e;
+        });
+      }
+
+      if (!filesToUpload.length) return;
+
+      const filtered = filterDuplicateFiles(
+        filesToUpload,
+        filesRef.current,
+        (normalizedName) =>
+          toast.error(
+            t("upload.notify.duplicate-skipped", { name: normalizedName }),
+          ),
+      );
+
+      if (filtered.length === 0) return;
+
+      const totalFileSize = filtered.reduce((n, { size }) => n + size, 0);
+
+      if (totalFileSize + currentFilesSizeRef.current > maxShareSize) {
+        toast.error(
+          t("upload.dropzone.notify.file-too-big", {
+            maxSize: byteToHumanSizeString(maxShareSize),
+          }),
         );
-        if (filtered.length === 0) return;
+        return;
+      }
 
-        if (autoOpenCreateUploadModal) {
-          setFiles(filtered);
-          showCreateUploadModalCallback(filtered);
-        } else {
-          setFiles((oldArr) => [...oldArr, ...filtered]);
-        }
+      if (autoOpenCreateUploadModal) {
+        setFiles(filtered);
+        showCreateUploadModalCallback(filtered);
+      } else {
+        setFiles((oldArr) => [...oldArr, ...filtered]);
       }
     };
 
