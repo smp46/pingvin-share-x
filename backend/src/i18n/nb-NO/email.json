@@ -7,5 +7,5 @@
   "testSubject": "Test-e-post",
   "testText": "Dette er en test-e-post",
   "sendFailed": "Kunne ikke sende e-post",
-  "locale": "no-NO"
+  "locale": "nb-NO"
 }
