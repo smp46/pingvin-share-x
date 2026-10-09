@@ -20,20 +20,17 @@ export class ErrorPageExceptionFilter implements ExceptionFilter {
     const ctx = host.switchToHttp();
     const response = ctx.getResponse();
 
-    const url = new URL(`${this.config.get("general.appUrl")}/error`);
-    url.searchParams.set("error", exception.key);
-    if (exception.redirect) {
-      url.searchParams.set("redirect", exception.redirect);
-    } else {
-      const redirect = ctx.getRequest().cookies.access_token
-        ? "/account"
-        : "/auth/signIn";
-      url.searchParams.set("redirect", redirect);
-    }
+    const redirect =
+      exception.redirect ||
+      (ctx.getRequest().cookies.access_token ? "/account" : "/auth/signIn");
+    const params = new URLSearchParams({
+      error: exception.key,
+      redirect,
+    });
     if (exception.params) {
-      url.searchParams.set("params", exception.params.join(","));
+      params.set("params", exception.params.join(","));
     }
 
-    response.redirect(url.toString());
+    response.redirect(`/error?${params.toString()}`);
   }
 }

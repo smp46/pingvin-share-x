@@ -221,6 +221,8 @@ oauth:
   #Whether to disable password login
   #Make sure that an OAuth provider is properly configured before activating this configuration to avoid being locked out.
   disablePassword: "false"
+  #Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).
+  allowedHosts: ""
   #Whether GitHub login is enabled
   github-enabled: "false"
   #Client ID of the GitHub OAuth app

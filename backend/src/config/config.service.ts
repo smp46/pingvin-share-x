@@ -274,7 +274,8 @@ export class ConfigService extends EventEmitter {
     const validations = [
       {
         key: "share.shareIdLength",
-        condition: (value: number) => value >= 2 && value <= 50,
+        condition: (value: unknown) =>
+          typeof value === "number" && value >= 2 && value <= 50,
         message: this.t(
           "config.shareIdLengthValidation",
           "Share ID length must be between 2 and 50",
@@ -282,17 +283,32 @@ export class ConfigService extends EventEmitter {
       },
       {
         key: "share.zipCompressionLevel",
-        condition: (value: number) => value >= 0 && value <= 9,
+        condition: (value: unknown) =>
+          typeof value === "number" && value >= 0 && value <= 9,
         message: this.t(
           "config.zipCompressionLevelValidation",
           "Zip compression level must be between 0 and 9",
+        ),
+      },
+      {
+        key: "oauth.allowedHosts",
+        condition: (value: unknown) => {
+          if (typeof value !== "string" || !value) return true;
+          return value.split(",").every((h) => {
+            const trimmed = h.trim();
+            return !trimmed.includes("://") && !trimmed.includes("/");
+          });
+        },
+        message: this.t(
+          "config.oauthAllowedHostsValidation",
+          "Allowed hosts must be a comma-separated list of hostnames without protocol or paths (e.g. share.internal.example.com)",
         ),
       },
       // TODO add validation for timespan type
     ];
 
     const validation = validations.find((validation) => validation.key == key);
-    if (validation && !validation.condition(value as any)) {
+    if (validation && !validation.condition(value)) {
       throw new BadRequestException(validation.message);
     }
   }

@@ -29,10 +29,11 @@ export class OAuthExceptionFilter implements ExceptionFilter {
 
     const key = this.errorKeys[request.query.error] || "default";
 
-    const url = new URL(`${this.config.get("general.appUrl")}/error`);
-    url.searchParams.set("redirect", "/account");
-    url.searchParams.set("error", key);
+    const params = new URLSearchParams({
+      redirect: "/account",
+      error: key,
+    });
 
-    response.redirect(url.toString());
+    response.redirect(`/error?${params.toString()}`);
   }
 }
