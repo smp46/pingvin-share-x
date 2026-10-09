@@ -1,0 +1,5 @@
+{
+  "usernamePattern": "Brukarnamn kan berre innehalde bokstavar, tal, punktum og understrekar",
+  "idPattern": "ID kan berre innehalde bokstavar, tal, understrekar og bindestrekar",
+  "namePattern": "Namn kan berre innehalde bokstavar, mellomrom, komma, punktum, apostrofar eller bindestrekar"
+}

@@ -1,0 +1,11 @@
+{
+  "shareRecipientsCreatorFallback": "Nokon",
+  "shareRecipientsDescFallback": "Inga skildring",
+  "shareRecipientsExpiresNeverFallback": "i: aldri",
+  "smtpDisabled": "SMTP er deaktivert",
+  "emailServiceDisabled": "E-postteneste deaktivert",
+  "testSubject": "Test-e-post",
+  "testText": "Dette er ein test-e-post",
+  "sendFailed": "Klarte ikkje å sende e-post",
+  "locale": "nn-NO"
+}

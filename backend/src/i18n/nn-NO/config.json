@@ -1,0 +1,13 @@
+{
+  "redisUrlNotSet": "Redis-URL er ikkje sett",
+  "redisTimedOut": "Tidsavbrot for Redis",
+  "redisConnectionFailed": "Tilkopling til Redis mislukkast",
+  "redisUnexpectedResponse": "Uventa svar frå Redis",
+  "redisError": "Redis-feil",
+  "variableNotFound": "Konfigurasjonsvariabel ikkje funnen",
+  "editNotAllowed": "Du kan berre oppdatere konfigurasjonsvariablar via config.yaml-fila",
+  "invalidType": "Konfigurasjonsvariabelen må vere av typen {type}",
+  "shareIdLengthValidation": "Delings-ID-lengda må vere mellom 2 og 50",
+  "zipCompressionLevelValidation": "Komprimeringsgrad for zip må vere mellom 0 og 9",
+  "deprecatedVariable": "Konfigurasjonsvariabelen '{legacyKey}' er forelda. Flytt til '{modernKey}' i din config.yaml"
+}

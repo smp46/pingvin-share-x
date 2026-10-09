@@ -1,0 +1,21 @@
+{
+  "notEnoughSpace": "Ikkje nok diskplass tilgjengeleg",
+  "idInUse": "Delings-ID er allereie i bruk",
+  "alreadyCompleted": "Delinga er allereie fullført",
+  "completionRequiresFile": "Du må ha minst éi fil i delinga for å fullføre ho.",
+  "notFound": "Deling ikkje funnen",
+  "anonymousNoDelete": "Anonyme delingar kan ikkje slettast",
+  "anonymousNoExpire": "Anonyme delingar kan ikkje setjast til å gå ut",
+  "anonymousNoUpdate": "Anonyme delingar kan ikkje oppdaterast",
+  "invalidExpiration": "Ugyldig utgangsdato",
+  "maxExpirationExceeded": "Utgangsdatoen overskrider maksimal utgangsdato",
+  "storageQuotaExceeded": "Lagringskvoten til brukaren er overskriden med {exceededSize}",
+  "reverseShareQuotaExceeded": "Lagringskvoten til eigaren av den omvende delinga er overskriden med {exceededSize}",
+  "wrongPassword": "Feil passord",
+  "tokenRequired": "Delingstoken krevst",
+  "privateShare": "Berre opprettaren av den omvende delinga har tilgang til denne delinga",
+  "maxViewsExceeded": "Maksimalt tal på visingar er overskride",
+  "restrictedToRecipients": "Denne delinga er avgrensa til visse mottakarar. Ver venleg og logg inn for å få tilgang.",
+  "notAllowedToShare": "Du har ikkje løyve til å opprette delingar",
+  "maxSharesExceeded": "Grensa for maksimalt tal på aktive delingar ({max}) er nådd"
+}

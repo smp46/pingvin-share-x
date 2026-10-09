@@ -1,0 +1,18 @@
+{
+  "invalidIdFormat": "Ugyldig ID-format",
+  "notFound": "Fila vart ikkje funnen",
+  "passwordProtected": "Denne delinga er passordverna",
+  "alreadyCompleted": "Delinga er allereie fullført",
+  "notEnoughSpace": "Ikkje nok plass på tenaren",
+  "unexpectedChunk": "Uventa del (chunk) mottatt",
+  "maxSizeExceeded": "Maksimal delingsstorleik er overskriden",
+  "storageQuotaExceeded": "Lagringskvoten din er overskriden med {exceededSize}",
+  "reverseShareQuotaExceeded": "Lagringskvoten til eigaren av den omvende delinga er overskriden med {exceededSize}",
+  "zipError": "Feil under oppretting av ZIP-fil",
+  "s3DeleteError": "Klarte ikkje å slette fil frå S3",
+  "s3UploadInitError": "Mislukkast i å initialisere fleirdelt opplasting (multipart upload).",
+  "s3SessionNotFound": "Fleirdelt opplastingsøkt vart ikkje funnen.",
+  "s3UploadFailed": "Fleirdelt opplasting mislukkast. Opplastinga har vorte avbroten.",
+  "s3SizeError": "Klarte ikkje å hente filstorleik",
+  "s3NotSupported": "Førehandssignerte operasjonar vert berre støtta for S3-lagring."
+}
