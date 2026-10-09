@@ -12,6 +12,10 @@ export default {
   "navbar.avatar.signout": "로그아웃",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "<h>직접 호스팅</h>하는 파일 공유 플랫폼.",
   "home.description": "정말 WeTransfer와 같은 제3자에게 개인 파일을 맡기고 싶으세요?",

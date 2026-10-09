@@ -12,6 +12,10 @@ export default {
   "navbar.avatar.signout": "Đăng xuất",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "Một nền tảng <h>seft-hosted</h> chi sẻ tệp tin.",
   "home.description": "Bạn có thực sự muốn giao các tệp cá nhân của mình vào tay bên thứ ba như WeTransfer không?",

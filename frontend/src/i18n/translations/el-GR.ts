@@ -12,6 +12,10 @@ export default {
   "navbar.avatar.signout": "Αποσύνδεση",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "Μια πλατφόρμα κοινής χρήσης αρχείων <h>σε ιδιωτική εγκατάσταση</h>.",
   "home.description": "Θέλετε πραγματικά να δώσετε τα προσωπικά σας αρχεία στο χέρι τρίτων όπως WeTransfer;",

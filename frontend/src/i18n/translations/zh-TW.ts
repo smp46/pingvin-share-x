@@ -12,6 +12,10 @@ export default {
   "navbar.avatar.signout": "登出",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "<h>自建</h> 檔案分享平台！",
   "home.description": "您真的放心把檔案交到第三方檔案平台手中嗎？",

@@ -12,6 +12,10 @@ export default {
   "navbar.avatar.signout": "Odjavi se",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "<h>Samo-hostana</h> platforma za dijeljenje datoteka.",
   "home.description": "Želite li zaista povjeriti svoje osobne datoteke trećim stranama poput WeTransfera?",

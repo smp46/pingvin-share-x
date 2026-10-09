@@ -12,6 +12,10 @@ export default {
   "navbar.avatar.signout": "Log ud",
   // END navbar
 
+  // Footer
+  "footer.poweredBy": "Powered by",
+  // END footer
+
   // /
   "home.title": "En <h>self-hosted</h> fildelingsplatform.",
   "home.description": "Er du sikker på, at du vil overlade dine personlige filer til tredjeparter som WeTransfer?",
