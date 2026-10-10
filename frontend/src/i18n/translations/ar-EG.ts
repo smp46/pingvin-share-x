@@ -604,7 +604,7 @@ export default {
   "admin.config.oauth.oidc-username-claim": "مطالبة اسم مستخدم OpenID Connect",
   "admin.config.oauth.oidc-username-claim.description": "طلب اسم المستخدم في رمز معرف OpenID Connect. إذا كنت لا تعرف معنى هذا الإعداد، اتركه فارغًا.",
   "admin.config.oauth.oidc-role-path": "المسار إلى الأدوار في رمز OpenID Connect",
-  "admin.config.oauth.oidc-role-path.description": "يجب أن يكون مسار JMES صالحًا يشير إلى مصفوفة من الأدوار. يوصى بإدارة حقوق الوصول باستخدام أدوار OpenID Connect فقط في حالة عدم تكوين موفر هوية آخر وتعطيل تسجيل الدخول بكلمة المرور. اتركه فارغًا إذا كنت لا تعرف ما هو هذا التكوين." + "Managing access rights using OpenID Connect roles is only recommended if no other identity provider is configured and password login is disabled. " + "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-path.description": "يجب أن يكون مسار JMES صالحًا يشير إلى مصفوفة من الأدوار. يوصى بإدارة حقوق الوصول باستخدام أدوار OpenID Connect فقط في حالة عدم تكوين موفر هوية آخر وتعطيل تسجيل الدخول بكلمة المرور. اتركه فارغًا إذا كنت لا تعرف ما هو هذا التكوين." + "إدارة حقوق الوصول باستخدام أدوار 'OpenID Connect' يوصى به فقط إذا لم يتم إعداد أي موفر هوية آخر و كان تسجيل الدخول بكلمة المرور معطلاً. " + "Leave it blank if you don't know what this config is.",
   "admin.config.oauth.oidc-role-general-access": "دور OpenID Connect للوصول العام",
   "admin.config.oauth.oidc-role-general-access.description": "الدور المطلوب للوصول العام. يجب أن يكون موجودًا في أدوار المستخدم ليتمكن من تسجيل الدخول. اتركه فارغًا إذا كنت لا تعرف ما هو هذا التكوين." + "Leave it blank if you don't know what this config is.",
   "admin.config.oauth.oidc-role-admin-access": "دور OpenID Connect لوصول المسؤول",
