@@ -13,16 +13,16 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Basert på",
   // END footer
 
   // /
-  "home.title": "Ein <h>sjølvhosta</h> fildelingsplattform.",
+  "home.title": "Ei <h>eigendrifta</h> fildelingsplattform.",
   "home.description": "Vil du verkeleg overlate dei personlege filene dine til tredjepartar som WeTransfer?",
-  "home.bullet.a.name": "Sjølvhosta",
+  "home.bullet.a.name": "Eigendrifta",
   "home.bullet.a.description": "Køyr Pingvin Share på di eiga maskin.",
   "home.bullet.b.name": "Personvern",
-  "home.bullet.b.description": "Filene dine er dine og vert aldri aksesserte av tredjepartar.",
+  "home.bullet.b.description": "Filene dine er dine og vert aldri tilgjengeleg for tredjepartar.",
   "home.bullet.c.name": "Inga irriterande grense for filstorleik",
   "home.bullet.c.description": "Last opp så store filer du vil. Berre harddisken din set grenser.",
   "home.button.start": "Kom i gong",
@@ -30,7 +30,7 @@ export default {
   // END /
 
   // /auth/signin
-  "signin.title": "Velkomen tilbake",
+  "signin.title": "Velkomen attende",
   "signin.description": "Har du ikkje ein konto enno?",
   "signin.button.signup": "Registrer deg",
   "signin.input.email-or-username": "E-post eller brukarnamn",
@@ -62,7 +62,7 @@ export default {
   "signup.button.submit": "La oss kome i gang",
   // /auth/verify
   "verify.title": "Verifiser konto",
-  "verify.success": "Kontoen din har vorte verifisert! Du kan nå logge inn.",
+  "verify.success": "Kontoen din har vorte verifisert! Du kan no logge inn.",
   "verify.error": "Verifiseringslenkja er ugyldig eller har gått ut.",
   "verify.button.signin": "Gå til logg inn",
   "verify.info.title": "Kontoverifisering",
