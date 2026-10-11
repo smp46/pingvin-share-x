@@ -80,7 +80,7 @@ export default {
 
   // /auth/reset-password
   "resetPassword.title": "Gløymt passordet ditt?",
-  "resetPassword.description": "Skriv inn e-posten din for å tilbakestille passordet.",
+  "resetPassword.description": "Skriv inn e-postadressa di for å tilbakestille passordet.",
   "resetPassword.notify.success": "Ei melding med ei lenkje for å tilbakestille passordet ditt har vorte send dersom den oppgjevne e-posten finst.",
   "resetPassword.button.back": "Attende til innloggingssida",
   "resetPassword.text.resetPassword": "Tilbakestill passord",
@@ -97,7 +97,7 @@ export default {
   "account.card.password.title": "Passord",
   "account.card.password.old": "Gammalt passord",
   "account.card.password.new": "Nytt passord",
-  "account.card.password.noPasswordSet": "Du har ikkje oppgitt noe passord. For å logge inn med e-post og passord må du opprette et passord.",
+  "account.card.password.noPasswordSet": "Du har ikkje oppgjeve noko passord. For å logge inn med e-post og passord må du opprette eit passord.",
   "account.notify.password.success": "Passordet vart endra",
   "account.card.oauth.title": "Sosial innlogging",
   "account.card.oauth.github": "GitHub",
@@ -168,7 +168,7 @@ export default {
   // /account/received
   "account.received-shares.title": "Mottekne delingar",
   "account.received-shares.title.empty": "Ingen delingar mottekne enno",
-  "account.received-shares.description.empty": "Delingar sendt til din e-postadresse vil verte viste her.",
+  "account.received-shares.description.empty": "Delingar send til e-postadressa di vil verte viste her.",
   "account.received-shares.table.from": "Fra",
   "account.received-shares.button.open": "Opne",
   // END /account/received
