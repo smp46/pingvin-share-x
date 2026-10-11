@@ -54,6 +54,14 @@ pm2 start npm --name "pingvin-share-x-frontend" -- run start
 
 The website is now listening on `http://localhost:3000`, have fun with Pingvin Share X!
 
+### Installing as an App (PWA)
+
+Pingvin Share X can be installed as an app on Android (Chrome) and other platforms. This requires the site to be served over HTTPS.
+
+- The app name shown on the home screen is the **App name** configured under _Settings → Administration → General_. Android caches the manifest of installed apps, so a changed name may only show up after some time. Reinstalling the app applies it immediately.
+- On Android, the installed app appears in the system share sheet. Photos and documents shared to it are opened in the upload page and can be shared right away. If you are not signed in, the files are kept on your device and added to the upload page after signing in.
+- After updating to a version with this feature, reinstall the app once so Android registers it as a share target.
+
 ### Alternative Deployments
 
 Pingvin Share X can also be deployed via the following platforms:
