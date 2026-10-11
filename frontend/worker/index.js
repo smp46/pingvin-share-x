@@ -20,6 +20,8 @@ self.addEventListener("fetch", (event) => {
           .getAll("files")
           .filter((entry) => typeof entry !== "string");
 
+        // Drop files from earlier shares that were never picked up
+        await caches.delete(SHARE_TARGET_CACHE);
         const cache = await caches.open(SHARE_TARGET_CACHE);
         const timestamp = Date.now();
 
@@ -32,6 +34,7 @@ self.addEventListener("fetch", (event) => {
                   "Content-Type": file.type || "application/octet-stream",
                   "X-File-Name": encodeURIComponent(file.name),
                   "X-File-Last-Modified": String(file.lastModified),
+                  "X-Shared-At": String(timestamp),
                 },
               }),
             ),
