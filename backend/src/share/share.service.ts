@@ -661,11 +661,23 @@ export class ShareService {
     return { isAvailable: !share };
   }
 
-  async increaseViewCount(share: Share) {
-    await this.prisma.share.update({
-      where: { id: share.id },
-      data: { views: share.views + 1 },
+  // Counts one view of a Share and enforces its View Limit. The limit check and
+  // the increment are one conditional UPDATE, so concurrent Viewers can't push
+  // the count past the limit. Throws share_max_views_exceeded once it's used up.
+  async increaseViewCount(share: Share & { security?: ShareSecurity | null }) {
+    const maxViews = share.security?.maxViews;
+
+    const { count } = await this.prisma.share.updateMany({
+      where: { id: share.id, views: maxViews ? { lt: maxViews } : undefined },
+      data: { views: { increment: 1 } },
     });
+
+    if (maxViews && count === 0) {
+      throw new ForbiddenException(
+        this.i18n.t("share.maxViewsExceeded"),
+        "share_max_views_exceeded",
+      );
+    }
   }
 
   async getShareToken(shareId: string, password: string) {
@@ -696,16 +708,8 @@ export class ShareService {
       }
     }
 
-    if (share.security?.maxViews && share.security.maxViews <= share.views) {
-      throw new ForbiddenException(
-        this.i18n.t("share.maxViewsExceeded"),
-        "share_max_views_exceeded",
-      );
-    }
-
-    const token = await this.generateShareToken(share);
     await this.increaseViewCount(share);
-    return token;
+    return this.generateShareToken(share);
   }
 
   async generateShareToken(share: Share & { security?: ShareSecurity }) {
