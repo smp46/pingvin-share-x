@@ -563,6 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Kullanıcı sosyal medya ile giriş yaptığında TOTP'yi yoksayıp yoksaymayacağı",
   "admin.config.oauth.disable-password": "Şifre ile girişi devre dışı bırak",
   "admin.config.oauth.disable-password.description": "Şifre ile girişi devre dışı bırakıp bırakmayacağı.\nHesabınıza erişimi kaybetmemek için bu yapılandırmayı etkinleştirmeden önce bir OAuth sağlayıcısının doğru şekilde yapılandırıldığından emin olun.",
+  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
+  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "GitHub ile girişin etkin olup olmadığı",
   "admin.config.oauth.github-client-id": "GitHub İstemci ID",
