@@ -563,6 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Αν θα αγνοηθεί το TOTP όταν ο χρήστης χρησιμοποιεί την κοινωνική σύνδεση",
   "admin.config.oauth.disable-password": "Απενεργοποίηση σύνδεσης με κωδικό πρόσβασης",
   "admin.config.oauth.disable-password.description": "Εάν θα απενεργοποιηθεί η σύνδεση με κωδικό πρόσβασης\nΒεβαιωθείτε ότι ένας πάροχος OAuth έχει διαμορφωθεί σωστά πριν ενεργοποιήσετε αυτήν τη διαμόρφωση για να αποφύγετε τον αποκλεισμό σας.",
+  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
+  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Αν είναι ενεργοποιημένη η σύνδεση GitHub",
   "admin.config.oauth.github-client-id": "GitHub Client ID",
