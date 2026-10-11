@@ -13,16 +13,16 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Basert på",
   // END footer
 
   // /
-  "home.title": "En <h>selvhostet</h> fildelingsplattform.",
+  "home.title": "En <h>egendriftet</h> fildelingsplattform.",
   "home.description": "Vil du virkelig gi dine personlige filer i hendene på tredjeparter som WeTransfer?",
-  "home.bullet.a.name": "Selvhostet",
-  "home.bullet.a.description": "Host Pingvin Share på din egen maskin.",
+  "home.bullet.a.name": "Egendriftet",
+  "home.bullet.a.description": "Kjør Pingvin Share på din egen maskin.",
   "home.bullet.b.name": "Personvern",
-  "home.bullet.b.description": "Filene dine er dine og vil aldri bli aksessert av tredjeparter.",
+  "home.bullet.b.description": "Filene dine er dine og vil aldri bli tilgjengelig for tredjeparter.",
   "home.bullet.c.name": "Ingen irriterende grense på filstørrelse",
   "home.bullet.c.description": "Last opp så store filer du vil. Bare harddisken din setter grenser.",
   "home.button.start": "Kom i gang",
