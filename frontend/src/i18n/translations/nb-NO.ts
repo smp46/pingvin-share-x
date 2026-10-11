@@ -393,7 +393,7 @@ export default {
   // END /share/[id]/edit
 
   // /imprint
-  "imprint.title": "Impressum",
+  "imprint.title": "Leverandørinformasjon",
   // END /imprint
 
   // /privacy
@@ -659,11 +659,11 @@ export default {
   "admin.config.s3.docs-link": "CORS må rekonfigureres på bøtten din, se {wikiLink} for detaljer.",
   "admin.config.category.legal": "Juridisk",
   "admin.config.legal.enabled": "Aktiver juridiske merknader",
-  "admin.config.legal.enabled.description": "Om det skal vises en lenke to impressum og personvernerklæring i bunnteksten.",
-  "admin.config.legal.imprint-text": "Impressum-tekst",
-  "admin.config.legal.imprint-text.description": "Teksten som skal vises i impressum. Støtter Markdown. La stå tomt for å lenke til en ekstern impressumside.",
-  "admin.config.legal.imprint-url": "Impressum-URL",
-  "admin.config.legal.imprint-url.description": "Hvis du allerede har en impressumside, kan du lenke til den her i stedet for å bruke tekstfeltet.",
+  "admin.config.legal.enabled.description": "Om det skal vises en lenke til leverandørinformasjon og personvernerklæring i bunnteksten.",
+  "admin.config.legal.imprint-text": "Tekst for leverandørinformasjon",
+  "admin.config.legal.imprint-text.description": "Teksten som skal vises i leverandørinformasjon. Støtter Markdown. La stå tomt for å lenke til en ekstern leverandørinformasjonsside.",
+  "admin.config.legal.imprint-url": "URL til leverandørinformasjon",
+  "admin.config.legal.imprint-url.description": "Hvis du allerede har en side med leverandørinformasjon, kan du lenke til den her i stedet for å bruke tekstfeltet.",
   "admin.config.legal.privacy-policy-text": "Personvernerklæring-tekst",
   "admin.config.legal.privacy-policy-text.description": "Teksten som skal vises i personvernerklæringen. Støtter Markdown. La stå tomt for å lenke til en ekstern personvernerklæringside.",
   "admin.config.legal.privacy-policy-url": "Personvernerklæring-URL",
