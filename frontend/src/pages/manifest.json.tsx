@@ -36,7 +36,7 @@ export const getServerSideProps = async ({
   const manifest = {
     id: "/",
     name: appName,
-    short_name: appName.length > 12 ? appName.substring(0, 12) : appName,
+    short_name: appName,
     theme_color: "#46509e",
     background_color: "#ffffff",
     display: "standalone",
