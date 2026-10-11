@@ -1192,6 +1192,10 @@
 										"exec": [
 											"pm.test(\"Status code is 403\",  () => {",
 											"    pm.response.to.have.status(403);",
+											"});",
+											"",
+											"pm.test(\"Error is share_max_views_exceeded\", () => {",
+											"    pm.expect(pm.response.json().error).to.be.equal(\"share_max_views_exceeded\");",
 											"});"
 										],
 										"type": "text/javascript"
@@ -1231,6 +1235,248 @@
 							"response": []
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "View Limit",
+			"item": [
+				{
+					"name": "Create Share with View Limit 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", () => {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/shares",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"shares"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"view-limit-share\",\n    \"expiration\": \"never\",\n    \"recipients\": [],\n    \"security\": {\n        \"maxViews\": 1,\n        \"password\": \"share-password\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload file",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", () => {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/octet-stream",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/shares/view-limit-share/files?name=test-file.txt&chunkIndex=0&totalChunks=1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"shares",
+								"view-limit-share",
+								"files"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "test-file.txt"
+								},
+								{
+									"key": "chunkIndex",
+									"value": "0"
+								},
+								{
+									"key": "totalChunks",
+									"value": "1"
+								}
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "data:application/octet-stream;base64,VGhpcyBpcyBhIHRlc3QgZmlsZWQgdXNlZCBmb3IgdXBsb2FkaW5nIGluIHRoZSBzeXN0ZW0gdGVzdC4="
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Complete share",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 202\", () => {",
+									"    pm.response.to.have.status(202);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/shares/view-limit-share/complete",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"shares",
+								"view-limit-share",
+								"complete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get share token - concurrent Viewers",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Several Viewers open the Share at the same time. Only one of them may get in.",
+									"// The password check is slow (argon2), which widens the window for a lost update.",
+									"const viewers = 8;",
+									"const statuses = [];",
+									"for (let i = 0; i < viewers; i++) {",
+									"    pm.sendRequest({",
+									"        url: pm.variables.replaceIn(\"{{API_URL}}/shares/view-limit-share/token\"),",
+									"        method: \"POST\",",
+									"        header: { \"Content-Type\": \"application/json\" },",
+									"        body: { mode: \"raw\", raw: JSON.stringify({ password: \"share-password\" }) },",
+									"    }, (err, res) => {",
+									"        statuses.push(err ? `error: ${err}` : `${res.code} ${res.json().error ?? \"\"}`.trim());",
+									"        if (statuses.length === viewers) pm.variables.set(\"burstStatuses\", JSON.stringify(statuses));",
+									"    });",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", () => {",
+									"    pm.response.to.have.status(403);",
+									"});",
+									"",
+									"pm.test(\"Concurrent Viewers get exactly one view\", () => {",
+									"    const statuses = JSON.parse(pm.variables.get(\"burstStatuses\"));",
+									"    pm.expect(statuses.filter((s) => s === \"200\")).to.have.lengthOf(1);",
+									"    pm.expect(statuses.filter((s) => s === \"403 share_max_views_exceeded\")).to.have.lengthOf(statuses.length - 1);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/shares/view-limit-share/token",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"shares",
+								"view-limit-share",
+								"token"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"share-password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Owner sees one view",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"const share = pm.response.json().find((s) => s.id === \"view-limit-share\");",
+									"pm.test(\"Share was viewed once\", () => {",
+									"    pm.expect(share.views).to.be.equal(1);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/shares",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"shares"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
