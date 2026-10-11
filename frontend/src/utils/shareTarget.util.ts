@@ -25,8 +25,10 @@ export const consumeSharedFiles = async (): Promise<FileUpload[]> => {
         const response = await cache.match(request);
         if (!response) continue;
 
+        // Files stored by an older service worker have no timestamp yet,
+        // treat them as fresh instead of dropping them
         const sharedAt = parseInt(response.headers.get("X-Shared-At") ?? "");
-        if (isNaN(sharedAt) || Date.now() - sharedAt > MAX_AGE_MS) continue;
+        if (!isNaN(sharedAt) && Date.now() - sharedAt > MAX_AGE_MS) continue;
 
         const blob = await response.blob();
         const name = decodeURIComponent(
