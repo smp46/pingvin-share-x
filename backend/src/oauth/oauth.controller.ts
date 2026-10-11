@@ -40,6 +40,20 @@ export class OAuthController {
     return this.oauthService.available();
   }
 
+  private getOAuthOrigin(request: Request): string {
+    const appUrl = this.config.get("general.appUrl");
+    const host = request.get("host");
+    if (!host) return appUrl;
+
+    const allowedHosts: string = this.config.get("oauth.allowedHosts") || "";
+    const allowed = [
+      new URL(appUrl).host.toLowerCase(),
+      ...allowedHosts.toLowerCase().split(",").map((h) => h.trim()).filter(Boolean),
+    ];
+
+    return allowed.includes(host.toLowerCase()) ? `${request.protocol}://${host}` : appUrl;
+  }
+
   @Get("status")
   @UseGuards(JwtGuard)
   async status(@GetUser() user: User) {
@@ -51,10 +65,12 @@ export class OAuthController {
   @UseFilters(ErrorPageExceptionFilter)
   async auth(
     @Param("provider") provider: string,
+    @Req() request: Request,
     @Res({ passthrough: true }) response: Response,
   ) {
     const state = nanoid(16);
-    const url = await this.providers[provider].getAuthEndpoint(state);
+    const redirectUri = `${this.getOAuthOrigin(request)}/api/oauth/callback/${provider}`;
+    const url = await this.providers[provider].getAuthEndpoint(state, redirectUri);
 
     const isSecure = this.config.get("security.secureCookies");
     response.cookie(`oauth_${provider}_state`, state, {
@@ -75,9 +91,17 @@ export class OAuthController {
     @Req() request: Request,
     @Res({ passthrough: true }) response: Response,
   ) {
-    const oauthToken = await this.providers[provider].getToken(query);
+    const redirectUri = `${this.getOAuthOrigin(request)}/api/oauth/callback/${provider}`;
+    const oauthToken = await this.providers[provider].getToken(query, redirectUri);
     const user = await this.providers[provider].getUserInfo(oauthToken, query);
     const id = await this.authService.getIdOfCurrentUser(request);
+
+    response.cookie(`oauth_${provider}_state`, "", {
+      maxAge: -1,
+      sameSite: "lax",
+      httpOnly: true,
+      secure: this.config.get("security.secureCookies"),
+    });
 
     if (id) {
       await this.oauthService.link(
@@ -86,7 +110,7 @@ export class OAuthController {
         user.providerId,
         user.providerUsername,
       );
-      response.redirect(this.config.get("general.appUrl") + "/account");
+      response.redirect("/account");
     } else {
       const token: {
         accessToken?: string;
@@ -99,11 +123,9 @@ export class OAuthController {
           token.refreshToken,
           token.accessToken,
         );
-        response.redirect(this.config.get("general.appUrl"));
+        response.redirect("/");
       } else {
-        response.redirect(
-          this.config.get("general.appUrl") + `/auth/totp/${token.loginToken}`,
-        );
+        response.redirect(`/auth/totp/${token.loginToken}`);
       }
     }
   }

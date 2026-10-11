@@ -371,6 +371,11 @@ export const configVariables = {
       defaultValue: "false",
       secret: false,
     },
+    allowedHosts: {
+      type: "string",
+      defaultValue: "",
+      secret: false,
+    },
     "github-enabled": {
       type: "boolean",
       defaultValue: "false",

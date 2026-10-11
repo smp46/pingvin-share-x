@@ -3,8 +3,8 @@ import { FaMicrosoft } from "react-icons/fa";
 import React from "react";
 import api from "../services/api.service";
 
-const getOAuthUrl = (appUrl: string, provider: string) => {
-  return `${appUrl}/api/oauth/auth/${provider}`;
+const getOAuthUrl = (provider: string) => {
+  return `/api/oauth/auth/${provider}`;
 };
 
 const getOAuthIcon = (provider: string) => {

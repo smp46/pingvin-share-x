@@ -53,7 +53,7 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
     return this.jwk.data;
   }
 
-  async getAuthEndpoint(state: string) {
+  async getAuthEndpoint(state: string, redirectUri?: string) {
     const configuration = await this.getConfiguration();
     const endpoint = configuration.authorization_endpoint;
 
@@ -82,14 +82,17 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
           this.name == "oidc"
             ? this.config.get(`oauth.oidc-scope`)
             : "openid email profile",
-        redirect_uri: this.getRedirectUri(),
+        redirect_uri: redirectUri || this.getRedirectUri(),
         state,
         nonce,
       }).toString()
     );
   }
 
-  async getToken(query: OAuthCallbackDto): Promise<OAuthToken<OidcToken>> {
+  async getToken(
+    query: OAuthCallbackDto,
+    redirectUri?: string,
+  ): Promise<OAuthToken<OidcToken>> {
     const configuration = await this.getConfiguration();
     const endpoint = configuration.token_endpoint;
     const res = await fetch(endpoint, {
@@ -102,7 +105,7 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
         client_secret: this.config.get(`oauth.${this.name}-clientSecret`),
         grant_type: "authorization_code",
         code: query.code,
-        redirect_uri: this.getRedirectUri(),
+        redirect_uri: redirectUri || this.getRedirectUri(),
       }).toString(),
     });
     const token = (await res.json()) as OidcToken;
