@@ -563,6 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Ohitetaanko TOTP, kun käyttäjä käyttää sosiaalisen median kirjautumista",
   "admin.config.oauth.disable-password": "Poista salasanakirjautuminen käytöstä",
   "admin.config.oauth.disable-password.description": "Poistetaanko salasanakirjautuminen käytöstä\nVarmista, että OAuth-palveluntarjoaja on määritetty oikein ennen tämän asetuksen aktivoimista, jotta et joudu lukituksi ulos.",
+  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
+  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHubia",
   "admin.config.oauth.github-enabled.description": "Onko GitHub-kirjautuminen käytössä",
   "admin.config.oauth.github-client-id": "GitHub Client ID",
