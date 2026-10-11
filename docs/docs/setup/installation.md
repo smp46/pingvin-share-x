@@ -58,9 +58,9 @@ The website is now listening on `http://localhost:3000`, have fun with Pingvin S
 
 Pingvin Share X can be installed as an app on Android (Chrome) and other platforms. This requires the site to be served over HTTPS.
 
-- The app name shown on the home screen is the **App name** configured under _Settings → Administration → General_. Android caches the manifest of installed apps, so a changed name may only show up after some time. Reinstalling the app applies it immediately.
-- On Android, the installed app appears in the system share sheet. Photos and documents shared to it are opened in the upload page and can be shared right away. If you are not signed in, the files are kept on your device and added to the upload page after signing in.
-- After updating to a version with this feature, reinstall the app once so Android registers it as a share target.
+- The app name shown on the home screen is the **App name** configured under _Settings → Administration → General_. Android updates the manifest of installed apps by itself, but this can take a few days. Reinstalling the app applies a changed name immediately.
+- On Android, the installed app appears in the system share sheet. Photos and documents shared to it are opened in the upload page and can be shared right away. If you are not signed in, the files are kept on your device and added to the upload page after signing in. This works in Chrome and Samsung Internet. iOS does not support sharing files to web apps.
+- Android registers an already installed app as a share target when it updates the app, which can take a few days. If the app does not show up in the share sheet after an update, reinstall it once.
 - The background of the app icon and the splash screen follows the **Color scheme** setting (_Settings → Administration → Appearance_): white for light, dark for dark. With _system_, white is used. Logos with a transparent background are placed on this background with some padding.
 
 ### Alternative Deployments
