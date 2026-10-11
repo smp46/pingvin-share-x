@@ -16,9 +16,12 @@ self.addEventListener("fetch", (event) => {
     (async () => {
       try {
         const formData = await event.request.formData();
-        const files = formData
-          .getAll("files")
-          .filter((entry) => typeof entry !== "string");
+        // Accept files from any form field, not only "files", because some
+        // browsers do not use the field name declared in the manifest
+        const files = [];
+        for (const [, value] of formData.entries()) {
+          if (typeof value !== "string") files.push(value);
+        }
 
         // Drop files from earlier shares that were never picked up
         await caches.delete(SHARE_TARGET_CACHE);
