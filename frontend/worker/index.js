@@ -15,7 +15,15 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(
     (async () => {
       try {
-        const formData = await event.request.formData();
+        // Samsung Internet fails with "Failed to fetch" on request.formData(),
+        // although the body itself can be read. So the body is read as a
+        // buffer and parsed from a new Response instead.
+        const body = await event.request.arrayBuffer();
+        const formData = await new Response(body, {
+          headers: {
+            "Content-Type": event.request.headers.get("content-type") || "",
+          },
+        }).formData();
         // Accept files from any form field, not only "files", because some
         // browsers do not use the field name declared in the manifest
         const files = [];
