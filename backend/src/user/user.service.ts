@@ -279,11 +279,15 @@ export class UserSevice {
   }
 
   async enforcePasswordPolicy(password: string): Promise<boolean> {
-    if (!this.configService.get("security.customPasswordPolicy")) {
-      return true;
-    }
+    const isCustom = this.configService.get("security.customPasswordPolicy");
+    const minLength = isCustom
+      ? this.configService.get("security.minLength")
+      : 8;
 
-    const minLength = this.configService.get("security.minLength");
+    if (password.length < minLength) return false;
+
+    if (!isCustom) return true;
+
     const requireUppercase = this.configService.get(
       "security.requireUppercase",
     );
