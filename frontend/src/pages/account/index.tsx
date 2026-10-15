@@ -85,7 +85,6 @@ const Account = () => {
           is: () => !!user?.hasPassword,
           then: (schema) =>
             schema
-              .min(8, t("common.error.too-short", { length: 8 }))
               .required(t("common.error.field-required")),
           otherwise: (schema) => schema.notRequired(),
         }),
@@ -116,7 +115,6 @@ const Account = () => {
             t("common.error.password.special"),
           )
           .required(t("common.error.field-required"))
-          .optional(),
       }),
     ),
   });
@@ -129,7 +127,6 @@ const Account = () => {
       yup.object().shape({
         password: yup
           .string()
-          .min(8, t("common.error.too-short", { length: 8 }))
           .required(t("common.error.field-required")),
       }),
     ),
@@ -142,7 +139,7 @@ const Account = () => {
     },
     validate: yupResolver(
       yup.object().shape({
-        password: yup.string().min(8),
+        password: yup.string(),
         code: yup
           .string()
           .min(6, t("common.error.exact-length", { length: 6 }))
