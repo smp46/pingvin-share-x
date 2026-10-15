@@ -328,7 +328,7 @@ const AdminConfigInput = ({
         (isEmailShareConfig || isEmailVerificationConfig) && (
           <>
             <Switch
-              disabled={!isSmtpEnabled}
+              disabled={!configVariable.allowEdit || !isSmtpEnabled}
               {...form.getInputProps("booleanValue", { type: "checkbox" })}
               onChange={(e) => onValueChange(configVariable, e.target.checked)}
             />
