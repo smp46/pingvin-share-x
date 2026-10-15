@@ -10,11 +10,14 @@ import {
 } from "@mantine/core";
 import { useForm, yupResolver } from "@mantine/form";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import * as yup from "yup";
 import useTranslate from "../../../hooks/useTranslate.hook";
 import authService from "../../../services/auth.service";
 import toast from "../../../utils/toast.util";
+import useConfig from "../../../hooks/config.hook";
+import { CustomPasswordPolicy } from "../../../types/config.type";
 
 const useStyles = createStyles((theme) => ({
   control: {
@@ -25,9 +28,34 @@ const useStyles = createStyles((theme) => ({
 }));
 
 const ResetPassword = () => {
+  const [customPasswordPolicy, setCustomPasswordPolicy] =
+    useState<CustomPasswordPolicy>({
+      minLength: 8,
+      requireUppercase: false,
+      requireLowercase: false,
+      requireNumber: false,
+      requireSpecialCharacter: false,
+    });
   const { classes } = useStyles();
   const router = useRouter();
+  const config = useConfig();
   const t = useTranslate();
+
+
+  useEffect(() => {
+    let customPasswordPolicy: CustomPasswordPolicy;
+    if (config.get("security.customPasswordPolicy")) {
+      customPasswordPolicy = {
+        minLength: config.get("security.minLength"),
+        requireUppercase: config.get("security.requireUppercase"),
+        requireLowercase: config.get("security.requireLowercase"),
+        requireNumber: config.get("security.requireNumber"),
+        requireSpecialCharacter: config.get("security.requireSpecialCharacter"),
+      };
+      setCustomPasswordPolicy(customPasswordPolicy);
+    }
+  }, []);
+
 
   const form = useForm({
     initialValues: {
@@ -37,7 +65,30 @@ const ResetPassword = () => {
       yup.object().shape({
         password: yup
           .string()
-          .min(8, t("common.error.too-short", { length: 8 }))
+          .min(
+            customPasswordPolicy.minLength,
+            t("common.error.too-short", {
+              length: customPasswordPolicy.minLength,
+            }),
+          )
+          .matches(
+            customPasswordPolicy.requireLowercase ? /[a-z]/ : /.*/,
+            t("common.error.password.lowercase"),
+          )
+          .matches(
+            customPasswordPolicy.requireUppercase ? /[A-Z]/ : /.*/,
+            t("common.error.password.uppercase"),
+          )
+          .matches(
+            customPasswordPolicy.requireNumber ? /[0-9]/ : /.*/,
+            t("common.error.password.number"),
+          )
+          .matches(
+            customPasswordPolicy.requireSpecialCharacter
+              ? /[^a-zA-Z0-9]/
+              : /.*/,
+            t("common.error.password.special"),
+          )
           .required(t("common.error.field-required")),
       }),
     ),
