@@ -46,8 +46,14 @@ export class ShareService {
   ) {}
 
   async create(share: CreateShareDTO, user?: User, reverseShareToken?: string) {
-    const reverseShare =
-      await this.reverseShareService.getByToken(reverseShareToken);
+    const isReverseValid = reverseShareToken
+      ? await this.reverseShareService.isValid(reverseShareToken)
+      : false;
+
+    const reverseShare = isReverseValid
+      ? await this.reverseShareService.getByToken(reverseShareToken)
+      : null;
+
     const quotaOwner = reverseShare ? reverseShare.creator : user;
 
     if (!reverseShare && user) {
@@ -365,7 +371,7 @@ export class ShareService {
 
     if (share.reverseShare) {
       await this.prisma.reverseShare.update({
-        where: { token: reverseShareToken },
+        where: { id: share.reverseShare.id },
         data: { remainingUses: { decrement: 1 } },
       });
     }
@@ -382,6 +388,20 @@ export class ShareService {
   }
 
   async revertComplete(id: string) {
+    const share = await this.prisma.share.findUnique({
+      where: { id },
+      include: { reverseShare: true },
+    });
+
+    if (!share) throw new NotFoundException(this.i18n.t("share.notFound"));
+
+    if (share.uploadLocked && share.reverseShare) {
+      await this.prisma.reverseShare.update({
+        where: { id: share.reverseShare.id },
+        data: { remainingUses: { increment: 1 } },
+      });
+    }
+
     return this.prisma.share.update({
       where: { id },
       data: { uploadLocked: false, isZipReady: false },
