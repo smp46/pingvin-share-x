@@ -50,7 +50,7 @@ export class AuthService {
     const email = dto.email.toLowerCase().trim();
 
     if (
-      dto.password &&
+      typeof dto.password === "string" &&
       !(await this.userService.enforcePasswordPolicy(dto.password))
     ) {
       throw new BadRequestException(this.i18n.t("auth.passwordPolicyNotMet"));
@@ -237,7 +237,7 @@ export class AuthService {
       throw new ForbiddenException(this.i18n.t("auth.passwordSignInDisabled"));
 
     if (
-      newPassword &&
+      typeof newPassword === "string" &&
       !(await this.userService.enforcePasswordPolicy(newPassword))
     ) {
       throw new BadRequestException(this.i18n.t("auth.passwordPolicyNotMet"));
@@ -330,7 +330,7 @@ export class AuthService {
       throw new ForbiddenException(this.i18n.t("auth.invalidPassword"));
 
     if (
-      newPassword &&
+      typeof newPassword === "string" &&
       !(await this.userService.enforcePasswordPolicy(newPassword))
     ) {
       throw new BadRequestException(this.i18n.t("auth.passwordPolicyNotMet"));
