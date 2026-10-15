@@ -563,6 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "用户通过社交账号登录时是否忽略两步验证",
   "admin.config.oauth.disable-password": "禁用密码登录",
   "admin.config.oauth.disable-password.description": "是否禁用密码登录\n确保在激活此配置之前，OAuth 已正确配置，以避免被锁定。",
+  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
+  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "是否启用 GitHub 账号登录",
   "admin.config.oauth.github-client-id": "GitHub Client ID",

@@ -1,6 +1,6 @@
 {
   "shareRecipientsCreatorFallback": "Nokon",
-  "shareRecipientsDescFallback": "Inga skildring",
+  "shareRecipientsDescFallback": "Ingen skildring",
   "shareRecipientsExpiresNeverFallback": "i: aldri",
   "smtpDisabled": "SMTP er deaktivert",
   "emailServiceDisabled": "E-postteneste deaktivert",

@@ -563,6 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Ігнорувати TOTP при використанні соціальної авторизації",
   "admin.config.oauth.disable-password": "Вимкнути вхід за паролем",
   "admin.config.oauth.disable-password.description": "Чи вимкнути вхід за паролем. \nПереконайтеся, що постачальник OAuth налаштований правильно, перед активацією цієї конфігурації, щоб уникнути блокування доступу.",
+  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
+  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Чи ввімкнено логін на GitHub",
   "admin.config.oauth.github-client-id": "ID клієнта GitHub",
