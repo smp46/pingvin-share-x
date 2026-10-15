@@ -139,7 +139,7 @@ const Account = () => {
     },
     validate: yupResolver(
       yup.object().shape({
-        password: yup.string(),
+        password: yup.string().required(t("common.error.field-required")),
         code: yup
           .string()
           .min(6, t("common.error.exact-length", { length: 6 }))
