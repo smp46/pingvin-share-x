@@ -30,8 +30,6 @@ import userService from "../../services/user.service";
 import { getOAuthIcon, getOAuthUrl, unlinkOAuth } from "../../utils/oauth.util";
 import toast from "../../utils/toast.util";
 
-import { CustomPasswordPolicy } from "../../types/config.type";
-
 const Account = () => {
   const [oauth, setOAuth] = useState<string[]>([]);
   const [oauthStatus, setOAuthStatus] = useState<Record<
@@ -41,19 +39,24 @@ const Account = () => {
       providerUsername: string;
     }
   > | null>(null);
-  const [customPasswordPolicy, setCustomPasswordPolicy] =
-    useState<CustomPasswordPolicy>({
-      minLength: 8,
-      requireUppercase: false,
-      requireLowercase: false,
-      requireNumber: false,
-      requireSpecialCharacter: false,
-    });
-
   const { user, refreshUser } = useUser();
   const modals = useModals();
   const t = useTranslate();
   const config = useConfig();
+
+  let minLength = 8;
+  let requireLowercase = false;
+  let requireUppercase = false;
+  let requireNumber = false;
+  let requireSpecialCharacter = false;
+
+  if (config.get("security.customPasswordPolicy")) {
+    minLength = config.get("security.minLength");
+    requireLowercase = config.get("security.requireLowercase");
+    requireUppercase = config.get("security.requireUppercase");
+    requireNumber = config.get("security.requireNumber");
+    requireSpecialCharacter = config.get("security.requireSpecialCharacter");
+  }
 
   const accountForm = useForm({
     initialValues: {
@@ -91,25 +94,25 @@ const Account = () => {
         password: yup
           .string()
           .min(
-            customPasswordPolicy.minLength,
+            minLength,
             t("common.error.too-short", {
-              length: customPasswordPolicy.minLength,
+              length: minLength,
             }),
           )
           .matches(
-            customPasswordPolicy.requireLowercase ? /[a-z]/ : /.*/,
+            requireLowercase ? /[a-z]/ : /.*/,
             t("common.error.password.lowercase"),
           )
           .matches(
-            customPasswordPolicy.requireUppercase ? /[A-Z]/ : /.*/,
+            requireUppercase ? /[A-Z]/ : /.*/,
             t("common.error.password.uppercase"),
           )
           .matches(
-            customPasswordPolicy.requireNumber ? /[0-9]/ : /.*/,
+            requireNumber ? /[0-9]/ : /.*/,
             t("common.error.password.number"),
           )
           .matches(
-            customPasswordPolicy.requireSpecialCharacter
+            requireSpecialCharacter
               ? /[^a-zA-Z0-9]/
               : /.*/,
             t("common.error.password.special"),
@@ -166,18 +169,6 @@ const Account = () => {
       })
       .catch(toast.axiosError);
     refreshOAuthStatus();
-
-    let customPasswordPolicy: CustomPasswordPolicy;
-    if (config.get("security.customPasswordPolicy")) {
-      customPasswordPolicy = {
-        minLength: config.get("security.minLength"),
-        requireUppercase: config.get("security.requireUppercase"),
-        requireLowercase: config.get("security.requireLowercase"),
-        requireNumber: config.get("security.requireNumber"),
-        requireSpecialCharacter: config.get("security.requireSpecialCharacter"),
-      };
-      setCustomPasswordPolicy(customPasswordPolicy);
-    }
   }, []);
 
   return (
