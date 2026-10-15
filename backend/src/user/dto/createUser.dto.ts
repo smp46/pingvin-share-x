@@ -1,5 +1,5 @@
 import { plainToClass } from "class-transformer";
-import { Allow, IsOptional, MinLength } from "class-validator";
+import { Allow, IsOptional} from "class-validator";
 import { UserDTO } from "./user.dto";
 
 export class CreateUserDTO extends UserDTO {
@@ -10,7 +10,6 @@ export class CreateUserDTO extends UserDTO {
   @IsOptional()
   isActivated: boolean;
 
-  @MinLength(8)
   @IsOptional()
   password: string;
 

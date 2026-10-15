@@ -49,15 +49,22 @@ export class AuthService {
     );
     const email = dto.email.toLowerCase().trim();
 
+    if (
+      typeof dto.password === "string" &&
+      !(await this.userService.enforcePasswordPolicy(dto.password))
+    ) {
+      throw new BadRequestException(this.i18n.t("auth.passwordPolicyNotMet"));
+    }
+
     const hash = dto.password ? await argon.hash(dto.password) : null;
     try {
       return await this.prisma.$transaction(async (tx) => {
-      const adminExists =
-        (await tx.user.count({ where: { isAdmin: true } })) > 0;
-      const shouldBeAdmin =
-        isAdmin ?? (!adminExists && (await tx.user.count()) === 0);
-      const needsVerification =
-        !shouldBeAdmin && !skipVerification && enableEmailVerification;
+        const adminExists =
+          (await tx.user.count({ where: { isAdmin: true } })) > 0;
+        const shouldBeAdmin =
+          isAdmin ?? (!adminExists && (await tx.user.count()) === 0);
+        const needsVerification =
+          !shouldBeAdmin && !skipVerification && enableEmailVerification;
 
         const user = await tx.user.create({
           data: {
@@ -229,6 +236,13 @@ export class AuthService {
     if (this.config.get("oauth.disablePassword"))
       throw new ForbiddenException(this.i18n.t("auth.passwordSignInDisabled"));
 
+    if (
+      typeof newPassword === "string" &&
+      !(await this.userService.enforcePasswordPolicy(newPassword))
+    ) {
+      throw new BadRequestException(this.i18n.t("auth.passwordPolicyNotMet"));
+    }
+
     const user = await this.prisma.user.findFirst({
       where: {
         resetPasswordToken: {
@@ -314,6 +328,13 @@ export class AuthService {
 
     if (!isPasswordValid)
       throw new ForbiddenException(this.i18n.t("auth.invalidPassword"));
+
+    if (
+      typeof newPassword === "string" &&
+      !(await this.userService.enforcePasswordPolicy(newPassword))
+    ) {
+      throw new BadRequestException(this.i18n.t("auth.passwordPolicyNotMet"));
+    }
 
     const hash = await argon.hash(newPassword);
 
