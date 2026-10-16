@@ -14,6 +14,7 @@ import { Readable } from "stream";
 import { PrismaService } from "../prisma/prisma.service";
 import { EmailService } from "src/email/email.service";
 import { I18nService } from "nestjs-i18n";
+import * as archiver from "archiver";
 
 const UPDATED_AT_THROTTLE_MS = 5 * 60 * 1000;
 const DOWNLOAD_NOTIFICATION_COOLDOWN_MS = 15 * 60 * 1000;
@@ -192,6 +193,117 @@ export class FileService {
     });
     const storageService = this.getStorageService(share?.storageProvider);
     return await storageService.getZip(shareId);
+  }
+
+  // Stream a ZIP containing only selected files. Resolve file IDs against the
+  // share before opening any file stream, and preserve safe relative paths.
+  async getSelectedZip(shareId: string, fileIdsJson: string): Promise<Readable> {
+    let ids: unknown;
+    try {
+      ids = JSON.parse(fileIdsJson);
+    } catch {
+      throw new BadRequestException("Invalid file selection");
+    }
+
+    if (
+        !Array.isArray(ids) ||
+        ids.length < 1 ||
+        ids.some((id) => typeof id !== "string" || !id) ||
+        new Set(ids).size !== ids.length
+    ) {
+      throw new BadRequestException("Invalid file selection");
+    }
+
+    const fileIds = ids as string[];
+    const files = await this.prisma.file.findMany({
+      where: { shareId, id: { in: fileIds } },
+      select: { id: true, name: true },
+    });
+    if (files.length !== fileIds.length) {
+      throw new NotFoundException(
+          "One or more selected files were not found in this share",
+      );
+    }
+
+    const byId = new Map(files.map((file) => [file.id, file]));
+    const safeArchiveName = (name: string) => {
+      const normalized = name.replace(/\\/g, "/");
+      if (
+          !normalized ||
+          normalized.length > 4096 ||
+          normalized.includes("\0") ||
+          normalized.startsWith("/") ||
+          /^[a-zA-Z]:/.test(normalized) ||
+          normalized.split("/").some((part) => !part || part === "." || part === "..")
+      ) {
+        throw new BadRequestException("Unsafe file name in selection");
+      }
+      return normalized;
+    };
+
+    const archiveEntries = fileIds.map((id) => ({
+      id,
+      zipName: safeArchiveName(byId.get(id)!.name),
+    }));
+
+    const configuredLevel = parseInt(
+        this.configService.get("share.zipCompressionLevel"),
+        10,
+    );
+    const zipLevel = Number.isInteger(configuredLevel) &&
+    configuredLevel >= 0 && configuredLevel <= 9
+        ? configuredLevel
+        : 6;
+    const archive = archiver("zip", { zlib: { level: zipLevel } });
+    archive.on("error", (error) => {
+      this.logger.error("Selected ZIP error", error);
+    });
+
+    void (async () => {
+      try {
+        for (const entry of archiveEntries) {
+          const file = await this.get(shareId, entry.id);
+          const source = file.file;
+          if (!source) throw new Error("Selected ZIP source is not readable");
+
+          await new Promise<void>((resolve, reject) => {
+            let ended = false;
+            const cleanup = () => {
+              source.off("end", onEnd);
+              source.off("error", onError);
+              source.off("close", onClose);
+              archive.off("error", onError);
+            };
+            const onEnd = () => {
+              ended = true;
+              cleanup();
+              resolve();
+            };
+            const onError = (error: Error) => {
+              cleanup();
+              reject(error);
+            };
+            const onClose = () => {
+              if (!ended) onError(new Error("Selected ZIP source closed early"));
+            };
+
+            source.once("end", onEnd);
+            source.once("error", onError);
+            source.once("close", onClose);
+            archive.once("error", onError);
+            archive.append(source, { name: entry.zipName });
+          });
+        }
+        await archive.finalize();
+      } catch (error) {
+        this.logger.error("Failed to create selected ZIP", error);
+        archive.destroy(
+            error instanceof Error ? error : new Error("Selected ZIP failed"),
+        );
+      }
+    })();
+
+    return archive;
   }
 
   async notifyRecipientDownload(

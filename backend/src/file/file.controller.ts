@@ -140,6 +140,31 @@ export class FileController {
     return new StreamableFile(zipStream);
   }
 
+  // ZIP archive containing only selected files, with the original directory paths.
+  @Post("selected-zip")
+  @UseGuards(FileSecurityGuard)
+  async getSelectedZip(
+      @Res({ passthrough: true }) res: Response,
+      @Param("shareId") shareId: string,
+      @Body("fileIds") fileIds: string,
+      @Query("recipient") recipientId?: string,
+  ) {
+    const zipStream = await this.fileService.getSelectedZip(shareId, fileIds);
+    const zipName = `${shareId}-selected.zip`;
+    res.set({
+      "Content-Type": "application/zip",
+      "Content-Disposition": contentDisposition(zipName),
+      "Cache-Control": "no-store",
+    });
+
+    void this.fileService.notifyRecipientDownload(
+        shareId,
+        zipName,
+        getValidRecipientId(recipientId),
+    );
+    return new StreamableFile(zipStream);
+  }
+
   @Throttle({
     default: {
       limit: 1200,

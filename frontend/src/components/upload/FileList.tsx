@@ -1,6 +1,7 @@
-import { ActionIcon, Table, Group } from "@mantine/core";
+import { useState, type ReactNode } from "react";
+import { ActionIcon, Table, Group, UnstyledButton } from "@mantine/core";
 import { useModals } from "@mantine/modals";
-import { TbTrash, TbEdit } from "react-icons/tb";
+import { TbTrash, TbEdit, TbChevronDown, TbChevronRight, TbFolder, TbFolderOpen } from "react-icons/tb";
 import { GrUndo } from "react-icons/gr";
 import { FileListItem } from "../../types/File.type";
 import { byteToHumanSizeString } from "../../utils/fileSize.util";
@@ -32,13 +33,46 @@ const getFileNameOrPath = (file: FileListItem) => {
   return pathName.replace(/\\/g, "/").replace(/^\//, "");
 };
 
+// Display-only tree. Original file objects and array indices are unchanged.
+type TreeNode =
+    | { type: "file"; index: number }
+    | { type: "folder"; name: string; path: string; children: TreeNode[] };
+
+const buildTree = (files: FileListItem[]): TreeNode[] => {
+  const root: TreeNode[] = [];
+  const folders = new Map<string, Extract<TreeNode, { type: "folder" }>>();
+
+  files.forEach((file, index) => {
+    const parts = getFileNameOrPath(file).split("/").filter(Boolean);
+    let nodes = root;
+    let path = "";
+
+    for (const name of parts.slice(0, -1)) {
+      path = path ? `${path}/${name}` : name;
+      let folder = folders.get(path);
+      if (!folder) {
+        folder = { type: "folder", name, path, children: [] };
+        nodes.push(folder);
+        folders.set(path, folder);
+      }
+      nodes = folder.children;
+    }
+
+    nodes.push({ type: "file", index });
+  });
+
+  return root;
+};
+
 const FileListRow = ({
-  file,
-  onRemove,
-  onRestore,
-  onEdit,
-}: {
+                       file,
+                       depth = 0,
+                       onRemove,
+                       onRestore,
+                       onEdit,
+                     }: {
   file: FileListItem;
+  depth?: number;
   onRemove?: () => void;
   onRestore?: () => void;
   onEdit?: () => void;
@@ -59,58 +93,60 @@ const FileListRow = ({
     const t = useTranslate();
 
     return (
-      <tr
-        style={{
-          color: deleted ? "rgba(120, 120, 120, 0.5)" : "inherit",
-          textDecoration: deleted ? "line-through" : "none",
-        }}
-      >
-        <td>{renderFileName(fileNameOrPath)}</td>
-        <td>{byteToHumanSizeString(+file.size)}</td>
-        <td>
-          <Group position="right" spacing="xs" noWrap>
-            {editable && (
-              <HoverTip label={t("common.button.edit")}>
-                <ActionIcon
-                  color="blue"
-                  variant="light"
-                  size={25}
-                  onClick={onEdit}
-                >
-                  <TbEdit />
-                </ActionIcon>
-              </HoverTip>
-            )}
-            {removable && (
-              <HoverTip label={t("common.button.delete")}>
-                <ActionIcon
-                  color="red"
-                  variant="light"
-                  size={25}
-                  onClick={onRemove}
-                >
-                  <TbTrash />
-                </ActionIcon>
-              </HoverTip>
-            )}
-            {uploading && (
-              <UploadProgressIndicator progress={file.uploadingProgress} />
-            )}
-            {restorable && (
-              <HoverTip label={t("common.button.undo")}>
-                <ActionIcon
-                  color="victoria"
-                  variant="light"
-                  size={25}
-                  onClick={onRestore}
-                >
-                  <GrUndo />
-                </ActionIcon>
-              </HoverTip>
-            )}
-          </Group>
-        </td>
-      </tr>
+        <tr
+            style={{
+              color: deleted ? "rgba(120, 120, 120, 0.5)" : "inherit",
+              textDecoration: deleted ? "line-through" : "none",
+            }}
+        >
+          <td style={{ paddingLeft: 56 + depth * 20 }}>
+            {renderFileName(fileNameOrPath.split("/").pop() ?? fileNameOrPath)}
+          </td>
+          <td>{byteToHumanSizeString(+file.size)}</td>
+          <td>
+            <Group position="right" spacing="xs" noWrap>
+              {editable && (
+                  <HoverTip label={t("common.button.edit")}>
+                    <ActionIcon
+                        color="blue"
+                        variant="light"
+                        size={25}
+                        onClick={onEdit}
+                    >
+                      <TbEdit />
+                    </ActionIcon>
+                  </HoverTip>
+              )}
+              {removable && (
+                  <HoverTip label={t("common.button.delete")}>
+                    <ActionIcon
+                        color="red"
+                        variant="light"
+                        size={25}
+                        onClick={onRemove}
+                    >
+                      <TbTrash />
+                    </ActionIcon>
+                  </HoverTip>
+              )}
+              {uploading && (
+                  <UploadProgressIndicator progress={file.uploadingProgress} />
+              )}
+              {restorable && (
+                  <HoverTip label={t("common.button.undo")}>
+                    <ActionIcon
+                        color="victoria"
+                        variant="light"
+                        size={25}
+                        onClick={onRestore}
+                    >
+                      <GrUndo />
+                    </ActionIcon>
+                  </HoverTip>
+              )}
+            </Group>
+          </td>
+        </tr>
     );
   }
 };
@@ -123,6 +159,16 @@ const FileList = <T extends FileListItem = FileListItem>({
   setFiles: (files: T[]) => void;
 }) => {
   const modals = useModals();
+  const [collapsed, setCollapsed] = useState<Set<string>>(() => new Set());
+  const toggleFolder = (path: string) => {
+    setCollapsed((prev) => {
+      const next = new Set(prev);
+      if (next.has(path)) next.delete(path);
+      else next.add(path);
+      return next;
+    });
+  };
+
   const remove = (index: number) => {
     const file = files[index];
 
@@ -153,20 +199,45 @@ const FileList = <T extends FileListItem = FileListItem>({
 
     showTextEditorModal(index, files, setFiles, text, modals);
   };
+  const renderNodes = (nodes: TreeNode[], depth = 0): ReactNode[] =>
+      nodes.flatMap((node) => {
+        if (node.type === "file") {
+          const i = node.index;
+          return [
+            <FileListRow
+                key={i}
+                file={files[i]}
+                depth={depth}
+                onRemove={() => remove(i)}
+                onRestore={() => restore(i)}
+                onEdit={() => edit(i)}
+            />,
+          ];
+        }
 
-  const rows = files.map((file, i) => (
-    <FileListRow
-      key={i}
-      file={file}
-      onRemove={() => remove(i)}
-      onRestore={() => restore(i)}
-      onEdit={() => edit(i)}
-    />
-  ));
+        const open = !collapsed.has(node.path);
+        return [
+          <tr key={`folder-${node.path}`}>
+            <td colSpan={3} style={{ paddingLeft: 16 + depth * 20 }}>
+              <UnstyledButton
+                  onClick={() => toggleFolder(node.path)}
+                  aria-expanded={open}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 600 }}
+              >
+                {open ? <TbChevronDown /> : <TbChevronRight />}
+                {open ? <TbFolderOpen /> : <TbFolder />}
+                {node.name}
+              </UnstyledButton>
+            </td>
+          </tr>,
+          ...(open ? renderNodes(node.children, depth + 1) : []),
+        ];
+      });
 
+  const rows = renderNodes(buildTree(files));
   return (
-    <Table>
-      <thead>
+      <Table>
+        <thead>
         <tr>
           <th>
             <FormattedMessage id="upload.filelist.name" />
