@@ -141,6 +141,7 @@ function App({ Component, pageProps }: AppProps) {
     return (config?.value ?? config?.defaultValue ?? fallback).trim();
   };
 
+  const appName = getStringConfigValue("general.appName", "Pingvin Share X");
   const customCss = getStringConfigValue("appearance.customCss");
   const themePrimaryColorRaw = getStringConfigValue(
     "appearance.themePrimaryColor",
@@ -292,6 +293,8 @@ function App({ Component, pageProps }: AppProps) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
+        <meta name="application-name" content={appName} />
+        <meta name="apple-mobile-web-app-title" content={appName} />
       </Head>
       <IntlProvider
         messages={i18nUtil.getLocaleByCode(language.current)?.messages}

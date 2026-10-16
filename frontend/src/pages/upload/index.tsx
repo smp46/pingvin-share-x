@@ -33,6 +33,7 @@ import {
   getNormalizedFileName,
   filterDuplicateFiles,
 } from "../../utils/file.util";
+import { consumeSharedFiles } from "../../utils/shareTarget.util";
 
 const promiseLimit = pLimit(3);
 let errorToastShown = false;
@@ -210,6 +211,15 @@ const Upload = ({
       setFiles((oldArr) => [...oldArr, ...filtered]);
     }
   };
+
+  // Pick up files shared to the installed web app (Web Share Target API)
+  useEffect(() => {
+    if (isReverseShare) return;
+
+    consumeSharedFiles().then((sharedFiles) => {
+      if (sharedFiles.length > 0) handleDropzoneFilesChanged(sharedFiles);
+    });
+  }, []);
 
   useEffect(() => {
     const handlePaste = (e: ClipboardEvent) => {
