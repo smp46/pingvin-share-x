@@ -244,7 +244,7 @@ const Upload = ({
       if (!clipboardData) return;
 
       let filesToUpload: FileUpload[] = [];
-      const hasFiles = Array.from(clipboardData.items).some(
+      const hasFiles = Array.from(clipboardData.items ?? []).some(
         (item) => item.kind === "file",
       );
 
