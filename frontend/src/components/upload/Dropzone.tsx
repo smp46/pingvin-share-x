@@ -121,21 +121,11 @@ const Dropzone = ({
         openRef={openRef as ForwardedRef<() => void>}
         getFilesFromEvent={getFilesFromEvent}
         onDrop={(files: FileUpload[]) => {
-          const fileSizeSum = files.reduce((n, { size }) => n + size, 0);
-
-          if (fileSizeSum + currentFilesSize > maxShareSize) {
-            toast.error(
-              t("upload.dropzone.notify.file-too-big", {
-                maxSize: byteToHumanSizeString(maxShareSize),
-              }),
-            );
-          } else {
-            files = files.map((newFile) => {
-              newFile.uploadingProgress = 0;
-              return newFile;
-            });
-            onFilesChanged(files);
-          }
+          files = files.map((newFile) => {
+            newFile.uploadingProgress = 0;
+            return newFile;
+          });
+          onFilesChanged(files);
         }}
         className={classes.dropzone}
         radius="md"
