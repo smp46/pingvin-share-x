@@ -12,7 +12,9 @@ export const traverseDirectory = async (
           configurable: true,
         });
         resolve([file]);
-      });
+      },
+        () => resolve([])
+      );
     });
   } else if (entry.isDirectory) {
     const dirReader = entry.createReader();
