@@ -22,8 +22,18 @@ const signInTotp = (totp: string, loginToken: string) => {
   });
 };
 
-const signUp = async (email: string, username: string, password: string) => {
-  const response = await api.post("auth/signUp", { email, username, password });
+const signUp = async (
+  displayName: string | undefined,
+  email: string,
+  username: string,
+  password: string,
+) => {
+  const response = await api.post("auth/signUp", {
+    displayName,
+    email,
+    username,
+    password,
+  });
 
   return response;
 };

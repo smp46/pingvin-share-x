@@ -1,5 +1,7 @@
 {
   "notFound": "Jeton de partage inversé non trouvé",
   "maxShareSizeExceeded": "La taille maximale du partage ne peut pas être supérieure à {maxSize} octets.",
-  "tokenInUse": "Le jeton de partage inversé est déjà utilisé"
+  "tokenInUse": "Le jeton de partage inversé est déjà utilisé",
+  "notAllowedToCreate": "Vous n'avez pas la permission de créer des partages inversés",
+  "maxReverseSharesExceeded": "Limite maximale de partages inversés actifs ({max}) atteinte"
 }

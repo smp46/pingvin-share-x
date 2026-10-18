@@ -29,16 +29,16 @@ const config: Config = {
           routeBasePath: "/",
           sidebarPath: "./sidebars.ts",
           editUrl: "https://github.com/smp46/pingvin-share-x/edit/main/docs",
-          lastVersion: "v1",
+          lastVersion: "current",
           versions: {
             v1: {
               label: "v1.x.x",
-              banner: "none",
+              path: "v1",
+              banner: "unmaintained",
             },
             current: {
               label: "v2.x.x",
-              path: "v2",
-              banner: "unreleased",
+              banner: "none",
             },
           },
         },

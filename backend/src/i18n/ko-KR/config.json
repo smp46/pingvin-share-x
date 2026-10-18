@@ -8,5 +8,6 @@
   "editNotAllowed": "설정 변수는 config.yaml 파일을 통해서만 업데이트할 수 있습니다",
   "invalidType": "설정 변수는 {type} 유형이어야 합니다",
   "shareIdLengthValidation": "공유 ID 길이는 2에서 50 사이여야 합니다",
-  "zipCompressionLevelValidation": "Zip 압축 레벨은 0에서 9 사이여야 합니다"
+  "zipCompressionLevelValidation": "Zip 압축 레벨은 0에서 9 사이여야 합니다",
+  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
 }

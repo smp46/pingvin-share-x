@@ -14,7 +14,7 @@ import { JwtGuard } from "../../auth/guard/jwt.guard";
 @Injectable()
 export class ShareOwnerGuard extends JwtGuard {
   constructor(
-    configService: ConfigService,
+    protected configService: ConfigService,
     private prisma: PrismaService,
     private readonly i18n: I18nService,
   ) {
@@ -41,7 +41,7 @@ export class ShareOwnerGuard extends JwtGuard {
 
     const share = await this.prisma.share.findUnique({
       where: { id: shareId },
-      include: { security: true },
+      include: { security: true, reverseShare: true },
     });
 
     if (!share) throw new NotFoundException(this.i18n.t("share.notFound"));
@@ -52,14 +52,30 @@ export class ShareOwnerGuard extends JwtGuard {
     await super.canActivate(context);
     const user = request.user as User;
 
-    // If the user is the creator of the share, allow access
-    if (user && share.creatorId == user.id) return true;
+    // If the user is the creator of the share or the parent reverse share
+    if (
+      user &&
+      (share.creatorId === user.id ||
+        (this.allowAdmin && share.reverseShare?.creatorId === user.id))
+    ) {
+      return true;
+    }
 
     // If the user is an admin, allow access
     if (this.allowAdmin && user?.isAdmin) return true;
 
     // If it's a anonymous share, allow access
-    if (this.allowAnonymous && !share.creatorId) return true;
+    if (this.allowAnonymous && !share.creatorId) {
+      if (share.reverseShare) {
+        const reverseShareToken = request.cookies?.reverse_share_token;
+        return (
+          Boolean(reverseShareToken) &&
+          reverseShareToken === share.reverseShare.token
+        );
+      }
+
+      return this.configService.get("security.allowUnauthenticatedShares");
+    }
 
     // If not signed in, deny access
     if (!user) return false;

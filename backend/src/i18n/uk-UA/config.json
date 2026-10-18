@@ -8,5 +8,6 @@
   "editNotAllowed": "Ви можете оновлювати змінні конфігурації лише через файл config.yaml",
   "invalidType": "Змінна конфігурації повинна мати тип {type}",
   "shareIdLengthValidation": "Довжина ID поширення повинна бути від 2 до 50 символів",
-  "zipCompressionLevelValidation": "Рівень стиснення Zip повинен бути від 0 до 9"
+  "zipCompressionLevelValidation": "Рівень стиснення Zip повинен бути від 0 до 9",
+  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
 }

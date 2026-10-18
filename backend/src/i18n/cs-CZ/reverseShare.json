@@ -1,5 +1,7 @@
 {
   "notFound": "Token reverzního sdílení nenalezen",
   "maxShareSizeExceeded": "Maximální velikost sdílení nesmí být větší než {maxSize} bajtů.",
-  "tokenInUse": "Token opačného sdílení se již používá"
+  "tokenInUse": "Token opačného sdílení se již používá",
+  "notAllowedToCreate": "Nemáte oprávnění vytvářet opačná sdílení",
+  "maxReverseSharesExceeded": "Byl dosažen maximální limit aktivních opačných sdílení ({max})"
 }

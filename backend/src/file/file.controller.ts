@@ -177,11 +177,7 @@ export class FileController {
       return;
     }
 
-    const file = await this.fileService.get(
-      shareId,
-      fileId,
-      req.headers.range,
-    );
+    const file = await this.fileService.get(shareId, fileId, req.headers.range);
 
     const totalSize = parseInt(file.metaData.size, 10);
 
@@ -215,7 +211,8 @@ export class FileController {
 
     if (file.range) {
       res.status(HttpStatus.PARTIAL_CONTENT);
-      headers["Content-Range"] = `bytes ${file.range.start}-${file.range.end}/${totalSize}`;
+      headers["Content-Range"] =
+        `bytes ${file.range.start}-${file.range.end}/${totalSize}`;
       headers["Content-Length"] = file.range.end - file.range.start + 1;
     } else {
       headers["Content-Length"] = totalSize;

@@ -8,5 +8,6 @@
   "editNotAllowed": "È consentito aggiornare le variabili di configurazione solo tramite il file config.yaml",
   "invalidType": "La variabile di configurazione deve essere di tipo {type}",
   "shareIdLengthValidation": "La lunghezza dell'ID di condivisione deve essere compresa tra 2 e 50",
-  "zipCompressionLevelValidation": "Il livello di compressione Zip deve essere compreso tra 0 e 9"
+  "zipCompressionLevelValidation": "Il livello di compressione Zip deve essere compreso tra 0 e 9",
+  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
 }

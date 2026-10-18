@@ -1,5 +1,7 @@
 {
   "notFound": "Käänteisen jaon tunnistetta ei löytynyt",
   "maxShareSizeExceeded": "Jaon enimmäiskoko ei voi olla suurempi kuin {maxSize} tavua.",
-  "tokenInUse": "Käänteisen jaon tunniste (token) on jo käytössä"
+  "tokenInUse": "Käänteisen jaon tunniste (token) on jo käytössä",
+  "notAllowedToCreate": "Sinulla ei ole oikeutta luoda käänteisiä jakoja",
+  "maxReverseSharesExceeded": "Aktiivisten käänteisten jakojen enimmäismäärä ({max}) on saavutettu"
 }

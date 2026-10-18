@@ -53,9 +53,17 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
     return this.jwk.data;
   }
 
-  async getAuthEndpoint(state: string) {
+  async getAuthEndpoint(state: string, redirectUri?: string) {
     const configuration = await this.getConfiguration();
     const endpoint = configuration.authorization_endpoint;
+
+    const clientId = this.config.get(`oauth.${this.name}-clientId`);
+    if (!clientId) {
+      this.logger.error(
+        `Client ID not configured for OAuth provider "${this.name}".`,
+      );
+      throw new ErrorPageException("oidc_configuration_error");
+    }
 
     const nonce = nanoid();
     await this.cache.set(
@@ -68,20 +76,23 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
       endpoint +
       "?" +
       new URLSearchParams({
-        client_id: this.config.get(`oauth.${this.name}-clientId`),
+        client_id: clientId,
         response_type: "code",
         scope:
           this.name == "oidc"
             ? this.config.get(`oauth.oidc-scope`)
             : "openid email profile",
-        redirect_uri: this.getRedirectUri(),
+        redirect_uri: redirectUri || this.getRedirectUri(),
         state,
         nonce,
       }).toString()
     );
   }
 
-  async getToken(query: OAuthCallbackDto): Promise<OAuthToken<OidcToken>> {
+  async getToken(
+    query: OAuthCallbackDto,
+    redirectUri?: string,
+  ): Promise<OAuthToken<OidcToken>> {
     const configuration = await this.getConfiguration();
     const endpoint = configuration.token_endpoint;
     const res = await fetch(endpoint, {
@@ -94,7 +105,7 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
         client_secret: this.config.get(`oauth.${this.name}-clientSecret`),
         grant_type: "authorization_code",
         code: query.code,
-        redirect_uri: this.getRedirectUri(),
+        redirect_uri: redirectUri || this.getRedirectUri(),
       }).toString(),
     });
     const token = (await res.json()) as OidcToken;
@@ -211,14 +222,29 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
   protected abstract getDiscoveryUri(): string;
 
   private async fetchConfiguration(): Promise<void> {
-    const res = await fetch(this.discoveryUri);
-    const expires = res.headers.has("expires")
-      ? new Date(res.headers.get("expires")).getTime()
-      : Date.now() + 1000 * 60 * 60 * 24;
-    this.configuration = {
-      expires,
-      data: (await res.json()) as OidcConfiguration,
-    };
+    try {
+      const res = await fetch(this.discoveryUri);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = (await res.json()) as OidcConfiguration;
+      if (
+        !URL.canParse(data?.authorization_endpoint) ||
+        !URL.canParse(data?.token_endpoint)
+      ) {
+        throw new Error(
+          "Missing or invalid authorization_endpoint or token_endpoint",
+        );
+      }
+
+      const expires = res.headers.has("expires")
+        ? new Date(res.headers.get("expires")).getTime()
+        : Date.now() + 1000 * 60 * 60 * 24;
+      this.configuration = { expires, data };
+    } catch (e) {
+      this.logger.error(
+        `Failed to fetch OIDC configuration from ${this.discoveryUri}: ${e.message}`,
+      );
+      throw new ErrorPageException("oidc_configuration_error");
+    }
   }
 
   private async fetchJwk(): Promise<void> {

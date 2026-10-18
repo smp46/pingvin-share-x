@@ -8,5 +8,6 @@
   "editNotAllowed": "您只能通过 config.yaml 文件更新配置变量",
   "invalidType": "配置变量必须为 {type} 类型",
   "shareIdLengthValidation": "分享 ID 长度必须在 2 到 50 之间",
-  "zipCompressionLevelValidation": "Zip 压缩级别必须在 0 到 9 之间"
+  "zipCompressionLevelValidation": "Zip 压缩级别必须在 0 到 9 之间",
+  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
 }

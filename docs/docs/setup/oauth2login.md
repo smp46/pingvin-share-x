@@ -42,9 +42,36 @@ Redirect URL: `https://<your-domain>/api/oauth/callback/discord`
 
 Generic OpenID Connect provider is also supported, we have tested it on Keycloak, Authentik, Casdoor and [Pocket ID](https://github.com/stonith404/pocket-id).
 
+Discovery URI: You can provide either the Issuer URL (e.g. `https://auth.example.com` or `https://keycloak.example.com/realms/my-realm`), the full discovery endpoint (e.g. `https://auth.example.com/.well-known/openid-configuration`), or an application-specific discovery endpoint (e.g. `https://auth.example.com/.well-known/<app_name>/openid-configuration`).
+
 Redirect URI: `https://<your-domain>/api/oauth/callback/oidc`
 
 Post Logout Redirect URI: `https://<your-domain>`
+
+## Alternative Hostnames
+
+If you access Pingvin Share X through more than one hostname (for example, an internal domain like `share.internal.example.com` and a public domain like `share.example.com`), set `oauth.allowedHosts` to allow OAuth redirects on those addresses.
+
+### Setup
+
+Set `oauth.allowedHosts` in `config.yaml` or under **Settings -> OAuth -> Allowed OAuth Hosts** in the admin panel. List hostnames separated by commas without protocols or paths:
+
+```yaml
+oauth:
+  allowedHosts: "share.internal.example.com"
+```
+
+If Pingvin Share X runs behind a reverse proxy, set `TRUST_PROXY=true` in your environment and configure your proxy to pass `Host`, `X-Forwarded-Host`, and `X-Forwarded-Proto`.
+
+### Provider Support
+
+This setting works with OpenID Connect, Google, and Microsoft. Register the callback URL for each allowed hostname in your identity provider:
+
+- OpenID Connect: `https://<hostname>/api/oauth/callback/oidc`
+- Google: `https://<hostname>/api/oauth/callback/google`
+- Microsoft: `https://<hostname>/api/oauth/callback/microsoft`
+
+GitHub and Discord only support the primary `general.appUrl`. Their OAuth apps do not accept multiple redirect URLs, and their integrations redirect back to `general.appUrl`. Logging in through GitHub or Discord from an alternative hostname fails because the browser stores the login state cookie on the alternative domain.
 
 ## Custom your OAuth 2 Provider
 

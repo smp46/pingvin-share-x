@@ -1,4 +1,5 @@
 {
   "usernamePattern": "Gebruikersnaam mag alleen letters, cijfers, punten en underscores bevatten",
-  "idPattern": "ID mag alleen letters, cijfers, underscores en streepjes bevatten"
+  "idPattern": "ID mag alleen letters, cijfers, underscores en streepjes bevatten",
+  "namePattern": "Naam mag alleen letters, spaties, komma's, punten, apostrofs of koppeltekens bevatten"
 }

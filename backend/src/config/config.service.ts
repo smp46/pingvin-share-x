@@ -16,6 +16,38 @@ import { I18nContext } from "nestjs-i18n";
 import { YamlConfig } from "../../prisma/seed/config.seed";
 import { CONFIG_FILE } from "src/constants";
 
+export const LEGACY_CONFIG_ALIASES: Record<
+  string,
+  { category: string; name: string }
+> = {
+  "security.sessionDuration": { category: "general", name: "sessionDuration" },
+  "security.secureCookies": { category: "general", name: "secureCookies" },
+  "security.enableEmailVerification": {
+    category: "email",
+    name: "enableEmailVerification",
+  },
+  "security.allowRegistration": {
+    category: "share",
+    name: "allowRegistration",
+  },
+  "security.allowUnauthenticatedShares": {
+    category: "share",
+    name: "allowUnauthenticatedShares",
+  },
+  "security.allowAdminAccessAllShares": {
+    category: "share",
+    name: "allowAdminAccessAllShares",
+  },
+  "share.enableShareEmailRecipients": {
+    category: "email",
+    name: "enableShareEmailRecipients",
+  },
+  "share.enableShareDownloadNotifications": {
+    category: "email",
+    name: "enableShareDownloadNotifications",
+  },
+};
+
 /**
  * ConfigService extends EventEmitter to allow listening for config updates,
  * now only `update` event will be emitted.
@@ -55,10 +87,36 @@ export class ConfigService extends EventEmitter {
 
       if (this.yamlConfig) {
         for (const configVariable of this.configVariables) {
+          const currentKey = `${configVariable.category}.${configVariable.name}`;
           const category = this.yamlConfig[configVariable.category];
-          if (!category) continue;
-          configVariable.value = category[configVariable.name];
-          this.emit("update", configVariable.name, configVariable.value);
+          let val = category?.[configVariable.name];
+
+          if (val === undefined && LEGACY_CONFIG_ALIASES[currentKey]) {
+            const legacy = LEGACY_CONFIG_ALIASES[currentKey];
+            const legacyVal = this.yamlConfig[legacy.category]?.[legacy.name];
+            if (legacyVal !== undefined) {
+              val = legacyVal;
+              this.logger.warn(
+                this.t(
+                  "config.deprecatedVariable",
+                  "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml",
+                  {
+                    legacyKey: `${legacy.category}.${legacy.name}`,
+                    modernKey: `${configVariable.category}.${configVariable.name}`,
+                  },
+                ),
+              );
+            }
+          }
+
+          if (val !== undefined) {
+            configVariable.value = val === null ? null : String(val);
+            this.emit(
+              "update",
+              `${configVariable.category}.${configVariable.name}`,
+              configVariable.value,
+            );
+          }
         }
       }
     } catch (e) {
@@ -70,7 +128,7 @@ export class ConfigService extends EventEmitter {
   }
 
   private async migrateInitUser(): Promise<void> {
-    if (!this.yamlConfig.initUser.enabled) return;
+    if (!this.yamlConfig.initUser?.enabled) return;
 
     const userCount = await this.prisma.user.count({
       where: { isAdmin: true },
@@ -216,7 +274,8 @@ export class ConfigService extends EventEmitter {
     const validations = [
       {
         key: "share.shareIdLength",
-        condition: (value: number) => value >= 2 && value <= 50,
+        condition: (value: unknown) =>
+          typeof value === "number" && value >= 2 && value <= 50,
         message: this.t(
           "config.shareIdLengthValidation",
           "Share ID length must be between 2 and 50",
@@ -224,17 +283,32 @@ export class ConfigService extends EventEmitter {
       },
       {
         key: "share.zipCompressionLevel",
-        condition: (value: number) => value >= 0 && value <= 9,
+        condition: (value: unknown) =>
+          typeof value === "number" && value >= 0 && value <= 9,
         message: this.t(
           "config.zipCompressionLevelValidation",
           "Zip compression level must be between 0 and 9",
+        ),
+      },
+      {
+        key: "oauth.allowedHosts",
+        condition: (value: unknown) => {
+          if (typeof value !== "string" || !value) return true;
+          return value.split(",").every((h) => {
+            const trimmed = h.trim();
+            return !trimmed.includes("://") && !trimmed.includes("/");
+          });
+        },
+        message: this.t(
+          "config.oauthAllowedHostsValidation",
+          "Allowed hosts must be a comma-separated list of hostnames without protocol or paths (e.g. share.internal.example.com)",
         ),
       },
       // TODO add validation for timespan type
     ];
 
     const validation = validations.find((validation) => validation.key == key);
-    if (validation && !validation.condition(value as any)) {
+    if (validation && !validation.condition(value)) {
       throw new BadRequestException(validation.message);
     }
   }

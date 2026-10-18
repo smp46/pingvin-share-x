@@ -8,5 +8,6 @@
   "editNotAllowed": "Konfiguratsioonimuutujaid on lubatud uuendada ainult config.yaml faili kaudu",
   "invalidType": "Konfiguratsioonimuutuja peab olema tüüpi {type}",
   "shareIdLengthValidation": "Jagamise ID pikkus peab olema vahemikus 2 kuni 50",
-  "zipCompressionLevelValidation": "Zip-pakkimise tase peab olema vahemikus 0 kuni 9"
+  "zipCompressionLevelValidation": "Zip-pakkimise tase peab olema vahemikus 0 kuni 9",
+  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
 }

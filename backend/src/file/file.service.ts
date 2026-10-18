@@ -215,7 +215,9 @@ export class FileService {
         where: { id: shareId },
         select: {
           id: true,
-          creator: { select: { email: true } },
+          creator: {
+            select: { email: true, username: true, displayName: true },
+          },
           recipients: {
             where: { id: recipientId },
             select: { email: true },
@@ -225,6 +227,11 @@ export class FileService {
 
       const recipient = share?.recipients[0];
       if (!share?.creator?.email || !recipient) return;
+
+      const recipientUser = await this.prisma.user.findUnique({
+        where: { email: recipient.email },
+        select: { displayName: true, username: true },
+      });
 
       await this.cache.set(
         notificationKey,
@@ -237,6 +244,8 @@ export class FileService {
         share.id,
         fileName,
         recipient.email,
+        share.creator?.displayName || share.creator?.username,
+        recipientUser?.displayName || recipientUser?.username,
       );
     } catch (e) {
       this.logger.error(

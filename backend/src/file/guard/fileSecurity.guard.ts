@@ -7,7 +7,6 @@ import {
 } from "@nestjs/common";
 import { Request } from "express";
 import * as moment from "moment";
-import { User } from "@prisma/client";
 import { I18nService } from "nestjs-i18n";
 import { PrismaService } from "src/prisma/prisma.service";
 import { ShareSecurityGuard } from "src/share/guard/shareSecurity.guard";

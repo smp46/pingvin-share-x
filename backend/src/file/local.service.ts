@@ -171,8 +171,8 @@ export class LocalFileService {
     fileId: string,
     range?: { start: number; end?: number } | string,
   ): Promise<File> {
-    const fileMetaData = await this.prisma.file.findUnique({
-      where: { id: fileId },
+    const fileMetaData = await this.prisma.file.findFirst({
+      where: { id: fileId, shareId },
     });
 
     if (!fileMetaData)
@@ -220,8 +220,8 @@ export class LocalFileService {
   }
 
   async remove(shareId: string, fileId: string) {
-    const fileMetaData = await this.prisma.file.findUnique({
-      where: { id: fileId },
+    const fileMetaData = await this.prisma.file.findFirst({
+      where: { id: fileId, shareId },
     });
 
     if (!fileMetaData)

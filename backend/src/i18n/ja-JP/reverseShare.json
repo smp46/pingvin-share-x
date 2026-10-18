@@ -1,5 +1,7 @@
 {
   "notFound": "リバース共有トークンが見つかりません",
   "maxShareSizeExceeded": "最大共有サイズは {maxSize} バイトを超えることはできません。",
-  "tokenInUse": "ファイルリクエストのトークンは既に使用されています"
+  "tokenInUse": "ファイルリクエストのトークンは既に使用されています",
+  "notAllowedToCreate": "ファイルリクエストを作成する権限がありません",
+  "maxReverseSharesExceeded": "アクティブなファイルリクエスト数の上限（{max}）に達しました"
 }

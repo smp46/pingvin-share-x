@@ -8,5 +8,6 @@
   "editNotAllowed": "Du må kun opdatere konfigurationsvariabler via config.yaml-filen",
   "invalidType": "Konfigurationsvariabel skal være af typen {type}",
   "shareIdLengthValidation": "Delings-ID skal være mellem 2 og 50",
-  "zipCompressionLevelValidation": "Zip-komprimeringsniveau skal være mellem 0 og 9"
+  "zipCompressionLevelValidation": "Zip-komprimeringsniveau skal være mellem 0 og 9",
+  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
 }

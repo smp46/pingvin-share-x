@@ -8,5 +8,6 @@
   "editNotAllowed": "Επιτρέπεται η ενημέρωση των μεταβλητών διαμόρφωσης μόνο μέσω του αρχείου config.yaml",
   "invalidType": "Η μεταβλητή διαμόρφωσης πρέπει να είναι τύπου {type}",
   "shareIdLengthValidation": "Το μήκος του ID κοινής χρήσης πρέπει να είναι μεταξύ 2 και 50",
-  "zipCompressionLevelValidation": "Το επίπεδο συμπίεσης Zip πρέπει να είναι μεταξύ 0 και 9"
+  "zipCompressionLevelValidation": "Το επίπεδο συμπίεσης Zip πρέπει να είναι μεταξύ 0 και 9",
+  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
 }

@@ -10,5 +10,5 @@ services:
     volumes:
       - "./data:/opt/app/backend/data:rw,z"
       - "./data/images:/opt/app/frontend/public/img:rw,z"
-#      - "./config.yaml:/opt/app/config.yaml"
+      # - "./config.yaml:/opt/app/config.yaml:ro,z"
 

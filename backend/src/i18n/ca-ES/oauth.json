@@ -7,6 +7,7 @@
   "user_not_allowed": "No teniu permès iniciar la sessió",
   "invalid_token": "Token no vàlid",
   "cannot_get_user_info": "No s'ha pogut obtenir la informació de l'usuari",
+  "oidc_configuration_error": "No s'ha pogut obtenir la configuració d'OpenID Connect del proveïdor d'identitat",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",

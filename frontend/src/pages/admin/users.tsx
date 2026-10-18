@@ -15,19 +15,33 @@ import toast from "../../utils/toast.util";
 
 const Users = () => {
   const [users, setUsers] = useState<User[]>([]);
-  const [customPasswordPolicy, setCustomPasswordPolicy] =
-    useState<CustomPasswordPolicy>({
-      minLength: 8,
-      requireUppercase: false,
-      requireLowercase: false,
-      requireNumber: false,
-      requireSpecialCharacter: false,
-    });
   const [isLoading, setIsLoading] = useState(true);
 
   const config = useConfig();
   const modals = useModals();
   const t = useTranslate();
+
+  let minLength = 8;
+  let requireLowercase = false;
+  let requireUppercase = false;
+  let requireNumber = false;
+  let requireSpecialCharacter = false;
+
+  if (config.get("security.customPasswordPolicy")) {
+    minLength = config.get("security.minLength");
+    requireLowercase = config.get("security.requireLowercase");
+    requireUppercase = config.get("security.requireUppercase");
+    requireNumber = config.get("security.requireNumber");
+    requireSpecialCharacter = config.get("security.requireSpecialCharacter");
+  }
+
+  const customPasswordPolicy: CustomPasswordPolicy = {
+    minLength,
+    requireUppercase,
+    requireLowercase,
+    requireNumber,
+    requireSpecialCharacter,
+  };
 
   const getUsers = () => {
     setIsLoading(true);
@@ -63,20 +77,6 @@ const Users = () => {
 
   useEffect(() => {
     getUsers();
-
-    let customPasswordPolicy: CustomPasswordPolicy;
-    if (config.get("security.customPasswordPolicy")) {
-      customPasswordPolicy = {
-        minLength: config.get("security.minLength"),
-        requireUppercase: config.get("security.requireUppercase"),
-        requireLowercase: config.get("security.requireLowercase"),
-        requireNumber: config.get("security.requireNumber"),
-        requireSpecialCharacter: config.get(
-          "security.requireSpecialCharacter",
-        ),
-      };
-      setCustomPasswordPolicy(customPasswordPolicy);
-    }
   }, []);
 
   return (
@@ -88,7 +88,12 @@ const Users = () => {
         </Title>
         <Button
           onClick={() =>
-            showCreateUserModal(modals, config.get("smtp.enabled"), getUsers, customPasswordPolicy)
+            showCreateUserModal(
+              modals,
+              config.get("smtp.enabled"),
+              getUsers,
+              customPasswordPolicy,
+            )
           }
           leftIcon={<TbPlus size={20} />}
         >

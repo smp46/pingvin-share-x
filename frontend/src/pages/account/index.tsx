@@ -39,19 +39,36 @@ const Account = () => {
       providerUsername: string;
     }
   > | null>(null);
-
   const { user, refreshUser } = useUser();
   const modals = useModals();
   const t = useTranslate();
   const config = useConfig();
 
+  let minLength = 8;
+  let requireLowercase = false;
+  let requireUppercase = false;
+  let requireNumber = false;
+  let requireSpecialCharacter = false;
+
+  if (config.get("security.customPasswordPolicy")) {
+    minLength = config.get("security.minLength");
+    requireLowercase = config.get("security.requireLowercase");
+    requireUppercase = config.get("security.requireUppercase");
+    requireNumber = config.get("security.requireNumber");
+    requireSpecialCharacter = config.get("security.requireSpecialCharacter");
+  }
+
   const accountForm = useForm({
     initialValues: {
+      displayName: user?.displayName ?? "",
       username: user?.username,
       email: user?.email,
     },
     validate: yupResolver(
       yup.object().shape({
+        displayName: yup
+          .string()
+          .matches(/^[\p{L} ,.'-]*$/u, t("common.error.name.invalid-chars")),
         email: yup.string().email(t("common.error.invalid-email")),
         username: yup
           .string()
@@ -71,14 +88,36 @@ const Account = () => {
           is: () => !!user?.hasPassword,
           then: (schema) =>
             schema
-              .min(8, t("common.error.too-short", { length: 8 }))
               .required(t("common.error.field-required")),
           otherwise: (schema) => schema.notRequired(),
         }),
         password: yup
           .string()
-          .min(8, t("common.error.too-short", { length: 8 }))
-          .required(t("common.error.field-required")),
+          .min(
+            minLength,
+            t("common.error.too-short", {
+              length: minLength,
+            }),
+          )
+          .matches(
+            requireLowercase ? /[a-z]/ : /.*/,
+            t("common.error.password.lowercase"),
+          )
+          .matches(
+            requireUppercase ? /[A-Z]/ : /.*/,
+            t("common.error.password.uppercase"),
+          )
+          .matches(
+            requireNumber ? /[0-9]/ : /.*/,
+            t("common.error.password.number"),
+          )
+          .matches(
+            requireSpecialCharacter
+              ? /[^a-zA-Z0-9]/
+              : /.*/,
+            t("common.error.password.special"),
+          )
+          .required(t("common.error.field-required"))
       }),
     ),
   });
@@ -91,7 +130,6 @@ const Account = () => {
       yup.object().shape({
         password: yup
           .string()
-          .min(8, t("common.error.too-short", { length: 8 }))
           .required(t("common.error.field-required")),
       }),
     ),
@@ -104,7 +142,7 @@ const Account = () => {
     },
     validate: yupResolver(
       yup.object().shape({
-        password: yup.string().min(8),
+        password: yup.string().required(t("common.error.field-required")),
         code: yup
           .string()
           .min(6, t("common.error.exact-length", { length: 6 }))
@@ -151,6 +189,7 @@ const Account = () => {
             onSubmit={accountForm.onSubmit((values) =>
               userService
                 .updateCurrentUser({
+                  displayName: values.displayName,
                   username: values.username,
                   email: values.email,
                 })
@@ -159,6 +198,10 @@ const Account = () => {
             )}
           >
             <Stack>
+              <TextInput
+                label={t("account.card.info.displayName")}
+                {...accountForm.getInputProps("displayName")}
+              />
               <TextInput
                 label={t("account.card.info.username")}
                 disabled={user?.isLdap}
@@ -279,13 +322,7 @@ const Account = () => {
                     ) : (
                       <Button
                         component="a"
-                        href={getOAuthUrl(
-                          config.get("general.appUrl") !==
-                            config.get("general.appUrl", true)
-                            ? config.get("general.appUrl")
-                            : window.location.origin,
-                          provider,
-                        )}
+                        href={getOAuthUrl(provider)}
                       >
                         {t("account.card.oauth.link")}
                       </Button>

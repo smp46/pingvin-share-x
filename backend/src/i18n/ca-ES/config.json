@@ -8,5 +8,6 @@
   "editNotAllowed": "Només teniu permès actualitzar les variables de configuració mitjançant el fitxer config.yaml",
   "invalidType": "La variable de configuració ha de ser de tipus {type}",
   "shareIdLengthValidation": "La longitud de l'ID de compartició ha de ser d'entre 2 i 50",
-  "zipCompressionLevelValidation": "El nivell de compressió Zip ha de ser d'entre 0 i 9"
+  "zipCompressionLevelValidation": "El nivell de compressió Zip ha de ser d'entre 0 i 9",
+  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
 }

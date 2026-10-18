@@ -1,5 +1,0 @@
-{
-  "notFound": "Omvendt delingstoken ble ikke funnet",
-  "maxShareSizeExceeded": "Maksimal delingsstørrelse kan ikke være større enn {maxSize} byte.",
-  "tokenInUse": "Token for omvendt deling er allerede i bruk"
-}

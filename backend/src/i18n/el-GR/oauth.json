@@ -7,6 +7,7 @@
   "user_not_allowed": "Δεν σας επιτρέπεται η σύνδεση",
   "invalid_token": "Άκυρο διακριτικό",
   "cannot_get_user_info": "Δεν ήταν δυνατή η λήψη πληροφοριών χρήστη",
+  "oidc_configuration_error": "Δεν ήταν δυνατή η ανάκτηση της διαμόρφωσης OpenID Connect από τον πάροχο ταυτότητας",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",

@@ -59,29 +59,36 @@ export class AdminNoticeService implements OnModuleInit {
     }
 
     const allNotices = this.getNoticeDefinitions();
+    const pendingNotices: AdminNoticeDto[] = [];
 
-    return allNotices.filter((notice) => {
+    for (const notice of allNotices) {
       if (dismissedNoticeIds.has(notice.id)) {
-        return false;
+        continue;
       }
       if (notice.conditionKey === "REQUIRE_S3_ENABLED" && !isS3Enabled) {
-        return false;
+        await this.dismissNotice(notice.id);
+        continue;
       }
-      return true;
-    });
+      pendingNotices.push(notice);
+    }
+
+    return pendingNotices;
   }
 
-  async dismissNotice(noticeId: string, user: User): Promise<void> {
+  async dismissNotice(
+    noticeId: string,
+    user?: { id?: string; username?: string },
+  ): Promise<void> {
     await this.prisma.adminNoticeDismissal.upsert({
       where: { noticeId },
       update: {
-        dismissedByUserId: user.id,
-        dismissedByUsername: user.username,
+        dismissedByUserId: user?.id ?? null,
+        dismissedByUsername: user?.username ?? "system",
       },
       create: {
         noticeId,
-        dismissedByUserId: user.id,
-        dismissedByUsername: user.username,
+        dismissedByUserId: user?.id ?? null,
+        dismissedByUsername: user?.username ?? "system",
       },
     });
   }

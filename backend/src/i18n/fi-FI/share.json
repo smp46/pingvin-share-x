@@ -15,5 +15,7 @@
   "tokenRequired": "Jaon tunniste vaaditaan",
   "privateShare": "Vain käänteisen jaon luoja voi käyttää tätä jakoa",
   "maxViewsExceeded": "Katselukertojen enimmäismäärä ylittyi",
-  "restrictedToRecipients": "Tämä jako on rajoitettu tietyille vastaanottajille. Kirjaudu sisään päästäksesi käsiksi siihen."
+  "restrictedToRecipients": "Tämä jako on rajoitettu tietyille vastaanottajille. Kirjaudu sisään päästäksesi käsiksi siihen.",
+  "notAllowedToShare": "Sinulla ei ole oikeutta luoda jakoja",
+  "maxSharesExceeded": "Aktiivisten jakojen enimmäismäärä ({max}) on saavutettu"
 }

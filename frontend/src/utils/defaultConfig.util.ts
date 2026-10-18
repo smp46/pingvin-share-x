@@ -27,6 +27,12 @@ export function getDefaultConfig(): Config[] {
       type: "string",
     },
     {
+      key: "share.enableUserRecipients",
+      value: "false",
+      defaultValue: "false",
+      type: "boolean",
+    },
+    {
       key: "security.allowRegistration",
       value: "false",
       defaultValue: "false",

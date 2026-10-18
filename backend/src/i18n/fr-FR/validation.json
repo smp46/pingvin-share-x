@@ -1,4 +1,5 @@
 {
   "usernamePattern": "Le nom d'utilisateur ne peut contenir que des lettres, des chiffres, des points et des soulignements",
-  "idPattern": "L'ID ne peut contenir que des lettres, des chiffres, des soulignements et des traits d'union"
+  "idPattern": "L'ID ne peut contenir que des lettres, des chiffres, des soulignements et des traits d'union",
+  "namePattern": "Le nom ne peut contenir que des lettres, des espaces, des virgules, des points, des apostrophes ou des traits d'union"
 }

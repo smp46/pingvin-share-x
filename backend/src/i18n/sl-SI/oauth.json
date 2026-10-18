@@ -7,6 +7,7 @@
   "user_not_allowed": "Prijava vam ni dovoljena",
   "invalid_token": "Neveljaven žeton",
   "cannot_get_user_info": "Ni bilo mogoče pridobiti podatkov o uporabniku",
+  "oidc_configuration_error": "Konfiguracije za OpenID Connect ni bilo mogoče pridobiti od ponudnika identitete",
   "provider_github": "GitHub",
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",
