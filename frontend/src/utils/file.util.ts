@@ -39,6 +39,38 @@ export const filterDuplicateFiles = <T extends File>(
   return filtered;
 };
 
+export const validateAndFilterFiles = <T extends File>(
+  newFiles: T[],
+  existingFilesList: Array<{
+    name: string;
+    webkitRelativePath?: string;
+    deleted?: boolean;
+    size: number | string;
+  }>,
+  maxShareSize: number,
+  onDuplicateDetected: (name: string) => void,
+  onSizeExceeded: () => void,
+): T[] => {
+  const filtered = filterDuplicateFiles(
+    newFiles,
+    existingFilesList,
+    onDuplicateDetected,
+  );
+  if (filtered.length === 0) return [];
+
+  const newFilesSize = filtered.reduce((n, { size }) => n + size, 0);
+  const baseSize = existingFilesList
+    .filter((file) => !file.deleted)
+    .reduce((acc, file) => acc + Number(file.size), 0);
+
+  if (newFilesSize + baseSize > maxShareSize) {
+    onSizeExceeded();
+    return [];
+  }
+
+  return filtered;
+};
+
 export const getFilesFromEvent = async (event: any): Promise<any[]> => {
   if (Array.isArray(event)) {
     const filePromises = event.map(async (item: any) => {
