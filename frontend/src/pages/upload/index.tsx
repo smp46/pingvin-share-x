@@ -58,6 +58,9 @@ const Upload = ({
   const [files, setFiles] = useState<FileUpload[]>([]);
   const [isUploading, setisUploading] = useState(false);
 
+  const filesRef = useRef<FileUpload[]>(files);
+  filesRef.current = files;
+
   useConfirmLeave({
     message: t("upload.notify.confirm-leave"),
     enabled: isUploading,
@@ -199,15 +202,24 @@ const Upload = ({
 
   const handleDropzoneFilesChanged = useCallback(
     (newFiles: FileUpload[]) => {
-      const filtered = filterDuplicateFiles(newFiles, files, (normalizedName) =>
-        toast.error(
-          t("upload.notify.duplicate-skipped", { name: normalizedName }),
-        ),
+      const currentFiles = filesRef.current;
+      const currentTotalSize = currentFiles.reduce(
+        (acc, file) => acc + file.size,
+        0,
+      );
+
+      const filtered = filterDuplicateFiles(
+        newFiles,
+        currentFiles,
+        (normalizedName) =>
+          toast.error(
+            t("upload.notify.duplicate-skipped", { name: normalizedName }),
+          ),
       );
       if (filtered.length === 0) return;
 
       const newFilesSize = filtered.reduce((n, { size }) => n + size, 0);
-      const baseSize = autoOpenCreateUploadModal ? 0 : currentFilesSize;
+      const baseSize = autoOpenCreateUploadModal ? 0 : currentTotalSize;
 
       if (newFilesSize + baseSize > maxShareSize) {
         toast.error(
@@ -226,8 +238,6 @@ const Upload = ({
       }
     },
     [
-      files,
-      currentFilesSize,
       maxShareSize,
       autoOpenCreateUploadModal,
       t,
@@ -238,6 +248,16 @@ const Upload = ({
 
   useEffect(() => {
     const handlePaste = async (e: ClipboardEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (
+        target &&
+        (target.tagName === "INPUT" ||
+          target.tagName === "TEXTAREA" ||
+          target.isContentEditable)
+      ) {
+        return;
+      }
+
       if (isUploading || modals.modals.length > 0) return;
 
       const clipboardData = e.clipboardData;
@@ -272,6 +292,7 @@ const Upload = ({
       }
 
       if (filesToUpload.length > 0) {
+        e.preventDefault();
         handleDropzoneFilesChanged(filesToUpload);
       }
     };
