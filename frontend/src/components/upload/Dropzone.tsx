@@ -10,7 +10,7 @@ import { Dropzone as MantineDropzone } from "@mantine/dropzone";
 import React, { ForwardedRef, useEffect, useRef, useState } from "react";
 import { TbCloudUpload, TbFolder } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
-import useTranslate from "../../hooks/useTranslate.hook";
+import useClipboardPaste from "../../hooks/useClipboardPaste.hook";
 import { FileUpload } from "../../types/File.type";
 import { byteToHumanSizeString } from "../../utils/fileSize.util";
 import toast from "../../utils/toast.util";
@@ -67,8 +67,12 @@ const Dropzone = ({
   currentFilesSize?: number;
   onFilesChanged: (files: FileUpload[]) => void;
 }) => {
-  const t = useTranslate();
   const { classes } = useStyles();
+
+  useClipboardPaste({
+    onFiles: onFilesChanged,
+    disabled: isUploading,
+  });
   const openRef = useRef<() => void>();
   const folderInputRef = useRef<HTMLInputElement>(null);
   const [isMounted, setIsMounted] = useState(false);
