@@ -96,17 +96,7 @@ const Dropzone = ({
       return newFile;
     });
 
-    const fileSizeSum = files.reduce((n, { size }) => n + size, 0);
-
-    if (fileSizeSum + currentFilesSize > maxShareSize) {
-      toast.error(
-        t("upload.dropzone.notify.file-too-big", {
-          maxSize: byteToHumanSizeString(maxShareSize),
-        }),
-      );
-    } else {
-      onFilesChanged(files);
-    }
+    onFilesChanged(files);
     event.target.value = "";
   };
 
