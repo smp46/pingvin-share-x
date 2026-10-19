@@ -1,3 +1,18 @@
+## [2.1.0-beta.0](https://github.com/smp46/pingvin-share-x/compare/v2.0.0...v2.1.0-beta.0) (2026-10-19)
+
+### Features
+
+* **lang:** support Norwegian Bokmal & Nynorsk ([#247](https://github.com/smp46/pingvin-share-x/issues/247)) ([81204f4](https://github.com/smp46/pingvin-share-x/commit/81204f4af77689d6986aaccf72e2a950f5d55f3b)), closes [#241](https://github.com/smp46/pingvin-share-x/issues/241)
+* **oidc:** allowed alternative login hostnames ([#240](https://github.com/smp46/pingvin-share-x/issues/240)) ([e2a264e](https://github.com/smp46/pingvin-share-x/commit/e2a264e2ed61b6c919c9bb2cbe70eabfce65cfdc))
+
+### Bug Fixes
+
+* **admin:** allowEdits consistently for email related configs ([#259](https://github.com/smp46/pingvin-share-x/issues/259)) ([f357005](https://github.com/smp46/pingvin-share-x/commit/f3570051e42798dc900c2587323d04a2bce15f12))
+* **footer:** make 'powered by' text translatable ([#245](https://github.com/smp46/pingvin-share-x/issues/245)) ([72f327f](https://github.com/smp46/pingvin-share-x/commit/72f327fc0baead06f5cd79cd5534eda6706e47a8))
+* never ignore custom password policy ([#258](https://github.com/smp46/pingvin-share-x/issues/258)) ([938df67](https://github.com/smp46/pingvin-share-x/commit/938df67d8609f63f7077d13670041a3c3829065a))
+* reverse share access ([b6a5e41](https://github.com/smp46/pingvin-share-x/commit/b6a5e41844c5cab126bfd8412f98f97377bc23d5))
+* **shares:** wrap maxViews handling in prisma transaction ([#265](https://github.com/smp46/pingvin-share-x/issues/265)) ([7525112](https://github.com/smp46/pingvin-share-x/commit/75251122a10c8acd2639c5b352494cede5337a98))
+
 ## [2.0.0](https://github.com/smp46/pingvin-share-x/compare/v1.22.1...v2.0.0) (2026-10-03)
 
 ### ⚠ BREAKING CHANGES
