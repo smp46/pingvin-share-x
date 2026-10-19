@@ -563,6 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Hvorvidt TOTP skal ignoreres, når brugeren benytter socialt login",
   "admin.config.oauth.disable-password": "Deaktiver login med password",
   "admin.config.oauth.disable-password.description": "Hvorvidt login med adgangskode skal deaktiveres\nSørg for, at en OAuth-udbyder er korrekt konfigureret, før du aktiverer denne konfiguration for at undgå at blive låst ude.",
+  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
+  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Om GitHub login er aktiveret",
   "admin.config.oauth.github-client-id": "GitHub Client ID",

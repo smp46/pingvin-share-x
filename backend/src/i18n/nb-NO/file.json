@@ -10,7 +10,7 @@
   "reverseShareQuotaExceeded": "Lagringskvoten til eieren av den omvendte delingen er overskredet med {exceededSize}",
   "zipError": "Feil under oppretting av ZIP-fil",
   "s3DeleteError": "Kunne ikke slette fil fra S3",
-  "s3UploadInitError": "Mislyktes i å initialisere flerdelt opplasting (multipart upload).",
+  "s3UploadInitError": "Mislyktes i å initialisere flerdelt opplasting.",
   "s3SessionNotFound": "Flerdelt opplastingsøkt ble ikke funnet.",
   "s3UploadFailed": "Flerdelt opplasting mislyktes. Opplastingen har blitt avbrutt.",
   "s3SizeError": "Kunne ikke hente filstørrelse",

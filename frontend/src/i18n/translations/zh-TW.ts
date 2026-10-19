@@ -563,6 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "當使用者使用第三方登入時，略過 TOTP 驗證",
   "admin.config.oauth.disable-password": "停用密碼登入",
   "admin.config.oauth.disable-password.description": "當你停用密碼登入時，確保你有啟用任意 OAuth 服務以避免無法存取",
+  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
+  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "啟用 Github 登入",
   "admin.config.oauth.github-client-id": "Github 的客戶端 ID",

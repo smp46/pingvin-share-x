@@ -563,6 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Si s'ha d'ignorar el TOTP quan l'usuari utilitza l'inici de sessió social",
   "admin.config.oauth.disable-password": "Desactivar l'inici de sessió amb contrasenya",
   "admin.config.oauth.disable-password.description": "Si s'ha de desactivar l'inici de sessió amb contrasenya\nAssegureu-vos que un proveïdor d'OAuth estigui correctament configurat amb anterioritat per evitar quedar-vos fora.",
+  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
+  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Si l'inici de sessió amb GitHub està activat",
   "admin.config.oauth.github-client-id": "ID de client de GitHub",
