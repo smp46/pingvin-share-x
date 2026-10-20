@@ -92,6 +92,12 @@ export class UserSevice {
       const hash = user.password && (await argon.hash(user.password));
       const { displayName, ...rest } = user;
 
+      if (hash) {
+        await this.prisma.refreshToken.deleteMany({
+          where: { userId: id },
+        });
+      }
+
       return await this.prisma.user.update({
         where: { id },
         data: {

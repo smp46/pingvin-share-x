@@ -209,7 +209,7 @@ export class AuthService {
       );
     }
 
-    await this.prisma.$transaction(async (tx) => {
+    const { token } = await this.prisma.$transaction(async (tx) => {
       // Delete old reset password token
       if (user.resetPasswordToken) {
         await tx.resetPasswordToken.delete({
@@ -217,19 +217,19 @@ export class AuthService {
         });
       }
 
-      const { token } = await tx.resetPasswordToken.create({
+      return await tx.resetPasswordToken.create({
         data: {
           expiresAt: moment().add(1, "hour").toDate(),
           user: { connect: { id: user.id } },
         },
       });
-
-      await this.emailService.sendResetPasswordEmail(
-        user.email,
-        token,
-        user.displayName || user.username,
-      );
     });
+
+    await this.emailService.sendResetPasswordEmail(
+      user.email,
+      token,
+      user.displayName || user.username,
+    );
   }
 
   async resetPassword(token: string, newPassword: string) {
@@ -256,6 +256,10 @@ export class AuthService {
       throw new BadRequestException(this.i18n.t("auth.tokenInvalidOrExpired"));
 
     const newPasswordHash = await argon.hash(newPassword);
+
+    await this.prisma.refreshToken.deleteMany({
+      where: { userId: user.id },
+    });
 
     await this.prisma.resetPasswordToken.delete({
       where: { token },
@@ -347,7 +351,12 @@ export class AuthService {
       data: { password: hash },
     });
 
-    return this.createRefreshToken(user.id);
+    const { refreshToken, refreshTokenId } = await this.createRefreshToken(
+      user.id,
+    );
+    const accessToken = await this.createAccessToken(user, refreshTokenId);
+
+    return { accessToken, refreshToken };
   }
 
   async createAccessToken(user: User, refreshTokenId: string) {
@@ -508,7 +517,15 @@ export class AuthService {
           secret: this.config.get("internal.jwtSecret"),
         },
       );
-      return payload.sub;
+      if (!payload.refreshTokenId) return null;
+      const refreshToken = await this.prisma.refreshToken.findFirst({
+        where: {
+          id: payload.refreshTokenId,
+          userId: payload.sub,
+          expiresAt: { gt: new Date() },
+        },
+      });
+      return refreshToken ? payload.sub : null;
     } catch {
       return null;
     }

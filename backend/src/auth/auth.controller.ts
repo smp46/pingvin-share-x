@@ -176,7 +176,11 @@ export class AuthController {
       dto.oldPassword,
     );
 
-    this.authService.addTokensToResponse(response, result.refreshToken);
+    this.authService.addTokensToResponse(
+      response,
+      result.refreshToken,
+      result.accessToken,
+    );
     return new TokenDTO().from(result);
   }
 
