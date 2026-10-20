@@ -22,6 +22,7 @@ import Meta from "../../components/Meta";
 import LanguagePicker from "../../components/account/LanguagePicker";
 import ThemeSwitcher from "../../components/account/ThemeSwitcher";
 import showEnableTotpModal from "../../components/account/showEnableTotpModal";
+import { HoverTip } from "../../components/core/HoverTip";
 import useConfig from "../../hooks/config.hook";
 import useTranslate from "../../hooks/useTranslate.hook";
 import useUser from "../../hooks/user.hook";
@@ -69,7 +70,6 @@ const Account = () => {
         displayName: yup
           .string()
           .matches(/^[\p{L} ,.'-]*$/u, t("common.error.name.invalid-chars")),
-        email: yup.string().email(t("common.error.invalid-email")),
         username: yup
           .string()
           .min(3, t("common.error.too-short", { length: 3 })),
@@ -191,7 +191,6 @@ const Account = () => {
                 .updateCurrentUser({
                   displayName: values.displayName,
                   username: values.username,
-                  email: values.email,
                 })
                 .then(() => toast.success(t("account.notify.info.success")))
                 .catch(toast.axiosError),
@@ -207,11 +206,15 @@ const Account = () => {
                 disabled={user?.isLdap}
                 {...accountForm.getInputProps("username")}
               />
-              <TextInput
-                label={t("account.card.info.email")}
-                disabled={user?.isLdap}
-                {...accountForm.getInputProps("email")}
-              />
+              <HoverTip label="Contact your administrator to change your email address">
+                <div>
+                  <TextInput
+                    label={t("account.card.info.email")}
+                    disabled={true}
+                    {...accountForm.getInputProps("email")}
+                  />
+                </div>
+              </HoverTip>
               {!user?.isLdap && (
                 <Group position="right">
                   <Button type="submit">
@@ -320,10 +323,7 @@ const Account = () => {
                         {t("account.card.oauth.unlink")}
                       </Button>
                     ) : (
-                      <Button
-                        component="a"
-                        href={getOAuthUrl(provider)}
-                      >
+                      <Button component="a" href={getOAuthUrl(provider)}>
                         {t("account.card.oauth.link")}
                       </Button>
                     )}
