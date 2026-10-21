@@ -84,11 +84,12 @@ export default function Home() {
   const redirectTarget = homeHref !== "/" ? homeHref : null;
 
   useEffect(() => {
-    if (redirectTarget) router.replace(redirectTarget);
-  }, [redirectTarget]);
+    if (redirectTarget) {
+      router.replace(redirectTarget);
+      return;
+    }
 
-  // If user is already authenticated, redirect to the upload page
-  useEffect(() => {
+    // If user is already authenticated, redirect to the upload page
     refreshUser().then((user) => {
       if (user) {
         router.replace("/upload");
@@ -102,7 +103,7 @@ export default function Home() {
     } catch (error) {
       setSignupEnabled(true);
     }
-  }, [config]);
+  }, [redirectTarget, config]);
 
   const getButtonHref = () => {
     return signupEnabled ? "/auth/signUp" : "/auth/signIn";
