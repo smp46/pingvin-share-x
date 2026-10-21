@@ -15,8 +15,9 @@ import { FileListItem, FileMetaData, FileUpload } from "../../types/File.type";
 import toast from "../../utils/toast.util";
 import {
   getNormalizedFileName,
-  filterDuplicateFiles,
+  validateAndFilterFiles,
 } from "../../utils/file.util";
+import { byteToHumanSizeString } from "../../utils/fileSize.util";
 
 const promiseLimit = pLimit(3);
 let errorToastShown = false;
@@ -42,6 +43,11 @@ const EditableUpload = ({
     useState<Array<FileMetaData & { deleted?: boolean }>>(savedFiles);
   const [uploadingFiles, setUploadingFiles] = useState<FileUpload[]>([]);
   const [isUploading, setIsUploading] = useState(false);
+
+  const existingFilesRef = useRef(existingFiles);
+  existingFilesRef.current = existingFiles;
+  const uploadingFilesRef = useRef(uploadingFiles);
+  uploadingFilesRef.current = uploadingFiles;
 
   const existingAndUploadedFiles: FileListItem[] = useMemo(
     () => [...uploadingFiles, ...existingFiles],
@@ -198,17 +204,30 @@ const EditableUpload = ({
   };
 
   const appendFiles = (appendingFiles: FileUpload[]) => {
-    const combinedExisting = [...existingFiles, ...uploadingFiles];
-    const filtered = filterDuplicateFiles(
+    const combinedExisting = [
+      ...existingFilesRef.current,
+      ...uploadingFilesRef.current,
+    ];
+    const filtered = validateAndFilterFiles(
       appendingFiles,
       combinedExisting,
+      maxShareSize!,
       (normalizedName) =>
         toast.error(
           t("upload.notify.duplicate-skipped", { name: normalizedName }),
         ),
+      () =>
+        toast.error(
+          t("upload.dropzone.notify.file-too-big", {
+            maxSize: byteToHumanSizeString(maxShareSize!),
+          }),
+        ),
     );
     if (filtered.length === 0) return;
-    setUploadingFiles([...filtered, ...uploadingFiles]);
+
+    const nextUploadingFiles = [...filtered, ...uploadingFilesRef.current];
+    uploadingFilesRef.current = nextUploadingFiles;
+    setUploadingFiles(nextUploadingFiles);
   };
 
   useEffect(() => {

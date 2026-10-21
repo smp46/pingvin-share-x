@@ -4,18 +4,17 @@ import {
   createStyles,
   Group,
   Text,
-  Menu,
   useMantineColorScheme,
 } from "@mantine/core";
 import { Dropzone as MantineDropzone } from "@mantine/dropzone";
 import React, { ForwardedRef, useEffect, useRef, useState } from "react";
-import { TbCloudUpload, TbUpload, TbFolder } from "react-icons/tb";
+import { TbCloudUpload, TbFolder } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
-import { fromEvent } from "file-selector";
-import useTranslate from "../../hooks/useTranslate.hook";
+import useClipboardPaste from "../../hooks/useClipboardPaste.hook";
 import { FileUpload } from "../../types/File.type";
 import { byteToHumanSizeString } from "../../utils/fileSize.util";
 import toast from "../../utils/toast.util";
+import { getFilesFromEvent } from "../../utils/file.util";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -55,87 +54,6 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const traverseDirectory = async (entry: any, path = ""): Promise<File[]> => {
-  if (entry.isFile) {
-    return new Promise((resolve) => {
-      entry.file((file: File) => {
-        const relativePath = path ? `${path}/${file.name}` : file.name;
-        Object.defineProperty(file, "webkitRelativePath", {
-          value: relativePath,
-          writable: true,
-          configurable: true,
-        });
-        resolve([file]);
-      });
-    });
-  } else if (entry.isDirectory) {
-    const dirReader = entry.createReader();
-    const readEntries = (): Promise<any[]> => {
-      return new Promise((resolve) => {
-        dirReader.readEntries(
-          (entries: any[]) => resolve(entries),
-          () => resolve([]),
-        );
-      });
-    };
-
-    let entries: any[] = [];
-    let readBatch = await readEntries();
-    while (readBatch.length > 0) {
-      entries = entries.concat(readBatch);
-      readBatch = await readEntries();
-    }
-
-    const promises = entries.map((e) =>
-      traverseDirectory(e, path ? `${path}/${entry.name}` : entry.name),
-    );
-    const results = await Promise.all(promises);
-    return results.flat();
-  }
-  return [];
-};
-
-const getFilesFromEvent = async (event: any): Promise<any[]> => {
-  if (Array.isArray(event)) {
-    const filePromises = event.map(async (item: any) => {
-      if (item && typeof item.getFile === "function") {
-        return await item.getFile();
-      }
-      return item;
-    });
-    return await Promise.all(filePromises);
-  }
-
-  if (event?.dataTransfer) {
-    const items = event.dataTransfer.items;
-    if (!items) return [];
-
-    const filePromises: Promise<File[]>[] = [];
-    for (let i = 0; i < items.length; i++) {
-      const item = items[i];
-      if (item.kind === "file") {
-        const entry = item.webkitGetAsEntry ? item.webkitGetAsEntry() : null;
-        if (entry) {
-          filePromises.push(traverseDirectory(entry));
-        } else {
-          const file = item.getAsFile();
-          if (file) {
-            filePromises.push(Promise.resolve([file]));
-          }
-        }
-      }
-    }
-    const fileArrays = await Promise.all(filePromises);
-    return fileArrays.flat();
-  }
-
-  if (event?.target?.files) {
-    return Array.from(event.target.files) as File[];
-  }
-
-  return await fromEvent(event);
-};
-
 const Dropzone = ({
   title,
   isUploading,
@@ -149,8 +67,12 @@ const Dropzone = ({
   currentFilesSize?: number;
   onFilesChanged: (files: FileUpload[]) => void;
 }) => {
-  const t = useTranslate();
   const { classes } = useStyles();
+
+  useClipboardPaste({
+    onFiles: onFilesChanged,
+    disabled: isUploading,
+  });
   const openRef = useRef<() => void>();
   const folderInputRef = useRef<HTMLInputElement>(null);
   const [isMounted, setIsMounted] = useState(false);
@@ -178,18 +100,7 @@ const Dropzone = ({
       return newFile;
     });
 
-    const fileSizeSum = files.reduce((n, { size }) => n + size, 0);
-
-    if (fileSizeSum + currentFilesSize > maxShareSize) {
-      toast.error(
-        t("upload.dropzone.notify.file-too-big", {
-          maxSize: byteToHumanSizeString(maxShareSize),
-        }),
-      );
-    } else {
-      onFilesChanged(files);
-    }
-
+    onFilesChanged(files);
     event.target.value = "";
   };
 
@@ -214,21 +125,11 @@ const Dropzone = ({
         openRef={openRef as ForwardedRef<() => void>}
         getFilesFromEvent={getFilesFromEvent}
         onDrop={(files: FileUpload[]) => {
-          const fileSizeSum = files.reduce((n, { size }) => n + size, 0);
-
-          if (fileSizeSum + currentFilesSize > maxShareSize) {
-            toast.error(
-              t("upload.dropzone.notify.file-too-big", {
-                maxSize: byteToHumanSizeString(maxShareSize),
-              }),
-            );
-          } else {
-            files = files.map((newFile) => {
-              newFile.uploadingProgress = 0;
-              return newFile;
-            });
-            onFilesChanged(files);
-          }
+          files = files.map((newFile) => {
+            newFile.uploadingProgress = 0;
+            return newFile;
+          });
+          onFilesChanged(files);
         }}
         className={classes.dropzone}
         radius="md"
