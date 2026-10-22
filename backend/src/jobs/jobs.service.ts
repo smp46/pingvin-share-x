@@ -162,6 +162,10 @@ export class JobsService {
       where: {
         isActivated: false,
         createdAt: { lt: cutoff },
+        OR: [
+          { activationTokenExpiresAt: { lt: new Date() } },
+          { activationTokenExpiresAt: null },
+        ],
       },
       include: { shares: true },
     });
