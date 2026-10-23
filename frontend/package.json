@@ -1,6 +1,6 @@
 {
   "name": "pingvin-share-frontend",
-  "version": "2.0.0",
+  "version": "2.1.0-beta.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,7 +13,7 @@
     "@next/eslint-plugin-next": {
       "glob": "10.5.0"
     },
-    "postcss": "8.5.15",
+    "postcss": "^8.5.31",
     "minimatch@9": {
       "brace-expansion": "^2.1.7"
     }

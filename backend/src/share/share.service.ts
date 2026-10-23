@@ -46,8 +46,14 @@ export class ShareService {
   ) {}
 
   async create(share: CreateShareDTO, user?: User, reverseShareToken?: string) {
-    const reverseShare =
-      await this.reverseShareService.getByToken(reverseShareToken);
+    const isReverseValid = reverseShareToken
+      ? await this.reverseShareService.isValid(reverseShareToken)
+      : false;
+
+    const reverseShare = isReverseValid
+      ? await this.reverseShareService.getByToken(reverseShareToken)
+      : null;
+
     const quotaOwner = reverseShare ? reverseShare.creator : user;
 
     if (!reverseShare && user) {
@@ -365,7 +371,7 @@ export class ShareService {
 
     if (share.reverseShare) {
       await this.prisma.reverseShare.update({
-        where: { token: reverseShareToken },
+        where: { id: share.reverseShare.id },
         data: { remainingUses: { decrement: 1 } },
       });
     }
@@ -382,6 +388,20 @@ export class ShareService {
   }
 
   async revertComplete(id: string) {
+    const share = await this.prisma.share.findUnique({
+      where: { id },
+      include: { reverseShare: true },
+    });
+
+    if (!share) throw new NotFoundException(this.i18n.t("share.notFound"));
+
+    if (share.uploadLocked && share.reverseShare) {
+      await this.prisma.reverseShare.update({
+        where: { id: share.reverseShare.id },
+        data: { remainingUses: { increment: 1 } },
+      });
+    }
+
     return this.prisma.share.update({
       where: { id },
       data: { uploadLocked: false, isZipReady: false },
@@ -661,10 +681,28 @@ export class ShareService {
     return { isAvailable: !share };
   }
 
-  async increaseViewCount(share: Share) {
-    await this.prisma.share.update({
-      where: { id: share.id },
-      data: { views: share.views + 1 },
+  async handleViewCount(id: string, maxViews?: number) {
+    await this.prisma.$transaction(async (tx) => {
+      const share = await tx.share.findUnique({
+        where: { id },
+        select: { views: true },
+      });
+
+      if (!share) {
+        throw new NotFoundException(this.i18n.t("share.notFound"));
+      }
+
+      if (maxViews && share.views >= maxViews) {
+        throw new ForbiddenException(
+          this.i18n.t("share.maxViewsExceeded"),
+          "share_max_views_exceeded",
+        );
+      } else {
+        await tx.share.update({
+          where: { id },
+          data: { views: { increment: 1 } },
+        });
+      }
     });
   }
 
@@ -696,16 +734,8 @@ export class ShareService {
       }
     }
 
-    if (share.security?.maxViews && share.security.maxViews <= share.views) {
-      throw new ForbiddenException(
-        this.i18n.t("share.maxViewsExceeded"),
-        "share_max_views_exceeded",
-      );
-    }
-
-    const token = await this.generateShareToken(share);
-    await this.increaseViewCount(share);
-    return token;
+    await this.handleViewCount(share.id, share.security?.maxViews);
+    return await this.generateShareToken(share);
   }
 
   async generateShareToken(share: Share & { security?: ShareSecurity }) {

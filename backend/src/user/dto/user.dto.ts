@@ -1,5 +1,6 @@
 import { Expose, plainToClass } from "class-transformer";
 import {
+  IsString,
   IsBoolean,
   IsEmail,
   IsInt,
@@ -7,7 +8,6 @@ import {
   Length,
   Matches,
   Min,
-  MinLength,
 } from "class-validator";
 import { i18nValidationMessage } from "nestjs-i18n";
 
@@ -36,7 +36,7 @@ export class UserDTO {
   @Expose()
   hasPassword: boolean;
 
-  @MinLength(8)
+  @IsString()
   password: string;
 
   @Expose()

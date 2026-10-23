@@ -90,7 +90,7 @@ those translations or add more at [CrowdIn](https://crowdin.com/project/pingvin-
 
 ### AI Usage Policy
 
-Anyone submitting code to this repo needs to read and comply with the project's [AI Usage Policy](https://github.com/smp46/pingvin-share-x/blob/main/AI_USAGE_POLICY.md). Submissions that do not comply with be closed.
+Anyone submitting code to this repo needs to read and comply with the project's [AI Usage Policy](https://github.com/smp46/pingvin-share-x/blob/main/AI_USAGE_POLICY.md). Please respect the time of maintainers, submissions that do not comply with be closed.
 
 ### Getting started
 

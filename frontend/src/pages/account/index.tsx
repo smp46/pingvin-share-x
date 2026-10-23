@@ -22,6 +22,7 @@ import Meta from "../../components/Meta";
 import LanguagePicker from "../../components/account/LanguagePicker";
 import ThemeSwitcher from "../../components/account/ThemeSwitcher";
 import showEnableTotpModal from "../../components/account/showEnableTotpModal";
+import { HoverTip } from "../../components/core/HoverTip";
 import useConfig from "../../hooks/config.hook";
 import useTranslate from "../../hooks/useTranslate.hook";
 import useUser from "../../hooks/user.hook";
@@ -39,11 +40,24 @@ const Account = () => {
       providerUsername: string;
     }
   > | null>(null);
-
   const { user, refreshUser } = useUser();
   const modals = useModals();
   const t = useTranslate();
   const config = useConfig();
+
+  let minLength = 8;
+  let requireLowercase = false;
+  let requireUppercase = false;
+  let requireNumber = false;
+  let requireSpecialCharacter = false;
+
+  if (config.get("security.customPasswordPolicy")) {
+    minLength = config.get("security.minLength");
+    requireLowercase = config.get("security.requireLowercase");
+    requireUppercase = config.get("security.requireUppercase");
+    requireNumber = config.get("security.requireNumber");
+    requireSpecialCharacter = config.get("security.requireSpecialCharacter");
+  }
 
   const accountForm = useForm({
     initialValues: {
@@ -56,7 +70,6 @@ const Account = () => {
         displayName: yup
           .string()
           .matches(/^[\p{L} ,.'-]*$/u, t("common.error.name.invalid-chars")),
-        email: yup.string().email(t("common.error.invalid-email")),
         username: yup
           .string()
           .min(3, t("common.error.too-short", { length: 3 })),
@@ -75,14 +88,36 @@ const Account = () => {
           is: () => !!user?.hasPassword,
           then: (schema) =>
             schema
-              .min(8, t("common.error.too-short", { length: 8 }))
               .required(t("common.error.field-required")),
           otherwise: (schema) => schema.notRequired(),
         }),
         password: yup
           .string()
-          .min(8, t("common.error.too-short", { length: 8 }))
-          .required(t("common.error.field-required")),
+          .min(
+            minLength,
+            t("common.error.too-short", {
+              length: minLength,
+            }),
+          )
+          .matches(
+            requireLowercase ? /[a-z]/ : /.*/,
+            t("common.error.password.lowercase"),
+          )
+          .matches(
+            requireUppercase ? /[A-Z]/ : /.*/,
+            t("common.error.password.uppercase"),
+          )
+          .matches(
+            requireNumber ? /[0-9]/ : /.*/,
+            t("common.error.password.number"),
+          )
+          .matches(
+            requireSpecialCharacter
+              ? /[^a-zA-Z0-9]/
+              : /.*/,
+            t("common.error.password.special"),
+          )
+          .required(t("common.error.field-required"))
       }),
     ),
   });
@@ -95,7 +130,6 @@ const Account = () => {
       yup.object().shape({
         password: yup
           .string()
-          .min(8, t("common.error.too-short", { length: 8 }))
           .required(t("common.error.field-required")),
       }),
     ),
@@ -108,7 +142,7 @@ const Account = () => {
     },
     validate: yupResolver(
       yup.object().shape({
-        password: yup.string().min(8),
+        password: yup.string().required(t("common.error.field-required")),
         code: yup
           .string()
           .min(6, t("common.error.exact-length", { length: 6 }))
@@ -157,7 +191,6 @@ const Account = () => {
                 .updateCurrentUser({
                   displayName: values.displayName,
                   username: values.username,
-                  email: values.email,
                 })
                 .then(() => toast.success(t("account.notify.info.success")))
                 .catch(toast.axiosError),
@@ -173,11 +206,15 @@ const Account = () => {
                 disabled={user?.isLdap}
                 {...accountForm.getInputProps("username")}
               />
-              <TextInput
-                label={t("account.card.info.email")}
-                disabled={user?.isLdap}
-                {...accountForm.getInputProps("email")}
-              />
+              <HoverTip label="Contact your administrator to change your email address">
+                <div>
+                  <TextInput
+                    label={t("account.card.info.email")}
+                    disabled={true}
+                    {...accountForm.getInputProps("email")}
+                  />
+                </div>
+              </HoverTip>
               {!user?.isLdap && (
                 <Group position="right">
                   <Button type="submit">
@@ -286,10 +323,7 @@ const Account = () => {
                         {t("account.card.oauth.unlink")}
                       </Button>
                     ) : (
-                      <Button
-                        component="a"
-                        href={getOAuthUrl(provider)}
-                      >
+                      <Button component="a" href={getOAuthUrl(provider)}>
                         {t("account.card.oauth.link")}
                       </Button>
                     )}

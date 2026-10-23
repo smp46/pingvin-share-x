@@ -37,7 +37,7 @@ export class UserSevice {
     let hash: string;
     let randomPassword: string;
 
-    if (dto.password && !(await this.enforcePasswordPolicy(dto.password))) {
+    if (typeof dto.password === "string" && !(await this.enforcePasswordPolicy(dto.password))) {
       throw new BadRequestException(this.i18n.t("auth.passwordPolicyNotMet"));
     }
 
@@ -85,12 +85,18 @@ export class UserSevice {
 
   async update(id: string, user: UpdateUserDto) {
     try {
-      if (user.password && !(await this.enforcePasswordPolicy(user.password))) {
+      if (typeof user.password === "string" && !(await this.enforcePasswordPolicy(user.password))) {
         throw new BadRequestException(this.i18n.t("auth.passwordPolicyNotMet"));
       }
 
       const hash = user.password && (await argon.hash(user.password));
       const { displayName, ...rest } = user;
+
+      if (hash) {
+        await this.prisma.refreshToken.deleteMany({
+          where: { userId: id },
+        });
+      }
 
       return await this.prisma.user.update({
         where: { id },
@@ -279,11 +285,15 @@ export class UserSevice {
   }
 
   async enforcePasswordPolicy(password: string): Promise<boolean> {
-    if (!this.configService.get("security.customPasswordPolicy")) {
-      return true;
-    }
+    const isCustom = this.configService.get("security.customPasswordPolicy");
+    const minLength = isCustom
+      ? this.configService.get("security.minLength")
+      : 8;
 
-    const minLength = this.configService.get("security.minLength");
+    if (password.length < minLength) return false;
+
+    if (!isCustom) return true;
+
     const requireUppercase = this.configService.get(
       "security.requireUppercase",
     );
