@@ -17,6 +17,7 @@ import Logo from "../components/Logo";
 import Meta from "../components/Meta";
 import useUser from "../hooks/user.hook";
 import useConfig from "../hooks/config.hook";
+import useHomeHref from "../hooks/homeHref.hook";
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -75,10 +76,20 @@ export default function Home() {
   const { refreshUser } = useUser();
   const router = useRouter();
   const config = useConfig();
+  const homeHref = useHomeHref();
   const [signupEnabled, setSignupEnabled] = useState(true);
 
-  // If user is already authenticated, redirect to the upload page
+  // If the home page is disabled or the user is signed in, never render it:
+  // redirect straight to the final destination instead.
+  const redirectTarget = homeHref !== "/" ? homeHref : null;
+
   useEffect(() => {
+    if (redirectTarget) {
+      router.replace(redirectTarget);
+      return;
+    }
+
+    // If user is already authenticated, redirect to the upload page
     refreshUser().then((user) => {
       if (user) {
         router.replace("/upload");
@@ -92,11 +103,13 @@ export default function Home() {
     } catch (error) {
       setSignupEnabled(true);
     }
-  }, [config]);
+  }, [redirectTarget, config]);
 
   const getButtonHref = () => {
     return signupEnabled ? "/auth/signUp" : "/auth/signIn";
   };
+
+  if (redirectTarget) return null;
 
   return (
     <>
