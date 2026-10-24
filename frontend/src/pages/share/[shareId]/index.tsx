@@ -54,7 +54,9 @@ const Share = ({ shareId }: { shareId: string }) => {
 
   const handleEditClick = async () => {
     try {
-      const myShares = await shareService.getMyShares();
+      const myShares = isOwner
+        ? await shareService.getMyShares()
+        : await shareService.list();
       const myShare = myShares.find((s) => s.id === shareId);
       if (!myShare) return;
       showShareInformationsModal(
