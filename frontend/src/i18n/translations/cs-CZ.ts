@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Běží na",
   // END footer
 
   // /
@@ -563,8 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Ignorovat TOTP při přihlášení přes sociální sítě",
   "admin.config.oauth.disable-password": "Zakázat přihlášení heslem",
   "admin.config.oauth.disable-password.description": "Zda zakázat přihlášení heslem\nUjistěte se, že je OAuth poskytovatel správně nakonfigurován před aktivací této konfigurace, abyste se vyhnuli ztrátě přístupu.",
-  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
-  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
+  "admin.config.oauth.allowed-hosts": "Povolení hostitelé OAuth",
+  "admin.config.oauth.allowed-hosts.description": "Čárkami oddělený seznam dalších názvů hostitelů povolených pro přihlášení přes OAuth (např. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Zda je povoleno přihlášení přes GitHub",
   "admin.config.oauth.github-client-id": "GitHub Client ID",
