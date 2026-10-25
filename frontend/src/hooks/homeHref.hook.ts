@@ -3,12 +3,13 @@ import useUser from "./user.hook";
 
 /**
  * Returns the target of "go home" links (logo, buttons, ...).
- * According to the configuration and user state, it can be:
- * - /upload if the user is logged in or unauthenticated shares are allowed
- * - / (home page) if the user is not logged in and the home page is enabled
- * - /auth/signIn if the user is not logged in and the home page is disabled
+ * According to the configuration and user state, it can be (checked in order):
+ * - /upload if the user is logged in
+ * - / (home page) if the home page is enabled
+ * - /upload if the home page is disabled and unauthenticated shares are allowed
+ * - /auth/signIn otherwise
  *
- * If config cannot be loaded, it defaults to / (home page).
+ * If a config variable is missing, it defaults to / (home page).
  */
 const useHomeHref = (): string => {
   const config = useConfig();
