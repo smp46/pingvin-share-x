@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Работает на",
   // END footer
 
   // /
@@ -563,8 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Игнорировать TOTP при использовании социальной авторизации",
   "admin.config.oauth.disable-password": "Отключить логин и пароль",
   "admin.config.oauth.disable-password.description": "Следует ли отключать вход по паролю? \nПеред активацией этой конфигурации убедитесь, что поставщик OAuth настроен должным образом, чтобы избежать блокировки.",
-  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
-  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
+  "admin.config.oauth.allowed-hosts": "Разрешённые хосты OAuth",
+  "admin.config.oauth.allowed-hosts.description": "Список дополнительных имён хостов через запятую, с которых разрешён вход через OAuth (например, share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Включен ли логин на GitHub",
   "admin.config.oauth.github-client-id": "ID клиента GitHub",
