@@ -9,5 +9,5 @@
   "invalidType": "Asetusmuuttujan on oltava tyyppiä {type}",
   "shareIdLengthValidation": "Jaon ID:n pituuden on oltava välillä 2-50",
   "zipCompressionLevelValidation": "Zip-pakkaustason on oltava välillä 0-9",
-  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
+  "deprecatedVariable": "Asetusmuuttuja '{legacyKey}' on vanhentunut. Siirrä se config.yaml-tiedostossasi kohtaan '{modernKey}'"
 }
