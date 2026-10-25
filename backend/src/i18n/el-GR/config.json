@@ -9,5 +9,5 @@
   "invalidType": "Η μεταβλητή διαμόρφωσης πρέπει να είναι τύπου {type}",
   "shareIdLengthValidation": "Το μήκος του ID κοινής χρήσης πρέπει να είναι μεταξύ 2 και 50",
   "zipCompressionLevelValidation": "Το επίπεδο συμπίεσης Zip πρέπει να είναι μεταξύ 0 και 9",
-  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
+  "deprecatedVariable": "Η μεταβλητή διαμόρφωσης '{legacyKey}' έχει καταργηθεί. Μετακινήστε τη στο '{modernKey}' στο αρχείο config.yaml"
 }
