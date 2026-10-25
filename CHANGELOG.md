@@ -1,3 +1,13 @@
+## [2.1.0-beta.1](https://github.com/smp46/pingvin-share-x/compare/v2.1.0-beta.0...v2.1.0-beta.1) (2026-10-25)
+
+### Bug Fixes
+
+* **account:** prevent users from changing own email ([6c1d924](https://github.com/smp46/pingvin-share-x/commit/6c1d9240638b99a7be63004feff98ec49664eb10))
+* **auth:** enforce token liveness and rotation ([e10d4b6](https://github.com/smp46/pingvin-share-x/commit/e10d4b6de1ddd718f0f7a19a275030925e7fe21a))
+* **cron:** prevent deactivated user deletion ([14c5d76](https://github.com/smp46/pingvin-share-x/commit/14c5d762e21e57655051c5f39c6b7adcf625b00a))
+* **frontend:** avoid home page flash when start page is disabled ([#251](https://github.com/smp46/pingvin-share-x/issues/251)) ([9fbf615](https://github.com/smp46/pingvin-share-x/commit/9fbf61551432b166d6aedeb219580832db86c400))
+* **share:** allow admin to edit anonymous reverse share ([#268](https://github.com/smp46/pingvin-share-x/issues/268)) ([058993d](https://github.com/smp46/pingvin-share-x/commit/058993da8bc6de3168c50d6b1faa753ff5b96121))
+
 ## [2.1.0-beta.0](https://github.com/smp46/pingvin-share-x/compare/v2.0.0...v2.1.0-beta.0) (2026-10-19)
 
 ### Features
