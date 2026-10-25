@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Drivs av",
   // END footer
 
   // /
@@ -563,8 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Om du vill ignorera TOTP när användaren använder social inloggning",
   "admin.config.oauth.disable-password": "Inaktivera lösenordsinloggning",
   "admin.config.oauth.disable-password.description": "Om du vill inaktivera lösenordsinloggning\nSe till att en OAuth leverantör är korrekt konfigurerad innan du aktiverar denna konfiguration för att undvika att bli låst.",
-  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
-  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
+  "admin.config.oauth.allowed-hosts": "Tillåtna OAuth-värdar",
+  "admin.config.oauth.allowed-hosts.description": "Kommaseparerad lista med ytterligare värdnamn som tillåts för OAuth-inloggning (t.ex. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Om GitHub-inloggning är aktiverad",
   "admin.config.oauth.github-client-id": "GitHub Client ID",
