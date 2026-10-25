@@ -42,16 +42,15 @@ export class OAuthController {
 
   private getOAuthOrigin(request: Request): string {
     const appUrl = this.config.get("general.appUrl");
-    const host = request.get("host");
+    const host = request.get("host")?.toLowerCase();
     if (!host) return appUrl;
 
-    const allowedHosts: string = this.config.get("oauth.allowedHosts") || "";
-    const allowed = [
-      new URL(appUrl).host.toLowerCase(),
-      ...allowedHosts.toLowerCase().split(",").map((h) => h.trim()).filter(Boolean),
-    ];
+    if (host === new URL(appUrl).host.toLowerCase()) return appUrl;
 
-    return allowed.includes(host.toLowerCase()) ? `${request.protocol}://${host}` : appUrl;
+    const allowedHosts: string = this.config.get("oauth.allowedHosts") || "";
+    const allowed = allowedHosts.toLowerCase().split(",").map((h) => h.trim()).filter(Boolean);
+
+    return allowed.includes(host) ? `${request.protocol}://${host}` : appUrl;
   }
 
   @Get("status")
