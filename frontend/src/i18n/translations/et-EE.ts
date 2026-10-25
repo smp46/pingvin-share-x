@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Teenust pakub",
   // END footer
 
   // /
@@ -563,8 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Kas ignoreerida TOTP-i kui kasutaja kasutab sotsiaalset sisselogimist.",
   "admin.config.oauth.disable-password": "Keela parooliga sisselogimine",
   "admin.config.oauth.disable-password.description": "Kas keelata parooliga sisselogimine\nVeendu, et OAuth pakkuja on korralikult seadistatud enne selle aktiveerimist, et vältida juurdepääsu lukustamist.",
-  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
-  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
+  "admin.config.oauth.allowed-hosts": "Lubatud OAuthi hostid",
+  "admin.config.oauth.allowed-hosts.description": "Komadega eraldatud loend täiendavatest hostinimedest, mis on OAuthiga sisselogimiseks lubatud (nt share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Kas GitHub sisselogimine on lubatud",
   "admin.config.oauth.github-client-id": "GitHub kliendi ID",
