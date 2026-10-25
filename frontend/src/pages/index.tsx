@@ -17,6 +17,7 @@ import Logo from "../components/Logo";
 import Meta from "../components/Meta";
 import useUser from "../hooks/user.hook";
 import useConfig from "../hooks/config.hook";
+import useHomeHref from "../hooks/homeHref.hook";
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -75,28 +76,32 @@ export default function Home() {
   const { refreshUser } = useUser();
   const router = useRouter();
   const config = useConfig();
-  const [signupEnabled, setSignupEnabled] = useState(true);
+  const homeHref = useHomeHref();
 
-  // If user is already authenticated, redirect to the upload page
+  let signupEnabled = true;
+  try {
+    signupEnabled = config.get("security.allowRegistration") !== false;
+  } catch {
+    signupEnabled = true;
+  }
+
+  // If the home page is disabled or the user is signed in, never render it:
+  // redirect straight to the final destination instead.
+  const redirectTarget = homeHref !== "/" ? homeHref : null;
+
   useEffect(() => {
-    refreshUser().then((user) => {
-      if (user) {
-        router.replace("/upload");
-      }
-    });
-
-    // If registration is disabled, get started button should redirect to the sign in page
-    try {
-      const allowRegistration = config.get("security.allowRegistration");
-      setSignupEnabled(allowRegistration !== false);
-    } catch (error) {
-      setSignupEnabled(true);
+    if (redirectTarget) {
+      router.replace(redirectTarget);
+    } else {
+      refreshUser();
     }
-  }, [config]);
+  }, [redirectTarget, router]);
 
   const getButtonHref = () => {
     return signupEnabled ? "/auth/signUp" : "/auth/signIn";
   };
+
+  if (redirectTarget) return null;
 
   return (
     <>

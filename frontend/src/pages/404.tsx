@@ -2,6 +2,7 @@ import { Button, Container, createStyles, Group, Title } from "@mantine/core";
 import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 import Meta from "../components/Meta";
+import useHomeHref from "../hooks/homeHref.hook";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -25,6 +26,7 @@ const useStyles = createStyles((theme) => ({
 
 const ErrorNotFound = () => {
   const { classes } = useStyles();
+  const homeHref = useHomeHref();
 
   return (
     <>
@@ -35,7 +37,7 @@ const ErrorNotFound = () => {
           <FormattedMessage id="404.description" />
         </Title>
         <Group position="center" mt={50}>
-          <Button component={Link} href="/" variant="light">
+          <Button component={Link} href={homeHref} variant="light">
             <FormattedMessage id="404.button.home" />
           </Button>
         </Group>
