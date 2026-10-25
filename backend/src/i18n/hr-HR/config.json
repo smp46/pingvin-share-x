@@ -9,5 +9,5 @@
   "invalidType": "Konfiguracijska varijabla mora biti tipa {type}",
   "shareIdLengthValidation": "Duljina ID-a dijeljenja mora biti između 2 i 50",
   "zipCompressionLevelValidation": "Razina Zip kompresije mora biti između 0 i 9",
-  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
+  "deprecatedVariable": "Konfiguracijska varijabla '{legacyKey}' je zastarjela. Premjestite je u '{modernKey}' u svojoj datoteci config.yaml"
 }
