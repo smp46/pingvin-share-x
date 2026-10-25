@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Mogelijk gemaakt door",
   // END footer
 
   // /
@@ -563,8 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "TOTP negeren wanneer gebruiker sociale login gebruikt",
   "admin.config.oauth.disable-password": "Zet password login uit",
   "admin.config.oauth.disable-password.description": "Of password login moet worden uitgeschakeld\nZorg ervoor dat een OAuth-provider correct is geconfigureerd voordat u deze configuratie activeert om te voorkomen dat u wordt buitengesloten.",
-  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
-  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
+  "admin.config.oauth.allowed-hosts": "Toegestane OAuth-hosts",
+  "admin.config.oauth.allowed-hosts.description": "Kommagescheiden lijst van extra hostnamen die zijn toegestaan voor aanmelden via OAuth (bv. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Ofdat GitHub login is ingeschakeld",
   "admin.config.oauth.github-client-id": "GitHub Client-ID",

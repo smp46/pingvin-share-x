@@ -9,5 +9,5 @@
   "invalidType": "ตัวแปรการกำหนดค่าต้องเป็นประเภท {type}",
   "shareIdLengthValidation": "ความยาวของ Share ID ต้องอยู่ระหว่าง 2 ถึง 50",
   "zipCompressionLevelValidation": "ระดับการบีบอัด Zip ต้องอยู่ระหว่าง 0 ถึง 9",
-  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
+  "deprecatedVariable": "ตัวแปรการกำหนดค่า '{legacyKey}' เลิกใช้งานแล้ว โปรดย้ายไปยัง '{modernKey}' ในไฟล์ config.yaml ของคุณ"
 }

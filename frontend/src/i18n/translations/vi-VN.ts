@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Được vận hành bởi",
   // END footer
 
   // /
@@ -563,8 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Có bỏ qua TOTP khi người dùng đăng nhập bằng mạng xã hội hay không",
   "admin.config.oauth.disable-password": "Tắt đăng nhập bằng mật khẩu",
   "admin.config.oauth.disable-password.description": "Có tắt tính năng đăng nhập bằng mật khẩu hay không\nHãy chắc chắn rằng nhà cung cấp OAuth đã được cấu hình đúng cách trước khi kích hoạt cấu hình này để tránh bị khóa tài khoản.",
-  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
-  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
+  "admin.config.oauth.allowed-hosts": "Máy chủ OAuth được phép",
+  "admin.config.oauth.allowed-hosts.description": "Danh sách tên máy chủ bổ sung được phép đăng nhập bằng OAuth, phân tách bằng dấu phẩy (ví dụ: share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Có bật đăng nhập bằng GitHub hay không",
   "admin.config.oauth.github-client-id": "GitHub Client ID",

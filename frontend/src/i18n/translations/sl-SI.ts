@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Poganja",
   // END footer
 
   // /
@@ -563,8 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Če ignorirati TOTP, ko se uporabnik registrira prek družbenih omrežij",
   "admin.config.oauth.disable-password": "Onemogoči prijavo z geslom",
   "admin.config.oauth.disable-password.description": "Ali naj se onemogoči prijava z geslom\nPred aktiviranjem te konfiguracije se prepričajte, da je ponudnik OAuth pravilno konfiguriran, da se izognete zaklepu dostopa.",
-  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
-  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
+  "admin.config.oauth.allowed-hosts": "Dovoljeni gostitelji OAuth",
+  "admin.config.oauth.allowed-hosts.description": "Z vejicami ločen seznam dodatnih imen gostiteljev, dovoljenih za prijavo z OAuth (npr. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Če je dovoljena prijava z GitHub računom",
   "admin.config.oauth.github-client-id": "GitHub ID klienta",

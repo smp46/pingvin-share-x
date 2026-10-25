@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Работи с",
   // END footer
 
   // /
@@ -563,8 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Дали да се игнорира TOTP при влизане чрез социална мрежа",
   "admin.config.oauth.disable-password": "Деактивиране на влизането с парола",
   "admin.config.oauth.disable-password.description": "Дали да се спре влизането с парола. Уверете се, че OAuth е настроен правилно, за да не загубите достъп.",
-  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
-  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
+  "admin.config.oauth.allowed-hosts": "Разрешени OAuth хостове",
+  "admin.config.oauth.allowed-hosts.description": "Списък с допълнителни имена на хостове, разделени със запетая, от които е разрешено влизане чрез OAuth (напр. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Влизане чрез GitHub",
   "admin.config.oauth.github-client-id": "GitHub Client ID",

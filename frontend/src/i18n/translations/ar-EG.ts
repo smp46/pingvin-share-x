@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "مدعوم من",
   // END footer
 
   // /
@@ -563,8 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "تجاهل TOTP إذا دخل المستخدم بحسابه الاجتماعي",
   "admin.config.oauth.disable-password": "تعطيل تسجيل الدخول باستخدام كلمة السر",
   "admin.config.oauth.disable-password.description": "ما إذا كان سيتم تعطيل تسجيل الدخول بكلمة المرور\nتأكد من تكوين موفر OAuth بشكل صحيح قبل تنشيط هذا التكوين لتجنب منعك من الوصول.",
-  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
-  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
+  "admin.config.oauth.allowed-hosts": "مضيفو OAuth المسموح بهم",
+  "admin.config.oauth.allowed-hosts.description": "قائمة مفصولة بفواصل بأسماء المضيفين الإضافية المسموح لها بتسجيل الدخول عبر OAuth (مثال: share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "تفعيل خيار الدخول بحساب GitHub",
   "admin.config.oauth.github-client-id": "GitHub Client ID",
