@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "제공:",
   // END footer
 
   // /
@@ -563,8 +563,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "사용자가 소셜 로그인을 사용하는 경우 TOTP를 무시할 것인지 여부",
   "admin.config.oauth.disable-password": "비밀번호 로그인 비활성화",
   "admin.config.oauth.disable-password.description": "비밀번호 로그인을 비활성화할지 여부입니다.\n계정 잠금을 방지하기 위해 이 설정을 활성화하기 전에 OAuth 공급자가 제대로 구성되었는지 확인하세요.",
-  "admin.config.oauth.allowed-hosts": "Allowed OAuth Hosts",
-  "admin.config.oauth.allowed-hosts.description": "Comma-separated list of additional hostnames allowed for OAuth sign-in (e.g. share.internal.example.com).",
+  "admin.config.oauth.allowed-hosts": "허용된 OAuth 호스트",
+  "admin.config.oauth.allowed-hosts.description": "OAuth 로그인을 허용할 추가 호스트 이름의 쉼표로 구분된 목록입니다(예: share.internal.example.com).",
   "admin.config.oauth.github-enabled": "깃허브",
   "admin.config.oauth.github-enabled.description": "깃허브 로그인 사용 여부",
   "admin.config.oauth.github-client-id": "GitHub 클라이언트 ID",
