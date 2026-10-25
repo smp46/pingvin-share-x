@@ -1,3 +1,23 @@
+## [2.1.0](https://github.com/smp46/pingvin-share-x/compare/v2.0.0...v2.1.0) (2026-10-25)
+
+### Features
+
+* **lang:** support Norwegian Bokmal & Nynorsk ([#247](https://github.com/smp46/pingvin-share-x/issues/247)) ([81204f4](https://github.com/smp46/pingvin-share-x/commit/81204f4af77689d6986aaccf72e2a950f5d55f3b)), closes [#241](https://github.com/smp46/pingvin-share-x/issues/241)
+* **oidc:** allowed alternative login hostnames ([#240](https://github.com/smp46/pingvin-share-x/issues/240)) ([e2a264e](https://github.com/smp46/pingvin-share-x/commit/e2a264e2ed61b6c919c9bb2cbe70eabfce65cfdc))
+
+### Bug Fixes
+
+* **account:** prevent users from changing own email ([6c1d924](https://github.com/smp46/pingvin-share-x/commit/6c1d9240638b99a7be63004feff98ec49664eb10))
+* **admin:** allowEdits consistently for email related configs ([#259](https://github.com/smp46/pingvin-share-x/issues/259)) ([f357005](https://github.com/smp46/pingvin-share-x/commit/f3570051e42798dc900c2587323d04a2bce15f12))
+* **auth:** enforce token liveness and rotation ([e10d4b6](https://github.com/smp46/pingvin-share-x/commit/e10d4b6de1ddd718f0f7a19a275030925e7fe21a))
+* **cron:** prevent deactivated user deletion ([14c5d76](https://github.com/smp46/pingvin-share-x/commit/14c5d762e21e57655051c5f39c6b7adcf625b00a))
+* **footer:** make 'powered by' text translatable ([#245](https://github.com/smp46/pingvin-share-x/issues/245)) ([72f327f](https://github.com/smp46/pingvin-share-x/commit/72f327fc0baead06f5cd79cd5534eda6706e47a8))
+* **frontend:** avoid home page flash when start page is disabled ([#251](https://github.com/smp46/pingvin-share-x/issues/251)) ([9fbf615](https://github.com/smp46/pingvin-share-x/commit/9fbf61551432b166d6aedeb219580832db86c400))
+* never ignore custom password policy ([#258](https://github.com/smp46/pingvin-share-x/issues/258)) ([938df67](https://github.com/smp46/pingvin-share-x/commit/938df67d8609f63f7077d13670041a3c3829065a))
+* reverse share access ([b6a5e41](https://github.com/smp46/pingvin-share-x/commit/b6a5e41844c5cab126bfd8412f98f97377bc23d5))
+* **share:** allow admin to edit anonymous reverse share ([#268](https://github.com/smp46/pingvin-share-x/issues/268)) ([058993d](https://github.com/smp46/pingvin-share-x/commit/058993da8bc6de3168c50d6b1faa753ff5b96121))
+* **shares:** wrap maxViews handling in prisma transaction ([#265](https://github.com/smp46/pingvin-share-x/issues/265)) ([7525112](https://github.com/smp46/pingvin-share-x/commit/75251122a10c8acd2639c5b352494cede5337a98))
+
 ## [2.1.0-beta.1](https://github.com/smp46/pingvin-share-x/compare/v2.1.0-beta.0...v2.1.0-beta.1) (2026-10-25)
 
 ### Bug Fixes
