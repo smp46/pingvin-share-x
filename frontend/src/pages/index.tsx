@@ -77,7 +77,13 @@ export default function Home() {
   const router = useRouter();
   const config = useConfig();
   const homeHref = useHomeHref();
-  const [signupEnabled, setSignupEnabled] = useState(true);
+
+  let signupEnabled = true;
+  try {
+    signupEnabled = config.get("security.allowRegistration") !== false;
+  } catch {
+    signupEnabled = true;
+  }
 
   // If the home page is disabled or the user is signed in, never render it:
   // redirect straight to the final destination instead.
@@ -86,24 +92,10 @@ export default function Home() {
   useEffect(() => {
     if (redirectTarget) {
       router.replace(redirectTarget);
-      return;
+    } else {
+      refreshUser();
     }
-
-    // If user is already authenticated, redirect to the upload page
-    refreshUser().then((user) => {
-      if (user) {
-        router.replace("/upload");
-      }
-    });
-
-    // If registration is disabled, get started button should redirect to the sign in page
-    try {
-      const allowRegistration = config.get("security.allowRegistration");
-      setSignupEnabled(allowRegistration !== false);
-    } catch (error) {
-      setSignupEnabled(true);
-    }
-  }, [redirectTarget, config]);
+  }, [redirectTarget, router]);
 
   const getButtonHref = () => {
     return signupEnabled ? "/auth/signUp" : "/auth/signIn";
