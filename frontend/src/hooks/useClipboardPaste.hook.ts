@@ -41,6 +41,8 @@ const useClipboardPaste = ({
       );
 
       if (hasFiles) {
+        e.preventDefault();
+
         const pastedFiles = (await getFilesFromEvent(e)) as FileUpload[];
         if (stateRef.current.disabled || stateRef.current.isModalOpen) return;
 
