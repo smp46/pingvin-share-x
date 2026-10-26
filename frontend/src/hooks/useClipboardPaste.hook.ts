@@ -45,8 +45,20 @@ const useClipboardPaste = ({
         if (stateRef.current.disabled || stateRef.current.isModalOpen) return;
 
         filesToUpload = pastedFiles.map((file) => {
-          file.uploadingProgress = 0;
-          return file;
+          // Screenshots are all named image.png, so give each a unique name.
+          const isScreenshot =
+            file.name === "image.png" && !file.webkitRelativePath;
+          const readyFile = (
+            isScreenshot
+              ? new File([file], `image_${Date.now()}.png`, {
+                  type: file.type,
+                  lastModified: file.lastModified,
+                })
+              : file
+          ) as FileUpload;
+
+          readyFile.uploadingProgress = 0;
+          return readyFile;
         });
       } else {
         const pastedText = clipboardData.getData("text/plain");
