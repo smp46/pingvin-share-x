@@ -1,5 +1,5 @@
 import { Button, Group } from "@mantine/core";
-import { cleanNotifications } from "@mantine/notifications";
+import { hideNotification } from "@mantine/notifications";
 import { AxiosError } from "axios";
 import { useRouter } from "next/router";
 import pLimit from "p-limit";
@@ -241,6 +241,7 @@ const EditableUpload = ({
         toast.error(
           t("upload.notify.count-failed", { count: fileErrorCount }),
           {
+            id: "upload-failed",
             withCloseButton: false,
             autoClose: false,
           },
@@ -248,9 +249,12 @@ const EditableUpload = ({
       }
       errorToastShown = true;
     } else {
-      cleanNotifications();
+      if (errorToastShown) {
+        hideNotification("upload-failed");
+      }
       errorToastShown = false;
     }
+
   }, [uploadingFiles]);
 
   return (

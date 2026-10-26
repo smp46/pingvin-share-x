@@ -8,7 +8,7 @@ import {
   Title,
 } from "@mantine/core";
 import { useModals } from "@mantine/modals";
-import { cleanNotifications } from "@mantine/notifications";
+import { hideNotification } from "@mantine/notifications";
 import { AxiosError } from "axios";
 import pLimit from "p-limit";
 import Link from "next/link";
@@ -244,6 +244,7 @@ const Upload = ({
         toast.error(
           t("upload.notify.count-failed", { count: fileErrorCount }),
           {
+            id: "upload-failed",
             withCloseButton: false,
             autoClose: false,
           },
@@ -251,7 +252,9 @@ const Upload = ({
       }
       errorToastShown = true;
     } else {
-      cleanNotifications();
+      if (errorToastShown) {
+        hideNotification("upload-failed");
+      }
       errorToastShown = false;
     }
 
