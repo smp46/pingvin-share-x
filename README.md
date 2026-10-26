@@ -90,7 +90,7 @@ those translations or add more at [CrowdIn](https://crowdin.com/project/pingvin-
 
 ### AI Usage Policy
 
-Anyone submitting code to this repo needs to read and comply with the project's [AI Usage Policy](https://github.com/smp46/pingvin-share-x/blob/main/AI_USAGE_POLICY.md). Please respect the time of maintainers, submissions that do not comply with be closed.
+Anyone submitting code to this repo needs to read and comply with the project's [AI Usage Policy](https://github.com/smp46/pingvin-share-x/blob/main/AI_USAGE_POLICY.md). AI-generated code is welcome, but you need to understand it and explain it in your own words. Please respect the time of maintainers, submissions that do not comply will be closed.
 
 ### Getting started
 
@@ -116,7 +116,7 @@ Before you submit the pull request for review please ensure that
   - **fix** - a bug fix
   - **refactor** - code change that neither fixes a bug nor adds a feature
 
-- Your pull request has a detailed description
+- Your pull request has a detailed description, written by you
 - You run `npm run format` to format the code
 
 ### Setup project
