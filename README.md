@@ -85,8 +85,8 @@ All contributions are welcome, including issues, feature suggestions, pull reque
 
 ### Translations
 
-This project supports 32 languages so far (to varying degrees), you can help complete
-those translations or add more at [CrowdIn](https://crowdin.com/project/pingvin-share-x).
+This project supports 34 languages so far, an LLM is used to add most translations, 
+but you can help correct these or add more at [CrowdIn](https://crowdin.com/project/pingvin-share-x).
 
 ### AI Usage Policy
 
@@ -94,7 +94,7 @@ Anyone submitting code to this repo needs to read and comply with the project's 
 
 ### Getting started
 
-If you have found a bug, have suggestion or something else, please create an issue.
+If you have found a bug, have a suggestion or something else, please open an issue.
 
 ### Submit a Pull Request
 
