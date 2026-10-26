@@ -90,8 +90,8 @@ export const getFilesFromEvent = async (event: any): Promise<any[]> => {
     for (let i = 0; i < items.length; i++) {
       const item = items[i];
       if (item.kind === "file") {
-        const entry = item.webkitGetAsEntry ? item.webkitGetAsEntry() : null;
-        if (entry) {
+        const entry = item.webkitGetAsEntry?.();
+        if (entry?.isDirectory) {
           filePromises.push(traverseDirectory(entry));
         } else {
           const file = item.getAsFile();
