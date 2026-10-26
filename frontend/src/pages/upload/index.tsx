@@ -8,11 +8,11 @@ import {
   Title,
 } from "@mantine/core";
 import { useModals } from "@mantine/modals";
-import { cleanNotifications } from "@mantine/notifications";
+import { hideNotification } from "@mantine/notifications";
 import { AxiosError } from "axios";
 import pLimit from "p-limit";
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { TbShieldLock } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
@@ -31,8 +31,9 @@ import toast from "../../utils/toast.util";
 import { useRouter } from "next/router";
 import {
   getNormalizedFileName,
-  filterDuplicateFiles,
+  validateAndFilterFiles,
 } from "../../utils/file.util";
+import { byteToHumanSizeString } from "../../utils/fileSize.util";
 
 const promiseLimit = pLimit(3);
 let errorToastShown = false;
@@ -55,6 +56,9 @@ const Upload = ({
   const config = useConfig();
   const [files, setFiles] = useState<FileUpload[]>([]);
   const [isUploading, setisUploading] = useState(false);
+
+  const filesRef = useRef<FileUpload[]>(files);
+  filesRef.current = files;
 
   useConfirmLeave({
     message: t("upload.notify.confirm-leave"),
@@ -195,78 +199,39 @@ const Upload = ({
     );
   };
 
-  const handleDropzoneFilesChanged = (newFiles: FileUpload[]) => {
-    const filtered = filterDuplicateFiles(newFiles, files, (normalizedName) =>
-      toast.error(
-        t("upload.notify.duplicate-skipped", { name: normalizedName }),
-      ),
-    );
-    if (filtered.length === 0) return;
+  const handleDropzoneFilesChanged = useCallback(
+    (newFiles: FileUpload[]) => {
+      const baseFiles = autoOpenCreateUploadModal ? [] : filesRef.current;
 
-    if (autoOpenCreateUploadModal) {
-      setFiles(filtered);
-      showCreateUploadModalCallback(filtered);
-    } else {
-      setFiles((oldArr) => [...oldArr, ...filtered]);
-    }
-  };
+      const filtered = validateAndFilterFiles(
+        newFiles,
+        baseFiles,
+        maxShareSize!,
+        (normalizedName) =>
+          toast.error(
+            t("upload.notify.duplicate-skipped", { name: normalizedName }),
+          ),
+        () =>
+          toast.error(
+            t("upload.dropzone.notify.file-too-big", {
+              maxSize: byteToHumanSizeString(maxShareSize!),
+            }),
+          ),
+      );
+      if (filtered.length === 0) return;
 
-  useEffect(() => {
-    const handlePaste = (e: ClipboardEvent) => {
-      if (modals.modals.length > 0) {
-        return;
+      if (autoOpenCreateUploadModal) {
+        filesRef.current = filtered;
+        setFiles(filtered);
+        showCreateUploadModalCallback(filtered);
+      } else {
+        const nextFiles = [...filesRef.current, ...filtered];
+        filesRef.current = nextFiles;
+        setFiles(nextFiles);
       }
-
-      const clipboardData = e.clipboardData;
-
-      if (!clipboardData) {
-        return;
-      }
-
-      if (clipboardData?.getData("text/plain")) {
-        const pastedText = clipboardData.getData("text/plain");
-        if (!pastedText) {
-          return;
-        }
-
-        // Create a sanitised file name from the pasted text
-        const safeName = pastedText
-          .substring(0, 50)
-          .replace(/[^a-zA-Z0-9 ]/g, "")
-          .trim();
-        const fileName = `${safeName || "clipboard_paste"}.txt`;
-
-        const file = new File([pastedText], fileName, {
-          type: "text/plain",
-        });
-        const fileUpload = file as FileUpload;
-        fileUpload.uploadingProgress = 0;
-
-        const filtered = filterDuplicateFiles(
-          [fileUpload],
-          files,
-          (normalizedName) =>
-            toast.error(
-              t("upload.notify.duplicate-skipped", { name: normalizedName }),
-            ),
-        );
-        if (filtered.length === 0) return;
-
-        if (autoOpenCreateUploadModal) {
-          setFiles(filtered);
-          showCreateUploadModalCallback(filtered);
-        } else {
-          setFiles((oldArr) => [...oldArr, ...filtered]);
-        }
-      }
-    };
-
-    window.addEventListener("paste", handlePaste);
-
-    return () => {
-      window.removeEventListener("paste", handlePaste);
-    };
-  }, [autoOpenCreateUploadModal, modals.modals.length]);
+    },
+    [maxShareSize, autoOpenCreateUploadModal, t, showCreateUploadModalCallback],
+  );
 
   useEffect(() => {
     // Check if there are any files that failed to upload
@@ -279,6 +244,7 @@ const Upload = ({
         toast.error(
           t("upload.notify.count-failed", { count: fileErrorCount }),
           {
+            id: "upload-failed",
             withCloseButton: false,
             autoClose: false,
           },
@@ -286,7 +252,9 @@ const Upload = ({
       }
       errorToastShown = true;
     } else {
-      cleanNotifications();
+      if (errorToastShown) {
+        hideNotification("upload-failed");
+      }
       errorToastShown = false;
     }
 
