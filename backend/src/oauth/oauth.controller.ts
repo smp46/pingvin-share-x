@@ -48,7 +48,11 @@ export class OAuthController {
     if (host === new URL(appUrl).host.toLowerCase()) return appUrl;
 
     const allowedHosts: string = this.config.get("oauth.allowedHosts") || "";
-    const allowed = allowedHosts.toLowerCase().split(",").map((h) => h.trim()).filter(Boolean);
+    const allowed = allowedHosts
+      .toLowerCase()
+      .split(",")
+      .map((h) => h.trim())
+      .filter(Boolean);
 
     return allowed.includes(host) ? `${request.protocol}://${host}` : appUrl;
   }
@@ -69,7 +73,10 @@ export class OAuthController {
   ) {
     const state = nanoid(16);
     const redirectUri = `${this.getOAuthOrigin(request)}/api/oauth/callback/${provider}`;
-    const url = await this.providers[provider].getAuthEndpoint(state, redirectUri);
+    const url = await this.providers[provider].getAuthEndpoint(
+      state,
+      redirectUri,
+    );
 
     const isSecure = this.config.get("security.secureCookies");
     response.cookie(`oauth_${provider}_state`, state, {
@@ -91,7 +98,10 @@ export class OAuthController {
     @Res({ passthrough: true }) response: Response,
   ) {
     const redirectUri = `${this.getOAuthOrigin(request)}/api/oauth/callback/${provider}`;
-    const oauthToken = await this.providers[provider].getToken(query, redirectUri);
+    const oauthToken = await this.providers[provider].getToken(
+      query,
+      redirectUri,
+    );
     const user = await this.providers[provider].getUserInfo(oauthToken, query);
     const id = await this.authService.getIdOfCurrentUser(request);
 

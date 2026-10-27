@@ -254,7 +254,6 @@ const EditableUpload = ({
       }
       errorToastShown = false;
     }
-
   }, [uploadingFiles]);
 
   return (
