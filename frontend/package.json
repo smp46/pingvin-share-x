@@ -31,7 +31,6 @@
     "@uiw/react-md-editor": "^4.1.0",
     "axios": "^1.7.7",
     "cookies-next": "^4.2.1",
-    "file-saver": "^2.0.5",
     "jose": "^5.9.2",
     "jwt-decode": "^4.0.0",
     "markdown-to-jsx": "^7.5.0",
