@@ -72,9 +72,7 @@ const ResetPassword = () => {
             t("common.error.password.number"),
           )
           .matches(
-            requireSpecialCharacter
-              ? /[^a-zA-Z0-9]/
-              : /.*/,
+            requireSpecialCharacter ? /[^a-zA-Z0-9]/ : /.*/,
             t("common.error.password.special"),
           )
           .required(t("common.error.field-required")),

@@ -1,5 +1,5 @@
 import { plainToClass } from "class-transformer";
-import { Allow, IsOptional} from "class-validator";
+import { Allow, IsOptional } from "class-validator";
 import { UserDTO } from "./user.dto";
 
 export class CreateUserDTO extends UserDTO {

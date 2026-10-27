@@ -202,10 +202,7 @@ const Header = () => {
       label: t("navbar.home"),
     });
 
-  if (
-    config.get("security.allowRegistration") &&
-    (!shouldHideAuthButtons)
-  ) {
+  if (config.get("security.allowRegistration") && !shouldHideAuthButtons) {
     unauthenticatedLinks.push({
       link: "/auth/signUp",
       label: t("navbar.signup"),
