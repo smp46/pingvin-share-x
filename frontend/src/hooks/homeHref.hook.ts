@@ -23,7 +23,6 @@ const useHomeHref = (): string => {
   } catch {
     return "/";
   }
-
 };
 
 export default useHomeHref;
