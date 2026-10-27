@@ -1,4 +1,4 @@
-import { getCookie } from "cookies-next";
+import { getCookie } from "cookies-next/client";
 import { createIntl, createIntlCache, useIntl } from "react-intl";
 import i18nUtil from "../utils/i18n.util";
 

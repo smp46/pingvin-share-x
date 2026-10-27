@@ -1,5 +1,5 @@
 import { Select } from "@mantine/core";
-import { getCookie, setCookie } from "cookies-next";
+import { getCookie, setCookie } from "cookies-next/client";
 import { useState } from "react";
 import useTranslate from "../../hooks/useTranslate.hook";
 import { LOCALES } from "../../i18n/locales";
