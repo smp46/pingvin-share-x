@@ -1,4 +1,4 @@
-import { deleteCookie, setCookie } from "cookies-next";
+import { deleteCookie, setCookie } from "cookies-next/client";
 import mime from "mime-types";
 import axios from "axios";
 import { translateOutsideContext } from "../hooks/useTranslate.hook";
