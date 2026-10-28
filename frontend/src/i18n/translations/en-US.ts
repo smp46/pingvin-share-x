@@ -1,4 +1,6 @@
 export default {
+  "app.description": "RV Files — simple, secure file sharing.",
+
   // Navbar
   "navbar.upload": "Upload",
   "navbar.signin": "Sign in",
