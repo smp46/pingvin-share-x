@@ -53,6 +53,7 @@
     "ldapts": "^7.4.0",
     "mime-types": "^3.0.1",
     "moment": "^2.30.1",
+    "mongodb": "^6.21.0",
     "nanoid": "^5.1.5",
     "nestjs-i18n": "^10.8.4",
     "nodemailer": "^10.0.13",

@@ -3,6 +3,9 @@ services:
     container_name: pingvin-share-x
     build: .
     restart: unless-stopped
+    env_file:
+      - path: .env
+        required: false
     ports:
       - 3001:3000
     environment:

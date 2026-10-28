@@ -14,6 +14,7 @@ import { Readable } from "stream";
 import { PrismaService } from "../prisma/prisma.service";
 import { EmailService } from "src/email/email.service";
 import { I18nService } from "nestjs-i18n";
+import { AuditService } from "src/audit/audit.service";
 import { isBlockedFileName } from "src/utils/fileNamePolicy.util";
 
 const UPDATED_AT_THROTTLE_MS = 5 * 60 * 1000;
@@ -28,6 +29,7 @@ export class FileService {
     private configService: ConfigService,
     private emailService: EmailService,
     private readonly i18n: I18nService,
+    private audit: AuditService,
     @Inject(CACHE_MANAGER) private cache: Cache,
   ) {}
   private readonly logger = new Logger(FileService.name);
@@ -60,7 +62,10 @@ export class FileService {
     }
     await this.touchShare(shareId);
     const storageService = this.getStorageService();
-    return storageService.create(data, chunk, file, shareId);
+    const result = await storageService.create(data, chunk, file, shareId);
+    if (chunk.index === chunk.total - 1)
+      this.audit.log({ action: "file_uploaded", shareId });
+    return result;
   }
 
   private async touchShare(shareId: string) {

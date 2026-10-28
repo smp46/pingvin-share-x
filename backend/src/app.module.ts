@@ -22,6 +22,7 @@ import { ReverseShareModule } from "./reverseShare/reverseShare.module";
 import { ShareModule } from "./share/share.module";
 import { UserModule } from "./user/user.module";
 import { SystemModule } from "./system/system.module";
+import { AuditModule } from "./audit/audit.module";
 import { AdminNoticeModule } from "./adminNotice/adminNotice.module";
 
 import { SystemLanguageResolver } from "./i18n/systemLanguage.resolver";
@@ -42,6 +43,7 @@ const i18nPath = existsSync(join(__dirname, "../i18n"))
     UserModule,
     SystemModule,
     AdminNoticeModule,
+    AuditModule,
     ThrottlerModule.forRoot([
       {
         ttl: 60 * 1000,

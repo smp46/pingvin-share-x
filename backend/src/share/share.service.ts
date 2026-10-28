@@ -31,6 +31,7 @@ import {
 import { generateShareId } from "src/utils/shareId.util";
 import { SHARE_DIRECTORY } from "../constants";
 import { BLOCKED_EXTENSIONS } from "src/utils/fileNamePolicy.util";
+import { AuditService } from "src/audit/audit.service";
 import { AccessEventService } from "./accessEvent.service";
 import { CreateShareDTO } from "./dto/createShare.dto";
 import { UpdateShareDTO } from "./dto/updateShare.dto";
@@ -51,6 +52,7 @@ export class ShareService {
     private systemService: SystemService,
     private readonly i18n: I18nService,
     private accessEventService: AccessEventService,
+    private audit: AuditService,
   ) {}
 
   async create(share: CreateShareDTO, user?: User, reverseShareToken?: string) {
@@ -209,6 +211,11 @@ export class ShareService {
       });
     }
 
+    this.audit.log({
+      action: "share_created",
+      shareId: shareTuple.id,
+      userId: user?.id,
+    });
     return shareTuple;
   }
 
@@ -542,6 +549,7 @@ export class ShareService {
 
     await this.fileService.deleteAllFiles(shareId);
     await this.prisma.share.delete({ where: { id: shareId } });
+    this.audit.log({ action: "share_deleted", shareId });
   }
 
   async revoke(shareId: string, reason: string): Promise<void> {
@@ -560,6 +568,7 @@ export class ShareService {
       where: { id: shareId, removedReason: null },
       data: { removedReason: reason },
     });
+    this.audit.log({ action: "revoked", shareId, detail: { reason } });
   }
 
   async expire(shareId: string) {

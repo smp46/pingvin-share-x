@@ -3,6 +3,7 @@ import * as crypto from "crypto";
 import { Request } from "express";
 import { ConfigService } from "src/config/config.service";
 import { PrismaService } from "src/prisma/prisma.service";
+import { AuditService } from "src/audit/audit.service";
 import { evaluateTripwire } from "src/utils/tripwire.util";
 
 export type AccessEventType = "view" | "download" | "bad_password";
@@ -17,6 +18,7 @@ export class AccessEventService {
   constructor(
     private prisma: PrismaService,
     private config: ConfigService,
+    private audit: AuditService,
   ) {}
 
   async record(
@@ -28,6 +30,8 @@ export class AccessEventService {
       .createHash("sha256")
       .update((req.ip ?? "") + this.config.get("internal.jwtSecret"))
       .digest("hex");
+    if (type === "download" || type === "bad_password")
+      this.audit.log({ action: type, shareId, ipHash });
     const userAgent = req.headers?.["user-agent"]?.toString().slice(0, 500);
 
     await this.prisma.accessEvent.create({
@@ -60,6 +64,12 @@ export class AccessEventService {
       cfg,
     );
     if (reason) {
+      this.audit.log({
+        action: "auto_revoked",
+        shareId,
+        ipHash,
+        detail: { reason },
+      });
       // Never overwrite an earlier reason (e.g. owner revoke)
       await this.prisma.share.updateMany({
         where: { id: shareId, removedReason: null },

@@ -22,6 +22,7 @@ import { GenericOidcProvider } from "../oauth/provider/genericOidc.provider";
 import { UserSevice } from "../user/user.service";
 import { AuthRegisterDTO } from "./dto/authRegister.dto";
 import { AuthSignInDTO } from "./dto/authSignIn.dto";
+import { AuditService } from "src/audit/audit.service";
 import { LdapService } from "./ldap.service";
 
 @Injectable()
@@ -35,6 +36,7 @@ export class AuthService {
     private userService: UserSevice,
     @Inject(forwardRef(() => OAuthService)) private oAuthService: OAuthService,
     private readonly i18n: I18nService,
+    private audit: AuditService,
   ) {}
   private readonly logger = new Logger(AuthService.name);
 
@@ -121,6 +123,7 @@ export class AuthService {
       );
     }
 
+    let knownUserId: string | undefined;
     if (!this.config.get("oauth.disablePassword")) {
       const email = dto.email?.toLowerCase().trim();
       const user = await this.prisma.user.findFirst({
@@ -128,6 +131,7 @@ export class AuthService {
           OR: [{ email }, { username: dto.username }],
         },
       });
+      knownUserId = user?.id;
 
       if (user?.password && (await argon.verify(user.password, dto.password))) {
         if (!user.isActivated) {
@@ -164,6 +168,7 @@ export class AuthService {
       }
     }
 
+    this.audit.log({ action: "login_failed", userId: knownUserId });
     this.logger.log(
       `Failed login attempt for user ${dto.email || dto.username} from IP ${ip}`,
     );
