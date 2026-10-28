@@ -16,6 +16,9 @@ export class MyShareDTO extends OmitType(ShareDTO, [
   createdAt: Date;
 
   @Expose()
+  removedReason: string | null;
+
+  @Expose()
   recipients: string[];
 
   @Expose()

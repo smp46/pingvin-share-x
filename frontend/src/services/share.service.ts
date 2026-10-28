@@ -75,6 +75,11 @@ const expire = async (id: string) => {
   await api.post(`shares/${id}/expire`);
 };
 
+const revoke = async (id: string): Promise<void> => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
+  await api.post(`shares/${id}/revoke`);
+};
+
 const getMyShares = async (): Promise<MyShare[]> => {
   return (await api.get("shares")).data;
 };
@@ -420,6 +425,7 @@ export default {
   update,
   remove,
   expire,
+  revoke,
   getMetaData,
   doesFileSupportPreview,
   isShareTextFile,

@@ -6,7 +6,6 @@ import {
   BadRequestException,
 } from "@nestjs/common";
 import { Request } from "express";
-import * as moment from "moment";
 import { I18nService } from "nestjs-i18n";
 import { PrismaService } from "src/prisma/prisma.service";
 import { ShareSecurityGuard } from "src/share/guard/shareSecurity.guard";
@@ -66,13 +65,12 @@ export class FileSecurityGuard extends ShareSecurityGuard {
         }
       }
 
-      if (
-        !share ||
-        (moment().isAfter(share.expiration) &&
-          !moment(share.expiration).isSame(0))
-      ) {
-        throw new NotFoundException(this._i18n.t("file.notFound"));
-      }
+      if (!share)
+        throw new NotFoundException(
+          this._i18n.t("share.notFound"),
+          "share_not_found",
+        );
+      this.assertShareAvailable(share);
 
       // Only the creator and reverse share creator can access the reverse share
       // if it's not public

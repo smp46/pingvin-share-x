@@ -64,6 +64,23 @@ export class ShareSecurityGuard extends JwtGuard {
     return false;
   }
 
+  /** Throws distinct revoked / expired errors. Unix-0 expiration means "never". */
+  protected assertShareAvailable(share: {
+    removedReason: string | null;
+    expiration: Date;
+  }) {
+    if (share.removedReason)
+      throw new NotFoundException(share.removedReason, "share_removed");
+    if (
+      moment().isAfter(share.expiration) &&
+      !moment(share.expiration).isSame(0)
+    )
+      throw new NotFoundException(
+        this.i18n.t("share.expired"),
+        "share_expired",
+      );
+  }
+
   async canActivate(context: ExecutionContext) {
     const request: Request = context.switchToHttp().getRequest();
 
@@ -86,7 +103,11 @@ export class ShareSecurityGuard extends JwtGuard {
       },
     });
 
-    if (!share) throw new NotFoundException(this.i18n.t("share.notFound"));
+    if (!share)
+      throw new NotFoundException(
+        this.i18n.t("share.notFound"),
+        "share_not_found",
+      );
 
     const user = await this.authenticateUser(context);
 
@@ -98,12 +119,7 @@ export class ShareSecurityGuard extends JwtGuard {
       return true;
     }
 
-    if (
-      moment().isAfter(share.expiration) &&
-      !moment(share.expiration).isSame(0)
-    ) {
-      throw new NotFoundException(this.i18n.t("share.notFound"));
-    }
+    this.assertShareAvailable(share);
 
     // If user sharing is enabled, check if the authenticated user is a recipient
     if (await this.isRecipient(share, user)) {

@@ -2,6 +2,7 @@ import {
   Body,
   Controller,
   Delete,
+  ForbiddenException,
   Get,
   HttpCode,
   Param,
@@ -71,8 +72,12 @@ export class ShareController {
 
   @Get(":id")
   @UseGuards(IdValidation, ShareSecurityGuard)
-  async get(@Param("id") id: string) {
-    return new ShareDTO().from(await this.shareService.get(id));
+  async get(@Param("id") id: string, @GetUser() user?: User) {
+    // Admin bypass (handled in the guard) must also skip the expiry check here
+    const adminBypass =
+      user?.isAdmin === true &&
+      this.config.get("security.allowAdminAccessAllShares");
+    return new ShareDTO().from(await this.shareService.get(id, !adminBypass));
   }
 
   @Get(":id/from-owner")
@@ -141,6 +146,15 @@ export class ShareController {
   @UseGuards(IdValidation, ShareOwnerGuard)
   async expire(@Param("id") id: string) {
     await this.shareService.expire(id);
+  }
+
+  @Post(":id/revoke")
+  @HttpCode(200)
+  @UseGuards(IdValidation, ShareOwnerGuard)
+  async revoke(@Param("id") id: string, @GetShare() share: Share) {
+    // Anonymous shares have no owner to revoke them (mirrors expire)
+    if (!share.creatorId) throw new ForbiddenException();
+    await this.shareService.revoke(id, "Revoked by owner");
   }
 
   @Throttle({

@@ -449,7 +449,7 @@ export class ShareService {
     return shares.map((share) => this.transformShare(share));
   }
 
-  async get(id: string): Promise<any> {
+  async get(id: string, enforceExpiry = false): Promise<any> {
     const share = await this.prisma.share.findUnique({
       where: { id },
       include: {
@@ -463,10 +463,26 @@ export class ShareService {
       },
     });
 
+    if (!share)
+      throw new NotFoundException(
+        this.i18n.t("share.notFound"),
+        "share_not_found",
+      );
+
     if (share.removedReason)
       throw new NotFoundException(share.removedReason, "share_removed");
 
-    if (!share || !share.uploadLocked)
+    if (
+      enforceExpiry &&
+      moment().isAfter(share.expiration) &&
+      !moment(share.expiration).isSame(0)
+    )
+      throw new NotFoundException(
+        this.i18n.t("share.expired"),
+        "share_expired",
+      );
+
+    if (!share.uploadLocked)
       throw new NotFoundException(this.i18n.t("share.notFound"));
     return {
       ...share,
@@ -510,6 +526,23 @@ export class ShareService {
 
     await this.fileService.deleteAllFiles(shareId);
     await this.prisma.share.delete({ where: { id: shareId } });
+  }
+
+  async revoke(shareId: string, reason: string): Promise<void> {
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+    });
+
+    if (!share)
+      throw new NotFoundException(
+        this.i18n.t("share.notFound"),
+        "share_not_found",
+      );
+
+    await this.prisma.share.update({
+      where: { id: shareId },
+      data: { removedReason: reason },
+    });
   }
 
   async expire(shareId: string) {
