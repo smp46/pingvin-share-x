@@ -11,12 +11,14 @@ import useTranslate, {
 import { CompletedShare } from "../../../types/share.type";
 import CopyTextField from "../CopyTextField";
 import QRCode from "../../share/QRCode";
+import ShareTicket from "../../share/ShareTicket";
 
 const showCompletedUploadModal = (
   modals: ModalsContextProps,
   share: CompletedShare,
   appUrl: string,
   defaultAppUrl: string,
+  maxViews?: number | null,
 ) => {
   const t = translateOutsideContext();
   return modals.openModal({
@@ -25,7 +27,12 @@ const showCompletedUploadModal = (
     closeOnEscape: false,
     title: t("upload.modal.completed.share-ready"),
     children: (
-      <Body share={share} appUrl={appUrl} defaultAppUrl={defaultAppUrl} />
+      <Body
+        share={share}
+        appUrl={appUrl}
+        defaultAppUrl={defaultAppUrl}
+        maxViews={maxViews ?? share.safety?.maxViews ?? null}
+      />
     ),
   });
 };
@@ -34,10 +41,12 @@ const Body = ({
   share,
   appUrl,
   defaultAppUrl,
+  maxViews,
 }: {
   share: CompletedShare;
   appUrl: string;
   defaultAppUrl: string;
+  maxViews: number | null;
 }) => {
   const modals = useModals();
   const router = useRouter();
@@ -55,6 +64,12 @@ const Body = ({
 
   return (
     <Stack align="stretch">
+      <ShareTicket
+        shareId={share.id}
+        link={link}
+        expiration={share.expiration}
+        maxViews={maxViews}
+      />
       <CopyTextField link={link} toggleQR={handleToggleQR} />
       <Collapse in={showQR}>
         <QRCode link={link} />

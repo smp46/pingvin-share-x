@@ -37,23 +37,23 @@ export default {
   "home.button.start": "Get started",
   "home.button.source": "Source code",
   "home.rv.meta": "Secure file sharing",
-  "home.rv.eyebrow": "Your files. A safer way forward.",
+  "home.rv.eyebrow": "Every file passes a checkpoint",
   "home.rv.title": "Share files. Not risks.",
   "home.rv.title.first": "Share files.",
   "home.rv.title.second": "Not risks.",
   "home.rv.description":
-    "Send what matters with a little more peace of mind. Private links, built-in tripwires, and clear safety details for every recipient.",
+    "Every upload is checked before anyone can open it. Recipients get an unguessable link, a clear safety slip and a tripwire that locks the share if something looks wrong.",
   "home.rv.cta": "Share a file",
   "home.rv.account": "Create an account",
   "home.rv.feature.links.title": "Unguessable links",
   "home.rv.feature.links.text":
-    "Every share gets a random, 128-bit link. Access starts with the people you choose to share it with.",
-  "home.rv.feature.tripwire.title": "Tripwire protection",
+    "Each link carries a 22-character random ID. Nobody reaches your files by guessing or counting up.",
+  "home.rv.feature.tripwire.title": "Tripwire",
   "home.rv.feature.tripwire.text":
-    "Too many wrong passwords or unusual download activity? Automatic tripwires can revoke the share.",
-  "home.rv.feature.card.title": "Safety card for recipients",
+    "5 wrong passwords, or 20 downloads from 5 different IPs, and the share locks itself. Your dashboard shows why.",
+  "home.rv.feature.card.title": "Safety slip",
   "home.rv.feature.card.text":
-    "Give recipients a clear view of the files, expiry, and protection details before they download.",
+    "Recipients see who sent it, every file's type and size, and the time left, before a single byte downloads.",
   "home.rv.features.label": "Sharing protections",
   "home.rv.preview.label": "Example of a protected file share",
   "home.rv.preview.file": "Project notes.pdf",
@@ -63,7 +63,7 @@ export default {
   "home.rv.preview.expiry": "Expires in 1 day",
   "home.rv.preview.badge": "A safer handoff",
   "home.rv.preview.badge.text": "Clarity on the receiving end.",
-  "home.rv.bottom": "Small files. Thoughtfully shared.",
+  "home.rv.bottom": "Small files. Checked before opened.",
   // END /
 
   // /auth/signin

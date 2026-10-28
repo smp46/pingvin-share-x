@@ -9,3 +9,5 @@ Selected source paths:
 - [`components/rareui/VaporSmokeText/VaporSmokeText.tsx`](https://github.com/Codewithswappy/RareUI/blob/e50c0c7a3bbc51c11b5799c05a600d0a78e9350e/components/rareui/VaporSmokeText/VaporSmokeText.tsx) → `VaporSmokeText.tsx`: retains staggered blur/spring letter reveal; motion 11 compatible, grouped words for responsive wrapping, semantic heading supplied by caller, accessible text label, reduced-motion support, shorter reveal and inherited typography.
 
 Removed `cn` imports in favor of simple class concatenation: these components do not need `clsx` or `tailwind-merge`. No new dependencies, CLI initialization, scaffolding, or React/Mantine upgrades were used. No React-19-only component fallback was necessary.
+
+**Update (inspection-checkpoint redesign):** all three components were removed from the app because their glow/particle/smoke styling no longer fits the visual identity. This attribution and the MIT LICENSE are kept for the git history that contained them.
