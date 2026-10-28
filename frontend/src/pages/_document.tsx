@@ -22,6 +22,7 @@ export default class _Document extends Document {
           />
           <link rel="manifest" href="/manifest.json" />
           <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
+          <link rel="alternate icon" href="/img/favicon.ico" />
           <link rel="apple-touch-icon" href="/img/rv-files-touch-icon.png" />
 
           <meta name="robots" content="noindex" />

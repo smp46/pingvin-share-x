@@ -21,6 +21,12 @@ const Logo = ({ height, width }: { height: number; width: number }) => {
       alt="RV Files"
       height={height}
       width={width}
+      style={{
+        objectFit: "contain",
+        backgroundColor: "#fff",
+        borderRadius: "50%",
+        flexShrink: 0,
+      }}
       onError={() => {
         if (logoSrc === darkLogoSrc) setLogoSrc(defaultLogoSrc);
         else if (logoSrc === defaultLogoSrc) setLogoSrc(fallbackLogoSrc);
