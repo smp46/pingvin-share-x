@@ -34,7 +34,8 @@ export function GlassShimmerButton({
       `}</style>
       <Link
         href={href}
-        className={`group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/20 bg-linear-to-r from-violet-500 to-indigo-500 px-8 py-4 text-base font-semibold text-white shadow-lg transition-transform duration-300 hover:scale-105 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-300 motion-reduce:transform-none ${className}`}
+        style={{ backgroundImage: "linear-gradient(90deg, #8b5cf6, #6366f1)" }}
+        className={`group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/20 px-8 py-4 text-base font-semibold text-white shadow-lg transition-transform duration-300 hover:scale-105 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-300 motion-reduce:transform-none ${className}`}
       >
         <span
           aria-hidden="true"

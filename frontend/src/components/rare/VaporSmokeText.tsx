@@ -39,7 +39,12 @@ export function VaporSmokeText({
         <span
           key={wordIndex}
           aria-hidden="true"
-          style={{ display: "inline-block", whiteSpace: "nowrap" }}
+          style={{
+            display: "inline-block",
+            whiteSpace: "nowrap",
+            marginInlineEnd:
+              wordIndex < text.split(" ").length - 1 ? "0.24em" : 0,
+          }}
         >
           {word.split("").map((letter, index) => (
             <motion.span
@@ -49,7 +54,7 @@ export function VaporSmokeText({
             >
               {letter}
             </motion.span>
-          ))}{" "}
+          ))}
         </span>
       ))}
     </motion.span>
