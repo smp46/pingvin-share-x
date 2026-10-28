@@ -13,7 +13,9 @@ the right of this source image.
 
 - `frontend/public/img/logo.png` and `logo-dark.png` are byte-for-byte copies of
   that source. The transparent black crest is displayed over a white circular
-  CSS background in `Logo.tsx`, with `object-fit: contain` to avoid distortion.
+  CSS background on a separate wrapper in `Logo.tsx`, with `object-fit: contain`
+  on the image to avoid distortion. The wrapper has visible overflow;
+  the image has no border radius, so its source corner pixels remain visible.
 - `logo.svg` embeds those exact PNG bytes in a 120 × 120 SVG image, over a white
   circle. It is a native presentation wrapper, not a vector redraw or AI cutout.
 - `favicon.ico` (16, 32, and 48 pixels), `rv-files-touch-icon.png` (180 pixels),
@@ -34,13 +36,27 @@ No endorsement by the crest's owner is implied.
 The existing `/img/logo.png` and `/img/logo-dark.png` URLs remain the preferred
 light/dark app logos. Admin uploads can continue replacing them. The fallback
 order remains dark PNG → light PNG → bundled SVG. Both custom PNGs receive the
-same white circular backing and contain sizing; neither is clipped by the CSS
-background. The shared Logo component serves the header and admin views.
+same white circular backing and contain sizing. The backing wrapper does not
+clip the image: square/rectangular custom uploads retain their corners, as does
+the default crest's outside registration mark. The shared Logo component serves
+the header and admin views.
 
 ## Verification
 
-Static SVG renders were inspected at 35 and 80 pixels on white and dark
+Static asset SVG renders were inspected at 35 and 80 pixels on white and dark
 backgrounds, plus the original 120-pixel size. All show the complete circular
 border, ring lettering and shield, without the earlier oversized margins.
 Browser verification was unavailable because local browser use is disabled in
 Work settings; this static inspection does not claim browser execution.
+
+`scripts/tests/logo-render.test.cjs` server-renders the actual React component
+in light/dark schemes at 35 × 35, 80 × 80, and 120 × 80 pixels. Its regression
+checks enforce square image corners, contain sizing, and a separate backing
+wrapper with visible overflow. All six checks failed on the original clipping
+CSS and pass after moving the circular backing to the wrapper.
+
+`docs/logo-component-preview.html` contains the actual server-rendered component
+markup/styles, with embedded crest images and a custom corner-color fixture for
+offline browser review. Generate it with
+`LOGO_PREVIEW_PATH=docs/logo-component-preview.html node --test scripts/tests/logo-render.test.cjs`
+from the repository root. It has not been visually executed in a browser here.

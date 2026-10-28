@@ -15,23 +15,31 @@ const Logo = ({ height, width }: { height: number; width: number }) => {
     setLogoSrc(preferredLogoSrc);
   }, [preferredLogoSrc]);
 
+  // Round the backing only; rounding the image would clip source/custom corners.
   return (
-    <img
-      src={logoSrc}
-      alt="RV Files"
-      height={height}
-      width={width}
+    <span
       style={{
-        objectFit: "contain",
+        display: "inline-flex",
+        height,
+        width,
         backgroundColor: "#fff",
         borderRadius: "50%",
         flexShrink: 0,
+        overflow: "visible",
       }}
-      onError={() => {
-        if (logoSrc === darkLogoSrc) setLogoSrc(defaultLogoSrc);
-        else if (logoSrc === defaultLogoSrc) setLogoSrc(fallbackLogoSrc);
-      }}
-    />
+    >
+      <img
+        src={logoSrc}
+        alt="RV Files"
+        height={height}
+        width={width}
+        style={{ objectFit: "contain", flexShrink: 0 }}
+        onError={() => {
+          if (logoSrc === darkLogoSrc) setLogoSrc(defaultLogoSrc);
+          else if (logoSrc === defaultLogoSrc) setLogoSrc(fallbackLogoSrc);
+        }}
+      />
+    </span>
   );
 };
 
