@@ -56,3 +56,4 @@ yarn-error.log*
 # Temp folder for generative work
 /temp/**
 data.bak-*/
+cloudflared.log
