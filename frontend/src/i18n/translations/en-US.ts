@@ -504,11 +504,11 @@ export default {
   "share.fileCount":
     "{count, plural, =1 {# file} other {# files}} · {size} (zip file may be smaller due to compression)",
   "share.copy-text-contents": "Copy file contents to clipboard",
-  "share.error.visitor-limit-exceeded.title": "Visitor limit exceeded",
+  "share.error.visitor-limit-exceeded.title": "View limit reached",
   "share.error.visitor-limit-exceeded.description":
     "The visitor limit for this share has been exceeded.",
-  "share.error.removed.title": "Share removed",
-  "share.error.not-found.title": "Share not found",
+  "share.error.removed.title": "This link was revoked",
+  "share.error.not-found.title": "Link not found",
   "share.error.not-found.description":
     "The share you're looking for doesn't exist.",
   "share.error.access-denied.title": "Private share",
@@ -519,6 +519,27 @@ export default {
     "This share is restricted to specific recipients. Please log in to access it.",
   "share.error.restricted.button": "Log in",
 
+  "share.error.expired.title": "This link has expired",
+  "share.error.expired.description":
+    "Ask the sender for a new link to access these files.",
+  "share.safety.title": "About this share",
+  "share.safety.shared-by": "Shared by {sharedBy}",
+  "share.safety.anonymous": "Anonymous",
+  "share.safety.unknown-type": "Unknown type",
+  "share.safety.extension-note":
+    "File types are inferred from filename extensions.",
+  "share.safety.blocked-list":
+    "Type checked against blocked list ({count} types)",
+  "share.safety.attachment":
+    "Downloads as attachment — never runs in your browser",
+  "share.safety.unguessable": "Link is 128-bit unguessable",
+  "share.safety.password": "Password protected",
+  "share.safety.no-password": "No password",
+  "share.safety.views": "{views} of {maxViews} views used",
+  "share.safety.unlimited-views": "Unlimited views",
+  "share.expiry.no-expiry": "No expiry",
+  "share.expiry.expired": "Expired",
+  "share.expiry.remaining": "Time remaining",
   "share.modal.password.title": "Password required",
   "share.modal.password.description":
     "Please enter the password to access this share.",

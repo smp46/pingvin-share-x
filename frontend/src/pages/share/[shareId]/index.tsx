@@ -12,20 +12,19 @@ import { useModals } from "@mantine/modals";
 import { GetServerSidePropsContext } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { TbEdit, TbPlusMinus } from "react-icons/tb";
 import Meta from "../../../components/Meta";
 import DownloadAllButton from "../../../components/share/DownloadAllButton";
 import FileList from "../../../components/share/FileList";
-import showEnterPasswordModal from "../../../components/share/showEnterPasswordModal";
-import showErrorModal from "../../../components/share/showErrorModal";
+import SafetyCard from "../../../components/share/SafetyCard";
+import useShareAccess from "../../../hooks/shareAccess.hook";
 import showShareInformationsModal from "../../../components/share/showShareInformationsModal";
 import useConfig from "../../../hooks/config.hook";
 import useTranslate from "../../../hooks/useTranslate.hook";
 import useUser from "../../../hooks/user.hook";
 import shareService from "../../../services/share.service";
-import { MyShare, Share as ShareType } from "../../../types/share.type";
+import { MyShare } from "../../../types/share.type";
 import toast from "../../../utils/toast.util";
 import { byteToHumanSizeString } from "../../../utils/fileSize.util";
 import { getQueryString } from "../../../utils/router.util";
@@ -40,8 +39,10 @@ export function getServerSideProps(context: GetServerSidePropsContext) {
 const Share = ({ shareId }: { shareId: string }) => {
   const modals = useModals();
   const router = useRouter();
-  const [share, setShare] = useState<ShareType>();
-  const [isRestricted, setIsRestricted] = useState(false);
+  const { share, setShare, isRestricted, error } = useShareAccess({
+    shareId,
+    modals,
+  });
   const { user } = useUser();
   const config = useConfig();
   const t = useTranslate();
@@ -90,83 +91,35 @@ const Share = ({ shareId }: { shareId: string }) => {
     }
   };
 
-  const getShareToken = async (password?: string) => {
-    await shareService
-      .getShareToken(shareId, password)
-      .then(() => {
-        modals.closeAll();
-        getFiles();
-      })
-      .catch((e) => {
-        const { error } = e.response.data;
-        if (error == "share_max_views_exceeded") {
-          showErrorModal(
-            modals,
-            t("share.error.visitor-limit-exceeded.title"),
-            t("share.error.visitor-limit-exceeded.description"),
-            "go-home",
-          );
-        } else if (error == "share_password_required") {
-          showEnterPasswordModal(modals, getShareToken);
-        } else {
-          toast.axiosError(e);
-        }
-      });
-  };
-
-  const getFiles = async () => {
-    shareService
-      .get(shareId)
-      .then((share) => {
-        setShare(share);
-      })
-      .catch((e) => {
-        const { error } = e.response.data;
-        if (e.response.status == 404) {
-          if (error == "share_removed") {
-            showErrorModal(
-              modals,
-              t("share.error.removed.title"),
-              e.response.data.message,
-              "go-home",
-            );
-          } else {
-            showErrorModal(
-              modals,
-              t("share.error.not-found.title"),
-              t("share.error.not-found.description"),
-              "go-home",
-            );
-          }
-        } else if (
-          e.response.status == 403 &&
-          error == "share_restricted_to_recipients"
-        ) {
-          setIsRestricted(true);
-        } else if (e.response.status == 403 && error == "private_share") {
-          showErrorModal(
-            modals,
-            t("share.error.access-denied.title"),
-            t("share.error.access-denied.description"),
-          );
-        } else if (error == "share_password_required") {
-          showEnterPasswordModal(modals, getShareToken);
-        } else if (error == "share_token_required") {
-          getShareToken();
-        } else {
-          showErrorModal(
-            modals,
-            t("common.error"),
-            t("common.error.unknown"),
-            "go-home",
-          );
-        }
-      });
-  };
-
-  useEffect(() => {
-    getFiles();
-  }, []);
+  if (error) {
+    return (
+      <>
+        <Meta title={t(error.title)} />
+        <Center style={{ minHeight: "70vh", padding: 24 }}>
+          <Stack
+            align="center"
+            spacing="md"
+            style={{ maxWidth: 520 }}
+            role="alert"
+          >
+            <Title order={2} align="center">
+              {t(error.title)}
+            </Title>
+            <Text
+              color="dimmed"
+              align="center"
+              style={{ overflowWrap: "anywhere" }}
+            >
+              {error.message ?? (error.description ? t(error.description) : "")}
+            </Text>
+            <Button component={Link} href="/">
+              {t("common.button.go-home")}
+            </Button>
+          </Stack>
+        </Center>
+      </>
+    );
+  }
 
   if (isRestricted) {
     return (
@@ -246,6 +199,14 @@ const Share = ({ shareId }: { shareId: string }) => {
           )}
         </Group>
       </Group>
+
+      {share?.safety && (
+        <SafetyCard
+          safety={share.safety}
+          files={share.files}
+          createdAt={share.createdAt}
+        />
+      )}
 
       <FileList
         files={share?.files}
