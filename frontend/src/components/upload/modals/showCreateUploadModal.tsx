@@ -4,8 +4,9 @@ import {
   Button,
   Checkbox,
   Col,
+  Container,
   Grid,
-  Group,
+  Modal,
   MultiSelect,
   NumberInput,
   PasswordInput,
@@ -19,8 +20,8 @@ import { useForm, yupResolver } from "@mantine/form";
 import { useModals } from "@mantine/modals";
 import { ModalsContextProps } from "@mantine/modals/lib/context";
 import moment from "moment";
-import React, { useState } from "react";
-import { TbAlertCircle } from "react-icons/tb";
+import React, { useEffect, useState } from "react";
+import { TbAlertCircle, TbRefresh } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import * as yup from "yup";
 import useTranslate, {
@@ -29,14 +30,13 @@ import useTranslate, {
 import shareService from "../../../services/share.service";
 import { FileUpload } from "../../../types/File.type";
 import { CreateShare } from "../../../types/share.type";
-import {
-  stringToTimespan,
-  getExpirationPreview,
-} from "../../../utils/date.util";
+import { getExpirationPreview } from "../../../utils/date.util";
 import toast from "../../../utils/toast.util";
 import { Timespan } from "../../../types/timespan.type";
 import { generateShareId } from "../../../utils/share.util";
 import CustomUrlInput from "../../share/CustomUrlInput";
+import PasswordGenerator from "../../core/PasswordGenerator";
+import { useDisclosure } from "@mantine/hooks";
 
 const showCreateUploadModal = (
   modals: ModalsContextProps,
@@ -125,6 +125,10 @@ const CreateUploadModalBody = ({
 
   const [showNotSignedInAlert, setShowNotSignedInAlert] = useState(true);
   const [emailSearch, setEmailSearch] = useState("");
+  const [
+    passwordModalOpened,
+    { open: passwordModalOpen, close: passwordModalClose },
+  ] = useDisclosure(false);
 
   const validationSchema = yup.object().shape({
     link: yup
@@ -164,7 +168,7 @@ const CreateUploadModalBody = ({
       name: undefined,
       link: generatedLink,
       recipients: [] as string[],
-      password: undefined,
+      password: "",
       maxViews: undefined,
       description: undefined,
       expiration_num: defaultTimespan.value,
@@ -179,7 +183,7 @@ const CreateUploadModalBody = ({
     form.setFieldValue("restrictToRecipients", checked);
     if (checked) {
       // A share can't be both password-protected and restricted to recipients.
-      form.setFieldValue("password", undefined);
+      form.setFieldValue("password", "");
     }
   };
 
@@ -457,17 +461,43 @@ const CreateUploadModalBody = ({
               <Accordion.Panel>
                 <Stack align="stretch">
                   {!form.values.restrictToRecipients && (
-                    <PasswordInput
-                      variant="filled"
-                      placeholder={t(
-                        "upload.modal.accordion.security.password.placeholder",
-                      )}
-                      label={t(
-                        "upload.modal.accordion.security.password.label",
-                      )}
-                      autoComplete="new-password"
-                      {...form.getInputProps("password")}
-                    />
+                    <>
+                      <PasswordInput
+                        variant="filled"
+                        placeholder={t(
+                          "upload.modal.accordion.security.password.placeholder",
+                        )}
+                        label={t(
+                          "upload.modal.accordion.security.password.label",
+                        )}
+                        autoComplete="new-password"
+                        {...form.getInputProps("password")}
+                      />
+                      <Container style={{ marginLeft: 0, padding: 0 }}>
+                        <Button
+                          type="button"
+                          variant="outline"
+                          onClick={() => {
+                            passwordModalOpen();
+                          }}
+                        >
+                          <FormattedMessage id="common.password-generator.button.label" />
+                        </Button>
+                        <Modal
+                          title={t("common.password-generator.button.label")}
+                          zIndex={1000}
+                          opened={passwordModalOpened}
+                          onClose={passwordModalClose}
+                        >
+                          <PasswordGenerator
+                            callback={async (password) => {
+                              form.setFieldValue("password", password);
+                              passwordModalClose();
+                            }}
+                          />
+                        </Modal>
+                      </Container>
+                    </>
                   )}
                   <NumberInput
                     min={1}

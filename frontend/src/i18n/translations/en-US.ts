@@ -406,6 +406,9 @@ export default {
   "upload.filelist.estimating": "Estimating...",
   "upload.filelist.remaining": "{time} remaining",
 
+  // PasswordGenerator.tsx
+  'common.password-generator.button.label': 'Generate Password',
+
   // showCreateUploadModal.tsx
   "upload.modal.title": "Create Share",
   "upload.modal.link.error.invalid":
