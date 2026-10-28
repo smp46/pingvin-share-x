@@ -34,18 +34,28 @@ const ExpiryRing = ({
   const days = seconds === null ? 0 : Math.floor(seconds / 86400);
   const hours = seconds === null ? 0 : Math.floor((seconds % 86400) / 3600);
   const minutes = seconds === null ? 0 : Math.floor((seconds % 3600) / 60);
+  const pad = (value: number) => String(value).padStart(2, "0");
+  const expired = seconds !== null && (seconds <= 0 || !Number.isFinite(seconds));
   const label =
     seconds === null
       ? t("share.expiry.no-expiry")
-      : seconds <= 0 || !Number.isFinite(seconds)
+      : expired
         ? t("share.expiry.expired")
-        : `${days ? `${days}d ` : ""}${hours ? `${hours}h ` : ""}${minutes ? `${minutes}m ` : ""}${seconds % 60}s`;
+        : `${days ? `${days}d ` : ""}${pad(hours)}:${pad(minutes)}:${pad(seconds % 60)}`;
+  const urgent = seconds !== null && !expired && seconds < 3600;
 
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: 12,
+        color: urgent ? "var(--rv-signal)" : "var(--rv-ink)",
+      }}
+    >
       <svg
-        width="56"
-        height="56"
+        width="52"
+        height="52"
         viewBox="0 0 56 56"
         aria-hidden="true"
         style={{ flexShrink: 0 }}
@@ -56,8 +66,9 @@ const ExpiryRing = ({
           r="23"
           fill="none"
           stroke="currentColor"
-          strokeWidth="4"
-          opacity="0.12"
+          strokeWidth="5"
+          strokeDasharray="2 2.5"
+          opacity="0.25"
         />
         <motion.circle
           cx="28"
@@ -65,8 +76,7 @@ const ExpiryRing = ({
           r="23"
           fill="none"
           stroke="currentColor"
-          strokeWidth="4"
-          strokeLinecap="round"
+          strokeWidth="5"
           pathLength="1"
           strokeDasharray="1"
           transform="rotate(-90 28 28)"
@@ -74,16 +84,16 @@ const ExpiryRing = ({
           animate={{
             strokeDashoffset: 1 - (Number.isFinite(progress) ? progress : 0),
           }}
-          transition={{ duration: reducedMotion ? 0 : 0.4 }}
+          transition={{ duration: reducedMotion ? 0 : 1, ease: "linear" }}
         />
       </svg>
       <div>
-        <div style={{ fontSize: 12, opacity: 0.65 }}>
-          {t("share.expiry.remaining")}
-        </div>
+        <div className="rv-label">{t("share.expiry.remaining")}</div>
         <span
+          className="rv-timer"
           suppressHydrationWarning
-          style={{ fontVariantNumeric: "tabular-nums", fontWeight: 600 }}
+          role="timer"
+          aria-live="off"
         >
           {label}
         </span>

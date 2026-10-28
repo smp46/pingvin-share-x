@@ -4,7 +4,6 @@ import {
   createStyles,
   Group,
   Text,
-  useMantineColorScheme,
 } from "@mantine/core";
 import { motion, useReducedMotion } from "framer-motion";
 import { Dropzone as MantineDropzone } from "@mantine/dropzone";
@@ -26,15 +25,19 @@ const useStyles = createStyles((theme) => ({
   },
 
   dropzone: {
-    borderWidth: 1,
-    padding: "42px 20px 54px",
+    borderWidth: 2,
+    padding: "40px 20px 56px",
     borderStyle: "dashed",
-    borderColor: theme.colorScheme === "dark" ? "#65558d" : "#c6b7ed",
-    background:
-      theme.colorScheme === "dark"
-        ? "linear-gradient(135deg, #252037, #171d2c)"
-        : "linear-gradient(135deg, #faf8ff, #f0f5ff)",
-    transition: "border-color 180ms ease, background 180ms ease",
+    borderColor: theme.colorScheme === "dark" ? theme.colors.dark[2] : theme.black,
+    backgroundColor: "var(--rv-surface)",
+    transition: "border-color 160ms ease, background-color 160ms ease",
+    "&[data-accept], &:hover": {
+      borderColor: theme.colors.victoria[5],
+      backgroundColor:
+        theme.colorScheme === "dark"
+          ? "rgba(255,106,51,0.08)"
+          : "rgba(255,90,31,0.06)",
+    },
   },
 
   icon: {
@@ -109,8 +112,6 @@ const Dropzone = ({
   const [isMounted, setIsMounted] = useState(false);
   const [isMac, setIsMac] = useState(false);
   const [isFirefox, setIsFirefox] = useState(false);
-  const { colorScheme } = useMantineColorScheme();
-  const dark = colorScheme === "dark";
 
   useEffect(() => {
     setIsMounted(true);
@@ -151,14 +152,22 @@ const Dropzone = ({
     <motion.div
       className={classes.wrapper}
       animate={{
-        scale: isDragging && !reduceMotion ? 1.015 : 1,
-        boxShadow: isDragging
-          ? "0 0 32px rgba(139, 92, 246, 0.24)"
-          : "0 0 0px rgba(139, 92, 246, 0)",
+        scale: isDragging && !reduceMotion ? 1.01 : 1,
       }}
-      transition={{ duration: reduceMotion ? 0 : 0.2 }}
-      style={{ borderRadius: 16 }}
+      transition={{ duration: reduceMotion ? 0 : 0.15 }}
     >
+      {isDragging && (
+        <div className="rv-gate" aria-hidden="true">
+          {!reduceMotion && (
+            <motion.div
+              className="rv-gate__beam"
+              initial={{ top: "0%" }}
+              animate={{ top: ["0%", "100%", "0%"] }}
+              transition={{ duration: 1.6, ease: "easeInOut", repeat: Infinity }}
+            />
+          )}
+        </div>
+      )}
       <input
         type="file"
         ref={folderInputRef}
@@ -188,10 +197,19 @@ const Dropzone = ({
         radius="md"
       >
         <div style={{ pointerEvents: "none" }}>
-          <Group position="center">
-            <TbCloudUpload size={50} />
+          <div className="rv-label" style={{ textAlign: "center" }}>
+            {isDragging ? "Release to inspect" : "Drop at the checkpoint"}
+          </div>
+          <Group position="center" mt="md">
+            <TbCloudUpload size={40} strokeWidth={1.6} />
           </Group>
-          <Text align="center" weight={700} size="lg" mt="xl">
+          <Text
+            align="center"
+            weight={700}
+            mt="sm"
+            className="rv-display"
+            style={{ fontSize: 24 }}
+          >
             {title || <FormattedMessage id="upload.dropzone.title" />}
           </Text>
           <Text align="center" size="sm" mt="xs" color="dimmed">
@@ -221,21 +239,25 @@ const Dropzone = ({
               />
             </span>
           </Text>
-          <Text align="center" size="xs" mt="md" color="dimmed">
+          <div className="rv-drop-limits" aria-label="Upload limits">
+            <span>MAX {byteToHumanSizeString(maxShareSize).toUpperCase()} / SHARE</span>
+            <span>50 MB / ACCOUNT</span>
+            <span>NO .EXE .HTML .SVG .JS .SH …</span>
+          </div>
+          <span className="sr-only">
             <FormattedMessage
               id="upload.dropzone.quota-hint"
               defaultMessage={en["upload.dropzone.quota-hint"]}
             />
-          </Text>
+          </span>
         </div>
       </MantineDropzone>
       <Center>
         {isFolderUploadSupported && (
           <Button
             className={classes.control}
-            variant={dark ? "filled" : "light"}
+            variant="default"
             size="sm"
-            radius="xl"
             disabled={isUploading}
             onClick={() => folderInputRef.current?.click()}
           >

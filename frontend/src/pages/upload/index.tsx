@@ -38,6 +38,7 @@ import { byteToHumanSizeString } from "../../utils/fileSize.util";
 const promiseLimit = pLimit(3);
 let errorToastShown = false;
 let createdShare: Share;
+let createdShareMaxViews: number | null = null;
 
 const Upload = ({
   maxShareSize,
@@ -83,6 +84,7 @@ const Upload = ({
     try {
       const isReverseShare = router.pathname != "/upload";
       const totalSize = files.reduce((acc, file) => acc + file.size, 0);
+      createdShareMaxViews = share.security?.maxViews ?? null;
       createdShare = await shareService.create(
         { ...share, size: totalSize },
         isReverseShare,
@@ -273,6 +275,7 @@ const Upload = ({
             share,
             config.get("general.appUrl"),
             config.get("general.appUrl", true),
+            createdShareMaxViews,
           );
           setFiles([]);
         })

@@ -18,6 +18,7 @@ import Meta from "../../../components/Meta";
 import DownloadAllButton from "../../../components/share/DownloadAllButton";
 import FileList from "../../../components/share/FileList";
 import SafetyCard from "../../../components/share/SafetyCard";
+import CheckpointClosed from "../../../components/share/CheckpointClosed";
 import useShareAccess from "../../../hooks/shareAccess.hook";
 import showShareInformationsModal from "../../../components/share/showShareInformationsModal";
 import useConfig from "../../../hooks/config.hook";
@@ -92,53 +93,43 @@ const Share = ({ shareId }: { shareId: string }) => {
   };
 
   if (error) {
+    const isTripwire =
+      error.title === "share.error.removed.title" &&
+      !!error.message?.startsWith("Auto-revoked");
+    const codes: Record<string, string> = {
+      "share.error.not-found.title": "NOT FOUND",
+      "share.error.expired.title": "EXPIRED",
+      "share.error.removed.title": isTripwire ? "TRIPWIRE" : "REVOKED",
+      "share.error.visitor-limit-exceeded.title": "VIEW LIMIT",
+      "share.error.access-denied.title": "PRIVATE",
+    };
+    const text = isTripwire
+      ? `${error.message!.replace(/^Auto-revoked:\s*/i, "Locked automatically after ")}. Nothing was downloaded after the lock — ask the sender for a fresh link.`
+      : (error.message ?? (error.description ? t(error.description) : ""));
     return (
       <>
         <Meta title={t(error.title)} />
-        <Center style={{ minHeight: "70vh", padding: 24 }}>
-          <Stack
-            align="center"
-            spacing="md"
-            style={{ maxWidth: 520 }}
-            role="alert"
-          >
-            <Title order={2} align="center">
-              {t(error.title)}
-            </Title>
-            <Text
-              color="dimmed"
-              align="center"
-              style={{ overflowWrap: "anywhere" }}
-            >
-              {error.message ?? (error.description ? t(error.description) : "")}
-            </Text>
-            <Button component={Link} href="/">
-              {t("common.button.go-home")}
-            </Button>
-          </Stack>
-        </Center>
+        <CheckpointClosed
+          code={codes[error.title] ?? "ERROR"}
+          hazard={isTripwire}
+          title={isTripwire ? "Tripwire triggered. Link locked." : t(error.title)}
+          text={text}
+          actionLabel={t("common.button.go-home")}
+          actionHref="/"
+        />
       </>
     );
   }
 
   if (isRestricted) {
     return (
-      <Center style={{ height: "70vh" }}>
-        <Stack align="center" spacing="md">
-          <Title order={3}>
-            <FormattedMessage id="share.error.restricted.title" />
-          </Title>
-          <Text color="dimmed" align="center">
-            <FormattedMessage id="share.error.restricted.description" />
-          </Text>
-          <Button
-            component={Link}
-            href={`/auth/signIn?redirect=/share/${shareId}`}
-          >
-            <FormattedMessage id="share.error.restricted.button" />
-          </Button>
-        </Stack>
-      </Center>
+      <CheckpointClosed
+        code="RECIPIENTS ONLY"
+        title={<FormattedMessage id="share.error.restricted.title" />}
+        text={<FormattedMessage id="share.error.restricted.description" />}
+        actionLabel={<FormattedMessage id="share.error.restricted.button" />}
+        actionHref={`/auth/signIn?redirect=/share/${shareId}`}
+      />
     );
   }
 
@@ -150,8 +141,16 @@ const Share = ({ shareId }: { shareId: string }) => {
       />
 
       <Group position="apart" mb="lg">
-        <Box style={{ maxWidth: "70%" }}>
-          <Title order={3}>{share?.name || share?.id}</Title>
+        <Box style={{ maxWidth: "100%", minWidth: 0, flex: "1 1 260px" }}>
+          <div className="rv-label">
+            Share ·{" "}
+            <span style={{ textTransform: "none", letterSpacing: "0.04em" }}>
+              {shareId}
+            </span>
+          </div>
+          <Title order={2} mt={4} style={{ overflowWrap: "anywhere" }}>
+            {share?.name || share?.id}
+          </Title>
           <Text size="sm">{share?.description}</Text>
           {share?.files?.length > 0 && (
             <Text size="sm" color="dimmed" mt={5}>
@@ -176,7 +175,7 @@ const Share = ({ shareId }: { shareId: string }) => {
           {isOwner && (
             <HoverTip label={t("account.shares.button.edit")}>
               <Link href={`/share/${shareId}/edit`}>
-                <ActionIcon variant="light" color="orange" size="lg">
+                <ActionIcon variant="outline" color="dark" size="lg">
                   <TbPlusMinus />
                 </ActionIcon>
               </Link>
@@ -185,8 +184,8 @@ const Share = ({ shareId }: { shareId: string }) => {
           {isOwnerOrAdmin && (
             <HoverTip label={t("common.button.edit")}>
               <ActionIcon
-                variant="light"
-                color="blue"
+                variant="outline"
+                color="dark"
                 size="lg"
                 onClick={handleEditClick}
               >

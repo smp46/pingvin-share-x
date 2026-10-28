@@ -1,6 +1,5 @@
 import {
   ActionIcon,
-  Badge,
   Box,
   Button,
   Center,
@@ -13,6 +12,7 @@ import {
   Title,
 } from "@mantine/core";
 import { useClipboard } from "@mantine/hooks";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useModals } from "@mantine/modals";
 import moment from "moment";
 import Link from "next/link";
@@ -52,6 +52,14 @@ const browserName = (ua: string | null) => {
   return null;
 };
 
+const shareStatus = (share: MyShare) => {
+  if (share.removedReason?.startsWith("Auto-revoked")) return "tripwire";
+  if (share.removedReason) return "revoked";
+  const expiry = moment(share.expiration);
+  if (expiry.unix() !== 0 && expiry.isBefore(moment())) return "expired";
+  return "active";
+};
+
 const MyShares = () => {
   const modals = useModals();
   const clipboard = useClipboard();
@@ -61,6 +69,8 @@ const MyShares = () => {
   const theme = useMantineTheme();
 
   const [shares, setShares] = useState<MyShare[]>();
+  const [voiding, setVoiding] = useState<string | null>(null);
+  const reduceMotion = useReducedMotion();
 
   const showActivity = async (shareId: string) => {
     let events: Awaited<ReturnType<typeof shareService.getActivity>> = [];
@@ -100,7 +110,10 @@ const MyShares = () => {
   return (
     <>
       <Meta title={t("account.shares.title")} />
-      <Title mb={30} order={3}>
+      <div className="rv-label" style={{ marginTop: 16 }}>
+        Owner dashboard · {shares.length} share{shares.length === 1 ? "" : "s"}
+      </div>
+      <Title mb={24} mt={4} order={2}>
         <FormattedMessage id="account.shares.title" />
       </Title>
       {shares.length == 0 ? (
@@ -127,6 +140,7 @@ const MyShares = () => {
           <Table>
             <thead>
               <tr>
+                <th>Status</th>
                 <th>
                   <FormattedMessage id="account.shares.table.id" />
                 </th>
@@ -151,13 +165,66 @@ const MyShares = () => {
                 return (
                   <tr key={share.id}>
                     <td>
-                      <Group spacing="xs">
-                        {share.id}{" "}
+                      {share.removedReason ? (
+                        <HoverTip label={share.removedReason}>
+                          <span
+                            className={`rv-pill rv-pill--${shareStatus(share)}`}
+                          >
+                            {shareStatus(share)}
+                          </span>
+                        </HoverTip>
+                      ) : (
+                        <span
+                          className={`rv-pill rv-pill--${shareStatus(share)}`}
+                        >
+                          {shareStatus(share)}
+                        </span>
+                      )}
+                    </td>
+                    <td style={{ position: "relative" }}>
+                      <AnimatePresence>
+                        {voiding === share.id && (
+                          <motion.span
+                            className="rv-void"
+                            aria-hidden="true"
+                            initial={
+                              reduceMotion
+                                ? { x: "-50%", y: "-50%", rotate: -8 }
+                                : {
+                                    x: "-50%",
+                                    y: "-50%",
+                                    scale: 2.4,
+                                    rotate: -18,
+                                    opacity: 0,
+                                  }
+                            }
+                            animate={{
+                              x: "-50%",
+                              y: "-50%",
+                              scale: 1,
+                              rotate: -8,
+                              opacity: 1,
+                            }}
+                            exit={{ opacity: 0 }}
+                            transition={{
+                              type: "spring",
+                              stiffness: 650,
+                              damping: 20,
+                            }}
+                          >
+                            VOID
+                          </motion.span>
+                        )}
+                      </AnimatePresence>
+                      <Group spacing="xs" noWrap>
+                        <span className="rv-mono" style={{ fontSize: 13 }}>
+                          {share.id}
+                        </span>
                         {share.security?.passwordProtected && (
                           <HoverTip label="Password Protected">
                             <span style={{ display: "inline-flex" }}>
                               <TbLock
-                                color="orange"
+                                color="currentColor"
                                 title={t(
                                   "account.shares.table.password-protected",
                                 )}
@@ -194,57 +261,33 @@ const MyShares = () => {
                     <td>
                       <Group spacing="xs">
                         {share.name}
-                        {share.removedReason && (
-                          <HoverTip label={share.removedReason}>
-                            <Badge
-                              size="sm"
-                              color={
-                                share.removedReason.startsWith("Auto-revoked")
-                                  ? "red"
-                                  : "gray"
-                              }
-                            >
-                              {share.removedReason.startsWith(
-                                "Auto-revoked",
-                              ) ? (
-                                <FormattedMessage id="account.shares.badge.tripwire" />
-                              ) : (
-                                <FormattedMessage id="account.shares.badge.revoked" />
-                              )}
-                            </Badge>
-                          </HoverTip>
-                        )}
                       </Group>
                     </td>
                     <td>
-                      {share.security?.maxViews ? (
-                        <FormattedMessage
-                          id="account.shares.table.visitor-count"
-                          values={{
-                            count: share.views,
-                            max: share.security.maxViews,
-                          }}
-                        />
-                      ) : (
-                        share.views
-                      )}
+                      <span className="rv-counter">
+                        {share.security?.maxViews
+                          ? `${share.views}/${share.security.maxViews}`
+                          : share.views}
+                      </span>
                     </td>
-                    <td>{share.downloads}</td>
                     <td>
+                      <span className="rv-counter">{share.downloads}</span>
+                    </td>
+                    <td className="rv-mono" style={{ fontSize: 13 }}>
                       {moment(share.expiration).unix() === 0 ? (
                         <FormattedMessage id="account.shares.table.expiry-never" />
                       ) : (
-                        moment(share.expiration).format("LLL")
+                        moment(share.expiration).format("DD MMM YYYY HH:mm")
                       )}
                     </td>
                     <td>
-                      <Group position="right">
+                      <Group position="right" noWrap spacing={6}>
                         <Link href={`/share/${share.id}/edit`}>
                           <HoverTip label={t("account.shares.button.edit")}>
                             <ActionIcon
-                              color="orange"
-                              variant="light"
-                              size={25}
+                              color="dark"
+                              variant="subtle"
+                              size={28}
                             >
                               <TbPlusMinus />
                             </ActionIcon>
@@ -252,9 +295,9 @@ const MyShares = () => {
                         </Link>
                         <HoverTip label={t("common.button.info")}>
                           <ActionIcon
-                            color="blue"
-                            variant="light"
-                            size={25}
+                            color="dark"
+                            variant="subtle"
+                            size={28}
                             onClick={() => {
                               showShareInformationsModal(
                                 modals,
@@ -281,9 +324,9 @@ const MyShares = () => {
                         </HoverTip>
                         <HoverTip label={t("common.button.copy-link")}>
                           <ActionIcon
-                            color="victoria"
-                            variant="light"
-                            size={25}
+                            color="dark"
+                            variant="subtle"
+                            size={28}
                             onClick={() => {
                               if (window.isSecureContext) {
                                 clipboard.copy(
@@ -296,6 +339,11 @@ const MyShares = () => {
                                   share.id,
                                   config.get("general.appUrl"),
                                   config.get("general.appUrl", true),
+                                  {
+                                    expiration: share.expiration,
+                                    maxViews: share.security?.maxViews ?? null,
+                                    views: share.views,
+                                  },
                                 );
                               }
                             }}
@@ -305,9 +353,9 @@ const MyShares = () => {
                         </HoverTip>
                         <HoverTip label={t("account.shares.button.activity")}>
                           <ActionIcon
-                            color="grape"
-                            variant="light"
-                            size={25}
+                            color="dark"
+                            variant="subtle"
+                            size={28}
                             onClick={() => showActivity(share.id)}
                           >
                             <TbActivity />
@@ -318,7 +366,7 @@ const MyShares = () => {
                             <ActionIcon
                               color="orange"
                               variant="light"
-                              size={25}
+                              size={28}
                               onClick={() => {
                                 modals.openConfirmModal({
                                   title: t(
@@ -339,6 +387,8 @@ const MyShares = () => {
                                   },
                                   onConfirm: async () => {
                                     await shareService.revoke(share.id);
+                                    setVoiding(share.id);
+                                    setTimeout(() => setVoiding(null), 1400);
                                     setShares(
                                       shares.map((item) =>
                                         item.id === share.id
@@ -360,8 +410,8 @@ const MyShares = () => {
                         <HoverTip label={t("common.button.delete")}>
                           <ActionIcon
                             color="red"
-                            variant="light"
-                            size={25}
+                            variant="subtle"
+                            size={28}
                             onClick={() => {
                               modals.openConfirmModal({
                                 title: t("account.shares.modal.delete.title", {

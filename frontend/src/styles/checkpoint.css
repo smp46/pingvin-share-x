@@ -1,0 +1,478 @@
+/* Inspection-checkpoint signature pieces. Tokens come from global.style.tsx. */
+
+.rv-mono {
+  font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.rv-label {
+  font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rv-muted);
+}
+
+.rv-display {
+  font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* ---------- Status pills ---------- */
+.rv-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border: 1.5px solid currentColor;
+  border-radius: 2px;
+  font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.rv-pill::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+  border-radius: 50%;
+}
+.rv-pill--active {
+  color: var(--rv-ok);
+  background: var(--rv-ok-bg);
+}
+.rv-pill--expired {
+  color: var(--rv-muted);
+  border-style: dashed;
+}
+.rv-pill--revoked {
+  color: var(--rv-surface);
+  background: var(--rv-revoked);
+  border-color: var(--rv-revoked);
+}
+.rv-pill--tripwire {
+  color: #ff7a45;
+  border-color: #16130f;
+  background: #16130f;
+}
+.rv-pill--tripwire::before {
+  width: 16px;
+  height: 10px;
+  border-radius: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    #ff5a1f 0 3px,
+    #16130f 3px 6px
+  );
+  outline: 1px solid #ff5a1f;
+  background-size: 8.5px 8.5px;
+  animation: rv-hazard 0.9s linear infinite;
+}
+@keyframes rv-hazard {
+  to {
+    background-position: 8.5px 0;
+  }
+}
+
+.rv-counter {
+  display: inline-block;
+  min-width: 2.6em;
+  padding: 2px 6px;
+  border: 1px solid var(--rv-line);
+  border-radius: 2px;
+  background: var(--rv-surface);
+  font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+/* ---------- Ticket stub ---------- */
+.rv-ticket-slot {
+  position: relative;
+  padding-top: 10px;
+}
+.rv-ticket-slot::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: -6px;
+  right: -6px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--rv-ink);
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.35);
+}
+.rv-ticket-clip {
+  overflow: hidden;
+  padding: 0 12px 12px;
+  margin: 0 -12px;
+}
+.rv-ticket {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  color: var(--rv-ink);
+}
+.rv-ticket__main {
+  padding: 16px 18px;
+  min-width: 0;
+  background: var(--rv-surface);
+  border: 1.5px solid var(--rv-line-strong);
+  border-right: 0;
+  border-radius: 4px 0 0 4px;
+}
+.rv-ticket__stub {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  align-content: center;
+  padding: 16px 18px;
+  min-width: 128px;
+  background: var(--rv-surface);
+  border: 1.5px solid var(--rv-line-strong);
+  border-left: 2px dashed var(--rv-line-strong);
+  border-radius: 0 4px 4px 0;
+  transform-origin: 0 100%;
+}
+/* punched notches at the perforation */
+.rv-ticket__stub::before,
+.rv-ticket__stub::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--rv-bg);
+  border: 1.5px solid var(--rv-line-strong);
+}
+.rv-ticket__stub::before {
+  top: -10px;
+  clip-path: inset(50% 0 0 0);
+}
+.rv-ticket__stub::after {
+  bottom: -10px;
+  clip-path: inset(0 0 50% 0);
+}
+.rv-ticket__id {
+  display: block;
+  margin-top: 4px;
+  font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  overflow-wrap: anywhere;
+}
+.rv-ticket__field strong {
+  display: block;
+  margin-top: 2px;
+  font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 520px) {
+  .rv-ticket {
+    grid-template-columns: 1fr;
+  }
+  .rv-ticket__main {
+    border-right: 1.5px solid var(--rv-line-strong);
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+  }
+  .rv-ticket__stub {
+    border-left: 1.5px solid var(--rv-line-strong);
+    border-top: 2px dashed var(--rv-line-strong);
+    border-radius: 0 0 4px 4px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .rv-ticket__stub::before,
+  .rv-ticket__stub::after {
+    left: auto;
+    top: -10px;
+    bottom: auto;
+  }
+  .rv-ticket__stub::before {
+    left: -10px;
+    clip-path: inset(0 0 0 50%);
+  }
+  .rv-ticket__stub::after {
+    right: -10px;
+    clip-path: inset(0 50% 0 0);
+  }
+}
+
+/* ---------- Inspection slip ---------- */
+.rv-slip {
+  position: relative;
+  margin-bottom: 32px;
+  border: 1.5px solid var(--rv-line-strong);
+  border-radius: 4px;
+  background: var(--rv-surface);
+  color: var(--rv-ink);
+  overflow: hidden;
+}
+.rv-slip__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  padding: 12px 18px;
+  border-bottom: 1.5px solid var(--rv-line-strong);
+}
+.rv-slip__title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.rv-slip__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-bottom: 1px solid var(--rv-line);
+}
+.rv-slip__cell {
+  padding: 12px 18px;
+  min-width: 0;
+}
+.rv-slip__cell + .rv-slip__cell {
+  border-left: 1px solid var(--rv-line);
+}
+.rv-slip__value {
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.rv-slip__files {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.rv-slip__files li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+  padding: 10px 18px;
+  border-bottom: 1px solid var(--rv-line);
+  font-size: 15px;
+}
+.rv-slip__checks {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+}
+.rv-slip__checks li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 18px;
+  font-size: 15px;
+}
+.rv-check {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+}
+.rv-check__box {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--rv-ink);
+  border-radius: 2px;
+  color: var(--rv-surface);
+}
+.rv-stamp {
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 2px 7px;
+  border: 2px solid var(--rv-ok);
+  border-radius: 3px;
+  color: var(--rv-ok);
+  font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  transform: rotate(-4deg);
+}
+.rv-slip__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 18px;
+  border-top: 1.5px solid var(--rv-line-strong);
+}
+.rv-timer {
+  font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  font-size: 22px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 520px) {
+  .rv-slip__grid {
+    grid-template-columns: 1fr;
+  }
+  .rv-slip__cell + .rv-slip__cell {
+    border-left: 0;
+    border-top: 1px solid var(--rv-line);
+  }
+}
+
+/* ---------- Checkpoint closed notice ---------- */
+.rv-closed {
+  position: relative;
+  max-width: 560px;
+  width: 100%;
+  margin: 64px auto 48px;
+  border: 1.5px solid var(--rv-line-strong);
+  border-radius: 4px;
+  background: var(--rv-surface);
+  color: var(--rv-ink);
+}
+.rv-closed__post {
+  position: absolute;
+  left: -1.5px;
+  top: -30px;
+  width: 14px;
+  height: 46px;
+  border-radius: 3px 3px 0 0;
+  background: var(--rv-ink);
+}
+.rv-closed__band {
+  position: relative;
+  margin: -1.5px -1.5px 0;
+  height: 16px;
+  border-radius: 3px 3px 0 0;
+  transform-origin: 7px 50%;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--rv-hazard-a) 0 12px,
+    var(--rv-hazard-b) 12px 24px
+  );
+}
+.rv-closed__band--calm {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--rv-ink) 0 12px,
+    var(--rv-surface) 12px 24px
+  );
+  outline: 1.5px solid var(--rv-ink);
+}
+.rv-void {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  padding: 2px 12px;
+  border: 3px solid #c93b0b;
+  border-radius: 4px;
+  color: #c93b0b;
+  background: var(--rv-surface);
+  font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  pointer-events: none;
+}
+.rv-closed__body {
+  padding: 28px 24px 28px;
+}
+.rv-closed__title {
+  margin: 10px 0 8px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(28px, 6vw, 40px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+.rv-closed__text {
+  margin: 0 0 24px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--rv-muted);
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Dropzone ---------- */
+.rv-drop-limits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 18px;
+}
+.rv-drop-limits span {
+  padding: 3px 7px;
+  border: 1px solid var(--rv-line);
+  border-radius: 2px;
+  background: var(--rv-bg);
+  font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--rv-muted);
+}
+
+/* ---------- Scanning gate (dropzone drag-over) ---------- */
+.rv-gate {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 2;
+}
+.rv-gate::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  --d: var(--rv-signal);
+  background:
+    linear-gradient(90deg, var(--d) 50%, transparent 0) repeat-x 0 0 / 16px 3px,
+    linear-gradient(90deg, var(--d) 50%, transparent 0) repeat-x 0 100% / 16px 3px,
+    linear-gradient(0deg, var(--d) 50%, transparent 0) repeat-y 0 0 / 3px 16px,
+    linear-gradient(0deg, var(--d) 50%, transparent 0) repeat-y 100% 0 / 3px 16px;
+  animation: rv-march 0.6s linear infinite;
+}
+@keyframes rv-march {
+  to {
+    background-position: 16px 0, -16px 100%, 0 -16px, 100% 16px;
+  }
+}
+.rv-gate__beam {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--rv-signal);
+  box-shadow: 0 0 0 1px rgba(255, 90, 31, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rv-gate::before,
+  .rv-pill--tripwire::before {
+    animation: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .rv-hide-sm {
+    display: none;
+  }
+}

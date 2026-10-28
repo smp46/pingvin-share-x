@@ -17,7 +17,7 @@ export default class _Document extends Document {
             crossOrigin="anonymous"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
             rel="stylesheet"
           />
           <link rel="manifest" href="/manifest.json" />
@@ -26,7 +26,7 @@ export default class _Document extends Document {
           <link rel="apple-touch-icon" href="/img/rv-files-touch-icon.png" />
 
           <meta name="robots" content="noindex" />
-          <meta name="theme-color" content="#4f46e5" />
+          <meta name="theme-color" content="#16130F" />
         </Head>
         <body>
           <Main />

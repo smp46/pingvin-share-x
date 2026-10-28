@@ -363,7 +363,12 @@ const Header = () => {
           <Link href={homeHref} passHref>
             <Group>
               <Logo height={35} width={35} />
-              <Text weight={600}>{config.get("general.appName")}</Text>
+              <Text weight={700} className="rv-display" size="lg">
+                {config.get("general.appName")}
+              </Text>
+              <span className="rv-label rv-hide-sm" style={{ marginLeft: -6 }}>
+                / Checkpoint 01
+              </span>
             </Group>
           </Link>
           <Group spacing={5} className={classes.links}>

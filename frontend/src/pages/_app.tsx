@@ -27,6 +27,7 @@ import authService from "../services/auth.service";
 import configService from "../services/config.service";
 import userService from "../services/user.service";
 import "../styles/tailwind.css";
+import "../styles/checkpoint.css";
 import GlobalStyle from "../styles/global.style";
 import globalStyle from "../styles/mantine.style";
 import Config from "../types/config.type";

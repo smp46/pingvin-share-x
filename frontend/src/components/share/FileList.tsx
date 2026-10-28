@@ -138,8 +138,8 @@ const FileList = ({
                       {shareService.isShareTextFile(file.name) && (
                         <HoverTip label={t("share.copy-text-contents")}>
                           <ActionIcon
-                            color="blue"
-                            variant="light"
+                            color="dark"
+                            variant="subtle"
                             size={25}
                             onClick={() => {
                               api
@@ -167,8 +167,8 @@ const FileList = ({
                       {shareService.doesFileSupportPreview(file.name) && (
                         <HoverTip label={t("common.button.preview")}>
                           <ActionIcon
-                            color="green"
-                            variant="light"
+                            color="dark"
+                            variant="subtle"
                             size={25}
                             onClick={() =>
                               showFilePreviewModal(share.id, file, modals)
@@ -181,8 +181,8 @@ const FileList = ({
                       {!share.hasPassword && (
                         <HoverTip label={t("common.button.copy-link")}>
                           <ActionIcon
-                            color="victoria"
-                            variant="light"
+                            color="dark"
+                            variant="subtle"
                             size={25}
                             onClick={() => copyFileLink(file)}
                           >
@@ -193,8 +193,8 @@ const FileList = ({
 
                       <HoverTip label={t("common.button.download")}>
                         <ActionIcon
-                          color="cyan"
-                          variant="light"
+                          color="victoria"
+                          variant="filled"
                           size={25}
                           onClick={async () => {
                             await shareService.downloadFile(
