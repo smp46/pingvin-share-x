@@ -235,7 +235,8 @@ if new_live_share; then
   get_token "$TMP/dl3.jar" "$S_ID"
   for i in $(seq 1 20); do
     ip="203.0.113.$(( (i % 5) + 1 ))"
-    download "$TMP/dl3.jar" "$S_ID" "$S_FILE" -H "X-Forwarded-For: $ip"
+    # download=true: only full downloads are counted (download=false is an inline preview)
+    req GET "shares/$S_ID/files/$S_FILE?download=true" "$TMP/dl3.jar" -H "X-Forwarded-For: $ip"
   done
   req GET "shares/$S_ID" ""
   expect_error "11. 20 downloads from 5 IPs -> auto-revoked" 404 share_removed "Auto-revoked: unusual download activity"
