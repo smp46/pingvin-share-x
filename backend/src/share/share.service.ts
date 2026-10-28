@@ -24,6 +24,7 @@ import { SystemService } from "src/system/system.service";
 import { parseRelativeDateToAbsolute } from "src/utils/date.util";
 import { byteToHumanSizeString } from "src/utils/fileSize.util";
 import { getUserActiveStorageUsage } from "src/utils/storageQuota.util";
+import { generateShareId } from "src/utils/shareId.util";
 import { SHARE_DIRECTORY } from "../constants";
 import { CreateShareDTO } from "./dto/createShare.dto";
 import { UpdateShareDTO } from "./dto/updateShare.dto";
@@ -111,6 +112,8 @@ export class ShareService {
         }
       }
     }
+
+    share.id = generateShareId();
 
     if (!(await this.isShareIdAvailable(share.id)).isAvailable)
       throw new BadRequestException(this.i18n.t("share.idInUse"));

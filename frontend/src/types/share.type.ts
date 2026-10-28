@@ -21,7 +21,7 @@ export type CompletedShare = Share & {
 };
 
 export type CreateShare = {
-  id: string;
+  id?: string;
   name?: string;
   description?: string;
   recipients: string[];

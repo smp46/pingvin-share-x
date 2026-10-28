@@ -26,17 +26,10 @@ import * as yup from "yup";
 import useTranslate, {
   translateOutsideContext,
 } from "../../../hooks/useTranslate.hook";
-import shareService from "../../../services/share.service";
 import { FileUpload } from "../../../types/File.type";
 import { CreateShare } from "../../../types/share.type";
-import {
-  stringToTimespan,
-  getExpirationPreview,
-} from "../../../utils/date.util";
-import toast from "../../../utils/toast.util";
+import { getExpirationPreview } from "../../../utils/date.util";
 import { Timespan } from "../../../types/timespan.type";
-import { generateShareId } from "../../../utils/share.util";
-import CustomUrlInput from "../../share/CustomUrlInput";
 
 const showCreateUploadModal = (
   modals: ModalsContextProps,
@@ -83,21 +76,6 @@ const showCreateUploadModal = (
   });
 };
 
-const generateAvailableLink = async (
-  shareIdLength: number,
-  times: number = 10,
-): Promise<string> => {
-  if (times <= 0) {
-    throw new Error("Could not generate available link");
-  }
-  const _link = generateShareId(shareIdLength);
-  if (!(await shareService.isShareIdAvailable(_link))) {
-    return await generateAvailableLink(shareIdLength, times - 1);
-  } else {
-    return _link;
-  }
-};
-
 const CreateUploadModalBody = ({
   uploadCallback,
   files,
@@ -121,20 +99,10 @@ const CreateUploadModalBody = ({
   const modals = useModals();
   const t = useTranslate();
 
-  const generatedLink = generateShareId(options.shareIdLength);
-
   const [showNotSignedInAlert, setShowNotSignedInAlert] = useState(true);
   const [emailSearch, setEmailSearch] = useState("");
 
   const validationSchema = yup.object().shape({
-    link: yup
-      .string()
-      .required(t("common.error.field-required"))
-      .min(3, t("common.error.too-short", { length: 3 }))
-      .max(50, t("common.error.too-long", { length: 50 }))
-      .matches(new RegExp("^[a-zA-Z0-9_-]*$"), {
-        message: t("upload.modal.link.error.invalid"),
-      }),
     name: yup
       .string()
       .transform((value) => value || undefined)
@@ -162,7 +130,6 @@ const CreateUploadModalBody = ({
   const form = useForm({
     initialValues: {
       name: undefined,
-      link: generatedLink,
       recipients: [] as string[],
       password: undefined,
       maxViews: undefined,
@@ -184,61 +151,56 @@ const CreateUploadModalBody = ({
   };
 
   const onSubmit = form.onSubmit(async (values) => {
-    if (!(await shareService.isShareIdAvailable(values.link))) {
-      form.setFieldError("link", t("upload.modal.link.error.taken"));
-    } else {
-      const expirationString = form.values.never_expires
-        ? "never"
-        : form.values.expiration_num + form.values.expiration_unit;
+    const expirationString = form.values.never_expires
+      ? "never"
+      : form.values.expiration_num + form.values.expiration_unit;
 
-      const expirationDate = moment().add(
-        form.values.expiration_num,
-        form.values.expiration_unit.replace(
-          "-",
-          "",
-        ) as moment.unitOfTime.DurationConstructor,
+    const expirationDate = moment().add(
+      form.values.expiration_num,
+      form.values.expiration_unit.replace(
+        "-",
+        "",
+      ) as moment.unitOfTime.DurationConstructor,
+    );
+
+    if (
+      options.maxExpiration.value != 0 &&
+      (form.values.never_expires ||
+        expirationDate.isAfter(
+          moment().add(
+            options.maxExpiration.value,
+            options.maxExpiration.unit,
+          ),
+        ))
+    ) {
+      form.setFieldError(
+        "expiration_num",
+        t("upload.modal.expires.error.too-long", {
+          max: moment
+            .duration(options.maxExpiration.value, options.maxExpiration.unit)
+            .humanize(),
+        }),
       );
-
-      if (
-        options.maxExpiration.value != 0 &&
-        (form.values.never_expires ||
-          expirationDate.isAfter(
-            moment().add(
-              options.maxExpiration.value,
-              options.maxExpiration.unit,
-            ),
-          ))
-      ) {
-        form.setFieldError(
-          "expiration_num",
-          t("upload.modal.expires.error.too-long", {
-            max: moment
-              .duration(options.maxExpiration.value, options.maxExpiration.unit)
-              .humanize(),
-          }),
-        );
-        return;
-      }
-
-      uploadCallback(
-        {
-          id: values.link,
-          name: values.name,
-          expiration: expirationString,
-          recipients: values.recipients,
-          description: values.description,
-          security: {
-            password: values.restrictToRecipients
-              ? undefined
-              : values.password || undefined,
-            maxViews: values.maxViews || undefined,
-            restrictToRecipients: values.restrictToRecipients || undefined,
-          },
-        },
-        files,
-      );
-      modals.closeAll();
+      return;
     }
+
+    uploadCallback(
+      {
+        name: values.name,
+        expiration: expirationString,
+        recipients: values.recipients,
+        description: values.description,
+        security: {
+          password: values.restrictToRecipients
+            ? undefined
+            : values.password || undefined,
+          maxViews: values.maxViews || undefined,
+          restrictToRecipients: values.restrictToRecipients || undefined,
+        },
+      },
+      files,
+    );
+    modals.closeAll();
   });
 
   return (
@@ -256,14 +218,6 @@ const CreateUploadModalBody = ({
       )}
       <form onSubmit={onSubmit}>
         <Stack align="stretch">
-          <CustomUrlInput
-            form={form}
-            fieldName="link"
-            shareIdLength={options.shareIdLength}
-            appUrl={options.appUrl}
-            defaultAppUrl={options.defaultAppUrl}
-            pathPrefix="/s/"
-          />
           {!options.isReverseShare && (
             <>
               <Grid align={form.errors.expiration_num ? "center" : "flex-end"}>
@@ -530,20 +484,8 @@ const SimplifiedCreateUploadModalModal = ({
   });
 
   const onSubmit = form.onSubmit(async (values) => {
-    const link = await generateAvailableLink(options.shareIdLength).catch(
-      () => {
-        toast.error(t("upload.modal.link.error.taken"));
-        return undefined;
-      },
-    );
-
-    if (!link) {
-      return;
-    }
-
     uploadCallback(
       {
-        id: link,
         name: values.name,
         expiration: "never",
         recipients: [],

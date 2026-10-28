@@ -173,3 +173,50 @@ No dependency or lockfile change was required. No frontend, push, merge, deploym
 or database reset was performed for Task 2. Detailed local report and red/green logs:
 `.superpowers/sdd/2026-10-28-rv-files/task-2-report.md`, `task-2-red.log`,
 `task-2-green.log`.
+
+Task 2: complete (commits aefd86c..6120b15, spec compliant and task quality approved).
+Task 2: minor (deferred): Node MODULE_TYPELESS_PACKAGE_JSON warning in native TS unit runner.
+Task 2: minor (deferred): tripwire helper counts future-dated inputs; unspecified contract, final review to triage.
+Ruling: Route S3 file bytes through the existing guarded streaming path when implementing strict headers — redirect response headers cannot protect the subsequent S3 object response, while Global Constraints require every file response to carry CSP/nosniff — cost if wrong: additional backend bandwidth and need to verify S3 range metadata.
+
+## Resume after usage interruption
+
+Task 3 implementation was uncommitted when its implementer hit account usage limits. Existing red/green logs are preserved; same implementer resumed to finish verification/report/commit. Tasks 1–2 are not re-dispatched.
+
+
+## Task 3 evidence (2026-10-28)
+
+Server creation now replaces valid supplied IDs with the Task 2 cryptographic
+22-character generator before availability checking. The id DTO field is optional;
+its string, pattern and length validation remains. Both upload modals omit IDs and
+client availability probes. Upload chunk and completion paths already consume the
+created response ID, so upload/index.tsx needed no change.
+
+Ruling: Add recipients:[] to the Task 3 curl fixture — the literal plan request
+returned HTTP 400 for missing recipients; the existing DTO contract is unchanged —
+cost if wrong: literal sample remains invalid until its caller supplies recipients.
+The corrected vanilla request returned HTTP 201, id abc. The rebuilt isolated
+backend returned id 573aeUbykl8rYs7PyHiKLQ for the same valid supplied id.
+Ruling: User explicitly approved the additional type-only ownership exception:
+frontend/src/types/share.type.ts CreateShare.id becomes optional. No other type
+or sibling checkout file was changed.
+
+TDD integration test first ran against vanilla: 4 tests, 1 pass, 3 expected failures
+(client id persisted; omitted id rejected in normal/reverse flows). Rebuilt code
+passed all 4, including actual upload/complete/download byte checks and reverse
+owner linkage. Final repeat also passed 4/4. Unit tests passed 54/54; backend build
+passed; backend lint passed with the same 16 baseline warnings and zero errors.
+Frontend npx tsc --noEmit exited 0; targeted modal Next lint exited 0 with no ESLint
+warnings/errors (Next deprecation/workspace-root notices only). git diff --check
+passed. The dangerous test:system script was never run.
+
+UI Step 3 remains unchecked. Chrome sign-in and the changed upload page rendered,
+but two documented file-chooser attempts timed out before selecting a fixture.
+No completed-upload modal was observed. This does not replace the passing HTTP
+normal/reverse integration evidence. No production deployment, push, merge,
+frontend sibling edits, existing database reset or unrelated data deletion occurred.
+Detailed local evidence: .superpowers/sdd/2026-10-28-rv-files/task-3-report.md,
+task-3-red.log, task-3-green-final.log. Runtime fixture handoff is in runtime-context.md.
+
+Task 3: implementation and local checks complete; UI Step 3 remains unverified;
+awaiting task review.

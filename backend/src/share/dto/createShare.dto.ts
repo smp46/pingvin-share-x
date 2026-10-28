@@ -13,6 +13,7 @@ import { i18nValidationMessage } from "nestjs-i18n";
 import { ShareSecurityDTO } from "./shareSecurity.dto";
 
 export class CreateShareDTO {
+  @IsOptional()
   @IsString()
   @Matches("^[a-zA-Z0-9_-]*$", undefined, {
     message: i18nValidationMessage("validation.idPattern"),
