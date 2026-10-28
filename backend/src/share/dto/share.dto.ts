@@ -29,6 +29,16 @@ export class ShareDTO {
   @Expose()
   size: number;
 
+  @Expose()
+  safety?: {
+    sharedBy: string | null;
+    views: number;
+    maxViews: number | null;
+    hasPassword: boolean;
+    blockedExtensions: string[];
+    expiresAt: string | null;
+  };
+
   from(partial: Partial<ShareDTO>) {
     return plainToClass(ShareDTO, partial, { excludeExtraneousValues: true });
   }

@@ -5,6 +5,7 @@ import { EmailModule } from "src/email/email.module";
 import { FileModule } from "src/file/file.module";
 import { ReverseShareModule } from "src/reverseShare/reverseShare.module";
 import { SystemModule } from "src/system/system.module";
+import { AccessEventService } from "./accessEvent.service";
 import { ShareController } from "./share.controller";
 import { ShareService } from "./share.service";
 
@@ -18,7 +19,7 @@ import { ShareService } from "./share.service";
     SystemModule,
   ],
   controllers: [ShareController],
-  providers: [ShareService],
-  exports: [ShareService],
+  providers: [ShareService, AccessEventService],
+  exports: [ShareService, AccessEventService],
 })
 export class ShareModule {}

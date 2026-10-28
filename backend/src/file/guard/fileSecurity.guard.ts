@@ -103,6 +103,7 @@ export class FileSecurityGuard extends ShareSecurityGuard {
       await this._shareService.handleViewCount(
         share.id,
         share.security?.maxViews,
+        request,
       );
       return true;
     } else {

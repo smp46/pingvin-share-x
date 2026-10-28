@@ -18,6 +18,8 @@ import { Request, Response } from "express";
 import { CreateShareGuard } from "src/share/guard/createShare.guard";
 import { StrictShareOwnerGuard } from "src/share/guard/strictShareOwner.guard";
 import { IdValidation } from "src/share/guard/shareIdValidation.guard";
+import { PrismaService } from "src/prisma/prisma.service";
+import { AccessEventService } from "src/share/accessEvent.service";
 import { FileService } from "./file.service";
 import { FileSecurityGuard } from "./guard/fileSecurity.guard";
 import * as mime from "mime-types";
@@ -37,7 +39,26 @@ function getValidRecipientId(recipientId?: string): string | undefined {
 
 @Controller("shares/:shareId/files")
 export class FileController {
-  constructor(private fileService: FileService) {}
+  constructor(
+    private fileService: FileService,
+    private prisma: PrismaService,
+    private accessEventService: AccessEventService,
+  ) {}
+
+  /** Counts a full download unless the requester is the share's creator. */
+  private async countDownload(shareId: string, req: Request) {
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+      select: { creatorId: true },
+    });
+    const user = req.user as { id: string } | undefined;
+    if (!share || (share.creatorId && user?.id === share.creatorId)) return;
+    await this.prisma.share.update({
+      where: { id: shareId },
+      data: { downloads: { increment: 1 } },
+    });
+    await this.accessEventService.record(shareId, "download", req);
+  }
 
   @Post("upload-init")
   @SkipThrottle()
@@ -126,11 +147,13 @@ export class FileController {
   @Get("zip")
   @UseGuards(FileSecurityGuard)
   async getZip(
+    @Req() req: Request,
     @Res({ passthrough: true }) res: Response,
     @Param("shareId") shareId: string,
     @Query("recipient") recipientId?: string,
   ) {
     const zipStream = await this.fileService.getZip(shareId);
+    await this.countDownload(shareId, req);
 
     res.set({
       ...FILE_SECURITY_HEADERS,
@@ -209,6 +232,7 @@ export class FileController {
     res.set(headers);
 
     if (isDownload && !file.range) {
+      await this.countDownload(shareId, req);
       void this.fileService.notifyRecipientDownload(
         shareId,
         file.metaData.name,

@@ -96,6 +96,7 @@ model Share {
   uploadLocked  Boolean  @default(false)
   isZipReady    Boolean  @default(false)
   views         Int      @default(0)
+  downloads     Int      @default(0)
   expiration    DateTime
   description   String?
   removedReason String?
@@ -110,7 +111,22 @@ model Share {
   recipients     ShareRecipient[]
   userRecipients ShareUserRecipient[]
   files          File[]
+  accessEvents   AccessEvent[]
   storageProvider String @default("LOCAL")
+}
+
+model AccessEvent {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+
+  shareId String
+  share   Share  @relation(fields: [shareId], references: [id], onDelete: Cascade)
+
+  type      String
+  ipHash    String
+  userAgent String?
+
+  @@index([shareId, createdAt])
 }
 
 model ReverseShare {

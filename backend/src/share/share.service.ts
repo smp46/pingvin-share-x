@@ -7,6 +7,7 @@ import {
 } from "@nestjs/common";
 import { JwtService, JwtSignOptions } from "@nestjs/jwt";
 import { Prisma, Share, User, ShareSecurity } from "@prisma/client";
+import { Request } from "express";
 import * as archiver from "archiver";
 import * as argon from "argon2";
 import * as crypto from "crypto";
@@ -29,6 +30,8 @@ import {
 } from "src/utils/storageQuota.util";
 import { generateShareId } from "src/utils/shareId.util";
 import { SHARE_DIRECTORY } from "../constants";
+import { BLOCKED_EXTENSIONS } from "src/utils/fileNamePolicy.util";
+import { AccessEventService } from "./accessEvent.service";
 import { CreateShareDTO } from "./dto/createShare.dto";
 import { UpdateShareDTO } from "./dto/updateShare.dto";
 
@@ -47,6 +50,7 @@ export class ShareService {
     private clamScanService: ClamScanService,
     private systemService: SystemService,
     private readonly i18n: I18nService,
+    private accessEventService: AccessEventService,
   ) {}
 
   async create(share: CreateShareDTO, user?: User, reverseShareToken?: string) {
@@ -487,6 +491,18 @@ export class ShareService {
     return {
       ...share,
       hasPassword: !!share.security?.password,
+      safety: {
+        sharedBy: share.creator
+          ? share.creator.displayName || share.creator.username
+          : null,
+        views: share.views,
+        maxViews: share.security?.maxViews ?? null,
+        hasPassword: !!share.security?.password,
+        blockedExtensions: [...BLOCKED_EXTENSIONS],
+        expiresAt: moment(share.expiration).isSame(0)
+          ? null
+          : share.expiration.toISOString(),
+      },
     };
   }
 
@@ -724,7 +740,11 @@ export class ShareService {
     return { isAvailable: !share };
   }
 
-  async handleViewCount(id: string, maxViews?: number) {
+  async handleViewCount(
+    id: string,
+    maxViews: number | undefined,
+    req: Request,
+  ) {
     await this.prisma.$transaction(async (tx) => {
       const share = await tx.share.findUnique({
         where: { id },
@@ -747,9 +767,10 @@ export class ShareService {
         });
       }
     });
+    await this.accessEventService.record(id, "view", req);
   }
 
-  async getShareToken(shareId: string, password: string) {
+  async getShareToken(shareId: string, password: string, req: Request) {
     const share = await this.prisma.share.findFirst({
       where: { id: shareId },
       include: {
@@ -770,6 +791,7 @@ export class ShareService {
         password,
       );
       if (!isPasswordValid) {
+        await this.accessEventService.record(shareId, "bad_password", req);
         throw new ForbiddenException(
           this.i18n.t("share.wrongPassword"),
           "wrong_password",
@@ -777,7 +799,7 @@ export class ShareService {
       }
     }
 
-    await this.handleViewCount(share.id, share.security?.maxViews);
+    await this.handleViewCount(share.id, share.security?.maxViews, req);
     return await this.generateShareToken(share);
   }
 

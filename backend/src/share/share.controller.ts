@@ -21,6 +21,7 @@ import { GetUser } from "src/auth/decorator/getUser.decorator";
 import { AdministratorGuard } from "src/auth/guard/isAdmin.guard";
 import { JwtGuard } from "src/auth/guard/jwt.guard";
 import { ConfigService } from "src/config/config.service";
+import { AccessEventService } from "./accessEvent.service";
 import { AdminShareDTO } from "./dto/adminShare.dto";
 import { CreateShareDTO } from "./dto/createShare.dto";
 import { MyShareDTO } from "./dto/myShare.dto";
@@ -46,6 +47,7 @@ export class ShareController {
     private shareService: ShareService,
     private jwtService: JwtService,
     private config: ConfigService,
+    private accessEventService: AccessEventService,
   ) {}
 
   @Get("all")
@@ -148,6 +150,12 @@ export class ShareController {
     await this.shareService.expire(id);
   }
 
+  @Get(":id/activity")
+  @UseGuards(IdValidation, ShareOwnerGuard)
+  async activity(@Param("id") id: string) {
+    return this.accessEventService.listForShare(id);
+  }
+
   @Post(":id/revoke")
   @HttpCode(200)
   @UseGuards(IdValidation, ShareOwnerGuard)
@@ -183,7 +191,11 @@ export class ShareController {
     @Res({ passthrough: true }) response: Response,
     @Body() body: SharePasswordDto,
   ) {
-    const token = await this.shareService.getShareToken(id, body.password);
+    const token = await this.shareService.getShareToken(
+      id,
+      body.password,
+      request,
+    );
 
     this.clearShareTokenCookies(request, response);
     response.cookie(`share_${id}_token`, token, {
