@@ -16,9 +16,7 @@ const CopyButtonIcon = (props: CopyButtonIconProps) => {
   return (
     <ActionIcon
       {...props}
-      onClick={() => {
-        copyContentToClipboard(props.content);
-      }}
+      onClick={() => copyContentToClipboard(props.content)}
     >
       {checkState ? <TbCheck /> : <TbCopy />}
     </ActionIcon>

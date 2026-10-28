@@ -4,12 +4,9 @@ import {
   Button,
   Checkbox,
   Col,
-  Container,
   Grid,
-  Modal,
   MultiSelect,
   NumberInput,
-  PasswordInput,
   Select,
   Stack,
   Text,
@@ -20,8 +17,8 @@ import { useForm, yupResolver } from "@mantine/form";
 import { useModals } from "@mantine/modals";
 import { ModalsContextProps } from "@mantine/modals/lib/context";
 import moment from "moment";
-import React, { useEffect, useState } from "react";
-import { TbAlertCircle, TbRefresh } from "react-icons/tb";
+import React, { useState } from "react";
+import { TbAlertCircle } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import * as yup from "yup";
 import useTranslate, {
@@ -35,8 +32,7 @@ import toast from "../../../utils/toast.util";
 import { Timespan } from "../../../types/timespan.type";
 import { generateShareId } from "../../../utils/share.util";
 import CustomUrlInput from "../../share/CustomUrlInput";
-import PasswordGenerator from "../../core/PasswordGenerator";
-import { useDisclosure } from "@mantine/hooks";
+import PasswordFieldWithGeneratorModal from "../../field/PasswordFieldWithGeneratorModal";
 
 const showCreateUploadModal = (
   modals: ModalsContextProps,
@@ -125,10 +121,6 @@ const CreateUploadModalBody = ({
 
   const [showNotSignedInAlert, setShowNotSignedInAlert] = useState(true);
   const [emailSearch, setEmailSearch] = useState("");
-  const [
-    passwordModalOpened,
-    { open: passwordModalOpen, close: passwordModalClose },
-  ] = useDisclosure(false);
 
   const validationSchema = yup.object().shape({
     link: yup
@@ -461,43 +453,20 @@ const CreateUploadModalBody = ({
               <Accordion.Panel>
                 <Stack align="stretch">
                   {!form.values.restrictToRecipients && (
-                    <>
-                      <PasswordInput
-                        variant="filled"
-                        placeholder={t(
-                          "upload.modal.accordion.security.password.placeholder",
-                        )}
-                        label={t(
-                          "upload.modal.accordion.security.password.label",
-                        )}
-                        autoComplete="new-password"
-                        {...form.getInputProps("password")}
-                      />
-                      <Container style={{ marginLeft: 0, padding: 0 }}>
-                        <Button
-                          type="button"
-                          variant="outline"
-                          onClick={() => {
-                            passwordModalOpen();
-                          }}
-                        >
-                          <FormattedMessage id="common.password-generator.button.label" />
-                        </Button>
-                        <Modal
-                          title={t("common.password-generator.button.label")}
-                          zIndex={1000}
-                          opened={passwordModalOpened}
-                          onClose={passwordModalClose}
-                        >
-                          <PasswordGenerator
-                            callback={async (password) => {
-                              form.setFieldValue("password", password);
-                              passwordModalClose();
-                            }}
-                          />
-                        </Modal>
-                      </Container>
-                    </>
+                    <PasswordFieldWithGeneratorModal
+                      variant="filled"
+                      placeholder={t(
+                        "upload.modal.accordion.security.password.placeholder",
+                      )}
+                      label={t(
+                        "upload.modal.accordion.security.password.label",
+                      )}
+                      autoComplete="new-password"
+                      handlePasswordGenerate={(password) => {
+                        form.setFieldValue("password", password);
+                      }}
+                      {...form.getInputProps("password")}
+                    />
                   )}
                   <NumberInput
                     min={1}

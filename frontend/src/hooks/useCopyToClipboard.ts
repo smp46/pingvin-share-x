@@ -8,11 +8,12 @@ interface UseCopyTextOptions {
 
 const useCopyToClipboard = ({
   toastMessage,
-  clipboardTimeout,
+  clipboardTimeout = 1500,
 }: UseCopyTextOptions) => {
-  const clipboard = useClipboard({ timeout: clipboardTimeout || 1500 });
+  const clipboard = useClipboard({ timeout: clipboardTimeout });
 
   const copyContentToClipboard = (content: string) => {
+    if (clipboard.copied) return;
     clipboard.copy(content);
     toast.success(toastMessage);
   };

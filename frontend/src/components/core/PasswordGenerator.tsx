@@ -1,4 +1,5 @@
 import {
+  ActionIcon,
   Button,
   Checkbox,
   Container,
@@ -69,16 +70,14 @@ const PasswordGenerator = ({
           <Text style={{ overflowWrap: "break-word", minWidth: 0 }}>
             {generatedPassword}
           </Text>
-          <Flex align={"center"} gap={"md"}>
-            <TbRefresh
-              size={18}
-              style={{ cursor: "pointer" }}
-              onClick={() => {
-                generatePassword();
-              }}
-            />
+          <Flex align={"center"} gap={"xs"}>
+            <ActionIcon>
+              <TbRefresh
+                style={{ cursor: "pointer" }}
+                onClick={generatePassword}
+              />
+            </ActionIcon>
             <CopyButtonIcon
-              size={18}
               content={generatedPassword}
               toastMessage="Passowrd has been copied to clipboard"
             />
@@ -117,12 +116,7 @@ const PasswordGenerator = ({
 
         <Divider />
 
-        <Button
-          type="button"
-          onClick={() => {
-            callback(generatedPassword);
-          }}
-        >
+        <Button type="button" onClick={() => callback(generatedPassword)}>
           Use this password
         </Button>
       </Stack>
