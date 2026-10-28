@@ -36,6 +36,34 @@ export default {
 
   "home.button.start": "Get started",
   "home.button.source": "Source code",
+  "home.rv.meta": "Secure file sharing",
+  "home.rv.eyebrow": "Your files. A safer way forward.",
+  "home.rv.title": "Share files. Not risks.",
+  "home.rv.title.first": "Share files.",
+  "home.rv.title.second": "Not risks.",
+  "home.rv.description":
+    "Send what matters with a little more peace of mind. Private links, built-in tripwires, and clear safety details for every recipient.",
+  "home.rv.cta": "Share a file",
+  "home.rv.account": "Create an account",
+  "home.rv.feature.links.title": "Unguessable links",
+  "home.rv.feature.links.text":
+    "Every share gets a random, 128-bit link. Access starts with the people you choose to share it with.",
+  "home.rv.feature.tripwire.title": "Tripwire protection",
+  "home.rv.feature.tripwire.text":
+    "Too many wrong passwords or unusual download activity? Automatic tripwires can revoke the share.",
+  "home.rv.feature.card.title": "Safety card for recipients",
+  "home.rv.feature.card.text":
+    "Give recipients a clear view of the files, expiry, and protection details before they download.",
+  "home.rv.features.label": "Sharing protections",
+  "home.rv.preview.label": "Example of a protected file share",
+  "home.rv.preview.file": "Project notes.pdf",
+  "home.rv.preview.ready": "Ready to share · 2.4 MB",
+  "home.rv.preview.link": "/s/4hQ7x…k9Z2",
+  "home.rv.preview.protection": "Tripwire enabled",
+  "home.rv.preview.expiry": "Expires in 1 day",
+  "home.rv.preview.badge": "A safer handoff",
+  "home.rv.preview.badge.text": "Clarity on the receiving end.",
+  "home.rv.bottom": "Small files. Thoughtfully shared.",
   // END /
 
   // /auth/signin
@@ -384,6 +412,9 @@ export default {
 
   // Dropzone.tsx
   "upload.dropzone.title": "Upload files",
+  "upload.dropzone.quota-hint": "Max 10 MB per share · 50 MB per account",
+  "upload.dropzone.notify.blocked-file":
+    "“{name}” was blocked. Executable and active-content file types are not allowed.",
   "upload.dropzone.description.mobile":
     "Tap here to select individual files, photos, or videos. To upload a folder, use the button below. Maximum total upload size: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder":
