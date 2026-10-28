@@ -47,8 +47,8 @@ Ruling: Runtime checks blocked by Docker/dependency availability stay unchecked;
 
 ## Task execution
 
-Task 1: env/docs complete; local smoke test in progress / unverified (handed to controller); Railway steps 2–3 skipped per user.
-Task 2: pending
+Task 1: env/docs and vanilla local smoke complete; Railway steps 2–3 skipped per user.
+Task 2: helpers and 54 unit tests complete; red/green, backend build, and lint verified; awaiting task review.
 Task 3: pending
 Task 4: pending
 Task 5: pending
@@ -110,7 +110,7 @@ for Prisma, argon2, esbuild and frontend unrs-resolver. No dependency changes we
 Approved read-back `docker info --format '{{.ServerVersion}}'` returned `29.4.3`;
 `docker compose -f docker-compose.local.yml ps --all` showed no containers while the
 image was building. No UI response, first-user registration, or admin status has been
-observed yet. The controller will monitor session 21649 and handle the UI check; Task
+observed yet. The Task 1 implementer monitors its agent-scoped session 21649 and handles the UI check; Task
 1 step 1 remains unchecked. Steps 2–3 remain unchecked and annotated skipped.
 
 Fresh Task 1 checks: Compose configuration validation exited 0; `git diff --check`
@@ -118,3 +118,58 @@ exited 0; source review confirmed the port/trust behavior documented above. No t
 suite was run for this documentation/configuration-only change, and the destructive
 `test:system` script was not invoked. The first env commit preserves the user-supplied
 `docs/CODEX_HANDOFF.md`, design/plan under `docs/superpowers/`, and this progress ledger.
+
+Task 1: complete (commits 760aa6f..aefd86c, spec compliant and task quality approved; smoke verification pending).
+Task 1: minor (addressed in ledger): corrected agent-scoped Docker monitor ownership.
+Task 1: minor (deferred): baseline lint/audit/install-script warnings recorded for final review; runtime health pending.
+
+
+## Task 1 smoke follow-up (reported by Task 1 monitor)
+
+Task 1 step 1 is now verified. The existing vanilla Compose build completed exit 0;
+container read-back was healthy with host port 3001 → container port 3000. Approved
+HTTP checks returned `/` 200 and `/api/health` `OK`; Chrome rendered the Pingvin
+landing page. The session-created database contained zero users before registration;
+`POST /api/auth/signUp` returned 201, authenticated `/api/users/me` showed
+`isAdmin: true` and `isActivated: true`, and SQLite then contained one user.
+No unrelated data was deleted. This resolves the historical smoke-pending notes above.
+The monitor's detailed evidence is session-local
+`.superpowers/sdd/2026-10-28-rv-files/task-1-smoke-report.md`. Railway steps 2–3
+remain unchecked and skipped per user. The Task 3 client-id baseline remains unverified;
+no baseline share was created by the Task 1 monitor.
+
+## Task 2 evidence (2026-10-28)
+
+Added filename blocking, cryptographic share ids, pure tripwire evaluation, and the
+quota fallback helper. The blocked extension list is exactly the required 15 values;
+hidden dotfile names are additionally rejected per the preflight ruling. Existing
+active-storage query semantics are unchanged, so revoked/expired shares still free
+quota. Its Prisma dependency is now a relative type-only import so the native Node
+TypeScript runner can load the fallback helper without runtime alias resolution.
+
+Observed TDD sequence on Node v24.7.0:
+
+- Initial `npm run test:unit` with `node --test test/unit/` exited 1:
+  `Cannot find module '.../backend/test/unit'` (`MODULE_NOT_FOUND`).
+- Applied the approved discovery fallback `node --test test/unit/*.test.ts`.
+- Before implementation, `npm run test:unit` exited 1: `tests 54`, `pass 0`,
+  `fail 54`. New policy imports failed with `ERR_MODULE_NOT_FOUND`; the existing
+  quota module failed on its runtime `src` alias. Tests exercised the real imports.
+- After implementation, `npm run test:unit` exited 0: `tests 54`, `pass 54`,
+  `fail 0`, `skipped 0`. A final run after formatting also passed all 54.
+- `CHOKIDAR_USEPOLLING=1 npm run build` exited 0.
+- `npm run lint` exited 0 with the same 16 baseline warnings and zero errors;
+  none were in the changed utilities.
+- `npm test` exited 1 because the repository has no `test` script. The existing
+  `test:system` resets the database, so it was not run under the no-data-loss rule.
+
+Unit coverage includes all brief cases, all blocked extensions, hidden names,
+extensions in the middle, trimming, safe false positives, 1000 unique URL-safe
+22-character ids, threshold misses, stale events, exact window boundary, view-only
+IP exclusion, configured limits/window, null/undefined quotas and explicit zero.
+Node emits `MODULE_TYPELESS_PACKAGE_JSON` while reparsing the `.ts` test as ESM;
+this warning is recorded, not suppressed through a backend module-mode change.
+No dependency or lockfile change was required. No frontend, push, merge, deployment,
+or database reset was performed for Task 2. Detailed local report and red/green logs:
+`.superpowers/sdd/2026-10-28-rv-files/task-2-report.md`, `task-2-red.log`,
+`task-2-green.log`.

@@ -1,5 +1,15 @@
 import * as moment from "moment";
-import { PrismaService } from "src/prisma/prisma.service";
+import type { PrismaService } from "../prisma/prisma.service";
+
+export function resolveStorageQuota(
+  user: { storageQuotaLimit?: string | null } | null | undefined,
+  defaultQuota: number,
+): number | null {
+  if (user?.storageQuotaLimit != null) {
+    return parseInt(user.storageQuotaLimit, 10);
+  }
+  return defaultQuota > 0 ? defaultQuota : null;
+}
 
 export async function getUserActiveStorageUsage(
   prisma: PrismaService,
