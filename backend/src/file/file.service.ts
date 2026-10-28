@@ -55,7 +55,7 @@ export class FileService {
     },
     shareId: string,
   ) {
-    if (chunk.index === 0 && isBlockedFileName(file.name)) {
+    if (isBlockedFileName(file.name)) {
       throw new BadRequestException(this.i18n.t("file.blockedType"));
     }
     await this.touchShare(shareId);

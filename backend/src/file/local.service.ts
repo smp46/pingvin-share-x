@@ -14,6 +14,7 @@ import { I18nService } from "nestjs-i18n";
 import { resolve, sep } from "path";
 import { ConfigService } from "src/config/config.service";
 import { PrismaService } from "src/prisma/prisma.service";
+import { isBlockedFileName } from "src/utils/fileNamePolicy.util";
 import { byteToHumanSizeString } from "src/utils/fileSize.util";
 import {
   getUserActiveStorageUsage,
@@ -159,6 +160,10 @@ export class LocalFileService {
       const fileSize = (
         await fs.stat(`${SHARE_DIRECTORY}/${shareId}/${file.id}`)
       ).size;
+      if (isBlockedFileName(file.name)) {
+        await fs.rm(`${SHARE_DIRECTORY}/${shareId}/${file.id}`, { force: true });
+        throw new BadRequestException(this.i18n.t("file.blockedType"));
+      }
       await this.prisma.file.create({
         data: {
           id: file.id,

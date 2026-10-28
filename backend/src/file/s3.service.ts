@@ -23,6 +23,7 @@ import {
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import * as contentDisposition from "content-disposition";
 import { PrismaService } from "src/prisma/prisma.service";
+import { isBlockedFileName } from "src/utils/fileNamePolicy.util";
 import { ConfigService } from "src/config/config.service";
 import { I18nService } from "nestjs-i18n";
 import * as crypto from "crypto";
@@ -227,6 +228,9 @@ export class S3FileService {
 
     const isLastChunk = chunk.index == chunk.total - 1;
     if (isLastChunk) {
+      if (isBlockedFileName(file.name)) {
+        throw new BadRequestException(this.i18n.t("file.blockedType"));
+      }
       const fileSize: number = await this.getFileSize(shareId, file.name);
 
       await this.prisma.file.create({

@@ -14,6 +14,12 @@ export const BLOCKED_EXTENSIONS: readonly string[] = [
   "jar",
   "apk",
   "dll",
+  "shtml",
+  "xht",
+  "mjs",
+  "svgz",
+  "hta",
+  "vbs",
 ];
 
 export function isBlockedFileName(name: string): boolean {

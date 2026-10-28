@@ -29,6 +29,12 @@ for (const name of [
   "run.jar",
   "run.apk",
   "run.dll",
+  "run.shtml",
+  "run.xht",
+  "run.mjs",
+  "run.svgz",
+  "run.hta",
+  "run.vbs",
 ]) {
   test(`blocks unsafe filename ${JSON.stringify(name)}`, async () => {
     const { isBlockedFileName } = await import(

@@ -120,6 +120,29 @@ for (const name of ["evil.html", "photo.SVG.png", ".htaccess"]) {
   });
 }
 
+test("renaming between chunks cannot bypass the blocklist", async () => {
+  const share = await newShare();
+  const first = await post(
+    `shares/${share.id}/files?name=a.txt&chunkIndex=0&totalChunks=2`,
+    "part one",
+    true,
+  );
+  assert.equal(first.status, 201);
+  const file = await first.json();
+  const second = await post(
+    `shares/${share.id}/files?id=${file.id}&name=evil.html&chunkIndex=1&totalChunks=2`,
+    "<script>1</script>",
+    true,
+  );
+  assert.equal(second.status, 400);
+  assert.match((await second.json()).message, /This file type is not allowed/);
+  assert.equal(
+    await prisma.file.count({ where: { shareId: share.id, name: "evil.html" } }),
+    0,
+  );
+  assert.equal(await prisma.file.count({ where: { shareId: share.id } }), 0);
+});
+
 test("default quota rejects a non-admin's 60 MB declared share", async () => {
   const response = await post("shares", {
     expiration: "1-day",

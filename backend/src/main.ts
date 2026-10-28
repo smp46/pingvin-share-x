@@ -53,7 +53,20 @@ async function bootstrap() {
   });
 
   app.use(cookieParser());
-  app.set("trust proxy", process.env.TRUST_PROXY === "true");
+  // Trust only a fixed number of proxy hops (cloudflared -> app = 1) so a
+  // client-supplied leftmost X-Forwarded-For entry cannot spoof req.ip.
+  const trustProxyHops = Number.parseInt(
+    process.env.TRUST_PROXY_HOPS ?? "1",
+    10,
+  );
+  app.set(
+    "trust proxy",
+    process.env.TRUST_PROXY === "true"
+      ? Number.isInteger(trustProxyHops) && trustProxyHops > 0
+        ? trustProxyHops
+        : 1
+      : false,
+  );
 
   await fs.promises.mkdir(`${DATA_DIRECTORY}/uploads/_temp`, {
     recursive: true,

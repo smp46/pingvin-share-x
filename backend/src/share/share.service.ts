@@ -555,8 +555,9 @@ export class ShareService {
         "share_not_found",
       );
 
-    await this.prisma.share.update({
-      where: { id: shareId },
+    // Never overwrite an existing reason (e.g. tripwire or ClamAV).
+    await this.prisma.share.updateMany({
+      where: { id: shareId, removedReason: null },
       data: { removedReason: reason },
     });
   }

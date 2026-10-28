@@ -230,7 +230,7 @@ else fail "10. password tripwire" "could not create share: $STATUS $(jqb .messag
 
 # --- 11 download tripwire ----------------------------------------------------
 section "Download-spray tripwire"
-note "needs TRUST_PROXY=true on the API so X-Forwarded-For is honoured (set in docker-compose.local.yml)"
+note "only demonstrates the rule when run directly against the app (TRUST_PROXY_HOPS=1 takes the rightmost X-Forwarded-For); through a real proxy the IP is the true client IP"
 if new_live_share; then
   get_token "$TMP/dl3.jar" "$S_ID"
   for i in $(seq 1 20); do

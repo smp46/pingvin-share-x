@@ -7,6 +7,7 @@ services:
       - 3001:3000
     environment:
       - TRUST_PROXY=true
+      - TRUST_PROXY_HOPS=1
     volumes:
       - "./data:/opt/app/backend/data:rw,z"
       - "./data/images:/opt/app/frontend/public/img:rw,z"
