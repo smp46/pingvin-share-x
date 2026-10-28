@@ -1,5 +1,7 @@
 import {
   BadRequestException,
+  HttpException,
+  HttpStatus,
   Injectable,
   InternalServerErrorException,
   NotFoundException,
@@ -26,7 +28,10 @@ import { I18nService } from "nestjs-i18n";
 import * as crypto from "crypto";
 import * as mime from "mime-types";
 import { byteToHumanSizeString } from "src/utils/fileSize.util";
-import { getUserActiveStorageUsage } from "src/utils/storageQuota.util";
+import {
+  getUserActiveStorageUsage,
+  resolveStorageQuota,
+} from "src/utils/storageQuota.util";
 import { File } from "./file.service";
 import { Readable } from "stream";
 import { validate as isValidUUID } from "uuid";
@@ -71,9 +76,63 @@ export class S3FileService {
       where: { id: shareId },
       include: {
         creator: true,
+        files: true,
         reverseShare: { include: { creator: true } },
       },
     });
+
+    if (share.uploadLocked) {
+      throw new BadRequestException(this.i18n.t("file.alreadyCompleted"));
+    }
+
+    const uploadedBytes = this.multipartUploads[file.id]?.uploadedBytes ?? 0;
+    const shareSize = share.files.reduce(
+      (sum, file) => sum + parseInt(file.size, 10),
+      0,
+    );
+    let limit = parseInt(this.config.get("share.maxSize"), 10);
+    if (share.reverseShare?.maxShareSize) {
+      limit = parseInt(share.reverseShare.maxShareSize, 10);
+    } else if (share.creator?.shareSizeLimit) {
+      limit = parseInt(share.creator.shareSizeLimit, 10);
+    }
+    if (shareSize + uploadedBytes + buffer.byteLength > limit) {
+      throw new HttpException(
+        this.i18n.t("file.maxSizeExceeded"),
+        HttpStatus.PAYLOAD_TOO_LARGE,
+      );
+    }
+
+    const quotaOwner = share.reverseShare
+      ? share.reverseShare.creator
+      : share.creator;
+    const quotaOwnerId = share.reverseShare
+      ? share.reverseShare.creatorId
+      : share.creatorId;
+    const quotaLimit = resolveStorageQuota(
+      quotaOwner,
+      this.config.get("share.defaultStorageQuota"),
+    );
+    if (quotaOwnerId && quotaLimit !== null) {
+      const activeStorageUsage = await getUserActiveStorageUsage(
+        this.prisma,
+        quotaOwnerId,
+      );
+      const projectedUsage =
+        activeStorageUsage + uploadedBytes + buffer.byteLength;
+      if (projectedUsage > quotaLimit) {
+        const exceededSize = byteToHumanSizeString(projectedUsage - quotaLimit);
+        throw new BadRequestException(
+          share.reverseShare
+            ? this.i18n.t("file.reverseShareQuotaExceeded", {
+                args: { exceededSize },
+              })
+            : this.i18n.t("file.storageQuotaExceeded", {
+                args: { exceededSize },
+              }),
+        );
+      }
+    }
 
     try {
       // Initialize multipart upload if it's the first chunk
@@ -104,39 +163,6 @@ export class S3FileService {
         throw new InternalServerErrorException(
           this.i18n.t("file.s3SessionNotFound"),
         );
-      }
-
-      const quotaOwner = share?.reverseShare
-        ? share.reverseShare.creator
-        : share?.creator;
-      const quotaOwnerId = share?.reverseShare
-        ? share.reverseShare.creatorId
-        : share?.creatorId;
-
-      if (quotaOwnerId && quotaOwner?.storageQuotaLimit) {
-        const quotaLimit = parseInt(quotaOwner.storageQuotaLimit);
-        const activeStorageUsage = await getUserActiveStorageUsage(
-          this.prisma,
-          quotaOwnerId,
-        );
-        const projectedUsage =
-          activeStorageUsage +
-          multipartUpload.uploadedBytes +
-          buffer.byteLength;
-
-        if (projectedUsage > quotaLimit) {
-          const exceededBytes = projectedUsage - quotaLimit;
-          const exceededSize = byteToHumanSizeString(exceededBytes);
-          throw new BadRequestException(
-            share?.reverseShare
-              ? this.i18n.t("file.reverseShareQuotaExceeded", {
-                  args: { exceededSize },
-                })
-              : this.i18n.t("file.storageQuotaExceeded", {
-                  args: { exceededSize },
-                }),
-          );
-        }
       }
 
       const uploadId = multipartUpload.uploadId;
@@ -194,6 +220,7 @@ export class S3FileService {
         }
         delete this.multipartUploads[file.id];
       }
+      if (error instanceof HttpException) throw error;
       this.logger.error(error);
       throw new Error(this.i18n.t("file.s3UploadFailed"));
     }
@@ -237,27 +264,40 @@ export class S3FileService {
 
     const s3Instance = this.getS3Instance();
     const key = `${this.getS3Path()}${shareId}/${fileName}`;
-    const response = await s3Instance.send(
-      new GetObjectCommand({
-        Bucket: this.config.get("s3.bucketName"),
-        Key: key,
-        Range: rangeString,
-      }),
-    );
-
-    return {
-      metaData: {
-        id: fileId,
-        size: response.ContentLength?.toString() || "0",
-        name: fileName,
-        shareId: shareId,
-        createdAt: response.LastModified || new Date(),
-        mimeType:
-          mime.contentType(fileId.split(".").pop()) ||
-          "application/octet-stream",
-      },
-      file: response.Body as Readable,
-    } as File;
+    const metaData = {
+      ...file,
+      mimeType: mime.contentType(file.name) || "application/octet-stream",
+    };
+    try {
+      const response = await s3Instance.send(
+        new GetObjectCommand({
+          Bucket: this.config.get("s3.bucketName"),
+          Key: key,
+          Range: rangeString,
+        }),
+      );
+      const contentRange = response.ContentRange?.match(
+        /^bytes (\d+)-(\d+)\/(\d+)$/,
+      );
+      return {
+        metaData: {
+          ...metaData,
+          size:
+            contentRange?.[3] ??
+            response.ContentLength?.toString() ??
+            file.size,
+        },
+        file: response.Body as Readable,
+        range: contentRange
+          ? { start: Number(contentRange[1]), end: Number(contentRange[2]) }
+          : undefined,
+      };
+    } catch (error) {
+      if (error?.$metadata?.httpStatusCode === 416) {
+        return { metaData, isRangeNotSatisfiable: true };
+      }
+      throw error;
+    }
   }
 
   async remove(shareId: string, fileId: string) {

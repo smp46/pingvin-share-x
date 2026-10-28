@@ -14,5 +14,7 @@
   "s3SessionNotFound": "Multipart upload session not found.",
   "s3UploadFailed": "Multipart upload failed. The upload has been aborted.",
   "s3SizeError": "Could not retrieve file size",
-  "s3NotSupported": "Pre-signed operations are only supported for S3 storage."
+  "s3NotSupported": "Pre-signed operations are only supported for S3 storage.",
+  "blockedType": "This file type is not allowed for safety reasons",
+  "directUploadDisabled": "Direct uploads are disabled. Please retry using server chunks."
 }

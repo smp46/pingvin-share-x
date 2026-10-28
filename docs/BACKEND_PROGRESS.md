@@ -220,3 +220,9 @@ task-3-red.log, task-3-green-final.log. Runtime fixture handoff is in runtime-co
 
 Task 3: implementation and local checks complete; UI Step 3 remains unverified;
 awaiting task review.
+
+Ruling: Fall back from S3 direct multipart uploads to the existing server chunk route, and reject the bypass completion route, when implementing Task4 — upstream presigned uploads bypass the required per-chunk share/quota checks — cost if wrong: more backend bandwidth and clients holding old multipart sessions must retry via the guarded path.
+Ruling: Extend Task5 state checks to ShareTokenSecurity on POST :id/token — it currently ignores removedReason, which would break Task6's next-attempt auto-revoked response — cost if wrong: existing token requests for revoked shares change to explicit share_removed as intended.
+
+Task 3: complete (commits 6120b15..e96c211, spec compliant implementation and task quality approved; browser Step3 unverified after chooser timeouts).
+Task 3: minor (deferred): browser normal/reverse completed-upload modal proof remains unverified; HTTP end-to-end paths passed4/4.

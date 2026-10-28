@@ -14,6 +14,7 @@ import { Readable } from "stream";
 import { PrismaService } from "../prisma/prisma.service";
 import { EmailService } from "src/email/email.service";
 import { I18nService } from "nestjs-i18n";
+import { isBlockedFileName } from "src/utils/fileNamePolicy.util";
 
 const UPDATED_AT_THROTTLE_MS = 5 * 60 * 1000;
 const DOWNLOAD_NOTIFICATION_COOLDOWN_MS = 15 * 60 * 1000;
@@ -54,6 +55,9 @@ export class FileService {
     },
     shareId: string,
   ) {
+    if (chunk.index === 0 && isBlockedFileName(file.name)) {
+      throw new BadRequestException(this.i18n.t("file.blockedType"));
+    }
     await this.touchShare(shareId);
     const storageService = this.getStorageService();
     return storageService.create(data, chunk, file, shareId);
@@ -79,46 +83,23 @@ export class FileService {
   async createPreSignedUploadUrls(
     shareId: string,
     fileName: string,
-    totalChunks: number,
+    _totalChunks: number,
   ) {
-    await this.touchShare(shareId);
-    const share = await this.prisma.share.findFirst({
-      where: { id: shareId },
-      select: { storageProvider: true },
-    });
-    if (share?.storageProvider !== "S3") {
-      return { directToS3: false };
+    if (isBlockedFileName(fileName)) {
+      throw new BadRequestException(this.i18n.t("file.blockedType"));
     }
-    const res = await this.s3FileService.createPreSignedUploadUrls(
-      shareId,
-      fileName,
-      totalChunks,
-    );
-    return { directToS3: true, ...res };
+    // Direct S3 parts bypass the server's per-chunk size and quota checks.
+    return { directToS3: false };
   }
 
   async completePreSignedUpload(
-    shareId: string,
-    fileId: string,
-    fileName: string,
-    uploadId: string,
-    parts: Array<{ ETag: string; PartNumber: number }>,
+    _shareId: string,
+    _fileId: string,
+    _fileName: string,
+    _uploadId: string,
+    _parts: Array<{ ETag: string; PartNumber: number }>,
   ) {
-    await this.touchShare(shareId);
-    const share = await this.prisma.share.findFirst({
-      where: { id: shareId },
-      select: { storageProvider: true },
-    });
-    if (share?.storageProvider !== "S3") {
-      throw new BadRequestException(this.i18n.t("file.s3NotSupported"));
-    }
-    return this.s3FileService.completePreSignedUpload(
-      shareId,
-      fileId,
-      fileName,
-      uploadId,
-      parts,
-    );
+    throw new BadRequestException(this.i18n.t("file.directUploadDisabled"));
   }
 
   async abortPreSignedUpload(

@@ -12,7 +12,7 @@ export const configVariables = {
   general: {
     appName: {
       type: "string",
-      defaultValue: "Pingvin Share X",
+      defaultValue: "RV Files",
       secret: false,
     },
     appUrl: {
@@ -157,12 +157,12 @@ export const configVariables = {
     },
     maxExpiration: {
       type: "timespan",
-      defaultValue: "0 days",
+      defaultValue: "7 days",
       secret: false,
     },
     defaultExpiration: {
       type: "timespan",
-      defaultValue: "7 days",
+      defaultValue: "1 day",
       secret: false,
     },
     shareIdLength: {
@@ -172,7 +172,32 @@ export const configVariables = {
     },
     maxSize: {
       type: "filesize",
-      defaultValue: "1000000000",
+      defaultValue: "10000000",
+      secret: false,
+    },
+    defaultStorageQuota: {
+      type: "filesize",
+      defaultValue: "50000000",
+      secret: false,
+    },
+    tripwirePasswordLimit: {
+      type: "number",
+      defaultValue: "5",
+      secret: false,
+    },
+    tripwireDownloadLimit: {
+      type: "number",
+      defaultValue: "20",
+      secret: false,
+    },
+    tripwireDistinctIps: {
+      type: "number",
+      defaultValue: "5",
+      secret: false,
+    },
+    tripwireWindowMinutes: {
+      type: "number",
+      defaultValue: "10",
       secret: false,
     },
     zipCompressionLevel: {

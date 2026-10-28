@@ -22,6 +22,12 @@ import { FileService } from "./file.service";
 import { FileSecurityGuard } from "./guard/fileSecurity.guard";
 import * as mime from "mime-types";
 
+const FILE_SECURITY_HEADERS = {
+  "X-Content-Type-Options": "nosniff",
+  "Content-Security-Policy":
+    "sandbox; default-src 'none'; img-src 'self'; media-src 'self'",
+};
+
 const VALID_ID_REGEX = /^[a-zA-Z0-9-]*={0,2}$/;
 
 function getValidRecipientId(recipientId?: string): string | undefined {
@@ -127,6 +133,7 @@ export class FileController {
     const zipStream = await this.fileService.getZip(shareId);
 
     res.set({
+      ...FILE_SECURITY_HEADERS,
       "Content-Type": "application/zip",
       "Content-Disposition": contentDisposition(`${shareId}.zip`),
     });
@@ -157,29 +164,10 @@ export class FileController {
     @Query("recipient") recipientId?: string,
   ) {
     const isDownload = download === "true";
-    const storageProvider = await this.fileService.getStorageProvider(shareId);
-
-    if (storageProvider === "S3") {
-      const url = await this.fileService.getPreSignedDownloadUrl(
-        shareId,
-        fileId,
-        isDownload,
-      );
-      const fileName = await this.fileService.getFileName(shareId, fileId);
-      if (isDownload) {
-        void this.fileService.notifyRecipientDownload(
-          shareId,
-          fileName,
-          getValidRecipientId(recipientId),
-        );
-      }
-      res.status(302).setHeader("Location", url);
-      return;
-    }
-
     const file = await this.fileService.get(shareId, fileId, req.headers.range);
 
     const totalSize = parseInt(file.metaData.size, 10);
+    res.set(FILE_SECURITY_HEADERS);
 
     if (file.isRangeNotSatisfiable) {
       res.status(HttpStatus.REQUESTED_RANGE_NOT_SATISFIABLE);
@@ -202,10 +190,10 @@ export class FileController {
     const headers: Record<string, string | number> = {
       "Content-Type": mimeType,
       "Accept-Ranges": "bytes",
-      "X-Content-Type-Options": "nosniff",
+      ...FILE_SECURITY_HEADERS,
       "Content-Disposition": contentDisposition(
         file.metaData.name,
-        isDownload ? undefined : { type: "inline" },
+        !isDownload && isPassiveMedia ? { type: "inline" } : undefined,
       ),
     };
 
@@ -216,10 +204,6 @@ export class FileController {
       headers["Content-Length"] = file.range.end - file.range.start + 1;
     } else {
       headers["Content-Length"] = totalSize;
-    }
-
-    if (!isPassiveMedia) {
-      headers["Content-Security-Policy"] = "sandbox";
     }
 
     res.set(headers);

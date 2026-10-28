@@ -23,7 +23,10 @@ import { ReverseShareService } from "src/reverseShare/reverseShare.service";
 import { SystemService } from "src/system/system.service";
 import { parseRelativeDateToAbsolute } from "src/utils/date.util";
 import { byteToHumanSizeString } from "src/utils/fileSize.util";
-import { getUserActiveStorageUsage } from "src/utils/storageQuota.util";
+import {
+  getUserActiveStorageUsage,
+  resolveStorageQuota,
+} from "src/utils/storageQuota.util";
 import { generateShareId } from "src/utils/shareId.util";
 import { SHARE_DIRECTORY } from "../constants";
 import { CreateShareDTO } from "./dto/createShare.dto";
@@ -56,6 +59,7 @@ export class ShareService {
       : null;
 
     const quotaOwner = reverseShare ? reverseShare.creator : user;
+    const quotaOwnerId = quotaOwner?.id;
 
     if (!reverseShare && user) {
       if (user.allowShare === false) {
@@ -89,11 +93,14 @@ export class ShareService {
         throw new BadRequestException(this.i18n.t("share.notEnoughSpace"));
       }
 
-      if (quotaOwner?.storageQuotaLimit) {
-        const quotaLimit = parseInt(quotaOwner.storageQuotaLimit);
+      const quotaLimit = resolveStorageQuota(
+        quotaOwner,
+        this.config.get("share.defaultStorageQuota"),
+      );
+      if (quotaOwnerId && quotaLimit !== null) {
         const activeStorageUsage = await getUserActiveStorageUsage(
           this.prisma,
-          quotaOwner.id,
+          quotaOwnerId,
         );
 
         const projectedUsage = activeStorageUsage + share.size;

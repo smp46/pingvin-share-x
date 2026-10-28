@@ -15,7 +15,10 @@ import { resolve, sep } from "path";
 import { ConfigService } from "src/config/config.service";
 import { PrismaService } from "src/prisma/prisma.service";
 import { byteToHumanSizeString } from "src/utils/fileSize.util";
-import { getUserActiveStorageUsage } from "src/utils/storageQuota.util";
+import {
+  getUserActiveStorageUsage,
+  resolveStorageQuota,
+} from "src/utils/storageQuota.util";
 import { validate as isValidUUID } from "uuid";
 import { SHARE_DIRECTORY } from "../constants";
 import { Readable } from "stream";
@@ -114,8 +117,11 @@ export class LocalFileService {
       ? share.reverseShare.creatorId
       : share.creatorId;
 
-    if (quotaOwnerId && quotaOwner?.storageQuotaLimit) {
-      const quotaLimit = parseInt(quotaOwner.storageQuotaLimit);
+    const quotaLimit = resolveStorageQuota(
+      quotaOwner,
+      this.config.get("share.defaultStorageQuota"),
+    );
+    if (quotaOwnerId && quotaLimit !== null) {
       const activeStorageUsage = await getUserActiveStorageUsage(
         this.prisma,
         quotaOwnerId,

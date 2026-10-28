@@ -9,5 +9,10 @@
   "invalidType": "Config variable must be of type {type}",
   "shareIdLengthValidation": "Share ID length must be between 2 and 50",
   "zipCompressionLevelValidation": "Zip compression level must be between 0 and 9",
-  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
+  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml",
+  "defaultStorageQuota": "Default per-user storage quota",
+  "tripwirePasswordLimit": "Wrong password limit",
+  "tripwireDownloadLimit": "Download activity limit",
+  "tripwireDistinctIps": "Distinct IP limit",
+  "tripwireWindowMinutes": "Activity window in minutes"
 }
