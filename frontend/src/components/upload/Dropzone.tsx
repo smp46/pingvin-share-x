@@ -6,6 +6,7 @@ import {
   Text,
   useMantineColorScheme,
 } from "@mantine/core";
+import { motion, useReducedMotion } from "framer-motion";
 import { Dropzone as MantineDropzone } from "@mantine/dropzone";
 import React, { ForwardedRef, useEffect, useRef, useState } from "react";
 import { TbCloudUpload, TbFolder } from "react-icons/tb";
@@ -15,6 +16,8 @@ import { FileUpload } from "../../types/File.type";
 import { byteToHumanSizeString } from "../../utils/fileSize.util";
 import toast from "../../utils/toast.util";
 import { getFilesFromEvent } from "../../utils/file.util";
+import { filterBlockedFiles } from "../../utils/blockedFiles.util";
+import en from "../../i18n/translations/en-US";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -24,7 +27,14 @@ const useStyles = createStyles((theme) => ({
 
   dropzone: {
     borderWidth: 1,
-    paddingBottom: 50,
+    padding: "42px 20px 54px",
+    borderStyle: "dashed",
+    borderColor: theme.colorScheme === "dark" ? "#65558d" : "#c6b7ed",
+    background:
+      theme.colorScheme === "dark"
+        ? "linear-gradient(135deg, #252037, #171d2c)"
+        : "linear-gradient(135deg, #faf8ff, #f0f5ff)",
+    transition: "border-color 180ms ease, background 180ms ease",
   },
 
   icon: {
@@ -69,8 +79,29 @@ const Dropzone = ({
 }) => {
   const { classes } = useStyles();
 
+  const [isDragging, setIsDragging] = useState(false);
+  const reduceMotion = useReducedMotion();
+
+  // All ingress routes share the same policy: picker, drop, folder and paste.
+  const acceptFiles = (incomingFiles: FileUpload[]) => {
+    if (isUploading) return;
+    const files = filterBlockedFiles(incomingFiles, (name) => {
+      toast.error(
+        <FormattedMessage
+          id="upload.dropzone.notify.blocked-file"
+          defaultMessage={en["upload.dropzone.notify.blocked-file"]}
+          values={{ name }}
+        />,
+      );
+    }).map((file) => {
+      file.uploadingProgress = 0;
+      return file;
+    });
+    if (files.length) onFilesChanged(files);
+  };
+
   useClipboardPaste({
-    onFiles: onFilesChanged,
+    onFiles: acceptFiles,
     disabled: isUploading,
   });
   const openRef = useRef<() => void>();
@@ -97,12 +128,7 @@ const Dropzone = ({
     if (!filesList) return;
     const filesArray = Array.from(filesList) as FileUpload[];
 
-    const files = filesArray.map((newFile) => {
-      newFile.uploadingProgress = 0;
-      return newFile;
-    });
-
-    onFilesChanged(files);
+    acceptFiles(filesArray);
     event.target.value = "";
   };
 
@@ -122,7 +148,17 @@ const Dropzone = ({
   }
 
   return (
-    <div className={classes.wrapper}>
+    <motion.div
+      className={classes.wrapper}
+      animate={{
+        scale: isDragging && !reduceMotion ? 1.015 : 1,
+        boxShadow: isDragging
+          ? "0 0 32px rgba(139, 92, 246, 0.24)"
+          : "0 0 0px rgba(139, 92, 246, 0)",
+      }}
+      transition={{ duration: reduceMotion ? 0 : 0.2 }}
+      style={{ borderRadius: 16 }}
+    >
       <input
         type="file"
         ref={folderInputRef}
@@ -136,17 +172,17 @@ const Dropzone = ({
       />
       <MantineDropzone
         onReject={(e) => {
-          toast.error(e[0].errors[0].message);
+          setIsDragging(false);
+          if (e[0]?.errors[0]) toast.error(e[0].errors[0].message);
         }}
+        onDragEnter={() => !isUploading && setIsDragging(true)}
+        onDragLeave={() => setIsDragging(false)}
         disabled={isUploading}
         openRef={openRef as ForwardedRef<() => void>}
         getFilesFromEvent={getFilesFromEvent}
         onDrop={(files: FileUpload[]) => {
-          files = files.map((newFile) => {
-            newFile.uploadingProgress = 0;
-            return newFile;
-          });
-          onFilesChanged(files);
+          setIsDragging(false);
+          acceptFiles(files);
         }}
         className={classes.dropzone}
         radius="md"
@@ -185,6 +221,12 @@ const Dropzone = ({
               />
             </span>
           </Text>
+          <Text align="center" size="xs" mt="md" color="dimmed">
+            <FormattedMessage
+              id="upload.dropzone.quota-hint"
+              defaultMessage={en["upload.dropzone.quota-hint"]}
+            />
+          </Text>
         </div>
       </MantineDropzone>
       <Center>
@@ -208,7 +250,7 @@ const Dropzone = ({
           </Button>
         )}
       </Center>
-    </div>
+    </motion.div>
   );
 };
 export default Dropzone;

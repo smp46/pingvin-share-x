@@ -26,6 +26,7 @@ import { LOCALES } from "../i18n/locales";
 import authService from "../services/auth.service";
 import configService from "../services/config.service";
 import userService from "../services/user.service";
+import "../styles/tailwind.css";
 import GlobalStyle from "../styles/global.style";
 import globalStyle from "../styles/mantine.style";
 import Config from "../types/config.type";
@@ -138,7 +139,15 @@ function App({ Component, pageProps }: AppProps) {
   );
   const getStringConfigValue = (key: string, fallback = ""): string => {
     const config = configVariables?.find((item) => item.key === key);
-    return (config?.value ?? config?.defaultValue ?? fallback).trim();
+    const value = (config?.value ?? config?.defaultValue ?? fallback).trim();
+    // Adopt the new radius for installations still using the upstream seed default.
+    if (
+      key === "appearance.themeRadius" &&
+      config?.defaultValue === "sm" &&
+      (!value || value === "sm")
+    )
+      return "md";
+    return value;
   };
 
   const customCss = getStringConfigValue("appearance.customCss");
@@ -149,7 +158,7 @@ function App({ Component, pageProps }: AppProps) {
   const themePrimaryColorOverrideRaw = getStringConfigValue(
     "appearance.themePrimaryColorOverride",
   );
-  const themeRadiusRaw = getStringConfigValue("appearance.themeRadius", "sm");
+  const themeRadiusRaw = getStringConfigValue("appearance.themeRadius", "md");
   const themeColorSchemeRaw = getStringConfigValue(
     "appearance.themeColorScheme",
     "system",
@@ -176,7 +185,7 @@ function App({ Component, pageProps }: AppProps) {
     themeRadiusRaw,
   )
     ? themeRadiusRaw
-    : "sm";
+    : "md";
 
   const adminDefaultColorScheme =
     themeColorSchemeRaw === "light" || themeColorSchemeRaw === "dark"

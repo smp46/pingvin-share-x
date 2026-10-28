@@ -1,4 +1,6 @@
 export default {
+  "app.description": "RV Files — simple, secure file sharing.",
+
   // Navbar
   "navbar.upload": "Upload",
   "navbar.signin": "Sign in",
@@ -34,6 +36,34 @@ export default {
 
   "home.button.start": "Get started",
   "home.button.source": "Source code",
+  "home.rv.meta": "Secure file sharing",
+  "home.rv.eyebrow": "Your files. A safer way forward.",
+  "home.rv.title": "Share files. Not risks.",
+  "home.rv.title.first": "Share files.",
+  "home.rv.title.second": "Not risks.",
+  "home.rv.description":
+    "Send what matters with a little more peace of mind. Private links, built-in tripwires, and clear safety details for every recipient.",
+  "home.rv.cta": "Share a file",
+  "home.rv.account": "Create an account",
+  "home.rv.feature.links.title": "Unguessable links",
+  "home.rv.feature.links.text":
+    "Every share gets a random, 128-bit link. Access starts with the people you choose to share it with.",
+  "home.rv.feature.tripwire.title": "Tripwire protection",
+  "home.rv.feature.tripwire.text":
+    "Too many wrong passwords or unusual download activity? Automatic tripwires can revoke the share.",
+  "home.rv.feature.card.title": "Safety card for recipients",
+  "home.rv.feature.card.text":
+    "Give recipients a clear view of the files, expiry, and protection details before they download.",
+  "home.rv.features.label": "Sharing protections",
+  "home.rv.preview.label": "Example of a protected file share",
+  "home.rv.preview.file": "Project notes.pdf",
+  "home.rv.preview.ready": "Ready to share · 2.4 MB",
+  "home.rv.preview.link": "/s/4hQ7x…k9Z2",
+  "home.rv.preview.protection": "Tripwire enabled",
+  "home.rv.preview.expiry": "Expires in 1 day",
+  "home.rv.preview.badge": "A safer handoff",
+  "home.rv.preview.badge.text": "Clarity on the receiving end.",
+  "home.rv.bottom": "Small files. Thoughtfully shared.",
   // END /
 
   // /auth/signin
@@ -180,6 +210,20 @@ export default {
   "account.shares.table.name": "Name",
   "account.shares.table.description": "Description",
   "account.shares.table.visitors": "Visitors",
+  "account.shares.table.downloads": "Downloads",
+  "account.shares.badge.tripwire": "Tripwire",
+  "account.shares.badge.revoked": "Revoked",
+  "account.shares.button.revoke": "Revoke",
+  "account.shares.button.activity": "Activity",
+  "account.shares.modal.revoke.title": "Revoke share: {share}",
+  "account.shares.modal.revoke.description":
+    "The link will stop working immediately. The share stays in your list marked as revoked.",
+  "account.shares.modal.activity.title": "Activity: {share}",
+  "account.shares.modal.activity.empty": "No activity yet.",
+  "account.shares.activity.view": "Viewed",
+  "account.shares.activity.download": "Downloaded",
+  "account.shares.activity.bad_password": "Wrong password",
+  "account.shares.activity.unknown-browser": "Unknown browser",
   "account.shares.table.expiresAt": "Expires on",
   "account.shares.table.createdAt": "Created on",
   "account.shares.table.size": "Size",
@@ -382,6 +426,9 @@ export default {
 
   // Dropzone.tsx
   "upload.dropzone.title": "Upload files",
+  "upload.dropzone.quota-hint": "Max 10 MB per share · 50 MB per account",
+  "upload.dropzone.notify.blocked-file":
+    "“{name}” was blocked. Executable and active-content file types are not allowed.",
   "upload.dropzone.description.mobile":
     "Tap here to select individual files, photos, or videos. To upload a folder, use the button below. Maximum total upload size: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder":
@@ -471,11 +518,11 @@ export default {
   "share.fileCount":
     "{count, plural, =1 {# file} other {# files}} · {size} (zip file may be smaller due to compression)",
   "share.copy-text-contents": "Copy file contents to clipboard",
-  "share.error.visitor-limit-exceeded.title": "Visitor limit exceeded",
+  "share.error.visitor-limit-exceeded.title": "View limit reached",
   "share.error.visitor-limit-exceeded.description":
     "The visitor limit for this share has been exceeded.",
-  "share.error.removed.title": "Share removed",
-  "share.error.not-found.title": "Share not found",
+  "share.error.removed.title": "This link was revoked",
+  "share.error.not-found.title": "Link not found",
   "share.error.not-found.description":
     "The share you're looking for doesn't exist.",
   "share.error.access-denied.title": "Private share",
@@ -486,6 +533,27 @@ export default {
     "This share is restricted to specific recipients. Please log in to access it.",
   "share.error.restricted.button": "Log in",
 
+  "share.error.expired.title": "This link has expired",
+  "share.error.expired.description":
+    "Ask the sender for a new link to access these files.",
+  "share.safety.title": "About this share",
+  "share.safety.shared-by": "Shared by {sharedBy}",
+  "share.safety.anonymous": "Anonymous",
+  "share.safety.unknown-type": "Unknown type",
+  "share.safety.extension-note":
+    "File types are inferred from filename extensions.",
+  "share.safety.blocked-list":
+    "Type checked against blocked list ({count} types)",
+  "share.safety.attachment":
+    "Downloads as attachment — never runs in your browser",
+  "share.safety.unguessable": "Link is 128-bit unguessable",
+  "share.safety.password": "Password protected",
+  "share.safety.no-password": "No password",
+  "share.safety.views": "{views} of {maxViews} views used",
+  "share.safety.unlimited-views": "Unlimited views",
+  "share.expiry.no-expiry": "No expiry",
+  "share.expiry.expired": "Expired",
+  "share.expiry.remaining": "Time remaining",
   "share.modal.password.title": "Password required",
   "share.modal.password.description":
     "Please enter the password to access this share.",

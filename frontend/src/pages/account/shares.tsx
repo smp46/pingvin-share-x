@@ -1,5 +1,6 @@
 import {
   ActionIcon,
+  Badge,
   Box,
   Button,
   Center,
@@ -18,6 +19,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
   TbPlusMinus,
+  TbActivity,
+  TbBan,
   TbInfoCircle,
   TbLink,
   TbLock,
@@ -38,6 +41,17 @@ import shareService from "../../services/share.service";
 import { MyShare } from "../../types/share.type";
 import toast from "../../utils/toast.util";
 
+const browserName = (ua: string | null) => {
+  if (!ua) return null;
+  if (/Edg\//.test(ua)) return "Edge";
+  if (/OPR\/|Opera/.test(ua)) return "Opera";
+  if (/Firefox\//.test(ua)) return "Firefox";
+  if (/Chrome\/|CriOS/.test(ua)) return "Chrome";
+  if (/Safari\//.test(ua)) return "Safari";
+  if (/curl\//.test(ua)) return "curl";
+  return null;
+};
+
 const MyShares = () => {
   const modals = useModals();
   const clipboard = useClipboard();
@@ -47,6 +61,35 @@ const MyShares = () => {
   const theme = useMantineTheme();
 
   const [shares, setShares] = useState<MyShare[]>();
+
+  const showActivity = async (shareId: string) => {
+    let events: Awaited<ReturnType<typeof shareService.getActivity>> = [];
+    try {
+      events = await shareService.getActivity(shareId);
+    } catch {
+      toast.error(t("common.error.unknown"));
+      return;
+    }
+    modals.openModal({
+      title: t("account.shares.modal.activity.title", { share: shareId }),
+      children: events.length ? (
+        <Stack spacing={6}>
+          {events.map((e, i) => (
+            <Text size="sm" key={i}>
+              {t(`account.shares.activity.${e.type}`)} ·{" "}
+              {moment(e.createdAt).fromNow()} ·{" "}
+              {browserName(e.userAgent) ??
+                t("account.shares.activity.unknown-browser")}
+            </Text>
+          ))}
+        </Stack>
+      ) : (
+        <Text size="sm">
+          <FormattedMessage id="account.shares.modal.activity.empty" />
+        </Text>
+      ),
+    });
+  };
 
   useEffect(() => {
     shareService.getMyShares().then((shares) => setShares(shares));
@@ -93,6 +136,9 @@ const MyShares = () => {
 
                 <th>
                   <FormattedMessage id="account.shares.table.visitors" />
+                </th>
+                <th>
+                  <FormattedMessage id="account.shares.table.downloads" />
                 </th>
                 <th>
                   <FormattedMessage id="account.shares.table.expiresAt" />
@@ -145,7 +191,31 @@ const MyShares = () => {
                           ) : null)}
                       </Group>
                     </td>
-                    <td>{share.name}</td>
+                    <td>
+                      <Group spacing="xs">
+                        {share.name}
+                        {share.removedReason && (
+                          <HoverTip label={share.removedReason}>
+                            <Badge
+                              size="sm"
+                              color={
+                                share.removedReason.startsWith("Auto-revoked")
+                                  ? "red"
+                                  : "gray"
+                              }
+                            >
+                              {share.removedReason.startsWith(
+                                "Auto-revoked",
+                              ) ? (
+                                <FormattedMessage id="account.shares.badge.tripwire" />
+                              ) : (
+                                <FormattedMessage id="account.shares.badge.revoked" />
+                              )}
+                            </Badge>
+                          </HoverTip>
+                        )}
+                      </Group>
+                    </td>
                     <td>
                       {share.security?.maxViews ? (
                         <FormattedMessage
@@ -159,6 +229,7 @@ const MyShares = () => {
                         share.views
                       )}
                     </td>
+                    <td>{share.downloads}</td>
                     <td>
                       {moment(share.expiration).unix() === 0 ? (
                         <FormattedMessage id="account.shares.table.expiry-never" />
@@ -232,6 +303,60 @@ const MyShares = () => {
                             <TbLink />
                           </ActionIcon>
                         </HoverTip>
+                        <HoverTip label={t("account.shares.button.activity")}>
+                          <ActionIcon
+                            color="grape"
+                            variant="light"
+                            size={25}
+                            onClick={() => showActivity(share.id)}
+                          >
+                            <TbActivity />
+                          </ActionIcon>
+                        </HoverTip>
+                        {!share.removedReason && (
+                          <HoverTip label={t("account.shares.button.revoke")}>
+                            <ActionIcon
+                              color="orange"
+                              variant="light"
+                              size={25}
+                              onClick={() => {
+                                modals.openConfirmModal({
+                                  title: t(
+                                    "account.shares.modal.revoke.title",
+                                    {
+                                      share: share.id,
+                                    },
+                                  ),
+                                  children: (
+                                    <Text size="sm">
+                                      <FormattedMessage id="account.shares.modal.revoke.description" />
+                                    </Text>
+                                  ),
+                                  confirmProps: { color: "red" },
+                                  labels: {
+                                    confirm: t("account.shares.button.revoke"),
+                                    cancel: t("common.button.cancel"),
+                                  },
+                                  onConfirm: async () => {
+                                    await shareService.revoke(share.id);
+                                    setShares(
+                                      shares.map((item) =>
+                                        item.id === share.id
+                                          ? {
+                                              ...item,
+                                              removedReason: "Revoked by owner",
+                                            }
+                                          : item,
+                                      ),
+                                    );
+                                  },
+                                });
+                              }}
+                            >
+                              <TbBan />
+                            </ActionIcon>
+                          </HoverTip>
+                        )}
                         <HoverTip label={t("common.button.delete")}>
                           <ActionIcon
                             color="red"

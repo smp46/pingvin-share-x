@@ -53,6 +53,10 @@ const get = (
     ? configVariable.defaultValue
     : (configVariable.value ?? configVariable.defaultValue);
 
+  // Existing installations may still return the upstream default name.
+  if (key === "general.appName" && /^Pingvin Share(?: X)?$/i.test(value.trim()))
+    return "RV Files";
+
   if (configVariable.type == "number" || configVariable.type == "filesize")
     return parseInt(value);
   if (configVariable.type == "boolean") return value == "true";

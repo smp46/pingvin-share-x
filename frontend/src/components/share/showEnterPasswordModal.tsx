@@ -9,6 +9,7 @@ import useTranslate, {
 const showEnterPasswordModal = (
   modals: ModalsContextProps,
   submitCallback: (password: string) => Promise<void>,
+  initialWrong = false,
 ) => {
   const t = translateOutsideContext();
   return modals.openModal({
@@ -16,17 +17,27 @@ const showEnterPasswordModal = (
     withCloseButton: false,
     closeOnEscape: false,
     title: t("share.modal.password.title"),
-    children: <Body submitCallback={submitCallback} />,
+    children: (
+      <PasswordModalBody
+        submitCallback={submitCallback}
+        initialWrong={initialWrong}
+      />
+    ),
   });
 };
 
-const Body = ({
+export const PasswordModalBody = ({
   submitCallback,
+  initialWrong = false,
 }: {
   submitCallback: (password: string) => Promise<void>;
+  initialWrong?: boolean;
 }) => {
   const [password, setPassword] = useState("");
-  const [passwordWrong, setPasswordWrong] = useState(false);
+  const [passwordError, setPasswordError] = useState(
+    initialWrong ? "share.modal.error.invalid-password" : "",
+  );
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const t = useTranslate();
   return (
     <Stack align="stretch">
@@ -35,21 +46,40 @@ const Body = ({
       </Text>
 
       <form
-        onSubmit={(e) => {
+        onSubmit={async (e) => {
           e.preventDefault();
-          submitCallback(password);
+          if (isSubmitting) return;
+          setIsSubmitting(true);
+          setPasswordError("");
+          try {
+            await submitCallback(password);
+          } catch (failure) {
+            const code = (
+              failure as { response?: { data?: { error?: string } } }
+            )?.response?.data?.error;
+            setPasswordError(
+              code === "wrong_password"
+                ? "share.modal.error.invalid-password"
+                : "common.error.unknown",
+            );
+          } finally {
+            setIsSubmitting(false);
+          }
         }}
       >
         <Stack>
           <PasswordInput
             variant="filled"
             placeholder={t("share.modal.password")}
-            error={passwordWrong && t("share.modal.error.invalid-password")}
-            onFocus={() => setPasswordWrong(false)}
-            onChange={(e) => setPassword(e.target.value)}
+            error={passwordError ? t(passwordError) : undefined}
+            aria-label={t("share.modal.password")}
+            onChange={(e) => {
+              setPassword(e.target.value);
+              setPasswordError("");
+            }}
             value={password}
           />
-          <Button type="submit">
+          <Button type="submit" loading={isSubmitting}>
             <FormattedMessage id="common.button.submit" />
           </Button>
         </Stack>

@@ -1,6 +1,17 @@
 import User from "./user.type";
 
+export type ShareSafety = {
+  sharedBy: string | null;
+  views: number;
+  maxViews: number | null;
+  hasPassword: boolean;
+  blockedExtensions: string[];
+  expiresAt: string | null;
+};
+
 export type Share = {
+  safety?: ShareSafety;
+  createdAt?: string;
   id: string;
   name?: string;
   files: any;
@@ -46,8 +57,10 @@ export type ShareMetaData = {
   isZipReady: boolean;
 };
 
-export type MyShare = Omit<Share, "hasPassword"> & {
+export type MyShare = Omit<Share, "hasPassword" | "createdAt"> & {
   views: number;
+  downloads: number;
+  removedReason: string | null;
   createdAt: Date;
   recipients: string[];
   security: MyShareSecurity;

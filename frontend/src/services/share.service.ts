@@ -70,6 +70,13 @@ const update = async (id: string, share: UpdateShare): Promise<MyShare> => {
   return (await api.patch(`shares/${id}`, share)).data;
 };
 
+const getActivity = async (
+  id: string,
+): Promise<{ type: string; createdAt: string; userAgent: string | null }[]> => {
+  if (!isValidId(id)) throw new Error("Invalid ID");
+  return (await api.get(`shares/${id}/activity`)).data;
+};
+
 const expire = async (id: string) => {
   if (!isValidId(id)) throw new Error("Invalid ID");
   await api.post(`shares/${id}/expire`);
@@ -426,6 +433,7 @@ export default {
   remove,
   expire,
   revoke,
+  getActivity,
   getMetaData,
   doesFileSupportPreview,
   isShareTextFile,
