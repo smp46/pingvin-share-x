@@ -1,4 +1,8 @@
-import { GenericOidcProvider } from "./genericOidc.provider";
+import {
+  GenericOidcProvider,
+  OidcConfiguration,
+  OidcIdToken,
+} from "./genericOidc.provider";
 import { ConfigService } from "../../config/config.service";
 import { JwtService } from "@nestjs/jwt";
 import { Inject, Injectable } from "@nestjs/common";
@@ -25,5 +29,12 @@ export class MicrosoftProvider extends GenericOidcProvider {
     return `https://login.microsoftonline.com/${this.config.get(
       "oauth.microsoft-tenant",
     )}/v2.0/.well-known/openid-configuration`;
+  }
+
+  protected getExpectedIssuer(
+    configuration: OidcConfiguration,
+    idToken: OidcIdToken & { tid?: string },
+  ): string {
+    return configuration.issuer.replace("{tenantid}", idToken.tid);
   }
 }
