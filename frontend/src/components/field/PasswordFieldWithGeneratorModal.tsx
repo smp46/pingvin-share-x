@@ -47,7 +47,7 @@ const PasswordFieldWithGeneratorModal = ({
               <Container style={{ width: "100%", padding: 0, margin: 0 }}>
                 {children}
               </Container>
-              <HoverTip label={t("common.password-generator.button.label")}>
+              <HoverTip label={t("password-generator.button.label")}>
                 <ActionIcon onClick={passwordModalOpen}>
                   <TbRefresh />
                 </ActionIcon>
@@ -57,7 +57,7 @@ const PasswordFieldWithGeneratorModal = ({
         }}
       />
       <Modal
-        title={t("common.password-generator.button.label")}
+        title={t("password-generator.button.label")}
         zIndex={1000}
         opened={passwordModalOpened}
         onClose={passwordModalClose}

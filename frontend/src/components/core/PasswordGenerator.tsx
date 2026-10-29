@@ -18,6 +18,7 @@ import {
 import CopyButtonIcon from "../icon/CopyButtonIcon";
 import { TbRefresh } from "react-icons/tb";
 import * as yup from "yup";
+import useTranslate from "../../hooks/useTranslate.hook";
 
 const DefaultConfig: PasswordGeneratorConfig = {
   length: 14,
@@ -42,13 +43,24 @@ const PasswordGenerator = ({
   validationRules?: PasswordGeneratorValidationRules;
   callback: (password: string, config: PasswordGeneratorConfig) => void;
 }) => {
+  const t = useTranslate();
+  const {
+    length: { min: passwordMinLength, max: passwordMaxLength },
+  } = validationRules;
+
   const [generatedPassword, setGeneratedPassword] = useState("");
   const validationSchema = yup.object().shape({
     length: yup
       .number()
-      .required("Password length is required")
-      .min(validationRules.length.min)
-      .max(validationRules.length.max)
+      .required(t("common.error.field-required"))
+      .min(
+        passwordMinLength,
+        t("common.error.too-short", { length: passwordMinLength }),
+      )
+      .max(
+        passwordMaxLength,
+        t("common.error.too-long", { length: passwordMaxLength }),
+      )
       .transform((value) => value || undefined),
   });
   const passwordForm = useForm<PasswordGeneratorConfig>({
@@ -107,7 +119,7 @@ const PasswordGenerator = ({
             </ActionIcon>
             <CopyButtonIcon
               content={generatedPassword}
-              toastMessage="Passowrd has been copied to clipboard"
+              toastMessage={t("password-generator.copy.message")}
             />
           </Flex>
         </Flex>
@@ -121,23 +133,28 @@ const PasswordGenerator = ({
         >
           <Text>Options</Text>
           <NumberInput
-            label="Length"
+            min={passwordMinLength}
+            max={passwordMaxLength}
+            label={t("password-generator.rule.length.text")}
             type="number"
-            description={`Use value between ${validationRules.length.min} and ${validationRules.length.max}`}
+            description={t("common.password-input.in-between", {
+              min: passwordMinLength,
+              max: passwordMaxLength,
+            })}
             {...passwordForm.getInputProps("length")}
           />
           <Checkbox
-            label="Include Uppercase"
+            label={t("password-generator.rule.uppercase.text")}
             checked={passwordForm.getInputProps("includeUppercase").value}
             {...passwordForm.getInputProps("includeUppercase")}
           />
           <Checkbox
-            label="Include Numbers"
+            label={t("password-generator.rule.number.text")}
             checked={passwordForm.getInputProps("includeNumbers").value}
             {...passwordForm.getInputProps("includeNumbers")}
           />
           <Checkbox
-            label="Include Symbols"
+            label={t("password-generator.rule.symbol.text")}
             checked={passwordForm.getInputProps("includeSymbols").value}
             {...passwordForm.getInputProps("includeSymbols")}
           />
@@ -146,7 +163,7 @@ const PasswordGenerator = ({
         <Divider />
 
         <Button type="button" onClick={submitPassword} disabled={hasFormErrors}>
-          Use this password
+          {t("password-generator.use.button.label")}
         </Button>
       </Stack>
     </Container>
