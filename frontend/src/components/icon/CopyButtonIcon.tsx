@@ -8,15 +8,15 @@ type CopyButtonIconProps = ActionIconProps & {
   callback?: () => void;
 };
 
-const CopyButtonIcon = (props: CopyButtonIconProps) => {
+const CopyButtonIcon = ({ content, toastMessage, ...actionProps }: CopyButtonIconProps) => {
   const { checkState, copyContentToClipboard } = useCopyText({
-    toastMessage: props.toastMessage,
+    toastMessage: toastMessage,
   });
 
   return (
     <ActionIcon
-      {...props}
-      onClick={() => copyContentToClipboard(props.content)}
+      {...actionProps}
+      onClick={() => copyContentToClipboard(content)}
     >
       {checkState ? <TbCheck /> : <TbCopy />}
     </ActionIcon>

@@ -9,11 +9,15 @@ import {
   Stack,
   Text,
 } from "@mantine/core";
-import { useForm } from "@mantine/form";
-import { useCallback, useEffect, useState } from "react";
-import { PasswordGeneratorConfig } from "../../types/password.type";
+import { useForm, yupResolver } from "@mantine/form";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import {
+  PasswordGeneratorConfig,
+  PasswordGeneratorValidationRules,
+} from "../../types/password.type";
 import CopyButtonIcon from "../icon/CopyButtonIcon";
 import { TbRefresh } from "react-icons/tb";
+import * as yup from "yup";
 
 const DefaultConfig: PasswordGeneratorConfig = {
   length: 14,
@@ -22,16 +26,35 @@ const DefaultConfig: PasswordGeneratorConfig = {
   includeSymbols: false,
 };
 
+const DefaultValidationRules: PasswordGeneratorValidationRules = {
+  length: {
+    min: 6,
+    max: 9999,
+  },
+};
+
 const PasswordGenerator = ({
-  config,
+  config = DefaultConfig,
+  validationRules = DefaultValidationRules,
   callback,
 }: {
   config?: PasswordGeneratorConfig;
-  callback: (password: string) => void;
+  validationRules?: PasswordGeneratorValidationRules;
+  callback: (password: string, config: PasswordGeneratorConfig) => void;
 }) => {
   const [generatedPassword, setGeneratedPassword] = useState("");
+  const validationSchema = yup.object().shape({
+    length: yup
+      .number()
+      .required("Password length is required")
+      .min(validationRules.length.min)
+      .max(validationRules.length.max)
+      .transform((value) => value || undefined),
+  });
   const passwordForm = useForm<PasswordGeneratorConfig>({
-    initialValues: config || DefaultConfig,
+    initialValues: config,
+    validate: yupResolver(validationSchema),
+    validateInputOnChange: true,
   });
 
   const generatePassword = useCallback(() => {
@@ -49,6 +72,14 @@ const PasswordGenerator = ({
     }
     setGeneratedPassword(generatedPassword);
   }, [passwordForm.values]);
+
+  const submitPassword = () => {
+    callback(generatedPassword, passwordForm.values);
+  };
+
+  const hasFormErrors = useMemo(() => {
+    return Object.keys(passwordForm.errors).length > 0;
+  }, [passwordForm.errors]);
 
   useEffect(() => {
     generatePassword();
@@ -71,11 +102,8 @@ const PasswordGenerator = ({
             {generatedPassword}
           </Text>
           <Flex align={"center"} gap={"xs"}>
-            <ActionIcon>
-              <TbRefresh
-                style={{ cursor: "pointer" }}
-                onClick={generatePassword}
-              />
+            <ActionIcon onClick={generatePassword}>
+              <TbRefresh style={{ cursor: "pointer" }} />
             </ActionIcon>
             <CopyButtonIcon
               content={generatedPassword}
@@ -95,6 +123,7 @@ const PasswordGenerator = ({
           <NumberInput
             label="Length"
             type="number"
+            description={`Use value between ${validationRules.length.min} and ${validationRules.length.max}`}
             {...passwordForm.getInputProps("length")}
           />
           <Checkbox
@@ -116,7 +145,7 @@ const PasswordGenerator = ({
 
         <Divider />
 
-        <Button type="button" onClick={() => callback(generatedPassword)}>
+        <Button type="button" onClick={submitPassword} disabled={hasFormErrors}>
           Use this password
         </Button>
       </Stack>

@@ -6,7 +6,10 @@ import {
   PasswordInput,
   PasswordInputProps,
 } from "@mantine/core";
-import { PasswordGeneratorConfig } from "../../types/password.type";
+import {
+  PasswordGeneratorConfig,
+  PasswordGeneratorValidationRules,
+} from "../../types/password.type";
 import { HoverTip } from "../core/HoverTip";
 import { TbRefresh } from "react-icons/tb";
 import useTranslate from "../../hooks/useTranslate.hook";
@@ -15,12 +18,19 @@ import PasswordGenerator from "../core/PasswordGenerator";
 
 type PasswordFieldWithGeneratorModalProps = PasswordInputProps & {
   generatorConfig?: PasswordGeneratorConfig;
-  handlePasswordGenerate: (password: string) => void;
+  validationRules?: PasswordGeneratorValidationRules;
+  handlePasswordGenerate: (
+    password: string,
+    config: PasswordGeneratorConfig,
+  ) => void;
 };
 
-const PasswordFieldWithGeneratorModal = (
-  props: PasswordFieldWithGeneratorModalProps,
-) => {
+const PasswordFieldWithGeneratorModal = ({
+  handlePasswordGenerate,
+  validationRules,
+  generatorConfig,
+  ...passwordInputProps
+}: PasswordFieldWithGeneratorModalProps) => {
   const t = useTranslate();
   const [
     passwordModalOpened,
@@ -30,7 +40,7 @@ const PasswordFieldWithGeneratorModal = (
   return (
     <>
       <PasswordInput
-        {...props}
+        {...passwordInputProps}
         inputContainer={(children) => {
           return (
             <Flex justify={"space-between"} align={"center"} gap={"xs"}>
@@ -53,8 +63,10 @@ const PasswordFieldWithGeneratorModal = (
         onClose={passwordModalClose}
       >
         <PasswordGenerator
-          callback={(password) => {
-            props.handlePasswordGenerate(password);
+          config={generatorConfig}
+          validationRules={validationRules}
+          callback={(password, config) => {
+            handlePasswordGenerate(password, config);
             passwordModalClose();
           }}
         />

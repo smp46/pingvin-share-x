@@ -33,6 +33,7 @@ import { Timespan } from "../../../types/timespan.type";
 import { generateShareId } from "../../../utils/share.util";
 import CustomUrlInput from "../../share/CustomUrlInput";
 import PasswordFieldWithGeneratorModal from "../../field/PasswordFieldWithGeneratorModal";
+import { PasswordGeneratorConfig } from "../../../types/password.type";
 
 const showCreateUploadModal = (
   modals: ModalsContextProps,
@@ -170,6 +171,14 @@ const CreateUploadModalBody = ({
     },
     validate: yupResolver(validationSchema),
   });
+
+  const [passwordGeneratorConfig, setPasswordGeneratorConfig] =
+    useState<PasswordGeneratorConfig>({
+      length: 14,
+      includeNumbers: true,
+      includeUppercase: true,
+      includeSymbols: false,
+    });
 
   const handleRestrictToggle = (checked: boolean) => {
     form.setFieldValue("restrictToRecipients", checked);
@@ -462,10 +471,18 @@ const CreateUploadModalBody = ({
                         "upload.modal.accordion.security.password.label",
                       )}
                       autoComplete="new-password"
-                      handlePasswordGenerate={(password) => {
-                        form.setFieldValue("password", password);
-                      }}
                       {...form.getInputProps("password")}
+                      handlePasswordGenerate={(password, config) => {
+                        form.setFieldValue("password", password);
+                        setPasswordGeneratorConfig(config);
+                      }}
+                      validationRules={{
+                        length: {
+                          min: 3,
+                          max: 30,
+                        },
+                      }}
+                      generatorConfig={passwordGeneratorConfig}
                     />
                   )}
                   <NumberInput
