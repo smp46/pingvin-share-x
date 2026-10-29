@@ -18,4 +18,8 @@ export class GoogleProvider extends GenericOidcProvider {
   protected getDiscoveryUri(): string {
     return "https://accounts.google.com/.well-known/openid-configuration";
   }
+
+  protected getExpectedIssuer(): string[] {
+    return ["https://accounts.google.com", "accounts.google.com"];
+  }
 }
