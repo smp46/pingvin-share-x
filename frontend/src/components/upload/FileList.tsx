@@ -17,7 +17,7 @@ const getFileNameOrPath = (file: FileListItem) => {
     "webkitRelativePath" in file && file.webkitRelativePath
       ? file.webkitRelativePath
       : file.name;
-  return pathName.replace(/\\/g, "/").replace(/^\//, "");
+  return pathName;
 };
 
 const getFileSize = (file: FileListItem) => +file.size;

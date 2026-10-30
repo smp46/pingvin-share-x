@@ -56,6 +56,16 @@ const createFolder = <T,>(name: string, path: string): FolderNode<T> => ({
   size: 0,
 });
 
+const normalizePath = (raw: string) =>
+  raw
+    .replace(/\\/g, "/")
+    .split("/")
+    .reduce<string[]>((parts, segment) => {
+      if (segment === "..") parts.pop();
+      else if (segment && segment !== ".") parts.push(segment);
+      return parts;
+    }, []);
+
 const compactFolder = <T,>(folder: FolderNode<T>): FolderNode<T> => {
   let node = folder;
   while (node.files.length === 0 && node.folders.length === 1) {
@@ -83,9 +93,10 @@ const buildFileTree = <T,>(
   const foldersByPath = new Map<string, FolderNode<T>>([["", root]]);
 
   items.forEach((item, index) => {
-    const parts = getPath(item).split("/").filter(Boolean);
+    const rawPath = getPath(item);
+    const parts = normalizePath(rawPath);
     const filePath = parts.join("/");
-    const name = parts.pop() ?? "";
+    const name = parts.pop() || rawPath.trim() || "—";
 
     let parent = root;
     for (const part of parts) {
