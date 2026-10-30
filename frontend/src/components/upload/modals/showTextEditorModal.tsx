@@ -1,6 +1,6 @@
 import { ModalsContextProps } from "@mantine/modals/lib/context";
-import mime from "mime-types";
 import { FileListItem, FileUpload } from "../../../types/File.type";
+import { getMimeType } from "../../../utils/file.util";
 import TextEditor from "../TextEditor";
 
 const showTextEditorModal = <T extends FileListItem>(
@@ -11,7 +11,7 @@ const showTextEditorModal = <T extends FileListItem>(
   modals: ModalsContextProps,
 ) => {
   const originalFile = files[index] as unknown as File;
-  const mimeType = (mime.contentType(originalFile.name) || "").split(";")[0];
+  const mimeType = getMimeType(originalFile.name);
 
   modals.openModal({
     title: `Editing ${originalFile.name}`,
@@ -24,6 +24,14 @@ const showTextEditorModal = <T extends FileListItem>(
           const newFile = new File([newText], originalFile.name, {
             type: mimeType || "text/plain",
           });
+
+          if (originalFile.webkitRelativePath) {
+            Object.defineProperty(newFile, "webkitRelativePath", {
+              value: originalFile.webkitRelativePath,
+              writable: true,
+              configurable: true,
+            });
+          }
 
           const fileUpload = newFile as FileUpload;
           fileUpload.uploadingProgress = 0;

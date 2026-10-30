@@ -58,6 +58,7 @@ const Upload = ({
   const [isUploading, setisUploading] = useState(false);
 
   const filesRef = useRef<FileUpload[]>(files);
+  const completingRef = useRef(false);
   filesRef.current = files;
 
   useConfirmLeave({
@@ -143,7 +144,9 @@ const Upload = ({
                     const totalUploaded =
                       uploadedBytesBeforeThisChunk + uploadedBytesInThisChunk;
                     const overallPercent = (totalUploaded / file.size) * 100;
-                    setFileProgress(Math.max(Math.min(overallPercent, 99.9), 1));
+                    setFileProgress(
+                      Math.max(Math.min(overallPercent, 99.9), 1),
+                    );
                   }
                 },
               )
@@ -264,8 +267,10 @@ const Upload = ({
     if (
       files.length > 0 &&
       files.every((file) => file.uploadingProgress >= 100) &&
-      fileErrorCount == 0
+      fileErrorCount == 0 &&
+      !completingRef.current
     ) {
+      completingRef.current = true;
       shareService
         .completeShare(createdShare.id)
         .then((share) => {
@@ -278,7 +283,10 @@ const Upload = ({
           );
           setFiles([]);
         })
-        .catch(() => toast.error(t("upload.notify.generic-error")));
+        .catch(() => toast.error(t("upload.notify.generic-error")))
+        .finally(() => {
+          completingRef.current = false;
+        });
     }
   }, [files]);
 
