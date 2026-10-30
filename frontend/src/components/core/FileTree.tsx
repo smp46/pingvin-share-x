@@ -368,10 +368,11 @@ const FileRow = ({
   );
 };
 
-const FileTree = <T,>({
+const FileTree = <T extends object>({
   files,
   getPath,
   getSize,
+  getKey,
   sort,
   nameHeader,
   sizeHeader,
@@ -384,6 +385,7 @@ const FileTree = <T,>({
   files: T[];
   getPath: (item: T) => string;
   getSize: (item: T) => number;
+  getKey?: (item: T) => string | undefined;
   sort?: TableSort;
   nameHeader: ReactNode;
   sizeHeader: ReactNode;
@@ -396,6 +398,8 @@ const FileTree = <T,>({
   const { theme } = useStyles();
   const t = useTranslate();
   const tableRef = useRef<HTMLTableElement>(null);
+  const itemIds = useRef(new WeakMap<T, number>());
+  const nextItemId = useRef(0);
 
   const tree = useMemo(
     () => buildFileTree(files, getPath, getSize),
@@ -407,6 +411,17 @@ const FileTree = <T,>({
     folderPaths,
     tableRef,
   );
+
+  const keyOf = (item: T) => {
+    const key = getKey?.(item);
+    if (key !== undefined) return key;
+    let id = itemIds.current.get(item);
+    if (id === undefined) {
+      id = nextItemId.current++;
+      itemIds.current.set(item, id);
+    }
+    return `item:${id}`;
+  };
 
   const headerActions = [
     {
@@ -459,7 +474,7 @@ const FileTree = <T,>({
         const index = folder.folders.length + i;
         return (
           <FileRow
-            key={`file:${file.index}`}
+            key={`file:${keyOf(item)}`}
             file={file}
             depth={depth}
             connectors={connectorsAt(index)}

@@ -18,6 +18,7 @@ import FileTree, { ICON_SIZE } from "../core/FileTree";
 
 const getFilePath = (file: FileMetaData) => file.name;
 const getFileSize = (file: FileMetaData) => parseInt(file.size);
+const getFileKey = (file: FileMetaData) => file.id;
 
 const FileList = ({
   files,
@@ -68,6 +69,7 @@ const FileList = ({
       files={files ?? []}
       getPath={getFilePath}
       getSize={getFileSize}
+      getKey={getFileKey}
       sort={sort}
       loadingRows={isLoading ? skeletonRows : undefined}
       nameHeader={

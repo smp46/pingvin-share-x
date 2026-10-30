@@ -22,6 +22,8 @@ const getFileNameOrPath = (file: FileListItem) => {
 
 const getFileSize = (file: FileListItem) => +file.size;
 
+const getFileKey = (file: FileListItem) => ("id" in file ? file.id : undefined);
+
 const getFileState = (file: FileListItem) => {
   const uploadable = "uploadingProgress" in file;
   return {
@@ -200,6 +202,7 @@ const FileList = <T extends FileListItem = FileListItem>({
       files={files}
       getPath={getFileNameOrPath}
       getSize={getFileSize}
+      getKey={getFileKey}
       nameHeader={<FormattedMessage id="upload.filelist.name" />}
       sizeHeader={<FormattedMessage id="upload.filelist.size" />}
       renderFileActions={renderFileActions}
