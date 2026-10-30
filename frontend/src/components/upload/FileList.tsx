@@ -24,7 +24,7 @@ const getFileSize = (file: FileListItem) => +file.size;
 
 const getFileKey = (file: FileListItem) => ("id" in file ? file.id : undefined);
 
-const getFileState = (file: FileListItem) => {
+const getFileState = (file: FileListItem, uploading: boolean) => {
   if ("uploadingProgress" in file) {
     const pending = file.uploadingProgress === 0;
     return {
@@ -32,7 +32,9 @@ const getFileState = (file: FileListItem) => {
       progress: file.uploadingProgress,
       removable: pending,
       editable:
-        pending && shareService.isShareTextFile(getFileNameOrPath(file)),
+        pending &&
+        !uploading &&
+        shareService.isShareTextFile(getFileNameOrPath(file)),
       deleted: false,
     };
   }
@@ -135,9 +137,11 @@ const FileListActions = ({
 const FileList = <T extends FileListItem = FileListItem>({
   files,
   setFiles,
+  uploading = false,
 }: {
   files: T[];
   setFiles: (files: T[]) => void;
+  uploading?: boolean;
 }) => {
   const modals = useModals();
 
@@ -146,6 +150,7 @@ const FileList = <T extends FileListItem = FileListItem>({
       const file = files[index];
 
       if ("uploadingProgress" in file) {
+        if (file.uploadingProgress !== 0) continue;
         files.splice(index, 1);
       } else {
         files[index] = { ...file, deleted: true };
@@ -174,7 +179,10 @@ const FileList = <T extends FileListItem = FileListItem>({
     showTextEditorModal(index, files, setFiles, text, modals);
   };
 
-  const states = useMemo(() => files.map(getFileState), [files]);
+  const states = useMemo(
+    () => files.map((file) => getFileState(file, uploading)),
+    [files, uploading],
+  );
 
   const renderFileActions = (_file: T, index: number) => {
     const { editable, removable, deleted, progress } = states[index];
