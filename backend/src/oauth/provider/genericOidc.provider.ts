@@ -9,6 +9,7 @@ import {
   JWTVerifyGetKey,
 } from "jose";
 import { nanoid } from "nanoid";
+import { I18nService } from "nestjs-i18n";
 import { ConfigService } from "../../config/config.service";
 import { OAuthCallbackDto } from "../dto/oauthCallback.dto";
 import { OAuthSignInDto } from "../dto/oauthSignIn.dto";
@@ -29,6 +30,7 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
     protected config: ConfigService,
     protected jwtService: JwtService,
     protected cache: Cache,
+    protected i18n: I18nService,
   ) {
     this.discoveryUri = this.getDiscoveryUri();
     this.config.addListener("update", (key: string) => {
@@ -59,7 +61,9 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
     const clientId = this.config.get(`oauth.${this.name}-clientId`);
     if (!clientId) {
       this.logger.error(
-        `Client ID not configured for OAuth provider "${this.name}".`,
+        this.i18n.t("oauth.log_client_id_missing", {
+          args: { provider: this.name },
+        }),
       );
       throw new ErrorPageException("oidc_configuration_error");
     }
@@ -130,7 +134,9 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
   ): Promise<OAuthSignInDto> {
     if (!token.idToken) {
       this.logger.error(
-        `Can not get ID Token from response ${JSON.stringify(token.rawToken, undefined, 2)}`,
+        this.i18n.t("oauth.log_id_token_missing", {
+          args: { response: JSON.stringify(token.rawToken, undefined, 2) },
+        }),
       );
       throw new InternalServerErrorException();
     }
@@ -142,7 +148,9 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
     await this.cache.del(key);
     if (!nonce || nonce !== idTokenData.nonce) {
       this.logger.error(
-        `Invalid nonce. Expected ${nonce}, but got ${idTokenData.nonce}`,
+        this.i18n.t("oauth.log_invalid_nonce", {
+          args: { expected: nonce as string, actual: idTokenData.nonce },
+        }),
       );
       throw new ErrorPageException("invalid_token");
     }
@@ -165,11 +173,12 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
         }
       } catch {
         this.logger.warn(
-          `Roles not found at path ${roleConfig.path} in ID Token ${JSON.stringify(
-            idTokenData,
-            undefined,
-            2,
-          )}`,
+          this.i18n.t("oauth.log_roles_not_found", {
+            args: {
+              path: roleConfig.path,
+              idToken: JSON.stringify(idTokenData, undefined, 2),
+            },
+          }),
         );
       }
 
@@ -179,7 +188,9 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
       ) {
         // Role for general access is configured and the user does not have it
         this.logger.error(
-          `User roles ${roles} do not include ${roleConfig.generalAccess}`,
+          this.i18n.t("oauth.log_role_missing", {
+            args: { roles: roles.join(","), role: roleConfig.generalAccess },
+          }),
         );
         throw new ErrorPageException("user_not_allowed");
       }
@@ -191,11 +202,9 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
 
     if (!username) {
       this.logger.error(
-        `Can not get username from ID Token ${JSON.stringify(
-          idTokenData,
-          undefined,
-          2,
-        )}`,
+        this.i18n.t("oauth.log_username_missing", {
+          args: { idToken: JSON.stringify(idTokenData, undefined, 2) },
+        }),
       );
       throw new ErrorPageException("cannot_get_user_info", undefined, [
         `provider_${this.name}`,
@@ -230,15 +239,16 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
   private async fetchConfiguration(): Promise<void> {
     try {
       const res = await fetch(this.discoveryUri);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if (!res.ok)
+        throw new Error(
+          this.i18n.t("oauth.log_http_error", { args: { status: res.status } }),
+        );
       const data = (await res.json()) as OidcConfiguration;
       if (
         !URL.canParse(data?.authorization_endpoint) ||
         !URL.canParse(data?.token_endpoint)
       ) {
-        throw new Error(
-          "Missing or invalid authorization_endpoint or token_endpoint",
-        );
+        throw new Error(this.i18n.t("oauth.log_endpoints_invalid"));
       }
 
       const expires = res.headers.has("expires")
@@ -247,7 +257,9 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
       this.configuration = { expires, data };
     } catch (e) {
       this.logger.error(
-        `Failed to fetch OIDC configuration from ${this.discoveryUri}: ${e.message}`,
+        this.i18n.t("oauth.log_discovery_failed", {
+          args: { uri: this.discoveryUri, error: e.message },
+        }),
       );
       throw new ErrorPageException("oidc_configuration_error");
     }
@@ -268,7 +280,8 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
         configuration,
         decodeJwt<OidcIdToken>(idToken),
       );
-      if (!issuer?.length) throw new Error("discovery document has no issuer");
+      if (!issuer?.length)
+        throw new Error(this.i18n.t("oauth.log_issuer_missing"));
 
       const { payload } = await jwtVerify<OidcIdToken>(
         idToken,
@@ -283,7 +296,9 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
           }
           if (!configuration.jwks_uri) {
             throw new Error(
-              `discovery document has no jwks_uri to verify a ${header.alg} token`,
+              this.i18n.t("oauth.log_jwks_uri_missing", {
+                args: { alg: header.alg },
+              }),
             );
           }
           this.jwks ??= createRemoteJWKSet(new URL(configuration.jwks_uri));
@@ -298,19 +313,29 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
       );
 
       if (payload.azp && payload.azp !== clientId) {
-        throw new Error(`unexpected azp "${payload.azp}"`);
+        throw new Error(
+          this.i18n.t("oauth.log_unexpected_azp", {
+            args: { azp: payload.azp },
+          }),
+        );
       }
 
-      if (!payload.sub) throw new Error('missing "sub" claim');
+      if (!payload.sub) throw new Error(this.i18n.t("oauth.log_sub_missing"));
 
       for (const claim of ["exp", "iat"]) {
         if (payload[claim] === undefined) {
-          this.logger.warn(`ID Token is missing required claim "${claim}"`);
+          this.logger.warn(
+            this.i18n.t("oauth.log_claim_missing", { args: { claim } }),
+          );
         }
       }
       return payload;
     } catch (e) {
-      this.logger.error(`Invalid ID Token: ${e.message}`);
+      this.logger.error(
+        this.i18n.t("oauth.log_invalid_id_token", {
+          args: { error: e.message },
+        }),
+      );
       throw new ErrorPageException("invalid_token");
     }
   }
