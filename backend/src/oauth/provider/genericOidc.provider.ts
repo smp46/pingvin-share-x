@@ -300,6 +300,12 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
       if (payload.azp && payload.azp !== clientId) {
         throw new Error(`unexpected azp "${payload.azp}"`);
       }
+
+      for (const claim of ["exp", "iat"]) {
+        if (payload[claim] === undefined) {
+          this.logger.warn(`ID Token is missing required claim "${claim}"`);
+        }
+      }
       return payload;
     } catch (e) {
       this.logger.error(`Invalid ID Token: ${e.message}`);
