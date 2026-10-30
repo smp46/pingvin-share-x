@@ -15,8 +15,8 @@ import {
   PasswordGeneratorConfig,
   PasswordGeneratorValidationRules,
 } from "../../types/password.type";
-import CopyButtonIcon from "../icon/CopyButtonIcon";
-import { TbRefresh } from "react-icons/tb";
+import useCopyToClipboard from "../../hooks/useCopyToClipboard";
+import { TbCheck, TbCopy, TbRefresh } from "react-icons/tb";
 import * as yup from "yup";
 import useTranslate from "../../hooks/useTranslate.hook";
 
@@ -47,6 +47,9 @@ const PasswordGenerator = ({
   const {
     length: { min: passwordMinLength, max: passwordMaxLength },
   } = validationRules;
+  const { checkState, copyContentToClipboard } = useCopyToClipboard({
+    toastMessage: t("password-generator.copy.message"),
+  });
 
   const [generatedPassword, setGeneratedPassword] = useState("");
   const validationSchema = yup.object().shape({
@@ -77,16 +80,20 @@ const PasswordGenerator = ({
     if (passwordForm.values.includeSymbols)
       charset += "!@#$%^&*()_+~`|}{[]:;?><,./-=";
 
+    const randomValues = new Uint32Array(passwordForm.values.length);
+    crypto.getRandomValues(randomValues);
+
     let generatedPassword = "";
-    for (let i = 0; i < passwordForm.values.length; i++) {
-      const randomIndex = Math.floor(Math.random() * charset.length);
-      generatedPassword += charset[randomIndex];
+    for (let i = 0; i < randomValues.length; i++) {
+      generatedPassword += charset[randomValues[i] % charset.length];
     }
+
     setGeneratedPassword(generatedPassword);
   }, [passwordForm.values]);
 
   const submitPassword = () => {
     callback(generatedPassword, passwordForm.values);
+    copyContentToClipboard(generatedPassword);
   };
 
   const hasFormErrors = useMemo(() => {
@@ -117,10 +124,11 @@ const PasswordGenerator = ({
             <ActionIcon onClick={generatePassword}>
               <TbRefresh style={{ cursor: "pointer" }} />
             </ActionIcon>
-            <CopyButtonIcon
-              content={generatedPassword}
-              toastMessage={t("password-generator.copy.message")}
-            />
+            <ActionIcon
+              onClick={() => copyContentToClipboard(generatedPassword)}
+            >
+              {checkState ? <TbCheck /> : <TbCopy />}
+            </ActionIcon>
           </Flex>
         </Flex>
 
