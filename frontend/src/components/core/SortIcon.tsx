@@ -26,12 +26,12 @@ const TableSortIcon = ({
           })
         }
       >
-        {sort.direction === "asc" ? <TbChevronDown /> : <TbChevronUp />}
+        {sort.direction === "asc" ? <TbChevronUp /> : <TbChevronDown />}
       </ActionIcon>
     );
   } else {
     return (
-      <ActionIcon onClick={() => setSort({ property, direction: "asc" })}>
+      <ActionIcon onClick={() => setSort({ property, direction: "desc" })}>
         <TbSelector />
       </ActionIcon>
     );

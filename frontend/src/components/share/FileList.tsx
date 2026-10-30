@@ -44,7 +44,7 @@ const FileList = ({
 
   const [sort, setSort] = useState<TableSort>({
     property: "name",
-    direction: "desc",
+    direction: "asc",
   });
 
   const copyFileLink = (file: FileMetaData) => {

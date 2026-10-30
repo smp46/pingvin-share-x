@@ -85,15 +85,13 @@ export const buildFileTree = <T>(
   return { ...root, folders: root.folders.map(compactFolder) };
 };
 
-// Sorts every level separately. Matches the existing table behaviour where
-// "desc" lists names A→Z and sizes smallest first.
 export const sortFileTree = <T>(
   folder: FolderNode<T>,
   sort: TableSort,
 ): FolderNode<T> => {
   if (!sort.property) return folder;
 
-  const factor = sort.direction === "asc" ? -1 : 1;
+  const factor = sort.direction === "asc" ? 1 : -1;
   const compare = (
     a: { name: string; size: number },
     b: { name: string; size: number },
