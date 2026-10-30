@@ -17,12 +17,12 @@ import {
   useState,
 } from "react";
 import {
+  TbArrowsVertical,
   TbChevronDown,
   TbChevronRight,
+  TbFold,
   TbFolder,
   TbFolderOpen,
-  TbFolders,
-  TbFoldersOff,
 } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import useTranslate from "../../hooks/useTranslate.hook";
@@ -156,6 +156,7 @@ const indent = (theme: MantineTheme) =>
   `calc(${ICON_SIZE}px + ${theme.spacing.xs})`;
 
 const nameCellStyle = (theme: MantineTheme, depth: number): CSSProperties => ({
+  overflowWrap: "anywhere",
   ...(depth > 0 && {
     position: "relative",
     paddingInlineStart: `calc(${theme.spacing.xs} + ${depth} * ${indent(theme)})`,
@@ -195,6 +196,19 @@ type Connectors = {
   trail: boolean[];
   isLast: boolean;
 };
+
+type RowPosition = {
+  depth: number;
+  index: number;
+  setSize: number;
+};
+
+const rowAria = ({ depth, index, setSize }: RowPosition) => ({
+  role: "row",
+  "aria-level": depth + 1,
+  "aria-posinset": index + 1,
+  "aria-setsize": setSize,
+});
 
 const TreeConnectors = ({ trail, isLast }: Connectors) => {
   const { classes, theme } = useStyles();
@@ -301,7 +315,7 @@ const useFolderExpansion = (
 
 const FolderRow = ({
   folder,
-  depth,
+  position,
   connectors,
   expanded,
   onToggle,
@@ -309,7 +323,7 @@ const FolderRow = ({
   style,
 }: {
   folder: FolderNode;
-  depth: number;
+  position: RowPosition;
   connectors?: Connectors;
   expanded: boolean;
   onToggle: () => void;
@@ -322,19 +336,21 @@ const FolderRow = ({
 
   return (
     <tr
+      {...rowAria(position)}
       aria-expanded={expanded}
       className={classes.folderRow}
       style={style}
       onClick={onToggle}
       data-folder-path={folder.path}
     >
-      <td style={nameCellStyle(theme, depth)}>
+      <td role="gridcell" style={nameCellStyle(theme, position.depth)}>
         {connectors && <TreeConnectors {...connectors} />}
         <Group spacing={6} noWrap>
           <ActionIcon
             color={theme.primaryColor}
             variant="subtle"
             size={ICON_SIZE}
+            aria-expanded={expanded}
             aria-label={t(
               expanded ? "filelist.collapse-folder" : "filelist.expand-folder",
             )}
@@ -346,7 +362,9 @@ const FolderRow = ({
             )}
           </ActionIcon>
           <FolderIcon size={18} className={classes.folderIcon} />
-          <span style={{ fontWeight: 600 }}>{folder.name}</span>
+          <Text component="span" weight={600} sx={{ minWidth: 0 }}>
+            {folder.name}
+          </Text>
           <Text
             component="span"
             size="xs"
@@ -360,21 +378,23 @@ const FolderRow = ({
           </Text>
         </Group>
       </td>
-      <td>{byteToHumanSizeString(folder.size)}</td>
-      <td onClick={(e) => e.stopPropagation()}>{actions}</td>
+      <td role="gridcell">{byteToHumanSizeString(folder.size)}</td>
+      <td role="gridcell" onClick={(e) => e.stopPropagation()}>
+        {actions}
+      </td>
     </tr>
   );
 };
 
 const FileRow = ({
   file,
-  depth,
+  position,
   connectors,
   actions,
   style,
 }: {
   file: FileTreeFile;
-  depth: number;
+  position: RowPosition;
   connectors?: Connectors;
   actions: ReactNode;
   style?: CSSProperties;
@@ -382,13 +402,13 @@ const FileRow = ({
   const { theme } = useStyles();
 
   return (
-    <tr style={style} data-file-path={file.path}>
-      <td style={nameCellStyle(theme, depth)}>
+    <tr {...rowAria(position)} style={style} data-file-path={file.path}>
+      <td role="gridcell" style={nameCellStyle(theme, position.depth)}>
         {connectors && <TreeConnectors {...connectors} />}
         {file.name}
       </td>
-      <td>{byteToHumanSizeString(file.size)}</td>
-      <td>{actions}</td>
+      <td role="gridcell">{byteToHumanSizeString(file.size)}</td>
+      <td role="gridcell">{actions}</td>
     </tr>
   );
 };
@@ -457,14 +477,10 @@ const FileTree = <T extends object>({
   const headerActions = [
     {
       label: "filelist.expand-all",
-      Icon: TbFolders,
+      Icon: TbArrowsVertical,
       onClick: expandAll,
     },
-    {
-      label: "filelist.collapse-all",
-      Icon: TbFoldersOff,
-      onClick: collapseAll,
-    },
+    { label: "filelist.collapse-all", Icon: TbFold, onClick: collapseAll },
   ];
 
   const renderRows = (
@@ -472,9 +488,9 @@ const FileTree = <T extends object>({
     depth: number,
     trail: boolean[],
   ): ReactNode[] => {
-    const lastIndex = folder.folders.length + folder.files.length - 1;
+    const setSize = folder.folders.length + folder.files.length;
     const connectorsAt = (i: number) =>
-      depth > 0 ? { trail, isLast: i === lastIndex } : undefined;
+      depth > 0 ? { trail, isLast: i === setSize - 1 } : undefined;
 
     return [
       ...folder.folders.flatMap((sub, i) => {
@@ -484,7 +500,7 @@ const FileTree = <T extends object>({
           <FolderRow
             key={`folder:${sub.path}`}
             folder={sub}
-            depth={depth}
+            position={{ depth, index: i, setSize }}
             connectors={connectors}
             expanded={expanded}
             onToggle={() => toggle(sub.path)}
@@ -507,7 +523,7 @@ const FileTree = <T extends object>({
           <FileRow
             key={`file:${keyOf(item)}`}
             file={file}
-            depth={depth}
+            position={{ depth, index, setSize }}
             connectors={connectorsAt(index)}
             actions={renderFileActions(item, file.index)}
             style={getFileStyle?.(item, file.index)}
@@ -519,10 +535,10 @@ const FileTree = <T extends object>({
 
   return (
     <Box sx={{ display: "block", overflowX: "auto" }}>
-      <Table ref={tableRef}>
+      <Table ref={tableRef} role="treegrid">
         <thead>
-          <tr>
-            <th>
+          <tr role="row">
+            <th role="columnheader">
               <Group spacing="xs" noWrap>
                 {nameHeader}
                 {folderPaths.length > 0 && (
@@ -544,8 +560,8 @@ const FileTree = <T extends object>({
                 )}
               </Group>
             </th>
-            <th>{sizeHeader}</th>
-            <th></th>
+            <th role="columnheader">{sizeHeader}</th>
+            <th role="columnheader"></th>
           </tr>
         </thead>
         <tbody>{loadingRows ?? renderRows(sortedTree, 0, [])}</tbody>
