@@ -45,6 +45,26 @@ const getFileState = (file: FileListItem) => {
   };
 };
 
+const folderProgress = (uploads: { progress: number; size: number }[]) => {
+  if (uploads.some(({ progress }) => progress === -1)) return -1;
+
+  const totalSize = uploads.reduce((total, { size }) => total + size, 0);
+  if (totalSize === 0) {
+    return (
+      uploads.reduce(
+        (total, { progress }) => total + Math.min(progress, 100),
+        0,
+      ) / uploads.length
+    );
+  }
+  return (
+    uploads.reduce(
+      (total, { progress, size }) => total + Math.min(progress, 100) * size,
+      0,
+    ) / totalSize
+  );
+};
+
 const deletedStyle: CSSProperties = {
   color: "rgba(120, 120, 120, 0.5)",
   textDecoration: "line-through",
@@ -173,26 +193,26 @@ const FileList = <T extends FileListItem = FileListItem>({
   };
 
   const renderFolderActions = (folder: FolderNode) => {
-    const indices = folder.allFiles.map(({ index }) => index);
-    const removable = indices.filter((index) => states[index].removable);
-    const restorable = indices.filter((index) => states[index].deleted);
-    const uploads = indices.filter((index) => states[index].uploadable);
-    const uploading = uploads.some((index) => states[index].progress !== 0);
+    const live: number[] = [];
+    const restorable: number[] = [];
+    const uploads: { progress: number; size: number }[] = [];
+
+    for (const { index, size } of folder.allFiles) {
+      const state = states[index];
+      if (state.deleted) restorable.push(index);
+      else live.push(index);
+      if (state.uploadable) uploads.push({ progress: state.progress, size });
+    }
+
+    const removable =
+      live.length > 0 && live.every((index) => states[index].removable);
 
     return (
       <FileListActions
-        removable={removable.length > 0}
+        removable={removable}
         restorable={restorable.length > 0}
-        progress={
-          uploading
-            ? uploads.reduce(
-                (total, index) =>
-                  total + Math.min(Math.max(states[index].progress, 0), 100),
-                0,
-              ) / uploads.length
-            : undefined
-        }
-        onRemove={() => remove(removable)}
+        progress={uploads.length > 0 ? folderProgress(uploads) : undefined}
+        onRemove={() => remove(live)}
         onRestore={() => restore(restorable)}
       />
     );
