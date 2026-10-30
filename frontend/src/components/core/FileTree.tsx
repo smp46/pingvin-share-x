@@ -1,11 +1,11 @@
 import {
   ActionIcon,
+  Box,
   Group,
   Table,
   Text,
   MantineTheme,
   createStyles,
-  useMantineTheme,
 } from "@mantine/core";
 import { useIsomorphicEffect } from "@mantine/hooks";
 import {
@@ -27,28 +27,130 @@ import {
 import { FormattedMessage } from "react-intl";
 import useTranslate from "../../hooks/useTranslate.hook";
 import { byteToHumanSizeString } from "../../utils/fileSize.util";
-import {
-  FolderNode,
-  buildFileTree,
-  getFolderPaths,
-  sortFileTree,
-} from "../../utils/fileTree.util";
 import { HoverTip } from "./HoverTip";
 import { TableSort } from "./SortIcon";
 
-const ICON_SIZE = 25;
+export type FileTreeFile<T> = {
+  item: T;
+  index: number;
+  name: string;
+  path: string;
+  size: number;
+};
+
+export type FolderNode<T> = {
+  name: string;
+  path: string;
+  folders: FolderNode<T>[];
+  files: FileTreeFile<T>[];
+  allFiles: FileTreeFile<T>[];
+  size: number;
+};
+
+const createFolder = <T,>(name: string, path: string): FolderNode<T> => ({
+  name,
+  path,
+  folders: [],
+  files: [],
+  allFiles: [],
+  size: 0,
+});
+
+const compactFolder = <T,>(folder: FolderNode<T>): FolderNode<T> => {
+  let node = folder;
+  while (node.files.length === 0 && node.folders.length === 1) {
+    const child = node.folders[0];
+    node = { ...child, name: `${node.name}/${child.name}` };
+  }
+  return { ...node, folders: node.folders.map(compactFolder) };
+};
+
+const computeTotals = <T,>(folder: FolderNode<T>) => {
+  folder.folders.forEach(computeTotals);
+  folder.allFiles = [
+    ...folder.files,
+    ...folder.folders.flatMap((sub) => sub.allFiles),
+  ];
+  folder.size = folder.allFiles.reduce((total, file) => total + file.size, 0);
+};
+
+const buildFileTree = <T,>(
+  items: T[],
+  getPath: (item: T) => string,
+  getSize: (item: T) => number,
+): FolderNode<T> => {
+  const root = createFolder<T>("", "");
+  const foldersByPath = new Map<string, FolderNode<T>>([["", root]]);
+
+  items.forEach((item, index) => {
+    const parts = getPath(item).split("/").filter(Boolean);
+    const filePath = parts.join("/");
+    const name = parts.pop() ?? "";
+
+    let parent = root;
+    for (const part of parts) {
+      const path = parent.path ? `${parent.path}/${part}` : part;
+      let folder = foldersByPath.get(path);
+      if (!folder) {
+        folder = createFolder<T>(part, path);
+        foldersByPath.set(path, folder);
+        parent.folders.push(folder);
+      }
+      parent = folder;
+    }
+
+    parent.files.push({
+      item,
+      index,
+      name,
+      path: filePath,
+      size: getSize(item),
+    });
+  });
+
+  computeTotals(root);
+  return { ...root, folders: root.folders.map(compactFolder) };
+};
+
+const sortFileTree = <T,>(
+  folder: FolderNode<T>,
+  sort?: TableSort,
+): FolderNode<T> => {
+  if (!sort?.property) return folder;
+
+  const factor = sort.direction === "asc" ? 1 : -1;
+  const compare = (
+    a: { name: string; size: number },
+    b: { name: string; size: number },
+  ) =>
+    factor *
+    (sort.property === "size"
+      ? a.size - b.size
+      : a.name.localeCompare(b.name, undefined, { numeric: true }));
+
+  return {
+    ...folder,
+    folders: folder.folders.map((sub) => sortFileTree(sub, sort)).sort(compare),
+    files: [...folder.files].sort(compare),
+  };
+};
+
+const getFolderPaths = <T,>(folder: FolderNode<T>): string[] =>
+  folder.folders.flatMap((sub) => [sub.path, ...getFolderPaths(sub)]);
+
+export const ICON_SIZE = 25;
 
 const indent = (theme: MantineTheme) =>
   `calc(${ICON_SIZE}px + ${theme.spacing.xs})`;
 
-const useStyles = createStyles((theme, { depth }: { depth: number }) => ({
-  nameCell:
-    depth > 0
-      ? {
-          position: "relative",
-          paddingInlineStart: `calc(${theme.spacing.xs} + ${depth} * ${indent(theme)}) !important`,
-        }
-      : {},
+const nameCellStyle = (theme: MantineTheme, depth: number): CSSProperties => ({
+  ...(depth > 0 && {
+    position: "relative",
+    paddingInlineStart: `calc(${theme.spacing.xs} + ${depth} * ${indent(theme)})`,
+  }),
+});
+
+const useStyles = createStyles((theme) => ({
   connector: {
     position: "absolute",
     pointerEvents: "none",
@@ -83,8 +185,7 @@ type Connectors = {
 };
 
 const TreeConnectors = ({ trail, isLast }: Connectors) => {
-  const theme = useMantineTheme();
-  const { classes } = useStyles({ depth: trail.length + 1 });
+  const { classes, theme } = useStyles();
   const offset = (level: number) =>
     `calc(${theme.spacing.xs} + ${ICON_SIZE / 2}px + ${level} * ${indent(theme)})`;
   const level = trail.length;
@@ -179,20 +280,19 @@ const FolderRow = ({
   actions?: ReactNode;
   style?: CSSProperties;
 }) => {
-  const theme = useMantineTheme();
-  const { classes } = useStyles({ depth });
+  const { classes, theme } = useStyles();
   const t = useTranslate();
   const FolderIcon = expanded ? TbFolderOpen : TbFolder;
 
   return (
     <tr
+      aria-expanded={expanded}
       className={classes.folderRow}
       style={style}
       onClick={onToggle}
-      aria-expanded={expanded}
       data-folder-path={folder.path}
     >
-      <td className={classes.nameCell}>
+      <td style={nameCellStyle(theme, depth)}>
         {connectors && <TreeConnectors {...connectors} />}
         <Group spacing={6} noWrap>
           <ActionIcon
@@ -219,7 +319,7 @@ const FolderRow = ({
           >
             <FormattedMessage
               id="filelist.folder.file-count"
-              values={{ count: folder.count }}
+              values={{ count: folder.allFiles.length }}
             />
           </Text>
         </Group>
@@ -231,31 +331,27 @@ const FolderRow = ({
 };
 
 const FileRow = ({
-  name,
-  path,
-  size,
+  file,
   depth,
   connectors,
   actions,
   style,
 }: {
-  name: string;
-  path: string;
-  size: number;
+  file: FileTreeFile<unknown>;
   depth: number;
   connectors?: Connectors;
   actions: ReactNode;
   style?: CSSProperties;
 }) => {
-  const { classes } = useStyles({ depth });
+  const { theme } = useStyles();
 
   return (
-    <tr style={style} data-file-path={path}>
-      <td className={classes.nameCell}>
+    <tr style={style} data-file-path={file.path}>
+      <td style={nameCellStyle(theme, depth)}>
         {connectors && <TreeConnectors {...connectors} />}
-        {name}
+        {file.name}
       </td>
-      <td>{byteToHumanSizeString(size)}</td>
+      <td>{byteToHumanSizeString(file.size)}</td>
       <td>{actions}</td>
     </tr>
   );
@@ -268,7 +364,6 @@ const FileTree = <T,>({
   sort,
   nameHeader,
   sizeHeader,
-  isLoading = false,
   loadingRows,
   renderFileActions,
   renderFolderActions,
@@ -281,14 +376,13 @@ const FileTree = <T,>({
   sort?: TableSort;
   nameHeader: ReactNode;
   sizeHeader: ReactNode;
-  isLoading?: boolean;
   loadingRows?: ReactNode;
   renderFileActions: (item: T, index: number) => ReactNode;
   renderFolderActions?: (folder: FolderNode<T>) => ReactNode;
-  getFileStyle?: (item: T) => CSSProperties | undefined;
+  getFileStyle?: (item: T, index: number) => CSSProperties | undefined;
   getFolderStyle?: (folder: FolderNode<T>) => CSSProperties | undefined;
 }) => {
-  const theme = useMantineTheme();
+  const { theme } = useStyles();
   const t = useTranslate();
   const tableRef = useRef<HTMLTableElement>(null);
 
@@ -296,15 +390,25 @@ const FileTree = <T,>({
     () => buildFileTree(files, getPath, getSize),
     [files, getPath, getSize],
   );
-  const sortedTree = useMemo(
-    () => (sort ? sortFileTree(tree, sort) : tree),
-    [tree, sort],
-  );
+  const sortedTree = useMemo(() => sortFileTree(tree, sort), [tree, sort]);
   const folderPaths = useMemo(() => getFolderPaths(tree), [tree]);
   const { isExpanded, toggle, expandAll, collapseAll } = useFolderExpansion(
     folderPaths,
     tableRef,
   );
+
+  const headerActions = [
+    {
+      label: "filelist.expand-all",
+      Icon: TbFolders,
+      onClick: expandAll,
+    },
+    {
+      label: "filelist.collapse-all",
+      Icon: TbFoldersOff,
+      onClick: collapseAll,
+    },
+  ];
 
   const renderRows = (
     folder: FolderNode<T>,
@@ -339,64 +443,57 @@ const FileTree = <T,>({
             : []),
         ];
       }),
-      ...folder.files.map((file, i) => (
-        <FileRow
-          key={`file:${file.index}`}
-          name={file.name}
-          path={file.path}
-          size={file.size}
-          depth={depth}
-          connectors={connectorsAt(folder.folders.length + i)}
-          actions={renderFileActions(file.item, file.index)}
-          style={getFileStyle?.(file.item)}
-        />
-      )),
+      ...folder.files.map((file, i) => {
+        const item = file.item;
+        const index = folder.folders.length + i;
+        return (
+          <FileRow
+            key={`file:${file.index}`}
+            file={file}
+            depth={depth}
+            connectors={connectorsAt(index)}
+            actions={renderFileActions(item, file.index)}
+            style={getFileStyle?.(item, file.index)}
+          />
+        );
+      }),
     ];
   };
 
   return (
-    <Table ref={tableRef}>
-      <thead>
-        <tr>
-          <th>
-            {folderPaths.length > 0 ? (
+    <Box sx={{ display: "block", overflowX: "auto" }}>
+      <Table ref={tableRef}>
+        <thead>
+          <tr>
+            <th>
               <Group spacing="xs" noWrap>
                 {nameHeader}
-                <Group spacing={4} noWrap>
-                  <HoverTip label={t("filelist.expand-all")}>
-                    <ActionIcon
-                      color={theme.primaryColor}
-                      variant="subtle"
-                      size={ICON_SIZE}
-                      aria-label={t("filelist.expand-all")}
-                      onClick={expandAll}
-                    >
-                      <TbFolders />
-                    </ActionIcon>
-                  </HoverTip>
-                  <HoverTip label={t("filelist.collapse-all")}>
-                    <ActionIcon
-                      color={theme.primaryColor}
-                      variant="subtle"
-                      size={ICON_SIZE}
-                      aria-label={t("filelist.collapse-all")}
-                      onClick={collapseAll}
-                    >
-                      <TbFoldersOff />
-                    </ActionIcon>
-                  </HoverTip>
-                </Group>
+                {folderPaths.length > 0 && (
+                  <Group spacing={4} noWrap>
+                    {headerActions.map(({ label, Icon, onClick }) => (
+                      <HoverTip key={label} label={t(label)}>
+                        <ActionIcon
+                          color={theme.primaryColor}
+                          variant="subtle"
+                          size={ICON_SIZE}
+                          aria-label={t(label)}
+                          onClick={onClick}
+                        >
+                          <Icon />
+                        </ActionIcon>
+                      </HoverTip>
+                    ))}
+                  </Group>
+                )}
               </Group>
-            ) : (
-              nameHeader
-            )}
-          </th>
-          <th>{sizeHeader}</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>{isLoading ? loadingRows : renderRows(sortedTree, 0, [])}</tbody>
-    </Table>
+            </th>
+            <th>{sizeHeader}</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>{loadingRows ?? renderRows(sortedTree, 0, [])}</tbody>
+      </Table>
+    </Box>
   );
 };
 

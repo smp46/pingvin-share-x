@@ -405,8 +405,6 @@ export default {
   "upload.filelist.size": "Size",
   "upload.filelist.estimating": "Estimating...",
   "upload.filelist.remaining": "{time} remaining",
-
-  // FileTree.tsx
   "filelist.folder.file-count":
     "{count, plural, =1 {# file} other {# files}}",
   "filelist.expand-all": "Expand all folders",

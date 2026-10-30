@@ -4,12 +4,11 @@ import { CSSProperties } from "react";
 import { TbTrash, TbEdit } from "react-icons/tb";
 import { GrUndo } from "react-icons/gr";
 import { FileListItem } from "../../types/File.type";
-import { FolderNode, getFolderFiles } from "../../utils/fileTree.util";
 import UploadProgressIndicator from "./UploadProgressIndicator";
 import { FormattedMessage } from "react-intl";
 import useTranslate from "../../hooks/useTranslate.hook";
 import { HoverTip } from "../core/HoverTip";
-import FileTree from "../core/FileTree";
+import FileTree, { FolderNode, ICON_SIZE } from "../core/FileTree";
 import showTextEditorModal from "./modals/showTextEditorModal";
 import shareService from "../../services/share.service";
 
@@ -63,14 +62,24 @@ const FileListActions = ({
     <Group position="right" spacing="xs" noWrap>
       {editable && (
         <HoverTip label={t("common.button.edit")}>
-          <ActionIcon color="blue" variant="light" size={25} onClick={onEdit}>
+          <ActionIcon
+            color="blue"
+            variant="light"
+            size={ICON_SIZE}
+            onClick={onEdit}
+          >
             <TbEdit />
           </ActionIcon>
         </HoverTip>
       )}
       {removable && (
         <HoverTip label={t("common.button.delete")}>
-          <ActionIcon color="red" variant="light" size={25} onClick={onRemove}>
+          <ActionIcon
+            color="red"
+            variant="light"
+            size={ICON_SIZE}
+            onClick={onRemove}
+          >
             <TbTrash />
           </ActionIcon>
         </HoverTip>
@@ -83,7 +92,7 @@ const FileListActions = ({
           <ActionIcon
             color="victoria"
             variant="light"
-            size={25}
+            size={ICON_SIZE}
             onClick={onRestore}
           >
             <GrUndo />
@@ -104,7 +113,6 @@ const FileList = <T extends FileListItem = FileListItem>({
   const modals = useModals();
 
   const remove = (indices: number[]) => {
-    // Descending so splicing doesn't shift the indices still to be removed
     for (const index of [...indices].sort((a, b) => b - a)) {
       const file = files[index];
 
@@ -122,9 +130,7 @@ const FileList = <T extends FileListItem = FileListItem>({
     for (const index of indices) {
       const file = files[index];
 
-      if ("uploadingProgress" in file) {
-        continue;
-      } else {
+      if (!("uploadingProgress" in file)) {
         files[index] = { ...file, deleted: false };
       }
     }
@@ -161,7 +167,7 @@ const FileList = <T extends FileListItem = FileListItem>({
   };
 
   const renderFolderActions = (folder: FolderNode<T>) => {
-    const folderFiles = getFolderFiles(folder).map((file) => ({
+    const folderFiles = folder.allFiles.map((file) => ({
       ...file,
       state: getFileState(file.item),
     }));
@@ -202,7 +208,7 @@ const FileList = <T extends FileListItem = FileListItem>({
         getFileState(file).deleted ? deletedStyle : undefined
       }
       getFolderStyle={(folder) =>
-        getFolderFiles(folder).every((file) => getFileState(file.item).deleted)
+        folder.allFiles.every((file) => getFileState(file.item).deleted)
           ? deletedStyle
           : undefined
       }
