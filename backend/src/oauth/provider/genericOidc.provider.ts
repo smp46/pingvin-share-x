@@ -223,7 +223,7 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
   protected getExpectedIssuer(
     configuration: OidcConfiguration,
     _idToken: OidcIdToken,
-  ): string {
+  ): string | string[] {
     return configuration.issuer;
   }
 
@@ -268,23 +268,31 @@ export abstract class GenericOidcProvider implements OAuthProvider<OidcToken> {
         configuration,
         decodeJwt<OidcIdToken>(idToken),
       );
-      if (!issuer) throw new Error("discovery document has no issuer");
+      if (!issuer?.length) throw new Error("discovery document has no issuer");
 
-      this.jwks ??= createRemoteJWKSet(new URL(configuration.jwks_uri));
       const { payload } = await jwtVerify<OidcIdToken>(
         idToken,
-        (header, token) =>
-          header.alg.startsWith("HS")
-            ? new TextEncoder().encode(
-                this.config.get(`oauth.${this.name}-clientSecret`),
-              )
-            : this.jwks(header, token),
+        (header, token) => {
+          if (
+            header.alg.startsWith("HS") &&
+            configuration.id_token_signing_alg_values_supported
+          ) {
+            return new TextEncoder().encode(
+              this.config.get(`oauth.${this.name}-clientSecret`),
+            );
+          }
+          if (!configuration.jwks_uri) {
+            throw new Error(
+              `discovery document has no jwks_uri to verify a ${header.alg} token`,
+            );
+          }
+          this.jwks ??= createRemoteJWKSet(new URL(configuration.jwks_uri));
+          return this.jwks(header, token);
+        },
         {
           issuer,
           audience: clientId,
-          algorithms: configuration.id_token_signing_alg_values_supported ?? [
-            "RS256",
-          ],
+          algorithms: configuration.id_token_signing_alg_values_supported,
           clockTolerance: 60,
         },
       );
