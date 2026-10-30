@@ -139,6 +139,17 @@ const sortFileTree = (folder: FolderNode, sort?: TableSort): FolderNode => {
 const getFolderPaths = (folder: FolderNode): string[] =>
   folder.folders.flatMap((sub) => [sub.path, ...getFolderPaths(sub)]);
 
+const countVisibleRows = (
+  folder: FolderNode,
+  isOpen: (path: string) => boolean,
+): number =>
+  folder.files.length +
+  folder.folders.reduce(
+    (total, sub) =>
+      total + 1 + (isOpen(sub.path) ? countVisibleRows(sub, isOpen) : 0),
+    0,
+  );
+
 export const ICON_SIZE = 25;
 
 const indent = (theme: MantineTheme) =>
@@ -228,39 +239,63 @@ const TreeConnectors = ({ trail, isLast }: Connectors) => {
 };
 
 const useFolderExpansion = (
+  tree: FolderNode,
   folderPaths: string[],
   tableRef: RefObject<HTMLTableElement>,
+  enabled: boolean,
 ) => {
-  const [expanded, setExpanded] = useState<Set<string>>(new Set());
-  const decided = useRef(new Set<string>());
-  const pending = folderPaths.filter((path) => !decided.current.has(path));
-
-  useIsomorphicEffect(() => {
-    if (pending.length === 0) return;
-
-    const tableBottom = tableRef.current?.getBoundingClientRect().bottom ?? 0;
-    const fits = tableBottom + window.scrollY <= window.innerHeight;
-
-    pending.forEach((path) => decided.current.add(path));
-    setExpanded((prev) => {
-      const next = new Set(prev);
-      pending.forEach((path) => (fits ? next.add(path) : next.delete(path)));
-      return next;
-    });
+  const [state, setState] = useState({
+    expanded: new Set<string>(),
+    decided: new Set<string>(),
   });
 
-  const toggle = (path: string) =>
-    setExpanded((prev) => {
-      const next = new Set(prev);
-      if (!next.delete(path)) next.add(path);
-      return next;
+  useIsomorphicEffect(() => {
+    if (!enabled) return;
+    const pending = new Set(
+      folderPaths.filter((path) => !state.decided.has(path)),
+    );
+    if (pending.size === 0) return;
+
+    let fits = true;
+    const table = tableRef.current;
+    const body = table?.tBodies[0];
+    if (table && body && body.rows.length > 0) {
+      const rowHeight = body.getBoundingClientRect().height / body.rows.length;
+      const projectedRows = countVisibleRows(
+        tree,
+        (path) => state.expanded.has(path) || pending.has(path),
+      );
+      const extra = (projectedRows - body.rows.length) * rowHeight;
+      fits =
+        table.getBoundingClientRect().bottom + extra + window.scrollY <=
+        window.innerHeight;
+    }
+
+    setState((prev) => {
+      const expanded = new Set(prev.expanded);
+      const decided = new Set(prev.decided);
+      pending.forEach((path) => {
+        if (decided.has(path)) return;
+        decided.add(path);
+        if (fits) expanded.add(path);
+      });
+      return { expanded, decided };
     });
+  }, [tree, folderPaths, state, enabled]);
+
+  const setExpanded = (update: (prev: Set<string>) => Set<string>) =>
+    setState((prev) => ({ ...prev, expanded: update(prev.expanded) }));
 
   return {
-    isExpanded: (path: string) => expanded.has(path) || pending.includes(path),
-    toggle,
-    expandAll: () => setExpanded(new Set(folderPaths)),
-    collapseAll: () => setExpanded(new Set()),
+    isExpanded: (path: string) => state.expanded.has(path),
+    toggle: (path: string) =>
+      setExpanded((prev) => {
+        const next = new Set(prev);
+        if (!next.delete(path)) next.add(path);
+        return next;
+      }),
+    expandAll: () => setExpanded(() => new Set(folderPaths)),
+    collapseAll: () => setExpanded(() => new Set()),
   };
 };
 
@@ -402,8 +437,10 @@ const FileTree = <T extends object>({
   const sortedTree = useMemo(() => sortFileTree(tree, sort), [tree, sort]);
   const folderPaths = useMemo(() => getFolderPaths(tree), [tree]);
   const { isExpanded, toggle, expandAll, collapseAll } = useFolderExpansion(
+    tree,
     folderPaths,
     tableRef,
+    !loadingRows,
   );
 
   const keyOf = (item: T) => {
