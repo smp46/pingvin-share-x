@@ -4,6 +4,7 @@ import { ConfigService } from "../../config/config.service";
 import { JwtService } from "@nestjs/jwt";
 import { CACHE_MANAGER } from "@nestjs/cache-manager";
 import { Cache } from "cache-manager";
+import { I18nService } from "nestjs-i18n";
 import { OAuthCallbackDto } from "../dto/oauthCallback.dto";
 import { OAuthSignInDto } from "../dto/oauthSignIn.dto";
 import { OAuthToken } from "./oauthProvider.interface";
@@ -14,6 +15,7 @@ export class OidcProvider extends GenericOidcProvider {
     config: ConfigService,
     jwtService: JwtService,
     @Inject(CACHE_MANAGER) protected cache: Cache,
+    i18n: I18nService,
   ) {
     super(
       "oidc",
@@ -21,6 +23,7 @@ export class OidcProvider extends GenericOidcProvider {
       config,
       jwtService,
       cache,
+      i18n,
     );
   }
 
