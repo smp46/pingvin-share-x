@@ -30,24 +30,23 @@ import { byteToHumanSizeString } from "../../utils/fileSize.util";
 import { HoverTip } from "./HoverTip";
 import { TableSort } from "./SortIcon";
 
-export type FileTreeFile<T> = {
-  item: T;
+export type FileTreeFile = {
   index: number;
   name: string;
   path: string;
   size: number;
 };
 
-export type FolderNode<T> = {
+export type FolderNode = {
   name: string;
   path: string;
-  folders: FolderNode<T>[];
-  files: FileTreeFile<T>[];
-  allFiles: FileTreeFile<T>[];
+  folders: FolderNode[];
+  files: FileTreeFile[];
+  allFiles: FileTreeFile[];
   size: number;
 };
 
-const createFolder = <T,>(name: string, path: string): FolderNode<T> => ({
+const createFolder = (name: string, path: string): FolderNode => ({
   name,
   path,
   folders: [],
@@ -66,7 +65,7 @@ const normalizePath = (raw: string) =>
       return parts;
     }, []);
 
-const compactFolder = <T,>(folder: FolderNode<T>): FolderNode<T> => {
+const compactFolder = (folder: FolderNode): FolderNode => {
   let node = folder;
   while (node.files.length === 0 && node.folders.length === 1) {
     const child = node.folders[0];
@@ -75,7 +74,7 @@ const compactFolder = <T,>(folder: FolderNode<T>): FolderNode<T> => {
   return { ...node, folders: node.folders.map(compactFolder) };
 };
 
-const computeTotals = <T,>(folder: FolderNode<T>) => {
+const computeTotals = (folder: FolderNode) => {
   folder.folders.forEach(computeTotals);
   folder.allFiles = [
     ...folder.files,
@@ -88,9 +87,9 @@ const buildFileTree = <T,>(
   items: T[],
   getPath: (item: T) => string,
   getSize: (item: T) => number,
-): FolderNode<T> => {
-  const root = createFolder<T>("", "");
-  const foldersByPath = new Map<string, FolderNode<T>>([["", root]]);
+): FolderNode => {
+  const root = createFolder("", "");
+  const foldersByPath = new Map<string, FolderNode>([["", root]]);
 
   items.forEach((item, index) => {
     const rawPath = getPath(item);
@@ -103,30 +102,21 @@ const buildFileTree = <T,>(
       const path = parent.path ? `${parent.path}/${part}` : part;
       let folder = foldersByPath.get(path);
       if (!folder) {
-        folder = createFolder<T>(part, path);
+        folder = createFolder(part, path);
         foldersByPath.set(path, folder);
         parent.folders.push(folder);
       }
       parent = folder;
     }
 
-    parent.files.push({
-      item,
-      index,
-      name,
-      path: filePath,
-      size: getSize(item),
-    });
+    parent.files.push({ index, name, path: filePath, size: getSize(item) });
   });
 
   computeTotals(root);
   return { ...root, folders: root.folders.map(compactFolder) };
 };
 
-const sortFileTree = <T,>(
-  folder: FolderNode<T>,
-  sort?: TableSort,
-): FolderNode<T> => {
+const sortFileTree = (folder: FolderNode, sort?: TableSort): FolderNode => {
   if (!sort?.property) return folder;
 
   const factor = sort.direction === "asc" ? 1 : -1;
@@ -146,7 +136,7 @@ const sortFileTree = <T,>(
   };
 };
 
-const getFolderPaths = <T,>(folder: FolderNode<T>): string[] =>
+const getFolderPaths = (folder: FolderNode): string[] =>
   folder.folders.flatMap((sub) => [sub.path, ...getFolderPaths(sub)]);
 
 export const ICON_SIZE = 25;
@@ -283,7 +273,7 @@ const FolderRow = ({
   actions,
   style,
 }: {
-  folder: FolderNode<unknown>;
+  folder: FolderNode;
   depth: number;
   connectors?: Connectors;
   expanded: boolean;
@@ -348,7 +338,7 @@ const FileRow = ({
   actions,
   style,
 }: {
-  file: FileTreeFile<unknown>;
+  file: FileTreeFile;
   depth: number;
   connectors?: Connectors;
   actions: ReactNode;
@@ -391,9 +381,9 @@ const FileTree = <T extends object>({
   sizeHeader: ReactNode;
   loadingRows?: ReactNode;
   renderFileActions: (item: T, index: number) => ReactNode;
-  renderFolderActions?: (folder: FolderNode<T>) => ReactNode;
+  renderFolderActions?: (folder: FolderNode) => ReactNode;
   getFileStyle?: (item: T, index: number) => CSSProperties | undefined;
-  getFolderStyle?: (folder: FolderNode<T>) => CSSProperties | undefined;
+  getFolderStyle?: (folder: FolderNode) => CSSProperties | undefined;
 }) => {
   const { theme } = useStyles();
   const t = useTranslate();
@@ -401,9 +391,13 @@ const FileTree = <T extends object>({
   const itemIds = useRef(new WeakMap<T, number>());
   const nextItemId = useRef(0);
 
+  const structure = useMemo(
+    () => files.map((file) => `${getPath(file)}\0${getSize(file)}`).join("\0"),
+    [files, getPath, getSize],
+  );
   const tree = useMemo(
     () => buildFileTree(files, getPath, getSize),
-    [files, getPath, getSize],
+    [structure],
   );
   const sortedTree = useMemo(() => sortFileTree(tree, sort), [tree, sort]);
   const folderPaths = useMemo(() => getFolderPaths(tree), [tree]);
@@ -437,7 +431,7 @@ const FileTree = <T extends object>({
   ];
 
   const renderRows = (
-    folder: FolderNode<T>,
+    folder: FolderNode,
     depth: number,
     trail: boolean[],
   ): ReactNode[] => {
@@ -470,7 +464,7 @@ const FileTree = <T extends object>({
         ];
       }),
       ...folder.files.map((file, i) => {
-        const item = file.item;
+        const item = files[file.index];
         const index = folder.folders.length + i;
         return (
           <FileRow

@@ -1,6 +1,6 @@
 import { ActionIcon, Group } from "@mantine/core";
 import { useModals } from "@mantine/modals";
-import { CSSProperties } from "react";
+import { CSSProperties, useMemo } from "react";
 import { TbTrash, TbEdit } from "react-icons/tb";
 import { GrUndo } from "react-icons/gr";
 import { FileListItem } from "../../types/File.type";
@@ -25,14 +25,23 @@ const getFileSize = (file: FileListItem) => +file.size;
 const getFileKey = (file: FileListItem) => ("id" in file ? file.id : undefined);
 
 const getFileState = (file: FileListItem) => {
-  const uploadable = "uploadingProgress" in file;
+  if ("uploadingProgress" in file) {
+    const pending = file.uploadingProgress === 0;
+    return {
+      uploadable: true,
+      progress: file.uploadingProgress,
+      removable: pending,
+      editable:
+        pending && shareService.isShareTextFile(getFileNameOrPath(file)),
+      deleted: false,
+    };
+  }
   return {
-    uploadable,
-    progress: uploadable ? file.uploadingProgress : 0,
-    uploading: uploadable && file.uploadingProgress !== 0,
-    removable: uploadable ? file.uploadingProgress === 0 : !file.deleted,
-    restorable: !uploadable && !!file.deleted,
-    deleted: !uploadable && !!file.deleted,
+    uploadable: false,
+    progress: 0,
+    removable: !file.deleted,
+    editable: false,
+    deleted: !!file.deleted,
   };
 };
 
@@ -86,9 +95,7 @@ const FileListActions = ({
           </ActionIcon>
         </HoverTip>
       )}
-      {progress !== undefined && (
-        <UploadProgressIndicator progress={progress} />
-      )}
+      {!!progress && <UploadProgressIndicator progress={progress} />}
       {restorable && (
         <HoverTip label={t("common.button.undo")}>
           <ActionIcon
@@ -147,20 +154,17 @@ const FileList = <T extends FileListItem = FileListItem>({
     showTextEditorModal(index, files, setFiles, text, modals);
   };
 
-  const renderFileActions = (file: T, index: number) => {
-    const { uploadable, progress, uploading, removable, restorable } =
-      getFileState(file);
-    const editable =
-      uploadable &&
-      progress === 0 &&
-      shareService.isShareTextFile(getFileNameOrPath(file));
+  const states = useMemo(() => files.map(getFileState), [files]);
+
+  const renderFileActions = (_file: T, index: number) => {
+    const { editable, removable, deleted, progress } = states[index];
 
     return (
       <FileListActions
         editable={editable}
         removable={removable}
-        restorable={restorable}
-        progress={uploading ? progress : undefined}
+        restorable={deleted}
+        progress={progress}
         onRemove={() => remove([index])}
         onRestore={() => restore([index])}
         onEdit={() => edit(index)}
@@ -168,15 +172,12 @@ const FileList = <T extends FileListItem = FileListItem>({
     );
   };
 
-  const renderFolderActions = (folder: FolderNode<T>) => {
-    const folderFiles = folder.allFiles.map((file) => ({
-      ...file,
-      state: getFileState(file.item),
-    }));
-    const removable = folderFiles.filter((file) => file.state.removable);
-    const restorable = folderFiles.filter((file) => file.state.restorable);
-    const uploads = folderFiles.filter((file) => file.state.uploadable);
-    const uploading = folderFiles.some((file) => file.state.uploading);
+  const renderFolderActions = (folder: FolderNode) => {
+    const indices = folder.allFiles.map(({ index }) => index);
+    const removable = indices.filter((index) => states[index].removable);
+    const restorable = indices.filter((index) => states[index].deleted);
+    const uploads = indices.filter((index) => states[index].uploadable);
+    const uploading = uploads.some((index) => states[index].progress !== 0);
 
     return (
       <FileListActions
@@ -185,14 +186,14 @@ const FileList = <T extends FileListItem = FileListItem>({
         progress={
           uploading
             ? uploads.reduce(
-                (total, file) =>
-                  total + Math.min(Math.max(file.state.progress, 0), 100),
+                (total, index) =>
+                  total + Math.min(Math.max(states[index].progress, 0), 100),
                 0,
               ) / uploads.length
             : undefined
         }
-        onRemove={() => remove(removable.map((file) => file.index))}
-        onRestore={() => restore(restorable.map((file) => file.index))}
+        onRemove={() => remove(removable)}
+        onRestore={() => restore(restorable)}
       />
     );
   };
@@ -207,11 +208,11 @@ const FileList = <T extends FileListItem = FileListItem>({
       sizeHeader={<FormattedMessage id="upload.filelist.size" />}
       renderFileActions={renderFileActions}
       renderFolderActions={renderFolderActions}
-      getFileStyle={(file) =>
-        getFileState(file).deleted ? deletedStyle : undefined
+      getFileStyle={(_file, index) =>
+        states[index].deleted ? deletedStyle : undefined
       }
       getFolderStyle={(folder) =>
-        folder.allFiles.every((file) => getFileState(file.item).deleted)
+        folder.allFiles.every(({ index }) => states[index].deleted)
           ? deletedStyle
           : undefined
       }
