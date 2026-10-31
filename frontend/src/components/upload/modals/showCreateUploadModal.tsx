@@ -5,10 +5,8 @@ import {
   Checkbox,
   Col,
   Grid,
-  Group,
   MultiSelect,
   NumberInput,
-  PasswordInput,
   Select,
   Stack,
   Text,
@@ -29,14 +27,13 @@ import useTranslate, {
 import shareService from "../../../services/share.service";
 import { FileUpload } from "../../../types/File.type";
 import { CreateShare } from "../../../types/share.type";
-import {
-  stringToTimespan,
-  getExpirationPreview,
-} from "../../../utils/date.util";
+import { getExpirationPreview } from "../../../utils/date.util";
 import toast from "../../../utils/toast.util";
 import { Timespan } from "../../../types/timespan.type";
 import { generateShareId } from "../../../utils/share.util";
 import CustomUrlInput from "../../share/CustomUrlInput";
+import PasswordFieldWithGeneratorModal from "../../field/PasswordFieldWithGeneratorModal";
+import { PasswordGeneratorConfig } from "../../../types/password.type";
 
 const showCreateUploadModal = (
   modals: ModalsContextProps,
@@ -164,7 +161,7 @@ const CreateUploadModalBody = ({
       name: undefined,
       link: generatedLink,
       recipients: [] as string[],
-      password: undefined,
+      password: "",
       maxViews: undefined,
       description: undefined,
       expiration_num: defaultTimespan.value,
@@ -175,11 +172,19 @@ const CreateUploadModalBody = ({
     validate: yupResolver(validationSchema),
   });
 
+  const [passwordGeneratorConfig, setPasswordGeneratorConfig] =
+    useState<PasswordGeneratorConfig>({
+      length: 14,
+      includeNumbers: true,
+      includeUppercase: true,
+      includeSymbols: false,
+    });
+
   const handleRestrictToggle = (checked: boolean) => {
     form.setFieldValue("restrictToRecipients", checked);
     if (checked) {
       // A share can't be both password-protected and restricted to recipients.
-      form.setFieldValue("password", undefined);
+      form.setFieldValue("password", "");
     }
   };
 
@@ -457,7 +462,7 @@ const CreateUploadModalBody = ({
               <Accordion.Panel>
                 <Stack align="stretch">
                   {!form.values.restrictToRecipients && (
-                    <PasswordInput
+                    <PasswordFieldWithGeneratorModal
                       variant="filled"
                       placeholder={t(
                         "upload.modal.accordion.security.password.placeholder",
@@ -467,6 +472,17 @@ const CreateUploadModalBody = ({
                       )}
                       autoComplete="new-password"
                       {...form.getInputProps("password")}
+                      handlePasswordGenerate={(password, config) => {
+                        form.setFieldValue("password", password);
+                        setPasswordGeneratorConfig(config);
+                      }}
+                      validationRules={{
+                        length: {
+                          min: 3,
+                          max: 30,
+                        },
+                      }}
+                      generatorConfig={passwordGeneratorConfig}
                     />
                   )}
                   <NumberInput
