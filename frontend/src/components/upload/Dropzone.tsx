@@ -109,8 +109,8 @@ const Dropzone = ({
   function dropzoneMessageId(mobile: boolean) {
     if (mobile) {
       return !isFolderUploadSupported
-        ? "upload.dropzone.description.desktop.no-folder"
-        : "upload.dropzone.description.desktop";
+        ? "upload.dropzone.description.mobile.no-folder"
+        : "upload.dropzone.description.mobile";
     } else if (isFirefox) {
       return !isFolderUploadSupported
         ? "upload.dropzone.description.desktop.firefox.no-folder"
