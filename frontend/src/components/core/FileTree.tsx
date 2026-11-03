@@ -139,6 +139,9 @@ const sortFileTree = (folder: FolderNode, sort?: TableSort): FolderNode => {
 const getFolderPaths = (folder: FolderNode): string[] =>
   folder.folders.flatMap((sub) => [sub.path, ...getFolderPaths(sub)]);
 
+const getMaxDepth = (folder: FolderNode): number =>
+  Math.max(0, ...folder.folders.map((sub) => 1 + getMaxDepth(sub)));
+
 const countVisibleRows = (
   folder: FolderNode,
   isOpen: (path: string) => boolean,
@@ -152,18 +155,25 @@ const countVisibleRows = (
 
 export const ICON_SIZE = 25;
 
-const indent = (theme: MantineTheme) =>
-  `calc(${ICON_SIZE}px + ${theme.spacing.xs})`;
-
 const nameCellStyle = (theme: MantineTheme, depth: number): CSSProperties => ({
   overflowWrap: "anywhere",
   ...(depth > 0 && {
     position: "relative",
-    paddingInlineStart: `calc(${theme.spacing.xs} + ${depth} * ${indent(theme)})`,
+    paddingInlineStart: `calc(${theme.spacing.xs} + ${depth} * var(--tree-indent))`,
   }),
 });
 
 const useStyles = createStyles((theme) => ({
+  tree: {
+    "--tree-indent": `calc(${ICON_SIZE}px + ${theme.spacing.xs})`,
+    "--tree-guide": `${ICON_SIZE / 2}px`,
+    "--tree-gap": "6px",
+    [theme.fn.smallerThan("xs")]: {
+      "--tree-indent": "min(12px, calc(60px / var(--tree-depth)))",
+      "--tree-guide": "calc(var(--tree-indent) / 2)",
+      "--tree-gap": "2px",
+    },
+  },
   connector: {
     position: "absolute",
     pointerEvents: "none",
@@ -184,6 +194,24 @@ const useStyles = createStyles((theme) => ({
   folderIcon: {
     color: theme.fn.primaryColor(),
     flexShrink: 0,
+    [theme.fn.smallerThan("xs")]: {
+      display: "none",
+    },
+  },
+  folderLabel: {
+    display: "flex",
+    alignItems: "center",
+    gap: 6,
+    minWidth: 0,
+    [theme.fn.smallerThan("xs")]: {
+      display: "block",
+    },
+  },
+  fileCount: {
+    flexShrink: 0,
+    [theme.fn.smallerThan("xs")]: {
+      marginInlineStart: 6,
+    },
   },
   collapsedChevron: {
     "[dir='rtl'] &": {
@@ -213,7 +241,7 @@ const rowAria = ({ depth, index, setSize }: RowPosition) => ({
 const TreeConnectors = ({ trail, isLast }: Connectors) => {
   const { classes, theme } = useStyles();
   const offset = (level: number) =>
-    `calc(${theme.spacing.xs} + ${ICON_SIZE / 2}px + ${level} * ${indent(theme)})`;
+    `calc(${theme.spacing.xs} + var(--tree-guide) + ${level} * var(--tree-indent))`;
   const level = trail.length;
 
   return (
@@ -236,7 +264,8 @@ const TreeConnectors = ({ trail, isLast }: Connectors) => {
           insetInlineStart: offset(level),
           top: -1,
           height: "calc(50% + 1px)",
-          width: `calc(${indent(theme)} - ${ICON_SIZE / 2 + 6}px)`,
+          width:
+            "max(0px, calc(var(--tree-indent) - var(--tree-guide) - var(--tree-gap)))",
           borderBottomWidth: 1,
           borderEndStartRadius: theme.radius.sm,
         }}
@@ -362,20 +391,22 @@ const FolderRow = ({
             )}
           </ActionIcon>
           <FolderIcon size={18} className={classes.folderIcon} />
-          <Text component="span" weight={600} sx={{ minWidth: 0 }}>
-            {folder.name}
-          </Text>
-          <Text
-            component="span"
-            size="xs"
-            color="dimmed"
-            sx={{ flexShrink: 0 }}
-          >
-            <FormattedMessage
-              id="filelist.folder.file-count"
-              values={{ count: folder.allFiles.length }}
-            />
-          </Text>
+          <Box className={classes.folderLabel}>
+            <Text component="span" weight={600} sx={{ minWidth: 0 }}>
+              {folder.name}
+            </Text>
+            <Text
+              component="span"
+              size="xs"
+              color="dimmed"
+              className={classes.fileCount}
+            >
+              <FormattedMessage
+                id="filelist.folder.file-count"
+                values={{ count: folder.allFiles.length }}
+              />
+            </Text>
+          </Box>
         </Group>
       </td>
       <td role="gridcell">{byteToHumanSizeString(folder.size)}</td>
@@ -440,7 +471,7 @@ const FileTree = <T extends object>({
   getFileStyle?: (item: T, index: number) => CSSProperties | undefined;
   getFolderStyle?: (folder: FolderNode) => CSSProperties | undefined;
 }) => {
-  const { theme } = useStyles();
+  const { classes, theme } = useStyles();
   const t = useTranslate();
   const tableRef = useRef<HTMLTableElement>(null);
   const itemIds = useRef(new WeakMap<T, number>());
@@ -456,6 +487,7 @@ const FileTree = <T extends object>({
   );
   const sortedTree = useMemo(() => sortFileTree(tree, sort), [tree, sort]);
   const folderPaths = useMemo(() => getFolderPaths(tree), [tree]);
+  const treeDepth = useMemo(() => Math.max(1, getMaxDepth(tree)), [tree]);
   const { isExpanded, toggle, expandAll, collapseAll } = useFolderExpansion(
     tree,
     folderPaths,
@@ -535,7 +567,12 @@ const FileTree = <T extends object>({
 
   return (
     <Box sx={{ display: "block", overflowX: "auto" }}>
-      <Table ref={tableRef} role="treegrid">
+      <Table
+        ref={tableRef}
+        role="treegrid"
+        className={classes.tree}
+        style={{ "--tree-depth": treeDepth } as CSSProperties}
+      >
         <thead>
           <tr role="row">
             <th role="columnheader">
