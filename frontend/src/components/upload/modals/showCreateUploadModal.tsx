@@ -49,6 +49,7 @@ const showCreateUploadModal = (
     defaultExpiration: Timespan;
     shareIdLength: number;
     simplified: boolean;
+    password: PasswordGeneratorConfig;
   },
   files: FileUpload[],
   uploadCallback: (createShare: CreateShare, files: FileUpload[]) => void,
@@ -113,6 +114,7 @@ const CreateUploadModalBody = ({
     maxExpiration: Timespan;
     defaultExpiration: Timespan;
     shareIdLength: number;
+    password: PasswordGeneratorConfig;
   };
 }) => {
   const modals = useModals();
@@ -173,12 +175,7 @@ const CreateUploadModalBody = ({
   });
 
   const [passwordGeneratorConfig, setPasswordGeneratorConfig] =
-    useState<PasswordGeneratorConfig>({
-      length: 14,
-      includeNumbers: true,
-      includeUppercase: true,
-      includeSymbols: false,
-    });
+    useState<PasswordGeneratorConfig>(options.password);
 
   const handleRestrictToggle = (checked: boolean) => {
     form.setFieldValue("restrictToRecipients", checked);

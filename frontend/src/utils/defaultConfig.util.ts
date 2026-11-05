@@ -1,4 +1,5 @@
 import Config from "../types/config.type";
+import { PasswordGeneratorConfig } from "../types/password.type";
 
 export function getDefaultConfig(): Config[] {
   return [
@@ -71,4 +72,14 @@ export function getDefaultConfig(): Config[] {
       type: "string",
     },
   ];
+}
+
+export function getDefaultPasswordConfig(): PasswordGeneratorConfig {
+  return {
+    length: 8,
+    includeLowercase: false,
+    includeUppercase: false,
+    includeNumbers: false,
+    includeSymbols: false,
+  };
 }

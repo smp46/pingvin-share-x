@@ -34,6 +34,7 @@ import {
   validateAndFilterFiles,
 } from "../../utils/file.util";
 import { byteToHumanSizeString } from "../../utils/fileSize.util";
+import usePasswordGeneratorConfig from "../../hooks/usePasswordGeneratorConfig.hook";
 
 const promiseLimit = pLimit(3);
 let errorToastShown = false;
@@ -54,6 +55,7 @@ const Upload = ({
 
   const { user } = useUser();
   const config = useConfig();
+  const passwordGeneratorConfig = usePasswordGeneratorConfig();
   const [files, setFiles] = useState<FileUpload[]>([]);
   const [isUploading, setisUploading] = useState(false);
 
@@ -193,6 +195,7 @@ const Upload = ({
         defaultExpiration: config.get("share.defaultExpiration"),
         shareIdLength: config.get("share.shareIdLength"),
         simplified,
+        password: passwordGeneratorConfig,
       },
       files,
       uploadFiles,
