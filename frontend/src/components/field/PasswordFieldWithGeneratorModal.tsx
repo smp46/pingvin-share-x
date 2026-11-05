@@ -48,7 +48,10 @@ const PasswordFieldWithGeneratorModal = ({
                 {children}
               </Container>
               <HoverTip label={t("password-generator.button.label")}>
-                <ActionIcon onClick={passwordModalOpen}>
+                <ActionIcon
+                  onClick={passwordModalOpen}
+                  disabled={passwordInputProps.disabled}
+                >
                   <TbRefresh />
                 </ActionIcon>
               </HoverTip>

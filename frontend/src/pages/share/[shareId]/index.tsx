@@ -30,6 +30,7 @@ import toast from "../../../utils/toast.util";
 import { byteToHumanSizeString } from "../../../utils/fileSize.util";
 import { getQueryString } from "../../../utils/router.util";
 import { HoverTip } from "../../../components/core/HoverTip";
+import usePasswordGeneratorConfig from "../../../hooks/usePasswordGeneratorConfig.hook";
 
 export function getServerSideProps(context: GetServerSidePropsContext) {
   return {
@@ -45,6 +46,7 @@ const Share = ({ shareId }: { shareId: string }) => {
   const { user } = useUser();
   const config = useConfig();
   const t = useTranslate();
+  const passwordConfig = usePasswordGeneratorConfig();
 
   const isOwner = !!user && !!share && share.creator?.id === user.id;
 
@@ -65,6 +67,7 @@ const Share = ({ shareId }: { shareId: string }) => {
         parseInt(config.get("share.maxSize")),
         config.get("general.appUrl"),
         config.get("general.appUrl", true),
+        passwordConfig,
         user?.isAdmin
           ? { value: 0, unit: "days" }
           : config.get("share.maxExpiration"),
