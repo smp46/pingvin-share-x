@@ -22,9 +22,10 @@ import useTranslate from "../../hooks/useTranslate.hook";
 
 const DefaultConfig: PasswordGeneratorConfig = {
   length: 14,
+  includeLowercase: true,
   includeUppercase: true,
   includeNumbers: true,
-  includeSymbols: false,
+  includeSymbols: true,
 };
 
 const DefaultValidationRules: PasswordGeneratorValidationRules = {
@@ -73,12 +74,20 @@ const PasswordGenerator = ({
   });
 
   const generatePassword = useCallback(() => {
-    let charset = "abcdefghijklmnopqrstuvwxyz";
+    let charset = "";
+    if (passwordForm.values.includeLowercase) {
+      charset += "abcdefghijklmnopqrstuvwxyz";
+    }
     if (passwordForm.values.includeUppercase)
       charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     if (passwordForm.values.includeNumbers) charset += "0123456789";
     if (passwordForm.values.includeSymbols)
       charset += "!@#$%^&*()_+~`|}{[]:;?><,./-=";
+
+    if (!charset) {
+      setGeneratedPassword("");
+      return;
+    }
 
     const randomValues = new Uint32Array(passwordForm.values.length);
     crypto.getRandomValues(randomValues);
@@ -97,8 +106,8 @@ const PasswordGenerator = ({
   };
 
   const hasFormErrors = useMemo(() => {
-    return Object.keys(passwordForm.errors).length > 0;
-  }, [passwordForm.errors]);
+    return Object.keys(passwordForm.errors).length > 0 || !generatedPassword;
+  }, [passwordForm.errors, generatedPassword]);
 
   useEffect(() => {
     generatePassword();
@@ -150,6 +159,11 @@ const PasswordGenerator = ({
               max: passwordMaxLength,
             })}
             {...passwordForm.getInputProps("length")}
+          />
+          <Checkbox
+            label={t("password-generator.rule.lowercase.text")}
+            checked={passwordForm.getInputProps("includeLowercase").value}
+            {...passwordForm.getInputProps("includeLowercase")}
           />
           <Checkbox
             label={t("password-generator.rule.uppercase.text")}

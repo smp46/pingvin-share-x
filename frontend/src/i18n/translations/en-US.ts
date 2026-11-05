@@ -412,6 +412,7 @@ export default {
   'password-generator.use.button.label': 'Use this password',
   'password-generator.rule.length.text': 'Length',
   'password-generator.rule.uppercase.text': 'Include Uppercase',
+  'password-generator.rule.lowercase.text': 'Include Lowercase',
   'password-generator.rule.number.text': 'Include Numbers',
   'password-generator.rule.symbol.text': 'Include Symbols',
 
