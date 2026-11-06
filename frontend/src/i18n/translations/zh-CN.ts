@@ -311,6 +311,13 @@ export default {
   "upload.filelist.size": "文件大小",
   "upload.filelist.estimating": "正在估算…",
   "upload.filelist.remaining": "剩余 {time}",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "创建分享",
   "upload.modal.link.error.invalid": "只能包括字母，数字，下划线(_)，和横线(-)",
