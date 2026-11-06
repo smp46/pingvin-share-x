@@ -311,6 +311,13 @@ export default {
   "upload.filelist.size": "Kích thước",
   "upload.filelist.estimating": "Đang ước tính...",
   "upload.filelist.remaining": "Còn lại {time}",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Tạo chia sẻ",
   "upload.modal.link.error.invalid": "Chỉ được phép sử dụng chữ, số, dấu gạch dưới và dấu gạch ngang",
