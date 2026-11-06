@@ -23,6 +23,7 @@ import User from "../../../types/user.type";
 import toast from "../../../utils/toast.util";
 import FileSizeInput from "../../core/FileSizeInput";
 import { CustomPasswordPolicy } from "../../../types/config.type";
+import PasswordFieldWithGeneratorModal from "../../field/PasswordFieldWithGeneratorModal";
 
 const showUpdateUserModal = (
   modals: ModalsContextProps,
@@ -253,11 +254,24 @@ const Body = ({
                   </Accordion.Control>
                   <Accordion.Panel>
                     <Stack>
-                      <PasswordInput
+                      <PasswordFieldWithGeneratorModal
                         label={t(
                           "admin.users.edit.update.change-password.field",
                         )}
                         {...passwordForm.getInputProps("password")}
+                        handlePasswordGenerate={(password) => {
+                          passwordForm.setFieldValue("password", password);
+                        }}
+                        generatorConfig={{
+                          length: customPasswordPolicy.minLength,
+                          includeLowercase:
+                            customPasswordPolicy.requireLowercase,
+                          includeNumbers: customPasswordPolicy.requireNumber,
+                          includeSymbols:
+                            customPasswordPolicy.requireSpecialCharacter,
+                          includeUppercase:
+                            customPasswordPolicy.requireUppercase,
+                        }}
                       />
                       <Button
                         variant="light"

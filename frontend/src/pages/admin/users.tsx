@@ -12,35 +12,23 @@ import userService from "../../services/user.service";
 import User from "../../types/user.type";
 import { CustomPasswordPolicy } from "../../types/config.type";
 import toast from "../../utils/toast.util";
+import usePasswordGeneratorConfig from "../../hooks/usePasswordGeneratorConfig.hook";
 
 const Users = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const config = useConfig();
+  const passwordConfig = usePasswordGeneratorConfig();
   const modals = useModals();
   const t = useTranslate();
 
-  let minLength = 8;
-  let requireLowercase = false;
-  let requireUppercase = false;
-  let requireNumber = false;
-  let requireSpecialCharacter = false;
-
-  if (config.get("security.customPasswordPolicy")) {
-    minLength = config.get("security.minLength");
-    requireLowercase = config.get("security.requireLowercase");
-    requireUppercase = config.get("security.requireUppercase");
-    requireNumber = config.get("security.requireNumber");
-    requireSpecialCharacter = config.get("security.requireSpecialCharacter");
-  }
-
   const customPasswordPolicy: CustomPasswordPolicy = {
-    minLength,
-    requireUppercase,
-    requireLowercase,
-    requireNumber,
-    requireSpecialCharacter,
+    minLength: passwordConfig.length,
+    requireUppercase: passwordConfig.includeUppercase,
+    requireLowercase: passwordConfig.includeLowercase,
+    requireNumber: passwordConfig.includeNumbers,
+    requireSpecialCharacter: passwordConfig.includeSymbols,
   };
 
   const getUsers = () => {

@@ -19,6 +19,7 @@ import userService from "../../../services/user.service";
 import toast from "../../../utils/toast.util";
 import FileSizeInput from "../../core/FileSizeInput";
 import { CustomPasswordPolicy } from "../../../types/config.type";
+import PasswordFieldWithGeneratorModal from "../../field/PasswordFieldWithGeneratorModal";
 
 const showCreateUserModal = (
   modals: ModalsContextProps,
@@ -58,7 +59,7 @@ const Body = ({
       displayName: "",
       username: "",
       email: "",
-      password: undefined,
+      password: "",
       isAdmin: false,
       setPasswordManually: false,
       allowShare: true,
@@ -224,9 +225,20 @@ const Body = ({
                 />
               )}
               {(form.values.setPasswordManually || !smtpEnabled) && (
-                <PasswordInput
+                <PasswordFieldWithGeneratorModal
                   label={t("admin.users.modal.create.password")}
                   {...form.getInputProps("password")}
+                  handlePasswordGenerate={(password) => {
+                    form.setFieldValue("password", password);
+                  }}
+                  generatorConfig={{
+                    length: customPasswordPolicy.minLength,
+                    includeLowercase: customPasswordPolicy.requireLowercase,
+                    includeNumbers: customPasswordPolicy.requireNumber,
+                    includeSymbols:
+                      customPasswordPolicy.requireSpecialCharacter,
+                    includeUppercase: customPasswordPolicy.requireUppercase,
+                  }}
                 />
               )}
               <Switch

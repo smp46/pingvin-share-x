@@ -414,6 +414,16 @@ export default {
   "filelist.sort-ascending": "Sort ascending",
   "filelist.sort-descending": "Sort descending",
 
+  // PasswordGenerator.tsx
+  'password-generator.button.label': 'Generate Password',
+  'password-generator.copy.message': 'Passowrd has been copied to clipboard',
+  'password-generator.use.button.label': 'Use this password',
+  'password-generator.rule.length.text': 'Length',
+  'password-generator.rule.uppercase.text': 'Include Uppercase',
+  'password-generator.rule.lowercase.text': 'Include Lowercase',
+  'password-generator.rule.number.text': 'Include Numbers',
+  'password-generator.rule.symbol.text': 'Include Symbols',
+
   // showCreateUploadModal.tsx
   "upload.modal.title": "Create Share",
   "upload.modal.link.error.invalid":
@@ -1005,6 +1015,7 @@ export default {
   "common.notify.copied": "Your link was copied to the clipboard",
   "common.notify.copied-link": "Your link was copied to the clipboard",
   "common.success": "Success",
+  "common.password-input.in-between": 'Use value between {min} and {max}',
 
   "common.error": "Error",
   "common.error.unknown": "An unknown error occurred",
