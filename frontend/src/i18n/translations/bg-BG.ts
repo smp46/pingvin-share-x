@@ -311,6 +311,13 @@ export default {
   "upload.filelist.size": "Размер",
   "upload.filelist.estimating": "Изчисляване...",
   "upload.filelist.remaining": "Оставащо време: {time}",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Създаване на споделяне",
   "upload.modal.link.error.invalid": "Може да съдържа само букви, цифри, долни черти и тирета",
