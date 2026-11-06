@@ -311,6 +311,13 @@ export default {
   "upload.filelist.size": "Величина",
   "upload.filelist.estimating": "Процењивање...",
   "upload.filelist.remaining": "Преостало: {time}",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Направи дељење",
   "upload.modal.link.error.invalid": "Може да садржи само слова, бројеве, доње црте и цртице",
