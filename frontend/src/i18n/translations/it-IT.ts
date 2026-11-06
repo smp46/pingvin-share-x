@@ -311,6 +311,13 @@ export default {
   "upload.filelist.size": "Dimensione",
   "upload.filelist.estimating": "Calcolo in corso...",
   "upload.filelist.remaining": "{time} rimanenti",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Crea Condivisione",
   "upload.modal.link.error.invalid": "Può contenere solo lettere, numeri, underscore e trattini",
