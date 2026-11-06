@@ -17,6 +17,7 @@ export const HoverTip = ({
   return (
     <Tooltip
       position="bottom"
+      withinPortal
       events={{ hover: true, focus: false, touch }}
       label={label}
       disabled={disabled}
