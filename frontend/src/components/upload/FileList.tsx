@@ -94,7 +94,7 @@ const FileListActions = ({
   return (
     <Group position="right" spacing="xs" noWrap>
       {editable && (
-        <HoverTip label={t("common.button.edit")}>
+        <HoverTip label={t("common.button.edit")} touch={false}>
           <ActionIcon
             color="blue"
             variant="light"
@@ -106,7 +106,7 @@ const FileListActions = ({
         </HoverTip>
       )}
       {removable && (
-        <HoverTip label={t("common.button.delete")}>
+        <HoverTip label={t("common.button.delete")} touch={false}>
           <ActionIcon
             color="red"
             variant="light"
@@ -119,7 +119,7 @@ const FileListActions = ({
       )}
       {!!progress && <UploadProgressIndicator progress={progress} />}
       {restorable && (
-        <HoverTip label={t("common.button.undo")}>
+        <HoverTip label={t("common.button.undo")} touch={false}>
           <ActionIcon
             color="victoria"
             variant="light"

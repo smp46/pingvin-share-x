@@ -581,7 +581,7 @@ const FileTree = <T extends object>({
                 {folderPaths.length > 0 && (
                   <Group spacing={4} noWrap>
                     {headerActions.map(({ label, Icon, onClick }) => (
-                      <HoverTip key={label} label={t(label)}>
+                      <HoverTip key={label} label={t(label)} touch={false}>
                         <ActionIcon
                           color={theme.primaryColor}
                           variant="subtle"

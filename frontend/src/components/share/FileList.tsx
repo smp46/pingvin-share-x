@@ -87,7 +87,7 @@ const FileList = ({
       renderFileActions={(file) => (
         <Group position="right" noWrap>
           {shareService.isShareTextFile(file.name) && (
-            <HoverTip label={t("share.copy-text-contents")}>
+            <HoverTip label={t("share.copy-text-contents")} touch={false}>
               <ActionIcon
                 color="blue"
                 variant="light"
@@ -110,7 +110,7 @@ const FileList = ({
             </HoverTip>
           )}
           {shareService.doesFileSupportPreview(file.name) && (
-            <HoverTip label={t("common.button.preview")}>
+            <HoverTip label={t("common.button.preview")} touch={false}>
               <ActionIcon
                 color="green"
                 variant="light"
@@ -122,7 +122,7 @@ const FileList = ({
             </HoverTip>
           )}
           {!share.hasPassword && (
-            <HoverTip label={t("common.button.copy-link")}>
+            <HoverTip label={t("common.button.copy-link")} touch={false}>
               <ActionIcon
                 color="victoria"
                 variant="light"
@@ -134,7 +134,7 @@ const FileList = ({
             </HoverTip>
           )}
 
-          <HoverTip label={t("common.button.download")}>
+          <HoverTip label={t("common.button.download")} touch={false}>
             <ActionIcon
               color="cyan"
               variant="light"
