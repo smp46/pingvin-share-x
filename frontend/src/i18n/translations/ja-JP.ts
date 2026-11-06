@@ -311,6 +311,13 @@ export default {
   "upload.filelist.size": "サイズ",
   "upload.filelist.estimating": "計算中...",
   "upload.filelist.remaining": "残り {time}",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "共有を作成",
   "upload.modal.link.error.invalid": "文字、数字、アンダースコア、ハイフンのみ使用できます",
