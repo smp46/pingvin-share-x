@@ -99,6 +99,7 @@ const FileListActions = ({
             color="blue"
             variant="light"
             size={ICON_SIZE}
+            aria-label={t("common.button.edit")}
             onClick={onEdit}
           >
             <TbEdit />
@@ -111,6 +112,7 @@ const FileListActions = ({
             color="red"
             variant="light"
             size={ICON_SIZE}
+            aria-label={t("common.button.delete")}
             onClick={onRemove}
           >
             <TbTrash />
@@ -124,6 +126,7 @@ const FileListActions = ({
             color="victoria"
             variant="light"
             size={ICON_SIZE}
+            aria-label={t("common.button.undo")}
             onClick={onRestore}
           >
             <GrUndo />

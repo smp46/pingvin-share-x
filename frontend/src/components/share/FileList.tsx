@@ -90,6 +90,7 @@ const FileList = ({
                 color="blue"
                 variant="light"
                 size={ICON_SIZE}
+                aria-label={t("share.copy-text-contents")}
                 onClick={() => {
                   api
                     .get(`/shares/${share.id}/files/${file.id}?download=false`)
@@ -113,6 +114,7 @@ const FileList = ({
                 color="green"
                 variant="light"
                 size={ICON_SIZE}
+                aria-label={t("common.button.preview")}
                 onClick={() => showFilePreviewModal(share.id, file, modals)}
               >
                 <TbEye />
@@ -125,6 +127,7 @@ const FileList = ({
                 color="victoria"
                 variant="light"
                 size={ICON_SIZE}
+                aria-label={t("common.button.copy-link")}
                 onClick={() => copyFileLink(file)}
               >
                 <TbLink />
@@ -137,6 +140,7 @@ const FileList = ({
               color="cyan"
               variant="light"
               size={ICON_SIZE}
+              aria-label={t("common.button.download")}
               onClick={async () => {
                 await shareService.downloadFile(share.id, file.id, recipientId);
               }}
