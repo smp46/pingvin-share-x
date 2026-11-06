@@ -16,6 +16,9 @@
     "postcss": "^8.5.31",
     "minimatch@9": {
       "brace-expansion": "^2.1.7"
+    },
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "^11.0.5"
     }
   },
   "dependencies": {
