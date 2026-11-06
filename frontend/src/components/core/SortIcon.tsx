@@ -15,8 +15,8 @@ const useStyles = createStyles((theme) => ({
     color: "inherit",
     whiteSpace: "nowrap",
     borderRadius: theme.radius.sm,
-    padding: "6px 8px",
-    margin: "-6px -8px",
+    padding: 6,
+    margin: -6,
   },
   icon: {
     flexShrink: 0,
@@ -27,6 +27,9 @@ const useStyles = createStyles((theme) => ({
       theme.colorScheme === "dark"
         ? theme.colors.dark[2]
         : theme.colors.gray[6],
+    [theme.fn.smallerThan("xs")]: {
+      display: "none",
+    },
   },
 }));
 

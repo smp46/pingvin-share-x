@@ -4,7 +4,6 @@ import {
   Group,
   Table,
   Text,
-  MantineTheme,
   createStyles,
 } from "@mantine/core";
 import { useIsomorphicEffect } from "@mantine/hooks";
@@ -155,23 +154,29 @@ const countVisibleRows = (
 
 export const ICON_SIZE = 25;
 
-const nameCellStyle = (theme: MantineTheme, depth: number): CSSProperties => ({
+const nameCellStyle = (depth: number): CSSProperties => ({
   overflowWrap: "anywhere",
   ...(depth > 0 && {
     position: "relative",
-    paddingInlineStart: `calc(${theme.spacing.xs} + ${depth} * var(--tree-indent))`,
+    paddingInlineStart: `calc(var(--tree-pad) + ${depth} * var(--tree-indent))`,
   }),
 });
 
 const useStyles = createStyles((theme) => ({
   tree: {
+    "--tree-pad": theme.spacing.xs,
     "--tree-indent": `calc(${ICON_SIZE}px + ${theme.spacing.xs})`,
     "--tree-guide": `${ICON_SIZE / 2}px`,
     "--tree-gap": "6px",
     [theme.fn.smallerThan("xs")]: {
+      "--tree-pad": "6px",
       "--tree-indent": "min(12px, calc(60px / var(--tree-depth)))",
       "--tree-guide": "calc(var(--tree-indent) / 2)",
       "--tree-gap": "2px",
+    },
+    "& > thead > tr > th, & > tbody > tr > td": {
+      paddingLeft: "var(--tree-pad)",
+      paddingRight: "var(--tree-pad)",
     },
   },
   connector: {
@@ -264,7 +269,7 @@ const ariaSort = (sort: TableSort | undefined, property: string) =>
 const TreeConnectors = ({ trail, isLast }: Connectors) => {
   const { classes, theme } = useStyles();
   const offset = (level: number) =>
-    `calc(${theme.spacing.xs} + var(--tree-guide) + ${level} * var(--tree-indent))`;
+    `calc(var(--tree-pad) + var(--tree-guide) + ${level} * var(--tree-indent))`;
   const level = trail.length;
 
   return (
@@ -395,7 +400,7 @@ const FolderRow = ({
       onClick={onToggle}
       data-folder-path={folder.path}
     >
-      <td role="gridcell" style={nameCellStyle(theme, position.depth)}>
+      <td role="gridcell" style={nameCellStyle(position.depth)}>
         {connectors && <TreeConnectors {...connectors} />}
         <Group spacing={6} noWrap>
           <ActionIcon
@@ -453,11 +458,9 @@ const FileRow = ({
   actions: ReactNode;
   style?: CSSProperties;
 }) => {
-  const { theme } = useStyles();
-
   return (
     <tr {...rowAria(position)} style={style} data-file-path={file.path}>
-      <td role="gridcell" style={nameCellStyle(theme, position.depth)}>
+      <td role="gridcell" style={nameCellStyle(position.depth)}>
         {connectors && <TreeConnectors {...connectors} />}
         {file.name}
       </td>
