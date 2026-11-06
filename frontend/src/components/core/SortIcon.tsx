@@ -1,6 +1,8 @@
 import { Group, UnstyledButton, createStyles } from "@mantine/core";
 import { Dispatch, ReactNode, SetStateAction } from "react";
 import { TbChevronDown, TbChevronUp, TbSelector } from "react-icons/tb";
+import useTranslate from "../../hooks/useTranslate.hook";
+import { HoverTip } from "./HoverTip";
 
 export type TableSort = {
   property?: string;
@@ -40,14 +42,11 @@ const SortableHeader = ({
   children: ReactNode;
 }) => {
   const { classes } = useStyles();
+  const t = useTranslate();
   const active = sort.property === property;
+  const nextDirection = active && sort.direction === "desc" ? "asc" : "desc";
 
-  const onClick = () =>
-    setSort(
-      active
-        ? { property, direction: sort.direction === "asc" ? "desc" : "asc" }
-        : { property, direction: "desc" },
-    );
+  const onClick = () => setSort({ property, direction: nextDirection });
 
   const Icon = !active
     ? TbSelector
@@ -56,16 +55,25 @@ const SortableHeader = ({
       : TbChevronDown;
 
   return (
-    <UnstyledButton className={classes.button} onClick={onClick}>
-      <Group spacing={4} noWrap>
-        <span>{children}</span>
-        <Icon
-          size={14}
-          aria-hidden
-          className={active ? classes.icon : classes.inactiveIcon}
-        />
-      </Group>
-    </UnstyledButton>
+    <HoverTip
+      label={t(
+        nextDirection === "asc"
+          ? "filelist.sort-ascending"
+          : "filelist.sort-descending",
+      )}
+      touch={false}
+    >
+      <UnstyledButton className={classes.button} onClick={onClick}>
+        <Group spacing={4} noWrap>
+          <span>{children}</span>
+          <Icon
+            size={14}
+            aria-hidden
+            className={active ? classes.icon : classes.inactiveIcon}
+          />
+        </Group>
+      </UnstyledButton>
+    </HoverTip>
   );
 };
 

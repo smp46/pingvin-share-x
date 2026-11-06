@@ -411,6 +411,8 @@ export default {
   "filelist.collapse-all": "Collapse all folders",
   "filelist.expand-folder": "Expand folder",
   "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
 
   // showCreateUploadModal.tsx
   "upload.modal.title": "Create Share",
