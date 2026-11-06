@@ -1,4 +1,4 @@
-import { setCookie } from "cookies-next";
+import { setCookie } from "cookies-next/client";
 import { LOCALES } from "../i18n/locales";
 
 const getLocaleByCode = (code: string) => {
