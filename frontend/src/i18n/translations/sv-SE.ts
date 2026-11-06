@@ -311,6 +311,13 @@ export default {
   "upload.filelist.size": "Storlek",
   "upload.filelist.estimating": "Uppskattar...",
   "upload.filelist.remaining": "{time} återstår",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Skapa delning",
   "upload.modal.link.error.invalid": "Kan endast innehålla bokstäver, siffror, understreck och bindestreck",
