@@ -5,13 +5,20 @@ type HoverTipProps = {
   label: string;
   children: ReactNode;
   disabled?: boolean;
+  touch?: boolean;
 };
 
-export const HoverTip = ({ label, children, disabled }: HoverTipProps) => {
+export const HoverTip = ({
+  label,
+  children,
+  disabled,
+  touch = true,
+}: HoverTipProps) => {
   return (
     <Tooltip
       position="bottom"
-      events={{ hover: true, focus: false, touch: true }}
+      withinPortal
+      events={{ hover: true, focus: false, touch }}
       label={label}
       disabled={disabled}
     >

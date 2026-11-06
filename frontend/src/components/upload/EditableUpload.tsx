@@ -67,6 +67,8 @@ const EditableUpload = ({
       (file) => !("uploadingProgress" in file),
     ) as FileMetaData[];
 
+    uploadingFilesRef.current = _uploadFiles;
+    existingFilesRef.current = _existingFiles;
     setUploadingFiles(_uploadFiles);
     setExistingFiles(_existingFiles);
   };
@@ -85,20 +87,16 @@ const EditableUpload = ({
   }, [existingFiles, uploadingFiles]);
 
   const uploadFiles = async (files: FileUpload[]) => {
-    const fileUploadPromises = files.map(async (file, fileIndex) =>
+    const fileUploadPromises = files.map(async (file) =>
       // Limit the number of concurrent uploads to 3
       promiseLimit(async () => {
+        if (!uploadingFilesRef.current.includes(file)) return;
+
         let fileId: string | undefined;
 
         const setFileProgress = (progress: number) => {
-          setUploadingFiles((files) =>
-            files.map((file, callbackIndex) => {
-              if (fileIndex == callbackIndex) {
-                file.uploadingProgress = progress;
-              }
-              return file;
-            }),
-          );
+          file.uploadingProgress = progress;
+          setUploadingFiles((files) => [...files]);
         };
 
         setFileProgress(1);
@@ -154,7 +152,9 @@ const EditableUpload = ({
   };
 
   const removeFiles = async () => {
-    const removedFiles = existingFiles.filter((file) => !!file.deleted);
+    const removedFiles = existingFilesRef.current.filter(
+      (file) => !!file.deleted,
+    );
 
     if (removedFiles.length > 0) {
       await Promise.all(
@@ -163,7 +163,9 @@ const EditableUpload = ({
         }),
       );
 
-      setExistingFiles(existingFiles.filter((file) => !file.deleted));
+      setExistingFiles(
+        existingFilesRef.current.filter((file) => !file.deleted),
+      );
     }
   };
 
@@ -271,7 +273,11 @@ const EditableUpload = ({
         isUploading={isUploading}
       />
       {existingAndUploadedFiles.length > 0 && (
-        <FileList files={existingAndUploadedFiles} setFiles={setFiles} />
+        <FileList
+          files={existingAndUploadedFiles}
+          setFiles={setFiles}
+          uploading={isUploading}
+        />
       )}
     </>
   );

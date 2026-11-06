@@ -12,6 +12,7 @@ import {
   UpdateShare,
 } from "../types/share.type";
 import { generateUUID } from "../utils/crypto.util";
+import { getMimeType } from "../utils/file.util";
 import {
   type UploadProgressHandler,
   withUploadInactivityTimeout,
@@ -94,7 +95,7 @@ const isShareIdAvailable = async (id: string): Promise<boolean> => {
 };
 
 const doesFileSupportPreview = (fileName: string) => {
-  const mimeType = (mime.contentType(fileName) || "").split(";")[0];
+  const mimeType = getMimeType(fileName);
 
   if (!mimeType) return false;
 
@@ -110,7 +111,7 @@ const doesFileSupportPreview = (fileName: string) => {
 };
 
 const isShareTextFile = (fileName: string) => {
-  const mimeType = (mime.contentType(fileName) || "").split(";")[0];
+  const mimeType = getMimeType(fileName);
 
   if (!mimeType) return false;
 
