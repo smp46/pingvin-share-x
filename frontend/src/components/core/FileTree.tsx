@@ -218,6 +218,22 @@ const useStyles = createStyles((theme) => ({
       transform: "scaleX(-1)",
     },
   },
+  headerCell: {
+    whiteSpace: "nowrap",
+  },
+  headerActions: {
+    [theme.fn.smallerThan("xs")]: {
+      gap: 2,
+    },
+  },
+  headerActionIcon: {
+    [theme.fn.smallerThan("xs")]: {
+      width: 22,
+      height: 22,
+      minWidth: 22,
+      minHeight: 22,
+    },
+  },
 }));
 
 type Connectors = {
@@ -237,6 +253,13 @@ const rowAria = ({ depth, index, setSize }: RowPosition) => ({
   "aria-posinset": index + 1,
   "aria-setsize": setSize,
 });
+
+const ariaSort = (sort: TableSort | undefined, property: string) =>
+  sort?.property === property
+    ? sort.direction === "asc"
+      ? "ascending"
+      : "descending"
+    : undefined;
 
 const TreeConnectors = ({ trail, isLast }: Connectors) => {
   const { classes, theme } = useStyles();
@@ -575,30 +598,45 @@ const FileTree = <T extends object>({
       >
         <thead>
           <tr role="row">
-            <th role="columnheader">
-              <Group spacing="xs" noWrap>
-                {nameHeader}
-                {folderPaths.length > 0 && (
-                  <Group spacing={4} noWrap>
-                    {headerActions.map(({ label, Icon, onClick }) => (
-                      <HoverTip key={label} label={t(label)} touch={false}>
-                        <ActionIcon
-                          color={theme.primaryColor}
-                          variant="subtle"
-                          size={ICON_SIZE}
-                          aria-label={t(label)}
-                          onClick={onClick}
-                        >
-                          <Icon />
-                        </ActionIcon>
-                      </HoverTip>
-                    ))}
-                  </Group>
-                )}
-              </Group>
+            <th
+              role="columnheader"
+              aria-sort={ariaSort(sort, "name")}
+              className={classes.headerCell}
+            >
+              {nameHeader}
             </th>
-            <th role="columnheader">{sizeHeader}</th>
-            <th role="columnheader"></th>
+            <th
+              role="columnheader"
+              aria-sort={ariaSort(sort, "size")}
+              className={classes.headerCell}
+            >
+              {sizeHeader}
+            </th>
+            <th role="columnheader" className={classes.headerCell}>
+              {folderPaths.length > 0 && (
+                <Group
+                  position="right"
+                  spacing={4}
+                  noWrap
+                  className={classes.headerActions}
+                >
+                  {headerActions.map(({ label, Icon, onClick }) => (
+                    <HoverTip key={label} label={t(label)} touch={false}>
+                      <ActionIcon
+                        color={theme.primaryColor}
+                        variant="subtle"
+                        size={ICON_SIZE}
+                        className={classes.headerActionIcon}
+                        aria-label={t(label)}
+                        onClick={onClick}
+                      >
+                        <Icon />
+                      </ActionIcon>
+                    </HoverTip>
+                  ))}
+                </Group>
+              )}
+            </th>
           </tr>
         </thead>
         <tbody>{loadingRows ?? renderRows(sortedTree, 0, [])}</tbody>

@@ -10,7 +10,7 @@ import shareService from "../../services/share.service";
 import { FileMetaData } from "../../types/File.type";
 import { Share } from "../../types/share.type";
 import toast from "../../utils/toast.util";
-import TableSortIcon, { TableSort } from "../core/SortIcon";
+import SortableHeader, { TableSort } from "../core/SortIcon";
 import showFilePreviewModal from "./modals/showFilePreviewModal";
 import { HoverTip } from "../core/HoverTip";
 import api from "../../services/api.service";
@@ -73,16 +73,14 @@ const FileList = ({
       sort={sort}
       loadingRows={isLoading ? skeletonRows : undefined}
       nameHeader={
-        <Group spacing="xs">
+        <SortableHeader sort={sort} setSort={setSort} property="name">
           <FormattedMessage id="share.table.name" />
-          <TableSortIcon sort={sort} setSort={setSort} property="name" />
-        </Group>
+        </SortableHeader>
       }
       sizeHeader={
-        <Group spacing="xs">
+        <SortableHeader sort={sort} setSort={setSort} property="size">
           <FormattedMessage id="share.table.size" />
-          <TableSortIcon sort={sort} setSort={setSort} property="size" />
-        </Group>
+        </SortableHeader>
       }
       renderFileActions={(file) => (
         <Group position="right" noWrap>
