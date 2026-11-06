@@ -11,6 +11,12 @@
 * **oidc:** correctly identify tls for redirect uri ([#269](https://github.com/smp46/pingvin-share-x/issues/269)) ([18414f1](https://github.com/smp46/pingvin-share-x/commit/18414f14759d6b00387852985d2cde8b28a6b322))
 * **oidc:** spec-compliant token validation ([#282](https://github.com/smp46/pingvin-share-x/issues/282)) ([61101a1](https://github.com/smp46/pingvin-share-x/commit/61101a1e2a942fded814f4d4d3e7a61535b86a45))
 
+## [2.1.1](https://github.com/smp46/pingvin-share-x/compare/v2.1.0...v2.1.1) (2026-11-06)
+
+### Bug Fixes
+
+* **ldap:** replace log strings with i18n translations ([071fe30](https://github.com/smp46/pingvin-share-x/commit/071fe3053f87c5eab62e7ca395731ba27d427f44))
+
 ## [2.1.0](https://github.com/smp46/pingvin-share-x/compare/v2.0.0...v2.1.0) (2026-10-25)
 
 ### Features
