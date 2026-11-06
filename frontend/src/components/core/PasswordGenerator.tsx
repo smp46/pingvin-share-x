@@ -10,7 +10,7 @@ import {
   Text,
 } from "@mantine/core";
 import { useForm, yupResolver } from "@mantine/form";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   PasswordGeneratorConfig,
   PasswordGeneratorValidationRules,
@@ -19,6 +19,7 @@ import useCopyToClipboard from "../../hooks/useCopyToClipboard";
 import { TbCheck, TbCopy, TbRefresh } from "react-icons/tb";
 import * as yup from "yup";
 import useTranslate from "../../hooks/useTranslate.hook";
+import { generatePassword } from "../../utils/crypto.util";
 
 const DefaultConfig: PasswordGeneratorConfig = {
   length: 14,
@@ -73,33 +74,6 @@ const PasswordGenerator = ({
     validateInputOnChange: true,
   });
 
-  const generatePassword = useCallback(() => {
-    let charset = "";
-    if (passwordForm.values.includeLowercase) {
-      charset += "abcdefghijklmnopqrstuvwxyz";
-    }
-    if (passwordForm.values.includeUppercase)
-      charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    if (passwordForm.values.includeNumbers) charset += "0123456789";
-    if (passwordForm.values.includeSymbols)
-      charset += "!@#$%^&*()_+~`|}{[]:;?><,./-=";
-
-    if (!charset) {
-      setGeneratedPassword("");
-      return;
-    }
-
-    const randomValues = new Uint32Array(passwordForm.values.length);
-    crypto.getRandomValues(randomValues);
-
-    let generatedPassword = "";
-    for (let i = 0; i < randomValues.length; i++) {
-      generatedPassword += charset[randomValues[i] % charset.length];
-    }
-
-    setGeneratedPassword(generatedPassword);
-  }, [passwordForm.values]);
-
   const submitPassword = () => {
     callback(generatedPassword, passwordForm.values);
     copyContentToClipboard(generatedPassword);
@@ -109,13 +83,13 @@ const PasswordGenerator = ({
     return Object.keys(passwordForm.errors).length > 0 || !generatedPassword;
   }, [passwordForm.errors, generatedPassword]);
 
-  useEffect(() => {
-    generatePassword();
-  }, [passwordForm.values]);
+  const handleRefreshClick = () => {
+    setGeneratedPassword(generatePassword(passwordForm.values));
+  };
 
   useEffect(() => {
-    generatePassword();
-  }, []);
+    setGeneratedPassword(generatePassword(passwordForm.values));
+  }, [passwordForm.values]);
 
   return (
     <Container style={{ width: "100%", marginTop: "1rem" }}>
@@ -130,7 +104,7 @@ const PasswordGenerator = ({
             {generatedPassword}
           </Text>
           <Flex align={"center"} gap={"xs"}>
-            <ActionIcon onClick={generatePassword}>
+            <ActionIcon onClick={handleRefreshClick}>
               <TbRefresh style={{ cursor: "pointer" }} />
             </ActionIcon>
             <ActionIcon

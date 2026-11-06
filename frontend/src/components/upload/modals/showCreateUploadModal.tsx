@@ -174,9 +174,6 @@ const CreateUploadModalBody = ({
     validate: yupResolver(validationSchema),
   });
 
-  const [passwordGeneratorConfig, setPasswordGeneratorConfig] =
-    useState<PasswordGeneratorConfig>(options.password);
-
   const handleRestrictToggle = (checked: boolean) => {
     form.setFieldValue("restrictToRecipients", checked);
     if (checked) {
@@ -469,9 +466,8 @@ const CreateUploadModalBody = ({
                       )}
                       autoComplete="new-password"
                       {...form.getInputProps("password")}
-                      handlePasswordGenerate={(password, config) => {
+                      handlePasswordGenerate={(password) => {
                         form.setFieldValue("password", password);
-                        setPasswordGeneratorConfig(config);
                       }}
                       validationRules={{
                         length: {
@@ -479,7 +475,7 @@ const CreateUploadModalBody = ({
                           max: 30,
                         },
                       }}
-                      generatorConfig={passwordGeneratorConfig}
+                      generatorConfig={options.password}
                     />
                   )}
                   <NumberInput

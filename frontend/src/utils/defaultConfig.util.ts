@@ -77,9 +77,18 @@ export function getDefaultConfig(): Config[] {
 export function getDefaultPasswordConfig(): PasswordGeneratorConfig {
   return {
     length: 8,
-    includeLowercase: false,
+    includeLowercase: true,
     includeUppercase: false,
     includeNumbers: false,
     includeSymbols: false,
+  };
+}
+
+export function getDefaultCharset() {
+  return {
+    uppercaseLetters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    lowercaseLetters: "abcdefghijklmnopqrstuvwxyz",
+    numbers: "0123456789",
+    symbols: "!@#$%^&*()_+~`|}{[]:;?><,./-=",
   };
 }
