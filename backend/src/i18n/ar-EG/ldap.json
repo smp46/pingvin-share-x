@@ -1,4 +1,13 @@
 {
   "urlNotDefined": "عنوان URL لخادم LDAP غير محدد",
-  "bindFailed": "فشل الارتباط بالمستخدم الافتراضي"
+  "bindFailed": "فشل الارتباط بالمستخدم الافتراضي",
+  "defaultUserBindFailed": "Failed to bind to default user: {error}",
+  "emptyPassword": "Authentication for username {username} failed. Empty password.",
+  "invalidUsernamePattern": "Username {username} does not match username pattern. Authentication failed.",
+  "tooManyUsersFound": "Authentication for username {username} failed. Too many users found with query {searchQuery}",
+  "noUserFound": "Authentication for username {username} failed. No user found with query {searchQuery}",
+  "tryingToAuthenticate": "Trying to authenticate {username} against LDAP user {dn}",
+  "invalidCredentials": "Failed to authenticate {username} against {dn}. Invalid credentials.",
+  "userBindFailure": "User bind failure: {error}",
+  "connectError": "Connect error: {error}"
 }
