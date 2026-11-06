@@ -311,6 +311,13 @@ export default {
   "upload.filelist.size": "크기",
   "upload.filelist.estimating": "계산 중...",
   "upload.filelist.remaining": "{time} 남음",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "공유 생성",
   "upload.modal.link.error.invalid": "문자, 숫자, 밑줄 및 하이픈만 포함할 수 있습니다",
