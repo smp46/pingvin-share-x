@@ -311,6 +311,13 @@ export default {
   "upload.filelist.size": "حجم",
   "upload.filelist.estimating": "در حال تخمین...",
   "upload.filelist.remaining": "{time} باقی‌مانده",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "ایجاد اشتراک",
   "upload.modal.link.error.invalid": "فقط می‌تواند شامل حروف، عدد، زیرخط و خط تیره باشد",
