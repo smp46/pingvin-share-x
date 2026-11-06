@@ -1,3 +1,16 @@
+## [2.2.0-beta.0](https://github.com/smp46/pingvin-share-x/compare/v2.1.0...v2.2.0-beta.0) (2026-11-06)
+
+### Features
+
+* add files/folders directly from clipboard into upload files dropzone ([#222](https://github.com/smp46/pingvin-share-x/issues/222)) ([3e85397](https://github.com/smp46/pingvin-share-x/commit/3e853971f8d6c8fb363d1f9417e1592eb7e773c6))
+* **fileList:** collapsible folder trees ([#288](https://github.com/smp46/pingvin-share-x/issues/288)) ([27e80f6](https://github.com/smp46/pingvin-share-x/commit/27e80f6ad7731fd6044786b7bddb2d5229074ed9))
+
+### Bug Fixes
+
+* **ldap:** replace log strings with i18n translations ([a2df9db](https://github.com/smp46/pingvin-share-x/commit/a2df9dba9870cf5e4c18aea4cfc2f599220368b0))
+* **oidc:** correctly identify tls for redirect uri ([#269](https://github.com/smp46/pingvin-share-x/issues/269)) ([18414f1](https://github.com/smp46/pingvin-share-x/commit/18414f14759d6b00387852985d2cde8b28a6b322))
+* **oidc:** spec-compliant token validation ([#282](https://github.com/smp46/pingvin-share-x/issues/282)) ([61101a1](https://github.com/smp46/pingvin-share-x/commit/61101a1e2a942fded814f4d4d3e7a61535b86a45))
+
 ## [2.1.0](https://github.com/smp46/pingvin-share-x/compare/v2.0.0...v2.1.0) (2026-10-25)
 
 ### Features
