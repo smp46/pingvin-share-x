@@ -311,6 +311,13 @@ export default {
   "upload.filelist.size": "Boyut",
   "upload.filelist.estimating": "Hesaplanıyor...",
   "upload.filelist.remaining": "Kalan süre: {time}",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Paylaşım Oluştur",
   "upload.modal.link.error.invalid": "Sadece harf, rakam, alt çizgi ve tire içerebilir",
