@@ -4,16 +4,17 @@ export const traverseDirectory = async (
 ): Promise<File[]> => {
   if (entry.isFile) {
     return new Promise((resolve) => {
-      entry.file((file: File) => {
-        const relativePath = path ? `${path}/${file.name}` : file.name;
-        Object.defineProperty(file, "webkitRelativePath", {
-          value: relativePath,
-          writable: true,
-          configurable: true,
-        });
-        resolve([file]);
-      },
-        () => resolve([])
+      entry.file(
+        (file: File) => {
+          const relativePath = path ? `${path}/${file.name}` : file.name;
+          Object.defineProperty(file, "webkitRelativePath", {
+            value: relativePath,
+            writable: true,
+            configurable: true,
+          });
+          resolve([file]);
+        },
+        () => resolve([]),
       );
     });
   } else if (entry.isDirectory) {

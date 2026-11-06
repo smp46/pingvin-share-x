@@ -1,147 +1,175 @@
-import { ActionIcon, Table, Group } from "@mantine/core";
+import { ActionIcon, Group } from "@mantine/core";
 import { useModals } from "@mantine/modals";
+import { CSSProperties, useMemo } from "react";
 import { TbTrash, TbEdit } from "react-icons/tb";
 import { GrUndo } from "react-icons/gr";
 import { FileListItem } from "../../types/File.type";
-import { byteToHumanSizeString } from "../../utils/fileSize.util";
 import UploadProgressIndicator from "./UploadProgressIndicator";
 import { FormattedMessage } from "react-intl";
 import useTranslate from "../../hooks/useTranslate.hook";
 import { HoverTip } from "../core/HoverTip";
+import FileTree, { FolderNode, ICON_SIZE } from "../core/FileTree";
 import showTextEditorModal from "./modals/showTextEditorModal";
 import shareService from "../../services/share.service";
-
-const renderFileName = (name: string) => {
-  const parts = name.split("/");
-  if (parts.length === 1) return name;
-  const fileName = parts.pop();
-  const folderPath = parts.join("/");
-  return (
-    <span>
-      <span style={{ opacity: 0.5 }}>{folderPath}/</span>
-      <span style={{ fontWeight: 600 }}>{fileName}</span>
-    </span>
-  );
-};
 
 const getFileNameOrPath = (file: FileListItem) => {
   const pathName =
     "webkitRelativePath" in file && file.webkitRelativePath
       ? file.webkitRelativePath
       : file.name;
-  return pathName.replace(/\\/g, "/").replace(/^\//, "");
+  return pathName;
 };
 
-const FileListRow = ({
-  file,
+const getFileSize = (file: FileListItem) => +file.size;
+
+const getFileKey = (file: FileListItem) => ("id" in file ? file.id : undefined);
+
+const getFileState = (file: FileListItem, uploading: boolean) => {
+  if ("uploadingProgress" in file) {
+    const pending = file.uploadingProgress === 0;
+    return {
+      uploadable: true,
+      progress: file.uploadingProgress,
+      removable: pending,
+      editable:
+        pending &&
+        !uploading &&
+        shareService.isShareTextFile(getFileNameOrPath(file)),
+      deleted: false,
+    };
+  }
+  return {
+    uploadable: false,
+    progress: 0,
+    removable: !file.deleted,
+    editable: false,
+    deleted: !!file.deleted,
+  };
+};
+
+const folderProgress = (uploads: { progress: number; size: number }[]) => {
+  if (uploads.some(({ progress }) => progress === -1)) return -1;
+
+  const totalSize = uploads.reduce((total, { size }) => total + size, 0);
+  if (totalSize === 0) {
+    return (
+      uploads.reduce(
+        (total, { progress }) => total + Math.min(progress, 100),
+        0,
+      ) / uploads.length
+    );
+  }
+  return (
+    uploads.reduce(
+      (total, { progress, size }) => total + Math.min(progress, 100) * size,
+      0,
+    ) / totalSize
+  );
+};
+
+const deletedStyle: CSSProperties = {
+  color: "rgba(120, 120, 120, 0.5)",
+  textDecoration: "line-through",
+};
+
+const FileListActions = ({
+  editable,
+  removable,
+  restorable,
+  progress,
   onRemove,
   onRestore,
   onEdit,
 }: {
-  file: FileListItem;
+  editable?: boolean;
+  removable?: boolean;
+  restorable?: boolean;
+  progress?: number;
   onRemove?: () => void;
   onRestore?: () => void;
   onEdit?: () => void;
 }) => {
-  {
-    const uploadable = "uploadingProgress" in file;
-    const uploading = uploadable && file.uploadingProgress !== 0;
-    const removable = uploadable
-      ? file.uploadingProgress === 0
-      : onRemove && !file.deleted;
-    const restorable = onRestore && !uploadable && !!file.deleted;
-    const deleted = !uploadable && !!file.deleted;
+  const t = useTranslate();
 
-    const fileNameOrPath = getFileNameOrPath(file);
-    const isTextFile = shareService.isShareTextFile(fileNameOrPath);
-    const editable = isTextFile && uploadable && file.uploadingProgress === 0;
-
-    const t = useTranslate();
-
-    return (
-      <tr
-        style={{
-          color: deleted ? "rgba(120, 120, 120, 0.5)" : "inherit",
-          textDecoration: deleted ? "line-through" : "none",
-        }}
-      >
-        <td>{renderFileName(fileNameOrPath)}</td>
-        <td>{byteToHumanSizeString(+file.size)}</td>
-        <td>
-          <Group position="right" spacing="xs" noWrap>
-            {editable && (
-              <HoverTip label={t("common.button.edit")}>
-                <ActionIcon
-                  color="blue"
-                  variant="light"
-                  size={25}
-                  onClick={onEdit}
-                >
-                  <TbEdit />
-                </ActionIcon>
-              </HoverTip>
-            )}
-            {removable && (
-              <HoverTip label={t("common.button.delete")}>
-                <ActionIcon
-                  color="red"
-                  variant="light"
-                  size={25}
-                  onClick={onRemove}
-                >
-                  <TbTrash />
-                </ActionIcon>
-              </HoverTip>
-            )}
-            {uploading && (
-              <UploadProgressIndicator progress={file.uploadingProgress} />
-            )}
-            {restorable && (
-              <HoverTip label={t("common.button.undo")}>
-                <ActionIcon
-                  color="victoria"
-                  variant="light"
-                  size={25}
-                  onClick={onRestore}
-                >
-                  <GrUndo />
-                </ActionIcon>
-              </HoverTip>
-            )}
-          </Group>
-        </td>
-      </tr>
-    );
-  }
+  return (
+    <Group position="right" spacing="xs" noWrap>
+      {editable && (
+        <HoverTip label={t("common.button.edit")} touch={false}>
+          <ActionIcon
+            color="blue"
+            variant="light"
+            size={ICON_SIZE}
+            aria-label={t("common.button.edit")}
+            onClick={onEdit}
+          >
+            <TbEdit />
+          </ActionIcon>
+        </HoverTip>
+      )}
+      {removable && (
+        <HoverTip label={t("common.button.delete")} touch={false}>
+          <ActionIcon
+            color="red"
+            variant="light"
+            size={ICON_SIZE}
+            aria-label={t("common.button.delete")}
+            onClick={onRemove}
+          >
+            <TbTrash />
+          </ActionIcon>
+        </HoverTip>
+      )}
+      {!!progress && <UploadProgressIndicator progress={progress} />}
+      {restorable && (
+        <HoverTip label={t("common.button.undo")} touch={false}>
+          <ActionIcon
+            color="victoria"
+            variant="light"
+            size={ICON_SIZE}
+            aria-label={t("common.button.undo")}
+            onClick={onRestore}
+          >
+            <GrUndo />
+          </ActionIcon>
+        </HoverTip>
+      )}
+    </Group>
+  );
 };
 
 const FileList = <T extends FileListItem = FileListItem>({
   files,
   setFiles,
+  uploading = false,
 }: {
   files: T[];
   setFiles: (files: T[]) => void;
+  uploading?: boolean;
 }) => {
   const modals = useModals();
-  const remove = (index: number) => {
-    const file = files[index];
 
-    if ("uploadingProgress" in file) {
-      files.splice(index, 1);
-    } else {
-      files[index] = { ...file, deleted: true };
+  const remove = (indices: number[]) => {
+    for (const index of [...indices].sort((a, b) => b - a)) {
+      const file = files[index];
+
+      if ("uploadingProgress" in file) {
+        if (file.uploadingProgress !== 0) continue;
+        files.splice(index, 1);
+      } else {
+        files[index] = { ...file, deleted: true };
+      }
     }
 
     setFiles([...files]);
   };
 
-  const restore = (index: number) => {
-    const file = files[index];
+  const restore = (indices: number[]) => {
+    for (const index of indices) {
+      const file = files[index];
 
-    if ("uploadingProgress" in file) {
-      return;
-    } else {
-      files[index] = { ...file, deleted: false };
+      if (!("uploadingProgress" in file)) {
+        files[index] = { ...file, deleted: false };
+      }
     }
 
     setFiles([...files]);
@@ -154,31 +182,72 @@ const FileList = <T extends FileListItem = FileListItem>({
     showTextEditorModal(index, files, setFiles, text, modals);
   };
 
-  const rows = files.map((file, i) => (
-    <FileListRow
-      key={i}
-      file={file}
-      onRemove={() => remove(i)}
-      onRestore={() => restore(i)}
-      onEdit={() => edit(i)}
-    />
-  ));
+  const states = useMemo(
+    () => files.map((file) => getFileState(file, uploading)),
+    [files, uploading],
+  );
+
+  const renderFileActions = (_file: T, index: number) => {
+    const { editable, removable, deleted, progress } = states[index];
+
+    return (
+      <FileListActions
+        editable={editable}
+        removable={removable}
+        restorable={deleted}
+        progress={progress}
+        onRemove={() => remove([index])}
+        onRestore={() => restore([index])}
+        onEdit={() => edit(index)}
+      />
+    );
+  };
+
+  const renderFolderActions = (folder: FolderNode) => {
+    const live: number[] = [];
+    const restorable: number[] = [];
+    const uploads: { progress: number; size: number }[] = [];
+
+    for (const { index, size } of folder.allFiles) {
+      const state = states[index];
+      if (state.deleted) restorable.push(index);
+      else live.push(index);
+      if (state.uploadable) uploads.push({ progress: state.progress, size });
+    }
+
+    const removable =
+      live.length > 0 && live.every((index) => states[index].removable);
+
+    return (
+      <FileListActions
+        removable={removable}
+        restorable={restorable.length > 0}
+        progress={uploads.length > 0 ? folderProgress(uploads) : undefined}
+        onRemove={() => remove(live)}
+        onRestore={() => restore(restorable)}
+      />
+    );
+  };
 
   return (
-    <Table>
-      <thead>
-        <tr>
-          <th>
-            <FormattedMessage id="upload.filelist.name" />
-          </th>
-          <th>
-            <FormattedMessage id="upload.filelist.size" />
-          </th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>{rows}</tbody>
-    </Table>
+    <FileTree
+      files={files}
+      getPath={getFileNameOrPath}
+      getSize={getFileSize}
+      getKey={getFileKey}
+      nameHeader={<FormattedMessage id="upload.filelist.name" />}
+      sizeHeader={<FormattedMessage id="upload.filelist.size" />}
+      renderFileActions={renderFileActions}
+      renderFolderActions={renderFolderActions}
+      getFileStyle={(_file, index) =>
+        states[index].deleted ? deletedStyle : undefined
+      }
+      getFolderStyle={(folder) =>
+        folder.allFiles.every(({ index }) => states[index].deleted)
+          ? deletedStyle
+          : undefined
+      }
+    />
   );
 };
 

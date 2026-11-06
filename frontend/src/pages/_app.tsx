@@ -374,7 +374,9 @@ App.getInitialProps = async ({ ctx }: { ctx: GetServerSidePropsContext }) => {
   } = {
     route: ctx.resolvedUrl,
     colorScheme:
-      (getCookie("mantine-color-scheme", ctx) as ColorScheme) ?? "light",
+      ((await getCookie("mantine-color-scheme", ctx)) as
+        | ColorScheme
+        | undefined) ?? "light",
   };
 
   if (ctx.req) {

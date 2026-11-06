@@ -86,9 +86,7 @@ const Account = () => {
       yup.object().shape({
         oldPassword: yup.string().when([], {
           is: () => !!user?.hasPassword,
-          then: (schema) =>
-            schema
-              .required(t("common.error.field-required")),
+          then: (schema) => schema.required(t("common.error.field-required")),
           otherwise: (schema) => schema.notRequired(),
         }),
         password: yup
@@ -112,12 +110,10 @@ const Account = () => {
             t("common.error.password.number"),
           )
           .matches(
-            requireSpecialCharacter
-              ? /[^a-zA-Z0-9]/
-              : /.*/,
+            requireSpecialCharacter ? /[^a-zA-Z0-9]/ : /.*/,
             t("common.error.password.special"),
           )
-          .required(t("common.error.field-required"))
+          .required(t("common.error.field-required")),
       }),
     ),
   });
@@ -128,9 +124,7 @@ const Account = () => {
     },
     validate: yupResolver(
       yup.object().shape({
-        password: yup
-          .string()
-          .required(t("common.error.field-required")),
+        password: yup.string().required(t("common.error.field-required")),
       }),
     ),
   });

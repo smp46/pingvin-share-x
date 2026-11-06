@@ -12,7 +12,7 @@ import {
 import { useForm, yupResolver } from "@mantine/form";
 import { useModals } from "@mantine/modals";
 import { ModalsContextProps } from "@mantine/modals/lib/context";
-import { getCookie, setCookie } from "cookies-next";
+import { getCookie, setCookie } from "cookies-next/client";
 import moment from "moment";
 import { FormattedMessage } from "react-intl";
 import * as yup from "yup";
@@ -100,10 +100,10 @@ const Body = ({
       sendEmailNotification: false,
       expiration_num: defaultTimespan.value,
       expiration_unit: `-${defaultTimespan.unit}` as string,
-      simplified: !reverseShareSimpleOnly
-        ? false
-        : !!(getCookie("reverse-share.simplified") ?? false),
-      publicAccess: !!(getCookie("reverse-share.public-access") ?? true),
+      simplified: reverseShareSimpleOnly
+        ? true
+        : getCookie("reverse-share.simplified") === "true",
+      publicAccess: getCookie("reverse-share.public-access") !== "false",
     },
     validate: yupResolver(
       yup.object().shape({

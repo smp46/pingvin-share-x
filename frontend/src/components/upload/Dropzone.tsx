@@ -85,7 +85,6 @@ const Dropzone = ({
     setIsMounted(true);
     setIsMac(/Macintosh|Mac OS X/.test(navigator.userAgent));
     setIsFirefox(/Firefox/.test(navigator.userAgent));
-    
   }, []);
 
   const isFolderUploadSupported =
@@ -106,22 +105,21 @@ const Dropzone = ({
     onFilesChanged(files);
     event.target.value = "";
   };
-  
+
   function dropzoneMessageId(mobile: boolean) {
     if (mobile) {
       return !isFolderUploadSupported
-        ? "upload.dropzone.description.desktop.no-folder"
-        : "upload.dropzone.description.desktop";
+        ? "upload.dropzone.description.mobile.no-folder"
+        : "upload.dropzone.description.mobile";
     } else if (isFirefox) {
       return !isFolderUploadSupported
-      ? "upload.dropzone.description.desktop.firefox.no-folder"
-      : "upload.dropzone.description.desktop.firefox";
+        ? "upload.dropzone.description.desktop.firefox.no-folder"
+        : "upload.dropzone.description.desktop.firefox";
     }
     return !isFolderUploadSupported
       ? "upload.dropzone.description.desktop.no-folder"
       : "upload.dropzone.description.desktop";
   }
-    
 
   return (
     <div className={classes.wrapper}>
@@ -164,7 +162,9 @@ const Dropzone = ({
             <span className={classes.mobileDescription}>
               <FormattedMessage
                 id={
-                  isMounted ? dropzoneMessageId(true) : "upload.dropzone.description.mobile"
+                  isMounted
+                    ? dropzoneMessageId(true)
+                    : "upload.dropzone.description.mobile"
                 }
                 values={{
                   maxSize: byteToHumanSizeString(maxShareSize),
@@ -174,7 +174,9 @@ const Dropzone = ({
             <span className={classes.desktopDescription}>
               <FormattedMessage
                 id={
-                  isMounted ? dropzoneMessageId(false) : "upload.dropzone.description.desktop"
+                  isMounted
+                    ? dropzoneMessageId(false)
+                    : "upload.dropzone.description.desktop"
                 }
                 values={{
                   maxSize: byteToHumanSizeString(maxShareSize),

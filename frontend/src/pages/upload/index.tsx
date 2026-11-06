@@ -60,6 +60,7 @@ const Upload = ({
   const [isUploading, setisUploading] = useState(false);
 
   const filesRef = useRef<FileUpload[]>(files);
+  const completingRef = useRef(false);
   filesRef.current = files;
 
   useConfirmLeave({
@@ -95,20 +96,22 @@ const Upload = ({
       return;
     }
 
-    const fileUploadPromises = files.map(async (file, fileIndex) =>
+    if (filesRef.current.length === 0) {
+      shareService.remove(createdShare.id).catch(() => {});
+      setisUploading(false);
+      return;
+    }
+
+    const fileUploadPromises = files.map(async (file) =>
       // Limit the number of concurrent uploads to 3
       promiseLimit(async () => {
+        if (!filesRef.current.includes(file)) return;
+
         let fileId;
 
         const setFileProgress = (progress: number) => {
-          setFiles((files) =>
-            files.map((file, callbackIndex) => {
-              if (fileIndex == callbackIndex) {
-                file.uploadingProgress = progress;
-              }
-              return file;
-            }),
-          );
+          file.uploadingProgress = progress;
+          setFiles((files) => [...files]);
         };
 
         setFileProgress(1);
@@ -143,7 +146,9 @@ const Upload = ({
                     const totalUploaded =
                       uploadedBytesBeforeThisChunk + uploadedBytesInThisChunk;
                     const overallPercent = (totalUploaded / file.size) * 100;
-                    setFileProgress(Math.min(overallPercent, 99.9));
+                    setFileProgress(
+                      Math.max(Math.min(overallPercent, 99.9), 1),
+                    );
                   }
                 },
               )
@@ -265,8 +270,10 @@ const Upload = ({
     if (
       files.length > 0 &&
       files.every((file) => file.uploadingProgress >= 100) &&
-      fileErrorCount == 0
+      fileErrorCount == 0 &&
+      !completingRef.current
     ) {
+      completingRef.current = true;
       shareService
         .completeShare(createdShare.id)
         .then((share) => {
@@ -279,7 +286,10 @@ const Upload = ({
           );
           setFiles([]);
         })
-        .catch(() => toast.error(t("upload.notify.generic-error")));
+        .catch(() => toast.error(t("upload.notify.generic-error")))
+        .finally(() => {
+          completingRef.current = false;
+        });
     }
   }, [files]);
 
@@ -330,7 +340,11 @@ const Upload = ({
         isUploading={isUploading}
       />
       {files.length > 0 && (
-        <FileList<FileUpload> files={files} setFiles={setFiles} />
+        <FileList<FileUpload>
+          files={files}
+          setFiles={setFiles}
+          uploading={isUploading}
+        />
       )}
     </>
   );

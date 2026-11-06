@@ -1,9 +1,15 @@
 import { fromEvent } from "file-selector";
+import mime from "mime-types";
 import { traverseDirectory } from "./folder.util";
 
 export const getNormalizedFileName = (file: File): string => {
   const pathName = file.webkitRelativePath || file.name;
   return pathName.replace(/\\/g, "/").replace(/^\//, "");
+};
+
+export const getMimeType = (fileName: string): string => {
+  const baseName = fileName.split(/[\\/]/).pop() ?? "";
+  return (mime.contentType(baseName) || "").split(";")[0];
 };
 
 export const filterDuplicateFiles = <T extends File>(
