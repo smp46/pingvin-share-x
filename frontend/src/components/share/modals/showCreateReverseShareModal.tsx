@@ -97,7 +97,8 @@ const Body = ({
       token: generatedToken,
       maxShareSize: userMaxShareSize,
       maxUseCount: 1,
-      sendEmailNotification: false,
+      sendEmailNotification:
+        getCookie("reverse-share.send-email-notification") === "true",
       expiration_num: defaultTimespan.value,
       expiration_unit: `-${defaultTimespan.unit}` as string,
       simplified: reverseShareSimpleOnly
@@ -141,9 +142,13 @@ const Body = ({
       return;
     }
 
-    // remember simplified and publicAccess in cookies
+    // remember simplified, publicAccess and sendEmailNotification in cookies
     setCookie("reverse-share.simplified", values.simplified);
     setCookie("reverse-share.public-access", values.publicAccess);
+    setCookie(
+      "reverse-share.send-email-notification",
+      values.sendEmailNotification,
+    );
 
     const expirationDate = moment().add(
       form.values.expiration_num,
