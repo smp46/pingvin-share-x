@@ -12,5 +12,20 @@
   "provider_google": "Google",
   "provider_microsoft": "Microsoft",
   "provider_discord": "Discord",
-  "provider_oidc": "OIDC"
+  "provider_oidc": "OIDC",
+  "log_client_id_missing": "Client ID not configured for OAuth provider \"{provider}\".",
+  "log_id_token_missing": "Can not get ID Token from response {response}",
+  "log_invalid_nonce": "Invalid nonce. Expected {expected}, but got {actual}",
+  "log_roles_not_found": "Roles not found at path {path} in ID Token {idToken}",
+  "log_role_missing": "User roles {roles} do not include {role}",
+  "log_username_missing": "Can not get username from ID Token {idToken}",
+  "log_http_error": "HTTP {status}",
+  "log_endpoints_invalid": "Missing or invalid authorization_endpoint or token_endpoint",
+  "log_discovery_failed": "Failed to fetch OIDC configuration from {uri}: {error}",
+  "log_issuer_missing": "discovery document has no issuer",
+  "log_jwks_uri_missing": "discovery document has no jwks_uri to verify a {alg} token",
+  "log_unexpected_azp": "unexpected azp \"{azp}\"",
+  "log_sub_missing": "missing \"sub\" claim",
+  "log_claim_missing": "ID Token is missing required claim \"{claim}\"",
+  "log_invalid_id_token": "Invalid ID Token: {error}"
 }
