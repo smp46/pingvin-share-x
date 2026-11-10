@@ -32,7 +32,7 @@ import toast from "../../../utils/toast.util";
 import { Timespan } from "../../../types/timespan.type";
 import { generateShareId } from "../../../utils/share.util";
 import CustomUrlInput from "../../share/CustomUrlInput";
-import PasswordFieldWithGeneratorModal from "../../field/PasswordFieldWithGeneratorModal";
+import PasswordFieldWithGenerateButton from "../../field/PasswordFieldWithGenerateButton";
 import { PasswordGeneratorConfig } from "../../../types/password.type";
 
 const showCreateUploadModal = (
@@ -456,7 +456,7 @@ const CreateUploadModalBody = ({
               <Accordion.Panel>
                 <Stack align="stretch">
                   {!form.values.restrictToRecipients && (
-                    <PasswordFieldWithGeneratorModal
+                    <PasswordFieldWithGenerateButton
                       variant="filled"
                       placeholder={t(
                         "upload.modal.accordion.security.password.placeholder",
@@ -468,12 +468,6 @@ const CreateUploadModalBody = ({
                       {...form.getInputProps("password")}
                       handlePasswordGenerate={(password) => {
                         form.setFieldValue("password", password);
-                      }}
-                      validationRules={{
-                        length: {
-                          min: 3,
-                          max: 30,
-                        },
                       }}
                       generatorConfig={options.password}
                     />

@@ -78,9 +78,9 @@ export function getDefaultPasswordConfig(): PasswordGeneratorConfig {
   return {
     length: 8,
     includeLowercase: true,
-    includeUppercase: false,
-    includeNumbers: false,
-    includeSymbols: false,
+    includeUppercase: true,
+    includeNumbers: true,
+    includeSymbols: true,
   };
 }
 

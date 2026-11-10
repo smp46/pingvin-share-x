@@ -19,7 +19,26 @@ import userService from "../../../services/user.service";
 import toast from "../../../utils/toast.util";
 import FileSizeInput from "../../core/FileSizeInput";
 import { CustomPasswordPolicy } from "../../../types/config.type";
-import PasswordFieldWithGeneratorModal from "../../field/PasswordFieldWithGeneratorModal";
+import PasswordFieldWithGenerateButton from "../../field/PasswordFieldWithGenerateButton";
+
+type UserFormValues = {
+  displayName: string;
+  username: string;
+  email: string;
+  password: string | undefined;
+  isAdmin: boolean;
+  setPasswordManually: boolean;
+  allowShare: boolean;
+  allowCreateReverseShares: boolean;
+  hasCustomMaxShares: boolean;
+  maxShares: number;
+  hasCustomMaxReverseShares: boolean;
+  maxReverseShares: number;
+  hasCustomShareSizeLimit: boolean;
+  shareSizeLimit: number;
+  hasCustomStorageQuotaLimit: boolean;
+  storageQuotaLimit: number;
+};
 
 const showCreateUserModal = (
   modals: ModalsContextProps,
@@ -54,12 +73,12 @@ const Body = ({
   const t = useTranslate();
   const [activeTab, setActiveTab] = useState<string | null>("general");
 
-  const form = useForm({
+  const form = useForm<UserFormValues>({
     initialValues: {
       displayName: "",
       username: "",
       email: "",
-      password: "",
+      password: undefined,
       isAdmin: false,
       setPasswordManually: false,
       allowShare: true,
@@ -225,7 +244,7 @@ const Body = ({
                 />
               )}
               {(form.values.setPasswordManually || !smtpEnabled) && (
-                <PasswordFieldWithGeneratorModal
+                <PasswordFieldWithGenerateButton
                   label={t("admin.users.modal.create.password")}
                   {...form.getInputProps("password")}
                   handlePasswordGenerate={(password) => {

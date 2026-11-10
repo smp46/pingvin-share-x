@@ -27,7 +27,7 @@ import toast from "../../utils/toast.util";
 import CopyTextField from "../upload/CopyTextField";
 import QRCode from "./QRCode";
 import { useState } from "react";
-import PasswordFieldWithGeneratorModal from "../field/PasswordFieldWithGeneratorModal";
+import PasswordFieldWithGenerateButton from "../field/PasswordFieldWithGenerateButton";
 import { PasswordGeneratorConfig } from "../../types/password.type";
 
 const showShareInformationsModal = (
@@ -356,7 +356,7 @@ const EditShareBody = ({
           />
         )}
         <Divider />
-        <PasswordFieldWithGeneratorModal
+        <PasswordFieldWithGenerateButton
           variant="filled"
           label={t("upload.modal.accordion.security.password.label")}
           placeholder={
