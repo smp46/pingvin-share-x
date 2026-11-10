@@ -2,7 +2,11 @@ import axios from "axios";
 import { GetServerSidePropsContext } from "next";
 import Config from "../types/config.type";
 import { getDefaultConfig } from "../utils/defaultConfig.util";
-import { getPwaScheme, PWA_BACKGROUNDS } from "../utils/pwaColors.util";
+import {
+  getPwaScheme,
+  getPwaThemeColor,
+  PWA_BACKGROUNDS,
+} from "../utils/pwaColors.util";
 
 const ICON_SIZES = [72, 96, 128, 144, 152, 192, 384, 512];
 const MASKABLE_ICON_SIZES = [192, 512];
@@ -10,6 +14,8 @@ const MASKABLE_ICON_SIZES = [192, 512];
 const getManifestConfig = async (): Promise<{
   appName: string;
   colorScheme: string;
+  primaryColor: string;
+  primaryColorOverride: string;
 }> => {
   const apiURL = process.env.API_URL || "http://localhost:8080";
 
@@ -32,21 +38,29 @@ const getManifestConfig = async (): Promise<{
   return {
     appName: getValue("general.appName") || "Pingvin Share X",
     colorScheme: getValue("appearance.themeColorScheme"),
+    primaryColor: getValue("appearance.themePrimaryColor"),
+    primaryColorOverride: getValue("appearance.themePrimaryColorOverride"),
   };
 };
 
 export const getServerSideProps = async ({
   res,
 }: GetServerSidePropsContext) => {
-  const { appName, colorScheme } = await getManifestConfig();
+  const { appName, colorScheme, primaryColor, primaryColorOverride } =
+    await getManifestConfig();
   const scheme = getPwaScheme(colorScheme);
   const backgroundColor = PWA_BACKGROUNDS[scheme];
+  const themeColor = getPwaThemeColor(
+    primaryColor,
+    primaryColorOverride,
+    scheme,
+  );
 
   const manifest = {
     id: "/",
     name: appName,
     short_name: appName,
-    theme_color: backgroundColor,
+    theme_color: themeColor,
     background_color: backgroundColor,
     display: "standalone",
     orientation: "portrait",
