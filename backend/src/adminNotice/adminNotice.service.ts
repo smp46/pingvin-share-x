@@ -1,5 +1,4 @@
 import { Injectable, OnModuleInit } from "@nestjs/common";
-import { User } from "@prisma/client";
 import * as fs from "fs";
 import * as path from "path";
 import { ConfigService } from "src/config/config.service";

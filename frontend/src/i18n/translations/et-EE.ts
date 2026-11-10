@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Teenust pakub",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "Laadi üles failid",
   "upload.dropzone.description.mobile": "Puuduta siia, et valida üksikuid faile, fotosid või videoid. Kausta üleslaadimiseks kasuta allolevat nuppu. Maksimaalne üleslaadimise kogumaht: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "Puuduta siia, et valida üksikuid faile, fotosid või videoid. Maksimaalne üleslaadimise kogumaht: {maxSize}.",
-  "upload.dropzone.description.desktop": "Klõpsa siia või lohista üksikud failid, fotod või videod. Kausta üleslaadimiseks kasuta allolevat nuppu või vajuta {shortcut}, et laadida üles tekst lõikelaualt. Maksimaalne üleslaadimise kogumaht: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "Klõpsa siia või lohista üksikud failid, fotod või videod või vajuta {shortcut}, et laadida üles tekst lõikelaualt. Maksimaalne üleslaadimise kogumaht: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Sinu failid ületavad lubatud suuruse {maxSize}.",
   "upload.button.folder": "Laadi üles kaust",
   "upload.button.folder.append": "Lisa kaust",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "Suurus",
   "upload.filelist.estimating": "Arvutamine...",
   "upload.filelist.remaining": "{time} jäänud",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Loo jagamine",
   "upload.modal.link.error.invalid": "Võib sisaldada ainult tähti, numbreid, alakriipse ja kriipse",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Kas ignoreerida TOTP-i kui kasutaja kasutab sotsiaalset sisselogimist.",
   "admin.config.oauth.disable-password": "Keela parooliga sisselogimine",
   "admin.config.oauth.disable-password.description": "Kas keelata parooliga sisselogimine\nVeendu, et OAuth pakkuja on korralikult seadistatud enne selle aktiveerimist, et vältida juurdepääsu lukustamist.",
+  "admin.config.oauth.allowed-hosts": "Lubatud OAuthi hostid",
+  "admin.config.oauth.allowed-hosts.description": "Komadega eraldatud loend täiendavatest hostinimedest, mis on OAuthiga sisselogimiseks lubatud (nt share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Kas GitHub sisselogimine on lubatud",
   "admin.config.oauth.github-client-id": "GitHub kliendi ID",

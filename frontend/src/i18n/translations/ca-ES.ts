@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Amb la tecnologia de",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "Pujar fitxers",
   "upload.dropzone.description.mobile": "Toqueu aquí per seleccionar fitxers individuals, fotos o vídeos. Per pujar una carpeta, utilitzeu el botó de sota. Mida màxima total de pujada: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "Toqueu aquí per seleccionar fitxers individuals, fotos o vídeos. Mida màxima total de pujada: {maxSize}.",
-  "upload.dropzone.description.desktop": "Feu clic aquí o arrossegueu i deixeu anar fitxers individuals, fotos o vídeos. Utilitzeu el botó de sota per pujar una carpeta, o premeu {shortcut} per pujar text del porta-retalls. Mida màxima total de pujada: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "Feu clic aquí o arrossegueu i deixeu anar fitxers individuals, fotos o vídeos, o premeu {shortcut} per pujar text del porta-retalls. Mida màxima total de pujada: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Els vostres fitxers superen la mida màxima de compartició de {maxSize}.",
   "upload.button.folder": "Pujar carpeta",
   "upload.button.folder.append": "Afegeix una carpeta",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "Mida",
   "upload.filelist.estimating": "S'està calculant...",
   "upload.filelist.remaining": "{time} restants",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Crear compartició",
   "upload.modal.link.error.invalid": "Només pot contenir lletres, números, guions baixos i guions",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Si s'ha d'ignorar el TOTP quan l'usuari utilitza l'inici de sessió social",
   "admin.config.oauth.disable-password": "Desactivar l'inici de sessió amb contrasenya",
   "admin.config.oauth.disable-password.description": "Si s'ha de desactivar l'inici de sessió amb contrasenya\nAssegureu-vos que un proveïdor d'OAuth estigui correctament configurat amb anterioritat per evitar quedar-vos fora.",
+  "admin.config.oauth.allowed-hosts": "Amfitrions OAuth permesos",
+  "admin.config.oauth.allowed-hosts.description": "Llista separada per comes de noms d'amfitrió addicionals permesos per a l'inici de sessió amb OAuth (p. ex., share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Si l'inici de sessió amb GitHub està activat",
   "admin.config.oauth.github-client-id": "ID de client de GitHub",

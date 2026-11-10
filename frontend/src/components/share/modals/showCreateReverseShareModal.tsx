@@ -12,7 +12,7 @@ import {
 import { useForm, yupResolver } from "@mantine/form";
 import { useModals } from "@mantine/modals";
 import { ModalsContextProps } from "@mantine/modals/lib/context";
-import { getCookie, setCookie } from "cookies-next";
+import { getCookie, setCookie } from "cookies-next/client";
 import moment from "moment";
 import { FormattedMessage } from "react-intl";
 import * as yup from "yup";
@@ -97,13 +97,15 @@ const Body = ({
       token: generatedToken,
       maxShareSize: userMaxShareSize,
       maxUseCount: 1,
-      sendEmailNotification: false,
+      sendEmailNotification:
+        showSendEmailNotificationOption &&
+        getCookie("reverse-share.send-email-notification") === "true",
       expiration_num: defaultTimespan.value,
       expiration_unit: `-${defaultTimespan.unit}` as string,
-      simplified: !reverseShareSimpleOnly
-        ? false
-        : !!(getCookie("reverse-share.simplified") ?? false),
-      publicAccess: !!(getCookie("reverse-share.public-access") ?? true),
+      simplified: reverseShareSimpleOnly
+        ? true
+        : getCookie("reverse-share.simplified") === "true",
+      publicAccess: getCookie("reverse-share.public-access") !== "false",
     },
     validate: yupResolver(
       yup.object().shape({
@@ -141,9 +143,15 @@ const Body = ({
       return;
     }
 
-    // remember simplified and publicAccess in cookies
+    // remember simplified, publicAccess and sendEmailNotification in cookies
     setCookie("reverse-share.simplified", values.simplified);
     setCookie("reverse-share.public-access", values.publicAccess);
+    if (showSendEmailNotificationOption) {
+      setCookie(
+        "reverse-share.send-email-notification",
+        values.sendEmailNotification,
+      );
+    }
 
     const expirationDate = moment().add(
       form.values.expiration_num,

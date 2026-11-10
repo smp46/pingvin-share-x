@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Működteti:",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "Fájlok feltöltése",
   "upload.dropzone.description.mobile": "Koppintson ide különálló fájlok, fényképek vagy videók kiválasztásához. Mappa feltöltéséhez használja az alábbi gombot. Maximális teljes feltöltési méret: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "Koppintson ide különálló fájlok, fényképek vagy videók kiválasztásához. Maximális teljes feltöltési méret: {maxSize}.",
-  "upload.dropzone.description.desktop": "Kattintson ide, vagy húzzon ide különálló fájlokat, fényképeket vagy videókat. Mappa feltöltéséhez használja az alábbi gombot, vagy nyomja meg a(z) {shortcut} billentyűkombinációt a vágólapon lévő szöveg feltöltéséhez. Maximális teljes feltöltési méret: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "Kattintson ide, vagy húzzon ide különálló fájlokat, fényképeket vagy videókat, vagy nyomja meg a(z) {shortcut} billentyűkombinációt a vágólapon lévő szöveg feltöltéséhez. Maximális teljes feltöltési méret: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "A fájlok mérete meghaladja a megengedett {maxSize} méretet.",
   "upload.button.folder": "Mappa feltöltése",
   "upload.button.folder.append": "Mappa hozzáfűzése",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "Méret",
   "upload.filelist.estimating": "Becslés folyamatban...",
   "upload.filelist.remaining": "Hátralévő idő: {time}",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Megosztás létrehozása",
   "upload.modal.link.error.invalid": "Csak betű, szám, aláhúzás és kötőjel karaktereket tartalmazhat",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "TOTP mellőzése a közösségi bejelentkezést használó felhasználónál",
   "admin.config.oauth.disable-password": "Jelszavas bejelentkezés letiltása",
   "admin.config.oauth.disable-password.description": "A jelszavas bejelentkezés be- és kikapcsolása\nA letiltás előtt a kizáródás elkerülésére mindenképpen ellenőrizendő az OAuth szolgáltató megfelelő konfigurációja.",
+  "admin.config.oauth.allowed-hosts": "Engedélyezett OAuth kiszolgálók",
+  "admin.config.oauth.allowed-hosts.description": "OAuth-bejelentkezéshez engedélyezett további kiszolgálónevek vesszővel elválasztott listája (pl. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "GitHub bejelentkezés engedélyezése",
   "admin.config.oauth.github-client-id": "GitHub ügyfél ID",

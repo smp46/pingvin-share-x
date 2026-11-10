@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Работи с",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "Качване на файлове",
   "upload.dropzone.description.mobile": "Докоснете тук, за да изберете отделни файлове, снимки или видеоклипове. За качване на папка използвайте бутона по-долу. Максимален общ размер за качване: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "Докоснете тук, за да изберете отделни файлове, снимки или видеоклипове. Максимален общ размер за качване: {maxSize}.",
-  "upload.dropzone.description.desktop": "Кликнете тук или плъзнете и пуснете отделни файлове, снимки или видеоклипове. Използвайте бутона по-долу, за да качите папка, или натиснете {shortcut}, за да качите текст от клипборда. Максимален общ размер за качване: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "Кликнете тук или плъзнете и пуснете отделни файлове, снимки или видеоклипове, или натиснете {shortcut}, за да качите текст от клипборда. Максимален общ размер за качване: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Вашите файлове надвишават максималния размер за споделяне от {maxSize}.",
   "upload.button.folder": "Качване на папка",
   "upload.button.folder.append": "Добавяне на папка",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "Размер",
   "upload.filelist.estimating": "Изчисляване...",
   "upload.filelist.remaining": "Оставащо време: {time}",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Създаване на споделяне",
   "upload.modal.link.error.invalid": "Може да съдържа само букви, цифри, долни черти и тирета",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Дали да се игнорира TOTP при влизане чрез социална мрежа",
   "admin.config.oauth.disable-password": "Деактивиране на влизането с парола",
   "admin.config.oauth.disable-password.description": "Дали да се спре влизането с парола. Уверете се, че OAuth е настроен правилно, за да не загубите достъп.",
+  "admin.config.oauth.allowed-hosts": "Разрешени OAuth хостове",
+  "admin.config.oauth.allowed-hosts.description": "Списък с допълнителни имена на хостове, разделени със запетая, от които е разрешено влизане чрез OAuth (напр. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Влизане чрез GitHub",
   "admin.config.oauth.github-client-id": "GitHub Client ID",

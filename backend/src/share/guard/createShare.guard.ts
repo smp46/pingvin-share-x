@@ -15,14 +15,13 @@ export class CreateShareGuard extends JwtGuard {
   async canActivate(context: ExecutionContext): Promise<boolean> {
     if (await super.canActivate(context)) return true;
 
-    const reverseShareTokenId = context.switchToHttp().getRequest()
-      .cookies.reverse_share_token;
+    const request = context.switchToHttp().getRequest();
+    const reverseShareTokenId = request.cookies?.reverse_share_token;
 
-    if (!reverseShareTokenId) return false;
+    if (!reverseShareTokenId) {
+      return false;
+    }
 
-    const isReverseShareTokenValid =
-      await this.reverseShareService.isValid(reverseShareTokenId);
-
-    return isReverseShareTokenValid;
+    return await this.reverseShareService.isValid(reverseShareTokenId);
   }
 }

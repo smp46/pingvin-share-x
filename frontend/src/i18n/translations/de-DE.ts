@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Bereitgestellt von",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "Dateien hochladen",
   "upload.dropzone.description.mobile": "Tippe hier, um einzelne Dateien, Fotos oder Videos auszuwählen. Um einen Ordner hochzuladen, verwende die Schaltfläche unten. Maximale Gesamtuploadgröße: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "Tippe hier, um einzelne Dateien, Fotos oder Videos auszuwählen. Maximale Gesamtuploadgröße: {maxSize}.",
-  "upload.dropzone.description.desktop": "Klicke hier oder ziehe einzelne Dateien, Fotos oder Videos per Drag & Drop hierher. Verwende die Schaltfläche unten, um einen Ordner hochzuladen, oder drücke {shortcut}, um Text aus deiner Zwischenablage hochzuladen. Maximale Gesamtuploadgröße: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "Klicke hier oder ziehe einzelne Dateien, Fotos oder Videos per Drag & Drop hierher, oder drücke {shortcut}, um Text aus deiner Zwischenablage hochzuladen. Maximale Gesamtuploadgröße: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Ihre Dateien überschreiten die maximale Freigabegröße von {maxSize}.",
   "upload.button.folder": "Ordner hochladen",
   "upload.button.folder.append": "Ordner anhängen",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "Größe",
   "upload.filelist.estimating": "Wird berechnet...",
   "upload.filelist.remaining": "{time} verbleibend",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Erstelle Freigabe",
   "upload.modal.link.error.invalid": "Darf nur Buchstaben, Zahlen, Unterstriche und Bindestriche enthalten",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Gibt an, ob TOTP ignoriert werden soll, wenn sich der Benutzer über soziale Netzwerke anmeldet",
   "admin.config.oauth.disable-password": "Anmelden mit Passwort deaktivieren",
   "admin.config.oauth.disable-password.description": "Deaktiviert das Anmelden mit Passwort\nStelle vor Aktivierung dieser Konfiguration sicher, dass ein OAuth-Provider korrekt konfiguriert ist, um nicht ausgesperrt zu werden.",
+  "admin.config.oauth.allowed-hosts": "Erlaubte OAuth-Hosts",
+  "admin.config.oauth.allowed-hosts.description": "Kommagetrennte Liste zusätzlicher Hostnamen, die für die OAuth-Anmeldung erlaubt sind (z. B. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Anmeldung mit GitHub erlauben",
   "admin.config.oauth.github-client-id": "GitHub Client-ID",

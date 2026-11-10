@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "قدرت‌گرفته از",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "بارگذاری فایل‌ها",
   "upload.dropzone.description.mobile": "برای انتخاب فایل‌ها، عکس‌ها یا ویدیوهای تکی اینجا ضربه بزنید. برای بارگذاری یک پوشه، از دکمه زیر استفاده کنید. حداکثر حجم کل بارگذاری: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "برای انتخاب فایل‌ها، عکس‌ها یا ویدیوهای تکی اینجا ضربه بزنید. حداکثر حجم کل بارگذاری: {maxSize}.",
-  "upload.dropzone.description.desktop": "اینجا کلیک کنید یا فایل‌ها، عکس‌ها یا ویدیوهای تکی را بکشید و رها کنید. برای بارگذاری یک پوشه از دکمه زیر استفاده کنید، یا برای بارگذاری متن از کلیپ‌بورد کلید {shortcut} را فشار دهید. حداکثر حجم کل بارگذاری: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "اینجا کلیک کنید یا فایل‌ها، عکس‌ها یا ویدیوهای تکی را بکشید و رها کنید، یا برای بارگذاری متن از کلیپ‌بورد کلید {shortcut} را فشار دهید. حداکثر حجم کل بارگذاری: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "فایل‌های شما از حداکثر اندازه اشتراک {maxSize} تجاوز می‌کنند.",
   "upload.button.folder": "بارگذاری پوشه",
   "upload.button.folder.append": "افزودن پوشه",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "حجم",
   "upload.filelist.estimating": "در حال تخمین...",
   "upload.filelist.remaining": "{time} باقی‌مانده",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "ایجاد اشتراک",
   "upload.modal.link.error.invalid": "فقط می‌تواند شامل حروف، عدد، زیرخط و خط تیره باشد",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "آیا هنگام استفاده از ورود اجتماعی TOTP نادیده گرفته شود.",
   "admin.config.oauth.disable-password": "غیرفعال کردن ورود با رمز عبور",
   "admin.config.oauth.disable-password.description": "آیا ورود با رمز عبور غیرفعال شود\nمطمئن شوید که قبل از فعال کردن این پیکربندی، یک ارائه‌دهنده OAuth به درستی پیکربندی شده باشد تا از قفل شدن جلوگیری شود.",
+  "admin.config.oauth.allowed-hosts": "میزبان‌های مجاز OAuth",
+  "admin.config.oauth.allowed-hosts.description": "فهرستی از نام‌های میزبان اضافی که برای ورود با OAuth مجاز هستند، جداشده با ویرگول (برای مثال share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "آیا ورود GitHub فعال است",
   "admin.config.oauth.github-client-id": "شناسه مشتری GitHub",

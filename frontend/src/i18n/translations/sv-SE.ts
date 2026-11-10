@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Drivs av",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "Ladda upp filer",
   "upload.dropzone.description.mobile": "Tryck här för att välja enskilda filer, foton eller videor. För att ladda upp en mapp, använd knappen nedan. Maximal total uppladdningsstorlek: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "Tryck här för att välja enskilda filer, foton eller videor. Maximal total uppladdningsstorlek: {maxSize}.",
-  "upload.dropzone.description.desktop": "Klicka här eller dra och släpp enskilda filer, foton eller videor. Använd knappen nedan för att ladda upp en mapp, eller tryck {shortcut} för att ladda upp text från ditt urklipp. Maximal total uppladdningsstorlek: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "Klicka här eller dra och släpp enskilda filer, foton eller videor, eller tryck {shortcut} för att ladda upp text från ditt urklipp. Maximal total uppladdningsstorlek: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Dina filer överskrider den maximala storleken på {maxSize}.",
   "upload.button.folder": "Ladda upp mapp",
   "upload.button.folder.append": "Lägg till mapp",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "Storlek",
   "upload.filelist.estimating": "Uppskattar...",
   "upload.filelist.remaining": "{time} återstår",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Skapa delning",
   "upload.modal.link.error.invalid": "Kan endast innehålla bokstäver, siffror, understreck och bindestreck",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Om du vill ignorera TOTP när användaren använder social inloggning",
   "admin.config.oauth.disable-password": "Inaktivera lösenordsinloggning",
   "admin.config.oauth.disable-password.description": "Om du vill inaktivera lösenordsinloggning\nSe till att en OAuth leverantör är korrekt konfigurerad innan du aktiverar denna konfiguration för att undvika att bli låst.",
+  "admin.config.oauth.allowed-hosts": "Tillåtna OAuth-värdar",
+  "admin.config.oauth.allowed-hosts.description": "Kommaseparerad lista med ytterligare värdnamn som tillåts för OAuth-inloggning (t.ex. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Om GitHub-inloggning är aktiverad",
   "admin.config.oauth.github-client-id": "GitHub Client ID",

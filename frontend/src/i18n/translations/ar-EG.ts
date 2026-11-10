@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "مدعوم من",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "رفع الملفات",
   "upload.dropzone.description.mobile": "اضغط هنا لاختيار ملفات فردية، أو صور، أو مقاطع فيديو. لرفع مجلد، استخدم الزر أدناه. الحد الأقصى لإجمالي حجم الرفع: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "اضغط هنا لاختيار ملفات فردية، أو صور، أو مقاطع فيديو. الحد الأقصى لإجمالي حجم الرفع: {maxSize}.",
-  "upload.dropzone.description.desktop": "انقر هنا أو اسحب وأفلت ملفات فردية، أو صور، أو مقاطع فيديو. استخدم الزر أدناه لرفع مجلد، أو اضغط على {shortcut} لرفع نص من الحافظة. الحد الأقصى لإجمالي حجم الرفع: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "انقر هنا أو اسحب وأفلت ملفات فردية، أو صور، أو مقاطع فيديو، أو اضغط على {shortcut} لرفع نص من الحافظة. الحد الأقصى لإجمالي حجم الرفع: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "تتجاوز ملفاتك الحجم الأقصى للمشاركة والذي هو {maxSize}.",
   "upload.button.folder": "رفع مجلد",
   "upload.button.folder.append": "إلحاق مجلد",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "الحجم",
   "upload.filelist.estimating": "جارٍ التقدير...",
   "upload.filelist.remaining": "متبقي {time}",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "إنشاء مشاركة",
   "upload.modal.link.error.invalid": "يمكن أن يحتوي فقط على الأحرف والأرقام والشرطات السفلية والواصلات",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "تجاهل TOTP إذا دخل المستخدم بحسابه الاجتماعي",
   "admin.config.oauth.disable-password": "تعطيل تسجيل الدخول باستخدام كلمة السر",
   "admin.config.oauth.disable-password.description": "ما إذا كان سيتم تعطيل تسجيل الدخول بكلمة المرور\nتأكد من تكوين موفر OAuth بشكل صحيح قبل تنشيط هذا التكوين لتجنب منعك من الوصول.",
+  "admin.config.oauth.allowed-hosts": "مضيفو OAuth المسموح بهم",
+  "admin.config.oauth.allowed-hosts.description": "قائمة مفصولة بفواصل بأسماء المضيفين الإضافية المسموح لها بتسجيل الدخول عبر OAuth (مثال: share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "تفعيل خيار الدخول بحساب GitHub",
   "admin.config.oauth.github-client-id": "GitHub Client ID",
@@ -604,7 +615,7 @@ export default {
   "admin.config.oauth.oidc-username-claim": "مطالبة اسم مستخدم OpenID Connect",
   "admin.config.oauth.oidc-username-claim.description": "طلب اسم المستخدم في رمز معرف OpenID Connect. إذا كنت لا تعرف معنى هذا الإعداد، اتركه فارغًا.",
   "admin.config.oauth.oidc-role-path": "المسار إلى الأدوار في رمز OpenID Connect",
-  "admin.config.oauth.oidc-role-path.description": "يجب أن يكون مسار JMES صالحًا يشير إلى مصفوفة من الأدوار. يوصى بإدارة حقوق الوصول باستخدام أدوار OpenID Connect فقط في حالة عدم تكوين موفر هوية آخر وتعطيل تسجيل الدخول بكلمة المرور. اتركه فارغًا إذا كنت لا تعرف ما هو هذا التكوين." + "Managing access rights using OpenID Connect roles is only recommended if no other identity provider is configured and password login is disabled. " + "Leave it blank if you don't know what this config is.",
+  "admin.config.oauth.oidc-role-path.description": "يجب أن يكون مسار JMES صالحًا يشير إلى مصفوفة من الأدوار. يوصى بإدارة حقوق الوصول باستخدام أدوار OpenID Connect فقط في حالة عدم تكوين موفر هوية آخر وتعطيل تسجيل الدخول بكلمة المرور. اتركه فارغًا إذا كنت لا تعرف ما هو هذا التكوين." + "إدارة حقوق الوصول باستخدام أدوار 'OpenID Connect' يوصى به فقط إذا لم يتم إعداد أي موفر هوية آخر و كان تسجيل الدخول بكلمة المرور معطلاً. " + "Leave it blank if you don't know what this config is.",
   "admin.config.oauth.oidc-role-general-access": "دور OpenID Connect للوصول العام",
   "admin.config.oauth.oidc-role-general-access.description": "الدور المطلوب للوصول العام. يجب أن يكون موجودًا في أدوار المستخدم ليتمكن من تسجيل الدخول. اتركه فارغًا إذا كنت لا تعرف ما هو هذا التكوين." + "Leave it blank if you don't know what this config is.",
   "admin.config.oauth.oidc-role-admin-access": "دور OpenID Connect لوصول المسؤول",

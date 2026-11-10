@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "技术支持：",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "上传文件",
   "upload.dropzone.description.mobile": "点击此处选择单个文件、照片或视频。若要上传文件夹，请使用下方按钮。最大总上传大小：{maxSize}。",
   "upload.dropzone.description.mobile.no-folder": "点击此处选择单个文件、照片或视频。最大总上传大小：{maxSize}。",
-  "upload.dropzone.description.desktop": "点击此处或将单个文件、照片或视频拖放到此处。使用下方按钮上传文件夹，或按 {shortcut} 上传剪贴板中的文本。最大总上传大小：{maxSize}。",
-  "upload.dropzone.description.desktop.no-folder": "点击此处或将单个文件、照片或视频拖放到此处，或按 {shortcut} 上传剪贴板中的文本。最大总上传大小：{maxSize}。",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "您的文件超过了最大上传限制 {maxSize}。",
   "upload.button.folder": "上传文件夹",
   "upload.button.folder.append": "追加文件夹",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "文件大小",
   "upload.filelist.estimating": "正在估算…",
   "upload.filelist.remaining": "剩余 {time}",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "创建分享",
   "upload.modal.link.error.invalid": "只能包括字母，数字，下划线(_)，和横线(-)",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "用户通过社交账号登录时是否忽略两步验证",
   "admin.config.oauth.disable-password": "禁用密码登录",
   "admin.config.oauth.disable-password.description": "是否禁用密码登录\n确保在激活此配置之前，OAuth 已正确配置，以避免被锁定。",
+  "admin.config.oauth.allowed-hosts": "允许的 OAuth 主机",
+  "admin.config.oauth.allowed-hosts.description": "允许用于 OAuth 登录的其他主机名列表，以逗号分隔（例如 share.internal.example.com）。",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "是否启用 GitHub 账号登录",
   "admin.config.oauth.github-client-id": "GitHub Client ID",

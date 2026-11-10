@@ -9,5 +9,5 @@
   "invalidType": "يجب أن يكون متغير التكوين من نوع {type}",
   "shareIdLengthValidation": "يجب أن يكون طول معرف المشاركة بين 2 و 50",
   "zipCompressionLevelValidation": "يجب أن يكون مستوى ضغط Zip بين 0 و 9",
-  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
+  "deprecatedVariable": "متغير التكوين '{legacyKey}' مهمل. يرجى نقله إلى '{modernKey}' في ملف config.yaml الخاص بك"
 }

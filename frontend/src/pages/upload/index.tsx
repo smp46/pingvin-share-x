@@ -8,11 +8,11 @@ import {
   Title,
 } from "@mantine/core";
 import { useModals } from "@mantine/modals";
-import { cleanNotifications } from "@mantine/notifications";
+import { hideNotification } from "@mantine/notifications";
 import { AxiosError } from "axios";
 import pLimit from "p-limit";
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { TbShieldLock } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
@@ -31,9 +31,10 @@ import toast from "../../utils/toast.util";
 import { useRouter } from "next/router";
 import {
   getNormalizedFileName,
-  filterDuplicateFiles,
+  validateAndFilterFiles,
 } from "../../utils/file.util";
 import { consumeSharedFiles } from "../../utils/shareTarget.util";
+import { byteToHumanSizeString } from "../../utils/fileSize.util";
 
 const promiseLimit = pLimit(3);
 let errorToastShown = false;
@@ -56,6 +57,10 @@ const Upload = ({
   const config = useConfig();
   const [files, setFiles] = useState<FileUpload[]>([]);
   const [isUploading, setisUploading] = useState(false);
+
+  const filesRef = useRef<FileUpload[]>(files);
+  const completingRef = useRef(false);
+  filesRef.current = files;
 
   useConfirmLeave({
     message: t("upload.notify.confirm-leave"),
@@ -90,20 +95,22 @@ const Upload = ({
       return;
     }
 
-    const fileUploadPromises = files.map(async (file, fileIndex) =>
+    if (filesRef.current.length === 0) {
+      shareService.remove(createdShare.id).catch(() => {});
+      setisUploading(false);
+      return;
+    }
+
+    const fileUploadPromises = files.map(async (file) =>
       // Limit the number of concurrent uploads to 3
       promiseLimit(async () => {
+        if (!filesRef.current.includes(file)) return;
+
         let fileId;
 
         const setFileProgress = (progress: number) => {
-          setFiles((files) =>
-            files.map((file, callbackIndex) => {
-              if (fileIndex == callbackIndex) {
-                file.uploadingProgress = progress;
-              }
-              return file;
-            }),
-          );
+          file.uploadingProgress = progress;
+          setFiles((files) => [...files]);
         };
 
         setFileProgress(1);
@@ -138,7 +145,9 @@ const Upload = ({
                     const totalUploaded =
                       uploadedBytesBeforeThisChunk + uploadedBytesInThisChunk;
                     const overallPercent = (totalUploaded / file.size) * 100;
-                    setFileProgress(Math.min(overallPercent, 99.9));
+                    setFileProgress(
+                      Math.max(Math.min(overallPercent, 99.9), 1),
+                    );
                   }
                 },
               )
@@ -196,23 +205,40 @@ const Upload = ({
     );
   };
 
-  const handleDropzoneFilesChanged = (newFiles: FileUpload[]) => {
-    const filtered = filterDuplicateFiles(newFiles, files, (normalizedName) =>
-      toast.error(
-        t("upload.notify.duplicate-skipped", { name: normalizedName }),
-      ),
-    );
-    if (filtered.length === 0) return;
+  const handleDropzoneFilesChanged = useCallback(
+    (newFiles: FileUpload[]) => {
+      const baseFiles = autoOpenCreateUploadModal ? [] : filesRef.current;
 
-    if (autoOpenCreateUploadModal) {
-      setFiles(filtered);
-      showCreateUploadModalCallback(filtered);
-    } else {
-      setFiles((oldArr) => [...oldArr, ...filtered]);
-    }
-  };
+      const filtered = validateAndFilterFiles(
+        newFiles,
+        baseFiles,
+        maxShareSize!,
+        (normalizedName) =>
+          toast.error(
+            t("upload.notify.duplicate-skipped", { name: normalizedName }),
+          ),
+        () =>
+          toast.error(
+            t("upload.dropzone.notify.file-too-big", {
+              maxSize: byteToHumanSizeString(maxShareSize!),
+            }),
+          ),
+      );
+      if (filtered.length === 0) return;
 
-  // Pick up files shared to the installed web app (Web Share Target API)
+      if (autoOpenCreateUploadModal) {
+        filesRef.current = filtered;
+        setFiles(filtered);
+        showCreateUploadModalCallback(filtered);
+      } else {
+        const nextFiles = [...filesRef.current, ...filtered];
+        filesRef.current = nextFiles;
+        setFiles(nextFiles);
+      }
+    },
+    [maxShareSize, autoOpenCreateUploadModal, t, showCreateUploadModalCallback],
+  );
+
   useEffect(() => {
     if (isReverseShare) return;
 
@@ -220,63 +246,6 @@ const Upload = ({
       if (sharedFiles.length > 0) handleDropzoneFilesChanged(sharedFiles);
     });
   }, []);
-
-  useEffect(() => {
-    const handlePaste = (e: ClipboardEvent) => {
-      if (modals.modals.length > 0) {
-        return;
-      }
-
-      const clipboardData = e.clipboardData;
-
-      if (!clipboardData) {
-        return;
-      }
-
-      if (clipboardData?.getData("text/plain")) {
-        const pastedText = clipboardData.getData("text/plain");
-        if (!pastedText) {
-          return;
-        }
-
-        // Create a sanitised file name from the pasted text
-        const safeName = pastedText
-          .substring(0, 50)
-          .replace(/[^a-zA-Z0-9 ]/g, "")
-          .trim();
-        const fileName = `${safeName || "clipboard_paste"}.txt`;
-
-        const file = new File([pastedText], fileName, {
-          type: "text/plain",
-        });
-        const fileUpload = file as FileUpload;
-        fileUpload.uploadingProgress = 0;
-
-        const filtered = filterDuplicateFiles(
-          [fileUpload],
-          files,
-          (normalizedName) =>
-            toast.error(
-              t("upload.notify.duplicate-skipped", { name: normalizedName }),
-            ),
-        );
-        if (filtered.length === 0) return;
-
-        if (autoOpenCreateUploadModal) {
-          setFiles(filtered);
-          showCreateUploadModalCallback(filtered);
-        } else {
-          setFiles((oldArr) => [...oldArr, ...filtered]);
-        }
-      }
-    };
-
-    window.addEventListener("paste", handlePaste);
-
-    return () => {
-      window.removeEventListener("paste", handlePaste);
-    };
-  }, [autoOpenCreateUploadModal, modals.modals.length]);
 
   useEffect(() => {
     // Check if there are any files that failed to upload
@@ -289,6 +258,7 @@ const Upload = ({
         toast.error(
           t("upload.notify.count-failed", { count: fileErrorCount }),
           {
+            id: "upload-failed",
             withCloseButton: false,
             autoClose: false,
           },
@@ -296,7 +266,9 @@ const Upload = ({
       }
       errorToastShown = true;
     } else {
-      cleanNotifications();
+      if (errorToastShown) {
+        hideNotification("upload-failed");
+      }
       errorToastShown = false;
     }
 
@@ -304,8 +276,10 @@ const Upload = ({
     if (
       files.length > 0 &&
       files.every((file) => file.uploadingProgress >= 100) &&
-      fileErrorCount == 0
+      fileErrorCount == 0 &&
+      !completingRef.current
     ) {
+      completingRef.current = true;
       shareService
         .completeShare(createdShare.id)
         .then((share) => {
@@ -318,7 +292,10 @@ const Upload = ({
           );
           setFiles([]);
         })
-        .catch(() => toast.error(t("upload.notify.generic-error")));
+        .catch(() => toast.error(t("upload.notify.generic-error")))
+        .finally(() => {
+          completingRef.current = false;
+        });
     }
   }, [files]);
 
@@ -369,7 +346,11 @@ const Upload = ({
         isUploading={isUploading}
       />
       {files.length > 0 && (
-        <FileList<FileUpload> files={files} setFiles={setFiles} />
+        <FileList<FileUpload>
+          files={files}
+          setFiles={setFiles}
+          uploading={isUploading}
+        />
       )}
     </>
   );

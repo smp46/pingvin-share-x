@@ -9,5 +9,5 @@
   "invalidType": "配置變數必須為 {type} 類型",
   "shareIdLengthValidation": "分享 ID 長度必須在 2 到 50 之間",
   "zipCompressionLevelValidation": "Zip 壓縮級別必須在 0 到 9 之間",
-  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
+  "deprecatedVariable": "設定變數 '{legacyKey}' 已棄用。請將其移至 config.yaml 中的 '{modernKey}'"
 }

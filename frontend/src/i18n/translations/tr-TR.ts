@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Altyapı:",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "Dosyaları Yükle",
   "upload.dropzone.description.mobile": "Tekil dosyaları, fotoğrafları veya videoları seçmek için buraya dokunun. Klasör yüklemek için aşağıdaki düğmeyi kullanın. Maksimum toplam yükleme boyutu: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "Tekil dosyaları, fotoğrafları veya videoları seçmek için buraya dokunun. Maksimum toplam yükleme boyutu: {maxSize}.",
-  "upload.dropzone.description.desktop": "Buraya tıklayın ya da tekil dosyaları, fotoğrafları veya videoları sürükleyip bırakın. Klasör yüklemek için aşağıdaki düğmeyi kullanın veya panonuzdan metin yüklemek için {shortcut} tuşlarına basın. Maksimum toplam yükleme boyutu: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "Buraya tıklayın ya da tekil dosyaları, fotoğrafları veya videoları sürükleyip bırakın veya panonuzdan metin yüklemek için {shortcut} tuşlarına basın. Maksimum toplam yükleme boyutu: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Dosyalarınız maksimum paylaşım boyutu olan {maxSize} değerini aşıyor.",
   "upload.button.folder": "Klasör yükle",
   "upload.button.folder.append": "Klasör ekle",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "Boyut",
   "upload.filelist.estimating": "Hesaplanıyor...",
   "upload.filelist.remaining": "Kalan süre: {time}",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Paylaşım Oluştur",
   "upload.modal.link.error.invalid": "Sadece harf, rakam, alt çizgi ve tire içerebilir",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Kullanıcı sosyal medya ile giriş yaptığında TOTP'yi yoksayıp yoksaymayacağı",
   "admin.config.oauth.disable-password": "Şifre ile girişi devre dışı bırak",
   "admin.config.oauth.disable-password.description": "Şifre ile girişi devre dışı bırakıp bırakmayacağı.\nHesabınıza erişimi kaybetmemek için bu yapılandırmayı etkinleştirmeden önce bir OAuth sağlayıcısının doğru şekilde yapılandırıldığından emin olun.",
+  "admin.config.oauth.allowed-hosts": "İzin Verilen OAuth Sunucuları",
+  "admin.config.oauth.allowed-hosts.description": "OAuth ile girişe izin verilen ek sunucu adlarının virgülle ayrılmış listesi (ör. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "GitHub ile girişin etkin olup olmadığı",
   "admin.config.oauth.github-client-id": "GitHub İstemci ID",

@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Pokreće",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "Pošaljite datoteke",
   "upload.dropzone.description.mobile": "Dodirnite ovdje za odabir pojedinačnih datoteka, fotografija ili videozapisa. Za otpremanje mape koristite gumb u nastavku. Maksimalna ukupna veličina za otpremanje: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "Dodirnite ovdje za odabir pojedinačnih datoteka, fotografija ili videozapisa. Maksimalna ukupna veličina za otpremanje: {maxSize}.",
-  "upload.dropzone.description.desktop": "Kliknite ovdje ili povucite i ispustite pojedinačne datoteke, fotografije ili videozapise. Koristite gumb u nastavku za otpremanje mape ili pritisnite {shortcut} za otpremanje teksta iz međuspremnika. Maksimalna ukupna veličina za otpremanje: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "Kliknite ovdje ili povucite i ispustite pojedinačne datoteke, fotografije ili videozapise, ili pritisnite {shortcut} za otpremanje teksta iz međuspremnika. Maksimalna ukupna veličina za otpremanje: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Vaše datoteke premašuju maksimalnu veličinu dijeljenja od {maxSize}.",
   "upload.button.folder": "Otpremi mapu",
   "upload.button.folder.append": "Dodaj mapu",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "Veličina",
   "upload.filelist.estimating": "Procjenjivanje...",
   "upload.filelist.remaining": "Preostalo: {time}",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Kreiraj dijeljenje",
   "upload.modal.link.error.invalid": "Može sadržavati samo slova, brojeve, donje crte i crtice",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Želite li zanemariti TOTP kada korisnik koristi društvenu prijavu",
   "admin.config.oauth.disable-password": "Onemogućite prijavu lozinkom",
   "admin.config.oauth.disable-password.description": "Omogućiti prijavu lozinkom ili ne.\nProvjerite je li OAuth pružatelj usluga ispravno konfiguriran prije aktiviranja ove opcije kako biste izbjegli zaključavanje računa.",
+  "admin.config.oauth.allowed-hosts": "Dopušteni OAuth hostovi",
+  "admin.config.oauth.allowed-hosts.description": "Zarezima odvojen popis dodatnih naziva hostova dopuštenih za prijavu putem OAuth-a (npr. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Je li omogućena prijava putem GitHuba",
   "admin.config.oauth.github-client-id": "GitHub ID klijenta",

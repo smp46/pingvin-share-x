@@ -14,11 +14,7 @@ import {
 import { useForm } from "@mantine/form";
 import { TbDeviceLaptop, TbMoon, TbSun } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
-import {
-  AdminConfig,
-  AdminConfigGroupedByCategory,
-  UpdateConfig,
-} from "../../../types/config.type";
+import { AdminConfig, UpdateConfig } from "../../../types/config.type";
 import { stringToTimespan, timespanToString } from "../../../utils/date.util";
 import FileSizeInput from "../../core/FileSizeInput";
 import TimespanInput from "../../core/TimespanInput";
@@ -55,9 +51,18 @@ const AdminConfigInput = ({
     configVariable.key === "share.enableShareEmailRecipients";
   const isEmailVerificationConfig =
     configVariable.key === "security.enableEmailVerification";
+  const isDownloadNotificationConfig =
+    configVariable.key === "share.enableShareDownloadNotifications";
+  const isEnableUserRecipients =
+    configVariable.key === "share.enableUserRecipients";
   let isSmtpEnabled = false;
 
-  if (isEmailShareConfig || isEmailVerificationConfig) {
+  if (
+    isEmailShareConfig ||
+    isEmailVerificationConfig ||
+    isDownloadNotificationConfig ||
+    isEnableUserRecipients
+  ) {
     isSmtpEnabled =
       optionalConfigVariables?.find((config) => config.key === "smtp.enabled")
         ?.value === "true";
@@ -325,17 +330,25 @@ const AdminConfigInput = ({
         />
       )}
       {configVariable.type == "boolean" &&
-        (isEmailShareConfig || isEmailVerificationConfig) && (
+        (isEmailShareConfig ||
+          isEmailVerificationConfig ||
+          isDownloadNotificationConfig ||
+          isEnableUserRecipients) && (
           <>
             <Switch
-              disabled={!isSmtpEnabled}
+              disabled={!configVariable.allowEdit || !isSmtpEnabled}
               {...form.getInputProps("booleanValue", { type: "checkbox" })}
               onChange={(e) => onValueChange(configVariable, e.target.checked)}
             />
           </>
         )}
       {configVariable.type == "boolean" &&
-        !(isEmailShareConfig || isEmailVerificationConfig) && (
+        !(
+          isEmailShareConfig ||
+          isEmailVerificationConfig ||
+          isDownloadNotificationConfig ||
+          isEnableUserRecipients
+        ) && (
           <>
             <Switch
               disabled={!configVariable.allowEdit}

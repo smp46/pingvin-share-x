@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Работает на",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "Загрузить файлы",
   "upload.dropzone.description.mobile": "Нажмите здесь, чтобы выбрать отдельные файлы, фото или видео. Для загрузки папки используйте кнопку ниже. Максимальный общий размер загрузки: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "Нажмите здесь, чтобы выбрать отдельные файлы, фото или видео. Максимальный общий размер загрузки: {maxSize}.",
-  "upload.dropzone.description.desktop": "Нажмите сюда или перетащите отдельные файлы, фото или видео. Используйте кнопку ниже для загрузки папки или нажмите {shortcut}, чтобы загрузить текст из буфера обмена. Максимальный общий размер загрузки: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "Нажмите сюда или перетащите отдельные файлы, фото или видео, или нажмите {shortcut}, чтобы загрузить текст из буфера обмена. Максимальный общий размер загрузки: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Ваши файлы превышают максимальный размер {maxSize}.",
   "upload.button.folder": "Загрузка папки",
   "upload.button.folder.append": "Добавить папку",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "Размер",
   "upload.filelist.estimating": "Оценка...",
   "upload.filelist.remaining": "{time} осталось",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Загрузить",
   "upload.modal.link.error.invalid": "Имя пользователя должно состоять только из букв, цифр, подчёркиваний и дефисов",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Игнорировать TOTP при использовании социальной авторизации",
   "admin.config.oauth.disable-password": "Отключить логин и пароль",
   "admin.config.oauth.disable-password.description": "Следует ли отключать вход по паролю? \nПеред активацией этой конфигурации убедитесь, что поставщик OAuth настроен должным образом, чтобы избежать блокировки.",
+  "admin.config.oauth.allowed-hosts": "Разрешённые хосты OAuth",
+  "admin.config.oauth.allowed-hosts.description": "Список дополнительных имён хостов через запятую, с которых разрешён вход через OAuth (например, share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Включен ли логин на GitHub",
   "admin.config.oauth.github-client-id": "ID клиента GitHub",

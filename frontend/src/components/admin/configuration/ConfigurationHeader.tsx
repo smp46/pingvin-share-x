@@ -4,6 +4,7 @@ import { Dispatch, SetStateAction } from "react";
 import { FormattedMessage } from "react-intl";
 import useConfig from "../../../hooks/config.hook";
 import Logo from "../../Logo";
+import useHomeHref from "../../../hooks/homeHref.hook";
 
 const ConfigurationHeader = ({
   isMobileNavBarOpened,
@@ -13,11 +14,12 @@ const ConfigurationHeader = ({
   setIsMobileNavBarOpened: Dispatch<SetStateAction<boolean>>;
 }) => {
   const config = useConfig();
+  const homeHref = useHomeHref();
   return (
     <Header height={60} p="md">
       <div style={{ display: "flex", alignItems: "center", height: "100%" }}>
         <Group position="apart" w="100%">
-          <Link href="/" passHref>
+          <Link href={homeHref} passHref>
             <Group>
               <Logo height={35} width={35} />
               <Text weight={600}>{config.get("general.appName")}</Text>

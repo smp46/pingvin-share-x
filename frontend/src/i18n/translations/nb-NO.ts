@@ -13,16 +13,16 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Basert på",
   // END footer
 
   // /
-  "home.title": "En <h>selvhostet</h> fildelingsplattform.",
+  "home.title": "En <h>egendriftet</h> fildelingsplattform.",
   "home.description": "Vil du virkelig gi dine personlige filer i hendene på tredjeparter som WeTransfer?",
-  "home.bullet.a.name": "Selvhostet",
-  "home.bullet.a.description": "Host Pingvin Share på din egen maskin.",
+  "home.bullet.a.name": "Egendriftet",
+  "home.bullet.a.description": "Kjør Pingvin Share på din egen maskin.",
   "home.bullet.b.name": "Personvern",
-  "home.bullet.b.description": "Filene dine er dine og vil aldri bli aksessert av tredjeparter.",
+  "home.bullet.b.description": "Filene dine er dine og vil aldri bli tilgjengelig for tredjeparter.",
   "home.bullet.c.name": "Ingen irriterende grense på filstørrelse",
   "home.bullet.c.description": "Last opp så store filer du vil. Bare harddisken din setter grenser.",
   "home.button.start": "Kom i gang",
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "Last opp filer",
   "upload.dropzone.description.mobile": "Trykk her for å velge enkeltfiler, bilder eller videoer. Bruk knappen nedenfor for å laste opp en mappe. Maksimal total opplastingsstørrelse: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "Trykk her for å velge enkeltfiler, bilder eller videoer. Maksimal total opplastingsstørrelse: {maxSize}.",
-  "upload.dropzone.description.desktop": "Klikk her eller dra og slipp enkeltfiler, bilder eller videoer. Bruk knappen nedenfor for å laste opp en mappe, eller trykk {shortcut} for å laste opp tekst fra utklippstavlen. Maksimal total opplastingsstørrelse: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "Klikk her eller dra og slipp enkeltfiler, bilder eller videoer, eller trykk {shortcut} for å laste opp tekst fra utklippstavlen. Maksimal total opplastingsstørrelse: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Filene dine overskrider den maksimale delingsstørrelsen på {maxSize}.",
   "upload.button.folder": "Last opp mappe",
   "upload.button.folder.append": "Legg til mappe",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "Størrelse",
   "upload.filelist.estimating": "Beregner...",
   "upload.filelist.remaining": "{time} gjenstår",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Opprett deling",
   "upload.modal.link.error.invalid": "Kan bare inneholde bokstaver, tall, understreker og bindestreker",
@@ -393,7 +402,7 @@ export default {
   // END /share/[id]/edit
 
   // /imprint
-  "imprint.title": "Impressum",
+  "imprint.title": "Leverandørinformasjon",
   // END /imprint
 
   // /privacy
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Om TOTP skal ignoreres når brukeren benytter sosial innlogging",
   "admin.config.oauth.disable-password": "Deaktiver passordinnlogging",
   "admin.config.oauth.disable-password.description": "Om passordinnlogging skal deaktiveres\nSørg for at en OAuth-tilbyder er riktig konfigurert før du aktiverer denne innstillingen, for å unngå å bli låst ute.",
+  "admin.config.oauth.allowed-hosts": "Tillatte OAuth-verter",
+  "admin.config.oauth.allowed-hosts.description": "En kommaseparert liste over ytterligere vertsnavn som er tillatt for OAuth-pålogging (f.eks. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Om GitHub-innlogging er aktivert",
   "admin.config.oauth.github-client-id": "GitHub Client-ID",
@@ -657,11 +668,11 @@ export default {
   "admin.config.s3.docs-link": "CORS må rekonfigureres på bøtten din, se {wikiLink} for detaljer.",
   "admin.config.category.legal": "Juridisk",
   "admin.config.legal.enabled": "Aktiver juridiske merknader",
-  "admin.config.legal.enabled.description": "Om det skal vises en lenke to impressum og personvernerklæring i bunnteksten.",
-  "admin.config.legal.imprint-text": "Impressum-tekst",
-  "admin.config.legal.imprint-text.description": "Teksten som skal vises i impressum. Støtter Markdown. La stå tomt for å lenke til en ekstern impressumside.",
-  "admin.config.legal.imprint-url": "Impressum-URL",
-  "admin.config.legal.imprint-url.description": "Hvis du allerede har en impressumside, kan du lenke til den her i stedet for å bruke tekstfeltet.",
+  "admin.config.legal.enabled.description": "Om det skal vises en lenke til leverandørinformasjon og personvernerklæring i bunnteksten.",
+  "admin.config.legal.imprint-text": "Tekst for leverandørinformasjon",
+  "admin.config.legal.imprint-text.description": "Teksten som skal vises i leverandørinformasjon. Støtter Markdown. La stå tomt for å lenke til en ekstern leverandørinformasjonsside.",
+  "admin.config.legal.imprint-url": "URL til leverandørinformasjon",
+  "admin.config.legal.imprint-url.description": "Hvis du allerede har en side med leverandørinformasjon, kan du lenke til den her i stedet for å bruke tekstfeltet.",
   "admin.config.legal.privacy-policy-text": "Personvernerklæring-tekst",
   "admin.config.legal.privacy-policy-text.description": "Teksten som skal vises i personvernerklæringen. Støtter Markdown. La stå tomt for å lenke til en ekstern personvernerklæringside.",
   "admin.config.legal.privacy-policy-url": "Personvernerklæring-URL",

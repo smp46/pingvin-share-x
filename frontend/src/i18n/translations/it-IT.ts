@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Realizzato con",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "Carica File",
   "upload.dropzone.description.mobile": "Tocca qui per selezionare singoli file, foto o video. Per caricare una cartella, usa il pulsante in basso. Dimensione massima totale di caricamento: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "Tocca qui per selezionare singoli file, foto o video. Dimensione massima totale di caricamento: {maxSize}.",
-  "upload.dropzone.description.desktop": "Fai clic qui o trascina singoli file, foto o video. Usa il pulsante in basso per caricare una cartella, oppure premi {shortcut} per caricare testo dagli appunti. Dimensione massima totale di caricamento: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "Fai clic qui o trascina singoli file, foto o video, oppure premi {shortcut} per caricare testo dagli appunti. Dimensione massima totale di caricamento: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "I tuoi file superano la dimensione massima di condivisione di {maxSize}.",
   "upload.button.folder": "Carica cartella",
   "upload.button.folder.append": "Aggiungi cartella",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "Dimensione",
   "upload.filelist.estimating": "Calcolo in corso...",
   "upload.filelist.remaining": "{time} rimanenti",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Crea Condivisione",
   "upload.modal.link.error.invalid": "Può contenere solo lettere, numeri, underscore e trattini",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Indica se ignorare TOTP quando l'utente utilizza il social login",
   "admin.config.oauth.disable-password": "Disabilita l'accesso tramite password",
   "admin.config.oauth.disable-password.description": "Nel caso di disabilitazione della password di accesso\nAssicurarti di aver configurato correttamente un provider OAuth prima di attivare questa configurazione, per evitare di essere bloccato fuori dal servizio.",
+  "admin.config.oauth.allowed-hosts": "Host OAuth consentiti",
+  "admin.config.oauth.allowed-hosts.description": "Elenco separato da virgole di nomi host aggiuntivi consentiti per l'accesso OAuth (es. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "Github",
   "admin.config.oauth.github-enabled.description": "Se l'accesso tramite GitHub è abilitato",
   "admin.config.oauth.github-client-id": "Client ID GitHub",

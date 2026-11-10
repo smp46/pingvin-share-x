@@ -85,16 +85,16 @@ All contributions are welcome, including issues, feature suggestions, pull reque
 
 ### Translations
 
-This project supports 32 languages so far (to varying degrees), you can help complete
-those translations or add more at [CrowdIn](https://crowdin.com/project/pingvin-share-x).
+This project supports 34 languages so far, an LLM is used to add most translations, 
+but you can help correct these or add more at [CrowdIn](https://crowdin.com/project/pingvin-share-x).
 
 ### AI Usage Policy
 
-Anyone submitting code to this repo needs to read and comply with the project's [AI Usage Policy](https://github.com/smp46/pingvin-share-x/blob/main/AI_USAGE_POLICY.md). Submissions that do not comply with be closed.
+Anyone submitting code to this repo needs to read and comply with the project's [AI Usage Policy](https://github.com/smp46/pingvin-share-x/blob/main/AI_USAGE_POLICY.md). AI-generated code is welcome, but you need to understand it and explain it in your own words. Please respect the time of maintainers, submissions that do not comply will be closed.
 
 ### Getting started
 
-If you have found a bug, have suggestion or something else, please create an issue.
+If you have found a bug, have a suggestion or something else, please open an issue.
 
 ### Submit a Pull Request
 
@@ -116,7 +116,7 @@ Before you submit the pull request for review please ensure that
   - **fix** - a bug fix
   - **refactor** - code change that neither fixes a bug nor adds a feature
 
-- Your pull request has a detailed description
+- Your pull request has a detailed description, written by you
 - You run `npm run format` to format the code
 
 ### Setup project

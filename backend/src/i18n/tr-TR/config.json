@@ -9,5 +9,5 @@
   "invalidType": "Yapılandırma değişkeni {type} tipinde olmalıdır",
   "shareIdLengthValidation": "Paylaşım ID uzunluğu 2 ile 50 arasında olmalıdır",
   "zipCompressionLevelValidation": "Zip sıkıştırma seviyesi 0 ile 9 arasında olmalıdır",
-  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
+  "deprecatedVariable": "'{legacyKey}' yapılandırma değişkeni kullanımdan kaldırılmıştır. Lütfen config.yaml dosyanızda bunu '{modernKey}' anahtarına taşıyın"
 }

@@ -9,5 +9,5 @@
   "invalidType": "La variable de configuration doit être de type {type}",
   "shareIdLengthValidation": "La longueur de l'ID de partage doit être comprise entre 2 et 50",
   "zipCompressionLevelValidation": "Le niveau de compression Zip doit être compris entre 0 et 9",
-  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
+  "deprecatedVariable": "La variable de configuration '{legacyKey}' est obsolète. Veuillez la déplacer vers '{modernKey}' dans votre config.yaml"
 }

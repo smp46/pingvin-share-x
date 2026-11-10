@@ -9,5 +9,5 @@
   "invalidType": "Biến cấu hình phải có kiểu {type}",
   "shareIdLengthValidation": "Độ dài ID chia sẻ phải từ 2 đến 50",
   "zipCompressionLevelValidation": "Mức nén Zip phải từ 0 đến 9",
-  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
+  "deprecatedVariable": "Biến cấu hình '{legacyKey}' đã lỗi thời. Vui lòng chuyển nó sang '{modernKey}' trong tệp config.yaml của bạn"
 }

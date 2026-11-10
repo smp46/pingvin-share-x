@@ -9,5 +9,5 @@
   "invalidType": "설정 변수는 {type} 유형이어야 합니다",
   "shareIdLengthValidation": "공유 ID 길이는 2에서 50 사이여야 합니다",
   "zipCompressionLevelValidation": "Zip 압축 레벨은 0에서 9 사이여야 합니다",
-  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
+  "deprecatedVariable": "설정 변수 '{legacyKey}'은(는) 더 이상 사용되지 않습니다. config.yaml에서 '{modernKey}'(으)로 옮겨 주세요"
 }

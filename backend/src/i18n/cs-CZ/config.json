@@ -9,5 +9,5 @@
   "invalidType": "Konfirační proměnná musí být typu {type}",
   "shareIdLengthValidation": "Délka ID sdílení musí být mezi 2 a 50",
   "zipCompressionLevelValidation": "Úroveň komprese Zip musí být mezi 0 a 9",
-  "deprecatedVariable": "Config variable '{legacyKey}' is deprecated. Please move it to '{modernKey}' in your config.yaml"
+  "deprecatedVariable": "Konfigurační proměnná '{legacyKey}' je zastaralá. Přesuňte ji prosím do '{modernKey}' ve vašem config.yaml"
 }

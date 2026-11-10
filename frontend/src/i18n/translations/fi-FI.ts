@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Palvelun tarjoaa",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "Pilvetä tiedostoja",
   "upload.dropzone.description.mobile": "Napauta tästä valitaksesi yksittäisiä tiedostoja, valokuvia tai videoita. Lataa kansio käyttämällä alla olevaa painiketta. Suurin yhteenlaskettu latauskoko: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "Napauta tästä valitaksesi yksittäisiä tiedostoja, valokuvia tai videoita. Suurin yhteenlaskettu latauskoko: {maxSize}.",
-  "upload.dropzone.description.desktop": "Napsauta tästä tai vedä ja pudota yksittäisiä tiedostoja, valokuvia tai videoita. Käytä alla olevaa painiketta ladataksesi kansion tai paina {shortcut} ladataksesi tekstiä leikepöydältä. Suurin yhteenlaskettu latauskoko: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "Napsauta tästä tai vedä ja pudota yksittäisiä tiedostoja, valokuvia tai videoita tai paina {shortcut} ladataksesi tekstiä leikepöydältä. Suurin yhteenlaskettu latauskoko: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Tiedostojen enimmäiskoko ylittää {maxSize} -arvon enimmäismäärän.",
   "upload.button.folder": "Lataa kansio",
   "upload.button.folder.append": "Lisää kansio",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "Koko",
   "upload.filelist.estimating": "Arvioidaan...",
   "upload.filelist.remaining": "{time} jäljellä",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Luo Jako",
   "upload.modal.link.error.invalid": "Voi sisältää vain kirjaimia, numeroita, alaviivoja ja väliviivoja",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Ohitetaanko TOTP, kun käyttäjä käyttää sosiaalisen median kirjautumista",
   "admin.config.oauth.disable-password": "Poista salasanakirjautuminen käytöstä",
   "admin.config.oauth.disable-password.description": "Poistetaanko salasanakirjautuminen käytöstä\nVarmista, että OAuth-palveluntarjoaja on määritetty oikein ennen tämän asetuksen aktivoimista, jotta et joudu lukituksi ulos.",
+  "admin.config.oauth.allowed-hosts": "Sallitut OAuth-isännät",
+  "admin.config.oauth.allowed-hosts.description": "Pilkuilla eroteltu luettelo muista isäntänimistä, jotka sallitaan OAuth-kirjautumisessa (esim. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHubia",
   "admin.config.oauth.github-enabled.description": "Onko GitHub-kirjautuminen käytössä",
   "admin.config.oauth.github-client-id": "GitHub Client ID",

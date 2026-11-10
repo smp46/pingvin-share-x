@@ -2,6 +2,7 @@ import { Inject, Injectable, Logger } from "@nestjs/common";
 import { inspect } from "node:util";
 import { ConfigService } from "../config/config.service";
 import { Client, Entry, InvalidCredentialsError } from "ldapts";
+import { I18nService } from "nestjs-i18n";
 
 @Injectable()
 export class LdapService {
@@ -9,12 +10,13 @@ export class LdapService {
   constructor(
     @Inject(ConfigService)
     private readonly serviceConfig: ConfigService,
+    private readonly i18n: I18nService,
   ) {}
 
   private async createLdapConnection(): Promise<Client> {
     const ldapUrl = this.serviceConfig.get("ldap.url");
     if (!ldapUrl) {
-      throw new Error("LDAP server URL is not defined");
+      throw new Error(this.i18n.t("ldap.urlNotDefined"));
     }
 
     const ldapClient = new Client({
@@ -31,8 +33,12 @@ export class LdapService {
           this.serviceConfig.get("ldap.bindPassword"),
         );
       } catch (error) {
-        this.logger.warn(`Failed to bind to default user: ${error}`);
-        throw new Error("failed to bind to default user");
+        this.logger.warn(
+          this.i18n.t("ldap.defaultUserBindFailed", {
+            args: { error: String(error) },
+          }),
+        );
+        throw new Error(this.i18n.t("ldap.bindFailed"));
       }
     }
 
@@ -43,9 +49,16 @@ export class LdapService {
     username: string,
     password: string,
   ): Promise<Entry | null> {
+    if (typeof password !== "string" || password.length === 0) {
+      this.logger.verbose(
+        this.i18n.t("ldap.emptyPassword", { args: { username } }),
+      );
+      return null;
+    }
+
     if (!username.match(/^[a-zA-Z0-9-_.@]+$/)) {
       this.logger.verbose(
-        `Username ${username} does not match username pattern. Authentication failed.`,
+        this.i18n.t("ldap.invalidUsernamePattern", { args: { username } }),
       );
       return null;
     }
@@ -68,20 +81,26 @@ export class LdapService {
       if (searchEntries.length > 1) {
         /* too many users found */
         this.logger.verbose(
-          `Authentication for username ${username} failed. Too many users found with query ${searchQuery}`,
+          this.i18n.t("ldap.tooManyUsersFound", {
+            args: { username, searchQuery },
+          }),
         );
         return null;
       } else if (searchEntries.length == 0) {
         /* user not found */
         this.logger.verbose(
-          `Authentication for username ${username} failed. No user found with query ${searchQuery}`,
+          this.i18n.t("ldap.noUserFound", {
+            args: { username, searchQuery },
+          }),
         );
         return null;
       }
 
       const targetEntity = searchEntries[0];
       this.logger.verbose(
-        `Trying to authenticate ${username} against LDAP user ${targetEntity.dn}`,
+        this.i18n.t("ldap.tryingToAuthenticate", {
+          args: { username, dn: targetEntity.dn },
+        }),
       );
       try {
         await ldapClient.bind(targetEntity.dn, password);
@@ -89,16 +108,26 @@ export class LdapService {
       } catch (error) {
         if (error instanceof InvalidCredentialsError) {
           this.logger.verbose(
-            `Failed to authenticate ${username} against ${targetEntity.dn}. Invalid credentials.`,
+            this.i18n.t("ldap.invalidCredentials", {
+              args: { username, dn: targetEntity.dn },
+            }),
           );
           return null;
         }
 
-        this.logger.warn(`User bind failure: ${inspect(error)}`);
+        this.logger.warn(
+          this.i18n.t("ldap.userBindFailure", {
+            args: { error: inspect(error) },
+          }),
+        );
         return null;
       }
     } catch (error) {
-      this.logger.warn(`Connect error: ${inspect(error)}`);
+      this.logger.warn(
+        this.i18n.t("ldap.connectError", {
+          args: { error: inspect(error) },
+        }),
+      );
       return null;
     }
   }

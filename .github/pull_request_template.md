@@ -18,8 +18,9 @@ Have you read and does your submission follow the project's [AI Usage Policy](ht
 - [ ] Yes
 - [ ] No
 
-If you answer Yes and you have used AI in this submission disclose it here.
-If you answer No and this PR that appears to be fully or largely AI-generated, it will be closed by the maintainers.
+PRs that don't follow the policy, including those with an AI-written description, may be closed by the maintainers.
+
+If you used AI in this submission, disclose which tools and how they were used here: 
 
 ## What's new?
 

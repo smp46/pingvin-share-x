@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Běží na",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "Nahrát soubory",
   "upload.dropzone.description.mobile": "Klepnutím sem vyberte jednotlivé soubory, fotografie nebo videa. Pro nahrání složky použijte tlačítko níže. Maximální celková velikost nahrávání: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "Klepnutím sem vyberte jednotlivé soubory, fotografie nebo videa. Maximální celková velikost nahrávání: {maxSize}.",
-  "upload.dropzone.description.desktop": "Klikněte sem nebo přetáhněte jednotlivé soubory, fotografie nebo videa. Pro nahrání složky použijte tlačítko níže, nebo stiskněte {shortcut} pro nahrání textu ze schránky. Maximální celková velikost nahrávání: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "Klikněte sem nebo přetáhněte jednotlivé soubory, fotografie nebo videa, nebo stiskněte {shortcut} pro nahrání textu ze schránky. Maximální celková velikost nahrávání: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Vaše soubory přesahují maximální velikost {maxSize}.",
   "upload.button.folder": "Nahrát složku",
   "upload.button.folder.append": "Připojit složku",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "Velikost",
   "upload.filelist.estimating": "Odhadování...",
   "upload.filelist.remaining": "Zbývá {time}",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Vytvořit sdílení",
   "upload.modal.link.error.invalid": "Může obsahovat pouze písmena, číslice, podtržítka a pomlčky",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Ignorovat TOTP při přihlášení přes sociální sítě",
   "admin.config.oauth.disable-password": "Zakázat přihlášení heslem",
   "admin.config.oauth.disable-password.description": "Zda zakázat přihlášení heslem\nUjistěte se, že je OAuth poskytovatel správně nakonfigurován před aktivací této konfigurace, abyste se vyhnuli ztrátě přístupu.",
+  "admin.config.oauth.allowed-hosts": "Povolení hostitelé OAuth",
+  "admin.config.oauth.allowed-hosts.description": "Čárkami oddělený seznam dalších názvů hostitelů povolených pro přihlášení přes OAuth (např. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Zda je povoleno přihlášení přes GitHub",
   "admin.config.oauth.github-client-id": "GitHub Client ID",

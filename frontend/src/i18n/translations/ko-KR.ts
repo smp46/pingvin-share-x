@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "제공:",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "파일 업로드",
   "upload.dropzone.description.mobile": "개별 파일, 사진 또는 동영상을 선택하려면 여기를 탭하세요. 폴더를 업로드하려면 아래 버튼을 사용하세요. 최대 총 업로드 크기: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "개별 파일, 사진 또는 동영상을 선택하려면 여기를 탭하세요. 최대 총 업로드 크기: {maxSize}.",
-  "upload.dropzone.description.desktop": "여기를 클릭하거나 개별 파일, 사진 또는 동영상을 드래그 앤 드롭하세요. 폴더를 업로드하려면 아래 버튼을 사용하거나, 클립보드의 텍스트를 업로드하려면 {shortcut} 키를 누르세요. 최대 총 업로드 크기: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "여기를 클릭하거나 개별 파일, 사진 또는 동영상을 드래그 앤 드롭하거나, 클립보드의 텍스트를 업로드하려면 {shortcut} 키를 누르세요. 최대 총 업로드 크기: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "파일이 {maxSize} 의 최대 공유 크기를 초과합니다.",
   "upload.button.folder": "폴더 업로드",
   "upload.button.folder.append": "폴더 추가",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "크기",
   "upload.filelist.estimating": "계산 중...",
   "upload.filelist.remaining": "{time} 남음",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "공유 생성",
   "upload.modal.link.error.invalid": "문자, 숫자, 밑줄 및 하이픈만 포함할 수 있습니다",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "사용자가 소셜 로그인을 사용하는 경우 TOTP를 무시할 것인지 여부",
   "admin.config.oauth.disable-password": "비밀번호 로그인 비활성화",
   "admin.config.oauth.disable-password.description": "비밀번호 로그인을 비활성화할지 여부입니다.\n계정 잠금을 방지하기 위해 이 설정을 활성화하기 전에 OAuth 공급자가 제대로 구성되었는지 확인하세요.",
+  "admin.config.oauth.allowed-hosts": "허용된 OAuth 호스트",
+  "admin.config.oauth.allowed-hosts.description": "OAuth 로그인을 허용할 추가 호스트 이름의 쉼표로 구분된 목록입니다(예: share.internal.example.com).",
   "admin.config.oauth.github-enabled": "깃허브",
   "admin.config.oauth.github-enabled.description": "깃허브 로그인 사용 여부",
   "admin.config.oauth.github-client-id": "GitHub 클라이언트 ID",

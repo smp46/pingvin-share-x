@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "Με την υποστήριξη του",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "Μεταφόρτωση αρχείων",
   "upload.dropzone.description.mobile": "Πατήστε εδώ για να επιλέξετε μεμονωμένα αρχεία, φωτογραφίες ή βίντεο. Για να μεταφορτώσετε έναν φάκελο, χρησιμοποιήστε το παρακάτω κουμπί. Μέγιστο συνολικό μέγεθος μεταφόρτωσης: {maxSize}.",
   "upload.dropzone.description.mobile.no-folder": "Πατήστε εδώ για να επιλέξετε μεμονωμένα αρχεία, φωτογραφίες ή βίντεο. Μέγιστο συνολικό μέγεθος μεταφόρτωσης: {maxSize}.",
-  "upload.dropzone.description.desktop": "Κάντε κλικ εδώ ή σύρετε και αφήστε μεμονωμένα αρχεία, φωτογραφίες ή βίντεο. Χρησιμοποιήστε το παρακάτω κουμπί για να μεταφορτώσετε έναν φάκελο ή πατήστε {shortcut} για να ανεβάσετε κείμενο από το πρόχειρό σας. Μέγιστο συνολικό μέγεθος μεταφόρτωσης: {maxSize}.",
-  "upload.dropzone.description.desktop.no-folder": "Κάντε κλικ εδώ ή σύρετε και αφήστε μεμονωμένα αρχεία, φωτογραφίες ή βίντεο, ή πατήστε {shortcut} για να ανεβάσετε κείμενο από το πρόχειρό σας. Μέγιστο συνολικό μέγεθος μεταφόρτωσης: {maxSize}.",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "Τα αρχεία σας υπερβαίνουν το μέγιστο μέγεθος κοινής χρήσης του {maxSize}.",
   "upload.button.folder": "Μεταφόρτωση φακέλου",
   "upload.button.folder.append": "Προσάρτηση φακέλου",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "Μέγεθος",
   "upload.filelist.estimating": "Υπολογισμός...",
   "upload.filelist.remaining": "{time} απομένουν",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "Δημιουργία Κοινοποίησης",
   "upload.modal.link.error.invalid": "Μπορεί να περιέχει μόνο γράμματα, αριθμούς, κάτω παύλες και παύλες",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "Αν θα αγνοηθεί το TOTP όταν ο χρήστης χρησιμοποιεί την κοινωνική σύνδεση",
   "admin.config.oauth.disable-password": "Απενεργοποίηση σύνδεσης με κωδικό πρόσβασης",
   "admin.config.oauth.disable-password.description": "Εάν θα απενεργοποιηθεί η σύνδεση με κωδικό πρόσβασης\nΒεβαιωθείτε ότι ένας πάροχος OAuth έχει διαμορφωθεί σωστά πριν ενεργοποιήσετε αυτήν τη διαμόρφωση για να αποφύγετε τον αποκλεισμό σας.",
+  "admin.config.oauth.allowed-hosts": "Επιτρεπόμενοι κεντρικοί υπολογιστές OAuth",
+  "admin.config.oauth.allowed-hosts.description": "Λίστα πρόσθετων ονομάτων κεντρικών υπολογιστών, διαχωρισμένων με κόμμα, που επιτρέπονται για σύνδεση μέσω OAuth (π.χ. share.internal.example.com).",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "Αν είναι ενεργοποιημένη η σύνδεση GitHub",
   "admin.config.oauth.github-client-id": "GitHub Client ID",

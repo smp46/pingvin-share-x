@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "技術支援：",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "上傳檔案",
   "upload.dropzone.description.mobile": "點選此處選取個別檔案、相片或影片。若要上傳資料夾，請使用下方按鈕。檔案總大小上限為 {maxSize}。",
   "upload.dropzone.description.mobile.no-folder": "點選此處選取個別檔案、相片或影片。檔案總大小上限為 {maxSize}。",
-  "upload.dropzone.description.desktop": "點選此處或拖曳個別檔案、相片或影片至此。使用下方按鈕上傳資料夾，或按下 {shortcut} 上傳剪貼簿中的文字內容。檔案總大小上限為 {maxSize}。",
-  "upload.dropzone.description.desktop.no-folder": "點選此處或拖曳個別檔案、相片或影片至此，或按下 {shortcut} 上傳剪貼簿中的文字內容。檔案總大小上限為 {maxSize}。",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "您的檔案超過了最大上傳限制 {maxSize}",
   "upload.button.folder": "上傳資料夾",
   "upload.button.folder.append": "追加資料夾",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "檔案大小",
   "upload.filelist.estimating": "估算中...",
   "upload.filelist.remaining": "剩餘 {time}",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "建立分享",
   "upload.modal.link.error.invalid": "只能包括字母，數字，下劃線(_)，和橫線(-)",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "當使用者使用第三方登入時，略過 TOTP 驗證",
   "admin.config.oauth.disable-password": "停用密碼登入",
   "admin.config.oauth.disable-password.description": "當你停用密碼登入時，確保你有啟用任意 OAuth 服務以避免無法存取",
+  "admin.config.oauth.allowed-hosts": "允許的 OAuth 主機",
+  "admin.config.oauth.allowed-hosts.description": "允許用於 OAuth 登入的其他主機名稱清單，以逗號分隔（例如 share.internal.example.com）。",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "啟用 Github 登入",
   "admin.config.oauth.github-client-id": "Github 的客戶端 ID",

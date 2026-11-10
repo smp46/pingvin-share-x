@@ -53,6 +53,7 @@ const TextEditor = ({
           onChange={setText}
           height={400}
           preview="live"
+          overflow={false}
           extraCommands={[
             commands.codeEdit,
             commands.codeLive,

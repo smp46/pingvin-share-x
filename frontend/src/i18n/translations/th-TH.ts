@@ -13,7 +13,7 @@ export default {
   // END navbar
 
   // Footer
-  "footer.poweredBy": "Powered by",
+  "footer.poweredBy": "ขับเคลื่อนโดย",
   // END footer
 
   // /
@@ -298,8 +298,10 @@ export default {
   "upload.dropzone.title": "อัปโหลดไฟล์",
   "upload.dropzone.description.mobile": "แตะที่นี่เพื่อเลือกแต่ละไฟล์ รูปภาพ หรือวิดีโอ หากต้องการอัปโหลดโฟลเดอร์ ให้ใช้ปุ่มด้านล่าง ขนาดการอัปโหลดรวมสูงสุด: {maxSize}",
   "upload.dropzone.description.mobile.no-folder": "แตะที่นี่เพื่อเลือกแต่ละไฟล์ รูปภาพ หรือวิดีโอ ขนาดการอัปโหลดรวมสูงสุด: {maxSize}",
-  "upload.dropzone.description.desktop": "คลิกที่นี่หรือลากและวางแต่ละไฟล์ รูปภาพ หรือวิดีโอ ใช้ปุ่มด้านล่างเพื่ออัปโหลดโฟลเดอร์ หรือกด {shortcut} เพื่ออัปโหลดข้อความจากคลิปบอร์ดของคุณ ขนาดการอัปโหลดรวมสูงสุด: {maxSize}",
-  "upload.dropzone.description.desktop.no-folder": "คลิกที่นี่หรือลากและวางแต่ละไฟล์ รูปภาพ หรือวิดีโอ หรือกด {shortcut} เพื่ออัปโหลดข้อความจากคลิปบอร์ดของคุณ ขนาดการอัปโหลดรวมสูงสุด: {maxSize}",
+  "upload.dropzone.description.desktop": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to upload from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox": "Click here or drag and drop individual files, photos, or videos. Use the button below to upload a folder, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
+  "upload.dropzone.description.desktop.firefox.no-folder": "Click here or drag and drop individual files, photos, or videos, or press {shortcut} to paste a single file or folder from your clipboard. Maximum total upload size: {maxSize}.",
   "upload.dropzone.notify.file-too-big": "ไฟล์ของคุณเกินขนาดสูงสุดของการแชร์ {maxSize}",
   "upload.button.folder": "อัปโหลดโฟลเดอร์",
   "upload.button.folder.append": "เพิ่มโฟลเดอร์",
@@ -309,6 +311,13 @@ export default {
   "upload.filelist.size": "ขนาด",
   "upload.filelist.estimating": "กำลังประเมิน...",
   "upload.filelist.remaining": "เหลือเวลาอีก {time}",
+  "filelist.folder.file-count": "{count, plural, =1 {# file} other {# files}}",
+  "filelist.expand-all": "Expand all folders",
+  "filelist.collapse-all": "Collapse all folders",
+  "filelist.expand-folder": "Expand folder",
+  "filelist.collapse-folder": "Collapse folder",
+  "filelist.sort-ascending": "Sort ascending",
+  "filelist.sort-descending": "Sort descending",
   // showCreateUploadModal.tsx
   "upload.modal.title": "สร้างการแชร์",
   "upload.modal.link.error.invalid": "สามารถใช้ได้เฉพาะตัวอักษร ตัวเลข ขีดล่าง และขีดเส้น",
@@ -563,6 +572,8 @@ export default {
   "admin.config.oauth.ignore-totp.description": "เพิกเฉยต่อ TOTP หรือไม่เมื่อผู้ใช้เข้าสู่ระบบด้วยบัญชีโซเชียล",
   "admin.config.oauth.disable-password": "ปิดใช้งานการเข้าสู่ระบบด้วยรหัสผ่าน",
   "admin.config.oauth.disable-password.description": "กำหนดว่าจะปิดใช้งานการเข้าสู่ระบบด้วยรหัสผ่านหรือไม่\nตรวจสอบให้แน่ใจว่าได้กำหนดค่าผู้ให้บริการ OAuth อย่างถูกต้องแล้วก่อนที่จะเปิดใช้งานการกำหนดค่านี้ เพื่อหลีกเลี่ยงการถูกล็อคไม่ให้เข้าสู่ระบบ",
+  "admin.config.oauth.allowed-hosts": "โฮสต์ OAuth ที่อนุญาต",
+  "admin.config.oauth.allowed-hosts.description": "รายชื่อโฮสต์เนมเพิ่มเติมที่อนุญาตให้เข้าสู่ระบบด้วย OAuth คั่นด้วยเครื่องหมายจุลภาค (เช่น share.internal.example.com)",
   "admin.config.oauth.github-enabled": "GitHub",
   "admin.config.oauth.github-enabled.description": "เปิดใช้งานการเข้าสู่ระบบด้วย GitHub หรือไม่",
   "admin.config.oauth.github-client-id": "GitHub Client ID",
