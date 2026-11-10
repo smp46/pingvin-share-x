@@ -1,15 +1,9 @@
 import { FileUpload } from "../types/File.type";
 
-// Must match the cache name used in frontend/worker/index.js
 const SHARE_TARGET_CACHE = "share-target";
 
-// Shared files that were not picked up within this time are discarded
 const MAX_AGE_MS = 24 * 60 * 60 * 1000;
 
-/**
- * Reads files that were shared to the installed web app (Web Share Target API)
- * from the cache filled by the service worker and removes them from the cache.
- */
 export const consumeSharedFiles = async (): Promise<FileUpload[]> => {
   if (typeof window === "undefined" || !("caches" in window)) return [];
 
@@ -25,8 +19,6 @@ export const consumeSharedFiles = async (): Promise<FileUpload[]> => {
         const response = await cache.match(request);
         if (!response) continue;
 
-        // Files stored by an older service worker have no timestamp yet,
-        // treat them as fresh instead of dropping them
         const sharedAt = parseInt(response.headers.get("X-Shared-At") ?? "");
         if (!isNaN(sharedAt) && Date.now() - sharedAt > MAX_AGE_MS) continue;
 
@@ -46,7 +38,6 @@ export const consumeSharedFiles = async (): Promise<FileUpload[]> => {
         files.push(file);
       }
     } finally {
-      // Always clear the cache, even if reading failed or files were expired
       await caches.delete(SHARE_TARGET_CACHE);
     }
 

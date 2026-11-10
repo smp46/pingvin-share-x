@@ -1,7 +1,3 @@
-// Custom service worker code, bundled into sw.js by next-pwa (customWorkerDir).
-// Handles files shared to the installed web app via the Web Share Target API.
-// The files are stored in the Cache API and picked up by the /upload page.
-
 const SHARE_TARGET_PATH = "/share-target";
 const SHARE_TARGET_CACHE = "share-target";
 
@@ -24,7 +20,6 @@ const getBoundary = (contentType, bytes) => {
   const match = /boundary=(?:"([^"]+)"|([^;]+))/i.exec(contentType);
   if (match) return (match[1] || match[2]).trim();
 
-  // Fall back to the first line of the body ("--<boundary>")
   const lineEnd = indexOfBytes(bytes, encoder.encode("\r\n"));
   if (lineEnd > 2 && bytes[0] === 45 && bytes[1] === 45) {
     return decoder.decode(bytes.subarray(2, lineEnd));
@@ -32,8 +27,6 @@ const getBoundary = (contentType, bytes) => {
   return null;
 };
 
-// Minimal multipart/form-data parser that returns all file parts. It is only
-// used when the browser's own parser fails, see below.
 const parseMultipartFiles = (buffer, contentType) => {
   const bytes = new Uint8Array(buffer);
   const boundary = getBoundary(contentType, bytes);
@@ -46,13 +39,12 @@ const parseMultipartFiles = (buffer, contentType) => {
   let pos = indexOfBytes(bytes, delimiter, 0);
   while (pos !== -1) {
     const partStart = pos + delimiter.length;
-    // "--" right after the delimiter marks the end of the body
     if (bytes[partStart] === 45 && bytes[partStart + 1] === 45) break;
 
     const next = indexOfBytes(bytes, delimiter, partStart);
     if (next === -1) break;
 
-    const headersStart = partStart + 2; // skip the CRLF after the delimiter
+    const headersStart = partStart + 2;
     const headersEnd = indexOfBytes(bytes, headerEnd, headersStart);
     if (headersEnd !== -1 && headersEnd < next) {
       const headers = decoder.decode(bytes.subarray(headersStart, headersEnd));
@@ -60,7 +52,6 @@ const parseMultipartFiles = (buffer, contentType) => {
       if (filename) {
         const type = /content-type:\s*([^\r\n]+)/i.exec(headers);
         const dataStart = headersEnd + 4;
-        // Strip the CRLF before the next delimiter
         const dataEnd = Math.max(dataStart, next - 2);
         files.push(
           new File(
@@ -87,15 +78,9 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(
     (async () => {
       try {
-        // Read the body as a buffer first. Samsung Internet throws
-        // "TypeError: Failed to fetch" in request.formData() and
-        // Response.formData(), although the body itself can be read. In that
-        // case the files are parsed manually.
         const contentType = event.request.headers.get("content-type") || "";
         const body = await event.request.arrayBuffer();
 
-        // Accept files from any form field, not only "files", because some
-        // browsers do not use the field name declared in the manifest
         let files = [];
         try {
           const formData = await new Response(body, {
@@ -108,7 +93,6 @@ self.addEventListener("fetch", (event) => {
           files = parseMultipartFiles(body, contentType);
         }
 
-        // Drop files from earlier shares that were never picked up
         await caches.delete(SHARE_TARGET_CACHE);
         const cache = await caches.open(SHARE_TARGET_CACHE);
         const timestamp = Date.now();
@@ -132,7 +116,6 @@ self.addEventListener("fetch", (event) => {
         console.error("Failed to store shared files", e);
       }
 
-      // 303 turns the POST into a GET request for the upload page
       return Response.redirect(new URL("/upload", self.location.origin), 303);
     })(),
   );

@@ -5,7 +5,6 @@ import { getDefaultConfig } from "../utils/defaultConfig.util";
 import { getPwaScheme, PWA_BACKGROUNDS } from "../utils/pwaColors.util";
 
 const ICON_SIZES = [72, 96, 128, 144, 152, 192, 384, 512];
-// Sizes of the icons with background and padding (see LogoService in the backend)
 const MASKABLE_ICON_SIZES = [192, 512];
 
 const getManifestConfig = async (): Promise<{
@@ -36,8 +35,6 @@ const getManifestConfig = async (): Promise<{
   };
 };
 
-// The manifest is generated dynamically so that the app name configured by
-// the admin (general.appName) is used when the web app gets installed.
 export const getServerSideProps = async ({
   res,
 }: GetServerSidePropsContext) => {
@@ -55,8 +52,6 @@ export const getServerSideProps = async ({
     orientation: "portrait",
     scope: "/",
     start_url: "/",
-    // Transparent icons must not be marked as maskable, otherwise every
-    // browser fills the transparency with a different color.
     icons: [
       ...ICON_SIZES.map((size) => ({
         src: `/img/icons/icon-${size}x${size}.png`,
@@ -94,7 +89,6 @@ export const getServerSideProps = async ({
   return { props: {} };
 };
 
-// The response is written in getServerSideProps, nothing gets rendered.
 export default function Manifest() {
   return null;
 }

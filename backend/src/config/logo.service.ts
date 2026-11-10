@@ -5,9 +5,6 @@ const sharp = require("sharp");
 
 const IMAGES_PATH = "../frontend/public/img";
 
-// Background colors of the maskable PWA icons, they match the page background
-// of the light and dark color scheme (Mantine: white / dark.7).
-// Keep in sync with frontend/src/utils/pwaColors.util.ts
 const MASKABLE_BACKGROUNDS = {
   light: "#ffffff",
   dark: "#1a1b1e",
@@ -16,8 +13,6 @@ const MASKABLE_SCHEMES = Object.keys(MASKABLE_BACKGROUNDS) as Array<
   keyof typeof MASKABLE_BACKGROUNDS
 >;
 const MASKABLE_SIZES = [192, 512];
-// Share of the icon the logo occupies, the rest is padding. Maskable icons
-// can be cropped by the launcher, so the logo has to stay in the safe zone.
 const MASKABLE_LOGO_RATIO = 0.6;
 
 @Injectable()
@@ -25,7 +20,6 @@ export class LogoService implements OnModuleInit {
   private readonly logger = new Logger(LogoService.name);
 
   async onModuleInit() {
-    // Create the maskable icons for existing installations and the default logo
     const missing = MASKABLE_SCHEMES.some((scheme) =>
       MASKABLE_SIZES.some(
         (size) =>
@@ -69,10 +63,6 @@ export class LogoService implements OnModuleInit {
     }
   }
 
-  // Maskable icons have an opaque background and some padding, so the icon
-  // looks the same on every Android launcher and browser instead of being
-  // filled with a browser specific color. The dark variant uses the dark logo
-  // if one was uploaded.
   async createMaskableIcons() {
     try {
       const lightLogoPath = `${IMAGES_PATH}/logo.png`;
