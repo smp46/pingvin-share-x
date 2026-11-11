@@ -20,15 +20,7 @@ export class LogoService implements OnModuleInit {
   private readonly logger = new Logger(LogoService.name);
 
   async onModuleInit() {
-    const missing = MASKABLE_SCHEMES.some((scheme) =>
-      MASKABLE_SIZES.some(
-        (size) =>
-          !fs.existsSync(
-            `${IMAGES_PATH}/icons/icon-maskable-${scheme}-${size}x${size}.png`,
-          ),
-      ),
-    );
-    if (missing) await this.createMaskableIcons();
+    await this.createMaskableIcons();
   }
 
   async create(file: Buffer) {
