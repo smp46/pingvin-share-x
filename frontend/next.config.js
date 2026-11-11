@@ -4,6 +4,7 @@ const { version } = require("./package.json");
 const withPWA = require("next-pwa")({
   dest: "public",
   customWorkerDir: "worker",
+  buildExcludes: [/dynamic-css-manifest\.json$/],
   disable: process.env.NODE_ENV === "development",
   reloadOnOnline: false,
   runtimeCaching: [
