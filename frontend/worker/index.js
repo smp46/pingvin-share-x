@@ -40,7 +40,10 @@ self.addEventListener("fetch", (event) => {
         console.error("Failed to store shared files", e);
       }
 
-      return Response.redirect(new URL("/upload", self.location.origin), 303);
+      return Response.redirect(
+        new URL("/upload?shared=1", self.location.origin),
+        303,
+      );
     })(),
   );
 });

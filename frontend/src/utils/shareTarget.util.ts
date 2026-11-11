@@ -2,7 +2,7 @@ import { FileUpload } from "../types/File.type";
 
 const SHARE_TARGET_CACHE = "share-target";
 
-const MAX_AGE_MS = 24 * 60 * 60 * 1000;
+const MAX_AGE_MS = 10 * 60 * 1000;
 
 export const consumeSharedFiles = async (): Promise<FileUpload[]> => {
   if (typeof window === "undefined" || !("caches" in window)) return [];

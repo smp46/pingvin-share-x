@@ -241,9 +241,12 @@ const Upload = ({
 
   useEffect(() => {
     if (isReverseShare) return;
+    const shared = router.query.shared !== undefined;
+    if (shared) router.replace("/upload", undefined, { shallow: true });
 
     consumeSharedFiles().then((sharedFiles) => {
-      if (sharedFiles.length > 0) handleDropzoneFilesChanged(sharedFiles);
+      if (shared && sharedFiles.length > 0)
+        handleDropzoneFilesChanged(sharedFiles);
     });
   }, []);
 
