@@ -20,6 +20,7 @@ import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { IntlProvider } from "react-intl";
 import Header from "../components/header/Header";
+import ThemeColorMeta from "../components/core/ThemeColorMeta";
 import { ConfigContext } from "../hooks/config.hook";
 import { UserContext } from "../hooks/user.hook";
 import { LOCALES } from "../i18n/locales";
@@ -320,6 +321,7 @@ function App({ Component, pageProps }: AppProps) {
             toggleColorScheme={toggleColorScheme}
           >
             <GlobalStyle />
+            <ThemeColorMeta />
             <Notifications />
             <ModalsProvider>
               <ConfigContext.Provider
