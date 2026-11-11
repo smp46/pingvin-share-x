@@ -211,6 +211,14 @@ function App({ Component, pageProps }: AppProps) {
   }, [router.pathname]);
 
   useEffect(() => {
+    if (process.env.NODE_ENV !== "production") return;
+    if (!("serviceWorker" in navigator)) return;
+    navigator.serviceWorker.register("/sw.js").catch((e) => {
+      console.error("Failed to register the service worker", e);
+    });
+  }, []);
+
+  useEffect(() => {
     const interval = setInterval(
       async () => await authService.refreshAccessToken(),
       2 * 60 * 1000, // 2 minutes
