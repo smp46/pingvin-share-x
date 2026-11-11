@@ -20,6 +20,7 @@ import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { IntlProvider } from "react-intl";
 import Header from "../components/header/Header";
+import ThemeColorMeta from "../components/core/ThemeColorMeta";
 import { ConfigContext } from "../hooks/config.hook";
 import { UserContext } from "../hooks/user.hook";
 import { LOCALES } from "../i18n/locales";
@@ -141,6 +142,7 @@ function App({ Component, pageProps }: AppProps) {
     return (config?.value ?? config?.defaultValue ?? fallback).trim();
   };
 
+  const appName = getStringConfigValue("general.appName", "Pingvin Share X");
   const customCss = getStringConfigValue("appearance.customCss");
   const themePrimaryColorRaw = getStringConfigValue(
     "appearance.themePrimaryColor",
@@ -208,6 +210,14 @@ function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     setRoute(router.pathname);
   }, [router.pathname]);
+
+  useEffect(() => {
+    if (process.env.NODE_ENV !== "production") return;
+    if (!("serviceWorker" in navigator)) return;
+    navigator.serviceWorker.register("/sw.js").catch((e) => {
+      console.error("Failed to register the service worker", e);
+    });
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(
@@ -292,6 +302,8 @@ function App({ Component, pageProps }: AppProps) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
+        <meta name="application-name" content={appName} />
+        <meta name="apple-mobile-web-app-title" content={appName} />
       </Head>
       <IntlProvider
         messages={i18nUtil.getLocaleByCode(language.current)?.messages}
@@ -309,6 +321,7 @@ function App({ Component, pageProps }: AppProps) {
             toggleColorScheme={toggleColorScheme}
           >
             <GlobalStyle />
+            <ThemeColorMeta />
             <Notifications />
             <ModalsProvider>
               <ConfigContext.Provider
