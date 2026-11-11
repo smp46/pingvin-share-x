@@ -245,8 +245,32 @@ const Upload = ({
     if (shared) router.replace("/upload", undefined, { shallow: true });
 
     consumeSharedFiles().then((sharedFiles) => {
-      if (shared && sharedFiles.length > 0)
-        handleDropzoneFilesChanged(sharedFiles);
+      if (!shared || sharedFiles.length === 0) return;
+      modals.openConfirmModal({
+        title: t("upload.shared.title"),
+        children: (
+          <Stack spacing="xs">
+            <Text size="sm">
+              <FormattedMessage
+                id="upload.shared.description"
+                values={{ count: sharedFiles.length }}
+              />
+            </Text>
+            <Stack spacing={0} mah={200} sx={{ overflowY: "auto" }}>
+              {sharedFiles.map((file, index) => (
+                <Text key={index} size="sm" weight={500}>
+                  {file.name} ({byteToHumanSizeString(file.size)})
+                </Text>
+              ))}
+            </Stack>
+          </Stack>
+        ),
+        labels: {
+          confirm: t("upload.shared.add"),
+          cancel: t("common.button.cancel"),
+        },
+        onConfirm: () => handleDropzoneFilesChanged(sharedFiles),
+      });
     });
   }, []);
 

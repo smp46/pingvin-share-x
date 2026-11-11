@@ -373,6 +373,10 @@ export default {
     "An error occurred while finishing your share.",
   "upload.notify.count-failed": "{count} files failed to upload. Trying again.",
   "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
+  "upload.shared.title": "Add shared files?",
+  "upload.shared.description":
+    "{count, plural, =1 {This file was} other {These # files were}} shared to the app. Only add files you shared yourself.",
+  "upload.shared.add": "Add",
   "upload.reverse-share.error.invalid.title": "Invalid reverse share link",
   "upload.reverse-share.error.invalid.description":
     "This link has no remaining uses or is invalid.",
