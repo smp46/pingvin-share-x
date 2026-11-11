@@ -20,6 +20,11 @@ export class LogoService implements OnModuleInit {
   private readonly logger = new Logger(LogoService.name);
 
   async onModuleInit() {
+    try {
+      await this.createPWAIcons(fs.readFileSync(`${IMAGES_PATH}/logo.png`));
+    } catch (e) {
+      this.logger.error(`Failed to create PWA icons: ${e}`);
+    }
     await this.createMaskableIcons();
   }
 
@@ -46,8 +51,14 @@ export class LogoService implements OnModuleInit {
     const sizes = [48, 72, 96, 128, 144, 152, 192, 384, 512];
 
     for (const size of sizes) {
-      const resized = await sharp(file).resize(size).toBuffer();
-      fs.promises.writeFile(
+      const resized = await sharp(file)
+        .resize(size, size, {
+          fit: "contain",
+          background: { r: 0, g: 0, b: 0, alpha: 0 },
+        })
+        .png()
+        .toBuffer();
+      await fs.promises.writeFile(
         `${IMAGES_PATH}/icons/icon-${size}x${size}.png`,
         resized,
         "binary",
