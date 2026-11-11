@@ -54,9 +54,19 @@ export class FileService {
     },
     shareId: string,
   ) {
+    await this.assertUploadUnlocked(shareId);
     await this.touchShare(shareId);
     const storageService = this.getStorageService();
     return storageService.create(data, chunk, file, shareId);
+  }
+
+  private async assertUploadUnlocked(shareId: string) {
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+      select: { uploadLocked: true },
+    });
+    if (share?.uploadLocked)
+      throw new BadRequestException(this.i18n.t("file.alreadyCompleted"));
   }
 
   private async touchShare(shareId: string) {
@@ -81,6 +91,7 @@ export class FileService {
     fileName: string,
     totalChunks: number,
   ) {
+    await this.assertUploadUnlocked(shareId);
     await this.touchShare(shareId);
     const share = await this.prisma.share.findFirst({
       where: { id: shareId },
@@ -104,6 +115,7 @@ export class FileService {
     uploadId: string,
     parts: Array<{ ETag: string; PartNumber: number }>,
   ) {
+    await this.assertUploadUnlocked(shareId);
     await this.touchShare(shareId);
     const share = await this.prisma.share.findFirst({
       where: { id: shareId },
