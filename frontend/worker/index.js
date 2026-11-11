@@ -10,6 +10,7 @@ self.addEventListener("fetch", (event) => {
 
   event.respondWith(
     (async () => {
+      let status = "1";
       try {
         const formData = await event.request.formData();
         const files = [];
@@ -38,10 +39,12 @@ self.addEventListener("fetch", (event) => {
         );
       } catch (e) {
         console.error("Failed to store shared files", e);
+        await caches.delete(SHARE_TARGET_CACHE).catch(() => {});
+        status = "error";
       }
 
       return Response.redirect(
-        new URL("/upload?shared=1", self.location.origin),
+        new URL(`/upload?shared=${status}`, self.location.origin),
         303,
       );
     })(),

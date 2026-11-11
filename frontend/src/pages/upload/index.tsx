@@ -241,37 +241,45 @@ const Upload = ({
 
   useEffect(() => {
     if (isReverseShare) return;
-    const shared = router.query.shared !== undefined;
-    if (shared) router.replace("/upload", undefined, { shallow: true });
+    const shared = router.query.shared;
+    if (shared !== undefined)
+      router.replace("/upload", undefined, { shallow: true });
+    const notifyFailed = () => toast.error(t("upload.shared.notify.failed"));
+    if (shared === "error") notifyFailed();
 
-    consumeSharedFiles().then((sharedFiles) => {
-      if (!shared || sharedFiles.length === 0) return;
-      modals.openConfirmModal({
-        title: t("upload.shared.title"),
-        children: (
-          <Stack spacing="xs">
-            <Text size="sm">
-              <FormattedMessage
-                id="upload.shared.description"
-                values={{ count: sharedFiles.length }}
-              />
-            </Text>
-            <Stack spacing={0} mah={200} sx={{ overflowY: "auto" }}>
-              {sharedFiles.map((file, index) => (
-                <Text key={index} size="sm" weight={500}>
-                  {file.name} ({byteToHumanSizeString(file.size)})
-                </Text>
-              ))}
+    consumeSharedFiles()
+      .then((sharedFiles) => {
+        if (shared !== "1" || sharedFiles.length === 0) return;
+        modals.openConfirmModal({
+          title: t("upload.shared.title"),
+          children: (
+            <Stack spacing="xs">
+              <Text size="sm">
+                <FormattedMessage
+                  id="upload.shared.description"
+                  values={{ count: sharedFiles.length }}
+                />
+              </Text>
+              <Stack spacing={0} mah={200} sx={{ overflowY: "auto" }}>
+                {sharedFiles.map((file, index) => (
+                  <Text key={index} size="sm" weight={500}>
+                    {file.name} ({byteToHumanSizeString(file.size)})
+                  </Text>
+                ))}
+              </Stack>
             </Stack>
-          </Stack>
-        ),
-        labels: {
-          confirm: t("upload.shared.add"),
-          cancel: t("common.button.cancel"),
-        },
-        onConfirm: () => handleDropzoneFilesChanged(sharedFiles),
+          ),
+          labels: {
+            confirm: t("upload.shared.add"),
+            cancel: t("common.button.cancel"),
+          },
+          onConfirm: () => handleDropzoneFilesChanged(sharedFiles),
+        });
+      })
+      .catch((e) => {
+        console.error("Failed to read shared files", e);
+        if (shared === "1") notifyFailed();
       });
-    });
   }, []);
 
   useEffect(() => {
