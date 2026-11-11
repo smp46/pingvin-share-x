@@ -5,6 +5,7 @@ const withPWA = require("next-pwa")({
   dest: "public",
   customWorkerDir: "worker",
   buildExcludes: [/dynamic-css-manifest\.json$/],
+  publicExcludes: ["!noprecache/**/*", "!img/**/*"],
   register: false,
   dynamicStartUrl: false,
   cacheStartUrl: false,

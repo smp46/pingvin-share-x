@@ -1,7 +1,10 @@
 #!/bin/sh
 
 # Copy default logo to the frontend public folder if it doesn't exist
-cp -rn /tmp/img/* /opt/app/frontend/public/img
+(cd /tmp/img && find . -type f | while read -r f; do
+  dest="/opt/app/frontend/public/img/$f"
+  [ -e "$dest" ] || { mkdir -p "$(dirname "$dest")" && cp "$f" "$dest"; }
+done)
 
 if [ "$CADDY_DISABLED" != "true" ]; then
   # Start Caddy
