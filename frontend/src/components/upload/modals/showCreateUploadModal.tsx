@@ -17,7 +17,7 @@ import { useForm, yupResolver } from "@mantine/form";
 import { useModals } from "@mantine/modals";
 import { ModalsContextProps } from "@mantine/modals/lib/context";
 import moment from "moment";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { TbAlertCircle } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import * as yup from "yup";
@@ -34,6 +34,7 @@ import { generateShareId } from "../../../utils/share.util";
 import CustomUrlInput from "../../share/CustomUrlInput";
 import PasswordFieldWithGenerateButton from "../../field/PasswordFieldWithGenerateButton";
 import { PasswordGeneratorConfig } from "../../../types/password.type";
+import { generatePassword } from "../../../utils/crypto.util";
 
 const showCreateUploadModal = (
   modals: ModalsContextProps,
@@ -50,6 +51,7 @@ const showCreateUploadModal = (
     shareIdLength: number;
     simplified: boolean;
     password: PasswordGeneratorConfig;
+    preFillPasswordEnabled: boolean;
   },
   files: FileUpload[],
   uploadCallback: (createShare: CreateShare, files: FileUpload[]) => void,
@@ -115,6 +117,7 @@ const CreateUploadModalBody = ({
     defaultExpiration: Timespan;
     shareIdLength: number;
     password: PasswordGeneratorConfig;
+    preFillPasswordEnabled: boolean;
   };
 }) => {
   const modals = useModals();
@@ -124,6 +127,9 @@ const CreateUploadModalBody = ({
 
   const [showNotSignedInAlert, setShowNotSignedInAlert] = useState(true);
   const [emailSearch, setEmailSearch] = useState("");
+  const [accordionValue, setAccordionValue] = useState<string | null>(
+    options.preFillPasswordEnabled ? "security" : null,
+  );
 
   const validationSchema = yup.object().shape({
     link: yup
@@ -163,7 +169,9 @@ const CreateUploadModalBody = ({
       name: undefined,
       link: generatedLink,
       recipients: [] as string[],
-      password: "",
+      password: options.preFillPasswordEnabled
+        ? generatePassword(options.password)
+        : "",
       maxViews: undefined,
       description: undefined,
       expiration_num: defaultTimespan.value,
@@ -239,6 +247,14 @@ const CreateUploadModalBody = ({
       modals.closeAll();
     }
   });
+
+  useEffect(() => {
+    if (form.values.restrictToRecipients) return;
+    if (options.preFillPasswordEnabled) {
+      const password = generatePassword(options.password);
+      form.setFieldValue("password", password);
+    }
+  }, [form.values.restrictToRecipients]);
 
   return (
     <>
@@ -351,7 +367,7 @@ const CreateUploadModalBody = ({
               </Text>
             </>
           )}
-          <Accordion>
+          <Accordion value={accordionValue} onChange={setAccordionValue}>
             <Accordion.Item value="description" sx={{ borderBottom: "none" }}>
               <Accordion.Control>
                 <FormattedMessage id="upload.modal.accordion.name-and-description.title" />

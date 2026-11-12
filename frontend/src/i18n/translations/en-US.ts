@@ -612,6 +612,8 @@ export default {
   "admin.config.appearance.logo-dark.description":
     "Upload a separate logo for dark mode. It must be a PNG with a 1:1 aspect ratio.",
   "admin.config.appearance.logo.placeholder": "Pick image",
+  "admin.config.security.prefill-generated-password": 'Pre-fill generated password',
+  "admin.config.security.prefill-generated-password.description": 'Pre-fill a generated password wherever password protection is available',
   "admin.config.security.custom-password-policy": "Custom password policy",
   "admin.config.security.custom-password-policy.description":
     "Whether to enable a custom password policy. If disabled, the default minimum length is 8 characters.",

@@ -69,6 +69,9 @@ const Upload = ({
   });
 
   const chunkSize = useRef(parseInt(config.get("share.chunkSize")));
+  const preFillPasswordEnabled = config.get(
+    "security.prefillGeneratedPassword",
+  ) as boolean;
 
   maxShareSize ??= user?.shareSizeLimit
     ? parseInt(user.shareSizeLimit)
@@ -201,6 +204,7 @@ const Upload = ({
         shareIdLength: config.get("share.shareIdLength"),
         simplified,
         password: passwordGeneratorConfig,
+        preFillPasswordEnabled,
       },
       files,
       uploadFiles,
