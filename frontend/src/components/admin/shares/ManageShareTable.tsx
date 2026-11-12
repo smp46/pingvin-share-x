@@ -20,6 +20,7 @@ import toast from "../../../utils/toast.util";
 import showShareInformationsModal from "../../share/showShareInformationsModal";
 import showShareLinkModal from "../../account/showShareLinkModal";
 import { HoverTip } from "../../core/HoverTip";
+import usePasswordGeneratorConfig from "../../../hooks/usePasswordGeneratorConfig.hook";
 
 const ManageShareTable = ({
   shares,
@@ -36,6 +37,7 @@ const ManageShareTable = ({
   const clipboard = useClipboard();
   const config = useConfig();
   const t = useTranslate();
+  const passwordConfig = usePasswordGeneratorConfig();
 
   // Check if file retention is enabled
   const fileRetentionPeriod = config.get("share.fileRetentionPeriod");
@@ -124,6 +126,7 @@ const ManageShareTable = ({
                               parseInt(config.get("share.maxSize")),
                               config.get("general.appUrl"),
                               config.get("general.appUrl", true),
+                              passwordConfig,
                               { value: 0, unit: "days" },
                               updateShare,
                             );
