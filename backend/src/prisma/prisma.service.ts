@@ -2,11 +2,11 @@ import { Injectable, Logger } from "@nestjs/common";
 import * as sqliteClient from "@prisma/client";
 import { DATABASE_URL } from "../constants";
 
+export const IS_POSTGRESQL = /^postgres(ql)?:\/\//.test(DATABASE_URL);
+
 // The PostgreSQL client is generated from prisma/postgresql/schema.prisma.
 // Both schemas define the same models, so the SQLite client types apply to it.
-const prismaClient: typeof sqliteClient = /^postgres(ql)?:\/\//.test(
-  DATABASE_URL,
-)
+const prismaClient: typeof sqliteClient = IS_POSTGRESQL
   ? // eslint-disable-next-line @typescript-eslint/no-require-imports
     require(".prisma/client-postgresql")
   : sqliteClient;
