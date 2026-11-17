@@ -31,11 +31,17 @@ For installation specific configuration, you can use environment variables. The 
 | Variable         | Default Value                                      | Description                                                                                              |
 | ---------------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | `BACKEND_PORT`   | `8080`                                             | The port on which the backend listens.                                                                   |
-| `DATABASE_URL`   | `file:../data/pingvin-share.db?connection_limit=1` | The URL of the SQLite database.                                                                          |
+| `DATABASE_URL`   | `file:../data/pingvin-share.db?connection_limit=1` | The URL of the database. See [Database](#database).                                                      |
 | `DATA_DIRECTORY` | `./data`                                           | The directory where data is stored.                                                                      |
 | `CONFIG_FILE`    | `../config.yaml`                                   | Path to the configuration file                                                                           |
 | `CLAMAV_HOST`    | `127.0.0.1` or `clamav` when running with Docker   | The IP address of the ClamAV server. See the [ClamAV docs](integrations.md#clamav) for more information. |
 | `CLAMAV_PORT`    | `3310`                                             | The port number of the ClamAV server.                                                                    |
+
+#### Database
+
+SQLite is used by default. To use PostgreSQL, set `DATABASE_URL` to a PostgreSQL URL, for example `postgresql://user:password@host:5432/pingvin-share`. Existing data is not moved to the new database.
+
+Without Docker, also run `npx prisma generate --schema prisma/postgresql/schema.prisma` after `npm install`, and start the backend with `npx prisma migrate deploy --schema prisma/postgresql/schema.prisma && npx prisma db seed && node dist/src/main`.
 
 #### Frontend
 
