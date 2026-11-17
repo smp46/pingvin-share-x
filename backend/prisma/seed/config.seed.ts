@@ -1,4 +1,5 @@
-import { Prisma, PrismaClient } from "@prisma/client";
+import * as sqliteClient from "@prisma/client";
+import { Prisma } from "@prisma/client";
 import * as crypto from "crypto";
 
 export const configVariables = {
@@ -571,12 +572,22 @@ type ConfigVariables = {
   };
 };
 
+const databaseUrl =
+  process.env.DATABASE_URL ||
+  "file:../data/pingvin-share.db?connection_limit=1";
+
+// The PostgreSQL client is generated from prisma/postgresql/schema.prisma
+const { PrismaClient }: typeof sqliteClient = /^postgres(ql)?:\/\//.test(
+  databaseUrl,
+)
+  ? // eslint-disable-next-line @typescript-eslint/no-require-imports
+    require(".prisma/client-postgresql")
+  : sqliteClient;
+
 const prisma = new PrismaClient({
   datasources: {
     db: {
-      url:
-        process.env.DATABASE_URL ||
-        "file:../data/pingvin-share.db?connection_limit=1",
+      url: databaseUrl,
     },
   },
 });
