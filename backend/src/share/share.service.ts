@@ -698,10 +698,18 @@ export class ShareService {
           "share_max_views_exceeded",
         );
       } else {
-        await tx.share.update({
-          where: { id },
+        // Re-check the limit in the update itself, so concurrent requests
+        // cannot both pass the check above on PostgreSQL
+        const { count } = await tx.share.updateMany({
+          where: { id, ...(maxViews && { views: { lt: maxViews } }) },
           data: { views: { increment: 1 } },
         });
+        if (count === 0) {
+          throw new ForbiddenException(
+            this.i18n.t("share.maxViewsExceeded"),
+            "share_max_views_exceeded",
+          );
+        }
       }
     });
   }
