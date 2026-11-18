@@ -24,8 +24,9 @@ case "$DATABASE_URL" in
   *) PRISMA_SCHEMA=prisma/schema.prisma ;;
 esac
 
-# Run the backend server
-cd backend && ./node_modules/.bin/prisma migrate deploy --schema "$PRISMA_SCHEMA" && node dist/prisma/seed/config.seed.js && node dist/src/main
+# Run the backend server. Exit if it fails, for example when the database is
+# not reachable yet, so that the container restart policy can retry
+cd backend && ./node_modules/.bin/prisma migrate deploy --schema "$PRISMA_SCHEMA" && node dist/prisma/seed/config.seed.js && node dist/src/main || exit 1
 
 # Wait for all processes to finish
 wait -n
