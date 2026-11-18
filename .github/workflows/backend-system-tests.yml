@@ -45,6 +45,9 @@ jobs:
       - name: Install Dependencies
         working-directory: ./backend
         run: npm install
+      - name: Generate the PostgreSQL Prisma client
+        working-directory: ./backend
+        run: npx prisma generate --schema prisma/postgresql/schema.prisma
       - name: Check that the PostgreSQL schema matches the SQLite schema
         working-directory: ./backend
         shell: bash
