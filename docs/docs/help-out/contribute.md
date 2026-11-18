@@ -72,6 +72,8 @@ The backend is built with [Nest.js](https://nestjs.com) and uses Typescript.
 4. Seed the database with `npx prisma db seed`
 5. Start the backend with `npm run dev`
 
+If you change the database models, make the same change in `prisma/schema.prisma` (SQLite) and `prisma/postgresql/schema.prisma` (PostgreSQL), and create a migration for each with `npx prisma migrate dev`. For PostgreSQL, add `--schema prisma/postgresql/schema.prisma` and set `DATABASE_URL` to a PostgreSQL database.
+
 ### Frontend
 
 The frontend is built with [Next.js](https://nextjs.org) and uses Typescript.
