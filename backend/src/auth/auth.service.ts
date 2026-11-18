@@ -9,14 +9,17 @@ import {
 } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
 import { Prisma, User } from "@prisma/client";
-import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 import * as argon from "argon2";
 import { Request, Response } from "express";
 import * as moment from "moment";
 import { I18nService } from "nestjs-i18n";
 import { ConfigService } from "src/config/config.service";
 import { EmailService } from "src/email/email.service";
-import { PrismaService } from "src/prisma/prisma.service";
+import {
+  IS_POSTGRESQL,
+  PrismaClientKnownRequestError,
+  PrismaService,
+} from "src/prisma/prisma.service";
 import { OAuthService } from "../oauth/oauth.service";
 import { GenericOidcProvider } from "../oauth/provider/genericOidc.provider";
 import { UserSevice } from "../user/user.service";
@@ -59,6 +62,11 @@ export class AuthService {
     const hash = dto.password ? await argon.hash(dto.password) : null;
     try {
       return await this.prisma.$transaction(async (tx) => {
+        // SQLite serialises transactions, PostgreSQL does not: take a
+        // transaction-scoped lock so the first-admin check stays atomic
+        if (IS_POSTGRESQL) {
+          await tx.$executeRaw`SELECT pg_advisory_xact_lock(hashtext('pingvin-share:sign-up'))`;
+        }
         const adminExists =
           (await tx.user.count({ where: { isAdmin: true } })) > 0;
         const shouldBeAdmin =

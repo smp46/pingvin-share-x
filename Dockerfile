@@ -25,7 +25,7 @@ RUN apk add openssl
 WORKDIR /opt/app
 COPY ./backend .
 COPY --from=backend-dependencies /opt/app/node_modules ./node_modules
-RUN npx prisma generate
+RUN npx prisma generate && npx prisma generate --schema prisma/postgresql/schema.prisma
 RUN npm run build && npx tsc prisma/seed/config.seed.ts --outDir dist/prisma/seed --rootDir prisma/seed && npm prune --production
 
 # Stage 5: Final image

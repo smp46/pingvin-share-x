@@ -1,9 +1,10 @@
 import {
   IsBoolean,
-  IsNumber,
+  IsInt,
   IsOptional,
   IsString,
   Length,
+  Max,
 } from "class-validator";
 
 export class ShareSecurityDTO {
@@ -12,7 +13,9 @@ export class ShareSecurityDTO {
   @Length(3, 30)
   password: string;
 
-  @IsNumber()
+  // PostgreSQL stores it as a 32-bit integer
+  @IsInt()
+  @Max(2147483647)
   @IsOptional()
   maxViews: number;
 

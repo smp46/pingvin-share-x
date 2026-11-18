@@ -1,12 +1,14 @@
 import { BadRequestException, Injectable, Logger } from "@nestjs/common";
-import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 import * as argon from "argon2";
 import * as crypto from "crypto";
 import { Entry } from "ldapts";
 import { I18nService } from "nestjs-i18n";
 import { AuthSignInDTO } from "src/auth/dto/authSignIn.dto";
 import { EmailService } from "src/email/email.service";
-import { PrismaService } from "src/prisma/prisma.service";
+import {
+  PrismaClientKnownRequestError,
+  PrismaService,
+} from "src/prisma/prisma.service";
 import { inspect } from "util";
 import { ConfigService } from "../config/config.service";
 import { FileService } from "../file/file.service";
@@ -26,7 +28,7 @@ export class UserSevice {
   ) {}
 
   async list() {
-    return await this.prisma.user.findMany();
+    return await this.prisma.user.findMany({ orderBy: { createdAt: "asc" } });
   }
 
   async get(id: string) {

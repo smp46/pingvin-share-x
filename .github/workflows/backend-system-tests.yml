@@ -21,3 +21,43 @@ jobs:
       - name: Run Server and Test with Newman
         working-directory: ./backend
         run: npm run test:system
+
+  system-tests-postgresql:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    container: node:22
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: pingvin
+          POSTGRES_PASSWORD: pingvin
+          POSTGRES_DB: pingvin
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DATABASE_URL: postgresql://pingvin:pingvin@postgres:5432/pingvin
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Dependencies
+        working-directory: ./backend
+        run: npm install
+      - name: Generate the PostgreSQL Prisma client
+        working-directory: ./backend
+        run: npx prisma generate --schema prisma/postgresql/schema.prisma
+      - name: Check that the PostgreSQL schema matches the SQLite schema
+        working-directory: ./backend
+        shell: bash
+        run: diff <(sed -n '/^model /,$p' prisma/schema.prisma) <(sed -n '/^model /,$p' prisma/postgresql/schema.prisma)
+      - name: Check that the PostgreSQL migrations are up to date
+        working-directory: ./backend
+        # The database is still empty here, so it can be used as the shadow database
+        run: npx prisma migrate diff --from-migrations prisma/postgresql/migrations --to-schema-datamodel prisma/postgresql/schema.prisma --shadow-database-url "$DATABASE_URL" --exit-code
+      - name: Run Server and Test with Newman
+        working-directory: ./backend
+        run: |
+          npx prisma migrate reset -f --schema prisma/postgresql/schema.prisma
+          npx nest start & npx wait-on http://localhost:8080/api/configs && npx newman run ./test/newman-system-tests.json
