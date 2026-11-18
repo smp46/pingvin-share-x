@@ -28,7 +28,7 @@ export class UserSevice {
   ) {}
 
   async list() {
-    return await this.prisma.user.findMany();
+    return await this.prisma.user.findMany({ orderBy: { createdAt: "asc" } });
   }
 
   async get(id: string) {
