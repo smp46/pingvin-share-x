@@ -12,3 +12,14 @@ services:
       - "./data/images:/opt/app/frontend/public/img:rw,z"
       # - "./config.yaml:/opt/app/config.yaml:ro,z"
 
+    labels:
+      de.hdkottmeyer.description: "Pingvin Share X - Selfhosted File Sharing DevelopmentVersion for Feature Testing"
+      de.hdkottmeyer.owner: "Matthias"
+      de.hdkottmeyer.backup: "true"
+      de.hdkottmeyer.category: "app"
+      de.hdkottmeyer.subdomain: "share"
+      de.hdkottmeyer.update-check: "skip"        # selbst gebautes Image, kein Registry-Vergleich
+
+      dockhand.url: "share.hdkottmeyer.de"
+      dockhand.tags: "development"
+      dockhand.update: "false"
