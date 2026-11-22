@@ -1,15 +1,15 @@
-import { ActionIcon, Group, Skeleton, Stack, TextInput } from "@mantine/core";
+import { ActionIcon, Group, Skeleton } from "@mantine/core";
 import { useClipboard } from "@mantine/hooks";
 import { useModals } from "@mantine/modals";
 import { useState } from "react";
 import { TbDownload, TbEye, TbLink, TbClipboard } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
-import useConfig from "../../hooks/config.hook";
 import useTranslate from "../../hooks/useTranslate.hook";
 import shareService from "../../services/share.service";
 import { FileMetaData } from "../../types/File.type";
 import { Share } from "../../types/share.type";
 import toast from "../../utils/toast.util";
+import useCopyFileLink from "../../hooks/useCopyFileLink.hook";
 import SortableHeader, { TableSort } from "../core/SortIcon";
 import showFilePreviewModal from "./modals/showFilePreviewModal";
 import { HoverTip } from "../core/HoverTip";
@@ -32,7 +32,6 @@ const FileList = ({
   recipientId?: string;
 }) => {
   const clipboard = useClipboard();
-  const config = useConfig();
   const modals = useModals();
   const t = useTranslate();
 
@@ -41,28 +40,7 @@ const FileList = ({
     direction: "asc",
   });
 
-  const copyFileLink = (file: FileMetaData) => {
-    const recipientQuery = recipientId
-      ? `?recipient=${encodeURIComponent(recipientId)}`
-      : "";
-    const link = `${config.get("general.appUrl") !== config.get("general.appUrl", true) ? config.get("general.appUrl") : window.location.origin}/api/shares/${
-      share.id
-    }/files/${file.id}${recipientQuery}`;
-
-    if (window.isSecureContext) {
-      clipboard.copy(link);
-      toast.success(t("common.notify.copied-link"));
-    } else {
-      modals.openModal({
-        title: t("share.modal.file-link"),
-        children: (
-          <Stack align="stretch">
-            <TextInput variant="filled" value={link} />
-          </Stack>
-        ),
-      });
-    }
-  };
+  const copyFileLink = useCopyFileLink(share, recipientId);
 
   return (
     <FileTree

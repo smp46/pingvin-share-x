@@ -1002,6 +1002,8 @@ export default {
   "common.text.redirecting": "Redirecting...",
   "common.button.go-back": "Go back",
   "common.button.go-home": "Go home",
+  "common.button.list-view": "List view",
+  "common.button.gallery-view": "Gallery view",
   "common.notify.copied": "Your link was copied to the clipboard",
   "common.notify.copied-link": "Your link was copied to the clipboard",
   "common.success": "Success",

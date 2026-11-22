@@ -14,9 +14,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import { TbEdit, TbPlusMinus } from "react-icons/tb";
+import { TbEdit, TbLayoutGrid, TbList, TbPlusMinus } from "react-icons/tb";
 import Meta from "../../../components/Meta";
 import DownloadAllButton from "../../../components/share/DownloadAllButton";
+import FileGallery from "../../../components/share/FileGallery";
 import FileList from "../../../components/share/FileList";
 import showEnterPasswordModal from "../../../components/share/showEnterPasswordModal";
 import showErrorModal from "../../../components/share/showErrorModal";
@@ -42,6 +43,7 @@ const Share = ({ shareId }: { shareId: string }) => {
   const router = useRouter();
   const [share, setShare] = useState<ShareType>();
   const [isRestricted, setIsRestricted] = useState(false);
+  const [isGalleryView, setIsGalleryView] = useState(false);
   const { user } = useUser();
   const config = useConfig();
   const t = useTranslate();
@@ -241,18 +243,41 @@ const Share = ({ shareId }: { shareId: string }) => {
               </ActionIcon>
             </HoverTip>
           )}
+          <HoverTip
+            label={
+              isGalleryView ? t("common.button.list-view") : t("common.button.gallery-view")
+            }
+          >
+            <ActionIcon
+              variant="light"
+              size="lg"
+              onClick={() => setIsGalleryView(!isGalleryView)}
+            >
+              {isGalleryView ? <TbList /> : <TbLayoutGrid />}
+            </ActionIcon>
+          </HoverTip>
+
           {share?.files.length > 1 && (
             <DownloadAllButton shareId={shareId} recipientId={recipientId} />
           )}
         </Group>
       </Group>
 
-      <FileList
-        files={share?.files}
-        share={share!}
-        isLoading={!share}
-        recipientId={recipientId}
-      />
+      {isGalleryView ? (
+        <FileGallery
+          files={share?.files}
+          share={share!}
+          isLoading={!share}
+          recipientId={recipientId}
+        />
+      ) : (
+        <FileList
+          files={share?.files}
+          share={share!}
+          isLoading={!share}
+          recipientId={recipientId}
+        />
+      )}
     </>
   );
 };
