@@ -1,5 +1,4 @@
 import {
-  ActionIcon,
   Box,
   Center,
   Group,
@@ -14,15 +13,12 @@ import { useModals } from "@mantine/modals";
 import { Dispatch, ReactNode, SetStateAction, useMemo } from "react";
 import { FormattedMessage } from "react-intl";
 import SortableHeader, { TableSort } from "../core/SortIcon";
-import { TbDownload, TbFile, TbLink } from "react-icons/tb";
-import useTranslate from "../../hooks/useTranslate.hook";
+import { TbFile } from "react-icons/tb";
 import shareService from "../../services/share.service";
 import { FileMetaData } from "../../types/File.type";
 import { Share } from "../../types/share.type";
 import { getMimeType } from "../../utils/file.util";
-import useCopyFileLink from "../../hooks/useCopyFileLink.hook";
-import { HoverTip } from "../core/HoverTip";
-import { ICON_SIZE } from "../core/FileTree";
+import FileActions from "./FileActions";
 import showFilePreviewModal from "./modals/showFilePreviewModal";
 
 const FilePreviewBox = ({
@@ -68,10 +64,7 @@ const FileGallery = ({
   headerExtra?: ReactNode;
 }) => {
   const modals = useModals();
-  const t = useTranslate();
   const theme = useMantineTheme();
-
-  const copyFileLink = useCopyFileLink(share, recipientId);
 
   const sortedFiles = useMemo(() => {
     const list = files ?? [];
@@ -141,44 +134,20 @@ const FileGallery = ({
                   <FilePreviewBox shareId={share.id} file={file} />
                 </Box>
                 <Group position="apart" noWrap p="xs">
-                  <Text size="sm" truncate title={file.name}>
+                  <Text
+                    size="sm"
+                    truncate
+                    title={file.name}
+                    sx={{ minWidth: 0 }}
+                  >
                     {file.name.split("/").pop()}
                   </Text>
-                  <Group spacing="xs" noWrap>
-                    {!share.hasPassword && (
-                      <HoverTip
-                        label={t("common.button.copy-link")}
-                        touch={false}
-                      >
-                        <ActionIcon
-                          color="victoria"
-                          variant="light"
-                          size={ICON_SIZE}
-                          aria-label={t("common.button.copy-link")}
-                          onClick={() => copyFileLink(file)}
-                        >
-                          <TbLink />
-                        </ActionIcon>
-                      </HoverTip>
-                    )}
-                    <HoverTip label={t("common.button.download")} touch={false}>
-                      <ActionIcon
-                        color="cyan"
-                        variant="light"
-                        size={ICON_SIZE}
-                        aria-label={t("common.button.download")}
-                        onClick={async () => {
-                          await shareService.downloadFile(
-                            share.id,
-                            file.id,
-                            recipientId,
-                          );
-                        }}
-                      >
-                        <TbDownload />
-                      </ActionIcon>
-                    </HoverTip>
-                  </Group>
+                  <FileActions
+                    file={file}
+                    share={share}
+                    recipientId={recipientId}
+                    spacing="xs"
+                  />
                 </Group>
               </Paper>
             ))}
