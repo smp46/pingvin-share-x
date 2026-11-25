@@ -113,6 +113,7 @@ model Share {
   userRecipients ShareUserRecipient[]
   files          File[]
   storageProvider String @default("LOCAL")
+  legacyS3Keys    Boolean @default(false)
 }
 
 model ReverseShare {

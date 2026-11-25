@@ -3,6 +3,7 @@ import {
   IsInt,
   IsOptional,
   IsString,
+  Max,
   MinLength,
 } from "class-validator";
 
