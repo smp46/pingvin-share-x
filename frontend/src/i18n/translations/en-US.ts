@@ -1001,6 +1001,8 @@ export default {
   "common.button.disable": "Disable",
   "common.button.share": "Share",
   "common.button.generate": "Generate",
+  "common.button.show-password": "Show password",
+  "common.button.hide-password": "Hide password",
   "common.button.done": "Done",
   "common.text.link": "Link",
   "common.text.navigate-to-link": "Visit link",

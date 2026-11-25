@@ -1,10 +1,12 @@
 import {
+  Box,
   Button,
-  Container,
-  Flex,
+  Group,
   PasswordInput,
   PasswordInputProps,
 } from "@mantine/core";
+import { TbEye, TbEyeOff } from "react-icons/tb";
+import { HoverTip } from "../core/HoverTip";
 import { PasswordGeneratorConfig } from "../../types/password.type";
 import useTranslate from "../../hooks/useTranslate.hook";
 import { useState } from "react";
@@ -54,25 +56,33 @@ const PasswordFieldWithGenerateButton = ({
   }
 
   return (
-    <PasswordInput
-      {...passwordInputProps}
-      inputContainer={(children) => {
-        return (
-          <Flex justify={"space-between"} align={"center"} gap={"xs"}>
-            <Container style={{ width: "100%", padding: 0, margin: 0 }}>
-              {children}
-            </Container>
-            <Button
-              variant="outline"
-              disabled={passwordInputProps.disabled}
-              onClick={handleGeneratePasswordButtonClick}
-            >
-              <FormattedMessage id="common.button.generate" />
-            </Button>
-          </Flex>
-        );
-      }}
-    />
+    <Group align={passwordInputProps.error ? "center" : "flex-end"} noWrap>
+      <PasswordInput
+        {...passwordInputProps}
+        style={{ flex: 1, ...passwordInputProps.style }}
+        visibilityToggleIcon={({ reveal, size }) => (
+          <HoverTip
+            label={
+              reveal
+                ? t("common.button.hide-password")
+                : t("common.button.show-password")
+            }
+          >
+            <Box component="span" sx={{ display: "flex" }}>
+              {reveal ? <TbEyeOff size={size} /> : <TbEye size={size} />}
+            </Box>
+          </HoverTip>
+        )}
+      />
+      <Button
+        style={{ flex: "0 0 auto" }}
+        variant="outline"
+        disabled={passwordInputProps.disabled}
+        onClick={handleGeneratePasswordButtonClick}
+      >
+        <FormattedMessage id="common.button.generate" />
+      </Button>
+    </Group>
   );
 };
 
