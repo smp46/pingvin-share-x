@@ -13,7 +13,6 @@ const useCopyToClipboard = ({
   const clipboard = useClipboard({ timeout: clipboardTimeout });
 
   const copyContentToClipboard = (content: string) => {
-    if (clipboard.copied) return;
     clipboard.copy(content);
     toast.success(toastMessage);
   };

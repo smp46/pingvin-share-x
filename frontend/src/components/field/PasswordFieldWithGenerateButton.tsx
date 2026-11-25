@@ -42,14 +42,12 @@ const PasswordFieldWithGenerateButton = ({
   ...passwordInputProps
 }: PasswordFieldWithGenerateButtonProps) => {
   const t = useTranslate();
-  const { copyContentToClipboard, checkState } = useCopyToClipboard({
+  const { copyContentToClipboard } = useCopyToClipboard({
     toastMessage: t("password-generator.copy.message"),
-    clipboardTimeout: 500,
   });
   const [config, setConfig] = useState(() => normalizeConfig(generatorConfig));
 
   function handleGeneratePasswordButtonClick() {
-    if (checkState) return;
     const password = generatePassword(config);
     handlePasswordGenerate(password);
     copyContentToClipboard(password);
@@ -66,6 +64,7 @@ const PasswordFieldWithGenerateButton = ({
             </Container>
             <Button
               variant="outline"
+              disabled={passwordInputProps.disabled}
               onClick={handleGeneratePasswordButtonClick}
             >
               <FormattedMessage id="common.button.generate" />

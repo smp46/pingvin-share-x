@@ -17,7 +17,7 @@ import { useForm, yupResolver } from "@mantine/form";
 import { useModals } from "@mantine/modals";
 import { ModalsContextProps } from "@mantine/modals/lib/context";
 import moment from "moment";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { TbAlertCircle } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import * as yup from "yup";
@@ -187,6 +187,8 @@ const CreateUploadModalBody = ({
     if (checked) {
       // A share can't be both password-protected and restricted to recipients.
       form.setFieldValue("password", "");
+    } else if (options.preFillPasswordEnabled) {
+      form.setFieldValue("password", generatePassword(options.password));
     }
   };
 
@@ -247,14 +249,6 @@ const CreateUploadModalBody = ({
       modals.closeAll();
     }
   });
-
-  useEffect(() => {
-    if (form.values.restrictToRecipients) return;
-    if (options.preFillPasswordEnabled) {
-      const password = generatePassword(options.password);
-      form.setFieldValue("password", password);
-    }
-  }, [form.values.restrictToRecipients]);
 
   return (
     <>
