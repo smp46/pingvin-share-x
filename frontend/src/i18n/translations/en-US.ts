@@ -414,15 +414,8 @@ export default {
   "filelist.sort-ascending": "Sort ascending",
   "filelist.sort-descending": "Sort descending",
 
-  // PasswordGenerator.tsx
-  'password-generator.button.label': 'Generate Password',
-  'password-generator.copy.message': 'Passowrd has been copied to clipboard',
-  'password-generator.use.button.label': 'Use this password',
-  'password-generator.rule.length.text': 'Length',
-  'password-generator.rule.uppercase.text': 'Include Uppercase',
-  'password-generator.rule.lowercase.text': 'Include Lowercase',
-  'password-generator.rule.number.text': 'Include Numbers',
-  'password-generator.rule.symbol.text': 'Include Symbols',
+  // PasswordFieldWithGenerateButton.tsx
+  "password-generator.copy.message": "Password has been copied to clipboard",
 
   // showCreateUploadModal.tsx
   "upload.modal.title": "Create Share",
@@ -612,8 +605,9 @@ export default {
   "admin.config.appearance.logo-dark.description":
     "Upload a separate logo for dark mode. It must be a PNG with a 1:1 aspect ratio.",
   "admin.config.appearance.logo.placeholder": "Pick image",
-  "admin.config.security.prefill-generated-password": 'Pre-fill generated password',
-  "admin.config.security.prefill-generated-password.description": 'Pre-fill a generated password wherever password protection is available',
+  "admin.config.security.prefill-generated-password": "Pre-fill generated password",
+  "admin.config.security.prefill-generated-password.description":
+    "Pre-fill a generated password wherever password protection is available",
   "admin.config.security.custom-password-policy": "Custom password policy",
   "admin.config.security.custom-password-policy.description":
     "Whether to enable a custom password policy. If disabled, the default minimum length is 8 characters.",
@@ -1017,7 +1011,6 @@ export default {
   "common.notify.copied": "Your link was copied to the clipboard",
   "common.notify.copied-link": "Your link was copied to the clipboard",
   "common.success": "Success",
-  "common.password-input.in-between": 'Use value between {min} and {max}',
 
   "common.error": "Error",
   "common.error.unknown": "An unknown error occurred",
