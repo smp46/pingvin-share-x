@@ -66,6 +66,11 @@ export const configVariables = {
       defaultValue: "false",
       secret: false,
     },
+    prefillGeneratedPassword: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
     customPasswordPolicy: {
       type: "boolean",
       defaultValue: "false",

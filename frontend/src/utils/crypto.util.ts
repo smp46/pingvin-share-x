@@ -1,3 +1,5 @@
+import { PasswordGeneratorConfig } from "../types/password.type";
+
 export const generateUUID = (): string => {
   if (
     typeof crypto !== "undefined" &&
@@ -24,3 +26,41 @@ export const generateUUID = (): string => {
     return v.toString(16);
   });
 };
+
+const CHARSETS = {
+  lowercase: "abcdefghijklmnopqrstuvwxyz",
+  uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  numbers: "0123456789",
+  symbols: "!@#$%^&*",
+};
+
+function randomIndex(n: number): number {
+  const limit = 2 ** 32 - (2 ** 32 % n);
+  const buf = new Uint32Array(1);
+  do crypto.getRandomValues(buf);
+  while (buf[0] >= limit);
+  return buf[0] % n;
+}
+
+export function generatePassword(config: PasswordGeneratorConfig): string {
+  const enabled = [
+    config.includeLowercase && CHARSETS.lowercase,
+    config.includeUppercase && CHARSETS.uppercase,
+    config.includeNumbers && CHARSETS.numbers,
+    config.includeSymbols && CHARSETS.symbols,
+  ].filter((set): set is string => !!set);
+  const sets = enabled.length > 0 ? enabled : Object.values(CHARSETS);
+
+  let length =
+    Number.isFinite(config.length) && config.length > 0 ? config.length : 8;
+  length = Math.max(length, sets.length);
+
+  const all = sets.join("");
+  // Re-roll until every enabled set is represented, keeping the output uniform.
+  for (;;) {
+    let password = "";
+    for (let i = 0; i < length; i++) password += all[randomIndex(all.length)];
+    if (sets.every((set) => [...password].some((c) => set.includes(c))))
+      return password;
+  }
+}

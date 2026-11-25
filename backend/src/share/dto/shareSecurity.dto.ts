@@ -3,13 +3,13 @@ import {
   IsNumber,
   IsOptional,
   IsString,
-  Length,
+  MinLength,
 } from "class-validator";
 
 export class ShareSecurityDTO {
   @IsString()
   @IsOptional()
-  @Length(3, 30)
+  @MinLength(3)
   password: string;
 
   @IsNumber()

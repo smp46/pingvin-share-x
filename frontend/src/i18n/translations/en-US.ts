@@ -414,6 +414,9 @@ export default {
   "filelist.sort-ascending": "Sort ascending",
   "filelist.sort-descending": "Sort descending",
 
+  // PasswordFieldWithGenerateButton.tsx
+  "password-generator.copy.message": "Password has been copied to clipboard",
+
   // showCreateUploadModal.tsx
   "upload.modal.title": "Create Share",
   "upload.modal.link.error.invalid":
@@ -602,6 +605,9 @@ export default {
   "admin.config.appearance.logo-dark.description":
     "Upload a separate logo for dark mode. It must be a PNG with a 1:1 aspect ratio.",
   "admin.config.appearance.logo.placeholder": "Pick image",
+  "admin.config.security.prefill-generated-password": "Pre-fill generated password",
+  "admin.config.security.prefill-generated-password.description":
+    "Pre-fill a generated password for shares. If a custom password policy is configured then that will be used for generation.",
   "admin.config.security.custom-password-policy": "Custom password policy",
   "admin.config.security.custom-password-policy.description":
     "Whether to enable a custom password policy. If disabled, the default minimum length is 8 characters.",
@@ -995,6 +1001,8 @@ export default {
   "common.button.disable": "Disable",
   "common.button.share": "Share",
   "common.button.generate": "Generate",
+  "common.button.show-password": "Show password",
+  "common.button.hide-password": "Hide password",
   "common.button.done": "Done",
   "common.text.link": "Link",
   "common.text.navigate-to-link": "Visit link",
