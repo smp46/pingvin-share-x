@@ -1,6 +1,4 @@
 import { PasswordGeneratorConfig } from "../types/password.type";
-import { shuffleArray } from "./array.utils";
-import { getDefaultCharset } from "./defaultConfig.util";
 
 export const generateUUID = (): string => {
   if (
@@ -29,117 +27,40 @@ export const generateUUID = (): string => {
   });
 };
 
-// Reference :- https://github.com/bitwarden/jslib/blob/master/common/src/services/crypto.service.ts#L677
-export function getRandomNumber(min: number, max: number) {
-  let rval = 0;
-  const range = max - min;
+const CHARSETS = {
+  lowercase: "abcdefghijklmnopqrstuvwxyz",
+  uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  numbers: "0123456789",
+  symbols: "!@#$%^&*()_+~`|}{[]:;?><,./-=",
+};
 
-  const bits_needed = Math.ceil(Math.log2(range));
-  if (bits_needed > 53) {
-    throw new Error("We cannot generate numbers larger than 53 bits.");
-  }
-  const bytes_needed = Math.ceil(bits_needed / 8);
-  const mask = Math.pow(2, bits_needed) - 1;
-  // 7776 -> (2^13 = 8192) -1 == 8191 or 0x00001111 11111111
-
-  // Create byte array and fill with N random numbers
-  const byteArray = new Uint8Array(bytes_needed);
-  crypto.getRandomValues(byteArray);
-
-  let p = (bytes_needed - 1) * 8;
-  for (let i = 0; i < bytes_needed; i++) {
-    rval += byteArray[i] * Math.pow(2, p);
-    p -= 8;
-  }
-
-  // Use & to apply the mask and reduce the number of recursive lookups
-  rval = rval & mask;
-
-  if (rval >= range) {
-    // Integer out of acceptable range
-    return getRandomNumber(min, max);
-  }
-  // Return an integer that falls within the range
-  return min + rval;
+function randomIndex(n: number): number {
+  const limit = 2 ** 32 - (2 ** 32 % n);
+  const buf = new Uint32Array(1);
+  do crypto.getRandomValues(buf);
+  while (buf[0] >= limit);
+  return buf[0] % n;
 }
 
-// Reference :- https://github.com/bitwarden/jslib/blob/master/common/src/services/passwordGeneration.service.ts#L41
-export function generatePassword(options: PasswordGeneratorConfig) {
-  let allCharset = "";
-  const defaultCharset = getDefaultCharset();
+export function generatePassword(config: PasswordGeneratorConfig): string {
+  const enabled = [
+    config.includeLowercase && CHARSETS.lowercase,
+    config.includeUppercase && CHARSETS.uppercase,
+    config.includeNumbers && CHARSETS.numbers,
+    config.includeSymbols && CHARSETS.symbols,
+  ].filter((set): set is string => !!set);
+  const sets = enabled.length > 0 ? enabled : Object.values(CHARSETS);
 
-  const passwordPlaceholders: ("L" | "U" | "N" | "S" | "A")[] = [];
-  const passwordLength = options.length;
+  let length =
+    Number.isFinite(config.length) && config.length > 0 ? config.length : 8;
+  length = Math.max(length, sets.length);
 
-  if (options.includeLowercase) {
-    allCharset += defaultCharset.lowercaseLetters;
-    if (passwordPlaceholders.length < passwordLength) {
-      passwordPlaceholders.push("L");
-    }
+  const all = sets.join("");
+  // Re-roll until every enabled set is represented, keeping the output uniform.
+  for (;;) {
+    let password = "";
+    for (let i = 0; i < length; i++) password += all[randomIndex(all.length)];
+    if (sets.every((set) => [...password].some((c) => set.includes(c))))
+      return password;
   }
-  if (options.includeUppercase) {
-    allCharset += defaultCharset.uppercaseLetters;
-    if (passwordPlaceholders.length < passwordLength) {
-      passwordPlaceholders.push("U");
-    }
-  }
-  if (options.includeNumbers) {
-    allCharset += defaultCharset.numbers;
-    if (passwordPlaceholders.length < passwordLength) {
-      passwordPlaceholders.push("N");
-    }
-  }
-  if (options.includeSymbols) {
-    allCharset += defaultCharset.symbols;
-    if (passwordPlaceholders.length < passwordLength) {
-      passwordPlaceholders.push("S");
-    }
-  }
-
-  const remainingSpace = passwordLength - passwordPlaceholders.length;
-
-  for (let i = 0; i < remainingSpace; i++) {
-    passwordPlaceholders.push("A");
-  }
-
-  shuffleArray(passwordPlaceholders);
-
-  let generatedPassword = "";
-  for (let i = 0; i < passwordPlaceholders.length; i++) {
-    const placeHolder = passwordPlaceholders[i];
-    let charSetToUse = "";
-
-    switch (placeHolder) {
-      case "A":
-        charSetToUse = allCharset;
-        break;
-
-      case "L":
-        charSetToUse = defaultCharset.lowercaseLetters;
-        break;
-
-      case "N":
-        charSetToUse = defaultCharset.numbers;
-        break;
-
-      case "S":
-        charSetToUse = defaultCharset.symbols;
-        break;
-
-      case "U":
-        charSetToUse = defaultCharset.uppercaseLetters;
-        break;
-
-      default:
-        break;
-    }
-
-    if (!charSetToUse) continue;
-
-    generatedPassword += charSetToUse.charAt(
-      getRandomNumber(0, charSetToUse.length),
-    );
-  }
-
-  return generatedPassword;
 }

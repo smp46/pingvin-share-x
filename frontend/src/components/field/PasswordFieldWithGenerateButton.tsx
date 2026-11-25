@@ -9,7 +9,6 @@ import { TbEye, TbEyeOff } from "react-icons/tb";
 import { HoverTip } from "../core/HoverTip";
 import { PasswordGeneratorConfig } from "../../types/password.type";
 import useTranslate from "../../hooks/useTranslate.hook";
-import { useState } from "react";
 import { generatePassword } from "../../utils/crypto.util";
 import { getDefaultPasswordConfig } from "../../utils/defaultConfig.util";
 import useCopyToClipboard from "../../hooks/useCopyToClipboard";
@@ -20,24 +19,6 @@ type PasswordFieldWithGenerateButtonProps = PasswordInputProps & {
   handlePasswordGenerate: (password: string) => void;
 };
 
-function normalizeConfig(
-  config?: PasswordGeneratorConfig,
-): PasswordGeneratorConfig {
-  const defaults = getDefaultPasswordConfig();
-  const base = config ?? defaults;
-
-  const hasCharset =
-    base.includeLowercase ||
-    base.includeUppercase ||
-    base.includeNumbers ||
-    base.includeSymbols;
-
-  return {
-    ...(hasCharset ? base : defaults),
-    length: base.length > 0 ? base.length : defaults.length,
-  };
-}
-
 const PasswordFieldWithGenerateButton = ({
   handlePasswordGenerate,
   generatorConfig,
@@ -47,10 +28,11 @@ const PasswordFieldWithGenerateButton = ({
   const { copyContentToClipboard } = useCopyToClipboard({
     toastMessage: t("password-generator.copy.message"),
   });
-  const [config, setConfig] = useState(() => normalizeConfig(generatorConfig));
 
   function handleGeneratePasswordButtonClick() {
-    const password = generatePassword(config);
+    const password = generatePassword(
+      generatorConfig ?? getDefaultPasswordConfig(),
+    );
     handlePasswordGenerate(password);
     copyContentToClipboard(password);
   }

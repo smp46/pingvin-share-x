@@ -83,12 +83,3 @@ export function getDefaultPasswordConfig(): PasswordGeneratorConfig {
     includeSymbols: true,
   };
 }
-
-export function getDefaultCharset() {
-  return {
-    uppercaseLetters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-    lowercaseLetters: "abcdefghijklmnopqrstuvwxyz",
-    numbers: "0123456789",
-    symbols: "!@#$%^&*()_+~`|}{[]:;?><,./-=",
-  };
-}
