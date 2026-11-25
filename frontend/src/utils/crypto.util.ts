@@ -31,7 +31,7 @@ const CHARSETS = {
   lowercase: "abcdefghijklmnopqrstuvwxyz",
   uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
   numbers: "0123456789",
-  symbols: "!@#$%^&*()_+~`|}{[]:;?><,./-=",
+  symbols: "!@#$%^&*",
 };
 
 function randomIndex(n: number): number {
