@@ -7,7 +7,7 @@ import {
 } from "@mantine/core";
 import { PasswordGeneratorConfig } from "../../types/password.type";
 import useTranslate from "../../hooks/useTranslate.hook";
-import { MouseEvent, useState } from "react";
+import { useState } from "react";
 import { generatePassword } from "../../utils/crypto.util";
 import { getDefaultPasswordConfig } from "../../utils/defaultConfig.util";
 import useCopyToClipboard from "../../hooks/useCopyToClipboard";
@@ -48,9 +48,7 @@ const PasswordFieldWithGenerateButton = ({
   });
   const [config, setConfig] = useState(() => normalizeConfig(generatorConfig));
 
-  function handleGeneratePasswordButtonClick(
-    event: MouseEvent<HTMLButtonElement>,
-  ) {
+  function handleGeneratePasswordButtonClick() {
     if (checkState) return;
     const password = generatePassword(config);
     handlePasswordGenerate(password);

@@ -5,10 +5,3 @@ export type PasswordGeneratorConfig = {
   includeNumbers: boolean;
   includeSymbols: boolean;
 };
-
-export type PasswordGeneratorValidationRules = {
-  length: {
-    min: number;
-    max: number;
-  };
-};
