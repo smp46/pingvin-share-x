@@ -2,7 +2,6 @@ import {
   Button,
   Group,
   NumberInput,
-  PasswordInput,
   Stack,
   Switch,
   Tabs,
@@ -19,6 +18,26 @@ import userService from "../../../services/user.service";
 import toast from "../../../utils/toast.util";
 import FileSizeInput from "../../core/FileSizeInput";
 import { CustomPasswordPolicy } from "../../../types/config.type";
+import PasswordFieldWithGenerateButton from "../../field/PasswordFieldWithGenerateButton";
+
+type UserFormValues = {
+  displayName: string;
+  username: string;
+  email: string;
+  password: string | undefined;
+  isAdmin: boolean;
+  setPasswordManually: boolean;
+  allowShare: boolean;
+  allowCreateReverseShares: boolean;
+  hasCustomMaxShares: boolean;
+  maxShares: number;
+  hasCustomMaxReverseShares: boolean;
+  maxReverseShares: number;
+  hasCustomShareSizeLimit: boolean;
+  shareSizeLimit: number;
+  hasCustomStorageQuotaLimit: boolean;
+  storageQuotaLimit: number;
+};
 
 const showCreateUserModal = (
   modals: ModalsContextProps,
@@ -53,7 +72,7 @@ const Body = ({
   const t = useTranslate();
   const [activeTab, setActiveTab] = useState<string | null>("general");
 
-  const form = useForm({
+  const form = useForm<UserFormValues>({
     initialValues: {
       displayName: "",
       username: "",
@@ -224,9 +243,20 @@ const Body = ({
                 />
               )}
               {(form.values.setPasswordManually || !smtpEnabled) && (
-                <PasswordInput
+                <PasswordFieldWithGenerateButton
                   label={t("admin.users.modal.create.password")}
                   {...form.getInputProps("password")}
+                  handlePasswordGenerate={(password) => {
+                    form.setFieldValue("password", password);
+                  }}
+                  generatorConfig={{
+                    length: customPasswordPolicy.minLength,
+                    includeLowercase: customPasswordPolicy.requireLowercase,
+                    includeNumbers: customPasswordPolicy.requireNumber,
+                    includeSymbols:
+                      customPasswordPolicy.requireSpecialCharacter,
+                    includeUppercase: customPasswordPolicy.requireUppercase,
+                  }}
                 />
               )}
               <Switch

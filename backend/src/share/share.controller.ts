@@ -33,6 +33,7 @@ import { CreateShareGuard } from "./guard/createShare.guard";
 import { ShareOwnerGuard } from "./guard/shareOwner.guard";
 import { StrictShareOwnerGuard } from "./guard/strictShareOwner.guard";
 import { RegisteredShareOwnerGuard } from "./guard/registeredShareOwner.guard";
+import { RevertShareCompletionGuard } from "./guard/revertShareCompletion.guard";
 import { ReceivedSharesGuard } from "./guard/receivedShares.guard";
 import { ShareSecurityGuard } from "./guard/shareSecurity.guard";
 import { ShareTokenSecurity } from "./guard/shareTokenSecurity.guard";
@@ -124,7 +125,7 @@ export class ShareController {
   }
 
   @Delete(":id/complete")
-  @UseGuards(IdValidation, StrictShareOwnerGuard)
+  @UseGuards(IdValidation, RevertShareCompletionGuard)
   async revertComplete(@Param("id") id: string) {
     return new ShareDTO().from(await this.shareService.revertComplete(id));
   }

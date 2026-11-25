@@ -229,6 +229,7 @@ const uploadFileDirectS3 = async (
     if (session) {
       try {
         await api.post(`shares/${shareId}/files/upload-abort`, {
+          id: session.fileId,
           name: file.name,
           uploadId: session.uploadId,
         });

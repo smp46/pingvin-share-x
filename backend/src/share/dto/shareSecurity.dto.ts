@@ -3,14 +3,13 @@ import {
   IsInt,
   IsOptional,
   IsString,
-  Length,
-  Max,
+  MinLength,
 } from "class-validator";
 
 export class ShareSecurityDTO {
   @IsString()
   @IsOptional()
-  @Length(3, 30)
+  @MinLength(3)
   password: string;
 
   // PostgreSQL stores it as a 32-bit integer

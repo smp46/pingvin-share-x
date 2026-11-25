@@ -51,9 +51,6 @@ export class LocalFileService {
       },
     });
 
-    if (share.uploadLocked)
-      throw new BadRequestException(this.i18n.t("file.alreadyCompleted"));
-
     let diskFileSize: number;
     try {
       diskFileSize = (

@@ -47,6 +47,7 @@ export class FileController {
   ) {
     return await this.fileService.createPreSignedUploadUrls(
       shareId,
+      body.id,
       body.name,
       body.totalChunks,
     );
@@ -80,6 +81,7 @@ export class FileController {
   async uploadAbort(
     @Body()
     body: {
+      id?: string;
       name: string;
       uploadId: string;
     },
@@ -87,6 +89,7 @@ export class FileController {
   ) {
     await this.fileService.abortPreSignedUpload(
       shareId,
+      body.id,
       body.name,
       body.uploadId,
     );

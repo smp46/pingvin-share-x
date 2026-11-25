@@ -54,9 +54,19 @@ export class FileService {
     },
     shareId: string,
   ) {
+    await this.assertUploadUnlocked(shareId);
     await this.touchShare(shareId);
     const storageService = this.getStorageService();
     return storageService.create(data, chunk, file, shareId);
+  }
+
+  private async assertUploadUnlocked(shareId: string) {
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+      select: { uploadLocked: true },
+    });
+    if (share?.uploadLocked)
+      throw new BadRequestException(this.i18n.t("file.alreadyCompleted"));
   }
 
   private async touchShare(shareId: string) {
@@ -78,9 +88,11 @@ export class FileService {
 
   async createPreSignedUploadUrls(
     shareId: string,
+    fileId: string | undefined,
     fileName: string,
     totalChunks: number,
   ) {
+    await this.assertUploadUnlocked(shareId);
     await this.touchShare(shareId);
     const share = await this.prisma.share.findFirst({
       where: { id: shareId },
@@ -91,6 +103,7 @@ export class FileService {
     }
     const res = await this.s3FileService.createPreSignedUploadUrls(
       shareId,
+      fileId,
       fileName,
       totalChunks,
     );
@@ -104,6 +117,7 @@ export class FileService {
     uploadId: string,
     parts: Array<{ ETag: string; PartNumber: number }>,
   ) {
+    await this.assertUploadUnlocked(shareId);
     await this.touchShare(shareId);
     const share = await this.prisma.share.findFirst({
       where: { id: shareId },
@@ -123,6 +137,7 @@ export class FileService {
 
   async abortPreSignedUpload(
     shareId: string,
+    fileId: string | undefined,
     fileName: string,
     uploadId: string,
   ) {
@@ -133,7 +148,12 @@ export class FileService {
     if (share?.storageProvider !== "S3") {
       throw new BadRequestException(this.i18n.t("file.s3NotSupported"));
     }
-    return this.s3FileService.abortPreSignedUpload(shareId, fileName, uploadId);
+    return this.s3FileService.abortPreSignedUpload(
+      shareId,
+      fileId,
+      fileName,
+      uploadId,
+    );
   }
 
   async getPreSignedDownloadUrl(
@@ -168,6 +188,7 @@ export class FileService {
   }
 
   async remove(shareId: string, fileId: string) {
+    await this.assertUploadUnlocked(shareId);
     const share = await this.prisma.share.findFirst({
       where: { id: shareId },
       select: { storageProvider: true },

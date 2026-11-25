@@ -27,6 +27,8 @@ import toast from "../../utils/toast.util";
 import CopyTextField from "../upload/CopyTextField";
 import QRCode from "./QRCode";
 import { useState } from "react";
+import PasswordFieldWithGenerateButton from "../field/PasswordFieldWithGenerateButton";
+import { PasswordGeneratorConfig } from "../../types/password.type";
 
 const showShareInformationsModal = (
   modals: ModalsContextProps,
@@ -34,6 +36,7 @@ const showShareInformationsModal = (
   maxShareSize: number,
   appUrl: string,
   defaultAppUrl: string,
+  password: PasswordGeneratorConfig,
   maxExpiration?: Timespan,
   onShareUpdated?: (share: MyShare) => void,
   initiallyEditing = false,
@@ -51,6 +54,7 @@ const showShareInformationsModal = (
         maxExpiration={maxExpiration}
         onShareUpdated={onShareUpdated}
         initiallyEditing={initiallyEditing}
+        password={password}
       />
     ),
   });
@@ -64,6 +68,7 @@ const Body = ({
   maxExpiration,
   onShareUpdated,
   initiallyEditing,
+  password,
 }: {
   share: MyShare;
   maxShareSize: number;
@@ -72,6 +77,7 @@ const Body = ({
   maxExpiration?: Timespan;
   onShareUpdated?: (share: MyShare) => void;
   initiallyEditing: boolean;
+  password: PasswordGeneratorConfig;
 }) => {
   const t = translateOutsideContext();
   const [currentShare, setCurrentShare] = useState(share);
@@ -111,6 +117,9 @@ const Body = ({
           setCurrentShare(updatedShare);
           onShareUpdated?.(updatedShare);
           setIsEditing(false);
+        }}
+        options={{
+          password,
         }}
       />
     );
@@ -209,11 +218,15 @@ const EditShareBody = ({
   maxExpiration,
   onCancel,
   onShareUpdated,
+  options: { password },
 }: {
   share: MyShare;
   maxExpiration?: Timespan;
   onCancel: () => void;
   onShareUpdated: (share: MyShare) => void;
+  options: {
+    password: PasswordGeneratorConfig;
+  };
 }) => {
   const t = translateOutsideContext();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -236,8 +249,7 @@ const EditShareBody = ({
     password: yup
       .string()
       .transform((value) => value || undefined)
-      .min(3, t("common.error.too-short", { length: 3 }))
-      .max(30, t("common.error.too-long", { length: 30 })),
+      .min(3, t("common.error.too-short", { length: 3 })),
     maxViews: yup
       .number()
       .nullable()
@@ -343,7 +355,7 @@ const EditShareBody = ({
           />
         )}
         <Divider />
-        <PasswordInput
+        <PasswordFieldWithGenerateButton
           variant="filled"
           label={t("upload.modal.accordion.security.password.label")}
           placeholder={
@@ -354,6 +366,10 @@ const EditShareBody = ({
           autoComplete="new-password"
           disabled={form.values.removePassword}
           {...form.getInputProps("password")}
+          handlePasswordGenerate={(password) => {
+            form.setFieldValue("password", password);
+          }}
+          generatorConfig={password}
         />
         {security.passwordProtected && (
           <Checkbox

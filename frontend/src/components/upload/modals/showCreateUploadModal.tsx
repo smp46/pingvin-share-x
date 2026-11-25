@@ -5,10 +5,8 @@ import {
   Checkbox,
   Col,
   Grid,
-  Group,
   MultiSelect,
   NumberInput,
-  PasswordInput,
   Select,
   Stack,
   Text,
@@ -29,14 +27,14 @@ import useTranslate, {
 import shareService from "../../../services/share.service";
 import { FileUpload } from "../../../types/File.type";
 import { CreateShare } from "../../../types/share.type";
-import {
-  stringToTimespan,
-  getExpirationPreview,
-} from "../../../utils/date.util";
+import { getExpirationPreview } from "../../../utils/date.util";
 import toast from "../../../utils/toast.util";
 import { Timespan } from "../../../types/timespan.type";
 import { generateShareId } from "../../../utils/share.util";
 import CustomUrlInput from "../../share/CustomUrlInput";
+import PasswordFieldWithGenerateButton from "../../field/PasswordFieldWithGenerateButton";
+import { PasswordGeneratorConfig } from "../../../types/password.type";
+import { generatePassword } from "../../../utils/crypto.util";
 
 const showCreateUploadModal = (
   modals: ModalsContextProps,
@@ -52,6 +50,8 @@ const showCreateUploadModal = (
     defaultExpiration: Timespan;
     shareIdLength: number;
     simplified: boolean;
+    password: PasswordGeneratorConfig;
+    preFillPasswordEnabled: boolean;
   },
   files: FileUpload[],
   uploadCallback: (createShare: CreateShare, files: FileUpload[]) => void,
@@ -116,6 +116,8 @@ const CreateUploadModalBody = ({
     maxExpiration: Timespan;
     defaultExpiration: Timespan;
     shareIdLength: number;
+    password: PasswordGeneratorConfig;
+    preFillPasswordEnabled: boolean;
   };
 }) => {
   const modals = useModals();
@@ -125,6 +127,9 @@ const CreateUploadModalBody = ({
 
   const [showNotSignedInAlert, setShowNotSignedInAlert] = useState(true);
   const [emailSearch, setEmailSearch] = useState("");
+  const [accordionValue, setAccordionValue] = useState<string | null>(
+    options.preFillPasswordEnabled ? "security" : null,
+  );
 
   const validationSchema = yup.object().shape({
     link: yup
@@ -143,8 +148,7 @@ const CreateUploadModalBody = ({
     password: yup
       .string()
       .transform((value) => value || undefined)
-      .min(3, t("common.error.too-short", { length: 3 }))
-      .max(30, t("common.error.too-long", { length: 30 })),
+      .min(3, t("common.error.too-short", { length: 3 })),
     maxViews: yup
       .number()
       .transform((value) => value || undefined)
@@ -164,7 +168,9 @@ const CreateUploadModalBody = ({
       name: undefined,
       link: generatedLink,
       recipients: [] as string[],
-      password: undefined,
+      password: options.preFillPasswordEnabled
+        ? generatePassword(options.password)
+        : "",
       maxViews: undefined,
       description: undefined,
       expiration_num: defaultTimespan.value,
@@ -179,7 +185,9 @@ const CreateUploadModalBody = ({
     form.setFieldValue("restrictToRecipients", checked);
     if (checked) {
       // A share can't be both password-protected and restricted to recipients.
-      form.setFieldValue("password", undefined);
+      form.setFieldValue("password", "");
+    } else if (options.preFillPasswordEnabled) {
+      form.setFieldValue("password", generatePassword(options.password));
     }
   };
 
@@ -352,7 +360,7 @@ const CreateUploadModalBody = ({
               </Text>
             </>
           )}
-          <Accordion>
+          <Accordion value={accordionValue} onChange={setAccordionValue}>
             <Accordion.Item value="description" sx={{ borderBottom: "none" }}>
               <Accordion.Control>
                 <FormattedMessage id="upload.modal.accordion.name-and-description.title" />
@@ -457,7 +465,7 @@ const CreateUploadModalBody = ({
               <Accordion.Panel>
                 <Stack align="stretch">
                   {!form.values.restrictToRecipients && (
-                    <PasswordInput
+                    <PasswordFieldWithGenerateButton
                       variant="filled"
                       placeholder={t(
                         "upload.modal.accordion.security.password.placeholder",
@@ -467,6 +475,10 @@ const CreateUploadModalBody = ({
                       )}
                       autoComplete="new-password"
                       {...form.getInputProps("password")}
+                      handlePasswordGenerate={(password) => {
+                        form.setFieldValue("password", password);
+                      }}
+                      generatorConfig={options.password}
                     />
                   )}
                   <NumberInput

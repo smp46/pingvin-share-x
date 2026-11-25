@@ -37,6 +37,7 @@ import useTranslate from "../../hooks/useTranslate.hook";
 import shareService from "../../services/share.service";
 import { MyShare } from "../../types/share.type";
 import toast from "../../utils/toast.util";
+import usePasswordGeneratorConfig from "../../hooks/usePasswordGeneratorConfig.hook";
 
 const MyShares = () => {
   const modals = useModals();
@@ -45,6 +46,7 @@ const MyShares = () => {
   const { user } = useUser();
   const t = useTranslate();
   const theme = useMantineTheme();
+  const passwordConfig = usePasswordGeneratorConfig();
 
   const [shares, setShares] = useState<MyShare[]>();
 
@@ -191,6 +193,7 @@ const MyShares = () => {
                                 parseInt(config.get("share.maxSize")),
                                 config.get("general.appUrl"),
                                 config.get("general.appUrl", true),
+                                passwordConfig,
                                 user?.isAdmin
                                   ? { value: 0, unit: "days" }
                                   : config.get("share.maxExpiration"),

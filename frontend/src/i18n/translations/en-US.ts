@@ -373,6 +373,11 @@ export default {
     "An error occurred while finishing your share.",
   "upload.notify.count-failed": "{count} files failed to upload. Trying again.",
   "upload.notify.duplicate-skipped": "Skipped duplicate file: {name}",
+  "upload.shared.title": "Add shared files?",
+  "upload.shared.description":
+    "{count, plural, =1 {This file was} other {These # files were}} shared to the app. Only add files you shared yourself.",
+  "upload.shared.add": "Add",
+  "upload.shared.notify.failed": "The shared files could not be received.",
   "upload.reverse-share.error.invalid.title": "Invalid reverse share link",
   "upload.reverse-share.error.invalid.description":
     "This link has no remaining uses or is invalid.",
@@ -413,6 +418,9 @@ export default {
   "filelist.collapse-folder": "Collapse folder",
   "filelist.sort-ascending": "Sort ascending",
   "filelist.sort-descending": "Sort descending",
+
+  // PasswordFieldWithGenerateButton.tsx
+  "password-generator.copy.message": "Password has been copied to clipboard",
 
   // showCreateUploadModal.tsx
   "upload.modal.title": "Create Share",
@@ -602,6 +610,9 @@ export default {
   "admin.config.appearance.logo-dark.description":
     "Upload a separate logo for dark mode. It must be a PNG with a 1:1 aspect ratio.",
   "admin.config.appearance.logo.placeholder": "Pick image",
+  "admin.config.security.prefill-generated-password": "Pre-fill generated password",
+  "admin.config.security.prefill-generated-password.description":
+    "Pre-fill a generated password for shares. If a custom password policy is configured then that will be used for generation.",
   "admin.config.security.custom-password-policy": "Custom password policy",
   "admin.config.security.custom-password-policy.description":
     "Whether to enable a custom password policy. If disabled, the default minimum length is 8 characters.",
@@ -995,6 +1006,8 @@ export default {
   "common.button.disable": "Disable",
   "common.button.share": "Share",
   "common.button.generate": "Generate",
+  "common.button.show-password": "Show password",
+  "common.button.hide-password": "Hide password",
   "common.button.done": "Done",
   "common.text.link": "Link",
   "common.text.navigate-to-link": "Visit link",
