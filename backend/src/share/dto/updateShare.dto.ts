@@ -6,13 +6,14 @@ import {
   IsString,
   Length,
   MaxLength,
+  MinLength,
   ValidateNested,
 } from "class-validator";
 
 export class UpdateShareSecurityDTO {
   @IsString()
   @IsOptional()
-  @Length(3, 30)
+  @MinLength(3)
   password?: string;
 
   @IsBoolean()

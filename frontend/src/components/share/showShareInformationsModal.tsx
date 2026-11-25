@@ -249,8 +249,7 @@ const EditShareBody = ({
     password: yup
       .string()
       .transform((value) => value || undefined)
-      .min(3, t("common.error.too-short", { length: 3 }))
-      .max(30, t("common.error.too-long", { length: 30 })),
+      .min(3, t("common.error.too-short", { length: 3 })),
     maxViews: yup
       .number()
       .nullable()
