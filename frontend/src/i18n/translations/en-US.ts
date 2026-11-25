@@ -731,6 +731,9 @@ export default {
     "Automatically open the share creation modal when files are selected.",
   "admin.config.security.allow-admin-access-all-shares":
     "Allow admin access to all shares",
+  "admin.config.share.enable-gallery-view-toggle": "Enable gallery view toggle",
+  "admin.config.share.enable-gallery-view-toggle.description":
+    "Show a toggle on the share page that lets visitors switch between list and gallery view.",
   "admin.config.share.reverse-share-simple-only":
     "Force reverse share simple mode",
   "admin.config.share.reverse-share-simple-only.description":

@@ -243,19 +243,23 @@ const Share = ({ shareId }: { shareId: string }) => {
               </ActionIcon>
             </HoverTip>
           )}
-          <HoverTip
-            label={
-              isGalleryView ? t("common.button.list-view") : t("common.button.gallery-view")
-            }
-          >
-            <ActionIcon
-              variant="light"
-              size="lg"
-              onClick={() => setIsGalleryView(!isGalleryView)}
+          {config.get("share.enableGalleryViewToggle") && (
+            <HoverTip
+              label={
+                isGalleryView
+                  ? t("common.button.list-view")
+                  : t("common.button.gallery-view")
+              }
             >
-              {isGalleryView ? <TbList /> : <TbLayoutGrid />}
-            </ActionIcon>
-          </HoverTip>
+              <ActionIcon
+                variant="light"
+                size="lg"
+                onClick={() => setIsGalleryView(!isGalleryView)}
+              >
+                {isGalleryView ? <TbList /> : <TbLayoutGrid />}
+              </ActionIcon>
+            </HoverTip>
+          )}
 
           {share?.files.length > 1 && (
             <DownloadAllButton shareId={shareId} recipientId={recipientId} />

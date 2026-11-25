@@ -60,6 +60,8 @@ share:
   enableUserRecipients: "false"
   #The share creation modal automatically appears when a user selects files, eliminating the need to manually click the button.
   autoOpenShareModal: "false"
+  #Show a toggle on the share page that lets visitors switch between list and gallery view.
+  enableGalleryViewToggle: "true"
   #Force reverse shares to be created in simple mode. If disabled, the creator of the reverse share can choose between simple and advanced mode.
   reverseShareSimpleOnly: "false"
   #Maximum share expiration. Set to 0 to allow unlimited expiration.

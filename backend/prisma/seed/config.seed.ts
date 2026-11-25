@@ -150,6 +150,11 @@ export const configVariables = {
       defaultValue: "false",
       secret: false,
     },
+    enableGalleryViewToggle: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
     reverseShareSimpleOnly: {
       type: "boolean",
       defaultValue: "false",
