@@ -180,6 +180,7 @@ export class FileService {
   }
 
   async remove(shareId: string, fileId: string) {
+    await this.assertUploadUnlocked(shareId);
     const share = await this.prisma.share.findFirst({
       where: { id: shareId },
       select: { storageProvider: true },
