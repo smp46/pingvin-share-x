@@ -243,7 +243,7 @@ const Share = ({ shareId }: { shareId: string }) => {
               </ActionIcon>
             </HoverTip>
           )}
-          {config.get("share.enableGalleryViewToggle") && (
+          {config.get("appearance.enableGalleryViewToggle") && (
             <HoverTip
               label={
                 isGalleryView

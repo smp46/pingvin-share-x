@@ -98,6 +98,16 @@ export const configVariables = {
     },
   },
   appearance: {
+    enableGalleryViewToggle: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    uploadProgressStyle: {
+      type: "string",
+      defaultValue: "circle",
+      secret: false,
+    },
     themePrimaryColor: {
       type: "string",
       defaultValue: "victoria",
@@ -123,11 +133,6 @@ export const configVariables = {
       defaultValue: "",
       secret: false,
     },
-    uploadProgressStyle: {
-      type: "string",
-      defaultValue: "circle",
-      secret: false,
-    },
   },
   share: {
     enableShareEmailRecipients: {
@@ -146,11 +151,6 @@ export const configVariables = {
       secret: false,
     },
     autoOpenShareModal: {
-      type: "boolean",
-      defaultValue: "false",
-      secret: false,
-    },
-    enableGalleryViewToggle: {
       type: "boolean",
       defaultValue: "false",
       secret: false,
