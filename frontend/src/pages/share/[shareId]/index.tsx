@@ -14,11 +14,13 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import { TbEdit, TbLayoutGrid, TbList, TbPlusMinus } from "react-icons/tb";
+import { TbEdit, TbPlusMinus } from "react-icons/tb";
 import Meta from "../../../components/Meta";
 import DownloadAllButton from "../../../components/share/DownloadAllButton";
 import FileGallery from "../../../components/share/FileGallery";
 import FileList from "../../../components/share/FileList";
+import ViewModeToggle from "../../../components/share/ViewModeToggle";
+import { TableSort } from "../../../components/core/SortIcon";
 import showEnterPasswordModal from "../../../components/share/showEnterPasswordModal";
 import showErrorModal from "../../../components/share/showErrorModal";
 import showShareInformationsModal from "../../../components/share/showShareInformationsModal";
@@ -44,6 +46,10 @@ const Share = ({ shareId }: { shareId: string }) => {
   const [share, setShare] = useState<ShareType>();
   const [isRestricted, setIsRestricted] = useState(false);
   const [isGalleryView, setIsGalleryView] = useState(false);
+  const [sort, setSort] = useState<TableSort>({
+    property: "name",
+    direction: "asc",
+  });
   const { user } = useUser();
   const config = useConfig();
   const t = useTranslate();
@@ -191,6 +197,13 @@ const Share = ({ shareId }: { shareId: string }) => {
     );
   }
 
+  const viewToggle = config.get("appearance.enableGalleryViewToggle") ? (
+    <ViewModeToggle
+      viewMode={isGalleryView ? "gallery" : "list"}
+      onToggle={() => setIsGalleryView((v) => !v)}
+    />
+  ) : undefined;
+
   return (
     <>
       <Meta
@@ -243,24 +256,6 @@ const Share = ({ shareId }: { shareId: string }) => {
               </ActionIcon>
             </HoverTip>
           )}
-          {config.get("appearance.enableGalleryViewToggle") && (
-            <HoverTip
-              label={
-                isGalleryView
-                  ? t("common.button.list-view")
-                  : t("common.button.gallery-view")
-              }
-            >
-              <ActionIcon
-                variant="light"
-                size="lg"
-                onClick={() => setIsGalleryView(!isGalleryView)}
-              >
-                {isGalleryView ? <TbList /> : <TbLayoutGrid />}
-              </ActionIcon>
-            </HoverTip>
-          )}
-
           {share?.files.length > 1 && (
             <DownloadAllButton shareId={shareId} recipientId={recipientId} />
           )}
@@ -273,6 +268,9 @@ const Share = ({ shareId }: { shareId: string }) => {
           share={share!}
           isLoading={!share}
           recipientId={recipientId}
+          sort={sort}
+          setSort={setSort}
+          headerExtra={viewToggle}
         />
       ) : (
         <FileList
@@ -280,6 +278,9 @@ const Share = ({ shareId }: { shareId: string }) => {
           share={share!}
           isLoading={!share}
           recipientId={recipientId}
+          sort={sort}
+          setSort={setSort}
+          headerExtra={viewToggle}
         />
       )}
     </>

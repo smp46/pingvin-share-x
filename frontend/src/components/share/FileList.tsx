@@ -1,7 +1,7 @@
 import { ActionIcon, Group, Skeleton } from "@mantine/core";
 import { useClipboard } from "@mantine/hooks";
 import { useModals } from "@mantine/modals";
-import { useState } from "react";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 import { TbDownload, TbEye, TbLink, TbClipboard } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import useTranslate from "../../hooks/useTranslate.hook";
@@ -25,20 +25,21 @@ const FileList = ({
   share,
   isLoading,
   recipientId,
+  sort,
+  setSort,
+  headerExtra,
 }: {
   files?: FileMetaData[];
   share: Share;
   isLoading: boolean;
   recipientId?: string;
+  sort: TableSort;
+  setSort: Dispatch<SetStateAction<TableSort>>;
+  headerExtra?: ReactNode;
 }) => {
   const clipboard = useClipboard();
   const modals = useModals();
   const t = useTranslate();
-
-  const [sort, setSort] = useState<TableSort>({
-    property: "name",
-    direction: "asc",
-  });
 
   const copyFileLink = useCopyFileLink(share, recipientId);
 
@@ -49,6 +50,7 @@ const FileList = ({
       getSize={getFileSize}
       getKey={getFileKey}
       sort={sort}
+      headerExtra={headerExtra}
       loadingRows={isLoading ? skeletonRows : undefined}
       nameHeader={
         <SortableHeader sort={sort} setSort={setSort} property="name">
