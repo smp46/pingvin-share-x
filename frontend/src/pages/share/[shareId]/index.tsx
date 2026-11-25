@@ -26,6 +26,7 @@ import showErrorModal from "../../../components/share/showErrorModal";
 import showShareInformationsModal from "../../../components/share/showShareInformationsModal";
 import useConfig from "../../../hooks/config.hook";
 import useTranslate from "../../../hooks/useTranslate.hook";
+import useShareViewMode from "../../../hooks/useShareViewMode.hook";
 import useUser from "../../../hooks/user.hook";
 import shareService from "../../../services/share.service";
 import { MyShare, Share as ShareType } from "../../../types/share.type";
@@ -45,13 +46,14 @@ const Share = ({ shareId }: { shareId: string }) => {
   const router = useRouter();
   const [share, setShare] = useState<ShareType>();
   const [isRestricted, setIsRestricted] = useState(false);
-  const [isGalleryView, setIsGalleryView] = useState(false);
   const [sort, setSort] = useState<TableSort>({
     property: "name",
     direction: "asc",
   });
   const { user } = useUser();
   const config = useConfig();
+  const galleryEnabled = config.get("appearance.enableGalleryViewToggle");
+  const [viewMode, toggleViewMode] = useShareViewMode(galleryEnabled);
   const t = useTranslate();
 
   const isOwner = !!user && !!share && share.creator?.id === user.id;
@@ -197,11 +199,8 @@ const Share = ({ shareId }: { shareId: string }) => {
     );
   }
 
-  const viewToggle = config.get("appearance.enableGalleryViewToggle") ? (
-    <ViewModeToggle
-      viewMode={isGalleryView ? "gallery" : "list"}
-      onToggle={() => setIsGalleryView((v) => !v)}
-    />
+  const viewToggle = galleryEnabled ? (
+    <ViewModeToggle viewMode={viewMode} onToggle={toggleViewMode} />
   ) : undefined;
 
   return (
@@ -262,7 +261,7 @@ const Share = ({ shareId }: { shareId: string }) => {
         </Group>
       </Group>
 
-      {isGalleryView ? (
+      {viewMode === "gallery" ? (
         <FileGallery
           files={share?.files}
           share={share!}
