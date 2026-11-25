@@ -26,7 +26,7 @@ security:
   allowUnauthenticatedShares: "false"
   #Allow administrators to access all shares, even if they are password protected, expired or deleted.
   allowAdminAccessAllShares: "false"
-  #Pre-fill a generated password wherever password protection is available
+  #Pre-fill a generated password for shares. If a custom password policy is configured then that will be used for generation.
   prefillGeneratedPassword: "false"
   #Whether to enable customisation of the password policy. If disabled, the default password policy of an 8 character minimum is used.
   customPasswordPolicy: "false"

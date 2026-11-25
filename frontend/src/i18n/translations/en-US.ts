@@ -607,7 +607,7 @@ export default {
   "admin.config.appearance.logo.placeholder": "Pick image",
   "admin.config.security.prefill-generated-password": "Pre-fill generated password",
   "admin.config.security.prefill-generated-password.description":
-    "Pre-fill a generated password wherever password protection is available",
+    "Pre-fill a generated password for shares. If a custom password policy is configured then that will be used for generation.",
   "admin.config.security.custom-password-policy": "Custom password policy",
   "admin.config.security.custom-password-policy.description":
     "Whether to enable a custom password policy. If disabled, the default minimum length is 8 characters.",
