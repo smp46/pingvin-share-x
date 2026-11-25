@@ -88,6 +88,7 @@ export class FileService {
 
   async createPreSignedUploadUrls(
     shareId: string,
+    fileId: string | undefined,
     fileName: string,
     totalChunks: number,
   ) {
@@ -102,6 +103,7 @@ export class FileService {
     }
     const res = await this.s3FileService.createPreSignedUploadUrls(
       shareId,
+      fileId,
       fileName,
       totalChunks,
     );
@@ -135,6 +137,7 @@ export class FileService {
 
   async abortPreSignedUpload(
     shareId: string,
+    fileId: string | undefined,
     fileName: string,
     uploadId: string,
   ) {
@@ -145,7 +148,12 @@ export class FileService {
     if (share?.storageProvider !== "S3") {
       throw new BadRequestException(this.i18n.t("file.s3NotSupported"));
     }
-    return this.s3FileService.abortPreSignedUpload(shareId, fileName, uploadId);
+    return this.s3FileService.abortPreSignedUpload(
+      shareId,
+      fileId,
+      fileName,
+      uploadId,
+    );
   }
 
   async getPreSignedDownloadUrl(

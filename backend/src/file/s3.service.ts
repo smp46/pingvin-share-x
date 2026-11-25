@@ -64,7 +64,6 @@ export class S3FileService {
     }
 
     const buffer = Buffer.from(data, "base64");
-    const key = `${this.getS3Path()}${shareId}/${file.name}`;
     const bucketName = this.config.get("s3.bucketName");
     const s3Instance = this.getS3Instance();
     const share = await this.prisma.share.findUnique({
@@ -74,6 +73,11 @@ export class S3FileService {
         reverseShare: { include: { creator: true } },
       },
     });
+    const key = this.objectKey(
+      shareId,
+      { id: file.id, name: file.name },
+      share?.legacyS3Keys ?? false,
+    );
 
     try {
       // Initialize multipart upload if it's the first chunk
@@ -200,7 +204,7 @@ export class S3FileService {
 
     const isLastChunk = chunk.index == chunk.total - 1;
     if (isLastChunk) {
-      const fileSize: number = await this.getFileSize(shareId, file.name);
+      const fileSize: number = await this.getFileSize(key);
 
       await this.prisma.file.create({
         data: {
@@ -236,7 +240,11 @@ export class S3FileService {
     }
 
     const s3Instance = this.getS3Instance();
-    const key = `${this.getS3Path()}${shareId}/${fileName}`;
+    const key = this.objectKey(
+      shareId,
+      file,
+      await this.usesLegacyKeys(shareId),
+    );
     const response = await s3Instance.send(
       new GetObjectCommand({
         Bucket: this.config.get("s3.bucketName"),
@@ -268,7 +276,11 @@ export class S3FileService {
     if (!fileMetaData)
       throw new NotFoundException(this.i18n.t("file.notFound"));
 
-    const key = `${this.getS3Path()}${shareId}/${fileMetaData.name}`;
+    const key = this.objectKey(
+      shareId,
+      fileMetaData,
+      await this.usesLegacyKeys(shareId),
+    );
     const s3Instance = this.getS3Instance();
 
     try {
@@ -293,12 +305,13 @@ export class S3FileService {
     const fallbackDeleteByDb = async (reason: string) => {
       const files = await this.prisma.file.findMany({
         where: { shareId },
-        select: { name: true },
+        select: { id: true, name: true },
       });
+      const legacy = await this.usesLegacyKeys(shareId);
       void reason;
 
       for (const f of files) {
-        const key = `${this.getS3Path()}${shareId}/${f.name}`;
+        const key = this.objectKey(shareId, f, legacy);
         try {
           await s3Instance.send(
             new DeleteObjectCommand({
@@ -346,8 +359,7 @@ export class S3FileService {
     }
   }
 
-  async getFileSize(shareId: string, fileName: string): Promise<number> {
-    const key = `${this.getS3Path()}${shareId}/${fileName}`;
+  async getFileSize(key: string): Promise<number> {
     const s3Instance = this.getS3Instance();
 
     try {
@@ -395,7 +407,7 @@ export class S3FileService {
     const s3Instance = this.getS3Instance();
     const bucketName = this.config.get("s3.bucketName");
     const compressionLevel = this.config.get("share.zipCompressionLevel");
-    const s3Path = this.getS3Path();
+    const legacy = await this.usesLegacyKeys(shareId);
 
     const archive = archiver("zip", {
       zlib: { level: parseInt(compressionLevel) },
@@ -407,7 +419,7 @@ export class S3FileService {
 
     const processFiles = async () => {
       for (const file of files) {
-        const key = `${s3Path}${shareId}/${file.name}`;
+        const key = this.objectKey(shareId, file, legacy);
         try {
           const response = await s3Instance.send(
             new GetObjectCommand({
@@ -439,10 +451,19 @@ export class S3FileService {
 
   async createPreSignedUploadUrls(
     shareId: string,
+    fileId: string | undefined,
     fileName: string,
     totalChunks: number,
   ): Promise<{ uploadId: string; key: string; urls: string[] }> {
-    const key = `${this.getS3Path()}${shareId}/${fileName}`;
+    const legacy = await this.usesLegacyKeys(shareId);
+    if (!legacy && (!fileId || !isValidUUID(fileId))) {
+      throw new BadRequestException(this.i18n.t("file.invalidIdFormat"));
+    }
+    const key = this.objectKey(
+      shareId,
+      { id: fileId ?? "", name: fileName },
+      legacy,
+    );
     const bucketName = this.config.get("s3.bucketName");
     const s3Instance = this.getS3Instance();
 
@@ -492,13 +513,17 @@ export class S3FileService {
     uploadId: string,
     parts: Array<{ ETag: string; PartNumber: number }>,
   ): Promise<{ id: string; name: string }> {
+    const legacy = await this.usesLegacyKeys(shareId);
     if (!fileId) {
+      if (!legacy) {
+        throw new BadRequestException(this.i18n.t("file.invalidIdFormat"));
+      }
       fileId = crypto.randomUUID();
     } else if (!isValidUUID(fileId)) {
       throw new BadRequestException(this.i18n.t("file.invalidIdFormat"));
     }
 
-    const key = `${this.getS3Path()}${shareId}/${fileName}`;
+    const key = this.objectKey(shareId, { id: fileId, name: fileName }, legacy);
     const bucketName = this.config.get("s3.bucketName");
     const s3Instance = this.getS3Instance();
 
@@ -521,7 +546,7 @@ export class S3FileService {
     }
 
     try {
-      const fileSize = await this.getFileSize(shareId, fileName);
+      const fileSize = await this.getFileSize(key);
 
       const existingFile = await this.prisma.file.findUnique({
         where: { id: fileId },
@@ -552,10 +577,19 @@ export class S3FileService {
 
   async abortPreSignedUpload(
     shareId: string,
+    fileId: string | undefined,
     fileName: string,
     uploadId: string,
   ): Promise<void> {
-    const key = `${this.getS3Path()}${shareId}/${fileName}`;
+    const legacy = await this.usesLegacyKeys(shareId);
+    if (!legacy && (!fileId || !isValidUUID(fileId))) {
+      throw new BadRequestException(this.i18n.t("file.invalidIdFormat"));
+    }
+    const key = this.objectKey(
+      shareId,
+      { id: fileId ?? "", name: fileName },
+      legacy,
+    );
     const bucketName = this.config.get("s3.bucketName");
     const s3Instance = this.getS3Instance();
 
@@ -584,7 +618,11 @@ export class S3FileService {
       throw new NotFoundException(this.i18n.t("file.notFound"));
     }
 
-    const key = `${this.getS3Path()}${shareId}/${fileRecord.name}`;
+    const key = this.objectKey(
+      shareId,
+      fileRecord,
+      await this.usesLegacyKeys(shareId),
+    );
     const bucketName = this.config.get("s3.bucketName");
     const s3Instance = this.getS3Instance();
 
@@ -598,6 +636,22 @@ export class S3FileService {
     });
 
     return await getSignedUrl(s3Instance, getObjectCommand, { expiresIn: 300 });
+  }
+
+  private async usesLegacyKeys(shareId: string): Promise<boolean> {
+    const share = await this.prisma.share.findUnique({
+      where: { id: shareId },
+      select: { legacyS3Keys: true },
+    });
+    return share?.legacyS3Keys ?? false;
+  }
+
+  private objectKey(
+    shareId: string,
+    file: { id: string; name: string },
+    legacy: boolean,
+  ): string {
+    return `${this.getS3Path()}${shareId}/${legacy ? file.name : file.id}`;
   }
 
   getS3Path(): string {
