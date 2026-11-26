@@ -18,6 +18,7 @@ import shareService from "../../services/share.service";
 import { FileMetaData } from "../../types/File.type";
 import { Share } from "../../types/share.type";
 import { getMimeType } from "../../utils/file.util";
+import { byteToHumanSizeString } from "../../utils/fileSize.util";
 import FileActions from "./FileActions";
 import showFilePreviewModal from "./modals/showFilePreviewModal";
 
@@ -133,22 +134,22 @@ const FileGallery = ({
                 >
                   <FilePreviewBox shareId={share.id} file={file} />
                 </Box>
-                <Group position="apart" noWrap p="xs">
-                  <Text
-                    size="sm"
-                    truncate
-                    title={file.name}
-                    sx={{ minWidth: 0 }}
-                  >
+                <Stack spacing={4} p="xs">
+                  <Text size="sm" truncate title={file.name}>
                     {file.name.split("/").pop()}
                   </Text>
-                  <FileActions
-                    file={file}
-                    share={share}
-                    recipientId={recipientId}
-                    spacing="xs"
-                  />
-                </Group>
+                  <Group position="apart" align="flex-end" noWrap>
+                    <Text size="xs" color="dimmed">
+                      {byteToHumanSizeString(parseInt(file.size))}
+                    </Text>
+                    <FileActions
+                      file={file}
+                      share={share}
+                      recipientId={recipientId}
+                      spacing="xs"
+                    />
+                  </Group>
+                </Stack>
               </Paper>
             ))}
       </SimpleGrid>
