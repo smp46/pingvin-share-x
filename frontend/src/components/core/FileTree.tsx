@@ -229,14 +229,12 @@ const useStyles = createStyles((theme) => ({
   headerActions: {
     [theme.fn.smallerThan("xs")]: {
       gap: 2,
-    },
-  },
-  headerActionIcon: {
-    [theme.fn.smallerThan("xs")]: {
-      width: 22,
-      height: 22,
-      minWidth: 22,
-      minHeight: 22,
+      "& > *": {
+        width: 22,
+        height: 22,
+        minWidth: 22,
+        minHeight: 22,
+      },
     },
   },
 }));
@@ -632,7 +630,6 @@ const FileTree = <T extends object>({
                           color={theme.primaryColor}
                           variant="subtle"
                           size={ICON_SIZE}
-                          className={classes.headerActionIcon}
                           aria-label={t(label)}
                           onClick={onClick}
                         >
