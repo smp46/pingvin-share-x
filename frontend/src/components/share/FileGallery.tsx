@@ -10,7 +10,7 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import { useModals } from "@mantine/modals";
-import { Dispatch, ReactNode, SetStateAction, useMemo } from "react";
+import { Dispatch, ReactNode, SetStateAction, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { HoverTip } from "../core/HoverTip";
 import SortableHeader, { TableSort } from "../core/SortIcon";
@@ -30,16 +30,34 @@ const FilePreviewBox = ({
   shareId: string;
   file: FileMetaData;
 }) => {
+  const [failed, setFailed] = useState(false);
   const mimeType = getMimeType(file.name);
   const src = `/api/shares/${shareId}/files/${file.id}?download=false`;
   const style = { width: "100%", height: "100%", objectFit: "cover" as const };
 
-  if (mimeType.startsWith("image/")) {
-    // eslint-disable-next-line @next/next/no-img-element
-    return <img src={src} alt={file.name} style={style} loading="lazy" />;
+  if (!failed && mimeType.startsWith("image/")) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={src}
+        alt={file.name}
+        style={style}
+        loading="lazy"
+        onError={() => setFailed(true)}
+      />
+    );
   }
-  if (mimeType.startsWith("video/")) {
-    return <video src={src} style={style} preload="metadata" muted />;
+  if (!failed && mimeType.startsWith("video/")) {
+    return (
+      <video
+        src={`${src}#t=0.1`}
+        style={style}
+        preload="metadata"
+        muted
+        playsInline
+        onError={() => setFailed(true)}
+      />
+    );
   }
   return (
     <Center style={{ height: "100%" }}>
