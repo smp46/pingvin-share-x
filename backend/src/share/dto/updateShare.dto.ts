@@ -1,10 +1,11 @@
 import { Type } from "class-transformer";
 import {
   IsBoolean,
-  IsNumber,
+  IsInt,
   IsOptional,
   IsString,
   Length,
+  Max,
   MaxLength,
   MinLength,
   ValidateNested,
@@ -20,7 +21,9 @@ export class UpdateShareSecurityDTO {
   @IsOptional()
   removePassword?: boolean;
 
-  @IsNumber()
+  // PostgreSQL stores it as a 32-bit integer
+  @IsInt()
+  @Max(2147483647)
   @IsOptional()
   maxViews?: number | null;
 }

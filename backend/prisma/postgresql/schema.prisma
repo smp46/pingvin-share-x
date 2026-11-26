@@ -1,0 +1,206 @@
+// PostgreSQL variant of ../schema.prisma. Keep the models of both files identical.
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../node_modules/.prisma/client-postgresql"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  username String  @unique
+  email    String  @unique
+  displayName String?
+  password String?
+  isAdmin  Boolean @default(false)
+  ldapDN   String? @unique
+  shareSizeLimit String?
+  storageQuotaLimit String?
+  allowShare Boolean @default(true)
+  allowCreateReverseShares Boolean @default(true)
+  maxShares Int?
+  maxReverseShares Int?
+
+  shares              Share[]
+  refreshTokens       RefreshToken[]
+  loginTokens         LoginToken[]
+  reverseShares       ReverseShare[]
+  shareUserRecipients ShareUserRecipient[]
+  adminNoticeDismissals AdminNoticeDismissal[]
+
+  totpEnabled        Boolean             @default(false)
+  totpVerified       Boolean             @default(false)
+  totpSecret         String?
+  resetPasswordToken ResetPasswordToken?
+
+  isActivated              Boolean   @default(true)
+  activationToken          String?   @unique
+  activationTokenExpiresAt DateTime?
+
+  oAuthUsers OAuthUser[]
+}
+
+model RefreshToken {
+  id        String   @id @default(uuid())
+  token     String   @unique @default(uuid())
+  createdAt DateTime @default(now())
+
+  expiresAt DateTime
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  oauthIDToken  String? // prefixed with the ID of the issuing OAuth provider, separated by a colon
+}
+
+model LoginToken {
+  token     String   @id @default(uuid())
+  createdAt DateTime @default(now())
+
+  expiresAt DateTime
+
+  userId String
+  user   User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  used   Boolean @default(false)
+}
+
+model ResetPasswordToken {
+  token     String   @id @default(uuid())
+  createdAt DateTime @default(now())
+
+  expiresAt DateTime
+
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model OAuthUser {
+  id               String @id @default(uuid())
+  provider         String
+  providerUserId   String
+  providerUsername String
+  userId           String
+  user             User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Share {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime? @updatedAt
+
+  name          String?
+  uploadLocked  Boolean  @default(false)
+  isZipReady    Boolean  @default(false)
+  views         Int      @default(0)
+  expiration    DateTime
+  description   String?
+  removedReason String?
+
+  creatorId String?
+  creator   User?   @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+
+  reverseShareId String?
+  reverseShare   ReverseShare? @relation(fields: [reverseShareId], references: [id], onDelete: Cascade)
+
+  security       ShareSecurity?
+  recipients     ShareRecipient[]
+  userRecipients ShareUserRecipient[]
+  files          File[]
+  storageProvider String @default("LOCAL")
+  legacyS3Keys    Boolean @default(false)
+}
+
+model ReverseShare {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+
+  token                 String   @unique @default(uuid())
+  shareExpiration       DateTime
+  maxShareSize          String
+  sendEmailNotification Boolean
+  remainingUses         Int
+  simplified            Boolean  @default(false)
+  publicAccess          Boolean  @default(true)
+
+  creatorId String
+  creator   User   @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+
+  shares Share[]
+}
+
+model ShareRecipient {
+  id    String @id @default(uuid())
+  email String
+
+  shareId String
+  share   Share  @relation(fields: [shareId], references: [id], onDelete: Cascade)
+}
+
+model File {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+
+  name String
+  size String
+
+  shareId String
+  share   Share  @relation(fields: [shareId], references: [id], onDelete: Cascade)
+}
+
+model ShareSecurity {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+
+  password             String?
+  maxViews             Int?
+  restrictToRecipients Boolean @default(false)
+
+  shareId String? @unique
+  share   Share?  @relation(fields: [shareId], references: [id], onDelete: Cascade)
+}
+
+model ShareUserRecipient {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+
+  userId  String
+  user    User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  shareId String
+  share   Share  @relation(fields: [shareId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, shareId])
+}
+
+model Config {
+  updatedAt DateTime @updatedAt
+
+  name         String
+  category     String
+  type         String
+  defaultValue String  @default("")
+  value        String?
+  obscured     Boolean @default(false)
+  secret       Boolean @default(true)
+  locked       Boolean @default(false)
+  order        Int
+
+  @@id([name, category])
+}
+
+model AdminNoticeDismissal {
+  id                  String   @id @default(uuid())
+  createdAt           DateTime @default(now())
+
+  noticeId            String   @unique
+  dismissedByUserId   String?
+  dismissedByUsername String?
+  dismissedByUser     User?    @relation(fields: [dismissedByUserId], references: [id], onDelete: SetNull)
+}
+

@@ -7,6 +7,7 @@ import {
   IsOptional,
   Length,
   Matches,
+  Max,
   Min,
 } from "class-validator";
 import { i18nValidationMessage } from "nestjs-i18n";
@@ -78,12 +79,14 @@ export class UserDTO {
   @IsOptional()
   @IsInt()
   @Min(1)
+  @Max(2147483647)
   maxShares?: number;
 
   @Expose()
   @IsOptional()
   @IsInt()
   @Min(1)
+  @Max(2147483647)
   maxReverseShares?: number;
 
   @Expose()

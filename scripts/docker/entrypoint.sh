@@ -21,8 +21,15 @@ fi
 # Run the frontend server
 PORT=3333 HOSTNAME=0.0.0.0 node frontend/server.js &
 
-# Run the backend server
-cd backend && ./node_modules/.bin/prisma migrate deploy && node dist/prisma/seed/config.seed.js && node dist/src/main
+# Pick the Prisma schema matching the database
+case "$DATABASE_URL" in
+  postgres://* | postgresql://*) PRISMA_SCHEMA=prisma/postgresql/schema.prisma ;;
+  *) PRISMA_SCHEMA=prisma/schema.prisma ;;
+esac
+
+# Run the backend server. Exit if it fails, for example when the database is
+# not reachable yet, so that the container restart policy can retry
+cd backend && ./node_modules/.bin/prisma migrate deploy --schema "$PRISMA_SCHEMA" && node dist/prisma/seed/config.seed.js && node dist/src/main || exit 1
 
 # Wait for all processes to finish
 wait -n
