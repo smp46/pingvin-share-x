@@ -25,8 +25,10 @@ const useShareViewMode = (enabled: boolean): [ShareViewMode, () => void] => {
 
   const toggle = () => {
     const next: ShareViewMode = viewMode === "list" ? "gallery" : "list";
-    setCookie(COOKIE_NAME, next);
-    setViewMode(next);
+    setCookie(COOKIE_NAME, next, {
+      sameSite: "lax",
+      expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)),
+    });
     router.replace(
       { pathname: router.pathname, query: { ...router.query, view: next } },
       undefined,
