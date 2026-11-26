@@ -12,6 +12,7 @@ import {
 import { useModals } from "@mantine/modals";
 import { Dispatch, ReactNode, SetStateAction, useMemo } from "react";
 import { FormattedMessage } from "react-intl";
+import { HoverTip } from "../core/HoverTip";
 import SortableHeader, { TableSort } from "../core/SortIcon";
 import { TbFile } from "react-icons/tb";
 import shareService from "../../services/share.service";
@@ -74,7 +75,7 @@ const FileGallery = ({
     return [...list].sort((a, b) =>
       sort.property === "size"
         ? (parseInt(a.size) - parseInt(b.size)) * dir
-        : a.name.localeCompare(b.name) * dir,
+        : a.name.localeCompare(b.name, undefined, { numeric: true }) * dir,
     );
   }, [files, sort]);
 
@@ -118,40 +119,45 @@ const FileGallery = ({
           ? [...Array(4)].map((_, i) => (
               <Skeleton key={i} style={{ aspectRatio: "1 / 1" }} />
             ))
-          : sortedFiles.map((file) => (
-              <Paper key={file.id} withBorder style={{ overflow: "hidden" }}>
-                <Box
-                  style={{
-                    aspectRatio: "1 / 1",
-                    cursor: shareService.doesFileSupportPreview(file.name)
-                      ? "pointer"
-                      : undefined,
-                  }}
-                  onClick={() =>
-                    shareService.doesFileSupportPreview(file.name) &&
-                    showFilePreviewModal(share.id, file, modals)
-                  }
-                >
-                  <FilePreviewBox shareId={share.id} file={file} />
-                </Box>
-                <Stack spacing={4} p="xs">
-                  <Text size="sm" truncate title={file.name}>
-                    {file.name.split("/").pop()}
-                  </Text>
-                  <Group position="apart" align="flex-end" noWrap>
-                    <Text size="xs" color="dimmed">
-                      {byteToHumanSizeString(parseInt(file.size))}
-                    </Text>
-                    <FileActions
-                      file={file}
-                      share={share}
-                      recipientId={recipientId}
-                      spacing="xs"
-                    />
-                  </Group>
-                </Stack>
-              </Paper>
-            ))}
+          : sortedFiles.map((file) => {
+              const previewable = shareService.doesFileSupportPreview(
+                file.name,
+              );
+              return (
+                <Paper key={file.id} withBorder style={{ overflow: "hidden" }}>
+                  <Box
+                    style={{
+                      aspectRatio: "1 / 1",
+                      cursor: previewable ? "pointer" : undefined,
+                    }}
+                    onClick={() =>
+                      previewable &&
+                      showFilePreviewModal(share.id, file, modals)
+                    }
+                  >
+                    <FilePreviewBox shareId={share.id} file={file} />
+                  </Box>
+                  <Stack spacing={4} p="xs">
+                    <HoverTip label={file.name}>
+                      <Text size="sm" truncate>
+                        {file.name.split("/").pop()}
+                      </Text>
+                    </HoverTip>
+                    <Group position="apart" align="flex-end" noWrap>
+                      <Text size="xs" color="dimmed">
+                        {byteToHumanSizeString(parseInt(file.size))}
+                      </Text>
+                      <FileActions
+                        file={file}
+                        share={share}
+                        recipientId={recipientId}
+                        spacing="xs"
+                      />
+                    </Group>
+                  </Stack>
+                </Paper>
+              );
+            })}
       </SimpleGrid>
     </Stack>
   );
