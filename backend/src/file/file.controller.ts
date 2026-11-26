@@ -173,6 +173,9 @@ export class FileController {
           getValidRecipientId(recipientId),
         );
       }
+      if (!isDownload) {
+        res.setHeader("Cache-Control", "private, max-age=240");
+      }
       res.status(302).setHeader("Location", url);
       return;
     }
@@ -220,6 +223,10 @@ export class FileController {
 
     if (!isPassiveMedia) {
       headers["Content-Security-Policy"] = "sandbox";
+    }
+
+    if (!isDownload) {
+      headers["Cache-Control"] = "private, max-age=3600";
     }
 
     res.set(headers);
