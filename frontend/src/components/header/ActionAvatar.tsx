@@ -26,16 +26,6 @@ const ActionAvatar = () => {
         <Menu.Item component={Link} href="/account" icon={<TbUser size={14} />}>
           <FormattedMessage id="navbar.avatar.account" />
         </Menu.Item>
-        {user!.isAdmin && (
-          <Menu.Item
-            component={Link}
-            href="/admin"
-            icon={<TbSettings size={14} />}
-          >
-            <FormattedMessage id="navbar.avatar.admin" />
-          </Menu.Item>
-        )}
-
         <Menu.Item
           onClick={async () => {
             await authService.signOut();

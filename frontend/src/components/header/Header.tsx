@@ -24,6 +24,7 @@ import Logo from "../Logo";
 import useHomeHref from "../../hooks/homeHref.hook";
 import ActionAvatar from "./ActionAvatar";
 import NavbarShareMenu from "./NavbarShareMenu";
+import AdminMenu from "./AdminMenu";
 
 const HEADER_HEIGHT = 60;
 
@@ -175,6 +176,7 @@ const Header = () => {
     {
       component: <NavbarShareMenu />,
     },
+    ...(user?.isAdmin ? [{ component: <AdminMenu /> }] : []),
     {
       component: <ActionAvatar />,
     },
@@ -225,6 +227,14 @@ const Header = () => {
         {
           label: t("common.button.profile"),
         },
+        ...(user?.isAdmin
+          ? [
+              {
+                link: "/admin",
+                label: t("navbar.avatar.admin"),
+              },
+            ]
+          : []),
       ]
     : unauthenticatedLinks;
 
@@ -252,14 +262,6 @@ const Header = () => {
       link: "/account",
       label: t("navbar.avatar.account"),
     },
-    ...(user?.isAdmin
-      ? [
-          {
-            link: "/admin",
-            label: t("navbar.avatar.admin"),
-          },
-        ]
-      : []),
     {
       label: t("navbar.avatar.signout"),
       action: async () => {

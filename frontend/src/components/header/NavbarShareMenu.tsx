@@ -18,7 +18,7 @@ const NavbarShareMneu = () => {
         <ActionIcon>
           <HoverTip label={t("common.button.shares")} disabled={menuOpened}>
             <div>
-              <TbLink />
+              <TbLink size={19} />
             </div>
           </HoverTip>
         </ActionIcon>

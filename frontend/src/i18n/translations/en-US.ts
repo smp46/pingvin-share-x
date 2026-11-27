@@ -281,6 +281,7 @@ export default {
   "admin.button.users": "User management",
   "admin.button.shares": "Share management",
   "admin.button.config": "Configuration",
+  "admin.button.update": "Update",
   "admin.version": "Version",
   // END /admin
 
