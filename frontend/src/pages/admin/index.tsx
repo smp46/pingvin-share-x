@@ -9,12 +9,10 @@ import {
   Title,
 } from "@mantine/core";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { TbLink, TbRefresh, TbSettings, TbUsers } from "react-icons/tb";
 import { FormattedMessage } from "react-intl";
 import Meta from "../../components/Meta";
 import useTranslate from "../../hooks/useTranslate.hook";
-import configService from "../../services/config.service";
+import useAdminNavLinks from "../../hooks/useAdminNavLinks.hook";
 
 const useStyles = createStyles((theme) => ({
   item: {
@@ -34,42 +32,7 @@ const useStyles = createStyles((theme) => ({
 const Admin = () => {
   const { classes, theme } = useStyles();
   const t = useTranslate();
-
-  const [managementOptions, setManagementOptions] = useState([
-    {
-      title: t("admin.button.users"),
-      icon: TbUsers,
-      route: "/admin/users",
-    },
-    {
-      title: t("admin.button.shares"),
-      icon: TbLink,
-      route: "/admin/shares",
-    },
-    {
-      title: t("admin.button.config"),
-      icon: TbSettings,
-      route: "/admin/config/general",
-    },
-  ]);
-
-  useEffect(() => {
-    configService
-      .isNewReleaseAvailable()
-      .then((isNewReleaseAvailable) => {
-        if (isNewReleaseAvailable) {
-          setManagementOptions([
-            ...managementOptions,
-            {
-              title: "Update",
-              icon: TbRefresh,
-              route: "https://github.com/smp46/pingvin-share-x/releases/latest",
-            },
-          ]);
-        }
-      })
-      .catch();
-  }, []);
+  const managementOptions = useAdminNavLinks();
 
   return (
     <>
