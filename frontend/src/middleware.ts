@@ -41,7 +41,7 @@ export async function middleware(request: NextRequest) {
       "/imprint",
       "/privacy",
     ]),
-    admin: new Routes(["/admin/*"]),
+    admin: new Routes(["/admin", "/admin/*"]),
     account: new Routes(["/account*"]),
     disabled: new Routes([]),
   };
