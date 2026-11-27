@@ -1,13 +1,13 @@
 {
   "urlNotDefined": "URL LDAP-сервера не определен",
   "bindFailed": "не удалось привязаться к пользователю по умолчанию",
-  "defaultUserBindFailed": "Failed to bind to default user: {error}",
-  "emptyPassword": "Authentication for username {username} failed. Empty password.",
-  "invalidUsernamePattern": "Username {username} does not match username pattern. Authentication failed.",
-  "tooManyUsersFound": "Authentication for username {username} failed. Too many users found with query {searchQuery}",
-  "noUserFound": "Authentication for username {username} failed. No user found with query {searchQuery}",
-  "tryingToAuthenticate": "Trying to authenticate {username} against LDAP user {dn}",
-  "invalidCredentials": "Failed to authenticate {username} against {dn}. Invalid credentials.",
-  "userBindFailure": "User bind failure: {error}",
-  "connectError": "Connect error: {error}"
+  "defaultUserBindFailed": "Не удалось привязаться к пользователю по умолчанию: {error}",
+  "emptyPassword": "Аутентификация для имени пользователя {username} не удалась. Пустой пароль.",
+  "invalidUsernamePattern": "Имя пользователя {username} не соответствует шаблону имени пользователя. Аутентификация не удалась.",
+  "tooManyUsersFound": "Аутентификация для имени пользователя {username} не удалась. Слишком много пользователей найдено с запросом {searchQuery}",
+  "noUserFound": "Аутентификация для имени пользователя {username} не удалась. Нет пользователя с запросом {searchQuery}",
+  "tryingToAuthenticate": "Пытаемся аутентифицировать {username} в отношении LDAP пользователя {dn}",
+  "invalidCredentials": "Не удалось аутентифицировать {username} для {dn}. Неверные учетные данные.",
+  "userBindFailure": "Ошибка привязки пользователя: {error}",
+  "connectError": "Ошибка соединения: {error}"
 }
