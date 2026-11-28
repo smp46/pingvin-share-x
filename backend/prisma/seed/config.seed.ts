@@ -103,6 +103,16 @@ export const configVariables = {
     },
   },
   appearance: {
+    enableGalleryViewToggle: {
+      type: "boolean",
+      defaultValue: "false",
+      secret: false,
+    },
+    uploadProgressStyle: {
+      type: "string",
+      defaultValue: "circle",
+      secret: false,
+    },
     themePrimaryColor: {
       type: "string",
       defaultValue: "victoria",
@@ -126,11 +136,6 @@ export const configVariables = {
     customCss: {
       type: "text",
       defaultValue: "",
-      secret: false,
-    },
-    uploadProgressStyle: {
-      type: "string",
-      defaultValue: "circle",
       secret: false,
     },
   },

@@ -591,6 +591,9 @@ export default {
     "Circle with percentage",
   "admin.config.appearance.upload-progress-style.percentage-time":
     "Percentage and time remaining",
+  "admin.config.appearance.enable-gallery-view-toggle": "Enable gallery view toggle",
+  "admin.config.appearance.enable-gallery-view-toggle.description":
+    "Show a toggle on the share page that lets visitors switch between list and gallery view.",
   "admin.config.general.app-url": "App URL",
   "admin.config.general.app-url.description":
     "URL where Pingvin Share X is available.",
@@ -1015,6 +1018,8 @@ export default {
   "common.text.redirecting": "Redirecting...",
   "common.button.go-back": "Go back",
   "common.button.go-home": "Go home",
+  "common.button.list-view": "List view",
+  "common.button.gallery-view": "Gallery view",
   "common.notify.copied": "Your link was copied to the clipboard",
   "common.notify.copied-link": "Your link was copied to the clipboard",
   "common.success": "Success",

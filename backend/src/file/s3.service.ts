@@ -633,6 +633,7 @@ export class S3FileService {
         fileRecord.name,
         isDownload ? undefined : { type: "inline" },
       ),
+      ResponseCacheControl: isDownload ? undefined : "private, max-age=3600",
     });
 
     return await getSignedUrl(s3Instance, getObjectCommand, { expiresIn: 300 });

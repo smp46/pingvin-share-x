@@ -41,6 +41,10 @@ security:
   #Whether to require at least one special character in the password.
   requireSpecialCharacter: "false"
 appearance:
+  #Show a toggle on the share page that lets visitors switch between list and gallery view.
+  enableGalleryViewToggle: "false"
+  #Choose how upload progress is displayed in the file list.
+  uploadProgressStyle: circle
   #Primary color used for buttons, links, and accents. Choose custom to use a color picker override.
   themePrimaryColor: victoria
   #Hex color override used when theme primary color is set to custom.
@@ -51,8 +55,6 @@ appearance:
   themeColorScheme: system
   #Global CSS applied to the frontend. Use carefully, as invalid CSS may affect the UI.
   customCss: ""
-  #Choose how upload progress is displayed in the file list.
-  uploadProgressStyle: circle
 share:
   #Whether to allow email sharing with recipients. This can only be enabled if SMTP is activated.
   enableShareEmailRecipients: "false"

@@ -17,12 +17,16 @@ import { FormattedMessage } from "react-intl";
 import { TbEdit, TbPlusMinus } from "react-icons/tb";
 import Meta from "../../../components/Meta";
 import DownloadAllButton from "../../../components/share/DownloadAllButton";
+import FileGallery from "../../../components/share/FileGallery";
 import FileList from "../../../components/share/FileList";
+import ViewModeToggle from "../../../components/share/ViewModeToggle";
+import { TableSort } from "../../../components/core/SortIcon";
 import showEnterPasswordModal from "../../../components/share/showEnterPasswordModal";
 import showErrorModal from "../../../components/share/showErrorModal";
 import showShareInformationsModal from "../../../components/share/showShareInformationsModal";
 import useConfig from "../../../hooks/config.hook";
 import useTranslate from "../../../hooks/useTranslate.hook";
+import useShareViewMode from "../../../hooks/useShareViewMode.hook";
 import useUser from "../../../hooks/user.hook";
 import shareService from "../../../services/share.service";
 import { MyShare, Share as ShareType } from "../../../types/share.type";
@@ -43,8 +47,14 @@ const Share = ({ shareId }: { shareId: string }) => {
   const router = useRouter();
   const [share, setShare] = useState<ShareType>();
   const [isRestricted, setIsRestricted] = useState(false);
+  const [sort, setSort] = useState<TableSort>({
+    property: "name",
+    direction: "asc",
+  });
   const { user } = useUser();
   const config = useConfig();
+  const galleryEnabled = config.get("appearance.enableGalleryViewToggle");
+  const [viewMode, toggleViewMode] = useShareViewMode(galleryEnabled);
   const t = useTranslate();
   const passwordConfig = usePasswordGeneratorConfig();
 
@@ -192,6 +202,10 @@ const Share = ({ shareId }: { shareId: string }) => {
     );
   }
 
+  const viewToggle = galleryEnabled ? (
+    <ViewModeToggle viewMode={viewMode} onToggle={toggleViewMode} />
+  ) : undefined;
+
   return (
     <>
       <Meta
@@ -250,12 +264,27 @@ const Share = ({ shareId }: { shareId: string }) => {
         </Group>
       </Group>
 
-      <FileList
-        files={share?.files}
-        share={share!}
-        isLoading={!share}
-        recipientId={recipientId}
-      />
+      {viewMode === "gallery" ? (
+        <FileGallery
+          files={share?.files}
+          share={share!}
+          isLoading={!share}
+          recipientId={recipientId}
+          sort={sort}
+          setSort={setSort}
+          headerExtra={viewToggle}
+        />
+      ) : (
+        <FileList
+          files={share?.files}
+          share={share!}
+          isLoading={!share}
+          recipientId={recipientId}
+          sort={sort}
+          setSort={setSort}
+          headerExtra={viewToggle}
+        />
+      )}
     </>
   );
 };

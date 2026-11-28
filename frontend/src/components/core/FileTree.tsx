@@ -229,14 +229,12 @@ const useStyles = createStyles((theme) => ({
   headerActions: {
     [theme.fn.smallerThan("xs")]: {
       gap: 2,
-    },
-  },
-  headerActionIcon: {
-    [theme.fn.smallerThan("xs")]: {
-      width: 22,
-      height: 22,
-      minWidth: 22,
-      minHeight: 22,
+      "& > *": {
+        width: 22,
+        height: 22,
+        minWidth: 22,
+        minHeight: 22,
+      },
     },
   },
 }));
@@ -483,6 +481,7 @@ const FileTree = <T extends object>({
   renderFolderActions,
   getFileStyle,
   getFolderStyle,
+  headerExtra,
 }: {
   files: T[];
   getPath: (item: T) => string;
@@ -496,6 +495,7 @@ const FileTree = <T extends object>({
   renderFolderActions?: (folder: FolderNode) => ReactNode;
   getFileStyle?: (item: T, index: number) => CSSProperties | undefined;
   getFolderStyle?: (folder: FolderNode) => CSSProperties | undefined;
+  headerExtra?: ReactNode;
 }) => {
   const { classes, theme } = useStyles();
   const t = useTranslate();
@@ -616,27 +616,28 @@ const FileTree = <T extends object>({
               {sizeHeader}
             </th>
             <th role="columnheader" className={classes.headerCell}>
-              {folderPaths.length > 0 && (
+              {(folderPaths.length > 0 || headerExtra) && (
                 <Group
                   position="right"
                   spacing={4}
                   noWrap
                   className={classes.headerActions}
                 >
-                  {headerActions.map(({ label, Icon, onClick }) => (
-                    <HoverTip key={label} label={t(label)} touch={false}>
-                      <ActionIcon
-                        color={theme.primaryColor}
-                        variant="subtle"
-                        size={ICON_SIZE}
-                        className={classes.headerActionIcon}
-                        aria-label={t(label)}
-                        onClick={onClick}
-                      >
-                        <Icon />
-                      </ActionIcon>
-                    </HoverTip>
-                  ))}
+                  {folderPaths.length > 0 &&
+                    headerActions.map(({ label, Icon, onClick }) => (
+                      <HoverTip key={label} label={t(label)} touch={false}>
+                        <ActionIcon
+                          color={theme.primaryColor}
+                          variant="subtle"
+                          size={ICON_SIZE}
+                          aria-label={t(label)}
+                          onClick={onClick}
+                        >
+                          <Icon />
+                        </ActionIcon>
+                      </HoverTip>
+                    ))}
+                  {headerExtra}
                 </Group>
               )}
             </th>
